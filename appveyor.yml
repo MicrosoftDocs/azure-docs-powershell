@@ -1,0 +1,147 @@
+environment:
+  github_access_token:
+    secure: JSOJKfdgXW09TdfN75l84f7+22GElWNgPo1Vab449RFYe8+BEbO/btueR3g0qldG
+
+build_script:
+  - ps: |
+      Write-Host "Begin processing files"
+
+      $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:DocFolder
+      $files = Get-ChildItem -Path $docPath -Recurse | where {$_.extension -eq $env:Extension} | % { $_.FullName }
+      $source_repo = "source_repo: " + $env:SourceRepo
+      $source_branch = "source_branch: " + $env:SourceBranch
+
+      Write-Host "Found " $files.count "Files"
+
+      foreach($file in $files)
+      {
+        if(!((Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'))
+        {
+          continue
+        }
+
+        $header = $matches[1]
+
+        if($header -match '{{' -or $header -match '}}')
+        {
+          $new_header = $header.replace('{{', '').replace('}}', '')
+          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+          $header = $new_header
+        }
+
+        $found = (Get-Content $file | Out-String) -match 'source_repo[\s|\S].*'
+
+        if(!$found)
+        {
+          $new_header = $header + $source_repo + "`r`n"
+          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+          $header = $new_header
+        }
+        else
+        {
+          if(!($matches[0] -match $env:SourceRepo))
+          {
+            $new_header = $header.replace($matches[0], $source_repo + "`r`n")
+            Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+            $header = $new_header
+          }
+        }
+
+        $found = (Get-Content $file | Out-String) -match 'source_branch[\s|\S].*'
+
+        if(!$found)
+        {
+          $new_header = $header + $source_branch + "`r`n"
+          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+          $header = $new_header
+        }
+        else
+        {
+          if(!($matches[0] -match $env:SourceBranch))
+            {
+              $new_header = $header.replace($matches[0], $source_branch + "`r`n")
+              Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+            }
+        }
+        # clear blank lines in header
+        $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
+        $new_header = $matches[0] -creplace '(?m)^\s*\r?\n', ''
+        Set-Content $file (Get-Content $file | Out-String).replace($matches[0], $new_header) -NoNewline
+      }
+      Write-Host 'Finish processing files.'
+  - ps: |
+      function GetToc
+      {
+        $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:DocFolder
+        $tocPath = Join-Path $docPath "toc.yml"
+
+        if(Test-Path $tocPath)
+        {
+          Remove-Item $tocPath
+        }
+        New-Item $tocPath
+        DoGetToc $docPath $tocPath $env:Extension 0
+      }
+
+      function global:DoGetToc($folderPath, $tocPath, $extension, $level)
+      {
+        Write-Host "constructing toc in $folderPath"
+        $pre = ""
+
+        for($i=0;$i -lt $level;$i++)
+        {
+          $pre = $pre + "    "
+        }
+
+        Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $folderPath -Leaf))
+        $subFolders = Get-ChildItem $folderPath -Directory | Select-Object FullName
+
+        if($subFolders -eq $null)
+        {
+          $files = (Get-ChildItem $folderPath) | Where-Object { $_.Extension -eq $Extension } | select -ExpandProperty FullName
+          $landingPage = ""
+
+          foreach($file in $files)
+          {
+            $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
+            if($found -and $matches[1] -match 'Module Name')
+            {
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace($env:DocFolder + '\', ''))
+              $landingPage = $file
+              break
+            }
+          }
+          Add-Content -Path $tocPath -Value ($pre + "  items:")
+          $pre = $pre + "    "
+          foreach($file in $files)
+          {
+            if($file -ne $landingPage)
+            {
+              Add-Content -Path $tocPath -Value ($pre + "- name: " + (Split-Path -Path $file -Leaf -Resolve).split('\.')[-2])
+              Add-Content -Path $tocPath -Value ($pre + "  href: " + (Get-Item $file | Resolve-Path -Relative).replace($env:DocFolder + '\', ''))
+            }
+          }
+        }
+        else
+        {
+          Add-Content -Path $tocPath -Value ($pre + "  items:")
+          foreach($subFolder in $subFolders)
+          {
+            DoGetToc $subFolder.FullName $tocPath $extension ($level+1)
+          }
+        }
+      }
+      GetToc
+on_success:
+  - git clone -q --branch=%TargetBranch% %ContentRepo% %TEMP%\AzurePowerShell
+  - ps: Get-ChildItem $env:TEMP\AzurePowerShell\$env:DocFolder -dir | Remove-Item -Recurse -Force
+  - robocopy %APPVEYOR_BUILD_FOLDER%\%DocFolder% %TEMP%\AzurePowerShell\%DocFolder% /e & IF %ERRORLEVEL% LEQ 1 exit 0  
+  - copy %APPVEYOR_BUILD_FOLDER%\%DocFolder%\toc.yml %TEMP%\AzurePowerShell\%DocFolder%
+  - cd %TEMP%\AzurePowerShell
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email %Email%
+  - git config --global user.name %Name%
+  - git add -A
+  - git commit -m "commit from appveyor"
+  - git push origin %TargetBranch%
