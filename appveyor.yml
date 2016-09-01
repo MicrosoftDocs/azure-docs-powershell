@@ -21,6 +21,31 @@ build_script:
         }
 
         $header = $matches[1]
+        
+        # set metadata
+        if(!($header -match $env:TopicMetadata))
+        {
+          $new_header = $header + $env:TopicMetadata + "`r`n"
+          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+          $header = $new_header
+        }
+        
+        $date = Get-Date ([datetime](Get-ItemProperty -Path $file -Name LastWriteTime).lastwritetime) -format d
+        
+        if($header -match "$env:DateMetadata[\s|\S].*")
+        {
+          $new_header = $header.replace($matches[0], $env:DateMetadata + " " + $date)
+          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+        }
+        else
+        {
+          $new_header = $header + $env:DateMetadata + " " + $date + "`r`n"
+          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+        }
+        
+        (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n' | out-null
+        $header = $matches[1]
+        # end set metadata
 
         if($header -match '{{' -or $header -match '}}')
         {
