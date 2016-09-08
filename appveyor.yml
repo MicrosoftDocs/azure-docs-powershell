@@ -8,90 +8,106 @@ build_script:
 
       $docPath = Join-Path (Get-Item -Path ".\" -Verbose).FullName $env:DocFolder
       $files = Get-ChildItem -Path $docPath -Recurse | where {$_.extension -eq $env:Extension} | % { $_.FullName }
-      $source_repo = "source_repo: " + $env:SourceRepo
-      $source_branch = "source_branch: " + $env:SourceBranch
+      $pattern = '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
 
       Write-Host "Found " $files.count "Files"
 
       foreach($file in $files)
       {
-        if(!((Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'))
+        if(!((Get-Content $file | Out-String) -match $pattern))
         {
           continue
         }
 
         $header = $matches[1]
-        
-        # set metadata
-        if(!($header -match $env:TopicMetadata))
+        $new_header = $matches[1]
+
+        #metadata: updated_at
+        $date = [datetime](Get-ItemProperty -Path $file -Name LastWriteTime).lastwritetime
+
+        if($header -match 'updated_at[\s\S].*')
         {
-          $new_header = $header + $env:TopicMetadata + "`r`n"
-          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
-          $header = $new_header
-        }
-        
-        $date = Get-Date ([datetime](Get-ItemProperty -Path $file -Name LastWriteTime).lastwritetime) -format d
-        
-        if($header -match "$env:DateMetadata[\s|\S].*")
-        {
-          $new_header = $header.replace($matches[0], $env:DateMetadata + " " + $date)
-          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+          $new_header = $new_header.replace($matches[0], 'updated_at: ' + (Get-Date $date -format g))
         }
         else
         {
-          $new_header = $header + $env:DateMetadata + " " + $date + "`r`n"
-          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+          $new_header = $new_header + 'updated_at: ' + (Get-Date $date -format g) + "`r`n"
+        }
+        #metadata: ms.date
+        if($header -match 'ms.date[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'ms.date: ' + (Get-Date $date -format d))
+        }
+        else
+        {
+          $new_header = $new_header + 'ms.date: ' + (Get-Date $date -format d) + "`r`n"
+        }
+        Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
+        
+        (Get-Content $file | Out-String) -match $pattern | out-null
+        $header = $matches[1]
+        $new_header = $matches[1]
+
+        #metadata: ms.topic
+        $topicType = 'reference'
+        if($header -match 'Module Name')
+        {
+          $topicType = 'conceptual'
         }
         
-        (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n' | out-null
-        $header = $matches[1]
-        # end set metadata
+        if($header -match 'ms.topic[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'ms.topic: ' + $topicType)
+        }
+        else
+        {
+          $new_header = $new_header + 'ms.topic: ' + $topicType + "`r`n"
+        }
+        
+        #metadata: source_repo
+        if($header -match 'source_repo[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'source_repo: ' + $env:source_repo)
+        }
+        else
+        {
+          $new_header = $new_header + 'source_repo: ' + $env:source_repo + "`r`n"
+        }
 
+        #metadata: source_branch        
+        if($header -match 'source_branch[\s\S].*')
+        {
+          $new_header = $new_header.replace($matches[0], 'source_branch: ' + $env:source_branch)
+        }
+        else
+        {
+          $new_header = $new_header + 'source_branch: ' + $env:source_branch + "`r`n"
+        }
+
+        #metadata: gitcommit
+        $commitId = (git rev-list -1 HEAD $file)
+        $rel_path = Get-Item $file | Resolve-Path -Relative
+        $git_commit_path = $env:source_repo + '/blob/' + $commitId + '/' + $rel_path
+        $git_commit_url = (New-object System.Uri $git_commit_path).AbsoluteUri
+        
+        if($header -match 'gitcommit[\s\S].*')
+        {
+        
+          $new_header = $new_header.replace($matches[0], 'gitcommit: ' + $git_commit_url)
+        }
+        else
+        {
+          $new_header = $new_header + 'gitcommit: ' + $git_commit_url + "`r`n"
+        }
+
+        #filter invalid characters
         if($header -match '{{' -or $header -match '}}')
         {
-          $new_header = $header.replace('{{', '').replace('}}', '')
-          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
-          $header = $new_header
+          $new_header = $new_header.replace('{{', '').replace('}}', '')
         }
-
-        $found = (Get-Content $file | Out-String) -match 'source_repo[\s|\S].*'
-
-        if(!$found)
-        {
-          $new_header = $header + $source_repo + "`r`n"
-          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
-          $header = $new_header
-        }
-        else
-        {
-          if(!($matches[0] -match $env:SourceRepo))
-          {
-            $new_header = $header.replace($matches[0], $source_repo + "`r`n")
-            Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
-            $header = $new_header
-          }
-        }
-
-        $found = (Get-Content $file | Out-String) -match 'source_branch[\s|\S].*'
-
-        if(!$found)
-        {
-          $new_header = $header + $source_branch + "`r`n"
-          Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
-          $header = $new_header
-        }
-        else
-        {
-          if(!($matches[0] -match $env:SourceBranch))
-            {
-              $new_header = $header.replace($matches[0], $source_branch + "`r`n")
-              Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
-            }
-        }
-        # clear blank lines in header
-        $found = (Get-Content $file | Out-String) -match '^(?s)\s*[-]{3}(.*?)[-]{3}\r?\n'
-        $new_header = $matches[0] -creplace '(?m)^\s*\r?\n', ''
-        Set-Content $file (Get-Content $file | Out-String).replace($matches[0], $new_header) -NoNewline
+        
+        #update file
+        Set-Content $file (Get-Content $file | Out-String).replace($header, $new_header) -NoNewline
       }
       Write-Host 'Finish processing files.'
   - ps: |
