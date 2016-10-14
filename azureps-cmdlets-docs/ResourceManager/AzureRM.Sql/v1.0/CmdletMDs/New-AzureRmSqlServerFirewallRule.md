@@ -1,0 +1,194 @@
+---
+external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+online version: .\Get-AzureRmSqlServerFirewallRule.md
+schema: 2.0.0
+---
+
+# New-AzureRmSqlServerFirewallRule
+
+## SYNOPSIS
+Creates a firewall rule for a nextref_database server.
+
+## SYNTAX
+
+### UserSpecifiedRuleSet
+```
+New-AzureRmSqlServerFirewallRule -FirewallRuleName <String> -StartIpAddress <String> -EndIpAddress <String>
+ [-ServerName] <String> [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
+```
+
+### AzureIpRuleSet
+```
+New-AzureRmSqlServerFirewallRule [-AllowAllAzureIPs] [-ServerName] <String> [-ResourceGroupName] <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **New-AzureRmSqlServerFirewallRule** cmdlet creates a firewall rule for the specified ssSDS server.
+
+## EXAMPLES
+
+### Example 1: Create a firewall rule
+```
+PS C:\>New-AzureRmSqlServerFirewallRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -FirewallRuleName "Rule01" -StartIpAddress "192.168.0.198" -EndIpAddress "192.168.0.199"
+ResourceGroupName : ResourceGroup01
+ServerName        : Server01
+StartIpAddress    : 192.168.0.198
+EndIpAddress      : 192.168.0.199
+FirewallRuleName  : Rule01
+```
+
+This command creates a firewall rule named Rule01 on the server named Server01.
+The rule includes the specified start and end IP addresses.
+
+### Example 2: Create a firewall rule that allows all Azure IP addresses to access the server
+```
+PS C:\>New-AzureRmSqlServerFirewallRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -AllowAllAzureIPs
+```
+
+This command creates a firewall rule on the server named Server01 that belongs to the resource group named ResourceGroup01.
+Since the *AllowAllAzureIPs* parameter is used, the firewall rule allows all azure_2 IP addresses to access the server.
+
+## PARAMETERS
+
+### -FirewallRuleName
+Specifies the name of the new firewall rule.
+
+```yaml
+Type: String
+Parameter Sets: UserSpecifiedRuleSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartIpAddress
+Specifies the start value of the IP address range for the firewall rule.
+
+```yaml
+Type: String
+Parameter Sets: UserSpecifiedRuleSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndIpAddress
+Specifies the end value of the IP address range for this rule.
+
+```yaml
+Type: String
+Parameter Sets: UserSpecifiedRuleSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of a server.
+Specify the server name, not the fully qualified DNS name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of a resource group to which the server is assigned.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowAllAzureIPs
+Indicates that this firewall rule allows all azure_2 IP addresses to access the server.
+You cannot use this parameter if you intend to use the *FirewallRuleName*, *StartIpAddress*, and *EndIpAddress* parameters.
+If you want to allow Azure IPs to access the server, this parameter should be used in a separate cmdlet call that does not use the *FirewallRuleName*, *StartIpAddress*, and *EndIpAddress* parameters.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AzureIpRuleSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+### Microsoft.Azure.Commands.Sql.FirewallRule.Model.AzureSqlServerFirewallRuleModel
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-AzureRmSqlServerFirewallRule](.\Get-AzureRmSqlServerFirewallRule.md)
+
+[Remove-AzureRmSqlServerFirewallRule](.\Remove-AzureRmSqlServerFirewallRule.md)
+
+[Set-AzureRmSqlServerFirewallRule](.\Set-AzureRmSqlServerFirewallRule.md)
+
+[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+
