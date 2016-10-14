@@ -6,7 +6,7 @@ build_script:
   - ps: |
       Write-Host "Begin processing files"
 
-    function set_or_update_metadata ($header, $new_header, $key, $value, $overwrite=$false)
+      function set_or_update_metadata ($header, $new_header, $key, $value, $overwrite=$false)
       {
         if($header -match "$key[\s\S].*" -and $overwrite)
         {
