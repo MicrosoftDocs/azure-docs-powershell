@@ -210,8 +210,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMAccessExtension](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVMAccessExtension.md)
+[Get-AzureVMAccessExtension](.\Get-AzureVMAccessExtension.md)
 
-[Remove-AzureVMAccessExtension](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Remove-AzureVMAccessExtension.md)
+[Remove-AzureVMAccessExtension](.\Remove-AzureVMAccessExtension.md)
 
 

@@ -72,9 +72,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMCustomScriptExtension](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVMCustomScriptExtension.md)
+[Get-AzureVMCustomScriptExtension](.\Get-AzureVMCustomScriptExtension.md)
 
-[Set-AzureVMCustomScriptExtension](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Set-AzureVMCustomScriptExtension.md)
+[Set-AzureVMCustomScriptExtension](.\Set-AzureVMCustomScriptExtension.md)
 
 [Azure Service Cmdlets](.\Azure.Service.md)
 

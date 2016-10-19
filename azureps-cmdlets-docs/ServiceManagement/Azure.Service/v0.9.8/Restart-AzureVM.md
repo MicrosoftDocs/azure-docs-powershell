@@ -115,14 +115,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVM.md)
+[Get-AzureVM](.\Get-AzureVM.md)
 
-[Remove-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Remove-AzureVM.md)
+[Remove-AzureVM](.\Remove-AzureVM.md)
 
-[Start-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Start-AzureVM.md)
+[Start-AzureVM](.\Start-AzureVM.md)
 
-[Stop-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Stop-AzureVM.md)
+[Stop-AzureVM](.\Stop-AzureVM.md)
 
-[Update-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Update-AzureVM.md)
+[Update-AzureVM](.\Update-AzureVM.md)
 
 

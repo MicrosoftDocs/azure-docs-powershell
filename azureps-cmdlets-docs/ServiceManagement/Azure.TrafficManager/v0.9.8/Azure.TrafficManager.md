@@ -23,11 +23,11 @@ Disables a Traffic Manager profile.
 Enables a Traffic Manager profile.
 
 
-### [Get-AzureTrafficManagerProfile](..\..\..\..\ResourceManager\AzureRM.TrafficManager\v0.9.8\CmdletMDs\Get-AzureTrafficManagerProfile.md)
+### [Get-AzureTrafficManagerProfile](.\Get-AzureTrafficManagerProfile.md)
 Gets the details of a Traffic Manager profile.
 
 
-### [New-AzureTrafficManagerProfile](..\..\..\..\ResourceManager\AzureRM.TrafficManager\v0.9.8\CmdletMDs\New-AzureTrafficManagerProfile.md)
+### [New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
 Creates a Traffic Manager profile.
 
 
@@ -35,7 +35,7 @@ Creates a Traffic Manager profile.
 Removes an endpoint from a Traffic Manager profile.
 
 
-### [Remove-AzureTrafficManagerProfile](..\..\..\..\ResourceManager\AzureRM.TrafficManager\v0.9.8\CmdletMDs\Remove-AzureTrafficManagerProfile.md)
+### [Remove-AzureTrafficManagerProfile](.\Remove-AzureTrafficManagerProfile.md)
 Removes a Traffic Manager profile.
 
 
@@ -43,7 +43,7 @@ Removes a Traffic Manager profile.
 Updates the properties of an endpoint in a Traffic Manager profile.
 
 
-### [Set-AzureTrafficManagerProfile](..\..\..\..\ResourceManager\AzureRM.TrafficManager\v0.9.8\CmdletMDs\Set-AzureTrafficManagerProfile.md)
+### [Set-AzureTrafficManagerProfile](.\Set-AzureTrafficManagerProfile.md)
 Updates the properties of a Traffic Manager profile.
 
 

@@ -88,10 +88,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAutomationJob](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Get-AzureAutomationJob.md)
+[Get-AzureAutomationJob](.\Get-AzureAutomationJob.md)
 
-[Resume-AzureAutomationJob](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Resume-AzureAutomationJob.md)
+[Resume-AzureAutomationJob](.\Resume-AzureAutomationJob.md)
 
-[Stop-AzureAutomationJob](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Stop-AzureAutomationJob.md)
+[Stop-AzureAutomationJob](.\Stop-AzureAutomationJob.md)
 
 

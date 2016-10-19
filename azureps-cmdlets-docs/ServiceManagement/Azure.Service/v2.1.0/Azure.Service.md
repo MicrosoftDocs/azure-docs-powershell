@@ -99,7 +99,7 @@ Gets information about the endpoints that are assigned to an Azure virtual machi
 Gets the details of the internal load balancer configuration.
 
 
-### [Get-AzureLocation](..\..\..\Azure.Compute\v2.0\CmdletMDs\Get-AzureLocation.md)
+### [Get-AzureLocation](.\Get-AzureLocation.md)
 Gets the available data center locations for the current Azure subscription.
 
 
@@ -139,7 +139,7 @@ Returns a list of roles in your Microsoft Azure service.
 Gets the cloud service Active Directory (AD) domain extension that applies to all roles or to named roles at a specified deployment slot.
 
 
-### [Get-AzureServiceAntimalwareConfig](..\..\..\Azure.Compute\v2.0\CmdletMDs\Get-AzureServiceAntimalwareConfig.md)
+### [Get-AzureServiceAntimalwareConfig](.\Get-AzureServiceAntimalwareConfig.md)
 Gets configuration details for the Microsoft Antimalware service extension.
 
 
@@ -355,15 +355,15 @@ Creates an Azure virtual machine configuration object.
 Creates a disk configuration set object.
 
 
-### [New-AzureVMSqlServerAutoBackupConfig](..\..\..\..\ResourceManager\AzureRM.Compute\v2.0\CmdletMDs\New-AzureVMSqlServerAutoBackupConfig.md)
+### [New-AzureVMSqlServerAutoBackupConfig](.\New-AzureVMSqlServerAutoBackupConfig.md)
 Creates a configuration object for SQL Server automatic backup.
 
 
-### [New-AzureVMSqlServerAutoPatchingConfig](..\..\..\..\ResourceManager\AzureRM.Compute\v2.0\CmdletMDs\New-AzureVMSqlServerAutoPatchingConfig.md)
+### [New-AzureVMSqlServerAutoPatchingConfig](.\New-AzureVMSqlServerAutoPatchingConfig.md)
 Creates a configuration object for virtual machine automatic patching.
 
 
-### [New-AzureVMSqlServerKeyVaultCredentialConfig](..\..\..\..\ResourceManager\AzureRM.Compute\v2.0\CmdletMDs\New-AzureVMSqlServerKeyVaultCredentialConfig.md)
+### [New-AzureVMSqlServerKeyVaultCredentialConfig](.\New-AzureVMSqlServerKeyVaultCredentialConfig.md)
 
 
 

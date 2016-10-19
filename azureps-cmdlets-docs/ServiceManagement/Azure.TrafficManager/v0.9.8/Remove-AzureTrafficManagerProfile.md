@@ -116,10 +116,10 @@ If the operation is successful and if you specify the *PassThru* parameter, this
 
 [Enable-AzureTrafficManagerProfile](.\Enable-AzureTrafficManagerProfile.md)
 
-[Get-AzureTrafficManagerProfile](..\..\..\..\ResourceManager\AzureRM.TrafficManager\v0.9.8\CmdletMDs\Get-AzureTrafficManagerProfile.md)
+[Get-AzureTrafficManagerProfile](.\Get-AzureTrafficManagerProfile.md)
 
-[New-AzureTrafficManagerProfile](..\..\..\..\ResourceManager\AzureRM.TrafficManager\v0.9.8\CmdletMDs\New-AzureTrafficManagerProfile.md)
+[New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
 
-[Set-AzureTrafficManagerProfile](..\..\..\..\ResourceManager\AzureRM.TrafficManager\v0.9.8\CmdletMDs\Set-AzureTrafficManagerProfile.md)
+[Set-AzureTrafficManagerProfile](.\Set-AzureTrafficManagerProfile.md)
 
 

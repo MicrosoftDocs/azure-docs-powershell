@@ -675,7 +675,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureLocation](..\..\..\Azure.Compute\v2.0\CmdletMDs\Get-AzureLocation.md)
+[Get-AzureLocation](..\..\Azure.Compute\v2.1.0\Get-AzureLocation.md)
 
 [Get-AzureVMImage](.\Get-AzureVMImage.md)
 

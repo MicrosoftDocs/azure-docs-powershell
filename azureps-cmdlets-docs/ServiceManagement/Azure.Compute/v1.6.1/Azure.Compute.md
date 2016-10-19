@@ -97,7 +97,7 @@ Gets a list of scheduler jobs or a particular scheduler job.
 Gets available scheduler locations.
 
 
-### [Get-AzureServiceAntimalwareConfig](..\..\..\Azure.Antimalware\v1.0\CmdletMDs\Get-AzureServiceAntimalwareConfig.md)
+### [Get-AzureServiceAntimalwareConfig](.\Get-AzureServiceAntimalwareConfig.md)
 
 
 
@@ -296,7 +296,7 @@ Removes the current cloud service.
 Removes an existing add-on instance.
 
 
-### [Remove-AzureVMMicrosoftAntimalwareExtension](..\..\..\Azure.Antimalware\v1.0\CmdletMDs\Remove-AzureVMMicrosoftAntimalwareExtension.md)
+### [Remove-AzureVMMicrosoftAntimalwareExtension](.\Remove-AzureVMMicrosoftAntimalwareExtension.md)
 
 
 

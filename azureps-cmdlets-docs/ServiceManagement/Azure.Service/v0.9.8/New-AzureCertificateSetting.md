@@ -111,11 +111,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzureCertificate](.\Get-AzureCertificate.md)
 
-[Get-AzureVMImage](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVMImage.md)
+[Get-AzureVMImage](.\Get-AzureVMImage.md)
 
 [New-AzureQuickVM](.\New-AzureQuickVM.md)
 
-[New-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\New-AzureVM.md)
+[New-AzureVM](.\New-AzureVM.md)
 
 [Remove-AzureCertificate](.\Remove-AzureCertificate.md)
 

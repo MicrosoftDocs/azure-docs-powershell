@@ -93,10 +93,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureAutomationSchedule](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\New-AzureAutomationSchedule.md)
+[New-AzureAutomationSchedule](.\New-AzureAutomationSchedule.md)
 
-[Remove-AzureAutomationSchedule](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Remove-AzureAutomationSchedule.md)
+[Remove-AzureAutomationSchedule](.\Remove-AzureAutomationSchedule.md)
 
-[Set-AzureAutomationSchedule](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Set-AzureAutomationSchedule.md)
+[Set-AzureAutomationSchedule](.\Set-AzureAutomationSchedule.md)
 
 

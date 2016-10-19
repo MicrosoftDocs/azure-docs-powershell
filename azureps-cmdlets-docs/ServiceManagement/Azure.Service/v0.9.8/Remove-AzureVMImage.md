@@ -109,9 +109,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-AzureVMImage](.\Add-AzureVMImage.md)
 
-[Get-AzureVMImage](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVMImage.md)
+[Get-AzureVMImage](.\Get-AzureVMImage.md)
 
-[Save-AzureVMImage](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Save-AzureVMImage.md)
+[Save-AzureVMImage](.\Save-AzureVMImage.md)
 
 [Update-AzureVMImage](.\Update-AzureVMImage.md)
 

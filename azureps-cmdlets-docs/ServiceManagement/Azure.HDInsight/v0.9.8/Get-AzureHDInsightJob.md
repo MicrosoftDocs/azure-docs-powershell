@@ -200,10 +200,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-AzureHDInsightJob](..\..\..\..\ResourceManager\AzureRM.HDInsight\v0.9.8\CmdletMDs\Start-AzureHDInsightJob.md)
+[Start-AzureHDInsightJob](.\Start-AzureHDInsightJob.md)
 
-[Stop-AzureHDInsightJob](..\..\..\..\ResourceManager\AzureRM.HDInsight\v0.9.8\CmdletMDs\Stop-AzureHDInsightJob.md)
+[Stop-AzureHDInsightJob](.\Stop-AzureHDInsightJob.md)
 
-[Wait-AzureHDInsightJob](..\..\..\..\ResourceManager\AzureRM.HDInsight\v0.9.8\CmdletMDs\Wait-AzureHDInsightJob.md)
+[Wait-AzureHDInsightJob](.\Wait-AzureHDInsightJob.md)
 
 

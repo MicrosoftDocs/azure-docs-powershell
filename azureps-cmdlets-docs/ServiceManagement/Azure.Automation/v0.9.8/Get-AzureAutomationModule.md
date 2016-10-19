@@ -103,10 +103,10 @@ Microsoft.Azure.Commands.Automation.Model.Module
 
 ## RELATED LINKS
 
-[New-AzureAutomationModule](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\New-AzureAutomationModule.md)
+[New-AzureAutomationModule](.\New-AzureAutomationModule.md)
 
-[Set-AzureAutomationModule](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Set-AzureAutomationModule.md)
+[Set-AzureAutomationModule](.\Set-AzureAutomationModule.md)
 
-[Remove-AzureAutomationModule](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Remove-AzureAutomationModule.md)
+[Remove-AzureAutomationModule](.\Remove-AzureAutomationModule.md)
 
 

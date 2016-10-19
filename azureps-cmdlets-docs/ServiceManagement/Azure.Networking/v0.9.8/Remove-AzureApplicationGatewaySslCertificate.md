@@ -93,8 +93,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureApplicationGatewaySslCertificate](..\..\..\..\ResourceManager\AzureRM.Network\v0.9.8\CmdletMDs\Add-AzureApplicationGatewaySslCertificate.md)
+[Add-AzureApplicationGatewaySslCertificate](.\Add-AzureApplicationGatewaySslCertificate.md)
 
-[Get-AzureApplicationGatewaySslCertificate](..\..\..\..\ResourceManager\AzureRM.Network\v0.9.8\CmdletMDs\Get-AzureApplicationGatewaySslCertificate.md)
+[Get-AzureApplicationGatewaySslCertificate](.\Get-AzureApplicationGatewaySslCertificate.md)
 
 
