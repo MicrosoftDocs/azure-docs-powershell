@@ -234,11 +234,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureHDInsightHiveJobDefinition](..\..\..\..\ResourceManager\AzureRM.HDInsight\v0.9.8\CmdletMDs\New-AzureHDInsightHiveJobDefinition.md)
+[New-AzureHDInsightHiveJobDefinition](.\New-AzureHDInsightHiveJobDefinition.md)
 
-[New-AzureHDInsightMapReduceJobDefinition](..\..\..\..\ResourceManager\AzureRM.HDInsight\v0.9.8\CmdletMDs\New-AzureHDInsightMapReduceJobDefinition.md)
+[New-AzureHDInsightMapReduceJobDefinition](.\New-AzureHDInsightMapReduceJobDefinition.md)
 
-[New-AzureHDInsightPigJobDefinition](..\..\..\..\ResourceManager\AzureRM.HDInsight\v0.9.8\CmdletMDs\New-AzureHDInsightPigJobDefinition.md)
+[New-AzureHDInsightPigJobDefinition](.\New-AzureHDInsightPigJobDefinition.md)
 
 [New-AzureHDInsightSqoopJobDefinition](.\New-AzureHDInsightSqoopJobDefinition.md)
 

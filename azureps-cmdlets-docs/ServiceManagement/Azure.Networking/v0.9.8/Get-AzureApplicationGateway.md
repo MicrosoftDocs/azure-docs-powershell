@@ -83,13 +83,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureApplicationGateway](..\..\..\..\ResourceManager\AzureRM.Network\v0.9.8\CmdletMDs\New-AzureApplicationGateway.md)
+[New-AzureApplicationGateway](.\New-AzureApplicationGateway.md)
 
-[Remove-AzureApplicationGateway](..\..\..\..\ResourceManager\AzureRM.Network\v0.9.8\CmdletMDs\Remove-AzureApplicationGateway.md)
+[Remove-AzureApplicationGateway](.\Remove-AzureApplicationGateway.md)
 
-[Start-AzureApplicationGateway](..\..\..\..\ResourceManager\AzureRM.Network\v0.9.8\CmdletMDs\Start-AzureApplicationGateway.md)
+[Start-AzureApplicationGateway](.\Start-AzureApplicationGateway.md)
 
-[Stop-AzureApplicationGateway](..\..\..\..\ResourceManager\AzureRM.Network\v0.9.8\CmdletMDs\Stop-AzureApplicationGateway.md)
+[Stop-AzureApplicationGateway](.\Stop-AzureApplicationGateway.md)
 
 [Update-AzureApplicationGateway](.\Update-AzureApplicationGateway.md)
 

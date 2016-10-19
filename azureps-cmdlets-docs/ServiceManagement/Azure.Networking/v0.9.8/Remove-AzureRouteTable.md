@@ -118,8 +118,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRouteTable](..\..\..\..\ResourceManager\AzureRM.Network\v0.9.8\CmdletMDs\Get-AzureRouteTable.md)
+[Get-AzureRouteTable](.\Get-AzureRouteTable.md)
 
-[New-AzureRouteTable](..\..\..\..\ResourceManager\AzureRM.Network\v0.9.8\CmdletMDs\New-AzureRouteTable.md)
+[New-AzureRouteTable](.\New-AzureRouteTable.md)
 
 

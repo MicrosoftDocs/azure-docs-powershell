@@ -140,8 +140,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureVMExtension](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Remove-AzureVMExtension.md)
+[Remove-AzureVMExtension](.\Remove-AzureVMExtension.md)
 
-[Set-AzureVMExtension](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Set-AzureVMExtension.md)
+[Set-AzureVMExtension](.\Set-AzureVMExtension.md)
 
 

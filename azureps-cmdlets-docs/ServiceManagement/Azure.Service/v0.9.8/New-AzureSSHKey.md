@@ -122,9 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-AzureProvisioningConfig](.\Add-AzureProvisioningConfig.md)
 
-[New-AzureVMConfig](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\New-AzureVMConfig.md)
+[New-AzureVMConfig](.\New-AzureVMConfig.md)
 
-[New-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\New-AzureVM.md)
+[New-AzureVM](.\New-AzureVM.md)
 
 [New-AzureQuickVM](.\New-AzureQuickVM.md)
 

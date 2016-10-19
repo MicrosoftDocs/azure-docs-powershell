@@ -91,7 +91,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-AzureEndpoint](.\Add-AzureEndpoint.md)
 
-[Get-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVM.md)
+[Get-AzureVM](.\Get-AzureVM.md)
 
 [Remove-AzureEndpoint](.\Remove-AzureEndpoint.md)
 

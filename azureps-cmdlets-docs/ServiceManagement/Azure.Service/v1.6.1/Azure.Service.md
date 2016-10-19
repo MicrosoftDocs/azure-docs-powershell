@@ -99,7 +99,7 @@ Gets information about the endpoints that are assigned to an azure_2 virtual mac
 Gets the details of the internal load balancer configuration.
 
 
-### [Get-AzureLocation](..\..\..\Azure.Compute\v1.0\CmdletMDs\Get-AzureLocation.md)
+### [Get-AzureLocation](.\Get-AzureLocation.md)
 Gets the available data center locations for the current azure_2 subscription.
 
 
@@ -139,7 +139,7 @@ Returns a list of roles in your Microsoft azure_2 service.
 Gets the cloud service Active Directory (AD) domain extension that applies to all roles or to named roles at a specified deployment slot.
 
 
-### [Get-AzureServiceAntimalwareConfig](..\..\..\Azure.Antimalware\v1.0\CmdletMDs\Get-AzureServiceAntimalwareConfig.md)
+### [Get-AzureServiceAntimalwareConfig](.\Get-AzureServiceAntimalwareConfig.md)
 Gets configuration details for the Microsoft Antimalware service extension.
 
 
@@ -223,7 +223,7 @@ Gets a disk configuration set object from the input image context.
 Gets the properties on one or a list of operating systems or a virtual machine image in the image repository.
 
 
-### [Get-AzureVMMicrosoftAntimalwareExtension](..\..\..\Azure.Antimalware\v1.0\CmdletMDs\Get-AzureVMMicrosoftAntimalwareExtension.md)
+### [Get-AzureVMMicrosoftAntimalwareExtension](.\Get-AzureVMMicrosoftAntimalwareExtension.md)
 Gets the Microsoft Antimalware extension details for a virtual machine.
 
 
@@ -331,11 +331,11 @@ Creates an azure_2 virtual machine configuration object.
 Creates a disk configuration set object.
 
 
-### [New-AzureVMSqlServerAutoBackupConfig](..\..\..\..\ResourceManager\AzureRM.Compute\v1.0\CmdletMDs\New-AzureVMSqlServerAutoBackupConfig.md)
+### [New-AzureVMSqlServerAutoBackupConfig](.\New-AzureVMSqlServerAutoBackupConfig.md)
 Creates a configuration object for SQL Server automatic backup.
 
 
-### [New-AzureVMSqlServerAutoPatchingConfig](..\..\..\..\ResourceManager\AzureRM.Compute\v1.0\CmdletMDs\New-AzureVMSqlServerAutoPatchingConfig.md)
+### [New-AzureVMSqlServerAutoPatchingConfig](.\New-AzureVMSqlServerAutoPatchingConfig.md)
 Creates a configuration object for virtual machine automatic patching.
 
 
@@ -411,7 +411,7 @@ Removes a reserved IP address by its name.
 Removes the cloud service AD domain extension applied on all roles or named roles at a certain deployment slot.
 
 
-### [Remove-AzureServiceAntimalwareExtension](..\..\..\Azure.Antimalware\v1.0\CmdletMDs\Remove-AzureServiceAntimalwareExtension.md)
+### [Remove-AzureServiceAntimalwareExtension](.\Remove-AzureServiceAntimalwareExtension.md)
 Removes the antimalware configuration from a cloud service.
 
 
@@ -479,7 +479,7 @@ Removes the operating system disk configuration from the DiskConfigSet object.
 Removes an operating system image from the image repository.
 
 
-### [Remove-AzureVMMicrosoftAntimalwareExtension](..\..\..\Azure.Antimalware\v1.0\CmdletMDs\Remove-AzureVMMicrosoftAntimalwareExtension.md)
+### [Remove-AzureVMMicrosoftAntimalwareExtension](.\Remove-AzureVMMicrosoftAntimalwareExtension.md)
 Removes the Microsoft Antimalware extension from a virtual machine.
 
 
@@ -579,7 +579,7 @@ Sets the number of instances of an azure_2 role to run.
 Enables an AD Domain extension for a cloud service.
 
 
-### [Set-AzureServiceAntimalwareExtension](..\..\..\Azure.Antimalware\v1.0\CmdletMDs\Set-AzureServiceAntimalwareExtension.md)
+### [Set-AzureServiceAntimalwareExtension](.\Set-AzureServiceAntimalwareExtension.md)
 Configures the Microsoft Antimalware extension for cloud services.
 
 
@@ -647,7 +647,7 @@ Sets the Data Disk properties on the virtual machine image.
 Sets the operating system disk properties on a virtual machine image.
 
 
-### [Set-AzureVMMicrosoftAntimalwareExtension](..\..\..\Azure.Antimalware\v1.0\CmdletMDs\Set-AzureVMMicrosoftAntimalwareExtension.md)
+### [Set-AzureVMMicrosoftAntimalwareExtension](.\Set-AzureVMMicrosoftAntimalwareExtension.md)
 Configures the Microsoft Antimalware extension for a virtual machine.
 
 

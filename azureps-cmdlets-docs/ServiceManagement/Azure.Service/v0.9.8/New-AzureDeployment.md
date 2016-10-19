@@ -221,7 +221,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Move-AzureDeployment](.\Move-AzureDeployment.md)
 
-[New-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\New-AzureVM.md)
+[New-AzureVM](.\New-AzureVM.md)
 
 [Remove-AzureDeployment](.\Remove-AzureDeployment.md)
 

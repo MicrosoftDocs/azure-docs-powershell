@@ -152,10 +152,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAutomationCertificate](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Get-AzureAutomationCertificate.md)
+[Get-AzureAutomationCertificate](.\Get-AzureAutomationCertificate.md)
 
-[Set-AzureAutomationCertificate](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Set-AzureAutomationCertificate.md)
+[Set-AzureAutomationCertificate](.\Set-AzureAutomationCertificate.md)
 
-[Remove-AzureAutomationCertificate](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Remove-AzureAutomationCertificate.md)
+[Remove-AzureAutomationCertificate](.\Remove-AzureAutomationCertificate.md)
 
 

@@ -35,7 +35,7 @@ You can use this object to perform a new deployment and add a new virtual machin
 ### Example 1: Create a Windows virtual machine configuration
 ```
 PS C:\>$Image = (Get-AzureVMImage)[4].ImageName 
-C:\PS> New-AzureVMConfig -Name "MyVM1" -InstanceSize ExtraSmall -ImageName $Image | Add-AzureProvisioningConfig -Windows -Password $AdminPassword | Add-AzureDataDisk -CreateNew -DiskSizeInGB 50 -DiskLabel "Datadisk1" -LUN 0 | New-AzureVM  ¢â‚�?ServiceName "MySvc1"
+C:\PS> New-AzureVMConfig -Name "MyVM1" -InstanceSize ExtraSmall -ImageName $Image | Add-AzureProvisioningConfig -Windows -Password $AdminPassword | Add-AzureDataDisk -CreateNew -DiskSizeInGB 50 -DiskLabel "Datadisk1" -LUN 0 | New-AzureVM -ServiceName "MySvc1"
 ```
 
 This command creates a Windows virtual machine configuration with operating system disk, data disk and provisioning configuration.
@@ -44,7 +44,7 @@ This configuration is then used to create a new virtual machine.
 ### Example 2: Create a Linux virtual machine configuration
 ```
 PS C:\>$Image = (Get-AzureVMImage)[7].ImageName
-C:\PS> New-AzureVMConfig -Name "MyVM1" -InstanceSize ExtraSmall -ImageName $Image | Add-AzureProvisioningConfig  ¢â‚�?Linux  ¢â‚�?LinuxUser $LinuxUser -Password $AdminPassword | Add-AzureDataDisk -CreateNew -DiskSizeInGB 50 -DiskLabel "Datadisk1" -LUN 0 | New-AzureVM  ¢â‚�?ServiceName "MySvc1"
+C:\PS> New-AzureVMConfig -Name "MyVM1" -InstanceSize ExtraSmall -ImageName $Image | Add-AzureProvisioningConfig -Linux -LinuxUser $LinuxUser -Password $AdminPassword | Add-AzureDataDisk -CreateNew -DiskSizeInGB 50 -DiskLabel "Datadisk1" -LUN 0 | New-AzureVM -ServiceName "MySvc1"
 ```
 
 This command creates a new Linux virtual machine configuration with operating system disk, data disk and provisioning configuration.

@@ -650,7 +650,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzureLocation](.\Get-AzureLocation.md)
 
-[Get-AzureVMImage](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVMImage.md)
+[Get-AzureVMImage](.\Get-AzureVMImage.md)
 
 [New-AzureDns](.\New-AzureDns.md)
 

@@ -275,12 +275,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzureDataDisk](.\Get-AzureDataDisk.md)
 
-[Get-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVM.md)
+[Get-AzureVM](.\Get-AzureVM.md)
 
 [Remove-AzureDataDisk](.\Remove-AzureDataDisk.md)
 
 [Set-AzureDataDisk](.\Set-AzureDataDisk.md)
 
-[Update-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Update-AzureVM.md)
+[Update-AzureVM](.\Update-AzureVM.md)
 
 

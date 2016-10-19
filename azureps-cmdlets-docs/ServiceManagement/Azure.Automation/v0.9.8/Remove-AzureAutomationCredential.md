@@ -98,10 +98,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAutomationCredential](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Get-AzureAutomationCredential.md)
+[Get-AzureAutomationCredential](.\Get-AzureAutomationCredential.md)
 
-[New-AzureAutomationCredential](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\New-AzureAutomationCredential.md)
+[New-AzureAutomationCredential](.\New-AzureAutomationCredential.md)
 
-[Set-AzureAutomationCredential](..\..\..\..\ResourceManager\AzureRM.Automation\v0.9.8\CmdletMDs\Set-AzureAutomationCredential.md)
+[Set-AzureAutomationCredential](.\Set-AzureAutomationCredential.md)
 
 

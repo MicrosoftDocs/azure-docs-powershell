@@ -344,7 +344,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzureVMDscExtension](.\Remove-AzureVMDscExtension.md)
 
-[Get-AzureVM](..\..\..\..\ResourceManager\AzureRM.Compute\v0.9.8\CmdletMDs\Get-AzureVM.md)
+[Get-AzureVM](.\Get-AzureVM.md)
 
 [Publish-AzureVMDscConfiguration](.\Publish-AzureVMDscConfiguration.md)
 
