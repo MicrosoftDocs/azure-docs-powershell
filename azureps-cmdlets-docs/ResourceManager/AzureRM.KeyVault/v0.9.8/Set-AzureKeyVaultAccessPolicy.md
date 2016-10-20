@@ -302,7 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies the ID of application that a user must use to grant permissions.```yaml
+Specifies the ID of application that a user must use to grant permissions.
+
+```yaml
 Type: Guid
 Parameter Sets: ByObjectId
 Aliases: 

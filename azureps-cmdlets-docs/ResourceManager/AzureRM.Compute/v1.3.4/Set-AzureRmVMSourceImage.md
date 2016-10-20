@@ -121,7 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -134,7 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

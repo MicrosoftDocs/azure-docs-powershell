@@ -71,7 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -DataDiskNames
-The virtual machine data disk's name.```yaml
+The virtual machine data disk's name.
+
+```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: Name

@@ -45,7 +45,9 @@ This command gets information about the account named ContosoAdlAccount.
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -58,7 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

@@ -89,7 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -NextLink
-Specifies the next link.```yaml
+Specifies the next link.
+
+```yaml
 Type: Uri
 Parameter Sets: ListNextLinkVirtualMachinesParamSet
 Aliases: 
@@ -118,7 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.```yaml
+Specifies the name of a resource group.
+
+```yaml
 Type: String
 Parameter Sets: ListVirtualMachineInResourceGroupParamSet, GetVirtualMachineInResourceGroupParamSet
 Aliases: 
@@ -131,7 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Indicates that this cmdlet gets only the instance view of the virtual machine.```yaml
+Indicates that this cmdlet gets only the instance view of the virtual machine.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: GetVirtualMachineInResourceGroupParamSet
 Aliases: 

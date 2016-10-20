@@ -34,7 +34,9 @@ This example gets all of the available website locations for the current subscri
 ## PARAMETERS
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases: 

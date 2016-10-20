@@ -102,7 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -Encrypted
-The encrypted property of the variable.```yaml
+The encrypted property of the variable.
+
+```yaml
 Type: Boolean
 Parameter Sets: UpdateVariableValue
 Aliases: 
@@ -115,7 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureProfile
 Parameter Sets: (All)
 Aliases: 

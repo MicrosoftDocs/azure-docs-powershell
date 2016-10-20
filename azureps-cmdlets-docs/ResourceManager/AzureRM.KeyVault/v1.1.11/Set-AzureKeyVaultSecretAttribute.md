@@ -168,7 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies a hash table that represents tags for a secret. If you do not specify this parameter, there is no change to the current secret's tags. To remove a tag, specify an empty hash table. For more information about resource tags, see Using tags to organize your Azure resources (http://go.microsoft.com/fwlink/?LinkId=613624).```yaml
+Specifies a hash table that represents tags for a secret. If you do not specify this parameter, there is no change to the current secret's tags. To remove a tag, specify an empty hash table. For more information about resource tags, see Using tags to organize your Azure resources (http://go.microsoft.com/fwlink/?LinkId=613624).
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 

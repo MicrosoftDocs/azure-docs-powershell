@@ -92,7 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group for which this cmdlet gets module metadata.```yaml
+Specifies the name of a resource group for which this cmdlet gets module metadata.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

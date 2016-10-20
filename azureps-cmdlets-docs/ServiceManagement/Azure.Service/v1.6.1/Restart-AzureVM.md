@@ -109,7 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -122,7 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv
@@ -150,7 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -Redeploy
-Redeploy the virtual machine.```yaml
+Redeploy the virtual machine.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: RedeployByName, RedeployInput
 Aliases: 

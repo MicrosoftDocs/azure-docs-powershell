@@ -77,7 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: pv

@@ -155,7 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies a hash table that represents tags for a secret. For more information about resource tags, see Using tags to organize your Azure resources (http://go.microsoft.com/fwlink/?LinkId=613624).```yaml
+Specifies a hash table that represents tags for a secret. For more information about resource tags, see Using tags to organize your Azure resources (http://go.microsoft.com/fwlink/?LinkId=613624).
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 

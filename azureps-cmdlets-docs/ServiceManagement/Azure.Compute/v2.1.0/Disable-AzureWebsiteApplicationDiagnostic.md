@@ -103,7 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -BlobStorage
-Blob storage switch.```yaml
+Blob storage switch.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -116,7 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases: 
@@ -129,7 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -TableStorage
-Table storage switch.```yaml
+Table storage switch.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 

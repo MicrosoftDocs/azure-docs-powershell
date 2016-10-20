@@ -64,7 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-When the Force parameter is provided, diagnostics will be disables without any confirmation prompts.```yaml
+When the Force parameter is provided, diagnostics will be disables without any confirmation prompts.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 

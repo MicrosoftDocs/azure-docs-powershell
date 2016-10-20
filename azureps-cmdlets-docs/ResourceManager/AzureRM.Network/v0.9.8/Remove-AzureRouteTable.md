@@ -98,7 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the route table that this cmdlet removes.```yaml
+Specifies the name of the resource group that contains the route table that this cmdlet removes.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

@@ -122,7 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -AlloowGatewayTransit
-Flag to allow gatewayLinks be used in remote virtual network's link to this virtual network```yaml
+Flag to allow gatewayLinks be used in remote virtual network's link to this virtual network
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: AllowGatewayTransit
@@ -150,7 +152,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -163,7 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

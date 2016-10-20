@@ -118,7 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -NodeType
-The node on which to apply the action.```yaml
+The node on which to apply the action.
+
+```yaml
 Type: ClusterNodeType
 Parameter Sets: (All)
 Aliases: 

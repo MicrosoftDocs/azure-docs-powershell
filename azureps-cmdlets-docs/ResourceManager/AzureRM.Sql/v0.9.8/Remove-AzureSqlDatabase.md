@@ -77,7 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group containing the Azure SQL Server that contains the Azure SQL Database to remove.```yaml
+The name of the resource group containing the Azure SQL Server that contains the Azure SQL Database to remove.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

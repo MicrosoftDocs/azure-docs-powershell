@@ -33,7 +33,9 @@ This command removes the SSL certificate named Cert02 from the application gatew
 ## PARAMETERS
 
 ### -ApplicationGateway
-Specifies the application gateway from which this cmdlet removes an SSL certificate.```yaml
+Specifies the application gateway from which this cmdlet removes an SSL certificate.
+
+```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 

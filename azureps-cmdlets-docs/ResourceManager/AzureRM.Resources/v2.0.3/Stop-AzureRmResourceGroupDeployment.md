@@ -84,7 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Suppresses the confirmation prompt. By default, Stop-AzureRmResourceGroupDeployment prompts you before stopping a deployment.```yaml
+Suppresses the confirmation prompt. By default, Stop-AzureRmResourceGroupDeployment prompts you before stopping a deployment.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 

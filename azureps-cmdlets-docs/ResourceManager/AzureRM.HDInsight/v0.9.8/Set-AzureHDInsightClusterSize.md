@@ -36,7 +36,9 @@ PS C:\> # Cluster info
 ## PARAMETERS
 
 ### -ClusterName
-Gets or sets the name of the cluster.```yaml
+Gets or sets the name of the cluster.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -65,7 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Gets or sets the name of the resource group.```yaml
+Gets or sets the name of the resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -78,7 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetInstanceCount
-Gets or sets the name of the cluster.```yaml
+Gets or sets the name of the cluster.
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 

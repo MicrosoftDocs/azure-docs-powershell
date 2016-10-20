@@ -85,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.```yaml
+The resource group name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

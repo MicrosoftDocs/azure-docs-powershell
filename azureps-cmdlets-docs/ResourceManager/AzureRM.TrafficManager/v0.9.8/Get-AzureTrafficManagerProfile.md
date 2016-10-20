@@ -63,7 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group that contains the Traffic Manager profile.```yaml
+Specifies the name of a resource group that contains the Traffic Manager profile.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

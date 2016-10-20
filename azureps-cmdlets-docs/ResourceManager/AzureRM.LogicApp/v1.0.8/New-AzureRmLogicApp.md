@@ -200,7 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-Specifies the name of the App Service Plan. This parameter is required.```yaml
+Specifies the name of the App Service Plan. This parameter is required.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -246,7 +248,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefinitionLinkUri
-Specifies Definition link Uri of the Logic App. If DefinitionLinkUri is provided as parameter then user must provide the "DefinitionLinkContentVersion" parameter.```yaml
+Specifies Definition link Uri of the Logic App. If DefinitionLinkUri is provided as parameter then user must provide the "DefinitionLinkContentVersion" parameter.
+
+```yaml
 Type: String
 Parameter Sets: LogicAppWithDefinitionLinkParameterSet
 Aliases: 
@@ -259,7 +263,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefinitionLinkContentVersion
-Specifies the content version of the Definition link Uri.```yaml
+Specifies the content version of the Definition link Uri.
+
+```yaml
 Type: String
 Parameter Sets: LogicAppWithDefinitionLinkParameterSet
 Aliases: 
@@ -272,7 +278,9 @@ Accept wildcard characters: False
 ```
 
 ### -ParameterLinkUri
-Specifies parameter link Uri of the Logic App. If ParameterLinkUri is provided as parameter then user must provide the "ParameterLinkContentVersion" parameter.```yaml
+Specifies parameter link Uri of the Logic App. If ParameterLinkUri is provided as parameter then user must provide the "ParameterLinkContentVersion" parameter.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -285,7 +293,9 @@ Accept wildcard characters: False
 ```
 
 ### -ParameterLinkContentVersion
-Specifies the content version of the Parameter Link Uri of the Logic App.```yaml
+Specifies the content version of the Parameter Link Uri of the Logic App.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -329,7 +339,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -342,7 +354,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

@@ -68,7 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetName
-Name of the sub network.```yaml
+Name of the sub network.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -81,7 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -VnetId
-Identifier of the virtual network.```yaml
+Identifier of the virtual network.
+
+```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
@@ -94,7 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -107,7 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

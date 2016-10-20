@@ -118,7 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group for which this cmdlet updates a module.```yaml
+Specifies the name of a resource group for which this cmdlet updates a module.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

@@ -30,7 +30,9 @@ The **Remove-AzureVMAccessExtension** cmdlet removes the Virtual Machine Access 
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -43,7 +45,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the extension that this cmdlet removes.```yaml
+Specifies the name of the extension that this cmdlet removes.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ExtensionName
@@ -72,7 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.```yaml
+Specifies the name of the resource group of the virtual machine.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -85,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Specifies the name of a virtual machine. This cmdlet removes VMAccess for the virtual machine that this parameter specifies.```yaml
+Specifies the name of a virtual machine. This cmdlet removes VMAccess for the virtual machine that this parameter specifies.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName

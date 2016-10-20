@@ -113,7 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.```yaml
+Specifies the name of a resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -126,7 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
@@ -139,7 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies a local virtual machine to create. To obtain a virtual machine object, use the New-AzureVMConfig cmdlet. Configure the virtual machine by using other cmdlets, such as Set-AzureVMOperatingSystem, Set-AzureVMSourceImage, and Add-AzureVMNetworkInterface.```yaml
+Specifies a local virtual machine to create. To obtain a virtual machine object, use the New-AzureVMConfig cmdlet. Configure the virtual machine by using other cmdlets, such as Set-AzureVMOperatingSystem, Set-AzureVMSourceImage, and Add-AzureVMNetworkInterface.
+
+```yaml
 Type: PSVirtualMachine
 Parameter Sets: (All)
 Aliases: VMProfile

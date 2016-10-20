@@ -30,7 +30,9 @@ PS C:\>
 ## PARAMETERS
 
 ### -ConnectionType
-Gateway connection type:IPsec/Vnet2Vnet/ExpressRoute/VPNClient```yaml
+Gateway connection type:IPsec/Vnet2Vnet/ExpressRoute/VPNClient
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -44,7 +46,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation if you want to overrite a resource```yaml
+Do not ask for confirmation if you want to overrite a resource
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -57,7 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocalNetworkGateway2
-local network gateway.```yaml
+local network gateway.
+
+```yaml
 Type: PSLocalNetworkGateway
 Parameter Sets: (All)
 Aliases: 
@@ -70,7 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-location.```yaml
+location.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -83,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.```yaml
+The resource name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName
@@ -109,7 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.```yaml
+The resource group name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -148,7 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-An array of hashtables which represents resource tags.```yaml
+An array of hashtables which represents resource tags.
+
+```yaml
 Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
@@ -161,7 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGateway1
-First virtual network gateway.```yaml
+First virtual network gateway.
+
+```yaml
 Type: PSVirtualNetworkGateway
 Parameter Sets: (All)
 Aliases: 
@@ -174,7 +190,9 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGateway2
-Second virtual network gateway.```yaml
+Second virtual network gateway.
+
+```yaml
 Type: PSVirtualNetworkGateway
 Parameter Sets: (All)
 Aliases: 

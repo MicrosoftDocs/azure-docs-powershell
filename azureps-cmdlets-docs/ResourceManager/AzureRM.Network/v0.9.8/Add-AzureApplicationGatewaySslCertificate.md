@@ -33,7 +33,9 @@ This command gets an application gateway named ApplicationGateway01 and then add
 ## PARAMETERS
 
 ### -ApplicationGateway
-Specifies the name of application gateway to which this cmdlet adds an SSL certificate.```yaml
+Specifies the name of application gateway to which this cmdlet adds an SSL certificate.
+
+```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 

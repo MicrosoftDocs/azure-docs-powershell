@@ -61,7 +61,9 @@ If the value has been applied to any resources or resource groups, the command f
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 

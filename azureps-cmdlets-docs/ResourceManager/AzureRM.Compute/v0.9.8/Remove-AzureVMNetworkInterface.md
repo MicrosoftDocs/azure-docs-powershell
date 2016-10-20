@@ -62,7 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkInterfaceIDs
-The virtual machine network interface's ID.```yaml
+The virtual machine network interface's ID.
+
+```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: Id, NicIds

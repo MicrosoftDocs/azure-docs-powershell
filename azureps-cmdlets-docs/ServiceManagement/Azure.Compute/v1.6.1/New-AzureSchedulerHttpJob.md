@@ -428,7 +428,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases: 

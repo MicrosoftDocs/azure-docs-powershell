@@ -31,7 +31,9 @@ This command gets properties from an HDInsight service from location East US 2.
 ## PARAMETERS
 
 ### -Location
-Gets or sets the datacenter location for the cluster.```yaml
+Gets or sets the datacenter location for the cluster.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

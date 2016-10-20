@@ -32,7 +32,9 @@ This command removes an availability set named AvailablitySet03 in the resource 
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -45,7 +47,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the availability set to remove.```yaml
+Specifies the name of the availability set to remove.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName, AvailabilitySetName
@@ -74,7 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.```yaml
+Specifies the name of a resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

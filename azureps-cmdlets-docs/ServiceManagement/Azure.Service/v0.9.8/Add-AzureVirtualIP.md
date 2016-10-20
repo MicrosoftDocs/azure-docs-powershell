@@ -44,7 +44,9 @@ This command adds a virtual IP address to a service.
 ### -InformationAction
 Not Specified
 
-The following values are permitted for this object type.```yaml
+The following values are permitted for this object type.
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -57,7 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified```yaml
+Not Specified
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv
@@ -70,7 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified```yaml
+Not Specified
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: pv

@@ -64,7 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Specifies the name of a database where the threat detection policy should be removed.```yaml
+Specifies the name of a database where the threat detection policy should be removed.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -92,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -105,7 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

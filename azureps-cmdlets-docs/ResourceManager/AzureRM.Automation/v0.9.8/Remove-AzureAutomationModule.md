@@ -93,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group in which this cmdlet removes a module.```yaml
+Specifies the name of a resource group in which this cmdlet removes a module.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

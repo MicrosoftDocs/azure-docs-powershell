@@ -64,7 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -Environment
-The Microsoft Azure environment name to use```yaml
+The Microsoft Azure environment name to use
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -77,7 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases: 

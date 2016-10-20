@@ -29,7 +29,9 @@ The **Remove-AzureRmEnvironment** cmdlet removes endpoints and metadata informat
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 

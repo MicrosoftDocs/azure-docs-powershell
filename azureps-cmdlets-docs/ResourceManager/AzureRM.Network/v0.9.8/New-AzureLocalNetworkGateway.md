@@ -29,7 +29,9 @@ PS C:\>
 ## PARAMETERS
 
 ### -AddressPrefix
-The address prefixes of the virtual network```yaml
+The address prefixes of the virtual network
+
+```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 Aliases: 
@@ -42,7 +44,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation if you want to overrite a resource```yaml
+Do not ask for confirmation if you want to overrite a resource
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -55,7 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -GatewayIpAddress
-IP address of local network gateway.```yaml
+IP address of local network gateway.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -68,7 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-location.```yaml
+location.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -81,7 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.```yaml
+The resource name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName
@@ -107,7 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.```yaml
+The resource group name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -120,7 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-An array of hashtables which represents resource tags.```yaml
+An array of hashtables which represents resource tags.
+
+```yaml
 Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 

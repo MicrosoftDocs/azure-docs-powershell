@@ -46,7 +46,9 @@ PS C:\> # Cluster info
 ## PARAMETERS
 
 ### -ClusterCredential
-The credentials with which to connect to the cluster.```yaml
+The credentials with which to connect to the cluster.
+
+```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
@@ -59,7 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterName
-The name of the cluster.```yaml
+The name of the cluster.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -103,7 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.```yaml
+The name of the resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

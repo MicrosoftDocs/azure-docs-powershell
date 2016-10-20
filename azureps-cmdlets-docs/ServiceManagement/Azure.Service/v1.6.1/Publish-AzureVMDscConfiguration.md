@@ -128,7 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDependencyDetection
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -141,7 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationDataPath
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -154,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalPath
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
@@ -167,7 +173,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -195,7 +203,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -208,7 +218,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

@@ -94,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group. This cmdlet deletes a Traffic Manager profile in the group that this parameter specifies.```yaml
+Specifies the name of a resource group. This cmdlet deletes a Traffic Manager profile in the group that this parameter specifies.
+
+```yaml
 Type: String
 Parameter Sets: Fields
 Aliases: 
@@ -107,7 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfile
-Specifies a TrafficManagerProfile object to delete.```yaml
+Specifies a TrafficManagerProfile object to delete.
+
+```yaml
 Type: TrafficManagerProfile
 Parameter Sets: Object
 Aliases: 

@@ -39,7 +39,9 @@ This command gets all the versions of **VMImage** that match the specified value
 ## PARAMETERS
 
 ### -FilterExpression
-Specifies a filter expression.```yaml
+Specifies a filter expression.
+
+```yaml
 Type: String
 Parameter Sets: ListVMImage
 Aliases: 
@@ -52,7 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the location of a VMImage.```yaml
+Specifies the location of a VMImage.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -65,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -Offer
-Specifies the type of VMImage offer. To obtain an image offer, use the Get-AzureVMImageOffer cmdlet.```yaml
+Specifies the type of VMImage offer. To obtain an image offer, use the Get-AzureVMImageOffer cmdlet.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -94,7 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublisherName
-Specifies the publisher of a VMImage. To obtain an image publisher, use the Get-AzureVMImagePublisher cmdlet.```yaml
+Specifies the publisher of a VMImage. To obtain an image publisher, use the Get-AzureVMImagePublisher cmdlet.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -107,7 +115,9 @@ Accept wildcard characters: False
 ```
 
 ### -Skus
-Specifies a VMImage SKU. To obtain an SKU, use the Get-AzureVMImageSku cmdlet.```yaml
+Specifies a VMImage SKU. To obtain an SKU, use the Get-AzureVMImageSku cmdlet.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -120,7 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: GetVMImageDetail
 Aliases: 

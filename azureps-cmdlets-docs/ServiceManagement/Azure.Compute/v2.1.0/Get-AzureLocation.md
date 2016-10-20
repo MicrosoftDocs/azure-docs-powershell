@@ -36,7 +36,9 @@ This command gets a list of available data centers, and their properties, for th
 ## PARAMETERS
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. If you do not specify a profile, this cmdlet reads from the local default profile.```yaml
+Specifies the Azure profile from which this cmdlet reads. If you do not specify a profile, this cmdlet reads from the local default profile.
+
+```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases: 
@@ -49,7 +51,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -62,7 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

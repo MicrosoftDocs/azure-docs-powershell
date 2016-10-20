@@ -38,7 +38,9 @@ The virtual machine belongs to the availability set stored in $AvailabilitySet.
 ## PARAMETERS
 
 ### -AvailabilitySetId
-Specifies the ID of an availability set. To obtain an availability set object, use the Get-AzureAvailabilitySet cmdlet. The availability set object contains an ID property.```yaml
+Specifies the ID of an availability set. To obtain an availability set object, use the Get-AzureAvailabilitySet cmdlet. The availability set object contains an ID property.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -67,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Specifies a name for the virtual machine.```yaml
+Specifies a name for the virtual machine.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName, Name
@@ -80,7 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -VMSize
-Specifies the size for the virtual machine.```yaml
+Specifies the size for the virtual machine.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

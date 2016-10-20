@@ -38,7 +38,9 @@ This command removes the virtual machine named VirtualMachine07 in the resource 
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -82,7 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.```yaml
+Specifies the name of a resource group.
+
+```yaml
 Type: String
 Parameter Sets: ResourceGroupNameParameterSetName
 Aliases: 
@@ -95,7 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The resource group name.```yaml
+The resource group name.
+
+```yaml
 Type: String
 Parameter Sets: IdParameterSetName
 Aliases: 

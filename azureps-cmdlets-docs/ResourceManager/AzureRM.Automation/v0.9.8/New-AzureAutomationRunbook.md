@@ -64,7 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogProgress
-Indicate whether progress logging should be turned on or off.```yaml
+Indicate whether progress logging should be turned on or off.
+
+```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
@@ -77,7 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogVerbose
-Indicate whether verbose logging should be turned on or off.```yaml
+Indicate whether verbose logging should be turned on or off.
+
+```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
@@ -121,7 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.```yaml
+The resource group name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -149,7 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Runbook definition type.```yaml
+Runbook definition type.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

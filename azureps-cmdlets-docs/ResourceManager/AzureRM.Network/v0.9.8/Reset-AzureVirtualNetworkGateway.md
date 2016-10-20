@@ -41,7 +41,9 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGateway
-The virtualNetworkGateway```yaml
+The virtualNetworkGateway
+
+```yaml
 Type: PSVirtualNetworkGateway
 Parameter Sets: (All)
 Aliases: 

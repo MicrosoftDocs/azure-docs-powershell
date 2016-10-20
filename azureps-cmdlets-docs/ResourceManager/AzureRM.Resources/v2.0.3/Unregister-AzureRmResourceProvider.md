@@ -45,7 +45,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 

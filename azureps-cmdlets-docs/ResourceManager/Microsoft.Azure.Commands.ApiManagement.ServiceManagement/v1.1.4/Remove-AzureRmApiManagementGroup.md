@@ -78,7 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces delete operation (prevents confirmation dialog). This parameter is optional. Default value is false.```yaml
+Forces delete operation (prevents confirmation dialog). This parameter is optional. Default value is false.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -91,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -104,7 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

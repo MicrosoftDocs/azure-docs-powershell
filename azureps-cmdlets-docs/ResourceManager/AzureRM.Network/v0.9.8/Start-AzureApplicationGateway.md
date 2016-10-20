@@ -32,7 +32,9 @@ This command starts the application gateway stored in the $AppGw variable.
 ## PARAMETERS
 
 ### -ApplicationGateway
-Specifies the application gateway to start.```yaml
+Specifies the application gateway to start.
+
+```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 
