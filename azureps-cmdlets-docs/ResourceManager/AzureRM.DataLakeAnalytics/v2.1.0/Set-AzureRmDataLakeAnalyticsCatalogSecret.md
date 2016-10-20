@@ -85,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseHost
-Specifies the host name for the database the secret is associated with in the format 'mydatabase.contoso.com'.```yaml
+Specifies the host name for the database the secret is associated with in the format 'mydatabase.contoso.com'.
+
+```yaml
 Type: String
 Parameter Sets: Specify full URI
 Aliases: Host
@@ -128,7 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -141,7 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

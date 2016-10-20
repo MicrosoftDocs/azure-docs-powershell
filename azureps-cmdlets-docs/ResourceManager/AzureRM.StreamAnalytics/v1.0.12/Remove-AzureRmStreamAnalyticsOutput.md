@@ -62,7 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics output without asking for confirmation.```yaml
+If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics output without asking for confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -90,7 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified```yaml
+Not Specified
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: pv

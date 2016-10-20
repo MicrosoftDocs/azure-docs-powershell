@@ -146,7 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -HBaseEnv
-Gets the HBase Env configurations of this HDInsight cluster.```yaml
+Gets the HBase Env configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
@@ -159,7 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -HBaseSite
-Gets the HBase Site configurations of this HDInsight cluster.```yaml
+Gets the HBase Site configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
@@ -187,7 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -HiveEnv
-Gets the Hive Env configurations of this HDInsight cluster.```yaml
+Gets the Hive Env configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
@@ -200,7 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -HiveSite
-Gets the Hive Site configurations of this HDInsight cluster.```yaml
+Gets the Hive Site configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
@@ -213,7 +221,9 @@ Accept wildcard characters: False
 ```
 
 ### -MapRed
-Gets the MapRed Site configurations of this HDInsight cluster.```yaml
+Gets the MapRed Site configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
@@ -226,7 +236,9 @@ Accept wildcard characters: False
 ```
 
 ### -OozieEnv
-Gets the Oozie Env configurations of this HDInsight cluster.```yaml
+Gets the Oozie Env configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
@@ -239,7 +251,9 @@ Accept wildcard characters: False
 ```
 
 ### -OozieSite
-Gets the Oozie Site configurations of this HDInsight cluster.```yaml
+Gets the Oozie Site configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
@@ -283,7 +297,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tez
-Gets the Tez Site configurations of this HDInsight cluster.```yaml
+Gets the Tez Site configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
@@ -296,7 +312,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebHCat
-Gets the WebHCat Site configurations of this HDInsight cluster.```yaml
+Gets the WebHCat Site configurations of this HDInsight cluster.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 

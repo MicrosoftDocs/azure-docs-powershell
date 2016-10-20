@@ -96,7 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestedServiceObjectiveName
-The name of the service objective to assign to the Azure SQL Database.```yaml
+The name of the service objective to assign to the Azure SQL Database.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -109,7 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -ElasticPoolName
-The name of the Azure SQL elastic pool to put the database in.```yaml
+The name of the Azure SQL elastic pool to put the database in.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -122,7 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tags to associate with the Azure SQL Database.```yaml
+The tags to associate with the Azure SQL Database.
+
+```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
 Aliases: 
@@ -150,7 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group of the Azure SQL Server that contains the Azure SQL Database.```yaml
+Name of resource group of the Azure SQL Server that contains the Azure SQL Database.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

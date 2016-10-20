@@ -232,7 +232,9 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Current storage account connection details.```yaml
+Current storage account connection details.
+
+```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
 Aliases: 

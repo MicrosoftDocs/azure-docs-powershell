@@ -104,7 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the location of the virtual machine.```yaml
+Specifies the location of the virtual machine.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -117,7 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the custom script extension.```yaml
+Specifies the name of the custom script extension.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ExtensionName
@@ -146,7 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.```yaml
+Specifies the name of the resource group of the virtual machine.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -231,7 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -TypeHandlerVersion
-Specifies the version of the extension to use for this virtual machine. To obtain the version, run the Get-AzureVMExtensionImage cmdlet with a value of Microsoft.Compute for the PublisherName parameter and VMAccessAgent for the Type parameter.```yaml
+Specifies the version of the extension to use for this virtual machine. To obtain the version, run the Get-AzureVMExtensionImage cmdlet with a value of Microsoft.Compute for the PublisherName parameter and VMAccessAgent for the Type parameter.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: HandlerVersion, Version
@@ -244,7 +252,9 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Specifies the name of a virtual machine. This cmdlet adds the custom script extension for the virtual machine that this parameter specifies.```yaml
+Specifies the name of a virtual machine. This cmdlet adds the custom script extension for the virtual machine that this parameter specifies.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName

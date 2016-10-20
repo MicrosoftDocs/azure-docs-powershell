@@ -66,7 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -Plan
-Specifies the plan for the Automation account. Valid values are: Basic and Free.```yaml
+Specifies the plan for the Automation account. Valid values are: Basic and Free.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -96,7 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group to which this cmdlet adds an Automation account.```yaml
+Specifies the name of a resource group to which this cmdlet adds an Automation account.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -109,7 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies tags for the Automation account.```yaml
+Specifies tags for the Automation account.
+
+```yaml
 Type: IDictionary
 Parameter Sets: (All)
 Aliases: Tag

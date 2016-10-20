@@ -78,7 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group in which this cmdlet gets Automation accounts.```yaml
+Specifies the name of a resource group in which this cmdlet gets Automation accounts.
+
+```yaml
 Type: String
 Parameter Sets: ByAll
 Aliases: 

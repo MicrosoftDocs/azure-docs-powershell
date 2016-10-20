@@ -63,7 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteAll
-Specify to remove the service and the underlying disk blob(s).```yaml
+Specify to remove the service and the underlying disk blob(s).
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -106,7 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases: 

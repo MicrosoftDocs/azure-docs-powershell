@@ -60,7 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the network security group to get.```yaml
+Specifies the name of the resource group that contains the network security group to get.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

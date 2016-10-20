@@ -91,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group. This cmdlet removes a network security group from the resource group that this parameter specifies.```yaml
+Specifies the name of a resource group. This cmdlet removes a network security group from the resource group that this parameter specifies.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

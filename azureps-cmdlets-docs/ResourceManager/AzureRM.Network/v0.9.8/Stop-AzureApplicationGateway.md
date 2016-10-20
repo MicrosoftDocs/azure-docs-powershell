@@ -31,7 +31,9 @@ This command stops the application gateway stored in the $AppGw variable.
 ## PARAMETERS
 
 ### -ApplicationGateway
-Specifies the application gateway to stop.```yaml
+Specifies the application gateway to stop.
+
+```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 

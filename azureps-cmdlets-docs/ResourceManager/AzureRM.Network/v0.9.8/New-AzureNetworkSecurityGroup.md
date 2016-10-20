@@ -31,7 +31,9 @@ The **New-AzureNetworkSecurityGroup** cmdlet creates an  Azure network security 
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -89,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group. This cmdlet creates a network security group in the resource group that this parameter specifies.```yaml
+Specifies the name of a resource group. This cmdlet creates a network security group in the resource group that this parameter specifies.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -102,7 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityRules
-Specifies a list of network security rule objects to create in a network security group.```yaml
+Specifies a list of network security rule objects to create in a network security group.
+
+```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSSecurityRule]
 Parameter Sets: (All)
 Aliases: 
@@ -115,7 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Specifies a dictionary of tags to associate with a network security group.```yaml
+Specifies a dictionary of tags to associate with a network security group.
+
+```yaml
 Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 

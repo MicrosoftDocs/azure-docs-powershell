@@ -206,7 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBootDiagnostics
-Boot diagnostics is enabled by default on the Virtual Machine. This allows the user to disable that behavior.```yaml
+Boot diagnostics is enabled by default on the Virtual Machine. This allows the user to disable that behavior.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -225,7 +227,9 @@ Possible values are:
 - Windows_Client
 - Windows_Server
 
-If this element is included in a request for an update, the value must match the intitial value. This value cannot be updated.```yaml
+If this element is included in a request for an update, the value must match the intitial value. This value cannot be updated.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -253,7 +257,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -266,7 +272,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

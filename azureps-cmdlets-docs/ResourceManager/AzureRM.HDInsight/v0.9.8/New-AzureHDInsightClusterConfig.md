@@ -87,7 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountKey
-Gets or sets the StorageKey for the default Azure Storage Account.```yaml
+Gets or sets the StorageKey for the default Azure Storage Account.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -100,7 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountName
-Gets or sets the StorageName for the default Azure Storage Account.```yaml
+Gets or sets the StorageName for the default Azure Storage Account.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -113,7 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -HeadNodeSize
-Gets or sets the size of the Head Node.```yaml
+Gets or sets the size of the Head Node.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -126,7 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -HiveMetastore
-Gets or sets the database to store the metadata for Hive.```yaml
+Gets or sets the database to store the metadata for Hive.
+
+```yaml
 Type: AzureHDInsightMetastore
 Parameter Sets: (All)
 Aliases: 
@@ -139,7 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -OozieMetastore
-Gets or sets the database to store the metadata for Oozie.```yaml
+Gets or sets the database to store the metadata for Oozie.
+
+```yaml
 Type: AzureHDInsightMetastore
 Parameter Sets: (All)
 Aliases: 
@@ -168,7 +178,9 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerNodeSize
-Gets or sets the size of the Data Node.```yaml
+Gets or sets the size of the Data Node.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -181,7 +193,9 @@ Accept wildcard characters: False
 ```
 
 ### -ZookeeperNodeSize
-Gets or sets the size of the Zookeeper Node.```yaml
+Gets or sets the size of the Zookeeper Node.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

@@ -33,7 +33,9 @@ This example gets the location of the Service Bus.
 ## PARAMETERS
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases: 

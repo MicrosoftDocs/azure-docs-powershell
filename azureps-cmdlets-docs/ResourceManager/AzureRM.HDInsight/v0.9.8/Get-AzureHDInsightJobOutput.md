@@ -50,7 +50,9 @@ This command gets the log output from the cluster named Hadoop-001.
 ## PARAMETERS
 
 ### -ClusterCredential
-The credentials with which to connect to the cluster.```yaml
+The credentials with which to connect to the cluster.
+
+```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
@@ -63,7 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterName
-The name of the cluster.```yaml
+The name of the cluster.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -76,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultContainer
-The default container name.```yaml
+The default container name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -89,7 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountKey
-The default storage account key.```yaml
+The default storage account key.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -102,7 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountName
-The default storage account name.```yaml
+The default storage account name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -146,7 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Gets or sets the name of the resource group.```yaml
+Gets or sets the name of the resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

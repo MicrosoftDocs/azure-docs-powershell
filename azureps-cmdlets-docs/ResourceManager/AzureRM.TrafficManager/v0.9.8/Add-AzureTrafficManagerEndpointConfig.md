@@ -213,7 +213,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-The resource id of the endpoint.```yaml
+The resource id of the endpoint.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

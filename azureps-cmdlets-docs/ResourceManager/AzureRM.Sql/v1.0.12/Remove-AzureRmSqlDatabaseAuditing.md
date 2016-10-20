@@ -42,7 +42,9 @@ That database is located on Server01, which is assigned to the resource group na
 ## PARAMETERS
 
 ### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.```yaml
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -55,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the server containing the database.```yaml
+Specifies the name of the server containing the database.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -68,7 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Specifies the name of the database.```yaml
+Specifies the name of the database.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -81,7 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group containing the database.```yaml
+Specifies the name of the resource group containing the database.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -94,7 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -107,7 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

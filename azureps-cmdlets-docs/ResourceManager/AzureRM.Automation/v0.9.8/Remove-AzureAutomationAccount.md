@@ -80,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group from which this cmdlet removes an Automation account.```yaml
+Specifies the name of the resource group from which this cmdlet removes an Automation account.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

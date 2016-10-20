@@ -41,7 +41,9 @@ This command gets a list of SSL certificates from the application gateway named 
 ## PARAMETERS
 
 ### -ApplicationGateway
-Specifies the application gateway object that contains the SSL certificate.```yaml
+Specifies the application gateway object that contains the SSL certificate.
+
+```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 

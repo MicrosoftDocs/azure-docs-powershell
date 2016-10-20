@@ -41,7 +41,9 @@ This command gets the instance view for the extension named CustomScriptExtensio
 ## PARAMETERS
 
 ### -Name
-Specifies the name of an extension. This cmdlet gets properties for the extension that this parameter specifies.```yaml
+Specifies the name of an extension. This cmdlet gets properties for the extension that this parameter specifies.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ExtensionName
@@ -70,7 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.```yaml
+Specifies the name of a resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -83,7 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Indicates that this cmdlet gets only the instance view of an extension.```yaml
+Indicates that this cmdlet gets only the instance view of an extension.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -96,7 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Specifies the name of a virtual machine. This cmdlet gets properties of an extension from the virtual machine that this parameter specifies.```yaml
+Specifies the name of a virtual machine. This cmdlet gets properties of an extension from the virtual machine that this parameter specifies.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName

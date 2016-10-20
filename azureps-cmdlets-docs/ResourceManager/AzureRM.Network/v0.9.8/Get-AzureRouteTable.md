@@ -85,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the route tables that this cmdlet gets.```yaml
+Specifies the name of the resource group that contains the route tables that this cmdlet gets.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

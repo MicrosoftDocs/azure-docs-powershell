@@ -76,7 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultContainer
-The default container name.```yaml
+The default container name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -89,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountKey
-The default storage account key.```yaml
+The default storage account key.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -102,7 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountName
-The default storage account name.```yaml
+The default storage account name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

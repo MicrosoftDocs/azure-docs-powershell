@@ -32,7 +32,9 @@ This command removes the application gateway named ApplicationGateway01 in the r
 ## PARAMETERS
 
 ### -Force
-Forces the deletion of the application gateway regardless of whether resources are assigned to it.```yaml
+Forces the deletion of the application gateway regardless of whether resources are assigned to it.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -60,7 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.```yaml
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -89,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group name that contains the application gateway.```yaml
+Specifies the name of the resource group name that contains the application gateway.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

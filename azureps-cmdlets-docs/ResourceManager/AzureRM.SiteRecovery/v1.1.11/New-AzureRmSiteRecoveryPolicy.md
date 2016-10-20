@@ -42,7 +42,9 @@ The replication policy is used to specify replication settings such as the repli
 ## PARAMETERS
 
 ### -AllowReplicaDeletion
-Switch parameter indicating whether replica entity deletion is to be enabled.```yaml
+Switch parameter indicating whether replica entity deletion is to be enabled.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
@@ -89,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionEnabled
-Switch parameter indicating whether compression is to be Enabled.```yaml
+Switch parameter indicating whether compression is to be Enabled.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 

@@ -189,7 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -BootstrapVersion
-Specifies the version of chef-client to be installed with the extension.```yaml
+Specifies the version of chef-client to be installed with the extension.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -247,7 +249,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -260,7 +264,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

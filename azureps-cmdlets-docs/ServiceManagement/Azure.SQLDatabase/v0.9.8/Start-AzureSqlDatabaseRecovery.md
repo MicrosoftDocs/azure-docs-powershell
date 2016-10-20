@@ -85,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetServerName
-The name of the server you want to restore the database to. This can be the same server as the source database or a different server name.```yaml
+The name of the server you want to restore the database to. This can be the same server as the source database or a different server name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -129,7 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureProfile
 Parameter Sets: (All)
 Aliases: 

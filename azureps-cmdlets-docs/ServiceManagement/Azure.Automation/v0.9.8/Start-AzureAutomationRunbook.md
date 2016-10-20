@@ -78,7 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureProfile
 Parameter Sets: (All)
 Aliases: 
@@ -91,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -RunOn
-Optional name of the hybrid agent which should execute the runbook```yaml
+Optional name of the hybrid agent which should execute the runbook
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: HybridWorker

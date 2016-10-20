@@ -208,7 +208,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies the ID of application that a user must.```yaml
+Specifies the ID of application that a user must.
+
+```yaml
 Type: Guid
 Parameter Sets: ByObjectId
 Aliases: 

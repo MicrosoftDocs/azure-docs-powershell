@@ -49,7 +49,9 @@ This command creates a .zip package for the given script and any dependent resou
 ## PARAMETERS
 
 ### -AdditionalPath
-Path to a file or a directory to include in  the configuration archive```yaml
+Path to a file or a directory to include in  the configuration archive
+
+```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
@@ -78,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationDataPath
-Path to a .psd1 file that specifies the data for the Configuration```yaml
+Path to a .psd1 file that specifies the data for the Configuration
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -137,7 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDependencyDetection
-Excludes DSC resource dependencies from the configuration archive.```yaml
+Excludes DSC resource dependencies from the configuration archive.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -213,7 +219,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Outputs the blob url for configuration archive path```yaml
+Outputs the blob url for configuration archive path
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 

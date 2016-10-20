@@ -69,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group of the server containing the database to retrieve.```yaml
+The name of the resource group of the server containing the database to retrieve.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

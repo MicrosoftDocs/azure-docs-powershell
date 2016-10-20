@@ -83,7 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultCredentialSettings
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: KeyVaultCredentialSettings
 Parameter Sets: EnableSqlServerExtension
 Aliases: 

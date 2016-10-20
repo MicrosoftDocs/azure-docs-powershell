@@ -105,7 +105,9 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: NewExtension, SetExtensionUsingThumbprint
 Aliases: 
@@ -118,7 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountKey
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: NewExtension, NewExtensionUsingThumbprint
 Aliases: 
@@ -131,7 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountEndpoint
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: NewExtension, NewExtensionUsingThumbprint
 Aliases: 
@@ -174,7 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionId
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: NewExtension, NewExtensionUsingThumbprint
 Aliases: 
@@ -202,7 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -215,7 +225,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv

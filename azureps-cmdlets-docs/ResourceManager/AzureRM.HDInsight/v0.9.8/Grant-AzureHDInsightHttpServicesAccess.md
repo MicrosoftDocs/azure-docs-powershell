@@ -39,7 +39,9 @@ This command grants HTTP access to the cluster named Hadoop-001.
 ## PARAMETERS
 
 ### -ClusterName
-Gets or sets the name of the cluster.```yaml
+Gets or sets the name of the cluster.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -52,7 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -HttpCredential
-Gets or sets the login for the cluster's user.```yaml
+Gets or sets the login for the cluster's user.
+
+```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
@@ -81,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Gets or sets the name of the resource group.```yaml
+Gets or sets the name of the resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

@@ -60,7 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -CommandEnvironment
-The command line environment for the mappers or the reducers.```yaml
+The command line environment for the mappers or the reducers.
+
+```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
@@ -88,7 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -File
-The file for the jobDetails.```yaml
+The file for the jobDetails.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

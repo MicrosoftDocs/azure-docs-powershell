@@ -57,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -CollationName
-The name of the Azure SQL Database collation to use.```yaml
+The name of the Azure SQL Database collation to use.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -70,7 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -CatalogCollation
-The name of the Azure SQL Database catalog collation to use.```yaml
+The name of the Azure SQL Database catalog collation to use.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -119,7 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestedServiceObjectiveName
-The name of the service objective to assign to the Azure SQL Database.```yaml
+The name of the service objective to assign to the Azure SQL Database.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -132,7 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -ElasticPoolName
-The name of the elastic pool to put the database in.```yaml
+The name of the elastic pool to put the database in.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -145,7 +153,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tags to associate to the Azure SQL Database Server.```yaml
+The tags to associate to the Azure SQL Database Server.
+
+```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
 Aliases: 
@@ -173,7 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group that the Azure SQL Server is in.```yaml
+Name of resource group that the Azure SQL Server is in.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 

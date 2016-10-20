@@ -32,7 +32,9 @@ This command removes the extension named ContosoTest from the virtual machine na
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -45,7 +47,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the extension to remove.```yaml
+Specifies the name of the extension to remove.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ExtensionName
@@ -74,7 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.```yaml
+Specifies the name of a resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -87,7 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Specifies the name of a virtual machine. This cmdlet removes extensions from the virtual machine that this parameter specifies.```yaml
+Specifies the name of a virtual machine. This cmdlet removes extensions from the virtual machine that this parameter specifies.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName

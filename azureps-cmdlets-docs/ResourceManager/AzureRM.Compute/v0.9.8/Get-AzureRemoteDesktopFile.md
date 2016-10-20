@@ -98,7 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.```yaml
+Specifies the name of a resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -111,7 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -Launch
-When specified, launches a remote desktop session to the specified virtual machine.```yaml
+When specified, launches a remote desktop session to the specified virtual machine.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: Launch
 Aliases: 

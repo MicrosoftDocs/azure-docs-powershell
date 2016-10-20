@@ -197,7 +197,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.```yaml
+In-memory profile.
+
+```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases: 
@@ -210,7 +212,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetParametersFile
-The WebDeploy SetParameters.xml file to transform configuration within the package.```yaml
+The WebDeploy SetParameters.xml file to transform configuration within the package.
+
+```yaml
 Type: String
 Parameter Sets: Package
 Aliases: 
@@ -238,7 +242,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tokens
-The configuration tokens to use for the deployment.```yaml
+The configuration tokens to use for the deployment.
+
+```yaml
 Type: String
 Parameter Sets: Package
 Aliases: 

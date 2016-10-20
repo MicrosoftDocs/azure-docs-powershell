@@ -59,7 +59,9 @@ The command specifies the resource group to which the table belongs and the loca
 ## PARAMETERS
 
 ### -Force
-Indicates that this cmdlet creates a route table even if a route table that has the same name already exists.```yaml
+Indicates that this cmdlet creates a route table even if a route table that has the same name already exists.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -119,7 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group in which this cmdlet creates a route table.```yaml
+Specifies the name of the resource group in which this cmdlet creates a route table.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -132,7 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -Route
-Specifies an array of Route objects to associate with the route table.```yaml
+Specifies an array of Route objects to associate with the route table.
+
+```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSRoute]
 Parameter Sets: (All)
 Aliases: 
@@ -145,7 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Specifies a dictionary of tags to associate with the route table.```yaml
+Specifies a dictionary of tags to associate with the route table.
+
+```yaml
 Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
