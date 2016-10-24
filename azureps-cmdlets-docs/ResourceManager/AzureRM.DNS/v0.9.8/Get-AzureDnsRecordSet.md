@@ -208,10 +208,10 @@ There will be at most one **RecordSet** returned if the *Name* and *RecordType* 
 
 ## RELATED LINKS
 
-[New-AzureDnsRecordSet](.\New-AzureDnsRecordSet.md)
+[New-AzureDnsRecordSet](./New-AzureDnsRecordSet.md)
 
-[Remove-AzureDnsRecordSet](.\Remove-AzureDnsRecordSet.md)
+[Remove-AzureDnsRecordSet](./Remove-AzureDnsRecordSet.md)
 
-[Set-AzureDnsRecordSet](.\Set-AzureDnsRecordSet.md)
+[Set-AzureDnsRecordSet](./Set-AzureDnsRecordSet.md)
 
 

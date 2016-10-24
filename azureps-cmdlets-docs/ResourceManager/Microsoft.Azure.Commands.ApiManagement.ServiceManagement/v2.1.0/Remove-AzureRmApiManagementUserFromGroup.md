@@ -133,8 +133,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmApiManagementUserToGroup](.\Add-AzureRmApiManagementUserToGroup.md)
+[Add-AzureRmApiManagementUserToGroup](./Add-AzureRmApiManagementUserToGroup.md)
 
-[Get-AzureRmApiManagementUser](.\Get-AzureRmApiManagementUser.md)
+[Get-AzureRmApiManagementUser](./Get-AzureRmApiManagementUser.md)
 
 

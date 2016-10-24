@@ -215,16 +215,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmLoadBalancerInboundNatRuleConfig](.\Add-AzureRmLoadBalancerInboundNatRuleConfig.md)
+[Add-AzureRmLoadBalancerInboundNatRuleConfig](./Add-AzureRmLoadBalancerInboundNatRuleConfig.md)
 
-[Get-AzureRmLoadBalancerInboundNatRuleConfig](.\Get-AzureRmLoadBalancerInboundNatRuleConfig.md)
+[Get-AzureRmLoadBalancerInboundNatRuleConfig](./Get-AzureRmLoadBalancerInboundNatRuleConfig.md)
 
-[New-AzureRmLoadBalancerFrontendIpConfig](.\New-AzureRmLoadBalancerFrontendIpConfig.md)
+[New-AzureRmLoadBalancerFrontendIpConfig](./New-AzureRmLoadBalancerFrontendIpConfig.md)
 
-[New-AzureRmPublicIpAddress](.\New-AzureRmPublicIpAddress.md)
+[New-AzureRmPublicIpAddress](./New-AzureRmPublicIpAddress.md)
 
-[Remove-AzureRmLoadBalancerInboundNatRuleConfig](.\Remove-AzureRmLoadBalancerInboundNatRuleConfig.md)
+[Remove-AzureRmLoadBalancerInboundNatRuleConfig](./Remove-AzureRmLoadBalancerInboundNatRuleConfig.md)
 
-[Set-AzureRmLoadBalancerInboundNatRuleConfig](.\Set-AzureRmLoadBalancerInboundNatRuleConfig.md)
+[Set-AzureRmLoadBalancerInboundNatRuleConfig](./Set-AzureRmLoadBalancerInboundNatRuleConfig.md)
 
 

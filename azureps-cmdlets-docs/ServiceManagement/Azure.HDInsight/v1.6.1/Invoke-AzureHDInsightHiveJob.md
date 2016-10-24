@@ -196,8 +196,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureHDInsightHiveJobDefinition](.\New-AzureHDInsightHiveJobDefinition.md)
+[New-AzureHDInsightHiveJobDefinition](./New-AzureHDInsightHiveJobDefinition.md)
 
-[Use-AzureHDInsightCluster](.\Use-AzureHDInsightCluster.md)
+[Use-AzureHDInsightCluster](./Use-AzureHDInsightCluster.md)
 
 

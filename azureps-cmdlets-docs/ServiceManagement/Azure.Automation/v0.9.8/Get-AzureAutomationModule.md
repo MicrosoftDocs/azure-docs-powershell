@@ -105,10 +105,10 @@ Microsoft.Azure.Commands.Automation.Model.Module
 
 ## RELATED LINKS
 
-[New-AzureAutomationModule](.\New-AzureAutomationModule.md)
+[New-AzureAutomationModule](./New-AzureAutomationModule.md)
 
-[Set-AzureAutomationModule](.\Set-AzureAutomationModule.md)
+[Set-AzureAutomationModule](./Set-AzureAutomationModule.md)
 
-[Remove-AzureAutomationModule](.\Remove-AzureAutomationModule.md)
+[Remove-AzureAutomationModule](./Remove-AzureAutomationModule.md)
 
 

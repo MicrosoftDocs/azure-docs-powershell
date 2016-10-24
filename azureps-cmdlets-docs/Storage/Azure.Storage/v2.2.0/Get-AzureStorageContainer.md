@@ -204,10 +204,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureStorageContainer](.\New-AzureStorageContainer.md)
+[New-AzureStorageContainer](./New-AzureStorageContainer.md)
 
-[Remove-AzureStorageContainer](.\Remove-AzureStorageContainer.md)
+[Remove-AzureStorageContainer](./Remove-AzureStorageContainer.md)
 
-[Set-AzureStorageContainerAcl](.\Set-AzureStorageContainerAcl.md)
+[Set-AzureStorageContainerAcl](./Set-AzureStorageContainerAcl.md)
 
 

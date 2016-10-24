@@ -247,8 +247,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseImportExportStatus](.\Get-AzureRmSqlDatabaseImportExportStatus.md)
+[Get-AzureRmSqlDatabaseImportExportStatus](./Get-AzureRmSqlDatabaseImportExportStatus.md)
 
-[New-AzureRmSqlDatabaseImport](.\New-AzureRmSqlDatabaseImport.md)
+[New-AzureRmSqlDatabaseImport](./New-AzureRmSqlDatabaseImport.md)
 
 

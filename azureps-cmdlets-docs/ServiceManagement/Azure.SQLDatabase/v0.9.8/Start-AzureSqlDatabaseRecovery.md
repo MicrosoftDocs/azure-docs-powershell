@@ -167,8 +167,8 @@ PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"
 
 ## RELATED LINKS
 
-[Start-AzureSqlDatabaseRestore](.\Start-AzureSqlDatabaseRestore.md)
+[Start-AzureSqlDatabaseRestore](./Start-AzureSqlDatabaseRestore.md)
 
-[Get-AzureSqlRecoverableDatabase](.\Get-AzureSqlRecoverableDatabase.md)
+[Get-AzureSqlRecoverableDatabase](./Get-AzureSqlRecoverableDatabase.md)
 
 

@@ -290,6 +290,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure Service Cmdlets](.\Azure.Service.md)
+[Azure Service Cmdlets](./Azure.Service.md)
 
 

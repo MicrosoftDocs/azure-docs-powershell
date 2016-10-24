@@ -177,10 +177,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlServerActiveDirectoryAdministrator](.\Get-AzureRmSqlServerActiveDirectoryAdministrator.md)
+[Get-AzureRmSqlServerActiveDirectoryAdministrator](./Get-AzureRmSqlServerActiveDirectoryAdministrator.md)
 
-[Remove-AzureRmSqlServerActiveDirectoryAdministrator](.\Remove-AzureRmSqlServerActiveDirectoryAdministrator.md)
+[Remove-AzureRmSqlServerActiveDirectoryAdministrator](./Remove-AzureRmSqlServerActiveDirectoryAdministrator.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

@@ -11,15 +11,15 @@ Locale: en-US
 Azure PowerShell is a command-line shell and scripting language designed to help information technology (IT) professionals automate system administration tasks. To install the latest Azure PowerShell version and associate it with your Azure subscription, see How to install and configure Azure PowerShell.
 
 ## AzureRM.Tags Cmdlets
-### [Get-AzureRmTag](.\Get-AzureRmTag.md)
+### [Get-AzureRmTag](./Get-AzureRmTag.md)
 Gets predefined azure_2 tags.
 
 
-### [New-AzureRmTag](.\New-AzureRmTag.md)
+### [New-AzureRmTag](./New-AzureRmTag.md)
 Creates a predefined azure_2 tag or adds values to an existing tag.
 
 
-### [Remove-AzureRmTag](.\Remove-AzureRmTag.md)
+### [Remove-AzureRmTag](./Remove-AzureRmTag.md)
 Deletes predefined azure_2 tags or values.
 
 

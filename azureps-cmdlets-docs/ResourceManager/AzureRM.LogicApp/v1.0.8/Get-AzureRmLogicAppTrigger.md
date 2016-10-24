@@ -155,8 +155,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmLogicAppTriggerHistory](.\Get-AzureRmLogicAppTriggerHistory.md)
+[Get-AzureRmLogicAppTriggerHistory](./Get-AzureRmLogicAppTriggerHistory.md)
 
-[Start-AzureRmLogicApp](.\Start-AzureRmLogicApp.md)
+[Start-AzureRmLogicApp](./Start-AzureRmLogicApp.md)
 
 

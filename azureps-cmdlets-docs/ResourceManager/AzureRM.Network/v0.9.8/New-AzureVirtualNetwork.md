@@ -178,10 +178,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVirtualNetwork](.\Get-AzureVirtualNetwork.md)
+[Get-AzureVirtualNetwork](./Get-AzureVirtualNetwork.md)
 
-[Remove-AzureVirtualNetwork](.\Remove-AzureVirtualNetwork.md)
+[Remove-AzureVirtualNetwork](./Remove-AzureVirtualNetwork.md)
 
-[Set-AzureVirtualNetwork](.\Set-AzureVirtualNetwork.md)
+[Set-AzureVirtualNetwork](./Set-AzureVirtualNetwork.md)
 
 

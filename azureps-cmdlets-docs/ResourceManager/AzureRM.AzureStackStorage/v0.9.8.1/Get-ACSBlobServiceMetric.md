@@ -264,8 +264,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ACSBlobService](.\Get-ACSBlobService.md)
+[Get-ACSBlobService](./Get-ACSBlobService.md)
 
-[Get-ACSBlobServiceMetricDefinition](.\Get-ACSBlobServiceMetricDefinition.md)
+[Get-ACSBlobServiceMetricDefinition](./Get-ACSBlobServiceMetricDefinition.md)
 
 

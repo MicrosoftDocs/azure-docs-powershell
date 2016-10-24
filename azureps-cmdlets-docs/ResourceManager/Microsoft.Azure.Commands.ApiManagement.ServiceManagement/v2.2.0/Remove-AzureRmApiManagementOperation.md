@@ -136,10 +136,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApiManagementOperation](.\Get-AzureRmApiManagementOperation.md)
+[Get-AzureRmApiManagementOperation](./Get-AzureRmApiManagementOperation.md)
 
-[New-AzureRmApiManagementOperation](.\New-AzureRmApiManagementOperation.md)
+[New-AzureRmApiManagementOperation](./New-AzureRmApiManagementOperation.md)
 
-[Set-AzureRmApiManagementOperation](.\Set-AzureRmApiManagementOperation.md)
+[Set-AzureRmApiManagementOperation](./Set-AzureRmApiManagementOperation.md)
 
 

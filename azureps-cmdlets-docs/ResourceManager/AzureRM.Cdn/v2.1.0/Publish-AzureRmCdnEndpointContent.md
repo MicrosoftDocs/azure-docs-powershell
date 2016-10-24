@@ -169,6 +169,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Unpublish-AzureRmCdnEndpointContent](.\Unpublish-AzureRmCdnEndpointContent.md)
+[Unpublish-AzureRmCdnEndpointContent](./Unpublish-AzureRmCdnEndpointContent.md)
 
 

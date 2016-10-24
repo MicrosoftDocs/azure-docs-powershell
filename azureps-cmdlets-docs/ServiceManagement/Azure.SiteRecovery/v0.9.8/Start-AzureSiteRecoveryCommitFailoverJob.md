@@ -203,14 +203,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-AzureSiteRecoveryPlannedFailoverJob](.\Start-AzureSiteRecoveryPlannedFailoverJob.md)
+[Start-AzureSiteRecoveryPlannedFailoverJob](./Start-AzureSiteRecoveryPlannedFailoverJob.md)
 
-[Start-AzureSiteRecoveryUnplannedFailoverJob](.\Start-AzureSiteRecoveryUnplannedFailoverJob.md)
+[Start-AzureSiteRecoveryUnplannedFailoverJob](./Start-AzureSiteRecoveryUnplannedFailoverJob.md)
 
-[Get-AzureSiteRecoveryJob](.\Get-AzureSiteRecoveryJob.md)
+[Get-AzureSiteRecoveryJob](./Get-AzureSiteRecoveryJob.md)
 
-[Get-AzureSiteRecoveryProtectionContainer](.\Get-AzureSiteRecoveryProtectionContainer.md)
+[Get-AzureSiteRecoveryProtectionContainer](./Get-AzureSiteRecoveryProtectionContainer.md)
 
-[Get-AzureSiteRecoveryProtectionEntity](.\Get-AzureSiteRecoveryProtectionEntity.md)
+[Get-AzureSiteRecoveryProtectionEntity](./Get-AzureSiteRecoveryProtectionEntity.md)
 
 

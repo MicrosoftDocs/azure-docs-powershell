@@ -148,8 +148,8 @@ Output from Get-ACSFarm can be piped to this cmdlet.
 
 ## RELATED LINKS
 
-[Get-ACSTableServiceMetric](.\Get-ACSTableServiceMetric.md)
+[Get-ACSTableServiceMetric](./Get-ACSTableServiceMetric.md)
 
-[Set-ACSTableService](.\Set-ACSTableService.md)
+[Set-ACSTableService](./Set-ACSTableService.md)
 
 

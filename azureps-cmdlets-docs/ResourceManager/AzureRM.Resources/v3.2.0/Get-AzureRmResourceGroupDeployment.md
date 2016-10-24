@@ -163,16 +163,16 @@ The cmdlet returns resource group deployments.
 
 ## RELATED LINKS
 
-[Get-AzureRmResourceGroup](.\Get-AzureRmResourceGroup.md)
+[Get-AzureRmResourceGroup](./Get-AzureRmResourceGroup.md)
 
-[New-AzureRmResourceGroup](.\New-AzureRmResourceGroup.md)
+[New-AzureRmResourceGroup](./New-AzureRmResourceGroup.md)
 
-[New-AzureRmResourceGroupDeployment](.\New-AzureRmResourceGroupDeployment.md)
+[New-AzureRmResourceGroupDeployment](./New-AzureRmResourceGroupDeployment.md)
 
-[Remove-AzureRmResourceGroupDeployment](.\Remove-AzureRmResourceGroupDeployment.md)
+[Remove-AzureRmResourceGroupDeployment](./Remove-AzureRmResourceGroupDeployment.md)
 
-[Stop-AzureRmResourceGroupDeployment](.\Stop-AzureRmResourceGroupDeployment.md)
+[Stop-AzureRmResourceGroupDeployment](./Stop-AzureRmResourceGroupDeployment.md)
 
-[Test-AzureRmResourceGroupDeployment](.\Test-AzureRmResourceGroupDeployment.md)
+[Test-AzureRmResourceGroupDeployment](./Test-AzureRmResourceGroupDeployment.md)
 
 

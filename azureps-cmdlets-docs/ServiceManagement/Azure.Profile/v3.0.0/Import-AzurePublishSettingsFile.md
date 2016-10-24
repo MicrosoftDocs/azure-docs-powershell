@@ -118,8 +118,8 @@ This cmdlet does not generate any output.
 
 [How to Install and Configure Azure PowerShell](http://azure.microsoft.com/documentation/articles/install-configure-powershell/)
 
-[Add-AzureAccount](.\Add-AzureAccount.md)
+[Add-AzureAccount](./Add-AzureAccount.md)
 
-[Get-AzurePublishSettingsFile](.\Get-AzurePublishSettingsFile.md)
+[Get-AzurePublishSettingsFile](./Get-AzurePublishSettingsFile.md)
 
 

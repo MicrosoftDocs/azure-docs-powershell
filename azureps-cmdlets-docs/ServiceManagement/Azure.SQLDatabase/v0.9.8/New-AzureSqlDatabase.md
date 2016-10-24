@@ -279,12 +279,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSqlDatabase](.\Get-AzureSqlDatabase.md)
+[Get-AzureSqlDatabase](./Get-AzureSqlDatabase.md)
 
-[New-AzureSqlDatabaseServerContext](.\New-AzureSqlDatabaseServerContext.md)
+[New-AzureSqlDatabaseServerContext](./New-AzureSqlDatabaseServerContext.md)
 
-[Remove-AzureSqlDatabase](.\Remove-AzureSqlDatabase.md)
+[Remove-AzureSqlDatabase](./Remove-AzureSqlDatabase.md)
 
-[Set-AzureSqlDatabase](.\Set-AzureSqlDatabase.md)
+[Set-AzureSqlDatabase](./Set-AzureSqlDatabase.md)
 
 

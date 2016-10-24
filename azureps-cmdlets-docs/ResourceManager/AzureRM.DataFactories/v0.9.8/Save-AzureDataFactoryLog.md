@@ -184,16 +184,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureDataFactoryRun](.\Get-AzureDataFactoryRun.md)
+[Get-AzureDataFactoryRun](./Get-AzureDataFactoryRun.md)
 
-[Get-AzureDataFactoryPipeline](.\Get-AzureDataFactoryPipeline.md)
+[Get-AzureDataFactoryPipeline](./Get-AzureDataFactoryPipeline.md)
 
-[New-AzureDataFactoryPipeline](.\New-AzureDataFactoryPipeline.md)
+[New-AzureDataFactoryPipeline](./New-AzureDataFactoryPipeline.md)
 
-[Remove-AzureDataFactoryPipeline](.\Remove-AzureDataFactoryPipeline.md)
+[Remove-AzureDataFactoryPipeline](./Remove-AzureDataFactoryPipeline.md)
 
-[Set-AzureDataFactoryPipelineActivePeriod](.\Set-AzureDataFactoryPipelineActivePeriod.md)
+[Set-AzureDataFactoryPipelineActivePeriod](./Set-AzureDataFactoryPipelineActivePeriod.md)
 
-[Suspend-AzureDataFactoryPipeline](.\Suspend-AzureDataFactoryPipeline.md)
+[Suspend-AzureDataFactoryPipeline](./Suspend-AzureDataFactoryPipeline.md)
 
 

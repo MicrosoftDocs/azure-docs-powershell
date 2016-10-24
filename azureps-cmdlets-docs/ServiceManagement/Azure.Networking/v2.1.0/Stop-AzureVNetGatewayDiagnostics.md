@@ -71,8 +71,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVNetGatewayDiagnostics](.\Get-AzureVNetGatewayDiagnostics.md)
+[Get-AzureVNetGatewayDiagnostics](./Get-AzureVNetGatewayDiagnostics.md)
 
-[Start-AzureVNetGatewayDiagnostics](.\Start-AzureVNetGatewayDiagnostics.md)
+[Start-AzureVNetGatewayDiagnostics](./Start-AzureVNetGatewayDiagnostics.md)
 
 

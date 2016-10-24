@@ -112,10 +112,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureAutomationSchedule](.\New-AzureAutomationSchedule.md)
+[New-AzureAutomationSchedule](./New-AzureAutomationSchedule.md)
 
-[Remove-AzureAutomationSchedule](.\Remove-AzureAutomationSchedule.md)
+[Remove-AzureAutomationSchedule](./Remove-AzureAutomationSchedule.md)
 
-[Set-AzureAutomationSchedule](.\Set-AzureAutomationSchedule.md)
+[Set-AzureAutomationSchedule](./Set-AzureAutomationSchedule.md)
 
 

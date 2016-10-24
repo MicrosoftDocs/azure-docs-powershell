@@ -101,10 +101,10 @@ If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation
 
 ## RELATED LINKS
 
-[Get-AzureRmDnsZone](.\Get-AzureRmDnsZone.md)
+[Get-AzureRmDnsZone](./Get-AzureRmDnsZone.md)
 
-[New-AzureRmDnsRecordSet](.\New-AzureRmDnsRecordSet.md)
+[New-AzureRmDnsRecordSet](./New-AzureRmDnsRecordSet.md)
 
-[Remove-AzureRmDnsZone](.\Remove-AzureRmDnsZone.md)
+[Remove-AzureRmDnsZone](./Remove-AzureRmDnsZone.md)
 
 

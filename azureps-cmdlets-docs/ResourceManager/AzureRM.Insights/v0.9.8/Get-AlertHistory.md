@@ -209,10 +209,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AlertRule](.\Add-AlertRule.md)
+[Add-AlertRule](./Add-AlertRule.md)
 
-[Remove-AlertRule](.\Remove-AlertRule.md)
+[Remove-AlertRule](./Remove-AlertRule.md)
 
-[Get-AlertRule](.\Get-AlertRule.md)
+[Get-AlertRule](./Get-AlertRule.md)
 
 

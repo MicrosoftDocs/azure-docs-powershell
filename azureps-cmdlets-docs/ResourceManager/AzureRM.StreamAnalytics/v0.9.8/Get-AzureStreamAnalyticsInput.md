@@ -127,10 +127,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureStreamAnalyticsInput](.\New-AzureStreamAnalyticsInput.md)
+[New-AzureStreamAnalyticsInput](./New-AzureStreamAnalyticsInput.md)
 
-[Remove-AzureStreamAnalyticsInput](.\Remove-AzureStreamAnalyticsInput.md)
+[Remove-AzureStreamAnalyticsInput](./Remove-AzureStreamAnalyticsInput.md)
 
-[Test-AzureStreamAnalyticsInput](.\Test-AzureStreamAnalyticsInput.md)
+[Test-AzureStreamAnalyticsInput](./Test-AzureStreamAnalyticsInput.md)
 
 

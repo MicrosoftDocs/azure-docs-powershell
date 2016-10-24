@@ -149,8 +149,8 @@ Output from cmdlet Get-ACSFarm can be piped to the input for this cmdlet.
 
 ## RELATED LINKS
 
-[Set-ACSBlobService](.\Set-ACSBlobService.md)
+[Set-ACSBlobService](./Set-ACSBlobService.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

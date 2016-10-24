@@ -111,8 +111,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackVNet](.\Get-WAPackVNet.md)
+[Get-WAPackVNet](./Get-WAPackVNet.md)
 
-[Remove-WAPackVNet](.\Remove-WAPackVNet.md)
+[Remove-WAPackVNet](./Remove-WAPackVNet.md)
 
 

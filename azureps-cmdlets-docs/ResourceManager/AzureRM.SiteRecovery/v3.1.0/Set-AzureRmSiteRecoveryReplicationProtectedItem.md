@@ -181,10 +181,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryReplicationProtectedItem](.\Get-AzureRmSiteRecoveryReplicationProtectedItem.md)
+[Get-AzureRmSiteRecoveryReplicationProtectedItem](./Get-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
-[New-AzureRmSiteRecoveryReplicationProtectedItem](.\New-AzureRmSiteRecoveryReplicationProtectedItem.md)
+[New-AzureRmSiteRecoveryReplicationProtectedItem](./New-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
-[Remove-AzureRmSiteRecoveryReplicationProtectedItem](.\Remove-AzureRmSiteRecoveryReplicationProtectedItem.md)
+[Remove-AzureRmSiteRecoveryReplicationProtectedItem](./Remove-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
 

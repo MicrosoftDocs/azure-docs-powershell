@@ -11,815 +11,815 @@ Locale: en-US
 {{Manually Enter Description Here}}
 
 ## AzureRM.Network Cmdlets
-### [Add-AzureRmApplicationGatewayAuthenticationCertificate](.\Add-AzureRmApplicationGatewayAuthenticationCertificate.md)
+### [Add-AzureRmApplicationGatewayAuthenticationCertificate](./Add-AzureRmApplicationGatewayAuthenticationCertificate.md)
 Adds an authentication certificate to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewayBackendAddressPool](.\Add-AzureRmApplicationGatewayBackendAddressPool.md)
+### [Add-AzureRmApplicationGatewayBackendAddressPool](./Add-AzureRmApplicationGatewayBackendAddressPool.md)
 Adds a back-end address pool to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewayBackendHttpSettings](.\Add-AzureRmApplicationGatewayBackendHttpSettings.md)
+### [Add-AzureRmApplicationGatewayBackendHttpSettings](./Add-AzureRmApplicationGatewayBackendHttpSettings.md)
 Adds back-end HTTP settings to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewayFrontendIPConfig](.\Add-AzureRmApplicationGatewayFrontendIPConfig.md)
+### [Add-AzureRmApplicationGatewayFrontendIPConfig](./Add-AzureRmApplicationGatewayFrontendIPConfig.md)
 Adds a front-end IP configuration to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewayFrontendPort](.\Add-AzureRmApplicationGatewayFrontendPort.md)
+### [Add-AzureRmApplicationGatewayFrontendPort](./Add-AzureRmApplicationGatewayFrontendPort.md)
 Adds a front-end port to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewayHttpListener](.\Add-AzureRmApplicationGatewayHttpListener.md)
+### [Add-AzureRmApplicationGatewayHttpListener](./Add-AzureRmApplicationGatewayHttpListener.md)
 Adds an HTTP listener to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewayIPConfiguration](.\Add-AzureRmApplicationGatewayIPConfiguration.md)
+### [Add-AzureRmApplicationGatewayIPConfiguration](./Add-AzureRmApplicationGatewayIPConfiguration.md)
 Adds an IP configuration to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewayProbeConfig](.\Add-AzureRmApplicationGatewayProbeConfig.md)
+### [Add-AzureRmApplicationGatewayProbeConfig](./Add-AzureRmApplicationGatewayProbeConfig.md)
 Adds a health probe to an Application Gateway.
 
 
-### [Add-AzureRmApplicationGatewayRequestRoutingRule](.\Add-AzureRmApplicationGatewayRequestRoutingRule.md)
+### [Add-AzureRmApplicationGatewayRequestRoutingRule](./Add-AzureRmApplicationGatewayRequestRoutingRule.md)
 Adds a request routing rule to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewaySslCertificate](.\Add-AzureRmApplicationGatewaySslCertificate.md)
+### [Add-AzureRmApplicationGatewaySslCertificate](./Add-AzureRmApplicationGatewaySslCertificate.md)
 Adds an SSL certificate to an application gateway.
 
 
-### [Add-AzureRmApplicationGatewayUrlPathMapConfig](.\Add-AzureRmApplicationGatewayUrlPathMapConfig.md)
+### [Add-AzureRmApplicationGatewayUrlPathMapConfig](./Add-AzureRmApplicationGatewayUrlPathMapConfig.md)
 Adds an array of URL path mappings to a backend server pool.
 
 
-### [Add-AzureRmExpressRouteCircuitAuthorization](.\Add-AzureRmExpressRouteCircuitAuthorization.md)
+### [Add-AzureRmExpressRouteCircuitAuthorization](./Add-AzureRmExpressRouteCircuitAuthorization.md)
 Adds an ExpressRoute circuit authorization.
 
 
-### [Add-AzureRmExpressRouteCircuitPeeringConfig](.\Add-AzureRmExpressRouteCircuitPeeringConfig.md)
+### [Add-AzureRmExpressRouteCircuitPeeringConfig](./Add-AzureRmExpressRouteCircuitPeeringConfig.md)
 
 
 
-### [Add-AzureRmLoadBalancerBackendAddressPoolConfig](.\Add-AzureRmLoadBalancerBackendAddressPoolConfig.md)
+### [Add-AzureRmLoadBalancerBackendAddressPoolConfig](./Add-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 Adds a backend address pool configuration to a load balancer.
 
 
-### [Add-AzureRmLoadBalancerFrontendIpConfig](.\Add-AzureRmLoadBalancerFrontendIpConfig.md)
+### [Add-AzureRmLoadBalancerFrontendIpConfig](./Add-AzureRmLoadBalancerFrontendIpConfig.md)
 Adds a front-end IP configuration to a load balancer.
 
 
-### [Add-AzureRmLoadBalancerInboundNatPoolConfig](.\Add-AzureRmLoadBalancerInboundNatPoolConfig.md)
+### [Add-AzureRmLoadBalancerInboundNatPoolConfig](./Add-AzureRmLoadBalancerInboundNatPoolConfig.md)
 
 
 
-### [Add-AzureRmLoadBalancerInboundNatRuleConfig](.\Add-AzureRmLoadBalancerInboundNatRuleConfig.md)
+### [Add-AzureRmLoadBalancerInboundNatRuleConfig](./Add-AzureRmLoadBalancerInboundNatRuleConfig.md)
 Adds an inbound NAT rule configuration to a load balancer.
 
 
-### [Add-AzureRmLoadBalancerProbeConfig](.\Add-AzureRmLoadBalancerProbeConfig.md)
+### [Add-AzureRmLoadBalancerProbeConfig](./Add-AzureRmLoadBalancerProbeConfig.md)
 Adds a probe configuration to a load balancer.
 
 
-### [Add-AzureRmLoadBalancerRuleConfig](.\Add-AzureRmLoadBalancerRuleConfig.md)
+### [Add-AzureRmLoadBalancerRuleConfig](./Add-AzureRmLoadBalancerRuleConfig.md)
 Adds a rule configuration to a load balancer.
 
 
-### [Add-AzureRmNetworkInterfaceIpConfig](.\Add-AzureRmNetworkInterfaceIpConfig.md)
+### [Add-AzureRmNetworkInterfaceIpConfig](./Add-AzureRmNetworkInterfaceIpConfig.md)
 Adds a network interface IP configuration to a network interface.
 
 
-### [Add-AzureRmNetworkSecurityRuleConfig](.\Add-AzureRmNetworkSecurityRuleConfig.md)
+### [Add-AzureRmNetworkSecurityRuleConfig](./Add-AzureRmNetworkSecurityRuleConfig.md)
 Adds a network security rule configuration to a network security group.
 
 
-### [Add-AzureRmRouteConfig](.\Add-AzureRmRouteConfig.md)
+### [Add-AzureRmRouteConfig](./Add-AzureRmRouteConfig.md)
 Adds a route to a route table.
 
 
-### [Add-AzureRmVirtualNetworkGatewayIpConfig](.\Add-AzureRmVirtualNetworkGatewayIpConfig.md)
+### [Add-AzureRmVirtualNetworkGatewayIpConfig](./Add-AzureRmVirtualNetworkGatewayIpConfig.md)
 Adds an IP configuration to a virtual network gateway.
 
 
-### [Add-AzureRmVirtualNetworkPeering](.\Add-AzureRmVirtualNetworkPeering.md)
+### [Add-AzureRmVirtualNetworkPeering](./Add-AzureRmVirtualNetworkPeering.md)
 Creates a peering between two virtual networks.
 
 
-### [Add-AzureRmVirtualNetworkSubnetConfig](.\Add-AzureRmVirtualNetworkSubnetConfig.md)
+### [Add-AzureRmVirtualNetworkSubnetConfig](./Add-AzureRmVirtualNetworkSubnetConfig.md)
 Adds a subnet configuration to a virtual network.
 
 
-### [Add-AzureRmVpnClientRevokedCertificate](.\Add-AzureRmVpnClientRevokedCertificate.md)
+### [Add-AzureRmVpnClientRevokedCertificate](./Add-AzureRmVpnClientRevokedCertificate.md)
 Adds a VPN client-revocation certificate.
 
 
-### [Add-AzureRmVpnClientRootCertificate](.\Add-AzureRmVpnClientRootCertificate.md)
+### [Add-AzureRmVpnClientRootCertificate](./Add-AzureRmVpnClientRootCertificate.md)
 Adds a VPN client root certificate.
 
 
-### [Get-AzureRmApplicationGatewayAuthenticationCertificate](.\Get-AzureRmApplicationGatewayAuthenticationCertificate.md)
+### [Get-AzureRmApplicationGatewayAuthenticationCertificate](./Get-AzureRmApplicationGatewayAuthenticationCertificate.md)
 Gets an authentication certificate for an application gateway.
 
 
-### [Get-AzureRmApplicationGatewayBackendAddressPool](.\Get-AzureRmApplicationGatewayBackendAddressPool.md)
+### [Get-AzureRmApplicationGatewayBackendAddressPool](./Get-AzureRmApplicationGatewayBackendAddressPool.md)
 Gets a back-end address pool for an application gateway.
 
 
-### [Get-AzureRmApplicationGatewayBackendHttpSettings](.\Get-AzureRmApplicationGatewayBackendHttpSettings.md)
+### [Get-AzureRmApplicationGatewayBackendHttpSettings](./Get-AzureRmApplicationGatewayBackendHttpSettings.md)
 Gets the back-end HTTP settings of an application gateway.
 
 
-### [Get-AzureRmApplicationGatewayFrontendIPConfig](.\Get-AzureRmApplicationGatewayFrontendIPConfig.md)
+### [Get-AzureRmApplicationGatewayFrontendIPConfig](./Get-AzureRmApplicationGatewayFrontendIPConfig.md)
 Gets the front-end IP configuration of an application gateway.
 
 
-### [Get-AzureRmApplicationGatewayFrontendPort](.\Get-AzureRmApplicationGatewayFrontendPort.md)
+### [Get-AzureRmApplicationGatewayFrontendPort](./Get-AzureRmApplicationGatewayFrontendPort.md)
 Gets the front-end port of an application gateway.
 
 
-### [Get-AzureRmApplicationGatewayHttpListener](.\Get-AzureRmApplicationGatewayHttpListener.md)
+### [Get-AzureRmApplicationGatewayHttpListener](./Get-AzureRmApplicationGatewayHttpListener.md)
 Gets the HTTP listener of an application gateway.
 
 
-### [Get-AzureRmApplicationGatewayIPConfiguration](.\Get-AzureRmApplicationGatewayIPConfiguration.md)
+### [Get-AzureRmApplicationGatewayIPConfiguration](./Get-AzureRmApplicationGatewayIPConfiguration.md)
 Gets the IP configuration of an application gateway.
 
 
-### [Get-AzureRmApplicationGatewayProbeConfig](.\Get-AzureRmApplicationGatewayProbeConfig.md)
+### [Get-AzureRmApplicationGatewayProbeConfig](./Get-AzureRmApplicationGatewayProbeConfig.md)
 Gets an existing health probe configuration from an Application Gateway.
 
 
-### [Get-AzureRmApplicationGatewayRequestRoutingRule](.\Get-AzureRmApplicationGatewayRequestRoutingRule.md)
+### [Get-AzureRmApplicationGatewayRequestRoutingRule](./Get-AzureRmApplicationGatewayRequestRoutingRule.md)
 Gets the request routing rule of an application gateway.
 
 
-### [Get-AzureRmApplicationGatewaySku](.\Get-AzureRmApplicationGatewaySku.md)
+### [Get-AzureRmApplicationGatewaySku](./Get-AzureRmApplicationGatewaySku.md)
 Gets the SKU of an application gateway.
 
 
-### [Get-AzureRmApplicationGatewaySslCertificate](.\Get-AzureRmApplicationGatewaySslCertificate.md)
+### [Get-AzureRmApplicationGatewaySslCertificate](./Get-AzureRmApplicationGatewaySslCertificate.md)
 Gets an SSL certificate for an application gateway.
 
 
-### [Get-AzureRmApplicationGatewaySslPolicy](.\Get-AzureRmApplicationGatewaySslPolicy.md)
+### [Get-AzureRmApplicationGatewaySslPolicy](./Get-AzureRmApplicationGatewaySslPolicy.md)
 Gets the SSL policy of an application gateway.
 
 
-### [Get-AzureRmApplicationGatewayUrlPathMapConfig](.\Get-AzureRmApplicationGatewayUrlPathMapConfig.md)
+### [Get-AzureRmApplicationGatewayUrlPathMapConfig](./Get-AzureRmApplicationGatewayUrlPathMapConfig.md)
 Gets an array of URL path mappings to a backend server pool.
 
 
-### [Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](.\Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
+### [Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
 Gets the WAF configuration of an application gateway.
 
 
-### [Get-AzureRmApplicationGateway](.\Get-AzureRmApplicationGateway.md)
+### [Get-AzureRmApplicationGateway](./Get-AzureRmApplicationGateway.md)
 Gets an application gateway.
 
 
-### [Get-AzureRmEffectiveNetworkSecurityGroup](.\Get-AzureRmEffectiveNetworkSecurityGroup.md)
+### [Get-AzureRmEffectiveNetworkSecurityGroup](./Get-AzureRmEffectiveNetworkSecurityGroup.md)
 Gets the effective network security group of a network interface.
 
 
-### [Get-AzureRmEffectiveRouteTable](.\Get-AzureRmEffectiveRouteTable.md)
+### [Get-AzureRmEffectiveRouteTable](./Get-AzureRmEffectiveRouteTable.md)
 Gets the effective route table of a network interface.
 
 
-### [Get-AzureRmExpressRouteCircuitARPTable](.\Get-AzureRmExpressRouteCircuitARPTable.md)
+### [Get-AzureRmExpressRouteCircuitARPTable](./Get-AzureRmExpressRouteCircuitARPTable.md)
 
 
 
-### [Get-AzureRmExpressRouteCircuitAuthorization](.\Get-AzureRmExpressRouteCircuitAuthorization.md)
+### [Get-AzureRmExpressRouteCircuitAuthorization](./Get-AzureRmExpressRouteCircuitAuthorization.md)
 Gets information about ExpressRoute circuit authorizations.
 
 
-### [Get-AzureRmExpressRouteCircuitPeeringConfig](.\Get-AzureRmExpressRouteCircuitPeeringConfig.md)
+### [Get-AzureRmExpressRouteCircuitPeeringConfig](./Get-AzureRmExpressRouteCircuitPeeringConfig.md)
 
 
 
-### [Get-AzureRmExpressRouteCircuitRouteTableSummary](.\Get-AzureRmExpressRouteCircuitRouteTableSummary.md)
+### [Get-AzureRmExpressRouteCircuitRouteTableSummary](./Get-AzureRmExpressRouteCircuitRouteTableSummary.md)
 
 
 
-### [Get-AzureRmExpressRouteCircuitRouteTable](.\Get-AzureRmExpressRouteCircuitRouteTable.md)
+### [Get-AzureRmExpressRouteCircuitRouteTable](./Get-AzureRmExpressRouteCircuitRouteTable.md)
 
 
 
-### [Get-AzureRmExpressRouteCircuitStats](.\Get-AzureRmExpressRouteCircuitStats.md)
+### [Get-AzureRmExpressRouteCircuitStats](./Get-AzureRmExpressRouteCircuitStats.md)
 
 
 
-### [Get-AzureRmExpressRouteCircuit](.\Get-AzureRmExpressRouteCircuit.md)
+### [Get-AzureRmExpressRouteCircuit](./Get-AzureRmExpressRouteCircuit.md)
 
 
 
-### [Get-AzureRmExpressRouteServiceProvider](.\Get-AzureRmExpressRouteServiceProvider.md)
+### [Get-AzureRmExpressRouteServiceProvider](./Get-AzureRmExpressRouteServiceProvider.md)
 
 
 
-### [Get-AzureRmLoadBalancerBackendAddressPoolConfig](.\Get-AzureRmLoadBalancerBackendAddressPoolConfig.md)
+### [Get-AzureRmLoadBalancerBackendAddressPoolConfig](./Get-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 Gets a backend address pool configuration for a load balancer.
 
 
-### [Get-AzureRmLoadBalancerFrontendIpConfig](.\Get-AzureRmLoadBalancerFrontendIpConfig.md)
+### [Get-AzureRmLoadBalancerFrontendIpConfig](./Get-AzureRmLoadBalancerFrontendIpConfig.md)
 Gets a front-end IP configuration in a load balancer.
 
 
-### [Get-AzureRmLoadBalancerInboundNatPoolConfig](.\Get-AzureRmLoadBalancerInboundNatPoolConfig.md)
+### [Get-AzureRmLoadBalancerInboundNatPoolConfig](./Get-AzureRmLoadBalancerInboundNatPoolConfig.md)
 
 
 
-### [Get-AzureRmLoadBalancerInboundNatRuleConfig](.\Get-AzureRmLoadBalancerInboundNatRuleConfig.md)
+### [Get-AzureRmLoadBalancerInboundNatRuleConfig](./Get-AzureRmLoadBalancerInboundNatRuleConfig.md)
 Gets an inbound NAT rule configuration for a load balancer.
 
 
-### [Get-AzureRmLoadBalancerProbeConfig](.\Get-AzureRmLoadBalancerProbeConfig.md)
+### [Get-AzureRmLoadBalancerProbeConfig](./Get-AzureRmLoadBalancerProbeConfig.md)
 Gets a probe configuration for a load balancer.
 
 
-### [Get-AzureRmLoadBalancerRuleConfig](.\Get-AzureRmLoadBalancerRuleConfig.md)
+### [Get-AzureRmLoadBalancerRuleConfig](./Get-AzureRmLoadBalancerRuleConfig.md)
 Gets the rule configuration for a load balancer.
 
 
-### [Get-AzureRmLoadBalancer](.\Get-AzureRmLoadBalancer.md)
+### [Get-AzureRmLoadBalancer](./Get-AzureRmLoadBalancer.md)
 Gets a load balancer.
 
 
-### [Get-AzureRmLocalNetworkGateway](.\Get-AzureRmLocalNetworkGateway.md)
+### [Get-AzureRmLocalNetworkGateway](./Get-AzureRmLocalNetworkGateway.md)
 
 
 
-### [Get-AzureRmNetworkInterfaceIpConfig](.\Get-AzureRmNetworkInterfaceIpConfig.md)
+### [Get-AzureRmNetworkInterfaceIpConfig](./Get-AzureRmNetworkInterfaceIpConfig.md)
 Gets a network interface IP configuration for a network interface.
 
 
-### [Get-AzureRmNetworkInterface](.\Get-AzureRmNetworkInterface.md)
+### [Get-AzureRmNetworkInterface](./Get-AzureRmNetworkInterface.md)
 Gets a network interface.
 
 
-### [Get-AzureRmNetworkSecurityGroup](.\Get-AzureRmNetworkSecurityGroup.md)
+### [Get-AzureRmNetworkSecurityGroup](./Get-AzureRmNetworkSecurityGroup.md)
 Gets a network security group.
 
 
-### [Get-AzureRmNetworkSecurityRuleConfig](.\Get-AzureRmNetworkSecurityRuleConfig.md)
+### [Get-AzureRmNetworkSecurityRuleConfig](./Get-AzureRmNetworkSecurityRuleConfig.md)
 Get a network security rule configuration for a network security group.
 
 
-### [Get-AzureRmPublicIpAddress](.\Get-AzureRmPublicIpAddress.md)
+### [Get-AzureRmPublicIpAddress](./Get-AzureRmPublicIpAddress.md)
 Gets a public IP address.
 
 
-### [Get-AzureRmRouteConfig](.\Get-AzureRmRouteConfig.md)
+### [Get-AzureRmRouteConfig](./Get-AzureRmRouteConfig.md)
 Gets routes from a route table.
 
 
-### [Get-AzureRmRouteTable](.\Get-AzureRmRouteTable.md)
+### [Get-AzureRmRouteTable](./Get-AzureRmRouteTable.md)
 Gets route tables.
 
 
-### [Get-AzureRmVirtualNetworkGatewayConnectionSharedKey](.\Get-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
+### [Get-AzureRmVirtualNetworkGatewayConnectionSharedKey](./Get-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
 
 
 
-### [Get-AzureRmVirtualNetworkGatewayConnection](.\Get-AzureRmVirtualNetworkGatewayConnection.md)
+### [Get-AzureRmVirtualNetworkGatewayConnection](./Get-AzureRmVirtualNetworkGatewayConnection.md)
 
 
 
-### [Get-AzureRmVirtualNetworkGateway](.\Get-AzureRmVirtualNetworkGateway.md)
+### [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
 
 
-### [Get-AzureRmVirtualNetworkPeering](.\Get-AzureRmVirtualNetworkPeering.md)
+### [Get-AzureRmVirtualNetworkPeering](./Get-AzureRmVirtualNetworkPeering.md)
 Gets the virtual network peering.
 
 
-### [Get-AzureRmVirtualNetworkSubnetConfig](.\Get-AzureRmVirtualNetworkSubnetConfig.md)
+### [Get-AzureRmVirtualNetworkSubnetConfig](./Get-AzureRmVirtualNetworkSubnetConfig.md)
 Gets a subnet in a virtual network.
 
 
-### [Get-AzureRmVirtualNetwork](.\Get-AzureRmVirtualNetwork.md)
+### [Get-AzureRmVirtualNetwork](./Get-AzureRmVirtualNetwork.md)
 Gets a virtual network in a resource group.
 
 
-### [Get-AzureRmVpnClientPackage](.\Get-AzureRmVpnClientPackage.md)
+### [Get-AzureRmVpnClientPackage](./Get-AzureRmVpnClientPackage.md)
 Gets information about a VPN client package.
 
 
-### [Get-AzureRmVpnClientRevokedCertificate](.\Get-AzureRmVpnClientRevokedCertificate.md)
+### [Get-AzureRmVpnClientRevokedCertificate](./Get-AzureRmVpnClientRevokedCertificate.md)
 Gets information about VPN client-revocation certificates.
 
 
-### [Get-AzureRmVpnClientRootCertificate](.\Get-AzureRmVpnClientRootCertificate.md)
+### [Get-AzureRmVpnClientRootCertificate](./Get-AzureRmVpnClientRootCertificate.md)
 Gets information about VPN root certificates.
 
 
-### [Move-AzureRmExpressRouteCircuit](.\Move-AzureRmExpressRouteCircuit.md)
+### [Move-AzureRmExpressRouteCircuit](./Move-AzureRmExpressRouteCircuit.md)
 
 
 
-### [New-AzureRmApplicationGatewayAuthenticationCertificate](.\New-AzureRmApplicationGatewayAuthenticationCertificate.md)
+### [New-AzureRmApplicationGatewayAuthenticationCertificate](./New-AzureRmApplicationGatewayAuthenticationCertificate.md)
 Creates an authentication certificate for an application gateway.
 
 
-### [New-AzureRmApplicationGatewayBackendAddressPool](.\New-AzureRmApplicationGatewayBackendAddressPool.md)
+### [New-AzureRmApplicationGatewayBackendAddressPool](./New-AzureRmApplicationGatewayBackendAddressPool.md)
 Creates a back-end address pool for an application gateway.
 
 
-### [New-AzureRmApplicationGatewayBackendHttpSettings](.\New-AzureRmApplicationGatewayBackendHttpSettings.md)
+### [New-AzureRmApplicationGatewayBackendHttpSettings](./New-AzureRmApplicationGatewayBackendHttpSettings.md)
 Creates back-end HTTP settings for an application gateway.
 
 
-### [New-AzureRmApplicationGatewayFrontendIPConfig](.\New-AzureRmApplicationGatewayFrontendIPConfig.md)
+### [New-AzureRmApplicationGatewayFrontendIPConfig](./New-AzureRmApplicationGatewayFrontendIPConfig.md)
 Creates a front-end IP configuration for an application gateway.
 
 
-### [New-AzureRmApplicationGatewayFrontendPort](.\New-AzureRmApplicationGatewayFrontendPort.md)
+### [New-AzureRmApplicationGatewayFrontendPort](./New-AzureRmApplicationGatewayFrontendPort.md)
 Creates a front-end port for an application gateway.
 
 
-### [New-AzureRmApplicationGatewayHttpListener](.\New-AzureRmApplicationGatewayHttpListener.md)
+### [New-AzureRmApplicationGatewayHttpListener](./New-AzureRmApplicationGatewayHttpListener.md)
 Creates an HTTP listener for an application gateway.
 
 
-### [New-AzureRmApplicationGatewayIPConfiguration](.\New-AzureRmApplicationGatewayIPConfiguration.md)
+### [New-AzureRmApplicationGatewayIPConfiguration](./New-AzureRmApplicationGatewayIPConfiguration.md)
 Creates an IP configuration for an application gateway.
 
 
-### [New-AzureRmApplicationGatewayPathRuleConfig](.\New-AzureRmApplicationGatewayPathRuleConfig.md)
+### [New-AzureRmApplicationGatewayPathRuleConfig](./New-AzureRmApplicationGatewayPathRuleConfig.md)
 Creates an application gateway path rule.
 
 
-### [New-AzureRmApplicationGatewayProbeConfig](.\New-AzureRmApplicationGatewayProbeConfig.md)
+### [New-AzureRmApplicationGatewayProbeConfig](./New-AzureRmApplicationGatewayProbeConfig.md)
 Creates a health probe.
 
 
-### [New-AzureRmApplicationGatewayRequestRoutingRule](.\New-AzureRmApplicationGatewayRequestRoutingRule.md)
+### [New-AzureRmApplicationGatewayRequestRoutingRule](./New-AzureRmApplicationGatewayRequestRoutingRule.md)
 Creates a request routing rule for an application gateway.
 
 
-### [New-AzureRmApplicationGatewaySku](.\New-AzureRmApplicationGatewaySku.md)
+### [New-AzureRmApplicationGatewaySku](./New-AzureRmApplicationGatewaySku.md)
 Creates a SKU for an application gateway.
 
 
-### [New-AzureRmApplicationGatewaySslCertificate](.\New-AzureRmApplicationGatewaySslCertificate.md)
+### [New-AzureRmApplicationGatewaySslCertificate](./New-AzureRmApplicationGatewaySslCertificate.md)
 Creates an SSL certificate for an Azure application gateway.
 
 
-### [New-AzureRmApplicationGatewaySslPolicy](.\New-AzureRmApplicationGatewaySslPolicy.md)
+### [New-AzureRmApplicationGatewaySslPolicy](./New-AzureRmApplicationGatewaySslPolicy.md)
 Creates an SSL policy for an application gateway.
 
 
-### [New-AzureRmApplicationGatewayUrlPathMapConfig](.\New-AzureRmApplicationGatewayUrlPathMapConfig.md)
+### [New-AzureRmApplicationGatewayUrlPathMapConfig](./New-AzureRmApplicationGatewayUrlPathMapConfig.md)
 Creates an array of URL path mappings to a backend server pool.
 
 
-### [New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](.\New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
+### [New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
 Creates a WAF configuration for an application gateway.
 
 
-### [New-AzureRmApplicationGateway](.\New-AzureRmApplicationGateway.md)
+### [New-AzureRmApplicationGateway](./New-AzureRmApplicationGateway.md)
 Creates an application gateway.
 
 
-### [New-AzureRmExpressRouteCircuitAuthorization](.\New-AzureRmExpressRouteCircuitAuthorization.md)
+### [New-AzureRmExpressRouteCircuitAuthorization](./New-AzureRmExpressRouteCircuitAuthorization.md)
 Creates an ExpressRoute circuit authorization.
 
 
-### [New-AzureRmExpressRouteCircuitPeeringConfig](.\New-AzureRmExpressRouteCircuitPeeringConfig.md)
+### [New-AzureRmExpressRouteCircuitPeeringConfig](./New-AzureRmExpressRouteCircuitPeeringConfig.md)
 
 
 
-### [New-AzureRmExpressRouteCircuit](.\New-AzureRmExpressRouteCircuit.md)
+### [New-AzureRmExpressRouteCircuit](./New-AzureRmExpressRouteCircuit.md)
 Creates an Azure express route circuit.
 
 
-### [New-AzureRmLoadBalancerBackendAddressPoolConfig](.\New-AzureRmLoadBalancerBackendAddressPoolConfig.md)
+### [New-AzureRmLoadBalancerBackendAddressPoolConfig](./New-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 Creates a backend address pool configuration for a load balancer.
 
 
-### [New-AzureRmLoadBalancerFrontendIpConfig](.\New-AzureRmLoadBalancerFrontendIpConfig.md)
+### [New-AzureRmLoadBalancerFrontendIpConfig](./New-AzureRmLoadBalancerFrontendIpConfig.md)
 Creates a front-end IP configuration for a load balancer.
 
 
-### [New-AzureRmLoadBalancerInboundNatPoolConfig](.\New-AzureRmLoadBalancerInboundNatPoolConfig.md)
+### [New-AzureRmLoadBalancerInboundNatPoolConfig](./New-AzureRmLoadBalancerInboundNatPoolConfig.md)
 
 
 
-### [New-AzureRmLoadBalancerInboundNatRuleConfig](.\New-AzureRmLoadBalancerInboundNatRuleConfig.md)
+### [New-AzureRmLoadBalancerInboundNatRuleConfig](./New-AzureRmLoadBalancerInboundNatRuleConfig.md)
 Creates an inbound NAT rule configuration for a load balancer.
 
 
-### [New-AzureRmLoadBalancerProbeConfig](.\New-AzureRmLoadBalancerProbeConfig.md)
+### [New-AzureRmLoadBalancerProbeConfig](./New-AzureRmLoadBalancerProbeConfig.md)
 Creates a probe configuration for a load balancer.
 
 
-### [New-AzureRmLoadBalancerRuleConfig](.\New-AzureRmLoadBalancerRuleConfig.md)
+### [New-AzureRmLoadBalancerRuleConfig](./New-AzureRmLoadBalancerRuleConfig.md)
 Creates a rule configuration for a load balancer.
 
 
-### [New-AzureRmLoadBalancer](.\New-AzureRmLoadBalancer.md)
+### [New-AzureRmLoadBalancer](./New-AzureRmLoadBalancer.md)
 Creates a load balancer.
 
 
-### [New-AzureRmLocalNetworkGateway](.\New-AzureRmLocalNetworkGateway.md)
+### [New-AzureRmLocalNetworkGateway](./New-AzureRmLocalNetworkGateway.md)
 
 
 
-### [New-AzureRmNetworkInterfaceIpConfig](.\New-AzureRmNetworkInterfaceIpConfig.md)
+### [New-AzureRmNetworkInterfaceIpConfig](./New-AzureRmNetworkInterfaceIpConfig.md)
 Creates a network interface IP configuration.
 
 
-### [New-AzureRmNetworkInterface](.\New-AzureRmNetworkInterface.md)
+### [New-AzureRmNetworkInterface](./New-AzureRmNetworkInterface.md)
 Creates a network interface.
 
 
-### [New-AzureRmNetworkSecurityGroup](.\New-AzureRmNetworkSecurityGroup.md)
+### [New-AzureRmNetworkSecurityGroup](./New-AzureRmNetworkSecurityGroup.md)
 Creates a network security group.
 
 
-### [New-AzureRmNetworkSecurityRuleConfig](.\New-AzureRmNetworkSecurityRuleConfig.md)
+### [New-AzureRmNetworkSecurityRuleConfig](./New-AzureRmNetworkSecurityRuleConfig.md)
 Creates a network security rule configuration.
 
 
-### [New-AzureRmPublicIpAddress](.\New-AzureRmPublicIpAddress.md)
+### [New-AzureRmPublicIpAddress](./New-AzureRmPublicIpAddress.md)
 Creates a public IP address.
 
 
-### [New-AzureRmRouteConfig](.\New-AzureRmRouteConfig.md)
+### [New-AzureRmRouteConfig](./New-AzureRmRouteConfig.md)
 Creates a route for a route table.
 
 
-### [New-AzureRmRouteTable](.\New-AzureRmRouteTable.md)
+### [New-AzureRmRouteTable](./New-AzureRmRouteTable.md)
 Creates a route table.
 
 
-### [New-AzureRmVirtualNetworkGatewayConnection](.\New-AzureRmVirtualNetworkGatewayConnection.md)
+### [New-AzureRmVirtualNetworkGatewayConnection](./New-AzureRmVirtualNetworkGatewayConnection.md)
 
 
 
-### [New-AzureRmVirtualNetworkGatewayIpConfig](.\New-AzureRmVirtualNetworkGatewayIpConfig.md)
+### [New-AzureRmVirtualNetworkGatewayIpConfig](./New-AzureRmVirtualNetworkGatewayIpConfig.md)
 
 
 
-### [New-AzureRmVirtualNetworkGateway](.\New-AzureRmVirtualNetworkGateway.md)
+### [New-AzureRmVirtualNetworkGateway](./New-AzureRmVirtualNetworkGateway.md)
 
 
 
-### [New-AzureRmVirtualNetworkSubnetConfig](.\New-AzureRmVirtualNetworkSubnetConfig.md)
+### [New-AzureRmVirtualNetworkSubnetConfig](./New-AzureRmVirtualNetworkSubnetConfig.md)
 Creates a virtual network subnet configuration.
 
 
-### [New-AzureRmVirtualNetwork](.\New-AzureRmVirtualNetwork.md)
+### [New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 Creates a virtual network.
 
 
-### [New-AzureRmVpnClientRevokedCertificate](.\New-AzureRmVpnClientRevokedCertificate.md)
+### [New-AzureRmVpnClientRevokedCertificate](./New-AzureRmVpnClientRevokedCertificate.md)
 Creates a new VPN client-revocation certificate.
 
 
-### [New-AzureRmVpnClientRootCertificate](.\New-AzureRmVpnClientRootCertificate.md)
+### [New-AzureRmVpnClientRootCertificate](./New-AzureRmVpnClientRootCertificate.md)
 Creates a new VPN client root certificate.
 
 
-### [Remove-AzureRmApplicationGatewayAuthenticationCertificate](.\Remove-AzureRmApplicationGatewayAuthenticationCertificate.md)
+### [Remove-AzureRmApplicationGatewayAuthenticationCertificate](./Remove-AzureRmApplicationGatewayAuthenticationCertificate.md)
 Removes an authentication certificate from an application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayBackendAddressPool](.\Remove-AzureRmApplicationGatewayBackendAddressPool.md)
+### [Remove-AzureRmApplicationGatewayBackendAddressPool](./Remove-AzureRmApplicationGatewayBackendAddressPool.md)
 Removes a back-end address pool from an application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayBackendHttpSettings](.\Remove-AzureRmApplicationGatewayBackendHttpSettings.md)
+### [Remove-AzureRmApplicationGatewayBackendHttpSettings](./Remove-AzureRmApplicationGatewayBackendHttpSettings.md)
 Removes back-end HTTP settings from an application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayFrontendIPConfig](.\Remove-AzureRmApplicationGatewayFrontendIPConfig.md)
+### [Remove-AzureRmApplicationGatewayFrontendIPConfig](./Remove-AzureRmApplicationGatewayFrontendIPConfig.md)
 Removes a front-end IP configuration from an application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayFrontendPort](.\Remove-AzureRmApplicationGatewayFrontendPort.md)
+### [Remove-AzureRmApplicationGatewayFrontendPort](./Remove-AzureRmApplicationGatewayFrontendPort.md)
 Removes a front-end port from an application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayHttpListener](.\Remove-AzureRmApplicationGatewayHttpListener.md)
+### [Remove-AzureRmApplicationGatewayHttpListener](./Remove-AzureRmApplicationGatewayHttpListener.md)
 Removes an HTTP listener from an application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayIPConfiguration](.\Remove-AzureRmApplicationGatewayIPConfiguration.md)
+### [Remove-AzureRmApplicationGatewayIPConfiguration](./Remove-AzureRmApplicationGatewayIPConfiguration.md)
 Removes an IP configuration from an application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayProbeConfig](.\Remove-AzureRmApplicationGatewayProbeConfig.md)
+### [Remove-AzureRmApplicationGatewayProbeConfig](./Remove-AzureRmApplicationGatewayProbeConfig.md)
 Removes a health probe from an existing application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayRequestRoutingRule](.\Remove-AzureRmApplicationGatewayRequestRoutingRule.md)
+### [Remove-AzureRmApplicationGatewayRequestRoutingRule](./Remove-AzureRmApplicationGatewayRequestRoutingRule.md)
 Removes a request routing rule from an application gateway.
 
 
-### [Remove-AzureRmApplicationGatewaySslCertificate](.\Remove-AzureRmApplicationGatewaySslCertificate.md)
+### [Remove-AzureRmApplicationGatewaySslCertificate](./Remove-AzureRmApplicationGatewaySslCertificate.md)
 Removes an SSL certificate from an Azure application gateway.
 
 
-### [Remove-AzureRmApplicationGatewayUrlPathMapConfig](.\Remove-AzureRmApplicationGatewayUrlPathMapConfig.md)
+### [Remove-AzureRmApplicationGatewayUrlPathMapConfig](./Remove-AzureRmApplicationGatewayUrlPathMapConfig.md)
 Removes URL path mappings to a backend server pool.
 
 
-### [Remove-AzureRmApplicationGateway](.\Remove-AzureRmApplicationGateway.md)
+### [Remove-AzureRmApplicationGateway](./Remove-AzureRmApplicationGateway.md)
 Removes an application gateway.
 
 
-### [Remove-AzureRmExpressRouteCircuitAuthorization](.\Remove-AzureRmExpressRouteCircuitAuthorization.md)
+### [Remove-AzureRmExpressRouteCircuitAuthorization](./Remove-AzureRmExpressRouteCircuitAuthorization.md)
 Removes an existing ExpressRoute configuration authorization.
 
 
-### [Remove-AzureRmExpressRouteCircuitPeeringConfig](.\Remove-AzureRmExpressRouteCircuitPeeringConfig.md)
+### [Remove-AzureRmExpressRouteCircuitPeeringConfig](./Remove-AzureRmExpressRouteCircuitPeeringConfig.md)
 Removes an ExpressRoute circuit peering configuration.
 
 
-### [Remove-AzureRmExpressRouteCircuit](.\Remove-AzureRmExpressRouteCircuit.md)
+### [Remove-AzureRmExpressRouteCircuit](./Remove-AzureRmExpressRouteCircuit.md)
 Removes an ExpressRoute circuit.
 
 
-### [Remove-AzureRmLoadBalancerBackendAddressPoolConfig](.\Remove-AzureRmLoadBalancerBackendAddressPoolConfig.md)
+### [Remove-AzureRmLoadBalancerBackendAddressPoolConfig](./Remove-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 Removes a backend address pool configuration from a load balancer.
 
 
-### [Remove-AzureRmLoadBalancerFrontendIpConfig](.\Remove-AzureRmLoadBalancerFrontendIpConfig.md)
+### [Remove-AzureRmLoadBalancerFrontendIpConfig](./Remove-AzureRmLoadBalancerFrontendIpConfig.md)
 Removes a front-end IP configuration from a load balancer.
 
 
-### [Remove-AzureRmLoadBalancerInboundNatPoolConfig](.\Remove-AzureRmLoadBalancerInboundNatPoolConfig.md)
+### [Remove-AzureRmLoadBalancerInboundNatPoolConfig](./Remove-AzureRmLoadBalancerInboundNatPoolConfig.md)
 
 
 
-### [Remove-AzureRmLoadBalancerInboundNatRuleConfig](.\Remove-AzureRmLoadBalancerInboundNatRuleConfig.md)
+### [Remove-AzureRmLoadBalancerInboundNatRuleConfig](./Remove-AzureRmLoadBalancerInboundNatRuleConfig.md)
 Removes an inbound NAT rule configuration from a load balancer.
 
 
-### [Remove-AzureRmLoadBalancerProbeConfig](.\Remove-AzureRmLoadBalancerProbeConfig.md)
+### [Remove-AzureRmLoadBalancerProbeConfig](./Remove-AzureRmLoadBalancerProbeConfig.md)
 Removes a probe configuration from a load balancer.
 
 
-### [Remove-AzureRmLoadBalancerRuleConfig](.\Remove-AzureRmLoadBalancerRuleConfig.md)
+### [Remove-AzureRmLoadBalancerRuleConfig](./Remove-AzureRmLoadBalancerRuleConfig.md)
 Removes a rule configuration for a load balancer.
 
 
-### [Remove-AzureRmLoadBalancer](.\Remove-AzureRmLoadBalancer.md)
+### [Remove-AzureRmLoadBalancer](./Remove-AzureRmLoadBalancer.md)
 Removes a load balancer.
 
 
-### [Remove-AzureRmLocalNetworkGateway](.\Remove-AzureRmLocalNetworkGateway.md)
+### [Remove-AzureRmLocalNetworkGateway](./Remove-AzureRmLocalNetworkGateway.md)
 Removes a local network gateway.
 
 
-### [Remove-AzureRmNetworkInterfaceIpConfig](.\Remove-AzureRmNetworkInterfaceIpConfig.md)
+### [Remove-AzureRmNetworkInterfaceIpConfig](./Remove-AzureRmNetworkInterfaceIpConfig.md)
 Removes a network interface IP configuration from a network interface.
 
 
-### [Remove-AzureRmNetworkInterface](.\Remove-AzureRmNetworkInterface.md)
+### [Remove-AzureRmNetworkInterface](./Remove-AzureRmNetworkInterface.md)
 Removes a network interface.
 
 
-### [Remove-AzureRmNetworkSecurityGroup](.\Remove-AzureRmNetworkSecurityGroup.md)
+### [Remove-AzureRmNetworkSecurityGroup](./Remove-AzureRmNetworkSecurityGroup.md)
 Removes a network security group.
 
 
-### [Remove-AzureRmNetworkSecurityRuleConfig](.\Remove-AzureRmNetworkSecurityRuleConfig.md)
+### [Remove-AzureRmNetworkSecurityRuleConfig](./Remove-AzureRmNetworkSecurityRuleConfig.md)
 Removes a network security rule from a network security group.
 
 
-### [Remove-AzureRmPublicIpAddress](.\Remove-AzureRmPublicIpAddress.md)
+### [Remove-AzureRmPublicIpAddress](./Remove-AzureRmPublicIpAddress.md)
 Removes a public IP address.
 
 
-### [Remove-AzureRmRouteConfig](.\Remove-AzureRmRouteConfig.md)
+### [Remove-AzureRmRouteConfig](./Remove-AzureRmRouteConfig.md)
 Removes a route from a route table.
 
 
-### [Remove-AzureRmRouteTable](.\Remove-AzureRmRouteTable.md)
+### [Remove-AzureRmRouteTable](./Remove-AzureRmRouteTable.md)
 Removes a route table.
 
 
-### [Remove-AzureRmVirtualNetworkGatewayConnection](.\Remove-AzureRmVirtualNetworkGatewayConnection.md)
+### [Remove-AzureRmVirtualNetworkGatewayConnection](./Remove-AzureRmVirtualNetworkGatewayConnection.md)
 Removes a virtual network gateway connection.
 
 
-### [Remove-AzureRmVirtualNetworkGatewayDefaultSite](.\Remove-AzureRmVirtualNetworkGatewayDefaultSite.md)
+### [Remove-AzureRmVirtualNetworkGatewayDefaultSite](./Remove-AzureRmVirtualNetworkGatewayDefaultSite.md)
 Removes the default site from a virtual network gateway.
 
 
-### [Remove-AzureRmVirtualNetworkGatewayIpConfig](.\Remove-AzureRmVirtualNetworkGatewayIpConfig.md)
+### [Remove-AzureRmVirtualNetworkGatewayIpConfig](./Remove-AzureRmVirtualNetworkGatewayIpConfig.md)
 
 
 
-### [Remove-AzureRmVirtualNetworkGateway](.\Remove-AzureRmVirtualNetworkGateway.md)
+### [Remove-AzureRmVirtualNetworkGateway](./Remove-AzureRmVirtualNetworkGateway.md)
 Removes a virtual network gateway.
 
 
-### [Remove-AzureRmVirtualNetworkPeering](.\Remove-AzureRmVirtualNetworkPeering.md)
+### [Remove-AzureRmVirtualNetworkPeering](./Remove-AzureRmVirtualNetworkPeering.md)
 
 
 
-### [Remove-AzureRmVirtualNetworkSubnetConfig](.\Remove-AzureRmVirtualNetworkSubnetConfig.md)
+### [Remove-AzureRmVirtualNetworkSubnetConfig](./Remove-AzureRmVirtualNetworkSubnetConfig.md)
 Removes a subnet configuration from a virtual network.
 
 
-### [Remove-AzureRmVirtualNetwork](.\Remove-AzureRmVirtualNetwork.md)
+### [Remove-AzureRmVirtualNetwork](./Remove-AzureRmVirtualNetwork.md)
 Removes a virtual network.
 
 
-### [Remove-AzureRmVpnClientRevokedCertificate](.\Remove-AzureRmVpnClientRevokedCertificate.md)
+### [Remove-AzureRmVpnClientRevokedCertificate](./Remove-AzureRmVpnClientRevokedCertificate.md)
 Removes a VPN client-revocation certificate.
 
 
-### [Remove-AzureRmVpnClientRootCertificate](.\Remove-AzureRmVpnClientRootCertificate.md)
+### [Remove-AzureRmVpnClientRootCertificate](./Remove-AzureRmVpnClientRootCertificate.md)
 Removes an existing VPN client root certificate.
 
 
-### [Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey](.\Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
+### [Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey](./Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
 
 
 
-### [Reset-AzureRmVirtualNetworkGateway](.\Reset-AzureRmVirtualNetworkGateway.md)
+### [Reset-AzureRmVirtualNetworkGateway](./Reset-AzureRmVirtualNetworkGateway.md)
 
 
 
-### [Resize-AzureRmVirtualNetworkGateway](.\Resize-AzureRmVirtualNetworkGateway.md)
+### [Resize-AzureRmVirtualNetworkGateway](./Resize-AzureRmVirtualNetworkGateway.md)
 Resizes an existing virtual network gateway.
 
 
-### [Set-AzureRmApplicationGatewayAuthenticationCertificate](.\Set-AzureRmApplicationGatewayAuthenticationCertificate.md)
+### [Set-AzureRmApplicationGatewayAuthenticationCertificate](./Set-AzureRmApplicationGatewayAuthenticationCertificate.md)
 Updates an authentication certificate for an application gateway.
 
 
-### [Set-AzureRmApplicationGatewayBackendAddressPool](.\Set-AzureRmApplicationGatewayBackendAddressPool.md)
+### [Set-AzureRmApplicationGatewayBackendAddressPool](./Set-AzureRmApplicationGatewayBackendAddressPool.md)
 Updates a back-end address pool for an application gateway.
 
 
-### [Set-AzureRmApplicationGatewayBackendHttpSettings](.\Set-AzureRmApplicationGatewayBackendHttpSettings.md)
+### [Set-AzureRmApplicationGatewayBackendHttpSettings](./Set-AzureRmApplicationGatewayBackendHttpSettings.md)
 Updates back-end HTTP settings for an application gateway.
 
 
-### [Set-AzureRmApplicationGatewayFrontendIPConfig](.\Set-AzureRmApplicationGatewayFrontendIPConfig.md)
+### [Set-AzureRmApplicationGatewayFrontendIPConfig](./Set-AzureRmApplicationGatewayFrontendIPConfig.md)
 Modifies a front-end IP address configuration.
 
 
-### [Set-AzureRmApplicationGatewayFrontendPort](.\Set-AzureRmApplicationGatewayFrontendPort.md)
+### [Set-AzureRmApplicationGatewayFrontendPort](./Set-AzureRmApplicationGatewayFrontendPort.md)
 Modifies a front-end port for an application gateway.
 
 
-### [Set-AzureRmApplicationGatewayHttpListener](.\Set-AzureRmApplicationGatewayHttpListener.md)
+### [Set-AzureRmApplicationGatewayHttpListener](./Set-AzureRmApplicationGatewayHttpListener.md)
 Modifies an HTTP listener for an application gateway.
 
 
-### [Set-AzureRmApplicationGatewayIPConfiguration](.\Set-AzureRmApplicationGatewayIPConfiguration.md)
+### [Set-AzureRmApplicationGatewayIPConfiguration](./Set-AzureRmApplicationGatewayIPConfiguration.md)
 Modifies an IP configuration for an application gateway.
 
 
-### [Set-AzureRmApplicationGatewayProbeConfig](.\Set-AzureRmApplicationGatewayProbeConfig.md)
+### [Set-AzureRmApplicationGatewayProbeConfig](./Set-AzureRmApplicationGatewayProbeConfig.md)
 Sets the health probe configuration on an existing Application Gateway.
 
 
-### [Set-AzureRmApplicationGatewayRequestRoutingRule](.\Set-AzureRmApplicationGatewayRequestRoutingRule.md)
+### [Set-AzureRmApplicationGatewayRequestRoutingRule](./Set-AzureRmApplicationGatewayRequestRoutingRule.md)
 Modifies a request routing rule for an application gateway.
 
 
-### [Set-AzureRmApplicationGatewaySku](.\Set-AzureRmApplicationGatewaySku.md)
+### [Set-AzureRmApplicationGatewaySku](./Set-AzureRmApplicationGatewaySku.md)
 Modifies the SKU of an application gateway.
 
 
-### [Set-AzureRmApplicationGatewaySslCertificate](.\Set-AzureRmApplicationGatewaySslCertificate.md)
+### [Set-AzureRmApplicationGatewaySslCertificate](./Set-AzureRmApplicationGatewaySslCertificate.md)
 Sets the goal state of an SSL certificate.
 
 
-### [Set-AzureRmApplicationGatewaySslPolicy](.\Set-AzureRmApplicationGatewaySslPolicy.md)
+### [Set-AzureRmApplicationGatewaySslPolicy](./Set-AzureRmApplicationGatewaySslPolicy.md)
 Modifies the SSL policy of an application gateway.
 
 
-### [Set-AzureRmApplicationGatewayUrlPathMapConfig](.\Set-AzureRmApplicationGatewayUrlPathMapConfig.md)
+### [Set-AzureRmApplicationGatewayUrlPathMapConfig](./Set-AzureRmApplicationGatewayUrlPathMapConfig.md)
 Sets configuration for an array of URL path mappings to a backend server pool.
 
 
-### [Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](.\Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
+### [Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
 Modifies the WAF configuration of an application gateway.
 
 
-### [Set-AzureRmApplicationGateway](.\Set-AzureRmApplicationGateway.md)
+### [Set-AzureRmApplicationGateway](./Set-AzureRmApplicationGateway.md)
 Updates an application gateway.
 
 
-### [Set-AzureRmExpressRouteCircuitPeeringConfig](.\Set-AzureRmExpressRouteCircuitPeeringConfig.md)
+### [Set-AzureRmExpressRouteCircuitPeeringConfig](./Set-AzureRmExpressRouteCircuitPeeringConfig.md)
 
 
 
-### [Set-AzureRmExpressRouteCircuit](.\Set-AzureRmExpressRouteCircuit.md)
+### [Set-AzureRmExpressRouteCircuit](./Set-AzureRmExpressRouteCircuit.md)
 Modifies an ExpressRoute circuit.
 
 
-### [Set-AzureRmLoadBalancerFrontendIpConfig](.\Set-AzureRmLoadBalancerFrontendIpConfig.md)
+### [Set-AzureRmLoadBalancerFrontendIpConfig](./Set-AzureRmLoadBalancerFrontendIpConfig.md)
 Sets the goal state for a front-end IP configuration in a load balancer.
 
 
-### [Set-AzureRmLoadBalancerInboundNatPoolConfig](.\Set-AzureRmLoadBalancerInboundNatPoolConfig.md)
+### [Set-AzureRmLoadBalancerInboundNatPoolConfig](./Set-AzureRmLoadBalancerInboundNatPoolConfig.md)
 
 
 
-### [Set-AzureRmLoadBalancerInboundNatRuleConfig](.\Set-AzureRmLoadBalancerInboundNatRuleConfig.md)
+### [Set-AzureRmLoadBalancerInboundNatRuleConfig](./Set-AzureRmLoadBalancerInboundNatRuleConfig.md)
 Sets an inbound NAT rule configuration for a load balancer.
 
 
-### [Set-AzureRmLoadBalancerProbeConfig](.\Set-AzureRmLoadBalancerProbeConfig.md)
+### [Set-AzureRmLoadBalancerProbeConfig](./Set-AzureRmLoadBalancerProbeConfig.md)
 Sets the goal state for a probe configuration.
 
 
-### [Set-AzureRmLoadBalancerRuleConfig](.\Set-AzureRmLoadBalancerRuleConfig.md)
+### [Set-AzureRmLoadBalancerRuleConfig](./Set-AzureRmLoadBalancerRuleConfig.md)
 Sets the goal state for a load balancer rule configuration.
 
 
-### [Set-AzureRmLoadBalancer](.\Set-AzureRmLoadBalancer.md)
+### [Set-AzureRmLoadBalancer](./Set-AzureRmLoadBalancer.md)
 Sets the goal state for a load balancer.
 
 
-### [Set-AzureRmLocalNetworkGateway](.\Set-AzureRmLocalNetworkGateway.md)
+### [Set-AzureRmLocalNetworkGateway](./Set-AzureRmLocalNetworkGateway.md)
 Modifies a local network gateway.
 
 
-### [Set-AzureRmNetworkInterfaceIpConfig](.\Set-AzureRmNetworkInterfaceIpConfig.md)
+### [Set-AzureRmNetworkInterfaceIpConfig](./Set-AzureRmNetworkInterfaceIpConfig.md)
 Sets the goal state for an Azure network interface IP configuration.
 
 
-### [Set-AzureRmNetworkInterface](.\Set-AzureRmNetworkInterface.md)
+### [Set-AzureRmNetworkInterface](./Set-AzureRmNetworkInterface.md)
 Sets the goal state for a network interface.
 
 
-### [Set-AzureRmNetworkSecurityGroup](.\Set-AzureRmNetworkSecurityGroup.md)
+### [Set-AzureRmNetworkSecurityGroup](./Set-AzureRmNetworkSecurityGroup.md)
 Sets the goal state for a network security group.
 
 
-### [Set-AzureRmNetworkSecurityRuleConfig](.\Set-AzureRmNetworkSecurityRuleConfig.md)
+### [Set-AzureRmNetworkSecurityRuleConfig](./Set-AzureRmNetworkSecurityRuleConfig.md)
 Sets the goal state for a network security rule configuration.
 
 
-### [Set-AzureRmPublicIpAddress](.\Set-AzureRmPublicIpAddress.md)
+### [Set-AzureRmPublicIpAddress](./Set-AzureRmPublicIpAddress.md)
 Sets the goal state for a public IP address.
 
 
-### [Set-AzureRmRouteConfig](.\Set-AzureRmRouteConfig.md)
+### [Set-AzureRmRouteConfig](./Set-AzureRmRouteConfig.md)
 Sets the goal state for a route.
 
 
-### [Set-AzureRmRouteTable](.\Set-AzureRmRouteTable.md)
+### [Set-AzureRmRouteTable](./Set-AzureRmRouteTable.md)
 Sets the goal state for a route table.
 
 
-### [Set-AzureRmVirtualNetworkGatewayConnectionSharedKey](.\Set-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
+### [Set-AzureRmVirtualNetworkGatewayConnectionSharedKey](./Set-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
 Configures the shared key of the virtual network gateway connection.
 
 
-### [Set-AzureRmVirtualNetworkGatewayConnection](.\Set-AzureRmVirtualNetworkGatewayConnection.md)
+### [Set-AzureRmVirtualNetworkGatewayConnection](./Set-AzureRmVirtualNetworkGatewayConnection.md)
 Configures a virtual network gateway connection.
 
 
-### [Set-AzureRmVirtualNetworkGatewayDefaultSite](.\Set-AzureRmVirtualNetworkGatewayDefaultSite.md)
+### [Set-AzureRmVirtualNetworkGatewayDefaultSite](./Set-AzureRmVirtualNetworkGatewayDefaultSite.md)
 Sets the default site for a virtual network gateway.
 
 
-### [Set-AzureRmVirtualNetworkGatewayVpnClientConfig](.\Set-AzureRmVirtualNetworkGatewayVpnClientConfig.md)
+### [Set-AzureRmVirtualNetworkGatewayVpnClientConfig](./Set-AzureRmVirtualNetworkGatewayVpnClientConfig.md)
 Sets the VPN client address pool for a virtual network gateway.
 
 
-### [Set-AzureRmVirtualNetworkGateway](.\Set-AzureRmVirtualNetworkGateway.md)
+### [Set-AzureRmVirtualNetworkGateway](./Set-AzureRmVirtualNetworkGateway.md)
 Updates a virtual network gateway.
 
 
-### [Set-AzureRmVirtualNetworkPeering](.\Set-AzureRmVirtualNetworkPeering.md)
+### [Set-AzureRmVirtualNetworkPeering](./Set-AzureRmVirtualNetworkPeering.md)
 Configures a virtual network peering.
 
 
-### [Set-AzureRmVirtualNetworkSubnetConfig](.\Set-AzureRmVirtualNetworkSubnetConfig.md)
+### [Set-AzureRmVirtualNetworkSubnetConfig](./Set-AzureRmVirtualNetworkSubnetConfig.md)
 Configures the goal state for a subnet configuration in a virtual network.
 
 
-### [Set-AzureRmVirtualNetwork](.\Set-AzureRmVirtualNetwork.md)
+### [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
 Sets the goal state for a virtual network.
 
 
-### [Start-AzureRmApplicationGateway](.\Start-AzureRmApplicationGateway.md)
+### [Start-AzureRmApplicationGateway](./Start-AzureRmApplicationGateway.md)
 Starts an application gateway.
 
 
-### [Stop-AzureRmApplicationGateway](.\Stop-AzureRmApplicationGateway.md)
+### [Stop-AzureRmApplicationGateway](./Stop-AzureRmApplicationGateway.md)
 Stops an application gateway
 
 
-### [Test-AzureRmDnsAvailability](.\Test-AzureRmDnsAvailability.md)
+### [Test-AzureRmDnsAvailability](./Test-AzureRmDnsAvailability.md)
 
 
 
-### [Test-AzureRmPrivateIPAddressAvailability](.\Test-AzureRmPrivateIPAddressAvailability.md)
+### [Test-AzureRmPrivateIPAddressAvailability](./Test-AzureRmPrivateIPAddressAvailability.md)
 Test availability of a private IP address in a virtual network.
 
 

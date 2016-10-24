@@ -177,12 +177,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSubscriptionIdLog](.\Get-AzureSubscriptionIdLog.md)
+[Get-AzureSubscriptionIdLog](./Get-AzureSubscriptionIdLog.md)
 
-[Get-AzureResourceGroupLog](.\Get-AzureResourceGroupLog.md)
+[Get-AzureResourceGroupLog](./Get-AzureResourceGroupLog.md)
 
-[Get-AzureResourceLog](.\Get-AzureResourceLog.md)
+[Get-AzureResourceLog](./Get-AzureResourceLog.md)
 
-[Get-AzureResourceProviderLog](.\Get-AzureResourceProviderLog.md)
+[Get-AzureResourceProviderLog](./Get-AzureResourceProviderLog.md)
 
 

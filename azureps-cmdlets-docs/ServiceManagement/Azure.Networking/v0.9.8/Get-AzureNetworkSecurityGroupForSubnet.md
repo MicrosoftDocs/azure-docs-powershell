@@ -102,8 +102,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureNetworkSecurityGroupFromSubnet](.\Remove-AzureNetworkSecurityGroupFromSubnet.md)
+[Remove-AzureNetworkSecurityGroupFromSubnet](./Remove-AzureNetworkSecurityGroupFromSubnet.md)
 
-[Set-AzureNetworkSecurityGroupToSubnet](.\Set-AzureNetworkSecurityGroupToSubnet.md)
+[Set-AzureNetworkSecurityGroupToSubnet](./Set-AzureNetworkSecurityGroupToSubnet.md)
 
 

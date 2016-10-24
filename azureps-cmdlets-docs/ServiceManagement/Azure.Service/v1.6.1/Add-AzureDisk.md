@@ -174,10 +174,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureDisk](.\Get-AzureDisk.md)
+[Get-AzureDisk](./Get-AzureDisk.md)
 
-[Remove-AzureDisk](.\Remove-AzureDisk.md)
+[Remove-AzureDisk](./Remove-AzureDisk.md)
 
-[Update-AzureDisk](.\Update-AzureDisk.md)
+[Update-AzureDisk](./Update-AzureDisk.md)
 
 

@@ -256,10 +256,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Stop-AzureRmDataLakeAnalyticsJob](.\Stop-AzureRmDataLakeAnalyticsJob.md)
+[Stop-AzureRmDataLakeAnalyticsJob](./Stop-AzureRmDataLakeAnalyticsJob.md)
 
-[Submit-AzureRmDataLakeAnalyticsJob](.\Submit-AzureRmDataLakeAnalyticsJob.md)
+[Submit-AzureRmDataLakeAnalyticsJob](./Submit-AzureRmDataLakeAnalyticsJob.md)
 
-[Wait-AzureRmDataLakeAnalyticsJob](.\Wait-AzureRmDataLakeAnalyticsJob.md)
+[Wait-AzureRmDataLakeAnalyticsJob](./Wait-AzureRmDataLakeAnalyticsJob.md)
 
 

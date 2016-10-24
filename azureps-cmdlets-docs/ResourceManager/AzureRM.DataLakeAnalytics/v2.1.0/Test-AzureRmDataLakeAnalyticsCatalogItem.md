@@ -133,6 +133,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataLakeAnalyticsCatalogItem](.\Get-AzureRmDataLakeAnalyticsCatalogItem.md)
+[Get-AzureRmDataLakeAnalyticsCatalogItem](./Get-AzureRmDataLakeAnalyticsCatalogItem.md)
 
 

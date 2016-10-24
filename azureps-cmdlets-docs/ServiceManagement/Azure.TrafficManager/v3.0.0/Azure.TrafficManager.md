@@ -11,43 +11,43 @@ Locale: en-US
 {{Manually Enter Description Here}}
 
 ## Azure.TrafficManager Cmdlets
-### [Add-AzureTrafficManagerEndpoint](.\Add-AzureTrafficManagerEndpoint.md)
+### [Add-AzureTrafficManagerEndpoint](./Add-AzureTrafficManagerEndpoint.md)
 Adds an endpoint to a Traffic Manager profile.
 
 
-### [Disable-AzureTrafficManagerProfile](.\Disable-AzureTrafficManagerProfile.md)
+### [Disable-AzureTrafficManagerProfile](./Disable-AzureTrafficManagerProfile.md)
 Disables a Traffic Manager profile.
 
 
-### [Enable-AzureTrafficManagerProfile](.\Enable-AzureTrafficManagerProfile.md)
+### [Enable-AzureTrafficManagerProfile](./Enable-AzureTrafficManagerProfile.md)
 Enables a Traffic Manager profile.
 
 
-### [Get-AzureTrafficManagerProfile](.\Get-AzureTrafficManagerProfile.md)
+### [Get-AzureTrafficManagerProfile](./Get-AzureTrafficManagerProfile.md)
 Gets the details of a Traffic Manager profile.
 
 
-### [New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
+### [New-AzureTrafficManagerProfile](./New-AzureTrafficManagerProfile.md)
 Creates a Traffic Manager profile.
 
 
-### [Remove-AzureTrafficManagerEndpoint](.\Remove-AzureTrafficManagerEndpoint.md)
+### [Remove-AzureTrafficManagerEndpoint](./Remove-AzureTrafficManagerEndpoint.md)
 Removes an endpoint from a Traffic Manager profile.
 
 
-### [Remove-AzureTrafficManagerProfile](.\Remove-AzureTrafficManagerProfile.md)
+### [Remove-AzureTrafficManagerProfile](./Remove-AzureTrafficManagerProfile.md)
 Removes a Traffic Manager profile.
 
 
-### [Set-AzureTrafficManagerEndpoint](.\Set-AzureTrafficManagerEndpoint.md)
+### [Set-AzureTrafficManagerEndpoint](./Set-AzureTrafficManagerEndpoint.md)
 Updates the properties of an endpoint in a Traffic Manager profile.
 
 
-### [Set-AzureTrafficManagerProfile](.\Set-AzureTrafficManagerProfile.md)
+### [Set-AzureTrafficManagerProfile](./Set-AzureTrafficManagerProfile.md)
 Updates the properties of a Traffic Manager profile.
 
 
-### [Test-AzureTrafficManagerDomainName](.\Test-AzureTrafficManagerDomainName.md)
+### [Test-AzureTrafficManagerDomainName](./Test-AzureTrafficManagerDomainName.md)
 Checks whether a domain name is available as a Traffic Manager profile.
 
 

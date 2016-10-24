@@ -88,16 +88,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Show-AzurePortal](.\Show-AzurePortal.md)
+[Show-AzurePortal](./Show-AzurePortal.md)
 
-[Get-AzureWebsite](.\Get-AzureWebsite.md)
+[Get-AzureWebsite](./Get-AzureWebsite.md)
 
-[New-AzureWebsite](.\New-AzureWebsite.md)
+[New-AzureWebsite](./New-AzureWebsite.md)
 
-[Remove-AzureWebsite](.\Remove-AzureWebsite.md)
+[Remove-AzureWebsite](./Remove-AzureWebsite.md)
 
-[Restart-AzureWebsite](.\Restart-AzureWebsite.md)
+[Restart-AzureWebsite](./Restart-AzureWebsite.md)
 
-[Set-AzureWebsite](.\Set-AzureWebsite.md)
+[Set-AzureWebsite](./Set-AzureWebsite.md)
 
 

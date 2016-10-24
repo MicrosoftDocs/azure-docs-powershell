@@ -194,8 +194,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataFactoryLinkedService](.\Get-AzureRmDataFactoryLinkedService.md)
+[Get-AzureRmDataFactoryLinkedService](./Get-AzureRmDataFactoryLinkedService.md)
 
-[Remove-AzureRmDataFactoryLinkedService](.\Remove-AzureRmDataFactoryLinkedService.md)
+[Remove-AzureRmDataFactoryLinkedService](./Remove-AzureRmDataFactoryLinkedService.md)
 
 

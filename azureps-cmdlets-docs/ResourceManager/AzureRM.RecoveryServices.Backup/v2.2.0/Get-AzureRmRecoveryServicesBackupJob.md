@@ -212,10 +212,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmRecoveryServicesBackupJobDetails](.\Get-AzureRmRecoveryServicesBackupJobDetails.md)
+[Get-AzureRmRecoveryServicesBackupJobDetails](./Get-AzureRmRecoveryServicesBackupJobDetails.md)
 
-[Stop-AzureRmRecoveryServicesBackupJob](.\Stop-AzureRmRecoveryServicesBackupJob.md)
+[Stop-AzureRmRecoveryServicesBackupJob](./Stop-AzureRmRecoveryServicesBackupJob.md)
 
-[Wait-AzureRmRecoveryServicesBackupJob](.\Wait-AzureRmRecoveryServicesBackupJob.md)
+[Wait-AzureRmRecoveryServicesBackupJob](./Wait-AzureRmRecoveryServicesBackupJob.md)
 
 

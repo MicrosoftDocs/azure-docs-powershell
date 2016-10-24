@@ -195,16 +195,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataLakeStoreItem](.\Get-AzureRmDataLakeStoreItem.md)
+[Get-AzureRmDataLakeStoreItem](./Get-AzureRmDataLakeStoreItem.md)
 
-[Export-AzureRmDataLakeStoreItem](.\Export-AzureRmDataLakeStoreItem.md)
+[Export-AzureRmDataLakeStoreItem](./Export-AzureRmDataLakeStoreItem.md)
 
-[Import-AzureRmDataLakeStoreItem](.\Import-AzureRmDataLakeStoreItem.md)
+[Import-AzureRmDataLakeStoreItem](./Import-AzureRmDataLakeStoreItem.md)
 
-[Join-AzureRmDataLakeStoreItem](.\Join-AzureRmDataLakeStoreItem.md)
+[Join-AzureRmDataLakeStoreItem](./Join-AzureRmDataLakeStoreItem.md)
 
-[New-AzureRmDataLakeStoreItem](.\New-AzureRmDataLakeStoreItem.md)
+[New-AzureRmDataLakeStoreItem](./New-AzureRmDataLakeStoreItem.md)
 
-[Test-AzureRmDataLakeStoreItem](.\Test-AzureRmDataLakeStoreItem.md)
+[Test-AzureRmDataLakeStoreItem](./Test-AzureRmDataLakeStoreItem.md)
 
 

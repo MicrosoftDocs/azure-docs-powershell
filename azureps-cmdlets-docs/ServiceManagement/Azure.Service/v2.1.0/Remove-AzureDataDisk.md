@@ -150,14 +150,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureDataDisk](.\Add-AzureDataDisk.md)
+[Add-AzureDataDisk](./Add-AzureDataDisk.md)
 
-[Get-AzureDataDisk](.\Get-AzureDataDisk.md)
+[Get-AzureDataDisk](./Get-AzureDataDisk.md)
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
-[Set-AzureDataDisk](.\Set-AzureDataDisk.md)
+[Set-AzureDataDisk](./Set-AzureDataDisk.md)
 
-[Update-AzureVM](.\Update-AzureVM.md)
+[Update-AzureVM](./Update-AzureVM.md)
 
 

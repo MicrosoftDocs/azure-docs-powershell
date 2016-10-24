@@ -143,6 +143,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabase](.\Get-AzureRmSqlDatabase.md)
+[Get-AzureRmSqlDatabase](./Get-AzureRmSqlDatabase.md)
 
 

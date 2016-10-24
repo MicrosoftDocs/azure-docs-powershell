@@ -345,12 +345,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureDataDisk](.\Add-AzureDataDisk.md)
+[Add-AzureDataDisk](./Add-AzureDataDisk.md)
 
-[Add-AzureProvisioningConfig](.\Add-AzureProvisioningConfig.md)
+[Add-AzureProvisioningConfig](./Add-AzureProvisioningConfig.md)
 
-[Get-AzureVMImage](.\Get-AzureVMImage.md)
+[Get-AzureVMImage](./Get-AzureVMImage.md)
 
-[New-AzureVMConfig](.\New-AzureVMConfig.md)
+[New-AzureVMConfig](./New-AzureVMConfig.md)
 
 

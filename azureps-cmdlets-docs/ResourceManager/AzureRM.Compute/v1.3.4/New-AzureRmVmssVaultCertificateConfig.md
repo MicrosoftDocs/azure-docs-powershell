@@ -115,6 +115,6 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Add-AzureRmVmssSecret](.\Add-AzureRmVmssSecret.md)
+[Add-AzureRmVmssSecret](./Add-AzureRmVmssSecret.md)
 
 

@@ -251,8 +251,8 @@ If you do not specify that parameter, it returns an **IEnumerable\<DeviceInfo\>*
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleResourceContext](.\Get-AzureStorSimpleResourceContext.md)
+[Get-AzureStorSimpleResourceContext](./Get-AzureStorSimpleResourceContext.md)
 
-[Select-AzureStorSimpleResource](.\Select-AzureStorSimpleResource.md)
+[Select-AzureStorSimpleResource](./Select-AzureStorSimpleResource.md)
 
 

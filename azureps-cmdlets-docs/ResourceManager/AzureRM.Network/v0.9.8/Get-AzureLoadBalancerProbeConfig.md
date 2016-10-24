@@ -85,12 +85,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureLoadBalancerProbeConfig](.\Add-AzureLoadBalancerProbeConfig.md)
+[Add-AzureLoadBalancerProbeConfig](./Add-AzureLoadBalancerProbeConfig.md)
 
-[New-AzureLoadBalancerProbeConfig](.\New-AzureLoadBalancerProbeConfig.md)
+[New-AzureLoadBalancerProbeConfig](./New-AzureLoadBalancerProbeConfig.md)
 
-[Remove-AzureLoadBalancerProbeConfig](.\Remove-AzureLoadBalancerProbeConfig.md)
+[Remove-AzureLoadBalancerProbeConfig](./Remove-AzureLoadBalancerProbeConfig.md)
 
-[Set-AzureLoadBalancerProbeConfig](.\Set-AzureLoadBalancerProbeConfig.md)
+[Set-AzureLoadBalancerProbeConfig](./Set-AzureLoadBalancerProbeConfig.md)
 
 

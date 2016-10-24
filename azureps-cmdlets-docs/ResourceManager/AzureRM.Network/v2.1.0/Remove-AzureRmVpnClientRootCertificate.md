@@ -161,10 +161,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmVpnClientRootCertificate](.\Add-AzureRmVpnClientRootCertificate.md)
+[Add-AzureRmVpnClientRootCertificate](./Add-AzureRmVpnClientRootCertificate.md)
 
-[Get-AzureRmVpnClientRootCertificate](.\Get-AzureRmVpnClientRootCertificate.md)
+[Get-AzureRmVpnClientRootCertificate](./Get-AzureRmVpnClientRootCertificate.md)
 
-[New-AzureRmVpnClientRootCertificate](.\New-AzureRmVpnClientRootCertificate.md)
+[New-AzureRmVpnClientRootCertificate](./New-AzureRmVpnClientRootCertificate.md)
 
 

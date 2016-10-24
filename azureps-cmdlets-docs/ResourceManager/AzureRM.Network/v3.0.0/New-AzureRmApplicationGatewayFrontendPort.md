@@ -75,12 +75,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmApplicationGatewayFrontendPort](.\Add-AzureRmApplicationGatewayFrontendPort.md)
+[Add-AzureRmApplicationGatewayFrontendPort](./Add-AzureRmApplicationGatewayFrontendPort.md)
 
-[Get-AzureRmApplicationGatewayFrontendPort](.\Get-AzureRmApplicationGatewayFrontendPort.md)
+[Get-AzureRmApplicationGatewayFrontendPort](./Get-AzureRmApplicationGatewayFrontendPort.md)
 
-[Remove-AzureRmApplicationGatewayFrontendPort](.\Remove-AzureRmApplicationGatewayFrontendPort.md)
+[Remove-AzureRmApplicationGatewayFrontendPort](./Remove-AzureRmApplicationGatewayFrontendPort.md)
 
-[Set-AzureRmApplicationGatewayFrontendPort](.\Set-AzureRmApplicationGatewayFrontendPort.md)
+[Set-AzureRmApplicationGatewayFrontendPort](./Set-AzureRmApplicationGatewayFrontendPort.md)
 
 

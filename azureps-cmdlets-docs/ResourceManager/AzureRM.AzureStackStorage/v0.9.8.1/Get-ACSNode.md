@@ -176,10 +176,10 @@ Output from Get-ACSFarm can be piped to this cmdlet.
 
 ## RELATED LINKS
 
-[Enable-ACSNode](.\Enable-ACSNode.md)
+[Enable-ACSNode](./Enable-ACSNode.md)
 
-[Disable-ACSNode](.\Disable-ACSNode.md)
+[Disable-ACSNode](./Disable-ACSNode.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

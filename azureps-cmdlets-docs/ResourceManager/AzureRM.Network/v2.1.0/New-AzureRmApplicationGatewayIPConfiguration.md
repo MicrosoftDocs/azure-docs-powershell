@@ -137,12 +137,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmApplicationGatewayIPConfiguration](.\Add-AzureRmApplicationGatewayIPConfiguration.md)
+[Add-AzureRmApplicationGatewayIPConfiguration](./Add-AzureRmApplicationGatewayIPConfiguration.md)
 
-[Get-AzureRmApplicationGatewayIPConfiguration](.\Get-AzureRmApplicationGatewayIPConfiguration.md)
+[Get-AzureRmApplicationGatewayIPConfiguration](./Get-AzureRmApplicationGatewayIPConfiguration.md)
 
-[Remove-AzureRmApplicationGatewayIPConfiguration](.\Remove-AzureRmApplicationGatewayIPConfiguration.md)
+[Remove-AzureRmApplicationGatewayIPConfiguration](./Remove-AzureRmApplicationGatewayIPConfiguration.md)
 
-[Set-AzureRmApplicationGatewayIPConfiguration](.\Set-AzureRmApplicationGatewayIPConfiguration.md)
+[Set-AzureRmApplicationGatewayIPConfiguration](./Set-AzureRmApplicationGatewayIPConfiguration.md)
 
 

@@ -120,10 +120,10 @@ If the zone name is not specified, an array of zone objects is returned.
 
 ## RELATED LINKS
 
-[New-AzureDnsZone](.\New-AzureDnsZone.md)
+[New-AzureDnsZone](./New-AzureDnsZone.md)
 
-[Remove-AzureDnsZone](.\Remove-AzureDnsZone.md)
+[Remove-AzureDnsZone](./Remove-AzureDnsZone.md)
 
-[Set-AzureDnsZone](.\Set-AzureDnsZone.md)
+[Set-AzureDnsZone](./Set-AzureDnsZone.md)
 
 

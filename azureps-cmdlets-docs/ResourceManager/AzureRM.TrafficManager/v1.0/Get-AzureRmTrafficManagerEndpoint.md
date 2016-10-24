@@ -135,14 +135,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureRmTrafficManagerEndpoint](.\Disable-AzureRmTrafficManagerEndpoint.md)
+[Disable-AzureRmTrafficManagerEndpoint](./Disable-AzureRmTrafficManagerEndpoint.md)
 
-[Enable-AzureRmTrafficManagerEndpoint](.\Enable-AzureRmTrafficManagerEndpoint.md)
+[Enable-AzureRmTrafficManagerEndpoint](./Enable-AzureRmTrafficManagerEndpoint.md)
 
-[New-AzureRmTrafficManagerEndpoint](.\New-AzureRmTrafficManagerEndpoint.md)
+[New-AzureRmTrafficManagerEndpoint](./New-AzureRmTrafficManagerEndpoint.md)
 
-[Remove-AzureRmTrafficManagerEndpoint](.\Remove-AzureRmTrafficManagerEndpoint.md)
+[Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)
 
-[Set-AzureRmTrafficManagerEndpoint](.\Set-AzureRmTrafficManagerEndpoint.md)
+[Set-AzureRmTrafficManagerEndpoint](./Set-AzureRmTrafficManagerEndpoint.md)
 
 

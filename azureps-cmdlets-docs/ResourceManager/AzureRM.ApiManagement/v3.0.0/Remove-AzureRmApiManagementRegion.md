@@ -99,8 +99,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmApiManagementRegion](.\Add-AzureRmApiManagementRegion.md)
+[Add-AzureRmApiManagementRegion](./Add-AzureRmApiManagementRegion.md)
 
-[Update-AzureRmApiManagementRegion](.\Update-AzureRmApiManagementRegion.md)
+[Update-AzureRmApiManagementRegion](./Update-AzureRmApiManagementRegion.md)
 
 

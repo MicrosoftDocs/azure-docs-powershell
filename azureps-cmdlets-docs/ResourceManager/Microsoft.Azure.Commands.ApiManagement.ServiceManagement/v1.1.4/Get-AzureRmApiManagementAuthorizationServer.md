@@ -118,10 +118,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmApiManagementAuthorizationServer](.\New-AzureRmApiManagementAuthorizationServer.md)
+[New-AzureRmApiManagementAuthorizationServer](./New-AzureRmApiManagementAuthorizationServer.md)
 
-[Remove-AzureRmApiManagementAuthorizationServer](.\Remove-AzureRmApiManagementAuthorizationServer.md)
+[Remove-AzureRmApiManagementAuthorizationServer](./Remove-AzureRmApiManagementAuthorizationServer.md)
 
-[Set-AzureRmApiManagementAuthorizationServer](.\Set-AzureRmApiManagementAuthorizationServer.md)
+[Set-AzureRmApiManagementAuthorizationServer](./Set-AzureRmApiManagementAuthorizationServer.md)
 
 

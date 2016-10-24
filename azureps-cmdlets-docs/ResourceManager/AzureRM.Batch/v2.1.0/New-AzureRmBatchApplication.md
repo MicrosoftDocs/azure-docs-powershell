@@ -118,16 +118,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBatchApplication](.\Get-AzureRmBatchApplication.md)
+[Get-AzureRmBatchApplication](./Get-AzureRmBatchApplication.md)
 
-[Get-AzureRmBatchApplicationPackage](.\Get-AzureRmBatchApplicationPackage.md)
+[Get-AzureRmBatchApplicationPackage](./Get-AzureRmBatchApplicationPackage.md)
 
-[New-AzureRmBatchApplicationPackage](.\New-AzureRmBatchApplicationPackage.md)
+[New-AzureRmBatchApplicationPackage](./New-AzureRmBatchApplicationPackage.md)
 
-[Remove-AzureRmBatchApplication](.\Remove-AzureRmBatchApplication.md)
+[Remove-AzureRmBatchApplication](./Remove-AzureRmBatchApplication.md)
 
-[Remove-AzureRmBatchApplicationPackage](.\Remove-AzureRmBatchApplicationPackage.md)
+[Remove-AzureRmBatchApplicationPackage](./Remove-AzureRmBatchApplicationPackage.md)
 
-[Set-AzureRmBatchApplication](.\Set-AzureRmBatchApplication.md)
+[Set-AzureRmBatchApplication](./Set-AzureRmBatchApplication.md)
 
 

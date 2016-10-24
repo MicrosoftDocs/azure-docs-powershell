@@ -139,8 +139,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmDataLakeAnalyticsDataSource](.\Add-AzureRmDataLakeAnalyticsDataSource.md)
+[Add-AzureRmDataLakeAnalyticsDataSource](./Add-AzureRmDataLakeAnalyticsDataSource.md)
 
-[Remove-AzureRmDataLakeAnalyticsDataSource](.\Remove-AzureRmDataLakeAnalyticsDataSource.md)
+[Remove-AzureRmDataLakeAnalyticsDataSource](./Remove-AzureRmDataLakeAnalyticsDataSource.md)
 
 

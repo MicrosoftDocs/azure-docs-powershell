@@ -64,8 +64,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBackupContainer](.\Get-AzureRmBackupContainer.md)
+[Get-AzureRmBackupContainer](./Get-AzureRmBackupContainer.md)
 
-[Register-AzureRmBackupContainer](.\Register-AzureRmBackupContainer.md)
+[Register-AzureRmBackupContainer](./Register-AzureRmBackupContainer.md)
 
 

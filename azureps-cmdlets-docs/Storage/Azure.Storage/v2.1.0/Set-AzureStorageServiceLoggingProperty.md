@@ -201,8 +201,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureStorageServiceLoggingProperty](.\Get-AzureStorageServiceLoggingProperty.md)
+[Get-AzureStorageServiceLoggingProperty](./Get-AzureStorageServiceLoggingProperty.md)
 
-[New-AzureStorageContext](.\New-AzureStorageContext.md)
+[New-AzureStorageContext](./New-AzureStorageContext.md)
 
 

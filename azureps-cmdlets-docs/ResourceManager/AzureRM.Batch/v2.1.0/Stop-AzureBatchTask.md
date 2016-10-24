@@ -120,12 +120,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureBatchTask](.\Get-AzureBatchTask.md)
+[Get-AzureBatchTask](./Get-AzureBatchTask.md)
 
-[New-AzureBatchTask](.\New-AzureBatchTask.md)
+[New-AzureBatchTask](./New-AzureBatchTask.md)
 
-[Remove-AzureBatchTask](.\Remove-AzureBatchTask.md)
+[Remove-AzureBatchTask](./Remove-AzureBatchTask.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

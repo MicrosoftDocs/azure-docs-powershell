@@ -134,8 +134,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAvailabilitySet](.\Get-AzureAvailabilitySet.md)
+[Get-AzureAvailabilitySet](./Get-AzureAvailabilitySet.md)
 
-[Remove-AzureAvailabilitySet](.\Remove-AzureAvailabilitySet.md)
+[Remove-AzureAvailabilitySet](./Remove-AzureAvailabilitySet.md)
 
 

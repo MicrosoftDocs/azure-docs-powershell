@@ -159,14 +159,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureApplicationGateway](.\Get-AzureApplicationGateway.md)
+[Get-AzureApplicationGateway](./Get-AzureApplicationGateway.md)
 
-[Remove-AzureApplicationGateway](.\Remove-AzureApplicationGateway.md)
+[Remove-AzureApplicationGateway](./Remove-AzureApplicationGateway.md)
 
-[Start-AzureApplicationGateway](.\Start-AzureApplicationGateway.md)
+[Start-AzureApplicationGateway](./Start-AzureApplicationGateway.md)
 
-[Stop-AzureApplicationGateway](.\Stop-AzureApplicationGateway.md)
+[Stop-AzureApplicationGateway](./Stop-AzureApplicationGateway.md)
 
-[Update-AzureApplicationGateway](.\Update-AzureApplicationGateway.md)
+[Update-AzureApplicationGateway](./Update-AzureApplicationGateway.md)
 
 

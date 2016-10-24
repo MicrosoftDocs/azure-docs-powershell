@@ -210,10 +210,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureStorageQueueStoredAccessPolicy](.\Get-AzureStorageQueueStoredAccessPolicy.md)
+[Get-AzureStorageQueueStoredAccessPolicy](./Get-AzureStorageQueueStoredAccessPolicy.md)
 
-[New-AzureStorageQueueStoredAccessPolicy](.\New-AzureStorageQueueStoredAccessPolicy.md)
+[New-AzureStorageQueueStoredAccessPolicy](./New-AzureStorageQueueStoredAccessPolicy.md)
 
-[Remove-AzureStorageQueueStoredAccessPolicy](.\Remove-AzureStorageQueueStoredAccessPolicy.md)
+[Remove-AzureStorageQueueStoredAccessPolicy](./Remove-AzureStorageQueueStoredAccessPolicy.md)
 
 

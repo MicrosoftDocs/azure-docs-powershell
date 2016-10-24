@@ -70,6 +70,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureStaticVNetIP](.\Set-AzureStaticVNetIP.md)
+[Set-AzureStaticVNetIP](./Set-AzureStaticVNetIP.md)
 
 

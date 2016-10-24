@@ -297,8 +297,8 @@ This cmdlet returns a NetworkConfig object that contains the following propertie
 
 ## RELATED LINKS
 
-[Set-AzureStorSimpleDevice](.\Set-AzureStorSimpleDevice.md)
+[Set-AzureStorSimpleDevice](./Set-AzureStorSimpleDevice.md)
 
-[Get-AzureStorSimpleDevice](.\Get-AzureStorSimpleDevice.md)
+[Get-AzureStorSimpleDevice](./Get-AzureStorSimpleDevice.md)
 
 

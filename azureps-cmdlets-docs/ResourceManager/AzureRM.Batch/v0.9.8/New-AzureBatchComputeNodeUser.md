@@ -200,12 +200,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureBatchAccountKeys](.\Get-AzureBatchAccountKeys.md)
+[Get-AzureBatchAccountKeys](./Get-AzureBatchAccountKeys.md)
 
-[Get-AzureBatchComputeNode](.\Get-AzureBatchComputeNode.md)
+[Get-AzureBatchComputeNode](./Get-AzureBatchComputeNode.md)
 
-[Remove-AzureBatchComputeNodeUser](.\Remove-AzureBatchComputeNodeUser.md)
+[Remove-AzureBatchComputeNodeUser](./Remove-AzureBatchComputeNodeUser.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

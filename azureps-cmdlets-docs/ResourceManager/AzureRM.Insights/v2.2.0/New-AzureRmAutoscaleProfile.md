@@ -338,14 +338,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmAutoscaleSetting](.\Add-AzureRmAutoscaleSetting.md)
+[Add-AzureRmAutoscaleSetting](./Add-AzureRmAutoscaleSetting.md)
 
-[Get-AzureRmAutoscaleHistory](.\Get-AzureRmAutoscaleHistory.md)
+[Get-AzureRmAutoscaleHistory](./Get-AzureRmAutoscaleHistory.md)
 
-[Get-AzureRmAutoscaleSetting](.\Get-AzureRmAutoscaleSetting.md)
+[Get-AzureRmAutoscaleSetting](./Get-AzureRmAutoscaleSetting.md)
 
-[New-AzureRmAutoscaleRule](.\New-AzureRmAutoscaleRule.md)
+[New-AzureRmAutoscaleRule](./New-AzureRmAutoscaleRule.md)
 
-[Remove-AzureRmAutoscaleSetting](.\Remove-AzureRmAutoscaleSetting.md)
+[Remove-AzureRmAutoscaleSetting](./Remove-AzureRmAutoscaleSetting.md)
 
 

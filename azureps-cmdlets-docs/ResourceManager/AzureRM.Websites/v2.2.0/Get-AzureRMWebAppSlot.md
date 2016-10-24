@@ -106,18 +106,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRMWebAppSlot](.\New-AzureRMWebAppSlot.md)
+[New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
 
-[Remove-AzureRMWebAppSlot](.\Remove-AzureRMWebAppSlot.md)
+[Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
 
-[Restart-AzureRMWebAppSlot](.\Restart-AzureRMWebAppSlot.md)
+[Restart-AzureRMWebAppSlot](./Restart-AzureRMWebAppSlot.md)
 
-[Set-AzureRMWebAppSlot](.\Set-AzureRMWebAppSlot.md)
+[Set-AzureRMWebAppSlot](./Set-AzureRMWebAppSlot.md)
 
-[Start-AzureRMWebAppSlot](.\Start-AzureRMWebAppSlot.md)
+[Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
 
-[Stop-AzureRMWebAppSlot](.\Stop-AzureRMWebAppSlot.md)
+[Stop-AzureRMWebAppSlot](./Stop-AzureRMWebAppSlot.md)
 
-[Get-AzureRmWebApp](.\Get-AzureRmWebApp.md)
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
 
 

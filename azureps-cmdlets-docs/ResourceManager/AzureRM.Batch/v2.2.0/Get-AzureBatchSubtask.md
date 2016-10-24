@@ -137,6 +137,6 @@ This cmdlet returns instances of the **PSSubtaskInformation** object.
 
 ## RELATED LINKS
 
-[Get-AzureBatchTask](.\Get-AzureBatchTask.md)
+[Get-AzureBatchTask](./Get-AzureBatchTask.md)
 
 

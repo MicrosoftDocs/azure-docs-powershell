@@ -112,8 +112,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Import-AzureRmSiteRecoveryVaultSettingsFile](.\Import-AzureRmSiteRecoveryVaultSettingsFile.md)
+[Import-AzureRmSiteRecoveryVaultSettingsFile](./Import-AzureRmSiteRecoveryVaultSettingsFile.md)
 
-[Set-AzureRmSiteRecoveryVaultSettings](.\Set-AzureRmSiteRecoveryVaultSettings.md)
+[Set-AzureRmSiteRecoveryVaultSettings](./Set-AzureRmSiteRecoveryVaultSettings.md)
 
 

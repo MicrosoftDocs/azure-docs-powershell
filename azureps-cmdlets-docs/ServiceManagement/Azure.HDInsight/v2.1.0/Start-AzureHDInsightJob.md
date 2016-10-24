@@ -211,14 +211,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureHDInsightJob](.\Get-AzureHDInsightJob.md)
+[Get-AzureHDInsightJob](./Get-AzureHDInsightJob.md)
 
-[Get-AzureHDInsightJobOutput](.\Get-AzureHDInsightJobOutput.md)
+[Get-AzureHDInsightJobOutput](./Get-AzureHDInsightJobOutput.md)
 
-[New-AzureHDInsightMapReduceJobDefinition](.\New-AzureHDInsightMapReduceJobDefinition.md)
+[New-AzureHDInsightMapReduceJobDefinition](./New-AzureHDInsightMapReduceJobDefinition.md)
 
-[Stop-AzureHDInsightJob](.\Stop-AzureHDInsightJob.md)
+[Stop-AzureHDInsightJob](./Stop-AzureHDInsightJob.md)
 
-[Wait-AzureHDInsightJob](.\Wait-AzureHDInsightJob.md)
+[Wait-AzureHDInsightJob](./Wait-AzureHDInsightJob.md)
 
 

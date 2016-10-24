@@ -105,8 +105,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmVmssNetworkInterfaceConfiguration](.\Add-AzureRmVmssNetworkInterfaceConfiguration.md)
+[Add-AzureRmVmssNetworkInterfaceConfiguration](./Add-AzureRmVmssNetworkInterfaceConfiguration.md)
 
-[Get-AzureRmVmss](.\Get-AzureRmVmss.md)
+[Get-AzureRmVmss](./Get-AzureRmVmss.md)
 
 

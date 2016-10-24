@@ -237,8 +237,8 @@ Output from Get-ACSStorageAccount can be piped to this cmdlet's input.
 
 ## RELATED LINKS
 
-[Get-ACSStorageAccount](.\Get-ACSStorageAccount.md)
+[Get-ACSStorageAccount](./Get-ACSStorageAccount.md)
 
-[Undo-ACSStorageAccountDeletion](.\Undo-ACSStorageAccountDeletion.md)
+[Undo-ACSStorageAccountDeletion](./Undo-ACSStorageAccountDeletion.md)
 
 

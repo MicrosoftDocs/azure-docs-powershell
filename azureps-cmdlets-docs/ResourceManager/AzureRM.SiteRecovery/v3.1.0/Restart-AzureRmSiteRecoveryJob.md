@@ -75,10 +75,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryJob](.\Get-AzureRmSiteRecoveryJob.md)
+[Get-AzureRmSiteRecoveryJob](./Get-AzureRmSiteRecoveryJob.md)
 
-[Resume-AzureRmSiteRecoveryJob](.\Resume-AzureRmSiteRecoveryJob.md)
+[Resume-AzureRmSiteRecoveryJob](./Resume-AzureRmSiteRecoveryJob.md)
 
-[Stop-AzureRmSiteRecoveryJob](.\Stop-AzureRmSiteRecoveryJob.md)
+[Stop-AzureRmSiteRecoveryJob](./Stop-AzureRmSiteRecoveryJob.md)
 
 

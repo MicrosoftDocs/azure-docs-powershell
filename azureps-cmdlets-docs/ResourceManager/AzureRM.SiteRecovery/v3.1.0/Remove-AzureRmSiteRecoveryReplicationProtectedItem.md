@@ -120,10 +120,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryReplicationProtectedItem](.\Get-AzureRmSiteRecoveryReplicationProtectedItem.md)
+[Get-AzureRmSiteRecoveryReplicationProtectedItem](./Get-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
-[New-AzureRmSiteRecoveryReplicationProtectedItem](.\New-AzureRmSiteRecoveryReplicationProtectedItem.md)
+[New-AzureRmSiteRecoveryReplicationProtectedItem](./New-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
-[Set-AzureRmSiteRecoveryReplicationProtectedItem](.\Set-AzureRmSiteRecoveryReplicationProtectedItem.md)
+[Set-AzureRmSiteRecoveryReplicationProtectedItem](./Set-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
 

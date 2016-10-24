@@ -189,10 +189,10 @@ Properties in the output from cmdlets Get-ACSFarm and Get-ACSNode can be piped t
 
 ## RELATED LINKS
 
-[Enable-ACSNode](.\Enable-ACSNode.md)
+[Enable-ACSNode](./Enable-ACSNode.md)
 
-[Get-ACSNode](.\Get-ACSNode.md)
+[Get-ACSNode](./Get-ACSNode.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

@@ -116,10 +116,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzurePublicIpAddress](.\Get-AzurePublicIpAddress.md)
+[Get-AzurePublicIpAddress](./Get-AzurePublicIpAddress.md)
 
-[New-AzurePublicIpAddress](.\New-AzurePublicIpAddress.md)
+[New-AzurePublicIpAddress](./New-AzurePublicIpAddress.md)
 
-[Set-AzurePublicIpAddress](.\Set-AzurePublicIpAddress.md)
+[Set-AzurePublicIpAddress](./Set-AzurePublicIpAddress.md)
 
 

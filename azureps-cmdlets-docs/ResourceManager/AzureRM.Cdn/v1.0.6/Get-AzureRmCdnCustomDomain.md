@@ -135,8 +135,8 @@ This cmdlet returns a custom domain object.
 
 ## RELATED LINKS
 
-[New-AzureRmCdnCustomDomain](.\New-AzureRmCdnCustomDomain.md)
+[New-AzureRmCdnCustomDomain](./New-AzureRmCdnCustomDomain.md)
 
-[Remove-AzureRmCdnCustomDomain](.\Remove-AzureRmCdnCustomDomain.md)
+[Remove-AzureRmCdnCustomDomain](./Remove-AzureRmCdnCustomDomain.md)
 
 

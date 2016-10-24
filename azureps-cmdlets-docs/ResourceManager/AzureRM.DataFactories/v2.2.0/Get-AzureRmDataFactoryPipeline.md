@@ -189,14 +189,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmDataFactoryPipeline](.\New-AzureRmDataFactoryPipeline.md)
+[New-AzureRmDataFactoryPipeline](./New-AzureRmDataFactoryPipeline.md)
 
-[Remove-AzureRmDataFactoryPipeline](.\Remove-AzureRmDataFactoryPipeline.md)
+[Remove-AzureRmDataFactoryPipeline](./Remove-AzureRmDataFactoryPipeline.md)
 
-[Resume-AzureRmDataFactoryPipeline](.\Resume-AzureRmDataFactoryPipeline.md)
+[Resume-AzureRmDataFactoryPipeline](./Resume-AzureRmDataFactoryPipeline.md)
 
-[Set-AzureRmDataFactoryPipelineActivePeriod](.\Set-AzureRmDataFactoryPipelineActivePeriod.md)
+[Set-AzureRmDataFactoryPipelineActivePeriod](./Set-AzureRmDataFactoryPipelineActivePeriod.md)
 
-[Suspend-AzureRmDataFactoryPipeline](.\Suspend-AzureRmDataFactoryPipeline.md)
+[Suspend-AzureRmDataFactoryPipeline](./Suspend-AzureRmDataFactoryPipeline.md)
 
 

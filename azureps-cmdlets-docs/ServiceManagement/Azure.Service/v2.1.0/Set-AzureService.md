@@ -153,8 +153,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureService](.\Get-AzureService.md)
+[Get-AzureService](./Get-AzureService.md)
 
-[New-AzureService](.\New-AzureService.md)
+[New-AzureService](./New-AzureService.md)
 
 

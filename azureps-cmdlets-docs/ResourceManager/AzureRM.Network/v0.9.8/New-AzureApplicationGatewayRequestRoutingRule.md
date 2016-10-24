@@ -198,12 +198,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureApplicationGatewayRequestRoutingRule](.\Add-AzureApplicationGatewayRequestRoutingRule.md)
+[Add-AzureApplicationGatewayRequestRoutingRule](./Add-AzureApplicationGatewayRequestRoutingRule.md)
 
-[Get-AzureApplicationGatewayRequestRoutingRule](.\Get-AzureApplicationGatewayRequestRoutingRule.md)
+[Get-AzureApplicationGatewayRequestRoutingRule](./Get-AzureApplicationGatewayRequestRoutingRule.md)
 
-[Remove-AzureApplicationGatewayRequestRoutingRule](.\Remove-AzureApplicationGatewayRequestRoutingRule.md)
+[Remove-AzureApplicationGatewayRequestRoutingRule](./Remove-AzureApplicationGatewayRequestRoutingRule.md)
 
-[Set-AzureApplicationGatewayRequestRoutingRule](.\Set-AzureApplicationGatewayRequestRoutingRule.md)
+[Set-AzureApplicationGatewayRequestRoutingRule](./Set-AzureApplicationGatewayRequestRoutingRule.md)
 
 

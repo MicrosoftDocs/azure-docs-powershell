@@ -135,6 +135,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmApiManagementVirtualNetwork](.\New-AzureRmApiManagementVirtualNetwork.md)
+[New-AzureRmApiManagementVirtualNetwork](./New-AzureRmApiManagementVirtualNetwork.md)
 
 

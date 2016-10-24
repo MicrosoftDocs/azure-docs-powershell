@@ -125,8 +125,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Revoke-AzureHDInsightRdpServicesAccess](.\Revoke-AzureHDInsightRdpServicesAccess.md)
+[Revoke-AzureHDInsightRdpServicesAccess](./Revoke-AzureHDInsightRdpServicesAccess.md)
 
-[Azure HDInsight Cmdlets](.\AzureRM.HDInsight.md)
+[Azure HDInsight Cmdlets](./AzureRM.HDInsight.md)
 
 

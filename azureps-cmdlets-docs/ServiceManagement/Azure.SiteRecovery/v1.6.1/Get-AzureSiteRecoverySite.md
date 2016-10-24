@@ -75,8 +75,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureSiteRecoverySite](.\New-AzureSiteRecoverySite.md)
+[New-AzureSiteRecoverySite](./New-AzureSiteRecoverySite.md)
 
-[Get-AzureSiteRecoveryVault](.\Get-AzureSiteRecoveryVault.md)
+[Get-AzureSiteRecoveryVault](./Get-AzureSiteRecoveryVault.md)
 
 

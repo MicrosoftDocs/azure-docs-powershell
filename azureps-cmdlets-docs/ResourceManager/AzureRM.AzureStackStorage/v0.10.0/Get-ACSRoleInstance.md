@@ -240,10 +240,10 @@ Output from Get-ACSFarm can be piped to this cmdlet.
 
 ## RELATED LINKS
 
-[Restart-ACSRoleInstance](.\Restart-ACSRoleInstance.md)
+[Restart-ACSRoleInstance](./Restart-ACSRoleInstance.md)
 
-[Update-ACSRoleInstance](.\Update-ACSRoleInstance.md)
+[Update-ACSRoleInstance](./Update-ACSRoleInstance.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

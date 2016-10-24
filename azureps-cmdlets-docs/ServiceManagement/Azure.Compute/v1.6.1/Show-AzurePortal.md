@@ -104,6 +104,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Show-AzureWebsite](.\Show-AzureWebsite.md)
+[Show-AzureWebsite](./Show-AzureWebsite.md)
 
 

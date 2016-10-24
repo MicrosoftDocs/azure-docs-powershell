@@ -55,8 +55,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryStorageClassificationMapping](.\Get-AzureRmSiteRecoveryStorageClassificationMapping.md)
+[Get-AzureRmSiteRecoveryStorageClassificationMapping](./Get-AzureRmSiteRecoveryStorageClassificationMapping.md)
 
-[New-AzureRmSiteRecoveryStorageClassificationMapping](.\New-AzureRmSiteRecoveryStorageClassificationMapping.md)
+[New-AzureRmSiteRecoveryStorageClassificationMapping](./New-AzureRmSiteRecoveryStorageClassificationMapping.md)
 
 

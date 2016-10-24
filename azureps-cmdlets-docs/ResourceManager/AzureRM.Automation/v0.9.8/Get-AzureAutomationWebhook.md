@@ -130,10 +130,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureAutomationWebhook](.\New-AzureAutomationWebhook.md)
+[New-AzureAutomationWebhook](./New-AzureAutomationWebhook.md)
 
-[Remove-AzureAutomationWebhook](.\Remove-AzureAutomationWebhook.md)
+[Remove-AzureAutomationWebhook](./Remove-AzureAutomationWebhook.md)
 
-[Set-AzureAutomationWebhook](.\Set-AzureAutomationWebhook.md)
+[Set-AzureAutomationWebhook](./Set-AzureAutomationWebhook.md)
 
 

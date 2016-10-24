@@ -136,8 +136,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureKeyVaultCertificate](.\Add-AzureKeyVaultCertificate.md)
+[Add-AzureKeyVaultCertificate](./Add-AzureKeyVaultCertificate.md)
 
-[Import-AzureKeyVaultCertificate](.\Import-AzureKeyVaultCertificate.md)
+[Import-AzureKeyVaultCertificate](./Import-AzureKeyVaultCertificate.md)
 
 

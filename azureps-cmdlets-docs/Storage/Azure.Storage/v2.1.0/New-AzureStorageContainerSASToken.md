@@ -251,6 +251,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureStorageBlobSASToken](.\New-AzureStorageBlobSASToken.md)
+[New-AzureStorageBlobSASToken](./New-AzureStorageBlobSASToken.md)
 
 

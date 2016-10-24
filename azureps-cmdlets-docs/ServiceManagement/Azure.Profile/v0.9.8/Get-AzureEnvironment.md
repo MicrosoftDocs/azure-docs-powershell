@@ -141,16 +141,16 @@ When you run **Get-AzureEnvironment** with the **Name** parameter, it returns a 
 
 ## RELATED LINKS
 
-[Add-AzureAccount](.\Add-AzureAccount.md)
+[Add-AzureAccount](./Add-AzureAccount.md)
 
-[Add-AzureEnvironment](.\Add-AzureEnvironment.md)
+[Add-AzureEnvironment](./Add-AzureEnvironment.md)
 
-[Get-AzurePublishSettingsFile](.\Get-AzurePublishSettingsFile.md)
+[Get-AzurePublishSettingsFile](./Get-AzurePublishSettingsFile.md)
 
-[Import-AzurePublishSettingsFile](.\Import-AzurePublishSettingsFile.md)
+[Import-AzurePublishSettingsFile](./Import-AzurePublishSettingsFile.md)
 
-[Remove-AzureEnvironment](.\Remove-AzureEnvironment.md)
+[Remove-AzureEnvironment](./Remove-AzureEnvironment.md)
 
-[Set-AzureEnvironment](.\Set-AzureEnvironment.md)
+[Set-AzureEnvironment](./Set-AzureEnvironment.md)
 
 

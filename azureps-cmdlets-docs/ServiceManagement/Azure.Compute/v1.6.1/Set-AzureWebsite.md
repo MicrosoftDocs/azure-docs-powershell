@@ -422,8 +422,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureWebsite](.\New-AzureWebsite.md)
+[New-AzureWebsite](./New-AzureWebsite.md)
 
-[Get-AzureWebsite](.\Get-AzureWebsite.md)
+[Get-AzureWebsite](./Get-AzureWebsite.md)
 
 

@@ -71,8 +71,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryFabric](.\Get-AzureRmSiteRecoveryFabric.md)
+[Get-AzureRmSiteRecoveryFabric](./Get-AzureRmSiteRecoveryFabric.md)
 
-[Remove-AzureRmSiteRecoveryFabric](.\Remove-AzureRmSiteRecoveryFabric.md)
+[Remove-AzureRmSiteRecoveryFabric](./Remove-AzureRmSiteRecoveryFabric.md)
 
 

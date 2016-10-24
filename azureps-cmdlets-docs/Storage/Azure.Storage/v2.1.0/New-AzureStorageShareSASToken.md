@@ -236,8 +236,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureStorageShare](.\Get-AzureStorageShare.md)
+[Get-AzureStorageShare](./Get-AzureStorageShare.md)
 
-[New-AzureStorageFileSASToken](.\New-AzureStorageFileSASToken.md)
+[New-AzureStorageFileSASToken](./New-AzureStorageFileSASToken.md)
 
 

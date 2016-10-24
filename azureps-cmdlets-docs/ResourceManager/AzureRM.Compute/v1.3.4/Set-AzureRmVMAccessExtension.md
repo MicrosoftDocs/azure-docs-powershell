@@ -246,12 +246,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVMAccessExtension](.\Get-AzureRmVMAccessExtension.md)
+[Get-AzureRmVMAccessExtension](./Get-AzureRmVMAccessExtension.md)
 
-[Remove-AzureRmVMAccessExtension](.\Remove-AzureRmVMAccessExtension.md)
+[Remove-AzureRmVMAccessExtension](./Remove-AzureRmVMAccessExtension.md)
 
-[Set-AzureRmVMExtension](.\Set-AzureRmVMExtension.md)
+[Set-AzureRmVMExtension](./Set-AzureRmVMExtension.md)
 
-[Get-AzureRmVMExtensionImage](.\Get-AzureRmVMExtensionImage.md)
+[Get-AzureRmVMExtensionImage](./Get-AzureRmVMExtensionImage.md)
 
 

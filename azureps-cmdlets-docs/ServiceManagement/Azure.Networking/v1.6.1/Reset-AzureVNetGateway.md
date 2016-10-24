@@ -71,14 +71,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVNetGateway](.\Get-AzureVNetGateway.md)
+[Get-AzureVNetGateway](./Get-AzureVNetGateway.md)
 
-[New-AzureVNetGateway](.\New-AzureVNetGateway.md)
+[New-AzureVNetGateway](./New-AzureVNetGateway.md)
 
-[Remove-AzureVNetGateway](.\Remove-AzureVNetGateway.md)
+[Remove-AzureVNetGateway](./Remove-AzureVNetGateway.md)
 
-[Resize-AzureVNetGateway](.\Resize-AzureVNetGateway.md)
+[Resize-AzureVNetGateway](./Resize-AzureVNetGateway.md)
 
-[Set-AzureVNetGatewayKey](.\Set-AzureVNetGatewayKey.md)
+[Set-AzureVNetGatewayKey](./Set-AzureVNetGatewayKey.md)
 
 

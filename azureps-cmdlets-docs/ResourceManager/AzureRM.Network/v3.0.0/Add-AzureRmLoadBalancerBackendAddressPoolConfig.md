@@ -72,14 +72,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmLoadBalancer](.\Get-AzureRmLoadBalancer.md)
+[Get-AzureRmLoadBalancer](./Get-AzureRmLoadBalancer.md)
 
-[Get-AzureRmNetworkInterface](.\Get-AzureRmNetworkInterface.md)
+[Get-AzureRmNetworkInterface](./Get-AzureRmNetworkInterface.md)
 
-[Get-AzureRmLoadBalancerBackendAddressPoolConfig](.\Get-AzureRmLoadBalancerBackendAddressPoolConfig.md)
+[Get-AzureRmLoadBalancerBackendAddressPoolConfig](./Get-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 
-[New-AzureRmLoadBalancerBackendAddressPoolConfig](.\New-AzureRmLoadBalancerBackendAddressPoolConfig.md)
+[New-AzureRmLoadBalancerBackendAddressPoolConfig](./New-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 
-[Remove-AzureRmLoadBalancerBackendAddressPoolConfig](.\Remove-AzureRmLoadBalancerBackendAddressPoolConfig.md)
+[Remove-AzureRmLoadBalancerBackendAddressPoolConfig](./Remove-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 
 

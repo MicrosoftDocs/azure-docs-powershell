@@ -96,8 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureVMDataDisk](.\Add-AzureVMDataDisk.md)
+[Add-AzureVMDataDisk](./Add-AzureVMDataDisk.md)
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
 

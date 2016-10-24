@@ -648,10 +648,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureLocation](.\Get-AzureLocation.md)
+[Get-AzureLocation](./Get-AzureLocation.md)
 
-[Get-AzureVMImage](.\Get-AzureVMImage.md)
+[Get-AzureVMImage](./Get-AzureVMImage.md)
 
-[New-AzureDns](.\New-AzureDns.md)
+[New-AzureDns](./New-AzureDns.md)
 
 

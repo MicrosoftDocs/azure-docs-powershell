@@ -279,6 +279,6 @@ PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"
 
 ## RELATED LINKS
 
-[Get-AzureSqlDatabase](.\Get-AzureSqlDatabase.md)
+[Get-AzureSqlDatabase](./Get-AzureSqlDatabase.md)
 
 

@@ -243,6 +243,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmKeyVaultAccessPolicy](.\Set-AzureRmKeyVaultAccessPolicy.md)
+[Set-AzureRmKeyVaultAccessPolicy](./Set-AzureRmKeyVaultAccessPolicy.md)
 
 

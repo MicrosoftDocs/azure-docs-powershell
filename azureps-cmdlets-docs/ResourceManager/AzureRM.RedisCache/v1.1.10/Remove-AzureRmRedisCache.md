@@ -147,10 +147,10 @@ Returns $True if no exception occurs.
 
 ## RELATED LINKS
 
-[Get-AzureRmRedisCache](.\Get-AzureRmRedisCache.md)
+[Get-AzureRmRedisCache](./Get-AzureRmRedisCache.md)
 
-[New-AzureRmRedisCache](.\New-AzureRmRedisCache.md)
+[New-AzureRmRedisCache](./New-AzureRmRedisCache.md)
 
-[Set-AzureRmRedisCache](.\Set-AzureRmRedisCache.md)
+[Set-AzureRmRedisCache](./Set-AzureRmRedisCache.md)
 
 

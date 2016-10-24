@@ -72,10 +72,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-AzureBatchAutoScale](.\Enable-AzureBatchAutoScale.md)
+[Enable-AzureBatchAutoScale](./Enable-AzureBatchAutoScale.md)
 
-[Test-AzureBatchAutoScale](.\Test-AzureBatchAutoScale.md)
+[Test-AzureBatchAutoScale](./Test-AzureBatchAutoScale.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

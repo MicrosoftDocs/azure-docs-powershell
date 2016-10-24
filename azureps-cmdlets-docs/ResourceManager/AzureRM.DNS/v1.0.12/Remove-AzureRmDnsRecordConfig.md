@@ -401,10 +401,10 @@ This cmdlet returns the modified **RecordSet** object.
 
 ## RELATED LINKS
 
-[Add-AzureRmDnsRecordConfig](.\Add-AzureRmDnsRecordConfig.md)
+[Add-AzureRmDnsRecordConfig](./Add-AzureRmDnsRecordConfig.md)
 
-[Get-AzureRmDnsRecordSet](.\Get-AzureRmDnsRecordSet.md)
+[Get-AzureRmDnsRecordSet](./Get-AzureRmDnsRecordSet.md)
 
-[Set-AzureRmDnsRecordSet](.\Set-AzureRmDnsRecordSet.md)
+[Set-AzureRmDnsRecordSet](./Set-AzureRmDnsRecordSet.md)
 
 

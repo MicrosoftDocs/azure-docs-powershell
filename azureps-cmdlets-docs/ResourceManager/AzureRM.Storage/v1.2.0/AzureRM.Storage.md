@@ -11,39 +11,39 @@ Locale: en-US
 This topic displays help topics for the Azure Storage Management Cmdlets.
 
 ## AzureRM.Storage Cmdlets
-### [Get-AzureRmStorageAccountKey](.\Get-AzureRmStorageAccountKey.md)
+### [Get-AzureRmStorageAccountKey](./Get-AzureRmStorageAccountKey.md)
 Gets the access keys for an azure_2 Storage account.
 
 
-### [Get-AzureRmStorageAccountNameAvailability](.\Get-AzureRmStorageAccountNameAvailability.md)
+### [Get-AzureRmStorageAccountNameAvailability](./Get-AzureRmStorageAccountNameAvailability.md)
 Checks the availability of a storage account name.
 
 
-### [Get-AzureRmStorageAccount](.\Get-AzureRmStorageAccount.md)
+### [Get-AzureRmStorageAccount](./Get-AzureRmStorageAccount.md)
 Gets a Storage account.
 
 
-### [Get-AzureRmStorageUsage](.\Get-AzureRmStorageUsage.md)
+### [Get-AzureRmStorageUsage](./Get-AzureRmStorageUsage.md)
 Gets the Storage resource usage of the current subscription.
 
 
-### [New-AzureRmStorageAccountKey](.\New-AzureRmStorageAccountKey.md)
+### [New-AzureRmStorageAccountKey](./New-AzureRmStorageAccountKey.md)
 Regenerates a storage key for an azure_2 Storage account.
 
 
-### [New-AzureRmStorageAccount](.\New-AzureRmStorageAccount.md)
+### [New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
 Creates a Storage account.
 
 
-### [Remove-AzureRmStorageAccount](.\Remove-AzureRmStorageAccount.md)
+### [Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
 Removes a Storage account from azure_2.
 
 
-### [Set-AzureRmCurrentStorageAccount](.\Set-AzureRmCurrentStorageAccount.md)
+### [Set-AzureRmCurrentStorageAccount](./Set-AzureRmCurrentStorageAccount.md)
 Modifies the current Storage account of the specified subscription.
 
 
-### [Set-AzureRmStorageAccount](.\Set-AzureRmStorageAccount.md)
+### [Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
 Modifies a Storage account.
 
 

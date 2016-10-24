@@ -93,8 +93,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmHDInsightCluster](.\Get-AzureRmHDInsightCluster.md)
+[Get-AzureRmHDInsightCluster](./Get-AzureRmHDInsightCluster.md)
 
-[Remove-AzureRmHDInsightCluster](.\Remove-AzureRmHDInsightCluster.md)
+[Remove-AzureRmHDInsightCluster](./Remove-AzureRmHDInsightCluster.md)
 
 

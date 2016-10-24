@@ -107,10 +107,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureService](.\Remove-AzureService.md)
+[Remove-AzureService](./Remove-AzureService.md)
 
-[Start-AzureService](.\Start-AzureService.md)
+[Start-AzureService](./Start-AzureService.md)
 
-[Stop-AzureService](.\Stop-AzureService.md)
+[Stop-AzureService](./Stop-AzureService.md)
 
 

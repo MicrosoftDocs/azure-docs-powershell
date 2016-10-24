@@ -83,10 +83,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBackupVault](.\Get-AzureRmBackupVault.md)
+[Get-AzureRmBackupVault](./Get-AzureRmBackupVault.md)
 
-[New-AzureRmBackupVault](.\New-AzureRmBackupVault.md)
+[New-AzureRmBackupVault](./New-AzureRmBackupVault.md)
 
-[Remove-AzureRmBackupVault](.\Remove-AzureRmBackupVault.md)
+[Remove-AzureRmBackupVault](./Remove-AzureRmBackupVault.md)
 
 

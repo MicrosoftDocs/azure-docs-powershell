@@ -104,6 +104,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmStreamAnalyticsTransformation](.\New-AzureRmStreamAnalyticsTransformation.md)
+[New-AzureRmStreamAnalyticsTransformation](./New-AzureRmStreamAnalyticsTransformation.md)
 
 

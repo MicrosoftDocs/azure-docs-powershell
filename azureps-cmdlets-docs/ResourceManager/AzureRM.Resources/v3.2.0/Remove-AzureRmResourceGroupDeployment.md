@@ -155,12 +155,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmResourceGroupDeployment](.\Get-AzureRmResourceGroupDeployment.md)
+[Get-AzureRmResourceGroupDeployment](./Get-AzureRmResourceGroupDeployment.md)
 
-[New-AzureRmResourceGroupDeployment](.\New-AzureRmResourceGroupDeployment.md)
+[New-AzureRmResourceGroupDeployment](./New-AzureRmResourceGroupDeployment.md)
 
-[Stop-AzureRmResourceGroupDeployment](.\Stop-AzureRmResourceGroupDeployment.md)
+[Stop-AzureRmResourceGroupDeployment](./Stop-AzureRmResourceGroupDeployment.md)
 
-[Test-AzureRmResourceGroupDeployment](.\Test-AzureRmResourceGroupDeployment.md)
+[Test-AzureRmResourceGroupDeployment](./Test-AzureRmResourceGroupDeployment.md)
 
 

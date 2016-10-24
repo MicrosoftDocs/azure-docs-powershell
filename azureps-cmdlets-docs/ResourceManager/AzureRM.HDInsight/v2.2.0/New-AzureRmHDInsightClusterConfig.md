@@ -309,6 +309,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmHDInsightStorage](.\Add-AzureRmHDInsightStorage.md)
+[Add-AzureRmHDInsightStorage](./Add-AzureRmHDInsightStorage.md)
 
 

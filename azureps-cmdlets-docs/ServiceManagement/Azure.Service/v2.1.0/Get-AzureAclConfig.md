@@ -121,12 +121,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
-[New-AzureAclConfig](.\New-AzureAclConfig.md)
+[New-AzureAclConfig](./New-AzureAclConfig.md)
 
-[Remove-AzureAclConfig](.\Remove-AzureAclConfig.md)
+[Remove-AzureAclConfig](./Remove-AzureAclConfig.md)
 
-[Set-AzureAclConfig](.\Set-AzureAclConfig.md)
+[Set-AzureAclConfig](./Set-AzureAclConfig.md)
 
 

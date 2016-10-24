@@ -78,8 +78,8 @@ This cmdlet returns a **ResourceContext** object.
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleResource](.\Get-AzureStorSimpleResource.md)
+[Get-AzureStorSimpleResource](./Get-AzureStorSimpleResource.md)
 
-[Select-AzureStorSimpleResource](.\Select-AzureStorSimpleResource.md)
+[Select-AzureStorSimpleResource](./Select-AzureStorSimpleResource.md)
 
 

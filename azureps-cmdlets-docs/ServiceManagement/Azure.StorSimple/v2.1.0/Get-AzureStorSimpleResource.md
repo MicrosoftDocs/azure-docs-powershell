@@ -115,8 +115,8 @@ This cmdlet returns **ResourceCredentials** objects that contain the following p
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleResourceContext](.\Get-AzureStorSimpleResourceContext.md)
+[Get-AzureStorSimpleResourceContext](./Get-AzureStorSimpleResourceContext.md)
 
-[Select-AzureStorSimpleResource](.\Select-AzureStorSimpleResource.md)
+[Select-AzureStorSimpleResource](./Select-AzureStorSimpleResource.md)
 
 

@@ -93,12 +93,12 @@ This cmdlet returns a modified TrafficManagerProfile object.
 
 ## RELATED LINKS
 
-[Add-AzureRmTrafficManagerEndpointConfig](.\Add-AzureRmTrafficManagerEndpointConfig.md)
+[Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)
 
-[Get-AzureRmTrafficManagerProfile](.\Get-AzureRmTrafficManagerProfile.md)
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
 
-[Remove-AzureRmTrafficManagerEndpoint](.\Remove-AzureRmTrafficManagerEndpoint.md)
+[Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)
 
-[Set-AzureRmTrafficManagerProfile](.\Set-AzureRmTrafficManagerProfile.md)
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
 
 

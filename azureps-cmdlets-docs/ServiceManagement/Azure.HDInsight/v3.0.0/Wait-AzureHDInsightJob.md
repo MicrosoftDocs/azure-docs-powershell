@@ -257,12 +257,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureHDInsightJob](.\Get-AzureHDInsightJob.md)
+[Get-AzureHDInsightJob](./Get-AzureHDInsightJob.md)
 
-[Get-AzureHDInsightJobOutput](.\Get-AzureHDInsightJobOutput.md)
+[Get-AzureHDInsightJobOutput](./Get-AzureHDInsightJobOutput.md)
 
-[Start-AzureHDInsightJob](.\Start-AzureHDInsightJob.md)
+[Start-AzureHDInsightJob](./Start-AzureHDInsightJob.md)
 
-[Stop-AzureHDInsightJob](.\Stop-AzureHDInsightJob.md)
+[Stop-AzureHDInsightJob](./Stop-AzureHDInsightJob.md)
 
 

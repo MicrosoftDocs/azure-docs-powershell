@@ -185,16 +185,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-AzureRmRecoveryServicesBackupProtection](.\Enable-AzureRmRecoveryServicesBackupProtection.md)
+[Enable-AzureRmRecoveryServicesBackupProtection](./Enable-AzureRmRecoveryServicesBackupProtection.md)
 
-[Get-AzureRmRecoveryServicesBackupProtectionPolicy](.\Get-AzureRmRecoveryServicesBackupProtectionPolicy.md)
+[Get-AzureRmRecoveryServicesBackupProtectionPolicy](./Get-AzureRmRecoveryServicesBackupProtectionPolicy.md)
 
-[Get-AzureRmRecoveryServicesBackupRetentionPolicyObject](.\Get-AzureRmRecoveryServicesBackupRetentionPolicyObject.md)
+[Get-AzureRmRecoveryServicesBackupRetentionPolicyObject](./Get-AzureRmRecoveryServicesBackupRetentionPolicyObject.md)
 
-[Get-AzureRmRecoveryServicesBackupSchedulePolicyObject](.\Get-AzureRmRecoveryServicesBackupSchedulePolicyObject.md)
+[Get-AzureRmRecoveryServicesBackupSchedulePolicyObject](./Get-AzureRmRecoveryServicesBackupSchedulePolicyObject.md)
 
-[Remove-AzureRmRecoveryServicesBackupProtectionPolicy](.\Remove-AzureRmRecoveryServicesBackupProtectionPolicy.md)
+[Remove-AzureRmRecoveryServicesBackupProtectionPolicy](./Remove-AzureRmRecoveryServicesBackupProtectionPolicy.md)
 
-[Set-AzureRmRecoveryServicesBackupProtectionPolicy](.\Set-AzureRmRecoveryServicesBackupProtectionPolicy.md)
+[Set-AzureRmRecoveryServicesBackupProtectionPolicy](./Set-AzureRmRecoveryServicesBackupProtectionPolicy.md)
 
 

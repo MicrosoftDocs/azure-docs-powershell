@@ -102,6 +102,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmDataLakeStoreItemAcl](.\Set-AzureRmDataLakeStoreItemAcl.md)
+[Set-AzureRmDataLakeStoreItemAcl](./Set-AzureRmDataLakeStoreItemAcl.md)
 
 

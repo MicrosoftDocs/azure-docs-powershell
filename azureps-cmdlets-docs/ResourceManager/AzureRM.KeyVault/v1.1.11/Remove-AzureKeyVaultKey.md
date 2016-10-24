@@ -158,10 +158,10 @@ This cmdlet returns a value only if you specify the *PassThru* parameter.
 
 ## RELATED LINKS
 
-[Add-AzureKeyVaultKey](.\Add-AzureKeyVaultKey.md)
+[Add-AzureKeyVaultKey](./Add-AzureKeyVaultKey.md)
 
-[Get-AzureKeyVaultKey](.\Get-AzureKeyVaultKey.md)
+[Get-AzureKeyVaultKey](./Get-AzureKeyVaultKey.md)
 
-[Set-AzureKeyVaultKeyAttribute](.\Set-AzureKeyVaultKeyAttribute.md)
+[Set-AzureKeyVaultKeyAttribute](./Set-AzureKeyVaultKeyAttribute.md)
 
 

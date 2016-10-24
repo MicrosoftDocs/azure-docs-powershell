@@ -126,8 +126,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureApplicationGatewaySku](.\Get-AzureApplicationGatewaySku.md)
+[Get-AzureApplicationGatewaySku](./Get-AzureApplicationGatewaySku.md)
 
-[New-AzureApplicationGatewaySku](.\New-AzureApplicationGatewaySku.md)
+[New-AzureApplicationGatewaySku](./New-AzureApplicationGatewaySku.md)
 
 

@@ -188,6 +188,6 @@ This cmdlet returns the policy that specifies the maximum number of virtual mach
 
 ## RELATED LINKS
 
-[Get-AzureRmDtlVMsPerUserPolicy](.\Get-AzureRmDtlVMsPerUserPolicy.md)
+[Get-AzureRmDtlVMsPerUserPolicy](./Get-AzureRmDtlVMsPerUserPolicy.md)
 
 

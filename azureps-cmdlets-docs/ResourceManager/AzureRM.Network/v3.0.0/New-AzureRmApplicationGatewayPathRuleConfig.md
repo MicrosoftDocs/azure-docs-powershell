@@ -201,22 +201,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmApplicationGatewayUrlPathMapConfig](.\Add-AzureRmApplicationGatewayUrlPathMapConfig.md)
+[Add-AzureRmApplicationGatewayUrlPathMapConfig](./Add-AzureRmApplicationGatewayUrlPathMapConfig.md)
 
-[Get-AzureRmApplicationGateway](.\Get-AzureRmApplicationGateway.md)
+[Get-AzureRmApplicationGateway](./Get-AzureRmApplicationGateway.md)
 
-[Get-AzureRmApplicationGatewayUrlPathMapConfig](.\Get-AzureRmApplicationGatewayUrlPathMapConfig.md)
+[Get-AzureRmApplicationGatewayUrlPathMapConfig](./Get-AzureRmApplicationGatewayUrlPathMapConfig.md)
 
-[New-AzureRmApplicationGatewayBackendAddressPool](.\New-AzureRmApplicationGatewayBackendAddressPool.md)
+[New-AzureRmApplicationGatewayBackendAddressPool](./New-AzureRmApplicationGatewayBackendAddressPool.md)
 
-[New-AzureRmApplicationGatewayBackendHttpSettings](.\New-AzureRmApplicationGatewayBackendHttpSettings.md)
+[New-AzureRmApplicationGatewayBackendHttpSettings](./New-AzureRmApplicationGatewayBackendHttpSettings.md)
 
-[New-AzureRmApplicationGatewayPathRuleConfig](.\New-AzureRmApplicationGatewayPathRuleConfig.md)
+[New-AzureRmApplicationGatewayPathRuleConfig](./New-AzureRmApplicationGatewayPathRuleConfig.md)
 
-[New-AzureRmApplicationGatewayUrlPathMapConfig](.\New-AzureRmApplicationGatewayUrlPathMapConfig.md)
+[New-AzureRmApplicationGatewayUrlPathMapConfig](./New-AzureRmApplicationGatewayUrlPathMapConfig.md)
 
-[Remove-AzureRmApplicationGatewayUrlPathMapConfig](.\Remove-AzureRmApplicationGatewayUrlPathMapConfig.md)
+[Remove-AzureRmApplicationGatewayUrlPathMapConfig](./Remove-AzureRmApplicationGatewayUrlPathMapConfig.md)
 
-[Set-AzureRmApplicationGatewayUrlPathMapConfig](.\Set-AzureRmApplicationGatewayUrlPathMapConfig.md)
+[Set-AzureRmApplicationGatewayUrlPathMapConfig](./Set-AzureRmApplicationGatewayUrlPathMapConfig.md)
 
 

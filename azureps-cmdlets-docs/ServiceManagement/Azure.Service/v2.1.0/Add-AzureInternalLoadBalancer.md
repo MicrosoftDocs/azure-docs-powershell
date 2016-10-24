@@ -183,12 +183,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureInternalLoadBalancer](.\Get-AzureInternalLoadBalancer.md)
+[Get-AzureInternalLoadBalancer](./Get-AzureInternalLoadBalancer.md)
 
-[New-AzureInternalLoadBalancerConfig](.\New-AzureInternalLoadBalancerConfig.md)
+[New-AzureInternalLoadBalancerConfig](./New-AzureInternalLoadBalancerConfig.md)
 
-[Remove-AzureInternalLoadBalancer](.\Remove-AzureInternalLoadBalancer.md)
+[Remove-AzureInternalLoadBalancer](./Remove-AzureInternalLoadBalancer.md)
 
-[Set-AzureInternalLoadBalancer](.\Set-AzureInternalLoadBalancer.md)
+[Set-AzureInternalLoadBalancer](./Set-AzureInternalLoadBalancer.md)
 
 

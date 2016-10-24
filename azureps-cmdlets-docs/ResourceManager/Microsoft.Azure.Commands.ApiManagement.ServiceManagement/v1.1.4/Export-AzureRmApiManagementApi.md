@@ -206,14 +206,14 @@ This cmdlet returns the exported API content as a string.
 
 ## RELATED LINKS
 
-[Get-AzureRmApiManagementApi](.\Get-AzureRmApiManagementApi.md)
+[Get-AzureRmApiManagementApi](./Get-AzureRmApiManagementApi.md)
 
-[Import-AzureRmApiManagementApi](.\Import-AzureRmApiManagementApi.md)
+[Import-AzureRmApiManagementApi](./Import-AzureRmApiManagementApi.md)
 
-[New-AzureRmApiManagementApi](.\New-AzureRmApiManagementApi.md)
+[New-AzureRmApiManagementApi](./New-AzureRmApiManagementApi.md)
 
-[Remove-AzureRmApiManagementApi](.\Remove-AzureRmApiManagementApi.md)
+[Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
 
-[Set-AzureRmApiManagementApi](.\Set-AzureRmApiManagementApi.md)
+[Set-AzureRmApiManagementApi](./Set-AzureRmApiManagementApi.md)
 
 

@@ -88,10 +88,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRemoteAppSession](.\Get-AzureRemoteAppSession.md)
+[Get-AzureRemoteAppSession](./Get-AzureRemoteAppSession.md)
 
-[Invoke-AzureRemoteAppSessionLogoff](.\Invoke-AzureRemoteAppSessionLogoff.md)
+[Invoke-AzureRemoteAppSessionLogoff](./Invoke-AzureRemoteAppSessionLogoff.md)
 
-[Send-AzureRemoteAppSessionMessage](.\Send-AzureRemoteAppSessionMessage.md)
+[Send-AzureRemoteAppSessionMessage](./Send-AzureRemoteAppSessionMessage.md)
 
 

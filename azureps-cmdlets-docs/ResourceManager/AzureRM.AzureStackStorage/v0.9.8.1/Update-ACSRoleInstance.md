@@ -216,10 +216,10 @@ Output from Get-ACSFarm and Get-ACSRoleInstance can be piped to this cmdlet's in
 
 ## RELATED LINKS
 
-[Get-ACSRoleInstance](.\Get-ACSRoleInstance.md)
+[Get-ACSRoleInstance](./Get-ACSRoleInstance.md)
 
-[Restart-ACSRoleInstance](.\Restart-ACSRoleInstance.md)
+[Restart-ACSRoleInstance](./Restart-ACSRoleInstance.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

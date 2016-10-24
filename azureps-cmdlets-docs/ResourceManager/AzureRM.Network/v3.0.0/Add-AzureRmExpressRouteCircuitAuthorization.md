@@ -94,14 +94,14 @@ The output type is the type of the objects that the cmdlet emits.
 
 ## RELATED LINKS
 
-[Get-AzureRmExpressRouteCircuit](.\Get-AzureRmExpressRouteCircuit.md)
+[Get-AzureRmExpressRouteCircuit](./Get-AzureRmExpressRouteCircuit.md)
 
-[Get-AzureRmExpressRouteCircuitAuthorization](.\Get-AzureRmExpressRouteCircuitAuthorization.md)
+[Get-AzureRmExpressRouteCircuitAuthorization](./Get-AzureRmExpressRouteCircuitAuthorization.md)
 
-[New-AzureRmExpressRouteCircuitAuthorization](.\New-AzureRmExpressRouteCircuitAuthorization.md)
+[New-AzureRmExpressRouteCircuitAuthorization](./New-AzureRmExpressRouteCircuitAuthorization.md)
 
-[Remove-AzureRmExpressRouteCircuitAuthorization](.\Remove-AzureRmExpressRouteCircuitAuthorization.md)
+[Remove-AzureRmExpressRouteCircuitAuthorization](./Remove-AzureRmExpressRouteCircuitAuthorization.md)
 
-[Set-AzureRmExpressRouteCircuit](.\Set-AzureRmExpressRouteCircuit.md)
+[Set-AzureRmExpressRouteCircuit](./Set-AzureRmExpressRouteCircuit.md)
 
 

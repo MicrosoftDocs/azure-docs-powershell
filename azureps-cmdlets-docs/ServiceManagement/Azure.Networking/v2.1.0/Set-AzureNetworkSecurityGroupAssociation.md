@@ -250,8 +250,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureNetworkSecurityGroupAssociation](.\Get-AzureNetworkSecurityGroupAssociation.md)
+[Get-AzureNetworkSecurityGroupAssociation](./Get-AzureNetworkSecurityGroupAssociation.md)
 
-[Remove-AzureNetworkSecurityGroupAssociation](.\Remove-AzureNetworkSecurityGroupAssociation.md)
+[Remove-AzureNetworkSecurityGroupAssociation](./Remove-AzureNetworkSecurityGroupAssociation.md)
 
 

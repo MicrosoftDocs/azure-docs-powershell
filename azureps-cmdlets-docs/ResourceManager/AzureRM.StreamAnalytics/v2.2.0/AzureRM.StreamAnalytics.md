@@ -11,87 +11,87 @@ Locale: en-US
 {{Manually Enter Description Here}}
 
 ## AzureRM.StreamAnalytics Cmdlets
-### [Get-AzureRmStreamAnalyticsDefaultFunctionDefinition](.\Get-AzureRmStreamAnalyticsDefaultFunctionDefinition.md)
+### [Get-AzureRmStreamAnalyticsDefaultFunctionDefinition](./Get-AzureRmStreamAnalyticsDefaultFunctionDefinition.md)
 Gets the default definition of a function in Stream Analytics.
 
 
-### [Get-AzureRmStreamAnalyticsFunction](.\Get-AzureRmStreamAnalyticsFunction.md)
+### [Get-AzureRmStreamAnalyticsFunction](./Get-AzureRmStreamAnalyticsFunction.md)
 Gets functions in a Stream Analytics job.
 
 
-### [Get-AzureRmStreamAnalyticsInput](.\Get-AzureRmStreamAnalyticsInput.md)
+### [Get-AzureRmStreamAnalyticsInput](./Get-AzureRmStreamAnalyticsInput.md)
 Gets Stream Analytics job inputs.
 
 
-### [Get-AzureRmStreamAnalyticsJob](.\Get-AzureRmStreamAnalyticsJob.md)
+### [Get-AzureRmStreamAnalyticsJob](./Get-AzureRmStreamAnalyticsJob.md)
 Gets Stream Analytics jobs information.
 
 
-### [Get-AzureRmStreamAnalyticsOutput](.\Get-AzureRmStreamAnalyticsOutput.md)
+### [Get-AzureRmStreamAnalyticsOutput](./Get-AzureRmStreamAnalyticsOutput.md)
 Gets the outputs defined in a specified Stream Analytics job or output.
 
 
-### [Get-AzureRmStreamAnalyticsQuota](.\Get-AzureRmStreamAnalyticsQuota.md)
+### [Get-AzureRmStreamAnalyticsQuota](./Get-AzureRmStreamAnalyticsQuota.md)
 Gets information about the Streaming Unit quota for a region.
 
 
-### [Get-AzureRmStreamAnalyticsTransformation](.\Get-AzureRmStreamAnalyticsTransformation.md)
+### [Get-AzureRmStreamAnalyticsTransformation](./Get-AzureRmStreamAnalyticsTransformation.md)
 Gets information about a Stream Analytics job transformation.
 
 
-### [New-AzureRmStreamAnalyticsFunction](.\New-AzureRmStreamAnalyticsFunction.md)
+### [New-AzureRmStreamAnalyticsFunction](./New-AzureRmStreamAnalyticsFunction.md)
 Creates or replaces a function in a Stream Analytics job.
 
 
-### [New-AzureRmStreamAnalyticsInput](.\New-AzureRmStreamAnalyticsInput.md)
+### [New-AzureRmStreamAnalyticsInput](./New-AzureRmStreamAnalyticsInput.md)
 Creates or updates a job input.
 
 
-### [New-AzureRmStreamAnalyticsJob](.\New-AzureRmStreamAnalyticsJob.md)
+### [New-AzureRmStreamAnalyticsJob](./New-AzureRmStreamAnalyticsJob.md)
 Creates or updates a Stream Analytics job.
 
 
-### [New-AzureRmStreamAnalyticsOutput](.\New-AzureRmStreamAnalyticsOutput.md)
+### [New-AzureRmStreamAnalyticsOutput](./New-AzureRmStreamAnalyticsOutput.md)
 Creates or updates outputs for a Stream Analytics job.
 
 
-### [New-AzureRmStreamAnalyticsTransformation](.\New-AzureRmStreamAnalyticsTransformation.md)
+### [New-AzureRmStreamAnalyticsTransformation](./New-AzureRmStreamAnalyticsTransformation.md)
 Creates or updates a transformation within a job.
 
 
-### [Remove-AzureRmStreamAnalyticsFunction](.\Remove-AzureRmStreamAnalyticsFunction.md)
+### [Remove-AzureRmStreamAnalyticsFunction](./Remove-AzureRmStreamAnalyticsFunction.md)
 Deletes a function from a Stream Analytics job.
 
 
-### [Remove-AzureRmStreamAnalyticsInput](.\Remove-AzureRmStreamAnalyticsInput.md)
+### [Remove-AzureRmStreamAnalyticsInput](./Remove-AzureRmStreamAnalyticsInput.md)
 Deletes an input from a Stream Analytics job.
 
 
-### [Remove-AzureRmStreamAnalyticsJob](.\Remove-AzureRmStreamAnalyticsJob.md)
+### [Remove-AzureRmStreamAnalyticsJob](./Remove-AzureRmStreamAnalyticsJob.md)
 Removes a Stream Analytics job.
 
 
-### [Remove-AzureRmStreamAnalyticsOutput](.\Remove-AzureRmStreamAnalyticsOutput.md)
+### [Remove-AzureRmStreamAnalyticsOutput](./Remove-AzureRmStreamAnalyticsOutput.md)
 Deletes an output from a Stream Analytics job.
 
 
-### [Start-AzureRmStreamAnalyticsJob](.\Start-AzureRmStreamAnalyticsJob.md)
+### [Start-AzureRmStreamAnalyticsJob](./Start-AzureRmStreamAnalyticsJob.md)
 Starts a Stream Analytics job.
 
 
-### [Stop-AzureRmStreamAnalyticsJob](.\Stop-AzureRmStreamAnalyticsJob.md)
+### [Stop-AzureRmStreamAnalyticsJob](./Stop-AzureRmStreamAnalyticsJob.md)
 Stops a Stream Analytics job.
 
 
-### [Test-AzureRmStreamAnalyticsFunction](.\Test-AzureRmStreamAnalyticsFunction.md)
+### [Test-AzureRmStreamAnalyticsFunction](./Test-AzureRmStreamAnalyticsFunction.md)
 Tests whether Stream Analytics can connect to a function.
 
 
-### [Test-AzureRmStreamAnalyticsInput](.\Test-AzureRmStreamAnalyticsInput.md)
+### [Test-AzureRmStreamAnalyticsInput](./Test-AzureRmStreamAnalyticsInput.md)
 Tests the connection status of an input.
 
 
-### [Test-AzureRmStreamAnalyticsOutput](.\Test-AzureRmStreamAnalyticsOutput.md)
+### [Test-AzureRmStreamAnalyticsOutput](./Test-AzureRmStreamAnalyticsOutput.md)
 Tests the connection status of an output.
 
 

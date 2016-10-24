@@ -85,10 +85,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmRecoveryServicesVault](.\Get-AzureRmRecoveryServicesVault.md)
+[Get-AzureRmRecoveryServicesVault](./Get-AzureRmRecoveryServicesVault.md)
 
-[Get-AzureRmRecoveryServicesVaultSettingsFile](.\Get-AzureRmRecoveryServicesVaultSettingsFile.md)
+[Get-AzureRmRecoveryServicesVaultSettingsFile](./Get-AzureRmRecoveryServicesVaultSettingsFile.md)
 
-[Remove-AzureRmRecoveryServicesVault](.\Remove-AzureRmRecoveryServicesVault.md)
+[Remove-AzureRmRecoveryServicesVault](./Remove-AzureRmRecoveryServicesVault.md)
 
 

@@ -239,8 +239,8 @@ Output from Get-ACSFarm can be piped to this cmdlet's input.
 
 ## RELATED LINKS
 
-[Resolve-ACSFault](.\Resolve-ACSFault.md)
+[Resolve-ACSFault](./Resolve-ACSFault.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

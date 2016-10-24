@@ -165,10 +165,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmLogicAppRunAction](.\Get-AzureRmLogicAppRunAction.md)
+[Get-AzureRmLogicAppRunAction](./Get-AzureRmLogicAppRunAction.md)
 
-[Start-AzureRmLogicApp](.\Start-AzureRmLogicApp.md)
+[Start-AzureRmLogicApp](./Start-AzureRmLogicApp.md)
 
-[Stop-AzureRmLogicAppRun](.\Stop-AzureRmLogicAppRun.md)
+[Stop-AzureRmLogicAppRun](./Stop-AzureRmLogicAppRun.md)
 
 

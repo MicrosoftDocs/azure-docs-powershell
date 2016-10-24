@@ -138,8 +138,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlServerCommunicationLink](.\Get-AzureRmSqlServerCommunicationLink.md)
+[Get-AzureRmSqlServerCommunicationLink](./Get-AzureRmSqlServerCommunicationLink.md)
 
-[New-AzureRmSqlServerCommunicationLink](.\New-AzureRmSqlServerCommunicationLink.md)
+[New-AzureRmSqlServerCommunicationLink](./New-AzureRmSqlServerCommunicationLink.md)
 
 

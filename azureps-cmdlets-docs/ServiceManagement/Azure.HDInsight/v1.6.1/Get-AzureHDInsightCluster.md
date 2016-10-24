@@ -159,10 +159,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureHDInsightCluster](.\New-AzureHDInsightCluster.md)
+[New-AzureHDInsightCluster](./New-AzureHDInsightCluster.md)
 
-[Remove-AzureHDInsightCluster](.\Remove-AzureHDInsightCluster.md)
+[Remove-AzureHDInsightCluster](./Remove-AzureHDInsightCluster.md)
 
-[Use-AzureHDInsightCluster](.\Use-AzureHDInsightCluster.md)
+[Use-AzureHDInsightCluster](./Use-AzureHDInsightCluster.md)
 
 

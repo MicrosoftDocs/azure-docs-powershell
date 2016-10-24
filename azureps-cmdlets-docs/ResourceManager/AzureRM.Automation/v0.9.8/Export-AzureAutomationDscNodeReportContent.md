@@ -153,6 +153,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAutomationDscNodeReport](.\Get-AzureAutomationDscNodeReport.md)
+[Get-AzureAutomationDscNodeReport](./Get-AzureAutomationDscNodeReport.md)
 
 

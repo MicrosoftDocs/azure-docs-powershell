@@ -312,28 +312,28 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVM](.\Get-AzureRmVM.md)
+[Get-AzureRmVM](./Get-AzureRmVM.md)
 
-[Remove-AzureRmVM](.\Remove-AzureRmVM.md)
+[Remove-AzureRmVM](./Remove-AzureRmVM.md)
 
-[Restart-AzureRmVM](.\Restart-AzureRmVM.md)
+[Restart-AzureRmVM](./Restart-AzureRmVM.md)
 
-[Start-AzureRmVM](.\Start-AzureRmVM.md)
+[Start-AzureRmVM](./Start-AzureRmVM.md)
 
-[Stop-AzureRmVM](.\Stop-AzureRmVM.md)
+[Stop-AzureRmVM](./Stop-AzureRmVM.md)
 
-[Update-AzureRmVM](.\Update-AzureRmVM.md)
+[Update-AzureRmVM](./Update-AzureRmVM.md)
 
-[Add-AzureRmVMDataDisk](.\Add-AzureRmVMDataDisk.md)
+[Add-AzureRmVMDataDisk](./Add-AzureRmVMDataDisk.md)
 
-[Add-AzureRmVMNetworkInterface](.\Add-AzureRmVMNetworkInterface.md)
+[Add-AzureRmVMNetworkInterface](./Add-AzureRmVMNetworkInterface.md)
 
-[New-AzureRmVMConfig](.\New-AzureRmVMConfig.md)
+[New-AzureRmVMConfig](./New-AzureRmVMConfig.md)
 
-[Set-AzureRmVMOperatingSystem](.\Set-AzureRmVMOperatingSystem.md)
+[Set-AzureRmVMOperatingSystem](./Set-AzureRmVMOperatingSystem.md)
 
-[Set-AzureRmVMSourceImage](.\Set-AzureRmVMSourceImage.md)
+[Set-AzureRmVMSourceImage](./Set-AzureRmVMSourceImage.md)
 
-[Set-AzureRmVMOSDisk](.\Set-AzureRmVMOSDisk.md)
+[Set-AzureRmVMOSDisk](./Set-AzureRmVMOSDisk.md)
 
 

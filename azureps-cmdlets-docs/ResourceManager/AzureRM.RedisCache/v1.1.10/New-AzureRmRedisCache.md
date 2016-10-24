@@ -424,10 +424,10 @@ This cmdlet returns all attributes of a Redis Cache including primary and second
 
 ## RELATED LINKS
 
-[Get-AzureRmRedisCache](.\Get-AzureRmRedisCache.md)
+[Get-AzureRmRedisCache](./Get-AzureRmRedisCache.md)
 
-[Remove-AzureRmRedisCache](.\Remove-AzureRmRedisCache.md)
+[Remove-AzureRmRedisCache](./Remove-AzureRmRedisCache.md)
 
-[Set-AzureRmRedisCache](.\Set-AzureRmRedisCache.md)
+[Set-AzureRmRedisCache](./Set-AzureRmRedisCache.md)
 
 

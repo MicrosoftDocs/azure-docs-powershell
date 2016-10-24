@@ -107,10 +107,10 @@ If the zone name is not specified, an array of zone objects is returned.
 
 ## RELATED LINKS
 
-[New-AzureRmDnsZone](.\New-AzureRmDnsZone.md)
+[New-AzureRmDnsZone](./New-AzureRmDnsZone.md)
 
-[Remove-AzureRmDnsZone](.\Remove-AzureRmDnsZone.md)
+[Remove-AzureRmDnsZone](./Remove-AzureRmDnsZone.md)
 
-[Set-AzureRmDnsZone](.\Set-AzureRmDnsZone.md)
+[Set-AzureRmDnsZone](./Set-AzureRmDnsZone.md)
 
 

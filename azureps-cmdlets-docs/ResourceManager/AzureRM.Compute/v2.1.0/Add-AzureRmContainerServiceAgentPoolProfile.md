@@ -121,8 +121,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmContainerServiceConfig](.\New-AzureRmContainerServiceConfig.md)
+[New-AzureRmContainerServiceConfig](./New-AzureRmContainerServiceConfig.md)
 
-[Remove-AzureRmContainerServiceAgentPoolProfile](.\Remove-AzureRmContainerServiceAgentPoolProfile.md)
+[Remove-AzureRmContainerServiceAgentPoolProfile](./Remove-AzureRmContainerServiceAgentPoolProfile.md)
 
 

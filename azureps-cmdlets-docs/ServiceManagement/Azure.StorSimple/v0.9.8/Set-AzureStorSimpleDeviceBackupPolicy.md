@@ -258,12 +258,12 @@ If you do not specify that parameter, it returns a **TaskResponse** object.
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleDeviceBackupPolicy](.\Get-AzureStorSimpleDeviceBackupPolicy.md)
+[Get-AzureStorSimpleDeviceBackupPolicy](./Get-AzureStorSimpleDeviceBackupPolicy.md)
 
-[New-AzureStorSimpleDeviceBackupPolicy](.\New-AzureStorSimpleDeviceBackupPolicy.md)
+[New-AzureStorSimpleDeviceBackupPolicy](./New-AzureStorSimpleDeviceBackupPolicy.md)
 
-[Remove-AzureStorSimpleDeviceBackupPolicy](.\Remove-AzureStorSimpleDeviceBackupPolicy.md)
+[Remove-AzureStorSimpleDeviceBackupPolicy](./Remove-AzureStorSimpleDeviceBackupPolicy.md)
 
-[New-AzureStorSimpleDeviceBackupScheduleUpdateConfig](.\New-AzureStorSimpleDeviceBackupScheduleUpdateConfig.md)
+[New-AzureStorSimpleDeviceBackupScheduleUpdateConfig](./New-AzureStorSimpleDeviceBackupScheduleUpdateConfig.md)
 
 

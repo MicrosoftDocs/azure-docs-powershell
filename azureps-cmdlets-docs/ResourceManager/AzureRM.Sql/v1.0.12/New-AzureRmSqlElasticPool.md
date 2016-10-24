@@ -259,16 +259,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlElasticPool](.\Get-AzureRmSqlElasticPool.md)
+[Get-AzureRmSqlElasticPool](./Get-AzureRmSqlElasticPool.md)
 
-[Get-AzureRmSqlElasticPoolActivity](.\Get-AzureRmSqlElasticPoolActivity.md)
+[Get-AzureRmSqlElasticPoolActivity](./Get-AzureRmSqlElasticPoolActivity.md)
 
-[Get-AzureRmSqlElasticPoolDatabase](.\Get-AzureRmSqlElasticPoolDatabase.md)
+[Get-AzureRmSqlElasticPoolDatabase](./Get-AzureRmSqlElasticPoolDatabase.md)
 
-[Remove-AzureRmSqlElasticPool](.\Remove-AzureRmSqlElasticPool.md)
+[Remove-AzureRmSqlElasticPool](./Remove-AzureRmSqlElasticPool.md)
 
-[Set-AzureRmSqlElasticPool](.\Set-AzureRmSqlElasticPool.md)
+[Set-AzureRmSqlElasticPool](./Set-AzureRmSqlElasticPool.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

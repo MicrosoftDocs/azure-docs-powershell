@@ -352,12 +352,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Update Database](https://msdn.microsoft.com/en-us/library/azure/dn505718.aspx)
 
-[Get-AzureSqlDatabase](.\Get-AzureSqlDatabase.md)
+[Get-AzureSqlDatabase](./Get-AzureSqlDatabase.md)
 
-[New-AzureSqlDatabase](.\New-AzureSqlDatabase.md)
+[New-AzureSqlDatabase](./New-AzureSqlDatabase.md)
 
-[Remove-AzureSqlDatabase](.\Remove-AzureSqlDatabase.md)
+[Remove-AzureSqlDatabase](./Remove-AzureSqlDatabase.md)
 
-[New-AzureSqlDatabaseServerContext](.\New-AzureSqlDatabaseServerContext.md)
+[New-AzureSqlDatabaseServerContext](./New-AzureSqlDatabaseServerContext.md)
 
 

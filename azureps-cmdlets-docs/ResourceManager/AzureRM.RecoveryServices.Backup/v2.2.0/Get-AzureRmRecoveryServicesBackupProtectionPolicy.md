@@ -119,10 +119,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmRecoveryServicesBackupProtectionPolicy](.\New-AzureRmRecoveryServicesBackupProtectionPolicy.md)
+[New-AzureRmRecoveryServicesBackupProtectionPolicy](./New-AzureRmRecoveryServicesBackupProtectionPolicy.md)
 
-[Remove-AzureRmRecoveryServicesBackupProtectionPolicy](.\Remove-AzureRmRecoveryServicesBackupProtectionPolicy.md)
+[Remove-AzureRmRecoveryServicesBackupProtectionPolicy](./Remove-AzureRmRecoveryServicesBackupProtectionPolicy.md)
 
-[Set-AzureRmRecoveryServicesBackupProtectionPolicy](.\Set-AzureRmRecoveryServicesBackupProtectionPolicy.md)
+[Set-AzureRmRecoveryServicesBackupProtectionPolicy](./Set-AzureRmRecoveryServicesBackupProtectionPolicy.md)
 
 

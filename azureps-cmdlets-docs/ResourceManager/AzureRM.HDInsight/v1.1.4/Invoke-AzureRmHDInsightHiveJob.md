@@ -270,6 +270,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Use-AzureRmHDInsightCluster](.\Use-AzureRmHDInsightCluster.md)
+[Use-AzureRmHDInsightCluster](./Use-AzureRmHDInsightCluster.md)
 
 

@@ -145,18 +145,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureRmTrafficManagerEndpoint](.\Disable-AzureRmTrafficManagerEndpoint.md)
+[Disable-AzureRmTrafficManagerEndpoint](./Disable-AzureRmTrafficManagerEndpoint.md)
 
-[Get-AzureRmTrafficManagerEndpoint](.\Get-AzureRmTrafficManagerEndpoint.md)
+[Get-AzureRmTrafficManagerEndpoint](./Get-AzureRmTrafficManagerEndpoint.md)
 
-[Get-AzureRmTrafficManagerProfile](.\Get-AzureRmTrafficManagerProfile.md)
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
 
-[New-AzureRmTrafficManagerEndpoint](.\New-AzureRmTrafficManagerEndpoint.md)
+[New-AzureRmTrafficManagerEndpoint](./New-AzureRmTrafficManagerEndpoint.md)
 
-[New-AzureRmTrafficManagerProfile](.\New-AzureRmTrafficManagerProfile.md)
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
 
-[Remove-AzureRmTrafficManagerEndpoint](.\Remove-AzureRmTrafficManagerEndpoint.md)
+[Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)
 
-[Set-AzureRmTrafficManagerProfile](.\Set-AzureRmTrafficManagerProfile.md)
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
 
 

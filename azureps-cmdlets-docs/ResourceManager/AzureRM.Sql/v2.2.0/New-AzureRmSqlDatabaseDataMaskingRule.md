@@ -310,12 +310,12 @@ None.
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseDataMaskingRule](.\Get-AzureRmSqlDatabaseDataMaskingRule.md)
+[Get-AzureRmSqlDatabaseDataMaskingRule](./Get-AzureRmSqlDatabaseDataMaskingRule.md)
 
-[Remove-AzureRmSqlDatabaseDataMaskingRule](.\Remove-AzureRmSqlDatabaseDataMaskingRule.md)
+[Remove-AzureRmSqlDatabaseDataMaskingRule](./Remove-AzureRmSqlDatabaseDataMaskingRule.md)
 
-[Set-AzureRmSqlDatabaseDataMaskingRule](.\Set-AzureRmSqlDatabaseDataMaskingRule.md)
+[Set-AzureRmSqlDatabaseDataMaskingRule](./Set-AzureRmSqlDatabaseDataMaskingRule.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

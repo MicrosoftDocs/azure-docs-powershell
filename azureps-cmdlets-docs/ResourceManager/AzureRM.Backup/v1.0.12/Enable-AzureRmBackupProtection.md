@@ -95,10 +95,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Backup-AzureRmBackupItem](.\Backup-AzureRmBackupItem.md)
+[Backup-AzureRmBackupItem](./Backup-AzureRmBackupItem.md)
 
-[Get-AzureRmBackupItem](.\Get-AzureRmBackupItem.md)
+[Get-AzureRmBackupItem](./Get-AzureRmBackupItem.md)
 
-[Get-AzureRmBackupProtectionPolicy](.\Get-AzureRmBackupProtectionPolicy.md)
+[Get-AzureRmBackupProtectionPolicy](./Get-AzureRmBackupProtectionPolicy.md)
 
 

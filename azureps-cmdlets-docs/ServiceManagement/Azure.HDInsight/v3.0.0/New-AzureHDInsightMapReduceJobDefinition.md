@@ -205,16 +205,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureHDInsightJobOutput](.\Get-AzureHDInsightJobOutput.md)
+[Get-AzureHDInsightJobOutput](./Get-AzureHDInsightJobOutput.md)
 
-[New-AzureHDInsightHiveJobDefinition](.\New-AzureHDInsightHiveJobDefinition.md)
+[New-AzureHDInsightHiveJobDefinition](./New-AzureHDInsightHiveJobDefinition.md)
 
-[New-AzureHDInsightPigJobDefinition](.\New-AzureHDInsightPigJobDefinition.md)
+[New-AzureHDInsightPigJobDefinition](./New-AzureHDInsightPigJobDefinition.md)
 
-[New-AzureHDInsightSqoopJobDefinition](.\New-AzureHDInsightSqoopJobDefinition.md)
+[New-AzureHDInsightSqoopJobDefinition](./New-AzureHDInsightSqoopJobDefinition.md)
 
-[Start-AzureHDInsightJob](.\Start-AzureHDInsightJob.md)
+[Start-AzureHDInsightJob](./Start-AzureHDInsightJob.md)
 
-[Wait-AzureHDInsightJob](.\Wait-AzureHDInsightJob.md)
+[Wait-AzureHDInsightJob](./Wait-AzureHDInsightJob.md)
 
 

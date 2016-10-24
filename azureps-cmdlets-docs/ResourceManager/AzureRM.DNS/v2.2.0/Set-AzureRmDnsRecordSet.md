@@ -141,10 +141,10 @@ This cmdlet returns an object that represents the updated **RecordSet** object.
 
 ## RELATED LINKS
 
-[Get-AzureRmDnsRecordSet](.\Get-AzureRmDnsRecordSet.md)
+[Get-AzureRmDnsRecordSet](./Get-AzureRmDnsRecordSet.md)
 
-[New-AzureRmDnsRecordSet](.\New-AzureRmDnsRecordSet.md)
+[New-AzureRmDnsRecordSet](./New-AzureRmDnsRecordSet.md)
 
-[Remove-AzureRmDnsRecordSet](.\Remove-AzureRmDnsRecordSet.md)
+[Remove-AzureRmDnsRecordSet](./Remove-AzureRmDnsRecordSet.md)
 
 

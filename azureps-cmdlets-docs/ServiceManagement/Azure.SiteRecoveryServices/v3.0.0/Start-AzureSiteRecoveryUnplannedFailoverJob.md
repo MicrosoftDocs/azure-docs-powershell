@@ -253,12 +253,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSiteRecoveryJob](.\Get-AzureSiteRecoveryJob.md)
+[Get-AzureSiteRecoveryJob](./Get-AzureSiteRecoveryJob.md)
 
-[Get-AzureSiteRecoveryProtectionContainer](.\Get-AzureSiteRecoveryProtectionContainer.md)
+[Get-AzureSiteRecoveryProtectionContainer](./Get-AzureSiteRecoveryProtectionContainer.md)
 
-[Get-AzureSiteRecoveryProtectionEntity](.\Get-AzureSiteRecoveryProtectionEntity.md)
+[Get-AzureSiteRecoveryProtectionEntity](./Get-AzureSiteRecoveryProtectionEntity.md)
 
-[Start-AzureSiteRecoveryTestFailoverJob](.\Start-AzureSiteRecoveryTestFailoverJob.md)
+[Start-AzureSiteRecoveryTestFailoverJob](./Start-AzureSiteRecoveryTestFailoverJob.md)
 
 

@@ -41,10 +41,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAclConfig](.\Get-AzureAclConfig.md)
+[Get-AzureAclConfig](./Get-AzureAclConfig.md)
 
-[Remove-AzureAclConfig](.\Remove-AzureAclConfig.md)
+[Remove-AzureAclConfig](./Remove-AzureAclConfig.md)
 
-[Set-AzureAclConfig](.\Set-AzureAclConfig.md)
+[Set-AzureAclConfig](./Set-AzureAclConfig.md)
 
 

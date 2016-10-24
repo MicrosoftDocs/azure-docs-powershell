@@ -103,8 +103,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureServiceProjectRemoteDesktop](.\Disable-AzureServiceProjectRemoteDesktop.md)
+[Disable-AzureServiceProjectRemoteDesktop](./Disable-AzureServiceProjectRemoteDesktop.md)
 
-[Publish-AzureServiceProject](.\Publish-AzureServiceProject.md)
+[Publish-AzureServiceProject](./Publish-AzureServiceProject.md)
 
 

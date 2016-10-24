@@ -97,6 +97,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmSiteRecoveryProtectionEntity](.\Set-AzureRmSiteRecoveryProtectionEntity.md)
+[Set-AzureRmSiteRecoveryProtectionEntity](./Set-AzureRmSiteRecoveryProtectionEntity.md)
 
 

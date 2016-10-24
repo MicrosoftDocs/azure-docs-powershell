@@ -103,12 +103,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVMImage](.\Get-AzureRmVMImage.md)
+[Get-AzureRmVMImage](./Get-AzureRmVMImage.md)
 
-[Get-AzureRmVMImagePublisher](.\Get-AzureRmVMImagePublisher.md)
+[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
 
-[Get-AzureRmVMImageSku](.\Get-AzureRmVMImageSku.md)
+[Get-AzureRmVMImageSku](./Get-AzureRmVMImageSku.md)
 
-[Save-AzureRmVMImage](.\Save-AzureRmVMImage.md)
+[Save-AzureRmVMImage](./Save-AzureRmVMImage.md)
 
 

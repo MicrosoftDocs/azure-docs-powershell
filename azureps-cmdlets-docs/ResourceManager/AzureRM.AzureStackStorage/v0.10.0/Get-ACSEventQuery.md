@@ -231,8 +231,8 @@ Output from Get-ACSFarm can be piped to this cmdlet.
 
 ## RELATED LINKS
 
-[Get-ACSEvent](.\Get-ACSEvent.md)
+[Get-ACSEvent](./Get-ACSEvent.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

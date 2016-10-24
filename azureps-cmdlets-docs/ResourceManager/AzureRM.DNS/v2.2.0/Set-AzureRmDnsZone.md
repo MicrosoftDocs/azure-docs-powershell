@@ -188,10 +188,10 @@ This cmdlet returns a DnsZone object that represents the updated DNS zone with a
 
 ## RELATED LINKS
 
-[Get-AzureRmDnsZone](.\Get-AzureRmDnsZone.md)
+[Get-AzureRmDnsZone](./Get-AzureRmDnsZone.md)
 
-[New-AzureRmDnsZone](.\New-AzureRmDnsZone.md)
+[New-AzureRmDnsZone](./New-AzureRmDnsZone.md)
 
-[Remove-AzureRmDnsZone](.\Remove-AzureRmDnsZone.md)
+[Remove-AzureRmDnsZone](./Remove-AzureRmDnsZone.md)
 
 

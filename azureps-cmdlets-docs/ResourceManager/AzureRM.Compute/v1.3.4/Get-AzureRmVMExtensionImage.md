@@ -150,10 +150,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVMExtensionImageType](.\Get-AzureRmVMExtensionImageType.md)
+[Get-AzureRmVMExtensionImageType](./Get-AzureRmVMExtensionImageType.md)
 
-[Get-AzureRmVMImage](.\Get-AzureRmVMImage.md)
+[Get-AzureRmVMImage](./Get-AzureRmVMImage.md)
 
-[Get-AzureRmVMImagePublisher](.\Get-AzureRmVMImagePublisher.md)
+[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
 
 

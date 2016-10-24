@@ -86,8 +86,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAutomationAccount](.\Get-AzureAutomationAccount.md)
+[Get-AzureAutomationAccount](./Get-AzureAutomationAccount.md)
 
-[New-AzureAutomationAccount](.\New-AzureAutomationAccount.md)
+[New-AzureAutomationAccount](./New-AzureAutomationAccount.md)
 
 

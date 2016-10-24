@@ -129,6 +129,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmIntegrationAccountCallbackUrl](.\Get-AzureRmIntegrationAccountCallbackUrl.md)
+[Get-AzureRmIntegrationAccountCallbackUrl](./Get-AzureRmIntegrationAccountCallbackUrl.md)
 
 

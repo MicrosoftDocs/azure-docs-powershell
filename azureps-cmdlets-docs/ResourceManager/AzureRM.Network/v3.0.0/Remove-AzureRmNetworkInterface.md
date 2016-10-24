@@ -144,10 +144,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmNetworkInterface](.\Get-AzureRmNetworkInterface.md)
+[Get-AzureRmNetworkInterface](./Get-AzureRmNetworkInterface.md)
 
-[New-AzureRmNetworkInterface](.\New-AzureRmNetworkInterface.md)
+[New-AzureRmNetworkInterface](./New-AzureRmNetworkInterface.md)
 
-[Set-AzureRmNetworkInterface](.\Set-AzureRmNetworkInterface.md)
+[Set-AzureRmNetworkInterface](./Set-AzureRmNetworkInterface.md)
 
 

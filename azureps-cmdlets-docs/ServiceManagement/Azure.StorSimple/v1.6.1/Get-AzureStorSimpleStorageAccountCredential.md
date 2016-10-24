@@ -105,10 +105,10 @@ This cmdlet returns a **StorageAccountCredential** object, if you specify the *S
 
 ## RELATED LINKS
 
-[New-AzureStorSimpleStorageAccountCredential](.\New-AzureStorSimpleStorageAccountCredential.md)
+[New-AzureStorSimpleStorageAccountCredential](./New-AzureStorSimpleStorageAccountCredential.md)
 
-[Remove-AzureStorSimpleStorageAccountCredential](.\Remove-AzureStorSimpleStorageAccountCredential.md)
+[Remove-AzureStorSimpleStorageAccountCredential](./Remove-AzureStorSimpleStorageAccountCredential.md)
 
-[Set-AzureStorSimpleStorageAccountCredential](.\Set-AzureStorSimpleStorageAccountCredential.md)
+[Set-AzureStorSimpleStorageAccountCredential](./Set-AzureStorSimpleStorageAccountCredential.md)
 
 

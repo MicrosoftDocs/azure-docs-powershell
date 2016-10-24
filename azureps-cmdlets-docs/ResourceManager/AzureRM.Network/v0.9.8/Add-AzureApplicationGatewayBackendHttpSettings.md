@@ -144,12 +144,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureApplicationGatewayBackendHttpSettings](.\Get-AzureApplicationGatewayBackendHttpSettings.md)
+[Get-AzureApplicationGatewayBackendHttpSettings](./Get-AzureApplicationGatewayBackendHttpSettings.md)
 
-[New-AzureApplicationGatewayBackendHttpSettings](.\New-AzureApplicationGatewayBackendHttpSettings.md)
+[New-AzureApplicationGatewayBackendHttpSettings](./New-AzureApplicationGatewayBackendHttpSettings.md)
 
-[Remove-AzureApplicationGatewayBackendHttpSettings](.\Remove-AzureApplicationGatewayBackendHttpSettings.md)
+[Remove-AzureApplicationGatewayBackendHttpSettings](./Remove-AzureApplicationGatewayBackendHttpSettings.md)
 
-[Set-AzureApplicationGatewayBackendHttpSettings](.\Set-AzureApplicationGatewayBackendHttpSettings.md)
+[Set-AzureApplicationGatewayBackendHttpSettings](./Set-AzureApplicationGatewayBackendHttpSettings.md)
 
 

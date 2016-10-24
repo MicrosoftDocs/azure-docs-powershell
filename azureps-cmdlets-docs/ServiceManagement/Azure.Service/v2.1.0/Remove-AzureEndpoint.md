@@ -121,14 +121,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureEndpoint](.\Add-AzureEndpoint.md)
+[Add-AzureEndpoint](./Add-AzureEndpoint.md)
 
-[Get-AzureEndpoint](.\Get-AzureEndpoint.md)
+[Get-AzureEndpoint](./Get-AzureEndpoint.md)
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
-[Set-AzureEndpoint](.\Set-AzureEndpoint.md)
+[Set-AzureEndpoint](./Set-AzureEndpoint.md)
 
-[Update-AzureVM](.\Update-AzureVM.md)
+[Update-AzureVM](./Update-AzureVM.md)
 
 

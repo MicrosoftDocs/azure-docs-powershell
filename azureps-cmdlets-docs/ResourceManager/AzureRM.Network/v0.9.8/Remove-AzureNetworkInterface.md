@@ -117,10 +117,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureNetworkInterface](.\Get-AzureNetworkInterface.md)
+[Get-AzureNetworkInterface](./Get-AzureNetworkInterface.md)
 
-[New-AzureNetworkInterface](.\New-AzureNetworkInterface.md)
+[New-AzureNetworkInterface](./New-AzureNetworkInterface.md)
 
-[Set-AzureNetworkInterface](.\Set-AzureNetworkInterface.md)
+[Set-AzureNetworkInterface](./Set-AzureNetworkInterface.md)
 
 

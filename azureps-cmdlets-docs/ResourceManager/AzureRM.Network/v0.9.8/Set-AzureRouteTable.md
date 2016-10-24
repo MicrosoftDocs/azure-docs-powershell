@@ -115,12 +115,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRouteConfig](.\Add-AzureRouteConfig.md)
+[Add-AzureRouteConfig](./Add-AzureRouteConfig.md)
 
-[Get-AzureRouteTable](.\Get-AzureRouteTable.md)
+[Get-AzureRouteTable](./Get-AzureRouteTable.md)
 
-[New-AzureRouteTable](.\New-AzureRouteTable.md)
+[New-AzureRouteTable](./New-AzureRouteTable.md)
 
-[Remove-AzureRouteTable](.\Remove-AzureRouteTable.md)
+[Remove-AzureRouteTable](./Remove-AzureRouteTable.md)
 
 

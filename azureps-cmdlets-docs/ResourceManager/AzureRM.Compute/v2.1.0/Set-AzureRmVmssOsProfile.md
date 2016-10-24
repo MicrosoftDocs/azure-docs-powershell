@@ -253,14 +253,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmVMAdditionalUnattendContent](.\Add-AzureRmVMAdditionalUnattendContent.md)
+[Add-AzureRmVMAdditionalUnattendContent](./Add-AzureRmVMAdditionalUnattendContent.md)
 
-[Add-AzureRmVmssWinRMListener](.\Add-AzureRmVmssWinRMListener.md)
+[Add-AzureRmVmssWinRMListener](./Add-AzureRmVmssWinRMListener.md)
 
-[Add-AzureRmVMSshPublicKey](.\Add-AzureRmVMSshPublicKey.md)
+[Add-AzureRmVMSshPublicKey](./Add-AzureRmVMSshPublicKey.md)
 
-[Add-AzureRmVmssSecret](.\Add-AzureRmVmssSecret.md)
+[Add-AzureRmVmssSecret](./Add-AzureRmVmssSecret.md)
 
-[New-AzureRmVmssConfig](.\New-AzureRmVmssConfig.md)
+[New-AzureRmVmssConfig](./New-AzureRmVmssConfig.md)
 
 

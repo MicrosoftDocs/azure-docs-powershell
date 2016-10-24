@@ -110,6 +110,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureKeyVaultCertificateAdministratorDetails](.\New-AzureKeyVaultCertificateAdministratorDetails.md)
+[New-AzureKeyVaultCertificateAdministratorDetails](./New-AzureKeyVaultCertificateAdministratorDetails.md)
 
 

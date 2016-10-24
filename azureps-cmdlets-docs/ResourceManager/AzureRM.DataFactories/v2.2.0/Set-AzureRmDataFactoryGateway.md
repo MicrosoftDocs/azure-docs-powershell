@@ -140,10 +140,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataFactoryGateway](.\Get-AzureRmDataFactoryGateway.md)
+[Get-AzureRmDataFactoryGateway](./Get-AzureRmDataFactoryGateway.md)
 
-[New-AzureRmDataFactoryGateway](.\New-AzureRmDataFactoryGateway.md)
+[New-AzureRmDataFactoryGateway](./New-AzureRmDataFactoryGateway.md)
 
-[Remove-AzureRmDataFactoryGateway](.\Remove-AzureRmDataFactoryGateway.md)
+[Remove-AzureRmDataFactoryGateway](./Remove-AzureRmDataFactoryGateway.md)
 
 

@@ -167,10 +167,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlServerUpgrade](.\Get-AzureRmSqlServerUpgrade.md)
+[Get-AzureRmSqlServerUpgrade](./Get-AzureRmSqlServerUpgrade.md)
 
-[Stop-AzureRmSqlServerUpgrade](.\Stop-AzureRmSqlServerUpgrade.md)
+[Stop-AzureRmSqlServerUpgrade](./Stop-AzureRmSqlServerUpgrade.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

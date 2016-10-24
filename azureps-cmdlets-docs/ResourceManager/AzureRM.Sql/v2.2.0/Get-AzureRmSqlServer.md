@@ -165,12 +165,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmSqlServer](.\New-AzureRmSqlServer.md)
+[New-AzureRmSqlServer](./New-AzureRmSqlServer.md)
 
-[Remove-AzureRmSqlServer](.\Remove-AzureRmSqlServer.md)
+[Remove-AzureRmSqlServer](./Remove-AzureRmSqlServer.md)
 
-[Set-AzureRmSqlServer](.\Set-AzureRmSqlServer.md)
+[Set-AzureRmSqlServer](./Set-AzureRmSqlServer.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

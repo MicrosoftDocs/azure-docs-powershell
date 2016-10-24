@@ -88,6 +88,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureVNetGatewayDefaultSite](.\Remove-AzureVNetGatewayDefaultSite.md)
+[Remove-AzureVNetGatewayDefaultSite](./Remove-AzureVNetGatewayDefaultSite.md)
 
 

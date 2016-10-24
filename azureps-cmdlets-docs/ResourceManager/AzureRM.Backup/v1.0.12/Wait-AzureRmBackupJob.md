@@ -79,8 +79,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBackupJob](.\Get-AzureRmBackupJob.md)
+[Get-AzureRmBackupJob](./Get-AzureRmBackupJob.md)
 
-[Stop-AzureRmBackupJob](.\Stop-AzureRmBackupJob.md)
+[Stop-AzureRmBackupJob](./Stop-AzureRmBackupJob.md)
 
 

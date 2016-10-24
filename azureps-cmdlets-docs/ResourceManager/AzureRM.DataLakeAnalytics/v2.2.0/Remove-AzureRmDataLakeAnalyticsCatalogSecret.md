@@ -150,8 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmDataLakeAnalyticsCatalogSecret](.\New-AzureRmDataLakeAnalyticsCatalogSecret.md)
+[New-AzureRmDataLakeAnalyticsCatalogSecret](./New-AzureRmDataLakeAnalyticsCatalogSecret.md)
 
-[Set-AzureRmDataLakeAnalyticsCatalogSecret](.\Set-AzureRmDataLakeAnalyticsCatalogSecret.md)
+[Set-AzureRmDataLakeAnalyticsCatalogSecret](./Set-AzureRmDataLakeAnalyticsCatalogSecret.md)
 
 

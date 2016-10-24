@@ -190,10 +190,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmNetworkInterface](.\New-AzureRmNetworkInterface.md)
+[New-AzureRmNetworkInterface](./New-AzureRmNetworkInterface.md)
 
-[Remove-AzureRmNetworkInterface](.\Remove-AzureRmNetworkInterface.md)
+[Remove-AzureRmNetworkInterface](./Remove-AzureRmNetworkInterface.md)
 
-[Set-AzureRmNetworkInterface](.\Set-AzureRmNetworkInterface.md)
+[Set-AzureRmNetworkInterface](./Set-AzureRmNetworkInterface.md)
 
 

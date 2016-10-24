@@ -148,8 +148,8 @@ Output from Get-ACSFarm can be piped to this cmdlet.
 
 ## RELATED LINKS
 
-[Set-ACSManagementService](.\Set-ACSManagementService.md)
+[Set-ACSManagementService](./Set-ACSManagementService.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

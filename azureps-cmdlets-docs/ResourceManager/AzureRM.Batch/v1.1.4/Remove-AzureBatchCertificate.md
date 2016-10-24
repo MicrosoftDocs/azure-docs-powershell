@@ -145,14 +145,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureBatchCertificate](.\Get-AzureBatchCertificate.md)
+[Get-AzureBatchCertificate](./Get-AzureBatchCertificate.md)
 
-[Get-AzureRmBatchAccountKeys](.\Get-AzureRmBatchAccountKeys.md)
+[Get-AzureRmBatchAccountKeys](./Get-AzureRmBatchAccountKeys.md)
 
-[New-AzureBatchCertificate](.\New-AzureBatchCertificate.md)
+[New-AzureBatchCertificate](./New-AzureBatchCertificate.md)
 
-[Stop-AzureBatchCertificateDeletion](.\Stop-AzureBatchCertificateDeletion.md)
+[Stop-AzureBatchCertificateDeletion](./Stop-AzureBatchCertificateDeletion.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

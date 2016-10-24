@@ -125,8 +125,8 @@ This cmdlet returns a **StorSimpleResourceContext** object that contains details
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleResource](.\Get-AzureStorSimpleResource.md)
+[Get-AzureStorSimpleResource](./Get-AzureStorSimpleResource.md)
 
-[Get-AzureStorSimpleResourceContext](.\Get-AzureStorSimpleResourceContext.md)
+[Get-AzureStorSimpleResourceContext](./Get-AzureStorSimpleResourceContext.md)
 
 

@@ -106,14 +106,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureDns](.\Add-AzureDns.md)
+[Add-AzureDns](./Add-AzureDns.md)
 
-[Get-AzureDns](.\Get-AzureDns.md)
+[Get-AzureDns](./Get-AzureDns.md)
 
-[New-AzureVM](.\New-AzureVM.md)
+[New-AzureVM](./New-AzureVM.md)
 
-[Remove-AzureDns](.\Remove-AzureDns.md)
+[Remove-AzureDns](./Remove-AzureDns.md)
 
-[Set-AzureDns](.\Set-AzureDns.md)
+[Set-AzureDns](./Set-AzureDns.md)
 
 

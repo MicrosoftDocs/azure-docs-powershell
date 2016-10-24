@@ -238,12 +238,12 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Get-AzureRmVMImageOffer](.\Get-AzureRmVMImageOffer.md)
+[Get-AzureRmVMImageOffer](./Get-AzureRmVMImageOffer.md)
 
-[Get-AzureRmVMImagePublisher](.\Get-AzureRmVMImagePublisher.md)
+[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
 
-[Get-AzureRmVMImageSku](.\Get-AzureRmVMImageSku.md)
+[Get-AzureRmVMImageSku](./Get-AzureRmVMImageSku.md)
 
-[New-AzureRmVmssConfig](.\New-AzureRmVmssConfig.md)
+[New-AzureRmVmssConfig](./New-AzureRmVmssConfig.md)
 
 

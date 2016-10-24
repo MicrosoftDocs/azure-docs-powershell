@@ -386,8 +386,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureKeyVaultCertificatePolicy](.\Get-AzureKeyVaultCertificatePolicy.md)
+[Get-AzureKeyVaultCertificatePolicy](./Get-AzureKeyVaultCertificatePolicy.md)
 
-[New-AzureKeyVaultCertificatePolicy](.\New-AzureKeyVaultCertificatePolicy.md)
+[New-AzureKeyVaultCertificatePolicy](./New-AzureKeyVaultCertificatePolicy.md)
 
 

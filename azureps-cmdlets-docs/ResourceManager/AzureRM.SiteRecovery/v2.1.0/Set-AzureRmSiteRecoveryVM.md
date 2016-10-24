@@ -165,6 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryVM](.\Get-AzureRmSiteRecoveryVM.md)
+[Get-AzureRmSiteRecoveryVM](./Get-AzureRmSiteRecoveryVM.md)
 
 

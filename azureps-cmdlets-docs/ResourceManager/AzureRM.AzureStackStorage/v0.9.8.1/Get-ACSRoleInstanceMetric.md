@@ -318,8 +318,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ACSRoleInstance](.\Get-ACSRoleInstance.md)
+[Get-ACSRoleInstance](./Get-ACSRoleInstance.md)
 
-[Get-ACSRoleInstanceMetricDefinition](.\Get-ACSRoleInstanceMetricDefinition.md)
+[Get-ACSRoleInstanceMetricDefinition](./Get-ACSRoleInstanceMetricDefinition.md)
 
 

@@ -92,8 +92,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-AzureHDInsightHttpServicesAccess](.\Grant-AzureHDInsightHttpServicesAccess.md)
+[Grant-AzureHDInsightHttpServicesAccess](./Grant-AzureHDInsightHttpServicesAccess.md)
 
-[Azure HDInsight Cmdlets](.\AzureRM.HDInsight.md)
+[Azure HDInsight Cmdlets](./AzureRM.HDInsight.md)
 
 

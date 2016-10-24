@@ -124,8 +124,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackVMSubnet](.\Get-WAPackVMSubnet.md)
+[Get-WAPackVMSubnet](./Get-WAPackVMSubnet.md)
 
-[New-WAPackVMSubnet](.\New-WAPackVMSubnet.md)
+[New-WAPackVMSubnet](./New-WAPackVMSubnet.md)
 
 

@@ -500,18 +500,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureHDInsightMetastore](.\Add-AzureHDInsightMetastore.md)
+[Add-AzureHDInsightMetastore](./Add-AzureHDInsightMetastore.md)
 
-[Add-AzureHDInsightStorage](.\Add-AzureHDInsightStorage.md)
+[Add-AzureHDInsightStorage](./Add-AzureHDInsightStorage.md)
 
-[Get-AzureHDInsightCluster](.\Get-AzureHDInsightCluster.md)
+[Get-AzureHDInsightCluster](./Get-AzureHDInsightCluster.md)
 
-[New-AzureHDInsightClusterConfig](.\New-AzureHDInsightClusterConfig.md)
+[New-AzureHDInsightClusterConfig](./New-AzureHDInsightClusterConfig.md)
 
-[Remove-AzureHDInsightCluster](.\Remove-AzureHDInsightCluster.md)
+[Remove-AzureHDInsightCluster](./Remove-AzureHDInsightCluster.md)
 
-[Set-AzureHDInsightDefaultStorage](.\Set-AzureHDInsightDefaultStorage.md)
+[Set-AzureHDInsightDefaultStorage](./Set-AzureHDInsightDefaultStorage.md)
 
-[Use-AzureHDInsightCluster](.\Use-AzureHDInsightCluster.md)
+[Use-AzureHDInsightCluster](./Use-AzureHDInsightCluster.md)
 
 

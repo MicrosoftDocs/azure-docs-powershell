@@ -331,10 +331,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureStorageDirectory](.\Remove-AzureStorageDirectory.md)
+[Remove-AzureStorageDirectory](./Remove-AzureStorageDirectory.md)
 
-[New-AzureStorageDirectory](.\New-AzureStorageDirectory.md)
+[New-AzureStorageDirectory](./New-AzureStorageDirectory.md)
 
-[Get-AzureStorageFileContent](.\Get-AzureStorageFileContent.md)
+[Get-AzureStorageFileContent](./Get-AzureStorageFileContent.md)
 
 

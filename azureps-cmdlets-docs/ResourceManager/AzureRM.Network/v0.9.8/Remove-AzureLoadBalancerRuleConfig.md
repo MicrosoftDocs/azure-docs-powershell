@@ -85,12 +85,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureLoadBalancerRuleConfig](.\Add-AzureLoadBalancerRuleConfig.md)
+[Add-AzureLoadBalancerRuleConfig](./Add-AzureLoadBalancerRuleConfig.md)
 
-[Get-AzureLoadBalancerRuleConfig](.\Get-AzureLoadBalancerRuleConfig.md)
+[Get-AzureLoadBalancerRuleConfig](./Get-AzureLoadBalancerRuleConfig.md)
 
-[New-AzureLoadBalancerRuleConfig](.\New-AzureLoadBalancerRuleConfig.md)
+[New-AzureLoadBalancerRuleConfig](./New-AzureLoadBalancerRuleConfig.md)
 
-[Set-AzureLoadBalancerRuleConfig](.\Set-AzureLoadBalancerRuleConfig.md)
+[Set-AzureLoadBalancerRuleConfig](./Set-AzureLoadBalancerRuleConfig.md)
 
 

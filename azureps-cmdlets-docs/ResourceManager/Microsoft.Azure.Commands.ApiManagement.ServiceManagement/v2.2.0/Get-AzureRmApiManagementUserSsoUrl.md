@@ -75,6 +75,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApiManagementUser](.\Get-AzureRmApiManagementUser.md)
+[Get-AzureRmApiManagementUser](./Get-AzureRmApiManagementUser.md)
 
 

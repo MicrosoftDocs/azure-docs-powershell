@@ -124,10 +124,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmIntegrationAccountMap](.\New-AzureRmIntegrationAccountMap.md)
+[New-AzureRmIntegrationAccountMap](./New-AzureRmIntegrationAccountMap.md)
 
-[Remove-AzureRmIntegrationAccountMap](.\Remove-AzureRmIntegrationAccountMap.md)
+[Remove-AzureRmIntegrationAccountMap](./Remove-AzureRmIntegrationAccountMap.md)
 
-[Set-AzureRmIntegrationAccountMap](.\Set-AzureRmIntegrationAccountMap.md)
+[Set-AzureRmIntegrationAccountMap](./Set-AzureRmIntegrationAccountMap.md)
 
 

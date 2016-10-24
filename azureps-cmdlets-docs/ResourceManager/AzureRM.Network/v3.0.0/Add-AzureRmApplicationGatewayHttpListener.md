@@ -234,12 +234,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApplicationGatewayHttpListener](.\Get-AzureRmApplicationGatewayHttpListener.md)
+[Get-AzureRmApplicationGatewayHttpListener](./Get-AzureRmApplicationGatewayHttpListener.md)
 
-[New-AzureRmApplicationGatewayHttpListener](.\New-AzureRmApplicationGatewayHttpListener.md)
+[New-AzureRmApplicationGatewayHttpListener](./New-AzureRmApplicationGatewayHttpListener.md)
 
-[Remove-AzureRmApplicationGatewayHttpListener](.\Remove-AzureRmApplicationGatewayHttpListener.md)
+[Remove-AzureRmApplicationGatewayHttpListener](./Remove-AzureRmApplicationGatewayHttpListener.md)
 
-[Set-AzureRmApplicationGatewayHttpListener](.\Set-AzureRmApplicationGatewayHttpListener.md)
+[Set-AzureRmApplicationGatewayHttpListener](./Set-AzureRmApplicationGatewayHttpListener.md)
 
 

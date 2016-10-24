@@ -93,12 +93,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureApplicationGatewayFrontendPort](.\Add-AzureApplicationGatewayFrontendPort.md)
+[Add-AzureApplicationGatewayFrontendPort](./Add-AzureApplicationGatewayFrontendPort.md)
 
-[Get-AzureApplicationGatewayFrontendPort](.\Get-AzureApplicationGatewayFrontendPort.md)
+[Get-AzureApplicationGatewayFrontendPort](./Get-AzureApplicationGatewayFrontendPort.md)
 
-[New-AzureApplicationGatewayFrontendPort](.\New-AzureApplicationGatewayFrontendPort.md)
+[New-AzureApplicationGatewayFrontendPort](./New-AzureApplicationGatewayFrontendPort.md)
 
-[Set-AzureApplicationGatewayFrontendPort](.\Set-AzureApplicationGatewayFrontendPort.md)
+[Set-AzureApplicationGatewayFrontendPort](./Set-AzureApplicationGatewayFrontendPort.md)
 
 

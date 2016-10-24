@@ -141,6 +141,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Revoke-AzureRmHDInsightRdpServicesAccess](.\Revoke-AzureRmHDInsightRdpServicesAccess.md)
+[Revoke-AzureRmHDInsightRdpServicesAccess](./Revoke-AzureRmHDInsightRdpServicesAccess.md)
 
 

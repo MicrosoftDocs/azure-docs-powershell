@@ -155,12 +155,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmNotificationHubsNamespaceAuthorizationRules](.\Get-AzureRmNotificationHubsNamespaceAuthorizationRules.md)
+[Get-AzureRmNotificationHubsNamespaceAuthorizationRules](./Get-AzureRmNotificationHubsNamespaceAuthorizationRules.md)
 
-[New-AzureRmNotificationHubAuthorizationRules](.\New-AzureRmNotificationHubAuthorizationRules.md)
+[New-AzureRmNotificationHubAuthorizationRules](./New-AzureRmNotificationHubAuthorizationRules.md)
 
-[Remove-AzureRmNotificationHubAuthorizationRules](.\Remove-AzureRmNotificationHubAuthorizationRules.md)
+[Remove-AzureRmNotificationHubAuthorizationRules](./Remove-AzureRmNotificationHubAuthorizationRules.md)
 
-[Set-AzureRmNotificationHubAuthorizationRules](.\Set-AzureRmNotificationHubAuthorizationRules.md)
+[Set-AzureRmNotificationHubAuthorizationRules](./Set-AzureRmNotificationHubAuthorizationRules.md)
 
 

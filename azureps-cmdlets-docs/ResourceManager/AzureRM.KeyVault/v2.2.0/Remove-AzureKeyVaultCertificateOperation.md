@@ -135,8 +135,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureKeyVaultCertificateOperation](.\Get-AzureKeyVaultCertificateOperation.md)
+[Get-AzureKeyVaultCertificateOperation](./Get-AzureKeyVaultCertificateOperation.md)
 
-[Stop-AzureKeyVaultCertificateOperation](.\Stop-AzureKeyVaultCertificateOperation.md)
+[Stop-AzureKeyVaultCertificateOperation](./Stop-AzureKeyVaultCertificateOperation.md)
 
 

@@ -60,8 +60,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmSiteRecoveryStorageClassificationMapping](.\New-AzureRmSiteRecoveryStorageClassificationMapping.md)
+[New-AzureRmSiteRecoveryStorageClassificationMapping](./New-AzureRmSiteRecoveryStorageClassificationMapping.md)
 
-[Remove-AzureRmSiteRecoveryStorageClassificationMapping](.\Remove-AzureRmSiteRecoveryStorageClassificationMapping.md)
+[Remove-AzureRmSiteRecoveryStorageClassificationMapping](./Remove-AzureRmSiteRecoveryStorageClassificationMapping.md)
 
 

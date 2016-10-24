@@ -255,8 +255,8 @@ Output from Get-ACSFarm and Get-ACSBlobService can be piped to this cmdlet's inp
 
 ## RELATED LINKS
 
-[Get-ACSBlobService](.\Get-ACSBlobService.md)
+[Get-ACSBlobService](./Get-ACSBlobService.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

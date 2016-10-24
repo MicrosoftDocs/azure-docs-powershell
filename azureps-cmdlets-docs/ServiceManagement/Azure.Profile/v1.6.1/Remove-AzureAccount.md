@@ -156,8 +156,8 @@ Otherwise, it does not return any output.
 
 ## RELATED LINKS
 
-[Add-AzureAccount](.\Add-AzureAccount.md)
+[Add-AzureAccount](./Add-AzureAccount.md)
 
-[Get-AzureAccount](.\Get-AzureAccount.md)
+[Get-AzureAccount](./Get-AzureAccount.md)
 
 

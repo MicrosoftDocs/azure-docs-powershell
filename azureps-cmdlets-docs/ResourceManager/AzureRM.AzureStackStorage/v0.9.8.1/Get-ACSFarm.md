@@ -156,8 +156,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-ACSFarm](.\Add-ACSFarm.md)
+[Add-ACSFarm](./Add-ACSFarm.md)
 
-[Set-ACSFarm](.\Set-ACSFarm.md)
+[Set-ACSFarm](./Set-ACSFarm.md)
 
 

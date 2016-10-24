@@ -100,12 +100,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmExpressRouteCircuitAuthorization](.\Add-AzureRmExpressRouteCircuitAuthorization.md)
+[Add-AzureRmExpressRouteCircuitAuthorization](./Add-AzureRmExpressRouteCircuitAuthorization.md)
 
-[Get-AzureRmExpressRouteCircuit](.\Get-AzureRmExpressRouteCircuit.md)
+[Get-AzureRmExpressRouteCircuit](./Get-AzureRmExpressRouteCircuit.md)
 
-[New-AzureRmExpressRouteCircuitAuthorization](.\New-AzureRmExpressRouteCircuitAuthorization.md)
+[New-AzureRmExpressRouteCircuitAuthorization](./New-AzureRmExpressRouteCircuitAuthorization.md)
 
-[Remove-AzureRmExpressRouteCircuitAuthorization](.\Remove-AzureRmExpressRouteCircuitAuthorization.md)
+[Remove-AzureRmExpressRouteCircuitAuthorization](./Remove-AzureRmExpressRouteCircuitAuthorization.md)
 
 

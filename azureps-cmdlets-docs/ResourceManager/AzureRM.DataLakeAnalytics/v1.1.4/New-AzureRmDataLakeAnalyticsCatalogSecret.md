@@ -170,8 +170,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureRmDataLakeAnalyticsCatalogSecret](.\Remove-AzureRmDataLakeAnalyticsCatalogSecret.md)
+[Remove-AzureRmDataLakeAnalyticsCatalogSecret](./Remove-AzureRmDataLakeAnalyticsCatalogSecret.md)
 
-[Set-AzureRmDataLakeAnalyticsCatalogSecret](.\Set-AzureRmDataLakeAnalyticsCatalogSecret.md)
+[Set-AzureRmDataLakeAnalyticsCatalogSecret](./Set-AzureRmDataLakeAnalyticsCatalogSecret.md)
 
 

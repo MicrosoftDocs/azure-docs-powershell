@@ -295,10 +295,10 @@ If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation
 
 ## RELATED LINKS
 
-[Get-AzureRmDnsRecordSet](.\Get-AzureRmDnsRecordSet.md)
+[Get-AzureRmDnsRecordSet](./Get-AzureRmDnsRecordSet.md)
 
-[New-AzureRmDnsRecordSet](.\New-AzureRmDnsRecordSet.md)
+[New-AzureRmDnsRecordSet](./New-AzureRmDnsRecordSet.md)
 
-[Set-AzureRmDnsRecordSet](.\Set-AzureRmDnsRecordSet.md)
+[Set-AzureRmDnsRecordSet](./Set-AzureRmDnsRecordSet.md)
 
 

@@ -76,8 +76,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
-[Set-AzureSubnet](.\Set-AzureSubnet.md)
+[Set-AzureSubnet](./Set-AzureSubnet.md)
 
 

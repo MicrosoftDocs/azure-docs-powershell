@@ -163,6 +163,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmPowerBIWorkspaceCollectionAccessKeys](.\Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
+[Get-AzureRmPowerBIWorkspaceCollectionAccessKeys](./Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
 
 

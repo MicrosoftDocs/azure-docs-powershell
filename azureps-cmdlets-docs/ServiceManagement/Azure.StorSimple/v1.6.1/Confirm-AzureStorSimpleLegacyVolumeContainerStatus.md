@@ -154,10 +154,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleLegacyVolumeContainerStatus](.\Get-AzureStorSimpleLegacyVolumeContainerStatus.md)
+[Get-AzureStorSimpleLegacyVolumeContainerStatus](./Get-AzureStorSimpleLegacyVolumeContainerStatus.md)
 
-[Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus](.\Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus.md)
+[Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus](./Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus.md)
 
-[Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan](.\Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan.md)
+[Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan](./Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan.md)
 
 

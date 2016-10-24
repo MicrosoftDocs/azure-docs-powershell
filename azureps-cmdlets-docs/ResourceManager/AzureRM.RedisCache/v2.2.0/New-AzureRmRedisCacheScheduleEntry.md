@@ -106,10 +106,10 @@ This cmdlet returns a schedule entry object.
 
 ## RELATED LINKS
 
-[Get-AzureRmRedisCachePatchSchedule](.\Get-AzureRmRedisCachePatchSchedule.md)
+[Get-AzureRmRedisCachePatchSchedule](./Get-AzureRmRedisCachePatchSchedule.md)
 
-[New-AzureRmRedisCachePatchSchedule](.\New-AzureRmRedisCachePatchSchedule.md)
+[New-AzureRmRedisCachePatchSchedule](./New-AzureRmRedisCachePatchSchedule.md)
 
-[Remove-AzureRmRedisCachePatchSchedule](.\Remove-AzureRmRedisCachePatchSchedule.md)
+[Remove-AzureRmRedisCachePatchSchedule](./Remove-AzureRmRedisCachePatchSchedule.md)
 
 

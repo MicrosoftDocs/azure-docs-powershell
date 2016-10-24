@@ -134,8 +134,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSubnetRouteTable](.\Get-AzureSubnetRouteTable.md)
+[Get-AzureSubnetRouteTable](./Get-AzureSubnetRouteTable.md)
 
-[Remove-AzureSubnetRouteTable](.\Remove-AzureSubnetRouteTable.md)
+[Remove-AzureSubnetRouteTable](./Remove-AzureSubnetRouteTable.md)
 
 

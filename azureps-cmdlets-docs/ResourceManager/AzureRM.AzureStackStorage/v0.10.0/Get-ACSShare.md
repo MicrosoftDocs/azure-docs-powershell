@@ -158,8 +158,8 @@ Output from Get-ACSFarm can be piped to this cmdlet.
 
 ## RELATED LINKS
 
-[Get-ACSShareMetric](.\Get-ACSShareMetric.md)
+[Get-ACSShareMetric](./Get-ACSShareMetric.md)
 
-[Get-ACSShareMetricDefinition](.\Get-ACSShareMetricDefinition.md)
+[Get-ACSShareMetricDefinition](./Get-ACSShareMetricDefinition.md)
 
 

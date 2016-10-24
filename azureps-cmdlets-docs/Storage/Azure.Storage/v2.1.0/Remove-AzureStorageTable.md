@@ -189,6 +189,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureStorageTable](.\Get-AzureStorageTable.md)
+[Get-AzureStorageTable](./Get-AzureStorageTable.md)
 
 

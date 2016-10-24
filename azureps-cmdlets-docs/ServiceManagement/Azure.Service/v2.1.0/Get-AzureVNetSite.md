@@ -111,10 +111,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVNetConfig](.\Get-AzureVNetConfig.md)
+[Get-AzureVNetConfig](./Get-AzureVNetConfig.md)
 
-[Remove-AzureVNetConfig](.\Remove-AzureVNetConfig.md)
+[Remove-AzureVNetConfig](./Remove-AzureVNetConfig.md)
 
-[Set-AzureVNetConfig](.\Set-AzureVNetConfig.md)
+[Set-AzureVNetConfig](./Set-AzureVNetConfig.md)
 
 

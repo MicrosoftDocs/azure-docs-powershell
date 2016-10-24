@@ -301,8 +301,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureServiceADDomainExtension](.\Get-AzureServiceADDomainExtension.md)
+[Get-AzureServiceADDomainExtension](./Get-AzureServiceADDomainExtension.md)
 
-[Set-AzureServiceADDomainExtension](.\Set-AzureServiceADDomainExtension.md)
+[Set-AzureServiceADDomainExtension](./Set-AzureServiceADDomainExtension.md)
 
 

@@ -247,8 +247,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataFactoryDataset](.\Get-AzureRmDataFactoryDataset.md)
+[Get-AzureRmDataFactoryDataset](./Get-AzureRmDataFactoryDataset.md)
 
-[Remove-AzureRmDataFactoryDataset](.\Remove-AzureRmDataFactoryDataset.md)
+[Remove-AzureRmDataFactoryDataset](./Remove-AzureRmDataFactoryDataset.md)
 
 

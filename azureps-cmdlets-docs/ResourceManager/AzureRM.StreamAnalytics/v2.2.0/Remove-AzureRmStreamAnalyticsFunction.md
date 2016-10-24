@@ -123,10 +123,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmStreamAnalyticsFunction](.\Get-AzureRmStreamAnalyticsFunction.md)
+[Get-AzureRmStreamAnalyticsFunction](./Get-AzureRmStreamAnalyticsFunction.md)
 
-[New-AzureRmStreamAnalyticsFunction](.\New-AzureRmStreamAnalyticsFunction.md)
+[New-AzureRmStreamAnalyticsFunction](./New-AzureRmStreamAnalyticsFunction.md)
 
-[Test-AzureRmStreamAnalyticsFunction](.\Test-AzureRmStreamAnalyticsFunction.md)
+[Test-AzureRmStreamAnalyticsFunction](./Test-AzureRmStreamAnalyticsFunction.md)
 
 

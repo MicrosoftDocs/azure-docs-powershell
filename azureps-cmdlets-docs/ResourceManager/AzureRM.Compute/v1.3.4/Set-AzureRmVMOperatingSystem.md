@@ -319,8 +319,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVM](.\Get-AzureRmVM.md)
+[Get-AzureRmVM](./Get-AzureRmVM.md)
 
-[New-AzureRmVMConfig](.\New-AzureRmVMConfig.md)
+[New-AzureRmVMConfig](./New-AzureRmVMConfig.md)
 
 

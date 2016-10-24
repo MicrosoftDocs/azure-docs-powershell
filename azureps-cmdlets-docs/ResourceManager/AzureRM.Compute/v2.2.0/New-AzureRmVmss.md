@@ -218,18 +218,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVmss](.\Get-AzureRmVmss.md)
+[Get-AzureRmVmss](./Get-AzureRmVmss.md)
 
-[Remove-AzureRmVmss](.\Remove-AzureRmVmss.md)
+[Remove-AzureRmVmss](./Remove-AzureRmVmss.md)
 
-[Restart-AzureRmVmss](.\Restart-AzureRmVmss.md)
+[Restart-AzureRmVmss](./Restart-AzureRmVmss.md)
 
-[Set-AzureRmVmss](.\Set-AzureRmVmss.md)
+[Set-AzureRmVmss](./Set-AzureRmVmss.md)
 
-[Start-AzureRmVmss](.\Start-AzureRmVmss.md)
+[Start-AzureRmVmss](./Start-AzureRmVmss.md)
 
-[Stop-AzureRmVmss](.\Stop-AzureRmVmss.md)
+[Stop-AzureRmVmss](./Stop-AzureRmVmss.md)
 
-[Update-AzureRmVmss](.\Update-AzureRmVmss.md)
+[Update-AzureRmVmss](./Update-AzureRmVmss.md)
 
 

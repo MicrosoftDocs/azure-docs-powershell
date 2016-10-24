@@ -122,12 +122,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureBatchAccount](.\New-AzureBatchAccount.md)
+[New-AzureBatchAccount](./New-AzureBatchAccount.md)
 
-[Remove-AzureBatchAccount](.\Remove-AzureBatchAccount.md)
+[Remove-AzureBatchAccount](./Remove-AzureBatchAccount.md)
 
-[Set-AzureBatchAccount](.\Set-AzureBatchAccount.md)
+[Set-AzureBatchAccount](./Set-AzureBatchAccount.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

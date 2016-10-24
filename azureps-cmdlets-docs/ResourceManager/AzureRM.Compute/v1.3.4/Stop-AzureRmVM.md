@@ -186,16 +186,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVM](.\Get-AzureRmVM.md)
+[Get-AzureRmVM](./Get-AzureRmVM.md)
 
-[New-AzureRmVM](.\New-AzureRmVM.md)
+[New-AzureRmVM](./New-AzureRmVM.md)
 
-[Remove-AzureRmVM](.\Remove-AzureRmVM.md)
+[Remove-AzureRmVM](./Remove-AzureRmVM.md)
 
-[Restart-AzureRmVM](.\Restart-AzureRmVM.md)
+[Restart-AzureRmVM](./Restart-AzureRmVM.md)
 
-[Start-AzureRmVM](.\Start-AzureRmVM.md)
+[Start-AzureRmVM](./Start-AzureRmVM.md)
 
-[Update-AzureRmVM](.\Update-AzureRmVM.md)
+[Update-AzureRmVM](./Update-AzureRmVM.md)
 
 

@@ -90,14 +90,14 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 
 ## RELATED LINKS
 
-[Add-AzureRmExpressRouteCircuitAuthorization](.\Add-AzureRmExpressRouteCircuitAuthorization.md)
+[Add-AzureRmExpressRouteCircuitAuthorization](./Add-AzureRmExpressRouteCircuitAuthorization.md)
 
-[Get-AzureRmExpressRouteCircuit](.\Get-AzureRmExpressRouteCircuit.md)
+[Get-AzureRmExpressRouteCircuit](./Get-AzureRmExpressRouteCircuit.md)
 
-[Get-AzureRmExpressRouteCircuitAuthorization](.\Get-AzureRmExpressRouteCircuitAuthorization.md)
+[Get-AzureRmExpressRouteCircuitAuthorization](./Get-AzureRmExpressRouteCircuitAuthorization.md)
 
-[New-AzureRmExpressRouteCircuitAuthorization](.\New-AzureRmExpressRouteCircuitAuthorization.md)
+[New-AzureRmExpressRouteCircuitAuthorization](./New-AzureRmExpressRouteCircuitAuthorization.md)
 
-[Set-AzureRmExpressRouteCircuit](.\Set-AzureRmExpressRouteCircuit.md)
+[Set-AzureRmExpressRouteCircuit](./Set-AzureRmExpressRouteCircuit.md)
 
 

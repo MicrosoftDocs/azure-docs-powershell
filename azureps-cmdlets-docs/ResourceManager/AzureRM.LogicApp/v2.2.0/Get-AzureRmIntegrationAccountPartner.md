@@ -118,10 +118,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmIntegrationAccountPartner](.\New-AzureRmIntegrationAccountPartner.md)
+[New-AzureRmIntegrationAccountPartner](./New-AzureRmIntegrationAccountPartner.md)
 
-[Remove-AzureRmIntegrationAccountPartner](.\Remove-AzureRmIntegrationAccountPartner.md)
+[Remove-AzureRmIntegrationAccountPartner](./Remove-AzureRmIntegrationAccountPartner.md)
 
-[Set-AzureRmIntegrationAccountPartner](.\Set-AzureRmIntegrationAccountPartner.md)
+[Set-AzureRmIntegrationAccountPartner](./Set-AzureRmIntegrationAccountPartner.md)
 
 

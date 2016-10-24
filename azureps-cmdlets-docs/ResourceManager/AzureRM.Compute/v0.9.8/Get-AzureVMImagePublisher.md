@@ -72,12 +72,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMImage](.\Get-AzureVMImage.md)
+[Get-AzureVMImage](./Get-AzureVMImage.md)
 
-[Get-AzureVMImageOffer](.\Get-AzureVMImageOffer.md)
+[Get-AzureVMImageOffer](./Get-AzureVMImageOffer.md)
 
-[Get-AzureVMImageSku](.\Get-AzureVMImageSku.md)
+[Get-AzureVMImageSku](./Get-AzureVMImageSku.md)
 
-[Save-AzureVMImage](.\Save-AzureVMImage.md)
+[Save-AzureVMImage](./Save-AzureVMImage.md)
 
 

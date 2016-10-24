@@ -118,6 +118,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmDataFactoryGateway](.\New-AzureRmDataFactoryGateway.md)
+[New-AzureRmDataFactoryGateway](./New-AzureRmDataFactoryGateway.md)
 
 

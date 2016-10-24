@@ -105,10 +105,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAffinityGroup](.\Get-AzureAffinityGroup.md)
+[Get-AzureAffinityGroup](./Get-AzureAffinityGroup.md)
 
-[New-AzureAffinityGroup](.\New-AzureAffinityGroup.md)
+[New-AzureAffinityGroup](./New-AzureAffinityGroup.md)
 
-[Set-AzureAffinityGroup](.\Set-AzureAffinityGroup.md)
+[Set-AzureAffinityGroup](./Set-AzureAffinityGroup.md)
 
 

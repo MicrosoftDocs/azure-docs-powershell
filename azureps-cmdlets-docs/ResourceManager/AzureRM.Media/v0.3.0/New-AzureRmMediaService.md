@@ -232,10 +232,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmMediaService](.\Get-AzureRmMediaService.md)
+[Get-AzureRmMediaService](./Get-AzureRmMediaService.md)
 
-[Remove-AzureRmMediaService](.\Remove-AzureRmMediaService.md)
+[Remove-AzureRmMediaService](./Remove-AzureRmMediaService.md)
 
-[Set-AzureRmMediaService](.\Set-AzureRmMediaService.md)
+[Set-AzureRmMediaService](./Set-AzureRmMediaService.md)
 
 

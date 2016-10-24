@@ -187,14 +187,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureApplicationGatewayBackendAddressPool](.\Add-AzureApplicationGatewayBackendAddressPool.md)
+[Add-AzureApplicationGatewayBackendAddressPool](./Add-AzureApplicationGatewayBackendAddressPool.md)
 
-[Get-AzureApplicationGatewayBackendAddressPool](.\Get-AzureApplicationGatewayBackendAddressPool.md)
+[Get-AzureApplicationGatewayBackendAddressPool](./Get-AzureApplicationGatewayBackendAddressPool.md)
 
-[Get-AzureNetworkInterface](.\Get-AzureNetworkInterface.md)
+[Get-AzureNetworkInterface](./Get-AzureNetworkInterface.md)
 
-[New-AzureApplicationGatewayBackendAddressPool](.\New-AzureApplicationGatewayBackendAddressPool.md)
+[New-AzureApplicationGatewayBackendAddressPool](./New-AzureApplicationGatewayBackendAddressPool.md)
 
-[Remove-AzureApplicationGatewayBackendAddressPool](.\Remove-AzureApplicationGatewayBackendAddressPool.md)
+[Remove-AzureApplicationGatewayBackendAddressPool](./Remove-AzureApplicationGatewayBackendAddressPool.md)
 
 

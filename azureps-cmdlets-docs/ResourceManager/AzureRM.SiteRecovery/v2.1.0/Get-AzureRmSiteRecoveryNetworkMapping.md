@@ -96,8 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmSiteRecoveryNetworkMapping](.\New-AzureRmSiteRecoveryNetworkMapping.md)
+[New-AzureRmSiteRecoveryNetworkMapping](./New-AzureRmSiteRecoveryNetworkMapping.md)
 
-[Remove-AzureRmSiteRecoveryNetworkMapping](.\Remove-AzureRmSiteRecoveryNetworkMapping.md)
+[Remove-AzureRmSiteRecoveryNetworkMapping](./Remove-AzureRmSiteRecoveryNetworkMapping.md)
 
 

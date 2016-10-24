@@ -129,10 +129,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureLocalNetworkGateway](.\Get-AzureLocalNetworkGateway.md)
+[Get-AzureLocalNetworkGateway](./Get-AzureLocalNetworkGateway.md)
 
-[New-AzureLocalNetworkGateway](.\New-AzureLocalNetworkGateway.md)
+[New-AzureLocalNetworkGateway](./New-AzureLocalNetworkGateway.md)
 
-[Remove-AzureLocalNetworkGateway](.\Remove-AzureLocalNetworkGateway.md)
+[Remove-AzureLocalNetworkGateway](./Remove-AzureLocalNetworkGateway.md)
 
 

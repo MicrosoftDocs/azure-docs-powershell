@@ -90,6 +90,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApiManagementTenantAccess](.\Get-AzureRmApiManagementTenantAccess.md)
+[Get-AzureRmApiManagementTenantAccess](./Get-AzureRmApiManagementTenantAccess.md)
 
 

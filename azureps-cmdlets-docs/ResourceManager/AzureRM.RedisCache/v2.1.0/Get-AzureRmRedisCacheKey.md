@@ -79,6 +79,6 @@ This cmdlet returns primary and secondary access keys for a Redis Cache.
 
 ## RELATED LINKS
 
-[New-AzureRmRedisCacheKey](.\New-AzureRmRedisCacheKey.md)
+[New-AzureRmRedisCacheKey](./New-AzureRmRedisCacheKey.md)
 
 

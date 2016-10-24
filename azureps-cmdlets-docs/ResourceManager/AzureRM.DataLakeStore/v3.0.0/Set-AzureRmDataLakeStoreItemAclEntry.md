@@ -203,6 +203,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureRmDataLakeStoreItemAclEntry](.\Remove-AzureRmDataLakeStoreItemAclEntry.md)
+[Remove-AzureRmDataLakeStoreItemAclEntry](./Remove-AzureRmDataLakeStoreItemAclEntry.md)
 
 

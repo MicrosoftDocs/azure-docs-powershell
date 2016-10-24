@@ -156,12 +156,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureVMImage](.\Add-AzureVMImage.md)
+[Add-AzureVMImage](./Add-AzureVMImage.md)
 
-[Get-AzureVMImage](.\Get-AzureVMImage.md)
+[Get-AzureVMImage](./Get-AzureVMImage.md)
 
-[Remove-AzureVMImage](.\Remove-AzureVMImage.md)
+[Remove-AzureVMImage](./Remove-AzureVMImage.md)
 
-[Update-AzureVMImage](.\Update-AzureVMImage.md)
+[Update-AzureVMImage](./Update-AzureVMImage.md)
 
 

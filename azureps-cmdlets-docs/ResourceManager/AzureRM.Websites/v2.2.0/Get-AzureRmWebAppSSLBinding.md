@@ -143,10 +143,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmWebAppSSLBinding](.\New-AzureRmWebAppSSLBinding.md)
+[New-AzureRmWebAppSSLBinding](./New-AzureRmWebAppSSLBinding.md)
 
-[Remove-AzureRmWebAppSSLBinding](.\Remove-AzureRmWebAppSSLBinding.md)
+[Remove-AzureRmWebAppSSLBinding](./Remove-AzureRmWebAppSSLBinding.md)
 
-[Get-AzureRmWebApp](.\Get-AzureRmWebApp.md)
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
 
 

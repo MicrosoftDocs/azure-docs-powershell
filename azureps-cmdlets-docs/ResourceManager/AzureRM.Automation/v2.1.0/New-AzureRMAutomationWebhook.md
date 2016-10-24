@@ -218,10 +218,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmAutomationWebhook](.\Get-AzureRMAutomationWebhook.md)
+[Get-AzureRmAutomationWebhook](./Get-AzureRMAutomationWebhook.md)
 
-[Remove-AzureRmAutomationWebhook](.\Remove-AzureRMAutomationWebhook.md)
+[Remove-AzureRmAutomationWebhook](./Remove-AzureRMAutomationWebhook.md)
 
-[Set-AzureRmAutomationWebhook](.\Set-AzureRMAutomationWebhook.md)
+[Set-AzureRmAutomationWebhook](./Set-AzureRMAutomationWebhook.md)
 
 

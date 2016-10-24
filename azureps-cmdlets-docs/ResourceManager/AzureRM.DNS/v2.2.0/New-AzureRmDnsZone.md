@@ -126,10 +126,10 @@ This cmdlet returns an object that represents the new DNS zone.
 
 ## RELATED LINKS
 
-[Get-AzureRmDnsZone](.\Get-AzureRmDnsZone.md)
+[Get-AzureRmDnsZone](./Get-AzureRmDnsZone.md)
 
-[New-AzureRmDnsRecordSet](.\New-AzureRmDnsRecordSet.md)
+[New-AzureRmDnsRecordSet](./New-AzureRmDnsRecordSet.md)
 
-[Remove-AzureRmDnsZone](.\Remove-AzureRmDnsZone.md)
+[Remove-AzureRmDnsZone](./Remove-AzureRmDnsZone.md)
 
 

@@ -367,10 +367,10 @@ This cmdlet returns the set of endpoints and metadata that are required to commu
 
 ## RELATED LINKS
 
-[Get-AzureRmEnvironment](.\Get-AzureRmEnvironment.md)
+[Get-AzureRmEnvironment](./Get-AzureRmEnvironment.md)
 
-[Remove-AzureRmEnvironment](.\Remove-AzureRmEnvironment.md)
+[Remove-AzureRmEnvironment](./Remove-AzureRmEnvironment.md)
 
-[Set-AzureRmEnvironment](.\Set-AzureRmEnvironment.md)
+[Set-AzureRmEnvironment](./Set-AzureRmEnvironment.md)
 
 

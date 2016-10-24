@@ -141,8 +141,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureRmRecoveryServicesBackupProtection](.\Disable-AzureRmRecoveryServicesBackupProtection.md)
+[Disable-AzureRmRecoveryServicesBackupProtection](./Disable-AzureRmRecoveryServicesBackupProtection.md)
 
-[Get-AzureRmRecoveryServicesBackupProtectionPolicy](.\Get-AzureRmRecoveryServicesBackupProtectionPolicy.md)
+[Get-AzureRmRecoveryServicesBackupProtectionPolicy](./Get-AzureRmRecoveryServicesBackupProtectionPolicy.md)
 
 

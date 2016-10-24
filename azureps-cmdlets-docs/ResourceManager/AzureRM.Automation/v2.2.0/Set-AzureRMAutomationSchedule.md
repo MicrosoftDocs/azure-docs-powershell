@@ -119,10 +119,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmAutomationSchedule](.\Get-AzureRMAutomationSchedule.md)
+[Get-AzureRmAutomationSchedule](./Get-AzureRMAutomationSchedule.md)
 
-[New-AzureRmAutomationSchedule](.\New-AzureRMAutomationSchedule.md)
+[New-AzureRmAutomationSchedule](./New-AzureRMAutomationSchedule.md)
 
-[Remove-AzureRmAutomationSchedule](.\Remove-AzureRMAutomationSchedule.md)
+[Remove-AzureRmAutomationSchedule](./Remove-AzureRMAutomationSchedule.md)
 
 

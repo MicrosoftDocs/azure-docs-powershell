@@ -101,10 +101,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmAutomationModule](.\New-AzureRmAutomationModule.md)
+[New-AzureRmAutomationModule](./New-AzureRmAutomationModule.md)
 
-[Remove-AzureRmAutomationModule](.\Remove-AzureRmAutomationModule.md)
+[Remove-AzureRmAutomationModule](./Remove-AzureRmAutomationModule.md)
 
-[Set-AzureRmAutomationModule](.\Set-AzureRmAutomationModule.md)
+[Set-AzureRmAutomationModule](./Set-AzureRmAutomationModule.md)
 
 

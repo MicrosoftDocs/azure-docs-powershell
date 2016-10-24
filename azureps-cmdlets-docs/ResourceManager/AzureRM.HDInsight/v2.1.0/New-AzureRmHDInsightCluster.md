@@ -659,10 +659,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmHDInsightScriptAction](.\Add-AzureRmHDInsightScriptAction.md)
+[Add-AzureRmHDInsightScriptAction](./Add-AzureRmHDInsightScriptAction.md)
 
-[Add-AzureRmHDInsightStorage](.\Add-AzureRmHDInsightStorage.md)
+[Add-AzureRmHDInsightStorage](./Add-AzureRmHDInsightStorage.md)
 
-[New-AzureRmHDInsightClusterConfig](.\New-AzureRmHDInsightClusterConfig.md)
+[New-AzureRmHDInsightClusterConfig](./New-AzureRmHDInsightClusterConfig.md)
 
 

@@ -104,10 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmStreamAnalyticsOutput](.\Get-AzureRmStreamAnalyticsOutput.md)
+[Get-AzureRmStreamAnalyticsOutput](./Get-AzureRmStreamAnalyticsOutput.md)
 
-[New-AzureRmStreamAnalyticsOutput](.\New-AzureRmStreamAnalyticsOutput.md)
+[New-AzureRmStreamAnalyticsOutput](./New-AzureRmStreamAnalyticsOutput.md)
 
-[Remove-AzureRmStreamAnalyticsOutput](.\Remove-AzureRmStreamAnalyticsOutput.md)
+[Remove-AzureRmStreamAnalyticsOutput](./Remove-AzureRmStreamAnalyticsOutput.md)
 
 

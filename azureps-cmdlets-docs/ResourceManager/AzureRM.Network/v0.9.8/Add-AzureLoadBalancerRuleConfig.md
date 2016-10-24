@@ -286,12 +286,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureLoadBalancerRuleConfig](.\Get-AzureLoadBalancerRuleConfig.md)
+[Get-AzureLoadBalancerRuleConfig](./Get-AzureLoadBalancerRuleConfig.md)
 
-[New-AzureLoadBalancerRuleConfig](.\New-AzureLoadBalancerRuleConfig.md)
+[New-AzureLoadBalancerRuleConfig](./New-AzureLoadBalancerRuleConfig.md)
 
-[Remove-AzureLoadBalancerRuleConfig](.\Remove-AzureLoadBalancerRuleConfig.md)
+[Remove-AzureLoadBalancerRuleConfig](./Remove-AzureLoadBalancerRuleConfig.md)
 
-[Set-AzureLoadBalancerRuleConfig](.\Set-AzureLoadBalancerRuleConfig.md)
+[Set-AzureLoadBalancerRuleConfig](./Set-AzureLoadBalancerRuleConfig.md)
 
 

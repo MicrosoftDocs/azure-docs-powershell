@@ -99,8 +99,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzurePHPWorkerRole](.\Add-AzurePHPWorkerRole.md)
+[Add-AzurePHPWorkerRole](./Add-AzurePHPWorkerRole.md)
 
-[New-AzureServiceProject](.\New-AzureServiceProject.md)
+[New-AzureServiceProject](./New-AzureServiceProject.md)
 
 

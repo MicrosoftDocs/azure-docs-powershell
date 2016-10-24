@@ -166,12 +166,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMAccessExtension](.\Get-AzureVMAccessExtension.md)
+[Get-AzureVMAccessExtension](./Get-AzureVMAccessExtension.md)
 
-[Remove-AzureVMAccessExtension](.\Remove-AzureVMAccessExtension.md)
+[Remove-AzureVMAccessExtension](./Remove-AzureVMAccessExtension.md)
 
-[Set-AzureVMExtension](.\Set-AzureVMExtension.md)
+[Set-AzureVMExtension](./Set-AzureVMExtension.md)
 
-[Get-AzureVMExtensionImage](.\Get-AzureVMExtensionImage.md)
+[Get-AzureVMExtensionImage](./Get-AzureVMExtensionImage.md)
 
 

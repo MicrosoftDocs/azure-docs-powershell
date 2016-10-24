@@ -248,8 +248,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureRmOperationalInsightsLinuxPerformanceCollection](.\Disable-AzureRmOperationalInsightsLinuxPerformanceCollection.md)
+[Disable-AzureRmOperationalInsightsLinuxPerformanceCollection](./Disable-AzureRmOperationalInsightsLinuxPerformanceCollection.md)
 
-[Enable-AzureRmOperationalInsightsLinuxPerformanceCollection](.\Enable-AzureRmOperationalInsightsLinuxPerformanceCollection.md)
+[Enable-AzureRmOperationalInsightsLinuxPerformanceCollection](./Enable-AzureRmOperationalInsightsLinuxPerformanceCollection.md)
 
 

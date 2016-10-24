@@ -107,10 +107,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureAffinityGroup](.\New-AzureAffinityGroup.md)
+[New-AzureAffinityGroup](./New-AzureAffinityGroup.md)
 
-[Remove-AzureAffinityGroup](.\Remove-AzureAffinityGroup.md)
+[Remove-AzureAffinityGroup](./Remove-AzureAffinityGroup.md)
 
-[Set-AzureAffinityGroup](.\Set-AzureAffinityGroup.md)
+[Set-AzureAffinityGroup](./Set-AzureAffinityGroup.md)
 
 

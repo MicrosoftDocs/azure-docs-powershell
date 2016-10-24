@@ -167,6 +167,6 @@ This cmdlet returns an **AzureSqlDatabaseAdvisorModel** object.
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseAdvisor](.\Get-AzureRmSqlDatabaseAdvisor.md)
+[Get-AzureRmSqlDatabaseAdvisor](./Get-AzureRmSqlDatabaseAdvisor.md)
 
 

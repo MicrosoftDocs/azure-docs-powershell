@@ -72,8 +72,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRemoteAppVNet](.\Get-AzureRemoteAppVNet.md)
+[Get-AzureRemoteAppVNet](./Get-AzureRemoteAppVNet.md)
 
-[Set-AzureRemoteAppVNet](.\Set-AzureRemoteAppVNet.md)
+[Set-AzureRemoteAppVNet](./Set-AzureRemoteAppVNet.md)
 
 

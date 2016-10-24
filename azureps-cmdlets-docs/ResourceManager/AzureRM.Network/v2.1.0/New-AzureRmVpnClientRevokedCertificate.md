@@ -126,10 +126,10 @@ This cmdlet creates new instances of the **Microsoft.Azure.Commands.Network.Mode
 
 ## RELATED LINKS
 
-[Add-AzureRmVpnClientRevokedCertificate](.\Add-AzureRmVpnClientRevokedCertificate.md)
+[Add-AzureRmVpnClientRevokedCertificate](./Add-AzureRmVpnClientRevokedCertificate.md)
 
-[Get-AzureRmVpnClientRevokedCertificate](.\Get-AzureRmVpnClientRevokedCertificate.md)
+[Get-AzureRmVpnClientRevokedCertificate](./Get-AzureRmVpnClientRevokedCertificate.md)
 
-[Remove-AzureRmVpnClientRevokedCertificate](.\Remove-AzureRmVpnClientRevokedCertificate.md)
+[Remove-AzureRmVpnClientRevokedCertificate](./Remove-AzureRmVpnClientRevokedCertificate.md)
 
 

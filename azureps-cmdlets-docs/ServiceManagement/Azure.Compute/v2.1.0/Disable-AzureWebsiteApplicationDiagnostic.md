@@ -158,14 +158,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-AzureWebsiteApplicationDiagnostic](.\Enable-AzureWebsiteApplicationDiagnostic.md)
+[Enable-AzureWebsiteApplicationDiagnostic](./Enable-AzureWebsiteApplicationDiagnostic.md)
 
-[Get-AzureWebsite](.\Get-AzureWebsite.md)
+[Get-AzureWebsite](./Get-AzureWebsite.md)
 
-[New-AzureWebsite](.\New-AzureWebsite.md)
+[New-AzureWebsite](./New-AzureWebsite.md)
 
-[Remove-AzureWebsite](.\Remove-AzureWebsite.md)
+[Remove-AzureWebsite](./Remove-AzureWebsite.md)
 
-[Start-AzureWebsite](.\Start-AzureWebsite.md)
+[Start-AzureWebsite](./Start-AzureWebsite.md)
 
 

@@ -308,10 +308,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure SQL Database Cmdlets](.\Azure.SQLDatabase.md)
+[Azure SQL Database Cmdlets](./Azure.SQLDatabase.md)
 
-[Get-AzureSqlDatabaseCopy](.\Get-AzureSqlDatabaseCopy.md)
+[Get-AzureSqlDatabaseCopy](./Get-AzureSqlDatabaseCopy.md)
 
-[Stop-AzureSqlDatabaseCopy](.\Stop-AzureSqlDatabaseCopy.md)
+[Stop-AzureSqlDatabaseCopy](./Stop-AzureSqlDatabaseCopy.md)
 
 

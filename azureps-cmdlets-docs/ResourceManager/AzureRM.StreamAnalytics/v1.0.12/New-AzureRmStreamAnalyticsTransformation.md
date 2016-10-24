@@ -178,6 +178,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmStreamAnalyticsTransformation](.\Get-AzureRmStreamAnalyticsTransformation.md)
+[Get-AzureRmStreamAnalyticsTransformation](./Get-AzureRmStreamAnalyticsTransformation.md)
 
 

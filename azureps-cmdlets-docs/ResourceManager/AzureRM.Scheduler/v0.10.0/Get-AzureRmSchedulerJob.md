@@ -136,23 +136,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmSchedulerHttpJob](.\New-AzureRmSchedulerHttpJob.md)
+[New-AzureRmSchedulerHttpJob](./New-AzureRmSchedulerHttpJob.md)
 
-[New-AzureRmSchedulerJobCollection](.\New-AzureRmSchedulerJobCollection.md)
+[New-AzureRmSchedulerJobCollection](./New-AzureRmSchedulerJobCollection.md)
 
-[New-AzureRmSchedulerServiceBusQueueJob](.\New-AzureRmSchedulerServiceBusQueueJob.md)
+[New-AzureRmSchedulerServiceBusQueueJob](./New-AzureRmSchedulerServiceBusQueueJob.md)
 
-[New-AzureRmSchedulerServiceBusTopicJob](.\New-AzureRmSchedulerServiceBusTopicJob.md)
+[New-AzureRmSchedulerServiceBusTopicJob](./New-AzureRmSchedulerServiceBusTopicJob.md)
 
-[New-AzureRmSchedulerStorageQueueJob](.\New-AzureRmSchedulerStorageQueueJob.md)
+[New-AzureRmSchedulerStorageQueueJob](./New-AzureRmSchedulerStorageQueueJob.md)
 
-[Remove-AzureRmSchedulerJob](.\Remove-AzureRmSchedulerJob.md)
+[Remove-AzureRmSchedulerJob](./Remove-AzureRmSchedulerJob.md)
 
-[Set-AzureRmSchedulerHttpJob](.\Set-AzureRmSchedulerHttpJob.md)
+[Set-AzureRmSchedulerHttpJob](./Set-AzureRmSchedulerHttpJob.md)
 
-[Set-AzureRmSchedulerServiceBusQueueJob](.\Set-AzureRmSchedulerServiceBusQueueJob.md)
+[Set-AzureRmSchedulerServiceBusQueueJob](./Set-AzureRmSchedulerServiceBusQueueJob.md)
 
-[Set-AzureRmSchedulerServiceBusTopicJob](.\Set-AzureRmSchedulerServiceBusTopicJob.md)
+[Set-AzureRmSchedulerServiceBusTopicJob](./Set-AzureRmSchedulerServiceBusTopicJob.md)
 
-[Set-AzureRmSchedulerStorageQueueJob](.\Set-AzureRmSchedulerStorageQueueJob.md)
+[Set-AzureRmSchedulerStorageQueueJob](./Set-AzureRmSchedulerStorageQueueJob.md)
 

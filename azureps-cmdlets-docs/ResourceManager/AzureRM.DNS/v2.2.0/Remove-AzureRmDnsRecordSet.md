@@ -290,10 +290,10 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Get-AzureRmDnsRecordSet](.\Get-AzureRmDnsRecordSet.md)
+[Get-AzureRmDnsRecordSet](./Get-AzureRmDnsRecordSet.md)
 
-[New-AzureRmDnsRecordSet](.\New-AzureRmDnsRecordSet.md)
+[New-AzureRmDnsRecordSet](./New-AzureRmDnsRecordSet.md)
 
-[Set-AzureRmDnsRecordSet](.\Set-AzureRmDnsRecordSet.md)
+[Set-AzureRmDnsRecordSet](./Set-AzureRmDnsRecordSet.md)
 
 

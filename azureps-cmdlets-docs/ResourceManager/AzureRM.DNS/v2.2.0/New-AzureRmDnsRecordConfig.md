@@ -371,10 +371,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmDnsRecordConfig](.\Add-AzureRmDnsRecordConfig.md)
+[Add-AzureRmDnsRecordConfig](./Add-AzureRmDnsRecordConfig.md)
 
-[New-AzureRmDnsRecordSet](.\New-AzureRmDnsRecordSet.md)
+[New-AzureRmDnsRecordSet](./New-AzureRmDnsRecordSet.md)
 
-[Remove-AzureRmDnsRecordConfig](.\Remove-AzureRmDnsRecordConfig.md)
+[Remove-AzureRmDnsRecordConfig](./Remove-AzureRmDnsRecordConfig.md)
 
 

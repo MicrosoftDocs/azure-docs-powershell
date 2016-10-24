@@ -185,12 +185,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureLoadBalancerInboundNatRuleConfig](.\Add-AzureLoadBalancerInboundNatRuleConfig.md)
+[Add-AzureLoadBalancerInboundNatRuleConfig](./Add-AzureLoadBalancerInboundNatRuleConfig.md)
 
-[Get-AzureLoadBalancerInboundNatRuleConfig](.\Get-AzureLoadBalancerInboundNatRuleConfig.md)
+[Get-AzureLoadBalancerInboundNatRuleConfig](./Get-AzureLoadBalancerInboundNatRuleConfig.md)
 
-[Remove-AzureLoadBalancerInboundNatRuleConfig](.\Remove-AzureLoadBalancerInboundNatRuleConfig.md)
+[Remove-AzureLoadBalancerInboundNatRuleConfig](./Remove-AzureLoadBalancerInboundNatRuleConfig.md)
 
-[Set-AzureLoadBalancerInboundNatRuleConfig](.\Set-AzureLoadBalancerInboundNatRuleConfig.md)
+[Set-AzureLoadBalancerInboundNatRuleConfig](./Set-AzureLoadBalancerInboundNatRuleConfig.md)
 
 

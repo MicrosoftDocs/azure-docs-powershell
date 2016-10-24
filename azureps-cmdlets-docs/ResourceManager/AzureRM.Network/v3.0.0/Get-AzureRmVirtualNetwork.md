@@ -115,10 +115,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmVirtualNetwork](.\New-AzureRmVirtualNetwork.md)
+[New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 
-[Remove-AzureRmVirtualNetwork](.\Remove-AzureRmVirtualNetwork.md)
+[Remove-AzureRmVirtualNetwork](./Remove-AzureRmVirtualNetwork.md)
 
-[Set-AzureRmVirtualNetwork](.\Set-AzureRmVirtualNetwork.md)
+[Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
 
 

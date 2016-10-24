@@ -106,10 +106,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackVMSubnet](.\Get-WAPackVMSubnet.md)
+[Get-WAPackVMSubnet](./Get-WAPackVMSubnet.md)
 
-[Get-WAPackVNet](.\Get-WAPackVNet.md)
+[Get-WAPackVNet](./Get-WAPackVNet.md)
 
-[Remove-WAPackVMSubnet](.\Remove-WAPackVMSubnet.md)
+[Remove-WAPackVMSubnet](./Remove-WAPackVMSubnet.md)
 
 

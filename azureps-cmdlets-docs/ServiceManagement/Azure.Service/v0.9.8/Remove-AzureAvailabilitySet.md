@@ -70,6 +70,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureAvailabilitySet](.\Set-AzureAvailabilitySet.md)
+[Set-AzureAvailabilitySet](./Set-AzureAvailabilitySet.md)
 
 

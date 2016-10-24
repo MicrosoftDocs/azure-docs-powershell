@@ -135,8 +135,8 @@ This cmdlet returns the status of the confirm migration operation that is perfor
 
 ## RELATED LINKS
 
-[Confirm-AzureStorSimpleLegacyVolumeContainerStatus](.\Confirm-AzureStorSimpleLegacyVolumeContainerStatus.md)
+[Confirm-AzureStorSimpleLegacyVolumeContainerStatus](./Confirm-AzureStorSimpleLegacyVolumeContainerStatus.md)
 
-[Get-AzureStorSimpleLegacyVolumeContainerStatus](.\Get-AzureStorSimpleLegacyVolumeContainerStatus.md)
+[Get-AzureStorSimpleLegacyVolumeContainerStatus](./Get-AzureStorSimpleLegacyVolumeContainerStatus.md)
 
 

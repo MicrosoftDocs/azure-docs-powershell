@@ -136,6 +136,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureVirtualIP](.\Add-AzureVirtualIP.md)
+[Add-AzureVirtualIP](./Add-AzureVirtualIP.md)
 
 

@@ -11,27 +11,27 @@ Locale: en-US
 {{Manually Enter Description Here}}
 
 ## AzureRM.PowerBIEmbedded Cmdlets
-### [Get-AzureRmPowerBIWorkspaceCollectionAccessKeys](.\Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
+### [Get-AzureRmPowerBIWorkspaceCollectionAccessKeys](./Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
 Gets the current access keys associated with a Power BI workspace collection.
 
 
-### [Get-AzureRmPowerBIWorkspaceCollection](.\Get-AzureRmPowerBIWorkspaceCollection.md)
+### [Get-AzureRmPowerBIWorkspaceCollection](./Get-AzureRmPowerBIWorkspaceCollection.md)
 Gets Power BI workspace collections.
 
 
-### [Get-AzureRmPowerBIWorkspace](.\Get-AzureRmPowerBIWorkspace.md)
+### [Get-AzureRmPowerBIWorkspace](./Get-AzureRmPowerBIWorkspace.md)
 Gets the workspaces in a Power BI workspace collection.
 
 
-### [New-AzureRmPowerBIWorkspaceCollection](.\New-AzureRmPowerBIWorkspaceCollection.md)
+### [New-AzureRmPowerBIWorkspaceCollection](./New-AzureRmPowerBIWorkspaceCollection.md)
 Creates a Power BI workspace collection.
 
 
-### [Remove-AzureRmPowerBIWorkspaceCollection](.\Remove-AzureRmPowerBIWorkspaceCollection.md)
+### [Remove-AzureRmPowerBIWorkspaceCollection](./Remove-AzureRmPowerBIWorkspaceCollection.md)
 Removes a Power BI workspace collection.
 
 
-### [Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys](.\Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
+### [Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys](./Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
 Resets the specified access key.
 
 

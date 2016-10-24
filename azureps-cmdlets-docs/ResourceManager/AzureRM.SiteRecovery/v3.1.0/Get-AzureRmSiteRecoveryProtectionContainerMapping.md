@@ -79,8 +79,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmSiteRecoveryProtectionContainerMapping](.\New-AzureRmSiteRecoveryProtectionContainerMapping.md)
+[New-AzureRmSiteRecoveryProtectionContainerMapping](./New-AzureRmSiteRecoveryProtectionContainerMapping.md)
 
-[Remove-AzureRmSiteRecoveryProtectionContainerMapping](.\Remove-AzureRmSiteRecoveryProtectionContainerMapping.md)
+[Remove-AzureRmSiteRecoveryProtectionContainerMapping](./Remove-AzureRmSiteRecoveryProtectionContainerMapping.md)
 
 

@@ -219,8 +219,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ACSNode](.\Get-ACSNode.md)
+[Get-ACSNode](./Get-ACSNode.md)
 
-[Get-ACSNodeMetric](.\Get-ACSNodeMetric.md)
+[Get-ACSNodeMetric](./Get-ACSNodeMetric.md)
 
 

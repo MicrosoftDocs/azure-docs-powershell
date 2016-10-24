@@ -352,10 +352,10 @@ You can pipe input to this cmdlet by property name, but not by value.
 
 ## RELATED LINKS
 
-[Get-AzureEnvironment](.\Get-AzureEnvironment.md)
+[Get-AzureEnvironment](./Get-AzureEnvironment.md)
 
-[Remove-AzureEnvironment](.\Remove-AzureEnvironment.md)
+[Remove-AzureEnvironment](./Remove-AzureEnvironment.md)
 
-[Set-AzureEnvironment](.\Set-AzureEnvironment.md)
+[Set-AzureEnvironment](./Set-AzureEnvironment.md)
 
 

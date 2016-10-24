@@ -11,7 +11,7 @@ Locale: en-US
 {{Manually Enter Description Here}}
 
 ## AzureRM.UsageAggregates Cmdlets
-### [Get-UsageAggregates](.\Get-UsageAggregates.md)
+### [Get-UsageAggregates](./Get-UsageAggregates.md)
 Gets the reported Azure subscription usage details.
 
 

@@ -109,10 +109,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVMAccessExtension](.\Get-AzureRmVMAccessExtension.md)
+[Get-AzureRmVMAccessExtension](./Get-AzureRmVMAccessExtension.md)
 
-[Get-AzureRmVMExtension](.\Get-AzureRmVMExtension.md)
+[Get-AzureRmVMExtension](./Get-AzureRmVMExtension.md)
 
-[Get-AzureRmVMExtensionImage](.\Get-AzureRmVMExtensionImage.md)
+[Get-AzureRmVMExtensionImage](./Get-AzureRmVMExtensionImage.md)
 
 

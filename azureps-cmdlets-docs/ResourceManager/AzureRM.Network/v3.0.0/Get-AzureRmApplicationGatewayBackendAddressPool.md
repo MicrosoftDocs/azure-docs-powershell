@@ -86,12 +86,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmApplicationGatewayBackendAddressPool](.\Add-AzureRmApplicationGatewayBackendAddressPool.md)
+[Add-AzureRmApplicationGatewayBackendAddressPool](./Add-AzureRmApplicationGatewayBackendAddressPool.md)
 
-[New-AzureRmApplicationGatewayBackendAddressPool](.\New-AzureRmApplicationGatewayBackendAddressPool.md)
+[New-AzureRmApplicationGatewayBackendAddressPool](./New-AzureRmApplicationGatewayBackendAddressPool.md)
 
-[Remove-AzureRmApplicationGatewayBackendAddressPool](.\Remove-AzureRmApplicationGatewayBackendAddressPool.md)
+[Remove-AzureRmApplicationGatewayBackendAddressPool](./Remove-AzureRmApplicationGatewayBackendAddressPool.md)
 
-[Set-AzureRmApplicationGatewayBackendAddressPool](.\Set-AzureRmApplicationGatewayBackendAddressPool.md)
+[Set-AzureRmApplicationGatewayBackendAddressPool](./Set-AzureRmApplicationGatewayBackendAddressPool.md)
 
 

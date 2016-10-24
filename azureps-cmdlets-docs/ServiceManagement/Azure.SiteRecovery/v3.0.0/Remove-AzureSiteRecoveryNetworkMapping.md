@@ -98,10 +98,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSiteRecoveryNetworkMapping](.\Get-AzureSiteRecoveryNetworkMapping.md)
+[Get-AzureSiteRecoveryNetworkMapping](./Get-AzureSiteRecoveryNetworkMapping.md)
 
-[New-AzureSiteRecoveryNetworkMapping](.\New-AzureSiteRecoveryNetworkMapping.md)
+[New-AzureSiteRecoveryNetworkMapping](./New-AzureSiteRecoveryNetworkMapping.md)
 
-[Get-AzureSiteRecoveryServer](.\Get-AzureSiteRecoveryServer.md)
+[Get-AzureSiteRecoveryServer](./Get-AzureSiteRecoveryServer.md)
 
 

@@ -240,8 +240,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-AzureStorageBlobCopy](.\Start-AzureStorageBlobCopy.md)
+[Start-AzureStorageBlobCopy](./Start-AzureStorageBlobCopy.md)
 
-[Stop-AzureStorageBlobCopy](.\Stop-AzureStorageBlobCopy.md)
+[Stop-AzureStorageBlobCopy](./Stop-AzureStorageBlobCopy.md)
 
 

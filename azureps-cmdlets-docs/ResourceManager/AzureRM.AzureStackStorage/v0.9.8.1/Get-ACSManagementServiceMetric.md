@@ -264,8 +264,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ACSManagementService](.\Get-ACSManagementService.md)
+[Get-ACSManagementService](./Get-ACSManagementService.md)
 
-[Get-ACSManagementServiceMetricDefinition](.\Get-ACSManagementServiceMetricDefinition.md)
+[Get-ACSManagementServiceMetricDefinition](./Get-ACSManagementServiceMetricDefinition.md)
 
 

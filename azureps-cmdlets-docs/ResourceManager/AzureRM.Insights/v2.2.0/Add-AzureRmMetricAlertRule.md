@@ -259,18 +259,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmLogAlertRule](.\Add-AzureRmLogAlertRule.md)
+[Add-AzureRmLogAlertRule](./Add-AzureRmLogAlertRule.md)
 
-[Add-AzureRmWebtestAlertRule](.\Add-AzureRmWebtestAlertRule.md)
+[Add-AzureRmWebtestAlertRule](./Add-AzureRmWebtestAlertRule.md)
 
-[Get-AzureRmAlertHistory](.\Get-AzureRmAlertHistory.md)
+[Get-AzureRmAlertHistory](./Get-AzureRmAlertHistory.md)
 
-[Get-AzureRmAlertRule](.\Get-AzureRmAlertRule.md)
+[Get-AzureRmAlertRule](./Get-AzureRmAlertRule.md)
 
-[New-AzureRmAlertRuleEmail](.\New-AzureRmAlertRuleEmail.md)
+[New-AzureRmAlertRuleEmail](./New-AzureRmAlertRuleEmail.md)
 
-[New-AzureRmAlertRuleWebhook](.\New-AzureRmAlertRuleWebhook.md)
+[New-AzureRmAlertRuleWebhook](./New-AzureRmAlertRuleWebhook.md)
 
-[Remove-AzureRmAlertRule](.\Remove-AzureRmAlertRule.md)
+[Remove-AzureRmAlertRule](./Remove-AzureRmAlertRule.md)
 
 

@@ -119,8 +119,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSqlDatabaseIndexRecommendations](.\Get-AzureSqlDatabaseIndexRecommendations.md)
+[Get-AzureSqlDatabaseIndexRecommendations](./Get-AzureSqlDatabaseIndexRecommendations.md)
 
-[Start-AzureSqlDatabaseExecuteIndexRecommendation](.\Start-AzureSqlDatabaseExecuteIndexRecommendation.md)
+[Start-AzureSqlDatabaseExecuteIndexRecommendation](./Start-AzureSqlDatabaseExecuteIndexRecommendation.md)
 
 

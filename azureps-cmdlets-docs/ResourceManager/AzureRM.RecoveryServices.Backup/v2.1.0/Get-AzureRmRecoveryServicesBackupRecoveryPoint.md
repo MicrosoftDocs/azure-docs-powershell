@@ -178,8 +178,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmRecoveryServicesBackupContainer](.\Get-AzureRmRecoveryServicesBackupContainer.md)
+[Get-AzureRmRecoveryServicesBackupContainer](./Get-AzureRmRecoveryServicesBackupContainer.md)
 
-[Get-AzureRmRecoveryServicesBackupItem](.\Get-AzureRmRecoveryServicesBackupItem.md)
+[Get-AzureRmRecoveryServicesBackupItem](./Get-AzureRmRecoveryServicesBackupItem.md)
 
 

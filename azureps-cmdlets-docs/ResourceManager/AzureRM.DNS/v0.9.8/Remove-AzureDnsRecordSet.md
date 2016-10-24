@@ -233,10 +233,10 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Get-AzureDnsRecordSet](.\Get-AzureDnsRecordSet.md)
+[Get-AzureDnsRecordSet](./Get-AzureDnsRecordSet.md)
 
-[New-AzureDnsRecordSet](.\New-AzureDnsRecordSet.md)
+[New-AzureDnsRecordSet](./New-AzureDnsRecordSet.md)
 
-[Set-AzureDnsRecordSet](.\Set-AzureDnsRecordSet.md)
+[Set-AzureDnsRecordSet](./Set-AzureDnsRecordSet.md)
 
 

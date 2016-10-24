@@ -377,10 +377,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureNetworkInterface](.\Get-AzureNetworkInterface.md)
+[Get-AzureNetworkInterface](./Get-AzureNetworkInterface.md)
 
-[Remove-AzureNetworkInterface](.\Remove-AzureNetworkInterface.md)
+[Remove-AzureNetworkInterface](./Remove-AzureNetworkInterface.md)
 
-[Set-AzureNetworkInterface](.\Set-AzureNetworkInterface.md)
+[Set-AzureNetworkInterface](./Set-AzureNetworkInterface.md)
 
 

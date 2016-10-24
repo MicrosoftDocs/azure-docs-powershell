@@ -115,6 +115,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataLakeStoreItemContent](.\Get-AzureRmDataLakeStoreItemContent.md)
+[Get-AzureRmDataLakeStoreItemContent](./Get-AzureRmDataLakeStoreItemContent.md)
 
 

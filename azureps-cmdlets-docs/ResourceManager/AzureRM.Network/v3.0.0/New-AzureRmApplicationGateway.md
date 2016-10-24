@@ -428,24 +428,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmApplicationGatewayBackendAddressPool](.\New-AzureRmApplicationGatewayBackendAddressPool.md)
+[New-AzureRmApplicationGatewayBackendAddressPool](./New-AzureRmApplicationGatewayBackendAddressPool.md)
 
-[New-AzureRmApplicationGatewayBackendHttpSettings](.\New-AzureRmApplicationGatewayBackendHttpSettings.md)
+[New-AzureRmApplicationGatewayBackendHttpSettings](./New-AzureRmApplicationGatewayBackendHttpSettings.md)
 
-[New-AzureRmApplicationGatewayFrontendIPConfig](.\New-AzureRmApplicationGatewayFrontendIPConfig.md)
+[New-AzureRmApplicationGatewayFrontendIPConfig](./New-AzureRmApplicationGatewayFrontendIPConfig.md)
 
-[New-AzureRmApplicationGatewayFrontendPort](.\New-AzureRmApplicationGatewayFrontendPort.md)
+[New-AzureRmApplicationGatewayFrontendPort](./New-AzureRmApplicationGatewayFrontendPort.md)
 
-[New-AzureRmApplicationGatewayHttpListener](.\New-AzureRmApplicationGatewayHttpListener.md)
+[New-AzureRmApplicationGatewayHttpListener](./New-AzureRmApplicationGatewayHttpListener.md)
 
-[New-AzureRmApplicationGatewayIPConfiguration](.\New-AzureRmApplicationGatewayIPConfiguration.md)
+[New-AzureRmApplicationGatewayIPConfiguration](./New-AzureRmApplicationGatewayIPConfiguration.md)
 
-[New-AzureRmApplicationGatewayRequestRoutingRule](.\New-AzureRmApplicationGatewayRequestRoutingRule.md)
+[New-AzureRmApplicationGatewayRequestRoutingRule](./New-AzureRmApplicationGatewayRequestRoutingRule.md)
 
-[New-AzureRmApplicationGatewaySku](.\New-AzureRmApplicationGatewaySku.md)
+[New-AzureRmApplicationGatewaySku](./New-AzureRmApplicationGatewaySku.md)
 
-[New-AzureRmVirtualNetwork](.\New-AzureRmVirtualNetwork.md)
+[New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 
-[New-AzureRmVirtualNetworkSubnetConfig](.\New-AzureRmVirtualNetworkSubnetConfig.md)
+[New-AzureRmVirtualNetworkSubnetConfig](./New-AzureRmVirtualNetworkSubnetConfig.md)
 
 

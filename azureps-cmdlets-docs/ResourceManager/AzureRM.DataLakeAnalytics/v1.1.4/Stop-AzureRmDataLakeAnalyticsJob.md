@@ -163,10 +163,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataLakeAnalyticsJob](.\Get-AzureRmDataLakeAnalyticsJob.md)
+[Get-AzureRmDataLakeAnalyticsJob](./Get-AzureRmDataLakeAnalyticsJob.md)
 
-[Submit-AzureRmDataLakeAnalyticsJob](.\Submit-AzureRmDataLakeAnalyticsJob.md)
+[Submit-AzureRmDataLakeAnalyticsJob](./Submit-AzureRmDataLakeAnalyticsJob.md)
 
-[Wait-AzureRmDataLakeAnalyticsJob](.\Wait-AzureRmDataLakeAnalyticsJob.md)
+[Wait-AzureRmDataLakeAnalyticsJob](./Wait-AzureRmDataLakeAnalyticsJob.md)
 
 

@@ -207,12 +207,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure Site Recovery Services Cmdlets](.\Azure.SiteRecoveryServices.md)
+[Azure Site Recovery Services Cmdlets](./Azure.SiteRecoveryServices.md)
 
-[Restart-AzureSiteRecoveryJob](.\Restart-AzureSiteRecoveryJob.md)
+[Restart-AzureSiteRecoveryJob](./Restart-AzureSiteRecoveryJob.md)
 
-[Resume-AzureSiteRecoveryJob](.\Resume-AzureSiteRecoveryJob.md)
+[Resume-AzureSiteRecoveryJob](./Resume-AzureSiteRecoveryJob.md)
 
-[Stop-AzureSiteRecoveryJob](.\Stop-AzureSiteRecoveryJob.md)
+[Stop-AzureSiteRecoveryJob](./Stop-AzureSiteRecoveryJob.md)
 
 

@@ -140,8 +140,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-AzureRmOperationalInsightsLinuxPerformanceCollection](.\Enable-AzureRmOperationalInsightsLinuxPerformanceCollection.md)
+[Enable-AzureRmOperationalInsightsLinuxPerformanceCollection](./Enable-AzureRmOperationalInsightsLinuxPerformanceCollection.md)
 
-[New-AzureRmOperationalInsightsLinuxSyslogDataSource](.\New-AzureRmOperationalInsightsLinuxSyslogDataSource.md)
+[New-AzureRmOperationalInsightsLinuxSyslogDataSource](./New-AzureRmOperationalInsightsLinuxSyslogDataSource.md)
 
 

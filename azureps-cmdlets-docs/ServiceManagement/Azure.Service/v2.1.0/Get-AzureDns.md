@@ -90,14 +90,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureDns](.\Add-AzureDns.md)
+[Add-AzureDns](./Add-AzureDns.md)
 
-[Get-AzureDeployment](.\Get-AzureDeployment.md)
+[Get-AzureDeployment](./Get-AzureDeployment.md)
 
-[New-AzureDns](.\New-AzureDns.md)
+[New-AzureDns](./New-AzureDns.md)
 
-[Remove-AzureDns](.\Remove-AzureDns.md)
+[Remove-AzureDns](./Remove-AzureDns.md)
 
-[Set-AzureDns](.\Set-AzureDns.md)
+[Set-AzureDns](./Set-AzureDns.md)
 
 

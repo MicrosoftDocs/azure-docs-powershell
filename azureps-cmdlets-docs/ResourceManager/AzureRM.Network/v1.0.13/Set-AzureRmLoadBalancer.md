@@ -94,10 +94,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmLoadBalancer](.\Get-AzureRmLoadBalancer.md)
+[Get-AzureRmLoadBalancer](./Get-AzureRmLoadBalancer.md)
 
-[New-AzureRmLoadBalancer](.\New-AzureRmLoadBalancer.md)
+[New-AzureRmLoadBalancer](./New-AzureRmLoadBalancer.md)
 
-[Remove-AzureRmLoadBalancer](.\Remove-AzureRmLoadBalancer.md)
+[Remove-AzureRmLoadBalancer](./Remove-AzureRmLoadBalancer.md)
 
 
