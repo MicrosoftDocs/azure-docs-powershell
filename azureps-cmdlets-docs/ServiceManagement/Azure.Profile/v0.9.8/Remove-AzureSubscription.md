@@ -187,10 +187,10 @@ Otherwise, it does not return any output.
 
 ## RELATED LINKS
 
-[Get-AzureSubscription](.\Get-AzureSubscription.md)
+[Get-AzureSubscription](./Get-AzureSubscription.md)
 
-[Select-AzureSubscription](.\Select-AzureSubscription.md)
+[Select-AzureSubscription](./Select-AzureSubscription.md)
 
-[Set-AzureSubscription](.\Set-AzureSubscription.md)
+[Set-AzureSubscription](./Set-AzureSubscription.md)
 
 

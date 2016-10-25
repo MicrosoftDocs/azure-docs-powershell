@@ -180,10 +180,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVirtualNetworkGateway](.\Get-AzureVirtualNetworkGateway.md)
+[Get-AzureVirtualNetworkGateway](./Get-AzureVirtualNetworkGateway.md)
 
-[Remove-AzureVirtualNetworkGateway](.\Remove-AzureVirtualNetworkGateway.md)
+[Remove-AzureVirtualNetworkGateway](./Remove-AzureVirtualNetworkGateway.md)
 
-[Resize-AzureVirtualNetworkGateway](.\Resize-AzureVirtualNetworkGateway.md)
+[Resize-AzureVirtualNetworkGateway](./Resize-AzureVirtualNetworkGateway.md)
 
 

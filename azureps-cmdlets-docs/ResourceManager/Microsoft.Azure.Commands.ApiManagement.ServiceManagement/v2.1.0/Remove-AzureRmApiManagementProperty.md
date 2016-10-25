@@ -152,8 +152,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmApiManagementProperty](.\New-AzureRmApiManagementProperty.md)
+[New-AzureRmApiManagementProperty](./New-AzureRmApiManagementProperty.md)
 
-[Set-AzureRmApiManagementProperty](.\Set-AzureRmApiManagementProperty.md)
+[Set-AzureRmApiManagementProperty](./Set-AzureRmApiManagementProperty.md)
 
 

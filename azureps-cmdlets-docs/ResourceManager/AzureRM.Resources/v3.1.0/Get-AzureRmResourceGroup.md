@@ -143,10 +143,10 @@ This cmdlet returns resource groups.
 
 ## RELATED LINKS
 
-[New-AzureRmResourceGroup](.\New-AzureRmResourceGroup.md)
+[New-AzureRmResourceGroup](./New-AzureRmResourceGroup.md)
 
-[Remove-AzureRmResourceGroup](.\Remove-AzureRmResourceGroup.md)
+[Remove-AzureRmResourceGroup](./Remove-AzureRmResourceGroup.md)
 
-[Set-AzureRmResourceGroup](.\Set-AzureRmResourceGroup.md)
+[Set-AzureRmResourceGroup](./Set-AzureRmResourceGroup.md)
 
 

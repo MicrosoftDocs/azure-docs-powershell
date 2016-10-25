@@ -137,8 +137,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureVMSqlServerExtension](.\Remove-AzureVMSqlServerExtension.md)
+[Remove-AzureVMSqlServerExtension](./Remove-AzureVMSqlServerExtension.md)
 
-[Set-AzureVMSqlServerExtension](.\Set-AzureVMSqlServerExtension.md)
+[Set-AzureVMSqlServerExtension](./Set-AzureVMSqlServerExtension.md)
 
 

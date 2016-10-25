@@ -124,10 +124,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSiteRecoveryJob](.\Get-AzureSiteRecoveryJob.md)
+[Get-AzureSiteRecoveryJob](./Get-AzureSiteRecoveryJob.md)
 
-[Restart-AzureSiteRecoveryJob](.\Restart-AzureSiteRecoveryJob.md)
+[Restart-AzureSiteRecoveryJob](./Restart-AzureSiteRecoveryJob.md)
 
-[Stop-AzureSiteRecoveryJob](.\Stop-AzureSiteRecoveryJob.md)
+[Stop-AzureSiteRecoveryJob](./Stop-AzureSiteRecoveryJob.md)
 
 

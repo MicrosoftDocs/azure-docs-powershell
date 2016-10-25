@@ -72,6 +72,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmVmssExtension](.\Add-AzureRmVmssExtension.md)
+[Add-AzureRmVmssExtension](./Add-AzureRmVmssExtension.md)
 
 

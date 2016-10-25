@@ -187,10 +187,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureKeyVaultCertificate](.\Get-AzureKeyVaultCertificate.md)
+[Get-AzureKeyVaultCertificate](./Get-AzureKeyVaultCertificate.md)
 
-[Import-AzureKeyVaultCertificate](.\Import-AzureKeyVaultCertificate.md)
+[Import-AzureKeyVaultCertificate](./Import-AzureKeyVaultCertificate.md)
 
-[Remove-AzureKeyVaultCertificate](.\Remove-AzureKeyVaultCertificate.md)
+[Remove-AzureKeyVaultCertificate](./Remove-AzureKeyVaultCertificate.md)
 
 

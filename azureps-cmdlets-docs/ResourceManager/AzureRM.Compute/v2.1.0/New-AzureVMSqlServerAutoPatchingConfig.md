@@ -146,8 +146,8 @@ This cmdlet returns object contains settings for automated patching.
 
 ## RELATED LINKS
 
-[New-AzureVMSqlServerAutoBackupConfig](.\New-AzureVMSqlServerAutoBackupConfig.md)
+[New-AzureVMSqlServerAutoBackupConfig](./New-AzureVMSqlServerAutoBackupConfig.md)
 
-[Set-AzureRmVMSqlServerExtension](.\Set-AzureRMVMSqlServerExtension.md)
+[Set-AzureRmVMSqlServerExtension](./Set-AzureRMVMSqlServerExtension.md)
 
 

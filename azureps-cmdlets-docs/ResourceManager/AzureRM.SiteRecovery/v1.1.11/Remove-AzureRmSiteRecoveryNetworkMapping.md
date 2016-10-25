@@ -54,8 +54,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryNetworkMapping](.\Get-AzureRmSiteRecoveryNetworkMapping.md)
+[Get-AzureRmSiteRecoveryNetworkMapping](./Get-AzureRmSiteRecoveryNetworkMapping.md)
 
-[New-AzureRmSiteRecoveryNetworkMapping](.\New-AzureRmSiteRecoveryNetworkMapping.md)
+[New-AzureRmSiteRecoveryNetworkMapping](./New-AzureRmSiteRecoveryNetworkMapping.md)
 
 

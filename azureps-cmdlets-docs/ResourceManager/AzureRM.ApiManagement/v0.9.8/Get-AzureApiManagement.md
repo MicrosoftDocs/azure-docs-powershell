@@ -106,12 +106,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Backup-AzureApiManagement](.\Backup-AzureApiManagement.md)
+[Backup-AzureApiManagement](./Backup-AzureApiManagement.md)
 
-[New-AzureApiManagement](.\New-AzureApiManagement.md)
+[New-AzureApiManagement](./New-AzureApiManagement.md)
 
-[Remove-AzureApiManagement](.\Remove-AzureApiManagement.md)
+[Remove-AzureApiManagement](./Remove-AzureApiManagement.md)
 
-[Restore-AzureApiManagement](.\Restore-AzureApiManagement.md)
+[Restore-AzureApiManagement](./Restore-AzureApiManagement.md)
 
 

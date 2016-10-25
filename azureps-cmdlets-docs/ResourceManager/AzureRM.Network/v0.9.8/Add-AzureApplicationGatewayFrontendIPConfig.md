@@ -231,12 +231,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureApplicationGatewayFrontendIPConfig](.\Get-AzureApplicationGatewayFrontendIPConfig.md)
+[Get-AzureApplicationGatewayFrontendIPConfig](./Get-AzureApplicationGatewayFrontendIPConfig.md)
 
-[New-AzureApplicationGatewayFrontendIPConfig](.\New-AzureApplicationGatewayFrontendIPConfig.md)
+[New-AzureApplicationGatewayFrontendIPConfig](./New-AzureApplicationGatewayFrontendIPConfig.md)
 
-[Remove-AzureApplicationGatewayFrontendIPConfig](.\Remove-AzureApplicationGatewayFrontendIPConfig.md)
+[Remove-AzureApplicationGatewayFrontendIPConfig](./Remove-AzureApplicationGatewayFrontendIPConfig.md)
 
-[Set-AzureApplicationGatewayFrontendIPConfig](.\Set-AzureApplicationGatewayFrontendIPConfig.md)
+[Set-AzureApplicationGatewayFrontendIPConfig](./Set-AzureApplicationGatewayFrontendIPConfig.md)
 
 

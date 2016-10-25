@@ -148,8 +148,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureKeyVault](.\New-AzureKeyVault.md)
+[New-AzureKeyVault](./New-AzureKeyVault.md)
 
-[Remove-AzureKeyVault](.\Remove-AzureKeyVault.md)
+[Remove-AzureKeyVault](./Remove-AzureKeyVault.md)
 
 

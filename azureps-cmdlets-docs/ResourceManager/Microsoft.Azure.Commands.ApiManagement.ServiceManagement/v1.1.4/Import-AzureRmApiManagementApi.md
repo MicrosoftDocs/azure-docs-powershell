@@ -193,14 +193,14 @@ This cmdlet returns the imported API as a **PsApiManagementApi** object.
 
 ## RELATED LINKS
 
-[Export-AzureRmApiManagementApi](.\Export-AzureRmApiManagementApi.md)
+[Export-AzureRmApiManagementApi](./Export-AzureRmApiManagementApi.md)
 
-[Get-AzureRmApiManagementApi](.\Get-AzureRmApiManagementApi.md)
+[Get-AzureRmApiManagementApi](./Get-AzureRmApiManagementApi.md)
 
-[New-AzureRmApiManagementApi](.\New-AzureRmApiManagementApi.md)
+[New-AzureRmApiManagementApi](./New-AzureRmApiManagementApi.md)
 
-[Remove-AzureRmApiManagementApi](.\Remove-AzureRmApiManagementApi.md)
+[Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
 
-[Set-AzureRmApiManagementApi](.\Set-AzureRmApiManagementApi.md)
+[Set-AzureRmApiManagementApi](./Set-AzureRmApiManagementApi.md)
 
 

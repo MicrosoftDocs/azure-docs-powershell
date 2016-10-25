@@ -195,10 +195,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Resume-AzureAutomationJob](.\Resume-AzureAutomationJob.md)
+[Resume-AzureAutomationJob](./Resume-AzureAutomationJob.md)
 
-[Stop-AzureAutomationJob](.\Stop-AzureAutomationJob.md)
+[Stop-AzureAutomationJob](./Stop-AzureAutomationJob.md)
 
-[Suspend-AzureAutomationJob](.\Suspend-AzureAutomationJob.md)
+[Suspend-AzureAutomationJob](./Suspend-AzureAutomationJob.md)
 
 

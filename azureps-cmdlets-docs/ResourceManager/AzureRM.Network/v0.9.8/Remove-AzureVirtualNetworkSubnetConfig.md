@@ -85,12 +85,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureVirtualNetworkSubnetConfig](.\Add-AzureVirtualNetworkSubnetConfig.md)
+[Add-AzureVirtualNetworkSubnetConfig](./Add-AzureVirtualNetworkSubnetConfig.md)
 
-[Get-AzureVirtualNetworkSubnetConfig](.\Get-AzureVirtualNetworkSubnetConfig.md)
+[Get-AzureVirtualNetworkSubnetConfig](./Get-AzureVirtualNetworkSubnetConfig.md)
 
-[New-AzureVirtualNetworkSubnetConfig](.\New-AzureVirtualNetworkSubnetConfig.md)
+[New-AzureVirtualNetworkSubnetConfig](./New-AzureVirtualNetworkSubnetConfig.md)
 
-[Set-AzureVirtualNetworkSubnetConfig](.\Set-AzureVirtualNetworkSubnetConfig.md)
+[Set-AzureVirtualNetworkSubnetConfig](./Set-AzureVirtualNetworkSubnetConfig.md)
 
 

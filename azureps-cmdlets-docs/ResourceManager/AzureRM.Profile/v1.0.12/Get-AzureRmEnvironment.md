@@ -54,10 +54,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmEnvironment](.\Add-AzureRmEnvironment.md)
+[Add-AzureRmEnvironment](./Add-AzureRmEnvironment.md)
 
-[Remove-AzureRmEnvironment](.\Remove-AzureRmEnvironment.md)
+[Remove-AzureRmEnvironment](./Remove-AzureRmEnvironment.md)
 
-[Set-AzureRmEnvironment](.\Set-AzureRmEnvironment.md)
+[Set-AzureRmEnvironment](./Set-AzureRmEnvironment.md)
 
 

@@ -169,8 +169,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureRmOperationalInsightsLinuxCustomLogCollection](.\Disable-AzureRmOperationalInsightsLinuxCustomLogCollection.md)
+[Disable-AzureRmOperationalInsightsLinuxCustomLogCollection](./Disable-AzureRmOperationalInsightsLinuxCustomLogCollection.md)
 
-[Enable-AzureRmOperationalInsightsLinuxCustomLogCollection](.\Enable-AzureRmOperationalInsightsLinuxCustomLogCollection.md)
+[Enable-AzureRmOperationalInsightsLinuxCustomLogCollection](./Enable-AzureRmOperationalInsightsLinuxCustomLogCollection.md)
 
 

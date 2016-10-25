@@ -139,10 +139,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBackupVault](.\Get-AzureRmBackupVault.md)
+[Get-AzureRmBackupVault](./Get-AzureRmBackupVault.md)
 
-[Remove-AzureRmBackupVault](.\Remove-AzureRmBackupVault.md)
+[Remove-AzureRmBackupVault](./Remove-AzureRmBackupVault.md)
 
-[Set-AzureRmBackupVault](.\Set-AzureRmBackupVault.md)
+[Set-AzureRmBackupVault](./Set-AzureRmBackupVault.md)
 
 

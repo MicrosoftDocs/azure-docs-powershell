@@ -137,12 +137,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureOperationalInsightsWorkspace](.\Get-AzureOperationalInsightsWorkspace.md)
+[Get-AzureOperationalInsightsWorkspace](./Get-AzureOperationalInsightsWorkspace.md)
 
-[New-AzureOperationalInsightsStorageInsight](.\New-AzureOperationalInsightsStorageInsight.md)
+[New-AzureOperationalInsightsStorageInsight](./New-AzureOperationalInsightsStorageInsight.md)
 
-[Remove-AzureOperationalInsightsStorageInsight](.\Remove-AzureOperationalInsightsStorageInsight.md)
+[Remove-AzureOperationalInsightsStorageInsight](./Remove-AzureOperationalInsightsStorageInsight.md)
 
-[Set-AzureOperationalInsightsStorageInsight](.\Set-AzureOperationalInsightsStorageInsight.md)
+[Set-AzureOperationalInsightsStorageInsight](./Set-AzureOperationalInsightsStorageInsight.md)
 
 

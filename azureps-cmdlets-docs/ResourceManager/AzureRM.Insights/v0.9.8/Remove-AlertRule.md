@@ -91,10 +91,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AlertRule](.\Add-AlertRule.md)
+[Add-AlertRule](./Add-AlertRule.md)
 
-[Get-AlertRule](.\Get-AlertRule.md)
+[Get-AlertRule](./Get-AlertRule.md)
 
-[Get-AlertHistory](.\Get-AlertHistory.md)
+[Get-AlertHistory](./Get-AlertHistory.md)
 
 

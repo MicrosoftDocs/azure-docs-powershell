@@ -161,6 +161,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Operations for Azure SQL Databases](https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx)
 
-[New-AzureSqlDatabaseServerContext](.\New-AzureSqlDatabaseServerContext.md)
+[New-AzureSqlDatabaseServerContext](./New-AzureSqlDatabaseServerContext.md)
 
 

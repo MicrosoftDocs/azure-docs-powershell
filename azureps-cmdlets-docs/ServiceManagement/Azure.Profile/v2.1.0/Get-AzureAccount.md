@@ -96,12 +96,12 @@ This cmdlet does not return any output.
 
 ## RELATED LINKS
 
-[Add-AzureAccount](.\Add-AzureAccount.md)
+[Add-AzureAccount](./Add-AzureAccount.md)
 
-[Get-AzurePublishSettingsFile](.\Get-AzurePublishSettingsFile.md)
+[Get-AzurePublishSettingsFile](./Get-AzurePublishSettingsFile.md)
 
-[Import-AzurePublishSettingsFile](.\Import-AzurePublishSettingsFile.md)
+[Import-AzurePublishSettingsFile](./Import-AzurePublishSettingsFile.md)
 
-[Remove-AzureAccount](.\Remove-AzureAccount.md)
+[Remove-AzureAccount](./Remove-AzureAccount.md)
 
 

@@ -102,10 +102,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmContainerService](.\Get-AzureRmContainerService.md)
+[Get-AzureRmContainerService](./Get-AzureRmContainerService.md)
 
-[New-AzureRmContainerService](.\New-AzureRmContainerService.md)
+[New-AzureRmContainerService](./New-AzureRmContainerService.md)
 
-[Update-AzureRmContainerService](.\Update-AzureRmContainerService.md)
+[Update-AzureRmContainerService](./Update-AzureRmContainerService.md)
 
 

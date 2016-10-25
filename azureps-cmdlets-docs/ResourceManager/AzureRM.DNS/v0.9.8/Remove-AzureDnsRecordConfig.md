@@ -315,10 +315,10 @@ This cmdlet returns the modified **RecordSet** object.
 
 ## RELATED LINKS
 
-[Add-AzureDnsRecordConfig](.\Add-AzureDnsRecordConfig.md)
+[Add-AzureDnsRecordConfig](./Add-AzureDnsRecordConfig.md)
 
-[Get-AzureDnsRecordSet](.\Get-AzureDnsRecordSet.md)
+[Get-AzureDnsRecordSet](./Get-AzureDnsRecordSet.md)
 
-[Set-AzureDnsRecordSet](.\Set-AzureDnsRecordSet.md)
+[Set-AzureDnsRecordSet](./Set-AzureDnsRecordSet.md)
 
 

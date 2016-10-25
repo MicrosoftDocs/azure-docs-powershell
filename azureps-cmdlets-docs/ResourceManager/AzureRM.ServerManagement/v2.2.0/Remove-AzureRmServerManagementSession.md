@@ -120,8 +120,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmServerManagementSession](.\Get-AzureRmServerManagementSession.md)
+[Get-AzureRmServerManagementSession](./Get-AzureRmServerManagementSession.md)
 
-[New-AzureRmServerManagementSession](.\New-AzureRmServerManagementSession.md)
+[New-AzureRmServerManagementSession](./New-AzureRmServerManagementSession.md)
 
 

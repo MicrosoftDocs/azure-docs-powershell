@@ -124,16 +124,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabase](.\Get-AzureRmSqlDatabase.md)
+[Get-AzureRmSqlDatabase](./Get-AzureRmSqlDatabase.md)
 
-[New-AzureRmSqlDatabase](.\New-AzureRmSqlDatabase.md)
+[New-AzureRmSqlDatabase](./New-AzureRmSqlDatabase.md)
 
-[Remove-AzureRmSqlDatabase](.\Remove-AzureRmSqlDatabase.md)
+[Remove-AzureRmSqlDatabase](./Remove-AzureRmSqlDatabase.md)
 
-[Resume-AzureRmSqlDatabase](.\Resume-AzureRmSqlDatabase.md)
+[Resume-AzureRmSqlDatabase](./Resume-AzureRmSqlDatabase.md)
 
-[Set-AzureRmSqlDatabase](.\Set-AzureRmSqlDatabase.md)
+[Set-AzureRmSqlDatabase](./Set-AzureRmSqlDatabase.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

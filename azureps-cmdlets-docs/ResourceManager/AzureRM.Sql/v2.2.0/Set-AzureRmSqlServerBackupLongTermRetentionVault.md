@@ -118,6 +118,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlServerBackupLongTermRetentionVault](.\Get-AzureRmSqlServerBackupLongTermRetentionVault.md)
+[Get-AzureRmSqlServerBackupLongTermRetentionVault](./Get-AzureRmSqlServerBackupLongTermRetentionVault.md)
 
 

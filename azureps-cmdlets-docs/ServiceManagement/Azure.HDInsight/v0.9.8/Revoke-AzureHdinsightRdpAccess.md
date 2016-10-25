@@ -173,6 +173,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-AzureHdinsightRdpAccess](.\Grant-AzureHdinsightRdpAccess.md)
+[Grant-AzureHdinsightRdpAccess](./Grant-AzureHdinsightRdpAccess.md)
 
 

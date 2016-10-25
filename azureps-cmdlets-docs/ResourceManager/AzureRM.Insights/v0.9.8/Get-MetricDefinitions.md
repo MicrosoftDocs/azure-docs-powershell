@@ -205,6 +205,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Metrics](.\Get-Metrics.md)
+[Get-Metrics](./Get-Metrics.md)
 
 

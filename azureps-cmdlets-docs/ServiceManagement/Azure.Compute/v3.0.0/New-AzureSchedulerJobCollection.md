@@ -175,10 +175,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSchedulerJobCollection](.\Get-AzureSchedulerJobCollection.md)
+[Get-AzureSchedulerJobCollection](./Get-AzureSchedulerJobCollection.md)
 
-[Remove-AzureSchedulerJobCollection](.\Remove-AzureSchedulerJobCollection.md)
+[Remove-AzureSchedulerJobCollection](./Remove-AzureSchedulerJobCollection.md)
 
-[Set-AzureSchedulerJobCollection](.\Set-AzureSchedulerJobCollection.md)
+[Set-AzureSchedulerJobCollection](./Set-AzureSchedulerJobCollection.md)
 
 

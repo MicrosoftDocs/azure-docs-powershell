@@ -173,12 +173,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVMImageOffer](.\Get-AzureRmVMImageOffer.md)
+[Get-AzureRmVMImageOffer](./Get-AzureRmVMImageOffer.md)
 
-[Get-AzureRmVMImagePublisher](.\Get-AzureRmVMImagePublisher.md)
+[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
 
-[Get-AzureRmVMImageSku](.\Get-AzureRmVMImageSku.md)
+[Get-AzureRmVMImageSku](./Get-AzureRmVMImageSku.md)
 
-[Save-AzureRmVMImage](.\Save-AzureRmVMImage.md)
+[Save-AzureRmVMImage](./Save-AzureRmVMImage.md)
 
 

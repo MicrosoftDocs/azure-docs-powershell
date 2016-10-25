@@ -202,8 +202,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSqlDatabaseImportExportStatus](.\Get-AzureSqlDatabaseImportExportStatus.md)
+[Get-AzureSqlDatabaseImportExportStatus](./Get-AzureSqlDatabaseImportExportStatus.md)
 
-[Start-AzureSqlDatabaseExport](.\Start-AzureSqlDatabaseExport.md)
+[Start-AzureSqlDatabaseExport](./Start-AzureSqlDatabaseExport.md)
 
 

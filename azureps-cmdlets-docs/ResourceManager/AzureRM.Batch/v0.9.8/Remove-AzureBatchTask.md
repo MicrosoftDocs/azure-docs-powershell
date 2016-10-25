@@ -153,12 +153,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureBatchAccountKeys](.\Get-AzureBatchAccountKeys.md)
+[Get-AzureBatchAccountKeys](./Get-AzureBatchAccountKeys.md)
 
-[Get-AzureBatchTask](.\Get-AzureBatchTask.md)
+[Get-AzureBatchTask](./Get-AzureBatchTask.md)
 
-[New-AzureBatchTask](.\New-AzureBatchTask.md)
+[New-AzureBatchTask](./New-AzureBatchTask.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

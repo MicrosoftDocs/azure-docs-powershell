@@ -188,10 +188,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureBatchJobSchedule](.\New-AzureBatchJobSchedule.md)
+[New-AzureBatchJobSchedule](./New-AzureBatchJobSchedule.md)
 
-[Remove-AzureBatchJobSchedule](.\Remove-AzureBatchJobSchedule.md)
+[Remove-AzureBatchJobSchedule](./Remove-AzureBatchJobSchedule.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

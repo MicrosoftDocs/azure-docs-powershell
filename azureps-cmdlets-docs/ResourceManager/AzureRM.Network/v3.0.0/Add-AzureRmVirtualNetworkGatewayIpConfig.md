@@ -188,10 +188,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVirtualNetworkGateway](.\Get-AzureRmVirtualNetworkGateway.md)
+[Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
-[New-AzureRmVirtualNetworkGatewayIpConfig](.\New-AzureRmVirtualNetworkGatewayIpConfig.md)
+[New-AzureRmVirtualNetworkGatewayIpConfig](./New-AzureRmVirtualNetworkGatewayIpConfig.md)
 
-[Remove-AzureRmVirtualNetworkGatewayIpConfig](.\Remove-AzureRmVirtualNetworkGatewayIpConfig.md)
+[Remove-AzureRmVirtualNetworkGatewayIpConfig](./Remove-AzureRmVirtualNetworkGatewayIpConfig.md)
 
 

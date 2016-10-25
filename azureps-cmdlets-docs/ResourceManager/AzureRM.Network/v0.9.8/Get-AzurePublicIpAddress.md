@@ -85,10 +85,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzurePublicIpAddress](.\New-AzurePublicIpAddress.md)
+[New-AzurePublicIpAddress](./New-AzurePublicIpAddress.md)
 
-[Remove-AzurePublicIpAddress](.\Remove-AzurePublicIpAddress.md)
+[Remove-AzurePublicIpAddress](./Remove-AzurePublicIpAddress.md)
 
-[Set-AzurePublicIpAddress](.\Set-AzurePublicIpAddress.md)
+[Set-AzurePublicIpAddress](./Set-AzurePublicIpAddress.md)
 
 

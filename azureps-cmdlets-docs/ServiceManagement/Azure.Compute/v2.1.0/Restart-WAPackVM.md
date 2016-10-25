@@ -95,20 +95,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackVM](.\Get-WAPackVM.md)
+[Get-WAPackVM](./Get-WAPackVM.md)
 
-[New-WAPackVM](.\New-WAPackVM.md)
+[New-WAPackVM](./New-WAPackVM.md)
 
-[Remove-WAPackVM](.\Remove-WAPackVM.md)
+[Remove-WAPackVM](./Remove-WAPackVM.md)
 
-[Resume-WAPackVM](.\Resume-WAPackVM.md)
+[Resume-WAPackVM](./Resume-WAPackVM.md)
 
-[Set-WAPackVM](.\Set-WAPackVM.md)
+[Set-WAPackVM](./Set-WAPackVM.md)
 
-[Start-WAPackVM](.\Start-WAPackVM.md)
+[Start-WAPackVM](./Start-WAPackVM.md)
 
-[Stop-WAPackVM](.\Stop-WAPackVM.md)
+[Stop-WAPackVM](./Stop-WAPackVM.md)
 
-[Suspend-WAPackVM](.\Suspend-WAPackVM.md)
+[Suspend-WAPackVM](./Suspend-WAPackVM.md)
 
 

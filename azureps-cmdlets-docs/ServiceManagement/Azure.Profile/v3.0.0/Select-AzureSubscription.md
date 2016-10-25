@@ -232,10 +232,10 @@ By default, it does not generate any output.
 
 ## RELATED LINKS
 
-[Get-AzureSubscription](.\Get-AzureSubscription.md)
+[Get-AzureSubscription](./Get-AzureSubscription.md)
 
-[Remove-AzureSubscription](.\Remove-AzureSubscription.md)
+[Remove-AzureSubscription](./Remove-AzureSubscription.md)
 
-[Set-AzureSubscription](.\Set-AzureSubscription.md)
+[Set-AzureSubscription](./Set-AzureSubscription.md)
 
 

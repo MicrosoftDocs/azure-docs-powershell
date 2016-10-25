@@ -11,99 +11,99 @@ Locale: en-US
 This topic displays help topics for the Azure Online Backup cmdlets. 
 
 ## AzureRM.Backup Cmdlets
-### [Backup-AzureRmBackupItem](.\Backup-AzureRmBackupItem.md)
+### [Backup-AzureRmBackupItem](./Backup-AzureRmBackupItem.md)
 Starts a backup for a Backup item.
 
 
-### [Disable-AzureRmBackupProtection](.\Disable-AzureRmBackupProtection.md)
+### [Disable-AzureRmBackupProtection](./Disable-AzureRmBackupProtection.md)
 Disables protection for a Backup protected item.
 
 
-### [Enable-AzureRmBackupContainerReregistration](.\Enable-AzureRmBackupContainerReregistration.md)
+### [Enable-AzureRmBackupContainerReregistration](./Enable-AzureRmBackupContainerReregistration.md)
 Reregisters a server to connect to a Backup vault.
 
 
-### [Enable-AzureRmBackupProtection](.\Enable-AzureRmBackupProtection.md)
+### [Enable-AzureRmBackupProtection](./Enable-AzureRmBackupProtection.md)
 Associates an item with an azure_2 Backup protection policy.
 
 
-### [Get-AzureRmBackupContainer](.\Get-AzureRmBackupContainer.md)
+### [Get-AzureRmBackupContainer](./Get-AzureRmBackupContainer.md)
 Gets Backup containers.
 
 
-### [Get-AzureRmBackupItem](.\Get-AzureRmBackupItem.md)
+### [Get-AzureRmBackupItem](./Get-AzureRmBackupItem.md)
 Gets the items under a container in Backup.
 
 
-### [Get-AzureRmBackupJobDetails](.\Get-AzureRmBackupJobDetails.md)
+### [Get-AzureRmBackupJobDetails](./Get-AzureRmBackupJobDetails.md)
 Gets the details of a Backup job.
 
 
-### [Get-AzureRmBackupJob](.\Get-AzureRmBackupJob.md)
+### [Get-AzureRmBackupJob](./Get-AzureRmBackupJob.md)
 Gets Backup jobs.
 
 
-### [Get-AzureRmBackupProtectionPolicy](.\Get-AzureRmBackupProtectionPolicy.md)
+### [Get-AzureRmBackupProtectionPolicy](./Get-AzureRmBackupProtectionPolicy.md)
 Gets backup policies for a Backup vault.
 
 
-### [Get-AzureRmBackupRecoveryPoint](.\Get-AzureRmBackupRecoveryPoint.md)
+### [Get-AzureRmBackupRecoveryPoint](./Get-AzureRmBackupRecoveryPoint.md)
 Gets the recovery points for a backed up item.
 
 
-### [Get-AzureRmBackupVaultCredentials](.\Get-AzureRmBackupVaultCredentials.md)
+### [Get-AzureRmBackupVaultCredentials](./Get-AzureRmBackupVaultCredentials.md)
 Downloads the vault credentials file for a Backup vault.
 
 
-### [Get-AzureRmBackupVault](.\Get-AzureRmBackupVault.md)
+### [Get-AzureRmBackupVault](./Get-AzureRmBackupVault.md)
 Gets Backup vaults.
 
 
-### [New-AzureRmBackupProtectionPolicy](.\New-AzureRmBackupProtectionPolicy.md)
+### [New-AzureRmBackupProtectionPolicy](./New-AzureRmBackupProtectionPolicy.md)
 Creates a Backup policy.
 
 
-### [New-AzureRmBackupRetentionPolicyObject](.\New-AzureRmBackupRetentionPolicyObject.md)
+### [New-AzureRmBackupRetentionPolicyObject](./New-AzureRmBackupRetentionPolicyObject.md)
 Creates a Backup retention policy.
 
 
-### [New-AzureRmBackupVault](.\New-AzureRmBackupVault.md)
+### [New-AzureRmBackupVault](./New-AzureRmBackupVault.md)
 Creates a Backup vault.
 
 
-### [Register-AzureRmBackupContainer](.\Register-AzureRmBackupContainer.md)
+### [Register-AzureRmBackupContainer](./Register-AzureRmBackupContainer.md)
 Registers the container with a Backup vault.
 
 
-### [Remove-AzureRmBackupProtectionPolicy](.\Remove-AzureRmBackupProtectionPolicy.md)
+### [Remove-AzureRmBackupProtectionPolicy](./Remove-AzureRmBackupProtectionPolicy.md)
 Deletes a policy from a Backup vault.
 
 
-### [Remove-AzureRmBackupVault](.\Remove-AzureRmBackupVault.md)
+### [Remove-AzureRmBackupVault](./Remove-AzureRmBackupVault.md)
 Deletes a Backup vault.
 
 
-### [Restore-AzureRmBackupItem](.\Restore-AzureRmBackupItem.md)
+### [Restore-AzureRmBackupItem](./Restore-AzureRmBackupItem.md)
 Restores the data and configuration for a Backup item to a recovery point.
 
 
-### [Set-AzureRmBackupProtectionPolicy](.\Set-AzureRmBackupProtectionPolicy.md)
+### [Set-AzureRmBackupProtectionPolicy](./Set-AzureRmBackupProtectionPolicy.md)
 Modifies an existing protection policy.
 
 
-### [Set-AzureRmBackupVault](.\Set-AzureRmBackupVault.md)
+### [Set-AzureRmBackupVault](./Set-AzureRmBackupVault.md)
 Changes the storage type of a Backup vault.
 
 
-### [Stop-AzureRmBackupJob](.\Stop-AzureRmBackupJob.md)
+### [Stop-AzureRmBackupJob](./Stop-AzureRmBackupJob.md)
 Cancels an existing Backup job.
 
 
-### [Unregister-AzureRmBackupContainer](.\Unregister-AzureRmBackupContainer.md)
+### [Unregister-AzureRmBackupContainer](./Unregister-AzureRmBackupContainer.md)
 Unregisters a container from a Backup vault.
 
 
-### [Wait-AzureRmBackupJob](.\Wait-AzureRmBackupJob.md)
+### [Wait-AzureRmBackupJob](./Wait-AzureRmBackupJob.md)
 Waits for a Backup job to finish.
 
 

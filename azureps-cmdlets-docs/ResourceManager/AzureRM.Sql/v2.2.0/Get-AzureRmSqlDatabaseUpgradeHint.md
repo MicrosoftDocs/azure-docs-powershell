@@ -153,10 +153,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseExpanded](.\Get-AzureRmSqlDatabaseExpanded.md)
+[Get-AzureRmSqlDatabaseExpanded](./Get-AzureRmSqlDatabaseExpanded.md)
 
-[Get-AzureRmSqlElasticPoolRecommendation](.\Get-AzureRmSqlElasticPoolRecommendation.md)
+[Get-AzureRmSqlElasticPoolRecommendation](./Get-AzureRmSqlElasticPoolRecommendation.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

@@ -167,14 +167,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-AzureRmApiManagementApi](.\Export-AzureRmApiManagementApi.md)
+[Export-AzureRmApiManagementApi](./Export-AzureRmApiManagementApi.md)
 
-[Import-AzureRmApiManagementApi](.\Import-AzureRmApiManagementApi.md)
+[Import-AzureRmApiManagementApi](./Import-AzureRmApiManagementApi.md)
 
-[New-AzureRmApiManagementApi](.\New-AzureRmApiManagementApi.md)
+[New-AzureRmApiManagementApi](./New-AzureRmApiManagementApi.md)
 
-[Remove-AzureRmApiManagementApi](.\Remove-AzureRmApiManagementApi.md)
+[Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
 
-[Set-AzureRmApiManagementApi](.\Set-AzureRmApiManagementApi.md)
+[Set-AzureRmApiManagementApi](./Set-AzureRmApiManagementApi.md)
 
 

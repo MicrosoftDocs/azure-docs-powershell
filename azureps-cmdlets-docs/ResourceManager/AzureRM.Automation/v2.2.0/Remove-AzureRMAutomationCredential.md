@@ -117,10 +117,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmAutomationCredential](.\Get-AzureRMAutomationCredential.md)
+[Get-AzureRmAutomationCredential](./Get-AzureRMAutomationCredential.md)
 
-[New-AzureRmAutomationCredential](.\New-AzureRMAutomationCredential.md)
+[New-AzureRmAutomationCredential](./New-AzureRMAutomationCredential.md)
 
-[Set-AzureRmAutomationCredential](.\Set-AzureRMAutomationCredential.md)
+[Set-AzureRmAutomationCredential](./Set-AzureRMAutomationCredential.md)
 
 

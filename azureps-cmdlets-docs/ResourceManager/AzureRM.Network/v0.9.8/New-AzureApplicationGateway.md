@@ -322,24 +322,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureApplicationGatewayBackendAddressPool](.\New-AzureApplicationGatewayBackendAddressPool.md)
+[New-AzureApplicationGatewayBackendAddressPool](./New-AzureApplicationGatewayBackendAddressPool.md)
 
-[New-AzureApplicationGatewayBackendHttpSettings](.\New-AzureApplicationGatewayBackendHttpSettings.md)
+[New-AzureApplicationGatewayBackendHttpSettings](./New-AzureApplicationGatewayBackendHttpSettings.md)
 
-[New-AzureApplicationGatewayFrontendIPConfig](.\New-AzureApplicationGatewayFrontendIPConfig.md)
+[New-AzureApplicationGatewayFrontendIPConfig](./New-AzureApplicationGatewayFrontendIPConfig.md)
 
-[New-AzureApplicationGatewayFrontendPort](.\New-AzureApplicationGatewayFrontendPort.md)
+[New-AzureApplicationGatewayFrontendPort](./New-AzureApplicationGatewayFrontendPort.md)
 
-[New-AzureApplicationGatewayHttpListener](.\New-AzureApplicationGatewayHttpListener.md)
+[New-AzureApplicationGatewayHttpListener](./New-AzureApplicationGatewayHttpListener.md)
 
-[New-AzureApplicationGatewayIPConfiguration](.\New-AzureApplicationGatewayIPConfiguration.md)
+[New-AzureApplicationGatewayIPConfiguration](./New-AzureApplicationGatewayIPConfiguration.md)
 
-[New-AzureApplicationGatewayRequestRoutingRule](.\New-AzureApplicationGatewayRequestRoutingRule.md)
+[New-AzureApplicationGatewayRequestRoutingRule](./New-AzureApplicationGatewayRequestRoutingRule.md)
 
-[New-AzureApplicationGatewaySku](.\New-AzureApplicationGatewaySku.md)
+[New-AzureApplicationGatewaySku](./New-AzureApplicationGatewaySku.md)
 
-[New-AzureVirtualNetwork](.\New-AzureVirtualNetwork.md)
+[New-AzureVirtualNetwork](./New-AzureVirtualNetwork.md)
 
-[New-AzureVirtualNetworkSubnetConfig](.\New-AzureVirtualNetworkSubnetConfig.md)
+[New-AzureVirtualNetworkSubnetConfig](./New-AzureVirtualNetworkSubnetConfig.md)
 
 

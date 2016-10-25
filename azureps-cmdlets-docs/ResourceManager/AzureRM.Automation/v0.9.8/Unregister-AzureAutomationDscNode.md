@@ -116,10 +116,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAutomationDscNode](.\Get-AzureAutomationDscNode.md)
+[Get-AzureAutomationDscNode](./Get-AzureAutomationDscNode.md)
 
-[Register-AzureAutomationDscNode](.\Register-AzureAutomationDscNode.md)
+[Register-AzureAutomationDscNode](./Register-AzureAutomationDscNode.md)
 
-[Set-AzureAutomationDscNode](.\Set-AzureAutomationDscNode.md)
+[Set-AzureAutomationDscNode](./Set-AzureAutomationDscNode.md)
 
 

@@ -146,8 +146,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureDataFactoryHub](.\New-AzureDataFactoryHub.md)
+[New-AzureDataFactoryHub](./New-AzureDataFactoryHub.md)
 
-[Get-AzureDataFactoryHub](.\Get-AzureDataFactoryHub.md)
+[Get-AzureDataFactoryHub](./Get-AzureDataFactoryHub.md)
 
 

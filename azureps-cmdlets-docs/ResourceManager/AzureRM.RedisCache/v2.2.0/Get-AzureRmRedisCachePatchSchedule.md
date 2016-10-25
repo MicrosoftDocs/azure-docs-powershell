@@ -78,10 +78,10 @@ This cmdlet returns the of patch schedule entries set on the cache.
 
 ## RELATED LINKS
 
-[New-AzureRmRedisCachePatchSchedule](.\New-AzureRmRedisCachePatchSchedule.md)
+[New-AzureRmRedisCachePatchSchedule](./New-AzureRmRedisCachePatchSchedule.md)
 
-[New-AzureRmRedisCacheScheduleEntry](.\New-AzureRmRedisCacheScheduleEntry.md)
+[New-AzureRmRedisCacheScheduleEntry](./New-AzureRmRedisCacheScheduleEntry.md)
 
-[Remove-AzureRmRedisCachePatchSchedule](.\Remove-AzureRmRedisCachePatchSchedule.md)
+[Remove-AzureRmRedisCachePatchSchedule](./Remove-AzureRmRedisCachePatchSchedule.md)
 
 

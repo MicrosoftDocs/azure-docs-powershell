@@ -102,16 +102,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmNotificationHubAuthorizationRules](.\Get-AzureRmNotificationHubAuthorizationRules.md)
+[Get-AzureRmNotificationHubAuthorizationRules](./Get-AzureRmNotificationHubAuthorizationRules.md)
 
-[Get-AzureRmNotificationHubListKeys](.\Get-AzureRmNotificationHubListKeys.md)
+[Get-AzureRmNotificationHubListKeys](./Get-AzureRmNotificationHubListKeys.md)
 
-[Get-AzureRmNotificationHubPNSCredentials](.\Get-AzureRmNotificationHubPNSCredentials.md)
+[Get-AzureRmNotificationHubPNSCredentials](./Get-AzureRmNotificationHubPNSCredentials.md)
 
-[New-AzureRmNotificationHub](.\New-AzureRmNotificationHub.md)
+[New-AzureRmNotificationHub](./New-AzureRmNotificationHub.md)
 
-[Remove-AzureRmNotificationHub](.\Remove-AzureRmNotificationHub.md)
+[Remove-AzureRmNotificationHub](./Remove-AzureRmNotificationHub.md)
 
-[Set-AzureRmNotificationHub](.\Set-AzureRmNotificationHub.md)
+[Set-AzureRmNotificationHub](./Set-AzureRmNotificationHub.md)
 
 

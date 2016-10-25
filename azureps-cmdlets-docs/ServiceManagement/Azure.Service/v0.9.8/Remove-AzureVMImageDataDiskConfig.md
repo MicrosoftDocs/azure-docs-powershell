@@ -98,8 +98,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureVMImageDataDiskConfig](.\Set-AzureVMImageDataDiskConfig.md)
+[Set-AzureVMImageDataDiskConfig](./Set-AzureVMImageDataDiskConfig.md)
 
-[Azure Service Cmdlets](.\Azure.Service.md)
+[Azure Service Cmdlets](./Azure.Service.md)
 
 

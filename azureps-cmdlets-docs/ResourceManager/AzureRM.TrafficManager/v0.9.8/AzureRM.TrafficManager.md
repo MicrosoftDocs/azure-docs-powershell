@@ -11,27 +11,27 @@ Locale: en-US
 This topic lists the help topics for the Azure Traffic Manager cmdlets—currently in Preview. The cmdlets require Azure PowerShell version 0.8.16.1 or later and use Azure Resource Manager.
 
 ## AzureRM.TrafficManager Cmdlets
-### [Add-AzureTrafficManagerEndpointConfig](.\Add-AzureTrafficManagerEndpointConfig.md)
+### [Add-AzureTrafficManagerEndpointConfig](./Add-AzureTrafficManagerEndpointConfig.md)
 Adds an endpoint to an Azure Traffic Manager profile.
 
 
-### [Get-AzureTrafficManagerProfile](.\Get-AzureTrafficManagerProfile.md)
+### [Get-AzureTrafficManagerProfile](./Get-AzureTrafficManagerProfile.md)
 Gets an Azure Traffic Manager profile.
 
 
-### [New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
+### [New-AzureTrafficManagerProfile](./New-AzureTrafficManagerProfile.md)
 Creates an Azure Traffic Manager profile.
 
 
-### [Remove-AzureTrafficManagerEndpointConfig](.\Remove-AzureTrafficManagerEndpointConfig.md)
+### [Remove-AzureTrafficManagerEndpointConfig](./Remove-AzureTrafficManagerEndpointConfig.md)
 Removes an endpoint from an Azure Traffic Manager profile.
 
 
-### [Remove-AzureTrafficManagerProfile](.\Remove-AzureTrafficManagerProfile.md)
+### [Remove-AzureTrafficManagerProfile](./Remove-AzureTrafficManagerProfile.md)
 Deletes an Azure Traffic Manager profile.
 
 
-### [Set-AzureTrafficManagerProfile](.\Set-AzureTrafficManagerProfile.md)
+### [Set-AzureTrafficManagerProfile](./Set-AzureTrafficManagerProfile.md)
 Updates an Azure Traffic Manager profile.
 
 

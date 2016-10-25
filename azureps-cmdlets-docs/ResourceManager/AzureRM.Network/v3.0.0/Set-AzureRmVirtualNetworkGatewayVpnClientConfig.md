@@ -85,10 +85,10 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 
 ## RELATED LINKS
 
-[Get-AzureRmVpnClientPackage](.\Get-AzureRmVpnClientPackage.md)
+[Get-AzureRmVpnClientPackage](./Get-AzureRmVpnClientPackage.md)
 
-[Get-AzureRmVirtualNetworkGateway](.\Get-AzureRmVirtualNetworkGateway.md)
+[Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
-[Resize-AzureRmVirtualNetworkGateway](.\Resize-AzureRmVirtualNetworkGateway.md)
+[Resize-AzureRmVirtualNetworkGateway](./Resize-AzureRmVirtualNetworkGateway.md)
 
 

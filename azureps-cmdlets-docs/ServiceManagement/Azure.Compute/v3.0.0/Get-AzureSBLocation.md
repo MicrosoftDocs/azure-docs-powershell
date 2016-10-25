@@ -60,6 +60,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSBNamespace](.\Get-AzureSBNamespace.md)
+[Get-AzureSBNamespace](./Get-AzureSBNamespace.md)
 
 

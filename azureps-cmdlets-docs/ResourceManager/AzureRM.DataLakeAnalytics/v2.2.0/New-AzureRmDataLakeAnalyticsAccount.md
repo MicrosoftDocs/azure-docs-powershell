@@ -119,12 +119,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataLakeAnalyticsAccount](.\Get-AzureRmDataLakeAnalyticsAccount.md)
+[Get-AzureRmDataLakeAnalyticsAccount](./Get-AzureRmDataLakeAnalyticsAccount.md)
 
-[Remove-AzureRmDataLakeAnalyticsAccount](.\Remove-AzureRmDataLakeAnalyticsAccount.md)
+[Remove-AzureRmDataLakeAnalyticsAccount](./Remove-AzureRmDataLakeAnalyticsAccount.md)
 
-[Set-AzureRmDataLakeAnalyticsAccount](.\Set-AzureRmDataLakeAnalyticsAccount.md)
+[Set-AzureRmDataLakeAnalyticsAccount](./Set-AzureRmDataLakeAnalyticsAccount.md)
 
-[Test-AzureRmDataLakeAnalyticsAccount](.\Test-AzureRmDataLakeAnalyticsAccount.md)
+[Test-AzureRmDataLakeAnalyticsAccount](./Test-AzureRmDataLakeAnalyticsAccount.md)
 
 

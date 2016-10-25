@@ -201,8 +201,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ACSTableService](.\Get-ACSTableService.md)
+[Get-ACSTableService](./Get-ACSTableService.md)
 
-[Get-ACSTableServiceMetric](.\Get-ACSTableServiceMetric.md)
+[Get-ACSTableServiceMetric](./Get-ACSTableServiceMetric.md)
 
 

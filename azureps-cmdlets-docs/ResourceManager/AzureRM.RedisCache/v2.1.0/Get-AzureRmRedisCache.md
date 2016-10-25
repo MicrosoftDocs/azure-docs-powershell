@@ -205,10 +205,10 @@ Returns an array of **RedisCacheAttributes** objects.
 
 ## RELATED LINKS
 
-[New-AzureRmRedisCache](.\New-AzureRmRedisCache.md)
+[New-AzureRmRedisCache](./New-AzureRmRedisCache.md)
 
-[Remove-AzureRmRedisCache](.\Remove-AzureRmRedisCache.md)
+[Remove-AzureRmRedisCache](./Remove-AzureRmRedisCache.md)
 
-[Set-AzureRmRedisCache](.\Set-AzureRmRedisCache.md)
+[Set-AzureRmRedisCache](./Set-AzureRmRedisCache.md)
 
 

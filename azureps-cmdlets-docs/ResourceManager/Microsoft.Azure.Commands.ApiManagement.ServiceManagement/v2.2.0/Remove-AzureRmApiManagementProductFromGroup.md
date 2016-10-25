@@ -106,6 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmApiManagementProductToGroup](.\Add-AzureRmApiManagementProductToGroup.md)
+[Add-AzureRmApiManagementProductToGroup](./Add-AzureRmApiManagementProductToGroup.md)
 
 

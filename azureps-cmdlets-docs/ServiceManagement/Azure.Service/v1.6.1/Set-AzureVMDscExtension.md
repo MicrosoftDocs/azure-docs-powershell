@@ -398,14 +398,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMDscExtension](.\Get-AzureVMDscExtension.md)
+[Get-AzureVMDscExtension](./Get-AzureVMDscExtension.md)
 
-[Remove-AzureVMDscExtension](.\Remove-AzureVMDscExtension.md)
+[Remove-AzureVMDscExtension](./Remove-AzureVMDscExtension.md)
 
-[Remove-AzureVMDscExtension](.\Remove-AzureVMDscExtension.md)
+[Remove-AzureVMDscExtension](./Remove-AzureVMDscExtension.md)
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
-[Publish-AzureVMDscConfiguration](.\Publish-AzureVMDscConfiguration.md)
+[Publish-AzureVMDscConfiguration](./Publish-AzureVMDscConfiguration.md)
 
 

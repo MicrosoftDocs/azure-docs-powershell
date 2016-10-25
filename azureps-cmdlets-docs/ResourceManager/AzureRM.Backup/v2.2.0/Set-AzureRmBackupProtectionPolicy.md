@@ -188,6 +188,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmBackupProtectionPolicy](.\New-AzureRmBackupProtectionPolicy.md)
+[New-AzureRmBackupProtectionPolicy](./New-AzureRmBackupProtectionPolicy.md)
 
 

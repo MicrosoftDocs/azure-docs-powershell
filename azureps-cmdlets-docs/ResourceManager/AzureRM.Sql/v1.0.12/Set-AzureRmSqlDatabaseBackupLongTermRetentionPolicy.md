@@ -177,6 +177,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseBackupLongTermRetentionPolicy](.\Get-AzureRmSqlDatabaseBackupLongTermRetentionPolicy.md)
+[Get-AzureRmSqlDatabaseBackupLongTermRetentionPolicy](./Get-AzureRmSqlDatabaseBackupLongTermRetentionPolicy.md)
 
 

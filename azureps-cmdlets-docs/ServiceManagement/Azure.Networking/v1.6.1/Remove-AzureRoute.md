@@ -126,6 +126,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRoute](.\Set-AzureRoute.md)
+[Set-AzureRoute](./Set-AzureRoute.md)
 
 

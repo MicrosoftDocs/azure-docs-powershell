@@ -104,10 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureAutomationCertificate](.\New-AzureAutomationCertificate.md)
+[New-AzureAutomationCertificate](./New-AzureAutomationCertificate.md)
 
-[Set-AzureAutomationCertificate](.\Set-AzureAutomationCertificate.md)
+[Set-AzureAutomationCertificate](./Set-AzureAutomationCertificate.md)
 
-[Remove-AzureAutomationCertificate](.\Remove-AzureAutomationCertificate.md)
+[Remove-AzureAutomationCertificate](./Remove-AzureAutomationCertificate.md)
 
 

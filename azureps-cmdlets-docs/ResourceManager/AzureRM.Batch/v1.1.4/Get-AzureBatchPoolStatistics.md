@@ -80,10 +80,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBatchAccountKeys](.\Get-AzureRmBatchAccountKeys.md)
+[Get-AzureRmBatchAccountKeys](./Get-AzureRmBatchAccountKeys.md)
 
-[Get-AzureBatchPoolUsageMetrics](.\Get-AzureBatchPoolUsageMetrics.md)
+[Get-AzureBatchPoolUsageMetrics](./Get-AzureBatchPoolUsageMetrics.md)
 
-[Get-AzureBatchJobStatistics](.\Get-AzureBatchJobStatistics.md)
+[Get-AzureBatchJobStatistics](./Get-AzureBatchJobStatistics.md)
 
 

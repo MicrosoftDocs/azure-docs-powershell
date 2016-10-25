@@ -130,10 +130,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVirtualNetworkGatewayConnection](.\Get-AzureVirtualNetworkGatewayConnection.md)
+[Get-AzureVirtualNetworkGatewayConnection](./Get-AzureVirtualNetworkGatewayConnection.md)
 
-[New-AzureVirtualNetworkGatewayConnection](.\New-AzureVirtualNetworkGatewayConnection.md)
+[New-AzureVirtualNetworkGatewayConnection](./New-AzureVirtualNetworkGatewayConnection.md)
 
-[Remove-AzureVirtualNetworkGatewayConnection](.\Remove-AzureVirtualNetworkGatewayConnection.md)
+[Remove-AzureVirtualNetworkGatewayConnection](./Remove-AzureVirtualNetworkGatewayConnection.md)
 
 

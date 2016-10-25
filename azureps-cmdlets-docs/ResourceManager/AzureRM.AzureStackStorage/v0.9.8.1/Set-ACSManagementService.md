@@ -204,8 +204,8 @@ Output from Get-ACSFarm and Get-ACSManagementService can be piped to this cmdlet
 
 ## RELATED LINKS
 
-[Get-ACSManagementService](.\Get-ACSManagementService.md)
+[Get-ACSManagementService](./Get-ACSManagementService.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

@@ -137,12 +137,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmVirtualNetworkSubnetConfig](.\Add-AzureRmVirtualNetworkSubnetConfig.md)
+[Add-AzureRmVirtualNetworkSubnetConfig](./Add-AzureRmVirtualNetworkSubnetConfig.md)
 
-[Get-AzureRmVirtualNetworkSubnetConfig](.\Get-AzureRmVirtualNetworkSubnetConfig.md)
+[Get-AzureRmVirtualNetworkSubnetConfig](./Get-AzureRmVirtualNetworkSubnetConfig.md)
 
-[Remove-AzureRmVirtualNetworkSubnetConfig](.\Remove-AzureRmVirtualNetworkSubnetConfig.md)
+[Remove-AzureRmVirtualNetworkSubnetConfig](./Remove-AzureRmVirtualNetworkSubnetConfig.md)
 
-[Set-AzureRmVirtualNetworkSubnetConfig](.\Set-AzureRmVirtualNetworkSubnetConfig.md)
+[Set-AzureRmVirtualNetworkSubnetConfig](./Set-AzureRmVirtualNetworkSubnetConfig.md)
 
 

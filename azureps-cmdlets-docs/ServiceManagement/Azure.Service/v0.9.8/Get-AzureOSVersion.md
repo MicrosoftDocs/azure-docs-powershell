@@ -66,6 +66,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureOSDisk](.\Get-AzureOSDisk.md)
+[Get-AzureOSDisk](./Get-AzureOSDisk.md)
 
 

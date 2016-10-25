@@ -244,10 +244,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseAdvisor](.\Get-AzureRmSqlDatabaseAdvisor.md)
+[Get-AzureRmSqlDatabaseAdvisor](./Get-AzureRmSqlDatabaseAdvisor.md)
 
-[Get-AzureRmSqlServerRecommendedAction](.\Get-AzureRmSqlServerRecommendedAction.md)
+[Get-AzureRmSqlServerRecommendedAction](./Get-AzureRmSqlServerRecommendedAction.md)
 
-[Set-AzureRmSqlDatabaseRecommendedActionState](.\Set-AzureRmSqlDatabaseRecommendedActionState.md)
+[Set-AzureRmSqlDatabaseRecommendedActionState](./Set-AzureRmSqlDatabaseRecommendedActionState.md)
 
 

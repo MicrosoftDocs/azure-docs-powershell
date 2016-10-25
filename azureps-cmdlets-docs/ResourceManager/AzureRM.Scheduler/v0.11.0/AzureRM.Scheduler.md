@@ -11,71 +11,71 @@ Locale: en-US
 {{Manually Enter Description Here}}
 
 ## AzureRM.Scheduler Cmdlets
-### [Disable-AzureRmSchedulerJobCollection](.\Disable-AzureRmSchedulerJobCollection.md)
+### [Disable-AzureRmSchedulerJobCollection](./Disable-AzureRmSchedulerJobCollection.md)
 Disables a job collection.
 
 
-### [Enable-AzureRmSchedulerJobCollection](.\Enable-AzureRmSchedulerJobCollection.md)
+### [Enable-AzureRmSchedulerJobCollection](./Enable-AzureRmSchedulerJobCollection.md)
 Enables a job collection.
 
 
-### [Get-AzureRmSchedulerJobCollection](.\Get-AzureRmSchedulerJobCollection.md)
+### [Get-AzureRmSchedulerJobCollection](./Get-AzureRmSchedulerJobCollection.md)
 Gets job collections.
 
 
-### [Get-AzureRmSchedulerJobHistory](.\Get-AzureRmSchedulerJobHistory.md)
+### [Get-AzureRmSchedulerJobHistory](./Get-AzureRmSchedulerJobHistory.md)
 Gets job history.
 
 
-### [Get-AzureRmSchedulerJob](.\Get-AzureRmSchedulerJob.md)
+### [Get-AzureRmSchedulerJob](./Get-AzureRmSchedulerJob.md)
 Gets Scheduler jobs.
 
 
-### [New-AzureRmSchedulerHttpJob](.\New-AzureRmSchedulerHttpJob.md)
+### [New-AzureRmSchedulerHttpJob](./New-AzureRmSchedulerHttpJob.md)
 Creates an HTTP job.
 
 
-### [New-AzureRmSchedulerJobCollection](.\New-AzureRmSchedulerJobCollection.md)
+### [New-AzureRmSchedulerJobCollection](./New-AzureRmSchedulerJobCollection.md)
 Creates a job collection.
 
 
-### [New-AzureRmSchedulerServiceBusQueueJob](.\New-AzureRmSchedulerServiceBusQueueJob.md)
+### [New-AzureRmSchedulerServiceBusQueueJob](./New-AzureRmSchedulerServiceBusQueueJob.md)
 Creates a service bus queue job.
 
 
-### [New-AzureRmSchedulerServiceBusTopicJob](.\New-AzureRmSchedulerServiceBusTopicJob.md)
+### [New-AzureRmSchedulerServiceBusTopicJob](./New-AzureRmSchedulerServiceBusTopicJob.md)
 Creates a service bus topic job.
 
 
-### [New-AzureRmSchedulerStorageQueueJob](.\New-AzureRmSchedulerStorageQueueJob.md)
+### [New-AzureRmSchedulerStorageQueueJob](./New-AzureRmSchedulerStorageQueueJob.md)
 Creates a storage queue job.
 
 
-### [Remove-AzureRmSchedulerJobCollection](.\Remove-AzureRmSchedulerJobCollection.md)
+### [Remove-AzureRmSchedulerJobCollection](./Remove-AzureRmSchedulerJobCollection.md)
 Removes a job collection.
 
 
-### [Remove-AzureRmSchedulerJob](.\Remove-AzureRmSchedulerJob.md)
+### [Remove-AzureRmSchedulerJob](./Remove-AzureRmSchedulerJob.md)
 Removes a Scheduler job.
 
 
-### [Set-AzureRmSchedulerHttpJob](.\Set-AzureRmSchedulerHttpJob.md)
+### [Set-AzureRmSchedulerHttpJob](./Set-AzureRmSchedulerHttpJob.md)
 Modifies a Scheduler HTTP job.
 
 
-### [Set-AzureRmSchedulerJobCollection](.\Set-AzureRmSchedulerJobCollection.md)
+### [Set-AzureRmSchedulerJobCollection](./Set-AzureRmSchedulerJobCollection.md)
 Modifies a job collection.
 
 
-### [Set-AzureRmSchedulerServiceBusQueueJob](.\Set-AzureRmSchedulerServiceBusQueueJob.md)
+### [Set-AzureRmSchedulerServiceBusQueueJob](./Set-AzureRmSchedulerServiceBusQueueJob.md)
 Modifies a service bus queue job.
 
 
-### [Set-AzureRmSchedulerServiceBusTopicJob](.\Set-AzureRmSchedulerServiceBusTopicJob.md)
+### [Set-AzureRmSchedulerServiceBusTopicJob](./Set-AzureRmSchedulerServiceBusTopicJob.md)
 Modifies a service bus topic job.
 
 
-### [Set-AzureRmSchedulerStorageQueueJob](.\Set-AzureRmSchedulerStorageQueueJob.md)
+### [Set-AzureRmSchedulerStorageQueueJob](./Set-AzureRmSchedulerStorageQueueJob.md)
 Modifies a storage queue job.
 
 

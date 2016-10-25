@@ -186,10 +186,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryRecoveryPlan](.\Get-AzureRmSiteRecoveryRecoveryPlan.md)
+[Get-AzureRmSiteRecoveryRecoveryPlan](./Get-AzureRmSiteRecoveryRecoveryPlan.md)
 
-[Remove-AzureRmSiteRecoveryRecoveryPlan](.\Remove-AzureRmSiteRecoveryRecoveryPlan.md)
+[Remove-AzureRmSiteRecoveryRecoveryPlan](./Remove-AzureRmSiteRecoveryRecoveryPlan.md)
 
-[Update-AzureRmSiteRecoveryRecoveryPlan](.\Update-AzureRmSiteRecoveryRecoveryPlan.md)
+[Update-AzureRmSiteRecoveryRecoveryPlan](./Update-AzureRmSiteRecoveryRecoveryPlan.md)
 
 

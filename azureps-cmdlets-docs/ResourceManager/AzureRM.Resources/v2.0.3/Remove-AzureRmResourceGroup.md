@@ -178,10 +178,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmResourceGroup](.\Get-AzureRmResourceGroup.md)
+[Get-AzureRmResourceGroup](./Get-AzureRmResourceGroup.md)
 
-[New-AzureRmResourceGroup](.\New-AzureRmResourceGroup.md)
+[New-AzureRmResourceGroup](./New-AzureRmResourceGroup.md)
 
-[Set-AzureRmResourceGroup](.\Set-AzureRmResourceGroup.md)
+[Set-AzureRmResourceGroup](./Set-AzureRmResourceGroup.md)
 
 

@@ -140,8 +140,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmLogicAppRunHistory](.\Get-AzureRmLogicAppRunHistory.md)
+[Get-AzureRmLogicAppRunHistory](./Get-AzureRmLogicAppRunHistory.md)
 
-[Stop-AzureRmLogicAppRun](.\Stop-AzureRmLogicAppRun.md)
+[Stop-AzureRmLogicAppRun](./Stop-AzureRmLogicAppRun.md)
 
 

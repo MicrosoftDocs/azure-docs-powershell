@@ -142,10 +142,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureHDInsightStorage](.\Add-AzureHDInsightStorage.md)
+[Add-AzureHDInsightStorage](./Add-AzureHDInsightStorage.md)
 
-[New-AzureHDInsightClusterConfig](.\New-AzureHDInsightClusterConfig.md)
+[New-AzureHDInsightClusterConfig](./New-AzureHDInsightClusterConfig.md)
 
-[Azure HDInsight Cmdlets](.\AzureRM.HDInsight.md)
+[Azure HDInsight Cmdlets](./AzureRM.HDInsight.md)
 
 

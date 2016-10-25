@@ -268,12 +268,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureBatchNodeFile](.\Get-AzureBatchNodeFile.md)
+[Get-AzureBatchNodeFile](./Get-AzureBatchNodeFile.md)
 
-[Get-AzureBatchNodeFileContent](.\Get-AzureBatchNodeFileContent.md)
+[Get-AzureBatchNodeFileContent](./Get-AzureBatchNodeFileContent.md)
 
-[Get-AzureBatchPool](.\Get-AzureBatchPool.md)
+[Get-AzureBatchPool](./Get-AzureBatchPool.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

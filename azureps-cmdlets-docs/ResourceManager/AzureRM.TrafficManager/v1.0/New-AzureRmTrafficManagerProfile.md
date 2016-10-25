@@ -222,16 +222,16 @@ This cmdlet returns a new TrafficManagerProfile object.
 
 ## RELATED LINKS
 
-[Add-AzureRmTrafficManagerEndpointConfig](.\Add-AzureRmTrafficManagerEndpointConfig.md)
+[Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)
 
-[Disable-AzureRmTrafficManagerProfile](.\Disable-AzureRmTrafficManagerProfile.md)
+[Disable-AzureRmTrafficManagerProfile](./Disable-AzureRmTrafficManagerProfile.md)
 
-[Enable-AzureRmTrafficManagerProfile](.\Enable-AzureRmTrafficManagerProfile.md)
+[Enable-AzureRmTrafficManagerProfile](./Enable-AzureRmTrafficManagerProfile.md)
 
-[Get-AzureRmTrafficManagerProfile](.\Get-AzureRmTrafficManagerProfile.md)
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
 
-[Remove-AzureRmTrafficManagerProfile](.\Remove-AzureRmTrafficManagerProfile.md)
+[Remove-AzureRmTrafficManagerProfile](./Remove-AzureRmTrafficManagerProfile.md)
 
-[Set-AzureRmTrafficManagerProfile](.\Set-AzureRmTrafficManagerProfile.md)
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
 
 

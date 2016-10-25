@@ -229,12 +229,12 @@ PS C:\\\> $Credential = New-Object -TypeName 'System.Management.Automation.PSCre
 
 ## RELATED LINKS
 
-[Get-AzureSqlDatabase](.\Get-AzureSqlDatabase.md)
+[Get-AzureSqlDatabase](./Get-AzureSqlDatabase.md)
 
-[New-AzureSqlDatabase](.\New-AzureSqlDatabase.md)
+[New-AzureSqlDatabase](./New-AzureSqlDatabase.md)
 
-[Remove-AzureSqlDatabase](.\Remove-AzureSqlDatabase.md)
+[Remove-AzureSqlDatabase](./Remove-AzureSqlDatabase.md)
 
-[Set-AzureSqlDatabase](.\Set-AzureSqlDatabase.md)
+[Set-AzureSqlDatabase](./Set-AzureSqlDatabase.md)
 
 

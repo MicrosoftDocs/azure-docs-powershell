@@ -105,8 +105,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureWebsite](.\Get-AzureWebsite.md)
+[Get-AzureWebsite](./Get-AzureWebsite.md)
 
-[Remove-AzureWebsite](.\Remove-AzureWebsite.md)
+[Remove-AzureWebsite](./Remove-AzureWebsite.md)
 
 

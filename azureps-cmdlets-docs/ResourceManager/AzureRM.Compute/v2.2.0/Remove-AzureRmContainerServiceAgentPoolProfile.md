@@ -76,8 +76,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmContainerServiceAgentPoolProfile](.\Add-AzureRmContainerServiceAgentPoolProfile.md)
+[Add-AzureRmContainerServiceAgentPoolProfile](./Add-AzureRmContainerServiceAgentPoolProfile.md)
 
-[Get-AzureRmContainerService](.\Get-AzureRmContainerService.md)
+[Get-AzureRmContainerService](./Get-AzureRmContainerService.md)
 
 

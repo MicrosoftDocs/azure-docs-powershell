@@ -190,10 +190,10 @@ Output from Get-ACSFarm and Get-ACSRoleInstance can be piped to this cmdlet's in
 
 ## RELATED LINKS
 
-[Start-ACSBlobServerRoleInstance](.\Start-ACSBlobServerRoleInstance.md)
+[Start-ACSBlobServerRoleInstance](./Start-ACSBlobServerRoleInstance.md)
 
-[Get-ACSRoleInstance](.\Get-ACSRoleInstance.md)
+[Get-ACSRoleInstance](./Get-ACSRoleInstance.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

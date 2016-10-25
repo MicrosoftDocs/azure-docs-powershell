@@ -120,10 +120,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmAutomationWebhook](.\Get-AzureRMAutomationWebhook.md)
+[Get-AzureRmAutomationWebhook](./Get-AzureRMAutomationWebhook.md)
 
-[New-AzureRmAutomationWebhook](.\New-AzureRMAutomationWebhook.md)
+[New-AzureRmAutomationWebhook](./New-AzureRMAutomationWebhook.md)
 
-[Set-AzureRmAutomationWebhook](.\Set-AzureRMAutomationWebhook.md)
+[Set-AzureRmAutomationWebhook](./Set-AzureRMAutomationWebhook.md)
 
 

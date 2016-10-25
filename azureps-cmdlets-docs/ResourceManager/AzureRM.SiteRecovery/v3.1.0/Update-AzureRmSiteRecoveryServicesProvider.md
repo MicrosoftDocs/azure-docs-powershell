@@ -55,8 +55,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryServicesProvider](.\Get-AzureRmSiteRecoveryServicesProvider.md)
+[Get-AzureRmSiteRecoveryServicesProvider](./Get-AzureRmSiteRecoveryServicesProvider.md)
 
-[Remove-AzureRmSiteRecoveryServicesProvider](.\Remove-AzureRmSiteRecoveryServicesProvider.md)
+[Remove-AzureRmSiteRecoveryServicesProvider](./Remove-AzureRmSiteRecoveryServicesProvider.md)
 
 

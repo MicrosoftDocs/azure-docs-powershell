@@ -157,12 +157,12 @@ This cmdlet returns a **TaskStatusInfo** object, if you specify the *WaitForComp
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleStorageAccountCredential](.\Get-AzureStorSimpleStorageAccountCredential.md)
+[Get-AzureStorSimpleStorageAccountCredential](./Get-AzureStorSimpleStorageAccountCredential.md)
 
-[New-AzureStorSimpleStorageAccountCredential](.\New-AzureStorSimpleStorageAccountCredential.md)
+[New-AzureStorSimpleStorageAccountCredential](./New-AzureStorSimpleStorageAccountCredential.md)
 
-[Set-AzureStorSimpleStorageAccountCredential](.\Set-AzureStorSimpleStorageAccountCredential.md)
+[Set-AzureStorSimpleStorageAccountCredential](./Set-AzureStorSimpleStorageAccountCredential.md)
 
-[Get-AzureStorSimpleJob](.\Get-AzureStorSimpleJob.md)
+[Get-AzureStorSimpleJob](./Get-AzureStorSimpleJob.md)
 
 

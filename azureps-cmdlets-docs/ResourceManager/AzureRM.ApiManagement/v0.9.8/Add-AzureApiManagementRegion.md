@@ -168,10 +168,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureApiManagementRegion](.\Remove-AzureApiManagementRegion.md)
+[Remove-AzureApiManagementRegion](./Remove-AzureApiManagementRegion.md)
 
-[Update-AzureApiManagementRegion](.\Update-AzureApiManagementRegion.md)
+[Update-AzureApiManagementRegion](./Update-AzureApiManagementRegion.md)
 
-[Update-AzureApiManagementDeployment](.\Update-AzureApiManagementDeployment.md)
+[Update-AzureApiManagementDeployment](./Update-AzureApiManagementDeployment.md)
 
 

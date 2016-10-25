@@ -72,8 +72,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMPuppetExtension](.\Get-AzureVMPuppetExtension.md)
+[Get-AzureVMPuppetExtension](./Get-AzureVMPuppetExtension.md)
 
-[Set-AzureVMPuppetExtension](.\Set-AzureVMPuppetExtension.md)
+[Set-AzureVMPuppetExtension](./Set-AzureVMPuppetExtension.md)
 
 

@@ -304,10 +304,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmIntegrationAccountAgreement](.\Get-AzureRmIntegrationAccountAgreement.md)
+[Get-AzureRmIntegrationAccountAgreement](./Get-AzureRmIntegrationAccountAgreement.md)
 
-[Remove-AzureRmIntegrationAccountAgreement](.\Remove-AzureRmIntegrationAccountAgreement.md)
+[Remove-AzureRmIntegrationAccountAgreement](./Remove-AzureRmIntegrationAccountAgreement.md)
 
-[Set-AzureRmIntegrationAccountAgreement](.\Set-AzureRmIntegrationAccountAgreement.md)
+[Set-AzureRmIntegrationAccountAgreement](./Set-AzureRmIntegrationAccountAgreement.md)
 
 

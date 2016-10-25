@@ -88,10 +88,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
-[New-AzureVM](.\New-AzureVM.md)
+[New-AzureVM](./New-AzureVM.md)
 
-[Update-AzureVM](.\Update-AzureVM.md)
+[Update-AzureVM](./Update-AzureVM.md)
 
 

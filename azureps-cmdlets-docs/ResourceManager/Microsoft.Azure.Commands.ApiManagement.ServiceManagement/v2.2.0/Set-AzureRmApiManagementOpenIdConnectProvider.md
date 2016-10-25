@@ -167,10 +167,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApiManagementOpenIdConnectProvider](.\Get-AzureRmApiManagementOpenIdConnectProvider.md)
+[Get-AzureRmApiManagementOpenIdConnectProvider](./Get-AzureRmApiManagementOpenIdConnectProvider.md)
 
-[New-AzureRmApiManagementOpenIdConnectProvider](.\New-AzureRmApiManagementOpenIdConnectProvider.md)
+[New-AzureRmApiManagementOpenIdConnectProvider](./New-AzureRmApiManagementOpenIdConnectProvider.md)
 
-[Remove-AzureRmApiManagementOpenIdConnectProvider](.\Remove-AzureRmApiManagementOpenIdConnectProvider.md)
+[Remove-AzureRmApiManagementOpenIdConnectProvider](./Remove-AzureRmApiManagementOpenIdConnectProvider.md)
 
 

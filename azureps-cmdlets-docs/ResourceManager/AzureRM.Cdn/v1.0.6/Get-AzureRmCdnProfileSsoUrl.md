@@ -126,6 +126,6 @@ This cmdlet returns a URL.
 
 ## RELATED LINKS
 
-[Get-AzureRMCdnProfile](.\Get-AzureRMCdnProfile.md)
+[Get-AzureRMCdnProfile](./Get-AzureRMCdnProfile.md)
 
 

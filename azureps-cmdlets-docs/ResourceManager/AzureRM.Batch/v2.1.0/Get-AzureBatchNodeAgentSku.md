@@ -101,6 +101,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBatchAccountKeys](.\Get-AzureRmBatchAccountKeys.md)
+[Get-AzureRmBatchAccountKeys](./Get-AzureRmBatchAccountKeys.md)
 
 

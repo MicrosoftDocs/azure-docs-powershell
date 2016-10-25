@@ -206,8 +206,8 @@ Output from Get-ACSFarm and Get-ACSTableService can be piped to this cmdlet's in
 
 ## RELATED LINKS
 
-[Get-ACSTableService](.\Get-ACSTableService.md)
+[Get-ACSTableService](./Get-ACSTableService.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

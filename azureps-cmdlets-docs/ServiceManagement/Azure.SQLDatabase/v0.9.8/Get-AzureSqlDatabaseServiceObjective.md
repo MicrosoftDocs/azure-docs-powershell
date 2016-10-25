@@ -155,8 +155,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure SQL Database](.\Azure.SQLDatabase.md)
+[Azure SQL Database](./Azure.SQLDatabase.md)
 
-[New-AzureSqlDatabaseServerContext](.\New-AzureSqlDatabaseServerContext.md)
+[New-AzureSqlDatabaseServerContext](./New-AzureSqlDatabaseServerContext.md)
 
 

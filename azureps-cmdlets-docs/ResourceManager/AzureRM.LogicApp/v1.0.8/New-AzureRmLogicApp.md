@@ -443,12 +443,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmLogicApp](.\Get-AzureRmLogicApp.md)
+[Get-AzureRmLogicApp](./Get-AzureRmLogicApp.md)
 
-[Remove-AzureRmLogicApp](.\Remove-AzureRmLogicApp.md)
+[Remove-AzureRmLogicApp](./Remove-AzureRmLogicApp.md)
 
-[Set-AzureRmLogicApp](.\Set-AzureRmLogicApp.md)
+[Set-AzureRmLogicApp](./Set-AzureRmLogicApp.md)
 
-[Start-AzureRmLogicApp](.\Start-AzureRmLogicApp.md)
+[Start-AzureRmLogicApp](./Start-AzureRmLogicApp.md)
 
 

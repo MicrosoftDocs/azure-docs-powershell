@@ -85,10 +85,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureLoadBalancerBackendAddressPoolConfig](.\Add-AzureLoadBalancerBackendAddressPoolConfig.md)
+[Add-AzureLoadBalancerBackendAddressPoolConfig](./Add-AzureLoadBalancerBackendAddressPoolConfig.md)
 
-[New-AzureLoadBalancerBackendAddressPoolConfig](.\New-AzureLoadBalancerBackendAddressPoolConfig.md)
+[New-AzureLoadBalancerBackendAddressPoolConfig](./New-AzureLoadBalancerBackendAddressPoolConfig.md)
 
-[Remove-AzureLoadBalancerBackendAddressPoolConfig](.\Remove-AzureLoadBalancerBackendAddressPoolConfig.md)
+[Remove-AzureLoadBalancerBackendAddressPoolConfig](./Remove-AzureLoadBalancerBackendAddressPoolConfig.md)
 
 

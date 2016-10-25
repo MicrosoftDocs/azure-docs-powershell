@@ -187,12 +187,12 @@ System.String
 
 ## RELATED LINKS
 
-[Get-AzureApplicationGatewayBackendAddressPool](.\Get-AzureApplicationGatewayBackendAddressPool.md)
+[Get-AzureApplicationGatewayBackendAddressPool](./Get-AzureApplicationGatewayBackendAddressPool.md)
 
-[New-AzureApplicationGatewayBackendAddressPool](.\New-AzureApplicationGatewayBackendAddressPool.md)
+[New-AzureApplicationGatewayBackendAddressPool](./New-AzureApplicationGatewayBackendAddressPool.md)
 
-[Remove-AzureApplicationGatewayBackendAddressPool](.\Remove-AzureApplicationGatewayBackendAddressPool.md)
+[Remove-AzureApplicationGatewayBackendAddressPool](./Remove-AzureApplicationGatewayBackendAddressPool.md)
 
-[Set-AzureApplicationGatewayBackendAddressPool](.\Set-AzureApplicationGatewayBackendAddressPool.md)
+[Set-AzureApplicationGatewayBackendAddressPool](./Set-AzureApplicationGatewayBackendAddressPool.md)
 
 

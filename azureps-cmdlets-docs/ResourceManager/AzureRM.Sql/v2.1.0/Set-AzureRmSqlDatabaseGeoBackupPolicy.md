@@ -168,6 +168,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseGeoBackupPolicy](.\Get-AzureRmSqlDatabaseGeoBackupPolicy.md)
+[Get-AzureRmSqlDatabaseGeoBackupPolicy](./Get-AzureRmSqlDatabaseGeoBackupPolicy.md)
 
 

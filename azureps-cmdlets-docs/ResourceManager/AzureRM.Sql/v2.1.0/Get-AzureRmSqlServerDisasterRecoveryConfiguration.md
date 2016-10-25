@@ -148,10 +148,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmSqlServerDisasterRecoveryConfiguration](.\New-AzureRmSqlServerDisasterRecoveryConfiguration.md)
+[New-AzureRmSqlServerDisasterRecoveryConfiguration](./New-AzureRmSqlServerDisasterRecoveryConfiguration.md)
 
-[Remove-AzureRmSqlServerDisasterRecoveryConfiguration](.\Remove-AzureRmSqlServerDisasterRecoveryConfiguration.md)
+[Remove-AzureRmSqlServerDisasterRecoveryConfiguration](./Remove-AzureRmSqlServerDisasterRecoveryConfiguration.md)
 
-[Set-AzureRmSqlServerDisasterRecoveryConfiguration](.\Set-AzureRmSqlServerDisasterRecoveryConfiguration.md)
+[Set-AzureRmSqlServerDisasterRecoveryConfiguration](./Set-AzureRmSqlServerDisasterRecoveryConfiguration.md)
 
 

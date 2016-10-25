@@ -164,10 +164,10 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Get-AzureDnsZone](.\Get-AzureDnsZone.md)
+[Get-AzureDnsZone](./Get-AzureDnsZone.md)
 
-[New-AzureDnsZone](.\New-AzureDnsZone.md)
+[New-AzureDnsZone](./New-AzureDnsZone.md)
 
-[Set-AzureDnsZone](.\Set-AzureDnsZone.md)
+[Set-AzureDnsZone](./Set-AzureDnsZone.md)
 
 

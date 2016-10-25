@@ -128,16 +128,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseDataMaskingRule](.\Get-AzureRmSqlDatabaseDataMaskingRule.md)
+[Get-AzureRmSqlDatabaseDataMaskingRule](./Get-AzureRmSqlDatabaseDataMaskingRule.md)
 
-[New-AzureRmSqlDatabaseDataMaskingRule](.\New-AzureRmSqlDatabaseDataMaskingRule.md)
+[New-AzureRmSqlDatabaseDataMaskingRule](./New-AzureRmSqlDatabaseDataMaskingRule.md)
 
-[Remove-AzureRmSqlDatabaseDataMaskingRule](.\Remove-AzureRmSqlDatabaseDataMaskingRule.md)
+[Remove-AzureRmSqlDatabaseDataMaskingRule](./Remove-AzureRmSqlDatabaseDataMaskingRule.md)
 
-[Set-AzureRmSqlDatabaseDataMaskingPolicy](.\Set-AzureRmSqlDatabaseDataMaskingPolicy.md)
+[Set-AzureRmSqlDatabaseDataMaskingPolicy](./Set-AzureRmSqlDatabaseDataMaskingPolicy.md)
 
-[Set-AzureRmSqlDatabaseDataMaskingRule](.\Set-AzureRmSqlDatabaseDataMaskingRule.md)
+[Set-AzureRmSqlDatabaseDataMaskingRule](./Set-AzureRmSqlDatabaseDataMaskingRule.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

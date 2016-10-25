@@ -187,10 +187,10 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
-[New-AzureRmSqlDatabaseSecondary](.\New-AzureRmSqlDatabaseSecondary.md)
+[New-AzureRmSqlDatabaseSecondary](./New-AzureRmSqlDatabaseSecondary.md)
 
-[Set-AzureRmSqlDatabaseSecondary](.\Set-AzureRmSqlDatabaseSecondary.md)
+[Set-AzureRmSqlDatabaseSecondary](./Set-AzureRmSqlDatabaseSecondary.md)
 
 

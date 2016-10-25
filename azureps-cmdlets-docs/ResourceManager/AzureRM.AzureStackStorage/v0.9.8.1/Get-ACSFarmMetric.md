@@ -264,8 +264,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
-[Get-ACSFarmMetricDefinition](.\Get-ACSFarmMetricDefinition.md)
+[Get-ACSFarmMetricDefinition](./Get-ACSFarmMetricDefinition.md)
 
 

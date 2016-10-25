@@ -87,6 +87,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure Storage Manager Cmdlets](.\AzureRM.Storage.md)
+[Azure Storage Manager Cmdlets](./AzureRM.Storage.md)
 
 

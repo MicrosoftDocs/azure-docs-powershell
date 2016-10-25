@@ -102,8 +102,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureStaticVNetIP](.\Get-AzureStaticVNetIP.md)
+[Get-AzureStaticVNetIP](./Get-AzureStaticVNetIP.md)
 
-[Test-AzureStaticVNetIP](.\Test-AzureStaticVNetIP.md)
+[Test-AzureStaticVNetIP](./Test-AzureStaticVNetIP.md)
 
 

@@ -116,8 +116,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureApiManagementRegion](.\Add-AzureApiManagementRegion.md)
+[Add-AzureApiManagementRegion](./Add-AzureApiManagementRegion.md)
 
-[Update-AzureApiManagementRegion](.\Update-AzureApiManagementRegion.md)
+[Update-AzureApiManagementRegion](./Update-AzureApiManagementRegion.md)
 
 

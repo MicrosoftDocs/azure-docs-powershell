@@ -202,10 +202,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmCdnCustomDomain](.\Get-AzureRmCdnCustomDomain.md)
+[Get-AzureRmCdnCustomDomain](./Get-AzureRmCdnCustomDomain.md)
 
-[New-AzureRmCdnCustomDomain](.\New-AzureRmCdnCustomDomain.md)
+[New-AzureRmCdnCustomDomain](./New-AzureRmCdnCustomDomain.md)
 
-[Test-AzureRmCdnCustomDomain](.\Test-AzureRmCdnCustomDomain.md)
+[Test-AzureRmCdnCustomDomain](./Test-AzureRmCdnCustomDomain.md)
 
 

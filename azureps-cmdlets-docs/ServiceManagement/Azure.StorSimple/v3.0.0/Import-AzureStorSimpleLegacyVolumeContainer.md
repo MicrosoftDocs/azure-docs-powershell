@@ -154,8 +154,8 @@ This command returns the status of the migration import volume container job if 
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleLegacyVolumeContainerStatus](.\Get-AzureStorSimpleLegacyVolumeContainerStatus.md)
+[Get-AzureStorSimpleLegacyVolumeContainerStatus](./Get-AzureStorSimpleLegacyVolumeContainerStatus.md)
 
-[Import-AzureStorSimpleLegacyApplianceConfig](.\Import-AzureStorSimpleLegacyApplianceConfig.md)
+[Import-AzureStorSimpleLegacyApplianceConfig](./Import-AzureStorSimpleLegacyApplianceConfig.md)
 
 

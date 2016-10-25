@@ -189,14 +189,14 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Remove-AzureRmVmssExtension](.\Remove-AzureRmVmssExtension.md)
+[Remove-AzureRmVmssExtension](./Remove-AzureRmVmssExtension.md)
 
-[Get-AzureRmVMImagePublisher](.\Get-AzureRmVMImagePublisher.md)
+[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
 
-[Get-AzureRmVMExtensionImageType](.\Get-AzureRmVMExtensionImageType.md)
+[Get-AzureRmVMExtensionImageType](./Get-AzureRmVMExtensionImageType.md)
 
-[Get-AzureRmVMExtensionImage](.\Get-AzureRmVMExtensionImage.md)
+[Get-AzureRmVMExtensionImage](./Get-AzureRmVMExtensionImage.md)
 
-[New-AzureRmVmssConfig](.\New-AzureRmVmssConfig.md)
+[New-AzureRmVmssConfig](./New-AzureRmVmssConfig.md)
 
 

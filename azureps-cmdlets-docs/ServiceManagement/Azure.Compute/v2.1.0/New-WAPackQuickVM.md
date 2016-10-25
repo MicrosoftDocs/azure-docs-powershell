@@ -122,8 +122,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-WAPackVM](.\New-WAPackVM.md)
+[New-WAPackVM](./New-WAPackVM.md)
 
-[Get-WAPackVMTemplate](.\Get-WAPackVMTemplate.md)
+[Get-WAPackVMTemplate](./Get-WAPackVMTemplate.md)
 
 

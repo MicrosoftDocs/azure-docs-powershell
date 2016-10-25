@@ -157,8 +157,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureStorageQueue](.\New-AzureStorageQueue.md)
+[New-AzureStorageQueue](./New-AzureStorageQueue.md)
 
-[Remove-AzureStorageQueue](.\Remove-AzureStorageQueue.md)
+[Remove-AzureStorageQueue](./Remove-AzureStorageQueue.md)
 
 

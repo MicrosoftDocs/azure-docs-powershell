@@ -149,8 +149,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureKeyVault](.\Get-AzureKeyVault.md)
+[Get-AzureKeyVault](./Get-AzureKeyVault.md)
 
-[New-AzureKeyVault](.\New-AzureKeyVault.md)
+[New-AzureKeyVault](./New-AzureKeyVault.md)
 
 

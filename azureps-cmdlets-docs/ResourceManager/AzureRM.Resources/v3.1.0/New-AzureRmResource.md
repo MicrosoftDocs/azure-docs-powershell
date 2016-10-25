@@ -401,14 +401,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Find-AzureRmResource](.\Find-AzureRmResource.md)
+[Find-AzureRmResource](./Find-AzureRmResource.md)
 
-[Get-AzureRmResource](.\Get-AzureRmResource.md)
+[Get-AzureRmResource](./Get-AzureRmResource.md)
 
-[Move-AzureRmResource](.\Move-AzureRmResource.md)
+[Move-AzureRmResource](./Move-AzureRmResource.md)
 
-[Remove-AzureRmResource](.\Remove-AzureRmResource.md)
+[Remove-AzureRmResource](./Remove-AzureRmResource.md)
 
-[Set-AzureRmResource](.\Set-AzureRmResource.md)
+[Set-AzureRmResource](./Set-AzureRmResource.md)
 
 

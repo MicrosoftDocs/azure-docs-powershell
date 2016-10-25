@@ -165,6 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[RMAzure_SqlDatabase](.\AzureRM.Sql.md)
+[RMAzure_SqlDatabase](./AzureRM.Sql.md)
 
 

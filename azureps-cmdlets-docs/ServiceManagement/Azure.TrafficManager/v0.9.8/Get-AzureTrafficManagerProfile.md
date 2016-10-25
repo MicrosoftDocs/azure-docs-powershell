@@ -89,16 +89,16 @@ This cmdlet generates a Traffic Manager profile object or objects.
 
 ## RELATED LINKS
 
-[Add-AzureTrafficManagerEndpoint](.\Add-AzureTrafficManagerEndpoint.md)
+[Add-AzureTrafficManagerEndpoint](./Add-AzureTrafficManagerEndpoint.md)
 
-[Disable-AzureTrafficManagerProfile](.\Disable-AzureTrafficManagerProfile.md)
+[Disable-AzureTrafficManagerProfile](./Disable-AzureTrafficManagerProfile.md)
 
-[Enable-AzureTrafficManagerProfile](.\Enable-AzureTrafficManagerProfile.md)
+[Enable-AzureTrafficManagerProfile](./Enable-AzureTrafficManagerProfile.md)
 
-[New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
+[New-AzureTrafficManagerProfile](./New-AzureTrafficManagerProfile.md)
 
-[Remove-AzureTrafficManagerProfile](.\Remove-AzureTrafficManagerProfile.md)
+[Remove-AzureTrafficManagerProfile](./Remove-AzureTrafficManagerProfile.md)
 
-[Set-AzureTrafficManagerProfile](.\Set-AzureTrafficManagerProfile.md)
+[Set-AzureTrafficManagerProfile](./Set-AzureTrafficManagerProfile.md)
 
 

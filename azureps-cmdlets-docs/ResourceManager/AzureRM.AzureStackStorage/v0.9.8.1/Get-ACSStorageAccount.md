@@ -232,10 +232,10 @@ Output from Get-ACSFarm can be piped to this cmdlet.
 
 ## RELATED LINKS
 
-[Sync-ACSStorageAccount](.\Sync-ACSStorageAccount.md)
+[Sync-ACSStorageAccount](./Sync-ACSStorageAccount.md)
 
-[Undo-ACSStorageAccountDeletion](.\Undo-ACSStorageAccountDeletion.md)
+[Undo-ACSStorageAccountDeletion](./Undo-ACSStorageAccountDeletion.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

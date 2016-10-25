@@ -153,12 +153,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApplicationGatewayAuthenticationCertificate](.\Get-AzureRmApplicationGatewayAuthenticationCertificate.md)
+[Get-AzureRmApplicationGatewayAuthenticationCertificate](./Get-AzureRmApplicationGatewayAuthenticationCertificate.md)
 
-[New-AzureRmApplicationGatewayAuthenticationCertificate](.\New-AzureRmApplicationGatewayAuthenticationCertificate.md)
+[New-AzureRmApplicationGatewayAuthenticationCertificate](./New-AzureRmApplicationGatewayAuthenticationCertificate.md)
 
-[Remove-AzureRmApplicationGatewayAuthenticationCertificate](.\Remove-AzureRmApplicationGatewayAuthenticationCertificate.md)
+[Remove-AzureRmApplicationGatewayAuthenticationCertificate](./Remove-AzureRmApplicationGatewayAuthenticationCertificate.md)
 
-[Set-AzureRmApplicationGatewayAuthenticationCertificate](.\Set-AzureRmApplicationGatewayAuthenticationCertificate.md)
+[Set-AzureRmApplicationGatewayAuthenticationCertificate](./Set-AzureRmApplicationGatewayAuthenticationCertificate.md)
 
 

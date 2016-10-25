@@ -120,10 +120,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVMDiagnosticsExtension](.\Get-AzureRMVMDiagnosticsExtension.md)
+[Get-AzureRmVMDiagnosticsExtension](./Get-AzureRMVMDiagnosticsExtension.md)
 
-[Set-AzureRmVMDiagnosticsExtension](.\Set-AzureRMVMDiagnosticsExtension.md)
+[Set-AzureRmVMDiagnosticsExtension](./Set-AzureRMVMDiagnosticsExtension.md)
 
-[Update-AzureRmVM](.\Update-AzureRmVM.md)
+[Update-AzureRmVM](./Update-AzureRmVM.md)
 
 

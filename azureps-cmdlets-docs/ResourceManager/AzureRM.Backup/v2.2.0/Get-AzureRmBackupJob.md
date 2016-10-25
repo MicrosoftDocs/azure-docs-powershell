@@ -265,10 +265,10 @@ This cmdlet returns one or more Backup jobs.
 
 ## RELATED LINKS
 
-[Get-AzureRmBackupVault](.\Get-AzureRmBackupVault.md)
+[Get-AzureRmBackupVault](./Get-AzureRmBackupVault.md)
 
-[Stop-AzureRmBackupJob](.\Stop-AzureRmBackupJob.md)
+[Stop-AzureRmBackupJob](./Stop-AzureRmBackupJob.md)
 
-[Wait-AzureRmBackupJob](.\Wait-AzureRmBackupJob.md)
+[Wait-AzureRmBackupJob](./Wait-AzureRmBackupJob.md)
 
 

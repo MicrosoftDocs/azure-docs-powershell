@@ -170,6 +170,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Publish-AzureRmCdnEndpointContent](.\Publish-AzureRmCdnEndpointContent.md)
+[Publish-AzureRmCdnEndpointContent](./Publish-AzureRmCdnEndpointContent.md)
 
 

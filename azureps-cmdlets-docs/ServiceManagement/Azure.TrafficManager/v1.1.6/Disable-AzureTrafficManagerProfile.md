@@ -102,14 +102,14 @@ If the operation is successful and if you specify the *PassThru* parameter, this
 
 ## RELATED LINKS
 
-[Enable-AzureTrafficManagerProfile](.\Enable-AzureTrafficManagerProfile.md)
+[Enable-AzureTrafficManagerProfile](./Enable-AzureTrafficManagerProfile.md)
 
-[Get-AzureTrafficManagerProfile](.\Get-AzureTrafficManagerProfile.md)
+[Get-AzureTrafficManagerProfile](./Get-AzureTrafficManagerProfile.md)
 
-[New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
+[New-AzureTrafficManagerProfile](./New-AzureTrafficManagerProfile.md)
 
-[Remove-AzureTrafficManagerProfile](.\Remove-AzureTrafficManagerProfile.md)
+[Remove-AzureTrafficManagerProfile](./Remove-AzureTrafficManagerProfile.md)
 
-[Set-AzureTrafficManagerProfile](.\Set-AzureTrafficManagerProfile.md)
+[Set-AzureTrafficManagerProfile](./Set-AzureTrafficManagerProfile.md)
 
 

@@ -78,6 +78,6 @@ This cmdlet returns the name of the vault credential file.
 
 ## RELATED LINKS
 
-[Get-AzureRmBackupVault](.\Get-AzureRmBackupVault.md)
+[Get-AzureRmBackupVault](./Get-AzureRmBackupVault.md)
 
 

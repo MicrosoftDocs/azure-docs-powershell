@@ -178,10 +178,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureSqlDatabaseServer](.\Get-AzureSqlDatabaseServer.md)
+[Get-AzureSqlDatabaseServer](./Get-AzureSqlDatabaseServer.md)
 
-[Remove-AzureSqlDatabaseServer](.\Remove-AzureSqlDatabaseServer.md)
+[Remove-AzureSqlDatabaseServer](./Remove-AzureSqlDatabaseServer.md)
 
-[Set-AzureSqlDatabaseServer](.\Set-AzureSqlDatabaseServer.md)
+[Set-AzureSqlDatabaseServer](./Set-AzureSqlDatabaseServer.md)
 
 

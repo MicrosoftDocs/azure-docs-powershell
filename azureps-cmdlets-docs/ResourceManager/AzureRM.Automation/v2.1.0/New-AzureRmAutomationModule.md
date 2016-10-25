@@ -120,10 +120,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmAutomationModule](.\Get-AzureRmAutomationModule.md)
+[Get-AzureRmAutomationModule](./Get-AzureRmAutomationModule.md)
 
-[Remove-AzureRmAutomationModule](.\Remove-AzureRmAutomationModule.md)
+[Remove-AzureRmAutomationModule](./Remove-AzureRmAutomationModule.md)
 
-[Set-AzureRmAutomationModule](.\Set-AzureRmAutomationModule.md)
+[Set-AzureRmAutomationModule](./Set-AzureRmAutomationModule.md)
 
 

@@ -74,8 +74,8 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 
 ## RELATED LINKS
 
-[Get-AzureRmVirtualNetworkGateway](.\Get-AzureRmVirtualNetworkGateway.md)
+[Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
-[Set-AzureRmVirtualNetworkGatewayDefaultSite](.\Set-AzureRmVirtualNetworkGatewayDefaultSite.md)
+[Set-AzureRmVirtualNetworkGatewayDefaultSite](./Set-AzureRmVirtualNetworkGatewayDefaultSite.md)
 
 

@@ -288,12 +288,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmNetworkInterfaceIpConfig](.\Add-AzureRmNetworkInterfaceIpConfig.md)
+[Add-AzureRmNetworkInterfaceIpConfig](./Add-AzureRmNetworkInterfaceIpConfig.md)
 
-[Get-AzureRmLoadBalancer](.\Get-AzureRmLoadBalancer.md)
+[Get-AzureRmLoadBalancer](./Get-AzureRmLoadBalancer.md)
 
-[Remove-AzureRmLoadBalancer](.\Remove-AzureRmLoadBalancer.md)
+[Remove-AzureRmLoadBalancer](./Remove-AzureRmLoadBalancer.md)
 
-[Set-AzureRmLoadBalancer](.\Set-AzureRmLoadBalancer.md)
+[Set-AzureRmLoadBalancer](./Set-AzureRmLoadBalancer.md)
 
 

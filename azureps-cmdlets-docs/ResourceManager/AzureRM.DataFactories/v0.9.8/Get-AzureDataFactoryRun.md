@@ -167,6 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure Data Factory Cmdlets](.\AzureRM.DataFactories.md)
+[Azure Data Factory Cmdlets](./AzureRM.DataFactories.md)
 
 

@@ -150,12 +150,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Backup-AzureRmApiManagement](.\Backup-AzureRmApiManagement.md)
+[Backup-AzureRmApiManagement](./Backup-AzureRmApiManagement.md)
 
-[Get-AzureRmApiManagement](.\Get-AzureRmApiManagement.md)
+[Get-AzureRmApiManagement](./Get-AzureRmApiManagement.md)
 
-[New-AzureRmApiManagement](.\New-AzureRmApiManagement.md)
+[New-AzureRmApiManagement](./New-AzureRmApiManagement.md)
 
-[Restore-AzureRmApiManagement](.\Restore-AzureRmApiManagement.md)
+[Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
 
 

@@ -78,14 +78,14 @@ You can modify this object, and then apply changes to Traffic Manager by using *
 
 ## RELATED LINKS
 
-[Disable-AzureRmTrafficManagerProfile](.\Disable-AzureRmTrafficManagerProfile.md)
+[Disable-AzureRmTrafficManagerProfile](./Disable-AzureRmTrafficManagerProfile.md)
 
-[Enable-AzureRmTrafficManagerProfile](.\Enable-AzureRmTrafficManagerProfile.md)
+[Enable-AzureRmTrafficManagerProfile](./Enable-AzureRmTrafficManagerProfile.md)
 
-[New-AzureRmTrafficManagerProfile](.\New-AzureRmTrafficManagerProfile.md)
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
 
-[Remove-AzureRmTrafficManagerProfile](.\Remove-AzureRmTrafficManagerProfile.md)
+[Remove-AzureRmTrafficManagerProfile](./Remove-AzureRmTrafficManagerProfile.md)
 
-[Set-AzureRmTrafficManagerProfile](.\Set-AzureRmTrafficManagerProfile.md)
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
 
 

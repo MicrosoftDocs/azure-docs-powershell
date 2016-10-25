@@ -57,8 +57,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Reset-AzureRmServerManagementGatewayProfile](.\Reset-AzureRmServerManagementGatewayProfile.md)
+[Reset-AzureRmServerManagementGatewayProfile](./Reset-AzureRmServerManagementGatewayProfile.md)
 
-[Save-AzureRmServerManagementGatewayProfile](.\Save-AzureRmServerManagementGatewayProfile.md)
+[Save-AzureRmServerManagementGatewayProfile](./Save-AzureRmServerManagementGatewayProfile.md)
 
 

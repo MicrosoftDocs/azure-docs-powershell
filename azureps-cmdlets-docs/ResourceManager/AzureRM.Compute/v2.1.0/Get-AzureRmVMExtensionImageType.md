@@ -74,8 +74,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVMExtensionImage](.\Get-AzureRmVMExtensionImage.md)
+[Get-AzureRmVMExtensionImage](./Get-AzureRmVMExtensionImage.md)
 
-[Get-AzureRmVMImagePublisher](.\Get-AzureRmVMImagePublisher.md)
+[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
 
 

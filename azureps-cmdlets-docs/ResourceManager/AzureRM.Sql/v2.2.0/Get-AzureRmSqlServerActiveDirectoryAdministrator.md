@@ -109,10 +109,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureRmSqlServerActiveDirectoryAdministrator](.\Remove-AzureRmSqlServerActiveDirectoryAdministrator.md)
+[Remove-AzureRmSqlServerActiveDirectoryAdministrator](./Remove-AzureRmSqlServerActiveDirectoryAdministrator.md)
 
-[Set-AzureRmSqlServerActiveDirectoryAdministrator](.\Set-AzureRmSqlServerActiveDirectoryAdministrator.md)
+[Set-AzureRmSqlServerActiveDirectoryAdministrator](./Set-AzureRmSqlServerActiveDirectoryAdministrator.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

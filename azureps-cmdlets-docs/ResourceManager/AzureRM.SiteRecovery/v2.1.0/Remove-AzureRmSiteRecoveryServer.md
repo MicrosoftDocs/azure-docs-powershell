@@ -101,8 +101,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryServer](.\Get-AzureRmSiteRecoveryServer.md)
+[Get-AzureRmSiteRecoveryServer](./Get-AzureRmSiteRecoveryServer.md)
 
-[Update-AzureRmSiteRecoveryServer](.\Update-AzureRmSiteRecoveryServer.md)
+[Update-AzureRmSiteRecoveryServer](./Update-AzureRmSiteRecoveryServer.md)
 
 

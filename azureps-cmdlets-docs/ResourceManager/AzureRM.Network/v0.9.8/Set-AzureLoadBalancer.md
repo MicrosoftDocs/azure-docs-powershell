@@ -70,10 +70,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureLoadBalancer](.\Get-AzureLoadBalancer.md)
+[Get-AzureLoadBalancer](./Get-AzureLoadBalancer.md)
 
-[New-AzureLoadBalancer](.\New-AzureLoadBalancer.md)
+[New-AzureLoadBalancer](./New-AzureLoadBalancer.md)
 
-[Remove-AzureLoadBalancer](.\Remove-AzureLoadBalancer.md)
+[Remove-AzureLoadBalancer](./Remove-AzureLoadBalancer.md)
 
 

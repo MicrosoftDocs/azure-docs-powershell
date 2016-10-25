@@ -159,12 +159,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmContainerService](.\Get-AzureRmContainerService.md)
+[Get-AzureRmContainerService](./Get-AzureRmContainerService.md)
 
-[New-AzureRmContainerServiceConfig](.\New-AzureRmContainerServiceConfig.md)
+[New-AzureRmContainerServiceConfig](./New-AzureRmContainerServiceConfig.md)
 
-[Remove-AzureRmContainerService](.\Remove-AzureRmContainerService.md)
+[Remove-AzureRmContainerService](./Remove-AzureRmContainerService.md)
 
-[Update-AzureRmContainerService](.\Update-AzureRmContainerService.md)
+[Update-AzureRmContainerService](./Update-AzureRmContainerService.md)
 
 

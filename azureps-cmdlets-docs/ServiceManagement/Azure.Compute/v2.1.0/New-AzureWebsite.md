@@ -207,6 +207,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureWebsite](.\Set-AzureWebsite.md)
+[Set-AzureWebsite](./Set-AzureWebsite.md)
 
 

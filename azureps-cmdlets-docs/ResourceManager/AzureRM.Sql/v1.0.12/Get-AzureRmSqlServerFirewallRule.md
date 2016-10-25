@@ -132,12 +132,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmSqlServerFirewallRule](.\New-AzureRmSqlServerFirewallRule.md)
+[New-AzureRmSqlServerFirewallRule](./New-AzureRmSqlServerFirewallRule.md)
 
-[Remove-AzureRmSqlServerFirewallRule](.\Remove-AzureRmSqlServerFirewallRule.md)
+[Remove-AzureRmSqlServerFirewallRule](./Remove-AzureRmSqlServerFirewallRule.md)
 
-[Set-AzureRmSqlServerFirewallRule](.\Set-AzureRmSqlServerFirewallRule.md)
+[Set-AzureRmSqlServerFirewallRule](./Set-AzureRmSqlServerFirewallRule.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

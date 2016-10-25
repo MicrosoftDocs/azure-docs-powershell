@@ -180,6 +180,6 @@ Specifies the size of the virtual machine.
 
 ## RELATED LINKS
 
-[Set-AzureServiceProject](.\Set-AzureServiceProject.md)
+[Set-AzureServiceProject](./Set-AzureServiceProject.md)
 
 

@@ -108,14 +108,14 @@ This cmdlet accepts a **TrafficManagerProfile** object.
 
 ## RELATED LINKS
 
-[Disable-AzureRmTrafficManagerProfile](.\Disable-AzureRmTrafficManagerProfile.md)
+[Disable-AzureRmTrafficManagerProfile](./Disable-AzureRmTrafficManagerProfile.md)
 
-[Get-AzureRmTrafficManagerProfile](.\Get-AzureRmTrafficManagerProfile.md)
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
 
-[New-AzureRmTrafficManagerProfile](.\New-AzureRmTrafficManagerProfile.md)
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
 
-[Remove-AzureRmTrafficManagerProfile](.\Remove-AzureRmTrafficManagerProfile.md)
+[Remove-AzureRmTrafficManagerProfile](./Remove-AzureRmTrafficManagerProfile.md)
 
-[Set-AzureRmTrafficManagerProfile](.\Set-AzureRmTrafficManagerProfile.md)
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
 
 

@@ -97,8 +97,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmPowerBIWorkspaceCollection](.\New-AzureRmPowerBIWorkspaceCollection.md)
+[New-AzureRmPowerBIWorkspaceCollection](./New-AzureRmPowerBIWorkspaceCollection.md)
 
-[Remove-AzureRmPowerBIWorkspaceCollection](.\Remove-AzureRmPowerBIWorkspaceCollection.md)
+[Remove-AzureRmPowerBIWorkspaceCollection](./Remove-AzureRmPowerBIWorkspaceCollection.md)
 
 

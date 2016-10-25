@@ -86,8 +86,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Reset-AzureVirtualNetworkGatewayKey](.\Reset-AzureVirtualNetworkGatewayKey.md)
+[Reset-AzureVirtualNetworkGatewayKey](./Reset-AzureVirtualNetworkGatewayKey.md)
 
-[Set-AzureVirtualNetworkGatewayKey](.\Set-AzureVirtualNetworkGatewayKey.md)
+[Set-AzureVirtualNetworkGatewayKey](./Set-AzureVirtualNetworkGatewayKey.md)
 
 

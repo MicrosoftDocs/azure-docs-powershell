@@ -123,8 +123,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Register-AzureRmResourceProvider](.\Register-AzureRmResourceProvider.md)
+[Register-AzureRmResourceProvider](./Register-AzureRmResourceProvider.md)
 
-[Unregister-AzureRmResourceProvider](.\Unregister-AzureRmResourceProvider.md)
+[Unregister-AzureRmResourceProvider](./Unregister-AzureRmResourceProvider.md)
 
 

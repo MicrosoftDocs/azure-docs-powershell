@@ -81,10 +81,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMImageDiskConfigSet](.\Get-AzureVMImageDiskConfigSet.md)
+[Get-AzureVMImageDiskConfigSet](./Get-AzureVMImageDiskConfigSet.md)
 
-[Set-AzureVMImageOSDiskConfig](.\Set-AzureVMImageOSDiskConfig.md)
+[Set-AzureVMImageOSDiskConfig](./Set-AzureVMImageOSDiskConfig.md)
 
-[Set-AzureVMImageDataDiskConfig](.\Set-AzureVMImageDataDiskConfig.md)
+[Set-AzureVMImageDataDiskConfig](./Set-AzureVMImageDataDiskConfig.md)
 
 

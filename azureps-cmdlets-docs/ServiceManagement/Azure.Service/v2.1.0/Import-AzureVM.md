@@ -90,8 +90,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-AzureVM](.\Export-AzureVM.md)
+[Export-AzureVM](./Export-AzureVM.md)
 
-[New-AzureVM](.\New-AzureVM.md)
+[New-AzureVM](./New-AzureVM.md)
 
 

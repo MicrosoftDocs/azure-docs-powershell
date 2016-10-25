@@ -167,6 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmCognitiveServicesAccountKey](.\Get-AzureRmCognitiveServicesAccountKey.md)
+[Get-AzureRmCognitiveServicesAccountKey](./Get-AzureRmCognitiveServicesAccountKey.md)
 
 

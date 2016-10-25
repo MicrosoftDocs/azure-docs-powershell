@@ -167,10 +167,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmRouteTable](.\Get-AzureRmRouteTable.md)
+[Get-AzureRmRouteTable](./Get-AzureRmRouteTable.md)
 
-[New-AzureRmRouteTable](.\New-AzureRmRouteTable.md)
+[New-AzureRmRouteTable](./New-AzureRmRouteTable.md)
 
-[Set-AzureRmRouteTable](.\Set-AzureRmRouteTable.md)
+[Set-AzureRmRouteTable](./Set-AzureRmRouteTable.md)
 
 

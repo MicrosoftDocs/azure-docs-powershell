@@ -63,10 +63,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApplicationGateway](.\Get-AzureRmApplicationGateway.md)
+[Get-AzureRmApplicationGateway](./Get-AzureRmApplicationGateway.md)
 
-[New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](.\New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
+[New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
 
-[Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](.\Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
+[Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
 
 

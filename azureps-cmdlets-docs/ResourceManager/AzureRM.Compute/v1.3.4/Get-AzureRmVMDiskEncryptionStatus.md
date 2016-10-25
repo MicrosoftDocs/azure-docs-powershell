@@ -104,8 +104,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureRmVMDiskEncryptionExtension](.\Remove-AzureRmVMDiskEncryptionExtension.md)
+[Remove-AzureRmVMDiskEncryptionExtension](./Remove-AzureRmVMDiskEncryptionExtension.md)
 
-[Set-AzureRmVMDiskEncryptionExtension](.\Set-AzureRmVMDiskEncryptionExtension.md)
+[Set-AzureRmVMDiskEncryptionExtension](./Set-AzureRmVMDiskEncryptionExtension.md)
 
 

@@ -199,10 +199,10 @@ This cmdlet returns a **Model.DatabaseThreatDetectionPolicyModel** object.
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseThreatDetectionPolicy](.\Get-AzureRmSqlServerThreatDetectionPolicy.md)
+[Get-AzureRmSqlDatabaseThreatDetectionPolicy](./Get-AzureRmSqlServerThreatDetectionPolicy.md)
 
-[Remove-AzureRmSqlDatabaseThreatDetectionPolicy](.\Remove-AzureRmSqlDatabaseThreatDetectionPolicy.md)
+[Remove-AzureRmSqlDatabaseThreatDetectionPolicy](./Remove-AzureRmSqlDatabaseThreatDetectionPolicy.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

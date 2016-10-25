@@ -266,8 +266,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSiteRecoveryPolicy](.\Get-AzureRmSiteRecoveryPolicy.md)
+[Get-AzureRmSiteRecoveryPolicy](./Get-AzureRmSiteRecoveryPolicy.md)
 
-[Remove-AzureRmSiteRecoveryPolicy](.\Remove-AzureRmSiteRecoveryPolicy.md)
+[Remove-AzureRmSiteRecoveryPolicy](./Remove-AzureRmSiteRecoveryPolicy.md)
 
 

@@ -111,10 +111,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmStreamAnalyticsOutput](.\New-AzureRmStreamAnalyticsOutput.md)
+[New-AzureRmStreamAnalyticsOutput](./New-AzureRmStreamAnalyticsOutput.md)
 
-[Remove-AzureRmStreamAnalyticsOutput](.\Remove-AzureRmStreamAnalyticsOutput.md)
+[Remove-AzureRmStreamAnalyticsOutput](./Remove-AzureRmStreamAnalyticsOutput.md)
 
-[Test-AzureRmStreamAnalyticsOutput](.\Test-AzureRmStreamAnalyticsOutput.md)
+[Test-AzureRmStreamAnalyticsOutput](./Test-AzureRmStreamAnalyticsOutput.md)
 
 

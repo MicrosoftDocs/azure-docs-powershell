@@ -177,12 +177,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmPolicyDefinition](.\Get-AzureRmPolicyDefinition.md)
+[Get-AzureRmPolicyDefinition](./Get-AzureRmPolicyDefinition.md)
 
-[Get-AzureRmPolicyAssignment](.\Get-AzureRmPolicyAssignment.md)
+[Get-AzureRmPolicyAssignment](./Get-AzureRmPolicyAssignment.md)
 
-[Remove-AzureRmPolicyAssignment](.\Remove-AzureRmPolicyAssignment.md)
+[Remove-AzureRmPolicyAssignment](./Remove-AzureRmPolicyAssignment.md)
 
-[Set-AzureRmPolicyAssignment](.\Set-AzureRmPolicyAssignment.md)
+[Set-AzureRmPolicyAssignment](./Set-AzureRmPolicyAssignment.md)
 
 

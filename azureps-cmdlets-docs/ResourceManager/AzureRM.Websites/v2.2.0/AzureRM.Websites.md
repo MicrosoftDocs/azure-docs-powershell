@@ -11,163 +11,163 @@ Locale: en-US
 {{Manually Enter Description Here}}
 
 ## AzureRM.Websites Cmdlets
-### [Edit-AzureRmWebAppBackupConfiguration](.\Edit-AzureRmWebAppBackupConfiguration.md)
+### [Edit-AzureRmWebAppBackupConfiguration](./Edit-AzureRmWebAppBackupConfiguration.md)
 
 
 
-### [Get-AzureRmAppServicePlanMetrics](.\Get-AzureRmAppServicePlanMetrics.md)
+### [Get-AzureRmAppServicePlanMetrics](./Get-AzureRmAppServicePlanMetrics.md)
 
 
 
-### [Get-AzureRmAppServicePlan](.\Get-AzureRmAppServicePlan.md)
+### [Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
 Gets an Azure App Service plan in the specified resource group.
 
 
-### [Get-AzureRmWebAppBackupConfiguration](.\Get-AzureRmWebAppBackupConfiguration.md)
+### [Get-AzureRmWebAppBackupConfiguration](./Get-AzureRmWebAppBackupConfiguration.md)
 
 
 
-### [Get-AzureRmWebAppBackupList](.\Get-AzureRmWebAppBackupList.md)
+### [Get-AzureRmWebAppBackupList](./Get-AzureRmWebAppBackupList.md)
 
 
 
-### [Get-AzureRmWebAppBackup](.\Get-AzureRmWebAppBackup.md)
+### [Get-AzureRmWebAppBackup](./Get-AzureRmWebAppBackup.md)
 
 
 
-### [Get-AzureRmWebAppCertificate](.\Get-AzureRmWebAppCertificate.md)
+### [Get-AzureRmWebAppCertificate](./Get-AzureRmWebAppCertificate.md)
 Gets an Azure Web App certificate.
 
 
-### [Get-AzureRMWebAppMetrics](.\Get-AzureRMWebAppMetrics.md)
+### [Get-AzureRMWebAppMetrics](./Get-AzureRMWebAppMetrics.md)
 Gets Azure Web App metrics.
 
 
-### [Get-AzureRmWebAppPublishingProfile](.\Get-AzureRmWebAppPublishingProfile.md)
+### [Get-AzureRmWebAppPublishingProfile](./Get-AzureRmWebAppPublishingProfile.md)
 Gets an Azure Web App publishing profile.
 
 
-### [Get-AzureRmWebAppSlotConfigName](.\Get-AzureRmWebAppSlotConfigName.md)
+### [Get-AzureRmWebAppSlotConfigName](./Get-AzureRmWebAppSlotConfigName.md)
 Get the list of Web App Slot Config names
 
 
-### [Get-AzureRMWebAppSlotMetrics](.\Get-AzureRMWebAppSlotMetrics.md)
+### [Get-AzureRMWebAppSlotMetrics](./Get-AzureRMWebAppSlotMetrics.md)
 Gets metrics for an Azure Web App slot.
 
 
-### [Get-AzureRMWebAppSlotPublishingProfile](.\Get-AzureRMWebAppSlotPublishingProfile.md)
+### [Get-AzureRMWebAppSlotPublishingProfile](./Get-AzureRMWebAppSlotPublishingProfile.md)
 Gets an Azure Web App slot publishing profile.
 
 
-### [Get-AzureRMWebAppSlot](.\Get-AzureRMWebAppSlot.md)
+### [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
 Gets an Azure Web App slot.
 
 
-### [Get-AzureRmWebAppSSLBinding](.\Get-AzureRmWebAppSSLBinding.md)
+### [Get-AzureRmWebAppSSLBinding](./Get-AzureRmWebAppSSLBinding.md)
 Gets an Azure Web App certificate SSL binding.
 
 
-### [Get-AzureRmWebApp](.\Get-AzureRmWebApp.md)
+### [Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
 Gets Azure Web Apps in the specified resource group.
 
 
-### [New-AzureRmAppServicePlan](.\New-AzureRmAppServicePlan.md)
+### [New-AzureRmAppServicePlan](./New-AzureRmAppServicePlan.md)
 Creates an Azure App Service plan in a given Geo location.
 
 
-### [New-AzureRmWebAppBackup](.\New-AzureRmWebAppBackup.md)
+### [New-AzureRmWebAppBackup](./New-AzureRmWebAppBackup.md)
 
 
 
-### [New-AzureRmWebAppDatabaseBackupSetting](.\New-AzureRmWebAppDatabaseBackupSetting.md)
+### [New-AzureRmWebAppDatabaseBackupSetting](./New-AzureRmWebAppDatabaseBackupSetting.md)
 
 
 
-### [New-AzureRMWebAppSlot](.\New-AzureRMWebAppSlot.md)
+### [New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
 Creates an Azure Web App slot.
 
 
-### [New-AzureRmWebAppSSLBinding](.\New-AzureRmWebAppSSLBinding.md)
+### [New-AzureRmWebAppSSLBinding](./New-AzureRmWebAppSSLBinding.md)
 Creates an SSL certificate binding for an Azure Web App.
 
 
-### [New-AzureRmWebApp](.\New-AzureRmWebApp.md)
+### [New-AzureRmWebApp](./New-AzureRmWebApp.md)
 Creates an Azure Web App.
 
 
-### [Remove-AzureRmAppServicePlan](.\Remove-AzureRmAppServicePlan.md)
+### [Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
 Removes an Azure App Service plan.
 
 
-### [Remove-AzureRmWebAppBackup](.\Remove-AzureRmWebAppBackup.md)
+### [Remove-AzureRmWebAppBackup](./Remove-AzureRmWebAppBackup.md)
 
 
 
-### [Remove-AzureRMWebAppSlot](.\Remove-AzureRMWebAppSlot.md)
+### [Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
 Removes an Azure Web App slot.
 
 
-### [Remove-AzureRmWebAppSSLBinding](.\Remove-AzureRmWebAppSSLBinding.md)
+### [Remove-AzureRmWebAppSSLBinding](./Remove-AzureRmWebAppSSLBinding.md)
 Removes an SSL binding from an uploaded certificate.
 
 
-### [Remove-AzureRmWebApp](.\Remove-AzureRmWebApp.md)
+### [Remove-AzureRmWebApp](./Remove-AzureRmWebApp.md)
 Removes an Azure Web App.
 
 
-### [Reset-AzureRmWebAppPublishingProfile](.\Reset-AzureRmWebAppPublishingProfile.md)
+### [Reset-AzureRmWebAppPublishingProfile](./Reset-AzureRmWebAppPublishingProfile.md)
 
 
 
-### [Reset-AzureRmWebAppSlotPublishingProfile](.\Reset-AzureRmWebAppSlotPublishingProfile.md)
+### [Reset-AzureRmWebAppSlotPublishingProfile](./Reset-AzureRmWebAppSlotPublishingProfile.md)
 
 
 
-### [Restart-AzureRMWebAppSlot](.\Restart-AzureRMWebAppSlot.md)
+### [Restart-AzureRMWebAppSlot](./Restart-AzureRMWebAppSlot.md)
 Restarts an Azure Web App slot.
 
 
-### [Restart-AzureRmWebApp](.\Restart-AzureRmWebApp.md)
+### [Restart-AzureRmWebApp](./Restart-AzureRmWebApp.md)
 Restarts an Azure Web App.
 
 
-### [Restore-AzureRmWebAppBackup](.\Restore-AzureRmWebAppBackup.md)
+### [Restore-AzureRmWebAppBackup](./Restore-AzureRmWebAppBackup.md)
 
 
 
-### [Set-AzureRmAppServicePlan](.\Set-AzureRmAppServicePlan.md)
+### [Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)
 Sets an Azure App Service plan.
 
 
-### [Set-AzureRmWebAppSlotConfigName](.\Set-AzureRmWebAppSlotConfigName.md)
+### [Set-AzureRmWebAppSlotConfigName](./Set-AzureRmWebAppSlotConfigName.md)
 Set Web App Slot Config names
 
 
-### [Set-AzureRMWebAppSlot](.\Set-AzureRMWebAppSlot.md)
+### [Set-AzureRMWebAppSlot](./Set-AzureRMWebAppSlot.md)
 Modifies an Azure Web App slot.
 
 
-### [Set-AzureRMWebApp](.\Set-AzureRMWebApp.md)
+### [Set-AzureRMWebApp](./Set-AzureRMWebApp.md)
 Modifies an Azure Web App.
 
 
-### [Start-AzureRMWebAppSlot](.\Start-AzureRMWebAppSlot.md)
+### [Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
 Starts an Azure Web App slot.
 
 
-### [Start-AzureRmWebApp](.\Start-AzureRmWebApp.md)
+### [Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
 Starts an Azure Web App.
 
 
-### [Stop-AzureRMWebAppSlot](.\Stop-AzureRMWebAppSlot.md)
+### [Stop-AzureRMWebAppSlot](./Stop-AzureRMWebAppSlot.md)
 Stops an Azure Web App slot.
 
 
-### [Stop-AzureRmWebApp](.\Stop-AzureRmWebApp.md)
+### [Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)
 Stops an Azure Web App.
 
 
-### [Swap-AzureRmWebAppSlot](.\Swap-AzureRmWebAppSlot.md)
+### [Swap-AzureRmWebAppSlot](./Swap-AzureRmWebAppSlot.md)
 
 
 

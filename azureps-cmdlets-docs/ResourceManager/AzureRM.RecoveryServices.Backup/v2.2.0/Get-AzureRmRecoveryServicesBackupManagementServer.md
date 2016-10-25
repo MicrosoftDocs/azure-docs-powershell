@@ -61,6 +61,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Unregister-AzureRmRecoveryServicesBackupManagementServer](.\Unregister-AzureRmRecoveryServicesBackupManagementServer.md)
+[Unregister-AzureRmRecoveryServicesBackupManagementServer](./Unregister-AzureRmRecoveryServicesBackupManagementServer.md)
 
 

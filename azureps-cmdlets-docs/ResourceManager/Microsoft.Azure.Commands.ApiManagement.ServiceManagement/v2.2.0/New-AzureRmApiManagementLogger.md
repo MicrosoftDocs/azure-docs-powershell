@@ -141,10 +141,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmApiManagementLogger](.\Get-AzureRmApiManagementLogger.md)
+[Get-AzureRmApiManagementLogger](./Get-AzureRmApiManagementLogger.md)
 
-[Remove-AzureRmApiManagementLogger](.\Remove-AzureRmApiManagementLogger.md)
+[Remove-AzureRmApiManagementLogger](./Remove-AzureRmApiManagementLogger.md)
 
-[Set-AzureRmApiManagementLogger](.\Set-AzureRmApiManagementLogger.md)
+[Set-AzureRmApiManagementLogger](./Set-AzureRmApiManagementLogger.md)
 
 

@@ -135,12 +135,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureDns](.\Add-AzureDns.md)
+[Add-AzureDns](./Add-AzureDns.md)
 
-[Get-AzureDns](.\Get-AzureDns.md)
+[Get-AzureDns](./Get-AzureDns.md)
 
-[New-AzureDns](.\New-AzureDns.md)
+[New-AzureDns](./New-AzureDns.md)
 
-[Set-AzureDns](.\Set-AzureDns.md)
+[Set-AzureDns](./Set-AzureDns.md)
 
 

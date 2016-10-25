@@ -249,10 +249,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureKeyVaultKey](.\Get-AzureKeyVaultKey.md)
+[Get-AzureKeyVaultKey](./Get-AzureKeyVaultKey.md)
 
-[Get-AzureKeyVaultSecret](.\Get-AzureKeyVaultSecret.md)
+[Get-AzureKeyVaultSecret](./Get-AzureKeyVaultSecret.md)
 
-[Remove-AzureKeyVaultSecret](.\Remove-AzureKeyVaultSecret.md)
+[Remove-AzureKeyVaultSecret](./Remove-AzureKeyVaultSecret.md)
 
 

@@ -158,6 +158,6 @@ This cmdlet returns the schedule which specifies when the virtual machines in th
 
 ## RELATED LINKS
 
-[Get-AzureRmDtlAutoShutdownPolicy](.\Get-AzureRmDtlAutoShutdownPolicy.md)
+[Get-AzureRmDtlAutoShutdownPolicy](./Get-AzureRmDtlAutoShutdownPolicy.md)
 
 

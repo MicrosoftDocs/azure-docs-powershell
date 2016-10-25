@@ -178,10 +178,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseTransparentDataEncryption](.\Get-AzureRmSqlDatabaseTransparentDataEncryption.md)
+[Get-AzureRmSqlDatabaseTransparentDataEncryption](./Get-AzureRmSqlDatabaseTransparentDataEncryption.md)
 
-[Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity](.\Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity.md)
+[Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity](./Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

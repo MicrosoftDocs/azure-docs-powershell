@@ -80,6 +80,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureRmSiteRecoveryServer](.\Remove-AzureRmSiteRecoveryServer.md)
+[Remove-AzureRmSiteRecoveryServer](./Remove-AzureRmSiteRecoveryServer.md)
 
 

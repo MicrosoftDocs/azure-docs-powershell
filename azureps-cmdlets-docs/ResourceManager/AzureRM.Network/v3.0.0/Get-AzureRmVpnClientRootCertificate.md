@@ -104,10 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmVpnClientRootCertificate](.\Add-AzureRmVpnClientRootCertificate.md)
+[Add-AzureRmVpnClientRootCertificate](./Add-AzureRmVpnClientRootCertificate.md)
 
-[New-AzureRmVpnClientRootCertificate](.\New-AzureRmVpnClientRootCertificate.md)
+[New-AzureRmVpnClientRootCertificate](./New-AzureRmVpnClientRootCertificate.md)
 
-[Remove-AzureRmVpnClientRootCertificate](.\Remove-AzureRmVpnClientRootCertificate.md)
+[Remove-AzureRmVpnClientRootCertificate](./Remove-AzureRmVpnClientRootCertificate.md)
 
 

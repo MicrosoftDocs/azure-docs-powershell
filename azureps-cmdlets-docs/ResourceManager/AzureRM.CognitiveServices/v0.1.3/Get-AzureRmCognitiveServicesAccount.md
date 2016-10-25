@@ -121,10 +121,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmCognitiveServicesAccount](.\New-AzureRmCognitiveServicesAccount.md)
+[New-AzureRmCognitiveServicesAccount](./New-AzureRmCognitiveServicesAccount.md)
 
-[Remove-AzureRmCognitiveServicesAccount](.\Remove-AzureRmCognitiveServicesAccount.md)
+[Remove-AzureRmCognitiveServicesAccount](./Remove-AzureRmCognitiveServicesAccount.md)
 
-[Set-AzureRmCognitiveServicesAccount](.\Set-AzureRmCognitiveServicesAccount.md)
+[Set-AzureRmCognitiveServicesAccount](./Set-AzureRmCognitiveServicesAccount.md)
 
 

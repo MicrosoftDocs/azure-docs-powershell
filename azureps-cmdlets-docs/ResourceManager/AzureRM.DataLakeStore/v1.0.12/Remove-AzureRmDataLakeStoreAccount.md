@@ -163,12 +163,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataLakeStoreAccount](.\Get-AzureRmDataLakeStoreAccount.md)
+[Get-AzureRmDataLakeStoreAccount](./Get-AzureRmDataLakeStoreAccount.md)
 
-[New-AzureRmDataLakeStoreAccount](.\New-AzureRmDataLakeStoreAccount.md)
+[New-AzureRmDataLakeStoreAccount](./New-AzureRmDataLakeStoreAccount.md)
 
-[Set-AzureRmDataLakeStoreAccount](.\Set-AzureRmDataLakeStoreAccount.md)
+[Set-AzureRmDataLakeStoreAccount](./Set-AzureRmDataLakeStoreAccount.md)
 
-[Test-AzureRmDataLakeStoreAccount](.\Test-AzureRmDataLakeStoreAccount.md)
+[Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
 
 

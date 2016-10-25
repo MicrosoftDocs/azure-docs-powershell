@@ -190,6 +190,6 @@ This cmdlet returns a **TaskStatusInfo** object if you specify the *WaitForCompl
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleDeviceBackup](.\Get-AzureStorSimpleDeviceBackup.md)
+[Get-AzureStorSimpleDeviceBackup](./Get-AzureStorSimpleDeviceBackup.md)
 
 

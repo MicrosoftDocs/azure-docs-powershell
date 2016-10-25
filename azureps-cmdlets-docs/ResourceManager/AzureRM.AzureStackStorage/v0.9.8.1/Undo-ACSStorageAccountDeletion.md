@@ -219,10 +219,10 @@ Output from Get-ACSFarm and Get-ACSStorageAccount can be piped to this cmdlet's 
 
 ## RELATED LINKS
 
-[Get-ACSStorageAccount](.\Get-ACSStorageAccount.md)
+[Get-ACSStorageAccount](./Get-ACSStorageAccount.md)
 
-[Sync-ACSStorageAccount](.\Sync-ACSStorageAccount.md)
+[Sync-ACSStorageAccount](./Sync-ACSStorageAccount.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

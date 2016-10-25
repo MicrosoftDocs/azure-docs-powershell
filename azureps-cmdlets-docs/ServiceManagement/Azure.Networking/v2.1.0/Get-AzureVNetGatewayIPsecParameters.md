@@ -86,6 +86,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureVNetGatewayIPsecParameters](.\Set-AzureVNetGatewayIPsecParameters.md)
+[Set-AzureVNetGatewayIPsecParameters](./Set-AzureVNetGatewayIPsecParameters.md)
 
 

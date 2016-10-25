@@ -153,10 +153,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureCertificate](.\Add-AzureCertificate.md)
+[Add-AzureCertificate](./Add-AzureCertificate.md)
 
-[Get-AzureCertificate](.\Get-AzureCertificate.md)
+[Get-AzureCertificate](./Get-AzureCertificate.md)
 
-[New-AzureCertificateSetting](.\New-AzureCertificateSetting.md)
+[New-AzureCertificateSetting](./New-AzureCertificateSetting.md)
 
 

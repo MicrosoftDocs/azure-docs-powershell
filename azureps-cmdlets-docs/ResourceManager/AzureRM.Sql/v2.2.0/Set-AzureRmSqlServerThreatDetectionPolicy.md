@@ -181,7 +181,7 @@ This cmdlet returns a **ServerThreatDetectionPolicyModel** object.
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlServerThreatDetectionPolicy](.\Get-AzureRmSqlServerThreatDetectionPolicy.md)
+[Get-AzureRmSqlServerThreatDetectionPolicy](./Get-AzureRmSqlServerThreatDetectionPolicy.md)
 
 [Remove-AzureRmSqlServerThreatDetectionPolicy](03e90cd1-6ae2-4134-bc5e-28cc080614c9)
 

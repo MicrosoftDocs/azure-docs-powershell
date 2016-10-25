@@ -359,14 +359,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-AzureRmMlWebService](.\Export-AzureRmMlWebService.md)
+[Export-AzureRmMlWebService](./Export-AzureRmMlWebService.md)
 
-[Get-AzureRmMlWebService](.\Get-AzureRmMlWebService.md)
+[Get-AzureRmMlWebService](./Get-AzureRmMlWebService.md)
 
-[Import-AzureRmMlWebService](.\Import-AzureRmMlWebService.md)
+[Import-AzureRmMlWebService](./Import-AzureRmMlWebService.md)
 
-[New-AzureRmMlWebService](.\New-AzureRmMlWebService.md)
+[New-AzureRmMlWebService](./New-AzureRmMlWebService.md)
 
-[Remove-AzureRmMlWebService](.\Remove-AzureRmMlWebService.md)
+[Remove-AzureRmMlWebService](./Remove-AzureRmMlWebService.md)
 
 

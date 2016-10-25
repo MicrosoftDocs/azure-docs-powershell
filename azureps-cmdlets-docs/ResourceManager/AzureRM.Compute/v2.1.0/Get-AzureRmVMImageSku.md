@@ -86,12 +86,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmVMImage](.\Get-AzureRmVMImage.md)
+[Get-AzureRmVMImage](./Get-AzureRmVMImage.md)
 
-[Get-AzureRmVMImageOffer](.\Get-AzureRmVMImageOffer.md)
+[Get-AzureRmVMImageOffer](./Get-AzureRmVMImageOffer.md)
 
-[Get-AzureRmVMImagePublisher](.\Get-AzureRmVMImagePublisher.md)
+[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
 
-[Save-AzureRmVMImage](.\Save-AzureRmVMImage.md)
+[Save-AzureRmVMImage](./Save-AzureRmVMImage.md)
 
 

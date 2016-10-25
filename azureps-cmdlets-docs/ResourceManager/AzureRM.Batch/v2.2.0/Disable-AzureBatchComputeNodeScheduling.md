@@ -177,8 +177,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBatchAccountKeys](.\Get-AzureRmBatchAccountKeys.md)
+[Get-AzureRmBatchAccountKeys](./Get-AzureRmBatchAccountKeys.md)
 
-[Enable-AzureBatchComputeNodeScheduling](.\Enable-AzureBatchComputeNodeScheduling.md)
+[Enable-AzureBatchComputeNodeScheduling](./Enable-AzureBatchComputeNodeScheduling.md)
 
 

@@ -217,6 +217,6 @@ The **PSSearchGetSearchResultsResponse** object includes a Value property that i
 
 ## RELATED LINKS
 
-[Get-AzureRmOperationalInsightsSavedSearchResults](.\Get-AzureRmOperationalInsightsSavedSearchResults.md)
+[Get-AzureRmOperationalInsightsSavedSearchResults](./Get-AzureRmOperationalInsightsSavedSearchResults.md)
 
 

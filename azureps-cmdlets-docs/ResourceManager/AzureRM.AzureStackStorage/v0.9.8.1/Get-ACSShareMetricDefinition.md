@@ -219,8 +219,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ACSShare](.\Get-ACSShare.md)
+[Get-ACSShare](./Get-ACSShare.md)
 
-[Get-ACSShareMetric](.\Get-ACSShareMetric.md)
+[Get-ACSShareMetric](./Get-ACSShareMetric.md)
 
 

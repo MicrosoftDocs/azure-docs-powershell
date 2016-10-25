@@ -155,12 +155,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureApiManagement](.\Get-AzureApiManagement.md)
+[Get-AzureApiManagement](./Get-AzureApiManagement.md)
 
-[New-AzureApiManagement](.\New-AzureApiManagement.md)
+[New-AzureApiManagement](./New-AzureApiManagement.md)
 
-[Remove-AzureApiManagement](.\Remove-AzureApiManagement.md)
+[Remove-AzureApiManagement](./Remove-AzureApiManagement.md)
 
-[Restore-AzureApiManagement](.\Restore-AzureApiManagement.md)
+[Restore-AzureApiManagement](./Restore-AzureApiManagement.md)
 
 

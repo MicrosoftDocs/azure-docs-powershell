@@ -137,8 +137,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmVmssVM](.\Set-AzureRmVmssVM.md)
+[Set-AzureRmVmssVM](./Set-AzureRmVmssVM.md)
 
-[Get-AzureRmVmss](.\Get-AzureRmVmss.md)
+[Get-AzureRmVmss](./Get-AzureRmVmss.md)
 
 

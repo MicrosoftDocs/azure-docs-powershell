@@ -211,8 +211,8 @@ Output from Get-ACSFarm can be piped to this cmdlet's input.
 
 ## RELATED LINKS
 
-[Get-ACSFault](.\Get-ACSFault.md)
+[Get-ACSFault](./Get-ACSFault.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

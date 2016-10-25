@@ -108,8 +108,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-WAPackStaticIPAddressPool](.\New-WAPackStaticIPAddressPool.md)
+[New-WAPackStaticIPAddressPool](./New-WAPackStaticIPAddressPool.md)
 
-[Remove-WAPackStaticIPAddressPool](.\Remove-WAPackStaticIPAddressPool.md)
+[Remove-WAPackStaticIPAddressPool](./Remove-WAPackStaticIPAddressPool.md)
 
 

@@ -74,6 +74,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure Stream Analytics Cmdlets](.\AzureRM.StreamAnalytics.md)
+[Azure Stream Analytics Cmdlets](./AzureRM.StreamAnalytics.md)
 
 

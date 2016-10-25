@@ -179,14 +179,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
-[Remove-AzureVM](.\Remove-AzureVM.md)
+[Remove-AzureVM](./Remove-AzureVM.md)
 
-[Start-AzureVM](.\Start-AzureVM.md)
+[Start-AzureVM](./Start-AzureVM.md)
 
-[Stop-AzureVM](.\Stop-AzureVM.md)
+[Stop-AzureVM](./Stop-AzureVM.md)
 
-[Update-AzureVM](.\Update-AzureVM.md)
+[Update-AzureVM](./Update-AzureVM.md)
 
 

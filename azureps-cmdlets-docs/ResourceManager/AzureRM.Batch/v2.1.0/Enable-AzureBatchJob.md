@@ -74,16 +74,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureBatchJob](.\Disable-AzureBatchJob.md)
+[Disable-AzureBatchJob](./Disable-AzureBatchJob.md)
 
-[Get-AzureBatchJob](.\Get-AzureBatchJob.md)
+[Get-AzureBatchJob](./Get-AzureBatchJob.md)
 
-[New-AzureBatchJob](.\New-AzureBatchJob.md)
+[New-AzureBatchJob](./New-AzureBatchJob.md)
 
-[Remove-AzureBatchJob](.\Remove-AzureBatchJob.md)
+[Remove-AzureBatchJob](./Remove-AzureBatchJob.md)
 
-[Stop-AzureBatchJob](.\Stop-AzureBatchJob.md)
+[Stop-AzureBatchJob](./Stop-AzureBatchJob.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

@@ -200,8 +200,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ACSBlobService](.\Get-ACSBlobService.md)
+[Get-ACSBlobService](./Get-ACSBlobService.md)
 
-[Get-ACSBlobServiceMetric](.\Get-ACSBlobServiceMetric.md)
+[Get-ACSBlobServiceMetric](./Get-ACSBlobServiceMetric.md)
 
 

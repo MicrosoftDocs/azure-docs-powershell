@@ -11,91 +11,91 @@ Locale: en-US
 The topics in this section document the Azure PowerShell cmdlets for Azure Data Lake Store in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.DataLakeStore namespace.
 
 ## AzureRM.DataLakeStore Cmdlets
-### [Add-AzureRmDataLakeStoreItemContent](.\Add-AzureRmDataLakeStoreItemContent.md)
+### [Add-AzureRmDataLakeStoreItemContent](./Add-AzureRmDataLakeStoreItemContent.md)
 Adds content to an item in a Data Lake Store.
 
 
-### [Export-AzureRmDataLakeStoreItem](.\Export-AzureRmDataLakeStoreItem.md)
+### [Export-AzureRmDataLakeStoreItem](./Export-AzureRmDataLakeStoreItem.md)
 Downloads a file from Data Lake Store.
 
 
-### [Get-AzureRmDataLakeStoreAccount](.\Get-AzureRmDataLakeStoreAccount.md)
+### [Get-AzureRmDataLakeStoreAccount](./Get-AzureRmDataLakeStoreAccount.md)
 Gets details of a Data Lake Store account.
 
 
-### [Get-AzureRmDataLakeStoreChildItem](.\Get-AzureRmDataLakeStoreChildItem.md)
+### [Get-AzureRmDataLakeStoreChildItem](./Get-AzureRmDataLakeStoreChildItem.md)
 Gets the list of items in a folder in Data Lake Store.
 
 
-### [Get-AzureRmDataLakeStoreItemAcl](.\Get-AzureRmDataLakeStoreItemAcl.md)
+### [Get-AzureRmDataLakeStoreItemAcl](./Get-AzureRmDataLakeStoreItemAcl.md)
 Gets the ACL of a file or folder in Data Lake Store.
 
 
-### [Get-AzureRmDataLakeStoreItemContent](.\Get-AzureRmDataLakeStoreItemContent.md)
+### [Get-AzureRmDataLakeStoreItemContent](./Get-AzureRmDataLakeStoreItemContent.md)
 Gets the contents of a file in Data Lake Store.
 
 
-### [Get-AzureRmDataLakeStoreItemOwner](.\Get-AzureRmDataLakeStoreItemOwner.md)
+### [Get-AzureRmDataLakeStoreItemOwner](./Get-AzureRmDataLakeStoreItemOwner.md)
 Gets the owner of a file or folder in Data Lake Store.
 
 
-### [Get-AzureRmDataLakeStoreItem](.\Get-AzureRmDataLakeStoreItem.md)
+### [Get-AzureRmDataLakeStoreItem](./Get-AzureRmDataLakeStoreItem.md)
 Gets the details of a file or folder in Data Lake Store.
 
 
-### [Import-AzureRmDataLakeStoreItem](.\Import-AzureRmDataLakeStoreItem.md)
+### [Import-AzureRmDataLakeStoreItem](./Import-AzureRmDataLakeStoreItem.md)
 Uploads a local file or directory to a Data Lake Store.
 
 
-### [Join-AzureRmDataLakeStoreItem](.\Join-AzureRmDataLakeStoreItem.md)
+### [Join-AzureRmDataLakeStoreItem](./Join-AzureRmDataLakeStoreItem.md)
 Joins one or more files to create one file in Data Lake Store.
 
 
-### [Move-AzureRmDataLakeStoreItem](.\Move-AzureRmDataLakeStoreItem.md)
+### [Move-AzureRmDataLakeStoreItem](./Move-AzureRmDataLakeStoreItem.md)
 Moves or renames a file or folder in Data Lake Store.
 
 
-### [New-AzureRmDataLakeStoreAccount](.\New-AzureRmDataLakeStoreAccount.md)
+### [New-AzureRmDataLakeStoreAccount](./New-AzureRmDataLakeStoreAccount.md)
 Creates a new Data Lake Store account.
 
 
-### [New-AzureRmDataLakeStoreItem](.\New-AzureRmDataLakeStoreItem.md)
+### [New-AzureRmDataLakeStoreItem](./New-AzureRmDataLakeStoreItem.md)
 Creates a new file or folder in Data Lake Store.
 
 
-### [Remove-AzureRmDataLakeStoreAccount](.\Remove-AzureRmDataLakeStoreAccount.md)
+### [Remove-AzureRmDataLakeStoreAccount](./Remove-AzureRmDataLakeStoreAccount.md)
 Deletes a Data Lake Store account permanently.
 
 
-### [Remove-AzureRmDataLakeStoreItemAclEntry](.\Remove-AzureRmDataLakeStoreItemAclEntry.md)
+### [Remove-AzureRmDataLakeStoreItemAclEntry](./Remove-AzureRmDataLakeStoreItemAclEntry.md)
 Removes an entry from the ACL of a file or folder in Data Lake Store.
 
 
-### [Remove-AzureRmDataLakeStoreItem](.\Remove-AzureRmDataLakeStoreItem.md)
+### [Remove-AzureRmDataLakeStoreItem](./Remove-AzureRmDataLakeStoreItem.md)
 Deletes a file or folder in Data Lake Store.
 
 
-### [Set-AzureRmDataLakeStoreAccount](.\Set-AzureRmDataLakeStoreAccount.md)
+### [Set-AzureRmDataLakeStoreAccount](./Set-AzureRmDataLakeStoreAccount.md)
 Modifies a Data Lake Store account.
 
 
-### [Set-AzureRmDataLakeStoreItemAclEntry](.\Set-AzureRmDataLakeStoreItemAclEntry.md)
+### [Set-AzureRmDataLakeStoreItemAclEntry](./Set-AzureRmDataLakeStoreItemAclEntry.md)
 Modifies an entry in the ACL of a file or folder in Data Lake Store.
 
 
-### [Set-AzureRmDataLakeStoreItemAcl](.\Set-AzureRmDataLakeStoreItemAcl.md)
+### [Set-AzureRmDataLakeStoreItemAcl](./Set-AzureRmDataLakeStoreItemAcl.md)
 Modifies the ACL of a file or folder in Data Lake Store.
 
 
-### [Set-AzureRmDataLakeStoreItemOwner](.\Set-AzureRmDataLakeStoreItemOwner.md)
+### [Set-AzureRmDataLakeStoreItemOwner](./Set-AzureRmDataLakeStoreItemOwner.md)
 Modifies the owner of a file or folder in Data Lake Store.
 
 
-### [Test-AzureRmDataLakeStoreAccount](.\Test-AzureRmDataLakeStoreAccount.md)
+### [Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
 Tests the existence of a Data Lake Store account.
 
 
-### [Test-AzureRmDataLakeStoreItem](.\Test-AzureRmDataLakeStoreItem.md)
+### [Test-AzureRmDataLakeStoreItem](./Test-AzureRmDataLakeStoreItem.md)
 Tests the existence of a file or folder in Data Lake Store.
 
 

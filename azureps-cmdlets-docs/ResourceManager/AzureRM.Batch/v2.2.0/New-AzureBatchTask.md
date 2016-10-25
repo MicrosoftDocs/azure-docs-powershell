@@ -364,18 +364,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBatchAccountKeys](.\Get-AzureRmBatchAccountKeys.md)
+[Get-AzureRmBatchAccountKeys](./Get-AzureRmBatchAccountKeys.md)
 
-[Get-AzureBatchJob](.\Get-AzureBatchJob.md)
+[Get-AzureBatchJob](./Get-AzureBatchJob.md)
 
-[Get-AzureBatchTask](.\Get-AzureBatchTask.md)
+[Get-AzureBatchTask](./Get-AzureBatchTask.md)
 
-[New-AzureBatchTask](.\New-AzureBatchTask.md)
+[New-AzureBatchTask](./New-AzureBatchTask.md)
 
-[Remove-AzureBatchTask](.\Remove-AzureBatchTask.md)
+[Remove-AzureBatchTask](./Remove-AzureBatchTask.md)
 
-[Stop-AzureBatchTask](.\Stop-AzureBatchTask.md)
+[Stop-AzureBatchTask](./Stop-AzureBatchTask.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

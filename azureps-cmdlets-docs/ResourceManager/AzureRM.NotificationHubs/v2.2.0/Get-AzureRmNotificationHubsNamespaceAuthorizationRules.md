@@ -115,12 +115,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmNotificationHubsNamespace](.\Get-AzureRmNotificationHubsNamespace.md)
+[Get-AzureRmNotificationHubsNamespace](./Get-AzureRmNotificationHubsNamespace.md)
 
-[New-AzureRmNotificationHubsNamespace](.\New-AzureRmNotificationHubsNamespace.md)
+[New-AzureRmNotificationHubsNamespace](./New-AzureRmNotificationHubsNamespace.md)
 
-[Remove-AzureRmNotificationHubsNamespace](.\Remove-AzureRmNotificationHubsNamespace.md)
+[Remove-AzureRmNotificationHubsNamespace](./Remove-AzureRmNotificationHubsNamespace.md)
 
-[Set-AzureRmNotificationHubsNamespace](.\Set-AzureRmNotificationHubsNamespace.md)
+[Set-AzureRmNotificationHubsNamespace](./Set-AzureRmNotificationHubsNamespace.md)
 
 

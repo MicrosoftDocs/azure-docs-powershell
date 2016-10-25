@@ -86,10 +86,10 @@ This cmdlet returns a **TrafficManagerProfile** object.
 
 ## RELATED LINKS
 
-[Get-AzureTrafficManagerProfile](.\Get-AzureTrafficManagerProfile.md)
+[Get-AzureTrafficManagerProfile](./Get-AzureTrafficManagerProfile.md)
 
-[New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
+[New-AzureTrafficManagerProfile](./New-AzureTrafficManagerProfile.md)
 
-[Remove-AzureTrafficManagerProfile](.\Remove-AzureTrafficManagerProfile.md)
+[Remove-AzureTrafficManagerProfile](./Remove-AzureTrafficManagerProfile.md)
 
 

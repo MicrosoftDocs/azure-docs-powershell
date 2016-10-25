@@ -341,12 +341,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureBatchAccountKeys](.\Get-AzureBatchAccountKeys.md)
+[Get-AzureBatchAccountKeys](./Get-AzureBatchAccountKeys.md)
 
-[Get-AzureBatchComputeNode](.\Get-AzureBatchComputeNode.md)
+[Get-AzureBatchComputeNode](./Get-AzureBatchComputeNode.md)
 
-[Get-AzureBatchTask](.\Get-AzureBatchTask.md)
+[Get-AzureBatchTask](./Get-AzureBatchTask.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

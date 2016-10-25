@@ -124,10 +124,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/)
 
-[Get-AzureManagedCacheNamedCache](.\Get-AzureManagedCacheNamedCache.md)
+[Get-AzureManagedCacheNamedCache](./Get-AzureManagedCacheNamedCache.md)
 
-[New-AzureManagedCacheNamedCache](.\New-AzureManagedCacheNamedCache.md)
+[New-AzureManagedCacheNamedCache](./New-AzureManagedCacheNamedCache.md)
 
-[Set-AzureManagedCacheNamedCache](.\Set-AzureManagedCacheNamedCache.md)
+[Set-AzureManagedCacheNamedCache](./Set-AzureManagedCacheNamedCache.md)
 
 

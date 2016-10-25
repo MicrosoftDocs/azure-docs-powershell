@@ -208,24 +208,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlServerAdvisor](.\Get-AzureRmSqlServerAdvisor.md)
+[Get-AzureRmSqlServerAdvisor](./Get-AzureRmSqlServerAdvisor.md)
 
-[Get-AzureRmSqlElasticPoolAdvisor](.\Get-AzureRmSqlElasticPoolAdvisor.md)
+[Get-AzureRmSqlElasticPoolAdvisor](./Get-AzureRmSqlElasticPoolAdvisor.md)
 
-[Get-AzureRmSqlServerRecommendedAction](.\Get-AzureRmSqlServerRecommendedAction.md)
+[Get-AzureRmSqlServerRecommendedAction](./Get-AzureRmSqlServerRecommendedAction.md)
 
-[Get-AzureRmSqlElasticPoolRecommendedAction](.\Get-AzureRmSqlElasticPoolRecommendedAction.md)
+[Get-AzureRmSqlElasticPoolRecommendedAction](./Get-AzureRmSqlElasticPoolRecommendedAction.md)
 
-[Set-AzureRmSqlElasticPoolRecommendedActionState](.\Set-AzureRmSqlElasticPoolRecommendedActionState.md)
+[Set-AzureRmSqlElasticPoolRecommendedActionState](./Set-AzureRmSqlElasticPoolRecommendedActionState.md)
 
-[Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus](.\Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus.md)
+[Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus](./Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus.md)
 
-[Set-AzureRmSqlElasticPoolRecommendedActionState](.\Set-AzureRmSqlElasticPoolRecommendedActionState.md)
+[Set-AzureRmSqlElasticPoolRecommendedActionState](./Set-AzureRmSqlElasticPoolRecommendedActionState.md)
 
-[Set-AzureRmSqlServerRecommendedActionState](.\Set-AzureRmSqlServerRecommendedActionState.md)
+[Set-AzureRmSqlServerRecommendedActionState](./Set-AzureRmSqlServerRecommendedActionState.md)
 
-[Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus](.\Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus.md)
+[Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus](./Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus.md)
 
-[Set-AzureRmSqlServerAdvisorAutoExecuteStatus](.\Set-AzureRmSqlServerAdvisorAutoExecuteStatus.md)
+[Set-AzureRmSqlServerAdvisorAutoExecuteStatus](./Set-AzureRmSqlServerAdvisorAutoExecuteStatus.md)
 
 

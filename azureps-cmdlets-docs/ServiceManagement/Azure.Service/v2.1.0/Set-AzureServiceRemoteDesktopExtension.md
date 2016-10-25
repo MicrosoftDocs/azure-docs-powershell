@@ -262,6 +262,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureServiceRemoteDesktopExtension](.\Get-AzureServiceRemoteDesktopExtension.md)
+[Get-AzureServiceRemoteDesktopExtension](./Get-AzureServiceRemoteDesktopExtension.md)
 
 

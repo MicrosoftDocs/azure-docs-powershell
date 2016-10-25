@@ -114,6 +114,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackVM](.\Get-WAPackVM.md)
+[Get-WAPackVM](./Get-WAPackVM.md)
 
 

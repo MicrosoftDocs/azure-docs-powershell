@@ -197,16 +197,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureStorageBlobSASToken](.\New-AzureStorageBlobSASToken.md)
+[New-AzureStorageBlobSASToken](./New-AzureStorageBlobSASToken.md)
 
-[New-AzureStorageContainerSASToken](.\New-AzureStorageContainerSASToken.md)
+[New-AzureStorageContainerSASToken](./New-AzureStorageContainerSASToken.md)
 
-[New-AzureStorageFileSASToken](.\New-AzureStorageFileSASToken.md)
+[New-AzureStorageFileSASToken](./New-AzureStorageFileSASToken.md)
 
-[New-AzureStorageQueueSASToken](.\New-AzureStorageQueueSASToken.md)
+[New-AzureStorageQueueSASToken](./New-AzureStorageQueueSASToken.md)
 
-[New-AzureStorageShareSASToken](.\New-AzureStorageShareSASToken.md)
+[New-AzureStorageShareSASToken](./New-AzureStorageShareSASToken.md)
 
-[New-AzureStorageTableSASToken](.\New-AzureStorageTableSASToken.md)
+[New-AzureStorageTableSASToken](./New-AzureStorageTableSASToken.md)
 
 

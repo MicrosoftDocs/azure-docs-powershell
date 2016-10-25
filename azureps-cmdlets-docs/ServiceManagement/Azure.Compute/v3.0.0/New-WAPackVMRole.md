@@ -132,10 +132,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackVMRole](.\Get-WAPackVMRole.md)
+[Get-WAPackVMRole](./Get-WAPackVMRole.md)
 
-[Remove-WAPackVMRole](.\Remove-WAPackVMRole.md)
+[Remove-WAPackVMRole](./Remove-WAPackVMRole.md)
 
-[Set-WAPackVMRole](.\Set-WAPackVMRole.md)
+[Set-WAPackVMRole](./Set-WAPackVMRole.md)
 
 

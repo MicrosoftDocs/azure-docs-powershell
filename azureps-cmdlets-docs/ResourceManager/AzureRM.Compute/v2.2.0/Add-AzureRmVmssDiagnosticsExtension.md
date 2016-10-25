@@ -186,10 +186,10 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Add-AzureRmVmssExtension](.\Add-AzureRmVmssExtension.md)
+[Add-AzureRmVmssExtension](./Add-AzureRmVmssExtension.md)
 
-[Remove-AzureRmVmssDiagnosticsExtension](.\Remove-AzureRmVmssDiagnosticsExtension.md)
+[Remove-AzureRmVmssDiagnosticsExtension](./Remove-AzureRmVmssDiagnosticsExtension.md)
 
-[Set-AzureRmVMDiagnosticsExtension](.\Set-AzureRMVMDiagnosticsExtension.md)
+[Set-AzureRmVMDiagnosticsExtension](./Set-AzureRMVMDiagnosticsExtension.md)
 
 

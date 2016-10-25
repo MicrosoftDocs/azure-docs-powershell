@@ -97,6 +97,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureOperationalInsightsWorkspace](.\Get-AzureOperationalInsightsWorkspace.md)
+[Get-AzureOperationalInsightsWorkspace](./Get-AzureOperationalInsightsWorkspace.md)
 
 

@@ -168,10 +168,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmNotificationHubAuthorizationRules](.\Get-AzureRmNotificationHubAuthorizationRules.md)
+[Get-AzureRmNotificationHubAuthorizationRules](./Get-AzureRmNotificationHubAuthorizationRules.md)
 
-[Remove-AzureRmNotificationHubAuthorizationRules](.\Remove-AzureRmNotificationHubAuthorizationRules.md)
+[Remove-AzureRmNotificationHubAuthorizationRules](./Remove-AzureRmNotificationHubAuthorizationRules.md)
 
-[Set-AzureRmNotificationHubAuthorizationRules](.\Set-AzureRmNotificationHubAuthorizationRules.md)
+[Set-AzureRmNotificationHubAuthorizationRules](./Set-AzureRmNotificationHubAuthorizationRules.md)
 
 

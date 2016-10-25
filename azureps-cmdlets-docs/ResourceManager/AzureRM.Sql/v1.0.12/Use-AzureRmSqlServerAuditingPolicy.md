@@ -139,14 +139,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlDatabaseAuditingPolicy](.\Get-AzureRmSqlDatabaseAuditingPolicy.md)
+[Get-AzureRmSqlDatabaseAuditingPolicy](./Get-AzureRmSqlDatabaseAuditingPolicy.md)
 
-[Get-AzureRmSqlServerAuditingPolicy](.\Get-AzureRmSqlServerAuditingPolicy.md)
+[Get-AzureRmSqlServerAuditingPolicy](./Get-AzureRmSqlServerAuditingPolicy.md)
 
-[Set-AzureRmSqlDatabaseAuditingPolicy](.\Set-AzureRmSqlDatabaseAuditingPolicy.md)
+[Set-AzureRmSqlDatabaseAuditingPolicy](./Set-AzureRmSqlDatabaseAuditingPolicy.md)
 
-[Set-AzureRmSqlServerAuditingPolicy](.\Set-AzureRmSqlServerAuditingPolicy.md)
+[Set-AzureRmSqlServerAuditingPolicy](./Set-AzureRmSqlServerAuditingPolicy.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

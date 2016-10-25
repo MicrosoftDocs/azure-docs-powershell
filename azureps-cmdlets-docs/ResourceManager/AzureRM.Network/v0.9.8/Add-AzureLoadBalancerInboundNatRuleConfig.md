@@ -208,16 +208,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureLoadBalancer](.\Get-AzureLoadBalancer.md)
+[Get-AzureLoadBalancer](./Get-AzureLoadBalancer.md)
 
-[Get-AzureLoadBalancerInboundNatRuleConfig](.\Get-AzureLoadBalancerInboundNatRuleConfig.md)
+[Get-AzureLoadBalancerInboundNatRuleConfig](./Get-AzureLoadBalancerInboundNatRuleConfig.md)
 
-[New-AzureLoadBalancerInboundNatRuleConfig](.\New-AzureLoadBalancerInboundNatRuleConfig.md)
+[New-AzureLoadBalancerInboundNatRuleConfig](./New-AzureLoadBalancerInboundNatRuleConfig.md)
 
-[Remove-AzureLoadBalancerInboundNatRuleConfig](.\Remove-AzureLoadBalancerInboundNatRuleConfig.md)
+[Remove-AzureLoadBalancerInboundNatRuleConfig](./Remove-AzureLoadBalancerInboundNatRuleConfig.md)
 
-[Set-AzureLoadBalancer](.\Set-AzureLoadBalancer.md)
+[Set-AzureLoadBalancer](./Set-AzureLoadBalancer.md)
 
-[Set-AzureLoadBalancerInboundNatRuleConfig](.\Set-AzureLoadBalancerInboundNatRuleConfig.md)
+[Set-AzureLoadBalancerInboundNatRuleConfig](./Set-AzureLoadBalancerInboundNatRuleConfig.md)
 
 

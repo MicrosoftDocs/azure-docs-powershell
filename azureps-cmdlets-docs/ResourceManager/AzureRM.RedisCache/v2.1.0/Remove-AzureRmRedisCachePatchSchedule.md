@@ -110,10 +110,10 @@ You can pipe input to this cmdlet by property name, but not by value.
 
 ## RELATED LINKS
 
-[Get-AzureRmRedisCachePatchSchedule](.\Get-AzureRmRedisCachePatchSchedule.md)
+[Get-AzureRmRedisCachePatchSchedule](./Get-AzureRmRedisCachePatchSchedule.md)
 
-[New-AzureRmRedisCachePatchSchedule](.\New-AzureRmRedisCachePatchSchedule.md)
+[New-AzureRmRedisCachePatchSchedule](./New-AzureRmRedisCachePatchSchedule.md)
 
-[New-AzureRmRedisCacheScheduleEntry](.\New-AzureRmRedisCacheScheduleEntry.md)
+[New-AzureRmRedisCacheScheduleEntry](./New-AzureRmRedisCacheScheduleEntry.md)
 
 

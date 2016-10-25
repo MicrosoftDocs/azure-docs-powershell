@@ -140,10 +140,10 @@ This cmdlet returns a value of $True, if it succeeds or, if the deletion fails, 
 
 ## RELATED LINKS
 
-[Get-AzureTrafficManagerProfile](.\Get-AzureTrafficManagerProfile.md)
+[Get-AzureTrafficManagerProfile](./Get-AzureTrafficManagerProfile.md)
 
-[New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
+[New-AzureTrafficManagerProfile](./New-AzureTrafficManagerProfile.md)
 
-[Set-AzureTrafficManagerProfile](.\Set-AzureTrafficManagerProfile.md)
+[Set-AzureTrafficManagerProfile](./Set-AzureTrafficManagerProfile.md)
 
 

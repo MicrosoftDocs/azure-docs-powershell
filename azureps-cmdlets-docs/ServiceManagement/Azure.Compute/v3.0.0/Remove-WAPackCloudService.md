@@ -156,8 +156,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackCloudService](.\Get-WAPackCloudService.md)
+[Get-WAPackCloudService](./Get-WAPackCloudService.md)
 
-[New-WAPackCloudService](.\New-WAPackCloudService.md)
+[New-WAPackCloudService](./New-WAPackCloudService.md)
 
 

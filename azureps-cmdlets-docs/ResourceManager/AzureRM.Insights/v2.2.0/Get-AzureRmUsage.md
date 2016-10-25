@@ -121,6 +121,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmMetric](.\Get-AzureRmMetric.md)
+[Get-AzureRmMetric](./Get-AzureRmMetric.md)
 
 

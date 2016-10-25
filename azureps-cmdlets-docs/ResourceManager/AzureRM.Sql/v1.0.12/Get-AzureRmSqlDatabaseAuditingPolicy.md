@@ -133,10 +133,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureRmSqlDatabaseAuditing](.\Remove-AzureRmSqlDatabaseAuditing.md)
+[Remove-AzureRmSqlDatabaseAuditing](./Remove-AzureRmSqlDatabaseAuditing.md)
 
-[Set-AzureRmSqlDatabaseAuditingPolicy](.\Set-AzureRmSqlDatabaseAuditingPolicy.md)
+[Set-AzureRmSqlDatabaseAuditingPolicy](./Set-AzureRmSqlDatabaseAuditingPolicy.md)
 
-[Azure SQL Database Cmdlets](.\AzureRM.Sql.md)
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

@@ -278,8 +278,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-MetricDefinitions](.\Get-MetricDefinitions.md)
+[Get-MetricDefinitions](./Get-MetricDefinitions.md)
 
-[Format-MetricsAsTable](.\Format-MetricsAsTable.md)
+[Format-MetricsAsTable](./Format-MetricsAsTable.md)
 
 

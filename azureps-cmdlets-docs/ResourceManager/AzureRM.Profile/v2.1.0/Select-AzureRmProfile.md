@@ -77,8 +77,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmContext](.\Get-AzureRmContext.md)
+[Get-AzureRmContext](./Get-AzureRmContext.md)
 
-[Save-AzureRmProfile](.\Save-AzureRmProfile.md)
+[Save-AzureRmProfile](./Save-AzureRmProfile.md)
 
 

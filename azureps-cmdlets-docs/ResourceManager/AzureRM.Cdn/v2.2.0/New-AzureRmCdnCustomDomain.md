@@ -169,10 +169,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmCdnCustomDomain](.\Get-AzureRmCdnCustomDomain.md)
+[Get-AzureRmCdnCustomDomain](./Get-AzureRmCdnCustomDomain.md)
 
-[Remove-AzureRmCdnCustomDomain](.\Remove-AzureRmCdnCustomDomain.md)
+[Remove-AzureRmCdnCustomDomain](./Remove-AzureRmCdnCustomDomain.md)
 
-[Test-AzureRmCdnCustomDomain](.\Test-AzureRmCdnCustomDomain.md)
+[Test-AzureRmCdnCustomDomain](./Test-AzureRmCdnCustomDomain.md)
 
 

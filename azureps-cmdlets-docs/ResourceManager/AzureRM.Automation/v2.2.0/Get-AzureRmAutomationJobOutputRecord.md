@@ -107,6 +107,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmAutomationJobOutput](.\Get-AzureRMAutomationJobOutput.md)
+[Get-AzureRmAutomationJobOutput](./Get-AzureRMAutomationJobOutput.md)
 
 

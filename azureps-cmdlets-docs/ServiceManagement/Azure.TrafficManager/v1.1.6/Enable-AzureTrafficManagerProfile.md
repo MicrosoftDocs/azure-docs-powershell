@@ -100,14 +100,14 @@ If the operation succeeds and if you specify the *PassThru* parameter, this cmdl
 
 ## RELATED LINKS
 
-[Disable-AzureTrafficManagerProfile](.\Disable-AzureTrafficManagerProfile.md)
+[Disable-AzureTrafficManagerProfile](./Disable-AzureTrafficManagerProfile.md)
 
-[Get-AzureTrafficManagerProfile](.\Get-AzureTrafficManagerProfile.md)
+[Get-AzureTrafficManagerProfile](./Get-AzureTrafficManagerProfile.md)
 
-[New-AzureTrafficManagerProfile](.\New-AzureTrafficManagerProfile.md)
+[New-AzureTrafficManagerProfile](./New-AzureTrafficManagerProfile.md)
 
-[Remove-AzureTrafficManagerProfile](.\Remove-AzureTrafficManagerProfile.md)
+[Remove-AzureTrafficManagerProfile](./Remove-AzureTrafficManagerProfile.md)
 
-[Set-AzureTrafficManagerProfile](.\Set-AzureTrafficManagerProfile.md)
+[Set-AzureTrafficManagerProfile](./Set-AzureTrafficManagerProfile.md)
 
 

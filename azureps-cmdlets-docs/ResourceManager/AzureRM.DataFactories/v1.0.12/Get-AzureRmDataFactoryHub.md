@@ -121,8 +121,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmDataFactoryHub](.\New-AzureRmDataFactoryHub.md)
+[New-AzureRmDataFactoryHub](./New-AzureRmDataFactoryHub.md)
 
-[Remove-AzureRmDataFactoryHub](.\Remove-AzureRmDataFactoryHub.md)
+[Remove-AzureRmDataFactoryHub](./Remove-AzureRmDataFactoryHub.md)
 
 

@@ -228,10 +228,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-AzureVMDataDisk](.\Remove-AzureVMDataDisk.md)
+[Remove-AzureVMDataDisk](./Remove-AzureVMDataDisk.md)
 
-[Get-AzureVM](.\Get-AzureVM.md)
+[Get-AzureVM](./Get-AzureVM.md)
 
-[New-AzureVMConfig](.\New-AzureVMConfig.md)
+[New-AzureVMConfig](./New-AzureVMConfig.md)
 
 

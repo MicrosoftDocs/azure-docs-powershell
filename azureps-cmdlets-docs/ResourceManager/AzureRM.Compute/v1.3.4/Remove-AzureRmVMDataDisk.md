@@ -110,8 +110,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmVMDataDisk](.\Add-AzureRmVMDataDisk.md)
+[Add-AzureRmVMDataDisk](./Add-AzureRmVMDataDisk.md)
 
-[Get-AzureRmVM](.\Get-AzureRmVM.md)
+[Get-AzureRmVM](./Get-AzureRmVM.md)
 
 

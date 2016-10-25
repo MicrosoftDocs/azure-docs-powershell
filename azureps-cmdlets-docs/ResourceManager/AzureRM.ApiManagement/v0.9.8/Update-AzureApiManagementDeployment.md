@@ -240,6 +240,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureApiManagement](.\Get-AzureApiManagement.md)
+[Get-AzureApiManagement](./Get-AzureApiManagement.md)
 
 

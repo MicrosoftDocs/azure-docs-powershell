@@ -128,8 +128,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackStaticIPAddressPool](.\Get-WAPackStaticIPAddressPool.md)
+[Get-WAPackStaticIPAddressPool](./Get-WAPackStaticIPAddressPool.md)
 
-[Remove-WAPackStaticIPAddressPool](.\Remove-WAPackStaticIPAddressPool.md)
+[Remove-WAPackStaticIPAddressPool](./Remove-WAPackStaticIPAddressPool.md)
 
 

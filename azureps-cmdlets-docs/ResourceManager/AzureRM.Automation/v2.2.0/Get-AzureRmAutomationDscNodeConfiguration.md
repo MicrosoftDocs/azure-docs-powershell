@@ -151,6 +151,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Import-AzureRmAutomationDscNodeConfiguration](.\Import-AzureRmAutomationDscNodeConfiguration.md)
+[Import-AzureRmAutomationDscNodeConfiguration](./Import-AzureRmAutomationDscNodeConfiguration.md)
 
 

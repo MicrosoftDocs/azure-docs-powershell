@@ -138,12 +138,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmBatchAccountKeys](.\Get-AzureRmBatchAccountKeys.md)
+[Get-AzureRmBatchAccountKeys](./Get-AzureRmBatchAccountKeys.md)
 
-[Get-AzureBatchComputeNode](.\Get-AzureBatchComputeNode.md)
+[Get-AzureBatchComputeNode](./Get-AzureBatchComputeNode.md)
 
-[Get-AzureBatchRemoteDesktopProtocolFile](.\Get-AzureBatchRemoteDesktopProtocolFile.md)
+[Get-AzureBatchRemoteDesktopProtocolFile](./Get-AzureBatchRemoteDesktopProtocolFile.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

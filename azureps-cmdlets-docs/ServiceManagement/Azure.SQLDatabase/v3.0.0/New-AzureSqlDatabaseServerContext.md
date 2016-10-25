@@ -230,14 +230,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Azure SQL Database Cmdlets](.\Azure.SQLDatabase.md)
+[Azure SQL Database Cmdlets](./Azure.SQLDatabase.md)
 
-[Get-AzureSqlDatabase](.\Get-AzureSqlDatabase.md)
+[Get-AzureSqlDatabase](./Get-AzureSqlDatabase.md)
 
-[New-AzureSqlDatabase](.\New-AzureSqlDatabase.md)
+[New-AzureSqlDatabase](./New-AzureSqlDatabase.md)
 
-[Remove-AzureSqlDatabase](.\Remove-AzureSqlDatabase.md)
+[Remove-AzureSqlDatabase](./Remove-AzureSqlDatabase.md)
 
-[Set-AzureSqlDatabase](.\Set-AzureSqlDatabase.md)
+[Set-AzureSqlDatabase](./Set-AzureSqlDatabase.md)
 
 

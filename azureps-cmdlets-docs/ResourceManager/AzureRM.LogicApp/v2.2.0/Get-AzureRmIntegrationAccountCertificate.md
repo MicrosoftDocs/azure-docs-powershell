@@ -126,10 +126,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmIntegrationAccountCertificate](.\New-AzureRmIntegrationAccountCertificate.md)
+[New-AzureRmIntegrationAccountCertificate](./New-AzureRmIntegrationAccountCertificate.md)
 
-[Remove-AzureRmIntegrationAccountCertificate](.\Remove-AzureRmIntegrationAccountCertificate.md)
+[Remove-AzureRmIntegrationAccountCertificate](./Remove-AzureRmIntegrationAccountCertificate.md)
 
-[Set-AzureRmIntegrationAccountCertificate](.\Set-AzureRmIntegrationAccountCertificate.md)
+[Set-AzureRmIntegrationAccountCertificate](./Set-AzureRmIntegrationAccountCertificate.md)
 
 

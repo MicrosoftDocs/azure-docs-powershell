@@ -148,8 +148,8 @@ Microsoft.Azure.Commands.Sql.ServerActiveDirectoryAdministrator.Model.AzureSqlSe
 
 ## RELATED LINKS
 
-[Get-AzureSqlServerActiveDirectoryAdministrator](.\Get-AzureSqlServerActiveDirectoryAdministrator.md)
+[Get-AzureSqlServerActiveDirectoryAdministrator](./Get-AzureSqlServerActiveDirectoryAdministrator.md)
 
-[Set-AzureSqlServerActiveDirectoryAdministrator](.\Set-AzureSqlServerActiveDirectoryAdministrator.md)
+[Set-AzureSqlServerActiveDirectoryAdministrator](./Set-AzureSqlServerActiveDirectoryAdministrator.md)
 
 

@@ -102,6 +102,6 @@ This cmdlet gets details of the **DeviceJob** that this cmdlet stops.
 
 ## RELATED LINKS
 
-[Get-AzureStorSimpleJob](.\Get-AzureStorSimpleJob.md)
+[Get-AzureStorSimpleJob](./Get-AzureStorSimpleJob.md)
 
 

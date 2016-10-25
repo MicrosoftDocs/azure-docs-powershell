@@ -191,8 +191,8 @@ This cmdlet returns updated device details for the virtual device.
 
 ## RELATED LINKS
 
-[New-AzureStorSimpleVirtualDevice](.\New-AzureStorSimpleVirtualDevice.md)
+[New-AzureStorSimpleVirtualDevice](./New-AzureStorSimpleVirtualDevice.md)
 
-[Set-AzureStorSimpleDevice](.\Set-AzureStorSimpleDevice.md)
+[Set-AzureStorSimpleDevice](./Set-AzureStorSimpleDevice.md)
 
 

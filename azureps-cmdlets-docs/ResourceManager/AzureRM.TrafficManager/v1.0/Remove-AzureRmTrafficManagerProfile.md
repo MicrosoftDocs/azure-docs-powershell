@@ -161,14 +161,14 @@ This cmdlet returns a value of $True, if it succeeds or, if the deletion fails, 
 
 ## RELATED LINKS
 
-[Disable-AzureRmTrafficManagerProfile](.\Disable-AzureRmTrafficManagerProfile.md)
+[Disable-AzureRmTrafficManagerProfile](./Disable-AzureRmTrafficManagerProfile.md)
 
-[Enable-AzureRmTrafficManagerProfile](.\Enable-AzureRmTrafficManagerProfile.md)
+[Enable-AzureRmTrafficManagerProfile](./Enable-AzureRmTrafficManagerProfile.md)
 
-[Get-AzureRmTrafficManagerProfile](.\Get-AzureRmTrafficManagerProfile.md)
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
 
-[New-AzureRmTrafficManagerProfile](.\New-AzureRmTrafficManagerProfile.md)
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
 
-[Set-AzureRmTrafficManagerProfile](.\Set-AzureRmTrafficManagerProfile.md)
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
 
 

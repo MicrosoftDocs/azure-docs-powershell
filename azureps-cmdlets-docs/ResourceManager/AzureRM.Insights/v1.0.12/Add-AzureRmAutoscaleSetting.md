@@ -187,12 +187,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmAutoscaleSetting](.\Get-AzureRmAutoscaleSetting.md)
+[Get-AzureRmAutoscaleSetting](./Get-AzureRmAutoscaleSetting.md)
 
-[New-AzureRmAutoscaleProfile](.\New-AzureRmAutoscaleProfile.md)
+[New-AzureRmAutoscaleProfile](./New-AzureRmAutoscaleProfile.md)
 
-[New-AzureRmAutoscaleRule](.\New-AzureRmAutoscaleRule.md)
+[New-AzureRmAutoscaleRule](./New-AzureRmAutoscaleRule.md)
 
-[Remove-AzureRmAutoscaleSetting](.\Remove-AzureRmAutoscaleSetting.md)
+[Remove-AzureRmAutoscaleSetting](./Remove-AzureRmAutoscaleSetting.md)
 
 

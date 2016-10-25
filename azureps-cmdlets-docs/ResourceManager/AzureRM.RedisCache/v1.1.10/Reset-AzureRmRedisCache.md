@@ -174,14 +174,14 @@ You can pipe input to this cmdlet by property name, but not by value.
 
 ## RELATED LINKS
 
-[Export-AzureRmRedisCache](.\Export-AzureRmRedisCache.md)
+[Export-AzureRmRedisCache](./Export-AzureRmRedisCache.md)
 
-[Import-AzureRmRedisCache](.\Import-AzureRmRedisCache.md)
+[Import-AzureRmRedisCache](./Import-AzureRmRedisCache.md)
 
-[New-AzureRmRedisCache](.\New-AzureRmRedisCache.md)
+[New-AzureRmRedisCache](./New-AzureRmRedisCache.md)
 
-[Remove-AzureRmRedisCache](.\Remove-AzureRmRedisCache.md)
+[Remove-AzureRmRedisCache](./Remove-AzureRmRedisCache.md)
 
-[Set-AzureRmRedisCache](.\Set-AzureRmRedisCache.md)
+[Set-AzureRmRedisCache](./Set-AzureRmRedisCache.md)
 
 

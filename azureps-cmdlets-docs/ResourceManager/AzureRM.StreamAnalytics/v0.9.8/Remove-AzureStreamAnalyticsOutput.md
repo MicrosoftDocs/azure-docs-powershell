@@ -136,10 +136,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureStreamAnalyticsOutput](.\Get-AzureStreamAnalyticsOutput.md)
+[Get-AzureStreamAnalyticsOutput](./Get-AzureStreamAnalyticsOutput.md)
 
-[New-AzureStreamAnalyticsOutput](.\New-AzureStreamAnalyticsOutput.md)
+[New-AzureStreamAnalyticsOutput](./New-AzureStreamAnalyticsOutput.md)
 
-[Test-AzureStreamAnalyticsOutput](.\Test-AzureStreamAnalyticsOutput.md)
+[Test-AzureStreamAnalyticsOutput](./Test-AzureStreamAnalyticsOutput.md)
 
 

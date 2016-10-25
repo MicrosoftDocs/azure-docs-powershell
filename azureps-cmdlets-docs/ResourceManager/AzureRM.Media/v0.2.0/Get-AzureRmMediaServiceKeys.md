@@ -101,5 +101,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmMediaServiceKey](.\Set-AzureRmMediaServiceKey.md)
+[Set-AzureRmMediaServiceKey](./Set-AzureRmMediaServiceKey.md)
 

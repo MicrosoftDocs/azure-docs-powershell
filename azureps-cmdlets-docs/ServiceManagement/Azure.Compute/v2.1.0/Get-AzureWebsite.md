@@ -154,14 +154,14 @@ When you use the **Name** parameter, **Get-AzureWebsite** returns a **SiteWithCo
 
 ## RELATED LINKS
 
-[New-AzureWebsite](.\New-AzureWebsite.md)
+[New-AzureWebsite](./New-AzureWebsite.md)
 
-[Remove-AzureWebsite](.\Remove-AzureWebsite.md)
+[Remove-AzureWebsite](./Remove-AzureWebsite.md)
 
-[Start-AzureWebsite](.\Start-AzureWebsite.md)
+[Start-AzureWebsite](./Start-AzureWebsite.md)
 
-[Stop-AzureWebsite](.\Stop-AzureWebsite.md)
+[Stop-AzureWebsite](./Stop-AzureWebsite.md)
 
-[Show-AzureWebsite](.\Show-AzureWebsite.md)
+[Show-AzureWebsite](./Show-AzureWebsite.md)
 
 

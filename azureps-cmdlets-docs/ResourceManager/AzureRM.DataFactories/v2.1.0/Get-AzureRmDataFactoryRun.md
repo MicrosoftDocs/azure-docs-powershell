@@ -176,6 +176,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmDataFactorySlice](.\Get-AzureRmDataFactorySlice.md)
+[Get-AzureRmDataFactorySlice](./Get-AzureRmDataFactorySlice.md)
 
 

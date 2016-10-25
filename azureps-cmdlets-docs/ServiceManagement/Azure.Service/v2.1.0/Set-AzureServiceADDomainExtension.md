@@ -379,10 +379,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureServiceADDomainExtension](.\Get-AzureServiceADDomainExtension.md)
+[Get-AzureServiceADDomainExtension](./Get-AzureServiceADDomainExtension.md)
 
-[Remove-AzureServiceADDomainExtension](.\Remove-AzureServiceADDomainExtension.md)
+[Remove-AzureServiceADDomainExtension](./Remove-AzureServiceADDomainExtension.md)
 
-[New-AzureServiceADDomainExtensionConfig](.\New-AzureServiceADDomainExtensionConfig.md)
+[New-AzureServiceADDomainExtensionConfig](./New-AzureServiceADDomainExtensionConfig.md)
 
 

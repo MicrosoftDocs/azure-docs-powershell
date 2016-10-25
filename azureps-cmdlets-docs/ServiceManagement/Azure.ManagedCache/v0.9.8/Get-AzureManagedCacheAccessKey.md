@@ -82,14 +82,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureManagedCacheAccessKey](.\New-AzureManagedCacheAccessKey.md)
+[New-AzureManagedCacheAccessKey](./New-AzureManagedCacheAccessKey.md)
 
-[New-AzureManagedCache](.\New-AzureManagedCache.md)
+[New-AzureManagedCache](./New-AzureManagedCache.md)
 
-[Get-AzureManagedCache](.\Get-AzureManagedCache.md)
+[Get-AzureManagedCache](./Get-AzureManagedCache.md)
 
-[Set-AzureManagedCache](.\Set-AzureManagedCache.md)
+[Set-AzureManagedCache](./Set-AzureManagedCache.md)
 
-[Remove-AzureManagedCache](.\Remove-AzureManagedCache.md)
+[Remove-AzureManagedCache](./Remove-AzureManagedCache.md)
 
 

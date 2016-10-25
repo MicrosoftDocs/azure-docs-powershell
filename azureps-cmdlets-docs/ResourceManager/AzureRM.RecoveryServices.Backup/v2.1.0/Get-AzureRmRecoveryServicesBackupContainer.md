@@ -191,10 +191,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmRecoveryServicesBackupItem](.\Get-AzureRmRecoveryServicesBackupItem.md)
+[Get-AzureRmRecoveryServicesBackupItem](./Get-AzureRmRecoveryServicesBackupItem.md)
 
-[Get-AzureRmRecoveryServicesBackupManagementServer](.\Get-AzureRmRecoveryServicesBackupManagementServer.md)
+[Get-AzureRmRecoveryServicesBackupManagementServer](./Get-AzureRmRecoveryServicesBackupManagementServer.md)
 
-[Unregister-AzureRmRecoveryServicesBackupContainer](.\Unregister-AzureRmRecoveryServicesBackupContainer.md)
+[Unregister-AzureRmRecoveryServicesBackupContainer](./Unregister-AzureRmRecoveryServicesBackupContainer.md)
 
 

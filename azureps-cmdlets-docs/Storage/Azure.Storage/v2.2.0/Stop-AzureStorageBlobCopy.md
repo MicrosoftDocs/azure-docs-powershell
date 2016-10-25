@@ -279,12 +279,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureStorageBlob](.\Get-AzureStorageBlob.md)
+[Get-AzureStorageBlob](./Get-AzureStorageBlob.md)
 
-[Get-AzureStorageContainer](.\Get-AzureStorageContainer.md)
+[Get-AzureStorageContainer](./Get-AzureStorageContainer.md)
 
-[Start-AzureStorageBlobCopy](.\Start-AzureStorageBlobCopy.md)
+[Start-AzureStorageBlobCopy](./Start-AzureStorageBlobCopy.md)
 
-[Get-AzureStorageBlobCopyState](.\Get-AzureStorageBlobCopyState.md)
+[Get-AzureStorageBlobCopyState](./Get-AzureStorageBlobCopyState.md)
 
 

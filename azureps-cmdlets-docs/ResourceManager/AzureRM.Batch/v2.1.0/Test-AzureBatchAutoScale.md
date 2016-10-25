@@ -97,12 +97,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureBatchAutoScale](.\Disable-AzureBatchAutoScale.md)
+[Disable-AzureBatchAutoScale](./Disable-AzureBatchAutoScale.md)
 
-[Enable-AzureBatchAutoScale](.\Enable-AzureBatchAutoScale.md)
+[Enable-AzureBatchAutoScale](./Enable-AzureBatchAutoScale.md)
 
-[Get-AzureRmBatchAccountKeys](.\Get-AzureRmBatchAccountKeys.md)
+[Get-AzureRmBatchAccountKeys](./Get-AzureRmBatchAccountKeys.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

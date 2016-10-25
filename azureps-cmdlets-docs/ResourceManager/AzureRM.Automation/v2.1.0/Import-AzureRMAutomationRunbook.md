@@ -258,20 +258,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-AzureRmAutomationRunbook](.\Export-AzureRMAutomationRunbook.md)
+[Export-AzureRmAutomationRunbook](./Export-AzureRMAutomationRunbook.md)
 
-[Get-AzureRmAutomationRunbook](.\Get-AzureRMAutomationRunbook.md)
+[Get-AzureRmAutomationRunbook](./Get-AzureRMAutomationRunbook.md)
 
-[New-AzureRmAutomationRunbook](.\New-AzureRMAutomationRunbook.md)
+[New-AzureRmAutomationRunbook](./New-AzureRMAutomationRunbook.md)
 
-[New-AzureRmAutomationRunbook](.\New-AzureRMAutomationRunbook.md)
+[New-AzureRmAutomationRunbook](./New-AzureRMAutomationRunbook.md)
 
-[Publish-AzureRmAutomationRunbook](.\Publish-AzureRMAutomationRunbook.md)
+[Publish-AzureRmAutomationRunbook](./Publish-AzureRMAutomationRunbook.md)
 
-[Remove-AzureRmAutomationRunbook](.\Remove-AzureRMAutomationRunbook.md)
+[Remove-AzureRmAutomationRunbook](./Remove-AzureRMAutomationRunbook.md)
 
-[Set-AzureRmAutomationRunbook](.\Set-AzureRMAutomationRunbook.md)
+[Set-AzureRmAutomationRunbook](./Set-AzureRMAutomationRunbook.md)
 
-[Start-AzureRmAutomationRunbook](.\Start-AzureRMAutomationRunbook.md)
+[Start-AzureRmAutomationRunbook](./Start-AzureRMAutomationRunbook.md)
 
 

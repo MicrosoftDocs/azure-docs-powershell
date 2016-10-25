@@ -79,14 +79,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Edit-AzureRmSiteRecoveryRecoveryPlan](.\Edit-AzureRmSiteRecoveryRecoveryPlan.md)
+[Edit-AzureRmSiteRecoveryRecoveryPlan](./Edit-AzureRmSiteRecoveryRecoveryPlan.md)
 
-[Get-AzureRmSiteRecoveryRecoveryPlan](.\Get-AzureRmSiteRecoveryRecoveryPlan.md)
+[Get-AzureRmSiteRecoveryRecoveryPlan](./Get-AzureRmSiteRecoveryRecoveryPlan.md)
 
-[New-AzureRmSiteRecoveryRecoveryPlan](.\New-AzureRmSiteRecoveryRecoveryPlan.md)
+[New-AzureRmSiteRecoveryRecoveryPlan](./New-AzureRmSiteRecoveryRecoveryPlan.md)
 
-[Remove-AzureRmSiteRecoveryRecoveryPlan](.\Remove-AzureRmSiteRecoveryRecoveryPlan.md)
+[Remove-AzureRmSiteRecoveryRecoveryPlan](./Remove-AzureRmSiteRecoveryRecoveryPlan.md)
 
-[Update-AzureRmSiteRecoveryRecoveryPlan](.\Update-AzureRmSiteRecoveryRecoveryPlan.md)
+[Update-AzureRmSiteRecoveryRecoveryPlan](./Update-AzureRmSiteRecoveryRecoveryPlan.md)
 
 

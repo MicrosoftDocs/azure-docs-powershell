@@ -125,6 +125,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmVmssConfig](.\New-AzureRmVmssConfig.md)
+[New-AzureRmVmssConfig](./New-AzureRmVmssConfig.md)
 
 

@@ -155,8 +155,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmOperationalInsightsDataSource](.\Get-AzureRmOperationalInsightsDataSource.md)
+[Get-AzureRmOperationalInsightsDataSource](./Get-AzureRmOperationalInsightsDataSource.md)
 
-[Set-AzureRmOperationalInsightsDataSource](.\Set-AzureRmOperationalInsightsDataSource.md)
+[Set-AzureRmOperationalInsightsDataSource](./Set-AzureRmOperationalInsightsDataSource.md)
 
 

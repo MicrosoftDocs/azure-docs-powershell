@@ -372,14 +372,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmLogAlertRule](.\Add-AzureRmLogAlertRule.md)
+[Add-AzureRmLogAlertRule](./Add-AzureRmLogAlertRule.md)
 
-[Add-AzureRmMetricAlertRule](.\Add-AzureRmMetricAlertRule.md)
+[Add-AzureRmMetricAlertRule](./Add-AzureRmMetricAlertRule.md)
 
-[Add-AzureRmWebtestAlertRule](.\Add-AzureRmWebtestAlertRule.md)
+[Add-AzureRmWebtestAlertRule](./Add-AzureRmWebtestAlertRule.md)
 
-[Get-AzureRmAlertRule](.\Get-AzureRmAlertRule.md)
+[Get-AzureRmAlertRule](./Get-AzureRmAlertRule.md)
 
-[Remove-AzureRmAlertRule](.\Remove-AzureRmAlertRule.md)
+[Remove-AzureRmAlertRule](./Remove-AzureRmAlertRule.md)
 
 

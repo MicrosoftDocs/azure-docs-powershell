@@ -152,10 +152,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMExtension](.\Get-AzureVMExtension.md)
+[Get-AzureVMExtension](./Get-AzureVMExtension.md)
 
-[Set-AzureVMExtension](.\Set-AzureVMExtension.md)
+[Set-AzureVMExtension](./Set-AzureVMExtension.md)
 
-[Azure Service Cmdlets](.\Azure.Service.md)
+[Azure Service Cmdlets](./Azure.Service.md)
 
 

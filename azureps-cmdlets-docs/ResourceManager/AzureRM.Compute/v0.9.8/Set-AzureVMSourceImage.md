@@ -158,16 +158,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureAvailabilitySet](.\Get-AzureAvailabilitySet.md)
+[Get-AzureAvailabilitySet](./Get-AzureAvailabilitySet.md)
 
-[New-AzureVMConfig](.\New-AzureVMConfig.md)
+[New-AzureVMConfig](./New-AzureVMConfig.md)
 
-[Get-AzureVMImagePublisher](.\Get-AzureVMImagePublisher.md)
+[Get-AzureVMImagePublisher](./Get-AzureVMImagePublisher.md)
 
-[Get-AzureVMImageOffer](.\Get-AzureVMImageOffer.md)
+[Get-AzureVMImageOffer](./Get-AzureVMImageOffer.md)
 
-[Get-AzureVMImageSku](.\Get-AzureVMImageSku.md)
+[Get-AzureVMImageSku](./Get-AzureVMImageSku.md)
 
-[Get-AzureVMImage](.\Get-AzureVMImage.md)
+[Get-AzureVMImage](./Get-AzureVMImage.md)
 
 

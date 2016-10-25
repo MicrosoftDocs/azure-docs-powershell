@@ -128,8 +128,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Resize-AzureRmVirtualNetworkGateway](.\Resize-AzureRmVirtualNetworkGateway.md)
+[Resize-AzureRmVirtualNetworkGateway](./Resize-AzureRmVirtualNetworkGateway.md)
 
-[Set-AzureRmVirtualNetworkGatewayVpnClientConfig](.\Set-AzureRmVirtualNetworkGatewayVpnClientConfig.md)
+[Set-AzureRmVirtualNetworkGatewayVpnClientConfig](./Set-AzureRmVirtualNetworkGatewayVpnClientConfig.md)
 
 

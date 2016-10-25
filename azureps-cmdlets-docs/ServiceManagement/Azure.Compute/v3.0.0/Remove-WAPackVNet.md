@@ -123,8 +123,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WAPackVNet](.\Get-WAPackVNet.md)
+[Get-WAPackVNet](./Get-WAPackVNet.md)
 
-[New-WAPackVNet](.\New-WAPackVNet.md)
+[New-WAPackVNet](./New-WAPackVNet.md)
 
 

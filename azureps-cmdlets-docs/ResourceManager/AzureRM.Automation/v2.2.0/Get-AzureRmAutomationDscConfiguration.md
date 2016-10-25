@@ -101,8 +101,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-AzureRmAutomationDscConfiguration](.\Export-AzureRmAutomationDscConfiguration.md)
+[Export-AzureRmAutomationDscConfiguration](./Export-AzureRmAutomationDscConfiguration.md)
 
-[Import-AzureRmAutomationDscConfiguration](.\Import-AzureRmAutomationDscConfiguration.md)
+[Import-AzureRmAutomationDscConfiguration](./Import-AzureRmAutomationDscConfiguration.md)
 
 

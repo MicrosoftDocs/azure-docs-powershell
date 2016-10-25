@@ -86,10 +86,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AutoscaleSetting](.\Add-AutoscaleSetting.md)
+[Add-AutoscaleSetting](./Add-AutoscaleSetting.md)
 
-[Get-AutoscaleSetting](.\Get-AutoscaleSetting.md)
+[Get-AutoscaleSetting](./Get-AutoscaleSetting.md)
 
-[Get-AutoscaleHistory](.\Get-AutoscaleHistory.md)
+[Get-AutoscaleHistory](./Get-AutoscaleHistory.md)
 
 

@@ -130,10 +130,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureServiceProject](.\New-AzureServiceProject.md)
+[New-AzureServiceProject](./New-AzureServiceProject.md)
 
-[Publish-AzureServiceProject](.\Publish-AzureServiceProject.md)
+[Publish-AzureServiceProject](./Publish-AzureServiceProject.md)
 
-[Set-AzureServiceProjectRole](.\Set-AzureServiceProjectRole.md)
+[Set-AzureServiceProjectRole](./Set-AzureServiceProjectRole.md)
 
 

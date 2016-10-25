@@ -257,8 +257,8 @@ Output from Get-ACSFarm can be piped to this cmdlet's input.
 
 ## RELATED LINKS
 
-[Add-ACSFarm](.\Add-ACSFarm.md)
+[Add-ACSFarm](./Add-ACSFarm.md)
 
-[Get-ACSFarm](.\Get-ACSFarm.md)
+[Get-ACSFarm](./Get-ACSFarm.md)
 
 

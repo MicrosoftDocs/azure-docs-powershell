@@ -275,18 +275,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureVMImage](.\Add-AzureVMImage.md)
+[Add-AzureVMImage](./Add-AzureVMImage.md)
 
-[Get-AzureVMImage](.\Get-AzureVMImage.md)
+[Get-AzureVMImage](./Get-AzureVMImage.md)
 
-[Remove-AzureVMImage](.\Remove-AzureVMImage.md)
+[Remove-AzureVMImage](./Remove-AzureVMImage.md)
 
-[Save-AzureVMImage](.\Save-AzureVMImage.md)
+[Save-AzureVMImage](./Save-AzureVMImage.md)
 
-[New-AzureVMImageDiskConfigSet](.\New-AzureVMImageDiskConfigSet.md)
+[New-AzureVMImageDiskConfigSet](./New-AzureVMImageDiskConfigSet.md)
 
-[Set-AzureVMImageOSDiskConfig](.\Set-AzureVMImageOSDiskConfig.md)
+[Set-AzureVMImageOSDiskConfig](./Set-AzureVMImageOSDiskConfig.md)
 
-[Set-AzureVMImageDataDiskConfig](.\Set-AzureVMImageDataDiskConfig.md)
+[Set-AzureVMImageDataDiskConfig](./Set-AzureVMImageDataDiskConfig.md)
 
 

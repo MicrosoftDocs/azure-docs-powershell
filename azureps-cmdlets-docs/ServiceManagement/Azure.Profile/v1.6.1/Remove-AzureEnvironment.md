@@ -108,10 +108,10 @@ Otherwise, it does not return any output.
 
 ## RELATED LINKS
 
-[Add-AzureEnvironment](.\Add-AzureEnvironment.md)
+[Add-AzureEnvironment](./Add-AzureEnvironment.md)
 
-[Get-AzureEnvironment](.\Get-AzureEnvironment.md)
+[Get-AzureEnvironment](./Get-AzureEnvironment.md)
 
-[Set-AzureEnvironment](.\Set-AzureEnvironment.md)
+[Set-AzureEnvironment](./Set-AzureEnvironment.md)
 
 

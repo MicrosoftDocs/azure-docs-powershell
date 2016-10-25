@@ -71,10 +71,10 @@ This cmdlet creates instances of the **Microsoft.Azure.Commands.Network.Models.P
 
 ## RELATED LINKS
 
-[Add-AzureRmExpressRouteCircuitAuthorization](.\Add-AzureRmExpressRouteCircuitAuthorization.md)
+[Add-AzureRmExpressRouteCircuitAuthorization](./Add-AzureRmExpressRouteCircuitAuthorization.md)
 
-[Get-AzureRmExpressRouteCircuitAuthorization](.\Get-AzureRmExpressRouteCircuitAuthorization.md)
+[Get-AzureRmExpressRouteCircuitAuthorization](./Get-AzureRmExpressRouteCircuitAuthorization.md)
 
-[Remove-AzureRmExpressRouteCircuitAuthorization](.\Remove-AzureRmExpressRouteCircuitAuthorization.md)
+[Remove-AzureRmExpressRouteCircuitAuthorization](./Remove-AzureRmExpressRouteCircuitAuthorization.md)
 
 

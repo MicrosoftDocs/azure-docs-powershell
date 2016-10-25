@@ -232,10 +232,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmDataFactorySliceStatus](.\Set-AzureRmDataFactorySliceStatus.md)
+[Set-AzureRmDataFactorySliceStatus](./Set-AzureRmDataFactorySliceStatus.md)
 
-[Get-AzureRmDataFactoryRun](.\Get-AzureRmDataFactoryRun.md)
+[Get-AzureRmDataFactoryRun](./Get-AzureRmDataFactoryRun.md)
 
-[Set-AzureRmDataFactoryPipelineActivePeriod](.\Set-AzureRmDataFactoryPipelineActivePeriod.md)
+[Set-AzureRmDataFactoryPipelineActivePeriod](./Set-AzureRmDataFactoryPipelineActivePeriod.md)
 
 

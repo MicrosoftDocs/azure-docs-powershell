@@ -311,12 +311,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMImage](.\Get-AzureVMImage.md)
+[Get-AzureVMImage](./Get-AzureVMImage.md)
 
-[Remove-AzureVMImage](.\Remove-AzureVMImage.md)
+[Remove-AzureVMImage](./Remove-AzureVMImage.md)
 
-[Save-AzureVMImage](.\Save-AzureVMImage.md)
+[Save-AzureVMImage](./Save-AzureVMImage.md)
 
-[Update-AzureVMImage](.\Update-AzureVMImage.md)
+[Update-AzureVMImage](./Update-AzureVMImage.md)
 
 

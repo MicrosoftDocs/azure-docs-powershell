@@ -122,6 +122,6 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[New-AzureRmVmssConfig](.\New-AzureRmVmssConfig.md)
+[New-AzureRmVmssConfig](./New-AzureRmVmssConfig.md)
 
 

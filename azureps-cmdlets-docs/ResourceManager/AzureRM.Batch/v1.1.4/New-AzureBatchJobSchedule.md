@@ -151,18 +151,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureBatchJobSchedule](.\Disable-AzureBatchJobSchedule.md)
+[Disable-AzureBatchJobSchedule](./Disable-AzureBatchJobSchedule.md)
 
-[Enable-AzureBatchJobSchedule](.\Enable-AzureBatchJobSchedule.md)
+[Enable-AzureBatchJobSchedule](./Enable-AzureBatchJobSchedule.md)
 
-[Get-AzureRmBatchAccountKeys](.\Get-AzureRmBatchAccountKeys.md)
+[Get-AzureRmBatchAccountKeys](./Get-AzureRmBatchAccountKeys.md)
 
-[Get-AzureBatchJobSchedule](.\Get-AzureBatchJobSchedule.md)
+[Get-AzureBatchJobSchedule](./Get-AzureBatchJobSchedule.md)
 
-[Remove-AzureBatchJobSchedule](.\Remove-AzureBatchJobSchedule.md)
+[Remove-AzureBatchJobSchedule](./Remove-AzureBatchJobSchedule.md)
 
-[Stop-AzureBatchJobSchedule](.\Stop-AzureBatchJobSchedule.md)
+[Stop-AzureBatchJobSchedule](./Stop-AzureBatchJobSchedule.md)
 
-[Azure Batch Cmdlets](.\AzureRM.Batch.md)
+[Azure Batch Cmdlets](./AzureRM.Batch.md)
 
 

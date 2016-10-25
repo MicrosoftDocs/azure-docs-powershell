@@ -155,12 +155,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureVMImageOffer](.\Get-AzureVMImageOffer.md)
+[Get-AzureVMImageOffer](./Get-AzureVMImageOffer.md)
 
-[Get-AzureVMImagePublisher](.\Get-AzureVMImagePublisher.md)
+[Get-AzureVMImagePublisher](./Get-AzureVMImagePublisher.md)
 
-[Get-AzureVMImageSku](.\Get-AzureVMImageSku.md)
+[Get-AzureVMImageSku](./Get-AzureVMImageSku.md)
 
-[Save-AzureVMImage](.\Save-AzureVMImage.md)
+[Save-AzureVMImage](./Save-AzureVMImage.md)
 
 

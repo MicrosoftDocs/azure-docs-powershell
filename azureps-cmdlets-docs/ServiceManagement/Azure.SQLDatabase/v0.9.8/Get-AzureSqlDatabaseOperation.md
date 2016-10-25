@@ -164,10 +164,10 @@ This cmdlet returns an array of **DatabaseOperationResponseList** objects if you
 
 ## RELATED LINKS
 
-[Azure SQL Database](.\Azure.SQLDatabase.md)
+[Azure SQL Database](./Azure.SQLDatabase.md)
 
-[Get-AzureSqlDatabase](.\Get-AzureSqlDatabase.md)
+[Get-AzureSqlDatabase](./Get-AzureSqlDatabase.md)
 
-[New-AzureSqlDatabaseServerContext](.\New-AzureSqlDatabaseServerContext.md)
+[New-AzureSqlDatabaseServerContext](./New-AzureSqlDatabaseServerContext.md)
 
 

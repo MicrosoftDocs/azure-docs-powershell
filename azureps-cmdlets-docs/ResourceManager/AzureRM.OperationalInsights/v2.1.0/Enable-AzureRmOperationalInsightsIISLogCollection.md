@@ -171,6 +171,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AzureRmOperationalInsightsIISLogCollection](.\Disable-AzureRmOperationalInsightsIISLogCollection.md)
+[Disable-AzureRmOperationalInsightsIISLogCollection](./Disable-AzureRmOperationalInsightsIISLogCollection.md)
 
 

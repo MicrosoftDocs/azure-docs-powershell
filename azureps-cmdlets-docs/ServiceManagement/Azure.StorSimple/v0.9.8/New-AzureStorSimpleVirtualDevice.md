@@ -188,8 +188,8 @@ You can use this identifier to track the progress using the Get-AzureStorSimpleJ
 
 ## RELATED LINKS
 
-[Set-AzureStorSimpleVirtualDevice](.\Set-AzureStorSimpleVirtualDevice.md)
+[Set-AzureStorSimpleVirtualDevice](./Set-AzureStorSimpleVirtualDevice.md)
 
-[Get-AzureStorSimpleJob](.\Get-AzureStorSimpleJob.md)
+[Get-AzureStorSimpleJob](./Get-AzureStorSimpleJob.md)
 
 

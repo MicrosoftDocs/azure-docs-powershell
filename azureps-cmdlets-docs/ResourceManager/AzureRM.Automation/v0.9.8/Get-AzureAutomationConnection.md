@@ -150,10 +150,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureAutomationConnection](.\New-AzureAutomationConnection.md)
+[New-AzureAutomationConnection](./New-AzureAutomationConnection.md)
 
-[Remove-AzureAutomationConnection](.\Remove-AzureAutomationConnection.md)
+[Remove-AzureAutomationConnection](./Remove-AzureAutomationConnection.md)
 
-[Set-AzureAutomationConnectionFieldValue](.\Set-AzureAutomationConnectionFieldValue.md)
+[Set-AzureAutomationConnectionFieldValue](./Set-AzureAutomationConnectionFieldValue.md)
 
 

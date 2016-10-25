@@ -208,6 +208,6 @@ By default, **Get-AzureWebHostingPlanMetric** returns an array of **MetricRespon
 
 ## RELATED LINKS
 
-[Get-AzureWebHostingPlan](.\Get-AzureWebHostingPlan.md)
+[Get-AzureWebHostingPlan](./Get-AzureWebHostingPlan.md)
 
 

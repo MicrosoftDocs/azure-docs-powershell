@@ -238,12 +238,12 @@ This cmdlet returns a *RestorableDroppedDatabase* object if you specify the *Res
 
 ## RELATED LINKS
 
-[New-AzureSqlDatabase](.\New-AzureSqlDatabase.md)
+[New-AzureSqlDatabase](./New-AzureSqlDatabase.md)
 
-[New-AzureSqlDatabaseServerContext](.\New-AzureSqlDatabaseServerContext.md)
+[New-AzureSqlDatabaseServerContext](./New-AzureSqlDatabaseServerContext.md)
 
-[Remove-AzureSqlDatabase](.\Remove-AzureSqlDatabase.md)
+[Remove-AzureSqlDatabase](./Remove-AzureSqlDatabase.md)
 
-[Set-AzureSqlDatabase](.\Set-AzureSqlDatabase.md)
+[Set-AzureSqlDatabase](./Set-AzureSqlDatabase.md)
 
 

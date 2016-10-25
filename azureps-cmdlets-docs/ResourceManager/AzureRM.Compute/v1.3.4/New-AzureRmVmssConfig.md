@@ -275,14 +275,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmVmssOsProfile](.\Set-AzureRmVmssOsProfile.md)
+[Set-AzureRmVmssOsProfile](./Set-AzureRmVmssOsProfile.md)
 
-[Set-AzureRmVmssStorageProfile](.\Set-AzureRmVmssStorageProfile.md)
+[Set-AzureRmVmssStorageProfile](./Set-AzureRmVmssStorageProfile.md)
 
-[Add-AzureRmVmssNetworkInterfaceConfiguration](.\Add-AzureRmVmssNetworkInterfaceConfiguration.md)
+[Add-AzureRmVmssNetworkInterfaceConfiguration](./Add-AzureRmVmssNetworkInterfaceConfiguration.md)
 
-[Add-AzureRmVmssExtension](.\Add-AzureRmVmssExtension.md)
+[Add-AzureRmVmssExtension](./Add-AzureRmVmssExtension.md)
 
-[New-AzureRmVmss](.\New-AzureRmVmss.md)
+[New-AzureRmVmss](./New-AzureRmVmss.md)
 
 

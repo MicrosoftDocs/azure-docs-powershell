@@ -201,10 +201,10 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Get-AzureRmDnsZone](.\Get-AzureRmDnsZone.md)
+[Get-AzureRmDnsZone](./Get-AzureRmDnsZone.md)
 
-[New-AzureRmDnsZone](.\New-AzureRmDnsZone.md)
+[New-AzureRmDnsZone](./New-AzureRmDnsZone.md)
 
-[Set-AzureRmDnsZone](.\Set-AzureRmDnsZone.md)
+[Set-AzureRmDnsZone](./Set-AzureRmDnsZone.md)
 
 

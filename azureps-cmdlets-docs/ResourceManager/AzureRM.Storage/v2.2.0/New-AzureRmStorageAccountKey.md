@@ -91,6 +91,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmStorageAccountKey](.\Get-AzureRmStorageAccountKey.md)
+[Get-AzureRmStorageAccountKey](./Get-AzureRmStorageAccountKey.md)
 
 

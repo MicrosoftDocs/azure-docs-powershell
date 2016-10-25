@@ -11,31 +11,31 @@ Locale: en-US
 Azure PowerShell is a PowerShell module designed to help information technology (IT) professionals automate system administration tasks. To install the latest Azure PowerShell version and associate it with your Azure subscription, see How to install and configure Azure PowerShell.
 
 ## AzureRM.CognitiveServices Cmdlets
-### [Get-AzureRmCognitiveServicesAccountKey](.\Get-AzureRmCognitiveServicesAccountKey.md)
+### [Get-AzureRmCognitiveServicesAccountKey](./Get-AzureRmCognitiveServicesAccountKey.md)
 Gets the API keys for an account.
 
 
-### [Get-AzureRmCognitiveServicesAccountSkus](.\Get-AzureRmCognitiveServicesAccountSkus.md)
+### [Get-AzureRmCognitiveServicesAccountSkus](./Get-AzureRmCognitiveServicesAccountSkus.md)
 Gets the available SKUs for an account.
 
 
-### [Get-AzureRmCognitiveServicesAccount](.\Get-AzureRmCognitiveServicesAccount.md)
+### [Get-AzureRmCognitiveServicesAccount](./Get-AzureRmCognitiveServicesAccount.md)
 Gets an account.
 
 
-### [New-AzureRmCognitiveServicesAccountKey](.\New-AzureRmCognitiveServicesAccountKey.md)
+### [New-AzureRmCognitiveServicesAccountKey](./New-AzureRmCognitiveServicesAccountKey.md)
 Regenerates an account key.
 
 
-### [New-AzureRmCognitiveServicesAccount](.\New-AzureRmCognitiveServicesAccount.md)
+### [New-AzureRmCognitiveServicesAccount](./New-AzureRmCognitiveServicesAccount.md)
 Creates a Cognitive Services account.
 
 
-### [Remove-AzureRmCognitiveServicesAccount](.\Remove-AzureRmCognitiveServicesAccount.md)
+### [Remove-AzureRmCognitiveServicesAccount](./Remove-AzureRmCognitiveServicesAccount.md)
 Deletes a Cognitive Services account.
 
 
-### [Set-AzureRmCognitiveServicesAccount](.\Set-AzureRmCognitiveServicesAccount.md)
+### [Set-AzureRmCognitiveServicesAccount](./Set-AzureRmCognitiveServicesAccount.md)
 Modifies an account.
 
 

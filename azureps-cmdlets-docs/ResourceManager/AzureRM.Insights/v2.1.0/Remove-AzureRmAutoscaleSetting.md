@@ -70,8 +70,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRmAutoscaleSetting](.\Add-AzureRmAutoscaleSetting.md)
+[Add-AzureRmAutoscaleSetting](./Add-AzureRmAutoscaleSetting.md)
 
-[Get-AzureRmAutoscaleSetting](.\Get-AzureRmAutoscaleSetting.md)
+[Get-AzureRmAutoscaleSetting](./Get-AzureRmAutoscaleSetting.md)
 
 

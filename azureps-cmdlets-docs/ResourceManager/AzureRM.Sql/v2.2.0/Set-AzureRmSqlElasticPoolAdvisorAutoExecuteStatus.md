@@ -169,6 +169,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmSqlElasticPoolAdvisor](.\Get-AzureRmSqlElasticPoolAdvisor.md)
+[Get-AzureRmSqlElasticPoolAdvisor](./Get-AzureRmSqlElasticPoolAdvisor.md)
 
 

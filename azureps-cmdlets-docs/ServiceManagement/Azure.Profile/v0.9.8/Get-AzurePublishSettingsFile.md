@@ -147,8 +147,8 @@ Otherwise, this cmdlet does not return any output
 
 ## RELATED LINKS
 
-[Add-AzureAccount](.\Add-AzureAccount.md)
+[Add-AzureAccount](./Add-AzureAccount.md)
 
-[Import-AzurePublishSettingsFile](.\Import-AzurePublishSettingsFile.md)
+[Import-AzurePublishSettingsFile](./Import-AzurePublishSettingsFile.md)
 
 

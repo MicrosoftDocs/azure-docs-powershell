@@ -475,10 +475,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AlertHistory](.\Get-AlertHistory.md)
+[Get-AlertHistory](./Get-AlertHistory.md)
 
-[Get-AlertRule](.\Get-AlertRule.md)
+[Get-AlertRule](./Get-AlertRule.md)
 
-[Remove-AlertRule](.\Remove-AlertRule.md)
+[Remove-AlertRule](./Remove-AlertRule.md)
 
 

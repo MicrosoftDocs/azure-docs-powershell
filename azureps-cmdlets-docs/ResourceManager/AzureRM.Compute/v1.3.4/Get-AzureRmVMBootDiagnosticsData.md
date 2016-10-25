@@ -170,6 +170,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AzureRmVMBootDiagnostics](.\Set-AzureRmVMBootDiagnostics.md)
+[Set-AzureRmVMBootDiagnostics](./Set-AzureRmVMBootDiagnostics.md)
 
 
