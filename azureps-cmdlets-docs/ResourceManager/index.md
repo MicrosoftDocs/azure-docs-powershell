@@ -1,42 +1,7 @@
 # Azure Resource Manager Cmdlets
 
-This section displays the online help files for the Azure Resource Manager in Azure PowerShell 3.0.
+This section displays the online help files for the Azure Resource Manager.
 The cmdlets in the __AzureRM.*__ modules let you use Resource Manager in Azure PowerShell.
-
-## Changes for the Azure PowerShell 3.0 release
-
-These are the breaking changes for Azure PowerShell 3.0.
-For additional details, see [Breaking changes for Microsoft Azure PowerShell 3.0.0](https://github.com/Azure/azure-powershell/blob/v3.0.0-September2016/documentation/release-notes/migration-guide.3.0.0.md) and the cmdlet documentation.
-
-### Breaking changes to Data Lake Store cmdlets
-
-The **Get-AzureRmDataLakeStoreItemAclEntry** cmdlet replaces the **Get-AzureRmDataLakeStoreItemAcl** cmdlet.
-**Get-AzureRmDataLakeStoreItemAclEntry** returns a list of entries in the access control list (ACL) of the path.
-The deprecated **Get-AzureRmDataLakeStoreItemAcl** returns a complex object that represents the ACL.
-
-You can pass the output of **Get-AzureRmDataLakeStoreItemAclEntry** to the Acl parameter of the following cmdlets:
-
-- **Get-AzureRmDataLakeStoreItemAclEntry**
-- **Set-AzureRmDataLakeStoreItemAcl**
-- **Set-AzureRmDataLakeStoreItemAclEntry**
-
-### Breaking changes to ApiManagement cmdlets
-
-In the **New-AzureRMApiManagementVirtualNetwork** cmdlet, the parameters used to refer to a virtual network changed from _SubnetName_ and _VnetId_ to _SubnetResourceId_.
-Specify a virtual network in the following format:
-
-```PowerShell
-/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ClassicNetwork/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}
-```
-
-The **Set-AzureRmApiManagementVirtualNetworks** cmdlet has been deprecated.
-Instead, use the **New-AzureRMApiManagementVirtualNetwork** and **Update-AzureRMApiManagementDeployment** cmdlets.
-
-### Breaking changes to Network cmdlets
-
-In the **New-AzureRmVirtualNetworkGateway** cmdlet, the _ActiveActive_ **Boolean** parameter has been replaced by the _EnableActiveActiveFeature_ switch parameter.
-
-In the **Set-AzureRmVirtualNetworkGateway** cmdlet, the _ActiveActive_ **Boolean** parameter has been replaced by the _EnableActiveActiveFeature_ and _DisableActiveActiveFeature_ switch parameters.
 
 ## To install the cmdlets
 
