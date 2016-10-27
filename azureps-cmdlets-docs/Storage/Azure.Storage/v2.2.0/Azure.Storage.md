@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.Storage Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Storage Cmdlets.
 
 ## Azure.Storage Cmdlets
 ### [Get-AzureStorageBlobContent](./Get-AzureStorageBlobContent.md)

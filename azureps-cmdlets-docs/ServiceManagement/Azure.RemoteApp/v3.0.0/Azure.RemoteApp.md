@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.RemoteApp Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure RemoteApp Cmdlets.
 
 ## Azure.RemoteApp Cmdlets
 ### [Add-AzureRemoteAppUser](./Add-AzureRemoteAppUser.md)

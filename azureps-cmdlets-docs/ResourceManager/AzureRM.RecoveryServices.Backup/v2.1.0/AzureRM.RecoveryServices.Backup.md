@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.RecoveryServices.Backup Module
 ## Description
-Azure PowerShell is a PowerShell module designed to help information technology (IT) professionals automate system administration tasks. To install the latest Azure PowerShell version and associate it with your Azure subscription, see How to install and configure Azure PowerShell. For more information about Azure Resource Manager cmdlets, see Using Azure PowerShell with Azure Resource Manager.
+This topic displays help topics for the Azure Backup - Recovery Services Cmdlets.
 
 ## AzureRM.RecoveryServices.Backup Cmdlets
 ### [Backup-AzureRmRecoveryServicesBackupItem](./Backup-AzureRmRecoveryServicesBackupItem.md)

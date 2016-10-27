@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.StorSimple Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure StorSimple Cmdlets.
 
 ## Azure.StorSimple Cmdlets
 ### [Confirm-AzureStorSimpleLegacyVolumeContainerStatus](./Confirm-AzureStorSimpleLegacyVolumeContainerStatus.md)

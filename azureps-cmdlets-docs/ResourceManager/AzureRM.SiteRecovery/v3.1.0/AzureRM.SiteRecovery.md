@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.SiteRecovery Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Site Recovery Cmdlets.
 
 ## AzureRM.SiteRecovery Cmdlets
 ### [Edit-AzureRmSiteRecoveryRecoveryPlan](./Edit-AzureRmSiteRecoveryRecoveryPlan.md)

@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Automation Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Automation Cmdlets.
 
 ## AzureRM.Automation Cmdlets
 ### [Export-AzureRmAutomationDscConfiguration](./Export-AzureRmAutomationDscConfiguration.md)

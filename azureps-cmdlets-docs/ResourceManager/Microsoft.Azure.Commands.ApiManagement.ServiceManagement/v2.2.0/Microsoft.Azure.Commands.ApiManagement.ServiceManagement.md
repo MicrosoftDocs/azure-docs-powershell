@@ -8,7 +8,7 @@ Locale: en-US
 
 # Microsoft.Azure.Commands.ApiManagement.ServiceManagement Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure cmdlets for Microsoft API Management.
 
 ## Microsoft.Azure.Commands.ApiManagement.ServiceManagement Cmdlets
 ### [Add-AzureRmApiManagementApiToProduct](./Add-AzureRmApiManagementApiToProduct.md)

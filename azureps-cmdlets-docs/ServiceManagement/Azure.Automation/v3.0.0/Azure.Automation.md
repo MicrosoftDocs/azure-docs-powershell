@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.Automation Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Automation Cmdlets.
 
 ## Azure.Automation Cmdlets
 ### [Get-AzureAutomationAccount](./Get-AzureAutomationAccount.md)

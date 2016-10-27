@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.SiteRecoveryServices Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Site Recovery Services Cmdlets.
 
 ## Azure.SiteRecoveryServices Cmdlets
 ### [Get-AzureSiteRecoveryJob](./Get-AzureSiteRecoveryJob.md)

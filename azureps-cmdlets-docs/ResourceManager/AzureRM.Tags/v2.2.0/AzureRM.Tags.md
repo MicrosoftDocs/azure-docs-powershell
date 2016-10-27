@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Tags Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Tag Cmdlets.
 
 ## AzureRM.Tags Cmdlets
 ### [Get-AzureRmTag](./Get-AzureRmTag.md)

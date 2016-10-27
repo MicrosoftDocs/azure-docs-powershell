@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.MachineLearning Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Machine Learning web service feature in Azure App Service cmdlets.
 
 ## AzureRM.MachineLearning Cmdlets
 ### [Export-AzureRmMlWebService](./Export-AzureRmMlWebService.md)

@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Scheduler Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Scheduler cmdlets.
 
 ## AzureRM.Scheduler Cmdlets
 ### [Disable-AzureRmSchedulerJobCollection](./Disable-AzureRmSchedulerJobCollection.md)

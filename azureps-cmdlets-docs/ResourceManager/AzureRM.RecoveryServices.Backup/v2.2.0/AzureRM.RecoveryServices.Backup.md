@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.RecoveryServices.Backup Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Backup - Recovery Services Cmdlets.
 
 ## AzureRM.RecoveryServices.Backup Cmdlets
 ### [Backup-AzureRmRecoveryServicesBackupItem](./Backup-AzureRmRecoveryServicesBackupItem.md)

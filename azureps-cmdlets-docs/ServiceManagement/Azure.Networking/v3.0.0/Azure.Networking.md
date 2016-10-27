@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.Networking Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Networking Cmdlets.
 
 ## Azure.Networking Cmdlets
 ### [Add-AzureApplicationGatewaySslCertificate](./Add-AzureApplicationGatewaySslCertificate.md)

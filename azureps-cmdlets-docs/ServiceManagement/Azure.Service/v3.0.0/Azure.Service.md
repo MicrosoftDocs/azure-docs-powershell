@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.Service Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Service Management Cmdlets.
 
 ## Azure.Service Cmdlets
 ### [Add-AzureCertificate](./Add-AzureCertificate.md)

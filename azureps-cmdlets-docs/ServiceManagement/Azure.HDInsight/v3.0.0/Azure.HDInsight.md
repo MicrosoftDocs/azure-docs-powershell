@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.HDInsight Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure HDInsight Cmdlets.
 
 ## Azure.HDInsight Cmdlets
 ### [Add-AzureHDInsightConfigValues](./Add-AzureHDInsightConfigValues.md)

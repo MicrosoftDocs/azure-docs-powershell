@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.RecoveryServices Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Recovery Services cmdlets.
 
 ## AzureRM.RecoveryServices Cmdlets
 ### [Get-AzureRmRecoveryServicesBackupProperties](./Get-AzureRmRecoveryServicesBackupProperties.md)

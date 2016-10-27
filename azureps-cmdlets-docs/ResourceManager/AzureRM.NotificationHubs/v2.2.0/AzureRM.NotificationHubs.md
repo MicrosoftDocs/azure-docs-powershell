@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.NotificationHubs Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Notification Hub cmdlets. Notification hubs are used to send push notifications to multiple clients regardless of the platform (iOS, Android, Windows Phone 8, Windows Store, etc.) used by those clients. These hubs are roughly equivalent to individual apps: each of your apps will typically have its own notification hub. Notification hubs are organized within logical containers known as namespaces, and Shared Access Signature (SAS) authorization rules are used to manage access to hubs and namespaces. All of these elements can be administered by using the Notification Hub cmdlets.
 
 ## AzureRM.NotificationHubs Cmdlets
 ### [Get-AzureRmNotificationHubAuthorizationRules](./Get-AzureRmNotificationHubAuthorizationRules.md)

@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.DataLakeAnalytics Module
 ## Description
-{{Manually Enter Description Here}}
+The topics in this section document the Azure PowerShell cmdlets for Azure Data Lake Analytics in the Azure Resource Manager (ARM) framework. The cmdlets exist in the **Microsoft.Azure.Commands.DataLakeAnalytics** namespace.
 
 ## AzureRM.DataLakeAnalytics Cmdlets
 ### [Add-AzureRmDataLakeAnalyticsDataSource](./Add-AzureRmDataLakeAnalyticsDataSource.md)

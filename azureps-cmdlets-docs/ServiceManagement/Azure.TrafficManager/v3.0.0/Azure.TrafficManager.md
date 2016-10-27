@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.TrafficManager Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Traffic Manager Cmdlets.
 
 ## Azure.TrafficManager Cmdlets
 ### [Add-AzureTrafficManagerEndpoint](./Add-AzureTrafficManagerEndpoint.md)
