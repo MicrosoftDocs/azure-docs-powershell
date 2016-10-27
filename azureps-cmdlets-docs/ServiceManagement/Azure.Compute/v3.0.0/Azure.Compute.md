@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.Compute Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Compute Cmdlets.
 
 ## Azure.Compute Cmdlets
 ### [Add-AzureNodeWebRole](./Add-AzureNodeWebRole.md)

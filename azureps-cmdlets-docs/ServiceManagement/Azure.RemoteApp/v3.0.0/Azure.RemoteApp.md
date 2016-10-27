@@ -8,7 +8,9 @@ Locale: en-US
 
 # Azure.RemoteApp Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure RemoteApp Cmdlets.
+
+The .dll file for this module is *Microsoft.WindowsAzure.Commands.RemoteApp.dll*.
 
 ## Azure.RemoteApp Cmdlets
 ### [Add-AzureRemoteAppUser](./Add-AzureRemoteAppUser.md)

@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Sql Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure SQL Database Cmdlets.
 
 ## AzureRM.Sql Cmdlets
 ### [Get-AzureRmSqlCapability](./Get-AzureRmSqlCapability.md)

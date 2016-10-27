@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Backup Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Online Backup cmdlets.
 
 ## AzureRM.Backup Cmdlets
 ### [Backup-AzureRmBackupItem](./Backup-AzureRmBackupItem.md)

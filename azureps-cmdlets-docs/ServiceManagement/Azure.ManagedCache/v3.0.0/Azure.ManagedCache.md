@@ -8,7 +8,11 @@ Locale: en-US
 
 # Azure.ManagedCache Module
 ## Description
-{{Manually Enter Description Here}}
+This section displays the online help files for the Azure Managed Cache cmdlets in the Azure module.
+
+An Azure Cache is a secure, dedicated cache that provides extremely fast access to data. This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications. For more information about Azure Cache, see [Azure Cache](http://azure.microsoft.com/services/cache/).
+
+These cmdlets were introduced in version 0.8.1 of the Azure module.
 
 ## Azure.ManagedCache Cmdlets
 ### [Get-AzureManagedCacheAccessKey](./Get-AzureManagedCacheAccessKey.md)

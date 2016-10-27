@@ -8,7 +8,9 @@ Locale: en-US
 
 # Azure.TrafficManager Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Traffic Manager Cmdlets.
+
+The .dll file for this module is *Microsoft.WindowsAzure.Commands.TrafficManager.dll*.
 
 ## Azure.TrafficManager Cmdlets
 ### [Add-AzureTrafficManagerEndpoint](./Add-AzureTrafficManagerEndpoint.md)

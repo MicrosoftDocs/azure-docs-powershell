@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.DNS Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure DNS Cmdlets.
 
 ## AzureRM.DNS Cmdlets
 ### [Add-AzureRmDnsRecordConfig](./Add-AzureRmDnsRecordConfig.md)

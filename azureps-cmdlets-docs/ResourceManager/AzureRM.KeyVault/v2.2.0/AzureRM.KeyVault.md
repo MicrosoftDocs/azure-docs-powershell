@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.KeyVault Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Key Vault Cmdlets.
 
 ## AzureRM.KeyVault Cmdlets
 ### [Add-AzureKeyVaultCertificateContact](./Add-AzureKeyVaultCertificateContact.md)

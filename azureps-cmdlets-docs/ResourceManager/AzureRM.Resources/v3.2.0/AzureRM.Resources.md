@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Resources Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Resource Manager Cmdlets.
 
 ## AzureRM.Resources Cmdlets
 ### [Export-AzureRmResourceGroup](./Export-AzureRmResourceGroup.md)

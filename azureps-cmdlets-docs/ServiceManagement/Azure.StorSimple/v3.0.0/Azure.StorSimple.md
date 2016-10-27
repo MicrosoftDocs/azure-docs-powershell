@@ -8,7 +8,11 @@ Locale: en-US
 
 # Azure.StorSimple Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure StorSimple Cmdlets.
+
+Migration cmdlets appear in a separate topic.
+
+The .dll file for this module is *Microsoft.WindowsAzure.Commands.StorSimple.dll*.
 
 ## Azure.StorSimple Cmdlets
 ### [Confirm-AzureStorSimpleLegacyVolumeContainerStatus](./Confirm-AzureStorSimpleLegacyVolumeContainerStatus.md)

@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.ApiManagement Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure API Management Cmdlets.
 
 ## AzureRM.ApiManagement Cmdlets
 ### [Add-AzureRmApiManagementRegion](./Add-AzureRmApiManagementRegion.md)

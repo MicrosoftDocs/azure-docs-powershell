@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Cdn Module
 ## Description
-{{Manually Enter Description Here}}
+The topics in this section document the Azure PowerShell cmdlets for Azure Content Delivery Network (CDN) in the Azure Resource Manager (ARM) framework. The cmdlets exist in the **Microsoft.Azure.Commands.Cdn** namespace.
 
 ## AzureRM.Cdn Cmdlets
 ### [Get-AzureRmCdnCustomDomain](./Get-AzureRmCdnCustomDomain.md)

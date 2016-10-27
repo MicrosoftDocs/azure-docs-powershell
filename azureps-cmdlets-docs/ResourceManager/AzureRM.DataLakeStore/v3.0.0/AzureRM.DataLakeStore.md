@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.DataLakeStore Module
 ## Description
-{{Manually Enter Description Here}}
+The topics in this section document the Azure PowerShell cmdlets for Azure Data Lake Store in the Azure Resource Manager (ARM) framework. The cmdlets exist in the **Microsoft.Azure.Commands.DataLakeStore** namespace.
 
 ## AzureRM.DataLakeStore Cmdlets
 ### [Add-AzureRmDataLakeStoreItemContent](./Add-AzureRmDataLakeStoreItemContent.md)

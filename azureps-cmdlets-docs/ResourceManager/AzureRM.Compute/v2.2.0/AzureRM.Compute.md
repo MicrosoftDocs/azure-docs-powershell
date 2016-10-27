@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Compute Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays the help topics for the Azure Compute Cmdlets.
 
 ## AzureRM.Compute Cmdlets
 ### [Add-AzureRmContainerServiceAgentPoolProfile](./Add-AzureRmContainerServiceAgentPoolProfile.md)

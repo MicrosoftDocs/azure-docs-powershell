@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.DevTestLabs Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the DevTest Labs feature in Azure App Service cmdlets. 
 
 ## AzureRM.DevTestLabs Cmdlets
 ### [Get-AzureRmDtlAllowedVMSizesPolicy](./Get-AzureRmDtlAllowedVMSizesPolicy.md)

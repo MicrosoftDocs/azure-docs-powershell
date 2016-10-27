@@ -8,7 +8,9 @@ Locale: en-US
 
 # Azure.SQLDatabase Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure SQL Database Cmdlets.
+
+The .dll file for this module is *Microsoft.WindowsAzure.Commands.SqlDatabase.dll*.
 
 ## Azure.SQLDatabase Cmdlets
 ### [Get-AzureSqlDatabaseCopy](./Get-AzureSqlDatabaseCopy.md)

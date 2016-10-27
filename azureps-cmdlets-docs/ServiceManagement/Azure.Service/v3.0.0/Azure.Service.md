@@ -8,7 +8,9 @@ Locale: en-US
 
 # Azure.Service Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Service Management Cmdlets.
+
+The .dll file for this module is *Microsoft.WindowsAzure.Commands.ServiceMgmt.dll*
 
 ## Azure.Service Cmdlets
 ### [Add-AzureCertificate](./Add-AzureCertificate.md)

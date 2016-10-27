@@ -8,7 +8,9 @@ Locale: en-US
 
 # Azure.Networking Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Networking Cmdlets.
+
+The .dll file for this module is *Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll*.
 
 ## Azure.Networking Cmdlets
 ### [Add-AzureApplicationGatewaySslCertificate](./Add-AzureApplicationGatewaySslCertificate.md)

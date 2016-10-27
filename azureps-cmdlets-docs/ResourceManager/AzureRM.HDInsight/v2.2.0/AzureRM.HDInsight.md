@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.HDInsight Module
 ## Description
-{{Manually Enter Description Here}}
+The topics in this section document the Azure PowerShell cmdlets for Microsoft Azure HDInsight in the Azure Resource Manager (ARM) framework. These cmdlets are used to manage HDInsight clusters and the jobs that run on them. The cmdlets exist in the **Microsoft.Azure.Commands.HDInsight** namespace.
 
 ## AzureRM.HDInsight Cmdlets
 ### [Add-AzureRmHDInsightClusterIdentity](./Add-AzureRmHDInsightClusterIdentity.md)

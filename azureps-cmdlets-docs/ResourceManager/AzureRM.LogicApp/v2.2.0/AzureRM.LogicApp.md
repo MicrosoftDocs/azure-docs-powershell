@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.LogicApp Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Logic Apps cmdlets.
 
 ## AzureRM.LogicApp Cmdlets
 ### [Get-AzureRmIntegrationAccountAgreement](./Get-AzureRmIntegrationAccountAgreement.md)

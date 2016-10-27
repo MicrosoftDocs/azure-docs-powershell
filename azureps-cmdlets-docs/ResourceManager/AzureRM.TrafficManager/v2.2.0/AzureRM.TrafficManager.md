@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.TrafficManager Module
 ## Description
-{{Manually Enter Description Here}}
+This topic lists the help topics for the Azure Traffic Manager cmdlets. The cmdlets use Azure Resource Manager.
 
 ## AzureRM.TrafficManager Cmdlets
 ### [Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)

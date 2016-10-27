@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.AzureStackStorage Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Consistent Storage (ASC) cmdlets, which are a part of the Microsoft Azure stack and designed to be used with Azure PowerShell.
 
 ## AzureRM.AzureStackStorage Cmdlets
 ### [Add-ACSFarm](./Add-ACSFarm.md)

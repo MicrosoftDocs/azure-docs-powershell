@@ -8,7 +8,14 @@ Locale: en-US
 
 # Azure.SiteRecovery Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Site Recovery Services Cmdlets.
+
+These cmdlets are supported only for the following recovery scenarios: 
+- Between two on-premises Hyper-V sites that System Center Virtual Machine Manager (VMM) manages 
+- Between a Hyper-V site that VMM manages and Azure
+- Between a Hyper-V site and Azure
+
+The .dll file for this module is *Microsoft.Azure.Commands.RecoveryServices.dll*.
 
 ## Azure.SiteRecovery Cmdlets
 ### [Get-AzureSiteRecoveryJob](./Get-AzureSiteRecoveryJob.md)

@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.DataFactories Module
 ## Description
-{{Manually Enter Description Here}}
+The cmdlets in the Azure Data Factory module enable you to manage data factories in Windows PowerShell.
 
 ## AzureRM.DataFactories Cmdlets
 ### [Get-AzureRmDataFactoryActivityWindow](./Get-AzureRmDataFactoryActivityWindow.md)

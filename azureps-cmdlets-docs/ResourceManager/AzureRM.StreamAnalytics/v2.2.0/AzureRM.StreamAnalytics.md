@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.StreamAnalytics Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Stream Analytics Cmdlets.
 
 ## AzureRM.StreamAnalytics Cmdlets
 ### [Get-AzureRmStreamAnalyticsDefaultFunctionDefinition](./Get-AzureRmStreamAnalyticsDefaultFunctionDefinition.md)

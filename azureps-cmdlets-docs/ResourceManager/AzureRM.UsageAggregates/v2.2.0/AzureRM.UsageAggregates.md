@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.UsageAggregates Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Usage Aggregate Cmdlets.
 
 ## AzureRM.UsageAggregates Cmdlets
 ### [Get-UsageAggregates](./Get-UsageAggregates.md)

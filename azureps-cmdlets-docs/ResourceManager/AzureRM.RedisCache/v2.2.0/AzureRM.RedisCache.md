@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.RedisCache Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Redis Cache cmdlets.
 
 ## AzureRM.RedisCache Cmdlets
 ### [Export-AzureRmRedisCache](./Export-AzureRmRedisCache.md)

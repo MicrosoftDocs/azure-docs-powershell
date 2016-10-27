@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Storage Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Storage Management Cmdlets.
 
 ## AzureRM.Storage Cmdlets
 ### [Get-AzureRmStorageAccountKey](./Get-AzureRmStorageAccountKey.md)

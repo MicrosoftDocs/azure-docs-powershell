@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Batch Module
 ## Description
-{{Manually Enter Description Here}}
+The Azure Batch cmdlets in the Azure module enable you to manage Microsoft Azure Batch services in Azure PowerShell.
 
 ## AzureRM.Batch Cmdlets
 ### [Disable-AzureBatchAutoScale](./Disable-AzureBatchAutoScale.md)
