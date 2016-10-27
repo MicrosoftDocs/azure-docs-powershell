@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.ServerManagement Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Server Management Cmdlets.
 
 ## AzureRM.ServerManagement Cmdlets
 ### [Get-AzureRmServerManagementGateway](./Get-AzureRmServerManagementGateway.md)

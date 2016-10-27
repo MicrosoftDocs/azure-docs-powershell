@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Media Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Media Service web service feature in Azure App Service cmdlets.
 
 ## AzureRM.Media Cmdlets
 ### [Get-AzureRmMediaServiceKeys](./Get-AzureRmMediaServiceKeys.md)

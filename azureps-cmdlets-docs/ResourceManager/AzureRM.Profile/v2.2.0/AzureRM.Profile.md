@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Profile Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Profile cmdlets.
 
 ## AzureRM.Profile Cmdlets
 ### [Add-AzureRmAccount](./Add-AzureRmAccount.md)

@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.OperationalInsights Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Operational Insights Cmdlets.
 
 ## AzureRM.OperationalInsights Cmdlets
 ### [Disable-AzureRmOperationalInsightsIISLogCollection](./Disable-AzureRmOperationalInsightsIISLogCollection.md)

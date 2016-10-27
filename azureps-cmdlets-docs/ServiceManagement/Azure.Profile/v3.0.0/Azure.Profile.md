@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.Profile Module
 ## Description
-{{Manually Enter Description Here}}
+The cmdlets in the Azure Profile module (AzureProfile) enable you to manage your Azure account and subscriptions in Windows PowerShell. The Azure Profile cmdlets are imported automatically when the Azure module or the AzureResourceManager module is in your session.
 
 ## Azure.Profile Cmdlets
 ### [Add-AzureAccount](./Add-AzureAccount.md)

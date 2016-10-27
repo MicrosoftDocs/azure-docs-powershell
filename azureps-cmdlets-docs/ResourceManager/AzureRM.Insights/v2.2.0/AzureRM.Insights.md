@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Insights Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Insights Cmdlets.
 
 ## AzureRM.Insights Cmdlets
 ### [Add-AzureRmAutoscaleSetting](./Add-AzureRmAutoscaleSetting.md)

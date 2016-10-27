@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.PowerBIEmbedded Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Power BI Embedded Cmdlets.
 
 ## AzureRM.PowerBIEmbedded Cmdlets
 ### [Get-AzureRmPowerBIWorkspaceCollectionAccessKeys](./Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)

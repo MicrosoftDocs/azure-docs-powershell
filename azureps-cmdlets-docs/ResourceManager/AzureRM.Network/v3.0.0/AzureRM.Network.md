@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Network Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Network Cmdlets.
 
 ## AzureRM.Network Cmdlets
 ### [Add-AzureRmApplicationGatewayAuthenticationCertificate](./Add-AzureRmApplicationGatewayAuthenticationCertificate.md)

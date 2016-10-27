@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Tags Module
 ## Description
-Azure PowerShell is a command-line shell and scripting language designed to help information technology (IT) professionals automate system administration tasks. To install the latest Azure PowerShell version and associate it with your Azure subscription, see How to install and configure Azure PowerShell.
+This topic displays help topics for the Azure Tag Cmdlets.
 
 ## AzureRM.Tags Cmdlets
 ### [Get-AzureRmTag](./Get-AzureRmTag.md)

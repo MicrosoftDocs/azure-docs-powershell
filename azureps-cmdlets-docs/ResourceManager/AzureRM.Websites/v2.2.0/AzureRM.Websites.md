@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Websites Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Website Cmdlets.
 
 ## AzureRM.Websites Cmdlets
 ### [Edit-AzureRmWebAppBackupConfiguration](./Edit-AzureRmWebAppBackupConfiguration.md)

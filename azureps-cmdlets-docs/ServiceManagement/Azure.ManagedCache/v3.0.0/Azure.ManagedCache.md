@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.ManagedCache Module
 ## Description
-{{Manually Enter Description Here}}
+This section displays the online help files for the Azure Managed Cache cmdlets in the Azure module.
 
 ## Azure.ManagedCache Cmdlets
 ### [Get-AzureManagedCacheAccessKey](./Get-AzureManagedCacheAccessKey.md)

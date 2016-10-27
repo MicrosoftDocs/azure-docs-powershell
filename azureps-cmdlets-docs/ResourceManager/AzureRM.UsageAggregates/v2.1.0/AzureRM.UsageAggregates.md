@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.UsageAggregates Module
 ## Description
-Azure PowerShell is a command-line shell and scripting language designed to help information technology (IT) professionals automate system administration tasks. To install the latest Azure PowerShell version and associate it with your Azure subscription, see How to install and configure Azure PowerShell.
+This topic displays help topics for the Azure Usage Aggregate Cmdlets.
 
 ## AzureRM.UsageAggregates Cmdlets
 ### [Get-UsageAggregates](./Get-UsageAggregates.md)

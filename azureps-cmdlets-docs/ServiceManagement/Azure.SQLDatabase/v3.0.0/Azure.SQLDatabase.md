@@ -8,7 +8,7 @@ Locale: en-US
 
 # Azure.SQLDatabase Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure SQL Database Cmdlets.
 
 ## Azure.SQLDatabase Cmdlets
 ### [Get-AzureSqlDatabaseCopy](./Get-AzureSqlDatabaseCopy.md)

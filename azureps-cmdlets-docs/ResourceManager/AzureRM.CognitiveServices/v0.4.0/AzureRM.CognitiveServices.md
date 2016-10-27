@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.CognitiveServices Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Cognitive Services cmdlets.
 
 ## AzureRM.CognitiveServices Cmdlets
 ### [Get-AzureRmCognitiveServicesAccountKey](./Get-AzureRmCognitiveServicesAccountKey.md)
