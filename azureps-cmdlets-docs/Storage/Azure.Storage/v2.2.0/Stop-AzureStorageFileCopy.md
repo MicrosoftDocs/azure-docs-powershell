@@ -45,7 +45,7 @@ Specifies the name of a share.
 ```yaml
 Type: String
 Parameter Sets: ShareName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -60,7 +60,7 @@ Specifies the path of a file.
 ```yaml
 Type: String
 Parameter Sets: ShareName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -70,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -CopyId
-@{Text=}
+Specifies the ID of the copy operation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,12 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-@{Text=}
+Specifies an Azure storage context.
+To obtain a storage context, use the [New-AzureStorageContext](./New-AzureStorageContext.md) cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: ShareName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,12 +116,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-@{Text=}
+Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,12 +131,14 @@ Accept wildcard characters: False
 ```
 
 ### -ClientTimeoutPerRequest
-@{Text=}
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,12 +148,16 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-@{Text=}
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+The default value is 10.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +173,7 @@ You can create a cloud file or obtain one by using the Get-AzureStorageFile cmdl
 ```yaml
 Type: CloudFile
 Parameter Sets: File
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -225,5 +232,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureStorageContext](./New-AzureStorageContext.md)
 
 [Start-AzureStorageFileCopy](./Start-AzureStorageFileCopy.md)
-
-
