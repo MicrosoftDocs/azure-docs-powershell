@@ -157,7 +157,7 @@ Specifies the name of the source blob.
 ```yaml
 Type: String
 Parameter Sets: ContainerName, ContainerInstance
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -172,7 +172,7 @@ Specifies the name of the source container.
 ```yaml
 Type: String
 Parameter Sets: ContainerName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -187,7 +187,7 @@ Specifies the name of the destination container.
 ```yaml
 Type: String
 Parameter Sets: ContainerName, BlobInstance, ContainerInstance, ShareName, ShareInstance, DirInstance, FileInstance, UriPipeline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -202,7 +202,7 @@ Specifies the name of the destination blob.
 ```yaml
 Type: String
 Parameter Sets: ContainerName, BlobInstance, ContainerInstance, ShareName, ShareInstance, DirInstance, FileInstance
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: UriPipeline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -258,7 +258,7 @@ To obtain a storage context, use the New-AzureStorageContext cmdlet.
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ Indicates that this cmdlet overwrites the destination blob without prompting you
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,7 +289,7 @@ If the specified interval elapses before the service processes the request, the 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -306,7 +306,7 @@ If this cmdlet does not receive a successful response before the interval elapse
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,7 +325,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -373,7 +373,7 @@ To obtain a **CloudBlobContainer** object, use the Get-AzureStorageContainer cmd
 ```yaml
 Type: CloudBlobContainer
 Parameter Sets: ContainerInstance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -388,7 +388,7 @@ Specifies the source share name.
 ```yaml
 Type: String
 Parameter Sets: ShareName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -403,7 +403,7 @@ Specifies the source file relative path of source directory or source share.
 ```yaml
 Type: String
 Parameter Sets: ShareName, ShareInstance, DirInstance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -419,7 +419,7 @@ You can create it or use Get-AzureStorageShare cmdlet.
 ```yaml
 Type: CloudFileShare
 Parameter Sets: ShareInstance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -434,7 +434,7 @@ Specifies a **CloudFileDirectory** object from Azure Storage Client library.
 ```yaml
 Type: CloudFileDirectory
 Parameter Sets: DirInstance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -450,7 +450,7 @@ You can create it or use Get-AzureStorageFile cmdlet.
 ```yaml
 Type: CloudFile
 Parameter Sets: FileInstanceToBlobInstance, FileInstance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -490,7 +490,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -506,7 +506,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -535,5 +534,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageBlobCopyState](./Get-AzureStorageBlobCopyState.md)
 
 [Stop-AzureStorageBlobCopy](./Stop-AzureStorageBlobCopy.md)
-
-
