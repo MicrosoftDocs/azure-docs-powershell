@@ -42,7 +42,6 @@ The command uses a Basic SKU and allocates two small workers.
 ## PARAMETERS
 
 ### -Location
-@{Text=}
 
 ```yaml
 Type: String
@@ -57,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-@{Text=}
 
 ```yaml
 Type: String
@@ -72,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -NumberofWorkers
-@{Text=}
 
 ```yaml
 Type: Int32
@@ -87,7 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerSize
-@{Text=}
 
 ```yaml
 Type: String
@@ -102,7 +98,6 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-@{Text=}
 
 ```yaml
 Type: String
@@ -117,7 +112,6 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -132,7 +126,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -147,7 +140,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -162,7 +154,6 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-@{Text=}
 
 ```yaml
 Type: ServerFarmWithRichSku

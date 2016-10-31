@@ -18,7 +18,7 @@ Backup-AzureRmRecoveryServicesBackupItem -Item <ItemBase> [-ExpiryDateTimeUTC <D
 ```
 
 ## DESCRIPTION
-The **Backup-AzureRmRecoveryServicesBackupItem** cmdlet starts a backup for a protected azure_2 Backup item that is not tied to the backup schedule.
+The **Backup-AzureRmRecoveryServicesBackupItem** cmdlet starts a backup for a protected Azure Backup item that is not tied to the backup schedule.
 You can do an initial backup immediately after you enable protection or start a backup after a scheduled backup fails.
 
 Set the vault context by using the Set-AzureRmRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
@@ -44,7 +44,16 @@ The last command triggers the backup job for the Backup item in $Item.
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -59,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

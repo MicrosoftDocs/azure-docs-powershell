@@ -8,7 +8,7 @@ ms.assetid: 09576E3E-92BA-4C21-A99E-A0EF9B76D3D9
 # Get-AzureOSVersion
 
 ## SYNOPSIS
-Lists all azure_2 guest operating systems.
+Lists all Azure guest operating systems.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureOSVersion [-Profile <AzureSMProfile>] [-InformationAction <ActionPrefer
 ```
 
 ## DESCRIPTION
-The **Get-AzureOSVersion** cmdlet lists all the available azure_2 guest operating systems.
+The **Get-AzureOSVersion** cmdlet lists all the available Azure guest operating systems.
 
 ## EXAMPLES
 
@@ -56,7 +56,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -71,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

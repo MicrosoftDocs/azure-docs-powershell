@@ -20,7 +20,7 @@ Remove-AzureReservedIPAssociation [-ReservedIPName] <String> [-ServiceName] <Str
 
 ## DESCRIPTION
 The **Remove-AzureReservedIPAssociation** cmdlet disassociates a reserved IP address from a virtual machine (VM) or Cloud Service.
-When the operation completes, the reserved IP address is free and the VM/VIP gets a dynamic public IP Address from the azure_2 Inventory.
+When the operation completes, the reserved IP address is free and the VM/VIP gets a dynamic public IP Address from the Azure Inventory.
 
 ## EXAMPLES
 
@@ -128,7 +128,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -143,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -27,7 +27,7 @@ New-AzureRmBatchApplicationPackage [-AccountName] <String> [-ResourceGroupName] 
 ```
 
 ## DESCRIPTION
-The **New-AzureRmBatchApplicationPackage** cmdlet creates an application package in an azure_2 Batch account.
+The **New-AzureRmBatchApplicationPackage** cmdlet creates an application package in an Azure Batch account.
 
 ## EXAMPLES
 

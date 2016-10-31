@@ -121,7 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationPackageReferences
-@{Text=}
 
 ```yaml
 Type: PSApplicationPackageReference[]
@@ -230,7 +229,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExitConditions
-@{Text=}
 
 ```yaml
 Type: PSExitConditions

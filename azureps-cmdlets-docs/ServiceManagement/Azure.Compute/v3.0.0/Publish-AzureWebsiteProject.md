@@ -162,7 +162,6 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotDelete
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -193,7 +192,6 @@ Accept wildcard characters: False
 ```
 
 ### -SetParametersFile
-@{Text=}
 
 ```yaml
 Type: String
@@ -208,7 +206,6 @@ Accept wildcard characters: False
 ```
 
 ### -SkipAppData
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -223,7 +220,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tokens
-@{Text=}
 
 ```yaml
 Type: String

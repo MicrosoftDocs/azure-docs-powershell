@@ -8,7 +8,7 @@ ms.assetid: A2A42C54-3D0E-4A1A-A33D-F7F13AC108CA
 # Get-AzureRemoteAppPlan
 
 ## SYNOPSIS
-Lists azure_2 RemoteApp plans.
+Lists Azure RemoteApp plans.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRemoteAppPlan [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppPlan** cmdlet lists azure_2 RemoteApp plans.
+The **Get-AzureRemoteAppPlan** cmdlet lists Azure RemoteApp plans.
 
 ## EXAMPLES
 

@@ -8,7 +8,7 @@ ms.assetid: FB551EA5-4159-4D77-8733-025AE66A13AF
 # Remove-AzureRmStorageAccount
 
 ## SYNOPSIS
-Removes a Storage account from azure_2.
+Removes a Storage account from Azure.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmStorageAccount** cmdlet removes a Storage account from azure_2.
+The **Remove-AzureRmStorageAccount** cmdlet removes a Storage account from Azure.
 
 ## EXAMPLES
 
@@ -62,7 +62,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -77,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

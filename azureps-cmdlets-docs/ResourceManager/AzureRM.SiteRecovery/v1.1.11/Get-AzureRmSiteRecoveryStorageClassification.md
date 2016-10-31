@@ -33,7 +33,7 @@ Get-AzureRmSiteRecoveryStorageClassification -Server <ASRServer> [<CommonParamet
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryStorageClassification** cmdlet gets storage classifications in azure_2 Site Recovery.
+The **Get-AzureRmSiteRecoveryStorageClassification** cmdlet gets storage classifications in Azure Site Recovery.
 
 ## EXAMPLES
 
@@ -75,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-@{Text=}
 
 ```yaml
 Type: ASRServer

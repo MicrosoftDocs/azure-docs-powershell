@@ -33,7 +33,6 @@ This command imports an updated version of an existing module named ContosoModul
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -48,7 +47,6 @@ Accept wildcard characters: False
 ```
 
 ### -ContentLinkUri
-@{Text=}
 
 ```yaml
 Type: Uri
@@ -63,7 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -ContentLinkVersion
-@{Text=}
 
 ```yaml
 Type: String
@@ -78,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -93,7 +89,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-@{Text=}
 
 ```yaml
 Type: IDictionary
@@ -108,7 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile

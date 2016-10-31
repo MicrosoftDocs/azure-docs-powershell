@@ -19,7 +19,7 @@ Start-ACSBlobServerRoleInstance [-FarmName] <String> [-InstanceId] <String> [[-S
 ```
 
 ## DESCRIPTION
-The **Start-ACSBlobServerRoleInstance** cmdlet starts the azure_2 Consistent Storage (ACS) blob service instance on a specific physical node.
+The **Start-ACSBlobServerRoleInstance** cmdlet starts the Azure Consistent Storage (ACS) blob service instance on a specific physical node.
 
 ## EXAMPLES
 
@@ -145,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

@@ -8,7 +8,7 @@ ms.assetid: B8B2C7BC-86EB-4F3B-9A70-107FF56AE78C
 # Get-AzureRemoteAppProgram
 
 ## SYNOPSIS
-Retrieves the properties of one or more published azure_2 RemoteApp programs for a collection.
+Retrieves the properties of one or more published Azure RemoteApp programs for a collection.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-AzureRemoteAppProgram [-CollectionName] <String> [[-Alias] <String>] [-Profi
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppProgram** cmdlet retrieves the properties of one or more published azure_2 RemoteApp programs for a collection.
+The **Get-AzureRemoteAppProgram** cmdlet retrieves the properties of one or more published Azure RemoteApp programs for a collection.
 
 ## EXAMPLES
 
@@ -50,8 +50,8 @@ Status               : Published
 VirtualPath          : %SYSTEMDRIVE%\Program Files (x86)\Contoso Finance\Finance.exe
 ```
 
-This command displays the properties of an azure_2 RemoteApp program.
-The program, named Finance App, is in the azure_2 RemoteApp collection named ContosoApps.
+This command displays the properties of an Azure RemoteApp program.
+The program, named Finance App, is in the Azure RemoteApp collection named ContosoApps.
 
 ## PARAMETERS
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

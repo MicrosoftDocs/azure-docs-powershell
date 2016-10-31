@@ -25,7 +25,7 @@ Get-AzureRmRouteTable -Name <String> -ResourceGroupName <String> -ExpandResource
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmRouteTable** cmdlet gets azure_2 route tables.
+The **Get-AzureRmRouteTable** cmdlet gets Azure route tables.
 You can get a single route table, or get all the route tables in a resource group or in your subscription.
 
 ## EXAMPLES
@@ -115,7 +115,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -130,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -145,7 +154,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandResource
-@{Text=}
 
 ```yaml
 Type: String

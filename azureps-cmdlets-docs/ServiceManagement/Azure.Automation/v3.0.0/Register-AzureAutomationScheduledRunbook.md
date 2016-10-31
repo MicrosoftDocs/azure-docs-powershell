@@ -55,7 +55,6 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-@{Text=}
 
 ```yaml
 Type: IDictionary

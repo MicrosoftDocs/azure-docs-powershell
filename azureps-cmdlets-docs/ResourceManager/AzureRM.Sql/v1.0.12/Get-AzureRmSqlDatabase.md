@@ -18,9 +18,9 @@ Get-AzureRmSqlDatabase [[-DatabaseName] <String>] [-ServerName] <String> [-Resou
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabase** cmdlet gets one or more azure_2 SQL databases from an ssSDS Server.
+The **Get-AzureRmSqlDatabase** cmdlet gets one or more Azure SQL databases from an ssSDS Server.
 
-This cmdlet is also supported by the SQL Server Stretch Database service on azure_2.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
@@ -141,7 +141,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -156,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

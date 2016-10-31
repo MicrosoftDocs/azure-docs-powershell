@@ -8,7 +8,7 @@ ms.assetid: 2C84CE79-E1E4-4558-A3B6-FC133760B1B9
 # Add-AzureRmVhd
 
 ## SYNOPSIS
-Uploads a virtual hard disk from an on-premises virtual machine to a blob in a cloud storage account in azure_2.
+Uploads a virtual hard disk from an on-premises virtual machine to a blob in a cloud storage account in Azure.
 
 ## SYNTAX
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -BaseImageUriToPatch
-Specifies the URI to a base image blob in azure_2 Blob Storage.
+Specifies the URI to a base image blob in Azure Blob Storage.
 An SAS can be specified as the value for this parameter.
 
 ```yaml
@@ -152,7 +152,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -167,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

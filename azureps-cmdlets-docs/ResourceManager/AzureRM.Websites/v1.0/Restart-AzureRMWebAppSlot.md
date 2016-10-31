@@ -8,7 +8,7 @@ ms.assetid: 8A5D3F85-A55B-48B3-9A7E-494512762722
 # Restart-AzureRmWebAppSlot
 
 ## SYNOPSIS
-Restarts an azure_2 Web App slot.
+Restarts an Azure Web App slot.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Restart-AzureRmWebAppSlot [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Restart-AzureRMWebAppSlot** cmdlet restarts an azure_2 Web App slot.
+The **Restart-AzureRMWebAppSlot** cmdlet restarts an Azure Web App slot.
 
 ## EXAMPLES
 

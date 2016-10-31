@@ -19,7 +19,7 @@ Add-ACSFarm [-FarmName] <String> [-SettingAccessString] <String> [-Location] <St
 ```
 
 ## DESCRIPTION
-The **Add-ACSFarm** cmdlet registers a new provisioned Microsoft azure_2 Consistent Storage (ACS) farm.
+The **Add-ACSFarm** cmdlet registers a new provisioned Microsoft Azure Consistent Storage (ACS) farm.
 After you deploy a new ACS farm, the Service Admin can use the cmdlet to register that farm to a Shared Resource Provider (SRP).
 
 ## EXAMPLES
@@ -159,7 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -174,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

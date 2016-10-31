@@ -25,7 +25,7 @@ New-AzureBatchCertificate [-RawData] <Byte[]> [-Password <String>] -BatchContext
 ```
 
 ## DESCRIPTION
-The **New-AzureBatchCertificate** cmdlet adds a certificate to the specified azure_2 Batch account.
+The **New-AzureBatchCertificate** cmdlet adds a certificate to the specified Azure Batch account.
 
 ## EXAMPLES
 

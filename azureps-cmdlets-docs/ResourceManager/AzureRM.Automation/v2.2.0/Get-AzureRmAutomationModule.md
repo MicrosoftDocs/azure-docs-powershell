@@ -25,7 +25,7 @@ Get-AzureRmAutomationModule [-Name] <String> [-ResourceGroupName] <String> [-Aut
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationModule** cmdlet gets metadata for modules from azure_2 Automation.
+The **Get-AzureRmAutomationModule** cmdlet gets metadata for modules from Azure Automation.
 
 ## EXAMPLES
 

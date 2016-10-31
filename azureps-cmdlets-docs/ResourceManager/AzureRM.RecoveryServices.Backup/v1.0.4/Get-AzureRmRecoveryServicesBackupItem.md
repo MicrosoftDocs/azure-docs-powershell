@@ -29,10 +29,10 @@ Get-AzureRmRecoveryServicesBackupItem [-BackupManagementType] <BackupManagementT
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmRecoveryServicesBackupItem** cmdlet gets the items in a container or a value in azure_2 Backup and the protection status of the items.
+The **Get-AzureRmRecoveryServicesBackupItem** cmdlet gets the items in a container or a value in Azure Backup and the protection status of the items.
 
-A container that is registered to an azure_2 Recovery Services vault can have one or more items that can be protected.
-For azure_2 virtual machines, there can be only one backup item in the virtual machine container.
+A container that is registered to an Azure Recovery Services vault can have one or more items that can be protected.
+For Azure virtual machines, there can be only one backup item in the virtual machine container.
 
 Set the vault context by using the Set-AzureRmRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
@@ -129,7 +129,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -144,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

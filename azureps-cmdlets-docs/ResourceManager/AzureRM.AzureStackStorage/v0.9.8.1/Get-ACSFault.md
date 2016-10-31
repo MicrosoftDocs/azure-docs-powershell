@@ -8,7 +8,7 @@ ms.assetid: 8D70F5E0-C1C3-4776-9C8B-D1DC7F819946
 # Get-ACSFault
 
 ## SYNOPSIS
-Gets faults in the azure_2 Consistent Storage system.
+Gets faults in the Azure Consistent Storage system.
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Get-ACSFault [-FarmName] <String> -StartTime <DateTime> -EndTime <DateTime> [[-S
 ```
 
 ## DESCRIPTION
-The **Get-ACSFault** cmdlet returns a list of azure_2 Consistent Storage (ACS) faults in the system.
+The **Get-ACSFault** cmdlet returns a list of Azure Consistent Storage (ACS) faults in the system.
 It supports several parameter sets: 
 The default parameter set is the *GetCurrentFaults* parameter, which returns a list of current active fault objects.
 If the *ResourceUri* parameter is specified, the cmdlet returns a list of current active fault objects on this resource. 
@@ -68,7 +68,7 @@ Type       : Microsoft.Storage.Admin/farms/faults
 ```
 
 The first command gets the specified ACSFarm and stores the result in the variable named $Farm.
-This final command gets a list of the fault messages in the azure_2 Consistent Storage system.
+This final command gets a list of the fault messages in the Azure Consistent Storage system.
 
 ## PARAMETERS
 

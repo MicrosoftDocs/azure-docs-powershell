@@ -18,7 +18,7 @@ Remove-AzureRmAutomationConnection [-Name] <String> [-Force] [-ResourceGroupName
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAutomationConnection** cmdlet removes a connection from azure_2 Automation.
+The **Remove-AzureRmAutomationConnection** cmdlet removes a connection from Azure Automation.
 
 ## EXAMPLES
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

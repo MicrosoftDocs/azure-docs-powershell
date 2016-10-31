@@ -19,7 +19,7 @@ New-AzureRmServerManagementGateway [-ResourceGroupName] <String> [-GatewayName] 
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServerManagementGateway** cmdlet creates an azure_2 Server Management gateway.
+The **New-AzureRmServerManagementGateway** cmdlet creates an Azure Server Management gateway.
 
 ## EXAMPLES
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -Tags
 Specifies tags as key-value pairs.
-You can use tags to identify a Gateway from other azure_2 resources.
+You can use tags to identify a Gateway from other Azure resources.
 
 ```yaml
 Type: Hashtable
@@ -107,7 +107,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -122,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

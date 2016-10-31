@@ -8,7 +8,7 @@ ms.assetid: 247FAC9D-2E66-42D6-9D4A-87E96C08F6FA
 # Restart-AzureVM
 
 ## SYNOPSIS
-Restarts an azure_2 virtual machine.
+Restarts an Azure virtual machine.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Restart-AzureVM -VM <PersistentVM> [-Redeploy] [-ServiceName] <String> [-Profile
 ```
 
 ## DESCRIPTION
-The **Restart-AzureVM** cmdlet requests a restart of an azure_2 virtual machine.
+The **Restart-AzureVM** cmdlet requests a restart of an Azure virtual machine.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ The **Restart-AzureVM** cmdlet requests a restart of an azure_2 virtual machine.
 PS C:\>Restart-AzureVM -ServiceName "MyService01" -Name "MyVM"
 ```
 
-This command restarts the VirtualMachine27 virtual machine running in the azure_2 service named Service01.
+This command restarts the VirtualMachine27 virtual machine running in the Azure service named Service01.
 
 ### Example 2: Restart a virtual machine by using a virtual machine object
 ```
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Specifies the name of the azure_2 service that contains the virtual machine to restart.
+Specifies the name of the Azure service that contains the virtual machine to restart.
 
 ```yaml
 Type: String
@@ -109,7 +109,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -124,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

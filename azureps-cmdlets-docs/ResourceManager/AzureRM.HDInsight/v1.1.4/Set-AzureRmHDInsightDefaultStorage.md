@@ -19,7 +19,7 @@ Set-AzureRmHDInsightDefaultStorage [-Config] <AzureHDInsightConfig> [-StorageAcc
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmHDInsightDefaultStorage** cmdlet sets the default Storage account setting in the azure_2 HDInsight cluster configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
+The **Set-AzureRmHDInsightDefaultStorage** cmdlet sets the default Storage account setting in the Azure HDInsight cluster configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ## EXAMPLES
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountKey
-Specifies the account key for the default azure_2 Storage account that the HDInsight cluster will use.
+Specifies the account key for the default Azure Storage account that the HDInsight cluster will use.
 
 ```yaml
 Type: String
@@ -109,7 +109,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -124,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

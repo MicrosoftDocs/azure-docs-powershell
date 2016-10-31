@@ -8,7 +8,7 @@ ms.assetid: 89CE062D-C2BA-4D77-B8EB-45785F5E7498
 # Set-AzureDataDisk
 
 ## SYNOPSIS
-Modifies the host caching of an existing data disk on an azure_2 virtual machine.
+Modifies the host caching of an existing data disk on an Azure virtual machine.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Set-AzureDataDisk [-DiskName] <String> [-ResizedSizeInGB] <Int32> -VM <IPersiste
 ```
 
 ## DESCRIPTION
-The **Set-AzureDataDisk** cmdlet modifies the cache attributes of an existing data disk on an azure_2 virtual machine.
+The **Set-AzureDataDisk** cmdlet modifies the cache attributes of an existing data disk on an Azure virtual machine.
 Specify which data disk to update by its logical unit number (LUN).
 
 ## EXAMPLES
@@ -121,7 +121,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -136,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

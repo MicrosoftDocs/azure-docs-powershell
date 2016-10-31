@@ -36,7 +36,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Databases
-@{Text=}
 
 ```yaml
 Type: DatabaseBackupSetting[]
@@ -51,7 +50,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreConflictingHostNames
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -66,7 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -81,7 +78,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -96,7 +92,6 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
 
 ```yaml
 Type: String
@@ -111,7 +106,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-@{Text=}
 
 ```yaml
 Type: String
@@ -126,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -BlobName
-@{Text=}
 
 ```yaml
 Type: String
@@ -141,7 +134,6 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -156,7 +148,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

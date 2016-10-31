@@ -25,7 +25,7 @@ Get-AzureRmAutomationCredential [-Name] <String> [-ResourceGroupName] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationCredential** cmdlet gets one or more azure_2 Automation credentials.
+The **Get-AzureRmAutomationCredential** cmdlet gets one or more Azure Automation credentials.
 By default, all credentials are returned.
 Specify the name of a credential to get a specific credential.
 

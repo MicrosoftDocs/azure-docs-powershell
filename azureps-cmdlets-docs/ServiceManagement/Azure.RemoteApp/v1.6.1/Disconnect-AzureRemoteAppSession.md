@@ -8,7 +8,7 @@ ms.assetid: E5E8587A-704C-48CB-9C08-452D5D0CFAEB
 # Disconnect-AzureRemoteAppSession
 
 ## SYNOPSIS
-Disconnects an azure_2 RemoteApp session.
+Disconnects an Azure RemoteApp session.
 
 ## SYNTAX
 
@@ -18,8 +18,8 @@ Disconnect-AzureRemoteAppSession [-CollectionName] <String> [-UserUpn] <String> 
 ```
 
 ## DESCRIPTION
-The **Disconnect-AzureRemoteAppSession** cmdlet disconnects a user's azure_2 RemoteApp session.
-The user's client disconnects from their azure_2 RemoteApp session, but the user's programs continue to run.
+The **Disconnect-AzureRemoteAppSession** cmdlet disconnects a user's Azure RemoteApp session.
+The user's client disconnects from their Azure RemoteApp session, but the user's programs continue to run.
 
 ## EXAMPLES
 
@@ -28,12 +28,12 @@ The user's client disconnects from their azure_2 RemoteApp session, but the user
 PS C:\>Disconnect-AzureRemoteAppSession -CollectionName "ContosoApps" -UserUpn "PattiFuller@contoso.com"
 ```
 
-This command disconnects the azure_2 RemoteApp session in the ContosoApps collection for the user whose UPN is PattiFuller@contoso.com.
+This command disconnects the Azure RemoteApp session in the ContosoApps collection for the user whose UPN is PattiFuller@contoso.com.
 
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

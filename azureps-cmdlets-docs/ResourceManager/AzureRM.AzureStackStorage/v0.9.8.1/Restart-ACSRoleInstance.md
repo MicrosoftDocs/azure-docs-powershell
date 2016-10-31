@@ -8,7 +8,7 @@ ms.assetid: B9682BCF-4777-457C-91C1-EF1257D83757
 # Restart-ACSRoleInstance
 
 ## SYNOPSIS
-Restarts a role instance in the azure_2 consistent storage system.
+Restarts a role instance in the Azure consistent storage system.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Restart-ACSRoleInstance [-FarmName] <String> [-RoleType] <RoleType> [-InstanceId
 ```
 
 ## DESCRIPTION
-The **Restart-ACSRoleInstance** cmdlet restarts a role instance in the azure_2 consistent storage (ACS) system.
+The **Restart-ACSRoleInstance** cmdlet restarts a role instance in the Azure consistent storage (ACS) system.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ PS C:\> Restart-ACSRoleInstance -SubscriptionId $SubscriptId -Token $Token -Admi
 ```
 
 This first command gets an ACS farm based on URL and resource group name and stores it in the variable named $Farm.
-The final command restarts a specific role instance in the azure_2 consistent storage system based on the ACS Farm.
+The final command restarts a specific role instance in the Azure consistent storage system based on the ACS Farm.
 
 ## PARAMETERS
 
@@ -170,7 +170,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -185,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

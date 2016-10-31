@@ -34,7 +34,7 @@ Set-AzureRmBackupProtectionPolicy [[-NewName] <String>] [-Weekly] [[-BackupTime]
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmBackupProtectionPolicy** cmdlet modifies an existing protection policy in azure_2 Backup.
+The **Set-AzureRmBackupProtectionPolicy** cmdlet modifies an existing protection policy in Azure Backup.
 You can modify the following protection policy components: 
 
 - Name

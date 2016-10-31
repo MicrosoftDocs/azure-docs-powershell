@@ -52,7 +52,7 @@ Removes an API Management service.
 
 
 ### [Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
-Restores an API Management Service from the specified azure_2 storage blob.
+Restores an API Management Service from the specified Azure storage blob.
 
 
 ### [Set-AzureRmApiManagementHostnames](./Set-AzureRmApiManagementHostnames.md)

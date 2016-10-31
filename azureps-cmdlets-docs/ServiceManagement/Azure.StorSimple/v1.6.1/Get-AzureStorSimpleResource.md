@@ -66,7 +66,7 @@ This example does not return any resource.
 ## PARAMETERS
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

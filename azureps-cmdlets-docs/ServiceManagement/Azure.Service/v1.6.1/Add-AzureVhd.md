@@ -8,7 +8,7 @@ ms.assetid: 18F4531B-7CE4-42A3-AC9D-0EAAEFD537E2
 # Add-AzureVhd
 
 ## SYNOPSIS
-Uploads a VHD file from an on-premise computer to a blob in a cloud storage account in azure_2.
+Uploads a VHD file from an on-premise computer to a blob in a cloud storage account in Azure.
 
 ## SYNTAX
 
@@ -150,7 +150,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -165,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

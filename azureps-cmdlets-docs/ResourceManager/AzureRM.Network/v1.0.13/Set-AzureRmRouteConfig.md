@@ -19,7 +19,7 @@ Set-AzureRmRouteConfig -Name <String> -RouteTable <PSRouteTable> [-AddressPrefix
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmRouteConfig** cmdlet sets the goal state for an azure_2 route.
+The **Set-AzureRmRouteConfig** cmdlet sets the goal state for an Azure route.
 
 ## EXAMPLES
 
@@ -115,13 +115,13 @@ Specifies how this route forwards packets.
 psdx_paramvalues
 
 - Internet.
-The default Internet gateway provided by azure_2. 
+The default Internet gateway provided by Azure. 
 - None.
 If you specify this value, the route does not forward packets. 
 - VirtualAppliance.
-A virtual appliance that you add to your azure_2 virtual network. 
+A virtual appliance that you add to your Azure virtual network. 
 - VirtualNetworkGateway.
-An azure_2server-to-server virtual private network gateway. 
+An Azureserver-to-server virtual private network gateway. 
 - VnetLocal.
 The local virtual network.
 If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network, select a value of VnetLocal for each subnet to forward to the other subnet.
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -NextHopIpAddress
-Specifies the IP address of a virtual appliance that you add to your azure_2 virtual network.
+Specifies the IP address of a virtual appliance that you add to your Azure virtual network.
 This route forwards packets to that address.
 Specify this parameter only if you specify a value of VirtualAppliance for the *NextHopType* parameter.
 
@@ -156,7 +156,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -171,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

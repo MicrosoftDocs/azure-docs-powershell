@@ -241,7 +241,6 @@ Accept wildcard characters: False
 ```
 
 ### -Encrypt
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

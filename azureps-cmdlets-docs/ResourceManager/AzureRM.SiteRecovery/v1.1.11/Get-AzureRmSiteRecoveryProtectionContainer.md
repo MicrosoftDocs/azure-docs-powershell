@@ -28,7 +28,7 @@ Get-AzureRmSiteRecoveryProtectionContainer -FriendlyName <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryProtectionContainer** cmdlet gets protection containers for the current azure_2 Site Recovery vault.
+The **Get-AzureRmSiteRecoveryProtectionContainer** cmdlet gets protection containers for the current Azure Site Recovery vault.
 A protection container is a logical container for protected objects such as virtual machines.
 Protection policies define replication settings for protected items and can be associated with a protection container and applied to a protected entity.
 

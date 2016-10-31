@@ -8,7 +8,7 @@ ms.assetid: 9C26AFEA-91AC-45A0-AA63-4AECB25E9E28
 # Copy-AzureRemoteAppUserDisk
 
 ## SYNOPSIS
-Copies the user disk of a user from one azure_2 RemoteApp collection to another.
+Copies the user disk of a user from one Azure RemoteApp collection to another.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Copy-AzureRemoteAppUserDisk [-SourceCollectionName] <String> [-DestinationCollec
 ```
 
 ## DESCRIPTION
-The **Copy-AzureRemoteAppUserDisk** cmdlet copies the user disk of a user from one azure_2 RemoteApp collection to another.
+The **Copy-AzureRemoteAppUserDisk** cmdlet copies the user disk of a user from one Azure RemoteApp collection to another.
 
 ## EXAMPLES
 
@@ -27,13 +27,13 @@ The **Copy-AzureRemoteAppUserDisk** cmdlet copies the user disk of a user from o
 PS C:\>Copy-AzureRemoteAppUserDisk -DestinationCollectionName "Contoso02" -SourceCollectionName "Contoso01" -UserUpn "PattiFuller@contoso.com" -OverwriteExistingUserDisk
 ```
 
-This command copies the user disk of an azure_2 Active Directory user who has the UPN PattiFuller@contoso.com from the collection Contoso01 to the collection Contoso02.
+This command copies the user disk of an Azure Active Directory user who has the UPN PattiFuller@contoso.com from the collection Contoso01 to the collection Contoso02.
 If a user disk for PattiFuller@contoso.com already exists on Contoso02, this command overwrites it.
 
 ## PARAMETERS
 
 ### -SourceCollectionName
-Specifies the name of the source azure_2 RemoteApp collection.
+Specifies the name of the source Azure RemoteApp collection.
 
 ```yaml
 Type: String
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationCollectionName
-Specifies the name of the destination azure_2 RemoteApp collection.
+Specifies the name of the destination Azure RemoteApp collection.
 
 ```yaml
 Type: String

@@ -63,8 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetOSVersion
-Specifies the azure_2 Guest operating system version to install on the virtual machines in the pool.
-For more information on azure_2 Guest operating system versions, see Azure Guest OS Releases and SDK Compatibility Matrixhttp://azure.microsoft.com/en-us/documentation/articles/cloud-services-guestos-update-matrix/ (http://azure.microsoft.com/en-us/documentation/articles/cloud-services-guestos-update-matrix/).
+Specifies the Azure Guest operating system version to install on the virtual machines in the pool.
+For more information on Azure Guest operating system versions, see Azure Guest OS Releases and SDK Compatibility Matrixhttp://azure.microsoft.com/en-us/documentation/articles/cloud-services-guestos-update-matrix/ (http://azure.microsoft.com/en-us/documentation/articles/cloud-services-guestos-update-matrix/).
 
 ```yaml
 Type: String

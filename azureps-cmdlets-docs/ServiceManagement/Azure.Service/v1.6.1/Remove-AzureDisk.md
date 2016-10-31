@@ -8,7 +8,7 @@ ms.assetid: C10C104D-CC5F-49D3-8169-971BABE36D04
 # Remove-AzureDisk
 
 ## SYNOPSIS
-Removes a disk from the azure_2 disk repository.
+Removes a disk from the Azure disk repository.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureDisk [-DiskName] <String> [-DeleteVHD] [-Profile <AzureSMProfile>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureDisk** cmdlet removes a disk from the azure_2 disk repository in the current subscription.
+The **Remove-AzureDisk** cmdlet removes a disk from the Azure disk repository in the current subscription.
 By default, this cmdlet does not delete the virtual hard disk (VHD) file from blob storage.
 To delete the VHD, specify the *DeleteVHD* parameter.
 
@@ -39,7 +39,7 @@ PS C:\>Remove-AzureDisk -DiskName "ContosoDataDisk" -DeleteVHD
 
 This command removes the disk named ContosoDataDisk disk from the disk repository.
 This command specifies the DeleteVHD parameter.
-Therefore, the command deletes the VHD from azure_2 Storage.
+Therefore, the command deletes the VHD from Azure Storage.
 
 ## PARAMETERS
 
@@ -89,7 +89,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -104,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

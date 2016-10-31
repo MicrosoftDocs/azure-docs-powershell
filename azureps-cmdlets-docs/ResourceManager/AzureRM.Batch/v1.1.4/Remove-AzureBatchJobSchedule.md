@@ -18,7 +18,7 @@ Remove-AzureBatchJobSchedule [-Id] <String> [-Force] -BatchContext <BatchAccount
 ```
 
 ## DESCRIPTION
-The **Remove-AzureBatchJobSchedule** cmdlet removes an azure_2 Batch job schedule.
+The **Remove-AzureBatchJobSchedule** cmdlet removes an Azure Batch job schedule.
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

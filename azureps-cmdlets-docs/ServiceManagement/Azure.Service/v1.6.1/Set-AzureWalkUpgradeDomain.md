@@ -19,7 +19,7 @@ Set-AzureWalkUpgradeDomain [-ServiceName] <String> [-Slot] <String> [-DomainNumb
 ```
 
 ## DESCRIPTION
-The **Set-AzureWalkUpgradeDomain** cmdlet initiates the actual upgrade of an azure_2 deployment.
+The **Set-AzureWalkUpgradeDomain** cmdlet initiates the actual upgrade of an Azure deployment.
 The upgrade package and configuration are set by using the Set-AzureDeployment cmdlet with the -Upgrade switch.
 
 ## EXAMPLES
@@ -34,7 +34,7 @@ This command initiates the upgrade of Upgrade Domain 2 of the production deploym
 ## PARAMETERS
 
 ### -ServiceName
-Specifies the Microsoft azure_2 service name to upgrade.
+Specifies the Microsoft Azure service name to upgrade.
 
 ```yaml
 Type: String
@@ -99,7 +99,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -114,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

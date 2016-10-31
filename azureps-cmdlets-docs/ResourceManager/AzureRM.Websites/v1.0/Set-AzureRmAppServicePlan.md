@@ -8,7 +8,7 @@ ms.assetid: 01D98F26-A631-4E25-97AE-92D0B1355E0E
 # Set-AzureRmAppServicePlan
 
 ## SYNOPSIS
-Sets an azure_2 App Service plan.
+Sets an Azure App Service plan.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Set-AzureRmAppServicePlan [-AppServicePlan] <ServerFarmWithRichSku> [<CommonPara
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAppServicePlan** cmdlet sets an azure_2 App Service plan.
+The **Set-AzureRmAppServicePlan** cmdlet sets an Azure App Service plan.
 
 ## EXAMPLES
 
@@ -36,7 +36,6 @@ The **Set-AzureRmAppServicePlan** cmdlet sets an azure_2 App Service plan.
 ## PARAMETERS
 
 ### -AdminSiteName
-@{Text=}
 
 ```yaml
 Type: String
@@ -51,7 +50,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-@{Text=}
 
 ```yaml
 Type: String
@@ -66,7 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -NumberofWorkers
-@{Text=}
 
 ```yaml
 Type: Int32
@@ -81,7 +78,6 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerSize
-@{Text=}
 
 ```yaml
 Type: String
@@ -96,7 +92,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -111,7 +106,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -126,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-@{Text=}
 
 ```yaml
 Type: ServerFarmWithRichSku

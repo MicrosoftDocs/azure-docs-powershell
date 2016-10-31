@@ -33,7 +33,6 @@ You must publish the service using the **Publish-AzureServiceProject** cmdlet af
 ## PARAMETERS
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

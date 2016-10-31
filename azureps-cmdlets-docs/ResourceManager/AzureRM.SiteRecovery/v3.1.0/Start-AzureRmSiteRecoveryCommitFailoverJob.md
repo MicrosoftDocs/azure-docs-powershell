@@ -41,7 +41,6 @@ The **Start-AzureRmSiteRecoveryCommitFailoverJob** cmdlet starts the commit fail
 ## PARAMETERS
 
 ### -ReplicationProtectedItem
-@{Text=}
 
 ```yaml
 Type: ASRReplicationProtectedItem

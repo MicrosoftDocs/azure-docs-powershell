@@ -25,7 +25,7 @@ Get-AzureRmRecoveryServicesBackupJobDetails [-JobId] <String> [-InformationActio
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmRecoveryServicesBackupJobDetails** cmdlet gets azure_2 Backup job details for a specified job.
+The **Get-AzureRmRecoveryServicesBackupJobDetails** cmdlet gets Azure Backup job details for a specified job.
 
 Set the vault context by using the Set-AzureRmRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
@@ -47,7 +47,16 @@ The final command displays error details for the failed jobs.
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -62,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

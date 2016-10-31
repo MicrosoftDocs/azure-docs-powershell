@@ -18,7 +18,7 @@ Get-AzureSqlDatabaseUsages [-ServerName] <String> -DatabaseName <String> [-Profi
 ```
 
 ## DESCRIPTION
-The **Get-AzureSqlDatabaseUsages** cmdlet gets the current size and size limit of an azure_2 SQL Database.
+The **Get-AzureSqlDatabaseUsages** cmdlet gets the current size and size limit of an Azure SQL Database.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ This command gets the size and size limit information for the SQL Database named
 ## PARAMETERS
 
 ### -DatabaseName
-Specifies the name of the azure_2 SQL Database.
+Specifies the name of the Azure SQL Database.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the server that hosts the azure_2 SQL Database.
+Specifies the name of the server that hosts the Azure SQL Database.
 
 ```yaml
 Type: String

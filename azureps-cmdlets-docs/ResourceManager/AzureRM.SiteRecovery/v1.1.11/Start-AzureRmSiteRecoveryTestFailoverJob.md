@@ -53,7 +53,7 @@ Start-AzureRmSiteRecoveryTestFailoverJob -ProtectionEntity <ASRProtectionEntity>
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSiteRecoveryTestFailoverJob** cmdlet starts test failover of an azure_2 Site Recovery protection entity or recovery plan.
+The **Start-AzureRmSiteRecoveryTestFailoverJob** cmdlet starts test failover of an Azure Site Recovery protection entity or recovery plan.
 You can check whether the job succeeded by using the Get-AzureRmSiteRecoveryJob cmdlet.
 
 ## EXAMPLES
@@ -66,7 +66,7 @@ You can check whether the job succeeded by using the Get-AzureRmSiteRecoveryJob 
 ## PARAMETERS
 
 ### -AzureVMNetworkId
-Specifies the azure_2 virtual network ID.
+Specifies the Azure virtual network ID.
 
 ```yaml
 Type: String

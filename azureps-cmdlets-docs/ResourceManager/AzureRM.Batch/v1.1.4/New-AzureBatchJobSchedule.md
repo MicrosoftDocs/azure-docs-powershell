@@ -19,7 +19,7 @@ New-AzureBatchJobSchedule [-Id] <String> [-DisplayName <String>] -Schedule <PSSc
 ```
 
 ## DESCRIPTION
-The **New-AzureBatchJobSchedule** cmdlet creates a job schedule in the azure_2 Batch service.
+The **New-AzureBatchJobSchedule** cmdlet creates a job schedule in the Azure Batch service.
 The *BatchAccountContext* parameter specifies the account in which this cmdlet creates the schedule.
 
 ## EXAMPLES

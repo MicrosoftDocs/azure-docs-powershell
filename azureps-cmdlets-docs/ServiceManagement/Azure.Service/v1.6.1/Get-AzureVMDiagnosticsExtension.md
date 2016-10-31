@@ -8,7 +8,7 @@ ms.assetid: DD8DBD57-462F-426F-A03F-E6BAC629D0D3
 # Get-AzureVMDiagnosticsExtension
 
 ## SYNOPSIS
-Gets the settings of the azure_2 Diagnostics extension on a virtual machine.
+Gets the settings of the Azure Diagnostics extension on a virtual machine.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureVMDiagnosticsExtension -VM <IPersistentVM> [-Profile <AzureSMProfile>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureVMDiagnosticsExtension** cmdlet gets the settings of the Microsoft azure_2 Diagnostics extension on a virtual machine.
+The **Get-AzureVMDiagnosticsExtension** cmdlet gets the settings of the Microsoft Azure Diagnostics extension on a virtual machine.
 
 ## EXAMPLES
 
@@ -62,7 +62,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -77,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -28,7 +28,7 @@ Get-AzureRmSiteRecoverySite -FriendlyName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoverySite** cmdlet gets the Hyper-V sites in the azure_2 Site Recovery vault.
+The **Get-AzureRmSiteRecoverySite** cmdlet gets the Hyper-V sites in the Azure Site Recovery vault.
 
 ## EXAMPLES
 

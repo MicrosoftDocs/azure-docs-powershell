@@ -8,7 +8,7 @@ ms.assetid: 0C58DF33-3573-4BBC-B74F-36A817DCBD81
 # Remove-AzureRmAvailabilitySet
 
 ## SYNOPSIS
-Removes an availability set from azure_2.
+Removes an availability set from Azure.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-AzureRmAvailabilitySet [-ResourceGroupName] <String> [[-Name] <String>] [
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAvailabilitySet** cmdlet removes an availability set from azure_2.
+The **Remove-AzureRmAvailabilitySet** cmdlet removes an availability set from Azure.
 
 ## EXAMPLES
 
@@ -78,7 +78,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -93,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -108,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -123,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

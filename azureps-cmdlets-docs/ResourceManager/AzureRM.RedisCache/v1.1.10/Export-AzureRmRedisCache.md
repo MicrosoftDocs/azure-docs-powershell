@@ -8,7 +8,7 @@ ms.assetid: B1E6378B-AFF9-4215-A950-FE491A6DC8D6
 # Export-AzureRmRedisCache
 
 ## SYNOPSIS
-Exports data from azure_2 Redis Cache to a container.
+Exports data from Azure Redis Cache to a container.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Export-AzureRmRedisCache -ResourceGroupName <String> -Name <String> -Prefix <Str
 ```
 
 ## DESCRIPTION
-The **Export-AzureRmRedisCache** cmdlet exports data from azure_2 Redis Cache to a container.
+The **Export-AzureRmRedisCache** cmdlet exports data from Azure Redis Cache to a container.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Export-AzureRmRedisCache** cmdlet exports data from azure_2 Redis Cache to
 PS C:\>Export-AzureRmRedisCache -ResourceGroupName "ResourceGroup13" -Name "RedisCache06" -Prefix "blobprefix" -Container "https://mystorageaccount.blob.core.windows.net/container18?sv=2015-04-05&sr=c&sig=HezZtBZ3DURmEGDduauE7pvETY4kqlPI8JCNa8ATmaw%3D&st=2016-05-27T00%3A00%3A00Z&se=2016-05-28T00%3A00%3A00Z&sp=rwdl"
 ```
 
-This command exports data from an azure_2 Redis Cache instance into the container that is specified by the SAS URL.
+This command exports data from an Azure Redis Cache instance into the container that is specified by the SAS URL.
 
 ## PARAMETERS
 

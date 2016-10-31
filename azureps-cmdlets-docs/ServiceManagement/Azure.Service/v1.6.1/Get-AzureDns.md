@@ -8,7 +8,7 @@ ms.assetid: F65D3505-9B07-457B-B3AF-48CB1F5BBA4B
 # Get-AzureDns
 
 ## SYNOPSIS
-Gets the DNS settings for an azure_2 deployment.
+Gets the DNS settings for an Azure deployment.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureDns [-DnsSettings <DnsSettings>] [-InformationAction <ActionPreference>
 ```
 
 ## DESCRIPTION
-The **Get-AzureDns** cmdlet gets the DNS settings for an azure_2 deployment.
+The **Get-AzureDns** cmdlet gets the DNS settings for an Azure deployment.
 The cmdlet returns the friendly name and IP address of the DNS server in a DNS settings object.
 
 ## EXAMPLES
@@ -50,7 +50,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -65,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

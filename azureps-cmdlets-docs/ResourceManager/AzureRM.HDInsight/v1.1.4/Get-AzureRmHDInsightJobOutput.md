@@ -20,7 +20,7 @@ Get-AzureRmHDInsightJobOutput [-ClusterName] <String> [-JobId] <String> [[-Defau
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmHDInsightJobOutput** cmdlet gets the log output for a job from the Storage account associated with an azure_2 HDInsight cluster.
+The **Get-AzureRmHDInsightJobOutput** cmdlet gets the log output for a job from the Storage account associated with an Azure HDInsight cluster.
 
 ## EXAMPLES
 
@@ -173,7 +173,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -188,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

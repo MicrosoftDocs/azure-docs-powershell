@@ -18,7 +18,7 @@ Get-AzureRmRouteConfig [-Name <String>] -RouteTable <PSRouteTable> [-Information
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmRouteConfig** cmdlet gets routes from an azure_2 route table.
+The **Get-AzureRmRouteConfig** cmdlet gets routes from an Azure route table.
 You can specify a route by name.
 
 ## EXAMPLES
@@ -72,7 +72,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -87,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

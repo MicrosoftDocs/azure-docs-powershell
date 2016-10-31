@@ -61,7 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -DataEncryptionPrimaryCertFile
-@{Text=}
 
 ```yaml
 Type: String
@@ -76,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -DataEncryptionSecondaryCertFile
-@{Text=}
 
 ```yaml
 Type: String

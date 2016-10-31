@@ -23,7 +23,7 @@ Stop-AzureBatchTask [-Task] <PSCloudTask> -BatchContext <BatchAccountContext> [<
 ```
 
 ## DESCRIPTION
-The **Stop-AzureBatchTask** cmdlet stops an azure_2 Batch task.
+The **Stop-AzureBatchTask** cmdlet stops an Azure Batch task.
 
 ## EXAMPLES
 

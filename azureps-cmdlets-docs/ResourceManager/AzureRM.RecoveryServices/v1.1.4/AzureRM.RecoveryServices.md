@@ -16,7 +16,7 @@ Gets Backup properties.
 
 
 ### [Get-AzureRmRecoveryServicesVaultSettingsFile](./Get-AzureRmRecoveryServicesVaultSettingsFile.md)
-Gets the azure_2 Site Recovery vault settings file.
+Gets the Azure Site Recovery vault settings file.
 
 
 ### [Get-AzureRmRecoveryServicesVault](./Get-AzureRmRecoveryServicesVault.md)

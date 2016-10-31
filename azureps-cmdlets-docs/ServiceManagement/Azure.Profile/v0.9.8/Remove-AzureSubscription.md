@@ -63,7 +63,6 @@ It uses the **PassThru** parameter, which returns a Boolean value, to determine 
 ## PARAMETERS
 
 ### -SubscriptionName
-@{Text=}
 
 ```yaml
 Type: String
@@ -78,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +91,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureProfile
@@ -155,7 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-@{Text=}
 
 ```yaml
 Type: String

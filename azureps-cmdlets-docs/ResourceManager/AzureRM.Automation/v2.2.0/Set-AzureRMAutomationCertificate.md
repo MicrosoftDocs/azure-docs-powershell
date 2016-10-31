@@ -19,7 +19,7 @@ Set-AzureRmAutomationCertificate [-Name] <String> [-Description <String>] [-Pass
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationCertificate** cmdlet modifies the configuration of a certificate in azure_2 Automation.
+The **Set-AzureRmAutomationCertificate** cmdlet modifies the configuration of a certificate in Azure Automation.
 
 ## EXAMPLES
 

@@ -202,7 +202,6 @@ Accept wildcard characters: False
 ```
 
 ### -DontShowInGui
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

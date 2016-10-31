@@ -18,7 +18,7 @@ Get-AzureApplicationGatewayConfig [-Name] <String> [-ExportToFile <String>] [-Pr
 ```
 
 ## DESCRIPTION
-The **Get-AzureApplicationGatewayConfig** cmdlet gets an azure_2 Application Gateway configuration context.
+The **Get-AzureApplicationGatewayConfig** cmdlet gets an Azure Application Gateway configuration context.
 A context includes both a configuration object and XML configuration.
 You can save the XML configuration to a file.
 

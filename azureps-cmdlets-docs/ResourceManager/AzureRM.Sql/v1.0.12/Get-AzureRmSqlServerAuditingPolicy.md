@@ -18,9 +18,9 @@ Get-AzureRmSqlServerAuditingPolicy -ServerName <String> [-ResourceGroupName] <St
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServerAuditingPolicy** cmdlet gets the auditing policy of an azure_2 SQL server.
+The **Get-AzureRmSqlServerAuditingPolicy** cmdlet gets the auditing policy of an Azure SQL server.
 Specify the *ResourceGroupName*, *ServerName*, and *DatabaseName* parameters to identify the database.
-This cmdlet returns a policy that is used by the azure_2 SQL databases that are both defined in the specified azure_2 SQL server and use its auditing policy.
+This cmdlet returns a policy that is used by the Azure SQL databases that are both defined in the specified Azure SQL server and use its auditing policy.
 
 ## EXAMPLES
 
@@ -42,7 +42,7 @@ This command gets the auditing policy of the server Server01 in resource group R
 ## PARAMETERS
 
 ### -ServerName
-Specifies the name of the azure_2 SQL server for which this cmdlet gets the auditing policy.
+Specifies the name of the Azure SQL server for which this cmdlet gets the auditing policy.
 
 ```yaml
 Type: String
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the azure_2 SQL server is assigned.
+Specifies the name of the resource group to which the Azure SQL server is assigned.
 
 ```yaml
 Type: String
@@ -72,7 +72,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -87,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

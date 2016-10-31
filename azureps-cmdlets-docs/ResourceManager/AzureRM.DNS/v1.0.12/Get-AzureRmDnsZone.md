@@ -49,7 +49,7 @@ This example gets all of the DNS zones in the specified resource group, and then
 PS C:\> $Zones = Get-AzureRmDnsZone
 ```
 
-This example gets all of the DNS zones in the current azure_2 subscription, and then stores them in the $Zones variable.
+This example gets all of the DNS zones in the current Azure subscription, and then stores them in the $Zones variable.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ This example gets all of the DNS zones in the current azure_2 subscription, and 
 Specifies the name of the DNS zone to get.
 
 If you do not specify a value for the *Name* parameter, this cmdlet gets all DNS zones in the specified resource group.
-If you also omit the *ResourceGroupName* parameter, this cmdlet gets all DNS zones in the current azure_2 subscription.
+If you also omit the *ResourceGroupName* parameter, this cmdlet gets all DNS zones in the current Azure subscription.
 
 ```yaml
 Type: String
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the DNS zone to get.
 
 If you do not specify the *ResourceGroupName*, then you must also omit the *Name* parameter.
-In this case, this cmdlet gets all DNS zones in the current azure_2 subscription.
+In this case, this cmdlet gets all DNS zones in the current Azure subscription.
 
 ```yaml
 Type: String

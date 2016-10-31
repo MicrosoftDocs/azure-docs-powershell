@@ -277,7 +277,6 @@ Accept wildcard characters: False
 ```
 
 ### -SchemaName
-@{Text=}
 
 ```yaml
 Type: String

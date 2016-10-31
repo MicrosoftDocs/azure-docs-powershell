@@ -18,7 +18,7 @@ Remove-AzureVNetGatewayDefaultSite [-VNetName] <String> [-Profile <AzureSMProfil
 
 ## DESCRIPTION
 The **Remove-AzureVNetGatewayDefaultSite** cmdlet removes the default route to the on-premises site for forced tunneling traffic.
-This cmdlet removes the route from an azure_2 virtual private network (VPN) gateway for a virtual network.
+This cmdlet removes the route from an Azure virtual private network (VPN) gateway for a virtual network.
 
 ## EXAMPLES
 

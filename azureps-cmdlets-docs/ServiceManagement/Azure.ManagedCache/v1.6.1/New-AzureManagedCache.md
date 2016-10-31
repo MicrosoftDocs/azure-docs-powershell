@@ -8,7 +8,7 @@ ms.assetid: 3FA2D6CF-3566-44DF-BBFD-A67E8DA4F0A2
 # New-AzureManagedCache
 
 ## SYNOPSIS
-Creates an azure_2 cache.
+Creates an Azure cache.
 
 ## SYNTAX
 
@@ -18,10 +18,10 @@ New-AzureManagedCache [-Name] <String> [-Location] <String> [-Sku <CacheServiceS
 ```
 
 ## DESCRIPTION
-The **New-AzureManagedCache** cmdlet creates an azure_2 Cache in your azure_2 account and returns an object that represents the new azure_2 Cache.
-An azure_2 Cache is a secure, dedicated cache that provides extremely fast access to data.
+The **New-AzureManagedCache** cmdlet creates an Azure Cache in your Azure account and returns an object that represents the new Azure Cache.
+An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about azure_2 Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ For more information about azure_2 Cache, see Azure Cachehttp://azure.microsoft.
 PS C:\>New-AzureManagedCache -Name "ContosoCache" -Location "West Europe"
 ```
 
-This command creates an azure_2 Cache named ContosoCache in the West Europe azure_2 data center.
+This command creates an Azure Cache named ContosoCache in the West Europe Azure data center.
 It uses the default values for the Sku and Memory parameters, which are Basic and 128MB.
 
 ### Example 2: Create a premium Azure Cache
@@ -38,12 +38,12 @@ It uses the default values for the Sku and Memory parameters, which are Basic an
 PS C:\>New-AzureManagedCache -Name "ContosoAppCache" -Location "West Europe" -Sku Premium -Memory 150GB
 ```
 
-This command creates the largest available azure_2 Cache.
+This command creates the largest available Azure Cache.
 
 ## PARAMETERS
 
 ### -Name
-Specifies a name for the azure_2 Cache.
+Specifies a name for the Azure Cache.
 The name can include only lower-case letters and numbers, and it must begin with a lower-case letter.
 The name must be unique.
 
@@ -60,9 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the location of the azure_2 Cache.
-Enter an azure_2 data center location, such as `North Central US` or `West Europe`.
-Use the Get-AzureLocation cmdlet to find a location that supports azure_2 Cache.
+Specifies the location of the Azure Cache.
+Enter an Azure data center location, such as `North Central US` or `West Europe`.
+Use the Get-AzureLocation cmdlet to find a location that supports Azure Cache.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Specifies the tier of the azure_2 Cache.
+Specifies the tier of the Azure Cache.
 The default value is Basic.
 psdx_paramvalues
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Memory
-Specifies the size of the azure_2 Cache.
+Specifies the size of the Azure Cache.
 The cache size may affect the cost of the service.
 Enter a value followed by MB or GB, such as 128MB or 8GB.
 This value must be compatible with the value of the *Sku* parameter.
@@ -148,7 +148,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models .PSCacheService
 
 ## NOTES
-* Use Add-AzureAccount or Import-AzurePublishSettingsFile to make your azure_2 account available to wps_2 before you use this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use Add-AzureAccount or Import-AzurePublishSettingsFile to make your Azure account available to wps_2 before you use this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
 
 ## RELATED LINKS
 

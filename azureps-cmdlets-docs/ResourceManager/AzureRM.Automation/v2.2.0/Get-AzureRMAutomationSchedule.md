@@ -25,7 +25,7 @@ Get-AzureRmAutomationSchedule [-Name] <String> [-ResourceGroupName] <String> [-A
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationSchedule** cmdlet gets an azure_2 Automation schedule.
+The **Get-AzureRmAutomationSchedule** cmdlet gets an Azure Automation schedule.
 
 ## EXAMPLES
 

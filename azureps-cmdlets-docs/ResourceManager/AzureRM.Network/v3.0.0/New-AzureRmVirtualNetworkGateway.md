@@ -34,7 +34,6 @@ New-AzureRmVirtualNetworkGateway -Name <String> -ResourceGroupName <String> -Loc
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -49,7 +48,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -64,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-@{Text=}
 
 ```yaml
 Type: String
@@ -79,7 +76,6 @@ Accept wildcard characters: False
 ```
 
 ### -IpConfigurations
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayIpConfiguration]
@@ -94,7 +90,6 @@ Accept wildcard characters: False
 ```
 
 ### -GatewayType
-@{Text=}
 
 ```yaml
 Type: String
@@ -109,7 +104,6 @@ Accept wildcard characters: False
 ```
 
 ### -VpnType
-@{Text=}
 
 ```yaml
 Type: String
@@ -124,7 +118,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBgp
-@{Text=}
 
 ```yaml
 Type: Boolean
@@ -154,7 +147,6 @@ Accept wildcard characters: False
 ```
 
 ### -GatewaySku
-@{Text=}
 
 ```yaml
 Type: String
@@ -169,7 +161,6 @@ Accept wildcard characters: False
 ```
 
 ### -GatewayDefaultSite
-@{Text=}
 
 ```yaml
 Type: PSLocalNetworkGateway
@@ -184,7 +175,6 @@ Accept wildcard characters: False
 ```
 
 ### -VpnClientAddressPool
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -199,7 +189,6 @@ Accept wildcard characters: False
 ```
 
 ### -VpnClientRootCertificates
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate]
@@ -214,7 +203,6 @@ Accept wildcard characters: False
 ```
 
 ### -VpnClientRevokedCertificates
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate]
@@ -229,7 +217,6 @@ Accept wildcard characters: False
 ```
 
 ### -Asn
-@{Text=}
 
 ```yaml
 Type: UInt32
@@ -244,7 +231,6 @@ Accept wildcard characters: False
 ```
 
 ### -PeerWeight
-@{Text=}
 
 ```yaml
 Type: Int32
@@ -259,7 +245,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-@{Text=}
 
 ```yaml
 Type: Hashtable

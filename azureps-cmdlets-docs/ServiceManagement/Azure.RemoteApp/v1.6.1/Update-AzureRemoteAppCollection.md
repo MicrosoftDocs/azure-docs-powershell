@@ -8,7 +8,7 @@ ms.assetid: 34DAF2EA-0710-4295-A0E4-27B0E785282B
 # Update-AzureRemoteAppCollection
 
 ## SYNOPSIS
-Updates an azure_2 RemoteApp collection with a new template image.
+Updates an Azure RemoteApp collection with a new template image.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Update-AzureRemoteAppCollection [-CollectionName] <String> [-ImageName] <String>
 ```
 
 ## DESCRIPTION
-The **Update-AzureRemoteAppCollection** cmdlet updates an azure_2 RemoteApp collection with a new template image.
+The **Update-AzureRemoteAppCollection** cmdlet updates an Azure RemoteApp collection with a new template image.
 After the update completes, users with existing sessions have one hour to sign out before they are automatically signed out.
 When they sign in again, they connect to the newly updated collection.
 To force users to be immediately signed out as soon as the collection is updated, specify the *ForceLogoffWhenUpdateComplete* parameter.
@@ -33,7 +33,7 @@ To force users to be immediately signed out as soon as the collection is updated
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImageName
-Specifies the name of an azure_2 RemoteApp template image.
+Specifies the name of an Azure RemoteApp template image.
 
 ```yaml
 Type: String
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

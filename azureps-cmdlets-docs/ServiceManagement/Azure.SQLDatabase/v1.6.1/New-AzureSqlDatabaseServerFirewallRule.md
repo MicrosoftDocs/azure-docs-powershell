@@ -29,7 +29,7 @@ The **New-AzureSqlDatabaseServerFirewallRule** cmdlet creates a firewall rule in
 
 Use the *StartIpAddress* and *EndIpAddress* parameters to specify a range of IP addresses that this rule allows to connect to the ssSDS server.
 
-Specify the *AllowAllAzureServices* parameter to create a rule that allows azure_2 connections to the server.
+Specify the *AllowAllAzureServices* parameter to create a rule that allows Azure connections to the server.
 The rule has starting and ending IP address values of 0.0.0.0.
 If you do not specify a firewall rule name, this cmdlet assigns the default name AllowAllAzureServices.
 
@@ -48,14 +48,14 @@ The command specifies an IP address range.
 PS C:\>New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -AllowAllAzureServices -RuleName "AzureConnections"
 ```
 
-This command creates a firewall rule named AzureConnections on the server named lpqd0zbr8y that allows azure_2 connections.
+This command creates a firewall rule named AzureConnections on the server named lpqd0zbr8y that allows Azure connections.
 
 ### Example 3: Create a rule that allows all Azure services that uses the default name Create a rule that allows all Azure services that uses the default name
 ```
 PS C:\>New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -AllowAllAzureServices
 ```
 
-This command creates a firewall rule on the specified server named lpqd0zbr8y that allows azure_2 connections.
+This command creates a firewall rule on the specified server named lpqd0zbr8y that allows Azure connections.
 The command assigns the default rule name AllowAllAzureServices.
 
 ## PARAMETERS
@@ -150,7 +150,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -165,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

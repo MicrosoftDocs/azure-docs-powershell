@@ -18,7 +18,7 @@ Get-AzureRmStreamAnalyticsDefaultFunctionDefinition [-JobName] <String> [-Name] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmStreamAnalyticsDefaultFunctionDefinition** cmdlet gets the default definition of a function in azure_2 Stream Analytics.
+The **Get-AzureRmStreamAnalyticsDefaultFunctionDefinition** cmdlet gets the default definition of a function in Azure Stream Analytics.
 You can use the default definition and the New-AzureRmStreamAnalyticsFunction cmdlet to create a function.
 You can modify the default definition before you create a function.
 

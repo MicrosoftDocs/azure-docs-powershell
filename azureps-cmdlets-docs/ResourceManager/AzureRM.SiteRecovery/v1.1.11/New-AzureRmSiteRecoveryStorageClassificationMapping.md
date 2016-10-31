@@ -18,7 +18,7 @@ New-AzureRmSiteRecoveryStorageClassificationMapping -PrimaryStorageClassificatio
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet creates a storage classification mapping in azure_2 Site Recovery.
+The **New-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet creates a storage classification mapping in Azure Site Recovery.
 
 ## EXAMPLES
 

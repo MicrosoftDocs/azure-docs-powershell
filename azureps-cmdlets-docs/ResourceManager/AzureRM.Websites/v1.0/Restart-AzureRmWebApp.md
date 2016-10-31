@@ -8,7 +8,7 @@ ms.assetid: 8FC691AA-3F5F-4773-9169-9EECC02E0CB3
 # Restart-AzureRmWebApp
 
 ## SYNOPSIS
-Restarts an azure_2 Web App.
+Restarts an Azure Web App.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Restart-AzureRmWebApp [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Restart-AzureRmWebApp** cmdlet stops and then starts an azure_2 Web App.
+The **Restart-AzureRmWebApp** cmdlet stops and then starts an Azure Web App.
 If the Web App is in a stopped state, use the Start-AzureRmWebApp cmdlet.
 
 ## EXAMPLES
@@ -33,12 +33,11 @@ If the Web App is in a stopped state, use the Start-AzureRmWebApp cmdlet.
 PS C:\>Restart-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
-This command stops the azure_2 Web App named ContosoSite that belongs to the resource group named Default-Web-WestUS and then restarts it.
+This command stops the Azure Web App named ContosoSite that belongs to the resource group named Default-Web-WestUS and then restarts it.
 
 ## PARAMETERS
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -53,7 +52,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -68,7 +66,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

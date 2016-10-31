@@ -18,7 +18,7 @@ Test-AzureRmStreamAnalyticsFunction [-JobName] <String> [-Name] <String> [-Resou
 ```
 
 ## DESCRIPTION
-The **Test-AzureRmStreamAnalyticsFunction** cmdlet tests whether azure_2 Stream Analytics can connect to a function.
+The **Test-AzureRmStreamAnalyticsFunction** cmdlet tests whether Azure Stream Analytics can connect to a function.
 
 ## EXAMPLES
 

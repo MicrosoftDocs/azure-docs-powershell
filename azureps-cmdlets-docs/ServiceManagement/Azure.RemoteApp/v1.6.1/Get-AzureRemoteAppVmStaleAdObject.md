@@ -8,7 +8,7 @@ ms.assetid: 5E93CD6F-3D69-4443-BA94-E34D00F59C5B
 # Get-AzureRemoteAppVmStaleAdObject
 
 ## SYNOPSIS
-Gets objects in azure_2 Active Directory that are associated with azure_2 RemoteApp virtual machines that no longer exist.
+Gets objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRemoteAppVmStaleAdObject [-CollectionName] <String> [[-Credential] <PSC
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppVmStaleAdObject** cmdlet gets objects in azure_2 Active Directory that are associated with azure_2 RemoteApp virtual machines that no longer exist.
+The **Get-AzureRemoteAppVmStaleAdObject** cmdlet gets objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
 This cmdlet displays the name of each object that it gets.
 
 ## EXAMPLES
@@ -33,7 +33,7 @@ This second command gets the stale objects for the collection named Contoso.
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

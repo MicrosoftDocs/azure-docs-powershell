@@ -24,7 +24,7 @@ Get-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndpoin
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmTrafficManagerEndpoint** cmdlet gets an endpoint for an azure_2 Traffic Manager profile.
+The **Get-AzureRmTrafficManagerEndpoint** cmdlet gets an endpoint for an Azure Traffic Manager profile.
 
 You can modify this object locally, and then apply changes to the profile by using the Set-AzureRmTrafficManagerEndpoint cmdlet.
 Specify the endpoint by using the *Name* and *Type* parameters.
@@ -38,7 +38,7 @@ Alternatively, you can pass that value by using the pipeline.
 PS C:\>$TrafficManagerEndpoint = Get-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type AzureEndpoints
 ```
 
-This command gets the azure_2 endpoint named contoso from the profile named ContosoProfile in the resource group named ResourceGroup11, and then stores that object in the $TrafficManagerEndpoint variable.
+This command gets the Azure endpoint named contoso from the profile named ContosoProfile in the resource group named ResourceGroup11, and then stores that object in the $TrafficManagerEndpoint variable.
 
 ## PARAMETERS
 

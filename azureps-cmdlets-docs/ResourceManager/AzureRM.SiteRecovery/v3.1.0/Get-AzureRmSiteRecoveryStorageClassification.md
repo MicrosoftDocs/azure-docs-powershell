@@ -80,7 +80,6 @@ Accept wildcard characters: False
 ```
 
 ### -Fabric
-@{Text=}
 
 ```yaml
 Type: ASRFabric
@@ -95,7 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-@{Text=}
 
 ```yaml
 Type: ASRServer

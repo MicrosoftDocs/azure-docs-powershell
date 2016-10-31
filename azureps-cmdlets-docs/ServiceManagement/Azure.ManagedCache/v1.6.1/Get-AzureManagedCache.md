@@ -8,7 +8,7 @@ ms.assetid: 0EE3CF16-D6FC-4372-8FAB-F21D1F9BFBFF
 # Get-AzureManagedCache
 
 ## SYNOPSIS
-Gets the azure_2 Caches in your azure_2 account.
+Gets the Azure Caches in your Azure account.
 
 ## SYNTAX
 
@@ -17,12 +17,12 @@ Get-AzureManagedCache [[-Name] <String>] [-Profile <AzureSMProfile>] [<CommonPar
 ```
 
 ## DESCRIPTION
-The **Get-AzureManagedCache** cmdlet get the azure_2 Caches in your account.
-By default, it gets all azure_2 Caches in the account.
-To get a particular azure_2 Cache, use the *Name* parameter.
-An azure_2 Cache is a secure, dedicated cache that provides extremely fast access to data.
+The **Get-AzureManagedCache** cmdlet get the Azure Caches in your account.
+By default, it gets all Azure Caches in the account.
+To get a particular Azure Cache, use the *Name* parameter.
+An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about azure_2 Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
 
 ## EXAMPLES
 
@@ -31,23 +31,23 @@ For more information about azure_2 Cache, see Azure Cachehttp://azure.microsoft.
 PS C:\>Get-AzureManagedCache
 ```
 
-This command gets all azure_2 Caches in your account.
+This command gets all Azure Caches in your account.
 
 ### Example 2: Get an Azure Cache by name
 ```
 PS C:\>Get-AzureManagedCache -Name "ContosoCache"
 ```
 
-This command gets the azure_2 Cache named ContosoCache.
+This command gets the Azure Cache named ContosoCache.
 
 ## PARAMETERS
 
 ### -Name
-Specifies the azure_2 cache.
-You need to supply the name of an azure_2 Cache.
+Specifies the Azure cache.
+You need to supply the name of an Azure Cache.
 This parameter is case-sensitive.
 This parameter is optional.
-By default, **Get-AzureManagedCache** gets all azure_2 caches in the account.
+By default, **Get-AzureManagedCache** gets all Azure caches in the account.
 
 ```yaml
 Type: String
@@ -88,7 +88,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PSCacheService
 
 ## NOTES
-* Before you use this cmdlet, call Add-AzureAccount or Import-AzurePublishSettingsFile to make your azure_2 account available to wps_2. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Before you use this cmdlet, call Add-AzureAccount or Import-AzurePublishSettingsFile to make your Azure account available to wps_2. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
 
 ## RELATED LINKS
 

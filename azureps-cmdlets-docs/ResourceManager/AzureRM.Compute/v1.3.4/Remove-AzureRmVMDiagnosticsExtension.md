@@ -18,7 +18,7 @@ Remove-AzureRmVMDiagnosticsExtension [-ResourceGroupName] <String> [-VMName] <St
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmVMDiagnosticsExtension** cmdlet removes an azure_2 Diagnostics extension from a virtual machine.
+The **Remove-AzureRmVMDiagnosticsExtension** cmdlet removes an Azure Diagnostics extension from a virtual machine.
 You must pass the output of this cmdlet to the Update-AzureRmVM cmdlet to implement your changes.
 
 ## EXAMPLES
@@ -80,7 +80,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -95,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

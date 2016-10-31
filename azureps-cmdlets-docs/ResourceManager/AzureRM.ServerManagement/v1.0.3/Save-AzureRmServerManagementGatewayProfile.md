@@ -26,7 +26,7 @@ Save-AzureRmServerManagementGatewayProfile [-OutputFile] <FileInfo> [-Gateway] <
 ```
 
 ## DESCRIPTION
-The **Save-AzureRmServerManagementGatewayProfile** cmdlet downloads the profile for an azure_2 Server Management gateway and stores it to a local file.
+The **Save-AzureRmServerManagementGatewayProfile** cmdlet downloads the profile for an Azure Server Management gateway and stores it to a local file.
 
 ## EXAMPLES
 
@@ -83,7 +83,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -98,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

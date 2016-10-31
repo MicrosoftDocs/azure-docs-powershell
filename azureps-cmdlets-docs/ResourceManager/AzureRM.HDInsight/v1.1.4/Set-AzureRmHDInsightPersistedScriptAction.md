@@ -21,7 +21,7 @@ Set-AzureRmHDInsightPersistedScriptAction [-ClusterName] <String> [-ScriptExecut
 ## DESCRIPTION
 The **Set-AzureRmHDInsightPersistedScriptAction** cmdlet sets a previously executed script action to be a persisted script action.
 The specified script action must have previously succeeded.
-The script action will run each time the azure_2 HDInsight cluster is scaled up.
+The script action will run each time the Azure HDInsight cluster is scaled up.
 
 ## EXAMPLES
 
@@ -84,7 +84,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -99,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -18,7 +18,7 @@ Set-AzureRmAutomationConnectionFieldValue [-Name] <String> -ConnectionFieldName 
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationConnectionFieldValue** cmdlet modifies the value of a field in a connection in azure_2 Automation.
+The **Set-AzureRmAutomationConnectionFieldValue** cmdlet modifies the value of a field in a connection in Azure Automation.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Set-AzureRmAutomationConnectionFieldValue** cmdlet modifies the value of a
 PS C:\>Set-AzureRmAutomationConnectionFieldValue -Name "ContosoConnection" -ConnectionFieldName "SubscriptionID" -Value "b53ec456-3494-4847-8f2b-180901c51050" -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
-This command changes the subscription ID for the azure_2 connection named ContosoConnection in the Automation account named AutomationAccount01.
+This command changes the subscription ID for the Azure connection named ContosoConnection in the Automation account named AutomationAccount01.
 
 ## PARAMETERS
 

@@ -8,7 +8,7 @@ ms.assetid: B8EF3FCC-D7FB-45C0-85B8-9C1CADAB80FF
 # New-AzureRmWebAppSlot
 
 ## SYNOPSIS
-Creates an azure_2 Web App slot.
+Creates an Azure Web App slot.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzureRmWebAppSlot [-ResourceGroupName] <String> [-Name] <String> [[-Slot] <S
 ```
 
 ## DESCRIPTION
-The **New-AzureRmWebAppSlot** cmdlet creates an azure_2 Web App slot.
+The **New-AzureRmWebAppSlot** cmdlet creates an Azure Web App slot.
 
 ## EXAMPLES
 

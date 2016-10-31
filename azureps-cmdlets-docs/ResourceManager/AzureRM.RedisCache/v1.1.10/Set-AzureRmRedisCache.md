@@ -19,7 +19,7 @@ Set-AzureRmRedisCache -ResourceGroupName <String> -Name <String> [-Size <String>
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmRedisCache** cmdlet modifies an azure_2 Redis Cache.
+The **Set-AzureRmRedisCache** cmdlet modifies an Azure Redis Cache.
 
 ## EXAMPLES
 

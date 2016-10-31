@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -File
-Specifies the Windows azure_2 Storage Blob (WASB) path to a file in azure_2 blob storage that contains the query to run.
+Specifies the Windows Azure Storage Blob (WASB) path to a file in Azure blob storage that contains the query to run.
 You can use this parameter instead of the *Query* parameter.
 
 ```yaml

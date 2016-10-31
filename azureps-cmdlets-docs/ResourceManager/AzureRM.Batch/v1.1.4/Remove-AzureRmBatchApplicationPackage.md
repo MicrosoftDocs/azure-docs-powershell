@@ -18,7 +18,7 @@ Remove-AzureRmBatchApplicationPackage [-AccountName] <String> [-ResourceGroupNam
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmBatchApplicationPackage** cmdlet deletes an application package record and the binary file from an azure_2 Batch account.
+The **Remove-AzureRmBatchApplicationPackage** cmdlet deletes an application package record and the binary file from an Azure Batch account.
 
 ## EXAMPLES
 

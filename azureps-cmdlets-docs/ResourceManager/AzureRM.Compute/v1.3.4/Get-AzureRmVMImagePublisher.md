@@ -27,7 +27,7 @@ The **Get-AzureRmVMImagePublisher** cmdlet gets the VMImage publishers.
 PS C:\>Get-AzureRmVMImagePublisher -Location "Central US"
 ```
 
-This command gets the publishers of VMImage instances for the Central US region within your azure_2 profile.
+This command gets the publishers of VMImage instances for the Central US region within your Azure profile.
 
 ## PARAMETERS
 
@@ -47,7 +47,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -62,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

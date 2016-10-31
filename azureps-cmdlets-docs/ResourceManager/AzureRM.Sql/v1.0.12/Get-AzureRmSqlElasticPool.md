@@ -136,7 +136,7 @@ TimeGrain      : 00:05:00
 Unit           : Percent
 ```
 
-This command returns metrics for an azure_2 SQL elastic database pool named ElasticPool01.
+This command returns metrics for an Azure SQL elastic database pool named ElasticPool01.
 
 ## PARAMETERS
 
@@ -186,7 +186,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -201,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

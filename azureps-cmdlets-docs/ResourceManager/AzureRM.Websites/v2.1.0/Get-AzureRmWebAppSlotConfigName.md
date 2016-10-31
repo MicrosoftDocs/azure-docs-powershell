@@ -35,7 +35,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -50,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -65,7 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

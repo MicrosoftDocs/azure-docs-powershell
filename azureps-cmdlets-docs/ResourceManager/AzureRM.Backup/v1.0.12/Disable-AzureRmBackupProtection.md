@@ -18,7 +18,7 @@ Disable-AzureRmBackupProtection [-RemoveRecoveryPoints] [-Force] [-Item] <AzureR
 ```
 
 ## DESCRIPTION
-The **Disable-AzureRmBackupProtection** cmdlet disables protection for an azure_2 Backup protected item.
+The **Disable-AzureRmBackupProtection** cmdlet disables protection for an Azure Backup protected item.
 This cmdlet stops regular scheduled backup of an item.
 This cmdlet can delete existing recovery points for the backup item.
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

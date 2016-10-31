@@ -19,7 +19,7 @@ Import-AzureStorSimpleLegacyApplianceConfig [-ConfigFilePath] <String> [-TargetD
 
 ## DESCRIPTION
 The **Import-AzureStorSimpleLegacyApplianceConfig** cmdlet imports the configuration file from the legacy appliance.
-That file contains information about volume containers, backup policies, and storage account credentials for the azure_2 StorSimple service.
+That file contains information about volume containers, backup policies, and storage account credentials for the Azure StorSimple service.
 This cmdlet returns the legacy appliance configuration metadata.
 
 ## EXAMPLES
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

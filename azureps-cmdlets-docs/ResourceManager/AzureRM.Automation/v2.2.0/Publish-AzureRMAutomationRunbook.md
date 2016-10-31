@@ -18,7 +18,7 @@ Publish-AzureRmAutomationRunbook [-Name] <String> [-ResourceGroupName] <String>
 ```
 
 ## DESCRIPTION
-The **Publish-AzureRmAutomationRunbook** cmdlet publishes a runbook for use in the production environment of azure_2 Automation.
+The **Publish-AzureRmAutomationRunbook** cmdlet publishes a runbook for use in the production environment of Azure Automation.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Publish-AzureRmAutomationRunbook** cmdlet publishes a runbook for use in t
 PS C:\>Publish-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ResourceGroupName "ResourceGroup01"
 ```
 
-This command publishes the runbook named Runbk01 in the azure_2 Automation account named Contoso17.
+This command publishes the runbook named Runbk01 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 

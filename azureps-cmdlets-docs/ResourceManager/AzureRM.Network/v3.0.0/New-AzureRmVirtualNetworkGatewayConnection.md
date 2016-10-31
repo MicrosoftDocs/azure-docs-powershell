@@ -41,7 +41,6 @@ New-AzureRmVirtualNetworkGatewayConnection -Name <String> -ResourceGroupName <St
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -56,7 +55,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -71,7 +69,6 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-@{Text=}
 
 ```yaml
 Type: String
@@ -86,7 +83,6 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationKey
-@{Text=}
 
 ```yaml
 Type: String
@@ -101,7 +97,6 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGateway1
-@{Text=}
 
 ```yaml
 Type: PSVirtualNetworkGateway
@@ -116,7 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGateway2
-@{Text=}
 
 ```yaml
 Type: PSVirtualNetworkGateway
@@ -131,7 +125,6 @@ Accept wildcard characters: False
 ```
 
 ### -LocalNetworkGateway2
-@{Text=}
 
 ```yaml
 Type: PSLocalNetworkGateway
@@ -146,7 +139,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionType
-@{Text=}
 
 ```yaml
 Type: String
@@ -161,7 +153,6 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingWeight
-@{Text=}
 
 ```yaml
 Type: Int32
@@ -176,7 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -SharedKey
-@{Text=}
 
 ```yaml
 Type: String
@@ -191,7 +181,6 @@ Accept wildcard characters: False
 ```
 
 ### -Peer
-@{Text=}
 
 ```yaml
 Type: PSPeering
@@ -206,7 +195,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBgp
-@{Text=}
 
 ```yaml
 Type: String
@@ -221,7 +209,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-@{Text=}
 
 ```yaml
 Type: Hashtable
@@ -236,7 +223,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -283,7 +269,6 @@ Accept wildcard characters: False
 ```
 
 ### -PeerId
-@{Text=}
 
 ```yaml
 Type: String

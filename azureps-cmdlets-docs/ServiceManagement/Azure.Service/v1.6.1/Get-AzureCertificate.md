@@ -8,7 +8,7 @@ ms.assetid: B77218CF-0CB8-47C4-B5D7-71B56AB54017
 # Get-AzureCertificate
 
 ## SYNOPSIS
-Gets a certificate object from an azure_2 service.
+Gets a certificate object from an Azure service.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureCertificate [-ServiceName] <String> [-ThumbprintAlgorithm <String>] [-T
 ```
 
 ## DESCRIPTION
-The **Get-AzureCertificate** cmdlet gets a certificate object from an azure_2 service.
+The **Get-AzureCertificate** cmdlet gets a certificate object from an Azure service.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ This command gets the certificate object identified by the specified thumbprint 
 ## PARAMETERS
 
 ### -ServiceName
-Specifies the name of the azure_2 service from which this cmdlet gets a certificate.
+Specifies the name of the Azure service from which this cmdlet gets a certificate.
 
 ```yaml
 Type: String
@@ -100,7 +100,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -115,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

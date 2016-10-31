@@ -18,8 +18,8 @@ Stop-AzureRmStreamAnalyticsJob [-Name] <String> [-ResourceGroupName] <String> [-
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmStreamAnalyticsJob** cmdlet asynchronously stops a Stream Analytics job from running in azure_2 and deallocates resources that were that were being used.
-The job definition and metadata remain available within your subscription through both the azure_2 Portal and Management APIs, such that the job can be edited and restarted.
+The **Stop-AzureRmStreamAnalyticsJob** cmdlet asynchronously stops a Stream Analytics job from running in Azure and deallocates resources that were that were being used.
+The job definition and metadata remain available within your subscription through both the Azure Portal and Management APIs, such that the job can be edited and restarted.
 You will not be charged for a job in the Stopped state.
 
 ## EXAMPLES
@@ -34,7 +34,7 @@ This command stops the job StreamingJob.
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the azure_2 Stream Analytics job to stop.
+Specifies the name of the Azure Stream Analytics job to stop.
 
 ```yaml
 Type: String
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the azure_2 Stream Analytics job belongs.
+Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
 
 ```yaml
 Type: String

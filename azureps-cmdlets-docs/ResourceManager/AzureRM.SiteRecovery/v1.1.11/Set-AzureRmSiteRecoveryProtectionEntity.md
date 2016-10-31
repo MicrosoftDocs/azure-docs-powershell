@@ -39,7 +39,7 @@ Set-AzureRmSiteRecoveryProtectionEntity -ProtectionEntity <ASRProtectionEntity> 
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSiteRecoveryProtectionEntity** cmdlet enables or disables protection on an azure_2 Site Recovery protection entity.
+The **Set-AzureRmSiteRecoveryProtectionEntity** cmdlet enables or disables protection on an Azure Site Recovery protection entity.
 
 ## EXAMPLES
 
@@ -51,7 +51,7 @@ The **Set-AzureRmSiteRecoveryProtectionEntity** cmdlet enables or disables prote
 ## PARAMETERS
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureStorageAccountId
-Specifies the ID of the target azure_2 Storage account.
+Specifies the ID of the target Azure Storage account.
 
 ```yaml
 Type: String
@@ -194,7 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

@@ -18,7 +18,7 @@ Remove-AzureRmBatchApplication [-AccountName] <String> [-ResourceGroupName] <Str
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmBatchApplication** cmdlet deletes an application from an azure_2 Batch account.
+The **Remove-AzureRmBatchApplication** cmdlet deletes an application from an Azure Batch account.
 
 ## EXAMPLES
 

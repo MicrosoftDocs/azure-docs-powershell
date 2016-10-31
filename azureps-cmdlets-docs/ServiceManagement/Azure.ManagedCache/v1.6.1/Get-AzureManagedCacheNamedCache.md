@@ -18,7 +18,7 @@ Get-AzureManagedCacheNamedCache -Name <String> [-NamedCache <String>] [-Profile 
 ```
 
 ## DESCRIPTION
-The **Get-AzureManagedCacheNamedCache** cmdlet gets a specific named cache or all named caches in an azure_2 Managed Cache Service instance in your azure_2 account.
+The **Get-AzureManagedCacheNamedCache** cmdlet gets a specific named cache or all named caches in an Azure Managed Cache Service instance in your Azure account.
 
 ## EXAMPLES
 
@@ -96,7 +96,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PSCacheServiceWithNamedCaches
 
 ## NOTES
-* Use Add-AzureAccount or Import-AzurePublishSettingsFile to make your azure_2 account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use Add-AzureAccount or Import-AzurePublishSettingsFile to make your Azure account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
 
 ## RELATED LINKS
 

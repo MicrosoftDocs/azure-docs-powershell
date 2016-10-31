@@ -20,7 +20,7 @@ Gets the status of an import or export request.
 
 
 ### [Get-AzureSqlDatabaseOperation](./Get-AzureSqlDatabaseOperation.md)
-Gets the status of database operations on an azure_2 server.
+Gets the status of database operations on an Azure server.
 
 
 ### [Get-AzureSqlDatabaseServerFirewallRule](./Get-AzureSqlDatabaseServerFirewallRule.md)

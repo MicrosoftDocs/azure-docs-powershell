@@ -29,7 +29,7 @@ Get-AzureRmSiteRecoveryNetworkMapping -PrimaryServer <ASRServer> [-Azure] [<Comm
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryNetworkMapping** cmdlet gets information about azure_2 Site Recovery network mappings for the current Site Recovery vault.
+The **Get-AzureRmSiteRecoveryNetworkMapping** cmdlet gets information about Azure Site Recovery network mappings for the current Site Recovery vault.
 
 ## EXAMPLES
 
@@ -41,7 +41,7 @@ The **Get-AzureRmSiteRecoveryNetworkMapping** cmdlet gets information about azur
 ## PARAMETERS
 
 ### -Azure
-Indicates that the command gets a list of network mappings for networks on the primary server mapped to azure_2 virtual networks.
+Indicates that the command gets a list of network mappings for networks on the primary server mapped to Azure virtual networks.
 
 ```yaml
 Type: SwitchParameter
@@ -56,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryServer
-@{Text=}
 
 ```yaml
 Type: ASRServer
@@ -71,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryServer
-@{Text=}
 
 ```yaml
 Type: ASRServer

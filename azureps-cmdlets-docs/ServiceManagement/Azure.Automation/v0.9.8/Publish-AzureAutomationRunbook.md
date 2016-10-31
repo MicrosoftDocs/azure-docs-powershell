@@ -32,7 +32,6 @@ This command publishes the runbook named Runbk01 in the Azure Automation account
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -47,7 +46,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String

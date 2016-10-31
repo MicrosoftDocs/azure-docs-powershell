@@ -18,7 +18,7 @@ Get-AzureRmHDInsightProperties [-Location] <String> [-InformationAction <ActionP
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmHDInsightProperties** cmdlet gets properties specific to azure_2 HDInsight, such as the list of available locations, HDInsight cluster versions, and available compute capacity.
+The **Get-AzureRmHDInsightProperties** cmdlet gets properties specific to Azure HDInsight, such as the list of available locations, HDInsight cluster versions, and available compute capacity.
 
 ## EXAMPLES
 
@@ -47,7 +47,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -62,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

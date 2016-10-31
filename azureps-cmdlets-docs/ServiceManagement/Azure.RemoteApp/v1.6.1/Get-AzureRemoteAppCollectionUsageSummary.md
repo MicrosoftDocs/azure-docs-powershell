@@ -8,7 +8,7 @@ ms.assetid: 5C0AF133-1D45-4F4E-A22E-0C53DA4B8127
 # Get-AzureRemoteAppCollectionUsageSummary
 
 ## SYNOPSIS
-Retrieves a usage summary for an azure_2 RemoteApp collection.
+Retrieves a usage summary for an Azure RemoteApp collection.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRemoteAppCollectionUsageSummary [-CollectionName] <String> [[-UsageMont
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppCollectionUsageSummary** cmdlet retrieves a usage summary for an azure_2 RemoteApp collection.
+The **Get-AzureRemoteAppCollectionUsageSummary** cmdlet retrieves a usage summary for an Azure RemoteApp collection.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ This command gets a usage summary for the month of December in the year 2014, fo
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

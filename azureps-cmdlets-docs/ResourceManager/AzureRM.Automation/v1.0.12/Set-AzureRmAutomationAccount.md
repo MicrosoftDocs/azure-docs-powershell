@@ -18,7 +18,7 @@ Set-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [-Pl
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationAccount** cmdlet modifies an azure_2 Automation account.
+The **Set-AzureRmAutomationAccount** cmdlet modifies an Azure Automation account.
 
 For more information about Automation accounts, see the New-AzureRmAutomationAccount cmdlet.
 

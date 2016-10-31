@@ -18,7 +18,7 @@ Suspend-AzureRmAutomationJob [-Id] <Guid> [-ResourceGroupName] <String> [-Automa
 ```
 
 ## DESCRIPTION
-The **Suspend-AzureRmAutomationJob** cmdlet suspends an azure_2 Automation job.
+The **Suspend-AzureRmAutomationJob** cmdlet suspends an Azure Automation job.
 Specify a running Automation job.
 
 To resume a suspended job, use the Resume-AzureRmAutomationJob cmdlet.

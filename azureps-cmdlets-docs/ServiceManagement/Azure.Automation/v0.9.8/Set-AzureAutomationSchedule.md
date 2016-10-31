@@ -32,7 +32,6 @@ This command modifies the description of the schedule named Schedule01.
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -47,7 +46,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-@{Text=}
 
 ```yaml
 Type: String
@@ -62,7 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-@{Text=}
 
 ```yaml
 Type: Boolean
@@ -77,7 +74,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ ms.assetid: D6BB2078-E58F-400F-AB45-6757798E073E
 # Stop-AzureRmWebApp
 
 ## SYNOPSIS
-Stops an azure_2 Web App.
+Stops an Azure Web App.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Stop-AzureRmWebApp [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmWebApp** cmdlet stops an azure_2 Web App.
+The **Stop-AzureRmWebApp** cmdlet stops an Azure Web App.
 
 ## EXAMPLES
 
@@ -32,12 +32,11 @@ The **Stop-AzureRmWebApp** cmdlet stops an azure_2 Web App.
 PS C:\>Stop-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
 ```
 
-This command stops the azure_2 Web App named ContosoWebApp that belongs to the resource group named Default-Web-WestUS.
+This command stops the Azure Web App named ContosoWebApp that belongs to the resource group named Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -52,7 +51,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -67,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

@@ -42,7 +42,7 @@ The final command gets the properties of the ACS table service from the ACS Farm
 ## PARAMETERS
 
 ### -FarmName
-Specifies the name of the azure_2 Consistent Storage (ACS) farm.
+Specifies the name of the Azure Consistent Storage (ACS) farm.
 
 ```yaml
 Type: String

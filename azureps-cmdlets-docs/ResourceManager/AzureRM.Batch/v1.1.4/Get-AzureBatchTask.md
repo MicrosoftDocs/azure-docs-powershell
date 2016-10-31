@@ -31,7 +31,7 @@ Get-AzureBatchTask [[-Job] <PSCloudJob>] [-Filter <String>] [-MaxCount <Int32>] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureBatchTask** cmdlet gets azure_2 Batch tasks for a Batch job.
+The **Get-AzureBatchTask** cmdlet gets Azure Batch tasks for a Batch job.
 Specify a job by either the *JobId* parameter or the *Job* parameter.
 To get a single task, specify the *Id* parameter.
 You can specify the *Filter* parameter to get the tasks that match an Open Data Protocol (OData) filter.

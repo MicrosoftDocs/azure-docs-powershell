@@ -8,7 +8,7 @@ ms.assetid: 648D7776-5056-4025-8706-3BA091658AD0
 # Set-AzureRmRedisCacheDiagnostics
 
 ## SYNOPSIS
-Enables diagnostics on an azure_2 Redis Cache.
+Enables diagnostics on an Azure Redis Cache.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Set-AzureRmRedisCacheDiagnostics -ResourceGroupName <String> -Name <String> -Sto
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmRedisCacheDiagnostics** cmdlet enables diagnostics for an azure_2 Redis Cache.
+The **Set-AzureRmRedisCacheDiagnostics** cmdlet enables diagnostics for an Azure Redis Cache.
 
 ## EXAMPLES
 
@@ -27,9 +27,9 @@ The **Set-AzureRmRedisCacheDiagnostics** cmdlet enables diagnostics for an azure
 PS C:\>Set-AzureRmRedisCacheDiagnostics -ResourceGroupName "ContosoResourceGroup" -Name "PeakCache" -StorageAccountId "/subscriptions/fffff139-aaaa-bbbb-cccc-21f21f35806e/resourcegroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount"
 ```
 
-This command enables diagnostics for an azure_2 Redis cache.
+This command enables diagnostics for an Azure Redis cache.
 
-This command will enable diagnostics or update the storage account for all azure_2 Redis Caches in the same region for the subscription.
+This command will enable diagnostics or update the storage account for all Azure Redis Caches in the same region for the subscription.
 
 ## PARAMETERS
 

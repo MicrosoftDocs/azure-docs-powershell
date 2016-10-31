@@ -43,7 +43,7 @@ New-AzureBatchTask [-Job <PSCloudJob>] -Id <String> [-DisplayName <String>] [-Co
 ```
 
 ## DESCRIPTION
-The **New-AzureBatchTask** cmdlet creates an azure_2 Batch task under the job specified by the *JobId* parameter or the *Job* parameter.
+The **New-AzureBatchTask** cmdlet creates an Azure Batch task under the job specified by the *JobId* parameter or the *Job* parameter.
 
 ## EXAMPLES
 

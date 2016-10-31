@@ -8,7 +8,7 @@ ms.assetid: AD3170AB-3678-4AA7-BCA2-04EA7AE2A0EC
 # Get-AzureOSDisk
 
 ## SYNOPSIS
-Gets the operating system disk of an azure_2 virtual machine.
+Gets the operating system disk of an Azure virtual machine.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureOSDisk -VM <IPersistentVM> [-Profile <AzureSMProfile>] [-InformationAct
 ```
 
 ## DESCRIPTION
-The **Get-AzureOSDisk** cmdlet gets the operating system disk of an azure_2 virtual machine.
+The **Get-AzureOSDisk** cmdlet gets the operating system disk of an Azure virtual machine.
 
 ## EXAMPLES
 
@@ -65,7 +65,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -80,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

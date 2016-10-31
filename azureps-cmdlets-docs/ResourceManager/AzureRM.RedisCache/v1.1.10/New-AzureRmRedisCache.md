@@ -20,7 +20,7 @@ New-AzureRmRedisCache -ResourceGroupName <String> -Name <String> -Location <Stri
 ```
 
 ## DESCRIPTION
-The **New-AzureRmRedisCache** cmdlet creates an azure_2 Redis Cache.
+The **New-AzureRmRedisCache** cmdlet creates an Azure Redis Cache.
 
 ## EXAMPLES
 
@@ -361,7 +361,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-@{Text=}
 
 ```yaml
 Type: String

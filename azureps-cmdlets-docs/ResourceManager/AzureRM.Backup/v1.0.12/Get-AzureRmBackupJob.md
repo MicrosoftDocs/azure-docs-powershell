@@ -24,7 +24,7 @@ Get-AzureRmBackupJob -Job <AzureRMBackupJob> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBackupJob** cmdlet gets azure_2 Backup jobs for a specific vault.
+The **Get-AzureRmBackupJob** cmdlet gets Azure Backup jobs for a specific vault.
 
 ## EXAMPLES
 

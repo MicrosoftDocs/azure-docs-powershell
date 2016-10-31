@@ -33,7 +33,7 @@ New-AzureSchedulerStorageQueueJob [-StorageQueueMessage <String>] [-Interval <In
 ## DESCRIPTION
 powershell_prelim
 
-The **New-AzureSchedulerStorageQueueJob** cmdlet creates a scheduler job that has an azure_2 Storage action.
+The **New-AzureSchedulerStorageQueueJob** cmdlet creates a scheduler job that has an Azure Storage action.
 
 ## EXAMPLES
 

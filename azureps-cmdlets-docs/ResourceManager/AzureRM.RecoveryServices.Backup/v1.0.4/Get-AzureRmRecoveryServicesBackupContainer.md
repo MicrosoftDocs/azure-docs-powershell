@@ -39,7 +39,7 @@ This command gets the container named V2VM of type AzureVM.
 PS C:\>Get-AzureRmRecoveryServicesBackupContainer -ContainerType Windows -BackupManagementType MARS
 ```
 
-This command gets all Windows containers that are protected by azure_2 Backup agent.
+This command gets all Windows containers that are protected by Azure Backup agent.
 The *BackupManagementType* parameter is only required for Windows containers.
 
 ## PARAMETERS
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 Specifies the name of the resource group.
-This parameter is for azure_2 virtual machines only.
+This parameter is for Azure virtual machines only.
 
 ```yaml
 Type: String
@@ -136,7 +136,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -151,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ ms.assetid: DE61E8F6-3DFE-4307-A07F-44E4A32BC5BE
 # Remove-AzureVNetConfig
 
 ## SYNOPSIS
-Deletes the network configuration from the current azure_2 subscription.
+Deletes the network configuration from the current Azure subscription.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureVNetConfig [-Profile <AzureSMProfile>] [-InformationAction <ActionPr
 ```
 
 ## DESCRIPTION
-The **Remove-AzureVNetConfig** cmdlet removes all virtual network settings from the current azure_2 subscription.
+The **Remove-AzureVNetConfig** cmdlet removes all virtual network settings from the current Azure subscription.
 
 ## EXAMPLES
 
@@ -47,7 +47,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -62,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

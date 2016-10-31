@@ -8,7 +8,7 @@ ms.assetid: 66213503-6FA4-49BB-B932-945C4BB9BB34
 # New-AzureRmHDInsightClusterConfig
 
 ## SYNOPSIS
-Creates a non-persisted cluster configuration object that describes an azure_2 HDInsight cluster configuration.
+Creates a non-persisted cluster configuration object that describes an Azure HDInsight cluster configuration.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ New-AzureRmHDInsightClusterConfig [-DefaultStorageAccountName <String>] [-Defaul
 ```
 
 ## DESCRIPTION
-The **New-AzureRmHDInsightClusterConfig** cmdlet creates a non-persisted object that describes an azure_2 HDInsight cluster configuration.
+The **New-AzureRmHDInsightClusterConfig** cmdlet creates a non-persisted object that describes an Azure HDInsight cluster configuration.
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountKey
-Specifies the account key for the default azure_2 Storage account that the HDInsight cluster will use.
+Specifies the account key for the default Azure Storage account that the HDInsight cluster will use.
 
 ```yaml
 Type: String
@@ -222,8 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the azure_2 AD object ID (a GUID) of the azure_2 AD Service Principal that represents the cluster.
-The cluster will use this when accessing azure_2 Data Lake Store.
+Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 
 ### -CertificateFilePath
 Specifies the file path to the certificate that will be used to authenticate as the Service Principal.
-The cluster will use this when accessing azure_2 Data Lake Store.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: String
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 
 ### -CertificatePassword
 Specifies the password for the certificate that will be used to authenticate as the Service Principal.
-The cluster will use this when accessing azure_2 Data Lake Store.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: String
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -AadTenantId
-Specifies the azure_2 AD Tenant ID that will be used when accessing azure_2 Data Lake Store.
+Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
@@ -300,7 +300,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -315,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

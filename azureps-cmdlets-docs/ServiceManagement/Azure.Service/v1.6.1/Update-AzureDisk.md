@@ -8,7 +8,7 @@ ms.assetid: 69874C98-EBA5-4242-9288-B9FA5164AAE7
 # Update-AzureDisk
 
 ## SYNOPSIS
-Changes the label of a disk in the azure_2 disk repository.
+Changes the label of a disk in the Azure disk repository.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Update-AzureDisk [-DiskName] <String> [-Label] <String> [-Profile <AzureSMProfil
 ```
 
 ## DESCRIPTION
-The **Update-AzureDisk** cmdlet changes the label that is associated with a disk in the disk repository of the current azure_2 subscription.
+The **Update-AzureDisk** cmdlet changes the label that is associated with a disk in the disk repository of the current Azure subscription.
 
 ## EXAMPLES
 
@@ -112,7 +112,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -127,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

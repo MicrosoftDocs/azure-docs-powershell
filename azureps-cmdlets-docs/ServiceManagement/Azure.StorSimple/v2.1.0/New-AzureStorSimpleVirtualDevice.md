@@ -72,7 +72,6 @@ Accept wildcard characters: False
 ```
 
 ### -PersistAzureVMOnFailrue
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

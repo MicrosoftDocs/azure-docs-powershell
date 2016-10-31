@@ -292,7 +292,6 @@ Accept wildcard characters: False
 ```
 
 ### -DataCollection
-@{Text=}
 
 ```yaml
 Type: String

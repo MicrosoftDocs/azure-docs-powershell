@@ -18,7 +18,7 @@ New-AzureRmStreamAnalyticsFunction [-JobName] <String> [[-Name] <String>] [-File
 ```
 
 ## DESCRIPTION
-The **New-AzureRmStreamAnalyticsFunction** cmdlet creates a function in an azure_2 Stream Analytics job or replaces an existing function.
+The **New-AzureRmStreamAnalyticsFunction** cmdlet creates a function in an Azure Stream Analytics job or replaces an existing function.
 Define the function in a JavaScript Object Notation (JSON) file.
 
 You can specify the name of the function by using the *Name* parameter or in the .json file.
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -143,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

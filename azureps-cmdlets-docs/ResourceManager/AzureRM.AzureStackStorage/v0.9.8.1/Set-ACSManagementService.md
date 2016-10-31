@@ -20,7 +20,7 @@ Set-ACSManagementService [-FarmName] <String> [-WacContainerGcFullScanIntervalIn
 ```
 
 ## DESCRIPTION
-The **Set-ACSManagementService** cmdlet sets the configuration for an azure_2 Consistent Storage (ACS) Management Service.
+The **Set-ACSManagementService** cmdlet sets the configuration for an Azure Consistent Storage (ACS) Management Service.
 
 ## EXAMPLES
 
@@ -161,7 +161,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -176,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

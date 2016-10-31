@@ -25,7 +25,7 @@ New-AzureBatchComputeNodeUser [[-ComputeNode] <PSComputeNode>] -Name <String> -P
 ```
 
 ## DESCRIPTION
-The **New-AzureBatchComputeNodeUser** cmdlet creates a user account on an azure_2 Batch compute node.
+The **New-AzureBatchComputeNodeUser** cmdlet creates a user account on an Azure Batch compute node.
 
 ## EXAMPLES
 

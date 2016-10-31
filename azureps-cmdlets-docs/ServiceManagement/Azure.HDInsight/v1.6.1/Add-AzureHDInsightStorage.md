@@ -26,7 +26,7 @@ For information about how to use the new HDInsight to create a cluster, see Crea
 For information about how to submit jobs by using APS and other approaches, see Submit Hadoop jobs in HDInsighthttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/.
 For reference information about APS HDInsight, see Azure HDInsight Cmdletshttps://msdn.microsoft.com/en-us/library/mt438705.aspx.
 
-The **Add-AzureHDInsightStorage** cmdlet adds a blob storage account entry to an azure_2 HDInsight configuration.
+The **Add-AzureHDInsightStorage** cmdlet adds a blob storage account entry to an Azure HDInsight configuration.
 
 ## EXAMPLES
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Specifies the name of the azure_2 storage account to add.
+Specifies the name of the Azure storage account to add.
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ ms.assetid: E517F86F-6837-422A-A873-315BC766777C
 # Add-AzureRmHDInsightStorage
 
 ## SYNOPSIS
-Adds an azure_2 Storage key to a cluster configuration object.
+Adds an Azure Storage key to a cluster configuration object.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Add-AzureRmHDInsightStorage [-Config] <AzureHDInsightConfig> [-StorageAccountNam
 ```
 
 ## DESCRIPTION
-The **Add-AzureRmHDInsightStorage** cmdlet adds an azure_2 Storage account entry to the Azure HDInsight configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
+The **Add-AzureRmHDInsightStorage** cmdlet adds an Azure Storage account entry to the Azure HDInsight configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ## EXAMPLES
 
@@ -118,7 +118,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -133,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

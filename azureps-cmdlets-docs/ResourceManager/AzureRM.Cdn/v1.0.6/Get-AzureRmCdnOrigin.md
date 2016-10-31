@@ -19,7 +19,7 @@ Get-AzureRmCdnOrigin -OriginName <String> -EndpointName <String> -ProfileName <S
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmCdnOrigin** cmdlet gets an azure_2 Content Delivery Network (CDN) origin server and its configuration data.
+The **Get-AzureRmCdnOrigin** cmdlet gets an Azure Content Delivery Network (CDN) origin server and its configuration data.
 
 ## EXAMPLES
 
@@ -91,7 +91,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -106,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

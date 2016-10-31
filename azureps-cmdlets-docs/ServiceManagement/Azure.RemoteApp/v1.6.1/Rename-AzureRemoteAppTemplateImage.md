@@ -8,7 +8,7 @@ ms.assetid: 654C490B-1C87-4920-B525-C12DB1152AB1
 # Rename-AzureRemoteAppTemplateImage
 
 ## SYNOPSIS
-Renames an azure_2 RemoteApp template image.
+Renames an Azure RemoteApp template image.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Rename-AzureRemoteAppTemplateImage [-ImageName] <String> [-NewName] <String> [-P
 ```
 
 ## DESCRIPTION
-The **Rename-AzureRemoteAppTemplateImage** cmdlet renames an azure_2 RemoteApp template image.
+The **Rename-AzureRemoteAppTemplateImage** cmdlet renames an Azure RemoteApp template image.
 
 ## EXAMPLES
 
@@ -27,12 +27,12 @@ The **Rename-AzureRemoteAppTemplateImage** cmdlet renames an azure_2 RemoteApp t
 PS C:\>Rename-AzureRemoteAppTemplateImage -ImageName "ContosoApps" -NewName "ContosoFinanceApps"
 ```
 
-This command renames the azure_2 RemoteApp template image named ContosoApps to ContosoFinanceApps.
+This command renames the Azure RemoteApp template image named ContosoApps to ContosoFinanceApps.
 
 ## PARAMETERS
 
 ### -ImageName
-Specifies the name of an azure_2 RemoteApp template image to rename.
+Specifies the name of an Azure RemoteApp template image to rename.
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
-Specifies a new name for an azure_2 RemoteApp template image.
+Specifies a new name for an Azure RemoteApp template image.
 
 ```yaml
 Type: String

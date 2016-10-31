@@ -31,7 +31,6 @@ The **New-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet creates a sto
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String

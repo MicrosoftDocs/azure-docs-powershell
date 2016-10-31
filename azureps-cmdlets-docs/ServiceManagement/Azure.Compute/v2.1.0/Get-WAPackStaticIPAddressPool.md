@@ -43,7 +43,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -VMSubnet
-@{Text=}
 
 ```yaml
 Type: VMSubnet
@@ -58,7 +57,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String

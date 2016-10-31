@@ -25,7 +25,7 @@ Get-AzureRMAutomationHybridWorkerGroup [[-Name] <String>] [-ResourceGroupName] <
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationHybridWorkerGroup** cmdlet gets azure_2 Automation hybrid runbook worker groups.
+The **Get-AzureRmAutomationHybridWorkerGroup** cmdlet gets Azure Automation hybrid runbook worker groups.
 To get a specific group, specify its name.
 
 ## EXAMPLES

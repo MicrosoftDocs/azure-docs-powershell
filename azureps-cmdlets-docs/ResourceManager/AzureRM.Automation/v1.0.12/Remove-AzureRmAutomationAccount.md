@@ -18,7 +18,7 @@ Remove-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAutomationAccount** cmdlet removes an azure_2 Automation account from a resource group.
+The **Remove-AzureRmAutomationAccount** cmdlet removes an Azure Automation account from a resource group.
 
 For more information about Automation accounts, see the New-AzureRmAutomationAccount cmdlet.
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

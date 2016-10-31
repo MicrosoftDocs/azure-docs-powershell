@@ -79,7 +79,6 @@ This command changes the default subscription to "ContosoFinance." It saves the 
 ## PARAMETERS
 
 ### -SubscriptionName
-@{Text=}
 
 ```yaml
 Type: String
@@ -94,7 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -Account
-@{Text=}
 
 ```yaml
 Type: String
@@ -109,7 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -Current
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -124,7 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +135,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile
@@ -154,7 +149,6 @@ Accept wildcard characters: False
 ```
 
 ### -Default
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -169,7 +163,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-@{Text=}
 
 ```yaml
 Type: String
@@ -184,7 +177,6 @@ Accept wildcard characters: False
 ```
 
 ### -NoCurrent
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -NoDefault
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

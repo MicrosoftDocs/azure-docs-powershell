@@ -54,7 +54,7 @@ This command enables the namespace named ContosoPartners located in the West US 
 ### -ResourceGroup
 Specifies the resource group to which the namespace is assigned.
 
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and azure_2 administration.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
 Type: String
@@ -119,9 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies name-value pairs that can be used to categorize and organize azure_2 items.
+Specifies name-value pairs that can be used to categorize and organize Azure items.
 Tags function similar to keywords, and operate across a deployment.
-For example, if you search for all items with the tag Department:IT the search will return all the azure_2 items that have that tag, regardless of such things as item type, location, or resource group.
+For example, if you search for all items with the tag Department:IT the search will return all the Azure items that have that tag, regardless of such things as item type, location, or resource group.
 
 An individual tag consists of two parts: the *Name* and (optionally) the *Value*.
 For example, in Department:IT, the tag name is Department and the tag value is IT.
@@ -146,7 +146,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -161,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -177,9 +186,9 @@ Accept wildcard characters: False
 
 ### -Location
 Specifies the display name of the datacenter that hosts the namespace.
-Although you can set this parameter to any valid azure_2 location, for optimal performance you should use a datacenter located near the majority of your users.
+Although you can set this parameter to any valid Azure location, for optimal performance you should use a datacenter located near the majority of your users.
 
-To get an up-to-date list of azure_2 locations run the following command:
+To get an up-to-date list of Azure locations run the following command:
 
 `Get-AzureLocation | Select-Object DisplayName`
 

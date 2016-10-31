@@ -8,7 +8,7 @@ ms.assetid: 8228CC98-3C2C-4392-825F-D91BA8136672
 # Clear-AzureRemoteAppVmStaleAdObject
 
 ## SYNOPSIS
-Removes objects in azure_2 Active Directory that are associated with azure_2 RemoteApp virtual machines that no longer exist.
+Removes objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
 
 ## SYNTAX
 
@@ -18,8 +18,8 @@ Clear-AzureRemoteAppVmStaleAdObject [-CollectionName] <String> [[-Credential] <P
 ```
 
 ## DESCRIPTION
-The **Clear-AzureRemoteAppVmStaleAdObject** cmdlet removes objects in azure_2 Active Directory that are associated with azure_2 RemoteApp virtual machines that no longer exist.
-You must use credentials that have rights to remove azure_2 Active Directory objects.
+The **Clear-AzureRemoteAppVmStaleAdObject** cmdlet removes objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
+You must use credentials that have rights to remove Azure Active Directory objects.
 If you specify the *Verbose* common parameter, this cmdlet displays the name of each object that it deletes.
 
 ## EXAMPLES
@@ -40,7 +40,7 @@ In order for the command to succeed, those credentials must have appropriate rig
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

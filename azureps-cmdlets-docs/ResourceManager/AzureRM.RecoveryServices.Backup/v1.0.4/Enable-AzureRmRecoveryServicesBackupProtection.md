@@ -32,7 +32,7 @@ Enable-AzureRmRecoveryServicesBackupProtection [-Policy] <PolicyBase> [-Item] <I
 ```
 
 ## DESCRIPTION
-The **Enable-AzureRmRecoveryServicesBackupProtection** cmdlet sets azure_2 Backup protection policy on an item.
+The **Enable-AzureRmRecoveryServicesBackupProtection** cmdlet sets Azure Backup protection policy on an item.
 
 Set the vault context by using the Set-AzureRmRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
 
@@ -54,7 +54,16 @@ The second cmdlet sets the Backup protection policy for the ARM virtual machine 
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -69,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

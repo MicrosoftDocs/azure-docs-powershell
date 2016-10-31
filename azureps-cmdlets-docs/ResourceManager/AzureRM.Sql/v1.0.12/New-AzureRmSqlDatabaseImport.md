@@ -21,7 +21,7 @@ New-AzureRmSqlDatabaseImport -DatabaseName <String> -Edition <DatabaseEdition> -
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSqlDatabaseImport** cmdlet imports a bacpac file from an azure_2 storage account to a new ssSDS.
+The **New-AzureRmSqlDatabaseImport** cmdlet imports a bacpac file from an Azure storage account to a new ssSDS.
 The get import database status request may be sent to retrieve status information for this request.
 
 ## EXAMPLES
@@ -223,8 +223,8 @@ psdx_paramvalues
 SQL authentication.
 Set the *AdministratorLogin* and *AdministratorLoginPassword* parameters to the SQL administrator username and password. 
 - ADPassword.
-azure_2 Active Directory authentication.
-Set *AdministratorLogin* and *AdministratorLoginPassword* to the azure_2 Active Directory administrator username and password.
+Azure Active Directory authentication.
+Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure Active Directory administrator username and password.
 
 This parameter is only available on nextref_database V12 servers.
 
@@ -256,7 +256,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -271,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ ms.assetid: CA32A23B-631A-4C8C-A045-719E7FEEF2CC
 # Get-AzureRmAvailabilitySet
 
 ## SYNOPSIS
-Gets azure_2 availability sets in a resource group.
+Gets Azure availability sets in a resource group.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRmAvailabilitySet [-ResourceGroupName] <String> [[-Name] <String>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAvailabilitySet** cmdlet gets azure_2 availability sets in a resource group.
+The **Get-AzureRmAvailabilitySet** cmdlet gets Azure availability sets in a resource group.
 You can specify the name of a specific availability set to get.
 
 ## EXAMPLES
@@ -70,7 +70,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -85,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -25,10 +25,10 @@ Register-AzureRmBackupContainer -Name <String> -ResourceGroupName <String> [-Vau
 ```
 
 ## DESCRIPTION
-The **Register-AzureRmBackupContainer** cmdlet registers the container with an azure_2 Backup vault.
-To configure backup by using azure_2 Backup, first register your server or virtual machine with a Backup vault.
+The **Register-AzureRmBackupContainer** cmdlet registers the container with an Azure Backup vault.
+To configure backup by using Azure Backup, first register your server or virtual machine with a Backup vault.
 This cmdlet registers an infrastructure as a service (IaaS) virtual machine with the specified vault.
-The register operation associates the azure_2 virtual machine with the backup vault and tracks the virtual machine through the backup life cycle.
+The register operation associates the Azure virtual machine with the backup vault and tracks the virtual machine through the backup life cycle.
 
 ## EXAMPLES
 

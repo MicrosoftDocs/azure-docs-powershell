@@ -32,7 +32,7 @@ Get-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <Str
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmDataLakeAnalyticsDataSource** cmdlet gets an azure_2 Data Lake Analytics data source.
+The **Get-AzureRmDataLakeAnalyticsDataSource** cmdlet gets an Azure Data Lake Analytics data source.
 
 ## EXAMPLES
 
@@ -89,7 +89,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -104,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -119,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Blob
-Specifies the name of the azure_2 Blob Storage data source.
+Specifies the name of the Azure Blob Storage data source.
 
 ```yaml
 Type: String

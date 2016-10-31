@@ -8,7 +8,7 @@ ms.assetid: A15ED498-99D1-4D81-983F-387466C0B904
 # Remove-AzureDns
 
 ## SYNOPSIS
-Removes a DNS server from an azure_2 service.
+Removes a DNS server from an Azure service.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureDns [-Name] <String> [-ServiceName] <String> [-Force] [-Profile <Azu
 ```
 
 ## DESCRIPTION
-The **Remove-AzureDns** cmdlet removes a DNS server from an azure_2 service.
+The **Remove-AzureDns** cmdlet removes a DNS server from an Azure service.
 
 ## EXAMPLES
 
@@ -92,7 +92,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -107,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

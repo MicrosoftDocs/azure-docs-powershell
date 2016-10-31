@@ -19,7 +19,7 @@ Get-AzureRmAutomationDscCompilationJobOutput [-Id] <Guid> [-Stream <CompilationJ
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationDscCompilationJobOutput** cmdlet gets the stream records of an APS Desired State Configuration (DSC) compilation job in azure_2 Automation.
+The **Get-AzureRmAutomationDscCompilationJobOutput** cmdlet gets the stream records of an APS Desired State Configuration (DSC) compilation job in Azure Automation.
 
 ## EXAMPLES
 

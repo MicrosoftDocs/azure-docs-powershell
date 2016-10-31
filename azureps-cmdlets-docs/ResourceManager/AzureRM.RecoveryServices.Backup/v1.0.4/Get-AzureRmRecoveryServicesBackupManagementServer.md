@@ -20,7 +20,7 @@ Get-AzureRmRecoveryServicesBackupManagementServer [[-Name] <String>] [-Informati
 ## DESCRIPTION
 The **Get-AzureRmRecoveryServicesBackupManagementServer** cmdlet gets a list of Backup management servers that are registered in a vault.
 
-There are two types of Backup management servers: System Center Data Protection Manager (SCDPM) and azure_2 Backup management servers.
+There are two types of Backup management servers: System Center Data Protection Manager (SCDPM) and Azure Backup management servers.
 Backup management servers are installed separately to manage Backup orchestration.
 
 Set the vault context by using the Set-AzureRmRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
@@ -52,7 +52,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -67,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

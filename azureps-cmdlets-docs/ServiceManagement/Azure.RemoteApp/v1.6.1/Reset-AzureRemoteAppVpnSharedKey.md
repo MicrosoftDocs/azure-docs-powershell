@@ -8,7 +8,7 @@ ms.assetid: AA129EA4-0A55-4DFC-8522-9782DF3566D8
 # Reset-AzureRemoteAppVpnSharedKey
 
 ## SYNOPSIS
-Resets the azure_2 RemoteApp VPN shared key.
+Resets the Azure RemoteApp VPN shared key.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Reset-AzureRemoteAppVpnSharedKey [-VNetName] <String> [-Profile <AzureSMProfile>
 ```
 
 ## DESCRIPTION
-The **Reset-AzureRemoteAppVpnSharedKey** cmdlet resets the azure_2 RemoteApp virtual private network (VPN) shared key.
+The **Reset-AzureRemoteAppVpnSharedKey** cmdlet resets the Azure RemoteApp virtual private network (VPN) shared key.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ To configure the VPN device, use the **Get-AzureRemoteAppVpnDeviceConfigScript**
 ## PARAMETERS
 
 ### -VNetName
-Specifies the name of the azure_2 RemoteApp virtual network.
+Specifies the name of the Azure RemoteApp virtual network.
 
 ```yaml
 Type: String
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

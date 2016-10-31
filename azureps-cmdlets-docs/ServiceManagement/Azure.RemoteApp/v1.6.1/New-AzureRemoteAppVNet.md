@@ -8,7 +8,7 @@ ms.assetid: 8576D0D9-588A-4E4F-9C94-31D140F34DDB
 # New-AzureRemoteAppVNet
 
 ## SYNOPSIS
-Creates an azure_2 RemoteApp virtual network.
+Creates an Azure RemoteApp virtual network.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-AzureRemoteAppVNet -VNetName <String> -VirtualNetworkAddressSpace <String[]>
 ```
 
 ## DESCRIPTION
-The **New-AzureRemoteAppVNet** cmdlet creates an azure_2 RemoteApp virtual network.
+The **New-AzureRemoteAppVNet** cmdlet creates an Azure RemoteApp virtual network.
 
 ## EXAMPLES
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -VNetName
-Specifies the name of the azure_2 RemoteApp virtual network.
+Specifies the name of the Azure RemoteApp virtual network.
 
 ```yaml
 Type: String

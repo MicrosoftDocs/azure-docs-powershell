@@ -19,7 +19,7 @@ Set-AzureRmSiteRecoveryVM -VirtualMachine <ASRVirtualMachine> [-Name <String>] [
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSiteRecoveryVM** cmdlet sets the recovery-side protection options, such as the recovery virtual machine size and recovery virtual machine network, for azure_2 Site Recovery protection entities.
+The **Set-AzureRmSiteRecoveryVM** cmdlet sets the recovery-side protection options, such as the recovery virtual machine size and recovery virtual machine network, for Azure Site Recovery protection entities.
 
 ## EXAMPLES
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryNicSubnetName
-Specifies the azure_2 virtual network subnet name with which to attach the primary network adapter controller on recovery.
+Specifies the Azure virtual network subnet name with which to attach the primary network adapter controller on recovery.
 
 ```yaml
 Type: String

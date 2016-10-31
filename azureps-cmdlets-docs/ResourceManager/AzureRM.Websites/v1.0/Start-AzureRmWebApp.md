@@ -8,7 +8,7 @@ ms.assetid: E2B48433-DC30-4C1B-AB7E-B71197B4687A
 # Start-AzureRmWebApp
 
 ## SYNOPSIS
-Starts an azure_2 Web App.
+Starts an Azure Web App.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Start-AzureRmWebApp [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmWebApp** cmdlet starts an azure_2 Web App.
+The **Start-AzureRmWebApp** cmdlet starts an Azure Web App.
 
 ## EXAMPLES
 
@@ -37,7 +37,6 @@ This command starts the Web App named ContosoWebApp that belongs to the resource
 ## PARAMETERS
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -52,7 +51,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -67,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

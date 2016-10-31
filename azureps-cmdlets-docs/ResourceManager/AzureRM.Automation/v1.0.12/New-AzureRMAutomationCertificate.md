@@ -19,7 +19,7 @@ New-AzureRmAutomationCertificate [-Name] <String> [-Description <String>] [-Pass
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationCertificate** cmdlet creates a certificate in azure_2 Automation.
+The **New-AzureRmAutomationCertificate** cmdlet creates a certificate in Azure Automation.
 Provide the path to a certificate file to upload.
 
 ## EXAMPLES

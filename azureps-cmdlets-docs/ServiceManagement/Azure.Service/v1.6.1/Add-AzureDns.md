@@ -8,7 +8,7 @@ ms.assetid: 9842700F-76E6-4C66-8694-8B00E11C435B
 # Add-AzureDns
 
 ## SYNOPSIS
-Adds a DNS server to an azure_2 service.
+Adds a DNS server to an Azure service.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Add-AzureDns [-Name] <String> [-IPAddress] <String> [-ServiceName] <String> [-Pr
 ```
 
 ## DESCRIPTION
-The **Add-AzureDns** cmdlet adds a DNS server to an azure_2 service.
+The **Add-AzureDns** cmdlet adds a DNS server to an Azure service.
 
 ## EXAMPLES
 
@@ -93,7 +93,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -108,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

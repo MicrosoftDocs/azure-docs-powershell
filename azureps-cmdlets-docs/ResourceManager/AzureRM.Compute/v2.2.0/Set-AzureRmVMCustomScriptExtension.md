@@ -76,7 +76,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAutoUpgradeMinorVersion
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

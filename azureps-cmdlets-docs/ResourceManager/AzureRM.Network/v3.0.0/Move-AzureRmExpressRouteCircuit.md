@@ -28,7 +28,6 @@ Move-AzureRmExpressRouteCircuit -Name <String> -ResourceGroupName <String> -Loca
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -43,7 +42,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -58,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-@{Text=}
 
 ```yaml
 Type: String
@@ -73,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceKey
-@{Text=}
 
 ```yaml
 Type: String
@@ -88,7 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-@{Text=}
 
 ```yaml
 Type: Hashtable

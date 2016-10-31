@@ -42,7 +42,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -ResourceDefinition
-@{Text=}
 
 ```yaml
 Type: VMRoleResourceDefinition
@@ -57,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -72,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-@{Text=}
 
 ```yaml
 Type: String
@@ -87,7 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -CloudService
-@{Text=}
 
 ```yaml
 Type: CloudService

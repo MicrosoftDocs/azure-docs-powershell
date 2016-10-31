@@ -18,7 +18,7 @@ Get-AzureService [[-ServiceName] <String>] [-Profile <AzureSMProfile>] [-Informa
 ```
 
 ## DESCRIPTION
-The **Get-AzureService** cmdlet returns a list object with all of the azure_2 cloud services associated with the current subscription.
+The **Get-AzureService** cmdlet returns a list object with all of the Azure cloud services associated with the current subscription.
 If you specify the *ServiceName* parameter, **Get-AzureService** returns information on only the matching service.
 
 ## EXAMPLES
@@ -28,7 +28,7 @@ If you specify the *ServiceName* parameter, **Get-AzureService** returns informa
 PS C:\>Get-AzureService
 ```
 
-This command returns an object that contains information about all of the azure_2 services associated with the current subscription.
+This command returns an object that contains information about all of the Azure services associated with the current subscription.
 
 ### Example 2: Get information about a specified service
 ```
@@ -77,7 +77,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -92,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

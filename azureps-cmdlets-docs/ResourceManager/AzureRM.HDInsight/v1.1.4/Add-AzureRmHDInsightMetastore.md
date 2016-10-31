@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlAzureServerName
-Specifies the azure_2ssNoVersion instance to use for this metastore.
+Specifies the AzuressNoVersion instance to use for this metastore.
 
 ```yaml
 Type: String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Specifies the database on the azure_2ssNoVersion instance to use for this metastore.
+Specifies the database on the AzuressNoVersion instance to use for this metastore.
 
 ```yaml
 Type: String
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies the credentials to use for the azure_2ssNoVersion database.
+Specifies the credentials to use for the AzuressNoVersion database.
 
 ```yaml
 Type: PSCredential
@@ -160,7 +160,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -175,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -29,7 +29,7 @@ For reference information about APS HDInsight, see Azure HDInsight Cmdletshttps:
 
 The **Remove-AzureHDInsightCluster** cmdlet deletes the specified HDInsight service cluster from a subscription.
 This operation also deletes any data stored in the Hadoop Distributed File System (HDFS) on the cluster.
-Data stored in the associated azure_2 Storage account is not deleted.
+Data stored in the associated Azure Storage account is not deleted.
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ This command deletes the HDInsight cluster named HDICluster.
 ## PARAMETERS
 
 ### -Certificate
-Specifies the management certificate for an azure_2 subscription.
+Specifies the management certificate for an Azure subscription.
 
 ```yaml
 Type: X509Certificate2
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-Specifies the endpoint to use to connect to azure_2.
+Specifies the endpoint to use to connect to Azure.
 If you do not specify this parameter, this cmdlet uses the default endpoint.
 
 ```yaml

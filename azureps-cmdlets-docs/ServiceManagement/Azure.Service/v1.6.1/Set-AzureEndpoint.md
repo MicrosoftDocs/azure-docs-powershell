@@ -21,7 +21,7 @@ Set-AzureEndpoint [-Name] <String> [[-Protocol] <String>] [[-LocalPort] <Int32>]
 ```
 
 ## DESCRIPTION
-The **Set-AzureEndpoint** cmdlet modifies an endpoint assigned to an azure_2 virtual machine.
+The **Set-AzureEndpoint** cmdlet modifies an endpoint assigned to an Azure virtual machine.
 You can specify changes to an endpoint that is not load balanced.
 
 ## EXAMPLES
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualIPName
-Specifies the name of a virtual IP address that azure_2 associates to the endpoint.
+Specifies the name of a virtual IP address that Azure associates to the endpoint.
 Your service can have multiple virtual IPs.
 To create virtual IPs, use the Add-AzureVirtualIP cmdlet.
 
@@ -237,7 +237,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -252,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

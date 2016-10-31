@@ -18,7 +18,7 @@ Export-AzureRmAutomationRunbook [-Name] <String> [-Slot <String>] [-OutputFolder
 ```
 
 ## DESCRIPTION
-The **Export-AzureRmAutomationRunbook** cmdlet exports an azure_2 Automation runbook to a wps_2 script (.ps1 ) file, for wps_2 or wps_2 Workflow runbooks, or to a graphical runbook (.graphrunbook) file, for graphical runbooks.
+The **Export-AzureRmAutomationRunbook** cmdlet exports an Azure Automation runbook to a wps_2 script (.ps1 ) file, for wps_2 or wps_2 Workflow runbooks, or to a graphical runbook (.graphrunbook) file, for graphical runbooks.
 The name of the runbook becomes the name of the exported file.
 
 ## EXAMPLES
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -144,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

@@ -26,7 +26,7 @@ New-AzureRmApiManagementAuthorizationServer -Context <PsApiManagementContext> [-
 ```
 
 ## DESCRIPTION
-The **New-AzureRmApiManagementAuthorizationServer** cmdlet creates an azure_2 API Management authorization server.
+The **New-AzureRmApiManagementAuthorizationServer** cmdlet creates an Azure API Management authorization server.
 
 ## EXAMPLES
 
@@ -322,7 +322,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -337,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

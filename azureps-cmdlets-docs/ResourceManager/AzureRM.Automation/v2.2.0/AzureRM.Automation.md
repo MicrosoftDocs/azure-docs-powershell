@@ -168,7 +168,7 @@ Publishes a runbook.
 
 
 ### [Register-AzureRmAutomationDscNode](./Register-AzureRmAutomationDscNode.md)
-Registers an azure_2 virtual machine as a DSC node for an Automation account.
+Registers an Azure virtual machine as a DSC node for an Automation account.
 
 
 ### [Register-AzureRMAutomationScheduledRunbook](./Register-AzureRMAutomationScheduledRunbook.md)

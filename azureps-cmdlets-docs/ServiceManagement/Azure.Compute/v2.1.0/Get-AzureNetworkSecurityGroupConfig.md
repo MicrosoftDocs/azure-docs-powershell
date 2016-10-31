@@ -33,7 +33,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Detailed
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-@{Text=}
 
 ```yaml
 Type: IPersistentVM

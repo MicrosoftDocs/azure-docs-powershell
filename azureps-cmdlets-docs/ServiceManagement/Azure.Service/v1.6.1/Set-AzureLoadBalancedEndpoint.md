@@ -8,7 +8,7 @@ ms.assetid: 1BBE4280-F577-462E-A5E2-5FB22DF53140
 # Set-AzureLoadBalancedEndpoint
 
 ## SYNOPSIS
-Modifies all of the endpoints in a load balancer set within an azure_2 service.
+Modifies all of the endpoints in a load balancer set within an Azure service.
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Set-AzureLoadBalancedEndpoint -LBSetName <String> [-Protocol <String>] [-LocalPo
 ```
 
 ## DESCRIPTION
-The **Set-AzureLoadBalancedEndpoint** cmdlet modifies all of the endpoints in a load balancer set in an azure_2 service.
+The **Set-AzureLoadBalancedEndpoint** cmdlet modifies all of the endpoints in a load balancer set in an Azure service.
 
 ## EXAMPLES
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -PublicPort
 Specifies the public port that the endpoint uses.
-If you do not specify a value, azure_2 assigns an available port.
+If you do not specify a value, Azure assigns an available port.
 
 ```yaml
 Type: Int32
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualIPName
-Specifies the name of a virtual IP address that azure_2 associates to the endpoints.
+Specifies the name of a virtual IP address that Azure associates to the endpoints.
 To add virtual IPs to your service, use the Add-AzureVirtualIP cmdlet.
 
 ```yaml
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Specifies the name of the azure_2 service that contains the endpoints that this cmdlet modifies.
+Specifies the name of the Azure service that contains the endpoints that this cmdlet modifies.
 
 ```yaml
 Type: String
@@ -262,7 +262,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -277,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

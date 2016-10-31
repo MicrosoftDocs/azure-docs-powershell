@@ -8,7 +8,7 @@ ms.assetid: C9EE0B8C-96EB-4F1A-84CF-5F7056167AEB
 # Get-AzureRemoteAppCollection
 
 ## SYNOPSIS
-Retrieves information about an azure_2 RemoteApp collection.
+Retrieves information about an Azure RemoteApp collection.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRemoteAppCollection [[-CollectionName] <String>] [-Profile <AzureSMProf
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppCollection** cmdlet retrieves information about azure_2 RemoteApp collections in Microsoft Azure.
+The **Get-AzureRemoteAppCollection** cmdlet retrieves information about Azure RemoteApp collections in Microsoft Azure.
 It returns an object with information on a specific collection, or if no collection is specified, for all the collections in the current subscription.
 
 ## EXAMPLES
@@ -27,26 +27,26 @@ It returns an object with information on a specific collection, or if no collect
 PS C:\>Get-AzureRemoteAppCollection
 ```
 
-This command returns a list of all azure_2 RemoteApp collections in the subscription.
+This command returns a list of all Azure RemoteApp collections in the subscription.
 
 ### Example 2: Get information about a specified collection
 ```
 PS C:\>Get-AzureRemoteAppCollection ContosoApps
 ```
 
-This command returns information about the azure_2 RemoteApp collection named ContosoApps.
+This command returns information about the Azure RemoteApp collection named ContosoApps.
 
 ### Example 3: Get a list of collections by using a wildcard
 ```
 PS C:\>Get-AzureRemoteAppCollection Finance*
 ```
 
-This command returns a list of all azure_2 RemoteApp collections matching Finance*.
+This command returns a list of all Azure RemoteApp collections matching Finance*.
 
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

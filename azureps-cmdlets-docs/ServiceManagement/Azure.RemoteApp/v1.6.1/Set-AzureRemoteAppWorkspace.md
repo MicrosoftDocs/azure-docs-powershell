@@ -8,7 +8,7 @@ ms.assetid: 8BBA9407-770B-41A3-B516-3774518E5E10
 # Set-AzureRemoteAppWorkspace
 
 ## SYNOPSIS
-Sets the properties of an azure_2 RemoteApp workspace.
+Sets the properties of an Azure RemoteApp workspace.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Set-AzureRemoteAppWorkspace [-WorkspaceName] <String> [-Profile <AzureSMProfile>
 ```
 
 ## DESCRIPTION
-The **Set-AzureRemoteAppWorkspace** cmdlet sets the properties of an azure_2 RemoteApp workspace.
+The **Set-AzureRemoteAppWorkspace** cmdlet sets the properties of an Azure RemoteApp workspace.
 
 ## EXAMPLES
 
@@ -29,12 +29,12 @@ TrackingId
 12345
 ```
 
-This command sets the azure_2 RemoteApp workspace name to Contoso Work Applications.
+This command sets the Azure RemoteApp workspace name to Contoso Work Applications.
 
 ## PARAMETERS
 
 ### -WorkspaceName
-Specifies the name of the azure_2 RemoteApp workspace.
+Specifies the name of the Azure RemoteApp workspace.
 
 ```yaml
 Type: String
@@ -71,7 +71,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-* All azure_2 RemoteApp collections for a specified subscription exist within a shared workspace.
+* All Azure RemoteApp collections for a specified subscription exist within a shared workspace.
 
 ## RELATED LINKS
 

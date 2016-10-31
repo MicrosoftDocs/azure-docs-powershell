@@ -25,7 +25,7 @@ New-AzureRmMlWebService -ResourceGroupName <String> -Location <String> -Name <St
 ```
 
 ## DESCRIPTION
-The **New-AzureRmMlWebService** cmdlet creates an azure_2 Machine Learning web service resource in a new or existing resource group.
+The **New-AzureRmMlWebService** cmdlet creates an Azure Machine Learning web service resource in a new or existing resource group.
 If a resource with the same name exists in the resource group, the cmdlet acts as an update operation and overwrites the existing web service resource.
 
 To determine the resource group name of an existing web service, run the Get-AzureRmMlWebService cmdlet to display the web services in your subscription.
@@ -40,7 +40,7 @@ In the following example the resource group name is **Default-MachineLearning-So
 `Type       : Microsoft.MachineLearning/webServices`
 `Tags       : {}`
 
-Alternatively, to determine the resource group name of an existing web service, log on to the Microsoft azure_2 Machine Learning Web Services portal.
+Alternatively, to determine the resource group name of an existing web service, log on to the Microsoft Azure Machine Learning Web Services portal.
 Select the web service.
 The resource group name is the fifth element of the URL of the web service, just after the **resourceGroups** element.
 In the following example the resource group name is **Default-MachineLearning-SouthCentralUS**.
@@ -54,7 +54,7 @@ In the following example the resource group name is **Default-MachineLearning-So
 PS C:\>New-AzureRmMlWebService -ResourceGroupName "RG001" -Name "WebService002" -Location "South Central US" -DefinitionFile "C:\mlservice.json"
 ```
 
-This command creates an azure_2 Machine Learning web service resource named WebService002 that belongs to the resource group named RG001.
+This command creates an Azure Machine Learning web service resource named WebService002 that belongs to the resource group named RG001.
 This command also sets the location to South Central US, based on the definition present in the referenced json file.
 
 ### Example 2: Create a new service from an object instance
@@ -62,7 +62,7 @@ This command also sets the location to South Central US, based on the definition
 PS C:\>New-AzureRmMlWebService -ResourceGroupName "RG004" -Name "WebService005" -Location "South Central US" -NewWebServiceDefinition $ServiceDefinitionObject
 ```
 
-This command creates an azure_2 Machine Learning web service resource named WebService005 that belongs to the resource group named RG004.
+This command creates an Azure Machine Learning web service resource named WebService005 that belongs to the resource group named RG004.
 This command also sets the location to South Central US.
 The new web service uses the information stored in the $ServiceDefinitionObject to create the definition.
 You can obtain a web service object instance to customize before publishing as a resource by using the Import-AzureRmMlWebService cmdlet.
@@ -87,9 +87,9 @@ Accept wildcard characters: False
 
 ### -Location
 Specifies the location of the web service resource.
-Enter an azure_2 data center location, such as West US or Southeast Asia.
+Enter an Azure data center location, such as West US or Southeast Asia.
 You can place a resource in any location that supports resources of that type.
-The resource does not have to be in the same location your azure_2 subscription or the same location as its resource group.
+The resource does not have to be in the same location your Azure subscription or the same location as its resource group.
 Resource groups can contain resources from different locations.
 To determine which locations support each resource type, use the Get-AzureRmResourceProvider cmdlet with the *ProviderNamespace* parameter cmdlet.
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -186,7 +186,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -208,7 +209,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
-The summary description of the created azure_2 Machine Learning web service resource is similar to the result obtained when calling the Get-AzureRmMlWebService cmdlet for an existing web service.
+The summary description of the created Azure Machine Learning web service resource is similar to the result obtained when calling the Get-AzureRmMlWebService cmdlet for an existing web service.
 This description does not contain sensitive properties.
 
 ## NOTES

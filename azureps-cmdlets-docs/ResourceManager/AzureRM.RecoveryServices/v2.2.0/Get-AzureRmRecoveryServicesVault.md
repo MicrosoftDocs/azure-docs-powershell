@@ -44,7 +44,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the azure_2 resource group in which to create or from which to retrieve the specified Recovery Services object.
+Specifies the name of the Azure resource group in which to create or from which to retrieve the specified Recovery Services object.
 
 ```yaml
 Type: String

@@ -18,7 +18,7 @@ Remove-AzureRmBackupProtectionPolicy [-Force] [-ProtectionPolicy] <AzureRMBackup
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmBackupProtectionPolicy** cmdlet deletes a policy from an azure_2 Backup vault.
+The **Remove-AzureRmBackupProtectionPolicy** cmdlet deletes a policy from an Azure Backup vault.
 
 Before you can delete a backup protection policy, the policy must not have any associated Backup items.
 Before you delete the policy, make sure that each associated item is associated with some other policy.
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

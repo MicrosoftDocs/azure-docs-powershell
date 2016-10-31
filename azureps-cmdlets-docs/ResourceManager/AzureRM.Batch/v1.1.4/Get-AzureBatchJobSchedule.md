@@ -25,7 +25,7 @@ Get-AzureBatchJobSchedule [[-Id] <String>] [-Select <String>] [-Expand <String>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureBatchJobSchedule** cmdlet gets azure_2 Batch job schedules for the Batch account specified by the *BatchContext* parameter.
+The **Get-AzureBatchJobSchedule** cmdlet gets Azure Batch job schedules for the Batch account specified by the *BatchContext* parameter.
 Specify an ID to get a single job schedule.
 Specify the *Filter* parameter to get the job schedules that match an Open Data Protocol (OData) filter.
 

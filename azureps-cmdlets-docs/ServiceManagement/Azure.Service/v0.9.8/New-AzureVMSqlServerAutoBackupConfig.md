@@ -113,7 +113,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryption
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

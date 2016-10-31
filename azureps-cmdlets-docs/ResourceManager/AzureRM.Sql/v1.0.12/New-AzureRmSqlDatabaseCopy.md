@@ -27,7 +27,7 @@ This cmdlet returns the **Database** object of the copy.
 
 Note: Use the New-AzureRmSqlDatabaseSecondary cmdlet to configure geo-replication for a database.
 
-This cmdlet is also supported by the SQL Server Stretch Database service on azure_2.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies the tags to associate with the azure_2 SQL Database copy.
+Specifies the tags to associate with the Azure SQL Database copy.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopyResourceGroupName
-Specifies the name of the azure_2 Resource Group in which to assign the copy.
+Specifies the name of the Azure Resource Group in which to assign the copy.
 
 ```yaml
 Type: String
@@ -174,7 +174,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -189,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

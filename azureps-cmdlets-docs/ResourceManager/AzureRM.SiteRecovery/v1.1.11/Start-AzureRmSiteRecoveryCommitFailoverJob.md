@@ -23,7 +23,7 @@ Start-AzureRmSiteRecoveryCommitFailoverJob -RecoveryPlan <ASRRecoveryPlan> [<Com
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSiteRecoveryCommitFailoverJob** cmdlet starts the commit failover process for an azure_2 Site Recovery object after a failover operation.
+The **Start-AzureRmSiteRecoveryCommitFailoverJob** cmdlet starts the commit failover process for an Azure Site Recovery object after a failover operation.
 
 ## EXAMPLES
 

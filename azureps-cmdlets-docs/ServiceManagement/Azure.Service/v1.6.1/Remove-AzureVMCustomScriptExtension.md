@@ -27,7 +27,7 @@ The **Remove-AzureVMCustomScriptExtension** cmdlet removes the custom script ext
 PS C:\> Remove-AzureVMCustomScriptExtension -VM $VM;
 ```
 
-This command removes the azure_2 virtual machine custom script extension from the specified virtual machine as stored in the variable $VM.
+This command removes the Azure virtual machine custom script extension from the specified virtual machine as stored in the variable $VM.
 
 ## PARAMETERS
 
@@ -62,7 +62,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -77,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

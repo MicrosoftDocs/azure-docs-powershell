@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlobName
-Specifies the name of the azure_2 Blob storage into which this cmdlet exports the database.
+Specifies the name of the Azure Blob storage into which this cmdlet exports the database.
 
 ```yaml
 Type: String

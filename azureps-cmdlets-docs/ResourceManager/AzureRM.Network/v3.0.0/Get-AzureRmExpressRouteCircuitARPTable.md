@@ -28,7 +28,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -43,7 +42,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -58,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuitName
-@{Text=}
 
 ```yaml
 Type: String
@@ -73,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -PeeringType
-@{Text=}
 
 ```yaml
 Type: String
@@ -88,7 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -DevicePath
-@{Text=}
 
 ```yaml
 Type: DevicePathEnum

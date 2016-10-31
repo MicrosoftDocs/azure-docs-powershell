@@ -17,7 +17,7 @@ Get-AzureRmBackupRecoveryPoint [[-RecoveryPointId] <String>] [-Item] <AzureRMBac
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBackupRecoveryPoint** cmdlet gets the recovery points for a backed up azure_2 Backup item.
+The **Get-AzureRmBackupRecoveryPoint** cmdlet gets the recovery points for a backed up Azure Backup item.
 After an item has been backed up, Backup stores one or more recovery points.
 
 ## EXAMPLES

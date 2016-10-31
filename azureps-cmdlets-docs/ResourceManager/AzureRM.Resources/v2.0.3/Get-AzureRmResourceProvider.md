@@ -25,7 +25,7 @@ Get-AzureRmResourceProvider -ProviderNamespace <String> [-Location <String>] [-A
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmResourceProvider** cmdlet gets an azure_2 resource provider.
+The **Get-AzureRmResourceProvider** cmdlet gets an Azure resource provider.
 
 ## EXAMPLES
 

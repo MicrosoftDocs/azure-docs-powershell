@@ -71,7 +71,6 @@ This command causes the job to run 20 times.
 ## PARAMETERS
 
 ### -ClientCertificatePassword
-@{Text=}
 
 ```yaml
 Type: String
@@ -86,7 +85,6 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCertificatePfx
-@{Text=}
 
 ```yaml
 Type: Object
@@ -291,7 +289,6 @@ Accept wildcard characters: False
 ```
 
 ### -HttpAuthenticationType
-@{Text=}
 
 ```yaml
 Type: String

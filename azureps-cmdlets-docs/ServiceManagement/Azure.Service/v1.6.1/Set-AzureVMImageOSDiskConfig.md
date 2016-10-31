@@ -78,7 +78,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -93,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -130,7 +139,7 @@ Valid values are:
 - Generalized
 - Specialized
 
-The use of this parameter indicates your intent to capture the virtual machine image to azure_2.
+The use of this parameter indicates your intent to capture the virtual machine image to Azure.
 
 ```yaml
 Type: String

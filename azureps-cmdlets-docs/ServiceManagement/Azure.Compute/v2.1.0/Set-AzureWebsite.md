@@ -353,7 +353,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSwapSlotName
-@{Text=}
 
 ```yaml
 Type: String
@@ -383,7 +382,6 @@ Accept wildcard characters: False
 ```
 
 ### -SlotStickyAppSettingNames
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -398,7 +396,6 @@ Accept wildcard characters: False
 ```
 
 ### -SlotStickyConnectionStringNames
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]

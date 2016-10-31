@@ -18,7 +18,7 @@ Remove-AzureRmSiteRecoveryStorageClassificationMapping
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet removes a storage classification mapping from azure_2 Site Recovery.
+The **Remove-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet removes a storage classification mapping from Azure Site Recovery.
 
 ## EXAMPLES
 

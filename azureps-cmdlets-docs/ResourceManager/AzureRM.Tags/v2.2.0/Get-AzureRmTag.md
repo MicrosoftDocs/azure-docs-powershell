@@ -8,7 +8,7 @@ ms.assetid: 4A43AF5D-6359-46BF-9C51-FDF399A5FDC6
 # Get-AzureRmTag
 
 ## SYNOPSIS
-Gets predefined azure_2 tags.
+Gets predefined Azure tags.
 
 ## SYNTAX
 
@@ -17,12 +17,12 @@ Get-AzureRmTag [[-Name] <String>] [-Detailed] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmTag** cmdlet gets predefined azure_2 tags in your subscription.
+The **Get-AzureRmTag** cmdlet gets predefined Azure tags in your subscription.
 This cmdlet returns basic information about the tags or detailed information about tags and their values.
 All output objects include a Count property that represents the number of resources and resource groups to which the tags and values have been applied.
 
-The azure_2 Tags module that **Get-AzureRMTag** is a part of can help you manage predefined azure_2 tags.
-An azure_2 tag is a name-value pair that you can use to categorize your azure_2 resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
+The Azure Tags module that **Get-AzureRMTag** is a part of can help you manage predefined Azure tags.
+An Azure tag is a name-value pair that you can use to categorize your Azure resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
 
 You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
 If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.

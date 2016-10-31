@@ -20,7 +20,7 @@ Set-AzureNetworkSecurityRule -Name <String> -Type <String> -Priority <Int32> -Ac
 ```
 
 ## DESCRIPTION
-The **Set-AzureNetworkSecurityRule** cmdlet adds or modifies an azure_2 network security rule in a network security group.
+The **Set-AzureNetworkSecurityRule** cmdlet adds or modifies an Azure network security rule in a network security group.
 
 ## EXAMPLES
 

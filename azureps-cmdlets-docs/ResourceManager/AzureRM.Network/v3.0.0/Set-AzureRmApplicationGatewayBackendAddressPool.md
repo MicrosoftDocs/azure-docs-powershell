@@ -94,7 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -BackendIPAddresses
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]

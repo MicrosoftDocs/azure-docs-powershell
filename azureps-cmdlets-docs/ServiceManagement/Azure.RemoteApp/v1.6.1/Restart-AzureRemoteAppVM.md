@@ -8,7 +8,7 @@ ms.assetid: 22C43C61-83FE-4008-9C74-DD089D7B90E0
 # Restart-AzureRemoteAppVM
 
 ## SYNOPSIS
-Restarts a virtual machine in an azure_2 RemoteApp collection.
+Restarts a virtual machine in an Azure RemoteApp collection.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Restart-AzureRemoteAppVM [-CollectionName] <String> [-UserUpn] <String> [[-Logof
 ```
 
 ## DESCRIPTION
-The **Restart-AzureRemoteAppVM** cmdlet restarts a virtual machine in an azure_2 RemoteApp collection on which the specified user is connected.
+The **Restart-AzureRemoteAppVM** cmdlet restarts a virtual machine in an Azure RemoteApp collection on which the specified user is connected.
 
 ## EXAMPLES
 
@@ -27,13 +27,13 @@ The **Restart-AzureRemoteAppVM** cmdlet restarts a virtual machine in an azure_2
 PS C:\>Restart-AzureRemoteAppVM -CollectionName "ContosoVNet" -UserUPN "PattiFuller@contoso.com"
 ```
 
-This command restarts a virtual machine in an azure_2 RemoteApp collection named Contoso.
+This command restarts a virtual machine in an Azure RemoteApp collection named Contoso.
 The user PattiFuller@contoso.com is connected to the collection which contains this virtual machine.
 
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of an azure_2 RemoteApp collection.
+Specifies the name of an Azure RemoteApp collection.
 
 ```yaml
 Type: String
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -125,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

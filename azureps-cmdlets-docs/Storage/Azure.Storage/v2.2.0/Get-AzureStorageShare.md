@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-@{Text=}
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String

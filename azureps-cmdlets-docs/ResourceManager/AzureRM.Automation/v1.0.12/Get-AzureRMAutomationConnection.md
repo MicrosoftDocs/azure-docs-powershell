@@ -31,7 +31,7 @@ Get-AzureRmAutomationConnection [-ConnectionTypeName] <String> [-ResourceGroupNa
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationConnection** cmdlet gets one or more azure_2 Automation connections.
+The **Get-AzureRmAutomationConnection** cmdlet gets one or more Azure Automation connections.
 By default, this cmdlet retrieves all connections.
 Specify the name of a connection to get a specific connection.
 Specify the connection type name to get all connections of a specific type.

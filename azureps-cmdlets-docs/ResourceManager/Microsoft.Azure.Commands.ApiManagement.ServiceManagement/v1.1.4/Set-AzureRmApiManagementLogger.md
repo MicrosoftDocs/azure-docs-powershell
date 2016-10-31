@@ -19,7 +19,7 @@ Set-AzureRmApiManagementLogger -Context <PsApiManagementContext> -LoggerId <Stri
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmApiManagementLogger** cmdlet modifies settings of an azure_2 API Management **Logger**.
+The **Set-AzureRmApiManagementLogger** cmdlet modifies settings of an Azure API Management **Logger**.
 
 ## EXAMPLES
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the entity name of an event hub from azure_2 classic portal.
+Specifies the entity name of an event hub from Azure classic portal.
 
 ```yaml
 Type: String
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionString
-Specifies an azure_2 Event Hubs connection string that includes Send policy rights.
+Specifies an Azure Event Hubs connection string that includes Send policy rights.
 
 ```yaml
 Type: String
@@ -139,7 +139,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -154,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

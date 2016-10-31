@@ -17,7 +17,7 @@ New-AzureRmSiteRecoverySite -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSiteRecoverySite** cmdlet creates an azure_2 Site Recovery site in the current vault.
+The **New-AzureRmSiteRecoverySite** cmdlet creates an Azure Site Recovery site in the current vault.
 
 ## EXAMPLES
 

@@ -8,7 +8,7 @@ ms.assetid: 8A97F067-7F6D-4D1D-BAB4-8195DC04A99A
 # Get-AzureDataDisk
 
 ## SYNOPSIS
-Gets azure_2 data disks.
+Gets Azure data disks.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureDataDisk [[-Lun] <Int32>] -VM <IPersistentVM> [-Profile <AzureSMProfile
 ```
 
 ## DESCRIPTION
-The **Get-AzureDataDisk** cmdlet gets an object that represents the data disks on an azure_2 virtual machine.
+The **Get-AzureDataDisk** cmdlet gets an object that represents the data disks on an Azure virtual machine.
 To get a specific data disk object, specify the logical unit number (LUN) of the disk.
 
 ## EXAMPLES
@@ -91,7 +91,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -106,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

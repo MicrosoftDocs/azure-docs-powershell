@@ -34,7 +34,7 @@ For information about how to use the new HDInsight to create a cluster, see Crea
 For information about how to submit jobs by using APS and other approaches, see Submit Hadoop jobs in HDInsighthttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/.
 For reference information about APS HDInsight, see Azure HDInsight Cmdletshttps://msdn.microsoft.com/en-us/library/mt438705.aspx.
 
-The **Start-AzureHDInsightJob** cmdlet starts a defined azure_2 HDInsight job on a specified cluster.
+The **Start-AzureHDInsightJob** cmdlet starts a defined Azure HDInsight job on a specified cluster.
 The job to start can be a MapReduce job, a streaming job, a Hive job, or a Pig job.
 
 ## EXAMPLES
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobDefinition
-Specifies the endpoint to use when connecting to Microsoft azure_2 if the endpoint is different from the default.
+Specifies the endpoint to use when connecting to Microsoft Azure if the endpoint is different from the default.
 
 ```yaml
 Type: AzureHDInsightJobDefinition
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-Specifies the management certificate for an azure_2 subscription.
+Specifies the management certificate for an Azure subscription.
 
 ```yaml
 Type: X509Certificate2
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-Specifies the endpoint to use to connect to azure_2.
+Specifies the endpoint to use to connect to Azure.
 If you do not specify this parameter, this cmdlet uses the default endpoint.
 
 ```yaml

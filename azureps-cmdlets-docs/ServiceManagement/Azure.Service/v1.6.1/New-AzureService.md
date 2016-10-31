@@ -8,7 +8,7 @@ ms.assetid: 024358C8-A520-4886-A7D6-73636C4FB073
 # New-AzureService
 
 ## SYNOPSIS
-Creates an azure_2 service.
+Creates an Azure service.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ New-AzureService [-ServiceName] <String> [-Location] <String> [[-Label] <String>
 ```
 
 ## DESCRIPTION
-The **New-AzureService** cmdlet creates a new azure_2 service in the current subscription.
+The **New-AzureService** cmdlet creates a new Azure service in the current subscription.
 
 ## EXAMPLES
 
@@ -142,7 +142,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -157,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

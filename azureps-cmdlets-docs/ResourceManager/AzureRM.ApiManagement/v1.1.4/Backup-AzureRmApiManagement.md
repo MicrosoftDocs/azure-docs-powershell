@@ -19,8 +19,8 @@ Backup-AzureRmApiManagement -ResourceGroupName <String> -Name <String> -StorageC
 ```
 
 ## DESCRIPTION
-The **Backup-AzureRmApiManagement** cmdlet backs up an instance of an azure_2 API Management service.
-This cmdlet stores the backup as an azure_2 Storage blob.
+The **Backup-AzureRmApiManagement** cmdlet backs up an instance of an Azure API Management service.
+This cmdlet stores the backup as an Azure Storage blob.
 
 ## EXAMPLES
 
@@ -129,7 +129,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -144,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

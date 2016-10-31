@@ -8,7 +8,7 @@ ms.assetid: ED79AC0B-94EC-4AB7-8109-3EBEBD5349C6
 # Remove-AzureAvailabilitySet
 
 ## SYNOPSIS
-Removes an availability set from an azure_2 virtual machine.
+Removes an availability set from an Azure virtual machine.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureAvailabilitySet -VM <IPersistentVM> [-Profile <AzureSMProfile>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureAvailabilitySet** cmdlet removes an availability set from an azure_2 virtual machine.
+The **Remove-AzureAvailabilitySet** cmdlet removes an availability set from an Azure virtual machine.
 
 ## EXAMPLES
 
@@ -60,7 +60,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -75,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

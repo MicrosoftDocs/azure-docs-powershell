@@ -28,7 +28,7 @@ Update-AzureRmMlWebService -ResourceGroupName <String> -Name <String> -ServiceUp
 ```
 
 ## DESCRIPTION
-The **Update-AzureRmMlWebService** cmdlet updates properties of an azure_2 Machine Learning web service.
+The **Update-AzureRmMlWebService** cmdlet updates properties of an Azure Machine Learning web service.
 The cmdlet works as a patch operation, so you need to pass only the properties that you want to modify.
 
 To determine the resource group name of an existing web service, run the Get-AzureRmMlWebService cmdlet to display the web services in your subscription.
@@ -43,7 +43,7 @@ In the following example the resource group name is **Default-MachineLearning-So
 `Type       : Microsoft.MachineLearning/webServices`
 `Tags       : {}`
 
-Alternatively, to determine the resource group name of an existing web service, log on to the Microsoft azure_2 Machine Learning Web Services portal.
+Alternatively, to determine the resource group name of an existing web service, log on to the Microsoft Azure Machine Learning Web Services portal.
 Select the web service.
 The resource group name is the fifth element of the URL of the web service, just after the **resourceGroups** element.
 In the following example the resource group name is **Default-MachineLearning-SouthCentralUS**.
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -331,7 +331,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

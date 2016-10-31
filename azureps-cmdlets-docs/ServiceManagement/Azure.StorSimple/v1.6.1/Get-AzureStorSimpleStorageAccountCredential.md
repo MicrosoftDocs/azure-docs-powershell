@@ -60,7 +60,7 @@ This command gets the storage account credential for the storage account named C
 ## PARAMETERS
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

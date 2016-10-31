@@ -8,7 +8,7 @@ ms.assetid: E0F94422-293C-4FC9-A888-891A636422DF
 # Get-ACSShare
 
 ## SYNOPSIS
-Gets a list of SMB shares used in the azure_2 Consistent Storage system.
+Gets a list of SMB shares used in the Azure Consistent Storage system.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-ACSShare -FarmName <String> [-ShareName <String>] [[-SubscriptionId] <String
 ```
 
 ## DESCRIPTION
-The **Get-ACSShare** cmdlet gets list of Server Message Block (SMB) shares used in the azure_2 Consistent Storage (ACS) system.
+The **Get-ACSShare** cmdlet gets list of Server Message Block (SMB) shares used in the Azure Consistent Storage (ACS) system.
 
 ## EXAMPLES
 

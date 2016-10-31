@@ -37,7 +37,7 @@ Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ProductId <String
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmApiManagementApi** cmdlet gets one or more azure_2 API Management APIs.
+The **Get-AzureRmApiManagementApi** cmdlet gets one or more Azure API Management APIs.
 
 ## EXAMPLES
 
@@ -125,7 +125,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -140,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

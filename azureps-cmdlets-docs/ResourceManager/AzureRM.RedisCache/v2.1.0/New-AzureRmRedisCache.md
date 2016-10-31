@@ -361,7 +361,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-@{Text=}
 
 ```yaml
 Type: String

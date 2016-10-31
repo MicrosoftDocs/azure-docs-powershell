@@ -139,7 +139,7 @@ That cmdlet creates a new volume container by using the credential.
 ## PARAMETERS
 
 ### -Endpoint
-Specifies the azure_2 storage endpoint for the storage account.
+Specifies the Azure storage endpoint for the storage account.
 
 ```yaml
 Type: String
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

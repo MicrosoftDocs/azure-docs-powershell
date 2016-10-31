@@ -18,7 +18,7 @@ New-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [-Lo
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationAccount** cmdlet creates an azure_2 Automation account in a resource group.
+The **New-AzureRmAutomationAccount** cmdlet creates an Azure Automation account in a resource group.
 
 An Automation account is a container for Automation resources that is isolated from the resources of other Automation accounts.
 Automation resources include runbooks, Desired State Configuration (DSC) configurations, jobs, and assets.

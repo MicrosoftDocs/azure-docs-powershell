@@ -18,7 +18,7 @@ Set-AzureRmAutomationSchedule [-Name] <String> [-IsEnabled <Boolean>] [-Descript
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationSchedule** cmdlet modifies a schedule in azure_2 Automation.
+The **Set-AzureRmAutomationSchedule** cmdlet modifies a schedule in Azure Automation.
 
 ## EXAMPLES
 

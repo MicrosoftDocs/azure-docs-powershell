@@ -64,7 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableIPForwarding
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -InternalDnsNameLabel
-@{Text=}
 
 ```yaml
 Type: String

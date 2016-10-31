@@ -87,7 +87,6 @@ The pool is configured to use small virtual machines imaged with the latest oper
 ## PARAMETERS
 
 ### -ApplicationPackageReferences
-@{Text=}
 
 ```yaml
 Type: PSApplicationPackageReference[]
@@ -257,7 +256,6 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkConfiguration
-@{Text=}
 
 ```yaml
 Type: PSNetworkConfiguration

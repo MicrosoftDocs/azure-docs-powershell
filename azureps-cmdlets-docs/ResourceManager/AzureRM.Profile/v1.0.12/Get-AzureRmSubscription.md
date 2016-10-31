@@ -23,7 +23,7 @@ Get-AzureRmSubscription [-SubscriptionName <String>] [-TenantId <String>] [<Comm
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSubscription** cmdlet gets the subscription ID, subscription name, and home tenant for azure_2 subscriptions that the current account can access.
+The **Get-AzureRmSubscription** cmdlet gets the subscription ID, subscription name, and home tenant for Azure subscriptions that the current account can access.
 
 ## EXAMPLES
 

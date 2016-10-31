@@ -8,7 +8,7 @@ ms.assetid: ED191A06-0C1D-486E-91F3-3CB61AA470A6
 # Remove-AzureRemoteAppVNet
 
 ## SYNOPSIS
-Deletes an azure_2 RemoteApp virtual network.
+Deletes an Azure RemoteApp virtual network.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Remove-AzureRemoteAppVNet -VNetName <String> [-Profile <AzureSMProfile>] [<Commo
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRemoteAppVNet** cmdlet deletes an azure_2 RemoteApp virtual network.
+The **Remove-AzureRemoteAppVNet** cmdlet deletes an Azure RemoteApp virtual network.
 
 ## EXAMPLES
 
@@ -31,7 +31,7 @@ This command deletes the virtual network named ContosoVNet
 ## PARAMETERS
 
 ### -VNetName
-Specifies the name of the azure_2 RemoteApp virtual network to delete.
+Specifies the name of the Azure RemoteApp virtual network to delete.
 
 ```yaml
 Type: String

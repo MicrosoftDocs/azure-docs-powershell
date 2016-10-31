@@ -8,7 +8,7 @@ ms.assetid: 979956B7-AA12-432C-B52A-442A9665A57D
 # Get-AzureAclConfig
 
 ## SYNOPSIS
-Gets the ACL configuration object from an azure_2 virtual machine.
+Gets the ACL configuration object from an Azure virtual machine.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureAclConfig [[-EndpointName] <String>] -VM <IPersistentVM> [-Profile <Azu
 ```
 
 ## DESCRIPTION
-The **Get-AzureAclConfig** cmdlet gets the access control list (ACL) configuration object from an existing azure_2 virtual machine.
+The **Get-AzureAclConfig** cmdlet gets the access control list (ACL) configuration object from an existing Azure virtual machine.
 
 ## EXAMPLES
 
@@ -80,7 +80,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -95,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

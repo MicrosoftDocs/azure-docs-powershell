@@ -48,7 +48,7 @@ This command removes the diagnostic extension for a specified role.
 ## PARAMETERS
 
 ### -ServiceName
-Specifies the azure_2 service name of the deployment.
+Specifies the Azure service name of the deployment.
 
 ```yaml
 Type: String
@@ -110,7 +110,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -125,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

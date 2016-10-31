@@ -8,7 +8,7 @@ ms.assetid: CBDE7141-7332-4884-A0F9-2E5D3A4D76BD
 # Add-AzureInternalLoadBalancer
 
 ## SYNOPSIS
-Adds an internal load balancer to an azure_2 service.
+Adds an internal load balancer to an Azure service.
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Add-AzureInternalLoadBalancer [-InternalLoadBalancerName] <String> [-ServiceName
 ```
 
 ## DESCRIPTION
-The **Add-AzureInternalLoadBalancer** cmdlet adds an internal load balancer configuration to an azure_2 service.
+The **Add-AzureInternalLoadBalancer** cmdlet adds an internal load balancer configuration to an Azure service.
 For a virtual network, you can specify a subnet or the IP address of the internal load balancer.
 
 ## EXAMPLES
@@ -110,7 +110,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -125,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

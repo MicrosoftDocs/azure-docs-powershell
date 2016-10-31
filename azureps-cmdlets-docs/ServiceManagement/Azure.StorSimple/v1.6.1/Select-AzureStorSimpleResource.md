@@ -62,7 +62,7 @@ In this example, that context has previously been selected, and, therefore, you 
 ## PARAMETERS
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

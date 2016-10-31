@@ -8,7 +8,7 @@ ms.assetid: 9B49B714-EB08-4DDA-9E45-B055792FBCEC
 # Set-AzureStorageAccount
 
 ## SYNOPSIS
-Updates the properties of a storage account in an azure_2 subscription.
+Updates the properties of a storage account in an Azure subscription.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Set-AzureStorageAccount [-StorageAccountName] <String> [-Label <String>] [-Descr
 ```
 
 ## DESCRIPTION
-The **Set-AzureStorageAccount** cmdlet updates the properties of an azure_2 storage account in the current subscription.
+The **Set-AzureStorageAccount** cmdlet updates the properties of an Azure storage account in the current subscription.
 Properties that can be set are: **Label**, **Description**, **Type** and **GeoReplicationEnabled**.
 
 ## EXAMPLES
@@ -133,7 +133,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -148,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

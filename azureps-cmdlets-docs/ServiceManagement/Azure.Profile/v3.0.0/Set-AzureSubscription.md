@@ -86,7 +86,6 @@ By default, Set-AzureSubscription uses the default subscription data file in you
 ## PARAMETERS
 
 ### -SubscriptionName
-@{Text=}
 
 ```yaml
 Type: String
@@ -101,7 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-@{Text=}
 
 ```yaml
 Type: String
@@ -116,7 +114,6 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-@{Text=}
 
 ```yaml
 Type: X509Certificate2
@@ -143,7 +140,6 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceEndpoint
-@{Text=}
 
 ```yaml
 Type: String
@@ -158,7 +154,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceManagerEndpoint
-@{Text=}
 
 ```yaml
 Type: String
@@ -173,7 +168,6 @@ Accept wildcard characters: False
 ```
 
 ### -CurrentStorageAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -188,7 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -Environment
-@{Text=}
 
 ```yaml
 Type: String
@@ -203,7 +196,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +210,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile
@@ -233,7 +224,6 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-@{Text=}
 
 ```yaml
 Type: AzureStorageContext

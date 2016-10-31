@@ -25,7 +25,7 @@ Database identifiers include, but are not limited to, ResourceGroupName, ServerN
 
 ## EXAMPLES
 
-### Example 1: Get the secure connection policy of an azure_2 SQL database
+### Example 1: Get the secure connection policy of an Azure SQL database
 ```
 PS C:\>Get-AzureSqlDatabaseSecureConnectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server04" -DatabaseName "Database07"
 ```

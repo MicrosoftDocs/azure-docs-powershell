@@ -19,7 +19,7 @@ New-AzureRmRouteConfig -Name <String> [-AddressPrefix <String>] -NextHopType <St
 ```
 
 ## DESCRIPTION
-The **New-AzureRmRouteConfig** cmdlet creates a route for an azure_2 route table.
+The **New-AzureRmRouteConfig** cmdlet creates a route for an Azure route table.
 
 ## EXAMPLES
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -NextHopIpAddress
-Specifies the IP address of a virtual appliance that you add to your azure_2virtual network.
+Specifies the IP address of a virtual appliance that you add to your Azurevirtual network.
 This route forwards packets to that address.
 Specify this parameter only if you specify a value of VirtualAppliance for the *NextHopType* parameter.
 
@@ -119,7 +119,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -134,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

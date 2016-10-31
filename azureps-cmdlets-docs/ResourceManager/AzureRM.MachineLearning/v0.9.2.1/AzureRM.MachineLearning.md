@@ -32,7 +32,7 @@ Creates a web service resource.
 
 
 ### [Remove-AzureRmMlWebService](./Remove-AzureRmMlWebService.md)
-Removes an azure_2 Machine Learning web service resource.
+Removes an Azure Machine Learning web service resource.
 
 
 ### [Update-AzureRmMlWebService](./Update-AzureRmMlWebService.md)

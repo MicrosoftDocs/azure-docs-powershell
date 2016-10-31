@@ -8,7 +8,7 @@ ms.assetid: 96828771-1E43-4F85-8A58-EA68E2D0F90A
 # Get-AzureRmVMExtensionImageType
 
 ## SYNOPSIS
-Gets the type of an azure_2 extension.
+Gets the type of an Azure extension.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRmVMExtensionImageType -Location <String> -PublisherName <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmVMExtensionImageType** cmdlet gets the type of an azure_2 extension.
+The **Get-AzureRmVMExtensionImageType** cmdlet gets the type of an Azure extension.
 
 ## EXAMPLES
 
@@ -65,7 +65,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -80,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

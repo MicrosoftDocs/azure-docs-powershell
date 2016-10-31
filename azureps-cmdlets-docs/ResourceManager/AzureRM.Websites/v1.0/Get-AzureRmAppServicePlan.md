@@ -8,7 +8,7 @@ ms.assetid: 472D30E3-A03C-4BDE-B0FA-0C582AB8D88F
 # Get-AzureRmAppServicePlan
 
 ## SYNOPSIS
-Gets an azure_2 App Service plan in the specified resource group.
+Gets an Azure App Service plan in the specified resource group.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-AzureRmAppServicePlan [-Location] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAppServicePlan** cmdlet gets an azure_2 App Service plan in the specified resource group.
+The **Get-AzureRmAppServicePlan** cmdlet gets an Azure App Service plan in the specified resource group.
 
 ## EXAMPLES
 
@@ -37,7 +37,6 @@ This command gets the App Service plan named ContosoAppServPlan that belongs to 
 ## PARAMETERS
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -52,7 +51,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -67,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-@{Text=}
 
 ```yaml
 Type: String

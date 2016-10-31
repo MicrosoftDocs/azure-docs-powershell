@@ -8,7 +8,7 @@ ms.assetid: A6F623A1-2E69-4EA2-828B-AB63D285A009
 # Register-AzureRmAutomationDscNode
 
 ## SYNOPSIS
-Registers an azure_2 virtual machine as a DSC node for an Automation account.
+Registers an Azure virtual machine as a DSC node for an Automation account.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Register-AzureRmAutomationDscNode -AzureVMName <String> [-NodeConfigurationName 
 ```
 
 ## DESCRIPTION
-The **Register-AzureRmAutomationDscNode** cmdlet registers an azure_2 virtual machine as an APS Desired State Configuration (DSC) node in an azure_2 Automation account.
+The **Register-AzureRmAutomationDscNode** cmdlet registers an Azure virtual machine as an APS Desired State Configuration (DSC) node in an Azure Automation account.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ The **Register-AzureRmAutomationDscNode** cmdlet registers an azure_2 virtual ma
 PS C:\>Register-AzureAutomationDscNode -AutomationAccountName "Contoso17" -AzureVMName "VirtualMachine01" -ResourceGroupName "ResourceGroup01"-NodeConfigurationName "ContosoConfiguration.webserver"
 ```
 
-This command registers the azure_2 virtual machine named VirtualMachine01 as a DSC node in the Automation account named Contoso17.
+This command registers the Azure virtual machine named VirtualMachine01 as a DSC node in the Automation account named Contoso17.
 
 ## PARAMETERS
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowModuleOverwrite
-Specifies whether new configurations that this DSC node downloads from the azure_2 Automation DSC pull server replace the existing modules already on the target node.
+Specifies whether new configurations that this DSC node downloads from the Azure Automation DSC pull server replace the existing modules already on the target node.
 
 ```yaml
 Type: Boolean
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureVMName
-Specifies the name of the azure_2 virtual machine that this cmdlet registers for management.
+Specifies the name of the Azure virtual machine that this cmdlet registers for management.
 
 ```yaml
 Type: String
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureVMResourceGroup
-Specifies the name of the resource group of the azure_2 virtual machine that this cmdlet registers.
+Specifies the name of the resource group of the Azure virtual machine that this cmdlet registers.
 
 ```yaml
 Type: String
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeConfigurationName
-Specifies the name of the node configuration that this cmdlet configures the virtual machine to pull from azure_2 Automation DSC.
+Specifies the name of the node configuration that this cmdlet configures the virtual machine to pull from Azure Automation DSC.
 
 ```yaml
 Type: String
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshFrequencyMins
-Specifies the frequency, in minutes, at which the local Configuration Manager contacts the azure_2 Automation DSC pull server to download the latest node configuration.
+Specifies the frequency, in minutes, at which the local Configuration Manager contacts the Azure Automation DSC pull server to download the latest node configuration.
 
 ```yaml
 Type: Int32

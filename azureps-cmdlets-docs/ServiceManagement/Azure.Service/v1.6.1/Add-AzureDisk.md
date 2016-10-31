@@ -8,7 +8,7 @@ ms.assetid: D8DA56DF-3618-41D9-8D28-B13F4C107DD6
 # Add-AzureDisk
 
 ## SYNOPSIS
-Adds a disk to the azure_2 disk repository.
+Adds a disk to the Azure disk repository.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Add-AzureDisk [-DiskName] <String> [-MediaLocation] <String> [-Label <String>] [
 ```
 
 ## DESCRIPTION
-The **Add-AzureDisk** cmdlet adds a disk to the azure_2 disk repository in the current subscription.
+The **Add-AzureDisk** cmdlet adds a disk to the Azure disk repository in the current subscription.
 This cmdlet can add a system disk or a data disk.
 To add a system disk, specify an operating system type by using the *OS* parameter.
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaLocation
-Specifies the physical location of the disk in azure_2 Storage.
+Specifies the physical location of the disk in Azure Storage.
 This value refers to a blob page in the current subscription and storage account.
 
 ```yaml
@@ -132,7 +132,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -147,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

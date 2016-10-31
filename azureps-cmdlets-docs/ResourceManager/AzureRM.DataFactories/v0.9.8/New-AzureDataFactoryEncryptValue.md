@@ -182,7 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -NonCredentialValue
-@{Text=}
 
 ```yaml
 Type: String
@@ -197,7 +196,6 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationType
-@{Text=}
 
 ```yaml
 Type: String
@@ -212,7 +210,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-@{Text=}
 
 ```yaml
 Type: String
@@ -227,7 +224,6 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-@{Text=}
 
 ```yaml
 Type: String
@@ -242,7 +238,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureProfile

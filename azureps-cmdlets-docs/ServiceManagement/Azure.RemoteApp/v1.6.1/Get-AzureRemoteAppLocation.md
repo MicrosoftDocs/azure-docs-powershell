@@ -8,7 +8,7 @@ ms.assetid: ACAE2FE7-863C-4AC8-B61C-CDE1A79F2AC7
 # Get-AzureRemoteAppLocation
 
 ## SYNOPSIS
-Lists the locations that azure_2 RemoteApp supports.
+Lists the locations that Azure RemoteApp supports.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRemoteAppLocation [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppLocation** cmdlet lists the locations that azure_2 RemoteApp supports.
+The **Get-AzureRemoteAppLocation** cmdlet lists the locations that Azure RemoteApp supports.
 
 ## EXAMPLES
 

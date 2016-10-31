@@ -18,7 +18,7 @@ New-AzureCertificateSetting [[-StoreName] <String>] [-Thumbprint] <String>
 ```
 
 ## DESCRIPTION
-The **New-AzureCertificateSetting** cmdlet creates a certificate setting object for a certificate that is in an azure_2 service.
+The **New-AzureCertificateSetting** cmdlet creates a certificate setting object for a certificate that is in an Azure service.
 
 You can use a certificate setting object to create a configuration object by using the Add-AzureProvisioningConfig cmdlet.
 Use a configuration object to create virtual machine by using the New-AzureVM cmdlet.
@@ -96,7 +96,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -111,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -17,7 +17,7 @@ Stop-AzureBatchPoolResize [-Id] <String> -BatchContext <BatchAccountContext> [<C
 ```
 
 ## DESCRIPTION
-The **Stop-AzureBatchPoolResize** cmdlet stops an azure_2 Batch resize operation on a pool.
+The **Stop-AzureBatchPoolResize** cmdlet stops an Azure Batch resize operation on a pool.
 
 ## EXAMPLES
 

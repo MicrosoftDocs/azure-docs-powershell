@@ -60,7 +60,6 @@ The **Get-AzureRmSiteRecoveryNetwork** cmdlet gets information about Azure Site 
 ## PARAMETERS
 
 ### -Server
-@{Text=}
 
 ```yaml
 Type: ASRServer
@@ -129,7 +128,6 @@ Accept wildcard characters: False
 ```
 
 ### -Fabric
-@{Text=}
 
 ```yaml
 Type: ASRFabric

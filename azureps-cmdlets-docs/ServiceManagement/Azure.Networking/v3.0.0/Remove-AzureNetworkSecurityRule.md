@@ -18,7 +18,7 @@ Remove-AzureNetworkSecurityRule [-Name] <String> [-Force] [-NetworkSecurityGroup
 ```
 
 ## DESCRIPTION
-The **Remove-AzureNetworkSecurityRule** cmdlet removes an azure_2 network security rule from a network security group.
+The **Remove-AzureNetworkSecurityRule** cmdlet removes an Azure network security rule from a network security group.
 
 ## EXAMPLES
 

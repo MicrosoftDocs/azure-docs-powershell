@@ -109,11 +109,11 @@ Gets the available Azure Store add-ons.
 
 
 ### [Get-AzureWebHostingPlanMetric](./Get-AzureWebHostingPlanMetric.md)
-Gets metrics for azure_2 website hosting plans.
+Gets metrics for Azure website hosting plans.
 
 
 ### [Get-AzureWebHostingPlan](./Get-AzureWebHostingPlan.md)
-Gets azure_2 web hosting plans in the current subscription.
+Gets Azure web hosting plans in the current subscription.
 
 
 ### [Get-AzureWebsiteDeployment](./Get-AzureWebsiteDeployment.md)
@@ -137,7 +137,7 @@ Gets logs for the specified website.
 
 
 ### [Get-AzureWebsiteMetric](./Get-AzureWebsiteMetric.md)
-Gets metrics for the azure_2 website in the current subscription.
+Gets metrics for the Azure website in the current subscription.
 
 
 ### [Get-AzureWebsite](./Get-AzureWebsite.md)

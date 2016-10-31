@@ -17,7 +17,7 @@ Set-AzureBatchTask [-Task] <PSCloudTask> -BatchContext <BatchAccountContext> [<C
 ```
 
 ## DESCRIPTION
-The **Set-AzureBatchTask** cmdlet updates the properties of a task in the azure_2 Batch service.
+The **Set-AzureBatchTask** cmdlet updates the properties of a task in the Azure Batch service.
 Use the Get-AzureBatchTask cmdlet to get a **PSCloudTask** object.
 Modify the properties of that object, and then use the current cmdlet to commit your changes to the Batch service.
 

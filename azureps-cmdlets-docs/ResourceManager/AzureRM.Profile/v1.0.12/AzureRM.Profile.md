@@ -32,7 +32,7 @@ Gets the metadata used to authenticate Resource Manager requests.
 
 
 ### [Get-AzureRmEnvironment](./Get-AzureRmEnvironment.md)
-Gets endpoints and metadata for an instance of azure_2 services.
+Gets endpoints and metadata for an instance of Azure services.
 
 
 ### [Get-AzureRmSubscription](./Get-AzureRmSubscription.md)
@@ -44,7 +44,7 @@ Gets tenants that are authorized for the current user.
 
 
 ### [Remove-AzureRmEnvironment](./Remove-AzureRmEnvironment.md)
-Removes endpoints and metadata for connecting to an azure_2 instance.
+Removes endpoints and metadata for connecting to an Azure instance.
 
 
 ### [Save-AzureRmProfile](./Save-AzureRmProfile.md)
@@ -52,7 +52,7 @@ Saves the current authentication information for use in other PowerShell session
 
 
 ### [Select-AzureRmProfile](./Select-AzureRmProfile.md)
-Loads azure_2 authentication information from a file.
+Loads Azure authentication information from a file.
 
 
 ### [Set-AzureRmContext](./Set-AzureRmContext.md)
@@ -60,7 +60,7 @@ Sets the tenant, subscription, and environment for cmdlets to use in the current
 
 
 ### [Set-AzureRmEnvironment](./Set-AzureRmEnvironment.md)
-Sets properties for an azure_2 environment.
+Sets properties for an Azure environment.
 
 
 

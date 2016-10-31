@@ -136,7 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMapId
-@{Text=}
 
 ```yaml
 Type: String
@@ -196,7 +195,6 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMap
-@{Text=}
 
 ```yaml
 Type: PSApplicationGatewayUrlPathMap

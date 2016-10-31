@@ -101,9 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies name-value pairs that can be used to categorize and organize azure_2 items.
+Specifies name-value pairs that can be used to categorize and organize Azure items.
 Tags function similar to keywords, and operate across a deployment.
-For example, if you search for all items with the tag Department:IT the search will return all the azure_2 items that have that tag, regardless of such things as item type, location, or resource group.
+For example, if you search for all items with the tag Department:IT the search will return all the Azure items that have that tag, regardless of such things as item type, location, or resource group.
 
 An individual tag consists of two parts: the *Name* and, optionally, the *Value*.
 For instance, in Department:IT, the tag name is Department and the tag value is IT.
@@ -122,7 +122,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -137,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

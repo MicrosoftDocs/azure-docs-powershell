@@ -8,7 +8,7 @@ ms.assetid: 9F77E3D1-EAE1-4ED2-A16E-C593BDD1C907
 # Set-AzureRmVMSqlServerExtension
 
 ## SYNOPSIS
-Sets the azure_2 SQL Server extension on a virtual machine.
+Sets the Azure SQL Server extension on a virtual machine.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Set-AzureRmVMSqlServerExtension [[-Version] <String>] [-ResourceGroupName] <Stri
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmVMSqlServerExtension** cmdlet sets the azure_2ssNoVersion extension on a virtual machine.
+The **Set-AzureRmVMSqlServerExtension** cmdlet sets the AzuressNoVersion extension on a virtual machine.
 
 ## EXAMPLES
 
@@ -165,7 +165,6 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultCredentialSettings
-@{Text=}
 
 ```yaml
 Type: KeyVaultCredentialSettings
@@ -195,7 +194,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -210,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

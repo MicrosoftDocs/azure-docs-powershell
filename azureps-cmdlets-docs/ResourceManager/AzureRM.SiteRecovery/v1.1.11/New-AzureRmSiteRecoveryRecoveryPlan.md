@@ -36,7 +36,7 @@ New-AzureRmSiteRecoveryRecoveryPlan -Path <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSiteRecoveryRecoveryPlan** cmdlet creates a recovery plan in azure_2 Site Recovery.
+The **New-AzureRmSiteRecoveryRecoveryPlan** cmdlet creates a recovery plan in Azure Site Recovery.
 
 A recovery plan gathers virtual machines in a group for the purposes of failover and recovery.
 
@@ -47,12 +47,11 @@ A recovery plan gathers virtual machines in a group for the purposes of failover
 PS C:\>New-AzureRmSiteRecoveryRecoveryPlan -Path "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
 ```
 
-This command adds the recovery plan named RecoveryPlan.xml to the azure_2 Site Recovery vault.
+This command adds the recovery plan named RecoveryPlan.xml to the Azure Site Recovery vault.
 
 ## PARAMETERS
 
 ### -Azure
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -67,7 +66,6 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverDeploymentModel
-@{Text=}
 
 ```yaml
 Type: String
@@ -82,7 +80,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -112,7 +109,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryServer
-@{Text=}
 
 ```yaml
 Type: ASRServer
@@ -127,7 +123,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySite
-@{Text=}
 
 ```yaml
 Type: ASRSite
@@ -142,7 +137,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionEntityList
-@{Text=}
 
 ```yaml
 Type: ASRProtectionEntity[]
@@ -157,7 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryServer
-@{Text=}
 
 ```yaml
 Type: ASRServer

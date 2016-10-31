@@ -28,7 +28,7 @@ Get-AzureRmSiteRecoveryRecoveryPlan -FriendlyName <String> [-Path <String>] [<Co
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryRecoveryPlan** cmdlet gets a recovery plan in azure_2 Site Recovery.
+The **Get-AzureRmSiteRecoveryRecoveryPlan** cmdlet gets a recovery plan in Azure Site Recovery.
 
 ## EXAMPLES
 

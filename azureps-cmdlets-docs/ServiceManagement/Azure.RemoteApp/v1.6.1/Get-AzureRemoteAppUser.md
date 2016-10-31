@@ -8,7 +8,7 @@ ms.assetid: CC568981-B4BF-4380-8797-B87CBA64A2B5
 # Get-AzureRemoteAppUser
 
 ## SYNOPSIS
-Lists the users in an azure_2 RemoteApp collection.
+Lists the users in an Azure RemoteApp collection.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRemoteAppUser [-CollectionName] <String> [[-UserUpn] <String>] [-Alias 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppUser** cmdlet lists the users in an azure_2 RemoteApp collection.
+The **Get-AzureRemoteAppUser** cmdlet lists the users in an Azure RemoteApp collection.
 
 ## EXAMPLES
 
@@ -27,12 +27,12 @@ The **Get-AzureRemoteAppUser** cmdlet lists the users in an azure_2 RemoteApp co
 PS C:\>Get-AzureRemoteAppUser -CollectionName "Contoso"
 ```
 
-This command lists the users who have access to the azure_2 RemoteApp collection named Contoso.
+This command lists the users who have access to the Azure RemoteApp collection named Contoso.
 
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

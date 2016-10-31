@@ -56,7 +56,7 @@ Add-AzureRmDnsRecordConfig -RecordSet <DnsRecordSet> -Cname <String> [<CommonPar
 
 ## DESCRIPTION
 The **Add-AzureRmDnsRecordConfig** cmdlet adds a Domain Name System (DNS) record to a **RecordSet** object.
-The **RecordSet** object is an offline object, and changes to it do not change the DNS responses until after you run the Set-AzureRmDnsRecordSet cmdlet to persist the change to the Microsoft azure_2 DNS service.
+The **RecordSet** object is an offline object, and changes to it do not change the DNS responses until after you run the Set-AzureRmDnsRecordSet cmdlet to persist the change to the Microsoft Azure DNS service.
 
 SOA records are created when a DNS zone is created, and are removed when the DNS zone is deleted.
 You cannot add or remove SOA records, but you can edit them.

@@ -17,7 +17,7 @@ Get-AzureRmSiteRecoveryVaultSettings [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryVaultSettings** cmdlet gets settings information related to the current azure_2 Site Recovery vault.
+The **Get-AzureRmSiteRecoveryVaultSettings** cmdlet gets settings information related to the current Azure Site Recovery vault.
 
 ## EXAMPLES
 

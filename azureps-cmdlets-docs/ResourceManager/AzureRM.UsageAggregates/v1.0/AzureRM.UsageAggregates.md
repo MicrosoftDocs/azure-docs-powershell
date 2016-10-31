@@ -12,7 +12,7 @@ This topic displays help topics for the Azure Usage Aggregate Cmdlets.
 
 ## AzureRM.UsageAggregates Cmdlets
 ### [Get-UsageAggregates](./Get-UsageAggregates.md)
-Gets the reported azure_2 subscription usage details.
+Gets the reported Azure subscription usage details.
 
 
 

@@ -35,7 +35,6 @@ The command specifies the name and type handler version for VMAccess.
 ## PARAMETERS
 
 ### -DisableAutoUpgradeMinorVersion
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

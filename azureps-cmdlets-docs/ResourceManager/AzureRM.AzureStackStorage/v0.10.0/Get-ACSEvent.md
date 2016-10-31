@@ -120,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-@{Text=}
 
 ```yaml
 Type: Int32[]

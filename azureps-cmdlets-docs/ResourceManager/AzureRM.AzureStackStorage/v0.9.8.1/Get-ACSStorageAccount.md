@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Detail
-Indicates that this cmdlet lists details about the azure_2 Consistent Storage (ACS) storage account.
+Indicates that this cmdlet lists details about the Azure Consistent Storage (ACS) storage account.
 
 ```yaml
 Type: SwitchParameter

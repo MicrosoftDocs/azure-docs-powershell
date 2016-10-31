@@ -8,7 +8,7 @@ ms.assetid: 259E1176-0740-406E-948E-FD89693B563F
 # Get-AzureRemoteAppVNet
 
 ## SYNOPSIS
-Retrieves information about azure_2 RemoteApp virtual networks in azure_2.
+Retrieves information about Azure RemoteApp virtual networks in Azure.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRemoteAppVNet [[-VNetName] <String>] [-IncludeSharedKey] [-Profile <Azu
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppVNet** cmdlet retrieves information about azure_2 RemoteApp virtual networks in Microsoft Azure.
+The **Get-AzureRemoteAppVNet** cmdlet retrieves information about Azure RemoteApp virtual networks in Microsoft Azure.
 This cmdlet returns an object that contains information about a specified virtual network.
 If no virtual network is specified, this cmdlet returns information about all the virtual networks in the current subscription.
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -VNetName
-Specifies the name of the azure_2 RemoteApp virtual network.
+Specifies the name of the Azure RemoteApp virtual network.
 
 ```yaml
 Type: String

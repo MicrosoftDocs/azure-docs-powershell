@@ -19,7 +19,7 @@ New-AzureManagedCacheNamedCache -Name <String> -NamedCache <String> [-ExpiryPoli
 ```
 
 ## DESCRIPTION
-The **New-AzureManagedCacheNamedCache** cmdlet creates a named cache in the specified azure_2 Managed Cache Service instance in your account and returns an object that represents the new azure_2 cache.
+The **New-AzureManagedCacheNamedCache** cmdlet creates a named cache in the specified Azure Managed Cache Service instance in your account and returns an object that represents the new Azure cache.
 Named caches are supported in the Standard and Premium cache offerings, and are not supported in the Basic cache offering.
 
 ## EXAMPLES
@@ -183,7 +183,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PSCacheServiceWithNamedCaches
 
 ## NOTES
-* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlets to make your azure_2 account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlets to make your Azure account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
 
 ## RELATED LINKS
 

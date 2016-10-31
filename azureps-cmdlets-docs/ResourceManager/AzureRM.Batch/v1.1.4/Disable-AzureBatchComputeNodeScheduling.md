@@ -28,7 +28,7 @@ Disable-AzureBatchComputeNodeScheduling [[-ComputeNode] <PSComputeNode>]
 
 ## DESCRIPTION
 The **Disable-AzureBatchComputeNodeScheduling** cmdlet disables task scheduling on the specified compute node.
-A compute node is an azure_2 virtual machine dedicated to a specific application workload.
+A compute node is an Azure virtual machine dedicated to a specific application workload.
 When you disable task scheduling on a compute node you will also have the option of determining what to do about jobs currently in the node's task queue.
 **Disable-AzureBatchComputeNodeScheduling** lets you do the following: 
 

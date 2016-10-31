@@ -19,7 +19,7 @@ New-AzureRmAutomationWebhook [-Name] <String> [-RunbookName] <String> [-IsEnable
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationWebhook** cmdlet creates a webhook for an azure_2 Automation runbook.
+The **New-AzureRmAutomationWebhook** cmdlet creates a webhook for an Azure Automation runbook.
 
 Be sure to save the webhook URL that this cmdlet returns, because it cannot be retrieved again.
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -191,7 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

@@ -18,7 +18,7 @@ Get-ACSManagementService [-FarmName] <String> [[-SubscriptionId] <String>] [[-To
 ```
 
 ## DESCRIPTION
-The **Get-ACSManagementService** cmdlet gets the status and settings of the azure_2 Consistent Storage (ACS) management service.
+The **Get-ACSManagementService** cmdlet gets the status and settings of the Azure Consistent Storage (ACS) management service.
 
 ## EXAMPLES
 

@@ -19,9 +19,9 @@ New-AzureAffinityGroup [-Name] <String> [-Label <String>] [-Description <String>
 ```
 
 ## DESCRIPTION
-The **New-AzureAffinityGroup** cmdlet creates an azure_2 affinity group in the current azure_2 subscription.
+The **New-AzureAffinityGroup** cmdlet creates an Azure affinity group in the current Azure subscription.
 
-An affinity group puts your services and their resources together in an azure_2 datacenter.
+An affinity group puts your services and their resources together in an Azure datacenter.
 The affinity group groups members together for optimal performance.
 Define affinity groups at the subscription level.
 Your affinity groups are available to any subsequent cloud services or storage accounts that you create.
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the geographical location of the azure_2 datacenter where this cmdlet creates the affinity group.
+Specifies the geographical location of the Azure datacenter where this cmdlet creates the affinity group.
 
 ```yaml
 Type: String
@@ -118,7 +118,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -133,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

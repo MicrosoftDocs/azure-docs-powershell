@@ -19,7 +19,7 @@ Set-AzureRmRecoveryServicesBackupProtectionPolicy [-Policy] <PolicyBase>
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmBackupProtectionPolicy** cmdlet modifies an existing azure_2 Backup protection policy.
+The **Set-AzureRmBackupProtectionPolicy** cmdlet modifies an existing Azure Backup protection policy.
 You can modify the Backup schedule and retention policy components.
 
 Any changes you make affect the backup and retention of the items associated with the policy.
@@ -59,7 +59,16 @@ The final command modifies the Backup protection policy in $Pol using schedule p
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -74,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

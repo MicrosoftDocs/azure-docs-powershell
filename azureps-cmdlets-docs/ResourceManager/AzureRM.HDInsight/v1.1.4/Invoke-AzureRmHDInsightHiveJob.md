@@ -20,7 +20,7 @@ Invoke-AzureRmHDInsightHiveJob [-Arguments <String[]>] [-Files <String[]>] [-Sta
 ```
 
 ## DESCRIPTION
-The **Invoke-AzureRmHDInsightHiveJob** cmdlet submits a Hive query to an azure_2 HDInsight cluster and retrieves query results in one operation.
+The **Invoke-AzureRmHDInsightHiveJob** cmdlet submits a Hive query to an Azure HDInsight cluster and retrieves query results in one operation.
 Use the Use-AzureRmHDInsightCluster cmdlet before calling **Invoke-AzureRmHDInsightHiveJob** to specify which cluster will be used for the query.
 
 ## EXAMPLES
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -File
-Specifies the path to a file in azure_2 Storage that contains the query to run.
+Specifies the path to a file in Azure Storage that contains the query to run.
 You can use this parameter instead of the *Query* parameter.
 
 ```yaml
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultContainer
-Specifies the name of the default container in the default azure_2 Storage account that an HDInsight cluster uses.
+Specifies the name of the default container in the default Azure Storage account that an HDInsight cluster uses.
 
 ```yaml
 Type: String
@@ -230,7 +230,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -245,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

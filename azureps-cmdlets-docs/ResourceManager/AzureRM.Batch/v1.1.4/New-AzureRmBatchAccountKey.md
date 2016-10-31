@@ -18,7 +18,7 @@ New-AzureRmBatchAccountKey [-AccountName] <String> [-ResourceGroupName <String>]
 ```
 
 ## DESCRIPTION
-The **New-AzureRmBatchAccountKey** cmdlet regenerates the primary or secondary key of an azure_2 Batch account.
+The **New-AzureRmBatchAccountKey** cmdlet regenerates the primary or secondary key of an Azure Batch account.
 The cmdlet returns a **BatchAccountContext** object that has its current **PrimaryAccountKey** and **SecondaryAccountKey** properties.
 
 ## EXAMPLES

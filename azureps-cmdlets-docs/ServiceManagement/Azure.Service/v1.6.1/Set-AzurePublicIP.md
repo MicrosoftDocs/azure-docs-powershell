@@ -8,7 +8,7 @@ ms.assetid: 48C16755-B39B-4C63-9363-5C133E04BA31
 # Set-AzurePublicIP
 
 ## SYNOPSIS
-Adds a Public IP to an azure_2 virtual machine.
+Adds a Public IP to an Azure virtual machine.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Set-AzurePublicIP [-PublicIPName] <String> [[-IdleTimeoutInMinutes] <Int32>] [[-
 ```
 
 ## DESCRIPTION
-The **Set-AzurePublicIP** cmdlet adds a Public IP to an azure_2 virtual machine.
+The **Set-AzurePublicIP** cmdlet adds a Public IP to an Azure virtual machine.
 If you run this cmdlet for an existing virtual machine, update the virtual machine to implement your changes.
 You can specify a domain name label to create a corresponding DNS entry for the public IP.
 
@@ -142,7 +142,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -157,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -17,7 +17,7 @@ Get-AzureVirtualNetworkGateway [[-GatewayId] <String>] [-Profile <AzureSMProfile
 ```
 
 ## DESCRIPTION
-The **Get-AzureVirtualNetworkGateway** cmdlet gets an azure_2 virtual network gateway.
+The **Get-AzureVirtualNetworkGateway** cmdlet gets an Azure virtual network gateway.
 
 ## EXAMPLES
 

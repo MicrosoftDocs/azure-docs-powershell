@@ -40,7 +40,6 @@ This command associates the runbook named Runbk01 with the schedule named Sched0
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -55,7 +54,6 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-@{Text=}
 
 ```yaml
 Type: IDictionary
@@ -70,7 +68,6 @@ Accept wildcard characters: False
 ```
 
 ### -RunbookName
-@{Text=}
 
 ```yaml
 Type: String
@@ -85,7 +82,6 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleName
-@{Text=}
 
 ```yaml
 Type: String

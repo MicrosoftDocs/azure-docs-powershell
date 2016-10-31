@@ -61,7 +61,7 @@ Test-AzureRmResourceGroupDeployment -ResourceGroupName <String> [-Mode <Deployme
 ```
 
 ## DESCRIPTION
-The **Test-AzureRmResourceGroupDeployment** cmdlet determines whether an azure_2 resource group deployment template and its parameter values are valid.
+The **Test-AzureRmResourceGroupDeployment** cmdlet determines whether an Azure resource group deployment template and its parameter values are valid.
 
 ## EXAMPLES
 

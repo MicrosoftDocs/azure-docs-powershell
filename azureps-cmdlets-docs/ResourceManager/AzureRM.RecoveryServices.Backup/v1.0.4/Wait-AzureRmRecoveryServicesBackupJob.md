@@ -18,7 +18,7 @@ Wait-AzureRmRecoveryServicesBackupJob [-Job] <Object> [[-Timeout] <Int64>]
 ```
 
 ## DESCRIPTION
-The **Wait-AzureRmRecoveryServicesBackupJob** cmdlet waits for an azure_2 Backup job to finish.
+The **Wait-AzureRmRecoveryServicesBackupJob** cmdlet waits for an Azure Backup job to finish.
 Backup jobs can take a long time.
 If you run a backup job as part of a script, you may want to force the script to wait for job to finish before it continues to other tasks.
 
@@ -83,7 +83,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -98,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

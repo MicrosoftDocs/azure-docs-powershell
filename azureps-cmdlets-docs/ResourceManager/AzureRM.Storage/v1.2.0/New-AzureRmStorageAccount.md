@@ -20,7 +20,7 @@ New-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-SkuNa
 ```
 
 ## DESCRIPTION
-The **New-AzureRmStorageAccount** cmdlet creates an azure_2 Storage account.
+The **New-AzureRmStorageAccount** cmdlet creates an Azure Storage account.
 
 ## EXAMPLES
 
@@ -223,7 +223,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -238,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

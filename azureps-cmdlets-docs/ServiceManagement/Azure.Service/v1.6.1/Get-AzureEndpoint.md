@@ -8,7 +8,7 @@ ms.assetid: E47AA091-BCE3-4637-9D34-C5AD9E8E04D9
 # Get-AzureEndpoint
 
 ## SYNOPSIS
-Gets information about the endpoints that are assigned to an azure_2 virtual machine.
+Gets information about the endpoints that are assigned to an Azure virtual machine.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureEndpoint [[-Name] <String>] -VM <IPersistentVM> [-Profile <AzureSMProfi
 ```
 
 ## DESCRIPTION
-The **Get-AzureEndpoint** cmdlet gets information about the endpoints that are assigned to an azure_2 virtual machine.
+The **Get-AzureEndpoint** cmdlet gets information about the endpoints that are assigned to an Azure virtual machine.
 
 ## EXAMPLES
 
@@ -79,7 +79,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -94,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

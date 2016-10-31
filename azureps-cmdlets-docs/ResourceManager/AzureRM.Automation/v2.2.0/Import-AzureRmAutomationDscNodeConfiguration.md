@@ -18,7 +18,7 @@ Import-AzureRmAutomationDscNodeConfiguration -Path <String> -ConfigurationName <
 ```
 
 ## DESCRIPTION
-The **Import-AzureRmAutomationDscConfiguration** cmdlet imports a Managed Object Format (MOF) configuration document into azure_2 Automation as a Desired State Configuration (DSC) node configuration.
+The **Import-AzureRmAutomationDscConfiguration** cmdlet imports a Managed Object Format (MOF) configuration document into Azure Automation as a Desired State Configuration (DSC) node configuration.
 Specify the path of a .mof file.
 
 ## EXAMPLES
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -125,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

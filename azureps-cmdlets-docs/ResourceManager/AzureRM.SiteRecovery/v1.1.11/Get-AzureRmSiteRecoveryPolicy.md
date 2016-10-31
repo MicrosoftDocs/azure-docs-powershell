@@ -28,7 +28,7 @@ Get-AzureRmSiteRecoveryPolicy -FriendlyName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryPolicy** cmdlet gets the list of configured azure_2 Site Recovery protection policies or a specific protection policy by name.
+The **Get-AzureRmSiteRecoveryPolicy** cmdlet gets the list of configured Azure Site Recovery protection policies or a specific protection policy by name.
 
 ## EXAMPLES
 

@@ -8,7 +8,7 @@ ms.assetid: 49A6EFCC-B273-40C0-AD5B-9EF9689F9AE9
 # Get-AzureRmStorageAccountKey
 
 ## SYNOPSIS
-Gets the access keys for an azure_2 Storage account.
+Gets the access keys for an Azure Storage account.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRmStorageAccountKey [-ResourceGroupName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmStorageAccountKey** cmdlet gets the access keys for an azure_2 Storage account.
+The **Get-AzureRmStorageAccountKey** cmdlet gets the access keys for an Azure Storage account.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Get-AzureRmStorageAccountKey** cmdlet gets the access keys for an azure_2 
 PS C:\>Get-AzureRmStorageAccountKey -ResourceGroupName "RG01" -AccountName "MyStorageAccount"
 ```
 
-This command gets the keys for the specified azure_2 Storage account.
+This command gets the keys for the specified Azure Storage account.
 
 ### Example 2: Get a specific access key for a Storage account
 ```
@@ -71,7 +71,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -86,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

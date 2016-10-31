@@ -35,7 +35,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Metrics
-@{Text=}
 
 ```yaml
 Type: String[]
@@ -50,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-@{Text=}
 
 ```yaml
 Type: DateTime
@@ -65,7 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-@{Text=}
 
 ```yaml
 Type: DateTime
@@ -80,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-@{Text=}
 
 ```yaml
 Type: String
@@ -95,7 +91,6 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceDetails
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -110,7 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -125,7 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -140,7 +133,6 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-@{Text=}
 
 ```yaml
 Type: ServerFarmWithRichSku

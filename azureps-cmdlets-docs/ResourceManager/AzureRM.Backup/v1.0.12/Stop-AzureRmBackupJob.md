@@ -23,7 +23,7 @@ Stop-AzureRmBackupJob -Job <AzureRMBackupJob> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmBackupJob** cmdlet cancels an existing azure_2 Backup job.
+The **Stop-AzureRmBackupJob** cmdlet cancels an existing Azure Backup job.
 Use this parameter to stop a job that takes too long and blocks other activities.
 
 You can cancel only the following types of jobs: 

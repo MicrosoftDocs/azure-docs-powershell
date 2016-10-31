@@ -122,7 +122,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureProfile
@@ -137,7 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-@{Text=}
 
 ```yaml
 Type: String

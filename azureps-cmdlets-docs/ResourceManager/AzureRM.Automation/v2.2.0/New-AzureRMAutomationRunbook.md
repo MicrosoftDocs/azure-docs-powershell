@@ -19,7 +19,7 @@ New-AzureRmAutomationRunbook [-Name] <String> [-Description <String>] [-Tags <ID
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationRunbook** cmdlet creates an empty azure_2 Automation runbook by using APS.
+The **New-AzureRmAutomationRunbook** cmdlet creates an empty Azure Automation runbook by using APS.
 Specify a name for the runbook.
 
 ## EXAMPLES
@@ -29,7 +29,7 @@ Specify a name for the runbook.
 PS C:\>New-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbook02" -ResourceGroupName "ResourceGroup01"
 ```
 
-This command creates a runbook named Runbook02 in the azure_2 Automation account named Contoso17.
+This command creates a runbook named Runbook02 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 

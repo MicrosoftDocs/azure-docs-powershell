@@ -22,7 +22,7 @@ The **New-AzureApplicationGatewaySku** cmdlet creates a stock keeping unit (SKU)
 
 ## EXAMPLES
 
-### Example 1: Create a SKU for an azure_2 application gateway
+### Example 1: Create a SKU for an Azure application gateway
 ```
 PS C:\>$SKU = New-AzureApplicationGatewaySku -Name "Standard_Small" -Tier "Standard" -Capacity 2
 ```

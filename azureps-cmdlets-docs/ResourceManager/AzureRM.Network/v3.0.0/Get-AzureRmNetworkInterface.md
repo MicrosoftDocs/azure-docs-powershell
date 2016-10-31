@@ -111,7 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandResource
-@{Text=}
 
 ```yaml
 Type: String

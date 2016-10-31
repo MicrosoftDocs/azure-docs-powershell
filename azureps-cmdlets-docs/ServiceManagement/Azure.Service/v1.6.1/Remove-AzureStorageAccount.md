@@ -18,7 +18,7 @@ Remove-AzureStorageAccount [-StorageAccountName] <String> [-Profile <AzureSMProf
 ```
 
 ## DESCRIPTION
-The **Remove-AzureStorageAccount** cmdlet removes an account from an azure_2 subscription.
+The **Remove-AzureStorageAccount** cmdlet removes an account from an Azure subscription.
 
 ## EXAMPLES
 
@@ -62,7 +62,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -77,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

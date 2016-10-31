@@ -30,7 +30,6 @@ The Set-AzureAutomationConnectionFieldValue cmdlet modifies the value for a fiel
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -45,7 +44,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionFieldName
-@{Text=}
 
 ```yaml
 Type: String
@@ -60,7 +58,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -75,7 +72,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile
@@ -90,7 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-@{Text=}
 
 ```yaml
 Type: Object

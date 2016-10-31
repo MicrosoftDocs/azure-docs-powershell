@@ -17,7 +17,7 @@ Get-AzureBatchJobStatistics -BatchContext <BatchAccountContext> [<CommonParamete
 ```
 
 ## DESCRIPTION
-The **Get-AzureBatchJobStatistics** cmdlet gets lifetime summary statistics for all of the jobs in an azure_2 Batch account.
+The **Get-AzureBatchJobStatistics** cmdlet gets lifetime summary statistics for all of the jobs in an Azure Batch account.
 Statistics are aggregated across all jobs that have ever existed in the account, from account creation to the last update time of the statistics.
 
 ## EXAMPLES

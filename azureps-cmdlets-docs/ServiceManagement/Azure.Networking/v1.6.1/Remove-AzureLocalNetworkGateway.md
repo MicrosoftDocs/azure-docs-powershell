@@ -8,7 +8,7 @@ ms.assetid: F6B82001-769A-4EDE-920E-CA848CAD41AE
 # Remove-AzureLocalNetworkGateway
 
 ## SYNOPSIS
-Removes an azure_2 local network gateway.
+Removes an Azure local network gateway.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Remove-AzureLocalNetworkGateway [-GatewayId] <String> [-Profile <AzureSMProfile>
 ```
 
 ## DESCRIPTION
-The **Remove-AzureLocalNetworkGateway** cmdlet removes an azure_2 local network gateway.
+The **Remove-AzureLocalNetworkGateway** cmdlet removes an Azure local network gateway.
 
 ## EXAMPLES
 

@@ -8,7 +8,7 @@ ms.assetid: EAE0FBC7-93DA-4322-BC05-A38A7780813D
 # New-AzureVirtualNetworkGatewayConnection
 
 ## SYNOPSIS
-Creates an azure_2 virtual gateway network connection.
+Creates an Azure virtual gateway network connection.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-AzureVirtualNetworkGatewayConnection [-ConnectedEntityId] <String> [-Gateway
 ```
 
 ## DESCRIPTION
-The **New-AzureVirtualNetworkGatewayConnection** cmdlet creates an azure_2 virtual gateway network connection.
+The **New-AzureVirtualNetworkGatewayConnection** cmdlet creates an Azure virtual gateway network connection.
 
 ## EXAMPLES
 

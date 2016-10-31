@@ -28,7 +28,7 @@ Get-AzureRmSiteRecoveryServer -FriendlyName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryServer** cmdlet gets information about azure_2 Site Recovery servers registered to the current Site Recovery vault.
+The **Get-AzureRmSiteRecoveryServer** cmdlet gets information about Azure Site Recovery servers registered to the current Site Recovery vault.
 
 ## EXAMPLES
 

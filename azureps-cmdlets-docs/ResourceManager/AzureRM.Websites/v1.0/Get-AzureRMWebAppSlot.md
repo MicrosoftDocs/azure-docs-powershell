@@ -8,7 +8,7 @@ ms.assetid: A957D7C7-30CF-4505-93B0-A4C013A4406C
 # Get-AzureRmWebAppSlot
 
 ## SYNOPSIS
-Gets an azure_2 Web App slot.
+Gets an Azure Web App slot.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-AzureRmWebAppSlot [[-Slot] <String>] [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmWebAppSlot** cmdlet gets an azure_2 Web App slot.
+The **Get-AzureRmWebAppSlot** cmdlet gets an Azure Web App slot.
 
 ## EXAMPLES
 

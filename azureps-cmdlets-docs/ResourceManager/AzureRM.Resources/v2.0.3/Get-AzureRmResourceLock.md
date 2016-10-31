@@ -58,7 +58,7 @@ Get-AzureRmResourceLock [-AtScope] -LockId <String> [-ApiVersion <String>] [-Pre
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmResourceLock** cmdlet gets azure_2 resource locks.
+The **Get-AzureRmResourceLock** cmdlet gets Azure resource locks.
 
 ## EXAMPLES
 
@@ -150,7 +150,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -165,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -18,7 +18,7 @@ New-AzureRmAutomationCredential [-Name] <String> [-Description <String>] [-Value
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationCredential** cmdlet creates a credential as a **PSCredential** object in azure_2 Automation.
+The **New-AzureRmAutomationCredential** cmdlet creates a credential as a **PSCredential** object in Azure Automation.
 
 ## EXAMPLES
 

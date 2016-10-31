@@ -25,10 +25,10 @@ Stop-AzureRmResourceGroupDeployment -Id <String> [-Force] [-ApiVersion <String>]
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmResourceGroupDeployment** cmdlet cancels an azure_2 resource group deployment that has started but not completed.
+The **Stop-AzureRmResourceGroupDeployment** cmdlet cancels an Azure resource group deployment that has started but not completed.
 To stop a deployment, the deployment must have an incomplete provisioning state, such as Provisioning, and not a completed state, such as Provisioned or Failed.
 
-An azure_2 resource is a user-managed entity, such as a website, database, or database server.
+An Azure resource is a user-managed entity, such as a website, database, or database server.
 A resource group is a collection of resources that are deployed as a unit.
 To deploy a resource group, use the New-AzureRmResourceGroupDeployment cmdlet.
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

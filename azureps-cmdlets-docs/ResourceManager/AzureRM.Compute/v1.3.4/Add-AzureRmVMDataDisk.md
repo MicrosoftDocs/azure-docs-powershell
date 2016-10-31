@@ -204,12 +204,12 @@ psdx_paramvalues
 - Attach.
 Specify this option to create a virtual machine from a specialized disk.
 When you specify this option, do not specify the *SourceImageUri* parameter.
-The *VhdUri* is all that is needed in order to tell the azure_2 platform the location of the virtual hard disk (VHD) to attach as a data disk to the virtual machine. 
+The *VhdUri* is all that is needed in order to tell the Azure platform the location of the virtual hard disk (VHD) to attach as a data disk to the virtual machine. 
 - Empty.
 Specify this to create an empty data disk.
 - FromImage.
 Specify this option to create a virtual machine from a generalized image or disk.
-When you specify this option, you must specify the *SourceImageUri* parameter also in order to tell the azure_2 platform the location of the VHD to attach as a data disk.
+When you specify this option, you must specify the *SourceImageUri* parameter also in order to tell the Azure platform the location of the VHD to attach as a data disk.
 The *VhdUri* parameter is used as the location identifying where the data disk VHD will be stored when it is used by the virtual machine.
 
 ```yaml
@@ -240,7 +240,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -255,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

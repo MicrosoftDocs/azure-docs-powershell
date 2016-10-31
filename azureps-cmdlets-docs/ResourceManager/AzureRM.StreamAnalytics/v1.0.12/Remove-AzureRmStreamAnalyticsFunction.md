@@ -18,7 +18,7 @@ Remove-AzureRmStreamAnalyticsFunction [-JobName] <String> [-Name] <String> [-For
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmStreamAnalyticsFunction** cmdlet deletes a function asynchronously from an azure_2 Stream Analytics job.
+The **Remove-AzureRmStreamAnalyticsFunction** cmdlet deletes a function asynchronously from an Azure Stream Analytics job.
 
 ## EXAMPLES
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

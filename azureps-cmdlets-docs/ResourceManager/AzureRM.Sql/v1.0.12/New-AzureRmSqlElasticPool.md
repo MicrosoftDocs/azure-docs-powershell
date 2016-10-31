@@ -44,7 +44,7 @@ Tags              :
 ```
 
 This command creates an elastic pool in the Standard service tier named ElasticPool01.
-The server named server01, assigned to an azure_2 resource group named ResourceGroup01, hosts the elastic pool in.
+The server named server01, assigned to an Azure resource group named ResourceGroup01, hosts the elastic pool in.
 The command specifies DTU property values for the pool and the databases in the pool.
 
 ## PARAMETERS
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Edition
-Specifies the edition of the azure_2 SQL Database used for the elastic pool.
+Specifies the edition of the Azure SQL Database used for the elastic pool.
 psdx_paramvalues
 
 - Premium 
@@ -217,7 +217,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -232,7 +241,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

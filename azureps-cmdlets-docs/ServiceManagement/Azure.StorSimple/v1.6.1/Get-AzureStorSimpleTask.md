@@ -17,7 +17,7 @@ Get-AzureStorSimpleTask [-InstanceId] <String> [-Profile <AzureSMProfile>] [<Com
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorSimpleTask** cmdlet retrieves the status of a task that runs asynchronously on an azure_2 StorSimple device.
+The **Get-AzureStorSimpleTask** cmdlet retrieves the status of a task that runs asynchronously on an Azure StorSimple device.
 
 While you manage a StorSimple device, most create, read, update, and delete actions can run asynchronously.
 wps_2 returns a **TaskId**.

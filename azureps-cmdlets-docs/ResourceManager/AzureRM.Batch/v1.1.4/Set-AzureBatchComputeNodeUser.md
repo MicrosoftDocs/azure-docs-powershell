@@ -18,7 +18,7 @@ Set-AzureBatchComputeNodeUser [-PoolId] <String> [-ComputeNodeId] <String> [-Nam
 ```
 
 ## DESCRIPTION
-The **Set-AzureBatchComputeNodeUser** cmdlet modifies properties of a user account on an azure_2 Batch compute node.
+The **Set-AzureBatchComputeNodeUser** cmdlet modifies properties of a user account on an Azure Batch compute node.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ New-AzureRmSiteRecoveryVault -Name <String> -ResourceGroupName <String> -Locatio
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSiteRecoveryVault** cmdlet creates an azure_2 Site Recovery services vault.
+The **New-AzureRmSiteRecoveryVault** cmdlet creates an Azure Site Recovery services vault.
 
 ## EXAMPLES
 

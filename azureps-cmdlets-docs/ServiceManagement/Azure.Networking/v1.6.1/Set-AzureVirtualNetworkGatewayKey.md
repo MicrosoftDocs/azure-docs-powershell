@@ -8,7 +8,7 @@ ms.assetid: 55E48183-31B6-44C7-A94B-E75D28415585
 # Set-AzureVirtualNetworkGatewayKey
 
 ## SYNOPSIS
-Sets the key for an azure_2 virtual network gateway.
+Sets the key for an Azure virtual network gateway.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Set-AzureVirtualNetworkGatewayKey [-GatewayId] <String> [-ConnectedEntityId] <St
 ```
 
 ## DESCRIPTION
-The **Set-AzureVirtualNetworkGatewayKey** cmdlet sets the key for an azure_2 virtual network gateway.
+The **Set-AzureVirtualNetworkGatewayKey** cmdlet sets the key for an Azure virtual network gateway.
 
 ## EXAMPLES
 

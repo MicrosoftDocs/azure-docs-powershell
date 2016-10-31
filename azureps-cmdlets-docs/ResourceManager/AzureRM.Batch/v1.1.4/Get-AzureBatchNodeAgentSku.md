@@ -18,7 +18,7 @@ Get-AzureBatchNodeAgentSku [-Filter <String>] [-MaxCount <Int32>] -BatchContext 
 ```
 
 ## DESCRIPTION
-The **Get-AzureBatchNodeAgentSku** cmdlet gets node agent SKUs that are available in an azure_2 Batch account.
+The **Get-AzureBatchNodeAgentSku** cmdlet gets node agent SKUs that are available in an Azure Batch account.
 Specify the account by using the *BatchContext* parameter.
 You can narrow your search to SKUs that match an Open Data Protocol (OData) filter.
 

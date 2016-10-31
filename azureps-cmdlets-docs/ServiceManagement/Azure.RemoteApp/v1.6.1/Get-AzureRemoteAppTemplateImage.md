@@ -8,7 +8,7 @@ ms.assetid: 0DA1D4D0-600C-466E-A541-F6D3142B91F9
 # Get-AzureRemoteAppTemplateImage
 
 ## SYNOPSIS
-Retrieves information about azure_2 RemoteApp template images.
+Retrieves information about Azure RemoteApp template images.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRemoteAppTemplateImage [[-ImageName] <String>] [-Profile <AzureSMProfil
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppTemplateImage** cmdlet retrieves information about azure_2 RemoteApp template images in Microsoft Azure.
+The **Get-AzureRemoteAppTemplateImage** cmdlet retrieves information about Azure RemoteApp template images in Microsoft Azure.
 This cmdlet returns an object containing information about a specified template image.
 If no template image is specified, it retrieves information about all the template images in the current subscription.
 
@@ -40,7 +40,7 @@ This command retrieves information about the template image named ContosoApps.
 ## PARAMETERS
 
 ### -ImageName
-Specifies the name of an azure_2 RemoteApp template image.
+Specifies the name of an Azure RemoteApp template image.
 
 ```yaml
 Type: String

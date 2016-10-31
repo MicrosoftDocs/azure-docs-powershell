@@ -8,7 +8,7 @@ ms.assetid: 172D226F-89E9-4200-BE1C-038B37BBDBD9
 # Get-AzurePublicIP
 
 ## SYNOPSIS
-Gets the Public IP information for an azure_2 virtual machine.
+Gets the Public IP information for an Azure virtual machine.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzurePublicIP [[-PublicIPName] <String>] -VM <IPersistentVM> [-Profile <Azur
 ```
 
 ## DESCRIPTION
-The **Get-AzurePublicIP** cmdlet gets the Public IP information for an azure_2 virtual machine.
+The **Get-AzurePublicIP** cmdlet gets the Public IP information for an Azure virtual machine.
 To obtain the IP address of the Public IP, use the Get-AzureVM cmdlet.
 
 ## EXAMPLES
@@ -80,7 +80,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -95,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

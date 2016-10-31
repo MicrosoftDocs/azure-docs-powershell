@@ -18,7 +18,7 @@ Remove-AzureRmStreamAnalyticsInput [-JobName] <String> [-Name] <String> [-Force]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmStreamAnalyticsInput** cmdlet asynchronously deletes an input from a Stream Analytics job in azure_2.
+The **Remove-AzureRmStreamAnalyticsInput** cmdlet asynchronously deletes an input from a Stream Analytics job in Azure.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ This command removes the input EventStream from StreamingJob.
 ## PARAMETERS
 
 ### -JobName
-Specifies the name of the azure_2 Stream Analytics job to which the azure_2 Stream Analytics input belongs.
+Specifies the name of the Azure Stream Analytics job to which the Azure Stream Analytics input belongs.
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the azure_2 Stream Analytics input to remove.
+Specifies the name of the Azure Stream Analytics input to remove.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the azure_2 Stream Analytics input belongs.
+Specifies the name of the resource group to which the Azure Stream Analytics input belongs.
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

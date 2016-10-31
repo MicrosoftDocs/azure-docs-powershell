@@ -18,7 +18,7 @@ Send-AzureRemoteAppSessionMessage [-CollectionName] <String> [-UserUpn] <String>
 ```
 
 ## DESCRIPTION
-The **Send-AzureRemoteAppSessionMessage** cmdlet sends a message to a user who is connected to an azure_2 RemoteApp session.
+The **Send-AzureRemoteAppSessionMessage** cmdlet sends a message to a user who is connected to an Azure RemoteApp session.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ This command sends a message to the user whose UPN is PattiFuller@contoso.com.
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

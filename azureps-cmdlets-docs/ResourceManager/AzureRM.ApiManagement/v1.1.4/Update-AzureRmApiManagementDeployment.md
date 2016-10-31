@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Specifies the tier of the master azure_2 API Management deployment region.
+Specifies the tier of the master Azure API Management deployment region.
 
 psdx_paramvalues
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Capacity
-Specifies the SKU capacity of the master azure_2 API Management deployment region.
+Specifies the SKU capacity of the master Azure API Management deployment region.
 
 ```yaml
 Type: Int32
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-Specifies the Virtual Network configuration of the master azure_2 API Management deployment region.
+Specifies the Virtual Network configuration of the master Azure API Management deployment region.
 
 ```yaml
 Type: PsApiManagementVirtualNetwork
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalRegions
-Specifies additional deployment regions of azure_2 API Management.
+Specifies additional deployment regions of Azure API Management.
 
 ```yaml
 Type: System.Collections.Generic.IList`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion]
@@ -212,7 +212,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -227,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

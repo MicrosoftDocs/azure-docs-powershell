@@ -24,15 +24,15 @@ Get-AzureRmResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre] [<
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmResourceGroupDeployment** cmdlet gets the deployments in an azure_2 resource group.
+The **Get-AzureRmResourceGroupDeployment** cmdlet gets the deployments in an Azure resource group.
 Specify the *Name* or *Id* parameter to filter the results.
 By default, **Get-AzureRmResourceGroupDeployment** gets all deployments for a specified resource group.
 
-An azure_2 resource is a user-managed azure_2 entity, such as a database server, database, or web site.
-An azure_2 resource group is a collection of azure_2 resources that are deployed as a unit.
+An Azure resource is a user-managed Azure entity, such as a database server, database, or web site.
+An Azure resource group is a collection of Azure resources that are deployed as a unit.
 
 A deployment is the operation that makes the resources in the resource group available for use.
-For more information about azure_2 resources and azure_2 resource groups, see the New-AzureRmResourceGroup cmdlet.
+For more information about Azure resources and Azure resource groups, see the New-AzureRmResourceGroup cmdlet.
 
 You can use this cmdlet for tracking.
 For debugging, use this cmdlet with the Get-AzureRmLog cmdlet.

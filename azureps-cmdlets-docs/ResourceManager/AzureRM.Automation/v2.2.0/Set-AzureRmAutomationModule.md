@@ -18,7 +18,7 @@ Set-AzureRmAutomationModule [-Name] <String> [-ContentLinkUri <Uri>] [-ContentLi
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationModule** cmdlet updates a module in azure_2 Automation.
+The **Set-AzureRmAutomationModule** cmdlet updates a module in Azure Automation.
 This command accepts a compressed file that has a .zip file name extension.
 The file contains a folder that includes a file that is one of the following types: 
 

@@ -26,7 +26,7 @@ Start-AzureRmSiteRecoveryPolicyAssociationJob -Policy <ASRPolicy>
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSiteRecoveryPolicyAssociationJob** cmdlet initiates an association job to associate a replication policy with an azure_2 Site Recovery protection container.
+The **Start-AzureRmSiteRecoveryPolicyAssociationJob** cmdlet initiates an association job to associate a replication policy with an Azure Site Recovery protection container.
 
 ## EXAMPLES
 

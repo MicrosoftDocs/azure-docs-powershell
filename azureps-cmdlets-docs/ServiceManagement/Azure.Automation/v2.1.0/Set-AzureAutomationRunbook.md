@@ -62,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogProgress
-@{Text=}
 
 ```yaml
 Type: Boolean
@@ -122,7 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile

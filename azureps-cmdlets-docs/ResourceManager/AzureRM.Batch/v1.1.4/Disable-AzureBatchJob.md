@@ -18,7 +18,7 @@ Disable-AzureBatchJob [-Id] <String> [-DisableJobOption] <DisableJobOption> -Bat
 ```
 
 ## DESCRIPTION
-The **Disable-AzureBatchJob** cmdlet disables an azure_2 Batch job.
+The **Disable-AzureBatchJob** cmdlet disables an Azure Batch job.
 After you enable a job, new tasks can run.
 Disabled jobs do not run new tasks.
 You can enable a disabled job later.

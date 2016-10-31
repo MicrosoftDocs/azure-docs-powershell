@@ -18,7 +18,7 @@ Get-AzureRmAutomationRegistrationInfo [-ResourceGroupName] <String> [-Automation
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationRegistrationInfo** cmdlet gets the endpoint and keys required to onboard a Desired State Configuration (DSC) node or hybrid worker into an azure_2 Automation account.
+The **Get-AzureRmAutomationRegistrationInfo** cmdlet gets the endpoint and keys required to onboard a Desired State Configuration (DSC) node or hybrid worker into an Azure Automation account.
 
 ## EXAMPLES
 

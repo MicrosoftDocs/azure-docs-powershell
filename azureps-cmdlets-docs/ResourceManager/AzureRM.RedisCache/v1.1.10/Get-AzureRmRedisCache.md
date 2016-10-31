@@ -28,7 +28,7 @@ Get-AzureRmRedisCache -ResourceGroupName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmRedisCache** cmdlet gets the specified azure_2 Redis Cache.
+The **Get-AzureRmRedisCache** cmdlet gets the specified Azure Redis Cache.
 If you specify no parameters, this operation gets every Redis Cache for the current subscription.
 
 ## EXAMPLES

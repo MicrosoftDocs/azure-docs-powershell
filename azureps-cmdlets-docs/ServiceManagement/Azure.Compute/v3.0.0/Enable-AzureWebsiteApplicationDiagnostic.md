@@ -155,7 +155,6 @@ Accept wildcard characters: False
 ```
 
 ### -BlobStorage
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -186,7 +185,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageBlobContainerName
-@{Text=}
 
 ```yaml
 Type: String
@@ -201,7 +199,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageTableName
-@{Text=}
 
 ```yaml
 Type: String
@@ -216,7 +213,6 @@ Accept wildcard characters: False
 ```
 
 ### -TableStorage
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

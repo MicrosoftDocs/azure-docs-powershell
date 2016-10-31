@@ -67,7 +67,7 @@ This command changes the storage account credential named ContosoStorage01 to no
 ## PARAMETERS
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

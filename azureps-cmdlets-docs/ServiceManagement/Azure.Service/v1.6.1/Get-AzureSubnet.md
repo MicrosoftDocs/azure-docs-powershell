@@ -8,7 +8,7 @@ ms.assetid: 797D908A-2E2A-4188-9666-96E613A12F51
 # Get-AzureSubnet
 
 ## SYNOPSIS
-Gets a list of subnets associated with the specified azure_2 virtual machine.
+Gets a list of subnets associated with the specified Azure virtual machine.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ C:\PS> Get-AzureSubnet -VM $VM
 
 The first command gets a virtual machine named VirtualMachine01 in the service named ContosoService03, and then stores it in the $VM variable.
 
-The second command gets the azure_2 subnets for the virtual machine in $VM.
+The second command gets the Azure subnets for the virtual machine in $VM.
 
 ## PARAMETERS
 
@@ -66,7 +66,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -81,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

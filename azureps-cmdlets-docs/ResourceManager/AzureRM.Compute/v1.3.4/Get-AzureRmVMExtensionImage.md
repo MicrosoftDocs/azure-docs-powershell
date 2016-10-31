@@ -8,7 +8,7 @@ ms.assetid: 4C206A95-E72A-4B30-84B0-2328287AD73F
 # Get-AzureRmVMExtensionImage
 
 ## SYNOPSIS
-Gets all versions for an azure_2 extension.
+Gets all versions for an Azure extension.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureRmVMExtensionImage -Location <String> -PublisherName <String> -Type <St
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmVMExtensionImage** cmdlet gets all versions for an azure_2 extension.
+The **Get-AzureRmVMExtensionImage** cmdlet gets all versions for an Azure extension.
 
 ## EXAMPLES
 
@@ -110,7 +110,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -125,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

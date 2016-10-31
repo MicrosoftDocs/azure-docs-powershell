@@ -27,7 +27,7 @@ Add-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <Str
 ```
 
 ## DESCRIPTION
-The **AzureRmDataLackAnalyticsDataSource** cmdlet adds a data source to an azure_2 Data Lake Analytics account.
+The **AzureRmDataLackAnalyticsDataSource** cmdlet adds a data source to an Azure Data Lake Analytics account.
 
 ## EXAMPLES
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataLakeStore
-Specifies the name of the azure_2 Data Lake Store account to add.
+Specifies the name of the Azure Data Lake Store account to add.
 
 ```yaml
 Type: String
@@ -101,7 +101,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -116,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -131,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Blob
-Specifies the name of the azure_2 Blob Storage account to add.
+Specifies the name of the Azure Blob Storage account to add.
 
 ```yaml
 Type: String
@@ -146,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessKey
-Specifies the access key of the azure_2 Blob storage account to add.
+Specifies the access key of the Azure Blob storage account to add.
 
 ```yaml
 Type: String

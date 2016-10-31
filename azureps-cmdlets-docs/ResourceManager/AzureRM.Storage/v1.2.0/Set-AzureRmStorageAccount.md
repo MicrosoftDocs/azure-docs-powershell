@@ -21,7 +21,7 @@ Set-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [[-SkuN
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmStorageAccount** cmdlet modifies an azure_2 Storage account.
+The **Set-AzureRmStorageAccount** cmdlet modifies an Azure Storage account.
 You can use this cmdlet to modify the account type, update a customer domain, or set tags on a Storage account.
 
 ## EXAMPLES
@@ -210,7 +210,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -225,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

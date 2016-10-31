@@ -8,7 +8,7 @@ ms.assetid: 0898D244-E2AE-4DDB-8B21-049B166A9C7E
 # Get-AzureRmWebAppSlotPublishingProfile
 
 ## SYNOPSIS
-Gets an azure_2 Web App slot publishing profile.
+Gets an Azure Web App slot publishing profile.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-AzureRmWebAppSlotPublishingProfile [-OutputFile] <String> [[-Format] <String
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmWebAppSlotPublishingProfile** cmdlet gets an azure_2 Web App slot publishing profile.
+The **Get-AzureRmWebAppSlotPublishingProfile** cmdlet gets an Azure Web App slot publishing profile.
 
 ## EXAMPLES
 

@@ -12,15 +12,15 @@ This topic displays help topics for the Azure Tag Cmdlets.
 
 ## AzureRM.Tags Cmdlets
 ### [Get-AzureRmTag](./Get-AzureRmTag.md)
-Gets predefined azure_2 tags.
+Gets predefined Azure tags.
 
 
 ### [New-AzureRmTag](./New-AzureRmTag.md)
-Creates a predefined azure_2 tag or adds values to an existing tag.
+Creates a predefined Azure tag or adds values to an existing tag.
 
 
 ### [Remove-AzureRmTag](./Remove-AzureRmTag.md)
-Deletes predefined azure_2 tags or values.
+Deletes predefined Azure tags or values.
 
 
 

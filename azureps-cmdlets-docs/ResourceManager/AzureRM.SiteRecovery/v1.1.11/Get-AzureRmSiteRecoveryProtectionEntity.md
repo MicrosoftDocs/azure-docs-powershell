@@ -30,7 +30,7 @@ Get-AzureRmSiteRecoveryProtectionEntity -FriendlyName <String> -ProtectionContai
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryProtectionEntity** cmdlet gets a list of protectable or protected entities, such as virtual machines, in the current azure_2 Site Recovery vault.
+The **Get-AzureRmSiteRecoveryProtectionEntity** cmdlet gets a list of protectable or protected entities, such as virtual machines, in the current Azure Site Recovery vault.
 
 ## EXAMPLES
 

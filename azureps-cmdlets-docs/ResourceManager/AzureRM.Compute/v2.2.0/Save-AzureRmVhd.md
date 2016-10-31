@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceUri
-Specifies the Uniform Resource Identifier (URI) of the blob in `azure_2`.
+Specifies the Uniform Resource Identifier (URI) of the blob in `Azure`.
 
 ```yaml
 Type: Uri

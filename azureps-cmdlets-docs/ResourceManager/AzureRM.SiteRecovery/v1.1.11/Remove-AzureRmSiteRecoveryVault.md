@@ -17,7 +17,7 @@ Remove-AzureRmSiteRecoveryVault -Vault <ASRVault> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSiteRecoveryVault** cmdlet deletes an azure_2 Site Recovery vault.
+The **Remove-AzureRmSiteRecoveryVault** cmdlet deletes an Azure Site Recovery vault.
 
 ## EXAMPLES
 

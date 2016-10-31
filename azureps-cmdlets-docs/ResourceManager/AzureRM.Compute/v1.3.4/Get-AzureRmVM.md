@@ -36,7 +36,7 @@ Get-AzureRmVM [-NextLink] <Uri> [-InformationAction <ActionPreference>] [-Inform
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmVM** cmdlet gets the model view and instance view of an azure_2 virtual machine.
+The **Get-AzureRmVM** cmdlet gets the model view and instance view of an Azure virtual machine.
 The model view is the user specified properties of the virtual machine.
 The instance view is the instance level status of the virtual machine.
 Specify the *Status* parameter to get only the instance view of a virtual machine.
@@ -76,7 +76,16 @@ This command gets all the virtual machines in your subscription.
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -91,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

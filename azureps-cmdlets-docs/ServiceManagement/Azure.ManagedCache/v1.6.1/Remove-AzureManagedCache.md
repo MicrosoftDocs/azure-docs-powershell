@@ -8,7 +8,7 @@ ms.assetid: 4A298D14-FF99-44A6-82CF-3E5D789CBE20
 # Remove-AzureManagedCache
 
 ## SYNOPSIS
-Removes an azure_2 Cache.
+Removes an Azure Cache.
 
 ## SYNTAX
 
@@ -17,12 +17,12 @@ Remove-AzureManagedCache [-Name] <String> [-PassThru] [-Force] [-Profile <AzureS
 ```
 
 ## DESCRIPTION
-The **Remove-AzureManagedCache** cmdlet removes an azure_2 Cache and all of the data in the Cache.
+The **Remove-AzureManagedCache** cmdlet removes an Azure Cache and all of the data in the Cache.
 It returns $True if the operation was successful and $False if it failed.
-By default, **Remove-AzureManagedCache** will prompt you for confirmation before it removes the azure_2 Cache, but you can use the *Force* parameter to suppress the prompt.
-An azure_2 Cache is a secure, dedicated cache that provides extremely fast access to data.
+By default, **Remove-AzureManagedCache** will prompt you for confirmation before it removes the Azure Cache, but you can use the *Force* parameter to suppress the prompt.
+An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about azure_2 Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ Performing the operation "Delete" on target "ContosoCache".
 True
 ```
 
-This command removes the azure_2 Cache named ContosoCache.
+This command removes the Azure Cache named ContosoCache.
 The command prompts for confirmation before the cmdlet removes the Cache.
 It returns a value of $True to indicate that the Cache was removed.
 
@@ -47,15 +47,15 @@ It returns a value of $True to indicate that the Cache was removed.
 PS C:\>Get-AzureManagedCache | Where-Object Name -like Test* | Remove-AzureManagedCache -Force
 ```
 
-This command removes all azure_2 Caches that have names that begin with Test.
-It uses the Get-AzureManagedCache cmdlet to get the azure_2 Caches in your account.
-It pipes them to the Where-Object cmdlet, which returns only the azure_2 Caches that have names that begin with Test.
+This command removes all Azure Caches that have names that begin with Test.
+It uses the Get-AzureManagedCache cmdlet to get the Azure Caches in your account.
+It pipes them to the Where-Object cmdlet, which returns only the Azure Caches that have names that begin with Test.
 Then, it pipes the test caches to the **Remove-AzureManagedCache** cmdlet with the *Force* parameter, which removes them without prompting for confirmation.
 
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the azure_2 Cache to remove.
+Specifies the name of the Azure Cache to remove.
 The parameter value is case-sensitive.
 Wildcard characters are not permitted.
 
@@ -128,7 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Boolean
 
 ## NOTES
-* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlet to make your azure_2 account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlet to make your Azure account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
 
 ## RELATED LINKS
 

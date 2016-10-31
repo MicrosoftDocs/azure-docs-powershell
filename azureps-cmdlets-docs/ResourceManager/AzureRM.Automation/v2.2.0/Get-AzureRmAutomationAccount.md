@@ -23,7 +23,7 @@ Get-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [<Co
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationAccount** cmdlet gets azure_2 Automation accounts in a resource group.
+The **Get-AzureRmAutomationAccount** cmdlet gets Azure Automation accounts in a resource group.
 
 For more information about Automation accounts, see the New-AzureRmAutomationAccount cmdlet.
 

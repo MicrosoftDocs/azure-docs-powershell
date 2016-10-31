@@ -17,9 +17,9 @@ Get-AzureRmContext [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmContext** cmdlet gets the current metadata used to authenticate azure_2 Resource Manager requests.
+The **Get-AzureRmContext** cmdlet gets the current metadata used to authenticate Azure Resource Manager requests.
 
-This cmdlet gets the Active Directory account, Active Directory tenant, azure_2 subscription, and the targeted azure_2 environment.
+This cmdlet gets the Active Directory account, Active Directory tenant, Azure subscription, and the targeted Azure environment.
 By default, Resource Manager cmdlets use these settings when it makes Resource Manager requests.
 
 ## EXAMPLES

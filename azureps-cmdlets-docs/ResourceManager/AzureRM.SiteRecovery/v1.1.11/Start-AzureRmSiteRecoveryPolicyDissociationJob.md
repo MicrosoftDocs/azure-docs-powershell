@@ -26,7 +26,7 @@ Start-AzureRmSiteRecoveryPolicyDissociationJob -Policy <ASRPolicy>
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSiteRecoveryPolicyDissociationJob** cmdlet initiates a dissociation job on the replication policy associated with an azure_2 Site Recovery protection container.
+The **Start-AzureRmSiteRecoveryPolicyDissociationJob** cmdlet initiates a dissociation job on the replication policy associated with an Azure Site Recovery protection container.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ The **Start-AzureRmSiteRecoveryPolicyDissociationJob** cmdlet initiates a dissoc
 ## PARAMETERS
 
 ### -Policy
-Specifies an azure_2 Site Recovery policy object.
+Specifies an Azure Site Recovery policy object.
 
 ```yaml
 Type: ASRPolicy

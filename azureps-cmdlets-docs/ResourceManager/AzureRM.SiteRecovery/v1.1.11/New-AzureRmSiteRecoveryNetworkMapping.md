@@ -25,7 +25,7 @@ New-AzureRmSiteRecoveryNetworkMapping -PrimaryNetwork <ASRNetwork> -RecoveryNetw
 ```
 
 ## DESCRIPTION
-The **New-AzureRMSiteRecoveryNetworkMapping** cmdlet creates a mapping between two virtual networks and returns an azure_2 Site Recovery job to track it.
+The **New-AzureRMSiteRecoveryNetworkMapping** cmdlet creates a mapping between two virtual networks and returns an Azure Site Recovery job to track it.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ The **New-AzureRMSiteRecoveryNetworkMapping** cmdlet creates a mapping between t
 ## PARAMETERS
 
 ### -AzureVMNetworkId
-Specifies the azure_2 virtual network ID.
+Specifies the Azure virtual network ID.
 
 ```yaml
 Type: String

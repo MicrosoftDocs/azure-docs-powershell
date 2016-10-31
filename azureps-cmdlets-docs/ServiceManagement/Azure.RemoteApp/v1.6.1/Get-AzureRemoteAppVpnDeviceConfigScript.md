@@ -8,7 +8,7 @@ ms.assetid: 24893A50-F2FD-4B6A-81CC-B387B21105CD
 # Get-AzureRemoteAppVpnDeviceConfigScript
 
 ## SYNOPSIS
-Retrieves the configuration script for an azure_2 RemoteApp VPN device.
+Retrieves the configuration script for an Azure RemoteApp VPN device.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRemoteAppVpnDeviceConfigScript [-VNetName] <String> [-Vendor] <String> 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppVpnDeviceConfigScript** cmdlet retrieves the configuration script for an azure_2 RemoteApp virtual private network (VPN) device.
+The **Get-AzureRemoteAppVpnDeviceConfigScript** cmdlet retrieves the configuration script for an Azure RemoteApp virtual private network (VPN) device.
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -VNetName
-Specifies the name of an azure_2 RemoteApp virtual network.
+Specifies the name of an Azure RemoteApp virtual network.
 
 ```yaml
 Type: String

@@ -25,7 +25,7 @@ Stop-AzureRmRecoveryServicesBackupJob [-JobId] <String> [-InformationAction <Act
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmRecoveryServicesBackupJob** cmdlet cancels an existing azure_2 Backup job.
+The **Stop-AzureRmRecoveryServicesBackupJob** cmdlet cancels an existing Azure Backup job.
 Use this cmdlet to stop a job that takes too long and blocks other activities.
 
 You can cancel only Backup and Restore job types.
@@ -47,7 +47,16 @@ The last command stops the job by specifying the Instance ID of the backup job i
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -62,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

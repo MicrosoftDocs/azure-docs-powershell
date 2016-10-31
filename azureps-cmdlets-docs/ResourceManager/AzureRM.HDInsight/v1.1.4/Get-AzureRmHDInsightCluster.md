@@ -8,7 +8,7 @@ ms.assetid: BFC55A8F-C0EE-4FA3-A39E-45AEF4A582EE
 # Get-AzureRmHDInsightCluster
 
 ## SYNOPSIS
-Gets and lists all of the azure_2 HDInsight clusters associated with the current subscription or a specified resource group, or retrieves a specific cluster.
+Gets and lists all of the Azure HDInsight clusters associated with the current subscription or a specified resource group, or retrieves a specific cluster.
 
 ## SYNTAX
 
@@ -18,17 +18,17 @@ Get-AzureRmHDInsightCluster [[-ResourceGroupName] <String>] [[-ClusterName] <Str
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmHDInsightCluster** cmdlet lists the azure_2 HDInsight service clusters for the current subscription.
+The **Get-AzureRmHDInsightCluster** cmdlet lists the Azure HDInsight service clusters for the current subscription.
 Use the *ClusterName* parameter to get details for a specific cluster.
 
 ## EXAMPLES
 
-### Example 1: List all azure_2 HDInsight clusters
+### Example 1: List all Azure HDInsight clusters
 ```
 PS C:\>Get-AzureRmHDInsightCluster
 ```
 
-This command lists all the azure_2 HDInsight clusters.
+This command lists all the Azure HDInsight clusters.
 
 ## PARAMETERS
 
@@ -63,7 +63,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -78,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

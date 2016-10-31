@@ -8,7 +8,7 @@ ms.assetid: 6E190D23-9704-4BDF-8595-7F5946EB3D72
 # Get-AzureStorageAccount
 
 ## SYNOPSIS
-Gets the storage accounts for the current azure_2 subscription.
+Gets the storage accounts for the current Azure subscription.
 
 ## SYNTAX
 
@@ -78,7 +78,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -93,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

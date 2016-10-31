@@ -25,7 +25,7 @@ Disable-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEnd
 ```
 
 ## DESCRIPTION
-The **Disable-AzureRmTrafficManagerEndpoint** cmdlet disables an endpoint in an azure_2 Traffic Manager profile.
+The **Disable-AzureRmTrafficManagerEndpoint** cmdlet disables an endpoint in an Azure Traffic Manager profile.
 
 You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet, or you can pass a **TrafficManagerEndpoint** object using the *TrafficManagerEndpoint* parameter.
 
@@ -55,7 +55,7 @@ Therefore, it does not prompt you for confirmation.
 ## PARAMETERS
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -169,7 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

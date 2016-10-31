@@ -27,7 +27,7 @@ For information about how to use the new HDInsight to create a cluster, see Crea
 For information about how to submit jobs by using APS and other approaches, see Submit Hadoop jobs in HDInsighthttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/.
 For reference information about APS HDInsight, see Azure HDInsight Cmdletshttps://msdn.microsoft.com/en-us/library/mt438705.aspx.
 
-The **Add-AzureHDInsightScriptAction** cmdlet provides azure_2 HDInsight functionality that is used to install additional software or to change the configuration of applications that run on a Hadoop cluster by using mshfull scripts.
+The **Add-AzureHDInsightScriptAction** cmdlet provides Azure HDInsight functionality that is used to install additional software or to change the configuration of applications that run on a Hadoop cluster by using mshfull scripts.
 
 A script action runs on the cluster nodes when HDInsight clusters are deployed, and they run after nodes in the cluster complete HDInsight configuration.
 The script action runs under system administrator account privileges and provides full access rights to the cluster nodes.

@@ -17,7 +17,7 @@ Remove-AzureRmSiteRecoveryNetworkMapping -NetworkMapping <ASRNetworkMapping> [<C
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRMSiteRecoveryNetworkMapping** cmdlet removes a network mapping from the current azure_2 Site Recovery vault.
+The **Remove-AzureRMSiteRecoveryNetworkMapping** cmdlet removes a network mapping from the current Azure Site Recovery vault.
 
 ## EXAMPLES
 

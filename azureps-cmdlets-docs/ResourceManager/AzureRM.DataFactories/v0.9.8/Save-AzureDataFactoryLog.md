@@ -65,7 +65,6 @@ Note that -DownloadLogs parameter is not specified.
 ## PARAMETERS
 
 ### -DataFactory
-@{Text=}
 
 ```yaml
 Type: PSDataFactory
@@ -159,7 +158,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureProfile

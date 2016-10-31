@@ -27,7 +27,7 @@ Start-AzureRmSiteRecoveryPlannedFailoverJob -RecoveryPlan <ASRRecoveryPlan> -Dir
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSiteRecoveryPlannedFailoverJob** cmdlet starts a planned failover for an azure_2 Site Recovery protection entity or recovery plan.
+The **Start-AzureRmSiteRecoveryPlannedFailoverJob** cmdlet starts a planned failover for an Azure Site Recovery protection entity or recovery plan.
 You can check whether the job succeeds by using the Get-AzureRmSiteRecoveryJob cmdlet.
 
 ## EXAMPLES
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 
 ### -Optimize
 Specifies what to optimize for.
-This parameter applies when failover is done from an azure_2 site to an on-premise site which requires a substantial data synchronization.
+This parameter applies when failover is done from an Azure site to an on-premise site which requires a substantial data synchronization.
 Valid values are: 
 
 - ForDowntime
@@ -166,7 +166,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-@{Text=}
 
 ```yaml
 Type: ASRServer

@@ -18,7 +18,7 @@ Set-AzureRmBackupVault [[-Storage] <AzureBackupVaultStorageType>] [-Vault] <Azur
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmBackupVault** cmdlet changes the storage type of an azure_2 Backup vault.
+The **Set-AzureRmBackupVault** cmdlet changes the storage type of an Azure Backup vault.
 You cannot modify other properties of a vault.
 
 ## EXAMPLES
@@ -28,7 +28,7 @@ You cannot modify other properties of a vault.
 PS C:\>Get-AzureRmBackupVault -Name "Vault03" | Set-AzureRmBackupVault -Storage LocallyRedundant
 ```
 
-This command gets the azure_2 Backup vault named Vault03 by using the **Get-AzureRmBackupVault** cmdlet.
+This command gets the Azure Backup vault named Vault03 by using the **Get-AzureRmBackupVault** cmdlet.
 The command passes that vault to the current cmdlet by using the pipeline operator.
 The current cmdlet changes the storage type to LocallyRedundant.
 

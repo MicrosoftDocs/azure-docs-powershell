@@ -8,7 +8,7 @@ ms.assetid: 60B81A48-15F4-4A1D-BD35-EF3D7C53CC9C
 # Remove-AzureRmWebAppSlot
 
 ## SYNOPSIS
-Removes an azure_2 Web App slot.
+Removes an Azure Web App slot.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Remove-AzureRmWebAppSlot [-Force] [-WebApp] <Site> [-WhatIf] [-Confirm] [<Common
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmWebAppSlot** cmdlet removes an azure_2 Web App slot.
+The **Remove-AzureRmWebAppSlot** cmdlet removes an Azure Web App slot.
 
 ## EXAMPLES
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -128,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

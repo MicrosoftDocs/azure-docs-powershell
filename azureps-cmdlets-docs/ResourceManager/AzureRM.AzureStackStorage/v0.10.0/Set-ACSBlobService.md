@@ -117,7 +117,6 @@ Accept wildcard characters: False
 ```
 
 ### -BlobSvcStreamMapMinContainerOccupancyPercent
-@{Text=}
 
 ```yaml
 Type: Int32

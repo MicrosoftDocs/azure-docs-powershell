@@ -8,7 +8,7 @@ ms.assetid: 8369024F-4F2C-4153-B4B9-019EAFC05B4C
 # Remove-AzureRemoteAppUser
 
 ## SYNOPSIS
-Removes a user from an azure_2 RemoteApp collection.
+Removes a user from an Azure RemoteApp collection.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRemoteAppUser [-CollectionName] <String> [-Type] <PrincipalProviderT
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRemoteAppUser** cmdlet removes a user from an azure_2 RemoteApp collection.
+The **Remove-AzureRemoteAppUser** cmdlet removes a user from an Azure RemoteApp collection.
 
 ## EXAMPLES
 
@@ -27,12 +27,12 @@ The **Remove-AzureRemoteAppUser** cmdlet removes a user from an azure_2 RemoteAp
 PS C:\>Remove-AzureRemoteAppUser -CollectionName "Contoso" -Type OrgId -UserUpn "PattiFuller@contoso.com"
 ```
 
-This command removes the azure_2 ActiveDirectory user PattiFuller@contoso.com from the Contoso collection.
+This command removes the Azure ActiveDirectory user PattiFuller@contoso.com from the Contoso collection.
 
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

@@ -49,7 +49,7 @@ New-AzureRmBackupRetentionPolicyObject [-YearlyRetentionInWeeklyFormat] -DaysOfW
 ```
 
 ## DESCRIPTION
-The **New-AzureRmBackupRetentionPolicyObject** cmdlet creates an azure_2 Backup retention policy.
+The **New-AzureRmBackupRetentionPolicyObject** cmdlet creates an Azure Backup retention policy.
 A retention policy defines how long Backup keeps a recovery point.
 The types of retention are the following: 
 

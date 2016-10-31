@@ -24,11 +24,11 @@ Get-AzureRmResourceGroup [-Location <String>] [-Id <String>] [-ApiVersion <Strin
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmResourceGroup** cmdlet gets azure_2 resource groups in the current subscription.
+The **Get-AzureRmResourceGroup** cmdlet gets Azure resource groups in the current subscription.
 You can get all resource groups, or specify a resource group by name or by other properties.
 By default, this cmdlet gets all resource groups in the current subscription.
 
-For more information about azure_2 resources and azure_2 resource groups, see the New-AzureRmResourceGroup cmdlet.
+For more information about Azure resources and Azure resource groups, see the New-AzureRmResourceGroup cmdlet.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ For more information about azure_2 resources and azure_2 resource groups, see th
 PS C:\>Get-AzureRmResourceGroup -Name "EngineerBlog"
 ```
 
-This command gets the azure_2 resource group in your subscription named EngineerBlog.
+This command gets the Azure resource group in your subscription named EngineerBlog.
 
 ### Example 2: Get all tags of a resource group
 ```

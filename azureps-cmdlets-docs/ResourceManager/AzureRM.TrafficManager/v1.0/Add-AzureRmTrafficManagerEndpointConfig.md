@@ -19,7 +19,7 @@ Add-AzureRmTrafficManagerEndpointConfig -EndpointName <String> -TrafficManagerPr
 ```
 
 ## DESCRIPTION
-The **Add-AzureRmTrafficManagerEndpointConfig** cmdlet adds an endpoint to a local azure_2 Traffic Manager profile object.
+The **Add-AzureRmTrafficManagerEndpointConfig** cmdlet adds an endpoint to a local Azure Traffic Manager profile object.
 You can get a profile by using the New-AzureRmTrafficManagerProfile or Get-AzureRmTrafficManagerProfile cmdlets.
 
 This cmdlet operates on the local profile object.
@@ -35,14 +35,14 @@ PS C:\> Add-AzureRmTrafficManagerEndpointConfig -EndpointName "contoso" -Endpoin
 PS C:\> Set-AzureRmTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
 ```
 
-The first command gets an azure_2 Traffic Manager profile by using the **Get-AzureRmTrafficManagerProfile** cmdlet.
+The first command gets an Azure Traffic Manager profile by using the **Get-AzureRmTrafficManagerProfile** cmdlet.
 The command stores the local profile in the $TrafficManagerProfile variable.
 
 The second command adds an endpoint named contoso to the profile stored in $TrafficManagerProfile.
 The command includes configuration data for the endpoint.
 This command changes only the local object.
 
-The final command updates the Traffic Manager profile in azure_2 to match the local value in $TrafficManagerProfile.
+The final command updates the Traffic Manager profile in Azure to match the local value in $TrafficManagerProfile.
 
 ## PARAMETERS
 
@@ -51,8 +51,8 @@ Specifies the location of the endpoint to use in the Performance traffic-routing
 This parameter is only applicable to endpoints of the ExternalEndpoints or the NestedEndpoints type.
 You must specify this parameter when the Performance traffic-routing method is used.
 
-Specify an azure_2 region name.
-For a full list of azure_2 regions, see Azure Regionshttp://azure.microsoft.com/regions/ (http://azure.microsoft.com/regions/).
+Specify an Azure region name.
+For a full list of Azure regions, see Azure Regionshttp://azure.microsoft.com/regions/ (http://azure.microsoft.com/regions/).
 
 ```yaml
 Type: String
@@ -199,8 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -MinChildEndpoints
-Specify an azure_2 region name.
-For a full list of azure_2 regions, see Azure Regionshttp://azure.microsoft.com/regions/ (http://azure.microsoft.com/regions/).
+Specify an Azure region name.
+For a full list of Azure regions, see Azure Regionshttp://azure.microsoft.com/regions/ (http://azure.microsoft.com/regions/).
 
 ```yaml
 Type: UInt32

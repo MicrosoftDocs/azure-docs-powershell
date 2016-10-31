@@ -63,7 +63,6 @@ This command uses the **SubscriptionDataFile** parameter to direct **Add-AzureAc
 ## PARAMETERS
 
 ### -Environment
-@{Text=}
 
 ```yaml
 Type: String
@@ -78,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-@{Text=}
 
 ```yaml
 Type: PSCredential
@@ -105,7 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile
@@ -120,7 +117,6 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipal
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -135,7 +131,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-@{Text=}
 
 ```yaml
 Type: String

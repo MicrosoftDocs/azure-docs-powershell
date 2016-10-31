@@ -18,7 +18,7 @@ Export-AzureRmAutomationDscConfiguration -Name <String> [-Slot <String>] [-Outpu
 ```
 
 ## DESCRIPTION
-The **Export-AzureRmAutomationDscConfiguration** cmdlet exports an APS Desired State Configuration (DSC) configuration from azure_2 Automation to a local file.
+The **Export-AzureRmAutomationDscConfiguration** cmdlet exports an APS Desired State Configuration (DSC) configuration from Azure Automation to a local file.
 The exported file has a .ps1 file name extension.
 
 ## EXAMPLES
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

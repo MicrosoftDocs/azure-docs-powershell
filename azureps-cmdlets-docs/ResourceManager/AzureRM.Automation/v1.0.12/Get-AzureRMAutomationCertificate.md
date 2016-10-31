@@ -25,7 +25,7 @@ Get-AzureRmAutomationCertificate [-Name] <String> [-ResourceGroupName] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationCertificate** cmdlet gets one or more azure_2 Automation certificates.
+The **Get-AzureRmAutomationCertificate** cmdlet gets one or more Azure Automation certificates.
 By default, this cmdlet gets all certificates.
 Specify the name of a certificate to get a specific certificate.
 

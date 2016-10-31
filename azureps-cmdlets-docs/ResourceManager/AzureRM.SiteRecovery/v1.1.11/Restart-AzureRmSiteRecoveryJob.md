@@ -8,7 +8,7 @@ ms.assetid: 6F52A501-E5A0-4F8D-8B2D-29CE303C7F98
 # Restart-AzureRmSiteRecoveryJob
 
 ## SYNOPSIS
-Restarts an azure_2 Site Recovery job.
+Restarts an Azure Site Recovery job.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Restart-AzureRmSiteRecoveryJob -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Restart-AzureRmSiteRecoveryJob** cmdlet restarts an azure_2 Site Recovery job.
+The **Restart-AzureRmSiteRecoveryJob** cmdlet restarts an Azure Site Recovery job.
 
 ## EXAMPLES
 

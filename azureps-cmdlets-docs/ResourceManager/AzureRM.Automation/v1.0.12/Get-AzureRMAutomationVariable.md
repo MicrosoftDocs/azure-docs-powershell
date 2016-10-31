@@ -25,7 +25,7 @@ Get-AzureRmAutomationVariable [-Name] <String> [-ResourceGroupName] <String> [-A
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationVariable** cmdlet gets one or more azure_2 Automation variables.
+The **Get-AzureRmAutomationVariable** cmdlet gets one or more Azure Automation variables.
 To get a specific variable, specify its name.
 
 ## EXAMPLES

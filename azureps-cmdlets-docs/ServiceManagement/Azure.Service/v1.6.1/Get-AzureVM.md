@@ -8,7 +8,7 @@ ms.assetid: 7F8A5FBB-7F93-40F7-A5D7-8E19FD65B65E
 # Get-AzureVM
 
 ## SYNOPSIS
-Retrieves information from one or more azure_2 virtual machines.
+Retrieves information from one or more Azure virtual machines.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-AzureVM [-ServiceName] <String> [[-Name] <String>] [-Profile <AzureSMProfile
 ```
 
 ## DESCRIPTION
-The **Get-AzureVM** cmdlet retrieves information about virtual machines running in azure_2.
+The **Get-AzureVM** cmdlet retrieves information about virtual machines running in Azure.
 It returns an object with information on a specific virtual machine, or if no virtual machine is specified, for all the virtual machines in the specified service of the current subscription.
 
 ## EXAMPLES
@@ -69,7 +69,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -84,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -26,7 +26,7 @@ Typical reasons to use this cmdlet are:
 
 - You want to escrow a copy of your key, so that you have an offline copy in case you accidentally delete your key in your key vault.
  
-- You created a key using Key Vault and now want to clone the key into a different azure_2 region, so that you can use it from all instances of your distributed application.
+- You created a key using Key Vault and now want to clone the key into a different Azure region, so that you can use it from all instances of your distributed application.
 Use the **Backup-AzureKeyVaultKey** cmdlet to retrieve the key in encrypted format and then use the Restore-AzureKeyVaultKey cmdlet and specify a key vault in the second region.
 
 ## EXAMPLES

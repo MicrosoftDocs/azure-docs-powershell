@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDiskEncryption
-Enables the azure_2 disk encryption service to get secrets and unwrap keys from this key vault.
+Enables the Azure disk encryption service to get secrets and unwrap keys from this key vault.
 
 ```yaml
 Type: SwitchParameter
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForTemplateDeployment
-Enables azure_2 Resource Manager to get secrets from this key vault when this key vault is referenced in a template deployment.
+Enables Azure Resource Manager to get secrets from this key vault when this key vault is referenced in a template deployment.
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the azure_2 region in which to create the key vault.
+Specifies the Azure region in which to create the key vault.
 Use the command Get-AzureLocationhttps://msdn.microsoft.com/ library/azure/mt589064.aspx to see your choices.
 For more information, type `Get-Help Get-AzureLocation`.
 

@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Redeploy
-Indicates that this cmdlet manually redeploys the virtual machine to a different azure_2 host to fix any problems.
+Indicates that this cmdlet manually redeploys the virtual machine to a different Azure host to fix any problems.
 
 If you redeploy a virtual machine, it restarts, which results in the loss of ephemeral drive data.
 
@@ -102,7 +102,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -117,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

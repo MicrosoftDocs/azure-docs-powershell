@@ -98,7 +98,6 @@ Accept wildcard characters: False
 ```
 
 ### -RouteTable
-@{Text=}
 
 ```yaml
 Type: PSRouteTable
@@ -128,7 +127,6 @@ Accept wildcard characters: False
 ```
 
 ### -RouteTableId
-@{Text=}
 
 ```yaml
 Type: String

@@ -32,7 +32,7 @@ Get-AzureRmAutomationWebhook -RunbookName <String> [-ResourceGroupName] <String>
 
 ## DESCRIPTION
 The **Get-AzureRmAutomationWebhook** cmdlet gets webhooks.
-To get specific webhooks, specify a webhook name or specify the name of an azure_2 Automation runbook to get the webhooks connected to it.
+To get specific webhooks, specify a webhook name or specify the name of an Azure Automation runbook to get the webhooks connected to it.
 
 ## EXAMPLES
 

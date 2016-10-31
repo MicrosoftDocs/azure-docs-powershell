@@ -33,7 +33,7 @@ PS C:\> $ResourceGroup = "RG005"
 PS C:\> Disable-ACSNode -SubscriptionId $SubscriptId -Token $Token -AdminUri $AdminUri -SkipCertificateValidation -ResourceGroupName $ResourceGroup -NodeName "Node001"
 ```
 
-This command disables the azure_2 Consistent Storage (ACS) node named Node001 from a service fabric cluster.
+This command disables the Azure Consistent Storage (ACS) node named Node001 from a service fabric cluster.
 
 ## PARAMETERS
 
@@ -144,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -159,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

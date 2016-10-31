@@ -8,7 +8,7 @@ ms.assetid: 48B9D59D-FF51-4F70-9A29-FD017A9A8383
 # Get-AzureVirtualNetworkGatewayKey
 
 ## SYNOPSIS
-Gets the key for an azure_2 virtual network gateway.
+Gets the key for an Azure virtual network gateway.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureVirtualNetworkGatewayKey [-GatewayId] <String> [-ConnectedEntityId] <St
 ```
 
 ## DESCRIPTION
-The **Get-AzureVirtualNetworkGatewayKey** cmdlet gets the key for an azure_2 virtual network gateway.
+The **Get-AzureVirtualNetworkGatewayKey** cmdlet gets the key for an Azure virtual network gateway.
 
 ## EXAMPLES
 
