@@ -111,7 +111,7 @@ The command gets the Azure Storage container for the local developer storage acc
 
 ### Example 6: Get multiple containers
 ```
-C:\PS>$Context01 = New-AzureStorageContext -Local 
+C:\PS>$Context01 = New-AzureStorageContext -Local
 PS C:\> $Context02 = New-AzureStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral ends with == >"
 PS C:\> ($Context01, $Context02) | Get-AzureStorageContainer
 ```
@@ -161,7 +161,7 @@ This cmdlet creates a context for the account that this parameter specifies.
 ```yaml
 Type: String
 Parameter Sets: AccountNameAndKey, SasToken, SasTokenWithAzureEnvironment, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -177,7 +177,7 @@ This cmdlet creates a context for the key that this parameter specifies.
 ```yaml
 Type: String
 Parameter Sets: AccountNameAndKey, AccountNameAndKeyEnvironment
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -198,7 +198,7 @@ The default value is HttpsOrHttp.
 ```yaml
 Type: String
 Parameter Sets: AccountNameAndKey, SasToken, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ Specifies the endpoint for the Azure Storage context.
 ```yaml
 Type: String
 Parameter Sets: AccountNameAndKey, SasToken, AnonymousAccount
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -223,7 +223,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -238,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -258,7 +265,7 @@ Specifies a Shared Access Signature (SAS) token for the context.
 ```yaml
 Type: String
 Parameter Sets: SasToken, SasTokenWithAzureEnvironment
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -302,7 +309,7 @@ Indicates that this cmdlet creates an Azure Storage context for anonymous logon.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AnonymousAccount, AnonymousAccountEnvironment
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -317,7 +324,7 @@ Specifies a connection string for the Azure Storage context.
 ```yaml
 Type: String
 Parameter Sets: ConnectionString
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -332,7 +339,7 @@ Indicates that this cmdlet creates a context by using the local development stor
 ```yaml
 Type: SwitchParameter
 Parameter Sets: LocalDevelopment
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -372,5 +379,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageBlob](./Get-AzureStorageBlob.md)
 
 [New-AzureStorageContainerSASToken](./New-AzureStorageContainerSASToken.md)
-
-

@@ -93,7 +93,7 @@ If a value is specified for this parameter, the cmdlet lists all blobs with name
 ```yaml
 Type: String
 Parameter Sets: BlobName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -123,7 +123,7 @@ Specifies the maximum number of objects that this cmdlet returns.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ Use this parameter and the *MaxCount* parameter to list blobs in multiple batche
 ```yaml
 Type: BlobContinuationToken
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ You can use the New-AzureStorageContext cmdlet to create a storage context.
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ If the specified interval elapses before the service processes the request, the 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ If this cmdlet does not receive a successful response before the interval elapse
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +207,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +217,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -232,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -255,7 +262,7 @@ However, if you specify "-Prefix My", the cmdlet returns "My", "MyBlob1", and "M
 ```yaml
 Type: String
 Parameter Sets: BlobPrefix
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,5 +305,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureStorageBlob](./Remove-AzureStorageBlob.md)
 
 [Set-AzureStorageBlobContent](./Set-AzureStorageBlobContent.md)
-
-
