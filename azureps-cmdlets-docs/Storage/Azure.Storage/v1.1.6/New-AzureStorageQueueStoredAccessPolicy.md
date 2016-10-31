@@ -8,7 +8,7 @@ ms.assetid: 64A4E0C7-905E-406B-AFB7-1723AFCEE9E8
 # New-AzureStorageQueueStoredAccessPolicy
 
 ## SYNOPSIS
-Creates a stored access policy for an azure_2 storage queue.
+Creates a stored access policy for an Azure storage queue.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzureStorageQueueStoredAccessPolicy [-Queue] <String> [-Policy] <String> [-P
 ```
 
 ## DESCRIPTION
-The **New-AzureStorageQueueStoredAccessPolicy** cmdlet creates a stored access policy for an azure_2 storage queue.
+The **New-AzureStorageQueueStoredAccessPolicy** cmdlet creates a stored access policy for an Azure storage queue.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ This command creates an access policy named Policy01 in the storage queue named 
 ## PARAMETERS
 
 ### -Queue
-Specifies the azure_2 storage queue name.
+Specifies the Azure storage queue name.
 
 ```yaml
 Type: String
@@ -54,7 +54,7 @@ Specifies a stored access policy, which includes the permissions for this SAS to
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -69,7 +69,7 @@ Specifies the level of public access to this storage queue.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Specifies the time at which the stored access policy becomes valid.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Specifies the time at which the stored access policy becomes invalid.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,13 +109,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +125,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -140,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -187,5 +194,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureStorageQueueStoredAccessPolicy](./Remove-AzureStorageQueueStoredAccessPolicy.md)
 
 [Set-AzureStorageQueueStoredAccessPolicy](./Set-AzureStorageQueueStoredAccessPolicy.md)
-
-

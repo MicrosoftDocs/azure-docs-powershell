@@ -8,7 +8,7 @@ ms.assetid: E9ED3EDB-61EB-4547-8228-968601CFBEE5
 # Remove-AzureStorageTableStoredAccessPolicy
 
 ## SYNOPSIS
-Removes a stored access policy from an azure_2 storage table.
+Removes a stored access policy from an Azure storage table.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-AzureStorageTableStoredAccessPolicy [-Table] <String> [-Policy] <String> 
 ```
 
 ## DESCRIPTION
-The **Remove-AzureStorageTableStoredAccessPolicy** cmdlet removes a stored access policy from an azure_2 storage table.
+The **Remove-AzureStorageTableStoredAccessPolicy** cmdlet removes a stored access policy from an Azure storage table.
 
 ## EXAMPLES
 
@@ -33,7 +33,7 @@ This command removes policy named Policy05 from storage table named MyTable.
 ## PARAMETERS
 
 ### -Table
-Specifies the azure_2 table name.
+Specifies the Azure table name.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Specifies the stored access policy, which includes the permissions for this SAS 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -68,7 +68,7 @@ ps_force
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ By default, this cmdlet does not return a value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,13 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +110,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -125,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -140,7 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -155,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -202,5 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureStorageTableStoredAccessPolicy](./New-AzureStorageTableStoredAccessPolicy.md)
 
 [Set-AzureStorageTableStoredAccessPolicy](./Set-AzureStorageTableStoredAccessPolicy.md)
-
-

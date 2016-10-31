@@ -8,7 +8,7 @@ ms.assetid: A1536004-87A3-48A2-AD18-BF3FE95908C9
 # Get-AzureStorageTableStoredAccessPolicy
 
 ## SYNOPSIS
-Gets the stored access policy or policies for an azure_2 storage table.
+Gets the stored access policy or policies for an Azure storage table.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureStorageTableStoredAccessPolicy [-Table] <String> [[-Policy] <String>] [
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorageTableStoredAccessPolicy** cmdlet lists the stored access policy or policies for an azure_2 storage table.
+The **Get-AzureStorageTableStoredAccessPolicy** cmdlet lists the stored access policy or policies for an Azure storage table.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ This command gets all access policies in the table named Table02.
 ## PARAMETERS
 
 ### -Table
-Specifies the azure_2 storage table name.
+Specifies the Azure storage table name.
 
 ```yaml
 Type: String
@@ -60,7 +60,7 @@ Specifies a stored access policy, which includes the permissions for this Shared
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -70,13 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies the azure_2 storage context.
+Specifies the Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -101,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -148,5 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureStorageTableStoredAccessPolicy](./Set-AzureStorageTableStoredAccessPolicy.md)
 
 [New-AzureStorageContext](./New-AzureStorageContext.md)
-
-

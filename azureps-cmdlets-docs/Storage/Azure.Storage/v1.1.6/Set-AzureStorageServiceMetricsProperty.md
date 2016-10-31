@@ -8,7 +8,7 @@ ms.assetid: AE9762AA-8104-4BB4-A3E5-EC3B3CE748A5
 # Set-AzureStorageServiceMetricsProperty
 
 ## SYNOPSIS
-Modifies metrics properties for the azure_2 Storage service.
+Modifies metrics properties for the Azure Storage service.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Set-AzureStorageServiceMetricsProperty [-ServiceType] <StorageServiceType> [-Met
 ```
 
 ## DESCRIPTION
-The **Set-AzureStorageServiceMetricsProperty** cmdlet modifies metrics properties for the azure_2 Storage service.
+The **Set-AzureStorageServiceMetricsProperty** cmdlet modifies metrics properties for the Azure Storage service.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ C:\PS>Set-AzureStorageServiceMetricsProperty -ServiceType Blob -MetricsType Hour
 ```
 
 This command modifies version 1.0 metrics for blob storage to a level of Service.
-azure_2 Storage service metrics retains entries for 10 days.
+Azure Storage service metrics retains entries for 10 days.
 Because this command specifies the *PassThru* parameter, the command displays the modified metrics properties.
 
 ## PARAMETERS
@@ -40,7 +40,7 @@ Specifies the storage service type.
 This cmdlet modifies the metrics properties for the service type that this parameter specifies.
 psdx_paramvalues
 
-- Blob 
+- Blob
 - Table
 - Queue
 - File
@@ -50,7 +50,7 @@ The value of File is not currently supported.
 ```yaml
 Type: StorageServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -61,13 +61,13 @@ Accept wildcard characters: False
 
 ### -MetricsType
 Specifies a metrics type.
-This cmldet sets the azure_2 Storage service metrics type to the value that this parameter specifies.
+This cmldet sets the Azure Storage service metrics type to the value that this parameter specifies.
 psdx_paramvalues Hour and Minute.
 
 ```yaml
 Type: ServiceMetricsType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -77,13 +77,13 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Specifies the version of the azure_2 Storage metrics.
+Specifies the version of the Azure Storage metrics.
 The default value is 1.0.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionDays
-Specifies the number of days that the azure_2 Storage service retains metrics information.
+Specifies the number of days that the Azure Storage service retains metrics information.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetricsLevel
-Specifies the metrics level that azure_2 Storage uses for the service.
+Specifies the metrics level that Azure Storage uses for the service.
 psdx_paramvalues
 
 - None
@@ -118,7 +118,7 @@ psdx_paramvalues
 ```yaml
 Type: MetricsLevel
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ If you do not specify this parameter, this cmdlet does not return a value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,13 +144,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +160,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -175,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -218,5 +225,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageServiceMetricsProperty](./Get-AzureStorageServiceMetricsProperty.md)
 
 [New-AzureStorageContext](./New-AzureStorageContext.md)
-
-

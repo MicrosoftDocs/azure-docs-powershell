@@ -8,7 +8,7 @@ ms.assetid: ABEE1CAB-F04A-400E-8FB1-CAED1EE02EE7
 # New-AzureStorageTableSASToken
 
 ## SYNOPSIS
-Generates an SAS token for an azure_2 Storage table.
+Generates an SAS token for an Azure Storage table.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ New-AzureStorageTableSASToken [-Name] <String> [-Permission <String>] [-Protocol
 ```
 
 ## DESCRIPTION
-The **New-AzureStorageTableSASToken** cmdlet generates a Shared Access Signature (SAS) token for an azure_2 Storage table.
+The **New-AzureStorageTableSASToken** cmdlet generates a Shared Access Signature (SAS) token for an Azure Storage table.
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ The command specifies the stored access policy named ClientPolicy01.
 ## PARAMETERS
 
 ### -Name
-Specifies the name of an azure_2 Storage table.
+Specifies the name of an Azure Storage table.
 This cmdlet creates an SAS token for the table that this parameter specifies.
 
 ```yaml
@@ -83,7 +83,7 @@ Specifies a stored access policy, which includes the permissions for this SAS to
 ```yaml
 Type: String
 Parameter Sets: SasPolicy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,12 +93,18 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-@{Text=}
+Specifies the protocol permitted for a request.
+The acceptable values for this parameter are:
+* HttpsOnly
+* HttpsOrHttp
+
+The default value is HttpsOrHttp.
+
 
 ```yaml
 Type: SharedAccessProtocol
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,12 +114,14 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressOrRange
-@{Text=}
+Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+The range is inclusive.
+
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +136,7 @@ Specifies when the SAS token becomes valid.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +151,7 @@ Specifies when the SAS token expires.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +166,7 @@ Indicates that this cmdlet returns the full queue URI with the SAS token.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,13 +236,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +252,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -259,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -274,12 +289,12 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-Specifies permissions for an azure_2 Storage table.
+Specifies permissions for an Azure Storage table.
 
 ```yaml
 Type: String
 Parameter Sets: SasPermission
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,5 +330,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-AzureStorageContext](./New-AzureStorageContext.md)
-
-

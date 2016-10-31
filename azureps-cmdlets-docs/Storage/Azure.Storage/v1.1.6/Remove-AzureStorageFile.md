@@ -72,7 +72,7 @@ This cmdlet removes the file in the share this parameter specifies.
 ```yaml
 Type: String
 Parameter Sets: ShareName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -88,7 +88,7 @@ This cmdlet deletes the file that this parameter specifies.
 ```yaml
 Type: String
 Parameter Sets: ShareName, Share, Directory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -98,12 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,12 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-@{Text=}
+Specifies an Azure storage context.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: ShareName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,12 +130,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-@{Text=}
+Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,12 +145,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClientTimeoutPerRequest
-@{Text=}
+Specifies the client-side time-out interval, in seconds, for one service request.
+If the previous call fails in the specified interval, this cmdlet retries the request.
+If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,12 +163,17 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentTaskCount
-@{Text=}
+Specifies the maximum concurrent network calls.
+You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+The specified value is an absolute count and is not multiplied by the core count.
+This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+The default value is 10.
+
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +183,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -188,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -203,7 +220,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -242,7 +260,7 @@ If you specify this parameter, do not specify the *Context* parameter.
 ```yaml
 Type: CloudFileShare
 Parameter Sets: Share
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -258,7 +276,7 @@ This cmdlet removes a file in the folder that this parameter specifies.
 ```yaml
 Type: CloudFileDirectory
 Parameter Sets: Directory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -275,7 +293,7 @@ To obtain a **CloudFile** object, use the Get-AzureStorageFile cmdlet.
 ```yaml
 Type: CloudFile
 Parameter Sets: File
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -315,5 +333,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageShare](./Get-AzureStorageShare.md)
 
 [New-AzureStorageContext](./New-AzureStorageContext.md)
-
-

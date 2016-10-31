@@ -70,7 +70,7 @@ Specifies the name of the blob.
 ```yaml
 Type: String
 Parameter Sets: NamePipeline, ContainerPipeline
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -85,7 +85,7 @@ Specifies the name of the container.
 ```yaml
 Type: String
 Parameter Sets: NamePipeline
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -100,7 +100,7 @@ Stops the current copy task on the specified blob without prompting for confirma
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Specifies the copy ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,13 +125,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies the azure_2 storage context.
+Specifies the Azure storage context.
 You can create the context by using the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ If the specified interval elapses before the service processes the request, the 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ If this cmdlet does not receive a successful response before the interval elapse
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +193,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -208,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -223,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlob
-Specifies a **CloudBlob** object from azure_2 Storage Client library.
+Specifies a **CloudBlob** object from Azure Storage Client library.
 To obtain a **CloudBlob** object, use the Get-AzureStorageBlob cmdlet.
 
 ```yaml
@@ -239,13 +246,13 @@ Accept wildcard characters: False
 ```
 
 ### -CloudBlobContainer
-Specifies a **CloudBlobContainer** object from the azure_2 Storage Client library.
+Specifies a **CloudBlobContainer** object from the Azure Storage Client library.
 You can create the object or use the Get-AzureStorageContainer cmdlet.
 
 ```yaml
 Type: CloudBlobContainer
 Parameter Sets: ContainerPipeline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -270,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -285,7 +292,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -317,5 +325,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureStorageBlobCopy](./Start-AzureStorageBlobCopy.md)
 
 [Get-AzureStorageBlobCopyState](./Get-AzureStorageBlobCopyState.md)
-
-

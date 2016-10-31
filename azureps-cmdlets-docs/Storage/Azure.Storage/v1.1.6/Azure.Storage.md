@@ -1,14 +1,14 @@
 ---
 Module Name: Azure.Storage
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
+Download Help Link: ./Azure.Storage.md
 Help Version: 1.0.0.0
 Locale: en-US
 ---
 
 # Azure.Storage Module
 ## Description
-This topic displays help topics for the Azure Storage Cmdlets. 
+This topic displays help topics for the Azure Storage Cmdlets.
 
 ## Azure.Storage Cmdlets
 ### [Get-AzureStorageBlobContent](./Get-AzureStorageBlobContent.md)
@@ -24,7 +24,7 @@ Lists blobs in a container.
 
 
 ### [Get-AzureStorageContainerStoredAccessPolicy](./Get-AzureStorageContainerStoredAccessPolicy.md)
-Gets the stored access policy or policies for an azure_2 storage container.
+Gets the stored access policy or policies for an Azure storage container.
 
 
 ### [Get-AzureStorageContainer](./Get-AzureStorageContainer.md)
@@ -48,7 +48,7 @@ Lists directories and files for a path.
 
 
 ### [Get-AzureStorageQueueStoredAccessPolicy](./Get-AzureStorageQueueStoredAccessPolicy.md)
-Gets the stored access policy or policies for an azure_2 storage queue.
+Gets the stored access policy or policies for an Azure storage queue.
 
 
 ### [Get-AzureStorageQueue](./Get-AzureStorageQueue.md)
@@ -56,11 +56,11 @@ Lists storage queues.
 
 
 ### [Get-AzureStorageServiceLoggingProperty](./Get-AzureStorageServiceLoggingProperty.md)
-Gets logging properties for azure_2 Storage services.
+Gets logging properties for Azure Storage services.
 
 
 ### [Get-AzureStorageServiceMetricsProperty](./Get-AzureStorageServiceMetricsProperty.md)
-Gets metrics properties for the azure_2 Storage service.
+Gets metrics properties for the Azure Storage service.
 
 
 ### [Get-AzureStorageShareStoredAccessPolicy](./Get-AzureStorageShareStoredAccessPolicy.md)
@@ -72,7 +72,7 @@ Gets a list of file shares.
 
 
 ### [Get-AzureStorageTableStoredAccessPolicy](./Get-AzureStorageTableStoredAccessPolicy.md)
-Gets the stored access policy or policies for an azure_2 storage table.
+Gets the stored access policy or policies for an Azure storage table.
 
 
 ### [Get-AzureStorageTable](./Get-AzureStorageTable.md)
@@ -84,23 +84,23 @@ Creates an SAS token.
 
 
 ### [New-AzureStorageBlobSASToken](./New-AzureStorageBlobSASToken.md)
-Generates an SAS token for an azure_2 storage blob.
+Generates an SAS token for an Azure storage blob.
 
 
 ### [New-AzureStorageContainerSASToken](./New-AzureStorageContainerSASToken.md)
-Generates an SAS token for an azure_2 storage container.
+Generates an SAS token for an Azure storage container.
 
 
 ### [New-AzureStorageContainerStoredAccessPolicy](./New-AzureStorageContainerStoredAccessPolicy.md)
-Creates a stored access policy for an azure_2 storage container.
+Creates a stored access policy for an Azure storage container.
 
 
 ### [New-AzureStorageContainer](./New-AzureStorageContainer.md)
-Creates an azure_2 storage container.
+Creates an Azure storage container.
 
 
 ### [New-AzureStorageContext](./New-AzureStorageContext.md)
-Creates an azure_2 Storage context.
+Creates an Azure Storage context.
 
 
 ### [New-AzureStorageDirectory](./New-AzureStorageDirectory.md)
@@ -112,11 +112,11 @@ Generates a shared access signature token for a Storage file.
 
 
 ### [New-AzureStorageQueueSASToken](./New-AzureStorageQueueSASToken.md)
-Generates a shared access signature token for an azure_2 storage queue.
+Generates a shared access signature token for an Azure storage queue.
 
 
 ### [New-AzureStorageQueueStoredAccessPolicy](./New-AzureStorageQueueStoredAccessPolicy.md)
-Creates a stored access policy for an azure_2 storage queue.
+Creates a stored access policy for an Azure storage queue.
 
 
 ### [New-AzureStorageQueue](./New-AzureStorageQueue.md)
@@ -124,7 +124,7 @@ Creates a storage queue.
 
 
 ### [New-AzureStorageShareSASToken](./New-AzureStorageShareSASToken.md)
-Generate Shared Access Signature token for azure_2 Storage share.
+Generate Shared Access Signature token for Azure Storage share.
 
 
 ### [New-AzureStorageShareStoredAccessPolicy](./New-AzureStorageShareStoredAccessPolicy.md)
@@ -136,11 +136,11 @@ Creates a file share.
 
 
 ### [New-AzureStorageTableSASToken](./New-AzureStorageTableSASToken.md)
-Generates an SAS token for an azure_2 Storage table.
+Generates an SAS token for an Azure Storage table.
 
 
 ### [New-AzureStorageTableStoredAccessPolicy](./New-AzureStorageTableStoredAccessPolicy.md)
-Creates a stored access policy for an azure_2 storage table.
+Creates a stored access policy for an Azure storage table.
 
 
 ### [New-AzureStorageTable](./New-AzureStorageTable.md)
@@ -152,7 +152,7 @@ Removes the specified storage blob.
 
 
 ### [Remove-AzureStorageContainerStoredAccessPolicy](./Remove-AzureStorageContainerStoredAccessPolicy.md)
-Removes a stored access policy from an azure_2 storage container.
+Removes a stored access policy from an Azure storage container.
 
 
 ### [Remove-AzureStorageContainer](./Remove-AzureStorageContainer.md)
@@ -172,7 +172,7 @@ Deletes a file.
 
 
 ### [Remove-AzureStorageQueueStoredAccessPolicy](./Remove-AzureStorageQueueStoredAccessPolicy.md)
-Removes a stored access policy from an azure_2 storage queue.
+Removes a stored access policy from an Azure storage queue.
 
 
 ### [Remove-AzureStorageQueue](./Remove-AzureStorageQueue.md)
@@ -188,7 +188,7 @@ Deletes a file share.
 
 
 ### [Remove-AzureStorageTableStoredAccessPolicy](./Remove-AzureStorageTableStoredAccessPolicy.md)
-Removes a stored access policy from an azure_2 storage table.
+Removes a stored access policy from an Azure storage table.
 
 
 ### [Remove-AzureStorageTable](./Remove-AzureStorageTable.md)
@@ -196,7 +196,7 @@ Removes a storage table.
 
 
 ### [Set-AzureStorageBlobContent](./Set-AzureStorageBlobContent.md)
-Uploads a local file to an azure_2 Storage blob.
+Uploads a local file to an Azure Storage blob.
 
 
 ### [Set-AzureStorageContainerAcl](./Set-AzureStorageContainerAcl.md)
@@ -204,7 +204,7 @@ Sets the public access permission to a storage container.
 
 
 ### [Set-AzureStorageContainerStoredAccessPolicy](./Set-AzureStorageContainerStoredAccessPolicy.md)
-Sets a stored access policy for an azure_2 storage container.
+Sets a stored access policy for an Azure storage container.
 
 
 ### [Set-AzureStorageCORSRule](./Set-AzureStorageCORSRule.md)
@@ -216,15 +216,15 @@ Uploads the contents of a file.
 
 
 ### [Set-AzureStorageQueueStoredAccessPolicy](./Set-AzureStorageQueueStoredAccessPolicy.md)
-Sets a stored access policy for an azure_2 storage queue.
+Sets a stored access policy for an Azure storage queue.
 
 
 ### [Set-AzureStorageServiceLoggingProperty](./Set-AzureStorageServiceLoggingProperty.md)
-Modifies logging for azure_2 Storage services.
+Modifies logging for Azure Storage services.
 
 
 ### [Set-AzureStorageServiceMetricsProperty](./Set-AzureStorageServiceMetricsProperty.md)
-Modifies metrics properties for the azure_2 Storage service.
+Modifies metrics properties for the Azure Storage service.
 
 
 ### [Set-AzureStorageShareQuota](./Set-AzureStorageShareQuota.md)
@@ -236,7 +236,7 @@ Updates a stored access policy on a Storage share.
 
 
 ### [Set-AzureStorageTableStoredAccessPolicy](./Set-AzureStorageTableStoredAccessPolicy.md)
-Sets the stored access policy for an azure_2 storage table.
+Sets the stored access policy for an Azure storage table.
 
 
 ### [Start-AzureStorageBlobCopy](./Start-AzureStorageBlobCopy.md)
@@ -253,7 +253,3 @@ Stops a copy operation.
 
 ### [Stop-AzureStorageFileCopy](./Stop-AzureStorageFileCopy.md)
 Stops a copy operation to the specified destination file.
-
-
-
-

@@ -8,7 +8,7 @@ ms.assetid: F5420030-D139-44D7-847B-86AE910B98CD
 # Get-AzureStorageQueueStoredAccessPolicy
 
 ## SYNOPSIS
-Gets the stored access policy or policies for an azure_2 storage queue.
+Gets the stored access policy or policies for an Azure storage queue.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureStorageQueueStoredAccessPolicy [-Queue] <String> [[-Policy] <String>] [
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorageQueueStoredAccessPolicy** cmdlet lists the stored access policy or policies for an azure_2 storage queue.
+The **Get-AzureStorageQueueStoredAccessPolicy** cmdlet lists the stored access policy or policies for an Azure storage queue.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ This command gets all stored access policies in the queue named MyQueue.
 ## PARAMETERS
 
 ### -Queue
-Specifies the azure_2 storage queue name.
+Specifies the Azure storage queue name.
 
 ```yaml
 Type: String
@@ -60,7 +60,7 @@ Specifies a stored access policy, which includes the permissions for this Shared
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -70,13 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies the azure_2 storage context.
+Specifies the Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -101,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -148,5 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureStorageQueueStoredAccessPolicy](./Set-AzureStorageQueueStoredAccessPolicy.md)
 
 [New-AzureStorageContext](./New-AzureStorageContext.md)
-
-

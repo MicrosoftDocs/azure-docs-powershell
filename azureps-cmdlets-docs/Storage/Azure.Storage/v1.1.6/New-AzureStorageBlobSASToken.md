@@ -8,7 +8,7 @@ ms.assetid: F08D2DE2-A276-439C-B9A8-EE187A8C334E
 # New-AzureStorageBlobSASToken
 
 ## SYNOPSIS
-Generates an SAS token for an azure_2 storage blob.
+Generates an SAS token for an Azure storage blob.
 
 ## SYNTAX
 
@@ -45,7 +45,7 @@ New-AzureStorageBlobSASToken [-Container] <String> [-Blob] <String> -Policy <Str
 ```
 
 ## DESCRIPTION
-The **New-AzureStorageBlobSASToken** cmdlet generates a Shared Access Signature (SAS) token for an azure_2 storage blob.
+The **New-AzureStorageBlobSASToken** cmdlet generates a Shared Access Signature (SAS) token for an Azure storage blob.
 
 ## EXAMPLES
 
@@ -73,7 +73,7 @@ Specifies the storage container name.
 ```yaml
 Type: String
 Parameter Sets: BlobNameWithPermission, BlobNameWithPolicy
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -88,7 +88,7 @@ Specifies the storage blob name.
 ```yaml
 Type: String
 Parameter Sets: BlobNameWithPermission, BlobNameWithPolicy
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -103,7 +103,7 @@ Specifies the permissions for a storage blob.
 ```yaml
 Type: String
 Parameter Sets: BlobNameWithPermission, BlobPipelineWithPermission
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,12 +113,17 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-@{Text=}
+Specifies the protocol permitted for a request.
+The acceptable values for this parameter are:
+* HttpsOnly
+* HttpsOrHttp
+
+The default value is HttpsOrHttp.
 
 ```yaml
 Type: SharedAccessProtocol
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,12 +133,14 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressOrRange
-@{Text=}
+Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+The range is inclusive.
+
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +155,7 @@ Specifies the time at which the shared access signature becomes valid.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +170,7 @@ Specifies when the shared access signature expires.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,7 +185,7 @@ Indicates that this cmdlet return the full blob URI and the shared access signat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +200,7 @@ Specifies the storage context.
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +210,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -218,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -249,12 +263,12 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-Specifies an azure_2 Stored Access Policy.
+Specifies an Azure Stored Access Policy.
 
 ```yaml
 Type: String
 Parameter Sets: BlobPipelineWithPolicy, BlobNameWithPolicy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -292,5 +306,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageBlob](./Get-AzureStorageBlob.md)
 
 [New-AzureStorageContainerSASToken](./New-AzureStorageContainerSASToken.md)
-
-
