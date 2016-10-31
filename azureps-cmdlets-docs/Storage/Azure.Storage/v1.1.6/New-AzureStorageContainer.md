@@ -8,7 +8,7 @@ ms.assetid: F3DA4BF0-AA3A-4853-A362-E3FC479688D6
 # New-AzureStorageContainer
 
 ## SYNOPSIS
-Creates an azure_2 storage container.
+Creates an Azure storage container.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzureStorageContainer [-Name] <String> [[-Permission] <BlobContainerPublicAc
 ```
 
 ## DESCRIPTION
-The **New-AzureStorageContainer** cmdlet creates an azure_2 storage container.
+The **New-AzureStorageContainer** cmdlet creates an Azure storage container.
 
 ## EXAMPLES
 
@@ -65,10 +65,10 @@ psdx_paramvalues
 
 - Container.
 Provides full read access to a container and its blobs.
-Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account. 
+Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account.
 - Blob.
 Provides read access to blob data throughout a container through anonymous request, but does not provide access to container data.
-Clients cannot enumerate blobs in the container by using anonymous request. 
+Clients cannot enumerate blobs in the container by using anonymous request.
 - Off.
 Which restricts access to only the storage account owner.
 
@@ -90,7 +90,7 @@ Specifies a context for the new container.
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ If the specified interval elapses before the service processes the request, the 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ If this cmdlet does not receive a successful response before the interval elapse
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +152,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -167,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -212,5 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureStorageContainer](./Remove-AzureStorageContainer.md)
 
 [Set-AzureStorageContainerAcl](./Set-AzureStorageContainerAcl.md)
-
-

@@ -8,7 +8,7 @@ ms.assetid: 3981E765-B861-4024-A1D2-2C60590EBE0E
 # Set-AzureStorageServiceLoggingProperty
 
 ## SYNOPSIS
-Modifies logging for azure_2 Storage services.
+Modifies logging for Azure Storage services.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Set-AzureStorageServiceLoggingProperty [-ServiceType] <StorageServiceType> [-Ver
 ```
 
 ## DESCRIPTION
-The **Set-AzureStorageServiceLoggingProperty** cmdlet modifies logging for azure_2 Storage services.
+The **Set-AzureStorageServiceLoggingProperty** cmdlet modifies logging for Azure Storage services.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ C:\PS>Set-AzureStorageServiceLoggingProperty -ServiceType Blob -LoggingOperation
 ```
 
 This command modifies version 1.0 logging for blob storage to include read and write operations.
-azure_2 Storage service logging retains entries for 10 days.
+Azure Storage service logging retains entries for 10 days.
 Because this command specifies the *PassThru* parameter, the command displays the modified logging properties.
 
 ## PARAMETERS
@@ -40,7 +40,7 @@ Specifies the storage service type.
 This cmdlet modifies the logging properties for the service type that this parameter specifies.
 psdx_paramvalues
 
-- Blob 
+- Blob
 - Table
 - Queue
 - File
@@ -50,7 +50,7 @@ The value of File is not currently supported.
 ```yaml
 Type: StorageServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -60,13 +60,13 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Specifies the version of the azure_2 Storage service logging.
+Specifies the version of the Azure Storage service logging.
 The default value is 1.0.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,12 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionDays
-Specifies the number of days that the azure_2 Storage service retains logged information.
+Specifies the number of days that the Azure Storage service retains logged information.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,8 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoggingOperations
-Specifies an array of azure_2 Storage service operations.
-azure_2 Storage services logs the operations that this parameter specifies.
+Specifies an array of Azure Storage service operations.
+Azure Storage services logs the operations that this parameter specifies.
 psdx_paramvalues
 
 - None
@@ -104,7 +104,7 @@ psdx_paramvalues
 ```yaml
 Type: LoggingOperations[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ If you do not specify this parameter, this cmdlet does not return a value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,13 +130,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -161,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -204,5 +211,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageServiceLoggingProperty](./Get-AzureStorageServiceLoggingProperty.md)
 
 [New-AzureStorageContext](./New-AzureStorageContext.md)
-
-

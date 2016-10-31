@@ -8,7 +8,7 @@ ms.assetid: 02217F39-6C93-401B-8801-52FDD38BA751
 # Get-AzureStorageServiceLoggingProperty
 
 ## SYNOPSIS
-Gets logging properties for azure_2 Storage services.
+Gets logging properties for Azure Storage services.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureStorageServiceLoggingProperty [-ServiceType] <StorageServiceType> [-Con
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorageServiceLoggingProperty** cmdlet gets logging properties for azure_2 Storage services.
+The **Get-AzureStorageServiceLoggingProperty** cmdlet gets logging properties for Azure Storage services.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ Specifies the storage service type.
 This cmdlet gets the logging properties for the service type that this parameter specifies.
 psdx_paramvalues
 
-- Blob 
+- Blob
 - Table
 - Queue
 - File
@@ -47,7 +47,7 @@ The value of File is not currently supported.
 ```yaml
 Type: StorageServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -57,13 +57,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +73,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -88,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -131,5 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureStorageContext](./New-AzureStorageContext.md)
 
 [Set-AzureStorageServiceLoggingProperty](./Set-AzureStorageServiceLoggingProperty.md)
-
-

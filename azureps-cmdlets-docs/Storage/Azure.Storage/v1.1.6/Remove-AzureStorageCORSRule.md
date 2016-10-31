@@ -19,7 +19,7 @@ Remove-AzureStorageCORSRule [-ServiceType] <StorageServiceType> [-Context <Azure
 ```
 
 ## DESCRIPTION
-The **Remove-AzureStorageCORSRule** cmdlet removes Cross-Origin Resource Sharing (CORS) for an azure_2 Storage service.
+The **Remove-AzureStorageCORSRule** cmdlet removes Cross-Origin Resource Sharing (CORS) for an Azure Storage service.
 This cmdlet deletes all CORS rules in a Storage service type.
 The types of storage services for this cmdlet are Blob, Table, Queue, and File.
 
@@ -35,18 +35,18 @@ This command removes CORS rules for the Blob service type.
 ## PARAMETERS
 
 ### -ServiceType
-Specifies the azure_2 Storage service type for which this cmdlet removes rules.
+Specifies the Azure Storage service type for which this cmdlet removes rules.
 psdx_paramvalues
 
-- Blob 
-- Table 
-- Queue 
+- Blob
+- Table
+- Queue
 - File
 
 ```yaml
 Type: StorageServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -56,13 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies the azure_2 storage context.
+Specifies the Azure storage context.
 To obtain the storage context, the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +77,7 @@ Specifies the length of the time-out period for the server part of a request.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ If this cmdlet does not receive a successful response before the interval elapse
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -138,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -166,5 +173,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageCORSRule](./Get-AzureStorageCORSRule.md)
 
 [Set-AzureStorageCORSRule](./Set-AzureStorageCORSRule.md)
-
-

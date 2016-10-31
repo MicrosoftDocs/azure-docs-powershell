@@ -19,7 +19,7 @@ Remove-AzureStorageTable [-Name] <String> [-Force] [-PassThru] [-Context <AzureS
 ```
 
 ## DESCRIPTION
-The **Remove-AzureStorageTable** cmdlet removes one or more storage tables from a storage account in azure_2.
+The **Remove-AzureStorageTable** cmdlet removes one or more storage tables from a storage account in Azure.
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ ps_force
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,7 +76,7 @@ By default, this cmdlet does not return a value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,13 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies the azure_2 storage context.
+Specifies the Azure storage context.
 You can create it by using the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +102,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -117,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -132,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -188,5 +196,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureStorageTable](./Get-AzureStorageTable.md)
-
-

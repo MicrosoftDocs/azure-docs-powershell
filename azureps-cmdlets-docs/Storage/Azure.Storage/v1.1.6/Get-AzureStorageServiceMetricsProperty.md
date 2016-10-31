@@ -8,7 +8,7 @@ ms.assetid: 59B6D8FB-70FF-4B9E-B6AF-E303E1451DBB
 # Get-AzureStorageServiceMetricsProperty
 
 ## SYNOPSIS
-Gets metrics properties for the azure_2 Storage service.
+Gets metrics properties for the Azure Storage service.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureStorageServiceMetricsProperty [-ServiceType] <StorageServiceType> [-Met
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorageServiceMetricsProperty** cmdlet gets metrics properties for the azure_2 Storage service.
+The **Get-AzureStorageServiceMetricsProperty** cmdlet gets metrics properties for the Azure Storage service.
 
 ## EXAMPLES
 
@@ -37,17 +37,17 @@ Specifies the storage service type.
 This cmdlet gets the metrics properties for the type that this parameter specifies.
 psdx_paramvalues
 
-- Blob 
+- Blob
 - Table
 - Queue
-- File 
+- File
 
 The value of File is not currently supported.
 
 ```yaml
 Type: StorageServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -58,13 +58,13 @@ Accept wildcard characters: False
 
 ### -MetricsType
 Specifies a metrics type.
-This cmdlet gets the azure_2 Storage service metrics properties for the metrics type that this parameter specifies.
+This cmdlet gets the Azure Storage service metrics properties for the metrics type that this parameter specifies.
 psdx_paramvalues Hour and Minute.
 
 ```yaml
 Type: ServiceMetricsType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -74,13 +74,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +90,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -105,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -148,5 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureStorageContext](./New-AzureStorageContext.md)
 
 [Set-AzureStorageServiceMetricsProperty](./Set-AzureStorageServiceMetricsProperty.md)
-
-

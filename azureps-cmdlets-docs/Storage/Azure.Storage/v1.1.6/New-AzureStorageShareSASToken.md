@@ -8,7 +8,7 @@ ms.assetid: 07C8AD4E-7A32-4407-9120-1432126B7376
 # New-AzureStorageShareSASToken
 
 ## SYNOPSIS
-Generate Shared Access Signature token for azure_2 Storage share.
+Generate Shared Access Signature token for Azure Storage share.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ New-AzureStorageShareSASToken [-ShareName] <String> [-Permission <String>] [-Pro
 ```
 
 ## DESCRIPTION
-The **New-AzureStorageShareSASToken** cmdlet generates a shared access signature token for an azure_2 Storage share.
+The **New-AzureStorageShareSASToken** cmdlet generates a shared access signature token for an Azure Storage share.
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ Specifies the stored access policy for a share.
 ```yaml
 Type: String
 Parameter Sets: SasPolicy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -89,12 +89,19 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-@{Text=}
+### -Protocol
+Specifies the protocol permitted for a request.
+The acceptable values for this parameter are:
+* HttpsOnly
+* HttpsOrHttp
+
+The default value is HttpsOrHttp.
+
 
 ```yaml
 Type: SharedAccessProtocol
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,12 +111,14 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressOrRange
-@{Text=}
+Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+The range is inclusive.
+
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +133,7 @@ Specifies the time at which the shared access signature becomes valid.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +148,7 @@ Specifies the time at which the shared access signature becomes invalid.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +163,7 @@ Indicates that this cmdlet return the full blob URI and the shared access signat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,13 +173,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 Storage context.
+Specifies an Azure Storage context.
 To obtain a context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +189,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -195,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -215,7 +231,7 @@ Specifies the permissions in the token to access the share and files under the s
 ```yaml
 Type: String
 Parameter Sets: SasPermission
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,5 +255,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageShare](./Get-AzureStorageShare.md)
 
 [New-AzureStorageFileSASToken](./New-AzureStorageFileSASToken.md)
-
-

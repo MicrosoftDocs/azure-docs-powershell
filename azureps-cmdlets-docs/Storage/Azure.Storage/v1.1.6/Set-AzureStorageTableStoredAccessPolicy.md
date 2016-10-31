@@ -8,7 +8,7 @@ ms.assetid: CD4016E4-C0AA-4963-BEB7-144A5BD2D619
 # Set-AzureStorageTableStoredAccessPolicy
 
 ## SYNOPSIS
-Sets the stored access policy for an azure_2 storage table.
+Sets the stored access policy for an Azure storage table.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Set-AzureStorageTableStoredAccessPolicy [-Table] <String> [-Policy] <String> [-P
 ```
 
 ## DESCRIPTION
-The **Set-AzureStorageTableStoredAccessPolicy** cmdlet set the stored access policy for an azure_2 storage table.
+The **Set-AzureStorageTableStoredAccessPolicy** cmdlet set the stored access policy for an Azure storage table.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ This command sets an access policy named Policy08 for storage table named MyTabl
 ## PARAMETERS
 
 ### -Table
-Specifies the azure_2 storage table name.
+Specifies the Azure storage table name.
 
 ```yaml
 Type: String
@@ -54,7 +54,7 @@ Specifies a stored access policy, which includes the permissions for this SAS to
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -69,7 +69,7 @@ Specifies the level of public access to this storage table.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Specifies the time at which the stored access policy becomes valid.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Specifies the time at which the stored access policy expires.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ Indicates that the start time is set to $Null.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ Indicates that the access policy has no expiration date.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,13 +139,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +155,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -170,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -217,5 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureStorageTableStoredAccessPolicy](./New-AzureStorageTableStoredAccessPolicy.md)
 
 [Remove-AzureStorageTableStoredAccessPolicy](./Remove-AzureStorageTableStoredAccessPolicy.md)
-
-

@@ -26,7 +26,7 @@ Get-AzureStorageQueue -Prefix <String> [-Context <AzureStorageContext>] [-Inform
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorageQueue** cmdlet lists storage queues associated with an azure_2 Storage account.
+The **Get-AzureStorageQueue** cmdlet lists storage queues associated with an Azure Storage account.
 
 ## EXAMPLES
 
@@ -71,13 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies the azure_2 storage context.
+Specifies the Azure storage context.
 You can create it by using the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +87,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -102,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -122,7 +129,7 @@ Specifies a prefix used in the name of the queues you want to get.
 ```yaml
 Type: String
 Parameter Sets: QueuePrefix
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,5 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureStorageQueue](./New-AzureStorageQueue.md)
 
 [Remove-AzureStorageQueue](./Remove-AzureStorageQueue.md)
-
-

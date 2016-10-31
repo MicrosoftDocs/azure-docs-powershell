@@ -18,7 +18,7 @@ New-AzureStorageTable [-Name] <String> [-Context <AzureStorageContext>] [-Inform
 ```
 
 ## DESCRIPTION
-The **New-AzureStorageTable** cmdlet creates a storage table associated with the storage account in azure_2.
+The **New-AzureStorageTable** cmdlet creates a storage table associated with the storage account in Azure.
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ To create it, you can use the New-AzureStorageContext cmdlet.
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,7 +71,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -86,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -129,5 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageTable](./Get-AzureStorageTable.md)
 
 [Remove-AzureStorageTable](./Remove-AzureStorageTable.md)
-
-
