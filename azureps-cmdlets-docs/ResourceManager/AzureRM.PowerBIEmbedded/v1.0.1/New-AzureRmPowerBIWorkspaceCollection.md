@@ -19,7 +19,7 @@ New-AzureRmPowerBIWorkspaceCollection [-ResourceGroupName] <String> [-WorkspaceC
 ```
 
 ## DESCRIPTION
-The **New-AzureRmPowerBIWorkspaceCollection** cmdlet creates a Power BI workspace collection for your azure_2 subscription in the specified resource group and location.
+The **New-AzureRmPowerBIWorkspaceCollection** cmdlet creates a Power BI workspace collection for your Azure subscription in the specified resource group and location.
 
 ## EXAMPLES
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the azure_2 location in which this cmdlet creates a workspace collection.
+Specifies the Azure location in which this cmdlet creates a workspace collection.
 
 ```yaml
 Type: String
@@ -78,7 +78,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -93,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -108,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -123,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

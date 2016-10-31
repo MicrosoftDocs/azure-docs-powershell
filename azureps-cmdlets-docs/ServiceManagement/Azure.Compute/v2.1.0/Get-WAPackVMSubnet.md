@@ -47,7 +47,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -VNet
-@{Text=}
 
 ```yaml
 Type: VMNetwork
@@ -62,7 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -ID
-@{Text=}
 
 ```yaml
 Type: Guid
@@ -77,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String

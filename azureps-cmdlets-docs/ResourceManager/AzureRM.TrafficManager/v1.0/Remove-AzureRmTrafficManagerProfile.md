@@ -25,7 +25,7 @@ Remove-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfil
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmTrafficManagerProfile** cmdlet deletes an azure_2 Traffic Manager profile.
+The **Remove-AzureRmTrafficManagerProfile** cmdlet deletes an Azure Traffic Manager profile.
 Specify the profile to delete by using the *Name* and *ResourceGroupName* parameters.
 Alternatively, you can specify a **TrafficManagerProfile** object using the *TrafficManagerProfile* parameter, or you can use the pipeline.
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -130,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

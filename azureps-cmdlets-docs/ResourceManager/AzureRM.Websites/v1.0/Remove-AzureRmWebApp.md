@@ -8,7 +8,7 @@ ms.assetid: 725F77DA-451C-459C-AB5C-F792B06FAEB8
 # Remove-AzureRmWebApp
 
 ## SYNOPSIS
-Removes an azure_2 Web App.
+Removes an Azure Web App.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Remove-AzureRmWebApp [-Force] [-WebApp] <Site> [-WhatIf] [-Confirm] [<CommonPara
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmWebApp** cmdlet removes an azure_2 Web App provided the resource group and Web App name.
+The **Remove-AzureRmWebApp** cmdlet removes an Azure Web App provided the resource group and Web App name.
 This cmdlet, by default, also removes all slots and metrics.
 
 ## EXAMPLES
@@ -34,12 +34,11 @@ This cmdlet, by default, also removes all slots and metrics.
 PS C:\>Remove-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
-This command removes the azure_2 Web App named ContosoSite that belongs to the resource group named Default-Web-WestUS.
+This command removes the Azure Web App named ContosoSite that belongs to the resource group named Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -69,7 +67,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -84,7 +81,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site
@@ -99,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

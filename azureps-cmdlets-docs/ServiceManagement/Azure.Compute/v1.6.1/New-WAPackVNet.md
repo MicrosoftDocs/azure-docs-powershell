@@ -35,7 +35,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -LogicalNetwork
-@{Text=}
 
 ```yaml
 Type: LogicalNetwork
@@ -50,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -65,7 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-@{Text=}
 
 ```yaml
 Type: String

@@ -33,7 +33,7 @@ New-AzureRmBackupProtectionPolicy [-Name] <String> [-Type] <String> [-Weekly] [-
 ```
 
 ## DESCRIPTION
-The **New-AzureRmBackupProtectionPolicy** cmdlet creates an azure_2 Backup policy as an APS object.
+The **New-AzureRmBackupProtectionPolicy** cmdlet creates an Azure Backup policy as an APS object.
 
 A backup policy defines when and how often Backup backs up an item.
 The Enable-AzureRmBackupProtection cmdlet uses a backup policy.
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -Vault
-Specifies the azure_2 Backup vault to which the backup policy belongs.
+Specifies the Azure Backup vault to which the backup policy belongs.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml

@@ -53,7 +53,6 @@ When you use the **SubscriptionDataFile** parameter to save your subscription da
 ## PARAMETERS
 
 ### -PublishSettingsFile
-@{Text=}
 
 ```yaml
 Type: String
@@ -68,7 +67,6 @@ Accept wildcard characters: False
 ```
 
 ### -Environment
-@{Text=}
 
 ```yaml
 Type: String
@@ -83,7 +81,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureProfile

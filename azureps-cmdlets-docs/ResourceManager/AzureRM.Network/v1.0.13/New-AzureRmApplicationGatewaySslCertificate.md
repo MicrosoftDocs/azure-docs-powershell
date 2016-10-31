@@ -8,7 +8,7 @@ ms.assetid: 5C828062-A9F9-4506-8CDD-11C4766104CE
 # New-AzureRmApplicationGatewaySslCertificate
 
 ## SYNOPSIS
-Creates an SSL certificate for an azure_2 application gateway.
+Creates an SSL certificate for an Azure application gateway.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ New-AzureRmApplicationGatewaySslCertificate -Name <String> -CertificateFile <Str
 ```
 
 ## DESCRIPTION
-The **New-AzureRmApplicationGatewaySslCertificate** cmdlet creates an SSL certificate for an azure_2 application gateway.
+The **New-AzureRmApplicationGatewaySslCertificate** cmdlet creates an SSL certificate for an Azure application gateway.
 
 ## EXAMPLES
 
@@ -77,7 +77,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -92,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ ms.assetid: 8698B8DD-D99D-40D2-A61F-0688C8AC5C9B
 # Get-AzureRmWebAppCertificate
 
 ## SYNOPSIS
-Gets an azure_2 Web App certificate.
+Gets an Azure Web App certificate.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRmWebAppCertificate [[-ResourceGroupName] <String>] [[-Thumbprint] <Str
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmWebAppCertificate** cmdlet gets information about azure_2 Web App certificates associated with a specified resource group.
+The **Get-AzureRmWebAppCertificate** cmdlet gets information about Azure Web App certificates associated with a specified resource group.
 If you know the certificate thumbprint you can also use this cmdlet to get information about a specified certificate.
 
 ## EXAMPLES

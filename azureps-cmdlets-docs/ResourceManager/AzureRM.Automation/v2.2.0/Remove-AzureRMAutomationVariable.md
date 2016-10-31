@@ -18,7 +18,7 @@ Remove-AzureRmAutomationVariable [-Name] <String> [-ResourceGroupName] <String>
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAutomationVariable** cmdlet removes a variable from azure_2 Automation.
+The **Remove-AzureRmAutomationVariable** cmdlet removes a variable from Azure Automation.
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

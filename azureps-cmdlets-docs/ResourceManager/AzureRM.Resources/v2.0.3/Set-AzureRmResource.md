@@ -36,7 +36,7 @@ Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmResource** cmdlet modifies an existing azure_2 resource.
+The **Set-AzureRmResource** cmdlet modifies an existing Azure resource.
 Specify a resource to modify by name and type or by ID.
 
 ## EXAMPLES
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -343,7 +343,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

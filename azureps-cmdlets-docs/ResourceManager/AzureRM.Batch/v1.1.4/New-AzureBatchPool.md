@@ -39,7 +39,7 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
 ```
 
 ## DESCRIPTION
-The **New-AzureBatchPool** cmdlet creates a pool in the azure_2 Batch service under the account specified by the *BatchContext* parameter.
+The **New-AzureBatchPool** cmdlet creates a pool in the Azure Batch service under the account specified by the *BatchContext* parameter.
 
 ## EXAMPLES
 
@@ -63,7 +63,6 @@ The pool is configured to use small virtual machines imaged with the latest oper
 ## PARAMETERS
 
 ### -ApplicationPackageReferences
-@{Text=}
 
 ```yaml
 Type: PSApplicationPackageReference[]
@@ -141,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServiceConfiguration
-Specifies configuration settings for a pool based on the azure_2 cloud service platform.
+Specifies configuration settings for a pool based on the Azure cloud service platform.
 
 ```yaml
 Type: PSCloudServiceConfiguration
@@ -310,7 +309,7 @@ Accept wildcard characters: False
 
 ### -VirtualMachineSize
 Specifies the size of the virtual machines in the pool.
-For more information about virtual machine sizes, see Sizes for virtual machineshttps://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/ (https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/) in the Microsoft azure_2 site.
+For more information about virtual machine sizes, see Sizes for virtual machineshttps://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/ (https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/) in the Microsoft Azure site.
 
 ```yaml
 Type: String

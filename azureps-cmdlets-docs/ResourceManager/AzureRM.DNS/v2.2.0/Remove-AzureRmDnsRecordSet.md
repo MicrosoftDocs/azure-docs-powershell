@@ -42,7 +42,7 @@ The *Confirm* parameter and $ConfirmPreference pn_PowerShell_short variable can 
 Because of the potential impact of deleting an in-use zone, a second level of confirmation is used in addition to the standard pn_PowerShell_short behavior.
 This can be suppressed using the *Force* parameter.
 
-When specifying the record set using a **RecordSet** object, the record set is not deleted if it has been changed in azure_2 DNS since the local **RecordSet** object was retrieved.
+When specifying the record set using a **RecordSet** object, the record set is not deleted if it has been changed in Azure DNS since the local **RecordSet** object was retrieved.
 This provides protection for concurrent changes.
 You can suppress this by using the *Overwrite* parameter, which deletes the record set regardless of concurrent changes.
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-When specifying the record set using a **RecordSet** object, the record set is not deleted if it has been changed in azure_2 DNS since the local **RecordSet** object was retrieved.
+When specifying the record set using a **RecordSet** object, the record set is not deleted if it has been changed in Azure DNS since the local **RecordSet** object was retrieved.
 This provides protection for concurrent changes.
 This can be suppressed using the *Overwrite* parameter, which deletes the record set regardless of concurrent changes.
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -259,7 +259,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

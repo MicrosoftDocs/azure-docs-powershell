@@ -8,7 +8,7 @@ ms.assetid: 292B4AA0-82B7-42DF-9A1B-E6A4F3B4A953
 # New-AzureLocalNetworkGateway
 
 ## SYNOPSIS
-creates an azure_2 local network gateway.
+creates an Azure local network gateway.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-AzureLocalNetworkGateway [-GatewayName] <String> [-IpAddress] <String>
 ```
 
 ## DESCRIPTION
-The **New-AzureLocalNetworkGateway** cmdlet creates an azure_2 local network gateway.
+The **New-AzureLocalNetworkGateway** cmdlet creates an Azure local network gateway.
 
 ## EXAMPLES
 

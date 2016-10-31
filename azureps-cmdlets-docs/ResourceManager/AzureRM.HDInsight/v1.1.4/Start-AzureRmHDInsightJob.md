@@ -19,7 +19,7 @@ Start-AzureRmHDInsightJob [-ClusterName] <String> [-JobDefinition] <AzureHDInsig
 ```
 
 ## DESCRIPTION
-The **Start-AzureRMHDInsightJob** cmdlet starts a defined azure_2 HDInsight job on a specified cluster.
+The **Start-AzureRMHDInsightJob** cmdlet starts a defined Azure HDInsight job on a specified cluster.
 This can be a MapReduce job, a Streaming MapReduce job, a Hive job, or a Pig job.
 
 ## EXAMPLES
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobDefinition
-Specifies the job to start on the azure_2 HDInsight cluster.
+Specifies the job to start on the Azure HDInsight cluster.
 
 ```yaml
 Type: AzureHDInsightJobDefinition
@@ -106,7 +106,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -121,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

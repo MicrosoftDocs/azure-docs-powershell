@@ -12,7 +12,7 @@ This topic displays help topics for the Azure Service Management Cmdlets.
 
 ## Azure.Service Cmdlets
 ### [Add-AzureCertificate](./Add-AzureCertificate.md)
-Uploads a certificate to an azure_2 cloud service.
+Uploads a certificate to an Azure cloud service.
 
 
 ### [Add-AzureDataDisk](./Add-AzureDataDisk.md)
@@ -20,11 +20,11 @@ Adds a data disk to a virtual machine.
 
 
 ### [Add-AzureDisk](./Add-AzureDisk.md)
-Adds a disk to the azure_2 disk repository.
+Adds a disk to the Azure disk repository.
 
 
 ### [Add-AzureDns](./Add-AzureDns.md)
-Adds a DNS server to an azure_2 service.
+Adds a DNS server to an Azure service.
 
 
 ### [Add-AzureEndpoint](./Add-AzureEndpoint.md)
@@ -32,7 +32,7 @@ Adds an endpoint to a virtual machine.
 
 
 ### [Add-AzureInternalLoadBalancer](./Add-AzureInternalLoadBalancer.md)
-Adds an internal load balancer to an azure_2 service.
+Adds an internal load balancer to an Azure service.
 
 
 ### [Add-AzureNetworkInterfaceConfig](./Add-AzureNetworkInterfaceConfig.md)
@@ -40,11 +40,11 @@ Adds an internal load balancer to an azure_2 service.
 
 
 ### [Add-AzureProvisioningConfig](./Add-AzureProvisioningConfig.md)
-Adds provisioning configuration for an azure_2 virtual machine.
+Adds provisioning configuration for an Azure virtual machine.
 
 
 ### [Add-AzureVhd](./Add-AzureVhd.md)
-Uploads a VHD file from an on-premise computer to a blob in a cloud storage account in azure_2.
+Uploads a VHD file from an on-premise computer to a blob in a cloud storage account in Azure.
 
 
 ### [Add-AzureVirtualIP](./Add-AzureVirtualIP.md)
@@ -56,27 +56,27 @@ Adds a new operating system image or a new virtual machine image to the image re
 
 
 ### [Export-AzureVM](./Export-AzureVM.md)
-Exports an azure_2 virtual machine state to a file.
+Exports an Azure virtual machine state to a file.
 
 
 ### [Get-AzureAclConfig](./Get-AzureAclConfig.md)
-Gets the ACL configuration object from an azure_2 virtual machine.
+Gets the ACL configuration object from an Azure virtual machine.
 
 
 ### [Get-AzureAffinityGroup](./Get-AzureAffinityGroup.md)
-Gets an azure_2 affinity group object.
+Gets an Azure affinity group object.
 
 
 ### [Get-AzureCertificate](./Get-AzureCertificate.md)
-Gets a certificate object from an azure_2 service.
+Gets a certificate object from an Azure service.
 
 
 ### [Get-AzureDataDisk](./Get-AzureDataDisk.md)
-Gets azure_2 data disks.
+Gets Azure data disks.
 
 
 ### [Get-AzureDeploymentEvent](./Get-AzureDeploymentEvent.md)
-Gets information about events that azure_2 initiates that impact virtual machines and cloud services.
+Gets information about events that Azure initiates that impact virtual machines and cloud services.
 
 
 ### [Get-AzureDeployment](./Get-AzureDeployment.md)
@@ -84,15 +84,15 @@ Gets details of a deployment.
 
 
 ### [Get-AzureDisk](./Get-AzureDisk.md)
-Gets information about disks in the azure_2 disk repository.
+Gets information about disks in the Azure disk repository.
 
 
 ### [Get-AzureDns](./Get-AzureDns.md)
-Gets the DNS settings for an azure_2 deployment.
+Gets the DNS settings for an Azure deployment.
 
 
 ### [Get-AzureEndpoint](./Get-AzureEndpoint.md)
-Gets information about the endpoints that are assigned to an azure_2 virtual machine.
+Gets information about the endpoints that are assigned to an Azure virtual machine.
 
 
 ### [Get-AzureInternalLoadBalancer](./Get-AzureInternalLoadBalancer.md)
@@ -100,7 +100,7 @@ Gets the details of the internal load balancer configuration.
 
 
 ### [Get-AzureLocation](./Get-AzureLocation.md)
-Gets the available data center locations for the current azure_2 subscription.
+Gets the available data center locations for the current Azure subscription.
 
 
 ### [Get-AzureNetworkInterfaceConfig](./Get-AzureNetworkInterfaceConfig.md)
@@ -108,19 +108,19 @@ Gets the available data center locations for the current azure_2 subscription.
 
 
 ### [Get-AzureOSDisk](./Get-AzureOSDisk.md)
-Gets the operating system disk of an azure_2 virtual machine.
+Gets the operating system disk of an Azure virtual machine.
 
 
 ### [Get-AzureOSVersion](./Get-AzureOSVersion.md)
-Lists all azure_2 guest operating systems.
+Lists all Azure guest operating systems.
 
 
 ### [Get-AzurePublicIP](./Get-AzurePublicIP.md)
-Gets the Public IP information for an azure_2 virtual machine.
+Gets the Public IP information for an Azure virtual machine.
 
 
 ### [Get-AzureRemoteDesktopFile](./Get-AzureRemoteDesktopFile.md)
-Gets an RDP file for an azure_2 virtual machine.
+Gets an RDP file for an Azure virtual machine.
 
 
 ### [Get-AzureReservedIP](./Get-AzureReservedIP.md)
@@ -132,7 +132,7 @@ Gets the role size information for the current subscription.
 
 
 ### [Get-AzureRole](./Get-AzureRole.md)
-Returns a list of roles in your Microsoft azure_2 service.
+Returns a list of roles in your Microsoft Azure service.
 
 
 ### [Get-AzureServiceADDomainExtension](./Get-AzureServiceADDomainExtension.md)
@@ -168,15 +168,15 @@ Gets the static VNet IP address information from a virtual machine object, if an
 
 
 ### [Get-AzureStorageAccount](./Get-AzureStorageAccount.md)
-Gets the storage accounts for the current azure_2 subscription.
+Gets the storage accounts for the current Azure subscription.
 
 
 ### [Get-AzureStorageKey](./Get-AzureStorageKey.md)
-Returns the primary and secondary storage account keys for an azure_2 storage account.
+Returns the primary and secondary storage account keys for an Azure storage account.
 
 
 ### [Get-AzureSubnet](./Get-AzureSubnet.md)
-Gets a list of subnets associated with the specified azure_2 virtual machine.
+Gets a list of subnets associated with the specified Azure virtual machine.
 
 
 ### [Get-AzureVMAccessExtension](./Get-AzureVMAccessExtension.md)
@@ -196,11 +196,11 @@ Gets the Chef extension applied on a virtual machine.
 
 
 ### [Get-AzureVMCustomScriptExtension](./Get-AzureVMCustomScriptExtension.md)
-Gets information from an azure_2 virtual machine custom script extension.
+Gets information from an Azure virtual machine custom script extension.
 
 
 ### [Get-AzureVMDiagnosticsExtension](./Get-AzureVMDiagnosticsExtension.md)
-Gets the settings of the azure_2 Diagnostics extension on a virtual machine.
+Gets the settings of the Azure Diagnostics extension on a virtual machine.
 
 
 ### [Get-AzureVMDscExtensionStatus](./Get-AzureVMDscExtensionStatus.md)
@@ -236,15 +236,15 @@ Gets the settings of the SQL Server IaaS Agent on a particular virtual machine.
 
 
 ### [Get-AzureVM](./Get-AzureVM.md)
-Retrieves information from one or more azure_2 virtual machines.
+Retrieves information from one or more Azure virtual machines.
 
 
 ### [Get-AzureVNetConfig](./Get-AzureVNetConfig.md)
-Gets the azure_2 virtual network configuration from the current subscription.
+Gets the Azure virtual network configuration from the current subscription.
 
 
 ### [Get-AzureVNetSite](./Get-AzureVNetSite.md)
-Gets a list object with information about azure_2 virtual networks.
+Gets a list object with information about Azure virtual networks.
 
 
 ### [Get-AzureWinRMUri](./Get-AzureWinRMUri.md)
@@ -252,7 +252,7 @@ Gets the URI to WinRM https listener to a virtual machine or a list of virtual m
 
 
 ### [Import-AzureVM](./Import-AzureVM.md)
-Imports an azure_2 virtual machine state from a file.
+Imports an Azure virtual machine state from a file.
 
 
 ### [Move-AzureDeployment](./Move-AzureDeployment.md)
@@ -276,7 +276,7 @@ Creates a deployment from a service.
 
 
 ### [New-AzureDns](./New-AzureDns.md)
-Creates an azure_2 DNS settings object.
+Creates an Azure DNS settings object.
 
 
 ### [New-AzureInternalLoadBalancerConfig](./New-AzureInternalLoadBalancerConfig.md)
@@ -284,7 +284,7 @@ Creates an internal load balancer configuration.
 
 
 ### [New-AzureQuickVM](./New-AzureQuickVM.md)
-Configures and creates an azure_2 virtual machine.
+Configures and creates an Azure virtual machine.
 
 
 ### [New-AzureReservedIP](./New-AzureReservedIP.md)
@@ -308,23 +308,23 @@ Generates a remote desktop extension configuration for a deployment.
 
 
 ### [New-AzureService](./New-AzureService.md)
-Creates an azure_2 service.
+Creates an Azure service.
 
 
 ### [New-AzureSSHKey](./New-AzureSSHKey.md)
-Creates a SSH Key object to insert an existing certificate into a new Linux-based azure_2 virtual machines.
+Creates a SSH Key object to insert an existing certificate into a new Linux-based Azure virtual machines.
 
 
 ### [New-AzureStorageAccount](./New-AzureStorageAccount.md)
-Creates a new storage account in an azure_2 subscription.
+Creates a new storage account in an Azure subscription.
 
 
 ### [New-AzureStorageKey](./New-AzureStorageKey.md)
-Regenerates storage keys for an azure_2 storage account.
+Regenerates storage keys for an Azure storage account.
 
 
 ### [New-AzureVMConfig](./New-AzureVMConfig.md)
-Creates an azure_2 virtual machine configuration object.
+Creates an Azure virtual machine configuration object.
 
 
 ### [New-AzureVMImageDiskConfigSet](./New-AzureVMImageDiskConfigSet.md)
@@ -340,15 +340,15 @@ Creates a configuration object for virtual machine automatic patching.
 
 
 ### [New-AzureVM](./New-AzureVM.md)
-Creates an azure_2 virtual machine.
+Creates an Azure virtual machine.
 
 
 ### [Publish-AzureVMDscConfiguration](./Publish-AzureVMDscConfiguration.md)
-Publishes a desired state configuration script to azure_2 blob storage.
+Publishes a desired state configuration script to Azure blob storage.
 
 
 ### [Remove-AzureAclConfig](./Remove-AzureAclConfig.md)
-Removes an ACL configuration object from an azure_2 virtual machine configuration.
+Removes an ACL configuration object from an Azure virtual machine configuration.
 
 
 ### [Remove-AzureAffinityGroup](./Remove-AzureAffinityGroup.md)
@@ -356,15 +356,15 @@ Deletes an affinity group in a subscription.
 
 
 ### [Remove-AzureAvailabilitySet](./Remove-AzureAvailabilitySet.md)
-Removes an availability set from an azure_2 virtual machine.
+Removes an availability set from an Azure virtual machine.
 
 
 ### [Remove-AzureCertificate](./Remove-AzureCertificate.md)
-Removes a certificate from an azure_2 service.
+Removes a certificate from an Azure service.
 
 
 ### [Remove-AzureDataDisk](./Remove-AzureDataDisk.md)
-Removes a data disk from an azure_2 virtual machine.
+Removes a data disk from an Azure virtual machine.
 
 
 ### [Remove-AzureDeployment](./Remove-AzureDeployment.md)
@@ -372,15 +372,15 @@ Deletes a deployment of a cloud service.
 
 
 ### [Remove-AzureDisk](./Remove-AzureDisk.md)
-Removes a disk from the azure_2 disk repository.
+Removes a disk from the Azure disk repository.
 
 
 ### [Remove-AzureDns](./Remove-AzureDns.md)
-Removes a DNS server from an azure_2 service.
+Removes a DNS server from an Azure service.
 
 
 ### [Remove-AzureEndpoint](./Remove-AzureEndpoint.md)
-Deletes an endpoint from an azure_2 virtual machine.
+Deletes an endpoint from an Azure virtual machine.
 
 
 ### [Remove-AzureInternalLoadBalancer](./Remove-AzureInternalLoadBalancer.md)
@@ -396,7 +396,7 @@ Removes an internal load balancer configuration.
 
 
 ### [Remove-AzurePublicIP](./Remove-AzurePublicIP.md)
-Removes Public IP configuration from an azure_2 virtual machine.
+Removes Public IP configuration from an Azure virtual machine.
 
 
 ### [Remove-AzureReservedIPAssociation](./Remove-AzureReservedIPAssociation.md)
@@ -460,7 +460,7 @@ Removes the Azure Diagnostics extension from a virtual machine.
 
 
 ### [Remove-AzureVMDscExtension](./Remove-AzureVMDscExtension.md)
-Removes an azure_2 DSC extension from a virtual machine.
+Removes an Azure DSC extension from a virtual machine.
 
 
 ### [Remove-AzureVMExtension](./Remove-AzureVMExtension.md)
@@ -488,15 +488,15 @@ Removes the Puppet extension applied on a virtual machine.
 
 
 ### [Remove-AzureVMSqlServerExtension](./Remove-AzureVMSqlServerExtension.md)
-Removes an azure_2 virtual machine SQL Server extension from a virtual machine object.
+Removes an Azure virtual machine SQL Server extension from a virtual machine object.
 
 
 ### [Remove-AzureVM](./Remove-AzureVM.md)
-Removes an azure_2 virtual machine.
+Removes an Azure virtual machine.
 
 
 ### [Remove-AzureVNetConfig](./Remove-AzureVNetConfig.md)
-Deletes the network configuration from the current azure_2 subscription.
+Deletes the network configuration from the current Azure subscription.
 
 
 ### [Reset-AzureRoleInstance](./Reset-AzureRoleInstance.md)
@@ -504,7 +504,7 @@ Requests a reboot or reimage of a single role instance or all role instances of 
 
 
 ### [Restart-AzureVM](./Restart-AzureVM.md)
-Restarts an azure_2 virtual machine.
+Restarts an Azure virtual machine.
 
 
 ### [Save-AzureVhd](./Save-AzureVhd.md)
@@ -512,7 +512,7 @@ Enables download of .vhd images.
 
 
 ### [Save-AzureVMImage](./Save-AzureVMImage.md)
-Captures and saves the image of a stopped azure_2 virtual machine.
+Captures and saves the image of a stopped Azure virtual machine.
 
 
 ### [Set-AzureAclConfig](./Set-AzureAclConfig.md)
@@ -524,11 +524,11 @@ Modifies properties of an affinity group.
 
 
 ### [Set-AzureAvailabilitySet](./Set-AzureAvailabilitySet.md)
-Sets the name of the availability set on an azure_2 virtual machine.
+Sets the name of the availability set on an Azure virtual machine.
 
 
 ### [Set-AzureDataDisk](./Set-AzureDataDisk.md)
-Modifies the host caching of an existing data disk on an azure_2 virtual machine.
+Modifies the host caching of an existing data disk on an Azure virtual machine.
 
 
 ### [Set-AzureDeployment](./Set-AzureDeployment.md)
@@ -544,11 +544,11 @@ Modifies an endpoint assigned to a virtual machine.
 
 
 ### [Set-AzureInternalLoadBalancer](./Set-AzureInternalLoadBalancer.md)
-Modifies an internal load balancer configuration in an azure_2 service.
+Modifies an internal load balancer configuration in an Azure service.
 
 
 ### [Set-AzureLoadBalancedEndpoint](./Set-AzureLoadBalancedEndpoint.md)
-Modifies all of the endpoints in a load balancer set within an azure_2 service.
+Modifies all of the endpoints in a load balancer set within an Azure service.
 
 
 ### [Set-AzureNetworkInterfaceConfig](./Set-AzureNetworkInterfaceConfig.md)
@@ -560,11 +560,11 @@ Modifies all of the endpoints in a load balancer set within an azure_2 service.
 
 
 ### [Set-AzureOSDisk](./Set-AzureOSDisk.md)
-Modifies the host cache mode of an azure_2 virtual machine.
+Modifies the host cache mode of an Azure virtual machine.
 
 
 ### [Set-AzurePublicIP](./Set-AzurePublicIP.md)
-Adds a Public IP to an azure_2 virtual machine.
+Adds a Public IP to an Azure virtual machine.
 
 
 ### [Set-AzureReservedIPAssociation](./Set-AzureReservedIPAssociation.md)
@@ -572,7 +572,7 @@ Associates a reserved IP address with an existing virtual machine or cloud servi
 
 
 ### [Set-AzureRole](./Set-AzureRole.md)
-Sets the number of instances of an azure_2 role to run.
+Sets the number of instances of an Azure role to run.
 
 
 ### [Set-AzureServiceADDomainExtension](./Set-AzureServiceADDomainExtension.md)
@@ -584,7 +584,7 @@ Configures the Microsoft Antimalware extension for cloud services.
 
 
 ### [Set-AzureServiceDiagnosticsExtension](./Set-AzureServiceDiagnosticsExtension.md)
-Enables azure_2 Diagnostics extension on specified roles or all roles on a deployed service or at deployment.
+Enables Azure Diagnostics extension on specified roles or all roles on a deployed service or at deployment.
 
 
 ### [Set-AzureServiceExtension](./Set-AzureServiceExtension.md)
@@ -596,7 +596,7 @@ Enables remote desktop extension on specified role(s) or all roles on a deployed
 
 
 ### [Set-AzureService](./Set-AzureService.md)
-Sets or updates the label and description of the specified Microsoft azure_2 service.
+Sets or updates the label and description of the specified Microsoft Azure service.
 
 
 ### [Set-AzureStaticVNetIP](./Set-AzureStaticVNetIP.md)
@@ -604,11 +604,11 @@ Sets the static VNet IP address information for a virtual machine object.
 
 
 ### [Set-AzureStorageAccount](./Set-AzureStorageAccount.md)
-Updates the properties of a storage account in an azure_2 subscription.
+Updates the properties of a storage account in an Azure subscription.
 
 
 ### [Set-AzureSubnet](./Set-AzureSubnet.md)
-Defines the subnet list for an azure_2 virtual machine.
+Defines the subnet list for an Azure virtual machine.
 
 
 ### [Set-AzureVMAccessExtension](./Set-AzureVMAccessExtension.md)
@@ -624,7 +624,7 @@ Adds the Chef extension to the virtual machine.
 
 
 ### [Set-AzureVMCustomScriptExtension](./Set-AzureVMCustomScriptExtension.md)
-Sets information for an azure_2 virtual machine custom script extension.
+Sets information for an Azure virtual machine custom script extension.
 
 
 ### [Set-AzureVMDiagnosticsExtension](./Set-AzureVMDiagnosticsExtension.md)
@@ -656,15 +656,15 @@ Sets the Puppet extension for a virtual machine.
 
 
 ### [Set-AzureVMSize](./Set-AzureVMSize.md)
-Sets the size of an azure_2 virtual machine.
+Sets the size of an Azure virtual machine.
 
 
 ### [Set-AzureVMSqlServerExtension](./Set-AzureVMSqlServerExtension.md)
-Sets the azure_2 SQL Server extension on a virtual machine.
+Sets the Azure SQL Server extension on a virtual machine.
 
 
 ### [Set-AzureVNetConfig](./Set-AzureVNetConfig.md)
-Updates the virtual network settings for an azure_2 cloud service.
+Updates the virtual network settings for an Azure cloud service.
 
 
 ### [Set-AzureWalkUpgradeDomain](./Set-AzureWalkUpgradeDomain.md)
@@ -672,11 +672,11 @@ Walks the specified upgrade domain.
 
 
 ### [Start-AzureVM](./Start-AzureVM.md)
-Starts an azure_2 virtual machine.
+Starts an Azure virtual machine.
 
 
 ### [Stop-AzureVM](./Stop-AzureVM.md)
-Shuts down an azure_2 virtual machine.
+Shuts down an Azure virtual machine.
 
 
 ### [Test-AzureStaticVNetIP](./Test-AzureStaticVNetIP.md)
@@ -684,7 +684,7 @@ Tests the availability of a static virtual network IP address, and gets a list o
 
 
 ### [Update-AzureDisk](./Update-AzureDisk.md)
-Changes the label of a disk in the azure_2 disk repository.
+Changes the label of a disk in the Azure disk repository.
 
 
 ### [Update-AzureVMImage](./Update-AzureVMImage.md)
@@ -692,7 +692,7 @@ Updates the label of an operating system image in the image repository.
 
 
 ### [Update-AzureVM](./Update-AzureVM.md)
-Modifies the configuration of an azure_2 virtual machine.
+Modifies the configuration of an Azure virtual machine.
 
 
 

@@ -17,7 +17,7 @@ Get-AzureRmSiteRecoveryVault [-ResourceGroupName <String>] [-Name <String>] [<Co
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryVault** gets a list of azure_2 Site Recovery vaults or a specific Site Recovery vault from the current subscription.
+The **Get-AzureRmSiteRecoveryVault** gets a list of Azure Site Recovery vaults or a specific Site Recovery vault from the current subscription.
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the azure_2 resource group from which to retrieve the recovery services object.
+Specifies the name of the Azure resource group from which to retrieve the recovery services object.
 
 ```yaml
 Type: String

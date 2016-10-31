@@ -22,7 +22,7 @@ New-AzureRmRecoveryServicesBackupProtectionPolicy [-Name] <String> [-WorkloadTyp
 ## DESCRIPTION
 The **New-AzureRmRecoveryServicesBackupProtectionPolicy** cmdlet creates a Backup protection policy in a vault.
 A protection policy is associated with at least one retention policy.
-The retention policy defines how long a recovery point is kept with azure_2 Backup.
+The retention policy defines how long a recovery point is kept with Azure Backup.
 
 You can use the Get-AzureRmRecoveryServicesBackupRetentionPolicyObject cmdlet to get the default retention policy.
 And you can use the Get-AzureRmRecoveryServicesBackupSchedulePolicyObject cmdlet to get the default schedule policy.
@@ -113,7 +113,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -128,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

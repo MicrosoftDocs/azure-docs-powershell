@@ -25,7 +25,7 @@ Set-AzureRmAutomationVariable [-Name] <String> -Encrypted <Boolean> -Value <Obje
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationVariable** cmdlet modifies the value or description of a variable in azure_2 Automation.
+The **Set-AzureRmAutomationVariable** cmdlet modifies the value or description of a variable in Azure Automation.
 To encrypt the variable, specify the *Encrypted* parameter.
 You cannot modify the encrypted state of a variable after creation.
 Specifying *Encrypted* for an existing, non-encrypted, variable fails.
@@ -37,7 +37,7 @@ Specifying *Encrypted* for an existing, non-encrypted, variable fails.
 PS C:\>Set-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -ResourceGroupName "ResourceGroup01" -Value "New Value" -Encrypted $False
 ```
 
-This command sets a new value for the variable named StringVariable22 in the azure_2 Automation account named Contoso17.
+This command sets a new value for the variable named StringVariable22 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 

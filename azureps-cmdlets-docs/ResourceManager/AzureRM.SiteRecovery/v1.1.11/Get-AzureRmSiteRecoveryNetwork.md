@@ -33,7 +33,7 @@ Get-AzureRmSiteRecoveryNetwork -Server <ASRServer> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryNetwork** cmdlet gets information about azure_2 Site Recovery networks for the current azure_2 Site Recovery vault.
+The **Get-AzureRmSiteRecoveryNetwork** cmdlet gets information about Azure Site Recovery networks for the current Azure Site Recovery vault.
 
 ## EXAMPLES
 
@@ -75,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-@{Text=}
 
 ```yaml
 Type: ASRServer

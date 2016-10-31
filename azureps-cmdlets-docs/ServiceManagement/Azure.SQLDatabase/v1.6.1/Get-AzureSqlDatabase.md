@@ -29,7 +29,7 @@ Get-AzureSqlDatabase [-ServerName] <String> [-Database <Database>] [-DatabaseNam
 ## DESCRIPTION
 The **Get-AzureSqlDatabase** cmdlet retrieves one or more instances of an ssSDS from an ssSDS server.
 You can specify the server with an ssSDS server connection context that you create using the **New-AzureSqlDatabaseServerContext** cmdlet.
-Or, if you specify the ssSDS server name, the cmdlet uses the current azure_2 subscription information to authenticate the request to access the server.
+Or, if you specify the ssSDS server name, the cmdlet uses the current Azure subscription information to authenticate the request to access the server.
 
 If you do not specify a database, the **Get-AzureSqlDatabase** cmdlet returns all databases from the specified server.
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 ### -ServerName
 Specifies the name of the server that contains the database that this cmdlet retrieves.
-The cmdlet uses the current azure_2 subscription to access the server.
+The cmdlet uses the current Azure subscription to access the server.
 
 ```yaml
 Type: String

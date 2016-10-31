@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerResourceGroupName
-Specifies the name of the azure_2 Resource Group to which this cmdlet assigns the secondary database.
+Specifies the name of the Azure Resource Group to which this cmdlet assigns the secondary database.
 
 ```yaml
 Type: String
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServerName
-Specifies the name of the azure_2 SQL database server to act as secondary.
+Specifies the name of the Azure SQL database server to act as secondary.
 
 ```yaml
 Type: String
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the azure_2 Resource Group to which this cmdlet assigns the primary database.
+Specifies the name of the Azure Resource Group to which this cmdlet assigns the primary database.
 
 ```yaml
 Type: String
@@ -174,7 +174,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -189,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -63,7 +63,6 @@ The command does not change the storage settings.
 ## PARAMETERS
 
 ### -AuditType
-@{Text=}
 
 ```yaml
 Type: AuditType
@@ -94,7 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -AuditActionGroup
-@{Text=}
 
 ```yaml
 Type: AuditActionGroups[]
@@ -109,7 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -AuditAction
-@{Text=}
 
 ```yaml
 Type: String[]

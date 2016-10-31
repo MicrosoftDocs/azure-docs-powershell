@@ -20,7 +20,7 @@ New-AzureRmVM [-ResourceGroupName] <String> [-Location] <String> [-VM] <PSVirtua
 ```
 
 ## DESCRIPTION
-The **New-AzureRmVM** cmdlet creates a virtual machine in azure_2.
+The **New-AzureRmVM** cmdlet creates a virtual machine in Azure.
 This cmdlet takes a virtual machine object as input.
 Use the New-AzureRmVMConfig cmdlet to create a virtual machine object.
 Other cmdlets can be used to configure the virtual machine, such as Set-AzureRmVMOperatingSystem, Set-AzureRmVMSourceImage, Add-AzureRmVMNetworkInterface, and Set-AzureRmVMOSDisk.
@@ -134,7 +134,7 @@ This example takes an existing sys-prepped, generalized custom operating system 
 
 This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
 
-This script assumes that you are already logged into your azure_2 account.
+This script assumes that you are already logged into your Azure account.
 You can confirm your login status by using the **Get-AzureSubscription** cmdlet.
 
 ## PARAMETERS
@@ -242,7 +242,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -257,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -272,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -287,7 +296,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

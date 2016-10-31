@@ -33,7 +33,6 @@ This command starts a runbook job for the runbook named Runbk01 in the Azure Aut
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -48,7 +47,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -63,7 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-@{Text=}
 
 ```yaml
 Type: IDictionary

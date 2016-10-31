@@ -52,7 +52,6 @@ The **Get-AzureRmSiteRecoveryNetworkMapping** cmdlet gets information about Azur
 ## PARAMETERS
 
 ### -PrimaryFabric
-@{Text=}
 
 ```yaml
 Type: ASRFabric
@@ -82,7 +81,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryFabric
-@{Text=}
 
 ```yaml
 Type: ASRFabric
@@ -97,7 +95,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryServer
-@{Text=}
 
 ```yaml
 Type: ASRServer
@@ -112,7 +109,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryServer
-@{Text=}
 
 ```yaml
 Type: ASRServer

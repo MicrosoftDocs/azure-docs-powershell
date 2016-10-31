@@ -8,7 +8,7 @@ ms.assetid: A3CE4408-26D7-4993-8487-8C7FFD80E37A
 # Export-AzureVM
 
 ## SYNOPSIS
-Exports an azure_2 virtual machine state to a file.
+Exports an Azure virtual machine state to a file.
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ This command exports the state of the specified virtual machine to the VMstate.x
 ## PARAMETERS
 
 ### -ServiceName
-Specifies the name of the azure_2 service that hosts the virtual machine.
+Specifies the name of the Azure service that hosts the virtual machine.
 
 ```yaml
 Type: String
@@ -94,7 +94,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -109,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

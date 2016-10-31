@@ -40,7 +40,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String

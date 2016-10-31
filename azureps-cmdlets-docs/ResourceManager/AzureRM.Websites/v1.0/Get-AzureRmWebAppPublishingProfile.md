@@ -8,7 +8,7 @@ ms.assetid: 6868B3FA-7A59-42BD-B90A-EB515A7AFB21
 # Get-AzureRmWebAppPublishingProfile
 
 ## SYNOPSIS
-Gets an azure_2 Web App publishing profile.
+Gets an Azure Web App publishing profile.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-AzureRmWebAppPublishingProfile [-OutputFile] <String> [[-Format] <String>] [
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmWebAppPublishingProfile** cmdlet gets an azure_2 Web App publishing profile.
+The **Get-AzureRmWebAppPublishingProfile** cmdlet gets an Azure Web App publishing profile.
 
 ## EXAMPLES
 
@@ -37,7 +37,6 @@ The **Get-AzureRmWebAppPublishingProfile** cmdlet gets an azure_2 Web App publis
 ## PARAMETERS
 
 ### -OutputFile
-@{Text=}
 
 ```yaml
 Type: String
@@ -52,7 +51,6 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-@{Text=}
 
 ```yaml
 Type: String
@@ -67,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -82,7 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -97,7 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

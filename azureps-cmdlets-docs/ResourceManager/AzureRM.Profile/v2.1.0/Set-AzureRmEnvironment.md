@@ -323,7 +323,6 @@ Accept wildcard characters: False
 ```
 
 ### -GraphAudience
-@{Text=}
 
 ```yaml
 Type: String

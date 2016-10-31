@@ -21,7 +21,7 @@ Export-ACSLog -FarmName <String> -StartTime <DateTime> -EndTime <DateTime> -Cred
 ```
 
 ## DESCRIPTION
-The **Export-ACSLog** cmdlet assembles azure_2 Consistent Storage (ACS) logs, metrics, settings, health, and other system-related information into a package.
+The **Export-ACSLog** cmdlet assembles Azure Consistent Storage (ACS) logs, metrics, settings, health, and other system-related information into a package.
 
 ## EXAMPLES
 
@@ -265,7 +265,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -280,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

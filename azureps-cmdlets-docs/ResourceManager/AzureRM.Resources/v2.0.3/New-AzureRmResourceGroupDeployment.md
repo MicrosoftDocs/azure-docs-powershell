@@ -8,7 +8,7 @@ ms.assetid: A8D81054-E35D-4758-9A29-47088139ED1B
 # New-AzureRmResourceGroupDeployment
 
 ## SYNOPSIS
-Adds an azure_2 deployment to a resource group.
+Adds an Azure deployment to a resource group.
 
 ## SYNTAX
 
@@ -72,15 +72,15 @@ New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> 
 The **New-AzureRmResourceGroupDeployment** cmdlet adds a deployment to an existing resource group.
 This includes the resources that the deployment requires.
 
-An azure_2 resource is a user-managed azure_2 entity, such as a database server, database, website, virtual machine, or Storage account.
-An azure_2 resource group is a collection of azure_2 resources that are deployed as a unit, such as the website, database server, and databases that are required for a financial website.
-A resource group deployment uses a template to add resources to a resource group and publishes them so that they are available in azure_2.
+An Azure resource is a user-managed Azure entity, such as a database server, database, website, virtual machine, or Storage account.
+An Azure resource group is a collection of Azure resources that are deployed as a unit, such as the website, database server, and databases that are required for a financial website.
+A resource group deployment uses a template to add resources to a resource group and publishes them so that they are available in Azure.
 To add resources to a resource group without using a template, use the New-AzureRmResource cmdlet.
 
 To add a resource group deployment, specify the name of an existing resource group and a resource group template.
 A resource group template is a JSON string that represents a resource group for a complex cloud-based service, such as a web portal.
 The template includes parameter placeholders for required resources and configurable property values, such as names and sizes.
-You can find many templates in the azure_2 template gallery or you can create your own templates.
+You can find many templates in the Azure template gallery or you can create your own templates.
 You can use the **Get-AzureRmResourceGroupGalleryTemplate** cmdlet to find a template in the gallery.
 
 To use a custom template to create a resource group, specify the *TemplateFile* parameter or *TemplateUri* parameter.
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -319,7 +319,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

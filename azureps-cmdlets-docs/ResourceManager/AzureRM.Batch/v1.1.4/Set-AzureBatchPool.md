@@ -17,7 +17,7 @@ Set-AzureBatchPool [-Pool] <PSCloudPool> -BatchContext <BatchAccountContext> [<C
 ```
 
 ## DESCRIPTION
-The **Set-AzureBatchPool** cmdlet updates the properties of a pool in the azure_2 Batch service.
+The **Set-AzureBatchPool** cmdlet updates the properties of a pool in the Azure Batch service.
 Use the Get-AzureBatchPool cmdlet to get a **PSCloudPool** object.
 Modify the properties of that object, and then use the current cmdlet to commit your changes to the Batch service.
 

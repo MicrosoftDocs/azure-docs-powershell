@@ -8,7 +8,7 @@ ms.assetid: 3F8F7A51-B753-4513-85B1-406C65FAFFD0
 # Import-AzureRmRedisCache
 
 ## SYNOPSIS
-Imports data from blobs to azure_2 Redis Cache.
+Imports data from blobs to Azure Redis Cache.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Import-AzureRmRedisCache -ResourceGroupName <String> -Name <String> -Files <Stri
 ```
 
 ## DESCRIPTION
-The **Import-AzureRmRedisCache** cmdlet imports data from blobs into azure_2 Redis Cache.
+The **Import-AzureRmRedisCache** cmdlet imports data from blobs into Azure Redis Cache.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Import-AzureRmRedisCache** cmdlet imports data from blobs into azure_2 Red
 PS C:\>Import-AzureRmRedisCache -ResourceGroupName "ResourceGroup13" -Name "RedisCache06" -Files @("https://mystorageaccount.blob.core.windows.net/container22/blobname?sv=2015-04-05&sr=b&sig=caIwutG2uDa0NZ8mjdNJdgOY8%2F8mhwRuGNdICU%2B0pI4%3D&st=2016-05-27T00%3A00%3A00Z&se=2016-05-28T00%3A00%3A00Z&sp=rwd") -Force
 ```
 
-This command imports data from the blob that is specified by the SAS URL into azure_2 Redis Cache.
+This command imports data from the blob that is specified by the SAS URL into Azure Redis Cache.
 
 ## PARAMETERS
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

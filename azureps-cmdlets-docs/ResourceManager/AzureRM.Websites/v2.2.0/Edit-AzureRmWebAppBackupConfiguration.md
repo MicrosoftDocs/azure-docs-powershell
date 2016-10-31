@@ -38,7 +38,6 @@ Edit-AzureRmWebAppBackupConfiguration [-FrequencyInterval] <Int32> [-FrequencyUn
 ## PARAMETERS
 
 ### -FrequencyInterval
-@{Text=}
 
 ```yaml
 Type: Int32
@@ -53,7 +52,6 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyUnit
-@{Text=}
 
 ```yaml
 Type: String
@@ -68,7 +66,6 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPeriodInDays
-@{Text=}
 
 ```yaml
 Type: Int32
@@ -83,7 +80,6 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-@{Text=}
 
 ```yaml
 Type: DateTime
@@ -98,7 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -KeepAtLeastOneBackup
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -113,7 +108,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -128,7 +122,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -143,7 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
 
 ```yaml
 Type: String
@@ -158,7 +150,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-@{Text=}
 
 ```yaml
 Type: String
@@ -173,7 +164,6 @@ Accept wildcard characters: False
 ```
 
 ### -Databases
-@{Text=}
 
 ```yaml
 Type: DatabaseBackupSetting[]
@@ -188,7 +178,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

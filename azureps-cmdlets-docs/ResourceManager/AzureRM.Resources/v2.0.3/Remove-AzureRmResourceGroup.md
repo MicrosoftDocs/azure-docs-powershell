@@ -25,7 +25,7 @@ Remove-AzureRmResourceGroup [-Id] <String> [-Force] [-ApiVersion <String>] [-Pre
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmResourceGroup** cmdlet removes an azure_2 resource group and its resources from the current subscription.
+The **Remove-AzureRmResourceGroup** cmdlet removes an Azure resource group and its resources from the current subscription.
 To delete a resource, but leave the resource group, use the Remove-AzureRmResource cmdlet.
 
 ## EXAMPLES
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -149,7 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

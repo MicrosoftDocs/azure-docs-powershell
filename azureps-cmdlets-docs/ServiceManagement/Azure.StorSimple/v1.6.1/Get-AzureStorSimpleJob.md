@@ -19,7 +19,7 @@ Get-AzureStorSimpleJob [[-DeviceName] <String>] [[-InstanceId] <String>] [[-Stat
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorSimpleJob** cmdlet gets azure_2 StorSimple jobs.
+The **Get-AzureStorSimpleJob** cmdlet gets Azure StorSimple jobs.
 Specify an instance ID to get a specific job.
 Specify other parameters to limit the jobs that this cmdlet gets.
 

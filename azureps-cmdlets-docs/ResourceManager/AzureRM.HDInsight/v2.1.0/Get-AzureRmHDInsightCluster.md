@@ -23,7 +23,7 @@ Use the *ClusterName* parameter to get details for a specific cluster.
 
 ## EXAMPLES
 
-### Example 1: List all azure_2 HDInsight clusters
+### Example 1: List all Azure HDInsight clusters
 ```
 PS C:\>Get-AzureRmHDInsightCluster
 ```
@@ -63,7 +63,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -78,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

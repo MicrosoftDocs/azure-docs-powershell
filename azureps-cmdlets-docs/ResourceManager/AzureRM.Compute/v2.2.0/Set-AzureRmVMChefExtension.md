@@ -241,7 +241,6 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationClientName
-@{Text=}
 
 ```yaml
 Type: String

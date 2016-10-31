@@ -8,7 +8,7 @@ ms.assetid: E8059E7D-76CB-4666-A6E7-1FFFC7F9C3BE
 # Get-AzureSqlDatabaseOperation
 
 ## SYNOPSIS
-Gets the status of database operations on an azure_2 server.
+Gets the status of database operations on an Azure server.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-AzureSqlDatabaseOperation [-ServerName] <String> [-Database <Database>] [-Da
 ```
 
 ## DESCRIPTION
-The **Get-AzureSqlDatabaseOperation** cmdlet gets the status of database operations on the specified azure_2 server.
+The **Get-AzureSqlDatabaseOperation** cmdlet gets the status of database operations on the specified Azure server.
 If you specify only the *ServerName* or *ConnectionContext* parameter, the cmdlet gets all the database operations for the server.
 If you also specify a database by using the *Database* or *DatabaseName* parameter, this cmdlet gets all the operations for the specified database.
 If you specify an operation GUID, and *ServerName* or *ConnectionContext*, the cmdlet gets a single database operation.

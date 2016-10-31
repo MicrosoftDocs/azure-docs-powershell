@@ -29,9 +29,9 @@ New-AzureSqlDatabase [-ServerName] <String> [-DatabaseName] <String> [-Collation
 ## DESCRIPTION
 The **New-AzureSqlDatabase** cmdlet creates an ssSDS.
 You can specify the server by using an ssSDS server connection context that you create using the **New-AzureSqlDatabaseServerContext** cmdlet.
-Or, if you specify the server name, the cmdlet uses the current azure_2 subscription information to authenticate the request to access the server.
+Or, if you specify the server name, the cmdlet uses the current Azure subscription information to authenticate the request to access the server.
 
-When you create a new database by specifying an ssSDS server, the **New-AzureSqlDatabase** cmdlet creates a temporary connection context using the specified server name and the current azure_2 subscription information to perform the operation.
+When you create a new database by specifying an ssSDS server, the **New-AzureSqlDatabase** cmdlet creates a temporary connection context using the specified server name and the current Azure subscription information to perform the operation.
 
 ## EXAMPLES
 
@@ -48,7 +48,7 @@ PS C:\>$Database01 = New-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName
 ```
 
 This example creates a database named Database1, in the specified ssSDS server named lpqd0zbr8y.
-The cmdlet uses the current azure_2 subscription information to authenticate the request to access the server.
+The cmdlet uses the current Azure subscription information to authenticate the request to access the server.
 
 ## PARAMETERS
 
@@ -212,7 +212,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -227,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

@@ -72,7 +72,7 @@ The Storage Insight consumes data from the WADWindowsEventLogsTable table in the
 ## PARAMETERS
 
 ### -ResourceGroupName
-Specifies the name of an azure_2 resource group that contains a workspace.
+Specifies the name of an Azure resource group that contains a workspace.
 
 ```yaml
 Type: String
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountResourceId
-Specifies the azure_2 resource of a storage account.
+Specifies the Azure resource of a storage account.
 This can be retrieved by executing the Get-AzureRmStorageAccount cmdlet and accessing the *Id* parameter of the result.
 
 ```yaml
@@ -193,7 +193,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -208,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -238,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -253,7 +262,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

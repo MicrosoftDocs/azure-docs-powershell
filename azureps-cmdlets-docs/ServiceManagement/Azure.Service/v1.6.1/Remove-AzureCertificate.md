@@ -8,7 +8,7 @@ ms.assetid: 7486FC67-E9FF-4239-B10B-1BC0225C942D
 # Remove-AzureCertificate
 
 ## SYNOPSIS
-Removes a certificate from an azure_2 service.
+Removes a certificate from an Azure service.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-AzureCertificate [-ServiceName] <String> [-ThumbprintAlgorithm] <String> 
 ```
 
 ## DESCRIPTION
-The **Remove-AzureCertificate** cmdlet removes a certificate from an azure_2 service.
+The **Remove-AzureCertificate** cmdlet removes a certificate from an Azure service.
 
 ## EXAMPLES
 
@@ -50,7 +50,7 @@ The command passes each certificate to the current cmdlet, which removes each ce
 ## PARAMETERS
 
 ### -ServiceName
-Specifies the name of the azure_2 service from which this cmdlet removes a certificate.
+Specifies the name of the Azure service from which this cmdlet removes a certificate.
 
 ```yaml
 Type: String
@@ -110,7 +110,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -125,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

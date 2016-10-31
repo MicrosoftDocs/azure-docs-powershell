@@ -18,7 +18,7 @@ Set-AzureNetworkSecurityGroupToSubnet [-Name] <String> [-VirtualNetworkName] <St
 ```
 
 ## DESCRIPTION
-The **Set-AzureNetworkSecurityGroupToSubnet** cmdlet associates an azure_2 network security group to a subnet.
+The **Set-AzureNetworkSecurityGroupToSubnet** cmdlet associates an Azure network security group to a subnet.
 
 ## EXAMPLES
 

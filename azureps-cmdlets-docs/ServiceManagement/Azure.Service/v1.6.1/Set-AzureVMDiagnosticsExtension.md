@@ -29,7 +29,7 @@ Set-AzureVMDiagnosticsExtension [-DiagnosticsConfigurationPath] <String> [[-Stor
 ```
 
 ## DESCRIPTION
-The **Set-AzureVMDiagnosticsExtension** cmdlet configures the Microsoft azure_2 Diagnostics extension on a virtual machine.
+The **Set-AzureVMDiagnosticsExtension** cmdlet configures the Microsoft Azure Diagnostics extension on a virtual machine.
 
 ## EXAMPLES
 
@@ -74,7 +74,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -89,7 +88,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountKey
-@{Text=}
 
 ```yaml
 Type: String
@@ -104,7 +102,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountEndpoint
-@{Text=}
 
 ```yaml
 Type: String
@@ -119,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 
 ```yaml
 Type: AzureStorageContext
@@ -194,7 +191,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -209,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

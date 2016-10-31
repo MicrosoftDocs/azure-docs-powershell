@@ -48,7 +48,6 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-@{Text=}
 
 ```yaml
 Type: SecureString
@@ -63,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

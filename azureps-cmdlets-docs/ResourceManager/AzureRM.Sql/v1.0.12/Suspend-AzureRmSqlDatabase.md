@@ -18,7 +18,7 @@ Suspend-AzureRmSqlDatabase [-ServerName] <String> -DatabaseName <String> [-Resou
 ```
 
 ## DESCRIPTION
-The **Suspend-AzureRmSqlDatabase** cmdlet suspends an azure_2 SQL Data Warehouse database.
+The **Suspend-AzureRmSqlDatabase** cmdlet suspends an Azure SQL Data Warehouse database.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Suspend-AzureRmSqlDatabase** cmdlet suspends an azure_2 SQL Data Warehouse
 PS C:\>Suspend-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 ```
 
-This command suspends an active azure_2 SQL Data Warehouse database.
+This command suspends an active Azure SQL Data Warehouse database.
 
 ## PARAMETERS
 
@@ -77,7 +77,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -92,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -118,7 +127,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel
 
 ## NOTES
-* The **Suspend-AzureRmSqlDatabase** cmdlet works only on azure_2 SQL Data Warehouse databases. This operation is not supported on ssSDS Basic, Standard and Premium editions.
+* The **Suspend-AzureRmSqlDatabase** cmdlet works only on Azure SQL Data Warehouse databases. This operation is not supported on ssSDS Basic, Standard and Premium editions.
 
 ## RELATED LINKS
 

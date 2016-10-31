@@ -196,7 +196,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProtectedItem
-@{Text=}
 
 ```yaml
 Type: ASRReplicationProtectedItem

@@ -43,7 +43,7 @@ Set-AzureRemoteAppCollection [-CollectionName] <String> -AclLevel <CollectionAcl
 ```
 
 ## DESCRIPTION
-The **Set-AzureRemoteAppCollection** cmdlet sets the properties of an azure_2 RemoteApp collection.
+The **Set-AzureRemoteAppCollection** cmdlet sets the properties of an Azure RemoteApp collection.
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ The **Set-AzureRemoteAppCollection** cmdlet sets the properties of an azure_2 Re
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies the credentials of a service account that has permission to join the azure_2 RemoteApp servers to your domain.
+Specifies the credentials of a service account that has permission to join the Azure RemoteApp servers to your domain.
 To obtain a **Credential** object, use the Get-Credential cmdlet.
 
 ```yaml
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plan
-Specifies the plan for the azure_2 RemoteApp collection, which defines the usage limits.
+Specifies the plan for the Azure RemoteApp collection, which defines the usage limits.
 Use **Get-AzureRemoteAppPlan** to see the plans available.
 
 ```yaml

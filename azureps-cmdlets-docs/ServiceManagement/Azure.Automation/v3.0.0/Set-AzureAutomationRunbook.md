@@ -62,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogProgress
-@{Text=}
 
 ```yaml
 Type: Boolean

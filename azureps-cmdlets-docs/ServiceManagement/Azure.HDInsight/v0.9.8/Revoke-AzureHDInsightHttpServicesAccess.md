@@ -136,7 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSslErrors
-@{Text=}
 
 ```yaml
 Type: Boolean

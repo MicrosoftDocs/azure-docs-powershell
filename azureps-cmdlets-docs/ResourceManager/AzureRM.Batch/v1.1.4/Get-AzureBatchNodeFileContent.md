@@ -49,7 +49,7 @@ Get-AzureBatchNodeFileContent [[-InputObject] <PSNodeFile>] -DestinationStream <
 ```
 
 ## DESCRIPTION
-The **Get-AzureBatchNodeFileContent** cmdlet gets an azure_2 Batch node file and saves it as a file or to a stream.
+The **Get-AzureBatchNodeFileContent** cmdlet gets an Azure Batch node file and saves it as a file or to a stream.
 
 ## EXAMPLES
 

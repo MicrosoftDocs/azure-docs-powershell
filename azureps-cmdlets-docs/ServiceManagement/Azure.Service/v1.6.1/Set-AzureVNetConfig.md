@@ -8,7 +8,7 @@ ms.assetid: CE36E975-59DC-4D81-AA5C-DAA3670E9FA9
 # Set-AzureVNetConfig
 
 ## SYNOPSIS
-Updates the virtual network settings for an azure_2 cloud service.
+Updates the virtual network settings for an Azure cloud service.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Set-AzureVNetConfig [-ConfigurationPath] <String> [-Profile <AzureSMProfile>]
 ```
 
 ## DESCRIPTION
-The **Set-AzureVNetConfig** cmdlet updates the network configuration for the current azure_2 subscription by specifying a path to anetwork configuration file (.netcfg).
+The **Set-AzureVNetConfig** cmdlet updates the network configuration for the current Azure subscription by specifying a path to anetwork configuration file (.netcfg).
 The network configuration file defines DNS servers and subnets for cloud services within a subscription.
 
 ## EXAMPLES
@@ -28,7 +28,7 @@ The network configuration file defines DNS servers and subnets for cloud service
 PS C:\>Set-AzureVNetConfig  -ConfigurationPath "c:\temp\MyAzNets.netcfg"
 ```
 
-This command updates the network configuration of the current Microsoft azure_2 subscription to that in the local file "c:\temp\MyAzNets.netcfg".
+This command updates the network configuration of the current Microsoft Azure subscription to that in the local file "c:\temp\MyAzNets.netcfg".
 
 ### Example 2: Set the Azure subscription and then update the network configuration
 ```
@@ -72,7 +72,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -87,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -25,7 +25,7 @@ Set-AzureRmCurrentStorageAccount -Context <AzureStorageContext> [-InformationAct
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmCurrentStorageAccount** cmdlet modifies the current azure_2 Storage account of the specified azure_2 subscription in azure_2 PowerShell.
+The **Set-AzureRmCurrentStorageAccount** cmdlet modifies the current Azure Storage account of the specified Azure subscription in Azure PowerShell.
 The current storage account is used as the default when you access Storage without specifying a Storage account name.
 
 ## EXAMPLES
@@ -70,7 +70,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -85,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

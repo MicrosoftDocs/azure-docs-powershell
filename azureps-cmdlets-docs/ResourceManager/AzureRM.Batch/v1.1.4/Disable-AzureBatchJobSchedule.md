@@ -17,7 +17,7 @@ Disable-AzureBatchJobSchedule [-Id] <String> -BatchContext <BatchAccountContext>
 ```
 
 ## DESCRIPTION
-The **Disable-AzureBatchJobSchedule** cmdlet disables an azure_2 Batch job schedule.
+The **Disable-AzureBatchJobSchedule** cmdlet disables an Azure Batch job schedule.
 If you disable a schedule, jobs are not created according to that schedule.
 You can enable a disabled schedule later.
 

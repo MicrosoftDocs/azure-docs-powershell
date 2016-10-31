@@ -17,7 +17,7 @@ Get-AzureNetworkSecurityGroup [[-Name] <String>] [-Detailed] [-Profile <AzureSMP
 ```
 
 ## DESCRIPTION
-The **Get-AzureNetworkSecurityGroup** cmdlet returns details for an azure_2 network security group.
+The **Get-AzureNetworkSecurityGroup** cmdlet returns details for an Azure network security group.
 Specify the *Detailed* parameter to display the network security rules.
 
 ## EXAMPLES

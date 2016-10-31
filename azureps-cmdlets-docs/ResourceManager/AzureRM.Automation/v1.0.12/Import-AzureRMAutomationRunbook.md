@@ -19,7 +19,7 @@ Import-AzureRmAutomationRunbook [-Path] <String> [-Description <String>] [-Name 
 ```
 
 ## DESCRIPTION
-The **Import-AzureRmAutomationRunbook** cmdlet imports an azure_2 Automation runbook.
+The **Import-AzureRmAutomationRunbook** cmdlet imports an Azure Automation runbook.
 Specify the path to a wps_2 script (.ps1 ) file to import for wps_2 and wps_2 Workflow runbooks, or to a graphical runbook (.graphrunbook) file for graphical runbooks.
 The name of the file becomes the name of the runbook.
 For wps_2 Workflow runbooks, the script must contain a single wps_2 Workflow definition that matches the name of the file.
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -231,7 +231,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

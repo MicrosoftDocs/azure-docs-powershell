@@ -8,7 +8,7 @@ ms.assetid: B13B9F46-C0BB-4565-95DB-211D5C5699C6
 # Remove-AzureRmSqlServerActiveDirectoryAdministrator
 
 ## SYNOPSIS
-Removes an azure_2 AD administrator for SQL Server.
+Removes an Azure AD administrator for SQL Server.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-AzureRmSqlServerActiveDirectoryAdministrator [-Force] [-ServerName] <Stri
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet removes an azure_2 Active Directory (azure_2 AD) administrator for azure_2ssNoVersion in the current subscription.
+The **Remove-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet removes an Azure Active Directory (Azure AD) administrator for AzuressNoVersion in the current subscription.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ ResourceGroupName ServerName DisplayName ObjectId
 ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
-This command removes the azure_2 AD administrator for the server named Server01 associated with the resource group ResourceGroup01.
+This command removes the Azure AD administrator for the server named Server01 associated with the resource group ResourceGroup01.
 
 ## PARAMETERS
 
@@ -85,7 +85,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -100,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -115,7 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -130,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

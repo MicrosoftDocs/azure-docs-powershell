@@ -27,7 +27,7 @@ Get-ACSEvent -EventQuery <EventQuery> [[-SubscriptionId] <String>] [[-Token] <St
 ```
 
 ## DESCRIPTION
-The **Get-ACSEvent** cmdlet gets a list of event objects events in the azure_2 Consistent Storage (ACS) system.
+The **Get-ACSEvent** cmdlet gets a list of event objects events in the Azure Consistent Storage (ACS) system.
 You can compose an event query with the Get-ACSEventQuery cmdlet.
 
 ## EXAMPLES
@@ -120,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-@{Text=}
 
 ```yaml
 Type: Int32[]

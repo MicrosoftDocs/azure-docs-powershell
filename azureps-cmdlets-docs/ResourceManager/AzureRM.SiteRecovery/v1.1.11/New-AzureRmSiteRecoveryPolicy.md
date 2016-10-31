@@ -29,7 +29,7 @@ New-AzureRmSiteRecoveryPolicy -Name <String> -ReplicationProvider <String> [-Rep
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSiteRecoveryPolicy** cmdlet creates an azure_2 Site Recovery replication policy.
+The **New-AzureRmSiteRecoveryPolicy** cmdlet creates an Azure Site Recovery replication policy.
 The replication policy is used to specify replication settings such as the replication frequency and number of recovery points.
 
 ## EXAMPLES
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureStorageAccountId
-Specifies the azure_2 storage account ID of the replication target.
+Specifies the Azure storage account ID of the replication target.
 
 ```yaml
 Type: String

@@ -39,7 +39,6 @@ This command removes the Azure App Service plan named ContosoAppPlan that belong
 ## PARAMETERS
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -69,7 +67,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -84,7 +81,6 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-@{Text=}
 
 ```yaml
 Type: ServerFarmWithRichSku

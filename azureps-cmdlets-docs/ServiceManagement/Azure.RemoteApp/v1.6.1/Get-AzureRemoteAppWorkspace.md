@@ -8,7 +8,7 @@ ms.assetid: BC3CEB58-CE52-46C8-97A1-66CEA9098F8F
 # Get-AzureRemoteAppWorkspace
 
 ## SYNOPSIS
-Retrieves information about an azure_2 RemoteApp workspace.
+Retrieves information about an Azure RemoteApp workspace.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRemoteAppWorkspace [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppWorkspace** cmdlet retrieves information about an azure_2 RemoteApp workspace.
+The **Get-AzureRemoteAppWorkspace** cmdlet retrieves information about an Azure RemoteApp workspace.
 
 ## EXAMPLES
 
@@ -29,7 +29,7 @@ ClientUrl                               EndUserFeedName
 https://www.remoteapp.windowsazure.com/ Contoso Work Applications
 ```
 
-This command retrieves information about the azure_2 RemoteApp workspace.
+This command retrieves information about the Azure RemoteApp workspace.
 
 ## PARAMETERS
 

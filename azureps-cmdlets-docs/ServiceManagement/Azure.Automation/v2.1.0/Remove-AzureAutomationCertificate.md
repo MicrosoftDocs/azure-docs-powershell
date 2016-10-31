@@ -32,7 +32,6 @@ This command removes a certificate named Cert01 in the Automation account named 
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -47,7 +46,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -62,7 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -77,7 +74,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile

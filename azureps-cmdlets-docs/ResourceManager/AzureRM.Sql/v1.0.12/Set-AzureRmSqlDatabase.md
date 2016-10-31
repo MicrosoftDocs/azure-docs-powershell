@@ -21,7 +21,7 @@ Set-AzureRmSqlDatabase [-DatabaseName] <String> [-MaxSizeBytes <Int64>] [-Editio
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSqlDatabase** cmdlet sets properties for an azure_2 SQL database.
+The **Set-AzureRmSqlDatabase** cmdlet sets properties for an Azure SQL database.
 In addition, you can specify the *ElasticPoolName* parameter to move a database into an elastic pool.
 If a database is already in an elastic pool, you can use the *RequestedServiceObjectiveName* parameter to assign a performance level.
 
@@ -211,7 +211,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -226,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

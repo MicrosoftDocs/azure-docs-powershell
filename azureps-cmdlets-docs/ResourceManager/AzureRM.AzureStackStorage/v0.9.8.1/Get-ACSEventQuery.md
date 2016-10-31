@@ -20,7 +20,7 @@ Get-ACSEventQuery [-FarmName] <String> [-StartTime] <DateTime> [-EndTime] <DateT
 ```
 
 ## DESCRIPTION
-The **Get-ACSEventQuery** cmdlet gets an azure_2 Consistent Storage system (ACS) query object.
+The **Get-ACSEventQuery** cmdlet gets an Azure Consistent Storage system (ACS) query object.
 The **ACSEventQuery** object can be used to query events from the ACS system.
 
 ## EXAMPLES
@@ -97,7 +97,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderGuid
-@{Text=}
 
 ```yaml
 Type: Guid
@@ -112,7 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-@{Text=}
 
 ```yaml
 Type: Int32[]

@@ -27,7 +27,7 @@ For information about how to use the new HDInsight to create a cluster, see Crea
 For information about how to submit jobs by using APS and other approaches, see Submit Hadoop jobs in HDInsighthttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/.
 For reference information about APS HDInsight, see Azure HDInsight Cmdletshttps://msdn.microsoft.com/en-us/library/mt438705.aspx.
 
-The **New-AzureHDInsightHiveJobDefinition** cmdlet defines a Hive job for an azure_2 HDInsight service.
+The **New-AzureHDInsightHiveJobDefinition** cmdlet defines a Hive job for an Azure HDInsight service.
 
 ## EXAMPLES
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunAsFileJob
-Indicates that this cmdlet creates a file in the default azure_2 storage account in which to store a query.
+Indicates that this cmdlet creates a file in the default Azure storage account in which to store a query.
 This cmdlet submits the job that references this file as a script to run.
 
 You can use this functionality to handle special characters such as percent sign (%) that would fail on a job submission through Templeton, because Templeton interprets a query with a percent sign as a URL parameter.

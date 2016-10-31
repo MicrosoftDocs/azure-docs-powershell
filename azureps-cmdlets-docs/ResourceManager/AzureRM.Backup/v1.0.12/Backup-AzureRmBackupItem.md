@@ -17,7 +17,7 @@ Backup-AzureRmBackupItem [-Item] <AzureRMBackupItem> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Backup-AzureRmBackupItem** cmdlet starts a backup for a protected azure_2 Backup item that is not tied to the backup schedule.
+The **Backup-AzureRmBackupItem** cmdlet starts a backup for a protected Azure Backup item that is not tied to the backup schedule.
 You can do an initial backup immediately after you enable protection or start a backup after a scheduled backup fails.
 
 If an existing backup job is running, this cmdlet fails.

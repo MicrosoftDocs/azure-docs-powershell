@@ -21,7 +21,7 @@ Get-AzureRmAutomationDscOnboardingMetaconfig [-OutputFolder <String>] [-Computer
 The **Get-AzureRmAutomationDscOnboardingMetaconfig** cmdlet creates APS Desired State Configuration (DSC) meta-configuration Managed Object Format (MOF) files.
 This cmdlet creates a .mof file for each computer name that you specify.
 The cmdlet creates a folder for the .mof files.
-You can run the Set-DscLocalConfigurationManager cmdlet for this folder to onboard these computers into an azure_2 Automation account as DSC nodes.
+You can run the Set-DscLocalConfigurationManager cmdlet for this folder to onboard these computers into an Azure Automation account as DSC nodes.
 
 ## EXAMPLES
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -132,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

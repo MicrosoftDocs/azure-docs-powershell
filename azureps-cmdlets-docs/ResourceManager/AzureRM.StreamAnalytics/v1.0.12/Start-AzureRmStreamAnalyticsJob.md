@@ -18,7 +18,7 @@ Start-AzureRmStreamAnalyticsJob [-Name] <String> [[-OutputStartMode] <String>] [
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmStreamAnalyticsJob** cmdlet asynchronously deploys and starts a Stream Analytics job in azure_2.
+The **Start-AzureRmStreamAnalyticsJob** cmdlet asynchronously deploys and starts a Stream Analytics job in Azure.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ This command starts the job StreamingJob and specifies that the output event str
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the azure_2 Stream Analytics job to start.
+Specifies the name of the Azure Stream Analytics job to start.
 
 ```yaml
 Type: String
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the azure_2 Stream Analytics job belongs.
+Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
 
 ```yaml
 Type: String

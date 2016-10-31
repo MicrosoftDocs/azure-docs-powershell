@@ -302,7 +302,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSwapSlotName
-@{Text=}
 
 ```yaml
 Type: String

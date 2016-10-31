@@ -8,7 +8,7 @@ ms.assetid: 4A5E74F3-08D6-4E95-AC27-94F68B74B02C
 # Get-AzureRemoteDesktopFile
 
 ## SYNOPSIS
-Gets an RDP file for an azure_2 virtual machine.
+Gets an RDP file for an Azure virtual machine.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Get-AzureRemoteDesktopFile [-Name] <String> [[-LocalPath] <String>] [-Launch] [-
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteDesktopFile** cmdlet downloads and saves a remote desktop connection (RDP) file for an azure_2 virtual machine.
+The **Get-AzureRemoteDesktopFile** cmdlet downloads and saves a remote desktop connection (RDP) file for an Azure virtual machine.
 The cmdlet can launch a remote desktop connection to the specified virtual machine.
 
 ## EXAMPLES
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Specifies the name of the azure_2 service to which the virtual machine belongs.
+Specifies the name of the Azure service to which the virtual machine belongs.
 
 ```yaml
 Type: String
@@ -124,7 +124,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -139,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -97,7 +97,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderGuid
-@{Text=}
 
 ```yaml
 Type: Guid
@@ -112,7 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-@{Text=}
 
 ```yaml
 Type: Int32[]

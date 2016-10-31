@@ -31,7 +31,7 @@ In the following example the resource group name is **Default-MachineLearning-So
 `Type       : Microsoft.MachineLearning/webServices`
 `Tags       : {}`
 
-Alternatively, to determine the resource group name of an existing web service, log on to the Microsoft azure_2 Machine Learning Web Services portal.
+Alternatively, to determine the resource group name of an existing web service, log on to the Microsoft Azure Machine Learning Web Services portal.
 Select the web service.
 The resource group name is the fifth element of the URL of the web service, just after the **resourceGroups** element.
 In the following example the resource group name is **Default-MachineLearning-SouthCentralUS**.

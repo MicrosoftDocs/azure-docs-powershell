@@ -8,7 +8,7 @@ ms.assetid: 7486A636-0827-446C-827D-247B760183D9
 # Set-AzureServiceDiagnosticsExtension
 
 ## SYNOPSIS
-Enables azure_2 Diagnostics extension on specified roles or all roles on a deployed service or at deployment.
+Enables Azure Diagnostics extension on specified roles or all roles on a deployed service or at deployment.
 
 ## SYNTAX
 
@@ -40,7 +40,7 @@ Set-AzureServiceDiagnosticsExtension [[-ServiceName] <String>] [[-Slot] <String>
 ```
 
 ## DESCRIPTION
-The **Set-AzureServiceDiagnosticsExtension** cmdlet enables azure_2 Diagnostics extension on specified roles or all roles on a deployed service or at deployment.
+The **Set-AzureServiceDiagnosticsExtension** cmdlet enables Azure Diagnostics extension on specified roles or all roles on a deployed service or at deployment.
 
 ## EXAMPLES
 
@@ -49,19 +49,19 @@ The **Set-AzureServiceDiagnosticsExtension** cmdlet enables azure_2 Diagnostics 
 PS C:\>Set-AzureServiceDiagnosticsExtension -ServiceName $Svc -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML
 ```
 
-This command enables the azure_2 Diagnostics extension for all roles.
+This command enables the Azure Diagnostics extension for all roles.
 
 ### Example 2: Enable Azure Diagnostics extension for a specified role
 ```
 PS C:\>Set-AzureServiceDiagnosticsExtension -ServiceName $Svc -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML -Role "WebRole01"
 ```
 
-This command enables the azure_2 Diagnostics extension for a specified role.
+This command enables the Azure Diagnostics extension for a specified role.
 
 ## PARAMETERS
 
 ### -ServiceName
-Specifies the azure_2 service name of the deployment.
+Specifies the Azure service name of the deployment.
 
 ```yaml
 Type: String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Specifies an optional array of roles for which to specify the azure_2 Diagnostics configuration.
+Specifies an optional array of roles for which to specify the Azure Diagnostics configuration.
 If you do not specify this parameter, the diagnostics configuration is applied as the default configuration for all roles.
 
 ```yaml
@@ -139,7 +139,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -154,7 +153,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountKey
-@{Text=}
 
 ```yaml
 Type: String
@@ -169,7 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountEndpoint
-@{Text=}
 
 ```yaml
 Type: String
@@ -184,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 
 ```yaml
 Type: AzureStorageContext
@@ -199,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticsConfigurationPath
-Specifies the configuration for azure_2 Diagnostics.
+Specifies the configuration for Azure Diagnostics.
 You can download the schema by using the following command:
                         `(Get-AzureServiceAvailableExtension -ExtensionName 'PaaSDiagnostics' -ProviderNamespace 'Microsoft.Azure.Diagnostics').PublicConfigurationSchema | Out-File -Encoding utf8 -FilePath 'WadConfig.xsd'`
 
@@ -231,7 +228,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionId
-@{Text=}
 
 ```yaml
 Type: String
@@ -261,7 +257,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -276,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -291,7 +296,6 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticsConfiguration
-@{Text=}
 
 ```yaml
 Type: ExtensionConfigurationInput[]

@@ -18,7 +18,7 @@ Restore-AzureRmBackupItem [-StorageAccountName] <String> [-RecoveryPoint] <Azure
 ```
 
 ## DESCRIPTION
-The **Restore-AzureRmBackupItem** cmdlet restores the data and configuration for an azure_2 Backup item to a specified recovery point.
+The **Restore-AzureRmBackupItem** cmdlet restores the data and configuration for an Azure Backup item to a specified recovery point.
 This cmdlet starts the restore from the Backup vault to your account.
 
 The restore operation does not restore the full virtual machine.

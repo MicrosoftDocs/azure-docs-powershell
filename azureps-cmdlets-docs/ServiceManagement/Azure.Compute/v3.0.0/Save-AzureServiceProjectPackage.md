@@ -34,7 +34,6 @@ This example creates a *.cspgk for a service project named MyAzureServiceProject
 ## PARAMETERS
 
 ### -Local
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

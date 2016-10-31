@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ### -ResourceGroupName
 Specifies the name of the resource group that the virtual network gateway is assigned to.
 
-Resource groups categorize items to help simplify inventory management and general azure_2 administration.
+Resource groups categorize items to help simplify inventory management and general Azure administration.
 
 ```yaml
 Type: String
@@ -121,7 +121,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -136,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

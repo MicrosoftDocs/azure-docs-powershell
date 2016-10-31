@@ -327,7 +327,7 @@ Creates a SKU for an application gateway.
 
 
 ### [New-AzureRmApplicationGatewaySslCertificate](./New-AzureRmApplicationGatewaySslCertificate.md)
-Creates an SSL certificate for an azure_2 application gateway.
+Creates an SSL certificate for an Azure application gateway.
 
 ### [New-AzureRmApplicationGatewayUrlPathMapConfig](./New-AzureRmApplicationGatewayUrlPathMapConfig.md)
 Creates an array of URL path mappings to a backend server pool.
@@ -345,7 +345,7 @@ Creates an ExpressRoute circuit authorization.
 
 
 ### [New-AzureRmExpressRouteCircuit](./New-AzureRmExpressRouteCircuit.md)
-Creates an azure_2 express route circuit.
+Creates an Azure express route circuit.
 
 
 ### [New-AzureRmLoadBalancerBackendAddressPoolConfig](./New-AzureRmLoadBalancerBackendAddressPoolConfig.md)
@@ -676,7 +676,7 @@ Modifies a local network gateway.
 
 
 ### [Set-AzureRmNetworkInterfaceIpConfig](./Set-AzureRmNetworkInterfaceIpConfig.md)
-Sets the goal state for an azure_2 network interface IP configuration.
+Sets the goal state for an Azure network interface IP configuration.
 
 
 ### [Set-AzureRmNetworkInterface](./Set-AzureRmNetworkInterface.md)

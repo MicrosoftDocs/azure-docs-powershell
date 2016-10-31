@@ -42,7 +42,7 @@ This command returns the available VPN device configurations for the specified v
 ## PARAMETERS
 
 ### -VNetName
-Specifies the name of the azure_2 RemoteApp virtual network.
+Specifies the name of the Azure RemoteApp virtual network.
 
 ```yaml
 Type: String

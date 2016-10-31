@@ -18,7 +18,7 @@ Get-AzureRmBatchApplicationPackage [-AccountName] <String> [-ResourceGroupName] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBatchApplicationPackage** cmdlet gets information about an application package in an azure_2 Batch account.
+The **Get-AzureRmBatchApplicationPackage** cmdlet gets information about an application package in an Azure Batch account.
 
 ## EXAMPLES
 

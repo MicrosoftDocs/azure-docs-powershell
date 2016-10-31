@@ -19,7 +19,7 @@ Remove-AzureRmHDInsightPersistedScriptAction [-ClusterName] <String> [-Name] <St
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmHDInsightPersistedScriptAction** cmdlet removes a persisted script action from the specified azure_2 HDInsight cluster's list of persisted script actions.
+The **Remove-AzureRmHDInsightPersistedScriptAction** cmdlet removes a persisted script action from the specified Azure HDInsight cluster's list of persisted script actions.
 The removed script will no longer be executed when the cluster is scaled up.
 
 ## EXAMPLES
@@ -81,7 +81,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -96,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -27,7 +27,7 @@ New-AzureRmApplicationGatewayFrontendIPConfig -Name <String> [-PrivateIPAddress 
 ```
 
 ## DESCRIPTION
-The **New-AzureRmApplicationGatewayFrontendIPConfig** cmdlet creates a front-end IP configuraton for an azure_2 application gateway.
+The **New-AzureRmApplicationGatewayFrontendIPConfig** cmdlet creates a front-end IP configuraton for an Azure application gateway.
 An application gateway supports two types of front-end IP configuration: 
 
 - Public IP addresses 
@@ -137,7 +137,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -152,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -29,7 +29,7 @@ Get-AzureRmSiteRecoveryVaultSettingsFile -Vault <ASRVault> -SiteIdentifier <Stri
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryVaultSettingsFile** cmdlet gets the settings file for an azure_2 Site Recovery vault.
+The **Get-AzureRmSiteRecoveryVaultSettingsFile** cmdlet gets the settings file for an Azure Site Recovery vault.
 
 ## EXAMPLES
 

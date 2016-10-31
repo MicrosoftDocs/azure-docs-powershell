@@ -49,7 +49,7 @@ The **Set-AzureSqlDatabase** cmdlet sets properties for an ssSDS.
 You can specify the database by name, or pass an ssSDS object through the pipeline.
 You can specify the server by name, or pass an ssSDS server connection context.
 Create a connection context by running the New-AzureSqlDatabaseServerContext cmdlet.
-If you specify the server by name, the cmdlet uses the current azure_2 subscription information to authenticate the request.
+If you specify the server by name, the cmdlet uses the current Azure subscription information to authenticate the request.
 
 ## EXAMPLES
 
@@ -242,7 +242,6 @@ Accept wildcard characters: False
 ```
 
 ### -Sync
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -257,7 +256,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

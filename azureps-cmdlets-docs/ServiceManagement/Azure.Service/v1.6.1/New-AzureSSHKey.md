@@ -8,7 +8,7 @@ ms.assetid: D1D4D505-9F98-4BB5-9810-B6438E701293
 # New-AzureSSHKey
 
 ## SYNOPSIS
-Creates a SSH Key object to insert an existing certificate into a new Linux-based azure_2 virtual machines.
+Creates a SSH Key object to insert an existing certificate into a new Linux-based Azure virtual machines.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ New-AzureSSHKey [-PublicKey] [-Fingerprint] <String> [-Path] <String> [-Informat
 ```
 
 ## DESCRIPTION
-The **New-AzureSSHKey** cmdlet creates an SSH Key object for a certificate that has already been added to azure_2.
+The **New-AzureSSHKey** cmdlet creates an SSH Key object for a certificate that has already been added to Azure.
 This SSH Key object can then be used by **New-AzureProvisioningConfig** when creating the configuration object for a new virtual machine using **New-AzureVM**, or when creating a new virtual machine with **New-AzureQuickVM**.
 When included as part of a virtual machine creation script, this adds the specified SSH Public Key or Key Pair to the new virtual machine.
 
@@ -47,7 +47,7 @@ New-AzureVMConfig -Name "MyVM2" -InstanceSize Small -ImageName $LxImage `
           | New-AzureVM -ServiceName "MySvc"
 ```
 
-This command adds a certificate to an azure_2 service, and then creates a new Linux virtual machine that uses the certificate.
+This command adds a certificate to an Azure service, and then creates a new Linux virtual machine that uses the certificate.
 
 ## PARAMETERS
 
@@ -97,7 +97,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -112,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

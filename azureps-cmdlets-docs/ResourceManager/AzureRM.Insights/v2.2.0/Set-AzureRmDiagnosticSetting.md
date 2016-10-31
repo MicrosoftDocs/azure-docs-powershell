@@ -183,7 +183,6 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceBusRuleId
-@{Text=}
 
 ```yaml
 Type: String

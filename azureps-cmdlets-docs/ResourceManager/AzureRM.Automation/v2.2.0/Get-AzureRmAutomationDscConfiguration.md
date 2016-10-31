@@ -25,7 +25,7 @@ Get-AzureRmAutomationDscConfiguration [-Name] <String> [-ResourceGroupName] <Str
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationDscConfiguration** cmdlet gets APS Desired State Configuration (DSC) configurations from azure_2 Automation.
+The **Get-AzureRmAutomationDscConfiguration** cmdlet gets APS Desired State Configuration (DSC) configurations from Azure Automation.
 
 ## EXAMPLES
 

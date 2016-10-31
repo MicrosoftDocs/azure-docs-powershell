@@ -23,7 +23,7 @@ Set-AzureRmSiteRecoveryVaultSettings -ARSVault <ARSVault> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSiteRecoveryVaultSettings** cmdlet sets the azure_2 Site Recovery vault context for further operations.
+The **Set-AzureRmSiteRecoveryVaultSettings** cmdlet sets the Azure Site Recovery vault context for further operations.
 This does not apply to recovery services vaults.
 
 ## EXAMPLES

@@ -23,7 +23,7 @@ Remove-AzureRmSiteRecoveryRecoveryPlan -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSiteRecoveryRecoveryPlan** cmdlet removes a site recovery plan from the current azure_2 Site Recovery.
+The **Remove-AzureRmSiteRecoveryRecoveryPlan** cmdlet removes a site recovery plan from the current Azure Site Recovery.
 
 ## EXAMPLES
 

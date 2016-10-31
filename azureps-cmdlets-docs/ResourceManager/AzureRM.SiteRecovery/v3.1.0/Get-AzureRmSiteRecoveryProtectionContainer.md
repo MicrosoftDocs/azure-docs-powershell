@@ -72,7 +72,6 @@ Accept wildcard characters: False
 ```
 
 ### -Fabric
-@{Text=}
 
 ```yaml
 Type: ASRFabric

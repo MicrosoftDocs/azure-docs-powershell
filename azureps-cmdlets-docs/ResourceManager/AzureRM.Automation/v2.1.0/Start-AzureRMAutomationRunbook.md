@@ -40,7 +40,6 @@ This command starts a runbook job for the runbook named Runbk01 in the Azure Aut
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -55,7 +54,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -70,7 +68,6 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-@{Text=}
 
 ```yaml
 Type: IDictionary
@@ -85,7 +82,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -100,7 +96,6 @@ Accept wildcard characters: False
 ```
 
 ### -RunOn
-@{Text=}
 
 ```yaml
 Type: String
@@ -115,7 +110,6 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -130,7 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxWaitSeconds
-@{Text=}
 
 ```yaml
 Type: Int32

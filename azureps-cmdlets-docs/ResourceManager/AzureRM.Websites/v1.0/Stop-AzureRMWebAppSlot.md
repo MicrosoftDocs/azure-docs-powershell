@@ -8,7 +8,7 @@ ms.assetid: 4553A418-F355-4CF5-B28E-FA60F76D1B09
 # Stop-AzureRmWebAppSlot
 
 ## SYNOPSIS
-Stops an azure_2 Web App slot.
+Stops an Azure Web App slot.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Stop-AzureRmWebAppSlot [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmWebAppSlot** cmdlet stops an azure_2 Web App slot.
+The **Stop-AzureRmWebAppSlot** cmdlet stops an Azure Web App slot.
 
 ## EXAMPLES
 

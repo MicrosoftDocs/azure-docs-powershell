@@ -37,7 +37,6 @@ The **Get-AzureRmWebAppPublishingProfile** cmdlet gets an Azure Web App publishi
 ## PARAMETERS
 
 ### -OutputFile
-@{Text=}
 
 ```yaml
 Type: String
@@ -52,7 +51,6 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-@{Text=}
 
 ```yaml
 Type: String
@@ -67,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -82,7 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -97,7 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

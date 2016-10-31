@@ -25,7 +25,7 @@ Set-AzureRmResourceGroup [-Tag] <Hashtable[]> [-Id] <String> [-ApiVersion <Strin
 
 ## DESCRIPTION
 The **Set-AzureRmResourceGroup** cmdlet modifies the properties of a resource group.
-You can use this cmdlet to add, change, or delete the azure_2 tags applied to a resource group.
+You can use this cmdlet to add, change, or delete the Azure tags applied to a resource group.
 Specify the *Name* parameter to identify the resource group and the *Tag* parameter to modify the tags.
 
 You cannot use this cmdlet to change the name of a resource group.

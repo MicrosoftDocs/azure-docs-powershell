@@ -20,7 +20,7 @@ Set-AzureRmApplicationGatewayBackendAddressPool -ApplicationGateway <PSApplicati
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmApplicationGatewayBackendAddressPool** cmdlet updates a back-end address pool for an azure_2 application gateway.
+The **Set-AzureRmApplicationGatewayBackendAddressPool** cmdlet updates a back-end address pool for an Azure application gateway.
 Back-end addresses can be specified as IP addresses, fully-qualified domain names (FQDN) or IP configurations IDs.
 
 ## EXAMPLES
@@ -95,7 +95,6 @@ Accept wildcard characters: False
 ```
 
 ### -BackendIPAddresses
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -125,7 +124,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -140,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

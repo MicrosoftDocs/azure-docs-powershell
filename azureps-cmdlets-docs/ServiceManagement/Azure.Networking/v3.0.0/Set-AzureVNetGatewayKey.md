@@ -8,7 +8,7 @@ ms.assetid: CC828AF0-5A91-423C-8B14-2B9305AB4783
 # Set-AzureVNetGatewayKey
 
 ## SYNOPSIS
-Sets the pre-shared key for the connection between an azure_2 VPN gateway and a local network site.
+Sets the pre-shared key for the connection between an Azure VPN gateway and a local network site.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Set-AzureVNetGatewayKey [-VNetName] <String> [-LocalNetworkSiteName] <String> [-
 ```
 
 ## DESCRIPTION
-The **Set-AzureVNetGatewayKey** cmdlet sets the pre-shared key for the connection between an azure_2 virtual private network (VPN) gateway and an on-premises local network site.
+The **Set-AzureVNetGatewayKey** cmdlet sets the pre-shared key for the connection between an Azure virtual private network (VPN) gateway and an on-premises local network site.
 The key must be equal to the key configured on the gateway of the local network site.
 If the keys do not match, a connection cannot establish.
 

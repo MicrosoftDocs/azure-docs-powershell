@@ -8,7 +8,7 @@ ms.assetid: 569E1687-2E48-4CA8-85D3-6113675274CC
 # Update-AzureVM
 
 ## SYNOPSIS
-Modifies the configuration of an azure_2 virtual machine.
+Modifies the configuration of an Azure virtual machine.
 
 ## SYNTAX
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Specifies the name of the azure_2 service.
+Specifies the name of the Azure service.
 
 ```yaml
 Type: String
@@ -100,7 +100,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -115,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -68,15 +68,15 @@ Gets a virtual network gateway connection.
 
 
 ### [Get-AzureVirtualNetworkGatewayDiagnostics](./Get-AzureVirtualNetworkGatewayDiagnostics.md)
-Gets the results of azure_2 virtual network gateway diagnostics.
+Gets the results of Azure virtual network gateway diagnostics.
 
 
 ### [Get-AzureVirtualNetworkGatewayIPsecParameters](./Get-AzureVirtualNetworkGatewayIPsecParameters.md)
-Gets the IPsec parameters for an azure_2 virtual network gateway.
+Gets the IPsec parameters for an Azure virtual network gateway.
 
 
 ### [Get-AzureVirtualNetworkGatewayKey](./Get-AzureVirtualNetworkGatewayKey.md)
-Gets the key for an azure_2 virtual network gateway.
+Gets the key for an Azure virtual network gateway.
 
 
 ### [Get-AzureVirtualNetworkGateway](./Get-AzureVirtualNetworkGateway.md)
@@ -84,7 +84,7 @@ Gets a virtual network gateway.
 
 
 ### [Get-AzureVNetConnection](./Get-AzureVNetConnection.md)
-Gets connections to an azure_2 virtual network.
+Gets connections to an Azure virtual network.
 
 
 ### [Get-AzureVNetGatewayDiagnostics](./Get-AzureVNetGatewayDiagnostics.md)
@@ -108,11 +108,11 @@ Creates an application gateway.
 
 
 ### [New-AzureLocalNetworkGateway](./New-AzureLocalNetworkGateway.md)
-creates an azure_2 local network gateway.
+creates an Azure local network gateway.
 
 
 ### [New-AzureNetworkSecurityGroup](./New-AzureNetworkSecurityGroup.md)
-Creates an azure_2 network security group.
+Creates an Azure network security group.
 
 
 ### [New-AzureRouteTable](./New-AzureRouteTable.md)
@@ -120,11 +120,11 @@ Creates a route table.
 
 
 ### [New-AzureVirtualNetworkGatewayConnection](./New-AzureVirtualNetworkGatewayConnection.md)
-Creates an azure_2 virtual gateway network connection.
+Creates an Azure virtual gateway network connection.
 
 
 ### [New-AzureVirtualNetworkGateway](./New-AzureVirtualNetworkGateway.md)
-Creates an azure_2 virtual network gateway.
+Creates an Azure virtual network gateway.
 
 
 ### [New-AzureVNetGateway](./New-AzureVNetGateway.md)
@@ -140,7 +140,7 @@ Removes an application gateway.
 
 
 ### [Remove-AzureLocalNetworkGateway](./Remove-AzureLocalNetworkGateway.md)
-Removes an azure_2 local network gateway.
+Removes an Azure local network gateway.
 
 
 ### [Remove-AzureNetworkSecurityGroupAssociation](./Remove-AzureNetworkSecurityGroupAssociation.md)
@@ -248,7 +248,7 @@ Sets IPsec parameters for a virtual network gateway.
 
 
 ### [Set-AzureVirtualNetworkGatewayKey](./Set-AzureVirtualNetworkGatewayKey.md)
-Sets the key for an azure_2 virtual network gateway.
+Sets the key for an Azure virtual network gateway.
 
 
 ### [Set-AzureVNetGatewayDefaultSite](./Set-AzureVNetGatewayDefaultSite.md)
@@ -260,11 +260,11 @@ Sets IPsec parameters for the connection between a virtual network gateway and a
 
 
 ### [Set-AzureVNetGatewayKey](./Set-AzureVNetGatewayKey.md)
-Sets the pre-shared key for the connection between an azure_2 VPN gateway and a local network site.
+Sets the pre-shared key for the connection between an Azure VPN gateway and a local network site.
 
 
 ### [Set-AzureVNetGateway](./Set-AzureVNetGateway.md)
-Enables or disables a VPN gateway for an azure_2 virtual network.
+Enables or disables a VPN gateway for an Azure virtual network.
 
 
 ### [Start-AzureApplicationGateway](./Start-AzureApplicationGateway.md)

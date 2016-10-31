@@ -19,7 +19,7 @@ New-AzureRmAutomationConnection [-Name] <String> [-ConnectionTypeName] <String>
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationConnection** cmdlet creates a connection in azure_2 Automation.
+The **New-AzureRmAutomationConnection** cmdlet creates a connection in Azure Automation.
 
 ## EXAMPLES
 
@@ -31,7 +31,7 @@ PS C:\> New-AzureRmAutomationConnection -Name "Connection12" -ConnectionTypeName
 
 The first command assigns a hash table of field values to the $FieldValue variable.
 
-The second command creates an azure_2 connection named Connection12 in the Automation account named AutomationAccount01.
+The second command creates an Azure connection named Connection12 in the Automation account named AutomationAccount01.
 The command uses the connection field values in $FieldValues.
 
 ## PARAMETERS

@@ -8,7 +8,7 @@ ms.assetid: C37E4F6A-09A8-45F9-9499-4AD5E2B4F9AB
 # Remove-AzureRemoteAppCollection
 
 ## SYNOPSIS
-Removes an azure_2 RemoteApp collection.
+Removes an Azure RemoteApp collection.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRemoteAppCollection [-CollectionName] <String> [-Profile <AzureSMPro
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRemoteAppCollection** cmdlet removes an azure_2 RemoteApp collection.
+The **Remove-AzureRemoteAppCollection** cmdlet removes an Azure RemoteApp collection.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ The **Remove-AzureRemoteAppCollection** cmdlet removes an azure_2 RemoteApp coll
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String
@@ -45,7 +45,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -60,7 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

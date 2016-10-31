@@ -35,7 +35,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -BackupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -50,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -65,7 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -80,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
 
 ```yaml
 Type: String
@@ -95,7 +91,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-@{Text=}
 
 ```yaml
 Type: String
@@ -110,7 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -Databases
-@{Text=}
 
 ```yaml
 Type: DatabaseBackupSetting[]
@@ -125,7 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

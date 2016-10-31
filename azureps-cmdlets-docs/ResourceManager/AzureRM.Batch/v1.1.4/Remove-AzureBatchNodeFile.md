@@ -31,7 +31,7 @@ Remove-AzureBatchNodeFile [[-InputObject] <PSNodeFile>] [-Force] [-Recursive]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureBatchNodeFile** cmdlet deletes an azure_2 Batch node file for a task or compute node.
+The **Remove-AzureBatchNodeFile** cmdlet deletes an Azure Batch node file for a task or compute node.
 
 ## EXAMPLES
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +218,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

@@ -8,7 +8,7 @@ ms.assetid: 02CFE06A-99DA-4B1B-83A5-E518CFA30790
 # Set-AzureInternalLoadBalancer
 
 ## SYNOPSIS
-Modifies an internal load balancer configuration in an azure_2 service.
+Modifies an internal load balancer configuration in an Azure service.
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Set-AzureInternalLoadBalancer [-InternalLoadBalancerName] <String> [-ServiceName
 ```
 
 ## DESCRIPTION
-The **Set-AzureInternalLoadBalancer** cmdlet modifies an internal load balancer configuration in an azure_2 service.
+The **Set-AzureInternalLoadBalancer** cmdlet modifies an internal load balancer configuration in an Azure service.
 For a virtual network, you can specify a subnet or the IP address of the internal load balancer.
 
 ## EXAMPLES
@@ -92,7 +92,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -107,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

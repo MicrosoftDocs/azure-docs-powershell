@@ -19,7 +19,7 @@ Set-AzureStorSimpleVirtualDevice [-DeviceName] <String> [-SecretKey] <String> [-
 ```
 
 ## DESCRIPTION
-The **Set-AzureStorSimpleVirtualDevice** cmdlet creates or updates the device configuration of an azure_2 StorSimple virtual device.
+The **Set-AzureStorSimpleVirtualDevice** cmdlet creates or updates the device configuration of an Azure StorSimple virtual device.
 
 ## EXAMPLES
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

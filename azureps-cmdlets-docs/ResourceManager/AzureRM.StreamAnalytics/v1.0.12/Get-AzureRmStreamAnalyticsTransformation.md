@@ -32,7 +32,7 @@ This command returns information about the transformation called StreamingJob on
 ## PARAMETERS
 
 ### -JobName
-Specifies the name of the azure_2 Stream Analytics job to which the azure_2 Stream Analytics transformation belongs.
+Specifies the name of the Azure Stream Analytics job to which the Azure Stream Analytics transformation belongs.
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the azure_2 Stream Analytics transformation to retrieve.
+Specifies the name of the Azure Stream Analytics transformation to retrieve.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the azure_2 Stream Analytics transformation belongs.
+Specifies the name of the resource group to which the Azure Stream Analytics transformation belongs.
 
 ```yaml
 Type: String

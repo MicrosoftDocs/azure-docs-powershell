@@ -65,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -Environment
-@{Text=}
 
 ```yaml
 Type: String

@@ -48,7 +48,7 @@ The command returns a message that explains the problem.
 ## PARAMETERS
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

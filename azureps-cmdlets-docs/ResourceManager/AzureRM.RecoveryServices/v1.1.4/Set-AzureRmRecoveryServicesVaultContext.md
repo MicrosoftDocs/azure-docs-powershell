@@ -17,7 +17,7 @@ Set-AzureRmRecoveryServicesVaultContext -Vault <ARSVault> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmRecoveryServicesVaultContext** cmdlet sets the vault context for azure_2 Site Recovery services.
+The **Set-AzureRmRecoveryServicesVaultContext** cmdlet sets the vault context for Azure Site Recovery services.
 
 ## EXAMPLES
 

@@ -8,7 +8,7 @@ ms.assetid: 15539858-E60B-4155-BB5C-3E9EAE90CC63
 # Get-AzureDisk
 
 ## SYNOPSIS
-Gets information about disks in the azure_2 disk repository.
+Gets information about disks in the Azure disk repository.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureDisk [[-DiskName] <String>] [-Profile <AzureSMProfile>] [-InformationAc
 ```
 
 ## DESCRIPTION
-The **Get-AzureDisk** cmdlet gets information about the disks that are stored in the azure_2 disk repository for the current subscription.
+The **Get-AzureDisk** cmdlet gets information about the disks that are stored in the Azure disk repository for the current subscription.
 This cmdlet returns a list of information for all disks in the repository.
 To view information for a specific disk, specify the name of the disk.
 
@@ -81,7 +81,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -96,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

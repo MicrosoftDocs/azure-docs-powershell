@@ -8,7 +8,7 @@ ms.assetid: F69EA38D-9914-454E-9B45-9262B7413042
 # Select-AzureRmProfile
 
 ## SYNOPSIS
-Loads azure_2 authentication information from a file.
+Loads Azure authentication information from a file.
 
 ## SYNTAX
 
@@ -23,8 +23,8 @@ Select-AzureRmProfile [-Path] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Select-AzureRmProfile** cmdlet loads authentication information from a file to set the azure_2 environment and context.
-Cmdlets that you run in the current session use this information to authenticate requests to azure_2 Resource Manager.
+The **Select-AzureRmProfile** cmdlet loads authentication information from a file to set the Azure environment and context.
+Cmdlets that you run in the current session use this information to authenticate requests to Azure Resource Manager.
 
 ## EXAMPLES
 

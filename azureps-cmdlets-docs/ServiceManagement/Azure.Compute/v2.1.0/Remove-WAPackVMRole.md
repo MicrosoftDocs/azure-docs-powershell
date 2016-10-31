@@ -44,7 +44,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -59,7 +58,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -74,7 +72,6 @@ Accept wildcard characters: False
 ```
 
 ### -VMRole
-@{Text=}
 
 ```yaml
 Type: VMRole
@@ -121,7 +118,6 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServiceName
-@{Text=}
 
 ```yaml
 Type: String

@@ -18,7 +18,7 @@ Set-AzureBatchJobSchedule [-JobSchedule] <PSCloudJobSchedule> -BatchContext <Bat
 ```
 
 ## DESCRIPTION
-The **Set-AzureBatchJobSchedule** cmdlet sets a job schedule in the azure_2 Batch service.
+The **Set-AzureBatchJobSchedule** cmdlet sets a job schedule in the Azure Batch service.
 
 ## EXAMPLES
 

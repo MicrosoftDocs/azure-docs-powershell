@@ -8,7 +8,7 @@ ms.assetid: C85588A2-15E3-4B6E-93B6-3B91DBE1A064
 # Get-AzureRemoteAppVM
 
 ## SYNOPSIS
-Gets the virtual machines in an azure_2 RemoteApp collection.
+Gets the virtual machines in an Azure RemoteApp collection.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRemoteAppVM [-CollectionName] <String> [-Profile <AzureSMProfile>] [<Co
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppVM** cmdlet gets the virtual machines created under an azure_2 RemoteApp collection for session hosting.
+The **Get-AzureRemoteAppVM** cmdlet gets the virtual machines created under an Azure RemoteApp collection for session hosting.
 
 ## EXAMPLES
 
@@ -26,12 +26,12 @@ The **Get-AzureRemoteAppVM** cmdlet gets the virtual machines created under an a
 PS C:\>Get-AzureRemoteAppVM -CollectionName "Contoso"
 ```
 
-This command displays the virtual machines used for session hosting in an azure_2 RemoteApp collection named Contoso.
+This command displays the virtual machines used for session hosting in an Azure RemoteApp collection named Contoso.
 
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ ms.assetid: 23023ECA-E637-4DC5-8130-606DE5CD6542
 # Get-AzureStorageKey
 
 ## SYNOPSIS
-Returns the primary and secondary storage account keys for an azure_2 storage account.
+Returns the primary and secondary storage account keys for an Azure storage account.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureStorageKey [-StorageAccountName] <String> [-Profile <AzureSMProfile>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorageKey** cmdlet returns an object with the azure_2 Storage account name, the primary account key, and the secondary account key of the specified azure_2 storage account as properties.
+The **Get-AzureStorageKey** cmdlet returns an object with the Azure Storage account name, the primary account key, and the secondary account key of the specified Azure storage account as properties.
 
 ## EXAMPLES
 
@@ -69,7 +69,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -84,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

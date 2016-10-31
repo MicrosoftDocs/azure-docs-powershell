@@ -42,7 +42,6 @@ This command gets the slot named Slot001 from the Web App named WebAppStandard t
 ## PARAMETERS
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -57,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -72,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-@{Text=}
 
 ```yaml
 Type: ServerFarmWithRichSku
@@ -87,7 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-@{Text=}
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ ms.assetid: CF8DF499-CC50-4DF0-AD77-9E6A47074456
 # Enable-AzureRmBackupProtection
 
 ## SYNOPSIS
-Associates an item with an azure_2 Backup protection policy.
+Associates an item with an Azure Backup protection policy.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Enable-AzureRmBackupProtection -Policy <AzureRMBackupProtectionPolicy>
 ```
 
 ## DESCRIPTION
-The **Enable-AzureRmBackupProtection** cmdlet associates an item with an azure_2 Backup protection policy.
+The **Enable-AzureRmBackupProtection** cmdlet associates an item with an Azure Backup protection policy.
 To enable a protection policy, you must first have an existing backup item and an existing policy.
 Both must belong to the same Backup vault.
 The backup schedule does the full initial copy for the item and the incremental copy for the subsequent backups.

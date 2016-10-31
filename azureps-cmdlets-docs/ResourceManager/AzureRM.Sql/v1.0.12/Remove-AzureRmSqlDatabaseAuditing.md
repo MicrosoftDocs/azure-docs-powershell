@@ -19,15 +19,15 @@ Remove-AzureRmSqlDatabaseAuditing [-PassThru] [-ServerName] <String> [-DatabaseN
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSqlDatabaseAuditing** cmdlet removes the auditing of an azure_2 SQL database.
+The **Remove-AzureRmSqlDatabaseAuditing** cmdlet removes the auditing of an Azure SQL database.
 To use this cmdlet, use the *ResourceGroupName*, *ServerName*, and *DatabaseName* parameters to identify the database.
 After you run this cmdlet, auditing of the database is not performed.
 If the command succeeds and you have used the *PassThru* parameter, the cmdlet returns an object that describes the current auditing policy, in addition to the database identifiers.
 Database identifiers include, but are not limited to, the **ResourceGroupName**, **ServerName** and **DatabaseName**.
 
-If you remove auditing of an azure_2 SQL database, threat detection is also removed.
+If you remove auditing of an Azure SQL database, threat detection is also removed.
 
-This cmdlet is also supported by the SQL Server Stretch Database service on azure_2.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
@@ -102,7 +102,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -117,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

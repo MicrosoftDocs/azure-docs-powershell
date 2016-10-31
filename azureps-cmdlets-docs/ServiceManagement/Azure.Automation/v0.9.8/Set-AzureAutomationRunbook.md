@@ -32,7 +32,6 @@ This command enables verbose logging for the jobs of the specified runbook in th
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -47,7 +46,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-@{Text=}
 
 ```yaml
 Type: String
@@ -62,7 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogProgress
-@{Text=}
 
 ```yaml
 Type: Boolean
@@ -77,7 +74,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogVerbose
-@{Text=}
 
 ```yaml
 Type: Boolean
@@ -92,7 +88,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -107,7 +102,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-@{Text=}
 
 ```yaml
 Type: String[]

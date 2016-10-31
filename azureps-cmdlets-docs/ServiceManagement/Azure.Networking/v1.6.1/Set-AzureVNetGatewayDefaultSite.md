@@ -19,7 +19,7 @@ Set-AzureVNetGatewayDefaultSite [-VNetName] <String> [-DefaultSite] <String> [-P
 
 ## DESCRIPTION
 The **Set-AzureVNetGatewayDefaultSite** cmdlet sets the default route to the on-premises site for forced tunneling traffic.
-This command sets the route on an azure_2 virtual private network (VPN) gateway for a virtual network.
+This command sets the route on an Azure virtual private network (VPN) gateway for a virtual network.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ Get-AzureApplicationGateway [[-Name] <String>] [-Profile <AzureSMProfile>] [<Com
 ```
 
 ## DESCRIPTION
-The **Get-AzureApplicationGateway** cmdlet gets an existing azure_2 Application Gateway.
+The **Get-AzureApplicationGateway** cmdlet gets an existing Azure Application Gateway.
 
 ## EXAMPLES
 

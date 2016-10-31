@@ -8,7 +8,7 @@ ms.assetid: 15469E2B-DDFA-48A8-8B96-4917744CFE9B
 # Get-AzureWebHostingPlanMetric
 
 ## SYNOPSIS
-Gets metrics for azure_2 website hosting plans.
+Gets metrics for Azure website hosting plans.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-AzureWebHostingPlanMetric [-MetricNames <String[]>] [-StartDate <DateTime>] 
 ## DESCRIPTION
 powershell_prelim
 
-The **Get-AzureWebHostingPlanMetric** cmdlet gets metrics for azure_2 web hosting plans in a subscription.
+The **Get-AzureWebHostingPlanMetric** cmdlet gets metrics for Azure web hosting plans in a subscription.
 
 ## EXAMPLES
 

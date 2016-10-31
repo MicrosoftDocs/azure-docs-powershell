@@ -8,7 +8,7 @@ ms.assetid: D19A9D2B-FE41-4EE9-998F-1609FB4DB5A9
 # Invoke-AzureRemoteAppSessionLogoff
 
 ## SYNOPSIS
-Logs off an azure_2 RemoteApp session immediately.
+Logs off an Azure RemoteApp session immediately.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Invoke-AzureRemoteAppSessionLogoff [-CollectionName] <String> [-UserUpn] <String
 ```
 
 ## DESCRIPTION
-The **Invoke-AzureRemoteAppSessionLogoff** cmdlet immediately logs off a user from a remote session running in azure_2 RemoteApp.
+The **Invoke-AzureRemoteAppSessionLogoff** cmdlet immediately logs off a user from a remote session running in Azure RemoteApp.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ This command logs off the user whose UPN is PattiFuller@contoso.com.
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -77,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

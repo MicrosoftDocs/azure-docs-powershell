@@ -18,7 +18,7 @@ Remove-AzureRmContainerService [-InformationAction <ActionPreference>] [-Informa
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmContainerService** cmdlet removes a container service from your azure_2 account.
+The **Remove-AzureRmContainerService** cmdlet removes a container service from your Azure account.
 
 ## EXAMPLES
 
@@ -32,7 +32,16 @@ This command removes the container service named CSResourceGroup17.
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

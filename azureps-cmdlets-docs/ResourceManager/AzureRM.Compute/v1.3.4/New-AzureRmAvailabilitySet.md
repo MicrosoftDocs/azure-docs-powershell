@@ -8,7 +8,7 @@ ms.assetid: E8A607AF-4739-4FB0-A4EA-A8382B69F081
 # New-AzureRmAvailabilitySet
 
 ## SYNOPSIS
-Creates an azure_2 availability set.
+Creates an Azure availability set.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-AzureRmAvailabilitySet [-ResourceGroupName] <String> [-Name] <String> [-Loca
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAvailabilitySet** cmdlet creates an azure_2 availability set.
+The **New-AzureRmAvailabilitySet** cmdlet creates an Azure availability set.
 
 ## EXAMPLES
 
@@ -108,7 +108,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -123,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

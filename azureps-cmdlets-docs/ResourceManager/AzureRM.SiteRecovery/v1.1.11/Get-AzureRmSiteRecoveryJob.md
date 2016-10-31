@@ -29,7 +29,7 @@ Get-AzureRmSiteRecoveryJob -Job <ASRJob> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryJob** cmdlet gets azure_2 Site Recovery jobs.
+The **Get-AzureRmSiteRecoveryJob** cmdlet gets Azure Site Recovery jobs.
 You can use this cmdlet to view the operation information for the current Site Recovery vault.
 
 ## EXAMPLES

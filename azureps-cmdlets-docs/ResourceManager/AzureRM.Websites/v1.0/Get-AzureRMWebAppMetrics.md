@@ -8,7 +8,7 @@ ms.assetid: 40057F2A-D5A2-4A6E-B9D2-2AC41F224020
 # Get-AzureRmWebAppMetrics
 
 ## SYNOPSIS
-Gets azure_2 Web App metrics.
+Gets Azure Web App metrics.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-AzureRmWebAppMetrics [-Metrics] <String[]> [-StartTime] <DateTime> [[-EndTim
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmWebAppMetrics** cmdlet gets azure_2 Web App metrics.
+The **Get-AzureRmWebAppMetrics** cmdlet gets Azure Web App metrics.
 
 ## EXAMPLES
 

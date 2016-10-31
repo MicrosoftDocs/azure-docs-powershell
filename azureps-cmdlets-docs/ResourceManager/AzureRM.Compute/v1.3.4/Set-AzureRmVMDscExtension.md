@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the azure_2 Resource Manager resource that represents the extension.
+Specifies the name of the Azure Resource Manager resource that represents the extension.
 The default value is Microsoft.Powershell.DSC.
 
 ```yaml
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveStorageAccountName
-Specifies the azure_2 storage account name that is used to download the ArchiveBlobName.
+Specifies the Azure storage account name that is used to download the ArchiveBlobName.
 
 ```yaml
 Type: String
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveContainerName
-Species name of the azure_2 storage container where the configuration archive is located.
+Species name of the Azure storage container where the configuration archive is located.
 
 ```yaml
 Type: String
@@ -318,7 +318,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -333,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -348,7 +357,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -363,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

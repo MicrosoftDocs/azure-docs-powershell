@@ -23,7 +23,7 @@ Stop-AzureRmSiteRecoveryJob -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmSiteRecoveryJob** stops an azure_2 Site Recovery job.
+The **Stop-AzureRmSiteRecoveryJob** stops an Azure Site Recovery job.
 
 ## EXAMPLES
 

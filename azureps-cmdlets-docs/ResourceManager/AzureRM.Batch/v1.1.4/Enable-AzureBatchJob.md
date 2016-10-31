@@ -17,7 +17,7 @@ Enable-AzureBatchJob [-Id] <String> -BatchContext <BatchAccountContext> [<Common
 ```
 
 ## DESCRIPTION
-The **Enable-AzureBatchJob** cmdlet enables an azure_2 Batch job.
+The **Enable-AzureBatchJob** cmdlet enables an Azure Batch job.
 After you enable a job, new tasks can run.
 
 ## EXAMPLES

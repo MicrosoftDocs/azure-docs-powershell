@@ -45,7 +45,6 @@ This command gets the specified authorization server.
 ## PARAMETERS
 
 ### -Context
-@{Text=}
 
 ```yaml
 Type: PsApiManagementContext
@@ -60,7 +59,6 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
-@{Text=}
 
 ```yaml
 Type: String

@@ -143,7 +143,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequireServerNameIndication
-@{Text=}
 
 ```yaml
 Type: String

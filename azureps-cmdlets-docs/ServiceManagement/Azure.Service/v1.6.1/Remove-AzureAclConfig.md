@@ -8,7 +8,7 @@ ms.assetid: EAF9DC4B-0CCB-4173-87CA-50AFBBC5CCDF
 # Remove-AzureAclConfig
 
 ## SYNOPSIS
-Removes an ACL configuration object from an azure_2 virtual machine configuration.
+Removes an ACL configuration object from an Azure virtual machine configuration.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureAclConfig [-EndpointName] <String> -VM <IPersistentVM> [-Profile <Az
 ```
 
 ## DESCRIPTION
-The **Remove-AzureAclConfig** cmdlet removes an access control list (ACL) configuration object from an azure_2 virtual machine configuration.
+The **Remove-AzureAclConfig** cmdlet removes an access control list (ACL) configuration object from an Azure virtual machine configuration.
 
 ## EXAMPLES
 
@@ -80,7 +80,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -95,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

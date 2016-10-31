@@ -8,7 +8,7 @@ ms.assetid: BCF1D6F3-D07A-4DF1-9A05-26FC64946B93
 # Publish-AzureRemoteAppProgram
 
 ## SYNOPSIS
-Publishes an azure_2 RemoteApp program.
+Publishes an Azure RemoteApp program.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Publish-AzureRemoteAppProgram [-CollectionName] <String> [-FileVirtualPath] <Str
 ```
 
 ## DESCRIPTION
-The **Publish-AzureRemoteAppProgram** cmdlet publishes an azure_2 RemoteApp program, which makes it available to users of the azure_2 RemoteApp collection.
+The **Publish-AzureRemoteAppProgram** cmdlet publishes an Azure RemoteApp program, which makes it available to users of the Azure RemoteApp collection.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ The published app will have a display name of "Finance App".
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Specifies the user-friendly display name of the azure_2 RemoteApp program.
+Specifies the user-friendly display name of the Azure RemoteApp program.
 Users see this as the name of the application.
 
 ```yaml

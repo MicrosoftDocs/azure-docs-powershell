@@ -8,7 +8,7 @@ ms.assetid: 0447A463-CF47-4EF7-8FB7-C0612499F3B0
 # Start-AzureRmVM
 
 ## SYNOPSIS
-Starts an azure_2 virtual machine.
+Starts an Azure virtual machine.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Start-AzureRmVM [-Name] <String> [-Id] <String> [-InformationAction <ActionPrefe
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmVM** cmdlet starts an azure_2 virtual machine.
+The **Start-AzureRmVM** cmdlet starts an Azure virtual machine.
 
 ## EXAMPLES
 
@@ -69,7 +69,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -84,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

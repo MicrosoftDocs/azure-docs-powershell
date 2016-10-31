@@ -19,11 +19,11 @@ Get-AzureRmSqlDatabaseDataMaskingRule [-SchemaName <String>] [-TableName <String
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabaseDataMaskingRule** cmdlet gets either a specific data masking rule or all of the data masking rules for an azure_2 SQL database.
+The **Get-AzureRmSqlDatabaseDataMaskingRule** cmdlet gets either a specific data masking rule or all of the data masking rules for an Azure SQL database.
 To use the cmdlet, use the *ResourceGroupName*, *ServerName*, and *DatabaseName* parameters to identify the database, and the *RuleId* parameter to specify which rule this cmdlet returns.
-If you do not provide *RuleId*, all the data masking rules for that azure_2 SQL database are returned.
+If you do not provide *RuleId*, all the data masking rules for that Azure SQL database are returned.
 
-This cmdlet is also supported by the SQL Server Stretch Database service on azure_2.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -TableName
-Specifies the name of an azure_2 SQL table.
+Specifies the name of an Azure SQL table.
 
 ```yaml
 Type: String
@@ -127,7 +127,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -142,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

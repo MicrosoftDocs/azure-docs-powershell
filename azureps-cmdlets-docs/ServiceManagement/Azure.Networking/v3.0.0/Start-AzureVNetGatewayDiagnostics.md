@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerName
-Specifies the name of an azure_2 container.
+Specifies the name of an Azure container.
 This cmdlet stores results in the container that this parameter specifies.
 
 ```yaml
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-Specifies an azure_2 storage context.
+Specifies an Azure storage context.
 This cmdlet stores results by using the storage context that this parameter specifies.
 
 ```yaml

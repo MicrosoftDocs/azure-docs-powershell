@@ -19,7 +19,7 @@ Start-AzureBatchPoolResize [-Id] <String> -TargetDedicated <Int32> [-ResizeTimeo
 ```
 
 ## DESCRIPTION
-The **Start-AzureBatchPoolResize** cmdlet starts an azure_2 Batch resize operation on a pool.
+The **Start-AzureBatchPoolResize** cmdlet starts an Azure Batch resize operation on a pool.
 
 ## EXAMPLES
 

@@ -35,7 +35,7 @@ Set-AzureDeployment [-Status] [-ServiceName] <String> [-Slot] <String> [-NewStat
 ```
 
 ## DESCRIPTION
-The **Set-AzureDeployment** cmdlet modifies the status, configuration settings, or upgrade mode of an azure_2 deployment.
+The **Set-AzureDeployment** cmdlet modifies the status, configuration settings, or upgrade mode of an Azure deployment.
 You can change the status of the deployment to either Running or Suspended.
 You can change the .cscfg file for the deployment.
 You can set the upgrade mode and update configuration files.
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Specifies the name of the azure_2 service of the deployment.
+Specifies the name of the Azure service of the deployment.
 
 ```yaml
 Type: String
@@ -246,7 +246,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -261,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

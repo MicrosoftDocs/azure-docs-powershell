@@ -270,7 +270,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateConfigKey
-@{Text=}
 
 ```yaml
 Type: String

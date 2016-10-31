@@ -18,7 +18,7 @@ Remove-AzureNetworkSecurityGroupFromSubnet [-Name] <String> [-VirtualNetworkName
 ```
 
 ## DESCRIPTION
-The **Remove-AzureNetworkSecurityGroupFromSubnet** cmdlet dissociates an azure_2 network security group from a subnet.
+The **Remove-AzureNetworkSecurityGroupFromSubnet** cmdlet dissociates an Azure network security group from a subnet.
 
 ## EXAMPLES
 

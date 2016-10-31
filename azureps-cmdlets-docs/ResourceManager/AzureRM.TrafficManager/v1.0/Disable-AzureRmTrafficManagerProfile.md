@@ -25,7 +25,7 @@ Disable-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfi
 ```
 
 ## DESCRIPTION
-The **Disable-AzureRmTrafficManagerProfile** cmdlet disables an azure_2 Traffic Manager profile.
+The **Disable-AzureRmTrafficManagerProfile** cmdlet disables an Azure Traffic Manager profile.
 You can specify the profile object by using the pipeline or as a parameter value.
 Alternatively, you can specify the profile by using the *Name* and *ResourceGroupName* parameters.
 
@@ -53,7 +53,7 @@ Therefore, it does not prompt you for confirmation.
 ## PARAMETERS
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -130,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

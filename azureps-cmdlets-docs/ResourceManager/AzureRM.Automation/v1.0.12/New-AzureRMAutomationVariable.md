@@ -18,7 +18,7 @@ New-AzureRmAutomationVariable [-Name] <String> -Encrypted <Boolean> [-Descriptio
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationVariable** cmdlet creates a variable in azure_2 Automation.
+The **New-AzureRmAutomationVariable** cmdlet creates a variable in Azure Automation.
 To encrypt the variable, specify the *Encrypted* parameter.
 You cannot modify the encrypted state of a variable after creation.
 

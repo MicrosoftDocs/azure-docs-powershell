@@ -18,7 +18,7 @@ Remove-AzureAffinityGroup [-Name] <String> [-Profile <AzureSMProfile>] [-Informa
 ```
 
 ## DESCRIPTION
-The **Remove-AzureAffinityGroup** cmdlet deletes an azure_2 affinity group in the current subscription.
+The **Remove-AzureAffinityGroup** cmdlet deletes an Azure affinity group in the current subscription.
 You cannot delete an affinity group that has any members.
 You must first delete all the members of an affinity group.
 
@@ -64,7 +64,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -79,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

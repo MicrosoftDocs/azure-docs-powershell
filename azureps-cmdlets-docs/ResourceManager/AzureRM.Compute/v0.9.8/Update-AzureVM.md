@@ -72,7 +72,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-@{Text=}
 
 ```yaml
 Type: Hashtable[]

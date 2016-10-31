@@ -18,7 +18,7 @@ Set-AzureRmBatchApplication [-AccountName] <String> [-ResourceGroupName] <String
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmBatchApplication** cmdlet modifies settings for the specified azure_2 Batch application.
+The **Set-AzureRmBatchApplication** cmdlet modifies settings for the specified Azure Batch application.
 
 ## EXAMPLES
 

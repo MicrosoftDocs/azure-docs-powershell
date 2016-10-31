@@ -25,7 +25,7 @@ Get-AzureRmPowerBIWorkspaceCollection [[-ResourceGroupName] <String>] [-Informat
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmPowerBIWorkspaceCollection** cmdlet gets Power BI workspace collections in your azure_2 subscription and resource group, or by collection name.
+The **Get-AzureRmPowerBIWorkspaceCollection** cmdlet gets Power BI workspace collections in your Azure subscription and resource group, or by collection name.
 
 ## EXAMPLES
 
@@ -73,7 +73,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -88,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

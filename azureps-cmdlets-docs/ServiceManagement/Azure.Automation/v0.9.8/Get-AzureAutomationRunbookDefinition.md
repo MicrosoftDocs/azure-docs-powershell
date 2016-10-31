@@ -33,7 +33,6 @@ This command gets the published runbook definition of the runbook named RunbookD
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -48,7 +47,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -63,7 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
 
 ```yaml
 Type: String

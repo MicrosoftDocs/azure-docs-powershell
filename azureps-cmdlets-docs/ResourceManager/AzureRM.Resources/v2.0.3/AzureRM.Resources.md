@@ -36,7 +36,7 @@ Gets policy definitions.
 
 
 ### [Get-AzureRmProviderFeature](./Get-AzureRmProviderFeature.md)
-Gets information about azure_2 provider features.
+Gets information about Azure provider features.
 
 
 ### [Get-AzureRmResourceGroupDeploymentOperation](./Get-AzureRmResourceGroupDeploymentOperation.md)
@@ -80,11 +80,11 @@ Creates a policy definition.
 
 
 ### [New-AzureRmResourceGroupDeployment](./New-AzureRmResourceGroupDeployment.md)
-Adds an azure_2 deployment to a resource group.
+Adds an Azure deployment to a resource group.
 
 
 ### [New-AzureRmResourceGroup](./New-AzureRmResourceGroup.md)
-Creates an azure_2 resource group.
+Creates an Azure resource group.
 
 
 ### [New-AzureRmResourceLock](./New-AzureRmResourceLock.md)
@@ -96,7 +96,7 @@ Creates a resource.
 
 
 ### [Register-AzureRmProviderFeature](./Register-AzureRmProviderFeature.md)
-Registers an azure_2 provider feature in your account.
+Registers an Azure provider feature in your account.
 
 
 ### [Register-AzureRmResourceProvider](./Register-AzureRmResourceProvider.md)

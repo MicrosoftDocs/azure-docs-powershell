@@ -18,7 +18,7 @@ Stop-AzureBatchJob [-Id] <String> [[-TerminateReason] <String>] -BatchContext <B
 ```
 
 ## DESCRIPTION
-The **Stop-AzureBatchJob** cmdlet stops an azure_2 Batch job.
+The **Stop-AzureBatchJob** cmdlet stops an Azure Batch job.
 This command marks the job as completed.
 
 ## EXAMPLES

@@ -37,7 +37,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -VNet
-@{Text=}
 
 ```yaml
 Type: VMNetwork
@@ -52,7 +51,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -67,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -Subnet
-@{Text=}
 
 ```yaml
 Type: String

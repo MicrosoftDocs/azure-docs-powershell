@@ -35,7 +35,6 @@ New-AzureRmVirtualNetworkGatewayIpConfig -Name <String> [-PrivateIpAddress <Stri
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -50,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateIpAddress
-@{Text=}
 
 ```yaml
 Type: String
@@ -65,7 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-@{Text=}
 
 ```yaml
 Type: String
@@ -80,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIpAddressId
-@{Text=}
 
 ```yaml
 Type: String
@@ -95,7 +91,6 @@ Accept wildcard characters: False
 ```
 
 ### -Subnet
-@{Text=}
 
 ```yaml
 Type: PSSubnet
@@ -110,7 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublicIpAddress
-@{Text=}
 
 ```yaml
 Type: PSPublicIpAddress

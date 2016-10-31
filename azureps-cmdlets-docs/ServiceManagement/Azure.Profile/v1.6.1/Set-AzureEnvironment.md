@@ -190,7 +190,6 @@ Accept wildcard characters: False
 ```
 
 ### -GraphEndpoint
-@{Text=}
 
 ```yaml
 Type: String
@@ -205,7 +204,6 @@ Accept wildcard characters: False
 ```
 
 ### -AzureKeyVaultDnsSuffix
-@{Text=}
 
 ```yaml
 Type: String
@@ -220,7 +218,6 @@ Accept wildcard characters: False
 ```
 
 ### -AzureKeyVaultServiceEndpointResourceId
-@{Text=}
 
 ```yaml
 Type: String
@@ -235,7 +232,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile
@@ -250,7 +246,6 @@ Accept wildcard characters: False
 ```
 
 ### -AdTenant
-@{Text=}
 
 ```yaml
 Type: String
@@ -265,7 +260,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAdfsAuthentication
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -280,7 +274,6 @@ Accept wildcard characters: False
 ```
 
 ### -SqlDatabaseDnsSuffix
-@{Text=}
 
 ```yaml
 Type: String
@@ -295,7 +288,6 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerDnsSuffix
-@{Text=}
 
 ```yaml
 Type: String

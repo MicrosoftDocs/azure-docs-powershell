@@ -8,7 +8,7 @@ ms.assetid: 84F0E54B-294C-4FAD-A7D1-FC1B352B1337
 # Get-AzureRmProviderFeature
 
 ## SYNOPSIS
-Gets information about azure_2 provider features.
+Gets information about Azure provider features.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-AzureRmProviderFeature -ProviderNamespace <String> -FeatureName <String> [<C
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmProviderFeature** cmdlet gets the feature name, provider name, and registration status for azure_2 provider features.
+The **Get-AzureRmProviderFeature** cmdlet gets the feature name, provider name, and registration status for Azure provider features.
 
 ## EXAMPLES
 

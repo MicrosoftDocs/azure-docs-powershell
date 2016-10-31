@@ -31,7 +31,7 @@ Get-AzureRmAutomationDscNodeConfiguration -ConfigurationName <String> [-RollupSt
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationDscNodeConfiguration** cmdlet gets metadata for APS Desired State Configuration (DSC) node configurations in azure_2 Automation.
+The **Get-AzureRmAutomationDscNodeConfiguration** cmdlet gets metadata for APS Desired State Configuration (DSC) node configurations in Azure Automation.
 Automation stores DSC node configuration as a Managed Object Format (MOF) configuration document.
 
 ## EXAMPLES

@@ -8,7 +8,7 @@ ms.assetid: 12BA6084-72BF-4E85-B059-BA4A20B0BE41
 # Get-AzureDeploymentEvent
 
 ## SYNOPSIS
-Gets information about events that azure_2 initiates that impact virtual machines and cloud services.
+Gets information about events that Azure initiates that impact virtual machines and cloud services.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Get-AzureDeploymentEvent [-ServiceName] <String> [-StartTime] <DateTime> [-EndTi
 ```
 
 ## DESCRIPTION
-The **Get-AzureDeploymentEvent** cmdlet gets information regarding events that azure_2 initiates that impact virtual machines and cloud services.
+The **Get-AzureDeploymentEvent** cmdlet gets information regarding events that Azure initiates that impact virtual machines and cloud services.
 These events include planned maintenance events.
 This cmdlet returns a list of events that identify the role instance or virtual machine impacted, the reason for the impact, and the start time of the event.
 
@@ -118,7 +118,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -133,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

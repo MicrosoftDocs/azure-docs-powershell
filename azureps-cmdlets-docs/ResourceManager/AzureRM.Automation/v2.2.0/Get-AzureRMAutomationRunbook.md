@@ -25,7 +25,7 @@ Get-AzureRmAutomationRunbook [-Name] <String> [-ResourceGroupName] <String> [-Au
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationRunbook** cmdlet gets azure_2 Automation runbooks.
+The **Get-AzureRmAutomationRunbook** cmdlet gets Azure Automation runbooks.
 To get a specific runbook, specify its name.
 
 ## EXAMPLES
@@ -35,7 +35,7 @@ To get a specific runbook, specify its name.
 PS C:\>Get-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
 ```
 
-This command gets all runbooks in the azure_2 Automation account named Contoso17.
+This command gets all runbooks in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 

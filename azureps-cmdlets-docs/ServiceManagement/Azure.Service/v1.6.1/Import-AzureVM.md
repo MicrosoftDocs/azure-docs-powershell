@@ -8,7 +8,7 @@ ms.assetid: 349D54F9-A5F7-460E-B5C8-FDAADC5EB4C7
 # Import-AzureVM
 
 ## SYNOPSIS
-Imports an azure_2 virtual machine state from a file.
+Imports an Azure virtual machine state from a file.
 
 ## SYNTAX
 
@@ -50,7 +50,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -65,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

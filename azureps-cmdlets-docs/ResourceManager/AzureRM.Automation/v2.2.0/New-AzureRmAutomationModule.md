@@ -18,7 +18,7 @@ New-AzureRmAutomationModule [-Name] <String> [-ContentLink] <Uri> [-ResourceGrou
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationModule** cmdlet imports a module into azure_2 Automation.
+The **New-AzureRmAutomationModule** cmdlet imports a module into Azure Automation.
 This command accepts a compressed file that has a .zip file name extension.
 The file contains a folder that includes a file that is one of the following types: 
 
@@ -45,7 +45,7 @@ PS C:\>New-AzureRmAutomationModule -AutomationAccountName "Contoso17" -Name "Con
 ```
 
 This command imports a module named ContosoModule into the Automation account named Contoso17.
-The module is stored in an azure_2 blob in a storage account named contosostorage and a container named modules.
+The module is stored in an Azure blob in a storage account named contosostorage and a container named modules.
 
 ## PARAMETERS
 

@@ -235,7 +235,6 @@ Accept wildcard characters: False
 ```
 
 ### -Sync
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

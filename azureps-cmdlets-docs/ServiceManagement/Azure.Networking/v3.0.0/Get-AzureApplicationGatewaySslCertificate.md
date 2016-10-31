@@ -18,7 +18,7 @@ Get-AzureApplicationGatewaySslCertificate [-Name] <String> [[-CertificateName] <
 ```
 
 ## DESCRIPTION
-The **Get-AzureApplicationGatewaySslCertificate** cmdlet gets Secure Sockets Layer (SSL) certificates for an azure_2 Application Gateway.
+The **Get-AzureApplicationGatewaySslCertificate** cmdlet gets Secure Sockets Layer (SSL) certificates for an Azure Application Gateway.
 
 ## EXAMPLES
 

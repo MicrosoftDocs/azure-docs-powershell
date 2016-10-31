@@ -27,7 +27,7 @@ The **New-AzureRmApplicationGatewaySku** cmdlet creates a stock keeping unit (SK
 PS C:\>$SKU = New-AzureRmApplicationGatewaySku -Name "Standard_Small" -Tier "Standard" -Capacity 2
 ```
 
-This command creates a SKU named Standard_Small for an azure_2 application gateway and stores the result in the variable named $SKU.
+This command creates a SKU named Standard_Small for an Azure application gateway and stores the result in the variable named $SKU.
 
 ## PARAMETERS
 
@@ -89,7 +89,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -104,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

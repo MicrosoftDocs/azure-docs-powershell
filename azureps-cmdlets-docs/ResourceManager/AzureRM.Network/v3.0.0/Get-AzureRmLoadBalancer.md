@@ -39,7 +39,6 @@ A load balancer must exist before you can run this cmdlet.
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -66,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -93,7 +91,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandResource
-@{Text=}
 
 ```yaml
 Type: String

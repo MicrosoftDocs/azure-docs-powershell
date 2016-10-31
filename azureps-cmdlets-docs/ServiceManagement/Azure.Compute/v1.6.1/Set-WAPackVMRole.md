@@ -35,7 +35,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -VMRole
-@{Text=}
 
 ```yaml
 Type: VMRole
@@ -50,7 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceCount
-@{Text=}
 
 ```yaml
 Type: Int32
@@ -65,7 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

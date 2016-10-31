@@ -8,7 +8,7 @@ ms.assetid: 0AD61F2D-7E0B-4AA3-B276-82496857E225
 # Stop-AzureRmVM
 
 ## SYNOPSIS
-Stops an azure_2 virtual machine.
+Stops an Azure virtual machine.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Stop-AzureRmVM [-Name] <String> [-Force] [-StayProvisioned] [-Id] <String>
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmVM** cmdlet stops an azure_2 virtual machine.
+The **Stop-AzureRmVM** cmdlet stops an Azure virtual machine.
 
 ## EXAMPLES
 
@@ -101,7 +101,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -116,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -131,7 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -146,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

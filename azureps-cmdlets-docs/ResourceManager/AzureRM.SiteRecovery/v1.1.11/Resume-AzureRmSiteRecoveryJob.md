@@ -23,7 +23,7 @@ Resume-AzureRmSiteRecoveryJob -Name <String> [-Comments <String>] [<CommonParame
 ```
 
 ## DESCRIPTION
-The **Resume-AzureRmSiteRecoveryJob** cmdlet resumes a suspended azure_2 Site Recovery job.
+The **Resume-AzureRmSiteRecoveryJob** cmdlet resumes a suspended Azure Site Recovery job.
 
 ## EXAMPLES
 

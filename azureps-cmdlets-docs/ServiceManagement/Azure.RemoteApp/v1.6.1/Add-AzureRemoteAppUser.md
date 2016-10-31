@@ -8,7 +8,7 @@ ms.assetid: DF927EC1-AA02-4BEA-A617-3FE0B59B88D7
 # Add-AzureRemoteAppUser
 
 ## SYNOPSIS
-Adds a user to an azure_2 RemoteApp collection.
+Adds a user to an Azure RemoteApp collection.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Add-AzureRemoteAppUser [-CollectionName] <String> [-Type] <PrincipalProviderType
 ```
 
 ## DESCRIPTION
-The **Add-AzureRemoteAppUser** cmdlet adds a user to an azure_2 RemoteApp collection.
+The **Add-AzureRemoteAppUser** cmdlet adds a user to an Azure RemoteApp collection.
 
 ## EXAMPLES
 
@@ -34,12 +34,12 @@ This command adds the Microsoft Account PattiFuller@contoso.com to the collectio
 PS C:\>Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType OrgId -UserUpn "PattiFuller@contoso.com"
 ```
 
-This command adds the azure_2 Active Directory account PattiFuller@contoso.com to the collection named Contoso.
+This command adds the Azure Active Directory account PattiFuller@contoso.com to the collection named Contoso.
 
 ## PARAMETERS
 
 ### -CollectionName
-Specifies the name of the azure_2 RemoteApp collection.
+Specifies the name of the Azure RemoteApp collection.
 
 ```yaml
 Type: String

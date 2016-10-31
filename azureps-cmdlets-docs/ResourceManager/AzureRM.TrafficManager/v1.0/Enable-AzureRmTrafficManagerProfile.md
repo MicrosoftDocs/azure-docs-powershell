@@ -23,7 +23,7 @@ Enable-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfil
 ```
 
 ## DESCRIPTION
-The **Enable-AzureRmTrafficManagerProfile** cmdlet enables an azure_2 Traffic Manager profile.
+The **Enable-AzureRmTrafficManagerProfile** cmdlet enables an Azure Traffic Manager profile.
 You can specify the profile object by using the pipeline or as a parameter value.
 Alternatively, you can specify the profile by using the *Name* and *ResourceGroupName* parameters.
 

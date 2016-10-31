@@ -8,7 +8,7 @@ ms.assetid: 9F92FDB6-B1AB-4A32-9248-D45ED5ACC617
 # Get-AzureWebsiteMetric
 
 ## SYNOPSIS
-Gets metrics for the azure_2 website in the current subscription.
+Gets metrics for the Azure website in the current subscription.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-AzureWebsiteMetric [-MetricNames <String[]>] [-StartDate <DateTime>] [-EndDa
 ## DESCRIPTION
 powershell_prelim
 
-The **Get-AzureWebsiteMetric** cmdlet gets metrics for the azure_2 website in the current subscription.
+The **Get-AzureWebsiteMetric** cmdlet gets metrics for the Azure website in the current subscription.
 
 ## EXAMPLES
 

@@ -21,17 +21,17 @@ Reset-AzureRoleInstance [-ServiceName] <String> -Slot <String> -InstanceName <St
 ## DESCRIPTION
 The **Reset-AzureRoleInstance** cmdlet requests a reboot or a reimage of a role instance that is running in a deployment.
 This operation executes synchronously.
-When you reboot a role instance, azure_2 takes the instance offline, restarts the underlying operating system for that instance, and brings the instance back online.
+When you reboot a role instance, Azure takes the instance offline, restarts the underlying operating system for that instance, and brings the instance back online.
 Any data that is written to the local disk persists across reboots.
 Any data that is in-memory is lost.
 
 Reimaging a role instance results in different behavior depending on the type of role.
-For a web or worker role, when the role is reimaged, azure_2 takes the role offline and writes a fresh installation of the azure_2 guest operating system to the virtual machine.
+For a web or worker role, when the role is reimaged, Azure takes the role offline and writes a fresh installation of the Azure guest operating system to the virtual machine.
 The role is then brought back online.
-For a VM role, when the role is reimaged, azure_2 takes the role offline, reapplies the custom image that you provided for it, and brings the role back online.
+For a VM role, when the role is reimaged, Azure takes the role offline, reapplies the custom image that you provided for it, and brings the role back online.
 
-azure_2 attempts to maintain data in any local storage resources when the role is reimaged; however, in case of a transient hardware failure, the local storage resource may be lost.
-If your application requires that data persist, writing to a durable data source, such as an azure_2 drive, is recommended.
+Azure attempts to maintain data in any local storage resources when the role is reimaged; however, in case of a transient hardware failure, the local storage resource may be lost.
+If your application requires that data persist, writing to a durable data source, such as an Azure drive, is recommended.
 Any data that is written to a local directory other than that defined by the local storage resource will be lost when the role is reimaged.
 
 ## EXAMPLES
@@ -154,7 +154,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -169,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

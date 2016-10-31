@@ -49,7 +49,7 @@ PS C:\>New-AzureRmSqlServerFirewallRule -ResourceGroupName "ResourceGroup01" -Se
 ```
 
 This command creates a firewall rule on the server named Server01 that belongs to the resource group named ResourceGroup01.
-Since the *AllowAllAzureIPs* parameter is used, the firewall rule allows all azure_2 IP addresses to access the server.
+Since the *AllowAllAzureIPs* parameter is used, the firewall rule allows all Azure IP addresses to access the server.
 
 ## PARAMETERS
 
@@ -130,7 +130,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -145,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -160,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAllAzureIPs
-Indicates that this firewall rule allows all azure_2 IP addresses to access the server.
+Indicates that this firewall rule allows all Azure IP addresses to access the server.
 You cannot use this parameter if you intend to use the *FirewallRuleName*, *StartIpAddress*, and *EndIpAddress* parameters.
 If you want to allow Azure IPs to access the server, this parameter should be used in a separate cmdlet call that does not use the *FirewallRuleName*, *StartIpAddress*, and *EndIpAddress* parameters.
 

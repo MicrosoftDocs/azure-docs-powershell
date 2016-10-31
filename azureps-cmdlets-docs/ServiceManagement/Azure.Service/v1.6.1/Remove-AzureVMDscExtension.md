@@ -8,7 +8,7 @@ ms.assetid: 2E8CD4D6-DAD9-4BFF-B318-077F756B0073
 # Remove-AzureVMDscExtension
 
 ## SYNOPSIS
-Removes an azure_2 DSC extension from a virtual machine.
+Removes an Azure DSC extension from a virtual machine.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-AzureVMDscExtension -VM <IPersistentVM> [-Profile <AzureSMProfile>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureVMDscExtension** cmdlet removes an azure_2 DSC extension from a virtual machine.
+The **Remove-AzureVMDscExtension** cmdlet removes an Azure DSC extension from a virtual machine.
 The output of this cmdlet needs to be piped to the Update-AzureVM cmdlet.
 
 ## EXAMPLES
@@ -29,7 +29,7 @@ The output of this cmdlet needs to be piped to the Update-AzureVM cmdlet.
 PS C:\>Remove-AzureVMDscExtension -VM $VM | Update-AzureVM
 ```
 
-This command removes an azure_2 DSC extension from a virtual machine.
+This command removes an Azure DSC extension from a virtual machine.
 
 ## PARAMETERS
 
@@ -64,7 +64,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -79,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -94,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

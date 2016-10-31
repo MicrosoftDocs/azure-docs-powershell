@@ -68,7 +68,7 @@ However, you do not need to specify any information about the rule itself: rule 
 ### -ResourceGroup
 Specifies the resource group to which the namespace is assigned.
 
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and azure_2 administration.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 You must use an existing resource group.
 This cmdlet cannot create a new resource group.
@@ -135,7 +135,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -150,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

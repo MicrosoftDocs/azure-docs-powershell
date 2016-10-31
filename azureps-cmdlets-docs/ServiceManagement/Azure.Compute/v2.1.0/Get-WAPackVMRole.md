@@ -47,7 +47,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -62,7 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServiceName
-@{Text=}
 
 ```yaml
 Type: String

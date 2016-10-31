@@ -18,7 +18,7 @@ New-AzureRmRedisCacheKey -ResourceGroupName <String> -Name <String> -KeyType <St
 ```
 
 ## DESCRIPTION
-The **New-AzureRmRedisCacheKey** cmdlet regenerates the access key of an azure_2 Redis Cache.
+The **New-AzureRmRedisCacheKey** cmdlet regenerates the access key of an Azure Redis Cache.
 
 ## EXAMPLES
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

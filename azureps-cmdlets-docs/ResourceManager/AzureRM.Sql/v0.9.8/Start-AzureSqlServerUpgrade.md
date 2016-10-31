@@ -106,7 +106,6 @@ Accept wildcard characters: False
 ```
 
 ### -ElasticPoolCollection
-@{Text=}
 
 ```yaml
 Type: UpgradeRecommendedElasticPoolProperties[]

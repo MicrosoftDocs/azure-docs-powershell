@@ -18,8 +18,8 @@ Get-AzureDeployment [-ServiceName] <String> [[-Slot] <String>] [-Profile <AzureS
 ```
 
 ## DESCRIPTION
-The **Get-AzureDeployment** cmdlet gets details of an azure_2 deployment.
-Specify the name of the azure_2 service and the slot of the deployment.
+The **Get-AzureDeployment** cmdlet gets details of an Azure deployment.
+Specify the name of the Azure service and the slot of the deployment.
 
 ## EXAMPLES
 
@@ -89,7 +89,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -104,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

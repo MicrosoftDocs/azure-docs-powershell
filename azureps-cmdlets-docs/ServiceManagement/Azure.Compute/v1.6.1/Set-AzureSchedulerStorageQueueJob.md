@@ -33,7 +33,7 @@ Set-AzureSchedulerStorageQueueJob [-Interval <Int32>] [-Frequency <String>] [-En
 ## DESCRIPTION
 powershell_prelim
 
-The **Set-AzureSchedulerStorageQueueJob** cmdlet updates a scheduler job that has an azure_2 Storage action.
+The **Set-AzureSchedulerStorageQueueJob** cmdlet updates a scheduler job that has an Azure Storage action.
 
 ## EXAMPLES
 

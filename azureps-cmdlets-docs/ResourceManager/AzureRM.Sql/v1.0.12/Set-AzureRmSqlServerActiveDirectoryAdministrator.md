@@ -8,7 +8,7 @@ ms.assetid: 20DFD2A4-6040-4204-8388-5251C72FFE14
 # Set-AzureRmSqlServerActiveDirectoryAdministrator
 
 ## SYNOPSIS
-Provisions an azure_2 AD administrator for SQL Server.
+Provisions an Azure AD administrator for SQL Server.
 
 ## SYNTAX
 
@@ -19,21 +19,21 @@ Set-AzureRmSqlServerActiveDirectoryAdministrator [-DisplayName] <String> [[-Obje
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet provisions an azure_2 Active Directory (azure_2 AD) administrator for azure_2ssNoVersion in the current subscription.
+The **Set-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet provisions an Azure Active Directory (Azure AD) administrator for AzuressNoVersion in the current subscription.
 
 You can provision only one administrator at a time.
 
-The following members of azure_2 AD can be provisioned as a SQL Server administrator:
+The following members of Azure AD can be provisioned as a SQL Server administrator:
 
-- Native members of azure_2 AD 
-- Federated members of azure_2 AD 
-- Imported members from other azure_2 ADs who are native or federated members 
-- azure_2 AD groups created as security groups
+- Native members of Azure AD 
+- Federated members of Azure AD 
+- Imported members from other Azure ADs who are native or federated members 
+- Azure AD groups created as security groups
 
 Microsoft accounts, such as those in the Outlook.com, Hotmail.com, or Live.com domains, are not supported as administrators.
 Other guest accounts, such as those in the Gmail.com or Yahoo.com domains, are not supported as administrators.
 
-We recommend that you provision a dedicated azure_2 AD group as an administrator.
+We recommend that you provision a dedicated Azure AD group as an administrator.
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ ResourceGroupName ServerName DisplayName ObjectId
 ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
-This command provisions an azure_2 AD administrator group named DBAs for the server named Server01.
+This command provisions an Azure AD administrator group named DBAs for the server named Server01.
 This server is associated with resource group ResourceGroup01.
 
 ### Example 2: Provision an administrator user for a server
@@ -56,7 +56,7 @@ ResourceGroupName ServerName DisplayName ObjectId
 resourcegroup01   server01   David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9
 ```
 
-This command provisions an azure_2 AD user as an administrator for the server named Server01.
+This command provisions an Azure AD user as an administrator for the server named Server01.
 
 ### Example 3: Provision an administrator group by specifying its ID
 ```
@@ -66,14 +66,14 @@ ResourceGroupName ServerName DisplayName ObjectId
 ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
-This command provisions an azure_2 AD administrator group named DBAs for the server named Server01.
+This command provisions an Azure AD administrator group named DBAs for the server named Server01.
 The command specifies an ID for the *ObjectId* parameter.
 This makes sure that that the command succeeds even if the display name of the group is not unique.
 
 ## PARAMETERS
 
 ### -DisplayName
-Specifies the display name of the azure_2 AD administrator that this cmdlet provisions.
+Specifies the display name of the Azure AD administrator that this cmdlet provisions.
 
 ```yaml
 Type: String
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the unique ID of the azure_2 AD administrator that this cmdlet provisions.
+Specifies the unique ID of the Azure AD administrator that this cmdlet provisions.
 If the display name is not unique, you must specify a value for this parameter.
 
 ```yaml
@@ -134,7 +134,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -149,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

@@ -23,7 +23,7 @@ Get-AzureRmBackupJobDetails -Vault <AzureRMBackupVault> -JobId <String> [<Common
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBackupJobDetails** cmdlet gets the details of an azure_2 Backup job.
+The **Get-AzureRmBackupJobDetails** cmdlet gets the details of an Azure Backup job.
 You can use this cmdlet to gather information about a job that fails.
 
 ## EXAMPLES

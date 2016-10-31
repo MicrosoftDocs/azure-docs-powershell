@@ -27,7 +27,7 @@ This cmdlet assigns an existing certificate as a gateway root certificate.
 If you do not have an X.509 certificate available you can generate one through your public key infrastructure or use a certificate generator such as makecert.exe.
 
 To add a root certificate, you must specify the certificate name and provide a text-only representation of the certificate (see *the PublicCertData* parameter for more information).
-azure_2 allows you to assign more than one root certificate to a gateway.
+Azure allows you to assign more than one root certificate to a gateway.
 Multiple root certificates are often deployed by organizations that include users from more than one company.
 
 ## EXAMPLES
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ### -ResourceGroupName
 Specifies the name of the resource group that the root certificate is assigned to.
 
-Resource groups categorize items to help simplify inventory management and general azure_2 administration.
+Resource groups categorize items to help simplify inventory management and general Azure administration.
 
 ```yaml
 Type: String
@@ -123,7 +123,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -138,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

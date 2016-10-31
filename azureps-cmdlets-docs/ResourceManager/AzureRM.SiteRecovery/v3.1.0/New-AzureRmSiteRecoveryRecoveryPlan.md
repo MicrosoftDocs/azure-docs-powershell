@@ -65,7 +65,6 @@ This command adds the recovery plan named RecoveryPlan.xml to the Azure Site Rec
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -80,7 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryFabric
-@{Text=}
 
 ```yaml
 Type: ASRFabric
@@ -95,7 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryFabric
-@{Text=}
 
 ```yaml
 Type: ASRFabric
@@ -110,7 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProtectedItem
-@{Text=}
 
 ```yaml
 Type: ASRReplicationProtectedItem[]
@@ -125,7 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverDeploymentModel
-@{Text=}
 
 ```yaml
 Type: String
@@ -140,7 +135,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySite
-@{Text=}
 
 ```yaml
 Type: ASRSite
@@ -155,7 +149,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionEntityList
-@{Text=}
 
 ```yaml
 Type: ASRProtectionEntity[]
@@ -170,7 +163,6 @@ Accept wildcard characters: False
 ```
 
 ### -Azure
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -185,7 +177,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryServer
-@{Text=}
 
 ```yaml
 Type: ASRServer
@@ -200,7 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryServer
-@{Text=}
 
 ```yaml
 Type: ASRServer

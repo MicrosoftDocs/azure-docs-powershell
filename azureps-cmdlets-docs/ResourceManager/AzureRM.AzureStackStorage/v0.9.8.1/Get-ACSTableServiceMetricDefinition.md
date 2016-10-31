@@ -87,12 +87,12 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Specifies the azure_2 subscription ID.
+Specifies the Azure subscription ID.
 For example:
 
 `-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
 
-If the azure_2 environment has already been configured by using the **Set-AzureRmEnvironment** cmdlet then you do not need to use this parameter.
+If the Azure environment has already been configured by using the **Set-AzureRmEnvironment** cmdlet then you do not need to use this parameter.
 
 ```yaml
 Type: String
@@ -144,7 +144,7 @@ For example:
 
 `ResourceGroupName "ContosoResourceGroup"`-
 
-Resource groups categorize items to help simplify inventory management and overall azure_2 administration.
+Resource groups categorize items to help simplify inventory management and overall Azure administration.
 
 ```yaml
 Type: String

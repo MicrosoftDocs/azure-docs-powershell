@@ -34,7 +34,7 @@ Add-AzureDataDisk [-ImportFrom] [-DiskLabel] <String> [-LUN] <Int32> -MediaLocat
 ```
 
 ## DESCRIPTION
-The **Add-AzureDataDisk** cmdlet adds a new or existing data disk to an azure_2 virtual machine object.
+The **Add-AzureDataDisk** cmdlet adds a new or existing data disk to an Azure virtual machine object.
 Use the *CreateNew* parameter to create a new data disk that has a specified size and label.
 Use the *Import* parameter to attach an existing disk from the image repository.
 Use the *ImportFrom* parameter to attach an existing disk from a blob in a storage account.
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaLocation
-Specifies the location of the blob in an azure_2 storage account where this cmdlet stores the data disk.
+Specifies the location of the blob in an Azure storage account where this cmdlet stores the data disk.
 If you do not specify a location, the cmdlet stores the data disk in the vhds container in the default storage account for the current subscription.
 If a vhds container does not exist, the cmdlet creates a vhds container.
 
@@ -219,7 +219,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -234,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

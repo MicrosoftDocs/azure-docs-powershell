@@ -18,7 +18,7 @@ Get-AzureRmOperationalInsightsLinkTargets [-InformationAction <ActionPreference>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmOperationalInsightsLinkTargets** cmdlet lists existing accounts that are not associated with an azure_2 subscription.
+The **Get-AzureRmOperationalInsightsLinkTargets** cmdlet lists existing accounts that are not associated with an Azure subscription.
 To link a new workspace to an existing account, use a customer ID returned by this operation in the customer ID property of a new workspace.
 
 ## EXAMPLES
@@ -33,7 +33,16 @@ This command gets unlinked accounts that are owned by the caller's ID.
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -48,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

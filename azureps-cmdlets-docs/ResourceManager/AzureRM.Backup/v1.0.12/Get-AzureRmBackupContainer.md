@@ -19,16 +19,16 @@ Get-AzureRmBackupContainer [-Name <String>] -Type <AzureBackupContainerType>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBackupContainer** cmdlet gets azure_2 Backup containers.
+The **Get-AzureRmBackupContainer** cmdlet gets Azure Backup containers.
 
 An **AzureBackupContainer** encapsulates data sources, protected items, and recovery points.
 An **AzureBackupContainer** can be one of the following: 
 
 - A Windows Server computer
 - A System Center Data Protection Manager (SCDPM) server 
-- An azure_2 infrastructure as a service (IaaS) virtual machine
+- An Azure infrastructure as a service (IaaS) virtual machine
 
-Before Backup can back up a data source or item, you must register the container that holds it with the azure_2 Backup service.
+Before Backup can back up a data source or item, you must register the container that holds it with the Azure Backup service.
 The container must be authenticated to send backup data to the Backup vault.
 For Windows Server computers and SCDPM servers, the registration is held with the fully qualified domain name of the server.
 

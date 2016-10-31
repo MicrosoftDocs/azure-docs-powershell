@@ -32,7 +32,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

@@ -17,7 +17,7 @@ Wait-AzureRmBackupJob -Job <Object> [-TimeOut <Int64>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Wait-AzureRmBackupJob** cmdlet waits for an azure_2 Backup job to finish.
+The **Wait-AzureRmBackupJob** cmdlet waits for an Azure Backup job to finish.
 Backup jobs can take a long time.
 If you run a backup job as part of a script, you may want to force the script to wait for job to finish before it continues to other tasks.
 

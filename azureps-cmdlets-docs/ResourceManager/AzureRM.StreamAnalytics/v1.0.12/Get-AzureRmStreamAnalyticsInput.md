@@ -39,7 +39,7 @@ This command returns information about the input named EntryStream defined on th
 ## PARAMETERS
 
 ### -JobName
-Specifies the name of the azure_2 Stream Analytics job to which the azure_2 Stream Analytics input belongs.
+Specifies the name of the Azure Stream Analytics job to which the Azure Stream Analytics input belongs.
 
 ```yaml
 Type: String
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the azure_2 Stream Analytics input to retrieve.
+Specifies the name of the Azure Stream Analytics input to retrieve.
 
 ```yaml
 Type: String
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the azure_2 Stream Analytics input belongs.
+Specifies the name of the resource group to which the Azure Stream Analytics input belongs.
 
 ```yaml
 Type: String

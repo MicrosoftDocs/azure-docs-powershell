@@ -8,7 +8,7 @@ ms.assetid: B0FF412D-269A-472F-8D79-9C0B9F0EBAC2
 # Restore-AzureRmApiManagement
 
 ## SYNOPSIS
-Restores an API Management Service from the specified azure_2 storage blob.
+Restores an API Management Service from the specified Azure storage blob.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Restore-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-Storag
 ```
 
 ## DESCRIPTION
-The **Restore-AzureRmApiManagement** cmdlet restores an API Management Service from the specified backup residing in an azure_2storage blob.
+The **Restore-AzureRmApiManagement** cmdlet restores an API Management Service from the specified backup residing in an Azurestorage blob.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ The **Restore-AzureRmApiManagement** cmdlet restores an API Management Service f
 PS C:\>Restore-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Name "RestoredContosoApi" -StorageContext $StorageContext -SourceContainerName "ContosoBackups" -SourceBlobName "ContosoBackup.apimbackup"
 ```
 
-This command restores an API Management service from azure_2 storage blob.
+This command restores an API Management service from Azure storage blob.
 
 ## PARAMETERS
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceContainerName
-Specifies the name of the azure_2 storage backup source container.
+Specifies the name of the Azure storage backup source container.
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceBlobName
-Specifies the name of the azure_2 storage backup source blob.
+Specifies the name of the Azure storage backup source blob.
 
 ```yaml
 Type: String
@@ -123,7 +123,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -138,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

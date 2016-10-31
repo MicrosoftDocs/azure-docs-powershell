@@ -33,7 +33,7 @@ New-AzureRmNetworkInterfaceIpConfig -Name <String> [-PrivateIpAddressVersion <St
 ```
 
 ## DESCRIPTION
-The **New-AzureRmNetworkInterfaceIpConfig** cmdlet creates an azure_2 network interface IP configuration for a network interface.
+The **New-AzureRmNetworkInterfaceIpConfig** cmdlet creates an Azure network interface IP configuration for a network interface.
 
 ## EXAMPLES
 
@@ -172,7 +172,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -187,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -277,7 +286,6 @@ Accept wildcard characters: False
 ```
 
 ### -Primary
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

@@ -17,7 +17,7 @@ Import-AzureRmSiteRecoveryVaultSettingsFile [-Path] <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-The **Import-AzureRmSiteRecoveryVaultSettingsFile** cmdlet imports an azure_2 Site Recovery vault settings file to set the vault context for subsequent Site Recovery operations in the current session.
+The **Import-AzureRmSiteRecoveryVaultSettingsFile** cmdlet imports an Azure Site Recovery vault settings file to set the vault context for subsequent Site Recovery operations in the current session.
 
 ## EXAMPLES
 

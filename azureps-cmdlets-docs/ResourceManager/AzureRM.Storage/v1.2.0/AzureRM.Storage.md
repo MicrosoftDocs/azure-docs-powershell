@@ -12,7 +12,7 @@ This topic displays help topics for the Azure Storage Management Cmdlets.
 
 ## AzureRM.Storage Cmdlets
 ### [Get-AzureRmStorageAccountKey](./Get-AzureRmStorageAccountKey.md)
-Gets the access keys for an azure_2 Storage account.
+Gets the access keys for an Azure Storage account.
 
 
 ### [Get-AzureRmStorageAccountNameAvailability](./Get-AzureRmStorageAccountNameAvailability.md)
@@ -28,7 +28,7 @@ Gets the Storage resource usage of the current subscription.
 
 
 ### [New-AzureRmStorageAccountKey](./New-AzureRmStorageAccountKey.md)
-Regenerates a storage key for an azure_2 Storage account.
+Regenerates a storage key for an Azure Storage account.
 
 
 ### [New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
@@ -36,7 +36,7 @@ Creates a Storage account.
 
 
 ### [Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
-Removes a Storage account from azure_2.
+Removes a Storage account from Azure.
 
 
 ### [Set-AzureRmCurrentStorageAccount](./Set-AzureRmCurrentStorageAccount.md)

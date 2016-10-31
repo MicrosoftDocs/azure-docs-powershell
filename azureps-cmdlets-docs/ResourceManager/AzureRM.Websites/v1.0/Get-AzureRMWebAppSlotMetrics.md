@@ -8,7 +8,7 @@ ms.assetid: 083BFB0B-FB9C-4566-B161-DC3EC24BDADD
 # Get-AzureRmWebAppSlotMetrics
 
 ## SYNOPSIS
-Gets metrics for an azure_2 Web App slot.
+Gets metrics for an Azure Web App slot.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Get-AzureRmWebAppSlotMetrics [-Metrics] <String[]> [-StartTime] <DateTime> [[-En
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmWebAppSlotMetrics** cmdlet gets metrics for an azure_2 Web App slot.
+The **Get-AzureRmWebAppSlotMetrics** cmdlet gets metrics for an Azure Web App slot.
 
 ## EXAMPLES
 

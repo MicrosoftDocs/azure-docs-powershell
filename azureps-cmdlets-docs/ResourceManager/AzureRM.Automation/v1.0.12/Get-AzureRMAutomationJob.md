@@ -32,7 +32,7 @@ Get-AzureRmAutomationJob -RunbookName <String> [-Status <String>] [-StartTime <D
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationJob** cmdlet gets runbook jobs in azure_2 Automation.
+The **Get-AzureRmAutomationJob** cmdlet gets runbook jobs in Azure Automation.
 
 ## EXAMPLES
 

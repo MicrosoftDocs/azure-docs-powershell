@@ -60,7 +60,7 @@ Gets the ACS Storage Farm, properties, and settings.
 
 
 ### [Get-ACSFault](./Get-ACSFault.md)
-Gets faults in the azure_2 Consistent Storage system.
+Gets faults in the Azure Consistent Storage system.
 
 
 ### [Get-ACSManagementServiceMetricDefinition](./Get-ACSManagementServiceMetricDefinition.md)
@@ -84,7 +84,7 @@ Gets metrics for a storage node.
 
 
 ### [Get-ACSNode](./Get-ACSNode.md)
-Gets a list of nodes in azure_2 Consistent Storage.
+Gets a list of nodes in Azure Consistent Storage.
 
 
 ### [Get-ACSRoleInstanceMetricDefinition](./Get-ACSRoleInstanceMetricDefinition.md)
@@ -108,7 +108,7 @@ Gets metrics for a storage share.
 
 
 ### [Get-ACSShare](./Get-ACSShare.md)
-Gets a list of SMB shares used in the azure_2 Consistent Storage system.
+Gets a list of SMB shares used in the Azure Consistent Storage system.
 
 
 ### [Get-ACSStorageAccount](./Get-ACSStorageAccount.md)
@@ -132,7 +132,7 @@ Resolves an ACS fault.
 
 
 ### [Restart-ACSRoleInstance](./Restart-ACSRoleInstance.md)
-Restarts a role instance in the azure_2 consistent storage system.
+Restarts a role instance in the Azure consistent storage system.
 
 
 ### [Set-ACSBlobService](./Set-ACSBlobService.md)

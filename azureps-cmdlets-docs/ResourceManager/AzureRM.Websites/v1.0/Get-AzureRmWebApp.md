@@ -8,7 +8,7 @@ ms.assetid: 50612BDC-6E73-47E4-A4DB-DE8CF804BB85
 # Get-AzureRmWebApp
 
 ## SYNOPSIS
-Gets azure_2 Web Apps in the specified resource group.
+Gets Azure Web Apps in the specified resource group.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Get-AzureRmWebApp [-Location] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmWebApp** cmdlet gets information about azure_2 Web Apps in the specified resource group.
+The **Get-AzureRmWebApp** cmdlet gets information about Azure Web Apps in the specified resource group.
 
 ## EXAMPLES
 
@@ -42,7 +42,6 @@ This command gets the slot named Slot001 from the Web App named WebAppStandard t
 ## PARAMETERS
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -57,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -72,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-@{Text=}
 
 ```yaml
 Type: ServerFarmWithRichSku
@@ -87,7 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-@{Text=}
 
 ```yaml
 Type: String

@@ -120,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -AddProtectedItems
-@{Text=}
 
 ```yaml
 Type: ASRReplicationProtectedItem[]
@@ -165,7 +164,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProtectedItems
-@{Text=}
 
 ```yaml
 Type: ASRReplicationProtectedItem[]

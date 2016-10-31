@@ -32,7 +32,6 @@ This command removes the schedule named MySchedule.
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -47,7 +46,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -62,7 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String

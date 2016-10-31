@@ -18,7 +18,7 @@ Get-ACSBlobService [-FarmName] <String> [[-SubscriptionId] <String>] [[-Token] <
 ```
 
 ## DESCRIPTION
-The **Get-ACSBlobService** cmdlet gets the status and settings of the azure_2 Consistent Storage (ACS) blob service.
+The **Get-ACSBlobService** cmdlet gets the status and settings of the Azure Consistent Storage (ACS) blob service.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ Get-AzureRmBatchSubscriptionQuotas [-Location] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBatchSubscriptionQuotas** cmdlet gets the quota of accounts for your subscription in the azure_2 Batch service for the specified region.
+The **Get-AzureRmBatchSubscriptionQuotas** cmdlet gets the quota of accounts for your subscription in the Azure Batch service for the specified region.
 
 ## EXAMPLES
 

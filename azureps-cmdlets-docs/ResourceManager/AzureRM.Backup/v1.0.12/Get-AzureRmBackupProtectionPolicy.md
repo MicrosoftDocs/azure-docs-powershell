@@ -17,7 +17,7 @@ Get-AzureRmBackupProtectionPolicy [[-Name] <String>] [-Vault] <AzureRMBackupVaul
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBackupProtectionPolicy** cmdlet gets backup policies for an azure_2 Backup vault.
+The **Get-AzureRmBackupProtectionPolicy** cmdlet gets backup policies for an Azure Backup vault.
 
 ## EXAMPLES
 

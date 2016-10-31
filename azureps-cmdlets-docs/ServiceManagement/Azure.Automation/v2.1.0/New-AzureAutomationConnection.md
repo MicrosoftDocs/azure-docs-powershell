@@ -31,7 +31,6 @@ The **New-AzureAutomationConnection** cmdlet creates a connection in Microsoft A
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -46,7 +45,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -61,7 +59,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionFieldValues
-@{Text=}
 
 ```yaml
 Type: IDictionary
@@ -76,7 +73,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionTypeName
-@{Text=}
 
 ```yaml
 Type: String
@@ -91,7 +87,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-@{Text=}
 
 ```yaml
 Type: String
@@ -106,7 +101,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile

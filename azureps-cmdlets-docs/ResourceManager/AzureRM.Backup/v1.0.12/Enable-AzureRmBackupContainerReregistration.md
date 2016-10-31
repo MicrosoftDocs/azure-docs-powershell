@@ -17,7 +17,7 @@ Enable-AzureRmBackupContainerReregistration [-Container] <AzureRMBackupContainer
 ```
 
 ## DESCRIPTION
-The **Enable-AzureRmBackupContainerReregistration** cmdlet reregisters a server to connect to an azure_2 Backup vault and continue the Backup recovery point chain.
+The **Enable-AzureRmBackupContainerReregistration** cmdlet reregisters a server to connect to an Azure Backup vault and continue the Backup recovery point chain.
 
 If you destroy a server, all its cloud backup points remain in the Backup vault.
 If you create a replacement server and assign it the same fully qualified domain name, you can connect the server back to the same vault.

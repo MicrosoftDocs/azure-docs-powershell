@@ -18,7 +18,7 @@ Get-AzureVirtualNetworkGatewayConnection [[-GatewayId] <String>] [[-ConnectedEnt
 ```
 
 ## DESCRIPTION
-The **Get-AzureVirtualNetworkGatewayConnection** cmdlet gets an azure_2 virtual network gateway connection.
+The **Get-AzureVirtualNetworkGatewayConnection** cmdlet gets an Azure virtual network gateway connection.
 
 ## EXAMPLES
 

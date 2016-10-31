@@ -121,7 +121,7 @@ Removes a Site Recovery vault.
 
 
 ### [Restart-AzureRmSiteRecoveryJob](./Restart-AzureRmSiteRecoveryJob.md)
-Restarts an azure_2 Site Recovery job.
+Restarts an Azure Site Recovery job.
 
 
 ### [Resume-AzureRmSiteRecoveryJob](./Resume-AzureRmSiteRecoveryJob.md)

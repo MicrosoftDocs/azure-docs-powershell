@@ -17,9 +17,9 @@ Get-AzureRmBackupVaultCredentials [-TargetLocation] <String> [-Vault] <AzureRMBa
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBackupVaultCredentials** cmdlet downloads the vault credentials file for an azure_2 Backup vault.
+The **Get-AzureRmBackupVaultCredentials** cmdlet downloads the vault credentials file for an Azure Backup vault.
 
-Backup uses a vault credential file to connect a server to the azure_2 Backup vault and register it.
+Backup uses a vault credential file to connect a server to the Azure Backup vault and register it.
 You must register a server before Backup can send backup data to the vault.
 
 ## EXAMPLES

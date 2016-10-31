@@ -23,7 +23,7 @@ Update-AzureRmSiteRecoveryRecoveryPlan -Path <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Update-AzureRmSiteRecoveryRecoveryPlan** cmdlet updates a recovery plan in azure_2 Site Recovery and then publishes it.
+The **Update-AzureRmSiteRecoveryRecoveryPlan** cmdlet updates a recovery plan in Azure Site Recovery and then publishes it.
 
 ## EXAMPLES
 

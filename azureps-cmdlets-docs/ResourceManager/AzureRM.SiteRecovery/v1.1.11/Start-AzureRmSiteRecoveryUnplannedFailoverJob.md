@@ -27,7 +27,7 @@ Start-AzureRmSiteRecoveryUnplannedFailoverJob -RecoveryPlan <ASRRecoveryPlan> -D
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSiteRecoveryUnplannedFailoverJob** cmdlet starts the unplanned failover of an azure_2 Site Recovery protection entity or recovery plan.
+The **Start-AzureRmSiteRecoveryUnplannedFailoverJob** cmdlet starts the unplanned failover of an Azure Site Recovery protection entity or recovery plan.
 You can check whether the job succeeds by using the Get-AzureRmSiteRecoveryJob cmdlet.
 
 ## EXAMPLES

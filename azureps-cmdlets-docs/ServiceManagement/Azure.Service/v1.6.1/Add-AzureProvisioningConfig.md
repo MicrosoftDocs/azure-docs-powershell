@@ -8,7 +8,7 @@ ms.assetid: B3669CC1-3D0F-4B2F-8CCC-52BBDBF35110
 # Add-AzureProvisioningConfig
 
 ## SYNOPSIS
-Adds provisioning configuration for an azure_2 virtual machine.
+Adds provisioning configuration for an Azure virtual machine.
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Add-AzureProvisioningConfig -VM <IPersistentVM> [-DisableGuestAgent] [-CustomDat
 ```
 
 ## DESCRIPTION
-The **Add-AzureProvisioningConfig** cmdlet adds provisioning configuration information to an azure_2 virtual machine configuration.
+The **Add-AzureProvisioningConfig** cmdlet adds provisioning configuration information to an Azure virtual machine configuration.
 You can use the configuration object to create a virtual machine.
 
 This cmdlet supports different provisioning configurations, including standalone Windows servers, Windows servers joined to an Active Directory domain, and Linux-based servers.
@@ -419,7 +419,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -434,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

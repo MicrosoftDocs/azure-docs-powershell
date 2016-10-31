@@ -40,7 +40,7 @@ Remove-AzureSqlDatabase [-ServerName] <String> [-Database] <Database> [-Force] [
 The **Remove-AzureSqlDatabase** cmdlet deletes an ssSDS by server connection context or server name.
 You can create an ssSDS server connection context using the New-AzureSqlDatabaseServerContext cmdlet, and then use it with this cmdlet.
 
-When you delete a database by specifying an ssSDS server name, the **Remove-AzureSqlDatabase** cmdlet uses the name and the current azure_2 subscription information to perform the operation.
+When you delete a database by specifying an ssSDS server name, the **Remove-AzureSqlDatabase** cmdlet uses the name and the current Azure subscription information to perform the operation.
 
 ## EXAMPLES
 
@@ -114,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

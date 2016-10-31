@@ -99,7 +99,7 @@ Gets elastic pools and their property values in an ssSDS.
 
 
 ### [Get-AzureRmSqlServerActiveDirectoryAdministrator](./Get-AzureRmSqlServerActiveDirectoryAdministrator.md)
-Gets information about an azure_2 AD administrator for SQL Server.
+Gets information about an Azure AD administrator for SQL Server.
 
 ### [Get-AzureRmSqlServerAuditingPolicy](./Get-AzureRmSqlServerAuditingPolicy.md)
 Gets the auditing policy of a SQL server.
@@ -200,7 +200,7 @@ Removes the threat detection policy from a database.
 
 
 ### [Remove-AzureRmSqlDatabase](./Remove-AzureRmSqlDatabase.md)
-Removes an azure_2 SQL database.
+Removes an Azure SQL database.
 
 
 ### [Remove-AzureRmSqlElasticPool](./Remove-AzureRmSqlElasticPool.md)
@@ -208,7 +208,7 @@ Deletes an elastic database pool.
 
 
 ### [Remove-AzureRmSqlServerActiveDirectoryAdministrator](./Remove-AzureRmSqlServerActiveDirectoryAdministrator.md)
-Removes an azure_2 AD administrator for SQL Server.
+Removes an Azure AD administrator for SQL Server.
 
 
 ### [Remove-AzureRmSqlServerAuditing](./Remove-AzureRmSqlServerAuditing.md)
@@ -232,7 +232,7 @@ Removes the threat detection policy from a database.
 
 
 ### [Remove-AzureRmSqlServer](./Remove-AzureRmSqlServer.md)
-Removes an azure_2 SQL Database server.
+Removes an Azure SQL Database server.
 
 
 ### [Restore-AzureRmSqlDatabase](./Restore-AzureRmSqlDatabase.md)
@@ -277,7 +277,7 @@ Modifies properties of an elastic database pool in a nextref_database.
 
 
 ### [Set-AzureRmSqlServerActiveDirectoryAdministrator](./Set-AzureRmSqlServerActiveDirectoryAdministrator.md)
-Provisions an azure_2 AD administrator for SQL Server.
+Provisions an Azure AD administrator for SQL Server.
 
 ### [Set-AzureRmSqlServerAuditingPolicy](./Set-AzureRmSqlServerAuditingPolicy.md)
 Changes the auditing policy of a nextref_database server.

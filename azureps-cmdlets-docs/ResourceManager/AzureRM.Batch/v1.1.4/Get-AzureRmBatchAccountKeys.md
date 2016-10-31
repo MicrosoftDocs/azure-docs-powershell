@@ -17,7 +17,7 @@ Get-AzureRmBatchAccountKeys [-AccountName] <String> [-ResourceGroupName <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBatchAccountKeys** cmdlet gets the keys of an azure_2 Batch account in the current subscription.
+The **Get-AzureRmBatchAccountKeys** cmdlet gets the keys of an Azure Batch account in the current subscription.
 
 ## EXAMPLES
 

@@ -23,7 +23,7 @@ Get-AzureRmSiteRecoveryStorageClassificationMapping -Name <String> [<CommonParam
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet gets a storage classification mapping in azure_2 Site Recovery.
+The **Get-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet gets a storage classification mapping in Azure Site Recovery.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ Remove-AzureRmSiteRecoveryPolicy -Policy <ASRPolicy> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRMSiteRecoveryPolicy** cmdlet removes an azure_2 Site Recovery replication policy.
+The **Remove-AzureRMSiteRecoveryPolicy** cmdlet removes an Azure Site Recovery replication policy.
 
 ## EXAMPLES
 

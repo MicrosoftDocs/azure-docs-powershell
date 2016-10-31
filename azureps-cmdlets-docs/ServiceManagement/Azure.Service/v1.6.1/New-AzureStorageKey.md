@@ -8,7 +8,7 @@ ms.assetid: 23FBE36F-C4BA-45BF-827B-1595309DC686
 # New-AzureStorageKey
 
 ## SYNOPSIS
-Regenerates storage keys for an azure_2 storage account.
+Regenerates storage keys for an Azure storage account.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ New-AzureStorageKey [-KeyType] <String> [-StorageAccountName] <String> [-Profile
 ```
 
 ## DESCRIPTION
-The **New-AzureStorageKey** cmdlet regenerates the primary or secondary key for an azure_2 Storage account.
+The **New-AzureStorageKey** cmdlet regenerates the primary or secondary key for an Azure Storage account.
 It returns an object that contains the storage account name, primary key, and secondary key as properties.
 
 ## EXAMPLES
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Specifies the name of the azure_2 Storage account for which to regenerate a key.
+Specifies the name of the Azure Storage account for which to regenerate a key.
 
 ```yaml
 Type: String
@@ -86,7 +86,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -101,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

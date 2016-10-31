@@ -8,7 +8,7 @@ ms.assetid: 985D040B-1148-40B1-ACDD-8C30DD3C7B29
 # Get-AzureAffinityGroup
 
 ## SYNOPSIS
-Gets an azure_2 affinity group object.
+Gets an Azure affinity group object.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureAffinityGroup [[-Name] <String>] [-Profile <AzureSMProfile>] [-Informat
 ```
 
 ## DESCRIPTION
-The **Get-AzureAffinityGroup** cmdlet gets an azure_2 affinity group.
+The **Get-AzureAffinityGroup** cmdlet gets an Azure affinity group.
 The affinity group object includes the affinity group name, location, label, description and the storage and hosted services that are part of the affinity group.
 
 ## EXAMPLES
@@ -65,7 +65,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -80,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

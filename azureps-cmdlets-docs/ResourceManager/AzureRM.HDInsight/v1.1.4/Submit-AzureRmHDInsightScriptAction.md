@@ -8,7 +8,7 @@ ms.assetid: 329B1D1F-4B65-45A1-97E0-71A0F905F0C0
 # Submit-AzureRmHDInsightScriptAction
 
 ## SYNOPSIS
-Submits a new script action to an azure_2 HDInsight cluster.
+Submits a new script action to an Azure HDInsight cluster.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Submit-AzureRmHDInsightScriptAction [-ClusterName] <String> [-Name] <String> [-U
 ```
 
 ## DESCRIPTION
-The **Submit-AzureRmHDInsightScriptAction** cmdlet submits a new script action to an azure_2 HDInsight cluster.
+The **Submit-AzureRmHDInsightScriptAction** cmdlet submits a new script action to an Azure HDInsight cluster.
 Use *PersistOnSuccess* to have the script action run each time the cluster is scaled up, as long as the script action initially succeeds.
 
 ## EXAMPLES
@@ -161,7 +161,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -176,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

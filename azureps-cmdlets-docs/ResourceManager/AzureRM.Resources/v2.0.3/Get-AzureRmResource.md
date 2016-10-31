@@ -67,7 +67,7 @@ Get-AzureRmResource [-ResourceType <String>] [-ExtensionResourceType <String>] [
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmResource** cmdlet gets azure_2 resources.
+The **Get-AzureRmResource** cmdlet gets Azure resources.
 
 ## EXAMPLES
 
@@ -81,7 +81,6 @@ This command gets a resource of the type microsoft.web/sites, named ContosoWebsi
 ## PARAMETERS
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -120,7 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-@{Text=}
 
 ```yaml
 Type: String
@@ -159,7 +157,6 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-@{Text=}
 
 ```yaml
 Type: String
@@ -174,7 +171,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandProperties
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -189,7 +185,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-@{Text=}
 
 ```yaml
 Type: String
@@ -204,7 +199,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
-@{Text=}
 
 ```yaml
 Type: String
@@ -231,7 +225,6 @@ Accept wildcard characters: False
 ```
 
 ### -IsCollection
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -246,7 +239,6 @@ Accept wildcard characters: False
 ```
 
 ### -ODataQuery
-@{Text=}
 
 ```yaml
 Type: String
@@ -261,7 +253,6 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -295,7 +286,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-@{Text=}
 
 ```yaml
 Type: String
@@ -337,7 +327,6 @@ Accept wildcard characters: False
 ```
 
 ### -Top
-@{Text=}
 
 ```yaml
 Type: Int32

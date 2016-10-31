@@ -25,7 +25,7 @@ Update-AzureRmSiteRecoveryProtectionDirection -RecoveryPlan <ASRRecoveryPlan> -D
 ```
 
 ## DESCRIPTION
-The **Update-AzureRmSiteRecoveryProtectionDirection** cmdlet updates the source and target server for the protection of an azure_2 Site Recovery object after the completion of a commit failover operation.
+The **Update-AzureRmSiteRecoveryProtectionDirection** cmdlet updates the source and target server for the protection of an Azure Site Recovery object after the completion of a commit failover operation.
 
 ## EXAMPLES
 

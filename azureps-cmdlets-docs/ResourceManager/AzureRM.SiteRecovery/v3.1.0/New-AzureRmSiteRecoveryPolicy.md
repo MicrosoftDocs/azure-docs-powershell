@@ -158,7 +158,6 @@ Accept wildcard characters: False
 ```
 
 ### -Encryption
-@{Text=}
 
 ```yaml
 Type: String
@@ -192,7 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -Compression
-@{Text=}
 
 ```yaml
 Type: String
@@ -241,7 +239,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicaDeletion
-@{Text=}
 
 ```yaml
 Type: String

@@ -8,7 +8,7 @@ ms.assetid: 25194B68-47AF-4C09-8D41-A1FE4D50B626
 # Get-AzureVirtualNetworkGatewayDiagnostics
 
 ## SYNOPSIS
-Gets the results of azure_2 virtual network gateway diagnostics.
+Gets the results of Azure virtual network gateway diagnostics.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureVirtualNetworkGatewayDiagnostics [-GatewayId] <String> [-Profile <Azure
 ```
 
 ## DESCRIPTION
-The **Get-AzureVirtualNetworkGatewayDiagnostics** cmdlet gets the results of azure_2 virtual network gateway diagnostics.
+The **Get-AzureVirtualNetworkGatewayDiagnostics** cmdlet gets the results of Azure virtual network gateway diagnostics.
 
 ## EXAMPLES
 

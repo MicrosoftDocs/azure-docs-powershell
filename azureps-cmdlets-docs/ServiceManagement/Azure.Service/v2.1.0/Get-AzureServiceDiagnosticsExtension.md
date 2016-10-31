@@ -33,7 +33,6 @@ This command enables a diagnostic service across all roles.
 ## PARAMETERS
 
 ### -ServiceName
-@{Text=}
 
 ```yaml
 Type: String
@@ -48,7 +47,6 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
 
 ```yaml
 Type: String
@@ -63,7 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-@{Text=}
 
 ```yaml
 Type: String[]
@@ -78,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile
@@ -93,7 +89,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -108,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

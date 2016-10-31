@@ -26,7 +26,7 @@ Register-AzureRmAutomationScheduledRunbook -RunbookName <String> -ScheduleName <
 ```
 
 ## DESCRIPTION
-The **Register-AzureRmAutomationScheduledRunbook** cmdlet associates an azure_2 Automation runbook to a schedule.
+The **Register-AzureRmAutomationScheduledRunbook** cmdlet associates an Azure Automation runbook to a schedule.
 The runbook starts based on the schedule you specify using the *ScheduleName* parameter.
 
 ## EXAMPLES
@@ -36,7 +36,7 @@ The runbook starts based on the schedule you specify using the *ScheduleName* pa
 PS C:\>Register-AzureRmAutomationScheduledRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ScheduleName "Sched01" -ResourceGroupName "ResourceGroup01"
 ```
 
-This command associates the runbook named Runbk01 with the schedule named Sched01 in the azure_2 Automation account named Contoso17.
+This command associates the runbook named Runbk01 with the schedule named Sched01 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 

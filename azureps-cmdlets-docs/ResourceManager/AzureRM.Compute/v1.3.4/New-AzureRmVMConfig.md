@@ -18,7 +18,7 @@ New-AzureRmVMConfig [-VMName] <String> [-VMSize] <String> [[-AvailabilitySetId] 
 ```
 
 ## DESCRIPTION
-The **New-AzureRmVMConfig** cmdlet creates a configurable local virtual machine object for azure_2.
+The **New-AzureRmVMConfig** cmdlet creates a configurable local virtual machine object for Azure.
 Other cmdlets can be used to configure a virtual machine object, such as Set-AzureRmVMOperatingSystem, Set-AzureRmVMSourceImage, Add-AzureRmVMNetworkInterface, and Set-AzureRmVMOSDisk.
 
 ## EXAMPLES
@@ -85,7 +85,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -100,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

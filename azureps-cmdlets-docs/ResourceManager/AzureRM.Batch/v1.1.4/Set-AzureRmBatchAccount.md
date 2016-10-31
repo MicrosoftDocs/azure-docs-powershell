@@ -18,7 +18,7 @@ Set-AzureRmBatchAccount [-AccountName] <String> [-Tag] <Hashtable[]> [-ResourceG
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmBatchAccount** cmdlet updates an azure_2 Batch account.
+The **Set-AzureRmBatchAccount** cmdlet updates an Azure Batch account.
 Currently, this cmdlet can update only tags.
 
 ## EXAMPLES

@@ -22,7 +22,7 @@ The **Remove-AzureApplicationGatewayIPConfiguration** cmdlet removes an IP confi
 
 ## EXAMPLES
 
-### Example 1: Remove an IP configuration from an azure_2 application gateway.
+### Example 1: Remove an IP configuration from an Azure application gateway.
 ```
 PS C:\>$AppGw = Get-AzureApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> Remove-AzureApplicationGatewayIPConfiguration -ApplicationGateway $AppGw -Name "Subnet02"

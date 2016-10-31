@@ -18,7 +18,7 @@ Stop-AzureRmAutomationJob [-Id] <Guid> [-ResourceGroupName] <String> [-Automatio
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmAutomationJob** cmdlet stops an azure_2 Automation job.
+The **Stop-AzureRmAutomationJob** cmdlet stops an Azure Automation job.
 Specify a running Automation job.
 
 ## EXAMPLES

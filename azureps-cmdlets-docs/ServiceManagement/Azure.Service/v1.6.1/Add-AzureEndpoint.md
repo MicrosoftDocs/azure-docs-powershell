@@ -50,7 +50,7 @@ Add-AzureEndpoint [-Name] <String> [-Protocol] <String> [-LocalPort] <Int32> [-P
 ```
 
 ## DESCRIPTION
-The **Add-AzureEndpoint** cmdlet adds an endpoint to an azure_2 virtual machine object.
+The **Add-AzureEndpoint** cmdlet adds an endpoint to an Azure virtual machine object.
 
 ## EXAMPLES
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -PublicPort
 Specifies the public port that the endpoint uses.
-If you do not specify a value, azure_2 assigns an available port.
+If you do not specify a value, Azure assigns an available port.
 
 ```yaml
 Type: Int32
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualIPName
-Specifies the name of a virtual IP address that azure_2 associates to the endpoint.
+Specifies the name of a virtual IP address that Azure associates to the endpoint.
 Your service can have multiple virtual IPs.
 To create virtual IPs, use the Add-AzureVirtualIP cmdlet.
 
@@ -290,7 +290,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -305,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

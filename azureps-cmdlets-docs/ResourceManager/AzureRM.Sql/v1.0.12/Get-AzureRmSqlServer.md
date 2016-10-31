@@ -86,7 +86,7 @@ ServerVersion            : 12.0
 Tags                     :
 ```
 
-This command gets information about all the azure_2 SQL Database servers in the current subscription.
+This command gets information about all the Azure SQL Database servers in the current subscription.
 
 ## PARAMETERS
 
@@ -121,7 +121,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -136,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

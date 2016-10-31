@@ -253,7 +253,6 @@ Accept wildcard characters: False
 ```
 
 ### -UsesTaskDependencies
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

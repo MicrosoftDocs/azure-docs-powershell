@@ -49,7 +49,7 @@ Get-AzureBatchNodeFile [[-ComputeNode] <PSComputeNode>] [-Filter <String>] [-Max
 ```
 
 ## DESCRIPTION
-The **Get-AzureBatchNodeFile** cmdlet gets the properties of the azure_2 Batch node files of a task or compute node.
+The **Get-AzureBatchNodeFile** cmdlet gets the properties of the Azure Batch node files of a task or compute node.
 To narrow your results, you can specify an Open Data Protocol (OData) filter.
 If you specify a task, but not a filter, this cmdlet returns properties for all node files for that task.
 If you specify a compute node, but not a filter, this cmdlet returns properties for all node files for that compute node.

@@ -42,7 +42,7 @@ For information about how to use the new HDInsight to create a cluster, see Crea
 For information about how to submit jobs by using APS and other approaches, see Submit Hadoop jobs in HDInsighthttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/.
 For reference information about APS HDInsight, see Azure HDInsight Cmdletshttps://msdn.microsoft.com/en-us/library/mt438705.aspx.
 
-The **New-AzureHDInsightCluster** cmdlet creates an azure_2 HDInsight cluster by using the specified parameters or by using a configuration object that is created by using the New-AzureHDInsightClusterConfig cmdlet.
+The **New-AzureHDInsightCluster** cmdlet creates an Azure HDInsight cluster by using the specified parameters or by using a configuration object that is created by using the New-AzureHDInsightClusterConfig cmdlet.
 
 ## EXAMPLES
 
@@ -81,7 +81,7 @@ The final command performs a sequence of operations by using these cmdlets:
 ## PARAMETERS
 
 ### -Certificate
-Specifies the management certificate for an azure_2 subscription.
+Specifies the management certificate for an Azure subscription.
 
 ```yaml
 Type: X509Certificate2
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndPoint
-Specifies the endpoint to use to connect to azure_2.
+Specifies the endpoint to use to connect to Azure.
 If you do not specify this parameter, this cmdlet uses the default endpoint.
 
 ```yaml
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the azure_2 HDInsight cluster to create.
+Specifies the name of the Azure HDInsight cluster to create.
 
 ```yaml
 Type: String
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -Subscription
-Specifies the azure_2 subscription in which to create an HDInsight cluster.
+Specifies the Azure subscription in which to create an HDInsight cluster.
 
 ```yaml
 Type: String
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageContainerName
-Specifies the name of the default container in the default azure_2 storage account that an HDInsight cluster uses.
+Specifies the name of the default container in the default Azure storage account that an HDInsight cluster uses.
 
 ```yaml
 Type: String

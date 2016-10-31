@@ -159,7 +159,6 @@ Accept wildcard characters: False
 ```
 
 ### -DatasetName
-@{Text=}
 
 ```yaml
 Type: String

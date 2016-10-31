@@ -8,7 +8,7 @@ ms.assetid: 7558D19C-08EC-4BB2-8652-D2E4231911B4
 # Get-AzureRmSqlServerActiveDirectoryAdministrator
 
 ## SYNOPSIS
-Gets information about an azure_2 AD administrator for SQL Server.
+Gets information about an Azure AD administrator for SQL Server.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRmSqlServerActiveDirectoryAdministrator [-ServerName] <String> [-Resour
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet gets information about an azure_2 Active Directory (azure_2 AD) administrator for an azure_2ssNoVersion in the current subscription.
+The **Get-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet gets information about an Azure Active Directory (Azure AD) administrator for an AzuressNoVersion in the current subscription.
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ ResourceGroupName ServerName DisplayName ObjectId
 ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
-This command gets information about an azure_2 AD administrator for a server named Server01 that is associated with a resource group named ResourceGroup01.
+This command gets information about an Azure AD administrator for a server named Server01 that is associated with a resource group named ResourceGroup01.
 
 ## PARAMETERS
 
@@ -65,7 +65,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -80,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

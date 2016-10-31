@@ -17,7 +17,7 @@ Enable-AzureBatchJobSchedule [-Id] <String> -BatchContext <BatchAccountContext> 
 ```
 
 ## DESCRIPTION
-The **Enable-AzureBatchJobSchedule** cmdlet enables an azure_2 Batch job schedule.
+The **Enable-AzureBatchJobSchedule** cmdlet enables an Azure Batch job schedule.
 After you enable a job schedule, jobs can be created according to that schedule.
 
 ## EXAMPLES

@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies an azure_2 profile.
+Specifies an Azure profile.
 
 ```yaml
 Type: AzureSMProfile

@@ -19,12 +19,12 @@ Get-AzureRmSqlDatabaseSecureConnectionPolicy [-ServerName] <String> [-DatabaseNa
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabaseSecureConnectionPolicy** cmdlet gets the encrypted channel policy of an azure_2 SQL database.
+The **Get-AzureRmSqlDatabaseSecureConnectionPolicy** cmdlet gets the encrypted channel policy of an Azure SQL database.
 To use the cmdlet, use the *ResourceGroupName*, *ServerName*, and *DatabaseName* parameters to identify the database.
 After this cmdlet runs successfully, it returns an object that describes the current encrypted channel policy and also the database identifiers.
 Database identifiers include, but are not limited to, **ResourceGroupName**, **ServerName**, and **DatabaseName**.
 
-This cmdlet is also supported by the SQL Server Stretch Database service on azure_2.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ ProxyPort             : 1433
 SecureConnectionState : Optional
 ```
 
-This command gets the encrypted channel policy of an azure_2 SQL database named database01 located on server server01.
+This command gets the encrypted channel policy of an Azure SQL database named database01 located on server server01.
 
 ## PARAMETERS
 
@@ -90,7 +90,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -105,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

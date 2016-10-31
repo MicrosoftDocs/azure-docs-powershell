@@ -130,7 +130,6 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-@{Text=}
 
 ```yaml
 Type: String

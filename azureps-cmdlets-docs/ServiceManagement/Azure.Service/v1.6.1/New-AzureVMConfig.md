@@ -8,7 +8,7 @@ ms.assetid: 73C0373D-16F8-4179-ABED-38374432231B
 # New-AzureVMConfig
 
 ## SYNOPSIS
-Creates an azure_2 virtual machine configuration object.
+Creates an Azure virtual machine configuration object.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ New-AzureVMConfig [-Name] <String> [-InstanceSize] <String> [[-HostCaching] <Str
 ```
 
 ## DESCRIPTION
-The **New-AzureVMConfig** cmdlet creates an azure_2  virtual machine configuration object.
+The **New-AzureVMConfig** cmdlet creates an Azure  virtual machine configuration object.
 You can use this object to perform a new deployment and add a new virtual machine to an existing deployment.
 
 ## EXAMPLES
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -MediaLocation
-Specifies the azure_2 storage location for the new virtual machine disk.
+Specifies the Azure storage location for the new virtual machine disk.
 
 ```yaml
 Type: String
@@ -257,7 +257,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -272,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

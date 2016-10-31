@@ -18,7 +18,7 @@ Set-AzureRmAutomationWebhook [-Name] <String> [-IsEnabled] <Boolean> [[-Paramete
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationWebhook** cmdlet modifies a webhook for an azure_2 Automation runbook.
+The **Set-AzureRmAutomationWebhook** cmdlet modifies a webhook for an Azure Automation runbook.
 
 ## EXAMPLES
 

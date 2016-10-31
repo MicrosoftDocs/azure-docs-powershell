@@ -49,7 +49,7 @@ This command gets the service objectives for the server named Server01 and the d
 ## PARAMETERS
 
 ### -ServiceObjectiveName
-Specifies the name of a service objective for an azure_2 SQL Database server.
+Specifies the name of a service objective for an Azure SQL Database server.
 psdx_paramvalues Basic, S0, S1, S2, P1, P2, and P3.
 
 ```yaml
@@ -111,7 +111,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -126,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

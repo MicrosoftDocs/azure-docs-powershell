@@ -17,7 +17,7 @@ Set-AzureBatchJob [-Job] <PSCloudJob> -BatchContext <BatchAccountContext> [<Comm
 ```
 
 ## DESCRIPTION
-The **Set-AzureBatchJob** cmdlet updates an azure_2 Batch job.
+The **Set-AzureBatchJob** cmdlet updates an Azure Batch job.
 Use the Get-AzureBatchJob cmdlet to get a **PSCloudJob** object.
 Modify the properties of that object, and then use the current cmdlet to commit your changes to the Batch service.
 

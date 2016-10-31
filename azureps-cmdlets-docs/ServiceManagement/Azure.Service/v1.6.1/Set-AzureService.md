@@ -8,7 +8,7 @@ ms.assetid: C24FDA41-A092-4B9B-B758-7E8668C50FBE
 # Set-AzureService
 
 ## SYNOPSIS
-Sets or updates the label and description of the specified Microsoft azure_2 service.
+Sets or updates the label and description of the specified Microsoft Azure service.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ This command sets the label to "MyTestSvc1" and the description to "My service f
 ## PARAMETERS
 
 ### -ServiceName
-Specifies the name of the azure_2 service to update.
+Specifies the name of the Azure service to update.
 
 ```yaml
 Type: String
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-Specifies a label for the azure_2 service.
+Specifies a label for the Azure service.
 The label may be up to 100 characters in length.
 
 ```yaml
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description for the azure_2 service.
+Specifies a description for the Azure service.
 The description may be up to 1024 characters in length.
 
 ```yaml
@@ -110,7 +110,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -125,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

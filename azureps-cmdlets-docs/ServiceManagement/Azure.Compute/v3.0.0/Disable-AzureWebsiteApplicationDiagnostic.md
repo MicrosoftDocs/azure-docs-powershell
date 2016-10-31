@@ -103,7 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -BlobStorage
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -134,7 +133,6 @@ Accept wildcard characters: False
 ```
 
 ### -TableStorage
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

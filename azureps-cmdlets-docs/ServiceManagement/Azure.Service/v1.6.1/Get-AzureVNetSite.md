@@ -8,7 +8,7 @@ ms.assetid: 21DA37EC-8A96-4997-9368-7705D0864BDE
 # Get-AzureVNetSite
 
 ## SYNOPSIS
-Gets a list object with information about azure_2 virtual networks.
+Gets a list object with information about Azure virtual networks.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureVNetSite [[-VNetName] <String>] [-Profile <AzureSMProfile>] [-Informati
 ```
 
 ## DESCRIPTION
-The **Get-AzureVNetSite** cmdlet gets a list object with information about azure_2virtual networks for the current subscription.
+The **Get-AzureVNetSite** cmdlet gets a list object with information about Azurevirtual networks for the current subscription.
 If you specify a virtual network name, only information for that virtual network is returned.
 
 ## EXAMPLES
@@ -70,7 +70,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -85,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

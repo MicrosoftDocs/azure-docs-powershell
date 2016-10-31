@@ -17,7 +17,7 @@ Set-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndpoin
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmTrafficManagerEndpoint** cmdlet updates an endpoint in azure_2 Traffic Manager.
+The **Set-AzureRmTrafficManagerEndpoint** cmdlet updates an endpoint in Azure Traffic Manager.
 This cmdlet updates the settings from a local endpoint object.
 You can specify the endpoint object either by using the *TrafficManagerEndpoint* parameter or by using the pipeline.
 
@@ -33,7 +33,7 @@ PS C:\> $TrafficManagerEndpoint.Weight = 20
 PS C:\> Set-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint $TrafficManagerEndpoint
 ```
 
-The first command gets an azure_2 Traffic Manager endpoint by using the **Get-AzureRmTrafficManagerEndpoint** cmdlet.
+The first command gets an Azure Traffic Manager endpoint by using the **Get-AzureRmTrafficManagerEndpoint** cmdlet.
 The command stores the endpoint locally in the $TrafficManagerEndpoint variable.
 
 The second command changes that endpoint locally.

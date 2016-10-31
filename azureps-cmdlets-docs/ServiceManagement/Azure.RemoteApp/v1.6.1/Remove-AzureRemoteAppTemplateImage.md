@@ -8,7 +8,7 @@ ms.assetid: 59DFE497-65B3-4D23-900B-2B1CC6FD9EF5
 # Remove-AzureRemoteAppTemplateImage
 
 ## SYNOPSIS
-Deletes an azure_2 RemoteApp template image.
+Deletes an Azure RemoteApp template image.
 
 ## SYNTAX
 
@@ -18,8 +18,8 @@ Remove-AzureRemoteAppTemplateImage [-ImageName] <String> [-Profile <AzureSMProfi
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRemoteAppTemplateImage** cmdlet deletes an azure_2 RemoteApp template image.
-A template image can deleted only if it is not linked to any azure_2 RemoteApp collection.
+The **Remove-AzureRemoteAppTemplateImage** cmdlet deletes an Azure RemoteApp template image.
+A template image can deleted only if it is not linked to any Azure RemoteApp collection.
 
 ## EXAMPLES
 
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

@@ -36,7 +36,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -51,7 +50,6 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-@{Text=}
 
 ```yaml
 Type: String

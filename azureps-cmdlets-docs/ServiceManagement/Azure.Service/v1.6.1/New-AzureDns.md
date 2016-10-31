@@ -8,7 +8,7 @@ ms.assetid: DB18688F-188C-49CE-AD9D-8D4BC1F09AF7
 # New-AzureDns
 
 ## SYNOPSIS
-Creates an azure_2 DNS settings object.
+Creates an Azure DNS settings object.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ New-AzureDns [-Name] <String> [-IPAddress] <String> [-InformationAction <ActionP
 ```
 
 ## DESCRIPTION
-The **New-AzureDns** cmdlet creates an azure_2 DNS settings object.
+The **New-AzureDns** cmdlet creates an Azure DNS settings object.
 You can use a DNS settings object when you create a virtual machine by using the New-AzureVM cmdlet.
 
 ## EXAMPLES
@@ -28,7 +28,7 @@ You can use a DNS settings object when you create a virtual machine by using the
 PS C:\>$Dns = New-AzureDns -Name "Dns01" -IPAddress "10.1.2.4"
 ```
 
-This command creates an azure_2 DNS settings object.
+This command creates an Azure DNS settings object.
 The DNS server has the specified address and the friendly name Dns01.
 The command stores the object in the $Dns variable for use by the **New-AzureVM** cmdlet.
 
@@ -66,7 +66,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -81,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

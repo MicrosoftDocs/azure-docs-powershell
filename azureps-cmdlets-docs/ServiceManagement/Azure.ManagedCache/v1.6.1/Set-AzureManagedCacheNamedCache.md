@@ -19,7 +19,7 @@ Set-AzureManagedCacheNamedCache -Name <String> -NamedCache <String> [-ExpiryPoli
 ```
 
 ## DESCRIPTION
-The **Set-AzureManagedCacheNamedCache** cmdlet updates a named cache in the specified azure_2 Managed Cache Service instance in your azure_2 account and returns an object that represents the named cache.
+The **Set-AzureManagedCacheNamedCache** cmdlet updates a named cache in the specified Azure Managed Cache Service instance in your Azure account and returns an object that represents the named cache.
 
 ## EXAMPLES
 
@@ -198,7 +198,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PSCacheServiceWithNamedCaches
 
 ## NOTES
-* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlet to make your azure_2 account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlet to make your Azure account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
 
 ## RELATED LINKS
 

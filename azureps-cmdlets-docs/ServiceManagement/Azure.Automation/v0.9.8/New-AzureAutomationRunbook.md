@@ -44,7 +44,6 @@ This command creates a new runbook named Runbook02 in the Azure Automation accou
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -59,7 +58,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-@{Text=}
 
 ```yaml
 Type: String
@@ -89,7 +87,6 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-@{Text=}
 
 ```yaml
 Type: String
@@ -104,7 +101,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-@{Text=}
 
 ```yaml
 Type: String[]

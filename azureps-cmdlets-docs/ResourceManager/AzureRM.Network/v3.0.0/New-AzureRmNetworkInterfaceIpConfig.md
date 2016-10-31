@@ -95,7 +95,6 @@ Accept wildcard characters: False
 ```
 
 ### -Primary
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

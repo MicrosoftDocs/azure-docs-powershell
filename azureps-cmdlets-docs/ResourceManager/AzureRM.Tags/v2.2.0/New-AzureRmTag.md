@@ -8,7 +8,7 @@ ms.assetid: CD68129A-CC88-4127-ADC4-D2ADDB20935D
 # New-AzureRmTag
 
 ## SYNOPSIS
-Creates a predefined azure_2 tag or adds values to an existing tag.
+Creates a predefined Azure tag or adds values to an existing tag.
 
 ## SYNTAX
 
@@ -17,15 +17,15 @@ New-AzureRmTag [-Name] <String> [[-Value] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-AzureRmTag** cmdlet creates a predefined azure_2 tag with an optional predefined value.
+The **New-AzureRmTag** cmdlet creates a predefined Azure tag with an optional predefined value.
 You can also use it to add additional values to existing predefined tags.
 To create a predefined tag, enter a unique tag name.
 To add a value to an existing predefined tag, specify the name of the existing tag and the new value.
 
 This cmdlet returns an object that represents the new or modified tag with its values and the number of resources to which it has been applied.
 
-The azure_2 Tags module that **New-AzureRmTag** is part of can help you manage predefined azure_2 tags.
-An azure_2 tag is a name-value pair that you can use to categorize your azure_2 resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
+The Azure Tags module that **New-AzureRmTag** is part of can help you manage predefined Azure tags.
+An Azure tag is a name-value pair that you can use to categorize your Azure resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
 
 You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
 If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.
@@ -35,7 +35,7 @@ To search for resource groups with a specified tag name or name and value, use t
 
 Every tag has a name.
 The values are optional.
-A predefined azure_2 tag can have multiple values, but when you apply the tag to a resource or resource group, you apply the tag name and only one of its values.
+A predefined Azure tag can have multiple values, but when you apply the tag to a resource or resource group, you apply the tag name and only one of its values.
 For example, you can create a predefined Department tag with a value for each department, such as Finance, Human Resources, and IT.
 When you apply the Department tag to a resource, you apply only one predefined value, such as Finance.
 

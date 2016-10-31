@@ -23,7 +23,7 @@ Get-AzureRmMlWebServiceKeys -MlWebService <WebService> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmMlWebServiceKeys** cmdlet gets the web service keys for an azure_2 Machine Learning web service runtime APIs.
+The **Get-AzureRmMlWebServiceKeys** cmdlet gets the web service keys for an Azure Machine Learning web service runtime APIs.
 
 To determine the resource group name of an existing web service, run the Get-AzureRmMlWebService cmdlet to display the web services in your subscription.
 Locate the web service, and then look at its web service ID.
@@ -37,7 +37,7 @@ In the following example the resource group name is **Default-MachineLearning-So
 `Type       : Microsoft.MachineLearning/webServices`
 `Tags       : {}`
 
-Alternatively, to determine the resource group name of an existing web service, log on to the Microsoft azure_2 Machine Learning Web Services portal.
+Alternatively, to determine the resource group name of an existing web service, log on to the Microsoft Azure Machine Learning Web Services portal.
 Select the web service.
 The resource group name is the fifth element of the URL of the web service, just after the **resourceGroups** element.
 In the following example the resource group name is **Default-MachineLearning-SouthCentralUS**.

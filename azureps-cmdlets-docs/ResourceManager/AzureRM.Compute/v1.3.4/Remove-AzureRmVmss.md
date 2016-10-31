@@ -18,7 +18,7 @@ Remove-AzureRmVmss [-InformationAction <ActionPreference>] [-InformationVariable
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmVmss** cmdlet removes the Virtual Machine Scale Set (VMSS) from azure_2.
+The **Remove-AzureRmVmss** cmdlet removes the Virtual Machine Scale Set (VMSS) from Azure.
 This cmdlet can also be used to remove a specific virtual machine inside the VMSS.
 You can use the *InstanceId* parameter to remove a specific virtual machine inside the VMSS.
 
@@ -41,7 +41,16 @@ This command removes the virtual machine with instance ID 3 from the VMSS named 
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -56,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

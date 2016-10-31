@@ -8,7 +8,7 @@ ms.assetid: 4B214D92-3377-42A6-8A79-E3FC85E79206
 # Get-AzureRemoteAppOperationResult
 
 ## SYNOPSIS
-Retrieves the result of an azure_2 RemoteApp operation.
+Retrieves the result of an Azure RemoteApp operation.
 
 ## SYNTAX
 
@@ -17,8 +17,8 @@ Get-AzureRemoteAppOperationResult [-TrackingId] <String> [-Profile <AzureSMProfi
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppOperationResult** cmdlet retrieves the result of a long-running azure_2 RemoteApp operation.
-azure_2 RemoteApp uses long-running operations for many actions that require processing by the service and cannot return immediately.
+The **Get-AzureRemoteAppOperationResult** cmdlet retrieves the result of a long-running Azure RemoteApp operation.
+Azure RemoteApp uses long-running operations for many actions that require processing by the service and cannot return immediately.
 Examples of cmdlets that return tracking IDs include **Update-AzureRemoteAppCollection**, **Set-AzureRemoteAppWorkspace**, **Disconnect-AzureRemoteAppSession**, and others.
 
 ## EXAMPLES
@@ -29,7 +29,7 @@ PS C:\>$result = New-AzureRemoteAppCollection -CollectionName Contoso -ImageName
 PS C:\> Get-AzureRemoteAppOperationResult -TrackingId $result.Tracking
 ```
 
-This command saves the tracking ID returned from an azure_2 RemoteApp operation.
+This command saves the tracking ID returned from an Azure RemoteApp operation.
 The tracking ID is passed to **Get-AzureRemoteAppOperationResult** in the command that follows.
 
 ## PARAMETERS

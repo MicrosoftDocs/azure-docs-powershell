@@ -63,7 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-@{Text=}
 
 ```yaml
 Type: IDictionary
@@ -78,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile
@@ -93,7 +91,6 @@ Accept wildcard characters: False
 ```
 
 ### -RunOn
-@{Text=}
 
 ```yaml
 Type: String

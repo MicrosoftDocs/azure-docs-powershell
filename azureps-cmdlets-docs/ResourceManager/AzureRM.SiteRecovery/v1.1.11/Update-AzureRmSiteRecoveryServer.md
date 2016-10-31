@@ -17,7 +17,7 @@ Update-AzureRmSiteRecoveryServer -Server <ASRServer> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Update-AzureRmSiteRecoveryServer** cmdlet refreshes an azure_2 Site Recovery server.
+The **Update-AzureRmSiteRecoveryServer** cmdlet refreshes an Azure Site Recovery server.
 
 ## EXAMPLES
 

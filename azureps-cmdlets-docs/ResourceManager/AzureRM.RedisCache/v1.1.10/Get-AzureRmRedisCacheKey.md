@@ -17,7 +17,7 @@ Get-AzureRmRedisCacheKey -ResourceGroupName <String> -Name <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmRedisCacheKey** cmdlet gets the access keys for an azure_2 Redis Cache.
+The **Get-AzureRmRedisCacheKey** cmdlet gets the access keys for an Azure Redis Cache.
 
 ## EXAMPLES
 

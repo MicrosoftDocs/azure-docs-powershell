@@ -181,7 +181,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionId
-@{Text=}
 
 ```yaml
 Type: String
@@ -223,7 +222,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -238,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -270,7 +278,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionState
-@{Text=}
 
 ```yaml
 Type: String

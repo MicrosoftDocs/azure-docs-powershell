@@ -32,7 +32,6 @@ This command creates an Automation account named MyAutomationAccount in the East
 ## PARAMETERS
 
 ### -Location
-@{Text=}
 
 ```yaml
 Type: String
@@ -47,7 +46,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -62,7 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile

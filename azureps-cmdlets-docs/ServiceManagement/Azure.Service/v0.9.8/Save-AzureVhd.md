@@ -56,7 +56,7 @@ This command downloads a .vhd file and specifies the storage key.
 ## PARAMETERS
 
 ### -Source
-Specifies the Uniform Resource Identifier (URI) to the blob in `azure_2`.
+Specifies the Uniform Resource Identifier (URI) to the blob in `Azure`.
 
 ```yaml
 Type: Uri

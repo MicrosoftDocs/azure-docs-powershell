@@ -53,7 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +82,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile

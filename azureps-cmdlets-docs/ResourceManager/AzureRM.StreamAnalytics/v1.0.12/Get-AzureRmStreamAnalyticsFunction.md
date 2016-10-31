@@ -18,7 +18,7 @@ Get-AzureRmStreamAnalyticsFunction [-JobName] <String> [[-Name] <String>] [-Reso
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmStreamAnalyticsFunction** cmdlet gets a list of the functions that are defined in an azure_2 Stream Analytics job or information about a specific function.
+The **Get-AzureRmStreamAnalyticsFunction** cmdlet gets a list of the functions that are defined in an Azure Stream Analytics job or information about a specific function.
 
 ## EXAMPLES
 

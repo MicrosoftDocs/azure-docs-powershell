@@ -23,8 +23,8 @@ If the key vault already has a key by the same name, this cmdlet fails instead o
 If the backup contains multiple versions of a key, all versions are restored.
 
 The key vault that you restore the key into can be different from the key vault that you backed up the key from.
-However, the key vault must use the same subscription and be in an azure_2 region in the same geography (for example, North America).
-See the Microsoft Azure Trust Centerhttps://azure.microsoft.com/support/trust-center/ (https://azure.microsoft.com/support/trust-center/) for the mapping of azure_2 regions to geographies.
+However, the key vault must use the same subscription and be in an Azure region in the same geography (for example, North America).
+See the Microsoft Azure Trust Centerhttps://azure.microsoft.com/support/trust-center/ (https://azure.microsoft.com/support/trust-center/) for the mapping of Azure regions to geographies.
 
 ## EXAMPLES
 

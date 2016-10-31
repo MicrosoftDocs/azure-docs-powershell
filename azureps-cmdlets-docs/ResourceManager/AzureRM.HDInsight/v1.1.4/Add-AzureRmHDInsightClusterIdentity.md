@@ -27,7 +27,7 @@ Add-AzureRmHDInsightClusterIdentity [-Config] <AzureHDInsightConfig> [-ObjectId]
 ```
 
 ## DESCRIPTION
-The **Add-AzureRmHDInsightClusterIdentity** cmdlet adds a cluster identity to the azure_2 HDInsight configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
+The **Add-AzureRmHDInsightClusterIdentity** cmdlet adds a cluster identity to the Azure HDInsight configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ## EXAMPLES
 
@@ -74,7 +74,7 @@ PS C:\> New-AzureRmHDInsightClusterConfig `
                 -DefaultStorageContainer $storageAccountContainer
 ```
 
-This command adds Cluster Identity info to the cluster named your-hadoop-001, allowing the cluster to access azure_2 Data Lake Store.
+This command adds Cluster Identity info to the cluster named your-hadoop-001, allowing the cluster to access Azure Data Lake Store.
 
 ## PARAMETERS
 
@@ -95,8 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the azure_2 AD object ID (a GUID) of the azure_2 AD Service Principal that represents the cluster.
-The cluster will use this when accessing azure_2 Data Lake Store.
+Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -CertificateFilePath
 Specifies the file path to the certificate that will be used to authenticate as the Service Principal.
-The cluster will use this when accessing azure_2 Data Lake Store.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: String
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -CertificatePassword
 Specifies the password for the certificate that will be used to authenticate as the Service Principal.
-The cluster will use this when accessing azure_2 Data Lake Store.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: String
@@ -158,7 +158,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -173,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

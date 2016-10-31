@@ -19,7 +19,7 @@ New-AzureRmTrafficManagerProfile -Name <String> -ResourceGroupName <String> [-Pr
 ```
 
 ## DESCRIPTION
-The **New-AzureRmTrafficManagerProfile** cmdlet creates an azure_2 Traffic Manager profile.
+The **New-AzureRmTrafficManagerProfile** cmdlet creates an Azure Traffic Manager profile.
 Specify the *Name* parameter and required settings.
 This cmdlet returns a local object that represents the new profile.
 
@@ -35,7 +35,7 @@ Alternatively, you can add endpoints by using the New-AzureRmTrafficManagerEndpo
 PS C:\>New-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" -ProfileStatus Enabled -TrafficRoutingMethod Performance -RelativeDnsName "contosoapp" -TTL 30 -MonitorProtocol HTTP -MonitorPort 80 -MonitorPath "/default.aspx"
 ```
 
-This command creates an azure_2 Traffic Manager profile named ContosoProfile in resource group ResourceGroup11.
+This command creates an Azure Traffic Manager profile named ContosoProfile in resource group ResourceGroup11.
 The DNS FQDN is contosoapp.trafficmanager.net.
 
 ## PARAMETERS
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -RelativeDnsName
 Specifies the relative DNS name that this Traffic Manager profile provides.
-Traffic Manager combines this value and the DNS domain name that azure_2 Traffic Manager uses to form the fully qualified domain name (FQDN) of the profile.
+Traffic Manager combines this value and the DNS domain name that Azure Traffic Manager uses to form the fully qualified domain name (FQDN) of the profile.
 
 ```yaml
 Type: String

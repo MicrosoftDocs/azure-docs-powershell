@@ -41,7 +41,7 @@ The command gets the shared keys for that workspace.
 ## PARAMETERS
 
 ### -ResourceGroupName
-Specifies the name of an azure_2 resource group.
+Specifies the name of an Azure resource group.
 
 ```yaml
 Type: String
@@ -71,7 +71,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -86,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

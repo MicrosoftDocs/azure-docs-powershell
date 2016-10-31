@@ -64,7 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteAll
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

@@ -18,7 +18,7 @@ Get-AzureRmStorageUsage [-InformationAction <ActionPreference>] [-InformationVar
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmStorageUsage** cmdlet gets the resource usage for azure_2 Storage for the current subscription.
+The **Get-AzureRmStorageUsage** cmdlet gets the resource usage for Azure Storage for the current subscription.
 
 ## EXAMPLES
 
@@ -32,7 +32,16 @@ This command gets the Storage resources usage of the current subscription.
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

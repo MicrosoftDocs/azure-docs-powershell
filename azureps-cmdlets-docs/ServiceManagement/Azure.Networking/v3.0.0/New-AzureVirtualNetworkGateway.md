@@ -8,7 +8,7 @@ ms.assetid: ACF3A543-1185-4FE7-9FA2-2FA5EA3B8CA2
 # New-AzureVirtualNetworkGateway
 
 ## SYNOPSIS
-Creates an azure_2 virtual network gateway.
+Creates an Azure virtual network gateway.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-AzureVirtualNetworkGateway [-VNetName] <String> [-GatewayName] <String> [[-G
 ```
 
 ## DESCRIPTION
-The **New-AzureVirtualNetworkGateway** cmdlet creates an azure_2 virtual network gateway.
+The **New-AzureVirtualNetworkGateway** cmdlet creates an Azure virtual network gateway.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ Remove-AzureRmBackupVault [-Force] [-Vault] <AzureRMBackupVault> [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmBackupVault** cmdlet deletes an azure_2 Backup vault.
+The **Remove-AzureRmBackupVault** cmdlet deletes an Azure Backup vault.
 
 Before you can delete a Backup vault, it must be empty.
 Use the **Remove-AzureRmBackupContainer** cmdlet to remove infrastructure as a service (IaaS) virtual machine backup data from the vault.
@@ -30,7 +30,7 @@ Use the **Delete-RegisteredServer** cmdlet to remove other registered servers an
 PS C:\>Get-AzureRmBackupVault -Name "Vault03" | Remove-AzureRmBackupVault
 ```
 
-This command gets the azure_2 Backup vault named Vault03 by using the **Get-AzureRmBackupVault** cmdlet.
+This command gets the Azure Backup vault named Vault03 by using the **Get-AzureRmBackupVault** cmdlet.
 The command passes that vault to the current cmdlet by using the pipeline operator.
 The current cmdlet removes the vault.
 
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -68,7 +68,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

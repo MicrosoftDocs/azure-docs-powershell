@@ -8,7 +8,7 @@ ms.assetid: 879C7DF4-1A13-4D06-A376-910910504626
 # Get-AzureVNetConfig
 
 ## SYNOPSIS
-Gets the azure_2 virtual network configuration from the current subscription.
+Gets the Azure virtual network configuration from the current subscription.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureVNetConfig [-ExportToFile <String>] [-Profile <AzureSMProfile>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureVNetConfig** cmdlet retrieves the virtual network configuration of the current azure_2 subscription.
+The **Get-AzureVNetConfig** cmdlet retrieves the virtual network configuration of the current Azure subscription.
 If the *ExportToFile* parameter is specified, a network configuration file is created.
 
 ## EXAMPLES
@@ -28,14 +28,14 @@ If the *ExportToFile* parameter is specified, a network configuration file is cr
 PS C:\>Get-AzureVNetConfig
 ```
 
-This command gets the virtual network configuration of the current azure_2 subscription and displays it.
+This command gets the virtual network configuration of the current Azure subscription and displays it.
 
 ### Example 2: Get the virtual network configuration of the current Azure subscription and save it to a local file
 ```
 PS C:\>Get-AzureVNetConfig -ExportToFile "c:\temp\MyAzNets.netcfg"
 ```
 
-This command gets the virtual network configuration of the current azure_2 subscription and then saves it to a local file.
+This command gets the virtual network configuration of the current Azure subscription and then saves it to a local file.
 
 ## PARAMETERS
 
@@ -70,7 +70,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -85,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

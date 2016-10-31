@@ -8,7 +8,7 @@ ms.assetid: 99D4203F-6E3A-4B21-B5FA-F72F8955C161
 # Remove-AzureRmRedisCacheDiagnostics
 
 ## SYNOPSIS
-Disables diagnostics on an azure_2 Redis Cache.
+Disables diagnostics on an Azure Redis Cache.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRmRedisCacheDiagnostics -ResourceGroupName <String> -Name <String> [
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmRedisCacheDiagnostics** cmdlet disables diagnostics on an azure_2 Redis Cache.
+The **Remove-AzureRmRedisCacheDiagnostics** cmdlet disables diagnostics on an Azure Redis Cache.
 
 ## EXAMPLES
 
@@ -27,9 +27,9 @@ The **Remove-AzureRmRedisCacheDiagnostics** cmdlet disables diagnostics on an az
 PS C:\>Remove-AzureRmRedisCacheDiagnostics -ResourceGroupName "ContosoResourceGroup" -Name "PeakCache" -Force
 ```
 
-This command disables diagnostics on specified azure_2 Redis Cache.
+This command disables diagnostics on specified Azure Redis Cache.
 
-This disables diagnostics for all azure_2 Redis Caches in the same region for the subscription.
+This disables diagnostics for all Azure Redis Caches in the same region for the subscription.
 
 ## PARAMETERS
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

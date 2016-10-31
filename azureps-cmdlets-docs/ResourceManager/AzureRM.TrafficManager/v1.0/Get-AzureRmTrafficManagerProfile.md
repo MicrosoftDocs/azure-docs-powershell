@@ -17,7 +17,7 @@ Get-AzureRmTrafficManagerProfile [-Name <String>] [-ResourceGroupName <String>] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmTrafficManagerProfile** cmdlet gets an azure_2 Traffic Manager profile, and returns an object that represents that profile.
+The **Get-AzureRmTrafficManagerProfile** cmdlet gets an Azure Traffic Manager profile, and returns an object that represents that profile.
 Specify a profile by its name and resource group name.
 
 You can modify this object locally, and then apply changes to the profile by using the Set-AzureRmTrafficManagerProfile cmdlet.

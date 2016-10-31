@@ -48,10 +48,10 @@ Use ssNoVersion authentication to create a connection context to a nextref_datab
 You can specify the nextref_database server by name, by the fully qualified name, or by URL.
 To obtain a credential, use the Get-Credential cmdlet that prompts you to specify the user name and password.
 
-Use the **New-AzureSqlDatabaseServerContext** cmdlet with certificate based authentication to create a connection context to the specified nextref_database server by using the specified azure_2 subscription data.
+Use the **New-AzureSqlDatabaseServerContext** cmdlet with certificate based authentication to create a connection context to the specified nextref_database server by using the specified Azure subscription data.
 You can specify nextref_database server by name or by the fully qualified name.
-You can specify the subscription data as a parameter or it can be retrieved from the current azure_2 subscription.
-Use the Select-AzureSubscriptionhttp://msdn.microsoft.com/library/windowsazure/jj152833.aspx cmdlet to select the current azure_2 subscription.
+You can specify the subscription data as a parameter or it can be retrieved from the current Azure subscription.
+Use the Select-AzureSubscriptionhttp://msdn.microsoft.com/library/windowsazure/jj152833.aspx cmdlet to select the current Azure subscription.
 
 ## EXAMPLES
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseSubscription
-Indicates that this cmdlet uses azure_2 subscription for creating the connection context.
+Indicates that this cmdlet uses Azure subscription for creating the connection context.
 
 ```yaml
 Type: SwitchParameter
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionName
-Specifies the name of the azure_2 subscription that this cmdlet uses to create the connection context.
+Specifies the name of the Azure subscription that this cmdlet uses to create the connection context.
 If you do not specify a value for this parameter, the cmdlet uses the current subscription.
 Run the Select-AzureSubscription cmdlet to change the current subscription.
 

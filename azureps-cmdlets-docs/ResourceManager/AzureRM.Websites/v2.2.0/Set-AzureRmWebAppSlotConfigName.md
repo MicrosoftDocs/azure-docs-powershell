@@ -38,7 +38,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -AppSettingNames
-@{Text=}
 
 ```yaml
 Type: String[]
@@ -53,7 +52,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStringNames
-@{Text=}
 
 ```yaml
 Type: String[]
@@ -68,7 +66,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAllAppSettingNames
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +80,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAllConnectionStringNames
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -113,7 +108,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -128,7 +122,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
 
 ```yaml
 Type: Site

@@ -26,7 +26,7 @@ Enable-AzureBatchComputeNodeScheduling [[-ComputeNode] <PSComputeNode>] -BatchCo
 
 ## DESCRIPTION
 The **Enable-AzureBatchComputeNodeScheduling** cmdlet enables task scheduling on the specified compute node.
-A compute node is an azure_2 virtual machine dedicated to a specific application workload.
+A compute node is an Azure virtual machine dedicated to a specific application workload.
 
 ## EXAMPLES
 

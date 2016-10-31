@@ -8,7 +8,7 @@ ms.assetid: 3D539C07-5407-4B31-BF14-949674EB64CE
 # Set-AzureRemoteAppVNet
 
 ## SYNOPSIS
-Sets the properties of an azure_2 RemoteApp virtual network.
+Sets the properties of an Azure RemoteApp virtual network.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Set-AzureRemoteAppVNet -VNetName <String> [-VirtualNetworkAddressSpace <String[]
 ```
 
 ## DESCRIPTION
-The **Set-AzureRemoteAppVNet** cmdlet sets the properties of an azure_2 RemoteApp virtual network.
+The **Set-AzureRemoteAppVNet** cmdlet sets the properties of an Azure RemoteApp virtual network.
 
 ## EXAMPLES
 
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -VNetName
-Specifies the name of the azure_2 RemoteApp virtual network.
+Specifies the name of the Azure RemoteApp virtual network.
 
 ```yaml
 Type: String

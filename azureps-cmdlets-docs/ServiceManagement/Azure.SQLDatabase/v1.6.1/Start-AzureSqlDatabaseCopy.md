@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -PartnerServer
 Specifies the name of the server that hosts the target database.
-This server must be in the same azure_2 subscription as the source database server.
+This server must be in the same Azure subscription as the source database server.
 
 ```yaml
 Type: String
@@ -190,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -205,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

@@ -42,7 +42,7 @@ The final command configures the blob service settings from the farm name.
 ## PARAMETERS
 
 ### -FarmName
-Specifies the name of the azure_2 Consistent Storage (ACS) farm.
+Specifies the name of the Azure Consistent Storage (ACS) farm.
 
 ```yaml
 Type: String
@@ -117,7 +117,6 @@ Accept wildcard characters: False
 ```
 
 ### -BlobSvcStreamMapMinContainerOccupancyPercent
-@{Text=}
 
 ```yaml
 Type: Int32
@@ -208,7 +207,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

@@ -24,7 +24,7 @@ Enable-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndp
 ```
 
 ## DESCRIPTION
-The **Enable-AzureRmTrafficManagerEndpoint** cmdlet enables an endpoint in an azure_2 Traffic Manager profile.
+The **Enable-AzureRmTrafficManagerEndpoint** cmdlet enables an endpoint in an Azure Traffic Manager profile.
 
 You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet, or you can specify a **TrafficManagerEndpoint** object by using the *TrafficManagerEndpoint* parameter.
 

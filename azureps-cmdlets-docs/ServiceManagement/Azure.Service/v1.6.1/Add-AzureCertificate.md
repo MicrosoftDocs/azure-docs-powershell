@@ -8,7 +8,7 @@ ms.assetid: 2A35B1DA-9917-4754-9C56-EF6993DC6E9A
 # Add-AzureCertificate
 
 ## SYNOPSIS
-Uploads a certificate to an azure_2 cloud service.
+Uploads a certificate to an Azure cloud service.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Add-AzureCertificate [-ServiceName] <String> [-CertToDeploy] <Object> [-Password
 ```
 
 ## DESCRIPTION
-The **Add-AzureCertificate** cmdlet uploads a certificate for an azure_2 service.
+The **Add-AzureCertificate** cmdlet uploads a certificate for an Azure service.
 
 ## EXAMPLES
 
@@ -53,7 +53,7 @@ The second command uploads the certificate in $certificate to a cloud service.
 ## PARAMETERS
 
 ### -ServiceName
-Specifies the name of the azure_2 service to which this cmdlet adds a certificate.
+Specifies the name of the Azure service to which this cmdlet adds a certificate.
 
 ```yaml
 Type: String
@@ -115,7 +115,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -130,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

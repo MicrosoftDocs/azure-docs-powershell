@@ -36,7 +36,7 @@ Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -Group <ASR
 ```
 
 ## DESCRIPTION
-The **Edit-AzureRmSiteRecoveryRecoveryPlan** cmdlet edits an azure_2 Site Recovery plan.
+The **Edit-AzureRmSiteRecoveryRecoveryPlan** cmdlet edits an Azure Site Recovery plan.
 
 ## EXAMPLES
 

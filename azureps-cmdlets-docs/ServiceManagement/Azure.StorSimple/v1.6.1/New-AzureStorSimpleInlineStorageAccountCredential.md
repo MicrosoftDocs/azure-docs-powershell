@@ -18,7 +18,7 @@ New-AzureStorSimpleInlineStorageAccountCredential [-StorageAccountName] <String>
 ```
 
 ## DESCRIPTION
-The **New-AzureStorSimpleInlineStorageAccountCredential** cmdlet creates an inline azure_2 storage account credential object.
+The **New-AzureStorSimpleInlineStorageAccountCredential** cmdlet creates an inline Azure storage account credential object.
 This cmdlet creates a dummy credential object.
 You can use the **New-AzureStorSimpleDeviceVolumeContainer** cmdlet and the current cmdlet in the same command by using the wps_2 pipeline.
 The actual storage account credential object is created as part of creation of the volume container.

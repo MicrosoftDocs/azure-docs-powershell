@@ -18,7 +18,7 @@ Remove-AzureNetworkSecurityGroup [-Name] <String> [-Force] [-PassThru] [-Profile
 ```
 
 ## DESCRIPTION
-The **Remove-AzureNetworkSecurityGroup** cmdlet deletes an azure_2 network security group from your subscription.
+The **Remove-AzureNetworkSecurityGroup** cmdlet deletes an Azure network security group from your subscription.
 
 ## EXAMPLES
 

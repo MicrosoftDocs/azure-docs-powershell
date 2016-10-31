@@ -19,7 +19,7 @@ Get-AzureRmHDInsightScriptActionHistory [-ClusterName] <String> [[-ScriptExecuti
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmHDInsightScriptActionHistory** cmdlet gets the script action history for an azure_2 HDInsight cluster and lists it in reverse chronological order, or gets details of a previously executed script action.
+The **Get-AzureRmHDInsightScriptActionHistory** cmdlet gets the script action history for an Azure HDInsight cluster and lists it in reverse chronological order, or gets details of a previously executed script action.
 
 ## EXAMPLES
 
@@ -78,7 +78,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -93,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

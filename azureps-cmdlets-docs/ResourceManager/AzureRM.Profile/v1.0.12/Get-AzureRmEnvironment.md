@@ -8,7 +8,7 @@ ms.assetid: 751287EF-97BF-492B-8EE0-7D9C0D60B33E
 # Get-AzureRmEnvironment
 
 ## SYNOPSIS
-Gets endpoints and metadata for an instance of azure_2 services.
+Gets endpoints and metadata for an instance of Azure services.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRmEnvironment [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmEnvironment** cmdlet gets endpoints and metadata for an instance of azure_2 services.
+The **Get-AzureRmEnvironment** cmdlet gets endpoints and metadata for an instance of Azure services.
 
 ## EXAMPLES
 
@@ -29,7 +29,7 @@ The **Get-AzureRmEnvironment** cmdlet gets endpoints and metadata for an instanc
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the azure_2 instance to get.
+Specifies the name of the Azure instance to get.
 
 ```yaml
 Type: String

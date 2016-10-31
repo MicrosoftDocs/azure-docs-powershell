@@ -31,7 +31,7 @@ Get-AzureBatchJob [[-JobSchedule] <PSCloudJobSchedule>] [-Filter <String>] [-Max
 ```
 
 ## DESCRIPTION
-The **Get-AzureBatchJob** cmdlet gets the azure_2 Batch jobs for the Batch account specified by the *BatchAccountContext* parameter.
+The **Get-AzureBatchJob** cmdlet gets the Azure Batch jobs for the Batch account specified by the *BatchAccountContext* parameter.
 You can use the *Id* parameter to get a single job.
 You can use the *Filter* parameter to get the jobs that match an Open Data Protocol (OData) filter.
 If you supply a job schedule ID or **PSCloudJobSchedule** instance, this cmdlet returns only the jobs for that job schedule.

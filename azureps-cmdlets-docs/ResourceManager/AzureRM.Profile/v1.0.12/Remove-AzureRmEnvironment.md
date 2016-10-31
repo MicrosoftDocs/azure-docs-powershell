@@ -8,7 +8,7 @@ ms.assetid: C850B127-55D6-4290-B8CC-B8047F57C72B
 # Remove-AzureRmEnvironment
 
 ## SYNOPSIS
-Removes endpoints and metadata for connecting to an azure_2 instance.
+Removes endpoints and metadata for connecting to an Azure instance.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Remove-AzureRmEnvironment [-Name] <String> [-Force] [-WhatIf] [-Confirm] [<Commo
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmEnvironment** cmdlet removes endpoints and metadata information for connecting to an azure_2 instance.
+The **Remove-AzureRmEnvironment** cmdlet removes endpoints and metadata information for connecting to an Azure instance.
 
 ## EXAMPLES
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -74,7 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

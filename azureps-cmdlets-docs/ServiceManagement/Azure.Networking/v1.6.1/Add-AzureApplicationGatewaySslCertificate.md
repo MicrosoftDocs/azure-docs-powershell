@@ -18,7 +18,7 @@ Add-AzureApplicationGatewaySslCertificate [-Name] <String> [-CertificateName] <S
 ```
 
 ## DESCRIPTION
-The **Add-AzureApplicationGatewaySslCertificate** cmdlet adds a Secure Sockets Layer (SSL) certificate to an azure_2 Application Gateway.
+The **Add-AzureApplicationGatewaySslCertificate** cmdlet adds a Secure Sockets Layer (SSL) certificate to an Azure Application Gateway.
 
 ## EXAMPLES
 

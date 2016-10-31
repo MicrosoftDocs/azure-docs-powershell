@@ -8,7 +8,7 @@ ms.assetid: 36F44663-AD54-4650-9C9C-434A77EF1579
 # Set-AzureSubnet
 
 ## SYNOPSIS
-Defines the subnet list for an azure_2 virtual machine.
+Defines the subnet list for an Azure virtual machine.
 
 ## SYNTAX
 
@@ -78,7 +78,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -93,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

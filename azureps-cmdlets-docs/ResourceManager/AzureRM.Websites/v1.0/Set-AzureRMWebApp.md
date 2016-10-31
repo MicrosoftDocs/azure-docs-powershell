@@ -8,7 +8,7 @@ ms.assetid: 2829ACB1-6BD7-48A6-8CD4-66FA277D82F3
 # Set-AzureRmWebApp
 
 ## SYNOPSIS
-Modifies an azure_2 Web App.
+Modifies an Azure Web App.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Set-AzureRmWebApp [[-Use32BitWorkerProcess] <Boolean>] [-AutoSwapSlotName <Strin
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmWebApp** cmdlet modifies an azure_2 Web App.
+The **Set-AzureRmWebApp** cmdlet modifies an Azure Web App.
 
 ## EXAMPLES
 
@@ -293,7 +293,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSwapSlotName
-@{Text=}
 
 ```yaml
 Type: String

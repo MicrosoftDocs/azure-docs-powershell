@@ -101,7 +101,6 @@ The final command gets jobs for the device named Device07 between the times stor
 ## PARAMETERS
 
 ### -DeviceName
-@{Text=}
 
 ```yaml
 Type: String
@@ -116,7 +115,6 @@ Accept wildcard characters: False
 ```
 
 ### -From
-@{Text=}
 
 ```yaml
 Type: DateTime
@@ -131,7 +129,6 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceId
-@{Text=}
 
 ```yaml
 Type: String
@@ -146,7 +143,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureProfile
@@ -161,7 +157,6 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-@{Text=}
 
 ```yaml
 Type: String
@@ -177,7 +172,6 @@ Accept wildcard characters: False
 ```
 
 ### -To
-@{Text=}
 
 ```yaml
 Type: DateTime
@@ -192,7 +186,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-@{Text=}
 
 ```yaml
 Type: String

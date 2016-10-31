@@ -18,7 +18,7 @@ New-AzureRmBackupVault [-ResourceGroupName] <String> [-Name] <String> [-Region] 
 ```
 
 ## DESCRIPTION
-The **New-AzureRmBackupVault** cmdlet creates an azure_2 Backup vault.
+The **New-AzureRmBackupVault** cmdlet creates an Azure Backup vault.
 This cmdlet returns an **AzureRmBackupVault** object that acts as a reference to the vault entity.
 
 ## EXAMPLES
@@ -34,7 +34,7 @@ Region            : westus
 Storage           : GeoRedundant
 ```
 
-This command creates an azure_2 Backup vault named Vault03.
+This command creates an Azure Backup vault named Vault03.
 The vault is in the resource group named ResourceGroup01 in the West US region.
 The vault uses the default GeoRedundant storage type.
 
@@ -49,14 +49,14 @@ Region            : westus
 Storage           : LocallyRedundant
 ```
 
-This command creates an azure_2 Backup vault named Vault03.
+This command creates an Azure Backup vault named Vault03.
 The vault is in the resource group named ResourceGroup02 in the West US region.
 The vault uses the LocallyRedundant storage type.
 
 ## PARAMETERS
 
 ### -Name
-Specifies a name for the azure_2 Backup vault.
+Specifies a name for the Azure Backup vault.
 The name must be unique in a resource group.
 
 ```yaml
@@ -72,9 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -Region
-Specifies an azure_2 region in which the backup vault exists.
+Specifies an Azure region in which the backup vault exists.
 For hybrid backup scenarios, we recommend that you create a vault in a region close to the on-premise server to reduce latency.
-For backup of azure_2 infrastructure as a service (IaaS) virtual machines, the vault becomes the point of discovery for local virtual machines.
+For backup of Azure infrastructure as a service (IaaS) virtual machines, the vault becomes the point of discovery for local virtual machines.
 
 ```yaml
 Type: String
@@ -89,9 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of an existing azure_2 resource group in which this cmdlet creates a Backup vault.
+Specifies the name of an existing Azure resource group in which this cmdlet creates a Backup vault.
 To create a resource group, use the New-AzureRMResourceGroup cmdlet.
-The resource group and the azure_2 Backup vault do not have to be in the same region.
+The resource group and the Azure Backup vault do not have to be in the same region.
 
 ```yaml
 Type: String

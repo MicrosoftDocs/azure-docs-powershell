@@ -18,7 +18,7 @@ Get-AzureRmAutomationJobOutput [-Id] <Guid> [-Stream <StreamType>] [-StartTime <
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationJobOutput** cmdlet gets the output of an azure_2 Automation job.
+The **Get-AzureRmAutomationJobOutput** cmdlet gets the output of an Azure Automation job.
 
 ## EXAMPLES
 

@@ -24,7 +24,7 @@ Reregisters a server to connect to a Backup vault.
 
 
 ### [Enable-AzureRmBackupProtection](./Enable-AzureRmBackupProtection.md)
-Associates an item with an azure_2 Backup protection policy.
+Associates an item with an Azure Backup protection policy.
 
 
 ### [Get-AzureRmBackupContainer](./Get-AzureRmBackupContainer.md)

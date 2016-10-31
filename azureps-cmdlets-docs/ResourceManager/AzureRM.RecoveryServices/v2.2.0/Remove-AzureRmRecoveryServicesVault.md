@@ -29,7 +29,7 @@ The **Remove-AzureRmRecoveryServicesVault** cmdlet deletes a Recovery Services v
 ## PARAMETERS
 
 ### -Vault
-Specifies an azure_2 Site Recovery vault object.
+Specifies an Azure Site Recovery vault object.
 
 ```yaml
 Type: ARSVault

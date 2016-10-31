@@ -27,7 +27,7 @@ Get-AzureRmDataLakeAnalyticsJob [-Account] <String> [-JobId] <Guid> [[-Include] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmDataLakeAnalyticsJob** cmdlet gets an azure_2 Data Lake Analytics job.
+The **Get-AzureRmDataLakeAnalyticsJob** cmdlet gets an Azure Data Lake Analytics job.
 If you do not specify a job, this cmdlet gets all jobs.
 
 ## EXAMPLES
@@ -180,7 +180,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -195,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

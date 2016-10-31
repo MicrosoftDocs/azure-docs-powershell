@@ -28,7 +28,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -43,7 +42,6 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-@{Text=}
 
 ```yaml
 Type: String
@@ -58,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionString
-@{Text=}
 
 ```yaml
 Type: String
@@ -73,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStringName
-@{Text=}
 
 ```yaml
 Type: String

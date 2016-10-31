@@ -19,7 +19,7 @@ Remove-AzureDeployment [-ServiceName] <String> [-Slot] <String> [-DeleteVHD] [-F
 ```
 
 ## DESCRIPTION
-The **Remove-AzureDeployment** cmdlet deletes a deployment of an azure_2 cloud service.
+The **Remove-AzureDeployment** cmdlet deletes a deployment of an Azure cloud service.
 To delete a deployment, first suspend it.
 
 ## EXAMPLES
@@ -29,7 +29,7 @@ To delete a deployment, first suspend it.
 PS C:\>Remove-AzureDeployment -ServiceName "ContosoService"
 ```
 
-This command removes the deployment of the azure_2 service named ContosoService.
+This command removes the deployment of the Azure service named ContosoService.
 Because this command does not specify a slot, it removes the service from the production environment.
 
 ### Example 2: Remove a deployment and virtual hard disks
@@ -120,7 +120,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -135,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

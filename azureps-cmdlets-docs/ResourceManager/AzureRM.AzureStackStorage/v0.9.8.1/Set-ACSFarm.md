@@ -20,7 +20,7 @@ Set-ACSFarm [-FarmName] <String> [-SettingsPollingIntervalInSecond <Int32>] [-Ho
 ```
 
 ## DESCRIPTION
-The **Set-ACSFarm** cmdlet changes the settings of the service configuration on an azure_2 Consistent Storage (ACS) Farm.
+The **Set-ACSFarm** cmdlet changes the settings of the service configuration on an Azure Consistent Storage (ACS) Farm.
 
 ## EXAMPLES
 
@@ -210,7 +210,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -225,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

@@ -29,7 +29,7 @@ Get-AzureRmSiteRecoveryVM -FriendlyName <String> -ProtectionContainer <ASRProtec
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSiteRecoveryVM** gets information about virtual machines managed in azure_2 Site Recovery.
+The **Get-AzureRmSiteRecoveryVM** gets information about virtual machines managed in Azure Site Recovery.
 
 ## EXAMPLES
 

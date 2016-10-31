@@ -31,8 +31,8 @@ This command returns information about Streaming Unit quota and usage in the Wes
 ## PARAMETERS
 
 ### -Location
-Specifies the name of an azure_2 region or data center location for which to get Streaming Unit quota information.
-See http://azure.microsoft.com/en-us/regions/#serviceshttp://azure.microsoft.com/en-us/regions/#services for a list of supported azure_2 regions.
+Specifies the name of an Azure region or data center location for which to get Streaming Unit quota information.
+See http://azure.microsoft.com/en-us/regions/#serviceshttp://azure.microsoft.com/en-us/regions/#services for a list of supported Azure regions.
 
 ```yaml
 Type: String

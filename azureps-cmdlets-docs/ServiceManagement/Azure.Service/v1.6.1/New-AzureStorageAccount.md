@@ -8,7 +8,7 @@ ms.assetid: 463D753F-D5DD-4801-87C2-F7EF9DA3C480
 # New-AzureStorageAccount
 
 ## SYNOPSIS
-Creates a new storage account in an azure_2 subscription.
+Creates a new storage account in an Azure subscription.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ New-AzureStorageAccount [-StorageAccountName] <String> [-Label <String>] [-Descr
 ```
 
 ## DESCRIPTION
-The **New-AzureStorageAccount** cmdlet creates an account that provides access to azure_2 storage services.
+The **New-AzureStorageAccount** cmdlet creates an account that provides access to Azure storage services.
 A storage account is a globally unique resource within the storage system.
 The account is the parent namespace for the Blob, Queue, and Table services.
 
@@ -51,7 +51,7 @@ This command creates a storage account in a specified location.
 
 ### -StorageAccountName
 Specifies a name for the storage account.
-The storage account name must be unique to azure_2 and must be between 3 and 24 characters in length and use lowercase letters and numbers only.
+The storage account name must be unique to Azure and must be between 3 and 24 characters in length and use lowercase letters and numbers only.
 
 ```yaml
 Type: String
@@ -155,7 +155,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -170,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -185,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the azure_2 data center location where the storage account is created.
+Specifies the Azure data center location where the storage account is created.
 You can include either the *Location* or *AffinityGroup* parameter, but not both.
 
 ```yaml

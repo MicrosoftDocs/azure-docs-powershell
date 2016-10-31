@@ -8,7 +8,7 @@ ms.assetid: C3DA0104-9BFA-4FBF-A6C4-C3AE5C13D229
 # Get-AzureVNetConnection
 
 ## SYNOPSIS
-Gets connections to an azure_2 virtual network.
+Gets connections to an Azure virtual network.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureVNetConnection [-VNetName] <String> [-Profile <AzureSMProfile>] [<Commo
 ```
 
 ## DESCRIPTION
-The **Get-AzureVNetConnection** cmdlet returns an object that specifies all active virtual private network (VPN) connections to an azure_2 virtual network.
+The **Get-AzureVNetConnection** cmdlet returns an object that specifies all active virtual private network (VPN) connections to an Azure virtual network.
 VPN connections include cross premises site-to-site VPNs and virtual network to virtual network connections.
 
 ## EXAMPLES

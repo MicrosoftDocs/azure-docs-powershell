@@ -18,7 +18,7 @@ New-AzureRmBatchAccount [-AccountName] <String> [-Location] <String> [-ResourceG
 ```
 
 ## DESCRIPTION
-The **New-AzureRmBatchAccount** cmdlet creates an azure_2 Batch account for the specified resource group and location.
+The **New-AzureRmBatchAccount** cmdlet creates an Azure Batch account for the specified resource group and location.
 
 ## EXAMPLES
 

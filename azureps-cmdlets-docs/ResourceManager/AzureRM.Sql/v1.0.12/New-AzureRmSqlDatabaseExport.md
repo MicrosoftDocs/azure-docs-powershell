@@ -23,7 +23,7 @@ New-AzureRmSqlDatabaseExport [-DatabaseName] <String> [-ServerName] <String> -St
 The **New-AzureRmSqlDatabaseExport** cmdlet exports an ssSDS as a .bacpac file to a storage account.
 The get export database status request may be sent to retrieve status information for this request.
 
-This cmdlet is also supported by the SQL Server Stretch Database service on azure_2.
+This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
 ## EXAMPLES
 
@@ -171,8 +171,8 @@ psdx_paramvalues
 SQL authentication.
 Set the *AdministratorLogin* and *AdministratorLoginPassword* to the SQL administrator username and password. 
 - ADPassword.
-azure_2 Active Directory authentication.
-Set *AdministratorLogin* and *AdministratorLoginPassword* to the azure_2 AD administrator username and password.
+Azure Active Directory authentication.
+Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure AD administrator username and password.
 
 This parameter is only available on nextref_database V12 servers.
 
@@ -204,7 +204,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -219,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

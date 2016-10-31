@@ -25,7 +25,7 @@ Remove-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndp
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmTrafficManagerEndpoint** cmdlet removes an endpoint from azure_2 Traffic Manager.
+The **Remove-AzureRmTrafficManagerEndpoint** cmdlet removes an endpoint from Azure Traffic Manager.
 
 This cmdlet commits each change to the Traffic Manager service.
 To remove multiple endpoints from a local Traffic Manager profile object and commit changes in a single operation, use the Remove-AzureRmTrafficManagerEndpointConfig cmdlet.
@@ -41,12 +41,12 @@ Alternatively, you can specify the endpoint name and type by using the *Name* an
 PS C:\>Remove-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type AzureEndpoints
 ```
 
-This command removes the azure_2 endpoint named contoso from the profile named ContosoProfile in the resource group named ResourceGroup11.
+This command removes the Azure endpoint named contoso from the profile named ContosoProfile in the resource group named ResourceGroup11.
 
 ## PARAMETERS
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

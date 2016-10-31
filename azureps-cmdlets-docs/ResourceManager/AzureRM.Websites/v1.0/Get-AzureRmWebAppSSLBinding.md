@@ -8,7 +8,7 @@ ms.assetid: 23739724-4ACE-423E-B962-244A904005B7
 # Get-AzureRmWebAppSSLBinding
 
 ## SYNOPSIS
-Gets an azure_2 Web App certificate SSL binding.
+Gets an Azure Web App certificate SSL binding.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Get-AzureRmWebAppSSLBinding [[-Name] <String>] [-WebApp] <Site> [<CommonParamete
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmWebAppSSLBinding** cmdlet gets a Secure Sockets Layer (SSL) binding for an azure_2 Web App.
+The **Get-AzureRmWebAppSSLBinding** cmdlet gets a Secure Sockets Layer (SSL) binding for an Azure Web App.
 SSL bindings are used to associate a Web App with an uploaded certificate.
 Web Apps can be bound to multiple certificates.
 

@@ -83,7 +83,6 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultCredentialSettings
-@{Text=}
 
 ```yaml
 Type: KeyVaultCredentialSettings

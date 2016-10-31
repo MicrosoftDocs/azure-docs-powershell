@@ -57,7 +57,7 @@ This command downloads a .vhd file and specifies the storage key.
 ## PARAMETERS
 
 ### -Source
-Specifies the Uniform Resource Identifier (URI) to the blob in `azure_2`.
+Specifies the Uniform Resource Identifier (URI) to the blob in `Azure`.
 
 ```yaml
 Type: Uri
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -StorageKey
 Specifies the storage key of the blob storage account.
-If it is not provided, **Save-AzureVhd** attempts to determine the storage key of the account in *SourceUri* from azure_2.
+If it is not provided, **Save-AzureVhd** attempts to determine the storage key of the account in *SourceUri* from Azure.
 
 ```yaml
 Type: String
@@ -148,7 +148,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -163,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

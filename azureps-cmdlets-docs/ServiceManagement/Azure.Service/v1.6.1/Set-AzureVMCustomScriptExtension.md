@@ -8,7 +8,7 @@ ms.assetid: E816D63D-4462-4C55-98A1-100415933D58
 # Set-AzureVMCustomScriptExtension
 
 ## SYNOPSIS
-Sets information for an azure_2 virtual machine custom script extension.
+Sets information for an Azure virtual machine custom script extension.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Set-AzureVMCustomScriptExtension [[-ReferenceName] <String>] [[-Version] <String
 ```
 
 ## DESCRIPTION
-The **Set-AzureVMCustomScriptExtension** cmdlet sets information for an azure_2 virtual machine custom script extension.
+The **Set-AzureVMCustomScriptExtension** cmdlet sets information for an Azure virtual machine custom script extension.
 
 ## EXAMPLES
 
@@ -264,7 +264,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -279,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

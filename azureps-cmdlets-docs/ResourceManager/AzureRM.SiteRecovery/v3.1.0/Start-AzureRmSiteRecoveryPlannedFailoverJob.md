@@ -129,7 +129,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-@{Text=}
 
 ```yaml
 Type: ASRServer
@@ -144,7 +143,6 @@ Accept wildcard characters: False
 ```
 
 ### -ServicesProvider
-@{Text=}
 
 ```yaml
 Type: ASRRecoveryServicesProvider
@@ -204,7 +202,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProtectedItem
-@{Text=}
 
 ```yaml
 Type: ASRReplicationProtectedItem

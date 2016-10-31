@@ -12,7 +12,7 @@ This topic displays help topics for the Azure Redis Cache cmdlets.
 
 ## AzureRM.RedisCache Cmdlets
 ### [Export-AzureRmRedisCache](./Export-AzureRmRedisCache.md)
-Exports data from azure_2 Redis Cache to a container.
+Exports data from Azure Redis Cache to a container.
 
 
 ### [Get-AzureRmRedisCacheKey](./Get-AzureRmRedisCacheKey.md)
@@ -23,7 +23,7 @@ Gets a Redis Cache.
 
 
 ### [Import-AzureRmRedisCache](./Import-AzureRmRedisCache.md)
-Imports data from blobs to azure_2 Redis Cache.
+Imports data from blobs to Azure Redis Cache.
 
 
 ### [New-AzureRmRedisCacheKey](./New-AzureRmRedisCacheKey.md)
@@ -34,7 +34,7 @@ Creates a Redis Cache.
 
 
 ### [Remove-AzureRmRedisCacheDiagnostics](./Remove-AzureRmRedisCacheDiagnostics.md)
-Disables diagnostics on an azure_2 Redis Cache.
+Disables diagnostics on an Azure Redis Cache.
 
 ### [Remove-AzureRmRedisCache](./Remove-AzureRmRedisCache.md)
 Removes a Redis Cache.
@@ -45,7 +45,7 @@ Restarts nodes of a cache.
 
 
 ### [Set-AzureRmRedisCacheDiagnostics](./Set-AzureRmRedisCacheDiagnostics.md)
-Enables diagnostics on an azure_2 Redis Cache.
+Enables diagnostics on an Azure Redis Cache.
 
 
 ### [Set-AzureRmRedisCache](./Set-AzureRmRedisCache.md)

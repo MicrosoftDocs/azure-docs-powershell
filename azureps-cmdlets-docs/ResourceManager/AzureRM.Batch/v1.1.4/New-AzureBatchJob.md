@@ -21,7 +21,7 @@ New-AzureBatchJob [-Id] <String> [-CommonEnvironmentSettings <IDictionary>] [-Di
 ```
 
 ## DESCRIPTION
-The **New-AzureBatchJob** cmdlet creates a job in the azure_2 Batch service in the account specified by the *BatchAccountContext* parameter.
+The **New-AzureBatchJob** cmdlet creates a job in the Azure Batch service in the account specified by the *BatchAccountContext* parameter.
 
 ## EXAMPLES
 
@@ -222,7 +222,6 @@ Accept wildcard characters: False
 ```
 
 ### -UsesTaskDependencies
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

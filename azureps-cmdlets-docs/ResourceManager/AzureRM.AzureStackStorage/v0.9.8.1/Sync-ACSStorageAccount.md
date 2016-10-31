@@ -20,7 +20,7 @@ Sync-ACSStorageAccount [-TenantAccountName] <String> [-TenantSubscriptionId] <St
 ```
 
 ## DESCRIPTION
-The **Sync-ACSStorageAccount** cmdlet synchronizes the account status of the azure_2 Consistent Storage (ACS) tenant storage accounts from back-end to front-end cache.
+The **Sync-ACSStorageAccount** cmdlet synchronizes the account status of the Azure Consistent Storage (ACS) tenant storage accounts from back-end to front-end cache.
 After a storage account has been undeleted, a service administrator needs to synchronize the account status change back to the frontend cache in order to ensure the front-end can serve the request for that undeleted storage account.
 
 ## EXAMPLES
@@ -192,7 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -207,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

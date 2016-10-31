@@ -55,7 +55,7 @@ New-AzureRmAutomationSchedule [-Name] <String> [-StartTime] <DateTimeOffset> [-D
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationSchedule** cmdlet creates a schedule in azure_2 Automation.
+The **New-AzureRmAutomationSchedule** cmdlet creates a schedule in Azure Automation.
 
 ## EXAMPLES
 

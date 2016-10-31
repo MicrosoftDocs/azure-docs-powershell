@@ -8,7 +8,7 @@ ms.assetid: FAED2C30-926E-48C9-A477-8438C4F83F8D
 # New-AzureVM
 
 ## SYNOPSIS
-Creates an azure_2 virtual machine.
+Creates an Azure virtual machine.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ New-AzureVM -ServiceName <String> [-Location <String>] [-AffinityGroup <String>]
 ```
 
 ## DESCRIPTION
-The **New-AzureVM** cmdlet adds a new virtual machine to an existing azure_2 service, or creates a virtual machine and service in the current subscription if either the *Location* or *AffinityGroup* is specified.
+The **New-AzureVM** cmdlet adds a new virtual machine to an existing Azure service, or creates a virtual machine and service in the current subscription if either the *Location* or *AffinityGroup* is specified.
 
 ## EXAMPLES
 
@@ -58,7 +58,7 @@ PS C:\> $VirtualMachine02 = New-AzureVMConfig -Name "VirtualMachine02" -Instance
 
 The first two commands get available images by using the Get-AzureVMImage cmdlet, and stores one of them in the $Image variable.
 
-This command creates a provisioning configuration based on a virtual machine configuration for the Windows operating system, and uses it to create a virtual machine with an azure_2 data disk.
+This command creates a provisioning configuration based on a virtual machine configuration for the Windows operating system, and uses it to create a virtual machine with an Azure data disk.
 
 ### Example 4: Create a virtual machine with a reserved IP address
 ```
@@ -228,7 +228,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -243,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -274,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -AffinityGroup
-Specifies the azure_2 affinity group in which the cloud service resides.
+Specifies the Azure affinity group in which the cloud service resides.
 This parameter is required only when this cmdlet creates a cloud service.
 
 ```yaml

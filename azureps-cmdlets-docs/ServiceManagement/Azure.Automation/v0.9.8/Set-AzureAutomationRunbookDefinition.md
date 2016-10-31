@@ -34,7 +34,6 @@ This command overwrites the existing draft definition of a runbook.
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -49,7 +48,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -64,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +76,6 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-@{Text=}
 
 ```yaml
 Type: String

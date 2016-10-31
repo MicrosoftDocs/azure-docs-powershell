@@ -8,7 +8,7 @@ ms.assetid: EB90E879-02DF-4C75-A49F-EC7090347CDB
 # Set-AzureOSDisk
 
 ## SYNOPSIS
-Modifies the host cache mode of an azure_2 virtual machine.
+Modifies the host cache mode of an Azure virtual machine.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Set-AzureOSDisk [[-HostCaching] <String>] [-ResizedSizeInGB] <Int32> -VM <IPersi
 ```
 
 ## DESCRIPTION
-The **Set-AzureOSDisk** cmdlet modifies the host cache mode of the operating system disk of an azure_2 virtual machine.
+The **Set-AzureOSDisk** cmdlet modifies the host cache mode of the operating system disk of an Azure virtual machine.
 The supported host cache modes are ReadOnly and ReadWrite.
 If you run this cmdlet on a virtual machine that is running, that virtual machine restarts.
 
@@ -116,7 +116,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -131,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

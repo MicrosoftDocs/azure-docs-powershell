@@ -17,13 +17,13 @@ Set-AzureRmDnsRecordSet -RecordSet <DnsRecordSet> [-Overwrite] [<CommonParameter
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmDnsRecordSet** cmdlet updates a record set in the azure_2 DNS service from a local **RecordSet** object.
+The **Set-AzureRmDnsRecordSet** cmdlet updates a record set in the Azure DNS service from a local **RecordSet** object.
 
 You can pass a **RecordSet** object as a parameter or by using the pipeline operator.
 
 You can use the *Confirm* parameter and $ConfirmPreference wps_2 variable to control whether the cmdlet prompts you for confirmation.
 
-The record set is not updated if it has been changed in azure_2 DNS since the local **RecordSet** object was retrieved.
+The record set is not updated if it has been changed in Azure DNS since the local **RecordSet** object was retrieved.
 This provides protection for concurrent changes.
 You can suppress this behavior using the *Overwrite* parameter, which updates the record set regardless of concurrent changes.
 

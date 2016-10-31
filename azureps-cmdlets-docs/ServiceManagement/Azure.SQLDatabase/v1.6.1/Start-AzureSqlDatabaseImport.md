@@ -28,7 +28,7 @@ Start-AzureSqlDatabaseImport [-SqlConnectionContext] <ISqlServerConnectionInform
 ```
 
 ## DESCRIPTION
-The **Start-AzureSqlDatabaseImport** cmdlet starts an import operation from azure_2 Blob storage to an ssSDS.
+The **Start-AzureSqlDatabaseImport** cmdlet starts an import operation from Azure Blob storage to an ssSDS.
 If the database does not exist, this cmdlet creates it by using the size and edition values that you specify.
 The operation requires a database server connection context.
 Use the Get-AzureSqlDatabaseImportExportStatus cmdlet to get the status of the import operation.
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlobName
-Specifies the name of the azure_2 Blob storage from which this cmdlet imports the database.
+Specifies the name of the Azure Blob storage from which this cmdlet imports the database.
 
 ```yaml
 Type: String

@@ -69,7 +69,6 @@ This command updates the URI of the job named Job01 to be http://www.contoso.com
 ## PARAMETERS
 
 ### -ClientCertificatePassword
-@{Text=}
 
 ```yaml
 Type: String
@@ -84,7 +83,6 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCertificatePfx
-@{Text=}
 
 ```yaml
 Type: Object
@@ -289,7 +287,6 @@ Accept wildcard characters: False
 ```
 
 ### -HttpAuthenticationType
-@{Text=}
 
 ```yaml
 Type: String

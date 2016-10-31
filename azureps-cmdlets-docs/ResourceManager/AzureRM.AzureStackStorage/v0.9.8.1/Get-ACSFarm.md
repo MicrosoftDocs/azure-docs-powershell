@@ -18,7 +18,7 @@ Get-ACSFarm [[-FarmName] <String>] [[-SubscriptionId] <String>] [[-Token] <Strin
 ```
 
 ## DESCRIPTION
-The **Get-ACSFarm** cmdlet gets the azure_2 Consistent Storage (ACS) Storage Farm, properties, and settings.
+The **Get-ACSFarm** cmdlet gets the Azure Consistent Storage (ACS) Storage Farm, properties, and settings.
 
 ## EXAMPLES
 

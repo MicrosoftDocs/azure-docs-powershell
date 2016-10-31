@@ -122,7 +122,6 @@ Accept wildcard characters: False
 ```
 
 ### -TagName
-@{Text=}
 
 ```yaml
 Type: String
@@ -137,7 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -TagValue
-@{Text=}
 
 ```yaml
 Type: String

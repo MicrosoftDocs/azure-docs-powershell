@@ -8,7 +8,7 @@ ms.assetid: 1087E8DB-E659-40E5-945C-B463B1FADEF9
 # Set-AzureRmVMDiagnosticsExtension
 
 ## SYNOPSIS
-Configures the azure_2 diagnostics extension on a virtual machine.
+Configures the Azure diagnostics extension on a virtual machine.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Set-AzureRmVMDiagnosticsExtension [-ResourceGroupName] <String> [-VMName] <Strin
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmVMDiagnosticsExtension** cmdlet configures the azure_2 diagnostics extension on a virtual machine.
+The **Set-AzureRmVMDiagnosticsExtension** cmdlet configures the Azure diagnostics extension on a virtual machine.
 
 ## EXAMPLES
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-Specifies the azure_2 storage context.
+Specifies the Azure storage context.
 
 ```yaml
 Type: AzureStorageContext
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoUpgradeMinorVersion
-Indicates whether this cmdlet allows the azure_2 guest agent to automatically update the extension to a newer minor version.
+Indicates whether this cmdlet allows the Azure guest agent to automatically update the extension to a newer minor version.
 
 ```yaml
 Type: Boolean
@@ -220,7 +220,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -235,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

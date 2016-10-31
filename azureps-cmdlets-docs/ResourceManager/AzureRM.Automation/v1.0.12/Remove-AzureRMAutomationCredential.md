@@ -18,7 +18,7 @@ Remove-AzureRmAutomationCredential [-Name] <String> [-Force] [-ResourceGroupName
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAutomationCredential** cmdlet removes a credential from azure_2 Automation.
+The **Remove-AzureRmAutomationCredential** cmdlet removes a credential from Azure Automation.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Remove-AzureRmAutomationCredential** cmdlet removes a credential from azur
 PS C:\>Remove-AzureRmAutomationCredential -AutomationAccountName "Contoso17" -Name "ContosoCredential" -ResourceGroupName "ResourceGroup01"
 ```
 
-This command removes a credential named ContosoCredential in the azure_2 Automation account named Contoso17.
+This command removes a credential named ContosoCredential in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

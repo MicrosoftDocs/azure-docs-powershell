@@ -8,7 +8,7 @@ ms.assetid: F8189B01-350F-4901-83CC-14BD4DF54EF2
 # Start-AzureRmWebAppSlot
 
 ## SYNOPSIS
-Starts an azure_2 Web App slot.
+Starts an Azure Web App slot.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Start-AzureRmWebAppSlot [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmWebAppSlot** cmdlet starts an azure_2 Web App slot.
+The **Start-AzureRmWebAppSlot** cmdlet starts an Azure Web App slot.
 
 ## EXAMPLES
 

@@ -34,7 +34,6 @@ PS C:\>
 ## PARAMETERS
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -49,7 +48,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -VNet
-@{Text=}
 
 ```yaml
 Type: VMNetwork

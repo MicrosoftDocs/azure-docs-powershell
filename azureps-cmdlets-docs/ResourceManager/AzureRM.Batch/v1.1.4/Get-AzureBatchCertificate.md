@@ -25,7 +25,7 @@ Get-AzureBatchCertificate [-ThumbprintAlgorithm] <String> [-Thumbprint] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureBatchCertificate** cmdlet gets the certificates in the azure_2 Batch account that the *BatchContext* parameter specifies.
+The **Get-AzureBatchCertificate** cmdlet gets the certificates in the Azure Batch account that the *BatchContext* parameter specifies.
 To obtain a particular certificate, specify the *ThumbprintAlgorithm* and *Thumbprint* parameters.
 Specify the *Filter* parameter to get the certificates that match an Open Data Protocol (OData) filter.
 

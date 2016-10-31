@@ -36,7 +36,6 @@ The first command creates the password for the certificate file that is used in 
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -51,7 +50,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-@{Text=}
 
 ```yaml
 Type: String
@@ -66,7 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -Exportable
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -81,7 +78,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -96,7 +92,6 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-@{Text=}
 
 ```yaml
 Type: SecureString
@@ -111,7 +106,6 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-@{Text=}
 
 ```yaml
 Type: String
@@ -126,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile

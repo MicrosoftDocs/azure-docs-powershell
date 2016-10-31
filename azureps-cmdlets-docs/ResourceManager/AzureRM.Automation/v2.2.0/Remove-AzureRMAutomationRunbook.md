@@ -18,7 +18,7 @@ Remove-AzureRmAutomationRunbook [-Name] <String> [-Force] [-ResourceGroupName] <
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAutomationRunbook** cmdlet removes a runbook from azure_2 Automation.
+The **Remove-AzureRmAutomationRunbook** cmdlet removes a runbook from Azure Automation.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Remove-AzureRmAutomationRunbook** cmdlet removes a runbook from azure_2 Au
 PS C:\>Remove-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbook03" -ResourceGroupName "ResourceGroup01"
 ```
 
-This command removes the runbook named Runbook03 in the azure_2 Automation account named Contoso17.
+This command removes the runbook named Runbook03 in the Azure Automation account named Contoso17.
 
 ## PARAMETERS
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

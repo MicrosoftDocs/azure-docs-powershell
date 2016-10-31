@@ -8,7 +8,7 @@ ms.assetid: B2FC0BC1-DAE4-44A0-860D-D158FE6FD9F8
 # Remove-AzurePublicIP
 
 ## SYNOPSIS
-Removes Public IP configuration from an azure_2 virtual machine.
+Removes Public IP configuration from an Azure virtual machine.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzurePublicIP [[-PublicIPName] <String>] -VM <IPersistentVM> [-Profile <A
 ```
 
 ## DESCRIPTION
-The **Remove-AzurePublicIP** cmdlet removes Public IP configuration from an azure_2 virtual machine.
+The **Remove-AzurePublicIP** cmdlet removes Public IP configuration from an Azure virtual machine.
 
 ## EXAMPLES
 
@@ -80,7 +80,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -95,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

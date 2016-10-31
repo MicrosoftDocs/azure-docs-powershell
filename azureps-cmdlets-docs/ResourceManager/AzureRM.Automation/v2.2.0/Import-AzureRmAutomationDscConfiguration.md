@@ -19,7 +19,7 @@ Import-AzureRmAutomationDscConfiguration -SourcePath <String> [-Tags <IDictionar
 ```
 
 ## DESCRIPTION
-The **Import-AzureRmAutomationDscConfiguration** cmdlet imports an APS Desired State Configuration (DSC) configuration into azure_2 Automation.
+The **Import-AzureRmAutomationDscConfiguration** cmdlet imports an APS Desired State Configuration (DSC) configuration into Azure Automation.
 Specify the path of an APS script that contains a single DSC configuration.
 
 ## EXAMPLES
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -172,7 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

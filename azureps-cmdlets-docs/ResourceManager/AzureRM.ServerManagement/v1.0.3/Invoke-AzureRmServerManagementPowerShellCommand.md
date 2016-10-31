@@ -27,7 +27,7 @@ Invoke-AzureRmServerManagementPowerShellCommand [-Session] <Session> [-Command] 
 ```
 
 ## DESCRIPTION
-The **Invoke-AzureRmServerManagementPowerShellCommand** cmdlet executes a wps_2 script block on a node managed by an azure_2 Server Management Gateway.
+The **Invoke-AzureRmServerManagementPowerShellCommand** cmdlet executes a wps_2 script block on a node managed by an Azure Server Management Gateway.
 
 ## EXAMPLES
 
@@ -129,7 +129,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -144,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

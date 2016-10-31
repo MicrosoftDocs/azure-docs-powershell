@@ -8,7 +8,7 @@ ms.assetid: 3D1B1573-E90A-42F1-AC84-DB62C3E16298
 # Set-AzureManagedCache
 
 ## SYNOPSIS
-Changes the properties of an azure_2 Cache.
+Changes the properties of an Azure Cache.
 
 ## SYNTAX
 
@@ -18,12 +18,12 @@ Set-AzureManagedCache [-Name] <String> [-Sku <CacheServiceSkuType>] [-Force] [-P
 ```
 
 ## DESCRIPTION
-The **Set-AzureManagedCache** cmdlet changes the properties of an azure_2 Cache and returns an object that represents the cache with the changes.
-Use the *Name* and *Location* parameters to identify the azure_2 Cache, and the *Sku* and *Memory* parameters to change its properties.
-An azure_2 Cache is a secure, dedicated cache that provides extremely fast access to data.
+The **Set-AzureManagedCache** cmdlet changes the properties of an Azure Cache and returns an object that represents the cache with the changes.
+Use the *Name* and *Location* parameters to identify the Azure Cache, and the *Sku* and *Memory* parameters to change its properties.
+An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about azure_2 Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
-WARNING: When you change the *SKU* of an azure_2 Cache, all data in the cache is deleted and a new, empty azure_2 Cache is created for you with the same name and location.
+For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+WARNING: When you change the *SKU* of an Azure Cache, all data in the cache is deleted and a new, empty Azure Cache is created for you with the same name and location.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ WARNING: When you change the *SKU* of an azure_2 Cache, all data in the cache is
 PS C:\>Set-AzureManagedCache -Name "ContosoCache" -Location "West Europe" -Memory 256MB
 ```
 
-This command increases the size of the azure_2 Cache named ContosoCache to 256 MB.
+This command increases the size of the Azure Cache named ContosoCache to 256 MB.
 
 ### Example 2: Change the SKU of an Azure Cache
 ```
@@ -43,14 +43,14 @@ Performing the operation "Delete" on target "ContosoCache".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-This command changes the SKU of the azure_2 Cache named ContosoCache from Basic to Standard and the Size to 10 GB.
+This command changes the SKU of the Azure Cache named ContosoCache from Basic to Standard and the Size to 10 GB.
 
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the azure_2 Cache.
+Specifies the name of the Azure Cache.
 The parameter value is case-sensitive.
-You cannot use this cmdlet to change the name of an azure_2 Cache.
+You cannot use this cmdlet to change the name of an Azure Cache.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Specifies the tier of the azure_2 Cache.
+Specifies the tier of the Azure Cache.
 
 psdx_paramvalues
 
@@ -101,10 +101,10 @@ Accept wildcard characters: False
 ```
 
 ### -Memory
-Specifies the new size of the azure_2 Cache.
+Specifies the new size of the Azure Cache.
 The cache size might affect the cost of the service.
 Enter a value followed by MB or GB, such as 128MB or 8GB.
-This value must be compatible with the Sku of the azure_2 Cache.
+This value must be compatible with the Sku of the Azure Cache.
 This parameter has the following considerations: 
 
 - When the value of Sku is Basic, the value of Memory must be divisible by 128MB.
@@ -150,7 +150,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PsCacheService
 
 ## NOTES
-* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlet to make your azure_2 account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlet to make your Azure account available to wps_2 before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
 
 ## RELATED LINKS
 

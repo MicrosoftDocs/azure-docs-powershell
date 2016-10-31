@@ -18,7 +18,7 @@ Remove-AzureRmApplicationGatewayBackendAddressPool -Name <String> -ApplicationGa
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmApplicationGatewayBackendAddressPool** cmdlet removes a back-end address pool from an azure_2 application gateway.
+The **Remove-AzureRmApplicationGatewayBackendAddressPool** cmdlet removes a back-end address pool from an Azure application gateway.
 
 ## EXAMPLES
 
@@ -65,7 +65,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -80,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

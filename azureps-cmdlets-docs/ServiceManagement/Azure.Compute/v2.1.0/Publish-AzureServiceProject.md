@@ -204,7 +204,6 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-@{Text=}
 
 ```yaml
 Type: SwitchParameter

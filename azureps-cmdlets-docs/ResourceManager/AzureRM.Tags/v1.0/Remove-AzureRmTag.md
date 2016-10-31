@@ -8,7 +8,7 @@ ms.assetid: AC99BEDE-9BB0-4449-9947-6DBBB236758D
 # Remove-AzureRmTag
 
 ## SYNOPSIS
-Deletes predefined azure_2 tags or values.
+Deletes predefined Azure tags or values.
 
 ## SYNTAX
 
@@ -18,14 +18,14 @@ Remove-AzureRmTag [-Name] <String> [[-Value] <String[]>] [-Force] [-PassThru] [-
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmTag** cmdlet deletes predefined azure_2 tags and values from your subscription.
+The **Remove-AzureRmTag** cmdlet deletes predefined Azure tags and values from your subscription.
 To delete particular values from a predefined tag, use the *Value* parameter.
 By default, **Remove-AzureRmTag** deletes the specified tag and all of its values.You cannot delete a tag or value that is currently applied to a resource or resource group.
 
 Before using **Remove-AzureRmTag**, use the *Tag* parameter of the Set-AzureRMResourceGroup cmdlet to delete the tag or values from the resource or resource group.
 
-The azure_2 Tags module that **Remove-AzureRmTag** is part of can help you manage your predefined azure_2 tags.
-An azure_2 tag is a name-value pair that you can use to categorize your azure_2 resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
+The Azure Tags module that **Remove-AzureRmTag** is part of can help you manage your predefined Azure tags.
+An Azure tag is a name-value pair that you can use to categorize your Azure resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
 
 You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
 If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

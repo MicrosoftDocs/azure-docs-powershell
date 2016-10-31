@@ -8,7 +8,7 @@ ms.assetid: 4B20F422-F5D6-403E-8744-2757C54EF0D4
 # New-AzureNetworkSecurityGroup
 
 ## SYNOPSIS
-Creates an azure_2 network security group.
+Creates an Azure network security group.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ New-AzureNetworkSecurityGroup [-Name] <String> [-Location] <String> [[-Label] <S
 ```
 
 ## DESCRIPTION
-The **New-AzureNetworkSecurityGroup** cmdlet creates an azure_2 network security group in a location.
+The **New-AzureNetworkSecurityGroup** cmdlet creates an Azure network security group in a location.
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the azure_2 location in which this cmdlet creates a network security group.
+Specifies the Azure location in which this cmdlet creates a network security group.
 To obtain valid locations, use the Get-AzureLocation cmdlet.
 
 ```yaml

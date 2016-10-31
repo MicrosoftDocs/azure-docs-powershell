@@ -17,7 +17,7 @@ Stop-AzureBatchJobSchedule [-Id] <String> -BatchContext <BatchAccountContext> [<
 ```
 
 ## DESCRIPTION
-The **Stop-AzureBatchJobSchedule** cmdlet stops an azure_2 Batch job schedule.
+The **Stop-AzureBatchJobSchedule** cmdlet stops an Azure Batch job schedule.
 
 ## EXAMPLES
 

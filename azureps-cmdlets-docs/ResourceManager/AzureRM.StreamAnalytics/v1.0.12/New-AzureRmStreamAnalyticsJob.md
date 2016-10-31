@@ -18,7 +18,7 @@ New-AzureRmStreamAnalyticsJob [[-Name] <String>] [-File] <String> [-Force] [-Res
 ```
 
 ## DESCRIPTION
-The **New-AzureRmStreamAnalyticsJob** cmdlet creates a new Stream Analytics job in azure_2 or updates the definition of an existing specified job.
+The **New-AzureRmStreamAnalyticsJob** cmdlet creates a new Stream Analytics job in Azure or updates the definition of an existing specified job.
 The name of the job can be specified in the .JSON file or on the command line.
 If both are specified, the name on command line must match the name in the file.
 
@@ -46,7 +46,7 @@ This command replaces the job definition for StreamingJob without confirmation.
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the azure_2 Stream Analytics job to create.
+Specifies the name of the Azure Stream Analytics job to create.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -File
-Specifies the path to a JSON file that contains the JSON representation of the azure_2 Stream Analytics job to create.
+Specifies the path to a JSON file that contains the JSON representation of the Azure Stream Analytics job to create.
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the azure_2 Stream Analytics job should belong.
+Specifies the name of the resource group to which the Azure Stream Analytics job should belong.
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -136,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

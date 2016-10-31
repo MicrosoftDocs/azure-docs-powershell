@@ -8,7 +8,7 @@ ms.assetid: 01ABD0AC-5D2F-4F1B-9482-3EFCC674DD43
 # Get-ACSNode
 
 ## SYNOPSIS
-Gets a list of nodes in azure_2 Consistent Storage.
+Gets a list of nodes in Azure Consistent Storage.
 
 ## SYNTAX
 
@@ -18,8 +18,8 @@ Get-ACSNode [-FarmName] <String> [[-NodeName] <String>] [[-SubscriptionId] <Stri
 ```
 
 ## DESCRIPTION
-The **Get-ACSNode** cmdlet get a list of nodes in azure_2 Consistent Storage.
-An azure_2 Consistent Storage (ACS) node can be either a Blob Server type or a Service Fabric node type.
+The **Get-ACSNode** cmdlet get a list of nodes in Azure Consistent Storage.
+An Azure Consistent Storage (ACS) node can be either a Blob Server type or a Service Fabric node type.
 
 ## EXAMPLES
 

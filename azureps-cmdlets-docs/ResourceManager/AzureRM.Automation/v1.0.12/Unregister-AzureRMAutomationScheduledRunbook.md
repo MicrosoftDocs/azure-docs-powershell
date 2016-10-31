@@ -25,7 +25,7 @@ Unregister-AzureRmAutomationScheduledRunbook -RunbookName <String> -ScheduleName
 ```
 
 ## DESCRIPTION
-The **Unregister-AzureRmAutomationScheduledRunbook** cmdlet removes the association between an azure_2 Automation runbook and a schedule.
+The **Unregister-AzureRmAutomationScheduledRunbook** cmdlet removes the association between an Azure Automation runbook and a schedule.
 The schedule no longer starts the runbook.
 
 ## EXAMPLES
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

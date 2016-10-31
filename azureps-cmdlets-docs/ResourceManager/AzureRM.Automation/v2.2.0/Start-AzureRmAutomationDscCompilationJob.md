@@ -19,7 +19,7 @@ Start-AzureRmAutomationDscCompilationJob [-ConfigurationName] <String> [-Paramet
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmAutomationDscCompilationJob** cmdlet compiles an APS Desired State Configuration (DSC) configuration in azure_2 Automation.
+The **Start-AzureRmAutomationDscCompilationJob** cmdlet compiles an APS Desired State Configuration (DSC) configuration in Azure Automation.
 
 ## EXAMPLES
 

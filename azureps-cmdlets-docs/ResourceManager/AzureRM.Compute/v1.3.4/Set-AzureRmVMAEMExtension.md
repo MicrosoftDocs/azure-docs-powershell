@@ -20,7 +20,7 @@ Set-AzureRmVMAEMExtension [-ResourceGroupName] <String> [-VMName] <String> [-Dis
 
 ## DESCRIPTION
 The **Set-AzureRmVMAEMExtension** cmdlet updates the configuration of a virtual machine to enable or update the support for monitoring for SAP systems that are installed on the virtual machine.
-The cmdlet installs the azure_2 Enhanced Monitoring (AEM) extension that collects the performance data and makes it discoverable for the SAP system.
+The cmdlet installs the Azure Enhanced Monitoring (AEM) extension that collects the performance data and makes it discoverable for the SAP system.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWAD
-Indicates that this cmdlet does not enable azure_2 Diagnostics for the virtual machine.
+Indicates that this cmdlet does not enable Azure Diagnostics for the virtual machine.
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +129,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -144,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String

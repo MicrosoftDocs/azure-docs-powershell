@@ -8,7 +8,7 @@ ms.assetid: 9A24D96F-396F-4054-BEBF-FE9877C9489D
 # Remove-AzureRmAppServicePlan
 
 ## SYNOPSIS
-Removes an azure_2 App Service plan.
+Removes an Azure App Service plan.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Remove-AzureRmAppServicePlan [-Force] [-AppServicePlan] <ServerFarmWithRichSku> 
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAppServicePlan** cmdlet removes an azure_2 App Service plan.
+The **Remove-AzureRmAppServicePlan** cmdlet removes an Azure App Service plan.
 
 ## EXAMPLES
 
@@ -34,12 +34,11 @@ The **Remove-AzureRmAppServicePlan** cmdlet removes an azure_2 App Service plan.
 PS C:\>Remove-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -AppServicePlanName "ContosoAppPlan"
 ```
 
-This command removes the azure_2 App Service plan named ContosoAppPlan that belongs to the resource group named Default-Web-WestUS.
+This command removes the Azure App Service plan named ContosoAppPlan that belongs to the resource group named Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -Force
-@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
 
 ```yaml
 Type: String
@@ -69,7 +67,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -84,7 +81,6 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-@{Text=}
 
 ```yaml
 Type: ServerFarmWithRichSku
@@ -99,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-psdx_confirmdesc
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-psdx_whatifdesc
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

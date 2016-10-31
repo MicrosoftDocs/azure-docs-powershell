@@ -41,7 +41,6 @@ A complex object is used for its value, in this case a virtual machine object.
 ## PARAMETERS
 
 ### -AutomationAccountName
-@{Text=}
 
 ```yaml
 Type: String
@@ -56,7 +55,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-@{Text=}
 
 ```yaml
 Type: String
@@ -71,7 +69,6 @@ Accept wildcard characters: False
 ```
 
 ### -Encrypted
-@{Text=}
 
 ```yaml
 Type: Boolean
@@ -86,7 +83,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
@@ -101,7 +97,6 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-@{Text=}
 
 ```yaml
 Type: Object
@@ -116,7 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}
 
 ```yaml
 Type: AzureSMProfile

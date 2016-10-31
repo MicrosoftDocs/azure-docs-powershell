@@ -8,7 +8,7 @@ ms.assetid: F0877362-B75E-4D8D-A2B7-5E4CB985E727
 # Get-AzureManagedCacheAccessKey
 
 ## SYNOPSIS
-Gets the access keys for an azure_2 Cache.
+Gets the access keys for an Azure Cache.
 
 ## SYNTAX
 
@@ -17,13 +17,13 @@ Get-AzureManagedCacheAccessKey [-Name] <String> [-Profile <AzureSMProfile>] [<Co
 ```
 
 ## DESCRIPTION
-The **Get-AzureManagedCacheAccessKey** cmdlet gets the primary and secondary access keys for an azure_2 Cache.
-You can use these keys to allow clients, such as web applications, to access to your azure_2 Cache.
+The **Get-AzureManagedCacheAccessKey** cmdlet gets the primary and secondary access keys for an Azure Cache.
+You can use these keys to allow clients, such as web applications, to access to your Azure Cache.
 Typically, you use the primary key, but use the secondary key to avoid delays while the primary key is being regenerated.
 To get new access keys, use the New-AzureManagedCacheAccessKey cmdlet.
-An azure_2 Cache is a secure, dedicated cache that provides extremely fast access to data.
+An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about azure_2 Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
 
 ## EXAMPLES
 
@@ -32,12 +32,12 @@ For more information about azure_2 Cache, see Azure Cachehttp://azure.microsoft.
 PS C:\>Get-AzureManagedCacheAccessKey -Name "ContosoCache"
 ```
 
-This command gets the access key for the azure_2 Cache named ContosoCache.
+This command gets the access key for the Azure Cache named ContosoCache.
 
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the azure_2 Cache.
+Specifies the name of the Azure Cache.
 This parameter value is case-sensitive.
 Wildcard characters are not permitted.
 

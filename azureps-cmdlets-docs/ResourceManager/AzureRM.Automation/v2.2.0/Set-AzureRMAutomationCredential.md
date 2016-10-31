@@ -18,7 +18,7 @@ Set-AzureRmAutomationCredential [-Name] <String> [-Description <String>] [-Value
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationCredential** cmdlet modifies a credential as a **PSCredential** object in azure_2 Automation.
+The **Set-AzureRmAutomationCredential** cmdlet modifies a credential as a **PSCredential** object in Azure Automation.
 
 ## EXAMPLES
 

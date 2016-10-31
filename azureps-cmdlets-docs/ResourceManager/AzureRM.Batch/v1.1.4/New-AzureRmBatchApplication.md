@@ -18,7 +18,7 @@ New-AzureRmBatchApplication [-AccountName] <String> [-ResourceGroupName] <String
 ```
 
 ## DESCRIPTION
-The **New-AzureRmBatchApplication** cmdlet adds an application to the specified azure_2 Batch account.
+The **New-AzureRmBatchApplication** cmdlet adds an application to the specified Azure Batch account.
 
 ## EXAMPLES
 

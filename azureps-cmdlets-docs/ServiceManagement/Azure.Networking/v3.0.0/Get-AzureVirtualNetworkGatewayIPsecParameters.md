@@ -8,7 +8,7 @@ ms.assetid: E78F45C8-B9B7-48C1-A919-306E52576469
 # Get-AzureVirtualNetworkGatewayIPsecParameters
 
 ## SYNOPSIS
-Gets the IPsec parameters for an azure_2 virtual network gateway.
+Gets the IPsec parameters for an Azure virtual network gateway.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureVirtualNetworkGatewayIPsecParameters [-GatewayId] <String> [-ConnectedE
 ```
 
 ## DESCRIPTION
-The **Get-AzureVirtualNetworkGatewayIPsecParameters** cmdlet gets the IPsec parameters for an azure_2 virtual network gateway.
+The **Get-AzureVirtualNetworkGatewayIPsecParameters** cmdlet gets the IPsec parameters for an Azure virtual network gateway.
 
 ## EXAMPLES
 

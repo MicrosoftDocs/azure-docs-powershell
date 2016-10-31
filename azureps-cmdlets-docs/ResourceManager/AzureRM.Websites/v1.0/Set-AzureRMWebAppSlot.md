@@ -8,7 +8,7 @@ ms.assetid: 949CC72C-4321-45BE-A3B5-49C108FE267B
 # Set-AzureRmWebAppSlot
 
 ## SYNOPSIS
-Modifies an azure_2 Web App slot.
+Modifies an Azure Web App slot.
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Set-AzureRmWebAppSlot [[-AppServicePlan] <String>] [[-DefaultDocuments] <String[
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmWebAppSlot** cmdlet modifies an azure_2 Web App slot.
+The **Set-AzureRmWebAppSlot** cmdlet modifies an Azure Web App slot.
 
 ## EXAMPLES
 
@@ -302,7 +302,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSwapSlotName
-@{Text=}
 
 ```yaml
 Type: String
