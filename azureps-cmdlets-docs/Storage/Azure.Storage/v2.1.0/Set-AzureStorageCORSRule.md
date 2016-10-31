@@ -35,8 +35,8 @@ PS C:\>$CorsRules = (@{
     MaxAgeInSeconds=30;
     AllowedMethods=@("Get","Connect")},
     @{
-    AllowedOrigins=@("http://www.fabrikam.com","http://www.contoso.com"); 
-    ExposedHeaders=@("x-ms-meta-data*","x-ms-meta-customheader"); 
+    AllowedOrigins=@("http://www.fabrikam.com","http://www.contoso.com");
+    ExposedHeaders=@("x-ms-meta-data*","x-ms-meta-customheader");
     AllowedHeaders=@("x-ms-meta-target*","x-ms-meta-customheader");
     MaxAgeInSeconds=30;
     AllowedMethods=@("Put")})
@@ -70,15 +70,15 @@ The revised rules overwrite the current CORS rules.
 Specifies the Azure Storage service type for which this cmdlet assigns rules.
 The acceptable values for this parameter are:
 
-- Blob 
-- Table 
-- Queue 
+- Blob
+- Table
+- Queue
 - File
 
 ```yaml
 Type: StorageServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -94,7 +94,7 @@ You can retrieve the existing rules using the Get-AzureStorageCORSRule cmdlet.
 ```yaml
 Type: PSCorsRule[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ By default, this cmdlet does not return a value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ To obtain a context, use the New-AzureStorageContext cmdlet.
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,12 +136,13 @@ Accept wildcard characters: False
 ```
 
 ### -ServerTimeoutPerRequest
-Specifies the length of the time-out period for the server part of a request.
+Specifies the service side time-out interval, in seconds, for a request.
+If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +159,7 @@ If this cmdlet does not receive a successful response before the interval elapse
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +178,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +188,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -202,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -232,5 +240,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureStorageContext](./New-AzureStorageContext.md)
 
 [Remove-AzureStorageCORSRule](./Remove-AzureStorageCORSRule.md)
-
-

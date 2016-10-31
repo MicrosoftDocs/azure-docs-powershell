@@ -73,7 +73,7 @@ This cmdlet gets the state of the blob copy operation for the Azure Storage blob
 ```yaml
 Type: String
 Parameter Sets: NamePipeline, ContainerPipeline
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -89,7 +89,7 @@ This cmdlet gets the copy status for a blob in the container that this parameter
 ```yaml
 Type: String
 Parameter Sets: NamePipeline
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -105,7 +105,7 @@ If you do not specify this parameter, this cmdlet returns a result immediately.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ To obtain a storage context, use the New-AzureStorageContext cmdlet.
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ If the specified interval elapses before the service processes the request, the 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ If this cmdlet does not receive a successful response before the interval elapse
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +183,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -198,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -236,7 +243,7 @@ To obtain a **CloudBlobContainer** object, use the Get-AzureStorageContainer cmd
 ```yaml
 Type: CloudBlobContainer
 Parameter Sets: ContainerPipeline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -276,5 +283,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureStorageBlobCopy](./Start-AzureStorageBlobCopy.md)
 
 [Stop-AzureStorageBlobCopy](./Stop-AzureStorageBlobCopy.md)
-
-

@@ -40,7 +40,7 @@ Specifies the storage service type.
 This cmdlet modifies the logging properties for the service type that this parameter specifies.
 The acceptable values for this parameter are:
 
-- Blob 
+- Blob
 - Table
 - Queue
 - File
@@ -50,7 +50,7 @@ The value of File is not currently supported.
 ```yaml
 Type: StorageServiceType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -66,7 +66,7 @@ The default value is 1.0.
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ Specifies the number of days that the Azure Storage service retains logged infor
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: LoggingOperations[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ If you do not specify this parameter, this cmdlet does not return a value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ To obtain a storage context, use the New-AzureStorageContext cmdlet.
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -161,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable. 
 
 ```yaml
 Type: String
@@ -204,5 +211,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageServiceLoggingProperty](./Get-AzureStorageServiceLoggingProperty.md)
 
 [New-AzureStorageContext](./New-AzureStorageContext.md)
-
-

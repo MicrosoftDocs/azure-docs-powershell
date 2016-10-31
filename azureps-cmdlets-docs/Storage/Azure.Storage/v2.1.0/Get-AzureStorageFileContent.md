@@ -66,7 +66,7 @@ This cmdlet downloads the contents of the file in the share this parameter speci
 ```yaml
 Type: String
 Parameter Sets: ShareName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -83,7 +83,7 @@ If the file does not exist, this cmdlet returns an error.
 ```yaml
 Type: String
 Parameter Sets: ShareName, Share, Directory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -105,7 +105,7 @@ If you specify the path of a folder, this cmdlet attempts to create a file that 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -124,7 +124,7 @@ If you specify the path of a folder, this cmdlet attempts to create a file that 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ If you specify the path of a folder, this cmdlet attempts to create a file that 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ If you specify the path of a folder, this cmdlet attempts to create a file that 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ If you specify the path of a folder, this cmdlet attempts to create a file that 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: ShareName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ If you specify the path of a folder, this cmdlet attempts to create a file that 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ If you specify the path of a folder, this cmdlet attempts to create a file that 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ If you specify the path of a folder, this cmdlet attempts to create a file that 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +248,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -263,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -279,7 +286,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -295,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -319,7 +325,7 @@ If you specify this parameter, do not specify the *Context* parameter.
 ```yaml
 Type: CloudFileShare
 Parameter Sets: Share
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -337,7 +343,7 @@ You can also use the Get-AzureStorageFile cmdlet to obtain a directory.
 ```yaml
 Type: CloudFileDirectory
 Parameter Sets: Directory
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -354,7 +360,7 @@ To obtain a **CloudFile** object, use the Get-AzureStorageFile cmdlet.
 ```yaml
 Type: CloudFile
 Parameter Sets: File
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -392,5 +398,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureStorageFile](./Get-AzureStorageFile.md)
 
 [Set-AzureStorageFileContent](./Set-AzureStorageFileContent.md)
-
-
