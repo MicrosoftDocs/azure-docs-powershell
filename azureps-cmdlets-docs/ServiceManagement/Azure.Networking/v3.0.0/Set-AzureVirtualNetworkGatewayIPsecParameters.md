@@ -47,7 +47,7 @@ Accept wildcard characters: False
 
 ### -EncryptionType
 Specifies the encryption type for the virtual network gateway.
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - NoEncryption
 - RequireEncryption
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 ### -PfsGroup
 Specifies the perfect forward secrecy (PFS) group.
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - PFS1
 - None
@@ -99,7 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-ps_azureprofile_description
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

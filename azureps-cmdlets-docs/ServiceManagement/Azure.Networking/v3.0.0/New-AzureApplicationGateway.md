@@ -39,7 +39,7 @@ Specifies a name for the new application gateway.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -54,7 +54,7 @@ Specifies the virtual network in which this cmdlet deploys the application gatew
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -69,7 +69,7 @@ Specifies an array of subnets in which this cmdlet deploys the application gatew
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -84,7 +84,7 @@ Specifies the number of instances that this cmdlet assigns to the application ga
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -95,16 +95,16 @@ Accept wildcard characters: False
 
 ### -GatewaySize
 Specifies the size that this cmdlet assigns to the application gateway.
-Valid values are: 
+Valid values are:
 
-- Small 
+- Small
 - Medium
 - Large
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -119,7 +119,7 @@ Specifies a description that this cmdlet assigns to the application gateway.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -129,12 +129,14 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-ps_azureprofile_description
+Specifies the Azure profile from which this cmdlet reads.
+If you do not specify a profile, this cmdlet reads from the local default profile.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,5 +169,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureApplicationGateway](./Stop-AzureApplicationGateway.md)
 
 [Update-AzureApplicationGateway](./Update-AzureApplicationGateway.md)
-
-

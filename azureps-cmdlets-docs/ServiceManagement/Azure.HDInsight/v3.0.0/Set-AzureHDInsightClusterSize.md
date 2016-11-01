@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 5BD9DDDF-5712-4D7E-9E1C-A4B52FC3313F
 ---
@@ -43,15 +43,6 @@ The **Set-AzureHDInsightClusterSize** cmdlet sets the number of data nodes for a
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
-### 2:
-```
-
-```
 
 ## PARAMETERS
 
@@ -76,7 +67,7 @@ Specifies the cluster to resize.
 ```yaml
 Type: AzureHDInsightCluster
 Parameter Sets: Set cluster size in nodes with cluster from pipeline.
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,7 +82,7 @@ Specifies the number of data nodes to create for a cluster.
 ```yaml
 Type: Int32
 Parameter Sets: Set cluster size in nodes with cluster from pipeline.
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -103,7 +94,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: Set cluster size in nodes with name.
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +110,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 ```yaml
 Type: Uri
 Parameter Sets: Cluster By Name (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +125,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set cluster size in nodes with cluster from pipeline., Set cluster size in nodes with name.
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +140,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 ```yaml
 Type: Boolean
 Parameter Sets: Cluster By Name (with Specific Subscription Credential)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +183,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,5 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
