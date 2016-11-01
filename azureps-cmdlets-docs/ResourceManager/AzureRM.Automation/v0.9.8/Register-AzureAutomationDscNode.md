@@ -25,10 +25,7 @@ The **Register-AzureAutomationDscNode** cmdlet registers an Azure virtual machin
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -39,7 +36,7 @@ Valid values are: ContinueConfiguration and StopConfiguration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ContinueConfiguration, StopConfiguration
 
 Required: False
@@ -55,7 +52,7 @@ Specifies whether new configurations that this DSC node downloads from the Azure
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,7 +67,7 @@ Specifies the name of an Automation account in which this cmdlet registers a vir
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -86,7 +83,7 @@ To obtain valid locations, use the **Get-AzureLocation** cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +98,7 @@ Specifies the name of the Azure virtual machine that this cmdlet registers for m
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,7 +113,7 @@ Specifies the name of the resource group of the Azure virtual machine that this 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,16 +124,16 @@ Accept wildcard characters: False
 
 ### -ConfigurationMode
 Specifies the DSC configuration mode.
-Valid values are: 
+Valid values are:
 
-- ApplyAndMonitor 
-- ApplyAndAutocorrect 
+- ApplyAndMonitor
+- ApplyAndAutocorrect
 - ApplyOnly
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: ApplyAndMonitor, ApplyAndAutocorrect, ApplyOnly
 
 Required: False
@@ -152,7 +149,7 @@ Specifies the frequency, in minutes, at which the background application of DSC 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +164,7 @@ Specifies the name of the node configuration that this cmdlet configures the vir
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +180,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +195,7 @@ Specifies whether to restart the virtual machine, if needed.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +210,7 @@ Specifies the frequency, in minutes, at which the local Configuration Manager co
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +226,7 @@ The Automation account with which this cmdlet registers a virtual machine belong
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -254,5 +251,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureAutomationDscNode](./Set-AzureAutomationDscNode.md)
 
 [Unregister-AzureAutomationDscNode](./Unregister-AzureAutomationDscNode.md)
-
-

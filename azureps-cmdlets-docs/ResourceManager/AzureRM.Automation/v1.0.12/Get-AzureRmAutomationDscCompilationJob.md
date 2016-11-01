@@ -33,7 +33,7 @@ Get-AzureRmAutomationDscCompilationJob -ConfigurationName <String> [-Status <Str
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationDscCompilationJob** cmdlet gets APS Desired State Configuration (DSC) compilation jobs in Azure Automation.
+The **Get-AzureRmAutomationDscCompilationJob** cmdlet gets Azure PowerShell Desired State Configuration (DSC) compilation jobs in Azure Automation.
 
 ## EXAMPLES
 

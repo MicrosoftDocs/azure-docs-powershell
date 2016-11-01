@@ -37,7 +37,7 @@ This example creates a virtual network and then calls the **Set-AzureRmApiManage
 ### -Location
 Specifies the location of the virtual network in which this cmdlet creates the instance.
 
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - North Central US
 - South Central US
@@ -58,7 +58,7 @@ psdx_paramvalues
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ Name of the sub network.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ Identifier of the virtual network.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -146,5 +146,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

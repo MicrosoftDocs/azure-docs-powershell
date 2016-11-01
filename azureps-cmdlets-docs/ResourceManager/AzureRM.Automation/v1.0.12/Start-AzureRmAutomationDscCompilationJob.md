@@ -19,7 +19,7 @@ Start-AzureRmAutomationDscCompilationJob [-ConfigurationName] <String> [-Paramet
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmAutomationDscCompilationJob** cmdlet compiles an APS Desired State Configuration (DSC) configuration in Azure Automation.
+The **Start-AzureRmAutomationDscCompilationJob** cmdlet compiles an Azure PowerShell Desired State Configuration (DSC) configuration in Azure Automation.
 
 ## EXAMPLES
 
@@ -42,7 +42,7 @@ Specifies the name of the Automation account that contains the DSC configuration
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -57,7 +57,7 @@ Specifies a dictionary of configuration data for DSC configuration.
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ Specifies a dictionary of parameters that this cmdlet uses to compile the DSC co
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Specifies the name of a resource group in which this cmdlet compiles a configura
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationDscCompilationJob](./Get-AzureRmAutomationDscCompilationJob.md)
 
 [Get-AzureRmAutomationDscCompilationJobOutput](./Get-AzureRmAutomationDscCompilationJobOutput.md)
-
-

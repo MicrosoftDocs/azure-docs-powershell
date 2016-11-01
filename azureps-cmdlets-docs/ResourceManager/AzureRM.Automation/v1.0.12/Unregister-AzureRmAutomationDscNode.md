@@ -18,7 +18,7 @@ Unregister-AzureRmAutomationDscNode -Id <Guid> [-Force] [-ResourceGroupName] <St
 ```
 
 ## DESCRIPTION
-The **Unregister-AzureRmAutomationDscNode** cmdlet removes an APS Desired State Configuration (DSC) node from management by an Azure Automation account.
+The **Unregister-AzureRmAutomationDscNode** cmdlet removes an Azure PowerShell Desired State Configuration (DSC) node from management by an Azure Automation account.
 
 ## EXAMPLES
 
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter

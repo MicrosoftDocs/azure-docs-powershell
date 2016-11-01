@@ -49,7 +49,7 @@ Specifies the name of the of resource group under which this cmdlet creates an A
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -64,7 +64,7 @@ Specifies a name for the API Management deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,9 +75,9 @@ Accept wildcard characters: False
 
 ### -Location
 Specifies the location in which this cmdlet creates an API Management deployment.
-To obtain valid locations, use the Get-AzureLocation cmdlets.
+To obtain valid locations, use the **Get-AzureLocation** cmdlets.
 
-Valid values are: 
+Valid values are:
 
 - North Central US
 - South Central US
@@ -98,7 +98,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,7 +114,7 @@ API Management uses this address in the developer portal in email notifications.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,7 +129,7 @@ Specifies the originating email address for all notifications that the API Manag
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -140,18 +140,18 @@ Accept wildcard characters: False
 
 ### -Sku
 Specifies the tier of the API Management service.
-Valid values are: 
+Valid values are:
 
-- Developer 
-- Standard 
-- Premium 
+- Developer
+- Standard
+- Premium
 
 The default is Developer.
 
 ```yaml
 Type: PsApiManagementSku
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ The default is one (1).
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +182,7 @@ Specifies a dictionary of tags.
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,5 +248,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagement](./Remove-AzureRmApiManagement.md)
 
 [Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
-
-

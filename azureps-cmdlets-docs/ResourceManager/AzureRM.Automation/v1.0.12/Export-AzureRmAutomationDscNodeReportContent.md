@@ -18,7 +18,7 @@ Export-AzureRmAutomationDscNodeReportContent -NodeId <Guid> -ReportId <Guid> [-O
 ```
 
 ## DESCRIPTION
-The **Export-AzureRmAutomationDscNodeReportContent** cmdlet exports the raw contents of an APS Desired State Configuration (DSC) report.
+The **Export-AzureRmAutomationDscNodeReportContent** cmdlet exports the raw contents of an Azure PowerShell Desired State Configuration (DSC) report.
 A DSC node sends a DSC report to Azure Automation.
 
 ## EXAMPLES

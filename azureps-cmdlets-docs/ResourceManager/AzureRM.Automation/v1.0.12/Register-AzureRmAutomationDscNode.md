@@ -21,7 +21,7 @@ Register-AzureRmAutomationDscNode -AzureVMName <String> [-NodeConfigurationName 
 ```
 
 ## DESCRIPTION
-The **Register-AzureRmAutomationDscNode** cmdlet registers an Azure virtual machine as an APS Desired State Configuration (DSC) node in an Azure Automation account.
+The **Register-AzureRmAutomationDscNode** cmdlet registers an Azure virtual machine as an Azure PowerShell Desired State Configuration (DSC) node in an Azure Automation account.
 
 ## EXAMPLES
 

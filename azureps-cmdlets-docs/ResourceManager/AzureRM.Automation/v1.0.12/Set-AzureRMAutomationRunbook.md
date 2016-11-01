@@ -19,7 +19,7 @@ Set-AzureRmAutomationRunbook [-Name] <String> [-Description <String>] [-Tags <ID
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationRunbook** cmdlet modifies the configuration of an Azure Automation runbook in APS.
+The **Set-AzureRmAutomationRunbook** cmdlet modifies the configuration of an Azure Automation runbook in Azure PowerShell.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ Specifies the name of the Automation account in which this cmdlet modifies a run
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -53,7 +53,7 @@ Specifies a description for the runbook.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,7 +68,7 @@ Specifies whether the runbook logs progress.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ Specifies whether logging includes detailed information.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Specifies the name of the resource group for which this cmdlet modifies a runboo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -128,7 +128,7 @@ Specifies a dictionary of tags to replace the current tags of the modified runbo
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,5 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationRunbook](./Remove-AzureRMAutomationRunbook.md)
 
 [Start-AzureRmAutomationRunbook](./Start-AzureRMAutomationRunbook.md)
-
-

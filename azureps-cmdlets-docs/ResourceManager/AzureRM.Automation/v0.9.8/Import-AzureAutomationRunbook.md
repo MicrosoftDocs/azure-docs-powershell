@@ -26,10 +26,6 @@ For PowerShell Workflow runbooks, the script must contain a single PowerShell Wo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -39,7 +35,7 @@ Specifies the name of the Automation account into which this cmdlet imports a ru
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -54,7 +50,7 @@ Specifies a description for the imported runbook.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +65,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +80,7 @@ Specifies whether the runbook logs progress information.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +95,7 @@ Specifies whether the runbook logs detailed information.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +126,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +141,7 @@ Indicates that this cmdlet publishes the runbook that it imports.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +156,7 @@ Specifies the name of the resource group for which this cmdlet imports a runbook
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -186,16 +182,16 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of runbook that this cmdlet creates.
-Valid values are: 
+Valid values are:
 
-- Graph 
-- PowerShell 
+- Graph
+- PowerShell
 - PowerShellWorkflow
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Graph, PowerShell, PowerShellWorkflow
 
 Required: True
@@ -231,5 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureAutomationRunbook](./Set-AzureAutomationRunbook.md)
 
 [Start-AzureAutomationRunbook](./Start-AzureAutomationRunbook.md)
-
-

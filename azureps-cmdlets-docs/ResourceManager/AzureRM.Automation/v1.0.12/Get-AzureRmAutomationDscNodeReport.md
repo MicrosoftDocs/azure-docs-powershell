@@ -31,7 +31,7 @@ Get-AzureRmAutomationDscNodeReport -NodeId <Guid> [-Latest] [-ResourceGroupName]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationDscNodeReport** cmdlet gets reports sent from an APS Desired State Configuration (DSC) node to Azure Automation.
+The **Get-AzureRmAutomationDscNodeReport** cmdlet gets reports sent from an Azure PowerShell Desired State Configuration (DSC) node to Azure Automation.
 
 ## EXAMPLES
 

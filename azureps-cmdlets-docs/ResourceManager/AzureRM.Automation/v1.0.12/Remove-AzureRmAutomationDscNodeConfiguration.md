@@ -18,7 +18,7 @@ Remove-AzureRmAutomationDscNodeConfiguration [-Name] <String> [-Force] [-IgnoreN
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAutomationDscNodeConfiguration** cmdlet removes metadata from APS Desired State Configuration (DSC) node configurations in Azure Automation.
+The **Remove-AzureRmAutomationDscNodeConfiguration** cmdlet removes metadata from Azure PowerShell Desired State Configuration (DSC) node configurations in Azure Automation.
 Automation stores DSC node configuration as a Managed Object Format (MOF) configuration document.
 
 ## EXAMPLES
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter

@@ -19,7 +19,7 @@ New-AzureRmAutomationRunbook [-Name] <String> [-Description <String>] [-Tags <ID
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAutomationRunbook** cmdlet creates an empty Azure Automation runbook by using APS.
+The **New-AzureRmAutomationRunbook** cmdlet creates an empty Azure Automation runbook by using Azure PowerShell.
 Specify a name for the runbook.
 
 ## EXAMPLES

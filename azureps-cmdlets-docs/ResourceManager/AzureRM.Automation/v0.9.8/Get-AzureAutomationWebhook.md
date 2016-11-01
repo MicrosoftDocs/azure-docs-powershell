@@ -36,10 +36,6 @@ To get specific webhooks, specify a webhook name or specify the name of an Azure
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -49,7 +45,7 @@ Specifies the name of an Automation account in which this cmdlet gets a webhook.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -80,7 +76,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +91,7 @@ Specifies the name of the resource group for which this cmdlet gets webhooks.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -110,7 +106,7 @@ Specifies the name of a runbook for which this cmdlet gets webhooks.
 ```yaml
 Type: String
 Parameter Sets: ByRunbookName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,5 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureAutomationWebhook](./Remove-AzureAutomationWebhook.md)
 
 [Set-AzureAutomationWebhook](./Set-AzureAutomationWebhook.md)
-
-

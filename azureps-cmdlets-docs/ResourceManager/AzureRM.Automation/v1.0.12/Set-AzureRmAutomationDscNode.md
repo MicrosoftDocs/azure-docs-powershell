@@ -18,7 +18,7 @@ Set-AzureRmAutomationDscNode -Id <Guid> -NodeConfigurationName <String> [-Force]
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmAutomationDscNode** cmdlet modifies an APS Desired State Configuration (DSC) node configuration.
+The **Set-AzureRmAutomationDscNode** cmdlet modifies an Azure PowerShell Desired State Configuration (DSC) node configuration.
 Azure Automation stores DSC node configuration as a Managed Object Format (MOF) configuration document.
 
 ## EXAMPLES
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force the command to run without asking for user confirmation.
+Forces the command to run without asking for user confirmation. the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter

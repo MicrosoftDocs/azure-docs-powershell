@@ -18,7 +18,7 @@ Get-AzureRmAutomationDscOnboardingMetaconfig [-OutputFolder <String>] [-Computer
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationDscOnboardingMetaconfig** cmdlet creates APS Desired State Configuration (DSC) meta-configuration Managed Object Format (MOF) files.
+The **Get-AzureRmAutomationDscOnboardingMetaconfig** cmdlet creates Azure PowerShell Desired State Configuration (DSC) meta-configuration Managed Object Format (MOF) files.
 This cmdlet creates a .mof file for each computer name that you specify.
 The cmdlet creates a folder for the .mof files.
 You can run the Set-DscLocalConfigurationManager cmdlet for this folder to onboard these computers into an Azure Automation account as DSC nodes.

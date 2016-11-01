@@ -18,13 +18,14 @@ Export-AzureRmAutomationDscConfiguration -Name <String> [-Slot <String>] [-Outpu
 ```
 
 ## DESCRIPTION
-The **Export-AzureRmAutomationDscConfiguration** cmdlet exports an APS Desired State Configuration (DSC) configuration from Azure Automation to a local file.
+The **Export-AzureRmAutomationDscConfiguration** cmdlet exports an Azure PowerShell Desired State Configuration (DSC) configuration from Azure Automation to a local file.
 The exported file has a .ps1 file name extension.
 
 ## EXAMPLES
 
 ### Example 1: Export the published version of a DSC configuration
-```
+
+```PowerShell
 PS C:\>Export-AzureRmAutomationDscConfiguration -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Name "Configuration01" -Slot Published -OutputFolder "C:\Users\PattiFuller\Desktop"
 ```
 
@@ -38,7 +39,7 @@ Specifies the name of the Automation account that contains the DSC that this cmd
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -53,7 +54,7 @@ Indicates that this cmdlet replaces an existing local file with a new file that 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +84,7 @@ Specifies the output folder where this cmdlet exports the DSC configuration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +99,7 @@ Specifies the name of a resource group for which this cmdlet exports a DSC confi
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -109,17 +110,17 @@ Accept wildcard characters: False
 
 ### -Slot
 Specifies which version of the DSC configuration that this cmdlet exports.
-Valid values are: 
+Valid values are:
 
 - Draft
-- Published 
+- Published
 
 The default value is Published.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Published, Draft
 
 Required: False
@@ -174,5 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationDscConfiguration](./Get-AzureRmAutomationDscConfiguration.md)
 
 [Import-AzureRmAutomationDscConfiguration](./Import-AzureRmAutomationDscConfiguration.md)
-
-

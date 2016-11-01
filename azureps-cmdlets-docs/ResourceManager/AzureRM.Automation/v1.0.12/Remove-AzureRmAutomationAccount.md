@@ -34,7 +34,7 @@ This command removes an automation account named ContosoAutomationAccount withou
 ## PARAMETERS
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter

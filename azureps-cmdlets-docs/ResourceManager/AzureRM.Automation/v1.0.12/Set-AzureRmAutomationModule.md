@@ -20,9 +20,9 @@ Set-AzureRmAutomationModule [-Name] <String> [-ContentLinkUri <Uri>] [-ContentLi
 ## DESCRIPTION
 The **Set-AzureRmAutomationModule** cmdlet updates a module in Azure Automation.
 This command accepts a compressed file that has a .zip file name extension.
-The file contains a folder that includes a file that is one of the following types: 
+The file contains a folder that includes a file that is one of the following types:
 
-- wps_2 module, which has a .psm1 or .dll file name extension 
+- wps_2 module, which has a .psm1 or .dll file name extension
 - wps_2 module manifest, which has a .psd1 file name extension
 
 The name of the .zip file, the name of the folder, and the name of the file in the folder must be the same.
@@ -33,7 +33,7 @@ If you import a wps_2 module into Automation by using this cmdlet or the New-Azu
 The command finishes whether the import succeeds or fails.
 To check whether it succeeded, run the following command:
 
-`PS C:\\\> $ModuleInstance = Get-AzureRmAutomationModule -Name `ModuleName
+`PS C:\> $ModuleInstance = Get-AzureRmAutomationModule -Name ModuleName`
 
 Check the **ProvisioningState** property for a value of Succeeded.
 
@@ -54,7 +54,7 @@ Specifies the name of the Automation account for which this cmdlet updates a mod
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -69,7 +69,7 @@ Specifies the URL of the .zip file that contains the new version of a module tha
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Specifies the version of the module to which this cmdlet updates Automation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Specifies the name of the module that this cmdlet imports.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -114,7 +114,7 @@ Specifies the name of a resource group for which this cmdlet updates a module.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -139,5 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationModule](./New-AzureRmAutomationModule.md)
 
 [Remove-AzureRmAutomationModule](./Remove-AzureRmAutomationModule.md)
-
-
