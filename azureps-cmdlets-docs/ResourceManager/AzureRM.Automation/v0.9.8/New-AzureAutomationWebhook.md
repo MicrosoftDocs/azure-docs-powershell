@@ -26,10 +26,7 @@ Be sure to save the webhook URL that this cmdlet returns, because it cannot be r
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -39,7 +36,7 @@ Specifies the name of an Automation account in which this cmdlet creates a webho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -55,7 +52,7 @@ You can specify a string or a **DateTime** that can be converted to a valid **Da
 ```yaml
 Type: DateTimeOffset
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -70,7 +67,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +82,7 @@ Specifies whether the webhook is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -100,7 +97,7 @@ Specifies a name for the webhook.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -118,7 +115,7 @@ When the runbook starts in response to a webhook, these parameters are passed to
 ```yaml
 Type: System.Collections.Generic.IDictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +131,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +146,7 @@ Specifies the name of the resource group for which this cmdlet creates a Webhook
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -164,7 +161,7 @@ Specifies the name of the runbook to associated with the webhook.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -189,5 +186,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureAutomationWebhook](./Remove-AzureAutomationWebhook.md)
 
 [Set-AzureAutomationWebhook](./Set-AzureAutomationWebhook.md)
-
-

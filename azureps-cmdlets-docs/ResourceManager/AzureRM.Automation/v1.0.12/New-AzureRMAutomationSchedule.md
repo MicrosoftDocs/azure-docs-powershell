@@ -91,7 +91,7 @@ Specifies the name of an Automation account for which this cmdlet creates a sche
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -107,7 +107,7 @@ If you do not specify this parameter, and you do not specify the *OneTime* param
 ```yaml
 Type: Byte
 Parameter Sets: ByDaily
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -122,7 +122,7 @@ Specifies a description for the schedule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ You can specify a string that can be converted to a valid **DateTimeOffset**.
 ```yaml
 Type: DateTimeOffset
 Parameter Sets: ByDaily, ByWeekly, ByMonthlyDaysOfMonth, ByMonthlyDayOfWeek, ByHourly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Specifies an interval, in hours, for the schedule.
 ```yaml
 Type: Byte
 Parameter Sets: ByHourly
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -168,7 +168,7 @@ Specifies a name for the schedule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -183,7 +183,7 @@ Specifies that the cmdlet creates a one-time schedule.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByOneTime
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -198,7 +198,7 @@ Specifies the name of a resource group for which this cmdlet creates a schedule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -215,7 +215,7 @@ You can specify a string that can be converted to a valid **DateTimeOffset**.
 ```yaml
 Type: DateTimeOffset
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -230,7 +230,7 @@ Specifies an interval, in weeks, for the schedule.
 ```yaml
 Type: Byte
 Parameter Sets: ByWeekly
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -245,7 +245,7 @@ Specifies an interval, in Months, for the schedule.
 ```yaml
 Type: Byte
 Parameter Sets: ByMonthlyDaysOfMonth, ByMonthlyDayOfWeek
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -260,7 +260,7 @@ Specifies a list of days of the week for the weekly schedule.
 ```yaml
 Type: DayOfWeek[]
 Parameter Sets: ByWeekly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ Specifies a list of days of the week for the weekly schedule.
 ```yaml
 Type: DayOfWeek
 Parameter Sets: ByMonthlyDayOfWeek
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 ### -DayOfWeekOccurrence
 Specifies the occurrence of the week within the month that the schedule runs.
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - 1
 - 2
@@ -302,7 +302,7 @@ psdx_paramvalues
 ```yaml
 Type: DayOfWeekOccurrence
 Parameter Sets: ByMonthlyDayOfWeek
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -318,7 +318,7 @@ This string can be the IANA ID or the Windows Time Zone ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -333,7 +333,7 @@ Specifies a list of days of the month for the monthly schedule.
 ```yaml
 Type: DaysOfMonth[]
 Parameter Sets: ByMonthlyDaysOfMonth
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -360,5 +360,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationSchedule](./Remove-AzureRMAutomationSchedule.md)
 
 [Set-AzureRmAutomationSchedule](./Set-AzureRMAutomationSchedule.md)
-
-

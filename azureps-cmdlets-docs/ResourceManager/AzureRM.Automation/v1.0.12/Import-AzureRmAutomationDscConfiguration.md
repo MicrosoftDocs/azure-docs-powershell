@@ -19,8 +19,8 @@ Import-AzureRmAutomationDscConfiguration -SourcePath <String> [-Tags <IDictionar
 ```
 
 ## DESCRIPTION
-The **Import-AzureRmAutomationDscConfiguration** cmdlet imports an APS Desired State Configuration (DSC) configuration into Azure Automation.
-Specify the path of an APS script that contains a single DSC configuration.
+The **Import-AzureRmAutomationDscConfiguration** cmdlet imports an Azure PowerShell Desired State Configuration (DSC) configuration into Azure Automation.
+Specify the path of an Azure PowerShell script that contains a single DSC configuration.
 
 ## EXAMPLES
 

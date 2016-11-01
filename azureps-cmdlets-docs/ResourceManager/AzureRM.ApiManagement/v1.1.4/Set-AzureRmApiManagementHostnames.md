@@ -58,7 +58,7 @@ Specifies the name of the resource group under which the API Management instance
 ```yaml
 Type: String
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ Specifies the name of the API Management instance.
 ```yaml
 Type: String
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -89,7 +89,7 @@ Passing $null to the cmdlet sets the default hostname.
 ```yaml
 Type: PsApiManagementHostnameConfiguration
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ Passing $null sets the default hostname.
 ```yaml
 Type: PsApiManagementHostnameConfiguration
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,12 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-passthru
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +136,7 @@ Specifies the **PsApiManagement** instance that this cmdlet gets the *PortalHost
 ```yaml
 Type: PsApiManagement
 Parameter Sets: Set from provided PsApiManagement instance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -197,5 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-AzureRmApiManagementHostnameCertificate](./Import-AzureRmApiManagementHostnameCertificate.md)
 
 [New-AzureRmApiManagementHostnameConfiguration](./New-AzureRmApiManagementHostnameConfiguration.md)
-
-

@@ -39,7 +39,7 @@ Specifies the name of the of resource group under which the API Management deplo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -54,7 +54,7 @@ Specifies the name of the API Management deployment that this cmdlet imports.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ### -HostnameType
 Specifies the host name type that this cmdlet loads the certificate for.
 
-Valid values are: 
+Valid values are:
 
 - Proxy
 - Portal
@@ -74,7 +74,7 @@ Valid values are:
 ```yaml
 Type: PsApiManagementHostnameType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -89,7 +89,7 @@ Specifies the path to a .pfx certificate file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ Specifies the password for the .pfx certificate file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,12 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-passthru
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,5 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementHostnameConfiguration](./New-AzureRmApiManagementHostnameConfiguration.md)
 
 [Set-AzureRmApiManagementHostnames](./Set-AzureRmApiManagementHostnames.md)
-
-

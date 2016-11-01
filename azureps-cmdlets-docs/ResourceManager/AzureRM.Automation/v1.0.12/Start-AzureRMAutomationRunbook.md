@@ -40,11 +40,12 @@ This command starts a runbook job for the runbook named Runbk01 in the Azure Aut
 ## PARAMETERS
 
 ### -AutomationAccountName
+Specifies the name of the Automation account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -54,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 
 ```yaml
 Type: String
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,11 +84,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -114,7 +117,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: BySynchronousReturnJobOutput
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +131,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: BySynchronousReturnJobOutput
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,5 +168,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationRunbook](./Remove-AzureRMAutomationRunbook.md)
 
 [Set-AzureRmAutomationRunbook](./Set-AzureRMAutomationRunbook.md)
-
-

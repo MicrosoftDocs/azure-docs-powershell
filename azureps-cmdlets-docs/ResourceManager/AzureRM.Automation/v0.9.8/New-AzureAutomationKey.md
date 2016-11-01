@@ -22,10 +22,7 @@ The **New-AzureAutomationKey** cmdlet regenerates registration keys for an Azure
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -35,7 +32,7 @@ Specifies the name of an Automation account for which this cmdlet regenerates ke
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -51,7 +48,7 @@ Valid values are: Primary and Secondary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Primary, Secondary
 
 Required: True
@@ -68,7 +65,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +81,7 @@ This cmdlet regenerates keys for an Automation account in the resource group tha
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -107,5 +104,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureAutomationAccount](./Get-AzureAutomationAccount.md)
 
 [New-AzureAutomationAccount](./New-AzureAutomationAccount.md)
-
-

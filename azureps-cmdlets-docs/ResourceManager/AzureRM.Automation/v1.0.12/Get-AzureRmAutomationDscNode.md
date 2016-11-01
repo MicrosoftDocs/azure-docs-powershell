@@ -43,7 +43,7 @@ Get-AzureRmAutomationDscNode -ConfigurationName <String> [-ResourceGroupName] <S
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmAutomationDscNode** cmdlet gets APS Desired State Configuration (DSC) nodes from Azure Automation.
+The **Get-AzureRmAutomationDscNode** cmdlet gets Azure PowerShell Desired State Configuration (DSC) nodes from Azure Automation.
 
 ## EXAMPLES
 

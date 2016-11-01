@@ -24,10 +24,7 @@ To update a deployment of an API Management use the modified **PsApiManagementIn
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -37,7 +34,7 @@ Specifies the **PsApiManagement** instance to update an existing deployment regi
 ```yaml
 Type: PsApiManagement
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -49,7 +46,7 @@ Accept wildcard characters: False
 ### -Location
 Specifies the location of the deployment region to update.
 
-Valid values are: 
+Valid values are:
 
 - North Central US
 - South Central US
@@ -70,7 +67,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,7 +79,7 @@ Accept wildcard characters: False
 ### -Sku
 Specifies the new tier value for the deployment region.
 
-Valid values are: 
+Valid values are:
 
 - Developer
 - Standard
@@ -91,7 +88,7 @@ Valid values are:
 ```yaml
 Type: PsApiManagementSku
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -106,7 +103,7 @@ Specifies the new SKU capacity value for the deployment region.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -122,7 +119,7 @@ Passing $null will remove virtual network configuration for the region.
 ```yaml
 Type: PsApiManagementVirtualNetwork
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,5 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementRegion](./Remove-AzureRmApiManagementRegion.md)
 
 [Update-AzureRmApiManagementDeployment](./Update-AzureRmApiManagementDeployment.md)
-
-

@@ -18,7 +18,7 @@ Remove-AzureRmAutomationDscConfiguration [-Name] <String> [-Force] [-ResourceGro
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmAutomationDscConfiguration** cmdlet removes APS Desired State Configuration (DSC) configurations from Azure Automation.
+The **Remove-AzureRmAutomationDscConfiguration** cmdlet removes Azure PowerShell Desired State Configuration (DSC) configurations from Azure Automation.
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
