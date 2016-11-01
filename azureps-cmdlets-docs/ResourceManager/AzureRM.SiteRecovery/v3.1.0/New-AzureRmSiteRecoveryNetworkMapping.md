@@ -29,10 +29,6 @@ The **New-AzureRMSiteRecoveryNetworkMapping** cmdlet creates a mapping between t
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -41,7 +37,7 @@ The **New-AzureRMSiteRecoveryNetworkMapping** cmdlet creates a mapping between t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -56,7 +52,7 @@ Specifies the primary network object.
 ```yaml
 Type: ASRNetwork
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -71,7 +67,7 @@ Specifies the Azure virtual network ID.
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -86,7 +82,7 @@ Specifies the recovery network object.
 ```yaml
 Type: ASRNetwork
 Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,5 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryNetworkMapping](./Get-AzureRmSiteRecoveryNetworkMapping.md)
 
 [Remove-AzureRmSiteRecoveryNetworkMapping](./Remove-AzureRmSiteRecoveryNetworkMapping.md)
-
-

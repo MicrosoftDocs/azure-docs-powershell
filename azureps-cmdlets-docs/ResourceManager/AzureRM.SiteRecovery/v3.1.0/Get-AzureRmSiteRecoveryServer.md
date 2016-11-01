@@ -32,10 +32,6 @@ The **Get-AzureRmSiteRecoveryServer** cmdlet gets information about Azure Site R
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -45,7 +41,7 @@ Specifies the name of the server.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,7 +56,7 @@ Specifies the friendly name of the server.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -81,5 +77,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-AzureRmSiteRecoveryServer](./Remove-AzureRmSiteRecoveryServer.md)
-
-

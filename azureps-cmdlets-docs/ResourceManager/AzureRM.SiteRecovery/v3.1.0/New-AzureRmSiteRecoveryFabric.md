@@ -21,10 +21,6 @@ The **New-AzureRmSiteRecoveryFabric** cmdlet creates an Azure Site Recovery Fabr
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -34,7 +30,7 @@ Specifies the name of the Azure Site Recovery Fabric
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -49,7 +45,7 @@ Specifies the Azure Site Recovery Fabric Type.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,5 +70,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryFabric](./Get-AzureRmSiteRecoveryFabric.md)
 
 [Remove-AzureRmSiteRecoveryFabric](./Remove-AzureRmSiteRecoveryFabric.md)
-
-

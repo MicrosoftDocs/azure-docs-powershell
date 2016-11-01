@@ -83,7 +83,7 @@ For future use.
 ```yaml
 Type: Guid
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Enables the Microsoft.Compute resource provider to retrieve secrets from this ke
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Enables the Azure disk encryption service to get secrets and unwrap keys from th
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ Enables Azure Resource Manager to get secrets from this key vault when this key 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ Specifies the object ID of the user or service principal in Azure Active Directo
 ```yaml
 Type: Guid
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +159,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ If not specified, this cmdlet searches for the key vault in the current subscrip
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -222,7 +222,7 @@ This cmdlet removes permissions for the key vault that this parameter specifies.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -248,7 +248,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -277,5 +276,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmKeyVaultAccessPolicy](./Set-AzureRmKeyVaultAccessPolicy.md)
-
-

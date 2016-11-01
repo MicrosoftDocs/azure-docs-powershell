@@ -22,10 +22,6 @@ The **Remove-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet removes a 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ Specifies a storage classification mapping that this cmdlet removes.
 ```yaml
 Type: ASRStorageClassificationMapping
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,5 +54,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryStorageClassificationMapping](./Get-AzureRmSiteRecoveryStorageClassificationMapping.md)
 
 [New-AzureRmSiteRecoveryStorageClassificationMapping](./New-AzureRmSiteRecoveryStorageClassificationMapping.md)
-
-

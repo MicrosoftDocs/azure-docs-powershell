@@ -79,10 +79,6 @@ You can check whether the job succeeded by using the Get-AzureRmSiteRecoveryJob 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -92,7 +88,7 @@ Specifies the Site Recovery protection entity object.
 ```yaml
 Type: ASRProtectionEntity
 Parameter Sets: ByPEObject, ByPEObjectWithVMNetwork, ByPEObjectWithAzureVMNetworkId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -111,7 +107,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -126,7 +122,7 @@ Specifies the primary certificate file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +137,7 @@ Specifies the secondary certificate file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +152,7 @@ Specifies a recovery plan object.
 ```yaml
 Type: ASRRecoveryPlan
 Parameter Sets: ByRPObject, ByRPObjectWithVMNetwork, ByRPObjectWithAzureVMNetworkId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -171,7 +167,7 @@ Specifies the Site Recovery virtual machine network.
 ```yaml
 Type: ASRNetwork
 Parameter Sets: ByRPObjectWithVMNetwork, ByPEObjectWithVMNetwork, ByRPIObjectWithVMNetwork
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -186,7 +182,7 @@ Specifies the Azure virtual network ID.
 ```yaml
 Type: String
 Parameter Sets: ByRPObjectWithAzureVMNetworkId, ByPEObjectWithAzureVMNetworkId, ByRPIObjectWithAzureVMNetworkId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +196,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRReplicationProtectedItem
 Parameter Sets: ByRPIObjectWithAzureVMNetworkId, ByRPIObject, ByRPIObjectWithVMNetwork
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -221,5 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmSiteRecoveryJob](./Get-AzureRmSiteRecoveryJob.md)
-
-

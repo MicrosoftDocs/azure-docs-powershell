@@ -40,10 +40,6 @@ You can check whether the job succeeds by using the Get-AzureRmSiteRecoveryJob c
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -53,7 +49,7 @@ Specifies the Site Recovery protection entity object.
 ```yaml
 Type: ASRProtectionEntity
 Parameter Sets: ByPEObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -72,7 +68,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,7 +80,7 @@ Accept wildcard characters: False
 ### -Optimize
 Specifies what to optimize for.
 This parameter applies when failover is done from an Azure site to an on-premise site which requires a substantial data synchronization.
-Valid values are: 
+Valid values are:
 
 - ForDowntime
 - ForSynchronization
@@ -101,7 +97,7 @@ Synchronization starts after shutdown to complete the failover operation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +115,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +129,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRServer
 Parameter Sets: ByPEObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +143,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRRecoveryServicesProvider
 Parameter Sets: ByRPIObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +158,7 @@ Specifies the primary certificate file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +173,7 @@ Specifies the secondary certificate file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +188,7 @@ Specifies a recovery plan object.
 ```yaml
 Type: ASRRecoveryPlan
 Parameter Sets: ByRPObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -206,7 +202,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRReplicationProtectedItem
 Parameter Sets: ByRPIObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -225,5 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

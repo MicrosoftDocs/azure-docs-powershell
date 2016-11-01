@@ -33,10 +33,6 @@ The **Start-AzureRmSiteRecoveryCommitFailoverJob** cmdlet starts the commit fail
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -45,7 +41,7 @@ The **Start-AzureRmSiteRecoveryCommitFailoverJob** cmdlet starts the commit fail
 ```yaml
 Type: ASRReplicationProtectedItem
 Parameter Sets: ByRPIObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,7 +56,7 @@ Specifies a recovery plan object.
 ```yaml
 Type: ASRRecoveryPlan
 Parameter Sets: ByRPObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,7 +71,7 @@ Specifies the Site Recovery protection entity object.
 ```yaml
 Type: ASRProtectionEntity
 Parameter Sets: ByPEObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -94,5 +90,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

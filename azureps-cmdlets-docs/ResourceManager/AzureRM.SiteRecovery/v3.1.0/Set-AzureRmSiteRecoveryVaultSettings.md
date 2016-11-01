@@ -28,10 +28,6 @@ This does not apply to recovery services vaults.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -41,7 +37,7 @@ Specifies an **ASRVault** object.
 ```yaml
 Type: ASRVault
 Parameter Sets: AzureSiteRecoveryVault
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -56,7 +52,7 @@ Specifies an **ARSVault** object.
 ```yaml
 Type: ARSVault
 Parameter Sets: AzureRecoveryServicesVault
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -77,5 +73,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmSiteRecoveryVaultSettings](./Get-AzureRmSiteRecoveryVaultSettings.md)
-
-

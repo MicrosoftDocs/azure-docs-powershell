@@ -52,10 +52,6 @@ The **Get-AzureRmSiteRecoveryNetwork** cmdlet gets information about Azure Site 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -64,7 +60,7 @@ The **Get-AzureRmSiteRecoveryNetwork** cmdlet gets information about Azure Site 
 ```yaml
 Type: ASRServer
 Parameter Sets: ByFriendlyNameLegacy, ByNameLegacy, ByServerObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,7 +75,7 @@ Specifies the name of the virtual machine network.
 ```yaml
 Type: String
 Parameter Sets: ByNameLegacy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,7 +87,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -106,7 +102,7 @@ Specifies the friendly name of the virtual machine network.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyNameLegacy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,7 +114,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +128,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRFabric
 Parameter Sets: ByFriendlyName, ByName, ByFabricObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -151,5 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

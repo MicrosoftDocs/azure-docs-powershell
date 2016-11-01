@@ -34,10 +34,6 @@ You can use this cmdlet to view the operation information for the current Site R
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -48,7 +44,7 @@ This cmdlet gets all jobs that started after the specified time.
 ```yaml
 Type: DateTime
 Parameter Sets: ByParam
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,7 +62,7 @@ For more information, type `Get-Help Get-Date`.
 ```yaml
 Type: DateTime
 Parameter Sets: ByParam
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +77,7 @@ Specifies the ID of the object targeted by the job.
 ```yaml
 Type: String
 Parameter Sets: ByParam
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +102,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: ByParam
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +117,7 @@ Specifies a unique name that identifies the job.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +132,7 @@ Specifies the Site Recovery job.
 ```yaml
 Type: ASRJob
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -161,5 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-AzureRmSiteRecoveryJob](./Resume-AzureRmSiteRecoveryJob.md)
 
 [Stop-AzureRmSiteRecoveryJob](./Stop-AzureRmSiteRecoveryJob.md)
-
-

@@ -47,14 +47,14 @@ It does not modify the permissions that other users, applications, or security g
 
 If you are setting permissions for a security group, this operation affects only users in that security group.
 
-The following directories must all be the same Azure directory: 
-- The default directory of the Azure subscription in which the key vault resides. 
+The following directories must all be the same Azure directory:
+- The default directory of the Azure subscription in which the key vault resides.
 - The Azure directory that contains the user or application group that you are granting permissions to.
 
-Examples of scenarios when these conditions are not met and this cmdlet will not work are: 
+Examples of scenarios when these conditions are not met and this cmdlet will not work are:
 
 - Authorizing a user from a different organization to manage your key vault.
-Each organization has its own directory. 
+Each organization has its own directory.
 - Your Azure account has multiple directories.
 If you register an application in a directory other than the default directory, you cannot authorize that application to use your key vault.
 The application must be in the default directory.
@@ -150,7 +150,7 @@ For future use.
 ```yaml
 Type: Guid
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ Use this parameter only if you want to grant access to your key vault to an obje
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ Enables the Microsoft.Compute resource provider to retrieve secrets from this ke
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ Enables the Azure disk encryption service to get secrets and unwrap keys from th
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Enables Azure Resource Manager to get secrets from this key vault when this key 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ Specifies the object ID of the user or service principal in Azure Active Directo
 ```yaml
 Type: Guid
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -242,7 +242,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -257,7 +257,7 @@ Specifies an array of certificate permissions to grant to a user or service prin
 ```yaml
 Type: String[]
 Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId
-Aliases: 
+Aliases:
 Accepted values: get, list, delete, create, import, update, managecontacts, getissuers, listissuers, setissuers, deleteissuers, all
 
 Required: False
@@ -275,22 +275,22 @@ The acceptable values for this parameter are:
 - Encrypt
 - UnwrapKey
 - WrapKey
-- Verify 
+- Verify
 - Sign
 - Get
 - List
 - Update
 - Create
 - Import
-- Delete 
-- Backup 
+- Delete
+- Backup
 - Restore
 - All
 
 ```yaml
 Type: String[]
 Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId
-Aliases: 
+Aliases:
 Accepted values: decrypt, encrypt, unwrapKey, wrapKey, verify, sign, get, list, update, create, import, delete, backup, restore, all
 
 Required: False
@@ -307,13 +307,13 @@ The acceptable values for this parameter are:
 - Get
 - List
 - Set
-- Delete 
+- Delete
 - All
 
 ```yaml
 Type: String[]
 Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId
-Aliases: 
+Aliases:
 Accepted values: get, list, set, delete, all
 
 Required: False
@@ -329,7 +329,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -378,7 +378,7 @@ This cmdlet modifies the access policy for the key vault that this parameter spe
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -404,7 +404,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -437,5 +436,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmKeyVault](./Get-AzureRmKeyVault.md)
 
 [Remove-AzureRmKeyVaultAccessPolicy](./Remove-AzureRmKeyVaultAccessPolicy.md)
-
-

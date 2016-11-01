@@ -26,31 +26,31 @@ The **Set-AzureKeyVaultCertificateAttribute** cmdlet modifies the editable attri
 ```
 PS C:\>$Tags = @{ "Team" = "Azure" ; "Role" = "Engg" }
 PS C:\> Set-AzureKeyVaultCertificateAttribute -VaultName "ContosoKV01" -Name "TestCert01" -Tags $Tags
-PS C:\> Get-AzureKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01" 
+PS C:\> Get-AzureKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
 Name        : "TestCert01"
-Certificate : [Subject] 
+Certificate : [Subject]
                 CN=AZURE
 
-              [Issuer] 
+              [Issuer]
                 CN=AZURE
 
-              [Serial Number] 
+              [Serial Number]
                 5A2EF60501F241D6A4336841B36FEA41
 
-              [Not Before] 
+              [Not Before]
                 7/27/2016 6:50:01 PM
 
-              [Not After] 
+              [Not After]
                 7/27/2018 7:00:01 PM
 
-              [Thumbprint] 
+              [Thumbprint]
                 A565D568082FEE2BE33B356ECC3703C2E9886555
 
 Id          : https://ContosoKV01.vault.azure.net:443/certificates/tt02
 KeyId       : https://ContosoKV01.vault.azure.net:443/keys/tt02
 SecretId    : https://ContosoKV01.vault.azure.net:443/secrets/tt02
 Thumbprint  : A565D568082FEE2BE33B356ECC3703C2E9886555
-Tags        : {[Role, Engg], [Team, Azure]} 
+Tags        : {[Role, Engg], [Team, Azure]}
 Enabled     : True
 Created     : 7/28/2016 2:00:01 AM
 Updated     : 8/1/2016 5:37:48 PM
@@ -71,7 +71,7 @@ Specify $True to enable or $False to disable.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ This cmdlet constructs the FQDN of a key vault based on the name and currently s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -165,7 +165,7 @@ Specifies a hash table that contains certificate tags.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +176,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -203,5 +202,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Add-AzureKeyVaultCertificate](./Add-AzureKeyVaultCertificate.md)
-
-

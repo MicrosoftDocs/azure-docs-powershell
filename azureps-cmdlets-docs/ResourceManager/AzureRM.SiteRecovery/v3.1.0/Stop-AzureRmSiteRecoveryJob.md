@@ -27,10 +27,6 @@ The **Stop-AzureRmSiteRecoveryJob** cmdlet stops an Azure Site Recovery job.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -40,7 +36,7 @@ Specifies the Site Recovery job object to stop.
 ```yaml
 Type: ASRJob
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -55,7 +51,7 @@ Specifies the unique name for the Site Recovery job to stop.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -80,5 +76,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Restart-AzureRmSiteRecoveryJob](./Restart-AzureRmSiteRecoveryJob.md)
 
 [Resume-AzureRmSiteRecoveryJob](./Resume-AzureRmSiteRecoveryJob.md)
-
-

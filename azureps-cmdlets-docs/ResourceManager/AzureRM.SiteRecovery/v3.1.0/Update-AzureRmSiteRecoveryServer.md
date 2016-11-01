@@ -21,10 +21,6 @@ The **Update-AzureRmSiteRecoveryServer** cmdlet refreshes an Azure Site Recovery
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -34,7 +30,7 @@ Specifies the Site Recovery server that this cmdlet updates.
 ```yaml
 Type: ASRServer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,5 +53,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryServer](./Get-AzureRmSiteRecoveryServer.md)
 
 [Remove-AzureRmSiteRecoveryServer](./Remove-AzureRmSiteRecoveryServer.md)
-
-

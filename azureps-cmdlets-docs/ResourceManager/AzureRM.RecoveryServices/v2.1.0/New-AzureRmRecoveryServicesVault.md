@@ -22,10 +22,6 @@ The **New-AzureRmRecoveryServicesVault** cmdlet creates a new Recovery Services 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ Specifies the name of the geographic location of the vault.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -50,7 +46,7 @@ Specifies the name of the vault to create.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -65,7 +61,7 @@ Specifies the name of the Azure resource group in which to create or from which 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -90,5 +86,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmRecoveryServicesVaultSettingsFile](./Get-AzureRmRecoveryServicesVaultSettingsFile.md)
 
 [Remove-AzureRmRecoveryServicesVault](./Remove-AzureRmRecoveryServicesVault.md)
-
-

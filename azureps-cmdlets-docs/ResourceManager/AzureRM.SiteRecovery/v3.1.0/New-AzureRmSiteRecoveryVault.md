@@ -21,10 +21,6 @@ The **New-AzureRmSiteRecoveryVault** cmdlet creates an Azure Site Recovery servi
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -34,7 +30,7 @@ Specifies the name of the vault.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -49,7 +45,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -64,7 +60,7 @@ Specifies the geographical location name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -87,5 +83,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryVault](./Get-AzureRmSiteRecoveryVault.md)
 
 [Remove-AzureRmSiteRecoveryVault](./Remove-AzureRmSiteRecoveryVault.md)
-
-

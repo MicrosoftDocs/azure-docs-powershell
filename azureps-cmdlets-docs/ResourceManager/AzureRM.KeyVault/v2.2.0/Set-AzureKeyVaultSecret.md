@@ -27,7 +27,7 @@ If the secret already exists, this cmdlet creates a new version of that secret.
 
 ### Example 1: Modify the value of a secret using default attributes
 ```
-PS C:\>$Secret = ConvertTo-SecureString -String 'Password' -AsPlainText -Force 
+PS C:\>$Secret = ConvertTo-SecureString -String 'Password' -AsPlainText -Force
 PS C:\> Set-AzureKeyVaultSecret -VaultName 'Contoso' -Name 'ITSecret' -SecretValue $Secret
 ```
 
@@ -39,7 +39,7 @@ The secret value becomes the value stored in $Secret.
 
 ### Example 2: Modify the value of a secret using custom attributes
 ```
-PS C:\>$Secret = ConvertTo-SecureString -String 'Password' -AsPlainText -Force 
+PS C:\>$Secret = ConvertTo-SecureString -String 'Password' -AsPlainText -Force
 PS C:\> $Expires = (Get-Date).AddYears(2).ToUniversalTime()
 PS C:\> $NBF =(Get-Date).ToUniversalTime()
 PS C:\> $Tags = @{ 'Severity' = 'medium'; 'IT' = null }
@@ -63,7 +63,7 @@ To delete the existing content type, specify an empty string.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +78,7 @@ Indicates that this cmdlet disables a secret.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ For more information, type `Get-Help Get-Date`.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ For more information, type `Get-Help ConvertTo-SecureString`.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -162,7 +162,7 @@ This cmdlet constructs the FQDN of a key vault based on the name that this param
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -203,7 +203,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -236,5 +235,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureKeyVaultSecret](./Get-AzureKeyVaultSecret.md)
 
 [Remove-AzureKeyVaultSecret](./Remove-AzureKeyVaultSecret.md)
-
-

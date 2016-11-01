@@ -21,10 +21,6 @@ The **New-AzureRmSiteRecoverySite** cmdlet creates an Azure Site Recovery site i
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -34,7 +30,7 @@ Specifies the name of the site.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,5 +53,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoverySite](./Get-AzureRmSiteRecoverySite.md)
 
 [Remove-AzureRmSiteRecoverySite](./Remove-AzureRmSiteRecoverySite.md)
-
-

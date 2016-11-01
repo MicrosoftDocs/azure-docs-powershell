@@ -40,10 +40,6 @@ The **Get-AzureRmSiteRecoveryReplicationProtectedItem** cmdlet gets the properti
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -53,7 +49,7 @@ Specifies the Azure Site Recovery Protection Container object.
 ```yaml
 Type: ASRProtectionContainer
 Parameter Sets: ByObject, ByObjectWithName, ByObjectWithFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -68,7 +64,7 @@ Specifies the name of the Replication Protected Item that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -83,7 +79,7 @@ Specifies the friendly name of the Replication Protected Item that this cmdlet g
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,7 +94,7 @@ Specifies the Protectable Item corresponding to the Replication Protected Item.
 ```yaml
 Type: ASRProtectableItem
 Parameter Sets: ByProtectableItemObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -125,5 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmSiteRecoveryReplicationProtectedItem](./Remove-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
 [Set-AzureRmSiteRecoveryReplicationProtectedItem](./Set-AzureRmSiteRecoveryReplicationProtectedItem.md)
-
-

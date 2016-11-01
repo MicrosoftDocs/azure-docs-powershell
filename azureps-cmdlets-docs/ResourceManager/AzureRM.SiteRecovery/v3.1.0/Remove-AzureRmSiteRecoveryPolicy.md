@@ -21,10 +21,6 @@ The **Remove-AzureRMSiteRecoveryPolicy** cmdlet removes an Azure Site Recovery r
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -34,7 +30,7 @@ Specifies the Site Recovery policy object.
 ```yaml
 Type: ASRPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,5 +53,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryPolicy](./Get-AzureRmSiteRecoveryPolicy.md)
 
 [New-AzureRmSiteRecoveryPolicy](./New-AzureRmSiteRecoveryPolicy.md)
-
-
