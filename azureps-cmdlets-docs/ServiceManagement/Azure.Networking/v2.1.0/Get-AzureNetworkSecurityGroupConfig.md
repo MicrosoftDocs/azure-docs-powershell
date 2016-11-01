@@ -23,10 +23,7 @@ Specify the *Detailed* parameter to display the network security rules.
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -36,7 +33,7 @@ Indicates that this cmdlet displays the network security rules.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -52,7 +49,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,5 +87,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureNetworkSecurityGroup](./New-AzureNetworkSecurityGroup.md)
 
 [Remove-AzureNetworkSecurityGroup](./Remove-AzureNetworkSecurityGroup.md)
-
-

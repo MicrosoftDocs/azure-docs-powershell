@@ -24,10 +24,7 @@ The **Set-AzureNetworkSecurityRule** cmdlet adds or modifies an Azure network se
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -37,7 +34,7 @@ Specifies the name for the network security rule that this cmdlet adds or modifi
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -53,7 +50,7 @@ Valid values are: Inbound and Outbound.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -69,7 +66,7 @@ Valid values are: integers from 100 to 4096.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -85,7 +82,7 @@ Valid values are: Allow and Deny.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,7 +98,7 @@ An asterisk (*) specifies any IP address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +116,7 @@ A hyphen separates the two values.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,7 +132,7 @@ An asterisk (*) specifies any IP address.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -153,7 +150,7 @@ A hyphen separates the two values.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,16 +161,16 @@ Accept wildcard characters: False
 
 ### -Protocol
 Specifies the protocol for the network security rule.
-Valid values are: 
+Valid values are:
 
-- TCP 
-- UDP 
+- TCP
+- UDP
 - *
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +186,7 @@ To obtain an **INetworkSecurityGroup** object, use the Get-AzureNetworkSecurityG
 ```yaml
 Type: INetworkSecurityGroup
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -205,7 +202,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,5 +223,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-AzureNetworkSecurityRule](./Remove-AzureNetworkSecurityRule.md)
-
-

@@ -21,10 +21,7 @@ The **Get-AzureVirtualNetworkGateway** cmdlet gets an Azure virtual network gate
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -34,7 +31,7 @@ Specifies the ID of the gateway.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -50,7 +47,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,5 +74,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Reset-AzureVirtualNetworkGateway](./Reset-AzureVirtualNetworkGateway.md)
 
 [Resize-AzureVirtualNetworkGateway](./Resize-AzureVirtualNetworkGateway.md)
-
-

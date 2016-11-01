@@ -22,10 +22,7 @@ The **Get-AzureVNetGatewayKey** cmdlet gets the pre-shared key for the connectio
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -35,7 +32,7 @@ Specifies the virtual network for which this cmdlet gets the shared key for conn
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -50,7 +47,7 @@ Specifies the name of the local network site that connects to the virtual networ
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -66,7 +63,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,5 +84,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureVNetGatewayKey](./Set-AzureVNetGatewayKey.md)
-
-
