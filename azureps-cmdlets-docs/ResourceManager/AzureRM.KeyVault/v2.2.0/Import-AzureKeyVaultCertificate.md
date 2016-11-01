@@ -40,7 +40,7 @@ Import-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String>
 ## DESCRIPTION
 The **Import-AzureKeyVaultCertificate** cmdlet imports a certificate into a key vault.
 
-You can create the certificate to import by using one of the following methods: 
+You can create the certificate to import by using one of the following methods:
 
 - Use the New-AzureKeyVaultCertificateSigningRequest cmdlet to create a certificate signing request and submit it to a certificate authority.
 - Use an existing certificate package file, such as a .pfx or .p12 file, which contains both the certificate and private key.
@@ -52,26 +52,26 @@ You can create the certificate to import by using one of the following methods:
 PS C:\>$Password = ConvertTo-SecureString -String "123" -AsPlainText -Force
 PS C:\> Import-AzureKeyVaultCertificate -VaultName "ContosoKV01" -Name "ImportCert01" -FilePath "C:\Users\contosoUser\Desktop\import.pfx" -Password $Password
 Name        : importCert01
-Certificate : [Subject] 
+Certificate : [Subject]
                 CN=contoso.com
 
-              [Issuer] 
+              [Issuer]
                 CN=contoso.com
 
-              [Serial Number] 
+              [Serial Number]
                 05979C5A2F0741D5A3B6F97673E8A118
 
-              [Not Before] 
+              [Not Before]
                 2/8/2016 3:11:45 PM
 
-              [Not After] 
+              [Not After]
                 8/8/2016 4:21:45 PM
 
-              [Thumbprint] 
+              [Thumbprint]
                 3E9B6848AD1834284157D68B060F748037F663C8
 
 Thumbprint  : 3E9B6848AD1834284157D68B060F748037F663C8
-Tags        : 
+Tags        :
 Enabled     : True
 Created     : 2/8/2016 11:50:43 PM
 Updated     : 2/8/2016 11:50:43 PM
@@ -89,7 +89,7 @@ Specifies the certificate collection to add to a key vault.
 ```yaml
 Type: X509Certificate2Collection
 Parameter Sets: ImportWithPrivateKeyFromCollection
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ Specifies a certificate string.
 ```yaml
 Type: String
 Parameter Sets: ImportWithPrivateKeyFromString
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +119,7 @@ Specifies the path of the certificate file that this cmdlet imports.
 ```yaml
 Type: String
 Parameter Sets: ImportCertificateFromFile, ImportWithPrivateKeyFromFile
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -150,7 +150,7 @@ Specifies the password for a certificate file.
 ```yaml
 Type: SecureString
 Parameter Sets: ImportWithPrivateKeyFromFile, ImportWithPrivateKeyFromString
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ This cmdlet constructs the fully qualified domain name (FQDN) of a key vault bas
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +196,7 @@ Specifies a hash table that contains certificate tags.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +207,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -236,5 +235,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-AzureKeyVaultCertificate](./Remove-AzureKeyVaultCertificate.md)
-
-

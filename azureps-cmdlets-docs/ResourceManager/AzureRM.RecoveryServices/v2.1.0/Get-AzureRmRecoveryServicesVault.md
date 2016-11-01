@@ -21,10 +21,6 @@ The **Get-AzureRmRecoveryServicesVault** cmdlet gets a list of Recovery Services
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -34,7 +30,7 @@ Specifies the name of the vault to query for.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -49,7 +45,7 @@ Specifies the name of the Azure resource group in which to create or from which 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,5 +70,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmRecoveryServicesVault](./New-AzureRmRecoveryServicesVault.md)
 
 [Remove-AzureRmRecoveryServicesVault](./Remove-AzureRmRecoveryServicesVault.md)
-
-

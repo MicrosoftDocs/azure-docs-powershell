@@ -21,10 +21,6 @@ The **Set-AzureRmRecoveryServicesVaultContext** cmdlet sets the vault context fo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ The vault must be an **AzureRmRecoveryServicesVault** object.
 ```yaml
 Type: ARSVault
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -54,5 +50,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

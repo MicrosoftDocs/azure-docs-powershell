@@ -25,7 +25,7 @@ The **Set-AzureKeyVaultKeyAttribute** cmdlet updates the editable attributes of 
 
 ### Example 1: Modify a key to enable it, and set the expiration date and tags
 ```
-PS C:\>$Expires = (Get-Date).AddYears(2).ToUniversalTime() 
+PS C:\>$Expires = (Get-Date).AddYears(2).ToUniversalTime()
 PS C:\> $Tags = @{'Severity' = 'high'; 'Accounting' = null}
 PS C:\> Set-AzureKeyVaultKeyAttribute -VaultName 'Contoso' -Name 'ITSoftware' -Expires $Expires -Enable $True -Tags $Tags -PassThru
 ```
@@ -58,7 +58,7 @@ If you do not specify this parameter, this cmdlet does not modify the status of 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,7 +76,7 @@ For more information, type `Get-Help Get-Date`.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,13 +90,13 @@ Specifies an array of operations that can be performed by using the key that thi
 If you do not specify this parameter, all operations can be performed.
 
 The acceptable values for this parameter are a comma-separated list of key operations as defined by the JSON Web Key specification.
-These values (case-sensitive) are: 
+These values (case-sensitive) are:
 
-- encrypt 
-- decrypt 
-- wrap 
-- unwrap 
-- sign 
+- encrypt
+- decrypt
+- wrap
+- unwrap
+- sign
 - verify
 - backup
 - restore
@@ -104,7 +104,7 @@ These values (case-sensitive) are:
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ This cmdlet constructs the FQDN of a key vault based on the name that this param
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -226,7 +226,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -261,5 +260,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureKeyVaultKey](./Get-AzureKeyVaultKey.md)
 
 [Remove-AzureKeyVaultKey](./Remove-AzureKeyVaultKey.md)
-
-
