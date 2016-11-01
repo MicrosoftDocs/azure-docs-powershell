@@ -22,10 +22,6 @@ The **Reset-AzureVirtualNetworkGatewayKey** cmdlet resets a virtual network gate
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ Specifies the ID of a connected entity.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -50,7 +46,7 @@ Specifies the ID of a gateway.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -60,12 +56,14 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-ps_azureprofile_description
+Specifies the Azure profile from which this cmdlet reads.
+If you do not specify a profile, this cmdlet reads from the local default profile.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +78,7 @@ Specifies the key length.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -103,5 +101,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureVirtualNetworkGatewayKey](./Get-AzureVirtualNetworkGatewayKey.md)
 
 [Set-AzureVirtualNetworkGatewayKey](./Set-AzureVirtualNetworkGatewayKey.md)
-
-

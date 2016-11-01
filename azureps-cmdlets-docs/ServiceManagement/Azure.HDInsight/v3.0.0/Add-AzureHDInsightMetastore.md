@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 32FE6891-A693-4B63-B39B-1FF14D148837
 ---
@@ -44,14 +44,14 @@ This command adds a SQL Server database named ContosoSQLServer to serve as a Hiv
 PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
 PS C:\> $Key1 = Get-AzureStorageKey -StorageAccountName "MyBlobStorage" | %{ $_.Primary }
 PS C:\> $Key2 = Get-AzureStorageKey -StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
-PS C:\> $Creds = Get-Credential 
+PS C:\> $Creds = Get-Credential
 PS C:\> $OozieCreds = Get-Credential
 PS C:\> $HiveCreds = Get-Credential
-PS C:\> New-AzureHDInsightClusterConfig -ClusterSizeInNodes 4 
-    | Set-AzureHDInsightDefaultStorage -StorageAccountName "MyBlobStorage.blob.core.windows.net" -StorageAccountKey $Key1 -StorageContainerName "MyContainer" 
-    | Add-AzureHDInsightStorage -StorageAccountName "MySecondBlobStorage.blob.core.windows.net" -StorageAccountKey $Key2 
-    | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.windows.net" -DatabaseName "MyOozieDatabaseName" -Credential $OozieCreds -MetastoreType OozieMetastore 
-    | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.widows.net" -DatabaseName "MyHiveDatabaseName" -Credential $HiveCreds -MetastoreType HiveMetastore 
+PS C:\> New-AzureHDInsightClusterConfig -ClusterSizeInNodes 4
+    | Set-AzureHDInsightDefaultStorage -StorageAccountName "MyBlobStorage.blob.core.windows.net" -StorageAccountKey $Key1 -StorageContainerName "MyContainer"
+    | Add-AzureHDInsightStorage -StorageAccountName "MySecondBlobStorage.blob.core.windows.net" -StorageAccountKey $Key2
+    | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.windows.net" -DatabaseName "MyOozieDatabaseName" -Credential $OozieCreds -MetastoreType OozieMetastore
+    | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.widows.net" -DatabaseName "MyHiveDatabaseName" -Credential $HiveCreds -MetastoreType HiveMetastore
     | New-AzureHDInsightCluster -Subscription $SubId -Credential $Creds
 ```
 
@@ -61,13 +61,13 @@ The second and third commands use the Get-AzureStorageKey cmdlet to get the prim
 
 The fourth, fifth, and sixth commands use the Get-Credential cmdlet to get credentials for the current subscription and for Oozie and Hive, and then store the credentials in variables.
 
-The final command performs a sequence of operations by using these cmdlets: 
+The final command performs a sequence of operations by using these cmdlets:
 
- -- New-AzureHDInsightClusterConfig to create an HDInsight cluster configuration.
-- Set-AzureHDInsightDefaultStorage to set the default storage account for the configuration to MyBlobStorage.blob.core.windows.net.
-- Add-AzureHDInsightStorage to add a second storage account named MySecondBlobStorage.blob.core.windows.net to the configuration.
+- **New-AzureHDInsightClusterConfig** to create an HDInsight cluster configuration.
+- **Set-AzureHDInsightDefaultStorage** to set the default storage account for the configuration to MyBlobStorage.blob.core.windows.net.
+- **Add-AzureHDInsightStorage** to add a second storage account named MySecondBlobStorage.blob.core.windows.net to the configuration.
 - **Add-AzureHDInsightMetastore** to add a metastore for Oozie and a metastore for Hive to the configuration.
-- New-AzureHDInsightCluster to create an HDInsight cluster with the new configuration.
+- **New-AzureHDInsightCluster** to create an HDInsight cluster with the new configuration.
 
 ## PARAMETERS
 
@@ -78,7 +78,7 @@ This cmdlet adds metastore information to the configuration object that this par
 ```yaml
 Type: AzureHDInsightConfig
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -93,7 +93,7 @@ Specifies the credentials that are used to access a SQL Server database.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -108,7 +108,7 @@ Specifies the name of the database to store Hive or Oozie metadata.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -124,7 +124,7 @@ The acceptable values for this parameter are: HiveMetaStore or OozieMetaStore.
 ```yaml
 Type: AzureHDInsightMetastoreType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -139,7 +139,7 @@ Specifies the fully qualified domain name (FQDN) of the SQL Server that contains
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -155,7 +155,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,5 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureHDInsightClusterConfig](./New-AzureHDInsightClusterConfig.md)
 
 [Set-AzureHDInsightDefaultStorage](./Set-AzureHDInsightDefaultStorage.md)
-
-

@@ -22,10 +22,6 @@ The **Get-AzureVirtualNetworkGatewayConnection** cmdlet gets an Azure virtual ne
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ Specifies the ID of a connected entity.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -50,7 +46,7 @@ Specifies the ID of the gateway.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -60,12 +56,14 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-ps_azureprofile_description
+Specifies the Azure profile from which this cmdlet reads.
+If you do not specify a profile, this cmdlet reads from the local default profile.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,5 +88,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureVirtualNetworkGatewayConnection](./Remove-AzureVirtualNetworkGatewayConnection.md)
 
 [Reset-AzureVirtualNetworkGatewayConnection](./Reset-AzureVirtualNetworkGatewayConnection.md)
-
-

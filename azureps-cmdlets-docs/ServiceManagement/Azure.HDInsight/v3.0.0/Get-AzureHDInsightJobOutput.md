@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 64C57ADB-80D8-4494-BF1E-AC594D54852B
 ---
@@ -24,9 +24,9 @@ This version of Azure PowerShell HDInsight is deprecated.
 These cmdlets will be removed by January 1, 2017.
 Please use the newer version of Azure PowerShell HDInsight.
 
-For information about how to use the new HDInsight to create a cluster, see Create Linux-based clusters in HDInsight using Azure PowerShellhttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/.
-For information about how to submit jobs by using Azure PowerShell and other approaches, see Submit Hadoop jobs in HDInsighthttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/.
-For reference information about Azure PowerShell HDInsight, see Azure HDInsight Cmdletshttps://msdn.microsoft.com/en-us/library/mt438705.aspx.
+For information about how to use the new HDInsight to create a cluster, see Create Linux-based clusters in [HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
+For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](https://msdn.microsoft.com/en-us/library/mt438705.aspx).
 
 The **Get-AzureHDInsightJobOutput** cmdlet gets the log output for a job from the storage account associated with a cluster.
 You can get various types of job logs including standard output, standard error, task logs, and a summary of the task logs.
@@ -36,10 +36,10 @@ You can get various types of job logs including standard output, standard error,
 ### Example 1: Get job output
 ```
 PS C:\>$SubId = (Get-AzureSubscription  ¢â‚¬"Current).SubscriptionId
-PS C:\> $ClusterName = "MyCluster" 
-PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" $WordCountJob 
-    | Start-AzureHDInsightJob -Subscription $SubId -Cluster $ClusterName 
-    | Wait-AzureHDInsightJob -Subscription $SubId -WaitTimeoutInSeconds 3600 
+PS C:\> $ClusterName = "MyCluster"
+PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" $WordCountJob
+    | Start-AzureHDInsightJob -Subscription $SubId -Cluster $ClusterName
+    | Wait-AzureHDInsightJob -Subscription $SubId -WaitTimeoutInSeconds 3600
     | Get-AzureHDInsightJobOutput -Cluster $ClusterName -StandardError
 ```
 
@@ -105,7 +105,7 @@ Indicates that this cmdlet gets the task logs for a job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Indicates that this cmdlet gets the StdErr output of a job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ Indicates that this cmdlet gets the SdtOut output of a job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Indicates that this cmdlets gets the task log summary.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -242,7 +242,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -267,5 +267,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureHDInsightJob](./Start-AzureHDInsightJob.md)
 
 [Wait-AzureHDInsightJob](./Wait-AzureHDInsightJob.md)
-
-

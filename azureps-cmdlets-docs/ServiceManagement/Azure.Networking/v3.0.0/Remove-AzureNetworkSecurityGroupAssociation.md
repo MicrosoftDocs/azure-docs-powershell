@@ -49,12 +49,12 @@ The current cmdlet removes the network security group named ContosoNetworkSecuri
 ## PARAMETERS
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +69,7 @@ Specifies the name of the network security group that this cmdlet removes.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -84,7 +84,7 @@ Specifies the name of the network adapter from which this cmdlet removes the net
 ```yaml
 Type: String
 Parameter Sets: RemoveNetworkSecurityGroupAssociationFromIaaSRole, RemoveNetworkSecurityGroupAssociationFromPaaSRole
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -94,12 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-passthru
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,12 +125,14 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-ps_azureprofile_description
+Specifies the Azure profile from which this cmdlet reads.
+If you do not specify a profile, this cmdlet reads from the local default profile.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +147,7 @@ Specifies the name of a PaaS role from which this cmdlet removes the network sec
 ```yaml
 Type: String
 Parameter Sets: RemoveNetworkSecurityGroupAssociationFromPaaSRole
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -160,7 +163,7 @@ The PaaS role from which this cmdlet removes a network security group belongs to
 ```yaml
 Type: String
 Parameter Sets: RemoveNetworkSecurityGroupAssociationFromIaaSRole, RemoveNetworkSecurityGroupAssociationFromPaaSRole
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -172,17 +175,17 @@ Accept wildcard characters: False
 ### -Slot
 Specifies a PaaS slot.
 The PaaS role from which this cmdlet removes a network security group has the slot that this parameter specifies.
-Valid values are: 
+Valid values are:
 
 - Production
-- Staging 
+- Staging
 
 The default value is Production.
 
 ```yaml
 Type: String
 Parameter Sets: RemoveNetworkSecurityGroupAssociationFromPaaSRole
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -197,7 +200,7 @@ Specifies the name of a subnet from which this cmdlet removes the network securi
 ```yaml
 Type: String
 Parameter Sets: RemoveNetworkSecurityGroupAssociationFromSubnet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -212,7 +215,7 @@ Specifies the name of a virtual network that contains the subnet from which this
 ```yaml
 Type: String
 Parameter Sets: RemoveNetworkSecurityGroupAssociationFromSubnet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -227,7 +230,7 @@ Specifies the virtual machine to which this cmdlet applies the network security 
 ```yaml
 Type: PersistentVMRoleContext
 Parameter Sets: RemoveNetworkSecurityGroupAssociationFromIaaSRole
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -252,5 +255,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureNetworkSecurityGroupAssociation](./Get-AzureNetworkSecurityGroupAssociation.md)
 
 [Set-AzureNetworkSecurityGroupAssociation](./Set-AzureNetworkSecurityGroupAssociation.md)
-
-
