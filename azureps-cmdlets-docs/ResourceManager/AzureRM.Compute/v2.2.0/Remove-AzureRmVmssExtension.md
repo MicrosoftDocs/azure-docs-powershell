@@ -22,10 +22,6 @@ The **Remove-AzureRmVmssExtension** cmdlet removes an extension from the Virtual
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ Specifies the name of the extension that this cmdlet removes from the VMSS.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -50,7 +46,7 @@ Specifies the VMSS from which to remove the extension from.
 ```yaml
 Type: VirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -73,5 +69,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Add-AzureRmVmssExtension](./Add-AzureRmVmssExtension.md)
-
-

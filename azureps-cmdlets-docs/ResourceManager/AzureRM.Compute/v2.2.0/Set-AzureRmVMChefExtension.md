@@ -35,7 +35,7 @@ The **Set-AzureVMChefExtension** cmdlet adds the Chef extension to the virtual m
 
 ## EXAMPLES
 
-### Example 1: Add a cChef extension to a Windows virtual machineC
+### Example 1: Add a Chef extension to a Windows virtual machine
 ```
 PS C:\>Set-AzureRmVMChefExtension -ResourceGroupName "ResourceGroup001" -VMName "WindowsVM001" -ValidationPem "C:\my-org-validator.pem" -ClientRb "C:\client.rb" -RunList "Apache" -Windows
 ```
@@ -43,7 +43,7 @@ PS C:\>Set-AzureRmVMChefExtension -ResourceGroupName "ResourceGroup001" -VMName 
 This command adds a Chef extension to a Windows virtual machine named WindowsVM001.
 When the virtual machine starts, Chef bootstraps the virtual machine to run Apache.
 
-### Example 2: Add a Cchef extension to a Linux virtual machineC
+### Example 2: Add a Chef extension to a Linux virtual machine
 ```
 PS C:\>Set-AzureRmVMChefExtension -ResourceGroupName "ResourceGroup002" -VMName "LinuxVM001" -ValidationPem "C:\my-org-validator.pem" -ClientRb "C:\client.rb" -RunList "Apache" -Linux
 ```
@@ -66,7 +66,7 @@ After bootstrapping, the virtual machine refers to the BootstrapOptions specifie
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 11
@@ -81,7 +81,7 @@ Specifies configuration settings in the client_rb option.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ Specifies the version of the bootstrap configuration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ Specifies the Chef server link, as a URL.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Specifies the full path of the Chef client.rb.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Indicates that this cmdlet creates a Windows virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linux
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -156,7 +156,7 @@ Specifies the location of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -186,7 +186,7 @@ Specifies the organization name of the Chef extension.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ Specifies the name of the resource group that contains the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -216,7 +216,7 @@ Specifies the Chef node run list.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +260,7 @@ Specifies the Chef validator .pem file path
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -291,7 +291,7 @@ Indicates that this cmdlet creates a Windows virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
+
 The cmdlet is not run.
 
 ```yaml
@@ -346,5 +346,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVMChefExtension](./Get-AzureRmVMChefExtension.md)
 
 [Remove-AzureRmVMChefExtension](./Remove-AzureRmVMChefExtension.md)
-
-

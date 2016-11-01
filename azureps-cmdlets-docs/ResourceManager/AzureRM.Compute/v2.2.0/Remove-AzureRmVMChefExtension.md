@@ -29,14 +29,14 @@ The **Remove-AzureVMChefExtension** cmdlet removes the Chef extension from a vir
 
 ## EXAMPLES
 
-### Example 1: Remove a Cchef extension from a Windows virtual machineC
+### Example 1: Remove a Chef extension from a Windows virtual machine
 ```
 PS C:\>Remove-AzureRmVMChefExtension -ResourceGroupName "ResourceGroup001" -VMName "WindowsVM001" -Windows
 ```
 
 This command removes a Chef extension from a Windows based virtual machine named WindowsVM001 that belongs to the resource group named ResourceGroup001.
 
-### Example 2: Remove a Cchef extension from a Linux virtual machineC
+### Example 2: Remove a Chef extension from a Linux virtual machine
 ```
 PS C:\>Remove-AzureRmVMChefExtension -ResourceGroupName "ResourceGroup002" -VMName "LinuxVM001" -Linux
 ```
@@ -51,7 +51,7 @@ Indicates that this cmdlet targets a Linux virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linux
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -81,7 +81,7 @@ Specifies the name of the resource group that contains the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -111,7 +111,7 @@ Indicates that this cmdlet targets a Windows virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
+
 The cmdlet is not run.
 
 ```yaml
@@ -166,5 +166,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVMChefExtension](./Get-AzureRmVMChefExtension.md)
 
 [Set-AzureRmVMChefExtension](./Set-AzureRmVMChefExtension.md)
-
-
