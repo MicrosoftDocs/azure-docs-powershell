@@ -39,7 +39,7 @@ This is only valid for Windows Virtual Machine Scale Sets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -53,16 +53,18 @@ Specifies the URI of a certificate stored in the Key Vault.
 
 It is the base64 encoding of the following JSON Object which is encoded in UTF-8:
 
+```
 {
   "data":"\<Base64-encoded-certificate\>",
   "dataType":"pfx",
   "password":"\<pfx-file-password\>"
 }
+```
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -86,5 +88,3 @@ This cmdlet does not generate any output.
 ## RELATED LINKS
 
 [Add-AzureRmVmssSecret](./Add-AzureRmVmssSecret.md)
-
-

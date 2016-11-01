@@ -22,10 +22,6 @@ The **Set-AzureRmVmssVM** cmdlet modifies the state of a Virtual Machine Scale S
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ Specifies the ID of the VMSS instance for which this cmdlet modifies state.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -50,7 +46,7 @@ Indicates that this cmdlet reimages the VMSS instance.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -65,7 +61,7 @@ Specifies the name of the resource group that contains the VMSS instance.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -80,7 +76,7 @@ Specifies the name of the VMSS instance that this cmdlet modifies.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -101,5 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmVmssVM](./Get-AzureRmVmssVM.md)
-
-

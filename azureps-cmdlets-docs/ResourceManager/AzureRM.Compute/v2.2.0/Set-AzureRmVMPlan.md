@@ -24,10 +24,6 @@ Before being able to deploy a Marketplace image through the command-line, progra
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -39,7 +35,7 @@ For more information about how to find image information, see Navigating and Sel
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -55,7 +51,7 @@ This is the same information as the **Offer** value of the **imageReference** el
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -70,7 +66,7 @@ Specifies a promotion code.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -86,7 +82,7 @@ You can find this information by using the Get-AzureRmVMImagePublisher cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -130,5 +126,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVMImageSku](./Get-AzureRmVMImageSku.md)
 
 [New-AzureRmVMConfig](./New-AzureRmVMConfig.md)
-
-
