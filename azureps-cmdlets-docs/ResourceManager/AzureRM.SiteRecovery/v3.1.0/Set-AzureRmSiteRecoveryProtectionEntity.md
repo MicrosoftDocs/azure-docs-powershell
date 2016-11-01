@@ -43,10 +43,6 @@ The **Set-AzureRmSiteRecoveryProtectionEntity** cmdlet enables or disables prote
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -56,7 +52,7 @@ Specifies the protection entity object.
 ```yaml
 Type: ASRProtectionEntity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,7 +71,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -90,7 +86,7 @@ Indicates that the command waits for completion before returning.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +101,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +112,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
+
 The cmdlet is not run.
 
 ```yaml
@@ -132,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -152,7 +148,7 @@ Specifies the Site Recovery policy object.
 ```yaml
 Type: ASRPolicy
 Parameter Sets: EnterpriseToEnterprise, HyperVSiteToAzure, EnterpriseToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -167,7 +163,7 @@ Specifies the ID of the target Azure Storage account.
 ```yaml
 Type: String
 Parameter Sets: HyperVSiteToAzure, EnterpriseToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -182,7 +178,7 @@ Specifies the name of the disk that contains the operating system.
 ```yaml
 Type: String
 Parameter Sets: HyperVSiteToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -201,7 +197,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: HyperVSiteToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -222,5 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmSiteRecoveryProtectionEntity](./Get-AzureRmSiteRecoveryProtectionEntity.md)
-
-

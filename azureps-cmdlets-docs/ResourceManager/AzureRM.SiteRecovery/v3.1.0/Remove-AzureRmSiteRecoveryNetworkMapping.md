@@ -21,10 +21,6 @@ The **Remove-AzureRMSiteRecoveryNetworkMapping** cmdlet removes a network mappin
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -34,7 +30,7 @@ Specifies the network mapping object.
 ```yaml
 Type: ASRNetworkMapping
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,5 +53,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryNetworkMapping](./Get-AzureRmSiteRecoveryNetworkMapping.md)
 
 [New-AzureRmSiteRecoveryNetworkMapping](./New-AzureRmSiteRecoveryNetworkMapping.md)
-
-

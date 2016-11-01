@@ -29,10 +29,6 @@ The **Get-AzureRmSiteRecoveryProtectionContainerMapping** cmdlet gets informatio
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -42,7 +38,7 @@ Specifies the Azure Site Recovery Protection Container object.
 ```yaml
 Type: ASRProtectionContainer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,7 +53,7 @@ Specifies the name of the Protection Container mapping.
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,5 +78,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSiteRecoveryProtectionContainerMapping](./New-AzureRmSiteRecoveryProtectionContainerMapping.md)
 
 [Remove-AzureRmSiteRecoveryProtectionContainerMapping](./Remove-AzureRmSiteRecoveryProtectionContainerMapping.md)
-
-

@@ -32,10 +32,6 @@ The **Get-AzureRmSiteRecoveryPolicy** cmdlet gets the list of configured Azure S
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -45,7 +41,7 @@ Specifies the name of the Site Recovery replication policy.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,7 +56,7 @@ Specifies the friendly name of the Site Recovery replication policy.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -83,5 +79,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSiteRecoveryPolicy](./New-AzureRmSiteRecoveryPolicy.md)
 
 [Remove-AzureRmSiteRecoveryPolicy](./Remove-AzureRmSiteRecoveryPolicy.md)
-
-

@@ -21,10 +21,6 @@ The **Remove-AzureRmSiteRecoveryVault** cmdlet deletes an Azure Site Recovery va
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -34,7 +30,7 @@ Specifies the Site Recovery vault object.
 ```yaml
 Type: ASRVault
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,5 +53,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryVault](./Get-AzureRmSiteRecoveryVault.md)
 
 [New-AzureRmSiteRecoveryVault](./New-AzureRmSiteRecoveryVault.md)
-
-

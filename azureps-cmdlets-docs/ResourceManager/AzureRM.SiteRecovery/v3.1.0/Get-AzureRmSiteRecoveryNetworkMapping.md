@@ -44,10 +44,6 @@ The **Get-AzureRmSiteRecoveryNetworkMapping** cmdlet gets information about Azur
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -56,7 +52,7 @@ The **Get-AzureRmSiteRecoveryNetworkMapping** cmdlet gets information about Azur
 ```yaml
 Type: ASRFabric
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -71,7 +67,7 @@ Indicates that the command gets a list of network mappings for networks on the p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: EnterpriseToAzure, EnterpriseToAzureLegacy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -85,7 +81,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRFabric
 Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,7 +95,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRServer
 Parameter Sets: EnterpriseToAzureLegacy, EnterpriseToEnterpriseLegacy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,7 +109,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRServer
 Parameter Sets: EnterpriseToEnterpriseLegacy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,5 +132,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSiteRecoveryNetworkMapping](./New-AzureRmSiteRecoveryNetworkMapping.md)
 
 [Remove-AzureRmSiteRecoveryNetworkMapping](./Remove-AzureRmSiteRecoveryNetworkMapping.md)
-
-

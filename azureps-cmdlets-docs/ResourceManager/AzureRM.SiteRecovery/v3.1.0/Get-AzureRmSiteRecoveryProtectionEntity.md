@@ -34,10 +34,6 @@ The **Get-AzureRmSiteRecoveryProtectionEntity** cmdlet gets a list of protectabl
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -47,7 +43,7 @@ Specifies the protection container object.
 ```yaml
 Type: ASRProtectionContainer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -62,7 +58,7 @@ Specifies the name of the protection entity.
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -77,7 +73,7 @@ Specifies the friendly name of the protection entity.
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,5 +94,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmSiteRecoveryProtectionEntity](./Set-AzureRmSiteRecoveryProtectionEntity.md)
-
-

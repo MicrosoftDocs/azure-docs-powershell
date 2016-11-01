@@ -23,10 +23,6 @@ The **New-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet creates a sto
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ The **New-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet creates a sto
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -50,7 +46,7 @@ Specifies the primary storage classification mapping.
 ```yaml
 Type: ASRStorageClassification
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -65,7 +61,7 @@ Specifies a recovery storage classification mapping.
 ```yaml
 Type: ASRStorageClassification
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,5 +84,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryStorageClassificationMapping](./Get-AzureRmSiteRecoveryStorageClassificationMapping.md)
 
 [Remove-AzureRmSiteRecoveryStorageClassificationMapping](./Remove-AzureRmSiteRecoveryStorageClassificationMapping.md)
-
-

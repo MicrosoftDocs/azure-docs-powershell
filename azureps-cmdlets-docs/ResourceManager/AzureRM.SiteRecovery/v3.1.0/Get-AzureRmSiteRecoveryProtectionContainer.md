@@ -49,10 +49,6 @@ Protection policies define replication settings for protected items and can be a
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -62,7 +58,7 @@ Specifies the name of the protection container.
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithName, ByObjectWithNameLegacy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,7 +72,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRFabric
 Parameter Sets: ByObjectWithName, ByObjectWithFriendlyName, ByFabricObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,7 +87,7 @@ Specifies the friendly name of the protection container.
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithFriendlyName, ByObjectWithFriendlyNameLegacy
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -110,5 +106,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

@@ -44,10 +44,6 @@ Use this cmdlet to enable replication for a protectable item.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -57,7 +53,7 @@ Indicates that the cmdlet waits for completion.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,7 +64,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
+
 The cmdlet is not run.
 
 ```yaml
@@ -84,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +100,7 @@ Specifies the Azure Site Recovery Protectable Item.
 ```yaml
 Type: ASRProtectableItem
 Parameter Sets: EnterpriseToAzure, EnterpriseToEnterprise, HyperVSiteToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +115,7 @@ Specifies the name of the Azure Site Recovery Replication Protected Item.
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToAzure, EnterpriseToEnterprise, HyperVSiteToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,7 +130,7 @@ Specifies the Azure Site Recovery Protection Container mapping object to use for
 ```yaml
 Type: ASRProtectionContainerMapping
 Parameter Sets: EnterpriseToAzure, EnterpriseToEnterprise, HyperVSiteToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +145,7 @@ Specifies the ID of the Azure storage account that this cmdlet replicates to.
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToAzure, HyperVSiteToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,7 +160,7 @@ Specifies the name of the operating system disk.
 ```yaml
 Type: String
 Parameter Sets: HyperVSiteToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -180,7 +176,7 @@ The acceptable values for this parameter are: Windows or Linux.
 ```yaml
 Type: String
 Parameter Sets: HyperVSiteToAzure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -207,5 +203,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmSiteRecoveryReplicationProtectedItem](./Remove-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
 [Set-AzureRmSiteRecoveryReplicationProtectedItem](./Set-AzureRmSiteRecoveryReplicationProtectedItem.md)
-
-

@@ -32,10 +32,6 @@ The **Get-AzureRmSiteRecoveryRecoveryPlan** cmdlet gets a recovery plan in Azure
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -45,7 +41,7 @@ Specifies the name of the recovery plan that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,7 +56,7 @@ Specifies the file path to which this cmdlet saves the recovery plan.
 ```yaml
 Type: String
 Parameter Sets: ByName, ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -75,7 +71,7 @@ Specifies the friendly name of the recovery plan that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -100,5 +96,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmSiteRecoveryRecoveryPlan](./Remove-AzureRmSiteRecoveryRecoveryPlan.md)
 
 [Update-AzureRmSiteRecoveryRecoveryPlan](./Update-AzureRmSiteRecoveryRecoveryPlan.md)
-
-

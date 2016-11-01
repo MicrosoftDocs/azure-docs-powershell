@@ -33,10 +33,6 @@ The **Get-AzureRmSiteRecoveryVaultSettingsFile** cmdlet gets the settings file f
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -46,7 +42,7 @@ Specifies the vault object for the site.
 ```yaml
 Type: ASRVault
 Parameter Sets: Default, ForSite
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -62,7 +58,7 @@ To store this file locally, download it from the Site Recovery vault portal once
 ```yaml
 Type: String
 Parameter Sets: Default, ForSite
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +73,7 @@ Specifies the site identifier for the vault when the site is a Hyper-V site.
 ```yaml
 Type: String
 Parameter Sets: ForSite
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -92,7 +88,7 @@ Specifies the site friendly name for the vault when the site is a Hyper-V site.
 ```yaml
 Type: String
 Parameter Sets: ForSite
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,5 +111,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-AzureRmSiteRecoveryVaultSettingsFile](./Import-AzureRmSiteRecoveryVaultSettingsFile.md)
 
 [Set-AzureRmSiteRecoveryVaultSettings](./Set-AzureRmSiteRecoveryVaultSettings.md)
-
-

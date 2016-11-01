@@ -27,10 +27,6 @@ The **Resume-AzureRmSiteRecoveryJob** cmdlet resumes a suspended Azure Site Reco
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -40,7 +36,7 @@ Specifies the Site Recovery job object.
 ```yaml
 Type: ASRJob
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -55,7 +51,7 @@ Specifies the comments for the job log.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,7 +66,7 @@ Specifies the unique name for the job.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -95,5 +91,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Restart-AzureRmSiteRecoveryJob](./Restart-AzureRmSiteRecoveryJob.md)
 
 [Stop-AzureRmSiteRecoveryJob](./Stop-AzureRmSiteRecoveryJob.md)
-
-

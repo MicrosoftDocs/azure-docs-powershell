@@ -23,10 +23,6 @@ The **Set-AzureRmSiteRecoveryVM** cmdlet sets the recovery-side protection optio
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -36,7 +32,7 @@ Specifies the Site Recovery virtual machine object.
 ```yaml
 Type: ASRVirtualMachine
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -51,7 +47,7 @@ Specifies the name of the target virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,7 +62,7 @@ Specifies the target virtual machine size.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +77,7 @@ Specifies the primary network adapter card.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +92,7 @@ Specifies the recovery network ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +107,7 @@ Specifies the Azure virtual network subnet name with which to attach the primary
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +122,7 @@ Specifies the static IP address that is assigned to primary network adapter cont
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +141,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,5 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmSiteRecoveryVM](./Get-AzureRmSiteRecoveryVM.md)
-
-

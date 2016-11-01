@@ -24,10 +24,6 @@ The **Set-AzureRmSiteRecoveryReplicationProtectedItem** cmdlet sets the recovery
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -37,7 +33,7 @@ Specifies the Azure Site Recovery Replication Protected Item.
 ```yaml
 Type: ASRReplicationProtectedItem
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -52,7 +48,7 @@ Specifies the name of the recovery virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,7 +64,7 @@ The value should be from the set of sizes supported by Azure virtual machines.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +79,7 @@ Specifies the NIC of the virtual machine for which this cmdlet sets the recovery
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +94,7 @@ Specifies the ID of the Azure virtual network for which this cmdlet recovers the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +109,7 @@ Specifies the name of the Subnet on the recovery Azure virtual network for which
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +124,7 @@ Specifies the static IP address that should be assigned to primary NIC on recove
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +140,7 @@ You can specify NotSelected to go back to the default values.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +155,7 @@ Specifies the license type selection for Windows Server virtual machines migrate
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,5 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSiteRecoveryReplicationProtectedItem](./New-AzureRmSiteRecoveryReplicationProtectedItem.md)
 
 [Remove-AzureRmSiteRecoveryReplicationProtectedItem](./Remove-AzureRmSiteRecoveryReplicationProtectedItem.md)
-
-

@@ -32,10 +32,6 @@ The **Get-AzureRmSiteRecoveryFabric** cmdlet gets the properties of a specified 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -45,7 +41,7 @@ Specifies the name of the Azure Site Recovery Fabric.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,7 +56,7 @@ Specifies the friendly name of the Azure Site Recovery Fabric.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -85,5 +81,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSiteRecoveryFabric](./New-AzureRmSiteRecoveryFabric.md)
 
 [Remove-AzureRmSiteRecoveryFabric](./Remove-AzureRmSiteRecoveryFabric.md)
-
-

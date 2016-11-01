@@ -27,10 +27,6 @@ The **Restart-AzureRmSiteRecoveryJob** cmdlet restarts an Azure Site Recovery jo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -40,7 +36,7 @@ Specifies the Site Recovery job object.
 ```yaml
 Type: ASRJob
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -55,7 +51,7 @@ Specifies the unique name for the job.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -80,5 +76,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-AzureRmSiteRecoveryJob](./Resume-AzureRmSiteRecoveryJob.md)
 
 [Stop-AzureRmSiteRecoveryJob](./Stop-AzureRmSiteRecoveryJob.md)
-
-

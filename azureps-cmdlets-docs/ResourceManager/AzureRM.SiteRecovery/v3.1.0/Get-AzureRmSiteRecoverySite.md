@@ -32,10 +32,6 @@ The **Get-AzureRmSiteRecoverySite** cmdlet gets the Hyper-V sites in the Azure S
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -45,7 +41,7 @@ Specifies the name of the site.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,7 +56,7 @@ Specifies the friendly name of the site.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -83,5 +79,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSiteRecoverySite](./New-AzureRmSiteRecoverySite.md)
 
 [Remove-AzureRmSiteRecoverySite](./Remove-AzureRmSiteRecoverySite.md)
-
-

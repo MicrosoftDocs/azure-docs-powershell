@@ -30,10 +30,6 @@ The **Start-AzureRmSiteRecoveryPolicyAssociationJob** cmdlet initiates an associ
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -43,7 +39,7 @@ Specifies the Site Recovery policy object.
 ```yaml
 Type: ASRPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,7 +54,7 @@ Specifies the primary protection container on which to apply the protection prof
 ```yaml
 Type: ASRProtectionContainer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +69,7 @@ Specifies the recovery protection container on which to apply the protection pro
 ```yaml
 Type: ASRProtectionContainer
 Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -92,5 +88,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

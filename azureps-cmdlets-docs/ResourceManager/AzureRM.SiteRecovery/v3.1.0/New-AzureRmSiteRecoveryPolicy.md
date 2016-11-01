@@ -34,10 +34,6 @@ The replication policy is used to specify replication settings such as the repli
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -47,7 +43,7 @@ Specifies a friendly name which identifies the Site Recovery replication policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,7 +54,7 @@ Accept wildcard characters: False
 
 ### -ReplicationProvider
 Specifies the replication provider.
-Valid values are: 
+Valid values are:
 
 - HyperVReplica2012R2
 - HyperVReplica2012
@@ -67,7 +63,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,7 +74,7 @@ Accept wildcard characters: False
 
 ### -ReplicationFrequencyInSeconds
 Specifies the replication frequency interval in seconds.
-Valid values are: 
+Valid values are:
 
 - 30
 - 300
@@ -87,7 +83,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,7 +98,7 @@ Specifies the number of hours to retain recovery points.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +113,7 @@ Specifies the frequency of the application consistent snapshot in hours.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +129,7 @@ It must be no later than 24-hours from the start of the job.
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +144,7 @@ Specifies the Azure storage account ID of the replication target.
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToAzure
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +158,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToAzure
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +169,7 @@ Accept wildcard characters: False
 
 ### -ReplicationMethod
 Specifies the replication method.
-Valid values are: 
+Valid values are:
 
 - Online
 - Offline
@@ -181,7 +177,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +191,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +206,7 @@ Specifies the port used for replication.
 ```yaml
 Type: UInt16
 Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -221,7 +217,7 @@ Accept wildcard characters: False
 
 ### -Authentication
 Specifies the type of authentication used.
-Valid values are: 
+Valid values are:
 
 - Certificate
 -  Kerberos
@@ -229,7 +225,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -243,7 +239,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,5 +262,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryPolicy](./Get-AzureRmSiteRecoveryPolicy.md)
 
 [Remove-AzureRmSiteRecoveryPolicy](./Remove-AzureRmSiteRecoveryPolicy.md)
-
-

@@ -23,10 +23,6 @@ The **Start-AzureRmSiteRecoveryApplyRecoveryPoint** changes a recovery point for
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -36,7 +32,7 @@ Specifies the recovery point object that this cmdlet changes.
 ```yaml
 Type: ASRRecoveryPoint
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -51,7 +47,7 @@ Specifies the Replication Protected Item object.
 ```yaml
 Type: ASRReplicationProtectedItem
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -65,7 +61,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +75,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,5 +98,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Azure Site Recovery Cmdlets](./AzureRM.SiteRecovery.md)
-
-

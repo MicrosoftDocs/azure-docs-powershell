@@ -33,10 +33,6 @@ The **Get-AzureRmSiteRecoveryVM** cmdlet gets information about virtual machines
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -46,7 +42,7 @@ Specifies the Site Recovery protection container object.
 ```yaml
 Type: ASRProtectionContainer
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,7 +54,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRProtectionContainer
 Parameter Sets: ByObjectWithName, ByObjectWithFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +69,7 @@ Specifies the name of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +84,7 @@ Specifies the friendly name of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: ByObjectWithFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,5 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmSiteRecoveryVM](./Set-AzureRmSiteRecoveryVM.md)
-
-

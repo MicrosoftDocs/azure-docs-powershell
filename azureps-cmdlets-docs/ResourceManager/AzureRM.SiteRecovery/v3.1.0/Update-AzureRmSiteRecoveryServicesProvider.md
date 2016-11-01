@@ -22,10 +22,6 @@ You can use this cmdlet to trigger a refresh of the information received from th
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -35,7 +31,7 @@ Specifies the Azure Site Recovery Services Provider object.
 ```yaml
 Type: ASRRecoveryServicesProvider
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,5 +54,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryServicesProvider](./Get-AzureRmSiteRecoveryServicesProvider.md)
 
 [Remove-AzureRmSiteRecoveryServicesProvider](./Remove-AzureRmSiteRecoveryServicesProvider.md)
-
-

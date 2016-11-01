@@ -52,10 +52,6 @@ The **Edit-AzureRmSiteRecoveryRecoveryPlan** cmdlet edits an Azure Site Recovery
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -65,7 +61,7 @@ Specifies a recovery plan.
 ```yaml
 Type: ASRRecoveryPlan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -80,7 +76,7 @@ Indicates that this operation appends the group to the recovery plan object.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AppendGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -95,7 +91,7 @@ Removes the specified Site Recovery recovery plan group.
 ```yaml
 Type: ASRRecoveryPlanGroup
 Parameter Sets: RemoveGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -110,7 +106,7 @@ Specifies a Site Recovery plan group.
 ```yaml
 Type: ASRRecoveryPlanGroup
 Parameter Sets: AddReplicationProtectedItems, RemoveProtectedEntities, AddProtectedEntities, RemoveReplicationProtectedItems
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,7 +120,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRReplicationProtectedItem[]
 Parameter Sets: AddReplicationProtectedItems
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,7 +135,7 @@ Specifies an array of protected entities to add.
 ```yaml
 Type: ASRProtectionEntity[]
 Parameter Sets: AddProtectedEntities
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +150,7 @@ Specifies an array of protected entities.
 ```yaml
 Type: ASRProtectionEntity[]
 Parameter Sets: RemoveProtectedEntities
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -168,7 +164,7 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRReplicationProtectedItem[]
 Parameter Sets: RemoveReplicationProtectedItems
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -191,5 +187,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSiteRecoveryRecoveryPlan](./Get-AzureRmSiteRecoveryRecoveryPlan.md)
 
 [New-AzureRmSiteRecoveryRecoveryPlan](./New-AzureRmSiteRecoveryRecoveryPlan.md)
-
-
