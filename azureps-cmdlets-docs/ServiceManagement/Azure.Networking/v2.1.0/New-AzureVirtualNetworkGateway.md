@@ -23,10 +23,7 @@ The **New-AzureVirtualNetworkGateway** cmdlet creates an Azure virtual network g
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -36,7 +33,7 @@ Specifies the autonomous system number (ASN).
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -51,7 +48,7 @@ Specifies the name of the gateway.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -62,16 +59,16 @@ Accept wildcard characters: False
 
 ### -GatewaySKU
 Specifies the SKU of the virtual network gateway that this cmdlet creates.
-Valid values are: 
+Valid values are:
 
-- Default 
-- Standard 
+- Default
+- Standard
 - HighPerformance
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -86,7 +83,7 @@ Specifies the type of gateway.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -101,7 +98,7 @@ Specifies the location.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -114,7 +111,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -130,7 +127,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +142,7 @@ Specifies a virtual network.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -160,7 +157,7 @@ Specifies the ID of a virtual network.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -185,5 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureVirtualNetworkGateway](./Remove-AzureVirtualNetworkGateway.md)
 
 [Resize-AzureVirtualNetworkGateway](./Resize-AzureVirtualNetworkGateway.md)
-
-

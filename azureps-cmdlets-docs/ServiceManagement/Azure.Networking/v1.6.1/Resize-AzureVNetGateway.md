@@ -38,7 +38,7 @@ Specifies the virtual network in which this cmdlet resizes a virtual network gat
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -49,16 +49,16 @@ Accept wildcard characters: False
 
 ### -GatewaySKU
 Specifies the SKU to which this cmdlet resizes virtual network gateway.
-Valid values are: 
+Valid values are:
 
-- Default 
-- Standard 
+- Default
+- Standard
 - HighPerformance
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -68,12 +68,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-ps_azureprofile_description
+Specifies the Azure profile from which this cmdlet reads.
+If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,5 +103,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Reset-AzureVNetGateway](./Reset-AzureVNetGateway.md)
 
 [Set-AzureVNetGatewayKey](./Set-AzureVNetGatewayKey.md)
-
-

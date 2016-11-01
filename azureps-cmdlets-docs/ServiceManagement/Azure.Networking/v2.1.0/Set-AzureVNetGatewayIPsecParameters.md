@@ -23,10 +23,7 @@ The **Set-AzureVNetGatewayIPsecParameters** cmdlet sets Internet Protocol securi
 
 ## EXAMPLES
 
-### 1:
-```
 
-```
 
 ## PARAMETERS
 
@@ -36,7 +33,7 @@ Specifies the virtual network for which this cmdlet sets IPsec parameters for th
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -51,7 +48,7 @@ Specifies the name of the local network site connection on which this cmdlet con
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -62,15 +59,15 @@ Accept wildcard characters: False
 
 ### -EncryptionType
 Specifies the encryption type for the virtual network gateway.
-Valid values are: 
+Valid values are:
 
-- NoEncryption 
+- NoEncryption
 - RequireEncryption
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -81,15 +78,15 @@ Accept wildcard characters: False
 
 ### -PfsGroup
 Specifies the perfect forward secrecy (PFS) group.
-Valid values are: 
+Valid values are:
 
-- PFS1 
+- PFS1
 - None
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -104,7 +101,7 @@ Specifies the size, in kilobytes, of the security association (SA).
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -119,7 +116,7 @@ Specifies the period, in seconds, of the security association.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -135,7 +132,7 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,5 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureVNetGatewayIPsecParameters](./Get-AzureVNetGatewayIPsecParameters.md)
-
-
