@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Get-AzurePublicIpAddress.md
+online version: 
 schema: 2.0.0
 ms.assetid: A2DE176B-584B-4FDD-8591-F4FD44045BB2
 ---

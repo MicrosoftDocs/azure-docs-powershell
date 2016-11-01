@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Remove-AzureServiceExtension.md
+online version: 
 schema: 2.0.0
 ms.assetid: 86F5B948-6852-45DE-BC40-FFD5E8EDD1B4
 ---

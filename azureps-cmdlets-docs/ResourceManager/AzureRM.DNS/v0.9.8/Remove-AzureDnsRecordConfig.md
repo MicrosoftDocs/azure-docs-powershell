@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-online version: .\Add-AzureDnsRecordConfig.md
+online version: 
 schema: 2.0.0
 ms.assetid: 40E685EE-913D-4FD7-9CB8-1A05A5A3C0A4
 ---

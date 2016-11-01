@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Add-AzureRmApplicationGatewayHttpListener.md
+online version: 
 schema: 2.0.0
 ms.assetid: 1D557E05-D8CC-4972-96BA-9EA285170A6C
 ---

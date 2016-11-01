@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Add-AzureLoadBalancerBackendAddressPoolConfig.md
+online version: 
 schema: 2.0.0
 ms.assetid: 4BE57000-181A-4761-BC1D-47F45079ED19
 ---

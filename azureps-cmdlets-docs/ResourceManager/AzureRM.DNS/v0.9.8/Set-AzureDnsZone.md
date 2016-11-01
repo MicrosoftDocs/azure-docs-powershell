@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-online version: http://azure.microsoft.com/en-us/documentation/articles/azure-preview-portal-using-tags/
+online version: 
 schema: 2.0.0
 ms.assetid: 91AB4823-7D77-4A1C-ACCB-642734949570
 ---

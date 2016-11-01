@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
-online version: .\Disable-AzureRmOperationalInsightsIISLogCollection.md
+online version: 
 schema: 2.0.0
 ms.assetid: 1015988A-3846-4193-B56A-BC3AFC12C74B
 ---

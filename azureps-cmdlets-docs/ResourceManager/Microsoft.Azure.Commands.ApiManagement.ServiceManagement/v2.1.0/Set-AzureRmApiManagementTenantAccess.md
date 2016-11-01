@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: .\Get-AzureRmApiManagementTenantAccess.md
+online version: 
 schema: 2.0.0
 ms.assetid: 3B5FC8E3-5A02-4F3B-81F0-51DFE47A201B
 ---

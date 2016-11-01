@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Add-AzureRouteConfig.md
+online version: 
 schema: 2.0.0
 ms.assetid: B45097AE-6E93-413D-AF85-00D516BC2F98
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: .\Remove-AzureRmVMExtension.md
+online version: 
 schema: 2.0.0
 ms.assetid: 770DD8C9-90CD-4C85-8B02-E5539F53EBF3
 ---

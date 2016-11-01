@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: .\New-AzureRmApiManagementHostnameConfiguration.md
+online version: 
 schema: 2.0.0
 ms.assetid: 2A7EF835-586C-4E86-A243-3CC0E9623D71
 ---

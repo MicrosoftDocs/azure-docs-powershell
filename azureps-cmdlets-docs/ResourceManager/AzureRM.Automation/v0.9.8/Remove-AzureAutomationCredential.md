@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
-online version: .\Get-AzureAutomationCredential.md
+online version: 
 schema: 2.0.0
 ms.assetid: 452BF685-28D4-4321-90FD-9C7FF4B2CF24
 ---

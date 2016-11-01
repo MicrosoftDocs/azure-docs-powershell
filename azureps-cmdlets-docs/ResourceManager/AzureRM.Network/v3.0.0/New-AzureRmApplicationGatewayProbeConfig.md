@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: https://azure.microsoft.com/en-us/documentation/articles/application-gateway-create-probe-ps/#
+online version: 
 schema: 2.0.0
 ms.assetid: 721B4E57-F47D-4BC0-899D-3F7B7C21463E
 ---

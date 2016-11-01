@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
-online version: .\Disable-ACSNode.md
+online version: 
 schema: 2.0.0
 ms.assetid: B346EBDE-CD04-4617-8E5A-24A814B3641B
 ---

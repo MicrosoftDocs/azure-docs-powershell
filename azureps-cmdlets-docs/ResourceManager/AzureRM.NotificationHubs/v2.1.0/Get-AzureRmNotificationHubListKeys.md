@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
-online version: .\Get-AzureRmNotificationHubAuthorizationRules.md
+online version: 
 schema: 2.0.0
 ms.assetid: FA80822A-2D9B-47BD-AD29-C25AF4379B38
 ---

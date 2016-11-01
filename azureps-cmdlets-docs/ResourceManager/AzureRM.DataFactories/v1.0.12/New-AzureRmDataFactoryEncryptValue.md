@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-online version: .\New-AzureRmDataFactoryEncryptValue.md
+online version: 
 schema: 2.0.0
 ms.assetid: 8350C2EF-E464-45F0-8D73-529D254FB031
 ---

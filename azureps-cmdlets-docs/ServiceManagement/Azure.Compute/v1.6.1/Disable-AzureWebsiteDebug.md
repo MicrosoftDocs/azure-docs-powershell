@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: .\Enable-AzureWebsiteDebug.md
+online version: 
 schema: 2.0.0
 ms.assetid: 007CC1D1-12FF-4EF0-A480-39B958AFF004
 ---

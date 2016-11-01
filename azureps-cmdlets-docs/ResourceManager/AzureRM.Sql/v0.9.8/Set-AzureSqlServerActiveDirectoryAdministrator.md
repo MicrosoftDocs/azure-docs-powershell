@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: .\Get-AzureSqlServerActiveDirectoryAdministrator.md
+online version: 
 schema: 2.0.0
 ms.assetid: B9457C85-9C82-49BD-BA65-16B6E6922ABD
 ---

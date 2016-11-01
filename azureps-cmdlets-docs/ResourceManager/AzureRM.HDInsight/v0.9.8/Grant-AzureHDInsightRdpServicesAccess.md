@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-online version: .\Revoke-AzureHDInsightRdpServicesAccess.md
+online version: 
 schema: 2.0.0
 ms.assetid: 16497CAD-1109-4F4F-8AF7-CF87312071F9
 ---

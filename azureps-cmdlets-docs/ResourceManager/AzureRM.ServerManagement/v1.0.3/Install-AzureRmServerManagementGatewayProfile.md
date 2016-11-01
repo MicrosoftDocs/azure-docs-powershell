@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
-online version: .\Reset-AzureRmServerManagementGatewayProfile.md
+online version: 
 schema: 2.0.0
 ms.assetid: 2A0A1A86-76A5-4E5D-8B9C-3284D1211E65
 ---

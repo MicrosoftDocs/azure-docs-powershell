@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Add-AzureRmApplicationGatewayAuthenticationCertificate.md
+online version: 
 schema: 2.0.0
 ms.assetid: 7A39CF9D-9249-4204-AD49-D329806D5955
 ---

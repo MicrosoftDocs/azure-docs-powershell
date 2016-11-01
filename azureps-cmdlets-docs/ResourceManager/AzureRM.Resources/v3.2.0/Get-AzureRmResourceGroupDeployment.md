@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-online version: 6282a378-c6f0-4a8e-bf68-dd5f68412205
+online version: 
 schema: 2.0.0
 ms.assetid: 2D41645A-48C4-4E76-B144-4E8E6305E99C
 ---

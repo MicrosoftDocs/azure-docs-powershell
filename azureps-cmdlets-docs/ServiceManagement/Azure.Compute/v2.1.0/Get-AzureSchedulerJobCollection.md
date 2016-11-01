@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: .\New-AzureSchedulerJobCollection.md
+online version: 
 schema: 2.0.0
 ms.assetid: 6C958301-009D-49BB-9360-49A0C73C1E73
 ---

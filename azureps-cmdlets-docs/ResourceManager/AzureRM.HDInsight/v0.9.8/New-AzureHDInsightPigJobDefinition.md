@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-online version: https://azure.microsoft.com/en-us/documentation/articles/hdinsight-use-pig/
+online version: 
 schema: 2.0.0
 ms.assetid: 6F5068F4-9B51-4CBA-80CC-F8F10CCD1E6D
 ---

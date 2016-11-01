@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.dll-Help.xml
-online version: .\Import-AzureSiteRecoveryVaultSettingsFile.md
+online version: 
 schema: 2.0.0
 ms.assetid: 0267B77A-F6EE-43B8-9B22-3D71AC453A66
 ---

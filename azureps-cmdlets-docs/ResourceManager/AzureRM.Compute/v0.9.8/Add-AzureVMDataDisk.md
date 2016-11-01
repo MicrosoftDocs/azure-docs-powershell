@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: .\Remove-AzureVMDataDisk.md
+online version: 
 schema: 2.0.0
 ms.assetid: DF7CC457-0DD2-450F-B229-EB097C5C0E3E
 ---

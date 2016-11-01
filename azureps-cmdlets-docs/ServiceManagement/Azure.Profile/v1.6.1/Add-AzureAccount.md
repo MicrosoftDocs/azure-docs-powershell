@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkID=397618
+online version: 
 schema: 2.0.0
 ms.assetid: 738FC867-1D2A-48D7-B61D-3FFD5887A896
 ---

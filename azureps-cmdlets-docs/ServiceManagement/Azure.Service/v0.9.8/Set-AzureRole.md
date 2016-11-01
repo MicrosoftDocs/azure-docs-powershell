@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Get-AzureRole.md
+online version: 
 schema: 2.0.0
 ms.assetid: 5291DC55-5D40-462B-9E22-61A4C0236AB9
 ---

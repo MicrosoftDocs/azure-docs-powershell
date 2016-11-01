@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: .\Get-AzureRMVMSqlServerExtension.md
+online version: 
 schema: 2.0.0
 ms.assetid: 78423815-46CD-43C3-9EAD-3A51E0480124
 ---

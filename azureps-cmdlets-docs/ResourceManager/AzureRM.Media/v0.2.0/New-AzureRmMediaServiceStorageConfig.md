@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
-online version: .\Sync-AzureRmMediaServiceStorageKeys.md
+online version: 
 schema: 2.0.0
 ---
 

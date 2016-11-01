@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
-online version: .\Get-AzureRmCdnEndpoint.md
+online version: 
 schema: 2.0.0
 ms.assetid: 9AD628ED-BC70-4984-9F20-24EA08069857
 ---

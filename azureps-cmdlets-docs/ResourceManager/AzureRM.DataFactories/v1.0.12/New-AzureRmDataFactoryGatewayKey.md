@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-online version: .\New-AzureRmDataFactoryGateway.md
+online version: 
 schema: 2.0.0
 ms.assetid: 40F0E3CF-4A4A-4AFF-AC37-E7599C20A3F2
 ---

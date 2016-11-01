@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
-online version: .\Enable-AzureRmOperationalInsightsLinuxSyslogCollection.md
+online version: 
 schema: 2.0.0
 ms.assetid: 3F13DD74-4141-4873-A6F7-0E9C948EA066
 ---

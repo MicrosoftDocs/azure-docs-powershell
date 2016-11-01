@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
-online version: .\Get-AzureAutomationWebhook.md
+online version: 
 schema: 2.0.0
 ms.assetid: F97CF76E-76B0-440A-9077-6FEE017D1F43
 ---

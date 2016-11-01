@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-online version: .\Add-AlertRule.md
+online version: 
 schema: 2.0.0
 ms.assetid: E32F7D00-0E7A-49A6-838B-33C34EF07059
 ---

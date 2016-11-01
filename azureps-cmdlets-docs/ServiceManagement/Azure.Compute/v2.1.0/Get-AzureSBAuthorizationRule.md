@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: .\New-AzureSBAuthorizationRule.md
+online version: 
 schema: 2.0.0
 ms.assetid: 0705D5EA-3479-4858-AF90-8F1AD0914D4E
 ---

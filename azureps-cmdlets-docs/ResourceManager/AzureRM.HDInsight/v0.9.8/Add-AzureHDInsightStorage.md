@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-online version: .\Add-AzureHDInsightStorage.md
+online version: 
 schema: 2.0.0
 ms.assetid: B638CE9C-78A0-4C65-84C0-0B44C79EB142
 ---

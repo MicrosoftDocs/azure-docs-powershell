@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.dll-Help.xml
-online version: .\New-AzureSiteRecoveryRecoveryPlan.md
+online version: 
 schema: 2.0.0
 ms.assetid: CB922D26-CB13-483D-866F-A7C11F088689
 ---

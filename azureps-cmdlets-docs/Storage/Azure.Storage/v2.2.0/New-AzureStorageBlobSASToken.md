@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-online version: .\Get-AzureStorageBlob.md
+online version: 
 schema: 2.0.0
 ms.assetid: F08D2DE2-A276-439C-B9A8-EE187A8C334E
 ---

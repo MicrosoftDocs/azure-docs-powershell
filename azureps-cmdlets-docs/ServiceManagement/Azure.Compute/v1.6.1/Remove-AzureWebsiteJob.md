@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: .\Remove-AzureWebsite.md
+online version: 
 schema: 2.0.0
 ms.assetid: E25091A2-2472-4674-978C-EC1522631BC1
 ---

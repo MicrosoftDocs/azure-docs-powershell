@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: f1d6b3f1-81c3-4527-b52d-330c487eb16b
+online version: 
 schema: 2.0.0
 ms.assetid: FA68F0E6-2B13-4400-BDFC-D0CBCFB7B017
 ---

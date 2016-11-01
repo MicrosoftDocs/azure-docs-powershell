@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
-online version: .\Get-AzureRmAutomationDscCompilationJobOutput.md
+online version: 
 schema: 2.0.0
 ms.assetid: CBD50659-1E44-425C-9B97-A58BE040E3B9
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-online version: .\Get-AlertHistory.md
+online version: 
 schema: 2.0.0
 ms.assetid: CFA31A07-F903-41EF-A3BA-85BF78E80B86
 ---

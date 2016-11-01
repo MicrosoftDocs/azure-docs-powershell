@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: .\New-AzureSchedulerStorageQueueJob.md
+online version: 
 schema: 2.0.0
 ms.assetid: B702DE80-CD33-48BC-94DE-EF4439A7FF1E
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: https://azure.microsoft.com/en-us/documentation/articles/application-gateway-create-probe-ps/#remove-a-probe-from-an-existing-application-gateway
+online version: 
 schema: 2.0.0
 ms.assetid: AA0AF410-4418-491D-8D55-392E799B824B
 ---

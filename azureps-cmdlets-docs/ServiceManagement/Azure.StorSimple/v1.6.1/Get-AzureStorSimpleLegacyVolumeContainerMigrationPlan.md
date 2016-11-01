@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
-online version: .\Start-AzureStorSimpleLegacyVolumeContainerMigrationPlan.md
+online version: 
 schema: 2.0.0
 ms.assetid: FFEAC170-0D2A-4571-B167-34E66A7FF17D
 ---

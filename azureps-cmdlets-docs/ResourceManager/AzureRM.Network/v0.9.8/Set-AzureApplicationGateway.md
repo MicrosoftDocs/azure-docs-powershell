@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Start-AzureApplicationGateway.md
+online version: 
 schema: 2.0.0
 ms.assetid: 02B42DC7-62C5-4900-BC2D-211CF5A22921
 ---

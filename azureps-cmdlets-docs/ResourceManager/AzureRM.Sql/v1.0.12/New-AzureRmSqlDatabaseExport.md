@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: .\Get-AzureRmSqlDatabaseImportExportStatus.md
+online version: 
 schema: 2.0.0
 ms.assetid: FD473C08-CD63-463C-A263-1C05FD06463F
 ---

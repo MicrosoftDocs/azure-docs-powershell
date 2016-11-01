@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Remove-AzureVMCustomScriptExtension.md
+online version: 
 schema: 2.0.0
 ms.assetid: 7CD94E7E-DD05-4050-AC3C-16915EF6A0B3
 ---

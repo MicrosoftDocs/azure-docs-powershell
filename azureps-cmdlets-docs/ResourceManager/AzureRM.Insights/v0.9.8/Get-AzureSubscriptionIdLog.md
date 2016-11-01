@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-online version: .\Get-AzureCorrelationIdLog.md
+online version: 
 schema: 2.0.0
 ms.assetid: 65FFF555-3AFB-4A4B-8297-C6A418C615E5
 ---

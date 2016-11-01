@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: .\Remove-AzureSchedulerJob.md
+online version: 
 schema: 2.0.0
 ms.assetid: 01D5A29F-4416-446A-8AE6-653B09BF183E
 ---

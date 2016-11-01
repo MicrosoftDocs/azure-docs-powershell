@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Get-AzureRmVirtualNetworkGatewayConnectionSharedKey.md
+online version: 
 schema: 2.0.0
 ms.assetid: 9805CF87-530D-4AF1-AE3E-3759F7CDF34E
 ---

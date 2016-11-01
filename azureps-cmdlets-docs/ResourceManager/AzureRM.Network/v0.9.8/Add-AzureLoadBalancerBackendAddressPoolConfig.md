@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Get-AzureLoadBalancer.md
+online version: 
 schema: 2.0.0
 ms.assetid: 1BDADE63-4F63-4A4A-A03B-76D746C31018
 ---

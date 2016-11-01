@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
-online version: .\Get-ACSFarm.md
+online version: 
 schema: 2.0.0
 ms.assetid: 1A95673A-8903-4FFD-9C0F-ACE5BCCAC39C
 ---

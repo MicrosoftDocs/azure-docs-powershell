@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
-online version: .\Set-ACSBlobService.md
+online version: 
 schema: 2.0.0
 ms.assetid: 6D098FBA-8E89-4A51-88DB-EA20B037830F
 ---

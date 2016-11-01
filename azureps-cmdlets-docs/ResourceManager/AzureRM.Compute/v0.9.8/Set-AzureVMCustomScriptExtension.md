@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: .\Get-AzureVMCustomScriptExtension.md
+online version: 
 schema: 2.0.0
 ms.assetid: 85EDAF98-080E-4A9C-B805-1D1012F08A70
 ---

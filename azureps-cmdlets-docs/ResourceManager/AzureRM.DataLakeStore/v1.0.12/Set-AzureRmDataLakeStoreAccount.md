@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
-online version: .\Get-AzureRmDataLakeStoreAccount.md
+online version: 
 schema: 2.0.0
 ms.assetid: EC369A1F-D3B5-4E18-A610-2C11EA487832
 ---

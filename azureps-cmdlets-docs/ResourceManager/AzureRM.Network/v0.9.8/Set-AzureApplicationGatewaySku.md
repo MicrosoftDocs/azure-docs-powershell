@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Get-AzureApplicationGatewaySku.md
+online version: 
 schema: 2.0.0
 ms.assetid: 0946BD79-3167-4AE2-884B-AA38BD967573
 ---
