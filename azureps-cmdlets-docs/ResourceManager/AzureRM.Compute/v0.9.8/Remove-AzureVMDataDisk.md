@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: .\Add-AzureVMDataDisk.md
+online version: 
 schema: 2.0.0
 ms.assetid: 3208C6C3-B6D9-4C3C-8B48-699C44FF6F89
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
-online version: 37c19eb7-0cf8-4d50-8437-31cb6fbdbc07
+online version: 
 schema: 2.0.0
 ms.assetid: F2A66A2D-B93D-491D-8990-A8CDD48B57BB
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Add-AzureNetworkSecurityRuleConfig.md
+online version: 
 schema: 2.0.0
 ms.assetid: E605BDCB-C843-4BF0-800E-8DD8726CF85A
 ---

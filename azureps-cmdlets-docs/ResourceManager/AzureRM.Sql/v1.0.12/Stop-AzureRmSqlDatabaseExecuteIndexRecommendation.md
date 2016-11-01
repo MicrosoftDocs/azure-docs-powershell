@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: .\Get-AzureRmSqlDatabaseIndexRecommendations.md
+online version: 
 schema: 2.0.0
 ms.assetid: A9BCE6C0-4100-4653-9922-613FF4ECCEB8
 ---

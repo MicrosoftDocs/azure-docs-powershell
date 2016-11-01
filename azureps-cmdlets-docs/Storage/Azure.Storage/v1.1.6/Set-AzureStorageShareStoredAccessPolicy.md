@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-online version: .\Get-AzureStorageShareStoredAccessPolicy.md
+online version: 
 schema: 2.0.0
 ms.assetid: 738F47B7-E244-40B1-9B2E-3B6F4E348C8F
 ---

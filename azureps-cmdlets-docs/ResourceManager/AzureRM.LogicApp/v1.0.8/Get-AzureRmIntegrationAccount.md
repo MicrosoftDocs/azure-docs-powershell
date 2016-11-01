@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
-online version: .\Get-AzureRmIntegrationAccountCallbackUrl.md
+online version: 
 schema: 2.0.0
 ms.assetid: 29842B0B-DA1D-4144-AF27-15B1DE75974F
 ---

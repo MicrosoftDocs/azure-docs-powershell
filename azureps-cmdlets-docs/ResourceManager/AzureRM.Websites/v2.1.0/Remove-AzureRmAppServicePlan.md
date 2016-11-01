@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: .\Get-AzureRmAppServicePlan.md
+online version: 
 schema: 2.0.0
 ms.assetid: 9A24D96F-396F-4054-BEBF-FE9877C9489D
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Get-AzureStaticVNetIP.md
+online version: 
 schema: 2.0.0
 ms.assetid: 60F9724C-836C-4913-83E5-56E7E93F1C49
 ---

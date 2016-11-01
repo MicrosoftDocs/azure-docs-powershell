@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Get-AzureStorageAccount.md
+online version: 
 schema: 2.0.0
 ms.assetid: 23023ECA-E637-4DC5-8130-606DE5CD6542
 ---

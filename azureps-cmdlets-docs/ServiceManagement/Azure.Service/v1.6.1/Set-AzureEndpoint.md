@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Add-AzureEndpoint.md
+online version: 
 schema: 2.0.0
 ms.assetid: C9EA47DC-6A43-489F-94DF-F94588B1AD55
 ---

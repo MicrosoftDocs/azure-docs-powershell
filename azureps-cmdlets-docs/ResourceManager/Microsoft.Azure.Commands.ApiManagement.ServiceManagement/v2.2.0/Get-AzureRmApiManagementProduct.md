@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: e94b88aa-b8b0-49f0-ad36-6707e17b40ad
+online version: 
 schema: 2.0.0
 ms.assetid: B64E9C13-97A6-4E8B-92DB-EFAF8A48C5B8
 ---

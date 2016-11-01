@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: .\Set-AzureSchedulerHttpJob.md
+online version: 
 schema: 2.0.0
 ms.assetid: 0B776445-FF55-455E-8630-DFAE5F9564B0
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
-online version: .\Get-AzureRmDtlVMsPerUserPolicy.md
+online version: 
 schema: 2.0.0
 ms.assetid: A394CFEF-2A76-425A-8E8F-43E3DB789720
 ---

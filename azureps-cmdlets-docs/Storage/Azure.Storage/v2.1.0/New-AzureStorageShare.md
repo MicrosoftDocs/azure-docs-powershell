@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-online version: .\Get-AzureStorageShare.md
+online version: 
 schema: 2.0.0
 ms.assetid: 17C0253C-C7B6-4C78-92CE-77277E156396
 ---

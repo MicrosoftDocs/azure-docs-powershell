@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-online version: 204fd229-256b-4db4-829d-3324f9b176f0
+online version: 
 schema: 2.0.0
 ms.assetid: 5DCDAF54-B9F3-4622-B58E-CCA597BA048C
 ---

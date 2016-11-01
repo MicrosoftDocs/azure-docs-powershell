@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkId=404172
+online version: 
 schema: 2.0.0
 ms.assetid: CD68129A-CC88-4127-ADC4-D2ADDB20935D
 ---

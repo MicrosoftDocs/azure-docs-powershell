@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
-online version: .\New-AzureRmRecoveryServicesBackupProtectionPolicy.md
+online version: 
 schema: 2.0.0
 ms.assetid: 1681BE74-E5E6-48FE-B521-8E40158DAB13
 ---

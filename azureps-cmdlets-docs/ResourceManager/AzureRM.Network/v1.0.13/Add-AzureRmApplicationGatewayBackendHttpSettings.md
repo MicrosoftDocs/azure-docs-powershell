@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Get-AzureRmApplicationGatewayBackendHttpSettings.md
+online version: 
 schema: 2.0.0
 ms.assetid: CCA576B8-8292-4D71-A692-7BB2F5F70166
 ---

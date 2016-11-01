@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-online version: .\Add-AzureRmAutoscaleSetting.md
+online version: 
 schema: 2.0.0
 ms.assetid: 48A201CC-0085-43D3-8016-F67CDFB5CFCD
 ---

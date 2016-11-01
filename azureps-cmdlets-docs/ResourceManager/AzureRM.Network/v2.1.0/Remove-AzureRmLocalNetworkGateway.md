@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Get-AzureRmLocalNetworkGateway.md
+online version: 
 schema: 2.0.0
 ms.assetid: 662320EB-BA6B-433E-BAD1-7CE78B8EDE16
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-online version: .\Get-AzureRmDataFactoryPipeline.md
+online version: 
 schema: 2.0.0
 ms.assetid: B7AE8E4D-7231-45E3-A027-7B848A822E44
 ---

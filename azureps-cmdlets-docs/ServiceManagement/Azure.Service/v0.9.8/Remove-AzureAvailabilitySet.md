@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Set-AzureAvailabilitySet.md
+online version: 
 schema: 2.0.0
 ms.assetid: 565BDDD9-8CEC-4EDA-95F2-1E4E1253FE57
 ---

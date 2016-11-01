@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
-online version: .\Get-AzureRmCdnCustomDomain.md
+online version: 
 schema: 2.0.0
 ms.assetid: AB9FBB55-14B4-4936-BE36-32CFE642D595
 ---

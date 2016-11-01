@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
-online version: 7973d46e-7f57-480e-b5e2-d37400364424
+online version: 
 schema: 2.0.0
 ms.assetid: 430C9A6C-916A-443B-B536-BBC2F943B0D9
 ---

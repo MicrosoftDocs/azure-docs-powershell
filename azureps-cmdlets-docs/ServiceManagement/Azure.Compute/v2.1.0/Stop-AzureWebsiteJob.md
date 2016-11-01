@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: .\Stop-AzureWebsite.md
+online version: 
 schema: 2.0.0
 ms.assetid: 74916563-0EE6-4ED1-87C5-99625DC36B11
 ---

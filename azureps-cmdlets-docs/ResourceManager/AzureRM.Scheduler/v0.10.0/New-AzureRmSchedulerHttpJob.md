@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
-online version: .\New-AzureRmSchedulerJobCollection.md
+online version: 
 schema: 2.0.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Get-AzureApplicationGatewayBackendAddressPool.md
+online version: 
 schema: 2.0.0
 ms.assetid: 23641B69-F0AA-4D50-9FBC-04C5F215520C
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Add-AzureApplicationGatewaySslCertificate.md
+online version: 
 schema: 2.0.0
 ms.assetid: 911CEFC4-E31E-484D-B669-9593D0723A81
 ---

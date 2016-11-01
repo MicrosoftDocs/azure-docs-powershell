@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Get-AzureApplicationGatewayRequestRoutingRule.md
+online version: 
 schema: 2.0.0
 ms.assetid: FDBA125C-5CE7-46D9-878B-FD864E1F00A8
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
-online version: .\Remove-AzureRmOperationalInsightsDataSource.md
+online version: 
 schema: 2.0.0
 ms.assetid: C31CEACF-025C-4568-A813-1A6E57A7DD23
 ---

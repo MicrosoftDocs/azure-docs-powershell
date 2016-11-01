@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
-online version: .\Get-AzureAutomationDscNode.md
+online version: 
 schema: 2.0.0
 ms.assetid: 1CFAC190-50D7-4A87-A2E0-F3B8DE8F7ED0
 ---

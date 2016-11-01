@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: .\Get-AzureRmWebAppSSLBinding.md
+online version: 
 schema: 2.0.0
 ms.assetid: 365B42CC-3142-449B-B4DB-C65061522A74
 ---

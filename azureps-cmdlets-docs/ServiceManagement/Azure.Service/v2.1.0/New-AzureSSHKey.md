@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Add-AzureProvisioningConfig.md
+online version: 
 schema: 2.0.0
 ms.assetid: D1D4D505-9F98-4BB5-9810-B6438E701293
 ---

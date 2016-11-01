@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-online version: .\Get-AzureRmMetricDefinition.md
+online version: 
 schema: 2.0.0
 ms.assetid: 7B6E8604-1BF0-4256-A37F-889743FE9FCD
 ---

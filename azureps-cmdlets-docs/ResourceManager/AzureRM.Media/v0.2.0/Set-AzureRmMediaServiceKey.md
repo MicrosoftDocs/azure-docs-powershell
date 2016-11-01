@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
-online version: .\Get-AzureRmMediaServiceKeys.md
+online version: 
 schema: 2.0.0
 ---
 

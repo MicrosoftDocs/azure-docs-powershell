@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Set-AzureReservedIPAssociation.md
+online version: 
 schema: 2.0.0
 ms.assetid: 8C973B85-880E-46AD-8602-A8967B90C8C2
 ---

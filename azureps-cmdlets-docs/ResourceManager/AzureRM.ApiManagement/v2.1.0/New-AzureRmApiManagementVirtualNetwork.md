@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: .\Set-AzureRmApiManagementVirtualNetworks.md
+online version: 
 schema: 2.0.0
 ms.assetid: EC96B443-15BF-4B19-B518-DECB18C64749
 ---

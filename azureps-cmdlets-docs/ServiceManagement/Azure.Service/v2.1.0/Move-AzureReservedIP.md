@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Move-AzureNetworkSecurityGroup.md
+online version: 
 schema: 2.0.0
 ms.assetid: 8EAD62A7-AB9A-4BD6-9E63-24E8D625A585
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: .\New-AzureRmApiManagementOpenIdConnectProvider.md
+online version: 
 schema: 2.0.0
 ms.assetid: 15B6EAE2-56ED-4A01-B8EA-52B9FCDC1F66
 ---

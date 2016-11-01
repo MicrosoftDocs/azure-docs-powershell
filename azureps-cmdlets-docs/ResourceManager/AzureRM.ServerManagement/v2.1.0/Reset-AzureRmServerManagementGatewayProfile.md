@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
-online version: .\Install-AzureRmServerManagementGatewayProfile.md
+online version: 
 schema: 2.0.0
 ms.assetid: 807E8C40-E28F-4CED-9753-D9A849DFBA08
 ---

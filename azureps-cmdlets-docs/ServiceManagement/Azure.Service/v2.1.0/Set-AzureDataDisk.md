@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Add-AzureDataDisk.md
+online version: 
 schema: 2.0.0
 ms.assetid: 89CE062D-C2BA-4D77-B8EB-45785F5E7498
 ---

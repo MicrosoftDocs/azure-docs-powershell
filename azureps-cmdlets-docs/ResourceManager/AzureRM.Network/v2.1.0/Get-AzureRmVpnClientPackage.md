@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Resize-AzureRmVirtualNetworkGateway.md
+online version: 
 schema: 2.0.0
 ms.assetid: 1878C47D-5E01-4BE5-AD66-DE14B02083DF
 ---

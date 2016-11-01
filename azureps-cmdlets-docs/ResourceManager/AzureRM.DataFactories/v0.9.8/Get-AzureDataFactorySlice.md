@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-online version: .\Set-AzureDataFactorySliceStatus.md
+online version: 
 schema: 2.0.0
 ms.assetid: 3AF4E7FB-1798-47E2-8B3B-7649C0386B50
 ---

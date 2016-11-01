@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: .\New-AzureRMWebAppSlot.md
+online version: 
 schema: 2.0.0
 ms.assetid: A957D7C7-30CF-4505-93B0-A4C013A4406C
 ---

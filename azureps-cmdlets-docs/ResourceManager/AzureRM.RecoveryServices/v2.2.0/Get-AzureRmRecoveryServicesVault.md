@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
-online version: 392a4537-0698-40ac-9569-026cc453d26c
+online version: 
 schema: 2.0.0
 ms.assetid: 6A2CBD8B-7AA2-4AB8-B5EB-69A32CFBD03D
 ---

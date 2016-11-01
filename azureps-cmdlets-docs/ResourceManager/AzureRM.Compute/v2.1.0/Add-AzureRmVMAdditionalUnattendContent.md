@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: .\Get-AzureRmAvailabilitySet.md
+online version: 
 schema: 2.0.0
 ms.assetid: C4F0EE47-E31F-4474-8E5D-0EF8DABB3433
 ---

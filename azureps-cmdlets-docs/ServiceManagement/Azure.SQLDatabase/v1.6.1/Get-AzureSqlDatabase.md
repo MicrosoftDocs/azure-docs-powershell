@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
-online version: https://azure.microsoft.com/en-us/services/sql-database/
+online version: 
 schema: 2.0.0
 ms.assetid: ABC7E620-0FBB-45FD-99C5-2D3C87C7D045
 ---

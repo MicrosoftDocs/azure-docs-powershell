@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-online version: .\Format-MetricsAsTable.md
+online version: 
 schema: 2.0.0
 ms.assetid: CCDBAD1D-B718-45DA-9362-DA517F1B711A
 ---

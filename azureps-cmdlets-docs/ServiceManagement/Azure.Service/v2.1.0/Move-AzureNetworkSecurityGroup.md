@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Move-AzureReservedIP.md
+online version: 
 schema: 2.0.0
 ms.assetid: 51C57DD6-3A1A-438C-89CF-997A46CB4808
 ---

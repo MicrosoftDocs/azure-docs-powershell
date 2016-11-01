@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: .\Add-AzureApplicationGatewayFrontendPort.md
+online version: 
 schema: 2.0.0
 ms.assetid: 94CA03D1-8155-438C-92DE-4C7CAFDF10C2
 ---

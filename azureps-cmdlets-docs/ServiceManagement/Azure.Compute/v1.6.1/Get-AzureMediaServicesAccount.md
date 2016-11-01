@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkId=324179
+online version: 
 schema: 2.0.0
 ms.assetid: D3235DBB-E211-4ABB-A370-772564BBD2D5
 ---

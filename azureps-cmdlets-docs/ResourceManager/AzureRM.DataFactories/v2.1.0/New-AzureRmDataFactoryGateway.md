@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-online version: .\Remove-AzureRmDataFactoryGateway.md
+online version: 
 schema: 2.0.0
 ms.assetid: B077C7B4-E0B1-4060-8D9F-A628AE04FBE9
 ---

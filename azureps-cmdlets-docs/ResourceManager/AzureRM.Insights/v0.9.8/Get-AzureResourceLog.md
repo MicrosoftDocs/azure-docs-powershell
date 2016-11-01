@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-online version: .\Get-AzureSubscriptionIdLog.md
+online version: 
 schema: 2.0.0
 ms.assetid: F08B1384-C36C-48FA-82C6-429EC08A235C
 ---

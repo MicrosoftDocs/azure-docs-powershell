@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Get-AzureDns.md
+online version: 
 schema: 2.0.0
 ms.assetid: 9842700F-76E6-4C66-8694-8B00E11C435B
 ---

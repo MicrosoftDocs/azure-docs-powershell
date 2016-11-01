@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
-online version: .\Get-AzureRMAutomationScheduledRunbook.md
+online version: 
 schema: 2.0.0
 ms.assetid: A56FC467-F64D-4453-9B55-CDD5CAD1AA98
 ---

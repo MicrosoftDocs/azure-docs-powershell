@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: .\Update-AzureVM.md
+online version: 
 schema: 2.0.0
 ms.assetid: AD96FEAC-55A4-435E-A7DD-76085C831F77
 ---

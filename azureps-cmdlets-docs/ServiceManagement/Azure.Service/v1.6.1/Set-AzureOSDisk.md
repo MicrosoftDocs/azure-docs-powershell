@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Add-AzureVMImage.md
+online version: 
 schema: 2.0.0
 ms.assetid: EB90E879-02DF-4C75-A49F-EC7090347CDB
 ---

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
-online version: a2fad07b-980d-4043-9011-2a4ccc5c8784
+online version: 
 schema: 2.0.0
 ms.assetid: 9FA74372-B84B-4D99-AFB3-E420927075B3
 ---

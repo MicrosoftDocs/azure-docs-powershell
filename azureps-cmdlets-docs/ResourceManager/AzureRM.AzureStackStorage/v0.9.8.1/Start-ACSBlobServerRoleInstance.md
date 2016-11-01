@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
-online version: .\Stop-ACSBlobServerRoleInstance.md
+online version: 
 schema: 2.0.0
 ms.assetid: 1FF9AA26-0ABE-4429-BA17-4C2D25EE81BE
 ---

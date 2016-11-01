@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
-online version: 10b88fc1-b29c-4c2b-8348-c1b5c1419d14
+online version: 
 schema: 2.0.0
 ms.assetid: ABB9DED5-A932-4949-8CD1-6835B607FA67
 ---

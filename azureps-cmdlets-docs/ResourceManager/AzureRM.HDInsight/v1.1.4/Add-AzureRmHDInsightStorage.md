@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-online version: .\New-AzureRmHDInsightClusterConfig.md
+online version: 
 schema: 2.0.0
 ms.assetid: E517F86F-6837-422A-A873-315BC766777C
 ---

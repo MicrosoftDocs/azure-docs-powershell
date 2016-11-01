@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: .\Remove-AzureVMAccessExtension.md
+online version: 
 schema: 2.0.0
 ms.assetid: BAC0B7A6-772F-471D-AFBA-AA96B0F893F4
 ---

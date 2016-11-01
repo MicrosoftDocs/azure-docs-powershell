@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
-online version: .\Remove-AzureVMDscExtension.md
+online version: 
 schema: 2.0.0
 ms.assetid: E9CF2266-B5C7-4274-A5F4-46DCED7278CC
 ---
