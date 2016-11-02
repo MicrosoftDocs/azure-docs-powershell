@@ -82,13 +82,12 @@ Specifies the URL that points to a Key Vault secret which contains a certificate
 
 The certificate is the Base64 encoding of the following JavaScript Object Notation (JSON) object, which is encoded in UTF-8:
 
-```
 {
 "data": "\<Base64-encoded-file\>",
 "dataType": "\<file-format\>",
 "password": "\<pfx-file-password\>"
 }
-```
+
 
 Currently, dataType accepts only .pfx files.
 
