@@ -53,13 +53,12 @@ Specifies the URI of a certificate stored in the Key Vault.
 
 It is the base64 encoding of the following JSON Object which is encoded in UTF-8:
 
-```
+
 {
   "data":"\<Base64-encoded-certificate\>",
   "dataType":"pfx",
   "password":"\<pfx-file-password\>"
 }
-```
 
 ```yaml
 Type: String
