@@ -39,9 +39,6 @@ You can use the pipeline operator to pass a **DnsZone** object to this cmdlet, o
 You can use the *Confirm* parameter and $ConfirmPreference PowerShell variable to control the standard PowerShell confirmation behavior.
 
 If a matching **RecordSet** already exists (same name and record type), you must specify the *Overwrite* parameter, otherwise the cmdlet will not create a new **RecordSet** .
-Because this has the potential to overwrite an existing, in-use DNS record, an overwrite confirmation prompt will be shown.
-You can suppress the confirmation prompt by using the *Force* parameter.
-This overwrite confirmation prompt is separate from the standard PowerShell confirmation behavior controlled via the *Confirm* parameter and $ConfirmPreference PowerShell variable as described above.
 
 ## EXAMPLES
 
