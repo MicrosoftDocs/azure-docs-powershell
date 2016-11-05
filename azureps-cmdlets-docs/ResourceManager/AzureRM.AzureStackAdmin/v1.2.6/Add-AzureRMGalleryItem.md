@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 The Add-AzureRMGalleryItem cmdlet adds the gallery item package.
-The gallery item uri needs to be a http/https uri accessible to the gallery service. 
+The gallery item uri needs to be a http/https uri accessible to the gallery service.
 Typically .azpkg file is uploaded to a publicly accessible blob container and its uri is provided as the GallelryItemUri parameter
 
 ## SYNTAX
@@ -44,7 +44,7 @@ This parameter will be deprecated in future
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,7 +61,7 @@ This parameter will be deprecated in the future.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +77,7 @@ The Uri should be accessible to the gallery service
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,13 +136,13 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
+This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
 This parameter will be deprecated in a future release
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,14 +152,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
+Authentication token for making the request. This parameter is not needed when using.
+This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
 This parameter will be deprecated in a future release
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,4 +176,3 @@ Accept wildcard characters: False
 
 ## NOTES
 ## RELATED LINKS
-
