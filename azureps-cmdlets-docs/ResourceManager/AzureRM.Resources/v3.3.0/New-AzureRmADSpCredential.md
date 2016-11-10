@@ -259,5 +259,5 @@ Accept wildcard characters: False
 
 [Get-AzureRmADServicePrincipal]()
 
-[]()
+
 
