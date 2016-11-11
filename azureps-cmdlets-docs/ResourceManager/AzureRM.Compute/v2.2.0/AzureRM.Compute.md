@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+ms.assetid: BAEA1EE9-8F62-4B9F-833C-1244564EC9F2
 ---
 
 # AzureRM.Compute Module

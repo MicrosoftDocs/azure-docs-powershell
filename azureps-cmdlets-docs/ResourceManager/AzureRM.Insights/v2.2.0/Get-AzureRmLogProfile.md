@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C39D5E83-5498-4464-8B03-D9352EE9370C
+ms.assetid: 5C7B6A77-ABFC-4217-906A-1B0276848363
 ---
 
 # Get-AzureRmLogProfile

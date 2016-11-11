@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F287198D-609E-4AC1-9221-9CE5453A732E
+ms.assetid: C9E59CA6-A96F-4996-9BE2-88F3EA6F94AF
 ---
 
 # Remove-AzureStorageTable

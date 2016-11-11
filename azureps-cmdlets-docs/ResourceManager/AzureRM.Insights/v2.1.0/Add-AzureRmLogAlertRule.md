@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 094F70FF-FFAF-47CC-9FAF-86D4CBD63540
+ms.assetid: A497FB5D-E196-49AC-91C8-C81019294F00
 ---
 
 # Add-AzureRmLogAlertRule

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F2EFFF61-38C9-4D1E-92BD-E00C82EFBFBE
+ms.assetid: 79FB5A97-6B9D-4F87-B5ED-6653BBCB06A7
 ---
 
 # New-AzureRmServerManagementSession

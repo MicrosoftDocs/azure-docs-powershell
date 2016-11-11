@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+ms.assetid: BA2D13D3-F6D6-4F07-A157-6F67A7E55864
 ---
 
 # AzureRM.PowerBIEmbedded Module

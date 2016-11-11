@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+ms.assetid: 0175C9DB-025C-47FC-9DBB-58977ACBCA0B
 ---
 
 # AzureRM.RecoveryServices.Backup Module

@@ -4,6 +4,7 @@ Module Guid: Batch_Cmdlets_D48CF693-4125-4D2D-879
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 2.0.7.0
 Locale: en-US
+ms.assetid: F992C605-32B9-4ECD-8F1F-0D907DD58274
 ---
 
 # AzureRM.Batch Module

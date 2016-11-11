@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4AE2A222-FB8B-409D-88FD-4A0A854E1C27
+ms.assetid: 87852E9D-1B3F-4F10-88C7-1F708D18330D
 ---
 
 # Remove-AzureRmBackupProtectionPolicy

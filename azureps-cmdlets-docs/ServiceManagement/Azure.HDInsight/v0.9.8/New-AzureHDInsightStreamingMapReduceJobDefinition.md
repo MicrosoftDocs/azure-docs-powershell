@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 87202D64-AD98-4320-B2B2-702184CE1F13
+ms.assetid: 4603051F-CCE6-4857-B09E-EEFF779599D4
 ---
 
 # New-AzureHDInsightStreamingMapReduceJobDefinition

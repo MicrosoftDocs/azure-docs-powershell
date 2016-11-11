@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EAB09B7A-2CAE-4B3B-A10D-07418104875B
+ms.assetid: 70654D1A-89C8-4380-9C76-60D5B205BA94
 ---
 
 # Set-AzureRmNetworkSecurityRuleConfig

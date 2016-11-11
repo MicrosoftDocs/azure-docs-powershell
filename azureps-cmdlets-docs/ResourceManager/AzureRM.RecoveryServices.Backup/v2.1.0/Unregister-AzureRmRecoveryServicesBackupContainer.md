@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 71357C7C-C3F4-44ED-8DCA-954025179A67
+ms.assetid: 1C3080F6-D863-44B5-B6C6-7A1D57A54F73
 ---
 
 # Unregister-AzureRmRecoveryServicesBackupContainer

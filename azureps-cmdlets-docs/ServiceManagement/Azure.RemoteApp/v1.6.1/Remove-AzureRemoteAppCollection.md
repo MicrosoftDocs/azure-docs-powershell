@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C37E4F6A-09A8-45F9-9499-4AD5E2B4F9AB
+ms.assetid: 66BE5DC1-326C-421D-B331-65FF06793A11
 ---
 
 # Remove-AzureRemoteAppCollection

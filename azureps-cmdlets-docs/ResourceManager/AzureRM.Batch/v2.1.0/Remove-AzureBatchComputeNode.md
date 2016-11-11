@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 42D8CC9E-FDB1-40BF-839A-1F9C2C859D06
+ms.assetid: 9C5BEED5-7C87-482B-974C-DB1DC6826E7E
 ---
 
 # Remove-AzureBatchComputeNode

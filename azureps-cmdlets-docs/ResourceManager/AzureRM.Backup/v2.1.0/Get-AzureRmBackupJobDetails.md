@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 09FC2526-8288-4AE9-8381-8D6BD749DA8C
+ms.assetid: 1ACF373F-D7F2-41B9-94D0-CDDA9CAEBAEF
 ---
 
 # Get-AzureRmBackupJobDetails

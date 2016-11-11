@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D52A4944-F8B3-4B65-BEA9-A34FFC7FE7DE
+ms.assetid: CD92DAEA-9878-46B3-8BC7-53A46AB10DAC
 ---
 
 # New-AzureRmBackupVault

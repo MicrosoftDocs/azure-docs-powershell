@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 258B05FA-EA14-4F7E-B593-2EB10FD186D4
 ---
 
 # New-AzureRmSchedulerStorageQueueJob

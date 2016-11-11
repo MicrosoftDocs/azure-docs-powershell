@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FF243961-E44D-4691-B80A-2D5B5AB08638
+ms.assetid: 6231AECF-DD15-4B0B-A017-DD083E70D46B
 ---
 
 # Stop-AzureStorSimpleJob

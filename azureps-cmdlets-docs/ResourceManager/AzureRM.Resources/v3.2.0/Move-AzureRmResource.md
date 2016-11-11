@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E7D50CA3-1316-4F9F-BAEC-FED95AA24322
+ms.assetid: 9ECBE2C2-B9F8-4167-8A79-E92D935D67C5
 ---
 
 # Move-AzureRmResource

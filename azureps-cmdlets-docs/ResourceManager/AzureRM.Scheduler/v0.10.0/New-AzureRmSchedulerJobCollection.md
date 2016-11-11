@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 04FA4B98-7E59-4416-B1C9-99FF62CFD30E
 ---
 
 # New-AzureRmSchedulerJobCollection

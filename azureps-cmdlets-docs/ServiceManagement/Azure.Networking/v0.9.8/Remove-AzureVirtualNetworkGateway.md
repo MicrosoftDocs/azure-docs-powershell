@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9434955B-9D7E-4592-AECF-DF81027CDD80
+ms.assetid: 7EA68613-FF7B-4DD6-AE17-207467CCC60A
 ---
 
 # Remove-AzureVirtualNetworkGateway

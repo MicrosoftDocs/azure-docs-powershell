@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F13AFEA9-2F1F-4A3F-839F-A99468368E70
+ms.assetid: 47E2E555-E899-419F-A7E1-9CB5B8DE123B
 ---
 
 # Undo-ACSStorageAccountDeletion

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7BB6DF38-91AC-4B65-A6CE-05C0618089CB
+ms.assetid: 8C0780C6-B277-4C3C-8832-450B7E53904B
 ---
 
 # Stop-AzureRmVmss

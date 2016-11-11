@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 78FFC780-44F3-4BBD-AABD-27C10BBA2E91
+ms.assetid: 6F97C577-432E-4CDF-B2DB-CFF07BF0AD84
 ---
 
 # Get-AzureRmVMBootDiagnosticsData

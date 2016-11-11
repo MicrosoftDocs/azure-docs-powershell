@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 557C120E-D3FB-40CD-9CA3-DD27610E6DD7
+ms.assetid: 2D1A3F29-9C58-4F5B-975D-A34F6221C7EE
 ---
 
 # Remove-AzureAutomationRunbook

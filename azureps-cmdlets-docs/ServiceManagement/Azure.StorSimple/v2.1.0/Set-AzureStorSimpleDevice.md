@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E28D1083-6219-41A2-AFA5-E26F5B50988A
+ms.assetid: 70036A39-5ADD-4B7F-B7C5-E4F0A9DB35C7
 ---
 
 # Set-AzureStorSimpleDevice

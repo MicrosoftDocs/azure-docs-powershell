@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9AD628ED-BC70-4984-9F20-24EA08069857
+ms.assetid: E6072BF4-8F8F-44ED-BC10-1FADC2FE27FD
 ---
 
 # New-AzureRmCdnEndpoint

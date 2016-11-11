@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 6DF0B014-03B0-47AA-9D34-9D0FCEEE2247
+ms.assetid: 2A617CCC-D504-46A2-A88A-D13AD563F0DF
 ---
 
 # Remove-AzureRmApiManagementRegion

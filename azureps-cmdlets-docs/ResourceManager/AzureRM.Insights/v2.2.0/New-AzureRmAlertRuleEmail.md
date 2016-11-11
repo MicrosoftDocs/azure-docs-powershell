@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8CCEA18B-C9DC-4CC0-979B-66C776A06BC1
+ms.assetid: AC9EC8E1-27F3-494C-8062-BBACCAAFD4D4
 ---
 
 # New-AzureRmAlertRuleEmail

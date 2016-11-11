@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: DD06EF11-DE4C-44A6-BB2C-CBF00D5C0ECA
 ---
 
 # Remove-AzureRMOffer

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E5E8587A-704C-48CB-9C08-452D5D0CFAEB
+ms.assetid: A449F2CF-FDA8-4FF7-9EB7-140D7F604EEF
 ---
 
 # Disconnect-AzureRemoteAppSession

@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: D30CC47A-FE6D-43A8-8602-26CCF145438F
 ---
 
 # Remove-AzureRMResourceProviderRegistration

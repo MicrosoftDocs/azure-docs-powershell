@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9DB5BA0B-6CEA-4EE4-B6D3-BF1997C9A3F8
+ms.assetid: 77C5BE01-44B4-4334-8104-FA07FDD99639
 ---
 
 # Move-AzureRmDataLakeStoreItem

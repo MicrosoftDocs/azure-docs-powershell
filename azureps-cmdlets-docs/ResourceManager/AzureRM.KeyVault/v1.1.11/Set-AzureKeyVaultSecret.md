@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FD385C29-0596-43B4-AC1F-ECDA88889F72
+ms.assetid: 5EA20686-8DD7-40E4-9E80-33AF83B40B05
 ---
 
 # Set-AzureKeyVaultSecret

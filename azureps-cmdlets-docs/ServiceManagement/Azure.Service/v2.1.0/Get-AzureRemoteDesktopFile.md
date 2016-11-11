@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4A5E74F3-08D6-4E95-AC27-94F68B74B02C
+ms.assetid: 7CB8D0B9-E78F-479D-A212-08964410C3B7
 ---
 
 # Get-AzureRemoteDesktopFile

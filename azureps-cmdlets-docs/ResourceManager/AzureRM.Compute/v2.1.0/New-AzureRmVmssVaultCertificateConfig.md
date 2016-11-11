@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A052C39E-360C-4576-94C8-7EAD4D78CBEC
+ms.assetid: D3D7381B-8EEA-45EF-BBA5-CA10216EC5DF
 ---
 
 # New-AzureRmVmssVaultCertificateConfig

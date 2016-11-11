@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7158758D-EDB2-49DD-A136-357C3F8FBEEB
+ms.assetid: 1AA518B3-248D-49E0-9880-0F425F47E067
 ---
 
 # Get-AzureRmLoadBalancerInboundNatRuleConfig

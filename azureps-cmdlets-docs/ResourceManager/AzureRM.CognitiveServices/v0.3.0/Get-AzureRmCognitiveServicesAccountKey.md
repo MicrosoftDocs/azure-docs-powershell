@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 35F33DDA-691E-4D12-A585-D9525DD0B721
+ms.assetid: BED775D5-68F3-4701-896C-77AFC740A9D8
 ---
 
 # Get-AzureRmCognitiveServicesAccountKey

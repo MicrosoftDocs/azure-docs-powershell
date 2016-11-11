@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 23FBE36F-C4BA-45BF-827B-1595309DC686
+ms.assetid: 7EC6A5A2-1E64-4AE9-994E-E00BD46CF68B
 ---
 
 # New-AzureStorageKey

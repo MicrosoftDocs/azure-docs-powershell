@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B5092C77-2E70-4D02-9A23-861571D0F8B7
+ms.assetid: FFA77281-3792-493E-9A2B-5043B91D8C5D
 ---
 
 # Remove-AzureRmLogicApp

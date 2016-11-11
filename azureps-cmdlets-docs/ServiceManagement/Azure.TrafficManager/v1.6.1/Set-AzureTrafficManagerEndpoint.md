@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F766B307-8EE2-4860-AEF7-DB6ED403D621
+ms.assetid: E5F96640-180C-489C-A8E5-BDB672661CA3
 ---
 
 # Set-AzureTrafficManagerEndpoint

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AF603495-E205-4000-928B-CF1C59551E39
+ms.assetid: CE318849-AC75-4704-8223-870DC9545278
 ---
 
 # Set-AzureRmVMBginfoExtension

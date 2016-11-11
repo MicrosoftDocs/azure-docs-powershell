@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FDDC1B9E-CAF4-47D7-A6B2-A2B2BB50113A
+ms.assetid: 23073710-2FAB-483A-99E4-350063C4C5D1
 ---
 
 # Remove-AzureStorageBlob

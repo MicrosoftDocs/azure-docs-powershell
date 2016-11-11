@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 48AC3BA1-94D3-4D0C-8BCB-0A9E178A2A3C
+ms.assetid: 3B246240-D905-4125-8E8F-B700BD04044A
 ---
 
 # Get-AzureRmVMDiskEncryptionStatus

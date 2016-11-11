@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4D7D5E14-1F9F-4FF4-BBEC-B53A70FCBE84
+ms.assetid: 7902A0BB-8C5C-498C-AEFF-F26BD79B2CD7
 ---
 
 # Get-AzureRmRouteTable

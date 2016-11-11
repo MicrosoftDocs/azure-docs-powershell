@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3B1FC41A-FA8C-4F70-BD33-A5F7914C9DA0
+ms.assetid: E2E1AFC4-7DB8-41DE-9B60-0A07FFB44F91
 ---
 
 # Add-AzureRmApiManagementUserToGroup

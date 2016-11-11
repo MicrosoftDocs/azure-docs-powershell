@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 58C65666-AFFD-4477-B1E3-278BE346ECD3
+ms.assetid: 95C88386-CA91-4E2D-9500-8A865F6B20BA
 ---
 
 # Remove-AzureSqlDatabaseServer

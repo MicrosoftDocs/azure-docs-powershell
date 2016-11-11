@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 865B321D-9C41-4472-93CC-7DEFE95BC7F0
+ms.assetid: 7978A980-40C9-46BD-9C40-5ECC2650D0AE
 ---
 
 # New-AzureVMImageDiskConfigSet

@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 3.0.1.0
 Locale: en-US
+ms.assetid: 3622BCC7-7020-4BFC-8907-92D14327C59D
 ---
 
 # AzureRM.KeyVault Module

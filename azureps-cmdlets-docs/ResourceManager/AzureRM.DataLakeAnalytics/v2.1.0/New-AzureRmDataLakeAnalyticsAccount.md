@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2106EAC5-21A6-435E-9B4A-3D6ADFC0A4EA
+ms.assetid: 7D88FA47-F376-4B1B-AB10-5C0611AA2706
 ---
 
 # New-AzureRmDataLakeAnalyticsAccount

@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: CBE387A8-238C-4FFF-8BF0-82059D622FA1
 ---
 
 # Remove-AzureRmMediaService

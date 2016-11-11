@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5AE7BB61-1EC6-42B8-968A-FD1400EC82C2
+ms.assetid: B9A0E3E1-91EF-48FD-8775-77047A03C642
 ---
 
 # Remove-AzureRmRouteConfig

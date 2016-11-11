@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E4CD4DB0-ADDD-4862-9B81-03803764D80F
+ms.assetid: 250E6733-A02B-4D5C-80AA-BF0CB3F9C5AC
 ---
 
 # Get-WAPackVMSizeProfile

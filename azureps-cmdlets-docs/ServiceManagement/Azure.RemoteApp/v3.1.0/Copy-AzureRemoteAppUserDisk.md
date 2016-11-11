@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
-ms.assetid: 9C26AFEA-91AC-45A0-AA63-4AECB25E9E28
+ms.assetid: 02F429EA-FE9A-427F-86B5-C9C4275FD3EA
 online version: 
 schema: 2.0.0
 ---

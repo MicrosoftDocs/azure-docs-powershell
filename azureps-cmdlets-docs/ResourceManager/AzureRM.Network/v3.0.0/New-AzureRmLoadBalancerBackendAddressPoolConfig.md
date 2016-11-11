@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 91FDBECA-D66F-4243-8E08-4E6D04CADBDF
+ms.assetid: B7500E8A-578E-41A1-846A-06F93ECA26A4
 ---
 
 # New-AzureRmLoadBalancerBackendAddressPoolConfig

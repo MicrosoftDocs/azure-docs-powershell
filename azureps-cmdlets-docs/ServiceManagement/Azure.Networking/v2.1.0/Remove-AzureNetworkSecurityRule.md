@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3CB862D2-C316-4135-A59A-65441F00AD96
+ms.assetid: 08889BD1-A159-40F9-A2FB-529A522C6E54
 ---
 
 # Remove-AzureNetworkSecurityRule

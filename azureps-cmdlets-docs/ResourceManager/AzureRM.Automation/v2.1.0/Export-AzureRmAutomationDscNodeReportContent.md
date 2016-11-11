@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0BFB6A70-3A4A-4E58-A0B9-E41EB52A90EF
+ms.assetid: 3A8ED2C7-90C7-403D-BAA7-103B27C098B3
 ---
 
 # Export-AzureRmAutomationDscNodeReportContent

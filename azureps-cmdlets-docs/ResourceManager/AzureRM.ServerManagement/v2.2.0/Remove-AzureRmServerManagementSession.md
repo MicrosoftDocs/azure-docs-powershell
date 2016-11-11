@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0685B321-0FE4-4760-9446-17656F9DB600
+ms.assetid: A07536A6-89E4-4819-BC24-E895D785DE1A
 ---
 
 # Remove-AzureRmServerManagementSession

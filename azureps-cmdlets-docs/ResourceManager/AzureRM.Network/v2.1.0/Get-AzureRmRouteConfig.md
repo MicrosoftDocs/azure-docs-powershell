@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2B08FCD6-BA8D-42B6-B9CC-897D26425669
+ms.assetid: F26C52CA-4643-49DE-9387-F71C8448CE1D
 ---
 
 # Get-AzureRmRouteConfig

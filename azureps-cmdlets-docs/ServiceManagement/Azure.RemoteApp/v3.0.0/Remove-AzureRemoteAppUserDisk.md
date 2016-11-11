@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 349327EE-838F-4194-AB6F-2B17F6051A6D
+ms.assetid: 021C274C-54D3-47E1-BCD3-1D02A10E912C
 ---
 
 # Remove-AzureRemoteAppUserDisk

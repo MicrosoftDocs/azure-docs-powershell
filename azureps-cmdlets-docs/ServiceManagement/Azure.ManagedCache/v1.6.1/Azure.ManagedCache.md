@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: E2F6B1BD-D41F-4B19-9229-F4B6769BBC2B
 ---
 
 # Azure.ManagedCache Module

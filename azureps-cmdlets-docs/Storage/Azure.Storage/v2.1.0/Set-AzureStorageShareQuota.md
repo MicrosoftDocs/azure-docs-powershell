@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C8585DFB-6ED2-41FD-9A78-6A063EAE8797
+ms.assetid: 01C56458-2693-4FEB-9BFC-8C431870390C
 ---
 
 # Set-AzureStorageShareQuota

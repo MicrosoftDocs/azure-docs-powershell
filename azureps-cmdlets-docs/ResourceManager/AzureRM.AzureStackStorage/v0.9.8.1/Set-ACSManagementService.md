@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FA216AFC-571B-4526-B56E-96BCD2E27CC0
+ms.assetid: FD1DF701-C533-4AC5-9939-F0B79A4BBD3D
 ---
 
 # Set-ACSManagementService

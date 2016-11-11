@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DD8F898F-99BE-4B61-B4F6-1AE259D60DD9
+ms.assetid: 405700BC-8D1C-4EE8-8C73-F160A5E08758
 ---
 
 # Get-AzureRmBatchApplication

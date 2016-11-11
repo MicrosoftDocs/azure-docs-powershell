@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9050047A-99D4-4CFC-95B2-07A42C20D1D5
+ms.assetid: 40669984-3A5C-46C7-B391-E3D474F138D0
 ---
 
 # Unregister-AzureAutomationScheduledRunbook

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 79BF6173-959C-45AC-B006-07D0D389C321
+ms.assetid: 56391CCA-0C97-43FD-9113-3F51E2E66176
 ---
 
 # Set-AzureRmContext

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7FD4E565-A169-45F1-B4B6-1055AAC2FF27
+ms.assetid: 15D917A3-9E9D-43F7-9986-81AA8E6DDACB
 ---
 
 # Get-AzureRmDataLakeStoreItemOwner

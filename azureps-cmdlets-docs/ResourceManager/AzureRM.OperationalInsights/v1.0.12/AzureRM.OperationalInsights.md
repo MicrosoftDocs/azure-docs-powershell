@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 2.0.2.0
 Locale: en-US
+ms.assetid: A5235078-BB51-402D-BD63-560D5A07A3FE
 ---
 
 # AzureRM.OperationalInsights Module

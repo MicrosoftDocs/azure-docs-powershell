@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 975161A1-B1B4-446A-B499-0EA209F02F78
+ms.assetid: E6A00BDB-63AA-4AAB-81DE-C6C575D11CFD
 ---
 
 # Add-AzureRmVmssSecret

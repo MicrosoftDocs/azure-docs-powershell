@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DE61E8F6-3DFE-4307-A07F-44E4A32BC5BE
+ms.assetid: 4D20AC96-BD6D-42E7-A78D-63FC3068380B
 ---
 
 # Remove-AzureVNetConfig

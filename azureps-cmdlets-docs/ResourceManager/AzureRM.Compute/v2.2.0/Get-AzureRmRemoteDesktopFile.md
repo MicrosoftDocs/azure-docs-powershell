@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 098806EA-0E92-4077-ACB5-DABECB53329A
+ms.assetid: 338AB03C-1677-42A5-AE27-7F1917AA3F08
 ---
 
 # Get-AzureRmRemoteDesktopFile

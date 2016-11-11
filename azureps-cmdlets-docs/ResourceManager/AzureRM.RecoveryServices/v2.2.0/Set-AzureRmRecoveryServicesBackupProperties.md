@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FBA2DBFB-F9C1-4C19-8DE3-A9CA50EB72B3
+ms.assetid: EACA77DA-0313-4C70-9A2C-649D92EC8DF3
 ---
 
 # Set-AzureRmRecoveryServicesBackupProperties

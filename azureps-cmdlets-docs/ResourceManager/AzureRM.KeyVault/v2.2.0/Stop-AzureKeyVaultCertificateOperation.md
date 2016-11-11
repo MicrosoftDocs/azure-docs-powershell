@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4CD3DD28-AAA4-4C03-9BCE-129FB8ED716D
+ms.assetid: 1FB257C0-BCE5-4938-9851-EEC11C07772D
 ---
 
 # Stop-AzureKeyVaultCertificateOperation
