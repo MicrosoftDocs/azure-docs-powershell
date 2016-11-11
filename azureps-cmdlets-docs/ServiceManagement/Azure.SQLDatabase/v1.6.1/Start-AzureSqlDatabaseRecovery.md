@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D33FA8F2-7A96-4459-B135-01B4688F39FA
+ms.assetid: 9FDF2E1D-ED2C-4C1E-B00F-6CEBD43D5F1E
 ---
 
 # Start-AzureSqlDatabaseRecovery

@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: 69AD7292-83EE-40A4-9BB1-8406BAD4D52B
 ---
 
 # Azure.TrafficManager Module

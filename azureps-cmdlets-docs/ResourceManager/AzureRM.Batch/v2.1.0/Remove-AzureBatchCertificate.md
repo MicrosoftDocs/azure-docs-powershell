@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3110222F-F51D-434E-A154-911A05D58A2F
+ms.assetid: 69237928-B653-4CD3-88B1-09D3863CC666
 ---
 
 # Remove-AzureBatchCertificate

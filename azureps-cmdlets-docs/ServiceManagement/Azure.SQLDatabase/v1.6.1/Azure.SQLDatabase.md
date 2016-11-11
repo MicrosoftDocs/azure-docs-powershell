@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: 0FC6E3DE-23F2-4BC1-B608-DD6A74847AB0
 ---
 
 # Azure.SQLDatabase Module

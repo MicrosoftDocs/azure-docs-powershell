@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C500460E-AF54-465C-B269-07DF3EBA75C2
+ms.assetid: 8504FC87-1359-4785-96E4-6CA8F8CB2064
 ---
 
 # Remove-AzureRmTrafficManagerEndpointConfig

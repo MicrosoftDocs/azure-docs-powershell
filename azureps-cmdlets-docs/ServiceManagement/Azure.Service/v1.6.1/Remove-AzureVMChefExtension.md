@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 323291A2-2A38-4230-A054-EA356380E356
+ms.assetid: 266409AF-D39B-4D47-8DAC-8E1F08A2465A
 ---
 
 # Remove-AzureVMChefExtension

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B5C9CEE5-7D1E-4B3D-A097-84A0FBEEC9FC
+ms.assetid: 6ED6CC7F-1083-40E3-A6E4-827D6F841313
 ---
 
 # Start-AzureSiteRecoveryProtectionProfileAssociationJob

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AA73524A-82DC-451E-843F-C88EEF9D73E5
+ms.assetid: 93928643-1CA6-4A2D-AF0F-D7D487F4A033
 ---
 
 # Get-AzureRMAutomationHybridWorkerGroup

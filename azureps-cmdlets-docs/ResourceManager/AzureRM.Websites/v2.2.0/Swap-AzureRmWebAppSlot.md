@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1813E35C-7494-4945-8F8E-D0464A6E3CC0
+ms.assetid: C604E721-1099-4F1F-B2D9-41DB89DF5B50
 ---
 
 # Swap-AzureRmWebAppSlot

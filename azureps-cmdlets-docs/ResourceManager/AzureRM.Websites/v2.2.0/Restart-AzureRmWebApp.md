@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8FC691AA-3F5F-4773-9169-9EECC02E0CB3
+ms.assetid: 3E2948E3-B14B-41E6-9134-F84525E02E65
 ---
 
 # Restart-AzureRmWebApp

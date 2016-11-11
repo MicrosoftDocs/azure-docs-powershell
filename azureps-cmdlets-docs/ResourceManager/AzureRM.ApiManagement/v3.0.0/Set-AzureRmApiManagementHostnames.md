@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DD997F04-B85B-409C-8C69-A5E659C768E3
+ms.assetid: 175F1067-1D17-418D-8204-58ABF4C96FF7
 ---
 
 # Set-AzureRmApiManagementHostnames

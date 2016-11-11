@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
-ms.assetid: A8A9A07E-1A67-405A-891E-71CDBCDD6C7E
+ms.assetid: AFDE5ECD-29AB-4C91-98BF-1B8C9C3BB079
 online version: 
 schema: 2.0.0
 ---

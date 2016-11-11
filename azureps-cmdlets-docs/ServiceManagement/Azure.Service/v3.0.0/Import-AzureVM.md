@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 349D54F9-A5F7-460E-B5C8-FDAADC5EB4C7
+ms.assetid: 05EFEF59-7D6D-41A0-BCCF-9595DE527405
 ---
 
 # Import-AzureVM

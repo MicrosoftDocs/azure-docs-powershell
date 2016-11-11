@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 37438002-4BCF-457B-A71F-9CBC3CE72ABB
+ms.assetid: D44AAA41-1664-4204-88E2-6A7698377982
 ---
 
 # Get-ACSTableService

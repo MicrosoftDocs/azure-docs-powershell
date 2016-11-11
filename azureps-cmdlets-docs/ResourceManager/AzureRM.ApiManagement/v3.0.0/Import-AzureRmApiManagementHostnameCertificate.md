@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2A7EF835-586C-4E86-A243-3CC0E9623D71
+ms.assetid: ABEAF762-88F7-4047-98A7-CD19FC206C47
 ---
 
 # Import-AzureRmApiManagementHostnameCertificate

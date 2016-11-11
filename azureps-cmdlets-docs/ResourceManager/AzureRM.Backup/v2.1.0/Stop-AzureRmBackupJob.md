@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1BD80C4F-CBAE-4A57-BA73-4DD9E0A3B16E
+ms.assetid: 8616A206-7DEB-4E7A-8130-BD860B7AC716
 ---
 
 # Stop-AzureRmBackupJob

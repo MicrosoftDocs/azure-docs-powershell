@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B1291145-7F00-4675-B928-1BCDFF1962E6
+ms.assetid: 199F88C9-DB95-4B85-9295-B768C30FFE7D
 ---
 
 # Remove-AzureRmAutoscaleSetting

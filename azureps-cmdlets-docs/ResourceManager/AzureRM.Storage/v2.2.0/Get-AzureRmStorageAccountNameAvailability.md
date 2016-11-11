@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F11035A8-7E3A-4B66-AD06-874C7C4AD40C
+ms.assetid: CB1FECAA-C288-4DC8-9415-D0B6CCA6B65B
 ---
 
 # Get-AzureRmStorageAccountNameAvailability

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 67E87B84-A4F4-4FB7-A8C9-1CE602C53204
+ms.assetid: B807B64D-EA62-4AE8-8972-B181CEAC321B
 ---
 
 # Remove-AzureSubscription

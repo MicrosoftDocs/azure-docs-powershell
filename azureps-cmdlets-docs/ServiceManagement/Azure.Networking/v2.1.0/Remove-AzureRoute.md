@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: ED5BCADA-79BE-4AD5-A5A8-E738BFA0337C
+ms.assetid: 01B01BD9-56D3-43F2-AF5D-153848FA9091
 ---
 
 # Remove-AzureRoute

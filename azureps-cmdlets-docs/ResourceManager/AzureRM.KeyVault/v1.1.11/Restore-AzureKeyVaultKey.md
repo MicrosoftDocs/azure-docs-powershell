@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9781A7D4-50B7-493A-9D4A-90ED291BD15A
+ms.assetid: 05109451-CC21-4B08-B58C-65984332B71A
 ---
 
 # Restore-AzureKeyVaultKey

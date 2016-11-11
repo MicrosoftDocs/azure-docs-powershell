@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F2A66A2D-B93D-491D-8990-A8CDD48B57BB
+ms.assetid: C5DB0CDE-B64B-469F-885B-AFBA876B5A1A
 ---
 
 # Get-AzureRmDtlAutoStartPolicy

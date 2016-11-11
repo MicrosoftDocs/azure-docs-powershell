@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C624BF50-FF3A-4FA8-83BC-CCAA1C14FBD0
+ms.assetid: EB8AD432-F3D0-4AA7-9270-37D9E70BAF03
 ---
 
 # Remove-AzureStorSimpleDeviceVolume

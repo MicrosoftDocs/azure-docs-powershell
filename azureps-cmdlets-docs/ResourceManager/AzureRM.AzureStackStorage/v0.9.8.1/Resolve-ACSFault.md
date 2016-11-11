@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 28B6671A-1CD0-49F1-99AD-BDB64A36BB25
+ms.assetid: 04C80C1A-55AB-410B-A74C-59D9C0E5F065
 ---
 
 # Resolve-ACSFault

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4D71F65D-E50D-4151-80A1-9C0F494E1EBA
+ms.assetid: 099D5454-1680-40B6-A0B9-746892C4AF8F
 ---
 
 # Remove-AzureRmApplicationGatewayBackendAddressPool

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EC9D0EE8-5F57-40B6-8593-798CB1D8EDCB
+ms.assetid: 27FC65E2-F036-416A-9017-9B0B0E180DDE
 ---
 
 # Get-AzureRmVMImageSku

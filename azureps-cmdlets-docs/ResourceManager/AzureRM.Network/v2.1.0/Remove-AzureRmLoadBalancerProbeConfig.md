@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 98401FC1-592C-43B1-9C98-EE7A63394330
+ms.assetid: CEA93B20-44D4-48B2-928D-3CC8CDA4DF1C
 ---
 
 # Remove-AzureRmLoadBalancerProbeConfig

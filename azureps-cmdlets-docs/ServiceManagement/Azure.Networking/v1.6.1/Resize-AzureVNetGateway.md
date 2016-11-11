@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A6DE7FAB-657D-440E-9754-12A6367A9C8A
+ms.assetid: 0ECE21CA-D76C-4ACE-A745-9B8CD47053B1
 ---
 
 # Resize-AzureVNetGateway

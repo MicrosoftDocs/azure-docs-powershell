@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
-ms.assetid: 8F516472-7EBD-4571-81D0-7F581C4FF0D4
+ms.assetid: 476E889F-C763-4EFA-AFD6-B037BA6BA0A1
 online version: 
 schema: 2.0.0
 ---

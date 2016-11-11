@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
-ms.assetid: 452BF685-28D4-4321-90FD-9C7FF4B2CF24
+ms.assetid: 4D87DD30-4AEF-4269-93B2-AE5964334AC8
 online version: 
 schema: 2.0.0
 ---

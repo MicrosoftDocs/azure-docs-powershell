@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D71E1B64-58E9-4665-A6CB-01E70F6E60AD
+ms.assetid: 6801CAFD-E86B-441D-8FE5-5DF7AEDBBDCD
 ---
 
 # Stop-AzureRmRecoveryServicesBackupJob

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
-ms.assetid: 5C8AB710-CFCD-4199-9CE9-A733E1E87F3A
+ms.assetid: 5C1C51FE-747F-4176-84ED-A28AA3475581
 online version: 
 schema: 2.0.0
 ---

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 049C1427-9415-4039-9B93-E736342616FE
+ms.assetid: D88F22E0-CEF0-47F8-92AA-C4367C91F003
 ---
 
 # Restart-AzureVM

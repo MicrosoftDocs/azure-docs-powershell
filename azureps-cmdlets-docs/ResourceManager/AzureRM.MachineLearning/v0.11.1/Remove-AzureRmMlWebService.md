@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
-ms.assetid: 01D650C8-2531-43FE-A1A3-18A2B793A388
+ms.assetid: 84B3EB80-8A74-4593-A75D-97CD20B7F0D1
 online version: 
 schema: 2.0.0
 ---

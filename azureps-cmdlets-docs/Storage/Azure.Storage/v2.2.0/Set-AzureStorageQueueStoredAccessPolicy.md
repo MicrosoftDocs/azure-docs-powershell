@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 02396020-02C8-4736-A00E-8D7112E27286
+ms.assetid: C0D9C10E-2759-4370-9A7E-4F11985AC628
 ---
 
 # Set-AzureStorageQueueStoredAccessPolicy

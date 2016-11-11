@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D91AAA87-9458-44A9-B332-DF8BA0322290
+ms.assetid: FB7CE48A-6A05-418B-8D0F-1B513EC7AE91
 ---
 
 # Invoke-AzureRmServerManagementPowerShellCommand

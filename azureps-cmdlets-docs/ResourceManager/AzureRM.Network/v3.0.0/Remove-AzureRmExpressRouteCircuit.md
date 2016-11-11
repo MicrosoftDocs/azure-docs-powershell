@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4271B5C0-765C-4957-B4D7-203CA877BF72
+ms.assetid: A77C2EF4-C287-4306-A42C-5098FAA2EAD9
 ---
 
 # Remove-AzureRmExpressRouteCircuit

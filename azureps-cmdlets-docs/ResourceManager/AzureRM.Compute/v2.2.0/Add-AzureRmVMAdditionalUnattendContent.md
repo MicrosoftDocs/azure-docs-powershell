@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C4F0EE47-E31F-4474-8E5D-0EF8DABB3433
+ms.assetid: C262AA74-E5BB-4FF5-86AC-085254BFF6D0
 ---
 
 # Add-AzureRmVMAdditionalUnattendContent

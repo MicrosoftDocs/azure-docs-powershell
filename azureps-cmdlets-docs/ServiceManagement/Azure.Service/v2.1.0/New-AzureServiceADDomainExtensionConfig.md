@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 664015DA-1FAC-437D-B280-80082EC85903
+ms.assetid: 89A024EC-2FEB-4156-8C5B-7D222DE33790
 ---
 
 # New-AzureServiceADDomainExtensionConfig

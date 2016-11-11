@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B7F7A192-E20B-4434-AB12-50D4791B7420
+ms.assetid: 870F0028-D5CF-4D2B-B47C-8EA3884A9DF9
 ---
 
 # Remove-AzureRmVirtualNetwork

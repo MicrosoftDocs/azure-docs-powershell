@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 59DFE497-65B3-4D23-900B-2B1CC6FD9EF5
+ms.assetid: 1E2BB4DB-6290-4CBD-B99F-F98D35216CC4
 ---
 
 # Remove-AzureRemoteAppTemplateImage

@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+ms.assetid: 79B770C8-C2F3-4173-A419-4C350A1B542A
 ---
 
 # Microsoft.Azure.Commands.ApiManagement.ServiceManagement Module

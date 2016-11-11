@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A8A9A07E-1A67-405A-891E-71CDBCDD6C7E
+ms.assetid: 8A84DFA8-5127-4D44-9694-FD2F69FB80A9
 ---
 
 # Get-AzureRmBatchAccountKeys

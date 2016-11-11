@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C43C456B-B18F-41C2-A68C-B818E5A738D1
+ms.assetid: 5CC7A6D3-8B23-427F-985E-9BBB11EE4226
 ---
 
 # Remove-AzureRmResource

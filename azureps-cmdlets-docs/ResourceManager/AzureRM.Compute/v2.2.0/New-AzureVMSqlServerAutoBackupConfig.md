@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0B5E1282-1CE1-4783-AEAD-BC75781814AE
+ms.assetid: B3E199FC-4C5B-4CF7-B191-ABA8A3A5631C
 ---
 
 # New-AzureVMSqlServerAutoBackupConfig

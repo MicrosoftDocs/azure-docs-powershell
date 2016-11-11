@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B346EBDE-CD04-4617-8E5A-24A814B3641B
+ms.assetid: E610B007-6DD1-4A02-AE5A-9259AAA79400
 ---
 
 # Enable-ACSNode

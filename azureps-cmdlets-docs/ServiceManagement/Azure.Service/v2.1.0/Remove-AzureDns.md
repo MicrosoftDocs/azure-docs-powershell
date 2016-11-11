@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A15ED498-99D1-4D81-983F-387466C0B904
+ms.assetid: 7964E2A6-D972-4FA4-B320-5CA0A562CF67
 ---
 
 # Remove-AzureDns

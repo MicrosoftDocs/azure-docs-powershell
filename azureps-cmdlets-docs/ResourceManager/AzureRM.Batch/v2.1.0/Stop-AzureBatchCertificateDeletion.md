@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D57D1545-E71D-4F35-9E94-D1AA4F8130AC
+ms.assetid: D65DA462-C480-4E1F-B3D8-2E90C1537578
 ---
 
 # Stop-AzureBatchCertificateDeletion

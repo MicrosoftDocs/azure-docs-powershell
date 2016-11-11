@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9B49B714-EB08-4DDA-9E45-B055792FBCEC
+ms.assetid: 0FA86E4B-C96C-44EC-B72E-F4840EA9DF58
 ---
 
 # Set-AzureStorageAccount

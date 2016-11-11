@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4AD73F5C-CF91-4910-BD37-A452EE057EF6
+ms.assetid: 3DBBC382-34F4-4F8E-9D45-B0C6869A6912
 ---
 
 # Remove-AzureRouteTable

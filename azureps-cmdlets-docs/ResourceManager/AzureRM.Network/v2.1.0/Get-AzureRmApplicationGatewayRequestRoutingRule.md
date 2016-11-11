@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 61AC0CE8-179E-4175-BE9D-2DE0D35E5BC2
+ms.assetid: 44814C91-3A48-4837-86CA-73B1DD635AC7
 ---
 
 # Get-AzureRmApplicationGatewayRequestRoutingRule

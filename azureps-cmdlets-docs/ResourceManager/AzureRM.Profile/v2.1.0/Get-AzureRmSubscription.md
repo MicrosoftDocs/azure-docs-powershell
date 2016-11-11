@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BA01FBA9-4450-4803-BD8D-54E3C01E1A61
+ms.assetid: D6327A7C-C24A-42D1-B4D6-B026D23C89E3
 ---
 
 # Get-AzureRmSubscription

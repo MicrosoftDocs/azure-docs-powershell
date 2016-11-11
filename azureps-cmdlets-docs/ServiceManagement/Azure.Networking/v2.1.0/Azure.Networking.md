@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 3.0.0.0
 Locale: en-US
+ms.assetid: 348566A1-DFEC-4219-B771-E209D1290E58
 ---
 
 # Azure.Networking Module

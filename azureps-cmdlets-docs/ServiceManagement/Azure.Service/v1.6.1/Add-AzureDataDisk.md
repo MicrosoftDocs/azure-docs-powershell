@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E675A42A-4B6A-472D-A1EF-77D864048948
+ms.assetid: 55DA909A-D221-473F-B09F-988CCC575E09
 ---
 
 # Add-AzureDataDisk

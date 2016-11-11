@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 4933C308-BC06-4B97-9C33-AEFF63D0C859
 ---
 
 # Get-AzureRmMediaServiceNameAvailability

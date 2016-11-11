@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E56CB6EC-1965-46CC-9ED9-FE130E7EBB83
+ms.assetid: 29719198-DE51-43D7-B753-DC666B6DACEF
 ---
 
 # Get-AzureRmLogicApp

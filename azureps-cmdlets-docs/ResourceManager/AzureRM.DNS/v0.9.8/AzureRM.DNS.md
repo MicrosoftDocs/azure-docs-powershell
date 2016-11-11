@@ -4,6 +4,7 @@ Module Guid: DNS_Cmdlets_D48CF693-4125-4D2D-8790-
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=280237
 Help Version: 2.0.2.0
 Locale: en-US
+ms.assetid: 17AF8C84-1066-4FF4-88C1-AE4BD51408A3
 ---
 
 # AzureRM.DNS Module

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4BE4F1E7-ADC5-42C2-AB39-7C3FD133B3D3
+ms.assetid: B5E37E43-DCA6-4D55-ADCB-1AB66ACE9263
 ---
 
 # New-AzureRmSqlServerDisasterRecoveryConfiguration

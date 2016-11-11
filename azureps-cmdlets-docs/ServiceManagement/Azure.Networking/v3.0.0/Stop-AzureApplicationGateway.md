@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 67B7AB92-EAF4-40F5-8234-FDD8A649459E
+ms.assetid: 585C721D-CD35-4DAB-8260-C667FAF25D35
 ---
 
 # Stop-AzureApplicationGateway

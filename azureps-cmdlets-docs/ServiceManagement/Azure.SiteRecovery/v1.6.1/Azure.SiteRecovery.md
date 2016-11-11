@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: 1BC040C8-C3E9-491E-AD92-FFDEB524B708
 ---
 
 # Azure.SiteRecovery Module

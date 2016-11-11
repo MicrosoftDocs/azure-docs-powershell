@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9ED502D1-74B0-47DB-925B-AE594E82258A
+ms.assetid: DFF0470A-2B74-437A-8B10-2460992FF7F2
 ---
 
 # New-AzureRmHDInsightSqoopJobDefinition

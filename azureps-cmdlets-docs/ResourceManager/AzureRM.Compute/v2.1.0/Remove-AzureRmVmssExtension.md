@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A55A15FC-AB17-416C-845D-0EE31700C7FF
+ms.assetid: DC41348E-C2E9-48F2-AC09-5BD0A55F9F1B
 ---
 
 # Remove-AzureRmVmssExtension

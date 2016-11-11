@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: AAA121E4-5544-4C05-82E1-37EE66C81D9E
 ---
 
 # Get-AzureRmSchedulerJobHistory

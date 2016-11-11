@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 3FD6090C-E28A-493A-8E67-9E5832401267
 ---
 
 # New-AzureRMManagedSubscription

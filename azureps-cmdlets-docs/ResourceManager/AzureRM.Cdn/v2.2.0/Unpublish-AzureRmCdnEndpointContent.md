@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C101398F-75B3-44D9-B07A-38405B748EA7
+ms.assetid: E8BA5B5C-78F9-4397-A39A-84C7B36BCF5C
 ---
 
 # Unpublish-AzureRmCdnEndpointContent

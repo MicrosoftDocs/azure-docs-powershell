@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5DDED8A3-F733-458D-888B-DC414D291B22
+ms.assetid: 583A9F6D-ED31-42AA-9A5F-D1EA11FCAE3D
 ---
 
 # Remove-AzureRmServerManagementGateway

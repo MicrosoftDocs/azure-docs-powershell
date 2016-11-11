@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2AF0D56E-542D-48DC-AF5D-B8752E0C343A
+ms.assetid: 00160AA3-D13B-487F-9A67-A76414FE2D45
 ---
 
 # New-AzureRmAlertRuleWebhook

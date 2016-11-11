@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EA872C93-797E-49A5-8E97-640A56AADCEB
+ms.assetid: 69E4F9C3-4F82-46EB-9F34-A7DD7D327C5A
 ---
 
 # Remove-AzureStorageCORSRule

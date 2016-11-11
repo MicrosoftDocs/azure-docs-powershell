@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5CC8299C-A698-4C80-9962-28F211C593E9
+ms.assetid: 253BCD8E-C398-4EEF-9D77-39E4F35A7E83
 ---
 
 # Remove-AzureAutomationModule

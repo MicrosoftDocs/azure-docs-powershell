@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AA01B882-67C7-4873-85AC-139B0E848D7E
+ms.assetid: 30EEDB4F-AEB5-45D8-BFD4-34351D1E8DC5
 ---
 
 # Remove-AzureRmNetworkInterface

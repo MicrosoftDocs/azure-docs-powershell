@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F0F039FD-2B0B-4993-8408-471E0F7AD10B
+ms.assetid: D95D10F9-C7D0-4EC9-B0DA-CDD1BE66BBA3
 ---
 
 # Set-AzureRmAutomationCredential

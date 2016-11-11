@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C0AD5384-C9A2-489F-AEFF-14B984798888
+ms.assetid: 38015F0B-BED5-44AF-AE81-2F82A7DE0617
 ---
 
 # Get-AzureVirtualNetworkGateway

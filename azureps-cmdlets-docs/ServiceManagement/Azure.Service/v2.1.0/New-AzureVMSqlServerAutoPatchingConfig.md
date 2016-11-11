@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 317BD083-023B-407E-B718-7A3A55773368
+ms.assetid: A5F39475-AD90-457A-B55E-7B3AF5AABE82
 ---
 
 # New-AzureVMSqlServerAutoPatchingConfig

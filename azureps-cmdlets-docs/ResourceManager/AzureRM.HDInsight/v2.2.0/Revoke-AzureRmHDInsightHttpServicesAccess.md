@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C81AACA3-6EFA-4AEC-90FF-4CCEF4C07ECE
+ms.assetid: 25389828-C6EB-4597-84DA-71FDFD5048EB
 ---
 
 # Revoke-AzureRmHDInsightHttpServicesAccess

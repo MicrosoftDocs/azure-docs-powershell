@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 9CC88EA1-27B0-4D39-BC4A-6EC06EB898C8
 ---
 
 # Set-AzureRmMediaServiceKey

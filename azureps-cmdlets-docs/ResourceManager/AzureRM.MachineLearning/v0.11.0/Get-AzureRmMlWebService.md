@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7E38633D-BAFC-41F9-84FE-82C3A7FE6BFA
+ms.assetid: 65893DF3-AA3A-4082-BF7F-E3208780F046
 ---
 
 # Get-AzureRmMlWebService

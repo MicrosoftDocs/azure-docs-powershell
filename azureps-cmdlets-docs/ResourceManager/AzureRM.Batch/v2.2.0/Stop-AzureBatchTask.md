@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E7831067-35C5-404A-BFA5-07805DF0725A
+ms.assetid: F5AAA466-B7C1-4F40-B2B2-1B328C3D1033
 ---
 
 # Stop-AzureBatchTask

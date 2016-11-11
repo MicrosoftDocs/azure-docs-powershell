@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1A07F30E-01CD-4DA6-A251-B3CB0E5F8444
+ms.assetid: C8049F81-4A74-411E-B336-4D75FFEA7311
 ---
 
 # Get-AzureRmAlertHistory

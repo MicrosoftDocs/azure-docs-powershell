@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
-ms.assetid: 4A43AF5D-6359-46BF-9C51-FDF399A5FDC6
+ms.assetid: 726E01DD-D73C-4D4B-8FC0-52767927367C
 online version: 
 schema: 2.0.0
 ---

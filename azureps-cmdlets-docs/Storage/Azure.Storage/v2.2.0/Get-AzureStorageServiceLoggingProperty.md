@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 02217F39-6C93-401B-8801-52FDD38BA751
+ms.assetid: 54671B17-92C4-44FD-B33E-CB771AE4AC16
 ---
 
 # Get-AzureStorageServiceLoggingProperty

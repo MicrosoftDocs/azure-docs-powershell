@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C7DBCF64-C2C1-43C8-806A-7166B52C1082
+ms.assetid: C15F6509-F393-4A40-9C40-119CE281C08A
 ---
 
 # Get-AzureKeyVaultCertificate
