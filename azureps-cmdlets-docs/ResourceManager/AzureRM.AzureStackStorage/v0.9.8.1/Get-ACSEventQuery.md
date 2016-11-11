@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F9988B87-11CA-41AB-90D8-4A0F9C2BA918
+ms.assetid: 2A76BC07-349F-4CDF-9080-9E7B451A7BA7
 ---
 
 # Get-ACSEventQuery

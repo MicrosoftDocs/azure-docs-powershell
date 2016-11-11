@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2F4C549B-ABDC-4792-A4D5-C91363B209B6
+ms.assetid: F105B606-DEBD-43CC-B6F2-03AEF6C2C6EB
 ---
 
 # Set-AzureRmSqlDatabaseAdvisorAutoExecuteStatus

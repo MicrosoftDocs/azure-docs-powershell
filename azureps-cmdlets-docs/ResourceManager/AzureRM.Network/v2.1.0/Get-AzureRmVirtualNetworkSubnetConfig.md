@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 95726C67-BE5C-46BB-90CA-CD5AFDF201AD
+ms.assetid: 33A6C1A4-5A53-4CD5-A514-04748C32B925
 ---
 
 # Get-AzureRmVirtualNetworkSubnetConfig

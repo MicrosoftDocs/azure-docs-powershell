@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 79E039C7-AC28-4DE8-A9A3-6CAABF94D873
+ms.assetid: B206CC8C-1A80-413B-B994-1D77A7F3E16A
 ---
 
 # Send-AzureRemoteAppSessionMessage

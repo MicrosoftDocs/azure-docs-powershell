@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 69D34F57-3641-4FCC-954A-D03505ECDE13
+ms.assetid: F85147CD-0816-49C1-937C-E5060CE899B2
 ---
 
 # New-AzureRmVirtualNetworkGateway

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5AB79492-7670-4ACC-A04C-4D6322E7AB6D
+ms.assetid: BA25C73A-B2A7-4096-A50C-4A58A5D677B1
 ---
 
 # New-AzureRmNotificationHubsNamespace

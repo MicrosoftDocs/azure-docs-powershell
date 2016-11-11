@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C16ED456-25D3-4780-BBF1-81563CCE839E
+ms.assetid: EFD50F9C-5A94-4DC8-96F8-C77E73CE85FF
 ---
 
 # Get-AzureRmPowerBIWorkspaceCollection

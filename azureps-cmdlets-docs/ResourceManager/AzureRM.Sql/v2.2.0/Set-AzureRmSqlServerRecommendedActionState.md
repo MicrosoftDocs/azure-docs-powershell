@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7219DB47-A290-49C7-B521-F264741229D0
+ms.assetid: 78079C3F-47EC-4296-9D2F-5BA35FAEABB2
 ---
 
 # Set-AzureRmSqlServerRecommendedActionState

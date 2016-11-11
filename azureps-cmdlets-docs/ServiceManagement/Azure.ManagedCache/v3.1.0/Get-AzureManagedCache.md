@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ManagedCache.dll-Help.xml
-ms.assetid: 0EE3CF16-D6FC-4372-8FAB-F21D1F9BFBFF
+ms.assetid: 8A6EF1A8-BA40-4FD6-BB55-3815E52F985B
 online version: 
 schema: 2.0.0
 ---

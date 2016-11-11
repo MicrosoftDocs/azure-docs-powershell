@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1B064272-B5E4-4E95-9B8B-43F2B8C27F94
+ms.assetid: 393C3CC8-60DB-42DB-9A47-3CF093BF4B9B
 ---
 
 # Get-AzureRmApiManagementSsoToken

@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: DA697EC7-B428-47E7-8C6C-D0D80B9ED47C
 ---
 
 # Azure.Automation Module

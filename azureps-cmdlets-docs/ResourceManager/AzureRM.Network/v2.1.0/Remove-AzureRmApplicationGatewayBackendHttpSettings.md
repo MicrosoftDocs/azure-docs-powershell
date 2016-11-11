@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 52FBC6B0-C531-4DBB-A17F-FD7CACBC2876
+ms.assetid: DCA8E48F-30E9-48C0-8993-540DDFC194F3
 ---
 
 # Remove-AzureRmApplicationGatewayBackendHttpSettings

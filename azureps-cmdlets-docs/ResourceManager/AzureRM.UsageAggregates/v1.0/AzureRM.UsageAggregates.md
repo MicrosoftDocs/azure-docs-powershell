@@ -4,6 +4,7 @@ Module Guid: e43e47c8-8bff-4013-b003-ded1741f403a
 Download Help Link: None
 Help Version: 2.0.1.0
 Locale: en-US
+ms.assetid: 433617D7-5289-4743-B99F-ECCA4F547708
 ---
 
 # AzureRM.UsageAggregates Module

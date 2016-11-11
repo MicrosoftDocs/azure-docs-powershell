@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 219D5A7F-E37C-4F37-AFC1-61C17680E25A
+ms.assetid: 3FA6B32C-9A95-4CB6-BDFC-73BEC32780E6
 ---
 
 # Get-AzureRmUsage

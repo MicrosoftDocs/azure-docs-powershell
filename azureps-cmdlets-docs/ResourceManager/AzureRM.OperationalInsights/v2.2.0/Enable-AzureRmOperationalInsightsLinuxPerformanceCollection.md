@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8A98AF2A-F22A-4A08-8D2C-142D964BBF9C
+ms.assetid: 4E88E511-BE2D-4492-98AD-DED6D622FE68
 ---
 
 # Enable-AzureRmOperationalInsightsLinuxPerformanceCollection

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 96281CEA-A6C8-4C93-A4DA-88F2C81CFE2D
+ms.assetid: 7D28D1B6-3AE7-4736-A02C-15725914430F
 ---
 
 # Remove-AzureRmLoadBalancerFrontendIpConfig

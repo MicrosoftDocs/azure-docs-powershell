@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 01D650C8-2531-43FE-A1A3-18A2B793A388
+ms.assetid: 5602BC72-E4CF-41AF-883D-3AEE11932386
 ---
 
 # Remove-AzureRmMlWebService

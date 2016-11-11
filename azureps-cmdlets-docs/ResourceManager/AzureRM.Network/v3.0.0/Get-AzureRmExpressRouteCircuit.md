@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1369BDBF-25BC-496A-9DCD-4AEC7C5F4BF4
+ms.assetid: 1E97CC93-05D8-42F5-9041-B7722565BA39
 ---
 
 # Get-AzureRmExpressRouteCircuit

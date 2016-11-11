@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7C0F9CBC-713A-4C55-AEE8-2483E96787D6
+ms.assetid: 3FE994B1-3C1E-4116-96DF-C643E7E9874E
 ---
 
 # Test-AzureRmStreamAnalyticsInput

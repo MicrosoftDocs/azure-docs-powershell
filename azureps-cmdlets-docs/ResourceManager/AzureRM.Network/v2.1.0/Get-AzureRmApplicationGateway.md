@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3BB4F77F-6ED1-4D35-87E4-F7E22C563995
+ms.assetid: F76532A8-4979-4AA5-AD7D-D862423F4D13
 ---
 
 # Get-AzureRmApplicationGateway

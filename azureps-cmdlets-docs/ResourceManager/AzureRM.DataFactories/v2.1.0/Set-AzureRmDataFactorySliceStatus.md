@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1B6814DF-8670-48CD-B8B2-55EAB5201D56
+ms.assetid: 5CBB4F9B-EAD0-4803-B7CE-C9080E4C8DD1
 ---
 
 # Set-AzureRmDataFactorySliceStatus

@@ -4,6 +4,7 @@ Module Guid: 0e691e0a-ce16-40f2-af84-86fb0d82fb29
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+ms.assetid: C3BD1E3D-6ED7-4244-A3D2-6E967018FEE4
 ---
 
 # AzureRM.AzureStackAdmin Module

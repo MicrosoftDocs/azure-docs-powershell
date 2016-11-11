@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8DD86477-E1F4-453D-B203-799A180D7010
+ms.assetid: 8FCEB822-C496-4CCD-8F8A-B555CAE700F0
 ---
 
 # Remove-AzureNetworkSecurityGroupConfig

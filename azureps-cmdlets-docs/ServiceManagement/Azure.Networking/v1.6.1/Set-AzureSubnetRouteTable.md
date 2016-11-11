@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F27FE323-FDBB-492D-98CE-79B4A07A214F
+ms.assetid: 7F65DC72-908A-400D-AD88-236C365E3953
 ---
 
 # Set-AzureSubnetRouteTable

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 6D216653-7E32-48CB-B48F-BAEB7B172E2F
+ms.assetid: 86BFA44D-3C3F-491E-A830-5C42C059191D
 ---
 
 # Remove-AzureKeyVaultCertificateOperation

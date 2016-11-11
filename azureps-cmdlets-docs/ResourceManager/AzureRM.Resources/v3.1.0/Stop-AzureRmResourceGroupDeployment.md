@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5B17A003-5FB3-4070-85D0-270AC535739F
+ms.assetid: 1A45D212-7772-492D-BEFC-D625A4D185A9
 ---
 
 # Stop-AzureRmResourceGroupDeployment

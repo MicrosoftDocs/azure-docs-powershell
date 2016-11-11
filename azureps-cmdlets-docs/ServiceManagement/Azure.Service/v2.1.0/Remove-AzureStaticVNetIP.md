@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 001AAC23-F936-4746-B736-6E41152AAB90
+ms.assetid: C7A98628-C4D2-49C4-88AC-04A8246145AB
 ---
 
 # Remove-AzureStaticVNetIP

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8C4D3F64-A5EC-4E5A-8BD9-68086BAA8294
+ms.assetid: D7922A2E-A02C-4019-9594-EB38267457A5
 ---
 
 # Remove-AzureRmDataLakeStoreItemAclEntry

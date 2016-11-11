@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F31847D4-F2C1-4E12-803D-5F5628F16868
+ms.assetid: 6E302469-A9EF-4BF6-B630-58668CE19834
 ---
 
 # Remove-AzureRmApplicationGatewayIPConfiguration

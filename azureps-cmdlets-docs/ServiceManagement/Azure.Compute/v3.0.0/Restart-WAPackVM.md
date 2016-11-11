@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1D85B627-809D-483B-9563-040A9644EECE
+ms.assetid: 10C51138-6E09-4151-9E03-B5EEDDFE1A88
 ---
 
 # Restart-WAPackVM

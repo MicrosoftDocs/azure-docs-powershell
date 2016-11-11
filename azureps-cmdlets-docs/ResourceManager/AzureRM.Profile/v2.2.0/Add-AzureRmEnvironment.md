@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D5202B22-4DD3-446B-9208-7F04ECE3C398
+ms.assetid: 6EA4031B-FDFB-4A0A-B71F-0264D826BA96
 ---
 
 # Add-AzureRmEnvironment

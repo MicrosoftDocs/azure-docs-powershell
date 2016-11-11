@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A607EBCA-104F-4B40-AE56-7339AD63EA2E
+ms.assetid: 8AED5837-2878-4E94-A434-4F0B485FB17A
 ---
 
 # Get-AzureVMChefExtension

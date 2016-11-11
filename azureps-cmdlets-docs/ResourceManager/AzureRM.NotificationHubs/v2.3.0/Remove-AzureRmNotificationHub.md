@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
-ms.assetid: FEBB2EBF-3525-4D89-BB76-A38FAF40FCB7
+ms.assetid: 376DFA01-91CE-4826-B1FD-20C592D8BC86
 online version: 
 schema: 2.0.0
 ---

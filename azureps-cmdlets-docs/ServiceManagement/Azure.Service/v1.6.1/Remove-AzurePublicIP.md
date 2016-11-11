@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B2FC0BC1-DAE4-44A0-860D-D158FE6FD9F8
+ms.assetid: D3665462-AF9E-4DE4-B45A-3DDC5F478BEB
 ---
 
 # Remove-AzurePublicIP

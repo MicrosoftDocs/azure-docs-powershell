@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 954A2C16-6915-4458-B290-A252A44675F8
+ms.assetid: 18C7E561-99C1-43A7-8C3A-F683E5D54094
 ---
 
 # New-AzureRmApplicationGatewayHttpListener

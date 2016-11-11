@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2513E6ED-EB16-40FD-9E2D-56B0E9C8375E
+ms.assetid: AAF6ADFF-A1FE-4E1C-9E22-88D3134D4EE1
 ---
 
 # Get-AzureRoleSize

@@ -4,6 +4,7 @@ Module Guid: DNS_D48CF693-4125-4D2D-8790-1514F44C
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=280237
 Help Version: 2.0.3.1
 Locale: en-US
+ms.assetid: A92F89F2-DA8C-4BE9-B4AF-D0FA2AF52C67
 ---
 
 # AzureRM.DNS Module

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B1F97A23-700A-4A7E-B8C9-26DF98B25994
+ms.assetid: 175D429C-D341-4E58-AE73-560CB937C15E
 ---
 
 # Get-WAPackLogicalNetwork

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8DADBD54-8DF1-4B9E-B853-97893E3AD73A
+ms.assetid: 9E288DA4-2B72-4721-9A18-7C25153121E3
 ---
 
 # Remove-AzureRmAutomationWebhook

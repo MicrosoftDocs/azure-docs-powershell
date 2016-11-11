@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1F36A2B5-013E-469F-99D3-2B0EE3EDD4B8
+ms.assetid: 344E514A-4CBC-4ED0-B1D9-B97AEE844D8F
 ---
 
 # Remove-AzureTrafficManagerProfile

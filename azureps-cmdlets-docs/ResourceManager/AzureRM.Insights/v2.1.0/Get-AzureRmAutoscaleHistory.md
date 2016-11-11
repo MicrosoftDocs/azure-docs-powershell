@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9FDE1F41-0298-460C-9817-07DDDF9DBFDE
+ms.assetid: D75DA785-FA22-4C1D-AEEA-B486F7923109
 ---
 
 # Get-AzureRmAutoscaleHistory

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
-ms.assetid: C83ABC8B-23A3-4607-85B4-740D2DF60D4A
+ms.assetid: 0EE69F94-A03E-4391-B1C2-CBF22F51BF4C
 online version: 
 schema: 2.0.0
 ---

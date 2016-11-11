@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1EB515B8-200F-4451-956E-C480DE3CCBA4
+ms.assetid: 7DE2BDDA-2561-47CC-945B-85B43FE97C4C
 ---
 
 # Get-AzureRmDataFactoryActivityWindow

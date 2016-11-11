@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D66EB400-F7F2-447B-992D-A4E7A5CB5155
+ms.assetid: 9994CEB0-E7D4-4E68-9371-B647076A386E
 ---
 
 # Save-AzureRmServerManagementGatewayProfile

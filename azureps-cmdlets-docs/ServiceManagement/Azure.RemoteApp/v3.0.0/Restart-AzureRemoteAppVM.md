@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 22C43C61-83FE-4008-9C74-DD089D7B90E0
+ms.assetid: 91E4D0F9-69F4-4774-8D16-120374065A8E
 ---
 
 # Restart-AzureRemoteAppVM

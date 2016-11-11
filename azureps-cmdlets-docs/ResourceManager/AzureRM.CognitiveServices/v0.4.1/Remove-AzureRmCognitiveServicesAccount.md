@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
-ms.assetid: 105816E2-3972-4A75-9826-DC7887CFCF1A
+ms.assetid: EEC57A7E-52EB-46F2-AB5A-705399A04BDD
 online version: 
 schema: 2.0.0
 ---

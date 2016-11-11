@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DC11783A-8DB6-488B-A493-132F7E91FF5D
+ms.assetid: 6DE416CF-0C77-4CA3-9102-A6688E09A8E9
 ---
 
 # Stop-AzureRmHDInsightJob

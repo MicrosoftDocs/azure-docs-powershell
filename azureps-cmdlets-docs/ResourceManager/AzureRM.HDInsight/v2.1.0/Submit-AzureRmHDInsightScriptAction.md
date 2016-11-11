@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 329B1D1F-4B65-45A1-97E0-71A0F905F0C0
+ms.assetid: 6CC5F473-F0DA-48B0-9B55-06C1598EEC88
 ---
 
 # Submit-AzureRmHDInsightScriptAction

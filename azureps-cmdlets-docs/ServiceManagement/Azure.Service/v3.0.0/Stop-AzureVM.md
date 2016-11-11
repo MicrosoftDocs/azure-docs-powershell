@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 064454BD-FB7A-468D-8530-BAA83C4656D7
+ms.assetid: E9ED9A57-FA0D-405A-8853-E3BE002FA21A
 ---
 
 # Stop-AzureVM

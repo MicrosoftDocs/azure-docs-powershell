@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F94D9B8B-2154-4889-BC82-2EDC84945044
+ms.assetid: 4E90D8E0-EE0E-43EF-A7EB-854C8FA98B8D
 ---
 
 # Unregister-AzureRmResourceProvider

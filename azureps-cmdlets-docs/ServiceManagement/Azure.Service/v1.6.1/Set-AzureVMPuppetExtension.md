@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F61F5F5A-F791-4FDE-97F0-0D87973C8567
+ms.assetid: BFDCAA6C-1EC1-4D17-8E57-B609398C64F9
 ---
 
 # Set-AzureVMPuppetExtension

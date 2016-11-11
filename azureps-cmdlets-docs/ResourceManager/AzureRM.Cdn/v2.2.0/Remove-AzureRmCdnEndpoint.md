@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E3CF363C-4496-4F6E-8593-C5B8B8EEAAD5
+ms.assetid: 45DA1791-B37B-46B8-812F-421CB199FB5E
 ---
 
 # Remove-AzureRmCdnEndpoint

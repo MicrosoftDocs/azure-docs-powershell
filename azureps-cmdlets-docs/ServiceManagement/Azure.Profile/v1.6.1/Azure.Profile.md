@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: 6E350C5F-5AFC-4251-B7C7-7A6836E6EA83
 ---
 
 # Azure.Profile Module

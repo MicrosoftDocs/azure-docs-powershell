@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 07C8AD4E-7A32-4407-9120-1432126B7376
+ms.assetid: 0B5098D5-4C82-4950-A8B9-677F1682799B
 ---
 
 # New-AzureStorageShareSASToken

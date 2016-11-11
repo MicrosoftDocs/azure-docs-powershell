@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 64F8A6A7-CCFF-44AC-BAA8-1DD086953478
+ms.assetid: 0AE23EE0-4F89-423D-B41D-9ADEAAD27FD4
 ---
 
 # Set-AzureRmApplicationGatewayUrlPathMapConfig

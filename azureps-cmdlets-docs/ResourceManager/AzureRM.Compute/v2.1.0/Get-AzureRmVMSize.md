@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BB359FEA-F61B-420F-ABED-9AAE37FB2EEA
+ms.assetid: B40B0C0D-44C6-4A62-B3DF-A364CAEC0D02
 ---
 
 # Get-AzureRmVMSize

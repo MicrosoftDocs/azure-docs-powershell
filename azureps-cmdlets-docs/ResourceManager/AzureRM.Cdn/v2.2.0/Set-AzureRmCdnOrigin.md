@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7693A9E2-6522-4EDF-BE3C-BF8BA33A3747
+ms.assetid: A17876B2-07D0-4570-A826-AF379D0115E8
 ---
 
 # Set-AzureRmCdnOrigin

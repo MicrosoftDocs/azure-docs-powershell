@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2ACDBC10-FE61-49C9-BC4D-6CBDB12AB530
+ms.assetid: 0B5D8074-FF6E-495F-86E3-2EA8C1032A2A
 ---
 
 # Remove-AzureVMSqlServerExtension

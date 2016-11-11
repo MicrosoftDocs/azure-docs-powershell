@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EC30CBBF-DD2F-43FB-9BBA-B4EA10D42553
+ms.assetid: 642C5D4D-088C-49DC-AE9D-7F98ECC63F7E
 ---
 
 # Set-AzureRmWebAppSlotConfigName

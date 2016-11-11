@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8E0C633A-F157-4525-A1A8-327FA4BDD36D
+ms.assetid: AB25F4C6-F38B-4229-BD6C-E30F58B229D0
 ---
 
 # Add-AzureRmAccount

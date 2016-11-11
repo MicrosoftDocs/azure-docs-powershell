@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 921ED1EF-72E5-43A8-80F5-7D4090813468
+ms.assetid: A5358601-91D1-428B-BB4E-084C5D426B6A
 ---
 
 # Get-ACSStorageAccount

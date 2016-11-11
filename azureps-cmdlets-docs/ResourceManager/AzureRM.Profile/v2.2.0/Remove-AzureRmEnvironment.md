@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C850B127-55D6-4290-B8CC-B8047F57C72B
+ms.assetid: 26C576AA-37BD-4111-A5B7-1A93D384182C
 ---
 
 # Remove-AzureRmEnvironment

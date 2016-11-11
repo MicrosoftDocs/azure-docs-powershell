@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=280237
 Help Version: 4.0.0.0
 Locale: en-US
+ms.assetid: 82D95B36-57BA-4F38-9E82-625C50E3051B
 ---
 
 # AzureRM.TrafficManager Module

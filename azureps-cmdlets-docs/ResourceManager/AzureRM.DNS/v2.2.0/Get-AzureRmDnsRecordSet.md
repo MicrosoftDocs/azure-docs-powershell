@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3D1B6E20-C580-4429-8F4F-A4388441B929
+ms.assetid: D3397739-2E86-4826-A31D-4D75D0A56EFD
 ---
 
 # Get-AzureRmDnsRecordSet

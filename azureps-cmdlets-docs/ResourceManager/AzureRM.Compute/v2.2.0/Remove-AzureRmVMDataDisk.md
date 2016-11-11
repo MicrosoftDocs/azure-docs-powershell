@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4538ECE1-A0B6-4439-B931-73E11B83D72A
+ms.assetid: B7EDC271-A530-4949-BF19-FDDB6E3A1199
 ---
 
 # Remove-AzureRmVMDataDisk

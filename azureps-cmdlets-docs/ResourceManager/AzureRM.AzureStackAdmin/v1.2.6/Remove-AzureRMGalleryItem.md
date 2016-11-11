@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 9896B840-4AA4-43D6-BCAD-2E4443929D37
 ---
 
 # Remove-AzureRMGalleryItem

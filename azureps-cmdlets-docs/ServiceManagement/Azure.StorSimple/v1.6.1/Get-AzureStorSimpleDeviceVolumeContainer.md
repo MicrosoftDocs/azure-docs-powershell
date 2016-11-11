@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B908265E-52BF-4719-880D-9D33F47A4F0D
+ms.assetid: B95685D8-69D6-43A9-8863-7D57AB92A881
 ---
 
 # Get-AzureStorSimpleDeviceVolumeContainer

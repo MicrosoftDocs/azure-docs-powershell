@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E7DD31E8-7174-4598-87CF-01A249A46694
+ms.assetid: D5026DEB-0285-4730-84D6-BF151DD8E5CD
 ---
 
 # Get-AzureBatchRemoteDesktopProtocolFile

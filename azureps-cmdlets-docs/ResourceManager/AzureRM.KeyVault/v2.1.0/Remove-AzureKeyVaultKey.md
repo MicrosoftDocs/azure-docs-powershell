@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A9754159-420F-412A-B2EA-17E29B43D611
+ms.assetid: 847F2BE3-72E4-4D27-A5FC-992967F0547E
 ---
 
 # Remove-AzureKeyVaultKey

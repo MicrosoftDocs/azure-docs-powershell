@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BB2651AD-1619-4672-A1ED-EA264B7F1640
+ms.assetid: D3F2596D-EF47-46CA-9EB4-5FFE2ED86030
 ---
 
 # Get-AzureRmPublicIpAddress

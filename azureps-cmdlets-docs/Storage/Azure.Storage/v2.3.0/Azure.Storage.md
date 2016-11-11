@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: ./Azure.Storage.md
 Help Version: 
 Locale: en-US
+ms.assetid: 1CD23AA4-F6D6-4C84-8B66-3B1FA8DD9ACD
 ---
 
 # Azure.Storage Module

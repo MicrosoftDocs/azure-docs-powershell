@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F7DFC5F3-C42A-4430-88EE-86289B3A739C
+ms.assetid: 46FC6975-DBAC-4923-9E35-6E267B9D746A
 ---
 
 # Sync-ACSStorageAccount

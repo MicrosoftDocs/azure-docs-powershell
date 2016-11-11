@@ -4,6 +4,7 @@ Module Guid: eca73aa1-a68f-4ceb-9775-70759316a57b
 Download Help Link: None
 Help Version: 2.0.6.0
 Locale: en-US
+ms.assetid: CF61FC8F-390E-4470-AC51-BBB8D10D63C4
 ---
 
 # AzureRM.DataLakeAnalytics Module

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9375BC6A-3914-48D1-904A-981D0E43F14A
+ms.assetid: 891E51E1-F07E-43C8-AFBF-D1819B86C792
 ---
 
 # Start-AzureBatchPoolResize

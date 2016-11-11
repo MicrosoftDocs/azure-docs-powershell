@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 261A4BC9-8D77-4DC4-82DF-E01811945055
+ms.assetid: 301221D0-E8E4-4A4B-95A6-01C60886F049
 ---
 
 # New-AzureRmOperationalInsightsWindowsPerformanceCounterDataSource

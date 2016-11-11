@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D1A02627-3EA0-47A7-B7E8-6A84558569EB
+ms.assetid: B2C3BD8F-014C-4C34-AA93-20B426B74E22
 ---
 
 # New-AzureBatchComputeNodeUser

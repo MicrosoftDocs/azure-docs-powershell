@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 02CFE06A-99DA-4B1B-83A5-E518CFA30790
+ms.assetid: 3036E4C1-C52C-45FE-97B2-D66A08B512F5
 ---
 
 # Set-AzureInternalLoadBalancer

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 329EF130-5CC9-4BFF-8561-DE5274018B09
+ms.assetid: 269AC3E3-8825-49E5-AA58-11752E9AC9B2
 ---
 
 # Remove-AzureRmApiManagementSubscription

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 6E8A4327-CBCF-45BA-99E4-0DF0DE18C289
+ms.assetid: B4715FD6-16BB-4CC2-8290-A5B0D14A2448
 ---
 
 # Get-AzureAccount

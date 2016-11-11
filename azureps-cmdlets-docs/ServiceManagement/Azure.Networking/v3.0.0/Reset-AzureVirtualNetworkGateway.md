@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5628EC21-9694-4336-9154-3598A1EC28E0
+ms.assetid: 9D3C6832-8BAC-4FDF-98AB-F52B3561B710
 ---
 
 # Reset-AzureVirtualNetworkGateway

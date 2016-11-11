@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 654C490B-1C87-4920-B525-C12DB1152AB1
+ms.assetid: 2757FC5D-1FF7-4FE0-849D-3207641C196E
 ---
 
 # Rename-AzureRemoteAppTemplateImage

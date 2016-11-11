@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 000B5E4C-CE06-487C-81F0-CEC12527B4E6
+ms.assetid: 8DFB8D9D-6559-4D94-BF7F-CF626D73F65D
 ---
 
 # New-AzureVMSqlServerKeyVaultCredentialConfig

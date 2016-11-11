@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0CDDDA13-EC00-4F05-9818-7193B38F3614
+ms.assetid: BD42378A-0C31-4A92-97C5-15D180E4625C
 ---
 
 # Reset-AzureLocalNetworkGateway

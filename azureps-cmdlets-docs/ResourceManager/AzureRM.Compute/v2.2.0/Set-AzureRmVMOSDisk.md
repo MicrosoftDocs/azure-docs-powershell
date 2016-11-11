@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 776FC591-3F3B-4C0F-B2D4-1E34ED4DC48A
+ms.assetid: 25E4101F-8307-4E48-9036-562D25E8863F
 ---
 
 # Set-AzureRmVMOSDisk

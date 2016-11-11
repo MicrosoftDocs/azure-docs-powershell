@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 3F0D04F8-43AE-4BEC-8F47-C375F9AAF05F
 ---
 
 # Add-AzureRMUsageConnection

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9E094816-6032-476B-9228-07A8B544B255
+ms.assetid: 004D4080-C336-4730-A429-867FC9D91FDF
 ---
 
 # Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey

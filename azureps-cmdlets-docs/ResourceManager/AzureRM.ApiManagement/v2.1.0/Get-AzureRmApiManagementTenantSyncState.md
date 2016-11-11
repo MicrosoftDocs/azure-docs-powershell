@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 288EF15B-FE5C-44AE-ABD5-2B92F408B9EB
+ms.assetid: DBB86359-C54B-41A7-B030-609C8F8515CF
 ---
 
 # Get-AzureRmApiManagementTenantSyncState

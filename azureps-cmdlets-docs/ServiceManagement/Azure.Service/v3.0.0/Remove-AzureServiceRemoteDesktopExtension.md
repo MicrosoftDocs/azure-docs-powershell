@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 23125C19-782D-4966-A005-9D615BF8710A
+ms.assetid: 2F96CDB0-5655-4604-AE2B-0BE34925747B
 ---
 
 # Remove-AzureServiceRemoteDesktopExtension

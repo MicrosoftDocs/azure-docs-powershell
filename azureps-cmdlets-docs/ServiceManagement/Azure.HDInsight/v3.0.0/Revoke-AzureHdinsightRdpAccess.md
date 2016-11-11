@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8D9C9C3C-BBEA-4530-B385-7962A50C3779
+ms.assetid: F034CEE1-E393-4B25-987C-CA67CB50E43C
 ---
 
 # Revoke-AzureHDInsightRdpAccess

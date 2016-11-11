@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 90D549E4-FCD0-4870-88C6-515BECCF70B8
+ms.assetid: BDA175BC-7AA2-4E21-AEE9-35787CD923CE
 ---
 
 # Remove-AzureBatchTask

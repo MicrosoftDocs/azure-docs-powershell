@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A624F955-75A4-49A8-BE7A-CFCCFF6B1F68
+ms.assetid: 4FE07C80-1138-4B37-8B9A-45643C8B0795
 ---
 
 # Set-AzureRmOperationalInsightsStorageInsight

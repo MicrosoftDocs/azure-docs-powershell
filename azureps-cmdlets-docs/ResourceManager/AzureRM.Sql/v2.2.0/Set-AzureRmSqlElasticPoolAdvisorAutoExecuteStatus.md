@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DCDC7046-C578-4617-8970-6B8879254F3D
+ms.assetid: 7B98F239-8DF9-4245-A450-B45B158EEFC0
 ---
 
 # Set-AzureRmSqlElasticPoolAdvisorAutoExecuteStatus

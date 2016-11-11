@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3DE8B74A-E1CA-4603-8FB9-6BA46CEC946A
+ms.assetid: 1D798697-7C36-4F9D-925C-DA5E8E39C989
 ---
 
 # Stop-AzureRmLogicAppRun

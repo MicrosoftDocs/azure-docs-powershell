@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FD23E93B-063A-4DA5-9E86-2C57C092E98B
+ms.assetid: E236D3F8-7BC4-4017-8F11-8B7C19CA5597
 ---
 
 # Get-AzureRmResourceProvider

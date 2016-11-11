@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 580B3B9F-FD85-4531-8586-F25A182E7FB2
+ms.assetid: A6AD1F50-65B7-4F68-BB45-365A85AEA502
 ---
 
 # Get-AzureLocation

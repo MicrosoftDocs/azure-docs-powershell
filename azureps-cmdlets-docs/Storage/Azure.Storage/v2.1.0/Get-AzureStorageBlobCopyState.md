@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5EAD5288-78E9-4EBB-904E-5E86EA88DA93
+ms.assetid: 1495EA3A-F4A3-4DF3-B963-47D382D59F47
 ---
 
 # Get-AzureStorageBlobCopyState

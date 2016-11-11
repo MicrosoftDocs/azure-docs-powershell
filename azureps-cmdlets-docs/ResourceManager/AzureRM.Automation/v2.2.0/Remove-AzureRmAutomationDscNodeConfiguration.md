@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EB95DD17-0761-4911-A33F-2949D55340D3
+ms.assetid: 0075D65D-E2E9-4B93-806E-E28E2371D9B0
 ---
 
 # Remove-AzureRmAutomationDscNodeConfiguration

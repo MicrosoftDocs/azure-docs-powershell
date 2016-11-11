@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 2.0.10.0
 Locale: en-US
+ms.assetid: 32C8F1AD-73C2-42AF-9890-E814B29DFBFD
 ---
 
 # AzureRM.Network Module

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D1D4D505-9F98-4BB5-9810-B6438E701293
+ms.assetid: 68622AB8-49AA-433F-886F-25FEA91E151D
 ---
 
 # New-AzureSSHKey

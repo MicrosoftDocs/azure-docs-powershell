@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7CB3F232-3AFC-401F-87D6-C00EFE3078A5
+ms.assetid: 6FF8B90E-4874-4C6D-A978-2CB538356A2D
 ---
 
 # Remove-AzureStorSimpleDeviceBackupPolicy

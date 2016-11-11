@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 18866521-2C92-46AA-B633-5C0BE4E0C2B2
+ms.assetid: 5F96288E-97C2-4EF2-A495-3EACBE2D4EF4
 ---
 
 # New-AzureAutomationCertificate

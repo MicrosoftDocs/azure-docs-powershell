@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5214F8ED-1855-4D15-9D2B-07906D8A9D7B
+ms.assetid: 682B5D2D-BFF4-406E-B458-E31F7D91A162
 ---
 
 # Set-AzureRmVirtualNetworkGatewayVpnClientConfig

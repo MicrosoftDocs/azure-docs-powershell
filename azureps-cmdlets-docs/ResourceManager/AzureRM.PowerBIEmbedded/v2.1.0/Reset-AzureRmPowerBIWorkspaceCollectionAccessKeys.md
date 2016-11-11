@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8B3C0B00-093D-402E-BC92-FB25A66C767B
+ms.assetid: D2B17904-AE70-4E59-AD2A-49A47D18003F
 ---
 
 # Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys

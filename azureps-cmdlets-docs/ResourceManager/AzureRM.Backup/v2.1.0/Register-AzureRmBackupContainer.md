@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1800F1EE-FE68-42EB-AB56-A8D464B84793
+ms.assetid: 2BE4553E-C8CB-4DF2-99EC-369BD802A449
 ---
 
 # Register-AzureRmBackupContainer

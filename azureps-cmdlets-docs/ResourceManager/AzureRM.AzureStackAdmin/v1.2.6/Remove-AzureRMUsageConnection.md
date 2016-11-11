@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 352FCBA9-1898-4A6B-BFBF-A601FCC1AA34
 ---
 
 # Remove-AzureRMUsageConnection

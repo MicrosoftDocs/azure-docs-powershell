@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DFE718B2-4F75-45EA-BCC9-DFBDF4402ADC
+ms.assetid: 511B3E84-57CF-465C-BC54-3C4E681CD264
 ---
 
 # Remove-AzureInternalLoadBalancer

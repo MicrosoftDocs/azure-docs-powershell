@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4032F28F-5A29-4986-8FB9-459B9D064E85
+ms.assetid: 4CF07E50-100B-40C9-82AA-F1673727BC61
 ---
 
 # Remove-AzureEndpoint

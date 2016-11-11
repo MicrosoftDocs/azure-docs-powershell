@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9AB51E65-FC67-4E50-9338-91CA87607BE9
+ms.assetid: A0C53F17-434D-426C-AFF8-3575555F5A97
 ---
 
 # New-AzureStorSimpleInlineStorageAccountCredential

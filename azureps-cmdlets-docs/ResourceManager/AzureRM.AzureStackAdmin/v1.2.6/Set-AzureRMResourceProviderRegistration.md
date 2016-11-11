@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: DA25F968-DBC9-48BB-9FF7-0BDBE1D4571C
 ---
 
 # Set-AzureRMResourceProviderRegistration

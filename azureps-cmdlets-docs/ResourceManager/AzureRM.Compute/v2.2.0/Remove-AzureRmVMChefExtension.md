@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A9B5F881-1B0E-46CB-B55F-4E46FA8B3256
+ms.assetid: 49101255-4263-4A7A-A1C6-DF9AC4EA1D78
 ---
 
 # Remove-AzureRmVMChefExtension

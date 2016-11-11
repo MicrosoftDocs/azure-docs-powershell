@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2C463937-AF16-4833-9484-F7B93A640674
+ms.assetid: 9F97B7CE-98EB-4408-BD1A-B86A144C7AA6
 ---
 
 # Enable-AzureBatchComputeNodeScheduling

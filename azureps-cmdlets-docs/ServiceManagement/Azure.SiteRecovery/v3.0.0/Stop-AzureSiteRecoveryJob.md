@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1DA46338-273E-4C73-AFB7-BC25E9FB83DD
+ms.assetid: FA46794A-BC4A-46F5-BD2C-5703F3B483A6
 ---
 
 # Stop-AzureSiteRecoveryJob

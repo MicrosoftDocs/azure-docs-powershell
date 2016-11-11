@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 50CDED61-8B2B-4138-93C0-C3686237BD42
+ms.assetid: 29597978-C9D9-4C72-9C5B-82E490DBC602
 ---
 
 # New-AzureRmDataFactoryDataset

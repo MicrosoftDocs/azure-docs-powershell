@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 06D538B7-C3ED-4735-98C3-44958140E8DE
+ms.assetid: 4CEB6056-13C7-42E3-89FE-AD1C62C1B100
 ---
 
 # Save-AzureVMImage

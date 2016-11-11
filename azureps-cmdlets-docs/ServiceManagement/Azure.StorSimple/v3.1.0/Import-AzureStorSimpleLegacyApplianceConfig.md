@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
-ms.assetid: F7A296C6-A3B7-453E-A8F6-D0AFDDF2D3B5
+ms.assetid: 1155FB29-E738-49FA-B46E-5EF4A0A4D34C
 online version: 
 schema: 2.0.0
 ---

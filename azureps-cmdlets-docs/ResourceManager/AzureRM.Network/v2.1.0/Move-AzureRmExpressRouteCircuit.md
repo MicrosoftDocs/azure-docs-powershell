@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2BED9484-E720-4876-A9E8-8EA6078481A5
+ms.assetid: B9386B9D-0056-44BB-A47E-9C7F2B0795EF
 ---
 
 # Move-AzureRmExpressRouteCircuit

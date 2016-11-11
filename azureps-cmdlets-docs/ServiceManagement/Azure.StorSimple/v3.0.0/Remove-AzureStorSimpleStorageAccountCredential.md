@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B265B3DF-B352-4801-9A3D-27F363B321EE
+ms.assetid: 6F5ED9DF-C249-4486-8C48-F4F53B1AA46A
 ---
 
 # Remove-AzureStorSimpleStorageAccountCredential

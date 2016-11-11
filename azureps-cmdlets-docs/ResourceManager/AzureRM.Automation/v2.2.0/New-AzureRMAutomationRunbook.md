@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C0DE19B6-68A5-46B0-8575-88F229FD2494
+ms.assetid: 1E59FFD0-EF4E-423E-8E09-B22985D5E2F8
 ---
 
 # New-AzureRmAutomationRunbook

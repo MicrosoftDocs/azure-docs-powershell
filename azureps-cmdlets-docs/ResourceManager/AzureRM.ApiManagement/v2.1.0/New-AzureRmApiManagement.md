@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 6B5595CA-246E-4381-A37E-24DFAE307109
+ms.assetid: 8260C92C-F830-41FF-88D3-FE1DA8C388F4
 ---
 
 # New-AzureRmApiManagement

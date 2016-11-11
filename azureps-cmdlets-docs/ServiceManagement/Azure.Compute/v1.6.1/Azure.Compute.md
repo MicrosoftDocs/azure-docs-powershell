@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: E5C8E0E5-B402-4D17-8A64-3B6C2956D5DA
 ---
 
 # Azure.Compute Module

@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: D7C412AF-987F-4781-A1EA-59AEF487F1E9
 ---
 
 # Set-AzureRMManagedSubscription

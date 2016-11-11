@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 990BC490-D50D-484E-BFF2-8B326EBEA413
+ms.assetid: 11D5BC21-5D17-48AB-9740-3B94A2173D98
 ---
 
 # Remove-AzureRmVirtualNetworkPeering

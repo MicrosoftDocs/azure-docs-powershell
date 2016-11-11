@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 86DA105E-48A0-4B73-9BC8-D4430A84DEF2
+ms.assetid: 1476A1F3-B29D-4F48-837D-9B530D8E4842
 ---
 
 # New-AzureRmVmss

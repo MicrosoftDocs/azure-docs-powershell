@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 6265B81C-07EA-4985-A323-2A925D39332A
 ---
 
 # Remove-AzureRmSchedulerJobCollection

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 803310BD-CD5D-4CAF-85B0-CAF7EC2995CE
+ms.assetid: 7FC9BA69-ECD4-40D0-80E6-EB3060A91BB3
 ---
 
 # Get-AzureVMAvailableExtension

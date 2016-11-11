@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CEDF99E4-8F39-468B-8CC3-EEE1FAE80FFE
+ms.assetid: 54768E0B-CB2E-4754-84A9-BED12CE8233D
 ---
 
 # Remove-AzureRmVMDiskEncryptionExtension

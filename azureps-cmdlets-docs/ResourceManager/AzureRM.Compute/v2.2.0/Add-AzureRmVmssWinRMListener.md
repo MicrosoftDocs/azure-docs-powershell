@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 96CECF8A-7D0F-49B2-BB4E-8D5581FC2E9D
+ms.assetid: B1C90940-4FE1-4F11-8C41-D21B28172677
 ---
 
 # Add-AzureRmVmssWinRMListener

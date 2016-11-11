@@ -4,6 +4,7 @@ Module Guid: 342714fc-4009-4863-8afb-a9067e3db04b
 Download Help Link: None
 Help Version: 4.0.0.0
 Locale: en-US
+ms.assetid: AC6DB16A-9CE1-4297-8E4A-5E8EAE72BB02
 ---
 
 # AzureRM.Profile Module

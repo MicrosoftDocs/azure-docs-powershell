@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 105816E2-3972-4A75-9826-DC7887CFCF1A
+ms.assetid: DC164D10-515D-47E8-8CC1-F15641FEACBE
 ---
 
 # Remove-AzureRmCognitiveServicesAccount

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4BE8FF39-4603-49F0-9C6B-3EFB1B37BEBA
+ms.assetid: 3EFBAD4F-26DF-4200-9689-8745102E7CD9
 ---
 
 # Get-AzureBatchCertificate

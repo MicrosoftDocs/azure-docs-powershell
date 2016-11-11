@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
-ms.assetid: 68F3E2C7-2CF6-4903-9212-E146E21704F6
+ms.assetid: 62C106B2-4FAC-4537-ACCA-D31583345120
 online version: 
 schema: 2.0.0
 ---

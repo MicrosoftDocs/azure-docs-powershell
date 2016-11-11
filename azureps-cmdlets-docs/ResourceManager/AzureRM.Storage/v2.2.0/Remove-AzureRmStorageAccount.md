@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FB551EA5-4159-4D77-8733-025AE66A13AF
+ms.assetid: 3DE53774-CDFA-466C-9C61-0DB2CB86D2F0
 ---
 
 # Remove-AzureRmStorageAccount

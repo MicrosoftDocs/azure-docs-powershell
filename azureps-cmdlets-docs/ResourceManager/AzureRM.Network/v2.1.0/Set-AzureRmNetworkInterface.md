@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: ABC26AB8-D8A7-42B9-8540-E8DA91D8092B
+ms.assetid: 290BE282-EF7D-420C-87CE-414D2CD6D96C
 ---
 
 # Set-AzureRmNetworkInterface

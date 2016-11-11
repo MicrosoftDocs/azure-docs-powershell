@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1714A887-59BD-431E-B654-CDB99F4EC7C5
+ms.assetid: F99DB4AE-2ED6-4B40-A318-3BDB8ED677C3
 ---
 
 # Get-AzureRmLoadBalancerFrontendIpConfig

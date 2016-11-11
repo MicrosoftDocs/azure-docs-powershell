@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A358089D-B045-4A4C-AE82-3827CFDC53F4
+ms.assetid: 68A30B0C-58CC-45F4-A873-E8B65A1BFB03
 ---
 
 # Add-AzureRmContainerServiceAgentPoolProfile

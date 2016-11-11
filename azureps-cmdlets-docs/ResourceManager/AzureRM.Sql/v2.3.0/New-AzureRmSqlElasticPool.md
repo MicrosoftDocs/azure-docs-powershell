@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-ms.assetid: C37650CE-7B6A-4833-AA7A-1D44E3A1C13C
+ms.assetid: BD252C72-47FA-46AD-B2E6-A7316AAFD5D7
 online version: 
 schema: 2.0.0
 ---

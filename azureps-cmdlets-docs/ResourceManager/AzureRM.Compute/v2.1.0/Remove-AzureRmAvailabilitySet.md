@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0C58DF33-3573-4BBC-B74F-36A817DCBD81
+ms.assetid: 2566B7A5-B46A-4FFE-AABF-2798E28A6A8A
 ---
 
 # Remove-AzureRmAvailabilitySet

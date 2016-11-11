@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 29CCF141-CC2F-4E11-8235-64025CFB5782
+ms.assetid: 3A412086-CFA2-414C-A47A-BD01DC925EAD
 ---
 
 # Set-AzureRmApiManagementApi

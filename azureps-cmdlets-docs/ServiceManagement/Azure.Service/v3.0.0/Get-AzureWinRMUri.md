@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BC52F5EE-C871-4D18-86F9-7D4684B45AF2
+ms.assetid: D32A017C-8E8B-47CD-9EBE-3AFB17DDA809
 ---
 
 # Get-AzureWinRMUri

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E61C7DCB-D9EB-4B05-9AB3-524F21D45AF8
+ms.assetid: 9FFBBBDB-B09C-4469-8E8A-E6BD3BAA11DE
 ---
 
 # Remove-AzureVMImage
