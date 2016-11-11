@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DDCD42E5-19B2-4027-B11C-99ADDF7B6D85
+ms.assetid: 8BE626FC-1B27-4892-AECA-1D75824E2B3B
 ---
 
 # Remove-AzureRmHDInsightCluster

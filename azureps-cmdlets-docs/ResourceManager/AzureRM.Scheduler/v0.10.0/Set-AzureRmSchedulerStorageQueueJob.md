@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: AFA3E76A-BF2C-433A-A7E7-FEC9841905EF
 ---
 
 # Set-AzureRmSchedulerStorageQueueJob

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version:
 schema: 2.0.0
-ms.assetid: 5BB95A2A-83BD-4ACB-B9F3-8858E768048D
+ms.assetid: 4F19782B-5FAD-47C2-8720-7D8E0E7E6B4A
 ---
 
 # Add-AzureRmVMDataDisk

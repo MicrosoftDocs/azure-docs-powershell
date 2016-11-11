@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1D0D3B91-ADB2-4E4D-83BE-5939AC114212
+ms.assetid: 1311E1BD-068C-462C-890A-E654D473022E
 ---
 
 # Set-AzureRmApplicationGatewayIPConfiguration

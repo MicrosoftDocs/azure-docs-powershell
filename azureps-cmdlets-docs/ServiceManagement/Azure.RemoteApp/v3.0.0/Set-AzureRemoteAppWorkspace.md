@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8BBA9407-770B-41A3-B516-3774518E5E10
+ms.assetid: ABF3945F-4F7F-4395-BC52-52DF4A73C4E2
 ---
 
 # Set-AzureRemoteAppWorkspace

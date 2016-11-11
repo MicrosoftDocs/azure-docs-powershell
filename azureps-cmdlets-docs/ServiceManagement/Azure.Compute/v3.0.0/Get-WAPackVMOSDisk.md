@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 10BC0C8D-C6BE-4984-81E7-476E9D750782
+ms.assetid: AFDF6A9C-3C3B-4A16-9B41-31221ED6CF7D
 ---
 
 # Get-WAPackVMOSDisk

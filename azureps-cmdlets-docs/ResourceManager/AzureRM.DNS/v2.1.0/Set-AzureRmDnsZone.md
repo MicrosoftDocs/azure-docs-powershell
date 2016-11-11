@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AA0EA073-59B6-4441-B866-C7505D4ABD05
+ms.assetid: 1553048B-4E55-4DAE-B296-ED0ED01B0315
 ---
 
 # Set-AzureRmDnsZone

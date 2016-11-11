@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 611ECB41-1C2F-4E02-9CAC-0D7D1323F79B
+ms.assetid: 2C8A860B-2612-4CF3-9EFA-1D18845811C5
 ---
 
 # Remove-AzureRmHDInsightPersistedScriptAction

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5D46ED0F-DFEB-422C-A462-4AC70A48C9A4
+ms.assetid: D5C99039-B691-42EC-A563-250653B4BA54
 ---
 
 # Remove-AzureRmApplicationGateway

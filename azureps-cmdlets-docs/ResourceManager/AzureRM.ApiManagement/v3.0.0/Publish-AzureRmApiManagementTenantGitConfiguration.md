@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4783305F-5619-446A-A6DF-BD1E56739A2F
+ms.assetid: 483305E9-FAF6-45AC-A916-D5D74E9F1DF0
 ---
 
 # Publish-AzureRmApiManagementTenantGitConfiguration

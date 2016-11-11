@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BE03B82D-16B8-407F-B774-62A872E99F3D
+ms.assetid: 73B4734D-838A-4F1A-AFC5-B00BC02720F2
 ---
 
 # Add-AzureRmVMNetworkInterface

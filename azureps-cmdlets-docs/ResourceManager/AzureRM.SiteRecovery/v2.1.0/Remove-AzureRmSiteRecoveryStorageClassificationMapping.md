@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 25704EBA-5C68-4573-90F8-02DCD2D14B69
+ms.assetid: 230D02D9-768C-4651-88DD-EC8825FFA1CC
 ---
 
 # Remove-AzureRmSiteRecoveryStorageClassificationMapping

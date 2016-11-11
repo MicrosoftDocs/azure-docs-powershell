@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1878C47D-5E01-4BE5-AD66-DE14B02083DF
+ms.assetid: 89C9983C-7C0F-4171-A974-A22ABA566159
 ---
 
 # Get-AzureRmVpnClientPackage

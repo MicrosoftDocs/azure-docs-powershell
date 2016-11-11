@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
-ms.assetid: D68F33FE-5F04-4680-B818-76AC05DE8797
+ms.assetid: F34E42B3-8F94-4DC6-A014-02CB84E9212F
 online version: 
 schema: 2.0.0
 ---

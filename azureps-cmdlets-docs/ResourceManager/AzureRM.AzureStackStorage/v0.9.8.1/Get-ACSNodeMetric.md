@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 19933AA5-E3AC-450C-A5FC-4BB5D6FE41E2
+ms.assetid: 4E123B6A-5C6A-4F63-A470-1BCCE9FBA9C4
 ---
 
 # Get-ACSNodeMetric

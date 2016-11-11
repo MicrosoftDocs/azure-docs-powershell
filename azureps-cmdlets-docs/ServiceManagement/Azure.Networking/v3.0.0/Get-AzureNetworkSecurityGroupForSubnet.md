@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DFD1141A-28F4-40F0-B25D-CAFB1D19CD52
+ms.assetid: DBDDBAAA-74CA-4427-9AB8-26DDF854A4DC
 ---
 
 # Get-AzureNetworkSecurityGroupForSubnet

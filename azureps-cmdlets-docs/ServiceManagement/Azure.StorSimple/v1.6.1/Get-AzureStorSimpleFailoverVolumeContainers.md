@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A8BA0CBC-E126-4B0A-BF3C-DB992A2696C4
+ms.assetid: AB416228-6D06-41F2-B0AA-49EE6EB6673C
 ---
 
 # Get-AzureStorSimpleFailoverVolumeContainers

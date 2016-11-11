@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
-ms.assetid: 5600D8DC-6CAC-4B4C-9FDE-45031A5F14B9
+ms.assetid: 18E02A9E-1B47-4B73-9281-1E89AA8E5365
 online version: 
 schema: 2.0.0
 ---

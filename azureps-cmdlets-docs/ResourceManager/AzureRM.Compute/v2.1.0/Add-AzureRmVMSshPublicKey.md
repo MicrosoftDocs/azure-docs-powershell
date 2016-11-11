@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 025B3FE1-DC21-4AFF-ABB1-00876EA560BC
+ms.assetid: B43211D4-7A66-4BAE-B552-F6ADB92A7964
 ---
 
 # Add-AzureRmVMSshPublicKey

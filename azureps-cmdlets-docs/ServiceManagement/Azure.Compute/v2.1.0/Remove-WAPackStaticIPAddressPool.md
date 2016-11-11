@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4EB01211-3148-4976-A32C-397E1149CF86
+ms.assetid: 29A64D07-B561-4664-B8D6-28206F3FF8C7
 ---
 
 # Remove-WAPackStaticIPAddressPool

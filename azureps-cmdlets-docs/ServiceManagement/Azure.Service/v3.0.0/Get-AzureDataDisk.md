@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8A97F067-7F6D-4D1D-BAB4-8195DC04A99A
+ms.assetid: B17B0834-55A3-4C2D-995E-BC7938DAD468
 ---
 
 # Get-AzureDataDisk

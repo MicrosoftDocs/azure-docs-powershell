@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 88264E1B-43CB-44FE-90BF-655DF795EA24
+ms.assetid: 9CB40CD3-3FE0-4263-AC68-A8A08D60B6D4
 ---
 
 # New-AzureAffinityGroup

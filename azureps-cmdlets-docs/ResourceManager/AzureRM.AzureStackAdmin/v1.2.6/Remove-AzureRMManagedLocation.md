@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 85B9D812-703F-43F8-AE36-EA84E55E82AF
 ---
 
 # Remove-AzureRMManagedLocation

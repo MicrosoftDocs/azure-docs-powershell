@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F2CBB48C-05F9-408F-9544-9DADCE1118DE
+ms.assetid: CCCB77D1-6F0F-4ED7-86D1-5AB600919772
 ---
 
 # Get-AzureEffectiveRouteTable

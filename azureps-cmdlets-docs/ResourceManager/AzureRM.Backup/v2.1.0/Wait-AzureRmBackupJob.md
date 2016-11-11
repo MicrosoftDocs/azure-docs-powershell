@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 47AE169C-9CEA-4F97-8B99-4A4009CA1B07
+ms.assetid: 77713EA7-32FF-44FD-944D-FCFBA6374D9F
 ---
 
 # Wait-AzureRmBackupJob

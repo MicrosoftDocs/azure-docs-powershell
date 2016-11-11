@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 80570E65-EA1F-44E5-B932-260FDEDAF4AF
+ms.assetid: 0453A63F-E91E-49A0-9F52-8ABF0048A588
 ---
 
 # Remove-AzureRmNetworkSecurityGroup

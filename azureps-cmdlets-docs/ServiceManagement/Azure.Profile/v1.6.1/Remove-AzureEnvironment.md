@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DB99D6BA-4FD9-491E-BF7E-4511B3EAAD12
+ms.assetid: B00A88EE-92D4-4922-873A-0665D1193C14
 ---
 
 # Remove-AzureEnvironment

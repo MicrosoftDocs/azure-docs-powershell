@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 785E19C5-0CB7-42CD-926C-CBCDDCDDB59C
+ms.assetid: 7B019EAD-41A8-4756-941E-6D11FD38171E
 ---
 
 # Get-AzureRmWebAppBackupList

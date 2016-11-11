@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 2D5AADDE-963D-4CC6-B211-52EDD8F67954
+ms.assetid: FED305F0-EF47-4680-9D86-E86565769735
 ---
 
 # Reset-AzureBatchComputeNode

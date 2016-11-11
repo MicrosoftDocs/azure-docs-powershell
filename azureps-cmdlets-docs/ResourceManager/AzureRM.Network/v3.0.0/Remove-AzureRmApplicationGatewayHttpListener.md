@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 29388C55-57C8-478C-819B-21E128C949B5
+ms.assetid: 171AC6D6-23D2-47E2-B0EE-C24B898F4410
 ---
 
 # Remove-AzureRmApplicationGatewayHttpListener

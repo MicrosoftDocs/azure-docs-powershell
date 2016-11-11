@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 64F54004-8E5F-4687-B4CD-2F79E720BD1A
+ms.assetid: 5C5366F5-6C7C-4217-B17D-2D230E9E94B1
 ---
 
 # Get-AzureRmAutomationDscOnboardingMetaconfig

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CA32A23B-631A-4C8C-A045-719E7FEEF2CC
+ms.assetid: ED6A7D4B-574C-4E4E-A1D8-F04553E310C9
 ---
 
 # Get-AzureRmAvailabilitySet

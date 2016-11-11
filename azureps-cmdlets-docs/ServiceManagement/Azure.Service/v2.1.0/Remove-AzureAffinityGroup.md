@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3757080E-8583-4A00-BDC2-82469B27336B
+ms.assetid: 381F58A1-98C3-4286-8E0F-771CD9A5BCCE
 ---
 
 # Remove-AzureAffinityGroup

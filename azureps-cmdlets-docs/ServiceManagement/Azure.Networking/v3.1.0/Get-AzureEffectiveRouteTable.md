@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
-ms.assetid: F2CBB48C-05F9-408F-9544-9DADCE1118DE
+ms.assetid: 542F7074-C520-4AAE-A4CB-2EE878F454AC
 online version: 
 schema: 2.0.0
 ---

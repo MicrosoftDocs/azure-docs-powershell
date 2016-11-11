@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CCDBC2D3-CE7B-4BB2-8645-E9E0651D116F
+ms.assetid: 46234E7F-8B4F-4F5A-9D29-C7B547E933CB
 ---
 
 # Remove-AzureServiceADDomainExtension

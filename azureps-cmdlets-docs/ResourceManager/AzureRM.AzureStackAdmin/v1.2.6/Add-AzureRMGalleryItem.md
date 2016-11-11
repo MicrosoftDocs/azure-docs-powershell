@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-help.xml
 online version:
 schema: 2.0.0
+ms.assetid: 52557345-4401-450E-8C26-B80FB9B8D5CD
 ---
 
 # Add-AzureRMGalleryItem

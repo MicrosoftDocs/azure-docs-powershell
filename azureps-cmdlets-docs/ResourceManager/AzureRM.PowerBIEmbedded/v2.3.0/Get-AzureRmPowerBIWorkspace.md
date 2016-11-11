@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
-ms.assetid: 853AC3AD-EAA3-43A1-ACFD-CAAE6C11B1AB
+ms.assetid: 4894250C-AC0A-4A1B-9F23-620A01C55BAA
 online version: 
 schema: 2.0.0
 ---

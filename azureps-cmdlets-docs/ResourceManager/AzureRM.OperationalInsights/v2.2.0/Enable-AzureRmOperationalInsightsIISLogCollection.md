@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1015988A-3846-4193-B56A-BC3AFC12C74B
+ms.assetid: 43E4DB6E-D613-48CF-A44B-6D45E1FF3DB0
 ---
 
 # Enable-AzureRmOperationalInsightsIISLogCollection

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B01797E1-B058-4E14-BD85-DA2348ABB2D6
+ms.assetid: 160AA6FF-D388-4C3D-8F9E-014EB3A90BDB
 ---
 
 # Remove-AzureRmVmssNetworkInterfaceConfiguration

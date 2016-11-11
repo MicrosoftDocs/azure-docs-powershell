@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0982DCDF-27E0-4331-AA11-D66BDEE729A9
+ms.assetid: C5C2F8DA-BDE7-47DA-B661-2531FD96D772
 ---
 
 # Set-AzureRmCdnProfile

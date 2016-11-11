@@ -1,3 +1,7 @@
+---
+ms.assetid: EB662E99-3B13-4D4E-A111-8894C31F6C61
+---
+
 # Azure Service Management Cmdlets
 
 The Azure Service Management reference provides information about Microsoft Azure PowerShell modules that help you to automate your Azure service management tasks.

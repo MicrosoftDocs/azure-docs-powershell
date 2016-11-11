@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 98BE11F8-76BF-4D2F-9AD4-DE00D79C388B
+ms.assetid: DED4DBC8-502A-4E89-991C-27AD0DDE6DE6
 ---
 
 # Set-AzureSiteRecoveryVM

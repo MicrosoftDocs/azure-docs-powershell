@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 25EBADAA-9FD3-42C0-ABF0-A643E88A39B0
+ms.assetid: 2F9E6A6A-0CA9-45CB-AF25-2306066C8D35
 ---
 
 # Set-AzureRmSqlElasticPoolRecommendedActionState

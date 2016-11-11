@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ManagedCache.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F0877362-B75E-4D8D-A2B7-5E4CB985E727
+ms.assetid: 6EFE7A4C-40CD-4208-B32D-EF916C2C65C9
 ---
 
 # Get-AzureManagedCacheAccessKey

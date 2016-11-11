@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8CDC13D5-5A18-42D2-A839-DA0A3B3E1A26
+ms.assetid: 82E06824-752C-4865-9A81-C413B963C8BB
 ---
 
 # Add-AzureRmLoadBalancerProbeConfig

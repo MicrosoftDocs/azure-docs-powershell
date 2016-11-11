@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C0B71949-72D6-4DE9-BC4D-88D6562D05BA
+ms.assetid: D1F592EA-E0B5-49BC-9E09-AF2B11701FDA
 ---
 
 # Remove-AzureRmOperationalInsightsSavedSearch

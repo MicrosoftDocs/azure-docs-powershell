@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 05024625-5AF1-44BF-9CAD-21ED0854FF25
+ms.assetid: 974ED947-C667-4DF9-9214-0F51AEDB4ACB
 ---
 
 # Add-AzureRmMetricAlertRule

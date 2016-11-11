@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 90BDAAAA-C9DE-4614-94FB-CA6BEE82D39B
+ms.assetid: 78DE8CC1-714E-40F7-95FD-68C1D0E411FB
 ---
 
 # Backup-AzureKeyVaultKey

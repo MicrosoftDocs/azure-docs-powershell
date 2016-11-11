@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: 38984C48-DBC1-46E5-8F29-B82E3F78ACFB
 ---
 
 # AzureRM.DataFactories Module

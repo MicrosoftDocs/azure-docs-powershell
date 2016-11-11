@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: BFF92245-231A-40F8-A994-31DB0B4B0072
 ---
 
 # New-AzureRMManagedLocation

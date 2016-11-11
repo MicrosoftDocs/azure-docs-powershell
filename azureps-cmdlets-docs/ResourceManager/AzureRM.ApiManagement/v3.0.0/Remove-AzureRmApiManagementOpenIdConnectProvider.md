@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 80B61E7D-14DC-422A-8EE3-CAC49EF1BE8B
+ms.assetid: 0A410CD4-8A3C-4A33-8C01-584CA48AD1F8
 ---
 
 # Remove-AzureRmApiManagementOpenIdConnectProvider

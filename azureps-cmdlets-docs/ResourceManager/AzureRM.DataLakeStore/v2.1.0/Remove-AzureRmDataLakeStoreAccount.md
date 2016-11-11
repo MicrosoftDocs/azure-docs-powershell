@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 24F79A04-4DE9-4A37-B87E-20632C11064F
+ms.assetid: C7D69985-5854-4484-9FEB-66283EE38B10
 ---
 
 # Remove-AzureRmDataLakeStoreAccount

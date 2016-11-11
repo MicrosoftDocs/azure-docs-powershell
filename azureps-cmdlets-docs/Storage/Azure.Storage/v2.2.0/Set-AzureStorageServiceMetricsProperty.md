@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AE9762AA-8104-4BB4-A3E5-EC3B3CE748A5
+ms.assetid: 6CE55DC0-0E73-46AE-86C0-13A5F1A1A3C2
 ---
 
 # Set-AzureStorageServiceMetricsProperty

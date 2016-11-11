@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C10C104D-CC5F-49D3-8169-971BABE36D04
+ms.assetid: C9D76086-D41F-4F71-9864-C43F3C9E6A0D
 ---
 
 # Remove-AzureDisk

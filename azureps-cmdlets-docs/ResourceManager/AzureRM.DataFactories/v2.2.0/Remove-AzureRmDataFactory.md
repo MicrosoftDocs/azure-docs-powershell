@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 496B4F69-7C80-482F-BC54-F1FAD7531ABB
+ms.assetid: 8C0FEBA3-9CDC-428F-9053-B4E56591B5A5
 ---
 
 # Remove-AzureRmDataFactory

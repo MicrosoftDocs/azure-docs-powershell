@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 14506C8E-2707-4C3F-9D65-312C63A3E0CB
+ms.assetid: 5BC6E67D-AABD-4386-A385-33C93D034F1C
 ---
 
 # Get-AzureRmTenant

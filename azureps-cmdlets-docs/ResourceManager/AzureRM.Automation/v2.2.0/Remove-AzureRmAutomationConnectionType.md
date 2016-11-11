@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A1885066-461C-4D7E-86EE-DBFE783A8B92
+ms.assetid: BE604B61-7564-4604-B309-25E244589D17
 ---
 
 # Remove-AzureRmAutomationConnectionType

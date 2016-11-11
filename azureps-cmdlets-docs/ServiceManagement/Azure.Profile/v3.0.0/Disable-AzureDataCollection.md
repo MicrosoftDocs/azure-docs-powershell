@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D48BFB43-778E-4498-AB8A-088B465E5863
+ms.assetid: 251B930A-51D2-4096-B586-D6525C3EFDFB
 ---
 
 # Disable-AzureDataCollection

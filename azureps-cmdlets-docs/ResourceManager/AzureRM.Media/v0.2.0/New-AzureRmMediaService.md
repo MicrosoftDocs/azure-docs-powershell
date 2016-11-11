@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: E7574392-6613-4A54-BBF3-263E9A7D70BD
 ---
 
 # New-AzureRmMediaService

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D48C0DAF-9982-4255-BE39-BEA0C8BEAB1B
+ms.assetid: 1EA69FFC-FA18-486F-B8F6-92157194937F
 ---
 
 # Reset-AzureRmWebAppSlotPublishingProfile

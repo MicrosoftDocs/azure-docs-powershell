@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: ED191A06-0C1D-486E-91F3-3CB61AA470A6
+ms.assetid: 9105895E-B433-41B5-8C4D-A10346B31F0B
 ---
 
 # Remove-AzureRemoteAppVNet

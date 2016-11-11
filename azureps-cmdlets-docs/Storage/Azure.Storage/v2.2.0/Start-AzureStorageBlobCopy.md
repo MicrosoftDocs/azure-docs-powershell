@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 606CB5D3-E7FD-4647-B980-329334ABC795
+ms.assetid: ABDE0396-CBAE-411A-AFFF-29D3C9D5D00D
 ---
 
 # Start-AzureStorageBlobCopy

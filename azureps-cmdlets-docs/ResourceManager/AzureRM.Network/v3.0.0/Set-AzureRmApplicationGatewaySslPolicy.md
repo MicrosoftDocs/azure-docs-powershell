@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 96BC725A-1802-4FC4-A975-200A8F9C99EF
+ms.assetid: 1240C6EA-9F0A-4D2F-99A3-2AF98DE2128A
 ---
 
 # Set-AzureRmApplicationGatewaySslPolicy

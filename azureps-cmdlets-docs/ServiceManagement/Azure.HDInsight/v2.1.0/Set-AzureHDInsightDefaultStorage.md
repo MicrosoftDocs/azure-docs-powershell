@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D2FD22D3-9365-46E5-AC6F-FCEAB817C81B
+ms.assetid: E9D81ABA-1C63-4148-A879-678244C0917F
 ---
 
 # Set-AzureHDInsightDefaultStorage

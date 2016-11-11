@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 33A0150F-C73A-4A57-92AE-5E1502F44B2C
+ms.assetid: 7A942B8B-A588-4B8E-9138-4084064F0168
 ---
 
 # Remove-AzureRmBatchAccount

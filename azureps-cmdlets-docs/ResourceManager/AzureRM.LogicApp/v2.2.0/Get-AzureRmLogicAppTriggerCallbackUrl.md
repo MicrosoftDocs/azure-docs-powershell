@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 62C3461D-D139-4653-91D0-319EE8BF8CA4
+ms.assetid: 12EACE42-6DB3-4D2F-8DE4-1F455893A786
 ---
 
 # Get-AzureRmLogicAppTriggerCallbackUrl

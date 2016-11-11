@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3BA022CE-3797-494D-B931-510163D34CD1
+ms.assetid: 4C26DD03-95C8-4C13-8646-304B7D461519
 ---
 
 # Get-ACSFarmMetric

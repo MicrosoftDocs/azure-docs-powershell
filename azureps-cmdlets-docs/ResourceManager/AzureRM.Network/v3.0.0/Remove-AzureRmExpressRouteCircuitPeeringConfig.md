@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A6293B25-88E5-4012-9ECE-E91B6ED36357
+ms.assetid: 94D6A33A-F9D8-4C7E-A171-CCF7D72DEF1F
 ---
 
 # Remove-AzureRmExpressRouteCircuitPeeringConfig

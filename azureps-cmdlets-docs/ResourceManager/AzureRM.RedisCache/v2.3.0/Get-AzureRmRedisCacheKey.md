@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
-ms.assetid: 7C136900-5F0E-4B0C-8518-CF8954EBC3A7
+ms.assetid: E236636C-247C-4A4E-81BB-F86BE952B161
 online version: 
 schema: 2.0.0
 ---

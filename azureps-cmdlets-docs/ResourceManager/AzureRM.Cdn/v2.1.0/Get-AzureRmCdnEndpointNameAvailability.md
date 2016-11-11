@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 377606B6-127E-4C20-9590-B11E7E0F25A5
+ms.assetid: B4304F2B-E109-4CCC-8A00-5DC17E83BCE3
 ---
 
 # Get-AzureRmCdnEndpointNameAvailability

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A4D1973B-0D96-459F-BC7C-88AA29FC65B2
+ms.assetid: 624C95AC-D7EB-4A71-A330-69367FAC5754
 ---
 
 # Get-AzureRemoteAppStartMenuProgram

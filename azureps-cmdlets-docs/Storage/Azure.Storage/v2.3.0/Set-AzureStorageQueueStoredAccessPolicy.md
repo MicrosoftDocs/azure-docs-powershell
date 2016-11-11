@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-ms.assetid: 02396020-02C8-4736-A00E-8D7112E27286
+ms.assetid: 1790702E-56E2-4170-BF3C-9476624938AD
 online version: 
 schema: 2.0.0
 ---

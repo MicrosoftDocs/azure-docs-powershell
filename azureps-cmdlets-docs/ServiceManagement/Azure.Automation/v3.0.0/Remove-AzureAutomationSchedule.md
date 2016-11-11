@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DF785B56-2A2F-49AB-B23C-F06BD6B9FADE
+ms.assetid: 32AC581D-8A87-4509-BCD1-E921826555FF
 ---
 
 # Remove-AzureAutomationSchedule

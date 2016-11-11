@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 253B7E3B-2E11-43D8-8882-8DBECE55DF8B
+ms.assetid: 2A055A47-C3AB-4F1C-93E0-B8E4D03FEC6F
 ---
 
 # Test-AzureRmPrivateIPAddressAvailability

@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+ms.assetid: 6BE7F4C8-B2B7-4DA1-B7BE-EF192AFE3EBB
 ---
 
 # AzureRM.DevTestLabs Module

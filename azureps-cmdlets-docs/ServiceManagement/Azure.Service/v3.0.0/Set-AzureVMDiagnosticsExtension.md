@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BB4F9AAA-AA76-4DFD-8604-B64721CCBEC1
+ms.assetid: 5AB6014B-23D2-49DF-AFCD-407B5680EE03
 ---
 
 # Set-AzureVMDiagnosticsExtension

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-ms.assetid: D83F7342-AA85-4AE1-A190-72BDDF6F61A2
+ms.assetid: 29E252B3-E2F3-4D76-9436-AA616C314365
 online version: 
 schema: 2.0.0
 ---

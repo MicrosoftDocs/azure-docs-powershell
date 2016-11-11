@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A935ABAC-6C60-4AE3-9434-B9BCC1182A34
+ms.assetid: E8BF2B3C-CF4D-4AB7-A644-E851DF1C96F2
 ---
 
 # Get-AzureRmApiManagementLogger

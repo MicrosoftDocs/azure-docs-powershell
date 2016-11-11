@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1BBE4280-F577-462E-A5E2-5FB22DF53140
+ms.assetid: 174DF72F-128E-4BCD-B8E0-DA78E05AA6E8
 ---
 
 # Set-AzureLoadBalancedEndpoint

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1168E58B-035E-45FF-A566-B1331D85582E
+ms.assetid: 85195369-AB8F-4E08-9117-E65A839AFD5C
 ---
 
 # New-AzureRmHDInsightMapReduceJobDefinition

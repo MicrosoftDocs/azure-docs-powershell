@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CF36D18F-6915-42D8-B543-B2B93C486ED9
+ms.assetid: 5D978F30-5F6E-46D5-852B-E588943A08B2
 ---
 
 # Set-AzureRmSqlDatabaseTransparentDataEncryption

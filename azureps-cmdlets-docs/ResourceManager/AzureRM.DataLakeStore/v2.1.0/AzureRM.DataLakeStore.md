@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+ms.assetid: EDD8FF60-478F-43B5-9E5E-0CE0E0B6FA11
 ---
 
 # AzureRM.DataLakeStore Module

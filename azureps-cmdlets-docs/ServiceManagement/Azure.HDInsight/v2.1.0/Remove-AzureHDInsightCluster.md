@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 55981C68-5D82-4EC4-8083-3DC9989CCBC4
+ms.assetid: FD288B1F-6DE7-4B0D-A48A-EFEEC2D152CC
 ---
 
 # Remove-AzureHDInsightCluster

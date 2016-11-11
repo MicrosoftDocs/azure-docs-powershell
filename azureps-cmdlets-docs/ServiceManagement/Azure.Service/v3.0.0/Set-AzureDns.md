@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FD9E7FD9-D39A-4F3C-8DE8-008A00035583
+ms.assetid: 71A20320-F770-49CF-891E-1F2060A32104
 ---
 
 # Set-AzureDns

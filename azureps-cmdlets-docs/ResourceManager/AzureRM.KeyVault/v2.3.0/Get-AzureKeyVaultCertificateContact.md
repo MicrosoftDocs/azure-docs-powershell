@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
-ms.assetid: 996FA5F2-AFAE-4424-AFDB-2DEEAB5143D1
+ms.assetid: BFFAF05F-6709-4F40-84A9-B3454900C95A
 online version: 
 schema: 2.0.0
 ---

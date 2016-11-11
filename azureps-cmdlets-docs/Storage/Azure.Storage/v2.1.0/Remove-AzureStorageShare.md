@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F9A0F4E1-3677-4786-BD84-D3645C61BACA
+ms.assetid: 396B67D5-0833-4054-A2AE-26DD400FC8AA
 ---
 
 # Remove-AzureStorageShare

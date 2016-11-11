@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F0E73B8F-312F-443E-93EA-CB18E9395F32
+ms.assetid: 85E188C5-A1FC-4484-A707-B6D0AB041042
 ---
 
 # New-AzureRmHDInsightHiveJobDefinition

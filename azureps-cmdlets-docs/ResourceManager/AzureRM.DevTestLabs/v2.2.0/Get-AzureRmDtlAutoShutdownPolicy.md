@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 91E9385C-E861-4BA7-9BC9-66CEF5385CEC
+ms.assetid: 8363DBAF-8C91-48BB-AC3A-161B061B2974
 ---
 
 # Get-AzureRmDtlAutoShutdownPolicy

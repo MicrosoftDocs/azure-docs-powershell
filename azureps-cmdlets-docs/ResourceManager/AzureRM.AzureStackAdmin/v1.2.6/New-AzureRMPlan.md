@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 08140BAB-6DDD-484C-B1CA-67094D9A6CD2
 ---
 
 # New-AzureRMPlan

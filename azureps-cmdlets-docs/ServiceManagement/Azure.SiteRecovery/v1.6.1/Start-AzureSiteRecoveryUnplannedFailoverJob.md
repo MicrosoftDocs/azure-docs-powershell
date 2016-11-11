@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B71E61A6-0431-49D9-A92F-F8EF087E67E2
+ms.assetid: 206F90F6-8BF2-4764-B9BA-F71C5DF780AF
 ---
 
 # Start-AzureSiteRecoveryUnplannedFailoverJob

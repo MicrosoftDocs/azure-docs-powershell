@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CCB375E5-47CB-4147-9CE3-1DFC23D7D88D
+ms.assetid: 2C9DB7D5-C11E-445E-92CC-7BBDA58FA591
 ---
 
 # Get-WAPackStaticIPAddressPool

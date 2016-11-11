@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 22EAC7C4-CD51-44E6-A493-2E7EE7D8B0C9
 ---
 
 # Set-AzureRmSchedulerServiceBusQueueJob

@@ -1,3 +1,7 @@
+﻿---
+ms.assetid: 68B53C00-56FD-4F5D-9EF7-C2149A01AC0B
+---
+
 # Azure Resource Manager Cmdlets
 
 This section displays the online help files for the Azure Resource Manager.

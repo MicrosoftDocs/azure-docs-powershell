@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 46CBE8E9-F33B-4377-AEB8-C668F553EEE5
+ms.assetid: BDD30004-9AA2-4D51-B544-6C0D785B50EF
 ---
 
 # New-AzureStorSimpleNetworkConfig

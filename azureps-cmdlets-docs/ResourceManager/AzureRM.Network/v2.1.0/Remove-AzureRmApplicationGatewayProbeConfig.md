@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AA0AF410-4418-491D-8D55-392E799B824B
+ms.assetid: 640C98DF-8F42-46F1-A598-8400AD9D3595
 ---
 
 # Remove-AzureRmApplicationGatewayProbeConfig

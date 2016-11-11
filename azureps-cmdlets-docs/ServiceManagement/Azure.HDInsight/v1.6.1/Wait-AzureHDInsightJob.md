@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5C18FE81-DCFA-4203-ABD7-D4FD1B055911
+ms.assetid: 4839F1E9-47F8-46A5-B648-08879B5904C7
 ---
 
 # Wait-AzureHDInsightJob

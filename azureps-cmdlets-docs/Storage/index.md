@@ -1,3 +1,7 @@
+---
+ms.assetid: 39B0760F-B1FF-4A64-A9CD-3564000A3AA4
+---
+
 # Azure Storage
 
 Azure Storage is a cloud storage solution for modern applications that rely on durability, availability, and scalability to meet the needs of customers.

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 932421FF-3AD3-4179-B550-604408F633AC
+ms.assetid: D43C923C-753A-48D8-9531-5BBAAA3070F9
 ---
 
 # Get-AzureRmSqlServerUpgradeHint

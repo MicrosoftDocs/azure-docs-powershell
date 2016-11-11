@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 47B681EC-6C72-4C9F-B5CA-C419574C34F3
+ms.assetid: 8B73082D-2A62-4655-97CC-F2BCD7452E98
 ---
 
 # Get-AzureRmStreamAnalyticsQuota

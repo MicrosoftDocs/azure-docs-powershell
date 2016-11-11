@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E0696C25-4A2A-4E51-8A38-C1ADFBEFBAC0
+ms.assetid: 85EBF8E8-5F5D-4CC8-80AC-34297D90A7D0
 ---
 
 # Set-AzureRmNetworkSecurityGroup

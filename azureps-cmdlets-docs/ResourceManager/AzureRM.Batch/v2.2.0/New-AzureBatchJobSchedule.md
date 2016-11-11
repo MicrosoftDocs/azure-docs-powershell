@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A0B57DF1-91B9-438D-8065-99384D0D6FD4
+ms.assetid: 83BE9127-6653-42AC-8F14-B873FF0A53F8
 ---
 
 # New-AzureBatchJobSchedule

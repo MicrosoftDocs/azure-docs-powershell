@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 64EFC6D9-735C-4432-9CBB-9C80ADE705C8
+ms.assetid: 3F4773AB-F5F1-44E2-8FEF-A2F4D868730F
 ---
 
 # Get-AzureVMSqlServerExtension

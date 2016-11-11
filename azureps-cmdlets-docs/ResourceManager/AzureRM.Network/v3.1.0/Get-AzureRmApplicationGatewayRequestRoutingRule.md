@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-ms.assetid: 61AC0CE8-179E-4175-BE9D-2DE0D35E5BC2
+ms.assetid: 8C0A7F9C-82BC-4EED-AE6C-156ADDC715CA
 online version: 
 schema: 2.0.0
 ---

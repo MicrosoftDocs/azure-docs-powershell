@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5DCDAF54-B9F3-4622-B58E-CCA597BA048C
+ms.assetid: C0C71A41-040C-4BF6-868F-3F0C18A9F216
 ---
 
 # Remove-AzureRmDnsRecordConfig

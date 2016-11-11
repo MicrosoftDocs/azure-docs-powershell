@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 778C2150-A49D-4A6D-988C-8DD92DFE7371
+ms.assetid: CD0B39AE-6A61-49A1-944F-BB3E01D71885
 ---
 
 # Get-AzureRmAppServicePlanMetrics

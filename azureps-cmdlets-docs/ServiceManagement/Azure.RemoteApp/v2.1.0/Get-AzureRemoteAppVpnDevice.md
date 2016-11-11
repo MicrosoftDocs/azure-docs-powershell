@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9EE53C94-61FB-4DA4-9362-FBACC9E998F7
+ms.assetid: 4EFE2A6B-E203-4728-9CD3-E15012C5D73F
 ---
 
 # Get-AzureRemoteAppVpnDevice

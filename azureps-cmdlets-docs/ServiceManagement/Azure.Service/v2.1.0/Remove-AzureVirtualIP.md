@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EDD9015B-98E4-4E9E-BDCC-8931E98A191A
+ms.assetid: B88E3F8E-6579-4DE9-93A3-6EDCE81B87B4
 ---
 
 # Remove-AzureVirtualIP

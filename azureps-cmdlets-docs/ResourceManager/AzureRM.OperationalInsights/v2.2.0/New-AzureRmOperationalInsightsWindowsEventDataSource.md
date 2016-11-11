@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BFCC4B74-5329-4491-8E9B-8F44DBF21C04
+ms.assetid: 4DB9AD9E-80AF-4DFA-9CF1-F10B28A6B505
 ---
 
 # New-AzureRmOperationalInsightsWindowsEventDataSource

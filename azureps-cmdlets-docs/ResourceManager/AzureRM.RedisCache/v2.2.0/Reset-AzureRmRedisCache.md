@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CDFE56CA-275B-4A43-9E9F-128949C13790
+ms.assetid: 39FC36E5-2046-4B41-A581-2F40ADDA4A50
 ---
 
 # Reset-AzureRmRedisCache

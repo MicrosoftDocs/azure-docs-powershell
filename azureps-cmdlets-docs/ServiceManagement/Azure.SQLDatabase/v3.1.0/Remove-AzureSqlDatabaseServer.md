@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
-ms.assetid: 58C65666-AFFD-4477-B1E3-278BE346ECD3
+ms.assetid: B4D287B8-CA4D-46AD-AC67-C26FFECF1DD0
 online version: 
 schema: 2.0.0
 ---

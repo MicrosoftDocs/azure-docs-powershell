@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 53EE4295-DC3E-4A9D-9610-493D0D208E68
+ms.assetid: 8AC9D630-BFDB-42D9-B41A-73ED9F03ADAD
 ---
 
 # Get-AzureRmLocation

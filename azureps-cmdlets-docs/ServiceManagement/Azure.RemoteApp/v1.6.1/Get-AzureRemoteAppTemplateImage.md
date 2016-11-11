@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0DA1D4D0-600C-466E-A541-F6D3142B91F9
+ms.assetid: 70098F96-3F77-4F8D-8945-5EE8094D58FE
 ---
 
 # Get-AzureRemoteAppTemplateImage

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 677817C2-2FC0-462E-B796-57A26F9112FD
+ms.assetid: 61361750-E2ED-4C83-A619-D4F5E6CC6723
 ---
 
 # Remove-AzureStorSimpleAccessControlRecord

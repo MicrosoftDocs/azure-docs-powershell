@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7CEA3F1A-4EEC-4AE1-9EC0-D96A50757A40
+ms.assetid: 4107B8B5-05E2-443F-B90E-3091C39170D8
 ---
 
 # Restart-AzureRmVM

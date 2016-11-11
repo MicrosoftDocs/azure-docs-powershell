@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F6A33861-6132-49F4-B86D-71916E4554CF
+ms.assetid: AE0FD9AD-4450-48C7-A8D9-83461725CE00
 ---
 
 # New-AzureRmAutoscaleWebhook

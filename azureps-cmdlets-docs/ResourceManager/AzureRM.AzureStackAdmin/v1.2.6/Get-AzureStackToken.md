@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 1F5B2821-231C-4DDA-8813-B719291EBBBD
 ---
 
 # Get-AzureStackToken

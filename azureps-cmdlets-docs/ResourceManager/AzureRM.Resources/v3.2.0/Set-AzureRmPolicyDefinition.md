@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A2AF802A-C7E9-45DB-B399-C170ABB360D2
+ms.assetid: 9A722E7B-1648-4EE1-948C-1655CA2CE572
 ---
 
 # Set-AzureRmPolicyDefinition

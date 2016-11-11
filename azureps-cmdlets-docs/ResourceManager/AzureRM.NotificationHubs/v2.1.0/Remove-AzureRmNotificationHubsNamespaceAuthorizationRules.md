@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4C88A065-E7CD-46D6-B29C-689B3B21B6D3
+ms.assetid: 95BBE415-922D-4318-ADE6-4CA4FF65FADE
 ---
 
 # Remove-AzureRmNotificationHubsNamespaceAuthorizationRules

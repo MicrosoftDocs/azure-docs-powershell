@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 20680AF5-8145-4EAB-94D3-D710A62A062B
+ms.assetid: 0CCA788D-19EE-4290-9A43-351A42F0CD25
 ---
 
 # Set-AzureStorageContainerAcl

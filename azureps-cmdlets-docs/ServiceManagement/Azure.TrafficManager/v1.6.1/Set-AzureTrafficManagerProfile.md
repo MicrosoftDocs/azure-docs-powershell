@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CB33E5A1-6E2E-4ED9-807B-D3505530EE96
+ms.assetid: 278BFED3-B1A4-49A3-8B03-C2257ACAD3A1
 ---
 
 # Set-AzureTrafficManagerProfile

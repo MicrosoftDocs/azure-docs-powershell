@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DF8920E8-10DC-480D-BD93-D3878F0E04EB
+ms.assetid: FF2719C1-052B-42D8-AB27-C583903DA789
 ---
 
 # Set-AzureRmVmssStorageProfile

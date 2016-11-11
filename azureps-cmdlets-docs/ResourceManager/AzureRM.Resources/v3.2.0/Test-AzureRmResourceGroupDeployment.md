@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 49B0E123-EF54-4C6A-A905-E5E563A67B08
+ms.assetid: 693D6111-C862-4BE6-81D9-601D21BE3304
 ---
 
 # Test-AzureRmResourceGroupDeployment

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 55476204-8793-4342-B7F9-DD881DAC9BEA
+ms.assetid: 3D11BFC8-F156-451E-992E-6917B4686B20
 ---
 
 # Remove-AzureRmOperationalInsightsStorageInsight

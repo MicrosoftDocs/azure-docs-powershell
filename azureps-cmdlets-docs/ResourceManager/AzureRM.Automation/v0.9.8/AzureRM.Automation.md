@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 2.0.2.0
 Locale: en-US
+ms.assetid: EA4A7ACE-06D5-46B0-8E41-7D7938A6E893
 ---
 
 # AzureRM.Automation Module

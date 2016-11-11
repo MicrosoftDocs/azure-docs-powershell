@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1C766AE8-84B5-48A0-8A96-79D605657B2F
+ms.assetid: A1387D6A-D3AA-4F20-983E-ABE57921F068
 ---
 
 # Remove-AzureRmVpnClientRevokedCertificate

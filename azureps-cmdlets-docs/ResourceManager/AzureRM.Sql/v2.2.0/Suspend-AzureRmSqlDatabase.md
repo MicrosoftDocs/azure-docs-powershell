@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B083D3E9-A931-4793-8B34-3B4FB8D46663
+ms.assetid: 40E3EB7C-BF96-4023-AC4C-6152E38E67AA
 ---
 
 # Suspend-AzureRmSqlDatabase

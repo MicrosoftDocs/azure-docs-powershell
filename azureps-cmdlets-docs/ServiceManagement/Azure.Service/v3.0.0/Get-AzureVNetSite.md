@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 21DA37EC-8A96-4997-9368-7705D0864BDE
+ms.assetid: 42AFF981-25F7-4EB4-8CDE-26DDA74FBF0B
 ---
 
 # Get-AzureVNetSite

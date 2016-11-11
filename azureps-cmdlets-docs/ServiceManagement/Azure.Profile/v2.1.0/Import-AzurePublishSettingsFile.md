@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 69DBFA51-E29F-430E-A02D-FCCE02CE0694
+ms.assetid: 7B92340E-918B-4EAA-8FA4-E8080A978464
 ---
 
 # Import-AzurePublishSettingsFile

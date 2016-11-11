@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 862E2299-7FC1-4050-AF6E-1140B47DEA16
+ms.assetid: 0F6F7F23-3D5C-466F-A9D5-3B527518AB22
 ---
 
 # Start-AzureSiteRecoveryCommitFailoverJob

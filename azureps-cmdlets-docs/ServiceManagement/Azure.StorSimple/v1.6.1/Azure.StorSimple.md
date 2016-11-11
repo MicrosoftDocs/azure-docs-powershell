@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: B0AC6D06-98B4-42E3-9C9B-793F5110DEB8
 ---
 
 # Azure.StorSimple Module

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 350D0F9F-05D4-448F-BE25-6F9A1E3B529D
+ms.assetid: 557CB766-5A56-4757-94C0-192CB60EFC22
 ---
 
 # Remove-AzureRmSqlServerFirewallRule

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 72EFA472-0378-4277-B32E-366D023D023F
+ms.assetid: F6070167-4C17-42A5-BB8B-B67D46C7717D
 ---
 
 # Disable-AzureRmOperationalInsightsLinuxCustomLogCollection

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CF05770C-FC18-4A31-BEB9-4F8C1C39C285
+ms.assetid: 0134BE67-7466-4C9D-9412-6C47A631FC48
 ---
 
 # Suspend-AzureRmAutomationJob

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0DD93641-B6F3-4257-93E8-FCEEE16BF8F5
+ms.assetid: 652D34D7-531C-4E88-A0AC-F2FD60E3F7EA
 ---
 
 # Remove-AzureRmServerManagementNode

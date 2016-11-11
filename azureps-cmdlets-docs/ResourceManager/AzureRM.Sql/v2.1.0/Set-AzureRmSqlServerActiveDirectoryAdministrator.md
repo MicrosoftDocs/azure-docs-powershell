@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 20DFD2A4-6040-4204-8388-5251C72FFE14
+ms.assetid: 9D8DA0CF-7FB4-4A0C-8F15-5D22CE1D5999
 ---
 
 # Set-AzureRmSqlServerActiveDirectoryAdministrator

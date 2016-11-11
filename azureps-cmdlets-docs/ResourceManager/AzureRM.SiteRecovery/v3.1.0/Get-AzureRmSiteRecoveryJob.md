@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 874C0981-749B-4161-9AC2-AC445A72EBEB
+ms.assetid: ECB18586-9060-420A-B7A8-044BE01CE08E
 ---
 
 # Get-AzureRmSiteRecoveryJob

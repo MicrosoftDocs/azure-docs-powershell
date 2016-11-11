@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A3CE99B1-CA65-4241-8018-4E80226AB610
+ms.assetid: 8DBF5D10-0C1E-449F-B2D9-FEA2F292B86C
 ---
 
 # Get-AzureRmExpressRouteCircuitAuthorization

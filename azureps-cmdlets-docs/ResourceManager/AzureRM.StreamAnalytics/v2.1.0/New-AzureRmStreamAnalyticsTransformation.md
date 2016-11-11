@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B1D80512-AAE8-4061-8503-536A83E62DDA
+ms.assetid: 0E2DBDD3-97F0-4CB4-AE10-51ECE697F5B4
 ---
 
 # New-AzureRmStreamAnalyticsTransformation

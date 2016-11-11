@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1DDC015D-4F61-46B4-A8F0-256A5A13F49D
+ms.assetid: 2DE5E9AD-A880-43D6-9D7A-B511AC3D5FAA
 ---
 
 # Get-AzureRmSqlServer

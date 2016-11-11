@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 373F1D30-E11A-4345-A482-2DAA16BFBCBE
+ms.assetid: AC6F5495-8E63-4115-A406-683C0E2737F3
 ---
 
 # Set-AzureVMAccessExtension

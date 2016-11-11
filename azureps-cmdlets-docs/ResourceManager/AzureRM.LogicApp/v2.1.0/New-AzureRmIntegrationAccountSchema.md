@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C83ABC8B-23A3-4607-85B4-740D2DF60D4A
+ms.assetid: 4BAA2864-D9E0-49D0-B8B1-3449E574FA64
 ---
 
 # New-AzureRmIntegrationAccountSchema

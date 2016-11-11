@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3FDA22F3-7E30-47F2-8244-AB4E80FD0E24
+ms.assetid: 6C335C14-6C54-4848-BDE5-150FCF0D8380
 ---
 
 # Get-AzureRmDataFactorySlice

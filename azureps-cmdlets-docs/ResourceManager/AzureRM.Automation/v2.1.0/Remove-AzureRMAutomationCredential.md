@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 6A171B2B-1FDC-4642-A3D5-495B39FA7CFF
+ms.assetid: 4CD2547B-C5F1-4AA6-8BFC-62524C3EA0F7
 ---
 
 # Remove-AzureRmAutomationCredential

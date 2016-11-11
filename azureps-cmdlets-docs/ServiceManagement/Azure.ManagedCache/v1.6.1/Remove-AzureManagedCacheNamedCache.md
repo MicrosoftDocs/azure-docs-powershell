@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ManagedCache.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 06F96135-1624-4693-AD49-30B2BE41A19E
+ms.assetid: 512AEC76-F4BE-4074-8508-5A826AAEF5CE
 ---
 
 # Remove-AzureManagedCacheNamedCache

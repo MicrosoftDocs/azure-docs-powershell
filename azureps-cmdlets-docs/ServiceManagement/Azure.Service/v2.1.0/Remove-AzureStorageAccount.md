@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 28CC3C65-E988-4BA4-BC96-79A2F6C36226
+ms.assetid: E33018BA-53B5-4738-AD65-2E012EB9A7F4
 ---
 
 # Remove-AzureStorageAccount

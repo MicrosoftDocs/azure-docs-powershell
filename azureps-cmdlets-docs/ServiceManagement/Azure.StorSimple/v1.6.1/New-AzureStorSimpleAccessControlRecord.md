@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EE52512C-F578-4207-92CE-1638EAABAC08
+ms.assetid: D8245477-40B4-47E2-8DCE-C4523E684F19
 ---
 
 # New-AzureStorSimpleAccessControlRecord

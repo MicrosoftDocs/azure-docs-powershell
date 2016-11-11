@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D83879BE-919A-4C1B-854B-E366CCAB5D8C
+ms.assetid: F54581E1-DFD1-4235-8836-81EFA5CB9434
 ---
 
 # Start-AzureRmSqlServerUpgrade

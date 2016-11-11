@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: ED79AC0B-94EC-4AB7-8109-3EBEBD5349C6
+ms.assetid: 3A313D6E-A694-4D9F-A27E-A9A3350A8413
 ---
 
 # Remove-AzureAvailabilitySet

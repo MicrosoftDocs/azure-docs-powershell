@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 12A51444-A178-4394-A61B-55D6F5221E40
+ms.assetid: F6D4355D-2F11-4650-80D6-FBFF73B8DB71
 ---
 
 # New-AzureRmExpressRouteCircuitPeeringConfig

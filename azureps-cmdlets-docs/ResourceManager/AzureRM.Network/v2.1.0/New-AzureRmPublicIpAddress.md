@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 44E44187-746D-4C4E-90DC-28986821482E
+ms.assetid: 5B1BD329-0253-47B0-9DE2-3650B1DE69D9
 ---
 
 # New-AzureRmPublicIpAddress

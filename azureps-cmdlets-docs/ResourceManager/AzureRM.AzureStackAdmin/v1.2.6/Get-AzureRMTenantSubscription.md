@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: E52F8FC6-69A6-4D08-8EA5-8D5555762FED
 ---
 
 # Get-AzureRMTenantSubscription

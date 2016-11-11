@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: ED49E9DA-2593-4F2E-AFB5-46978A0A0BD3
+ms.assetid: 78E21A79-574C-42CE-8634-353E880A4BA4
 ---
 
 # Add-AzureRmWebtestAlertRule

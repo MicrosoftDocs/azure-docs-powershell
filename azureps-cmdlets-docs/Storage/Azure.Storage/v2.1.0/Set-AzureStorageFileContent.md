@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CD2E0AA7-3259-4AA5-8494-C432063D34E7
+ms.assetid: 9693B4E8-28C2-409A-B98D-20C38A6BF1A0
 ---
 
 # Set-AzureStorageFileContent

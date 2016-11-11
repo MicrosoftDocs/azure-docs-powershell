@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F2CDD40F-C85B-4522-9271-048D3AE03474
+ms.assetid: 75F2A738-7987-4B42-A10F-704D8F6BDB1E
 ---
 
 # Confirm-AzureStorSimpleLegacyVolumeContainerStatus

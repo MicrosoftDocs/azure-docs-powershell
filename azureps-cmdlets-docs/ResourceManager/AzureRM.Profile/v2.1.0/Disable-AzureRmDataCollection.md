@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3E0927A7-EBB9-4463-826E-9B6A3F52E0C9
+ms.assetid: 1B6DEA9A-A832-4E44-B12D-C270C6080667
 ---
 
 # Disable-AzureRmDataCollection

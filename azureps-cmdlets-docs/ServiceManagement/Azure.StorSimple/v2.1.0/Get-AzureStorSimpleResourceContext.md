@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 167E78A0-558D-48F3-B009-08DB322FCAFC
+ms.assetid: 015166B1-9C1D-4CF8-9098-CF81570B9A2F
 ---
 
 # Get-AzureStorSimpleResourceContext

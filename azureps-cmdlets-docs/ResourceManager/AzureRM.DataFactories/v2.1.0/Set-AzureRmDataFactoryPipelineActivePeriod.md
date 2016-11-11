@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 59BA5C7A-AA54-434F-B966-51622060D931
+ms.assetid: 26FF6FE5-405A-4FB7-8FE4-E4CA18B9D80C
 ---
 
 # Set-AzureRmDataFactoryPipelineActivePeriod

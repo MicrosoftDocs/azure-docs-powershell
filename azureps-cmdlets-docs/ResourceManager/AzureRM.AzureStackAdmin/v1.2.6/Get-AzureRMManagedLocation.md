@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: 31791B2A-ACB5-4D7A-802A-4E101E9C2FBB
 ---
 
 # Get-AzureRMManagedLocation

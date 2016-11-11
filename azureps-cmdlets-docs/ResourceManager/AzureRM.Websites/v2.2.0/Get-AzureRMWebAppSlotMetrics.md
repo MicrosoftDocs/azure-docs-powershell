@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 083BFB0B-FB9C-4566-B161-DC3EC24BDADD
+ms.assetid: 9B63FE22-136B-4643-AA66-415B410E2C2F
 ---
 
 # Get-AzureRmWebAppSlotMetrics

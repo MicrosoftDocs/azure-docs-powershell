@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 6598360C-F187-4E0F-AFAB-41D5301030D1
+ms.assetid: 6BDDE442-7570-4624-8433-A11D996CC28C
 ---
 
 # Get-AzureAutomationJobOutput

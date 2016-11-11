@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CBA0E2E7-48D3-4F6C-9686-F971634270E4
+ms.assetid: D0EC72F2-C73B-4D7B-A874-0B2463BA2D2A
 ---
 
 # Remove-AzureRmPowerBIWorkspaceCollection

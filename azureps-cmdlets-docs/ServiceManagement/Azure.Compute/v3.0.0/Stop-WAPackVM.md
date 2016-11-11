@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 352919AF-3173-4382-8CF0-67AA7A8BF81D
+ms.assetid: 04A09EE1-C4C1-43FD-85BA-EAFE1C45BE4B
 ---
 
 # Stop-WAPackVM

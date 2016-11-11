@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BFFC7F7D-7B8D-48EC-BD0B-0CF0D0144800
+ms.assetid: 96F33A12-4E32-46EB-B277-F317E0F868B4
 ---
 
 # Remove-AzureRmSqlElasticPool

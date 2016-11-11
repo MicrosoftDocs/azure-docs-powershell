@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C2CC10DE-1D36-4937-8A3E-9776BE80DF9A
+ms.assetid: 487E58A4-AD80-4D28-A743-8F74C1387B8E
 ---
 
 # Remove-AzureRmApiManagementAuthorizationServer

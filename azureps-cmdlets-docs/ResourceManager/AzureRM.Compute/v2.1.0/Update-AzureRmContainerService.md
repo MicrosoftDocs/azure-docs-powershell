@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 493CA8CB-36EC-4276-AA4E-58F7CAE7111F
+ms.assetid: 3D0F53CC-B153-476B-A49F-BD63A8B80618
 ---
 
 # Update-AzureRmContainerService
