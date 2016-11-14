@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 2.0.8.0
 Locale: en-US
+ms.assetid: 3FF02FCF-7E39-4DA0-AD1B-7F982B60A867
 ---
 
 # AzureRM.Compute Module

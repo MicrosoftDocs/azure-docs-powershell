@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AA129EA4-0A55-4DFC-8522-9782DF3566D8
+ms.assetid: 304F92A5-99C1-4915-943C-730484187AC5
 ---
 
 # Reset-AzureRemoteAppVpnSharedKey

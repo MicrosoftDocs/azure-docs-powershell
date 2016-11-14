@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E02357EF-6B5B-411A-B9A1-BEF3FD35F62E
+ms.assetid: 46AE17A4-64B2-4AFD-8060-C66FD67C2A81
 ---
 
 # Remove-WAPackVMSubnet

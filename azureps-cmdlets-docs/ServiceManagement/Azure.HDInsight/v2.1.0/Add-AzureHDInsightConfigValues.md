@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AC65660B-0FF5-46FE-B5A8-CACDAFCE48D1
+ms.assetid: FC461A76-3597-4BB0-9838-D290CA75F85F
 ---
 
 # Add-AzureHDInsightConfigValues

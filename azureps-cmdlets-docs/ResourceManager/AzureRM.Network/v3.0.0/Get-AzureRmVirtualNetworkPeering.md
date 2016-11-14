@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F253FB21-37EF-41C9-A079-908DE3BB5AFA
+ms.assetid: 29DE7ED6-9C03-46D0-BE62-63D6BD0383A4
 ---
 
 # Get-AzureRmVirtualNetworkPeering

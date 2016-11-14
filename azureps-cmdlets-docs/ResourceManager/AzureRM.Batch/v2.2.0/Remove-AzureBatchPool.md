@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3D6783EC-142C-4CA5-9940-D6E219CE7EE5
+ms.assetid: B104D4A0-4575-4E0D-8731-F8ED788EC120
 ---
 
 # Remove-AzureBatchPool

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
-ms.assetid: D91AAA87-9458-44A9-B332-DF8BA0322290
+ms.assetid: 1EA5F348-5EF4-4056-BA06-7B95E12E329D
 online version: 
 schema: 2.0.0
 ---

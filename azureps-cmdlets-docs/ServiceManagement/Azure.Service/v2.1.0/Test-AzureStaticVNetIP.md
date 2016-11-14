@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 60F9724C-836C-4913-83E5-56E7E93F1C49
+ms.assetid: 137DEF4A-B185-4081-B1A8-53A4B09AA218
 ---
 
 # Test-AzureStaticVNetIP

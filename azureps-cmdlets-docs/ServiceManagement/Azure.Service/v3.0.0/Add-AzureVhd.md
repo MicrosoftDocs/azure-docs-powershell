@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 18F4531B-7CE4-42A3-AC9D-0EAAEFD537E2
+ms.assetid: 0AA7AE35-CFAB-4892-BEEF-4197890B3740
 ---
 
 # Add-AzureVhd

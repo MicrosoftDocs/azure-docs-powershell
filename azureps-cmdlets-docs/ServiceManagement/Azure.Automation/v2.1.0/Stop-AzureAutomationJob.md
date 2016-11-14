@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DCBF988D-B23A-4720-B461-35503231C30F
+ms.assetid: B01A370E-85A4-4358-BECC-5D188F118E26
 ---
 
 # Stop-AzureAutomationJob

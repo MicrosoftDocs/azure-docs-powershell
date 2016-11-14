@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E349E259-AECA-4CA8-ADD4-D940D95D88C2
+ms.assetid: B1C072AB-E0E8-4873-80D2-C2C762D0BA2A
 ---
 
 # Remove-AzureRmRedisCachePatchSchedule

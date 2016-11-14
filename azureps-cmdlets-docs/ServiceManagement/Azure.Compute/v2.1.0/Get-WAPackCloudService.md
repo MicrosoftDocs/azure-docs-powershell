@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9C760705-93AA-4330-8225-AB6031FBE8E0
+ms.assetid: 6FC18D57-A70E-4F62-A528-8BE1E951BE98
 ---
 
 # Get-WAPackCloudService

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AF49321B-F593-45AC-8EB7-603DCE676E7E
+ms.assetid: 0900A20E-FBF5-4B80-8396-403E2CA024C0
 ---
 
 # Remove-WAPackCloudService

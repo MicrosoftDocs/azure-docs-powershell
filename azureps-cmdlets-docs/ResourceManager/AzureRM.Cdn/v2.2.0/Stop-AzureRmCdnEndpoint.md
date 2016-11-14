@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 67C77C12-A987-497B-BB32-E604953B65CC
+ms.assetid: BFF9BC42-7F39-4360-A26A-9851D05C1357
 ---
 
 # Stop-AzureRmCdnEndpoint

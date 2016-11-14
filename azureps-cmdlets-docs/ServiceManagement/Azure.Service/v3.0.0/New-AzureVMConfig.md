@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 73C0373D-16F8-4179-ABED-38374432231B
+ms.assetid: E0861EF2-14AB-490B-AFC8-4FF05212A524
 ---
 
 # New-AzureVMConfig

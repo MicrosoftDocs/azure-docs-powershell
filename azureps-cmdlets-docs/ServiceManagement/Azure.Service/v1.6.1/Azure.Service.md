@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: none
 Help Version: 2.0.0.1
 Locale: en-US
+ms.assetid: CE03957E-1E14-42DE-A667-F07EE71CBDD8
 ---
 
 # Azure.Service Module

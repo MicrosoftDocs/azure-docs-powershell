@@ -1,3 +1,7 @@
+---
+ms.assetid: DF332CD7-E3E5-4CC1-8C01-380B2065193C
+---
+
 # Get started with Azure PowerShell cmdlets
 
 

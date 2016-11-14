@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.UsageAggregates.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BC7092A8-72ED-48E9-BA38-55866B5B6F08
+ms.assetid: 9E633CC0-1D2D-4A6B-9DDB-0F9944618F02
 ---
 
 # Get-UsageAggregates

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8ACEF132-C795-405B-8A1C-90D35E744272
+ms.assetid: 2E05FCA1-354B-4D78-BFD7-68202036A591
 ---
 
 # Get-AzureRmHDInsightJobOutput

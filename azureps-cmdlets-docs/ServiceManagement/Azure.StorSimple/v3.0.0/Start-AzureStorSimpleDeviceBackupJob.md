@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4A62165C-930A-40F7-B9B3-25B8925BF587
+ms.assetid: BB740864-0632-4325-9371-0F5E6DBA4EE7
 ---
 
 # Start-AzureStorSimpleDeviceBackupJob

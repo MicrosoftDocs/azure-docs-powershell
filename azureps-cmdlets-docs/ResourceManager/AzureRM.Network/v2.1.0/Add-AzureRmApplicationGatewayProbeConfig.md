@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 31FC5898-6BC5-420B-82A9-2C2761580AC5
+ms.assetid: B5D02E4B-4732-4F6C-A354-46B3507BF60B
 ---
 
 # Add-AzureRmApplicationGatewayProbeConfig

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4DA71FCA-502C-4CAD-93FB-5AFC26B26DF2
+ms.assetid: DA4BE94B-CA79-4800-B871-B9920782A1ED
 ---
 
 # Get-AzureRmSqlDatabaseRestorePoints

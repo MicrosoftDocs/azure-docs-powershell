@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7486FC67-E9FF-4239-B10B-1BC0225C942D
+ms.assetid: 4B8E6D7B-1E25-4493-AC4A-1F5EC461F3FC
 ---
 
 # Remove-AzureCertificate

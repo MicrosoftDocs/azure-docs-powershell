@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EB9E969E-680B-4DDA-98E8-7732ED396F56
+ms.assetid: 21DDCB4F-BE0B-48EC-8DE4-7B068B31A7F3
 ---
 
 # Enable-AzureRmDataCollection

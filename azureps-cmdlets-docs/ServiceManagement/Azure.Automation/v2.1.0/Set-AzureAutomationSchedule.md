@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 844A1EB2-F22D-467D-A7C1-6616502AE29E
+ms.assetid: A8E18B1A-EDD0-4303-96A9-A1C508314B74
 ---
 
 # Set-AzureAutomationSchedule

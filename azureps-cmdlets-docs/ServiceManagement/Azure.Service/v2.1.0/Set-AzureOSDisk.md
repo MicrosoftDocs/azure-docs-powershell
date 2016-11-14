@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EB90E879-02DF-4C75-A49F-EC7090347CDB
+ms.assetid: 2F077B32-1A6E-4A8F-B951-4B11B05D1E8C
 ---
 
 # Set-AzureOSDisk

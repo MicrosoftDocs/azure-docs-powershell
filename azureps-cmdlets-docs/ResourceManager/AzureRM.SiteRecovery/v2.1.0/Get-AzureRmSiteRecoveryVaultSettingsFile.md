@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A2FAD07B-980D-4043-9011-2A4CCC5C8784
+ms.assetid: C2A2C222-136A-42B1-9312-14F29CA68586
 ---
 
 # Get-AzureRmSiteRecoveryVaultSettingsFile

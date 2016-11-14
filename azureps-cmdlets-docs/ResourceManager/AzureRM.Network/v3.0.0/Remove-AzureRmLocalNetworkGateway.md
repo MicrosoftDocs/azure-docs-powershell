@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 662320EB-BA6B-433E-BAD1-7CE78B8EDE16
+ms.assetid: 57B2DFC6-9A57-48BB-BC19-A8AAEDD496C6
 ---
 
 # Remove-AzureRmLocalNetworkGateway

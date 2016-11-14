@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F6B82001-769A-4EDE-920E-CA848CAD41AE
+ms.assetid: F06D9C3C-2F9A-4B9C-ADB9-654F69E276AB
 ---
 
 # Remove-AzureLocalNetworkGateway

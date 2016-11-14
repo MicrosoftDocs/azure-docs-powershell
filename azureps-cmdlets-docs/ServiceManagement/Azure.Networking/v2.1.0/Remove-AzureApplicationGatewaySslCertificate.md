@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F066F724-CF6A-43EE-A263-1DE9F07FFFD8
+ms.assetid: 4E806F9B-3B93-4080-9E97-92710B12A489
 ---
 
 # Remove-AzureApplicationGatewaySslCertificate

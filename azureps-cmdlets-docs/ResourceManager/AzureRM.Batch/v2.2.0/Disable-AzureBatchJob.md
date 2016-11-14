@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7836B925-0943-4D90-AE8F-80291B313EBB
+ms.assetid: 691970DF-8F76-4DB6-B4F1-3995E7F56E7E
 ---
 
 # Disable-AzureBatchJob

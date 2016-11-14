@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
 online version: 
 schema: 2.0.0
+ms.assetid: FC6A23F8-D6C2-4883-9813-7DFB2CC3405E
 ---
 
 # Set-AzureRmSchedulerServiceBusTopicJob

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
-ms.assetid: 50D59A00-7891-43DF-90EE-AB8761BCA75E
+ms.assetid: BFB5FB5F-BACB-41E0-BF89-69D646BC7D3E
 online version: 
 schema: 2.0.0
 ---

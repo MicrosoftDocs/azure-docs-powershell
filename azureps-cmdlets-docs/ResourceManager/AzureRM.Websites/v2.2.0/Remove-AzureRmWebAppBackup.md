@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A0687E9E-77D0-4981-B83A-5DFB9F6AC8BE
+ms.assetid: B2CE52D6-185B-4AD1-BBEB-BF2EFD99C6AC
 ---
 
 # Remove-AzureRmWebAppBackup

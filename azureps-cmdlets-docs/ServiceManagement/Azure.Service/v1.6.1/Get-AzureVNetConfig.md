@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 879C7DF4-1A13-4D06-A376-910910504626
+ms.assetid: 975EA857-22A5-4A4A-B76F-AD27BB039E6B
 ---
 
 # Get-AzureVNetConfig

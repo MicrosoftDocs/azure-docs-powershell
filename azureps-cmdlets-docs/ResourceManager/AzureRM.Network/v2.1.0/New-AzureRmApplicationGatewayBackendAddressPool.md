@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0E8C28A9-614B-4756-B035-5F2F47ED070E
+ms.assetid: F03D8755-BCA8-4F8D-B541-EA9D246DF62F
 ---
 
 # New-AzureRmApplicationGatewayBackendAddressPool

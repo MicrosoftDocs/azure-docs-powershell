@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CE9BE4F5-4154-461F-9D72-AB015AE8AF41
+ms.assetid: 4293A608-ABD8-43AF-9ACE-343C9B2B35F5
 ---
 
 # Stop-ACSBlobServerRoleInstance

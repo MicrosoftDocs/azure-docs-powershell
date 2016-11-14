@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5E93CD6F-3D69-4443-BA94-E34D00F59C5B
+ms.assetid: 8335C7D1-D1BD-4002-8EF2-83AECA2AE618
 ---
 
 # Get-AzureRemoteAppVmStaleAdObject

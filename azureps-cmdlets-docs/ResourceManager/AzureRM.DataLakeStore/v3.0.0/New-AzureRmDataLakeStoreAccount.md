@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1E2DAAE8-EB5B-490F-AB29-28B588D1141B
+ms.assetid: A544B8FC-F84F-49A7-9E5D-E550B7F947E3
 ---
 
 # New-AzureRmDataLakeStoreAccount

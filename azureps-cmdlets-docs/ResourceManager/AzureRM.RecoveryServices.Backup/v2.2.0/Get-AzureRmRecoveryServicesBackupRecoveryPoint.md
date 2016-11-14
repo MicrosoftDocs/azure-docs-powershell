@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 65B4F207-B14C-4757-BBD5-58DA52DC52E6
+ms.assetid: 06FE901E-6123-456D-8684-F73AFE8CD0B9
 ---
 
 # Get-AzureRmRecoveryServicesBackupRecoveryPoint

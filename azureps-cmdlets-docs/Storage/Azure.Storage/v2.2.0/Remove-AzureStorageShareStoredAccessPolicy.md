@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AF46A7C9-DD40-4D0D-9950-56F661DADA33
+ms.assetid: 1B09948A-4706-4AF7-9AE2-754D49D6D028
 ---
 
 # Remove-AzureStorageShareStoredAccessPolicy

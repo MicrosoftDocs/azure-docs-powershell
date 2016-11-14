@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 6C942BB0-39B8-4B4B-BE6A-08A171A57BB4
+ms.assetid: 158C0D2B-BAC7-4471-A26C-E9A47C749DEC
 ---
 
 # Suspend-AzureRmDataFactoryPipeline

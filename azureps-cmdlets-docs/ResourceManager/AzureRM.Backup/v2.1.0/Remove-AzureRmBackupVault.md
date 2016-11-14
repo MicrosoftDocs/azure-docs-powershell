@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EAE6DB41-9F9D-40C1-A5E9-212161C76EBF
+ms.assetid: EBC0FC6D-D942-4FDF-93B1-79874826F09C
 ---
 
 # Remove-AzureRmBackupVault

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 35977AF1-9C15-4BB9-8E31-E42F8DA081BA
+ms.assetid: C5D29B6C-7490-4B97-826A-EAD0E261FA7C
 ---
 
 # Clear-AzureProfile

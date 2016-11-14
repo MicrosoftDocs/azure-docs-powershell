@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 98AD1C84-B147-48EB-94B5-8D77B531F6F8
+ms.assetid: FDAA70E1-CB68-44B8-B9A9-91B5E0C725F7
 ---
 
 # Remove-AzureRmApiManagementLogger

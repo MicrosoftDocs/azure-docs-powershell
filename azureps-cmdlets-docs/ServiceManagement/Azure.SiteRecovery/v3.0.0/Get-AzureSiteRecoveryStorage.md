@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 060AF58C-C0AF-4DB5-8DB6-12EABD21D475
+ms.assetid: B9594615-F634-4189-9419-A220547F6B52
 ---
 
 # Get-AzureSiteRecoveryStorage

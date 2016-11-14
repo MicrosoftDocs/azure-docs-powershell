@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D59FA784-0339-4550-A114-7C86DDA39623
+ms.assetid: F24D20D1-0EA9-4C08-B037-EB0C4E211C9A
 ---
 
 # Get-AzureRmDataLakeAnalyticsCatalogItem

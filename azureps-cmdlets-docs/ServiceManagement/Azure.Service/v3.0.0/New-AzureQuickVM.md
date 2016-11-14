@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 469D1444-025D-4302-834B-0CD5E6A0C628
+ms.assetid: CB3F84DC-4CCE-4307-B5BD-96F5DEDBCA0D
 ---
 
 # New-AzureQuickVM

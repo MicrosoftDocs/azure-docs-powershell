@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 7CDDC4BC-945E-43F3-857A-071BACF26A36
+ms.assetid: 29FEEE82-8951-4742-AABE-FE292448C6B0
 ---
 
 # Remove-AzureRmDataLakeAnalyticsAccount

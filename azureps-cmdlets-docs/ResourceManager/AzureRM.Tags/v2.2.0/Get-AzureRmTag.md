@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4A43AF5D-6359-46BF-9C51-FDF399A5FDC6
+ms.assetid: B5B4559B-8487-4CBF-B232-C09F08B644AB
 ---
 
 # Get-AzureRmTag

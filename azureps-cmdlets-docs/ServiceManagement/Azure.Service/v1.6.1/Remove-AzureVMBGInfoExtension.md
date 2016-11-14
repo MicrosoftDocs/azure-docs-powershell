@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 61AE2C22-3B73-4290-9375-1D89DA7B0398
+ms.assetid: B61D5471-3113-448A-869E-55534633C309
 ---
 
 # Remove-AzureVMBGInfoExtension

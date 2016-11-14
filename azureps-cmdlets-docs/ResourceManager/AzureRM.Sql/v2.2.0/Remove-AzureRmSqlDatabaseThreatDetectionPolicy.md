@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FF6994BD-7E36-4CC5-BAAE-E6372EFC520A
+ms.assetid: A364BA48-5B08-4566-99D2-D7AD9B6DAD77
 ---
 
 # Remove-AzureRmSqlDatabaseThreatDetectionPolicy

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 311D7889-4D4D-42D5-A8D0-6FE9A6C2C372
+ms.assetid: 7866F136-A066-4D71-8B2C-4BADAD052269
 ---
 
 # Get-AzureRmSqlDatabaseSecureConnectionPolicy

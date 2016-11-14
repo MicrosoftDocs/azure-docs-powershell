@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 96EA83CF-8660-44B7-AFA3-179FEAE1B1CA
+ms.assetid: 991470EC-2C3F-4672-8AC8-0B30E51E5CC9
 ---
 
 # Get-AzureRmDtlVMsPerLabPolicy

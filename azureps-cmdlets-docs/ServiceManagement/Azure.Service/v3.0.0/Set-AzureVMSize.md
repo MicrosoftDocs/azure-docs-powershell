@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: BA63898A-23E5-4510-A198-E122E762AC7F
+ms.assetid: 5E0FFC4C-1DF1-4BDF-98E2-CB7C68978494
 ---
 
 # Set-AzureVMSize

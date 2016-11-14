@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3CCC06A0-190E-481E-87E2-7BEB2ED93176
+ms.assetid: 5FE5258B-D82D-4730-88DB-ACF471CEF804
 ---
 
 # Get-AzureApplicationGatewaySslCertificate

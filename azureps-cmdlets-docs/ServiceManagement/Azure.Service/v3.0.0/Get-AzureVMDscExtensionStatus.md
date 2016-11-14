@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E218FED1-9636-476C-8D9D-D6AD14A35534
+ms.assetid: C183ABF4-72CF-40C3-A286-0B74ADE8F730
 ---
 
 # Get-AzureVMDscExtensionStatus

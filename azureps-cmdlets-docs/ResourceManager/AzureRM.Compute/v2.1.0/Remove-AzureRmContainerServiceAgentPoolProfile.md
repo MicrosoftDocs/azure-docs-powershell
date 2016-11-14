@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C52E74C1-9D28-4253-86D3-91AD50902A11
+ms.assetid: 1F031CC2-E603-4AAC-B98F-69BA7EA0CE3C
 ---
 
 # Remove-AzureRmContainerServiceAgentPoolProfile

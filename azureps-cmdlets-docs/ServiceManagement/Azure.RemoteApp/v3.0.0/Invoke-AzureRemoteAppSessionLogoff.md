@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D19A9D2B-FE41-4EE9-998F-1609FB4DB5A9
+ms.assetid: 440F74CE-BDA4-451E-9BC5-65DF6D280663
 ---
 
 # Invoke-AzureRemoteAppSessionLogoff

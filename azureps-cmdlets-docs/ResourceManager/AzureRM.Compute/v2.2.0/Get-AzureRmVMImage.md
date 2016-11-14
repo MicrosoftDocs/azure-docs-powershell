@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 4F9BFBF3-CCDF-4325-96C4-199376CB5D27
+ms.assetid: D23D8541-C781-4DCE-A64C-DE9C110C4B3F
 ---
 
 # Get-AzureRmVMImage

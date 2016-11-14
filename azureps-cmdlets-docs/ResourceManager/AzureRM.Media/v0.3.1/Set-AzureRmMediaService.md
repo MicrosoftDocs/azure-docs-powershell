@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
-ms.assetid: 638D1221-3109-4849-9AD5-15CD6F7E2A5E
+ms.assetid: 0FA49058-F3A7-4ED9-93F2-0C84BC130FB7
 online version: 
 schema: 2.0.0
 ---

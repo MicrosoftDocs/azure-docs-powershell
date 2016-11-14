@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 633C3E61-0DA0-4A01-897B-E81C6E571196
+ms.assetid: A3808AA9-02AB-4469-9D14-A4884FABC4A0
 ---
 
 # Remove-AzureRmAutomationSchedule

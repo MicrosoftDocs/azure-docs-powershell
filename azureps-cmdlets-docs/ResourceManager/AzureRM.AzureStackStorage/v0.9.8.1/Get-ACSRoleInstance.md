@@ -2,7 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8F12FE28-0C72-402A-8155-BC239F9806FF
+ms.assetid: 5210173B-C1A8-4A96-95AF-041ED3D61ACE
 ---
 
 # Get-ACSRoleInstance

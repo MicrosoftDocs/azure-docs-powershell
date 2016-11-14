@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E10BBD12-0078-4E95-98CB-85A1AC7B23F6
+ms.assetid: 4D3FB9C6-7561-4DBB-9E77-31782C41D355
 ---
 
 # Remove-AzureRmStreamAnalyticsInput

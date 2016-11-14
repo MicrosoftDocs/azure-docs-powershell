@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 12D27EDA-39C6-486C-AE1C-28E82E149F39
+ms.assetid: 68470D01-BF3C-4304-B01D-6AAE657375BC
 ---
 
 # New-AzureRmVpnClientRootCertificate

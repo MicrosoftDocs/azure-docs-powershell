@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 546171CD-77CE-4752-861F-2AB5F88B13CA
+ms.assetid: 5ED5512B-4318-4F16-95A6-6B6A73F1E4C7
 ---
 
 # Get-AzureRmDtlAllowedVMSizesPolicy

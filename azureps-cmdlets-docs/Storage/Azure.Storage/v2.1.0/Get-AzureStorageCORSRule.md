@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: ACCFB0FD-AD3A-4415-ABCE-A98B8073E82B
+ms.assetid: 0C19B818-44FC-4802-BF7C-91A8B4CE3813
 ---
 
 # Get-AzureStorageCORSRule

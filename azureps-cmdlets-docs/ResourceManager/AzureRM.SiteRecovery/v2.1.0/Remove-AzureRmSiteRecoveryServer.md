@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0D000EAB-C592-449E-9150-8D0E4A28BF3D
+ms.assetid: 70C3446C-7CC7-4C02-B022-E9569BD90041
 ---
 
 # Remove-AzureRmSiteRecoveryServer

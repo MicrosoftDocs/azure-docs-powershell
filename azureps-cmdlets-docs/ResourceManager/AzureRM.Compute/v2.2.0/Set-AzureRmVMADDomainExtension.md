@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0EF71D82-ABAB-4A2B-B844-B613CD2527AC
+ms.assetid: 1E628B46-913D-4D0E-9211-22004B6918E2
 ---
 
 # Set-AzureRmVMADDomainExtension

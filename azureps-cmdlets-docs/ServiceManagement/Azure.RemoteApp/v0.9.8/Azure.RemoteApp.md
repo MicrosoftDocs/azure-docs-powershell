@@ -4,6 +4,7 @@ Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 1.0.4.0
 Locale: en-US
+ms.assetid: 576EF7B8-0CDD-427D-8571-756340BC7AA4
 ---
 
 # Azure.RemoteApp Module

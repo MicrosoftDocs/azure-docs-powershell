@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 15439DBC-C039-41E5-BCD4-D0600B19A711
+ms.assetid: 0E79E9C0-92BA-449E-9F63-DAFE3D8F05B0
 ---
 
 # Get-AzureRmLogicAppRunHistory

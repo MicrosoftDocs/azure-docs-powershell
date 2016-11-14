@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 1B56C404-EBD7-4970-9488-633FF8A3B57F
+ms.assetid: DEBD768B-012F-4B5D-9AA6-8B1AB29D021F
 ---
 
 # Remove-AzureApplicationGateway

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 688BE4C0-0390-4DB2-97B7-81E05E8D796B
+ms.assetid: DAB612F0-6608-48AF-9A87-C82DF5B8E838
 ---
 
 # Reset-AzureRoleInstance

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A94B400E-D081-461D-BBE6-A21332FC207B
+ms.assetid: 67514964-FFF8-46E8-979A-6887FB8F9A9D
 ---
 
 # Set-AzureAclConfig

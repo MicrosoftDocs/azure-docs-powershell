@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B62B9DAE-662B-4CA0-9B46-A2CB4AE5DCAD
+ms.assetid: 6F677A54-FC1A-4C0E-AB34-F10B3625410D
 ---
 
 # Remove-AzureRmPublicIpAddress

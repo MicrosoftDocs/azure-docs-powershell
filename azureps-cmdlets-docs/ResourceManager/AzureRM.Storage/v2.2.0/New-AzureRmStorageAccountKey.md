@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 67276B0C-B5DB-4C5F-8959-F88462B72499
+ms.assetid: CFF428B8-DBFB-445C-84C6-6848C0113DEC
 ---
 
 # New-AzureRmStorageAccountKey

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-ms.assetid: 496B4F69-7C80-482F-BC54-F1FAD7531ABB
+ms.assetid: 3D2E9FAE-FE34-457A-BE95-BC61D025B07A
 online version: 
 schema: 2.0.0
 ---

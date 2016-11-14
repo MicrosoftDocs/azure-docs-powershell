@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B9AECE59-FD64-4A10-93F4-0824001ACA4A
+ms.assetid: 75BB2810-44C6-4DF3-89EE-C6E22E8AEC5B
 ---
 
 # Get-AzureRmSqlServerServiceObjective

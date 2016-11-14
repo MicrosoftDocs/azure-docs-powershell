@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 55377E7C-90B2-430D-97D7-23C35DABC7B7
+ms.assetid: 44403CE2-686F-46D0-A0E0-F12D62B9C342
 ---
 
 # Test-AzureTrafficManagerDomainName

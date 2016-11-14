@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 798D3B87-2A3D-4C5B-9925-031CFE6B5F64
+ms.assetid: B7EB3C57-FEFC-4D38-A482-499CD8C2CF9A
 ---
 
 # Get-AzureRmStorageUsage

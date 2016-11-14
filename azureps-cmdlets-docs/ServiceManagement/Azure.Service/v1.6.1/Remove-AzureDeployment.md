@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DCA716C0-5227-44DB-9188-DAC8CC2B8548
+ms.assetid: 700AA986-6C66-4BB1-8605-605875CD53C4
 ---
 
 # Remove-AzureDeployment

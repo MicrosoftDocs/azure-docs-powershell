@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 89D7ED7C-1DB6-4E01-8981-8F34483039FD
+ms.assetid: 4DDAF8EC-0150-4C03-83FA-96F844284569
 ---
 
 # Remove-AzureStorageContainer

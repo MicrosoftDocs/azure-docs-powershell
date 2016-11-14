@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 78423815-46CD-43C3-9EAD-3A51E0480124
+ms.assetid: C091E5ED-C051-4E7C-A826-DD84E049A4A2
 ---
 
 # Remove-AzureRmVMSqlServerExtension

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5EE6E2C7-0FA3-43CD-A509-E8DC56179792
+ms.assetid: 8CE7019E-0DE3-47E2-8175-BAA877642906
 ---
 
 # Add-AzureRmHDInsightMetastore
