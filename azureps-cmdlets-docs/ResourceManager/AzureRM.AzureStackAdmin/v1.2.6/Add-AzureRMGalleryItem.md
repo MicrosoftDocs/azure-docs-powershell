@@ -8,9 +8,7 @@ ms.assetid: CD5B7E02-85E8-4419-BF24-AC1CF0F58BDD
 # Add-AzureRMGalleryItem
 
 ## SYNOPSIS
-The Add-AzureRMGalleryItem cmdlet adds the gallery item package.
-The gallery item uri needs to be a http/https uri accessible to the gallery service.
-Typically .azpkg file is uploaded to a publicly accessible blob container and its uri is provided as the GallelryItemUri parameter
+Adds the gallery item package.
 
 ## SYNTAX
 
@@ -21,10 +19,13 @@ Add-AzureRMGalleryItem [-SubscriptionId <Guid>] -GalleryItemUri <String> [-Admin
 ```
 
 ## DESCRIPTION
+The **Add-AzureRMGalleryItem** cmdlet adds the gallery item package.
+The gallery item URI needs to be a http/https URI accessible to the gallery service.
+Typically .azpkg file is uploaded to a publicly accessible blob container and its URI is provided as the *GallelryItemUri* parameter.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Upload and register a gallery package with the gallery service
 ```
 Add-AzureRMGalleryItem -ApiVersion 2015-04-01 -GalleryItemUri "http://127.0.0.1:10000/devstoreaccount1/sqlrpgallery/Microsoft.SqlDatabase.0.1.0.azpkg"
 ```
@@ -33,7 +34,7 @@ Description
 
 -----------
 
-The example uploads and registers the gallery package with the gallery service
+The command uploads and registers the gallery package with the gallery service
 
 ## PARAMETERS
 
@@ -72,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -GalleryItemUri
-The http/https uri containing the .azpkg file.
+Specifies the http/https URI containing the .azpkg file.
 The Uri should be accessible to the gallery service
 
 ```yaml
@@ -88,9 +89,15 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
-The following values are permitted for this object type.
 
 ```yaml
 Type: ActionPreference
@@ -106,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -136,9 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when using the cmdlet against the Azure stack environment configured against Azure active directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
@@ -153,9 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request. This parameter is not needed when using.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed when using the cmdlet against the Azure stack environment configured against Azure active directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
@@ -177,3 +184,7 @@ Accept wildcard characters: False
 
 ## NOTES
 ## RELATED LINKS
+
+[Get-AzureRmGalleryItem](./Get-AzureRmGalleryItem.md)
+
+[Remove-AzureRmGalleryItem](./Remove-AzureRmGalleryItem.md)

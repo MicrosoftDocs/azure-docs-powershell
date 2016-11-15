@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 3FD6090C-E28A-493A-8E67-9E5832401267
 ---
@@ -8,7 +8,7 @@ ms.assetid: 3FD6090C-E28A-493A-8E67-9E5832401267
 # New-AzureRMManagedSubscription
 
 ## SYNOPSIS
-The New-AzureRmManagedSubscriiption cmdlet creates a subscription as an admin for the specified tenant user
+Creates a subscription as an administrator for the specified tenant user.
 
 ## SYNTAX
 
@@ -19,30 +19,28 @@ New-AzureRMManagedSubscription [-SubscriptionId <Guid>] -Owner <String> -OfferId
 ```
 
 ## DESCRIPTION
+The **New-AzureRmManagedSubscriiption** cmdlet creates a subscription as an administrator for the specified tenant user.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Create a subscription for a tenant user
 ```
-New-AzureRmManagedSubscription -Owner "tenanuser@contoso.com" -OfferId $OfferId -DisplayName "Displayname"
+New-AzureRmManagedSubscription -Owner "tenantuser@contoso.com" -OfferId $OfferId -DisplayName "Displayname"
 ```
 
-Description
 
------------
-
-The example creates a subscription for the specified tenant user.
+This command creates a subscription for the tenant user named tenantuser@contoso.com using the offer ID stored in the variable named $OfferId.
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory
+Specifies the Azure Stack resource manager endpoint.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -52,14 +50,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies the api version supported.
-This is optional.
-This parameter will be deprecated in future
+Specifies the supported API version.
+This parameter is optional.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,9 +67,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -87,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -102,12 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -OfferId
-Specifies the Id of the offer to which the user is subscribed to
+Specifies the ID of the offer to which the user is subscribed to.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-Specifies the owner of the subscription
+Specifies the owner of the subscription.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -147,14 +150,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,14 +167,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for the request.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,12 +184,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-{{Fill DisplayName Description}}
+Specifies the display name of the managed subscription.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,5 +205,11 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.SubscriptionDefinition
 
 ## NOTES
+
 ## RELATED LINKS
 
+[Get-AzureRMManagedSubscription](./Get-AzureRMManagedSubscription.md)
+
+[Remove-AzureRMManagedSubscription](./Remove-AzureRMManagedSubscription.md)
+
+[Set-AzureRMManagedSubscription](./Set-AzureRMManagedSubscription.md)

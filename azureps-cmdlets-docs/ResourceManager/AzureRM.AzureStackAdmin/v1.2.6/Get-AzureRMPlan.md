@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 1449385B-0CFB-455E-B3B7-42D8DCA44BF7
 ---
@@ -8,7 +8,7 @@ ms.assetid: 1449385B-0CFB-455E-B3B7-42D8DCA44BF7
 # Get-AzureRMPlan
 
 ## SYNOPSIS
-The Get-AzureRmPlan cmdlet gets the plan details
+Gets the plan details.
 
 ## SYNTAX
 
@@ -32,31 +32,27 @@ Get-AzureRMPlan -Name <String> [-AdminUri <Uri>] [-Token <String>] [-ApiVersion 
 ```
 
 ## DESCRIPTION
-The Get-AzureRmPlan cmdlet gets the plan details
+The **Get-AzureRmPlan** cmdlet gets the plan details.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRMPlan -Name "ComputePlan" -ResourceGroup "PlanGroup" -Managed
 ```
 
-Description
-
------------
-
-The example gets the plan named 'ComputePlan'
+The command gets the plan named ComputePlan from the resource group named PlanGroup.
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory
+Specifies the Azure Stack resource manager endpoint.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -67,13 +63,13 @@ Accept wildcard characters: False
 
 ### -ApiVersion
 Specifies the api version supported.
-This is optional.
-This parameter will be deprecated in future
+This parameter is optional.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,9 +79,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -101,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -116,12 +117,12 @@ Accept wildcard characters: False
 ```
 
 ### -Managed
-@{Text=}
+Indicates that the cmdlet executes the operation as an administrator.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Admin
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -131,12 +132,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the plan
+Specifies the name of the plan.
 
 ```yaml
 Type: String
 Parameter Sets: Admin
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +149,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: TenantGet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -173,12 +174,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the resource group name
+Specifies the resource group name.
 
 ```yaml
 Type: String
 Parameter Sets: Admin
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,14 +189,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: Admin
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,14 +206,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,5 +229,11 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.AdminPlanModel
 
 ## NOTES
+
 ## RELATED LINKS
 
+[New-AzureRMPlan](./New-AzureRMPlan.md)
+
+[Remove-AzureRMPlan](./Remove-AzureRMPlan.md)
+
+[Set-AzureRMPlan](./Set-AzureRMPlan.md)

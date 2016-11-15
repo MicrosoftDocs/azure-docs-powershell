@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: F89EDA59-9E1F-4CD3-8B8A-1CC06E9395EB
 ---
@@ -8,7 +8,7 @@ ms.assetid: F89EDA59-9E1F-4CD3-8B8A-1CC06E9395EB
 # Get-AzureRMUsageConnection
 
 ## SYNOPSIS
-The Get-AzureRMUsageConnection cmdlet gets the specified usage connection information
+Gets the specified usage connection information.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureRMUsageConnection [-Name <String>] -ResourceGroup <String> [-Subscripti
 ```
 
 ## DESCRIPTION
-The Get-AzureRMUsageConnection cmdlet gets the specified usage connection information
+The **Get-AzureRMUsageConnection** cmdlet gets the specified usage connection information.
 
 ## EXAMPLES
 
@@ -33,13 +33,13 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory
+Specifies the Azure Stack resource manager endpoint.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -49,14 +49,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-API Version for the usage connection api.
-This needs to be '2015-06-01-preview' .
-Note that this parameter will get removed in a future release
+Specifies the API Version for the usage connection API.
+This needs to be 2015-06-01-preview .
+This parameter will be removed in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,9 +66,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -84,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -99,12 +104,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the usage connection
+Specifies the name of the usage connection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -129,12 +134,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Name of the resource group where the usage connection was created
+Specifies the name of the resource group where the usage connection was created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,14 +149,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,14 +166,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,5 +189,9 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.UsageConnectionModel
 
 ## NOTES
+
 ## RELATED LINKS
 
+[Add-AzureRMUsageConnection](./Add-AzureRMUsageConnection.md)
+
+[Remove-AzureRMUsageConnection](./Remove-AzureRMUsageConnection.md)

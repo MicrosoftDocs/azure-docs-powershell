@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 5ED4C309-2D02-4590-9288-6A5F9D08AE84
 ---
@@ -8,8 +8,7 @@ ms.assetid: 5ED4C309-2D02-4590-9288-6A5F9D08AE84
 # Remove-AzureRMTenantSubscription
 
 ## SYNOPSIS
-The Remove-AzureRMTenantSubscription cmdlet removes the current logged in user's specified subscription.
-There should not be any resources under the subscription to be removed
+Removes the current logged in user's tenant subscription.
 
 ## SYNTAX
 
@@ -20,31 +19,29 @@ Remove-AzureRMTenantSubscription -TargetSubscriptionId <Guid> [-AdminUri <Uri>] 
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRMTenantSubscription** cmdlet removes the current logged in user's tenant subscription.
+There should not be any resources under the subscription to be removed.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Remove the tenant subscription of the current logged in user
 ```
 Remove-AzureRMTenantSubscription -TargetSubscriptionId $TenantSubscriptionId
 ```
 
-Description
-
------------
-
-The example removes the specified tenant subscription id.
+The command removes the specified tenant subscription ID that is stored in the variable named $TenantSubscriptionId.
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
-This parameter will be deprecated in future
+Specifies the Azure Stack Resource Manager endpoint.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured with Azure Active Directory.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -54,14 +51,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies the api version supported.
-This is optional.
-This parameter will be deprecated in future
+Specifies the supported API version.
+This parameter is optional.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,9 +68,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -89,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -104,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -119,12 +121,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetSubscriptionId
-The current logged in user's Subscription Id to be removed
+Specified the current logged in user's Subscription ID to be removed.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,14 +136,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured with Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,5 +159,11 @@ Accept wildcard characters: False
 ### Microsoft.Azure.AzureOperationResponse
 
 ## NOTES
+
 ## RELATED LINKS
 
+[Get-AzureRMTenantSubscription](./Get-AzureRMTenantSubscription.md)
+
+[New-AzureRMTenantSubscription](./New-AzureRMTenantSubscription.md)
+
+[Set-AzureRMTenantSubscription](./Set-AzureRMTenantSubscription.md)
