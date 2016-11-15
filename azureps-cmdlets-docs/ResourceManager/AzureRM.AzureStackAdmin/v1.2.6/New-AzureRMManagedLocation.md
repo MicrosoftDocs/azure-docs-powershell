@@ -9,7 +9,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a location managed by Azure Stack Resource Manager.
 
-
 ## SYNTAX
 
 ```
@@ -24,7 +23,7 @@ The resource providers can be deployed in the new location.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Create a location
 ```
 New-AzureRMManagedLocation -Name "LocationName" -DisplayName "LocationName" -Latitude 80.5 -Longitude -45.5
 ```
@@ -34,8 +33,8 @@ This command creates a location named LocationName.
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the Azure Stack environment configured against Azure Active Directory (AAD).
+Specifies the Azure Stack Resource Manager endpoint.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
 
 ```yaml
 Type: Uri
@@ -220,6 +219,7 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.Location
 
 ## NOTES
+
 ## RELATED LINKS
 
 [Get-AzureRMManagedLocation](./Get-AzureRMManagedLocation.md)
