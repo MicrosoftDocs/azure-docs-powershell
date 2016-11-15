@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRMOffer
 
 ## SYNOPSIS
-The Set-AzureRmOffer cmdlet updates the existing offer
+Updates the existing offer.
 
 ## SYNTAX
 
@@ -18,32 +18,28 @@ Set-AzureRMOffer -Offer <AdminOfferModel> -ResourceGroup <String> [-Subscription
 ```
 
 ## DESCRIPTION
-The Set-AzureRmOffer cmdlet updates the existing offer
+The **Set-AzureRmOffer** cmdlet updates the existing offer.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Get and update an existing offer
 ```
 $Offer = Get-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "OfferGroup" -Managed; $Offer.DisplayName ="New Compute Offer";  Set-AzureRMOffer -Plan $Offer -ResourceGroup "OfferGroup"
 ```
 
-Description
-
------------
-
-The example gets and updates the offer name 'ComputeOffer'
+This command gets and updates the offer name ComputeOffer that belongs to the resource group named OfferGroup.
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
-This parameter will be deprecated in future
+Specifies the Azure Stack Resource Manager endpoint.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -53,14 +49,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies the api version supported.
-This is optional.
-This parameter will be deprecated in future
+Specifies the supported API version.
+This parameter is optional.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,9 +66,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -88,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -103,12 +104,12 @@ Accept wildcard characters: False
 ```
 
 ### -Offer
-@{Text=}
+Specifies the offer that this cmdlet updates.
 
 ```yaml
 Type: AdminOfferModel
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -133,12 +134,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the resource group name of the offer
+Specifies the name of the resource group that contains the offer.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,14 +149,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured with Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,14 +166,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured with Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,5 +189,11 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.AdminOfferModel
 
 ## NOTES
+
 ## RELATED LINKS
 
+[Get-AzureRMOffer](./Get-AzureRMOffer.md)
+
+[New-AzureRMOffer](./New-AzureRMOffer.md)
+
+[Remove-AzureRMOffer](./Remove-AzureRMOffer.md)

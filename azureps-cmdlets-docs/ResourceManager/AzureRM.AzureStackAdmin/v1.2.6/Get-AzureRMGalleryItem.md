@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRMGalleryItem
 
 ## SYNOPSIS
-The Get-AzureRmGalleryItem cmdlet gets the gallery item
+Get the gallery item.
 
 ## SYNTAX
 
@@ -18,10 +18,11 @@ Get-AzureRMGalleryItem [-Name <String>] [-SubscriptionId <Guid>] [-AdminUri <Uri
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmGalleryItem** cmdlet gets the gallery item.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Get a gallery item
 ```
 Get-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0" -ApiVersion "2015-04-01"
 ```
@@ -30,19 +31,19 @@ Description
 
 -----------
 
-The example gets the gallery item named 'Microsoft.SqlDatabase.0.1.0'
+The command gets the gallery item named Microsoft.SqlDatabase.0.1.0.
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
-This parameter will be deprecated in future
+Specifies the Azure stack resource manager endpoint.
+This parameter is not needed when using the cmdlet against the azure stack environment configured against Azure active directory.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -52,14 +53,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies the api version supported. 
-The ApiVersion needs to be "2015-04-01".
-This parameter will be deprecated in future
+Specifies the API version supported.
+The *ApiVersion* parameter needs to be 2015-04-01.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,9 +70,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -87,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -102,12 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the gallery item name
+Specifies the gallery item name that this cmdlet gets.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -132,14 +138,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when using the cmdlet against the Azure stack environment configured against Azure active directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,14 +155,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,5 +178,9 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.GalleryItemModel
 
 ## NOTES
+
 ## RELATED LINKS
 
+[Add-AzureRmGalleryItem](./Add-AzureRmGalleryItem.md)
+
+[Remove-AzureRmGalleryItem](./Remove-AzureRmGalleryItem.md)

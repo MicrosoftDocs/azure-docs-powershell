@@ -1,14 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Add-AzureRMResourceProviderRegistration
 
 ## SYNOPSIS
-This cmdlet adds a resource provider manifest to azure stack resource manager.
-This is needed to register any new resource provider with resource manager.
+Adds a resource provider manifest to Azure stack resource manager.
 
 ## SYNTAX
 
@@ -30,49 +29,45 @@ Add-AzureRMResourceProviderRegistration -Name <String> -Namespace <String> -Reso
 ```
 
 ## DESCRIPTION
+The **Add-AzureRMResourceProviderRegistration** cmdlet adds a resource provider manifest to Azure stack resource manager.
+This is needed to register any new resource provider with resource manager.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Register the resource provider manifest for the specified namespace
+```
+# Make sure to provide the resource types json of the resource provider being registered
+$AdminResourceTypesFile="$PSScriptRoot\AdminResourceTypes.json"
+$AdminNamespace="Microsoft.Sql.Admin"
+$AdminJson = Get-Content $AdminResourceTypesFile -Raw | ConvertFrom-Json
+$AdminJson | % { $_.endpoints\[0\].endpointUri="https://${VmName}:30010" }
+$AdminJsonStr = $AdminJson | ConvertTo-Json -Depth 4
+
+$Location = "local"
+Add-AzureRMResourceProviderRegistration -Name $AdminNamespace \`
+-Namespace $AdminNamespace \`
+-ResourceGroup System \`
+-ArmLocation $Location \`
+-ProviderLocation $Location \`
+-DisplayName $AdminNamespace \`
+-ExtensionName "SqlAdminExtension" \`
+-ExtensionUri "https://${VmName}:13002"  \`
+-ResourceTypes $AdminJsonStr
+
 ```
 
-```
-
-Description
-
------------
-
-The following example registers the resource provider manifest for a namespace providing the details needed
-
-
-            # Make sure to provide the resource types json of the resource provider being registered
-            $adminResourceTypesFile="$PSScriptRoot\AdminResourceTypes.json"
-            $adminNamespace="Microsoft.Sql.Admin"
-            $adminJson = Get-Content $adminResourceTypesFile -Raw | ConvertFrom-Json
-            $adminJson | % { $_.endpoints\[0\].endpointUri="https://${VmName}:30010" }
-            $adminJsonStr = $adminJson | ConvertTo-Json -Depth 4
-
-            $location = "local"
-            Add-AzureRMResourceProviderRegistration -Name $adminNamespace \`
-            -Namespace $adminNamespace \`
-            -ResourceGroup System \`
-            -ArmLocation $location \`
-            -ProviderLocation $location \`
-            -DisplayName $adminNamespace \`
-            -ExtensionName "SqlAdminExtension" \`
-            -ExtensionUri "https://${VmName}:13002"  \`
-            -ResourceTypes $adminJsonStr
+The following example registers the resource provider manifest for a namespace providing the details needed.            
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory
+Specifies the Azure stack resource manager endpoint.
+This parameter is not needed when using the cmdlet against the Azure stack environment configured against Azure active directory.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,13 +78,13 @@ Accept wildcard characters: False
 
 ### -ApiVersion
 Specifies API Version for the usage connection api.
-This needs to be '2015-06-01-preview' .
-Note that this parameter will get removed in a future release
+This needs to be 2015-06-01-preview.
+This parameter will get removed in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +99,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,12 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionName
-Extension name associated with the resource provider manifest
+Specifies the extension name associated with the resource provider manifest.
 
 ```yaml
 Type: String
 Parameter Sets: SingleExtension
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,13 +124,13 @@ Accept wildcard characters: False
 ```
 
 ### -Extensions
-Json string specifying the extension names and extension URIs associated with the resource provider manifest.
-This parameter is used only when there are multiple parameters associated with a single resource provider manifest
+Specifies a JSON string that contains the extension names and extension URIs associated with the resource provider manifest.
+This parameter is used only when there are multiple parameters associated with a single resource provider manifest.
 
 ```yaml
 Type: String
 Parameter Sets: MultipleExtensions
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,12 +140,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionUri
-Extension URI associated with the resource provider manifest
+Specifies the extension URI associated with the resource provider manifest.
 
 ```yaml
 Type: Uri
 Parameter Sets: SingleExtension
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,9 +155,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
+Specifies how this cmdlet responds to an information event.
 
-The following values are permitted for this object type.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
+
 
 ```yaml
 Type: ActionPreference
@@ -178,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -193,12 +195,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Resource provider manifest name
+Specifies the resource provider manifest name.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -208,12 +210,12 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace associated with the resource provider manifest
+Specifies the namespace associated with the resource provider manifest.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -223,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -238,12 +240,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderLocation
-Location of the resource provider
+Specifies the location of the resource provider.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -253,12 +255,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Resource group under which the resource provider manifest is created
+Specifies the resource group under which the cmdlet creates the resource provider manifest.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -268,12 +270,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceTypes
-Json string describing the resource provider manifest.
+Specifies a JSON string that describes the resource provider manifest.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -283,14 +285,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when you use the cmdlet against the Azure stack environment configured against Azure active directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -300,14 +302,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for which the cmdlet makes the request.
+This parameter is not needed when using the cmdlet against the Azure stack environment configured against Azure active directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -317,12 +319,13 @@ Accept wildcard characters: False
 ```
 
 ### -ArmLocation
-{{Fill ArmLocation Description}}
+Specifies the location of the Azure Stack Resource Manager.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -340,3 +343,8 @@ Accept wildcard characters: False
 ## NOTES
 ## RELATED LINKS
 
+[Get-AzureRMResourceProviderRegistration](./Get-AzureRMResourceProviderRegistration.md)
+
+[Remove-AzureRMResourceProviderRegistration](./Remove-AzureRMResourceProviderRegistration.md)
+
+[Set-AzureRMResourceProviderRegistration](./Set-AzureRMResourceProviderRegistration.md)

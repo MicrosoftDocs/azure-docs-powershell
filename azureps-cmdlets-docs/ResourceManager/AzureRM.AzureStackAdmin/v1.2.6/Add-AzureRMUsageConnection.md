@@ -1,16 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Add-AzureRMUsageConnection
 
 ## SYNOPSIS
-The Add-AzureRMUsageConnection cmdlet adds an usage connection details for a resource provider.
-The cmdlet gets the storage account information where the resource provider is storing the usage records.
-This information is given to the usage service through this cmdlet. 
-Usage Service will retrieve the usage records periodically from the storage account information provided
+Adds an usage connection details for a resource provider.
 
 ## SYNTAX
 
@@ -24,19 +21,19 @@ Add-AzureRMUsageConnection -Name <String> -ResourceGroup <String> [-Subscription
 ```
 
 ## DESCRIPTION
+The **Add-AzureRMUsageConnection** cmdlet adds an usage connection details for a resource provider.
+The cmdlet gets the storage account information where the resource provider is storing the usage records.
+This information is given to the usage service through this cmdlet.
+Usage Service will retrieve the usage records periodically from the storage account information provided.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Add-AzureRmUsageConnection @usageConnectionParams
 ```
 
-Description
-
------------
-
-The following example registers a usage connection information of a resource provider to usage service
+The following example registers a usage connection information of a resource provider to usage service.
 
             $usageConnectionId = "sqlrpusageconnection"
             $location = "local"
@@ -77,12 +74,12 @@ The following example registers a usage connection information of a resource pro
 
 ### -AdminUri
 Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory
+This parameter is not needed when using the cmdlet against the azure stack environment configured against Azure active directory
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,14 +89,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-API Version for the usage connection api.
-This needs to be '2015-06-01-preview' .
-Note that this parameter will get removed in a future release
+API Version for the usage connection API.
+You need to set this to 2015-06-01-preview.
+This parameter will get removed in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,12 +106,12 @@ Accept wildcard characters: False
 ```
 
 ### -ArmLocation
-This is the Location of the resource manager instance in the Azure Stack installation
+Specifies the location of the resource manager instance in the Azure Stack installation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,13 +121,13 @@ Accept wildcard characters: False
 ```
 
 ### -ErrorReportingQueue
-Queue name for reporting the errors.
-Usage service would insert records in this queue for any errors during its collection process
+Specifies the queue name for reporting the errors.
+Usage service would insert records in this queue for any errors during its collection process.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -140,13 +137,13 @@ Accept wildcard characters: False
 ```
 
 ### -ErrorReportingTable
-Table name for reporting the errors.
-Usage service would insert records in this queue for any errors during its collection process
+Specifies the table name for reporting the errors.
+Usage service would insert records in this queue for any errors during its collection process.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -156,9 +153,15 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
-The following values are permitted for this object type.
 
 ```yaml
 Type: ActionPreference
@@ -174,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -189,12 +192,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the usage connection
+Specifies the name of the usage connection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -219,12 +222,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderLocation
-Location of the resource provider for which the usage connection is being added
+Specifies the location of the resource provider for which this cmdlet adds the usage connection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -234,12 +237,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderNamespace
-Namespace of the resource provider for which the usage connection is being added
+Specifies the namespace of the resource provider for which this cmdlet adds the usage connection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -249,12 +252,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Resource group name for the usage connection resource
+Specifies the resource group name for the usage connection resource.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -264,14 +267,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifeis the service administrator subscription ID.
+This parameter is not needed when using the cmdlet against the azure stack environment configured against Azure active directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,14 +284,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed when using the cmdlet against the Azure stack environment configured against Azure active directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,13 +301,13 @@ Accept wildcard characters: False
 ```
 
 ### -UsageReportingQueue
-Queue name where the added usage meta data is queued .
-Using this metadata, Usage service will read the data from reporting table for usage aggregation
+Specifies the queue name where the added usage meta data is queued.
+Using this metadata, Usage service will read the data from reporting table for usage aggregation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -314,12 +317,12 @@ Accept wildcard characters: False
 ```
 
 ### -UsageReportingTable
-Table name where usage records are inserted
+Specifies the table name where this cmdlet inserts usage records.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -329,12 +332,12 @@ Accept wildcard characters: False
 ```
 
 ### -UsageStorageConnectionString
-This specifies the storage connection string in which the resource provider usage records are inserted
+Specifies the storage connection string in which this cmdlet inserts the resource provider usage records.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -350,5 +353,9 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.UsageConnectionModel
 
 ## NOTES
+
 ## RELATED LINKS
 
+[Get-AzureRMUsageConnection.md](./Get-AzureRMUsageConnection.md)
+
+[Remove-AzureRMUsageConnection.md](./Remove-AzureRMUsageConnection.md)
