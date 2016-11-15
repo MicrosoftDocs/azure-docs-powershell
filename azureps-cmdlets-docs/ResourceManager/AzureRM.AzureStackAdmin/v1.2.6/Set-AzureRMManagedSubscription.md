@@ -23,8 +23,6 @@ The **Set-AzureRMManagedSubscription** updates any tenant user subscription as a
 
 ## EXAMPLES
 
-### Example 1
-
 ## PARAMETERS
 
 ### -AdminUri

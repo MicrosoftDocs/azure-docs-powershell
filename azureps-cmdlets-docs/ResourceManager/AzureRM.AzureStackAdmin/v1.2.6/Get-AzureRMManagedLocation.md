@@ -23,14 +23,10 @@ The **Get-AzureRmMangedLocation cmdlet** gets the Azure Stack resource manager l
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get the Azure Stack resource manager located in Chicago.
 ```
 Get-AzureRMManagedLocation -Name "Chicago"
 ```
-
-Description
-
------------
 
 This command gets the details of the location named Chicago.
 
@@ -38,9 +34,9 @@ This command gets the details of the location named Chicago.
 
 ### -AdminUri
 Specifies the Azure Stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
 
-``` yaml
+```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases:
