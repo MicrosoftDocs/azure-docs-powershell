@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 9E26F02B-04B7-429E-930D-42D5D71D5044
 ---
@@ -8,7 +8,7 @@ ms.assetid: 9E26F02B-04B7-429E-930D-42D5D71D5044
 # New-AzureRMPlan
 
 ## SYNOPSIS
-The New-AzureRmPlan cmdlet creates a new plan composing the various quotas of the resource provider
+Creates a plan composing the various quotas of the resource provider.
 
 ## SYNTAX
 
@@ -20,10 +20,11 @@ New-AzureRMPlan -Name <String> [-DisplayName <String>] -ArmLocation <String> -Re
 ```
 
 ## DESCRIPTION
+The **New-AzureRmPlan** cmdlet creates a plan composing the various quotas of the resource provider.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 New-AzureRMPlan -Name $PlanName -DisplayName "ComputePlan" -ArmLocation "local" -ResourceGroup $ResourceGroupName -QuotaIds $quotaIds
 ```
@@ -91,13 +92,13 @@ Note that quota creation cmdlets are not available yet and will be added in a fu
 
 ### -AdminUri
 Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
-This parameter will be deprecated in future
+This parameter is not needed when using the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,14 +108,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies the api version supported.
-This is optional.
-This parameter will be deprecated in future
+Specifies the supported API version.
+This parameter is optional.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,13 +125,13 @@ Accept wildcard characters: False
 ```
 
 ### -ArmLocation
-Specifies the location of the Azurestack resource manager.
-The parameter will be deprecated in future
+Specifies the location of the Azure Stack Resource Manager.
+The parameter will be deprecated in future.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -140,12 +141,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Specifies the display name of the plan
+Specifies the display name of the Azure Stack Resource Manager plan.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,9 +156,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -173,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -188,12 +194,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the plan
+Specifies the name of the plan that this cmdlet creates.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -203,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -218,14 +224,14 @@ Accept wildcard characters: False
 ```
 
 ### -QuotaIds
-Specifies an array of quota ids.
-The resource providers create the quotas and provide the quota ids.
-The cmdlets for CRUD operations on  quotas are not available yet and will be added in a future release
+Specifies an array of quota IDs.
+The resource providers create the quotas and provide the quota IDs.
+The cmdlets for CRUD operations on quotas are not available yet and will be added in a future release
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,12 +241,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The resource group name under which the plan resource is created
+Specifies the resource group name under which the plan resource is created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -250,12 +256,12 @@ Accept wildcard characters: False
 ```
 
 ### -SkuIds
-An array of SkuIds from the resource provider
+Specifies an array of Sku IDs from the resource provider.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -265,14 +271,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,14 +288,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -305,5 +311,10 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.AdminPlanModel
 
 ## NOTES
-## RELATED LINKS
 
+## RELATED LINKS
+[Get-AzureRMPlan](./Get-AzureRMPlan.md)
+
+[Remove-AzureRMPlan](./Remove-AzureRMPlan.md)
+
+[Set-AzureRMPlan](./Set-AzureRMPlan.md)

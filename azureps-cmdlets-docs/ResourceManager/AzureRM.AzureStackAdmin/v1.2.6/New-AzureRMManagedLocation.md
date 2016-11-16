@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: C1701B31-9AAC-4F6D-BB9F-414D8794C1B8
 ---
@@ -8,8 +8,7 @@ ms.assetid: C1701B31-9AAC-4F6D-BB9F-414D8794C1B8
 # New-AzureRMManagedLocation
 
 ## SYNOPSIS
-The cmdlet New-AzureRmManagedLocation creates a new location managed by Azurestack Resource Manager.
-The resource providers can be deployed in the new location
+Creates a location managed by Azure Stack Resource Manager.
 
 ## SYNTAX
 
@@ -20,30 +19,28 @@ New-AzureRMManagedLocation -Name <String> -DisplayName <String> -Latitude <Doubl
 ```
 
 ## DESCRIPTION
+The **New-AzureRmManagedLocation** cmdlet creates a location managed by Azure Stack Resource Manager.
+The resource providers can be deployed in the new location.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Create a location
 ```
 New-AzureRMManagedLocation -Name "LocationName" -DisplayName "LocationName" -Latitude 80.5 -Longitude -45.5
 ```
 
-Description
-
------------
-
-The example creates a new location
+This command creates a location named LocationName.
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory
+Specifies the Azure Stack Resource Manager endpoint.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -53,14 +50,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies the api version supported.
-This is optional.
-This parameter will be deprecated in future
+Specifies the API version supported.
+This parameter is optional.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,12 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-@{Text=}
+Specifies the display name of the managed location that this cmdlet creates.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -85,9 +82,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -103,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -118,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-Specifies the latitude of the location in decimal format
+Specifies the latitude of the location in decimal format.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,12 +135,12 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-Specifies the Longitude of the location in decimal format
+Specifies the Longitude of the location in decimal format.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,12 +150,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the location
+Specifies the name of the location that this cmdlet creates.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -178,14 +180,14 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Service administrator subscription id.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the service administrator subscription ID.
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,13 +198,13 @@ Accept wildcard characters: False
 
 ### -Token
 Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+This parameter is not needed when you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,5 +220,11 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.Location
 
 ## NOTES
+
 ## RELATED LINKS
 
+[Get-AzureRMManagedLocation](./Get-AzureRMManagedLocation.md)
+
+[Remove-AzureRMManagedLocation](./Remove-AzureRMManagedLocation.md)
+
+[Set-AzureRMManagedLocation](./Set-AzureRMManagedLocation.md)

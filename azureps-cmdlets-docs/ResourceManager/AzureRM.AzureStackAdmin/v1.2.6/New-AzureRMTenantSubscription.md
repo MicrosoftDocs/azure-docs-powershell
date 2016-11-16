@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: A0D4D7C9-8783-4837-850F-24F1C9C3A1B1
 ---
@@ -8,7 +8,7 @@ ms.assetid: A0D4D7C9-8783-4837-850F-24F1C9C3A1B1
 # New-AzureRMTenantSubscription
 
 ## SYNOPSIS
-The cmdlet New-AzureRMTenantSubscription creates a subscription as a tenant for the specified offer
+Creates a subscription as a tenant for the specified offer.
 
 ## SYNTAX
 
@@ -19,34 +19,30 @@ New-AzureRMTenantSubscription -OfferId <String> [-DisplayName <String>] [-AdminU
 ```
 
 ## DESCRIPTION
+The **New-AzureRMTenantSubscription** cmdlet creates a subscription as a tenant for the specified offer.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
-New-AzureRmTenantSubscription  -OfferId $offer.Id -DisplayName "Compute Subscription"
+$Offer =  Get-AzureRMOffer -Provider "Default" | Where-Object name -eq "ComputeOffer"
+New-AzureRmTenantSubscription  -OfferId $Offer.Id -DisplayName "Compute Subscription"
 ```
+The first command gets all Azure Resource Manager offers that are named ComputeOffer and stores the offers in the variable named $Offer.
+The second command creates a subscription for the logged in tenant user using the information stored in the $Offer variable.
 
-Description
-
------------
-
-The example creates a subscription for the logged in tenant user
-
-            $Offer =  Get-AzureRMOffer -Provider "default" | Where-Object name -eq "ComputeOffer"
-            New-AzureRmTenantSubscription  -OfferId $offer.Id -DisplayName "Compute Subscription"
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the azure stack resource manager endpoint.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory.
-This parameter will be deprecated in future
+Specifies the Azure Stack Resource Manager endpoint.
+This parameter is not needed if you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -56,14 +52,14 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies the api version supported.
-This is optional.
-This parameter will be deprecated in future
+Specifies the supported API version.
+This parameter is optional.
+This parameter will be deprecated in future.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-@{Text=}
+Specifies the name of the tenant subscription that this cmdlet creates.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,9 +84,14 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Specifies how this cmdlet responds to an information event.
+The acceptable values for this parameter are:
+* Continue
+* Ignore
+* Inquire
+* SilentlyContinue
+* Stop
+* Suspend
 
 ```yaml
 Type: ActionPreference
@@ -106,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -121,12 +122,12 @@ Accept wildcard characters: False
 ```
 
 ### -OfferId
-Specifies the Id of the offer to which the tenant subscribes to create a new subscription
+Specifies the ID of the offer to which the tenant subscribes to create a new subscription.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
 
 ```yaml
 Type: String
@@ -151,14 +152,14 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-Authentication token for making the request.
-This parameter is not needed when using the cmdlet against the azure stack environment configured against azure active directory. 
-This parameter will be deprecated in a future release
+Specifies the authentication token for making the request.
+This parameter is not needed if you use the cmdlet against the Azure Stack environment configured against Azure Active Directory.
+This parameter will be deprecated in a future release.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,5 +175,11 @@ Accept wildcard characters: False
 ### Microsoft.AzureStack.Management.Models.SubscriptionDefinition
 
 ## NOTES
+
 ## RELATED LINKS
 
+[Get-AzureRMTenantSubscription](./Get-AzureRMTenantSubscription.md)
+
+[Remove-AzureRMTenantSubscription](./Remove-AzureRMTenantSubscription.md)
+
+[Set-AzureRMTenantSubscription](./Set-AzureRMTenantSubscription.md)
