@@ -12,7 +12,7 @@ ms.manager: carolz
 
 Azure PowerShell cmdlets provide support for the following Azure services:
 
-[Azure Resource Manager](~/ResourceManager/)
+[Azure Resource Manager](/ResourceManager/)
 
 Azure Resource Manager enables you to work with the resources in your solution as a group.
 You can deploy, update, or delete all the resources for your solution in a single, coordinated operation.
