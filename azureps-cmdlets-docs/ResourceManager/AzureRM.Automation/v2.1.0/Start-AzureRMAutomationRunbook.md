@@ -107,6 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunOn
+Specifies which Hybrid Worker Group on which to run the runbook.
 
 ```yaml
 Type: String
@@ -159,9 +160,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.Automation.Model.Job
-This cmdlet returns a Job object, unless you specify the _Wait_ parameter.
-If you specify _Wait_, Azure PowerShell completes the job, and then returns the results.
+This cmdlet returns a **Job** object, unless you specify the _Wait_ parameter.
 
+If you do not specify _Wait_, Azure PowerShell returns a **Job** object immediately.
+If you specify _Wait_, Azure PowerShell completes the job, and then returns the result.
+The result is not a **Job** object.
 
 ## NOTES
 
