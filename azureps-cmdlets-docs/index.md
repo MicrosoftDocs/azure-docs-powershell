@@ -1,5 +1,11 @@
 ---
 ms.assetid: DF332CD7-E3E5-4CC1-8C01-380B2065193C
+ms.title: Get started with Azure PowerShell | Microsoft Docs
+ms.prod: azure
+ms.service: powershell
+author: erickson-doug
+ms.author: douge
+ms.manager: carolz
 ---
 
 # Get started with Azure PowerShell cmdlets
@@ -27,4 +33,4 @@ Storage supports Blob storage, File storage, Queue storage, and Table storage.
 
 ## Install and configure
 
-To use the cmdlets, you need to install and configure Azure PowerShell to connect it to your account. For more information, see [How to install and configure Azure PowerShell](https://azure.microsoft.com/en-in/documentation/articles/powershell-install-configure/).
+To use the cmdlets, you need to install and configure Azure PowerShell to connect it to your account. For more information, see [How to install and configure Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).
