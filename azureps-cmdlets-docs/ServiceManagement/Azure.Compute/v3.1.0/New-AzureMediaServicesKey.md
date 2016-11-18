@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If the ` Â¢ ¢â€šÂ¬"Force` switch is specified, the key generation is not confirmed.
+If the `-Force` switch is specified, the key generation is not confirmed.
 
 ```yaml
 Type: SwitchParameter

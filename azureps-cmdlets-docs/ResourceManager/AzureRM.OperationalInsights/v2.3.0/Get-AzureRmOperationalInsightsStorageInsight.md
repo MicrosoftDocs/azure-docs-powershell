@@ -34,15 +34,15 @@ If you do not specify a name, this cmdlet gets information about all storage ins
 
 ### Example 1: Get a Storage Insight by name
 ```
-PS C:\>Get-AzureRmOperationalInsightsStorageInsight  Â¢ ¢â€šÂ¬"Name "MyStorageInsight"  Â¢ ¢â€šÂ¬"ResourceGroupName "ContosoResourceGroup"  Â¢ ¢â€šÂ¬"WorkspaceName "ContosoWorkspace"
+PS C:\>Get-AzureRmOperationalInsightsStorageInsight -Name "MyStorageInsight" -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "ContosoWorkspace"
 ```
 
 This command gets the storage insight named MyStorageInsight from the workspace named ContosoWorkspace.
 
 ### Example 2: Get a Storage Insight by using a workspace object
 ```
-PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace  Â¢ ¢â€šÂ¬"ResourceGroupName "ContosoResourceGroup"  Â¢ ¢â€šÂ¬"Name "MyWorkspace"
-PS C:\>Get-AzureRmOperationalInsightsStorageInsight  Â¢ ¢â€šÂ¬"Workspace $Workspace  Â¢ ¢â€šÂ¬"Name "MyStorageInsight"
+PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
+PS C:\>Get-AzureRmOperationalInsightsStorageInsight -Workspace $Workspace -Name "MyStorageInsight"
 ```
 
 The first command uses the **Get-AzureRmOperationalInsightsWorkspace** cmdlet to get an Operational Insights workspace, and then stores it in the $Workspace variable.

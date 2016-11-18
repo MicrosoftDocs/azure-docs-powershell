@@ -27,7 +27,7 @@ The **New-AzureAutomationCredential** cmdlet creates a credential as a **PSCrede
 ```
 PS C:\> $user = "MyDomain\MyUser"
 PS C:\> $pw = ConvertTo-SecureString "PassWord!" -AsPlainText -Force
-PS C:\> $cred = New-Object  Â¢ ¢â€šÂ¬"TypeName System.Management.Automation.PSCredential  Â¢ ¢â€šÂ¬"ArgumentList $user, $pw
+PS C:\> $cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $user, $pw
 PS C:\> New-AzureAutomationCredential -AutomationAccountName "Contoso17" -Name "MyCredential" -Value $cred
 ```
 
