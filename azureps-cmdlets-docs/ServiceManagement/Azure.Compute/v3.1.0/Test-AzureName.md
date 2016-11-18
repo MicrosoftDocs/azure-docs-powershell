@@ -44,21 +44,21 @@ If the name does not exist, it returns $False.
 
 ### Example 1
 ```
-PS C:\>Test-AzureName  Â¢ ¢â€šÂ¬"Service "MyNameService1"
+PS C:\>Test-AzureName -Service "MyNameService1"
 ```
 
 This command tests to see if the "MyNameService1" is an existing Microsoft Azure cloud service name.
 
 ### Example 2
 ```
-PS C:\>Test-AzureName  Â¢ ¢â€šÂ¬"Storage "mystorename1"
+PS C:\>Test-AzureName -Storage "mystorename1"
 ```
 
 This command tests to see if the "mystorename1" is an existing Microsoft Azure storage service name.
 
 ### Example 3
 ```
-PS C:\>Test-AzureName  Â¢ ¢â€šÂ¬"ServiceBusNamespace "mynamespace"
+PS C:\>Test-AzureName -ServiceBusNamespace "mynamespace"
 ```
 
 This command tests to see if the "mynamespace" is an existing Microsoft Azure service bus namespace name.

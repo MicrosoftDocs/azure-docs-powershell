@@ -53,7 +53,7 @@ It first retrieves both files and directories, passes them to the **where** oper
 
 ### Example 2: List a File Directory
 ```
-PS C:\> Get-AzureStorageFile -ShareName "ContosoShare06"  Â¢ ¢â€šÂ¬"Path "ContosoWorkingFolder" | Get-AzureStorageFile
+PS C:\> Get-AzureStorageFile -ShareName "ContosoShare06" -Path "ContosoWorkingFolder" | Get-AzureStorageFile
 ```
 
 This command lists the files and folders in the directory ContosoWorkingFolder under the share ContosoShare06.

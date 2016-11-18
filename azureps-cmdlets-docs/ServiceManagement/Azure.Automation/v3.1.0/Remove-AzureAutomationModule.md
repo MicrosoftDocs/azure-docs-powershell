@@ -25,7 +25,7 @@ The **Remove-AzureAutomationModule** cmdlet removes an Automation account from M
 
 ### Example 1: Remove a module
 ```
-PS C:\> Remove-AzureAutomationModule  Â¢ ¢â€šÂ¬"AutomationAccountName "Contoso17"  Â¢ ¢â€šÂ¬"Name "ContosoModule"
+PS C:\> Remove-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule"
 ```
 
 This command removes a module named ContosoModule from the Automation account named Contoso17.

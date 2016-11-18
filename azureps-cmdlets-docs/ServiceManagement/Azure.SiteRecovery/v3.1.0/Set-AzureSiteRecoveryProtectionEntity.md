@@ -40,7 +40,7 @@ Check whether the operation succeeds by using the **Get-AzureSiteRecoveryProtect
 ```
 PS C:\>$ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer -Name "Cloud17"
 PS C:\> $ProtectionEntity = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $ProtectionContainer -Name "VM01"
-PS C:\> Set-AzureSiteRecoveryProtectionEntity -ProtectionEntity $ ProtectionEntity -Protection Enable  Â¢ ¢â€šÂ¬"ProtectionProfile $ProtectionContainer.AvailableProtectionProfiles[0] -OS Windows
+PS C:\> Set-AzureSiteRecoveryProtectionEntity -ProtectionEntity $ ProtectionEntity -Protection Enable -ProtectionProfile $ProtectionContainer.AvailableProtectionProfiles[0] -OS Windows
 ```
 
 The first command gets containers for the current Azure Site vault by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores it in the $ProtectionContainer variable.

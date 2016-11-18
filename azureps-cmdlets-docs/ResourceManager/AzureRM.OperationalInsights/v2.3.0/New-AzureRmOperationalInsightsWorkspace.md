@@ -26,7 +26,7 @@ The **New-AzureRmOperationalInsightsWorkspace** cmdlet creates a workspace in th
 
 ### Example 1: Create a workspace by name
 ```
-PS C:\>New-AzureRmOperationalInsightsWorkspace  Â¢ ¢â€šÂ¬"ResourceGroupName "ContosoResourceGroup"  Â¢ ¢â€šÂ¬"Name "MyWorkspace"  Â¢ ¢â€šÂ¬"Location "East US"  Â¢ ¢â€šÂ¬"Sku "Standard"
+PS C:\>New-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" -Location "East US" -Sku "Standard"
 ```
 
 This command creates a standard SKU workspace named MyWorkspace in the resource group named ContosoResourceGroup.
@@ -35,7 +35,7 @@ This command creates a standard SKU workspace named MyWorkspace in the resource 
 ```
 PS C:\>$OILinkTargets = Get-AzureRmOperationalInsightsLinkTargets
 
-PS C:\>$OILinkTargets[0] | New-AzureRmOperationalInsightsWorkspace  Â¢ ¢â€šÂ¬"ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"  Â¢ ¢â€šÂ¬"Sku "Standard"
+PS C:\>$OILinkTargets[0] | New-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" -Sku "Standard"
 ```
 
 The first command uses the Get-AzureRmOperationalInsightsLinkTargets cmdlet to get Operational Insights account link targets, and then stores them in the $OILinkTargets variable.

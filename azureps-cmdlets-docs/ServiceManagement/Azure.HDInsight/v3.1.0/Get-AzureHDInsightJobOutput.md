@@ -36,7 +36,7 @@ You can get various types of job logs including standard output, standard error,
 
 ### Example 1: Get job output
 ```
-PS C:\>$SubId = (Get-AzureSubscription  Â¢ ¢â€šÂ¬"Current).SubscriptionId
+PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
 PS C:\> $ClusterName = "MyCluster"
 PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" $WordCountJob
     | Start-AzureHDInsightJob -Subscription $SubId -Cluster $ClusterName

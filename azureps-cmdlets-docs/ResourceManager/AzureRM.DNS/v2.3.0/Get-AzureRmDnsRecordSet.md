@@ -58,7 +58,7 @@ This command gets an array of all record sets in the zone named myzone.com in th
 ### Example 4: Get all record sets in a zone, using a DnsZone object
 ```
 PS C:\> $Zone = Get-AzureRmDnsZone -Name "myzone.com" -ResourceGroupName "MyResourceGroup"
-PS C:\> $RecordSets = Get-AzureRmDnsRecordSet  Â¢ ¢â€šÂ¬"Zone $Zone
+PS C:\> $RecordSets = Get-AzureRmDnsRecordSet -Zone $Zone
 ```
 
 This example is equivalent to Example 3 above.
