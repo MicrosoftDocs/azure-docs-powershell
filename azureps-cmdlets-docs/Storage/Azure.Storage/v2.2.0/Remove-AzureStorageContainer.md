@@ -25,7 +25,7 @@ The **Remove-AzureStorageContainer** cmdlet removes the specified storage contai
 
 ### Example 1: Remove a container
 ```
-PS C:\>Remove-AzureStorageContainer  ¢â‚¬"Name "MyTestContainer"
+PS C:\>Remove-AzureStorageContainer -Name "MyTestContainer"
 ```
 
 This example removes a container named MyTestContainer.

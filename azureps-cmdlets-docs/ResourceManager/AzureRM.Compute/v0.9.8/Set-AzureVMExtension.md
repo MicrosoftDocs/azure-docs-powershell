@@ -38,7 +38,7 @@ PS C:\> $ProtectedSettings = @{"storageAccountName" = $stoname; "storageAccountK
 PS C:\> Set-AzureVMExtension -ResourceGroupName "ResourceGroup11" -Location "West US" -VMName "VirtualMachine22" -Name "ContosoTest" -Publisher "Contoso.Compute" -Type "CustomScriptExtension" -TypeHandlerVersion "1.1" -Settings $Settings -ProtectedSettings $ProtectedSettings;
 ```
 
-The first two commands use standard Windows PowerShell ‚Â® syntax to create hash tables, and then stores those hash tables in the $Settings and $ProtectedSettings variables.
+The first two commands use standard Windows PowerShell syntax to create hash tables, and then stores those hash tables in the $Settings and $ProtectedSettings variables.
 For more information, type `Get-Help about_Hash_Tables`.
 The second command includes two values previously created and stored in variables.
 

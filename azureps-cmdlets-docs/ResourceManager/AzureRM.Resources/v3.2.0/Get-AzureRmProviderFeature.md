@@ -29,7 +29,7 @@ The **Get-AzureRmProviderFeature** cmdlet gets the feature name, provider name, 
 
 ### Example 1: Get all available features
 ```
-PS C:\>Get-AzureRmProviderFeature  ¢â‚¬"ListAvailable
+PS C:\>Get-AzureRmProviderFeature -ListAvailable
 ```
 
 This command gets all available features.

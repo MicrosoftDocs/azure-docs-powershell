@@ -31,14 +31,14 @@ Server identifiers include, but are not limited to, ResourceGroupName and Server
 
 ### Example 1: Set the auditing policy of an Azure SQL server
 ```
-PS C:\>Set-AzureSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02"  ¢â‚¬"StorageAccountName "Storage22"
+PS C:\>Set-AzureSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -StorageAccountName "Storage22"
 ```
 
 This command sets the auditing policy of the server named Server02 to use storage account named Storage22.
 
 ### Example 2: Set the storage account key of an already existing auditing policy of an Azure SQL server
 ```
-PS C:\>Set-AzureSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02"  ¢â‚¬"StorageAccountKey Secondary
+PS C:\>Set-AzureSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -StorageAccountKey Secondary
 ```
 
 This command sets the auditing policy of the server named Server02 to use the secondary key.
@@ -46,7 +46,7 @@ The command does not modify the storage account name.
 
 ### Example 3: Set the auditing policy of an Azure SQL server to use a specific event type
 ```
-PS C:\>Set-AzureSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02"  ¢â‚¬"EventType Login_Failure
+PS C:\>Set-AzureSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -EventType Login_Failure
 ```
 
 This command sets the auditing policy of the server named Server02 to use the Login_Failure event type.

@@ -33,7 +33,7 @@ The names of the zip file, the folder in the zip file, and file in the folder (.
 
 ### Example 1: Import a module
 ```
-PS C:\> New-AzureAutomationModule  ¢â‚¬"AutomationAccountName "Contoso17"  ¢â‚¬"Name "ContosoModule"  ¢â‚¬"ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip"
+PS C:\> New-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip"
 ```
 
 This command imports a module named ContosoModule into the Automation account named Contoso17.

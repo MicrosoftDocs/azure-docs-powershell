@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -Listener
 Specifies the Windows Remote Management (WinRM) listeners.
-This enables remote Windows PowerShell ‚Â®.
+This enables remote Windows PowerShell.
 You can use the Add-AzureRmVmssWinRMListener cmdlet to create the listener.
 
 ```yaml

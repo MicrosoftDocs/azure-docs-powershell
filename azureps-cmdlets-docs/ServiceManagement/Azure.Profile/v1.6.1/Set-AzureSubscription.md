@@ -53,21 +53,21 @@ powershell_prelim
 ```
 C:\PS> $thumbprint = <Thumbprint-2>
 C:\PS> $differentCert = Get-Item cert:\\CurrentUser\My\$thumbprint 
-C:\PS> Set-AzureSubscription  ¢â‚¬"SubscriptionName ContosoEngineering -Certificate $differentCert
+C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -Certificate $differentCert
 ```
 
 This example changes the certificate for the subscription named ContosoEngineering.
 
 ### Example 2: Change the service endpoint
 ```
-C:\PS> Set-AzureSubscription  ¢â‚¬"SubscriptionName ContosoEngineering -ServiceEndpoint "https://management.core.contoso.com"
+C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -ServiceEndpoint "https://management.core.contoso.com"
 ```
 
 This command adds or changes a custom service endpoint for the ContosoEngineering subscription.
 
 ### Example 3: Clear property values
 ```
-C:\PS> Set-AzureSubscription  ¢â‚¬"SubscriptionName ContosoEngineering  ¢â‚¬"Certificate $null -ResourceManagerEndpoint $null
+C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -Certificate $null -ResourceManagerEndpoint $null
 ```
 
 This command sets the values of the Certificate and ResourceManagerEndpoint properties to null ($null).

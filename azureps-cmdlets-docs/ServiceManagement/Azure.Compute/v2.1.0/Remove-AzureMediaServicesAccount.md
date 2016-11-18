@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If the ` ¢â‚¬"Force` switch is specified, the deletion is not confirmed.
+If the `-Force` switch is specified, the deletion is not confirmed.
 
 ```yaml
 Type: SwitchParameter

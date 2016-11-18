@@ -32,9 +32,9 @@ You can suppress this behavior using the *Overwrite* parameter, which updates th
 ### Example 1: Update a record set
 ```
 PS C:\>$RecordSet = Get-AzureRmDnsRecordSet -ResourceGroupName MyResourceGroup -ZoneName myzone.com -Name www -RecordType A
-PS C:\> Add-AzureRmDnsRecordConfig  ¢â‚¬"RecordSet $RecordSet -Ipv4Address 172.16.0.0
-PS C:\> Add-AzureRmDnsRecordConfig  ¢â‚¬"RecordSet $RecordSet -Ipv4Address 172.31.255.255
-PS C:\> Set-AzureRmDnsRecordSet  ¢â‚¬"RecordSet $RecordSet
+PS C:\> Add-AzureRmDnsRecordConfig -RecordSet $RecordSet -Ipv4Address 172.16.0.0
+PS C:\> Add-AzureRmDnsRecordConfig -RecordSet $RecordSet -Ipv4Address 172.31.255.255
+PS C:\> Set-AzureRmDnsRecordSet -RecordSet $RecordSet
 
 # These cmdlets can also be piped: 
 

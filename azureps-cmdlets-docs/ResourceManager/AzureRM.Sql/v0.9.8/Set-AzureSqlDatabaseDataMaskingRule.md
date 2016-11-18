@@ -32,7 +32,7 @@ Rule identifiers include, but are not limited to, ResourceGroupName, ServerName,
 
 ### Example 1: Change the range of a data masking rule in a database
 ```
-PS C:\>Set-AzureSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database03"  ¢â‚¬"RuleId "Rule17"  ¢â‚¬"NumberFrom 23  ¢â‚¬"NumberTo 42
+PS C:\>Set-AzureSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database03" -RuleId "Rule17" -NumberFrom 23 -NumberTo 42
 ```
 
 This command modifies a data masking rule that has the ID Rule17.
