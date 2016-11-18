@@ -52,7 +52,7 @@ This example enables application logging on file system with verbose level.
 C:\PS>Enable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -Storage -LogLevel Information -StorageAccountName myaccount
 ```
 
-This example enables application logging using storage account named  ¢â‚¬Å"myaccount ¢â‚¬Â with logging level set to  ¢â‚¬Å"information ¢â‚¬Â.
+This example enables application logging using storage account named "myaccount" with logging level set to "information".
 
 ## PARAMETERS
 

@@ -40,17 +40,17 @@ The input role definition MUST contain the following properties:
 
 3) Actions: the set of operations to which the custom role grants access.
 Use Get-AzureRmProviderOperations to get the operation for Azure resource providers that can be secured using Azure RBAC.
-Following are some valid operation strings
-        • "*/read" grants access to read operations of all Azure resource providers.
-        • "Microsoft.Network/*/read" grants access to read operations for all resource types in the Microsoft.Network resource provider of Azure.
-        • "Microsoft.Compute/virtualMachines/*" grants access to all operations of virtual machines and its child resource types.
+Following are some valid operation strings:
+ - "*/read" grants access to read operations of all Azure resource providers.
+ - "Microsoft.Network/*/read" grants access to read operations for all resource types in the Microsoft.Network resource provider of Azure.
+ - "Microsoft.Compute/virtualMachines/*" grants access to all operations of virtual machines and its child resource types.
 
 4) AssignableScopes: the set of scopes (Azure subscriptions or resource groups) in which the custom role will be available for assignment.
 Using AssignableScopes you can make the custom role available for assignment in only the subscriptions or resource groups that need it, and not clutter the user experience for the rest of the subscriptions or resource groups.
-Following are some valid assignable scopes
-        • "/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e", "/subscriptions/e91d47c4-76f3-4271-a796-21b4ecfe3624": makes the role available for assignment in two subscriptions.
-        • "/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e": makes the role available for assignment in a single subscription.
-        • "/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e/resourceGroups/Network": makes the role available for assignment only in the Network resource group.
+Following are some valid assignable scopes:
+ - "/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e", "/subscriptions/e91d47c4-76f3-4271-a796-21b4ecfe3624": makes the role available for assignment in two subscriptions.
+ - "/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e": makes the role available for assignment in a single subscription.
+ - "/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e/resourceGroups/Network": makes the role available for assignment only in the Network resource group.
 
 The input role definition MAY contain the following properties:
 

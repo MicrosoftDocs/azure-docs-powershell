@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
@@ -84,8 +84,6 @@ Accept wildcard characters: False
 
 ### -Output
 Specifies the output path of generated template.
-\<Unclear to me ¢â‚¬Â¦is this where you want to store the template that the cmdlet creates?
-Seems to be based on the example.\>
 
 ```yaml
 Type: String

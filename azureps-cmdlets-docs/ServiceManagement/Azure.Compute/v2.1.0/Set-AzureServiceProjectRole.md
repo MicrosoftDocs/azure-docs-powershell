@@ -40,24 +40,24 @@ The **Set-AzureServiceProjectRole** cmdlet sets the number of role instances for
 
 ### 1: Set instances for a web role
 ```
-PS C:\>Set-AzureServiceProjectRole  ¢â‚¬Å"MyWebRole ¢â‚¬Â 2
+PS C:\>Set-AzureServiceProjectRole "MyWebRole" 2
 ```
 
 Sets the number of instances for the web role named 'MyWebRole1' to 2.
 
 ### 2: Set instances for a worker role
 ```
-PS C:\>Set-AzureServiceProjectRole  ¢â‚¬Å"MyWorkerRole1 ¢â‚¬Â 2
+PS C:\>Set-AzureServiceProjectRole "MyWorkerRole1" 2
 ```
 
 Sets the role instance count for the worker role named WorkerRole1 to 2.
 
 ### 3: Set the runtime version for a role service
 ```
-PS C:\>Set-AzureServiceProjectRole  ¢â‚¬Å"MyRole1 ¢â‚¬Â node 0.6.20
+PS C:\>Set-AzureServiceProjectRole "MyRole1" node 0.6.20
 ```
 
-Sets the node.exe runtime version for role  ¢â‚¬Å"MyRole1 ¢â‚¬Â to 0.6.20.
+Sets the node.exe runtime version for role "MyRole1" to 0.6.20.
 
 ## PARAMETERS
 
