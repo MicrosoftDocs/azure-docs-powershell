@@ -41,7 +41,7 @@ The job to start can be a MapReduce job, a streaming job, a Hive job, or a Pig j
 
 ### Example 1: Start an HDInsight job
 ```
-PS C:\>$SubId = (Get-AzureSubscription  ¢â‚¬"Current).SubscriptionId
+PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
 PS C:\> $ClusterName = "Cluster01" 
 PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" 
 PS C:\> $WordCountJob | Start-AzureHDInsightJob -Cluster $ClusterName 

@@ -40,7 +40,7 @@ The **Set-AzureStorageFileContent** cmdlet uploads the contents of a file to a f
 
 ### Example 1: Upload a file in the current folder
 ```
-PS C:\>Set-AzureStorageFileContent  ¢â‚¬"ShareName "ContosoShare06"  ¢â‚¬"Source "DataFile37"  ¢â‚¬"Path "ContosoWorkingFolder/CurrentDataFile"
+PS C:\>Set-AzureStorageFileContent -ShareName "ContosoShare06" -Source "DataFile37" -Path "ContosoWorkingFolder/CurrentDataFile"
 ```
 
 This command uploads a file that is named DataFile37 in the current folder as a file that is named CurrentDataFile in the folder named ContosoWorkingFolder.

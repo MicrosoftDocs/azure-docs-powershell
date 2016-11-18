@@ -56,13 +56,13 @@ The first command gets the specified record set, and then stores it in the $Reco
 ### Example 2: Remove a record set and suppress all confirmation
 ```
 PS C:\> $RecordSet = Get-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" 
-PS C:\> Remove-AzureRmDnsRecordSet -RecordSet $RecordSet  ¢â‚¬"Confirm:$False  ¢â‚¬"Overwrite 
+PS C:\> Remove-AzureRmDnsRecordSet -RecordSet $RecordSet -Confirm:$False -Overwrite 
 
 # Alternatively, the record set can be removed as follows.  In this case, 
 # because the record set is specified by name rather than by object, the 
 # Overwrite parameter is not applicable.
 
-PS C:\> Remove-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup"  ¢â‚¬"Confirm:$False
+PS C:\> Remove-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" -Confirm:$False
 ```
 
 The first command gets the specified record set.

@@ -25,7 +25,7 @@ The **Set-AzureAutomationModule** cmdlet imports a new version of a module or ch
 
 ### Example 1: Update a module
 ```
-PS C:\> Set-AzureAutomationModule  ¢â‚¬"AutomationAccountName "Contoso17"  ¢â‚¬"Name "ContosoModule"  ¢â‚¬"ContentLinkUri ".\ContosoModule.zip"  ¢â‚¬"ContentLinkVersion "1.1"
+PS C:\> Set-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLinkUri ".\ContosoModule.zip" -ContentLinkVersion "1.1"
 ```
 
 This command imports an updated version of an existing module named ContosoModule into the Azure Automation account named Contoso17.
