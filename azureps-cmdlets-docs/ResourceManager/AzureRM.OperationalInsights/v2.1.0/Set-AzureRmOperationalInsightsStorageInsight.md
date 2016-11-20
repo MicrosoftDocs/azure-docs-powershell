@@ -33,16 +33,16 @@ The **Set-AzureRmOperationalInsightsStorageInsight** cmdlet changes the configur
 
 ### Example 1: Modify a Storage Insight by name
 ```
-PS C:\>Set-AzureRmOperationalInsightsStorageInsight  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"WorkspaceName "MyWorkspace"  ¢â‚¬"Name "MyStorageInsight"  ¢â‚¬"Tables @("WADWindowsEventLogsTable")
+PS C:\>Set-AzureRmOperationalInsightsStorageInsight -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "MyWorkspace" -Name "MyStorageInsight" -Tables @("WADWindowsEventLogsTable")
 ```
 
 This command modifies the tables from which the Storage Insight named MyStorageInsight reads.
 
 ### Example 2: Modify a Storage Insight by using a workspace object
 ```
-PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"Name "MyWorkspace"
+PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
 
-PS C:\>Set-AzureRmOperationalInsightsStorageInsight  ¢â‚¬"Workspace $Workspace  ¢â‚¬"Name "MyStorageInsight"  ¢â‚¬"Containers @("wad-iis-logfiles")
+PS C:\>Set-AzureRmOperationalInsightsStorageInsight -Workspace $Workspace -Name "MyStorageInsight" -Containers @("wad-iis-logfiles")
 ```
 
 The first command uses the Get-AzureRmOperationalInsightsWorkspace cmdlet to get the workspace named MyWorkspace, and then stores it in the $Workspace variable.

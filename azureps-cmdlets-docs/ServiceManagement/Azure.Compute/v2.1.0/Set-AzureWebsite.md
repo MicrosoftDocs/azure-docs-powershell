@@ -44,7 +44,7 @@ This example enables HTTP logging.
 
 ### 2: Set storage credentials for a website
 ```
-PS C:\>$settings = New-Object Hashtable$settings[ ¢â‚¬Å"AZURE_STORAGE_ACCOUNT ¢â‚¬Â= myaccountname$settings[ ¢â‚¬Å"AZURE_STORAGE_ACCESS_KEY ¢â‚¬Â] = myaccesskeySet-AzureWebsite -AppSettings $settings myWebsite
+PS C:\>$settings = New-Object Hashtable$settings["AZURE_STORAGE_ACCOUNT"= myaccountname$settings["AZURE_STORAGE_ACCESS_KEY"] = myaccesskeySet-AzureWebsite -AppSettings $settings myWebsite
 ```
 
 This example sets storage credentials in a website named myWebsite with environment variables for AZURE_STORAGE_ACCOUNT and AZURE_STORAGE_ACCESS_KEY.
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 
 ### -Name
 Specifies the name of the website.
-\<What ¢â‚¬â"¢s used if this isn ¢â‚¬â"¢t specified?\>
+\<What's used if this isn't specified?\>
 
 ```yaml
 Type: String

@@ -24,7 +24,7 @@ Specify the ResourceGroupName and ServerName parameters to identify the server, 
 You can also define retention for the audit logs table by setting the value of the RetentionInDays and TableIdentifier parameters to define the period and the seed for the names of the audit logs tables.
 Specify the EventType parameter to define which event types to audit.
 After you run this cmdlet, auditing of the databases that use the policy of this server is enabled.
-If the cmdlet succeeds, and you specify the PassThru parameter, the cmdlet returns an object that describes the current auditing policy, and the server ¢â‚¬â"¢s identifiers.
+If the cmdlet succeeds, and you specify the PassThru parameter, the cmdlet returns an object that describes the current auditing policy, and the server's identifiers.
 Server identifiers include, but are not limited to, ResourceGroupName and ServerName.
 
 ## EXAMPLES

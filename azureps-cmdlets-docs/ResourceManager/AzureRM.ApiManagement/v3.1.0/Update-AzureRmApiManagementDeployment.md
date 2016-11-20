@@ -52,15 +52,15 @@ This example gets an Api Management instance, scales it to five premium units an
 
 ### Example 3: Update deployment (external VNET)
 ```PowerShell
-PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork –Location "East US" –SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/Api-Default-West-US/providers/Microsoft.ClassicNetwork/virtualNetworks/dfVirtualNetwork/subnets/backendSubnet"
-PS C:\> Update-AzureRmApiManagementDeployment –ResourceGroupName "ContosoGroup" –Name "ContosoApi" -VirtualNetwork $virtualNetwork -VpnType "External"
+PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "East US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/Api-Default-West-US/providers/Microsoft.ClassicNetwork/virtualNetworks/dfVirtualNetwork/subnets/backendSubnet"
+PS C:\> Update-AzureRmApiManagementDeployment -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetwork $virtualNetwork -VpnType "External"
 ```
 This command updates an existing API Management deployment and joins to an external *VpnType*.
 
 ### Example 4: Update deployment (internal VNET)
 ```PowerShell
-PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork –Location "East US" –SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/Api-Default-West-US/providers/Microsoft.ClassicNetwork/virtualNetworks/dfVirtualNetwork/subnets/backendSubnet"
-PS C:\> Update-AzureRmApiManagementDeployment –ResourceGroupName "ContosoGroup" –Name "ContosoApi" -VirtualNetwork $virtualNetwork -VpnType "Internal"
+PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "East US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/Api-Default-West-US/providers/Microsoft.ClassicNetwork/virtualNetworks/dfVirtualNetwork/subnets/backendSubnet"
+PS C:\> Update-AzureRmApiManagementDeployment -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetwork $virtualNetwork -VpnType "Internal"
 ```
 This command updates an existing API Management deployment and joins to an internal *VpnType*.
 ## PARAMETERS
