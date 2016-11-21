@@ -28,7 +28,7 @@ The **New-AzureServiceProject** cmdlet creates the required files and configurat
 PS C:\>New-AzureServiceProject MyService1
 ```
 
-This example creates scaffolding for a new Azure service named  ¢â‚¬Å"MyService1 ¢â‚¬Â in the current directory.
+This example creates scaffolding for a new Azure service named "MyService1" in the current directory.
 
 ## PARAMETERS
 

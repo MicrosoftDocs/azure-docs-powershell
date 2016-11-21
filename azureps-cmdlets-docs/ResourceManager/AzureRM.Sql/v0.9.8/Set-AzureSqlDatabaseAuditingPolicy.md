@@ -35,21 +35,21 @@ Database identifiers include, but are not limited to, ResourceGroupName, ServerN
 
 ### Example 1: Set the auditing policy of a database
 ```
-PS C:\>Set-AzureSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -DatabaseName "Database01"  ¢â‚¬"StorageAccountName "Storage31"
+PS C:\>Set-AzureSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -DatabaseName "Database01" -StorageAccountName "Storage31"
 ```
 
 This command sets the auditing policy of database named Database01 located in Server02 to use the storage account named Storage31.
 
 ### Example 2: Set the storage account key of an existing auditing policy of a database
 ```
-PS C:\>Set-AzureSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -DatabaseName "Database01"  ¢â‚¬"StorageAccountKey Secondary
+PS C:\>Set-AzureSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -DatabaseName "Database01" -StorageAccountKey Secondary
 ```
 
 This command sets the auditing policy of database named Database01 located in Server02 to keep using the same storage account name, but use the secondary key.
 
 ### Example 3: Set the auditing policy of a database to use a specific event type
 ```
-PS C:\>Set-AzureSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -DatabaseName "Database01"  ¢â‚¬"EventType Login_Failure
+PS C:\>Set-AzureSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -DatabaseName "Database01" -EventType Login_Failure
 ```
 
 This command sets the auditing policy of database named Database01 located in Server02 to log the Login_Failure event type.

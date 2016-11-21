@@ -40,9 +40,9 @@ This command adds a storage account named MyStorage to the configuration object 
 
 ### Example 2: Configure multiple storage accounts
 ```
-PS C:\>$SubId = (Get-AzureSubscription  Â¢ ¢â€šÂ¬"Current).SubscriptionId
-PS C:\> $Key1 = Get-AzureStorageKey  Â¢ ¢â€šÂ¬"StorageAccountName "MyBlobStorage" | %{ $_.Primary }
-PS C:\> $Key2 = Get-AzureStorageKey  Â¢ ¢â€šÂ¬"StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
+PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
+PS C:\> $Key1 = Get-AzureStorageKey -StorageAccountName "MyBlobStorage" | %{ $_.Primary }
+PS C:\> $Key2 = Get-AzureStorageKey -StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
 PS C:\> $Creds = Get-Credential
 PS C:\> $OozieCreds = Get-Credential
 PS C:\> $HiveCreds = Get-Credential

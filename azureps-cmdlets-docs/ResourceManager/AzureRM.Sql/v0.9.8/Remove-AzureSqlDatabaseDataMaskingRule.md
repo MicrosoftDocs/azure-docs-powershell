@@ -26,7 +26,7 @@ You can remove a data masking rule by using the ResourceGroupName, ServerName, D
 
 ### Example 1: Remove a database data masking rule
 ```
-PS C:\>Remove-AzureSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup11"  ¢â‚¬"ServerName "Server02"  ¢â‚¬"DatabaseName "Database14"  ¢â‚¬"RuleId "Rule17"
+PS C:\>Remove-AzureSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup11" -ServerName "Server02" -DatabaseName "Database14" -RuleId "Rule17"
 ```
 
 This command removes the rule that has the ID Rule17, that was defined for the database database1 located in Server02 in resource group ResourceGroup11.

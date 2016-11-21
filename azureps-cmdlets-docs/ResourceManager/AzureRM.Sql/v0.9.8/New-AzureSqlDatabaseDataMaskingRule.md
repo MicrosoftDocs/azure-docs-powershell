@@ -33,7 +33,7 @@ Rule identifiers include, but are not limited to, **ResourceGroupName**, **Serve
 
 ### Example 1: Create a data masking rule for a number column in a database
 ```
-PS C:\>Set-AzureSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database03"  ¢â‚¬"RuleId "Rule17"  ¢â‚¬"SchemaName "Schema31"  ¢â‚¬"TableName "Table01"  ¢â‚¬"ColumnName "Column22"  ¢â‚¬"MaskingFunction Number  ¢â‚¬"NumberFrom 5  ¢â‚¬"NumberTo 14
+PS C:\>Set-AzureSqlDatabaseDataMaskingRule -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database03" -RuleId "Rule17" -SchemaName "Schema31" -TableName "Table01" -ColumnName "Column22" -MaskingFunction Number -NumberFrom 5 -NumberTo 14
 ```
 
 This command creates a data masking rule for the column named Column22 in the table named Table01 in the schema named Schema31.

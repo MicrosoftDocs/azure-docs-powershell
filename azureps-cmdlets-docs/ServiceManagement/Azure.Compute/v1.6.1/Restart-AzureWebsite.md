@@ -26,7 +26,7 @@ The **Restart-AzureWebsite** cmdlet stops and then restarts the specified websit
 
 ### 1: Restart a website
 ```
-PS C:\>Restart-AzureWebsite  ¢â‚¬"Name MyWebsite
+PS C:\>Restart-AzureWebsite -Name MyWebsite
 ```
 
 This example restarts a website named MyWebsite.

@@ -32,7 +32,7 @@ This command gets usage details for the month of December in the year 2014, for 
 ## PARAMETERS
 
 ### -AsJob
-Indicates that the cmdlet runs in the background as a Windows PowerShellÂ® job.
+Indicates that the cmdlet runs in the background as a Windows PowerShell job.
 
 ```yaml
 Type: SwitchParameter

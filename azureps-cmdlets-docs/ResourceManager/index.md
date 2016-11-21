@@ -40,7 +40,7 @@ PS C:\> Import-Module AzureRM.Compute
 To see all of the Azure Resource Manager modules installed and their versions, run the following command:
 
 ```PowerShell
-PS C:\> Get-Module –ListAvailable AzureRM*
+PS C:\> Get-Module -ListAvailable AzureRM*
 ```
 
 ## To use the cmdlets
@@ -64,13 +64,13 @@ PS C:\> Get-AzureRmSubscription
 To select a default subscription for your current session, run the following command:
 
 ```PowerShell
-PS C:\> Get-AzureRmSubscription –SubscriptionName "your subscription" | Select-AzureRmSubscription
+PS C:\> Get-AzureRmSubscription -SubscriptionName "your subscription" | Select-AzureRmSubscription
 ```
 
 To select the default storage context for your current session, run the following command:
 
 ```PowerShell
-PS C:\> Set-AzureRmCurrentStorageAccount –ResourceGroupName "your resource group" –StorageAccountName "your storage account name"
+PS C:\> Set-AzureRmCurrentStorageAccount -ResourceGroupName "your resource group" -StorageAccountName "your storage account name"
 ```
 
 To import the **Azure.Storage** data plane module (blob, queue, table), run the following command:

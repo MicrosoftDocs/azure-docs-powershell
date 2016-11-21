@@ -40,7 +40,7 @@ This command gets all modules in the Azure Automation account named Contoso17.
 
 ### Example 2: Get a module
 ```
-PS C:\> Get-AzureAutomationModule -AutomationAccountName "Contoso17"  Â¢ ¢â€šÂ¬"Name "ContosoModule"
+PS C:\> Get-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule"
 ```
 
 This command gets a module named ContosoModule in the Azure Automation account named Contoso17.

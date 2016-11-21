@@ -43,7 +43,7 @@ This command sets a custom domain for a Storage account.
 
 ### Example 3: Enable encryption and set the access tier value
 ```
-PS C:\>Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "MyStorageAccount"  Â¢ ¢â€šÂ¬"EnableEncryptionService Blob -AccessTier Cool
+PS C:\>Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "MyStorageAccount" -EnableEncryptionService Blob -AccessTier Cool
 ```
 
 This command enables Storage Service encryption for a Storage account.

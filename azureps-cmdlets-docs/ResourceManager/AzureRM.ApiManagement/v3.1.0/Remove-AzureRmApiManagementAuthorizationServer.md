@@ -23,10 +23,6 @@ The **Remove-AzureRmApiManagementAuthorizationServer** cmdlet removes an Azure A
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

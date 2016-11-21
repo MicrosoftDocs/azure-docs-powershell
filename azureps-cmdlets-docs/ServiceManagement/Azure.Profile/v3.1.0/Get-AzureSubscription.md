@@ -57,7 +57,7 @@ This command gets all subscriptions in the account.
 
 ### Example 2: Get a subscription by name
 ```
-C:\PS>Get-AzureSubscription  Â¢ ¢â€šÂ¬"SubscriptionName "MyProdSubscription"
+C:\PS>Get-AzureSubscription -SubscriptionName "MyProdSubscription"
 ```
 
 This command gets only the "MyProdSubsciption" subscription.
