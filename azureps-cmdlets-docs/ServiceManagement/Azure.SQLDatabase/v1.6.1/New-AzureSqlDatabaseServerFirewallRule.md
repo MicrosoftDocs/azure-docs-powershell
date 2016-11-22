@@ -8,7 +8,7 @@ ms.assetid: 887687C8-F1FD-457D-9507-33D763E0E558
 # New-AzureSqlDatabaseServerFirewallRule
 
 ## SYNOPSIS
-Creates a firewall rule in ssSDS Server.
+Creates a firewall rule in Azure SQL Database Server.
 
 ## SYNTAX
 
@@ -25,9 +25,9 @@ New-AzureSqlDatabaseServerFirewallRule [-ServerName] <String> [-RuleName <String
 ```
 
 ## DESCRIPTION
-The **New-AzureSqlDatabaseServerFirewallRule** cmdlet creates a firewall rule in the specified instance of ssSDS Server in the current subscription.
+The **New-AzureSqlDatabaseServerFirewallRule** cmdlet creates a firewall rule in the specified instance of Azure SQL Database Server in the current subscription.
 
-Use the *StartIpAddress* and *EndIpAddress* parameters to specify a range of IP addresses that this rule allows to connect to the ssSDS server.
+Use the *StartIpAddress* and *EndIpAddress* parameters to specify a range of IP addresses that this rule allows to connect to the Azure SQL Database server.
 
 Specify the *AllowAllAzureServices* parameter to create a rule that allows Azure connections to the server.
 The rule has starting and ending IP address values of 0.0.0.0.
@@ -40,7 +40,7 @@ If you do not specify a firewall rule name, this cmdlet assigns the default name
 PS C:\>New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24" -StartIpAddress 10.1.1.1 -EndIpAddress 10.1.1.2
 ```
 
-This command creates a firewall rule FirewallRule24 on the ssSDS server named lpqd0zbr8y.
+This command creates a firewall rule FirewallRule24 on the Azure SQL Database server named lpqd0zbr8y.
 The command specifies an IP address range.
 
 ### Example 2: Create a rule that allows all Azure services

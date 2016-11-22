@@ -8,7 +8,7 @@ ms.assetid: AB7DE118-2471-4396-AED4-CF6B1DE13F04
 # New-AzureRmSqlServerFirewallRule
 
 ## SYNOPSIS
-Creates a firewall rule for a nextref_database server.
+Creates a firewall rule for a SQL Database server.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ New-AzureRmSqlServerFirewallRule [-AllowAllAzureIPs] [-ServerName] <String> [-Re
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSqlServerFirewallRule** cmdlet creates a firewall rule for the specified ssSDS server.
+The **New-AzureRmSqlServerFirewallRule** cmdlet creates a firewall rule for the specified Azure SQL Database server.
 
 ## EXAMPLES
 

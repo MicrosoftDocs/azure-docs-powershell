@@ -147,7 +147,7 @@ Gets available virtual machine sizes.
 
 
 ### [Get-AzureRMVMSqlServerExtension](./Get-AzureRMVMSqlServerExtension.md)
-Gets the settings for a ssNoVersion extension on a virtual machine.
+Gets the settings for a SQL Server extension on a virtual machine.
 
 
 ### [Get-AzureRmVmssSku](./Get-AzureRmVmssSku.md)
@@ -207,7 +207,7 @@ Creates a virtual machine.
 
 
 ### [New-AzureVMSqlServerAutoBackupConfig](./New-AzureVMSqlServerAutoBackupConfig.md)
-Creates a configuration object for ssNoVersion automatic backup.
+Creates a configuration object for SQL Server automatic backup.
 
 
 ### [New-AzureVMSqlServerAutoPatchingConfig](./New-AzureVMSqlServerAutoPatchingConfig.md)
@@ -274,7 +274,7 @@ Removes a network interface from a virtual machine.
 
 
 ### [Remove-AzureRMVMSqlServerExtension](./Remove-AzureRMVMSqlServerExtension.md)
-Removes a ssNoVersion extension from a virtual machine.
+Removes a SQL Server extension from a virtual machine.
 
 ### [Remove-AzureRmVmssExtension](./Remove-AzureRmVmssExtension.md)
 Removes an extension from the VMSS.

@@ -8,7 +8,7 @@ ms.assetid: 0076AD80-F949-4271-8A7B-0AC755857D87
 # Remove-AzureRmSqlDatabaseSecondary
 
 ## SYNOPSIS
-Terminates data replication between a nextref_database and the specified secondary database.
+Terminates data replication between a SQL Database and the specified secondary database.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ There is no replication synchronization before termination.
 ## PARAMETERS
 
 ### -DatabaseName
-Specifies the name of the primary ssSDS that has the replication link that this cmdlet removes.
+Specifies the name of the primary Azure SQL Database that has the replication link that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServerName
-Specifies the name of the partner ssNoVersion.
+Specifies the name of the partner SQL Server.
 
 ```yaml
 Type: String
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion that has the replication link to remove.
+Specifies the name of the SQL Server that has the replication link to remove.
 
 ```yaml
 Type: String

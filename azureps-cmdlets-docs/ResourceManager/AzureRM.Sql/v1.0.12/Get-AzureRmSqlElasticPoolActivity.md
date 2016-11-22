@@ -19,7 +19,7 @@ Get-AzureRmSqlElasticPoolActivity [-ServerName] <String> [-ElasticPoolName] <Str
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlElasticPoolActivity** cmdlet gets the status of operations on an elastic pool for an ssSDS.
+The **Get-AzureRmSqlElasticPoolActivity** cmdlet gets the status of operations on an elastic pool for an Azure SQL Database.
 You can see the status of both pool creation and configuration updates.
 
 ## EXAMPLES

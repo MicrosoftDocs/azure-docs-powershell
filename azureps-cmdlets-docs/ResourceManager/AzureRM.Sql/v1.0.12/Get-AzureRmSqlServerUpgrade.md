@@ -8,7 +8,7 @@ ms.assetid: 3294EC5F-B0F6-4B76-9AFD-5279CB5CFDB0
 # Get-AzureRmSqlServerUpgrade
 
 ## SYNOPSIS
-Gets the status of an ssSDS server upgrade.
+Gets the status of an Azure SQL Database server upgrade.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRmSqlServerUpgrade -ServerName <String> [-ResourceGroupName] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServerUpgrade** cmdlet gets the status of an ssSDS server upgrade.
+The **Get-AzureRmSqlServerUpgrade** cmdlet gets the status of an Azure SQL Database server upgrade.
 
 ## EXAMPLES
 

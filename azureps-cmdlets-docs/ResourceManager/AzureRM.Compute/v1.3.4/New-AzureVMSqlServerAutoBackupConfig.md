@@ -8,7 +8,7 @@ ms.assetid: 0B5E1282-1CE1-4783-AEAD-BC75781814AE
 # New-AzureVMSqlServerAutoBackupConfig
 
 ## SYNOPSIS
-Creates a configuration object for ssNoVersion automatic backup.
+Creates a configuration object for SQL Server automatic backup.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ New-AzureVMSqlServerAutoBackupConfig [-ResourceGroupName] <String> [-Enable] [[-
 ```
 
 ## DESCRIPTION
-The **New-AzureVMSqlServerAutoBackupConfig** cmdlet creates a configuration object for ssNoVersion automatic backup.
+The **New-AzureVMSqlServerAutoBackupConfig** cmdlet creates a configuration object for SQL Server automatic backup.
 
 ## EXAMPLES
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Indicates that automated backup for the ssNoVersion virtual machine is enabled.
+Indicates that automated backup for the SQL Server virtual machine is enabled.
 If you specify this parameter, automated backup sets a backup schedule for all current and new databases.
 This updates your Managed Backup settings to follow this schedule.
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-Specifies a password to encrypt the certificate that is used to perform ssNoVersion encrypted backups.
+Specifies a password to encrypt the certificate that is used to perform SQL Server encrypted backups.
 
 ```yaml
 Type: SecureString
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ### -StorageContext
 Specifies the storage account that will be used to store backups.
 To obtain an **AzureStorageContext** object, use the New-AzureStorageContext cmdlet.
-The default is the storage account that is associated with the ssNoVersion virtual machine.
+The default is the storage account that is associated with the SQL Server virtual machine.
 
 ```yaml
 Type: AzureStorageContext

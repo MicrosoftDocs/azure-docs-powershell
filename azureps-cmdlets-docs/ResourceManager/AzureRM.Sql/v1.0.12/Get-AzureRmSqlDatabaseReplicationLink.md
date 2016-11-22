@@ -8,7 +8,7 @@ ms.assetid: B518AB6E-F4B8-4FD5-98AE-A1D75BDB12A7
 # Get-AzureRmSqlDatabaseReplicationLink
 
 ## SYNOPSIS
-Gets the geo-replication links between an ssSDS and a resource group or ssNoVersion.
+Gets the geo-replication links between an Azure SQL Database and a resource group or SQL Server.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Get-AzureRmSqlDatabaseReplicationLink [-DatabaseName] <String> -PartnerResourceG
 
 ## DESCRIPTION
 The **Get-AzureRMSqlDatabaseReplicationLink** cmdlet replaces the **Get-AzureSqlDatabaseCopy** cmdlet.
-It gets all geo-replication links between the specified ssSDS and a resource group or AzuressNoVersion.
+It gets all geo-replication links between the specified Azure SQL Database and a resource group or AzureSQL Server.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ It gets all geo-replication links between the specified ssSDS and a resource gro
 ## PARAMETERS
 
 ### -DatabaseName
-Specifies the name of the nextref_database for which to retrieve links.
+Specifies the name of the SQL Database for which to retrieve links.
 
 ```yaml
 Type: String
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion for the database to retrieve links for.
+Specifies the name of the SQL Server for the database to retrieve links for.
 
 ```yaml
 Type: String

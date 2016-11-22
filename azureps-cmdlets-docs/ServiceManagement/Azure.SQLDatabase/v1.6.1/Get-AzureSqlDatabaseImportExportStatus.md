@@ -44,7 +44,7 @@ The second command gets the status of the export request stored in $ExportReques
 ## PARAMETERS
 
 ### -Username
-Specifies the user name required to connect to the ssSDS server.
+Specifies the user name required to connect to the Azure SQL Database server.
 You must specify this parameter if you specified the *RequestId* parameter.
 
 ```yaml
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifies the password that is required to connect to the ssSDS server.
+Specifies the password that is required to connect to the Azure SQL Database server.
 You must specify this parameter if you specified the *RequestId* parameter.
 
 ```yaml
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssSDS server.
+Specifies the name of the Azure SQL Database server.
 You must specify this parameter if you specified the *RequestId* parameter.
 
 ```yaml

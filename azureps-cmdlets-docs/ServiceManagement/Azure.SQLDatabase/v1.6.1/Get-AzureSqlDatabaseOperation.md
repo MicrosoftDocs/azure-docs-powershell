@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-Specifies an object that represents an ssSDS.
+Specifies an object that represents an Azure SQL Database.
 If you specify this parameter, you must specify the *ServerName* parameter or *ConnectionContext* parameter.
 
 ```yaml
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -OperationGuid
 Specifies the operation ID that represents a specific database operation for which this cmdlet gets status.
-You can obtain operation IDs by requesting all the database operations for a ssSDS or server.
+You can obtain operation IDs by requesting all the database operations for a Azure SQL Database or server.
 If you specify this parameter, you must specify the *ServerName* parameter or the *ConnectionContext* parameter.
 
 ```yaml

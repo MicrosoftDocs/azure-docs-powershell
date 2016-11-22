@@ -20,7 +20,7 @@ Get-AzureRmSqlElasticPoolDatabase [-ElasticPoolName] <String> [-DatabaseName <St
 
 ## DESCRIPTION
 The **Get-AzureRmSqlElasticPoolDatabase** cmdlet gets elastic databases in an elastic pool and their property values.
-You can specify the name of an elastic database in ssSDS to see the property values for only that database.
+You can specify the name of an elastic database in Azure SQL Database to see the property values for only that database.
 
 ## EXAMPLES
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Specifies the name of the nextref_database that this cmdlet gets.
+Specifies the name of the SQL Database that this cmdlet gets.
 
 ```yaml
 Type: String

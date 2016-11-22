@@ -8,7 +8,7 @@ ms.assetid: 670B9755-DC64-400D-B56D-938472E5E1AC
 # New-AzureRmSqlServer
 
 ## SYNOPSIS
-Creates a nextref_database server.
+Creates a SQL Database server.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzureRmSqlServer -ServerName <String> -SqlAdministratorCredentials <PSCreden
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSqlServer** cmdlet creates an ssSDS server.
+The **New-AzureRmSqlServer** cmdlet creates an Azure SQL Database server.
 
 ## EXAMPLES
 
@@ -36,7 +36,7 @@ ServerVersion            : 12.0
 Tags                     :
 ```
 
-This command creates a version 12 ssSDS server.
+This command creates a version 12 Azure SQL Database server.
 
 ## PARAMETERS
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlAdministratorCredentials
-Specifies the nextref_database server administrator credentials for the new server.
+Specifies the SQL Database server administrator credentials for the new server.
 To obtain a **PSCredential** object, use the Get-Credential cmdlet.
 For more information, type `Get-Help Get-Credential`.
 

@@ -19,7 +19,7 @@ Get-AzureRmSqlDatabaseIndexRecommendations -ServerName <String> [-DatabaseName <
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabaseIndexRecommendations** cmdlet gets the recommended index operations for an ssSDS server or database.
+The **Get-AzureRmSqlDatabaseIndexRecommendations** cmdlet gets the recommended index operations for an Azure SQL Database server or database.
 
 ## EXAMPLES
 

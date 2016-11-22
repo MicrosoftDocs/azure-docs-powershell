@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies the tags to associate with the nextref_database replication link.
+Specifies the tags to associate with the SQL Database replication link.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowConnections
-Specifies the read intent of the secondary ssSDS.
+Specifies the read intent of the secondary Azure SQL Database.
 psdx_paramvalues
 
 - No
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion of the primary  nextref_database.
+Specifies the name of the SQL Server of the primary  SQL Database.
 
 ```yaml
 Type: String

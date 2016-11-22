@@ -18,7 +18,7 @@ Get-AzureRmSqlServer [[-ServerName] <String>] [-ResourceGroupName] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServer** cmdlet returns information about one or more ssSDS servers.
+The **Get-AzureRmSqlServer** cmdlet returns information about one or more Azure SQL Database servers.
 Specify the name of a server to see information for only that server.
 
 ## EXAMPLES
@@ -42,7 +42,7 @@ ServerVersion            : 12.0
 Tags                     :
 ```
 
-This command gets information about all the ssSDS servers assigned to the resource group ResourceGroup01.
+This command gets information about all the Azure SQL Database servers assigned to the resource group ResourceGroup01.
 
 ### Example 2: Get information about an Azure SQL Database server
 ```
@@ -56,7 +56,7 @@ ServerVersion            : 12.0
 Tags                     :
 ```
 
-This command gets information about the ssSDS server named Server01.
+This command gets information about the Azure SQL Database server named Server01.
 
 ### Example 3: Get all instances of SQL Server in the subscription
 ```
