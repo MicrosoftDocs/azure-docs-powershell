@@ -8,7 +8,7 @@ ms.assetid: 8A40DE11-385A-4B50-8709-CCC4FD77F9C7
 # Set-AzureRmSqlServerAuditingPolicy
 
 ## SYNOPSIS
-Changes the auditing policy of a nextref_database server.
+Changes the auditing policy of a SQL Database server.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Set-AzureRmSqlServerAuditingPolicy [-PassThru] [-EventType <String[]>] [-Storage
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSqlServerAuditingPolicy** cmdlet changes the auditing policy of an ssSDS server.
+The **Set-AzureRmSqlServerAuditingPolicy** cmdlet changes the auditing policy of an Azure SQL Database server.
 Specify the *ResourceGroupName* and *ServerName* parameters to identify the server, the *StorageAccountName* parameter to specify the storage account for the audit logs, and the *StorageKeyType* parameter to define the storage keys to use.
 
 You can also define retention for the audit logs table by setting the value of the *RetentionInDays* and *TableIdentifier* parameters to define the period and the seed for the audit log table names.

@@ -19,7 +19,7 @@ Get-AzureRmSqlDatabaseAuditingPolicy [-ServerName] <String> [-DatabaseName] <Str
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabaseAuditingPolicy** cmdlet gets the auditing policy of an ssSDS.
+The **Get-AzureRmSqlDatabaseAuditingPolicy** cmdlet gets the auditing policy of an Azure SQL Database.
 To use the cmdlet, use the *ResourceGroupName*, *ServerName*, and *DatabaseName* parameters to identify the database.
 
 This cmdlet is also supported by the SQL Server Stretch Database service on Azure.

@@ -29,7 +29,7 @@ For reference information about APS HDInsight, see Azure HDInsight Cmdletshttps:
 The **New-AzureHDInsightSqoopJobDefinition** cmdlet creates a Sqoop job to run on an Azure HDInsight cluster.
 
 Sqoop is a tool to transfer data between Hadoop clusters and relational databases.
-You can use Sqoop to import data from a ssNoVersion database to a Hadoop Distributed File System (HDFS), transform the data with Hadoop MapReduce, and then export the data from the HDFS back to the ssNoVersion database.
+You can use Sqoop to import data from a SQL Server database to a Hadoop Distributed File System (HDFS), transform the data with Hadoop MapReduce, and then export the data from the HDFS back to the SQL Server database.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ You can use Sqoop to import data from a ssNoVersion database to a Hadoop Distrib
 PS C:\>$SqoopJobDef = New-AzureHDInsightSqoopJobDefinition -Command "import --connect jdbc:sqlserver://<SQLDatabaseServerName>.database.windows.net:1433;username=<SQLDatabasUsername>@<SQLDatabaseServerName>; password=<SQLDatabasePassword>; database=<SQLDatabaseDatabaseName> --table <TableName> --target-dir wasb://<ContainerName>@<WindowsAzureStorageAccountName>.blob.core.windows.net/<Path>"
 ```
 
-This command defines a Sqoop job that imports all of the rows in a table from an AzuressNoVersion database to an HDInsight cluster, and then stores the job definition in the $SqoopJobDef variable.
+This command defines a Sqoop job that imports all of the rows in a table from an AzureSQL Server database to an HDInsight cluster, and then stores the job definition in the $SqoopJobDef variable.
 
 ## PARAMETERS
 

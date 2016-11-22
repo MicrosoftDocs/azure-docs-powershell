@@ -18,7 +18,7 @@ Get-AzureRmSqlDatabase [[-DatabaseName] <String>] [-ServerName] <String> [-Resou
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabase** cmdlet gets one or more Azure SQL databases from an ssSDS Server.
+The **Get-AzureRmSqlDatabase** cmdlet gets one or more Azure SQL databases from an Azure SQL Database Server.
 
 This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 

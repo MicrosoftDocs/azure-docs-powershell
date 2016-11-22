@@ -36,7 +36,7 @@ New-AzureRmResource [-Location <String>] [-Kind <String>] [-Properties <PSObject
 ```
 
 ## DESCRIPTION
-The **New-AzureRmResource** cmdlet creates an Azure resource, such as a website, ssSDS server, or ssSDS, in a resource group.
+The **New-AzureRmResource** cmdlet creates an Azure resource, such as a website, Azure SQL Database server, or Azure SQL Database, in a resource group.
 
 ## EXAMPLES
 

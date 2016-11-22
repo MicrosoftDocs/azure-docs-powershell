@@ -43,13 +43,13 @@ New-AzureSqlDatabaseServerContext [-FullyQualifiedServerName] <String> [-Credent
 ```
 
 ## DESCRIPTION
-The **New-AzureSqlDatabaseServerContext** cmdlet creates an ssSDS server connection context.
-Use ssNoVersion authentication to create a connection context to a nextref_database server by using the specified credentials.
-You can specify the nextref_database server by name, by the fully qualified name, or by URL.
+The **New-AzureSqlDatabaseServerContext** cmdlet creates an Azure SQL Database server connection context.
+Use SQL Server authentication to create a connection context to a SQL Database server by using the specified credentials.
+You can specify the SQL Database server by name, by the fully qualified name, or by URL.
 To obtain a credential, use the Get-Credential cmdlet that prompts you to specify the user name and password.
 
-Use the **New-AzureSqlDatabaseServerContext** cmdlet with certificate based authentication to create a connection context to the specified nextref_database server by using the specified Azure subscription data.
-You can specify nextref_database server by name or by the fully qualified name.
+Use the **New-AzureSqlDatabaseServerContext** cmdlet with certificate based authentication to create a connection context to the specified SQL Database server by using the specified Azure subscription data.
+You can specify SQL Database server by name or by the fully qualified name.
 You can specify the subscription data as a parameter or it can be retrieved from the current Azure subscription.
 Use the Select-AzureSubscriptionhttp://msdn.microsoft.com/library/windowsazure/jj152833.aspx cmdlet to select the current Azure subscription.
 
@@ -62,11 +62,11 @@ PS C:\> $Context = New-AzureSqlDatabaseServerContext -ServerName "lpqd0zbr8y" -C
 PS C:\> $Database17 = New-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database17" -MaxSizeGB 50 -Collation "SQL_Latin1_General_CP1_CI_AS"
 ```
 
-This example uses the ssNoVersion authentication.
+This example uses the SQL Server authentication.
 
 The first command prompts you for server administrator credentials, and stores the credentials in the $Credential variable.
 
-The second command connects to the nextref_database server named lpqd0zbr8y by using $Credential.
+The second command connects to the SQL Database server named lpqd0zbr8y by using $Credential.
 
 The final command creates a database named Database17 on the server that is part of the context in $Context.
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies a credential object that provides ssNoVersion authentication for you to access the server.
+Specifies a credential object that provides SQL Server authentication for you to access the server.
 
 ```yaml
 Type: PSCredential
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManageUrl
-Specifies the URL that this cmdlet uses to access the ssSDSnextref_azportal for the server.
+Specifies the URL that this cmdlet uses to access the Azure SQL DatabaseManagement Portal for the server.
 
 ```yaml
 Type: Uri
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullyQualifiedServerName
-Specifies the fully qualified domain name (FQDN) name for the ssSDS server.
+Specifies the fully qualified domain name (FQDN) name for the Azure SQL Database server.
 For example, Server02.database.windows.net.
 
 ```yaml

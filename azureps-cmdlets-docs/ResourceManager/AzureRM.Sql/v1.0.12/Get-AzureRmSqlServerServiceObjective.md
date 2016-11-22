@@ -8,7 +8,7 @@ ms.assetid: B9AECE59-FD64-4A10-93F4-0824001ACA4A
 # Get-AzureRmSqlServerServiceObjective
 
 ## SYNOPSIS
-Gets service objectives for an ssSDS server.
+Gets service objectives for an Azure SQL Database server.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureRmSqlServerServiceObjective [[-ServiceObjectiveName] <String>] [-Server
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServerServiceObjective** cmdlet gets the available service objectives for an ssSDS server.
+The **Get-AzureRmSqlServerServiceObjective** cmdlet gets the available service objectives for an Azure SQL Database server.
 
 ## EXAMPLES
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of a nextref_database SQL Database server.
+Specifies the name of a SQL Database SQL Database server.
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Specifies the name of an ssSDS.
+Specifies the name of an Azure SQL Database.
 
 ```yaml
 Type: String
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 Specifies the name of a resource group.
-This cmdlet gets service objectives for a nextref_database server assigned to this resource.
+This cmdlet gets service objectives for a SQL Database server assigned to this resource.
 
 ```yaml
 Type: String

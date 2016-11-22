@@ -8,7 +8,7 @@ ms.assetid: 52740669-7E10-4AB0-A4E2-03961F80BB4B
 # New-AzureRmSqlDatabaseCopy
 
 ## SYNOPSIS
-Creates a copy of a nextref_database that uses the snapshot at the current time.
+Creates a copy of a SQL Database that uses the snapshot at the current time.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzureRmSqlDatabaseCopy [-DatabaseName] <String> [-ServiceObjectiveName <Stri
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSqlDatabaseCopy** cmdlet creates a copy of an ssSDS that uses the snapshot of the data at the current time.
+The **New-AzureRmSqlDatabaseCopy** cmdlet creates a copy of an Azure SQL Database that uses the snapshot of the data at the current time.
 Use this cmdlet instead of the Start-AzureSqlDatabaseCopy cmdlet to create a one-time database copy.
 This cmdlet returns the **Database** object of the copy.
 
@@ -39,7 +39,7 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 ## PARAMETERS
 
 ### -DatabaseName
-Specifies the name of the nextref_database to copy.
+Specifies the name of the SQL Database to copy.
 
 ```yaml
 Type: String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopyServerName
-Specifies the name of the ssNoVersion which hosts the copy.
+Specifies the name of the SQL Server which hosts the copy.
 
 ```yaml
 Type: String
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopyDatabaseName
-Specifies the name of the nextref_database copy.
+Specifies the name of the SQL Database copy.
 
 ```yaml
 Type: String
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the  ssNoVersion that contains the database to copy.
+Specifies the name of the  SQL Server that contains the database to copy.
 
 ```yaml
 Type: String

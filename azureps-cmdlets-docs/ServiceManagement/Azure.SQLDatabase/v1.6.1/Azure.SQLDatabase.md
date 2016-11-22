@@ -25,19 +25,19 @@ Gets the status of database operations on an Azure server.
 
 
 ### [Get-AzureSqlDatabaseServerFirewallRule](./Get-AzureSqlDatabaseServerFirewallRule.md)
-Gets firewall rules for ssSDS Server.
+Gets firewall rules for Azure SQL Database Server.
 
 
 ### [Get-AzureSqlDatabaseServerQuota](./Get-AzureSqlDatabaseServerQuota.md)
-Gets quota information for an ssSDS server.
+Gets quota information for an Azure SQL Database server.
 
 
 ### [Get-AzureSqlDatabaseServer](./Get-AzureSqlDatabaseServer.md)
-Gets information about ssSDS servers.
+Gets information about Azure SQL Database servers.
 
 
 ### [Get-AzureSqlDatabaseServiceObjective](./Get-AzureSqlDatabaseServiceObjective.md)
-Gets service objectives for an ssSDS server.
+Gets service objectives for an Azure SQL Database server.
 
 
 ### [Get-AzureSqlDatabaseUsages](./Get-AzureSqlDatabaseUsages.md)
@@ -57,51 +57,51 @@ Creates a server connection context.
 
 
 ### [New-AzureSqlDatabaseServerFirewallRule](./New-AzureSqlDatabaseServerFirewallRule.md)
-Creates a firewall rule in ssSDS Server.
+Creates a firewall rule in Azure SQL Database Server.
 
 
 ### [New-AzureSqlDatabaseServer](./New-AzureSqlDatabaseServer.md)
-Creates an ssSDS server.
+Creates an Azure SQL Database server.
 
 
 ### [New-AzureSqlDatabase](./New-AzureSqlDatabase.md)
-Creates an ssSDS.
+Creates an Azure SQL Database.
 
 
 ### [Remove-AzureSqlDatabaseServerFirewallRule](./Remove-AzureSqlDatabaseServerFirewallRule.md)
-Removes a firewall rule from an ssSDS server.
+Removes a firewall rule from an Azure SQL Database server.
 
 
 ### [Remove-AzureSqlDatabaseServer](./Remove-AzureSqlDatabaseServer.md)
-Removes an ssSDS server.
+Removes an Azure SQL Database server.
 
 
 ### [Remove-AzureSqlDatabase](./Remove-AzureSqlDatabase.md)
-Deletes an ssSDS.
+Deletes an Azure SQL Database.
 
 
 ### [Set-AzureSqlDatabaseServerFirewallRule](./Set-AzureSqlDatabaseServerFirewallRule.md)
-Modifies an existing firewall rule in an ssSDS Server.
+Modifies an existing firewall rule in an Azure SQL Database Server.
 
 
 ### [Set-AzureSqlDatabaseServer](./Set-AzureSqlDatabaseServer.md)
-Modifies the properties of an ssSDS server.
+Modifies the properties of an Azure SQL Database server.
 
 
 ### [Set-AzureSqlDatabase](./Set-AzureSqlDatabase.md)
-Sets properties for an ssSDS.
+Sets properties for an Azure SQL Database.
 
 
 ### [Start-AzureSqlDatabaseCopy](./Start-AzureSqlDatabaseCopy.md)
-Starts a copy operation of an ssSDS.
+Starts a copy operation of an Azure SQL Database.
 
 
 ### [Start-AzureSqlDatabaseExport](./Start-AzureSqlDatabaseExport.md)
-Starts an export operation from an ssSDS to Blob storage.
+Starts an export operation from an Azure SQL Database to Blob storage.
 
 
 ### [Start-AzureSqlDatabaseImport](./Start-AzureSqlDatabaseImport.md)
-Starts an import operation from blob storage to an ssSDS.
+Starts an import operation from blob storage to an Azure SQL Database.
 
 
 ### [Start-AzureSqlDatabaseRecovery](./Start-AzureSqlDatabaseRecovery.md)

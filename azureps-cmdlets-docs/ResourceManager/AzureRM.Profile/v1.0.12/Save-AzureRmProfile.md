@@ -18,7 +18,7 @@ Save-AzureRmProfile [[-Profile] <AzureRMProfile>] [-Path] <String> [-Force] [-Wh
 ```
 
 ## DESCRIPTION
-The **Save-AzureRmProfile** cmdlet saves the current authentication information for use in other azurepowershell sessions.
+The **Save-AzureRmProfile** cmdlet saves the current authentication information for use in other Azure PowerShell sessions.
 
 ## EXAMPLES
 

@@ -8,7 +8,7 @@ ms.assetid: 9BFF1A0D-1F5B-486F-9789-684D94A1B204
 # Get-AzureSqlDatabaseServiceObjective
 
 ## SYNOPSIS
-Gets service objectives for an ssSDS server.
+Gets service objectives for an Azure SQL Database server.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Get-AzureSqlDatabaseServiceObjective [-ServerName] <String> [-ServiceObjective <
 ```
 
 ## DESCRIPTION
-The **Get-AzureSqlDatabaseServiceObjective** cmdlet gets service objectives for an ssSDS server.
+The **Get-AzureSqlDatabaseServiceObjective** cmdlet gets service objectives for an Azure SQL Database server.
 Service objectives are referred to as performance levels.
 If you do not specify a service objective, this cmdlet returns all valid service objectives for the specified server.
 

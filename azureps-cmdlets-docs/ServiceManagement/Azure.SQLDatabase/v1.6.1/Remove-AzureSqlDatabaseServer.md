@@ -8,7 +8,7 @@ ms.assetid: FE570D5A-7C94-4058-AF61-12AA368D21B0
 # Remove-AzureSqlDatabaseServer
 
 ## SYNOPSIS
-Removes an ssSDS server.
+Removes an Azure SQL Database server.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureSqlDatabaseServer [-ServerName] <String> [-Force] [-Profile <AzureSM
 ```
 
 ## DESCRIPTION
-The **Remove-AzureSqlDatabaseServer** cmdlet removes the specified instance of ssSDS Server from the current subscription.
+The **Remove-AzureSqlDatabaseServer** cmdlet removes the specified instance of Azure SQL Database Server from the current subscription.
 This cmdlet deletes all databases on the server.
 
 ## EXAMPLES
@@ -28,7 +28,7 @@ This cmdlet deletes all databases on the server.
 PS C:\>Remove-AzureSqlDatabaseServer -ServerName "lpqd0zbr8y"
 ```
 
-This command removes the ssSDS server named lpqd0zbr8y.
+This command removes the Azure SQL Database server named lpqd0zbr8y.
 
 ## PARAMETERS
 
