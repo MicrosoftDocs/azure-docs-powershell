@@ -8,7 +8,7 @@ ms.assetid: 9002901A-BE80-40C2-8EDC-E864ABE3C4AF
 # Set-AzureSqlDatabaseServer
 
 ## SYNOPSIS
-Modifies the properties of an ssSDS server.
+Modifies the properties of an Azure SQL Database server.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Set-AzureSqlDatabaseServer [-ServerName] <String> -AdminPassword <String> [-Forc
 ```
 
 ## DESCRIPTION
-The **Set-AzureSqlDatabaseServer** cmdlet modifies the properties of the specified instance of ssSDS Server.
+The **Set-AzureSqlDatabaseServer** cmdlet modifies the properties of the specified instance of Azure SQL Database Server.
 In the current release, you can only update the administrator account password for a server.
 
 ## EXAMPLES
@@ -28,7 +28,7 @@ In the current release, you can only update the administrator account password f
 PS C:\>Set-AzureSqlDatabaseServer -ServerName "lpqd0zbr8y" -AdminPassword "NewPassword"
 ```
 
-This command changes the administrator account password for the ssSDS server named lpqd0zbr8y.
+This command changes the administrator account password for the Azure SQL Database server named lpqd0zbr8y.
 
 ## PARAMETERS
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminPassword
-Specifies the administrator account password for the ssSDS server.
+Specifies the administrator account password for the Azure SQL Database server.
 You must specify a strong password.
 For more information, see Strong Passwordshttp://go.microsoft.com/fwlink/p/?LinkId=154152 (http://go.microsoft.com/fwlink/p/?LinkId=154152) at the Microsoft Developer Network.
 

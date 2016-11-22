@@ -8,7 +8,7 @@ ms.assetid: 5944EDB2-DC4D-40C3-9123-A33011CB7032
 # Set-AzureSqlDatabaseServerFirewallRule
 
 ## SYNOPSIS
-Modifies an existing firewall rule in an ssSDS Server.
+Modifies an existing firewall rule in an Azure SQL Database Server.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Set-AzureSqlDatabaseServerFirewallRule [-ServerName] <String> -RuleName <String>
 ```
 
 ## DESCRIPTION
-The **Set-AzureSqlDatabaseServerFirewallRule** cmdlet modifies the start IP address and end IP address values of an existing firewall rule in the specified instance of ssSDS Server.
+The **Set-AzureSqlDatabaseServerFirewallRule** cmdlet modifies the start IP address and end IP address values of an existing firewall rule in the specified instance of Azure SQL Database Server.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Set-AzureSqlDatabaseServerFirewallRule** cmdlet modifies the start IP addr
 PS C:\>Set-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24" -StartIpAddress 10.1.1.2 -EndIpAddress 10.1.1.4
 ```
 
-This command modifies the start IP address and end IP address of the firewall rule named FirewallRule24 on the ssSDS server named lpqd0zbr8y.
+This command modifies the start IP address and end IP address of the firewall rule named FirewallRule24 on the Azure SQL Database server named lpqd0zbr8y.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Get-AzureRmSqlServerCommunicationLink [[-LinkName] <String>] [-ServerName] <Stri
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServerCommunicationLink** cmdlet gets server-to-server communication links for elastic database transactions in ssSDS.
+The **Get-AzureRmSqlServerCommunicationLink** cmdlet gets server-to-server communication links for elastic database transactions in Azure SQL Database.
 Specify the name of a server communication link to see the properties for that link.
 
 ## EXAMPLES

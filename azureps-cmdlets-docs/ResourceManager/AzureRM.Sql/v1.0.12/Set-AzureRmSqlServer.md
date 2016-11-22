@@ -8,7 +8,7 @@ ms.assetid: 57874E1C-3C62-4BFE-AADC-1689DAB9AD0C
 # Set-AzureRmSqlServer
 
 ## SYNOPSIS
-Modifies properties of a nextref_database server.
+Modifies properties of a SQL Database server.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Set-AzureRmSqlServer [-ServerName] <String> [-SqlAdministratorPassword <SecureSt
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSqlServer** cmdlet modifies properties of an ssSDS server.
+The **Set-AzureRmSqlServer** cmdlet modifies properties of an Azure SQL Database server.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ ServerVersion            : 12.0
 Tags                     :
 ```
 
-This command resets the administrator password on the AzuressNoVersion named server01.
+This command resets the administrator password on the AzureSQL Server named server01.
 
 ## PARAMETERS
 

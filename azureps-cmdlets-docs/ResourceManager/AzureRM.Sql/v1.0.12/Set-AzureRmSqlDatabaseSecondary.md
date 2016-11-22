@@ -43,7 +43,7 @@ In the latter case, the secondary database is synchronized with the primary befo
 ## PARAMETERS
 
 ### -DatabaseName
-Specifies the name of the ssSDS Secondary.
+Specifies the name of the Azure SQL Database Secondary.
 
 ```yaml
 Type: String
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerResourceGroupName
-Specifies the name of the resource group to which the partner ssSDS is assigned.
+Specifies the name of the resource group to which the partner Azure SQL Database is assigned.
 
 ```yaml
 Type: String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion that hosts the ssSDS Secondary.
+Specifies the name of the SQL Server that hosts the Azure SQL Database Secondary.
 
 ```yaml
 Type: String
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the ssSDS Secondary is assigned.
+Specifies the name of the resource group to which the Azure SQL Database Secondary is assigned.
 
 ```yaml
 Type: String

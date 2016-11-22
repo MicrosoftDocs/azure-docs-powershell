@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-Specifies an object that represents the source ssSDS.
+Specifies an object that represents the source Azure SQL Database.
 This cmdlet terminates the continuous copy relationship of the database that this parameter specifies.
 
 ```yaml

@@ -20,7 +20,7 @@ Get-AzureRmSqlDatabaseRestorePoints [-ServerName] <String> [-DatabaseName] <Stri
 
 ## DESCRIPTION
 The **Get-AzureRmSqlDatabaseRestorePoints** cmdlet retrieves the distinct restore points that an Azure SQL Data Warehouse can be restored from.
-For an ssSDS, the restore window is continuous.
+For an Azure SQL Database, the restore window is continuous.
 This means that any point in time in the backup retention period of the database can be used as a restore point.
 
 This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
@@ -39,12 +39,12 @@ RestorePointCreationDate :
 EarliestRestoreDate      : 8/12/2015 12:00:00 AM
 ```
 
-This command returns all available restore points for the ssSDS named Database01.
+This command returns all available restore points for the Azure SQL Database named Database01.
 
 ## PARAMETERS
 
 ### -ServerName
-Specifies the name of the AzuressNoVersion that hosts the database.
+Specifies the name of the AzureSQL Server that hosts the database.
 
 ```yaml
 Type: String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Specifies the name of the nextref_database.
+Specifies the name of the SQL Database.
 
 ```yaml
 Type: String
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the nextref_database is assigned.
+Specifies the name of the resource group to which the SQL Database is assigned.
 
 ```yaml
 Type: String

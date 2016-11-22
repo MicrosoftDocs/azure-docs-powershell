@@ -8,7 +8,7 @@ ms.assetid: D83879BE-919A-4C1B-854B-E366CCAB5D8C
 # Start-AzureRmSqlServerUpgrade
 
 ## SYNOPSIS
-Starts the upgrade of a nextref_database server.
+Starts the upgrade of a SQL Database server.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Start-AzureRmSqlServerUpgrade -ServerVersion <String> [-ScheduleUpgradeAfterUtcD
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSqlServerUpgrade** cmdlet starts the upgrade of an ssSDS server version 11 to version 12.
+The **Start-AzureRmSqlServerUpgrade** cmdlet starts the upgrade of an Azure SQL Database server version 11 to version 12.
 You can monitor the progress of an upgrade by using the Get-AzureRmSqlServerUpgrade cmdlet.
 
 ## EXAMPLES

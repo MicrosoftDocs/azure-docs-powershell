@@ -17,7 +17,7 @@ Adds a Hadoop configuration value customization or a Hive shared library customi
 
 
 ### [Add-AzureHDInsightMetastore](./Add-AzureHDInsightMetastore.md)
-Adds a ssNoVersion database account to an HDInsight cluster configuration.
+Adds a SQL Server database account to an HDInsight cluster configuration.
 
 
 ### [Add-AzureHDInsightScriptAction](./Add-AzureHDInsightScriptAction.md)

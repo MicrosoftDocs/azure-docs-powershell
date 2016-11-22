@@ -8,7 +8,7 @@ ms.assetid: B05EE557-5FD5-417A-B6D5-AC484595E87D
 # New-AzureSqlDatabaseServer
 
 ## SYNOPSIS
-Creates an ssSDS server.
+Creates an Azure SQL Database server.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-AzureSqlDatabaseServer [-AdministratorLogin] <String> -AdministratorLoginPas
 ```
 
 ## DESCRIPTION
-The **New-AzureSqlDatabaseServer** cmdlet creates an instance of ssSDS Server in the current subscription.
+The **New-AzureSqlDatabaseServer** cmdlet creates an instance of Azure SQL Database Server in the current subscription.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ The **New-AzureSqlDatabaseServer** cmdlet creates an instance of ssSDS Server in
 PS C:\>New-AzureSqlDatabaseServer -Location "East US" -AdministratorLogin "AdminLogin" -AdministratorLoginPassword "AdminPassword"
 ```
 
-This command creates a version 11 ssSDS server.
+This command creates a version 11 Azure SQL Database server.
 
 ### Example 2: Create a version 12 server
 ```
@@ -40,7 +40,7 @@ This command creates a version 12 server.
 ## PARAMETERS
 
 ### -AdministratorLogin
-Specifies the administrator account name for the new ssSDS server.
+Specifies the administrator account name for the new Azure SQL Database server.
 
 ```yaml
 Type: String
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdministratorLoginPassword
-Specifies the administrator account password for the ssSDS server.
+Specifies the administrator account password for the Azure SQL Database server.
 You must specify a strong password.
 For more information, see Strong Passwordshttp://go.microsoft.com/fwlink/p/?LinkId=154152 (http://go.microsoft.com/fwlink/p/?LinkId=154152) in MSDN.
 

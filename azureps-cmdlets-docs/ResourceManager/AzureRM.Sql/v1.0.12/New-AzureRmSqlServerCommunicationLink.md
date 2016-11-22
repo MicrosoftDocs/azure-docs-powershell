@@ -8,7 +8,7 @@ ms.assetid: E7FAD077-5B9A-4A56-91F4-3F768354ECB9
 # New-AzureRmSqlServerCommunicationLink
 
 ## SYNOPSIS
-Creates a communication link for elastic database transactions between two nextref_database servers.
+Creates a communication link for elastic database transactions between two SQL Database servers.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-AzureRmSqlServerCommunicationLink -LinkName <String> -PartnerServer <String>
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSqlServerCommunicationLink** cmdlet creates a communication link for elastic database transactions between two logical servers in ssSDS.
+The **New-AzureRmSqlServerCommunicationLink** cmdlet creates a communication link for elastic database transactions between two logical servers in Azure SQL Database.
 Elastic database transactions can span databases in either of the paired servers.
 You can create more than one link on a server.
 Therefore, elastic database transactions can span across a larger number of servers.

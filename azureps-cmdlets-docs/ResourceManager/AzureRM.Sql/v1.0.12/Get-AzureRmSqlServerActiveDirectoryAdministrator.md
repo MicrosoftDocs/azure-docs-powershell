@@ -18,7 +18,7 @@ Get-AzureRmSqlServerActiveDirectoryAdministrator [-ServerName] <String> [-Resour
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet gets information about an Azure Active Directory (Azure AD) administrator for an AzuressNoVersion in the current subscription.
+The **Get-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet gets information about an Azure Active Directory (Azure AD) administrator for an AzureSQL Server in the current subscription.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ This command gets information about an Azure AD administrator for a server named
 ## PARAMETERS
 
 ### -ServerName
-Specifies the name of the ssNoVersion for which this cmdlet gets information.
+Specifies the name of the SQL Server for which this cmdlet gets information.
 
 ```yaml
 Type: String
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the ssNoVersion is assigned.
+Specifies the name of the resource group to which the SQL Server is assigned.
 
 ```yaml
 Type: String

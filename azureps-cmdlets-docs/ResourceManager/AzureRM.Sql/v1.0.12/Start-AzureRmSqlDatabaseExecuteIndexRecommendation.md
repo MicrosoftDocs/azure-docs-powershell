@@ -19,7 +19,7 @@ Start-AzureRmSqlDatabaseExecuteIndexRecommendation -ServerName <String> -Databas
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSqlDatabaseExecuteIndexRecommendation** cmdlet starts the workflow that runs a recommended index operation for an ssSDS.
+The **Start-AzureRmSqlDatabaseExecuteIndexRecommendation** cmdlet starts the workflow that runs a recommended index operation for an Azure SQL Database.
 
 ## EXAMPLES
 
