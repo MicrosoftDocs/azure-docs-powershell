@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
 ms.assetid: 99E6C4DD-11AF-4DC0-848B-39811240BE06
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -21,6 +21,8 @@ The **Set-AzureRmDnsRecordSet** cmdlet updates a record set in the Azure DNS ser
 
 You can pass a **RecordSet** object as a parameter or by using the pipeline operator.
 
+You can use the *Confirm* parameter and $ConfirmPreference Windows PowerShell variable to control whether the cmdlet prompts you for confirmation.
+
 The record set is not updated if it has been changed in Azure DNS since the local **RecordSet** object was retrieved.
 This provides protection for concurrent changes.
 You can suppress this behavior using the *Overwrite* parameter, which updates the record set regardless of concurrent changes.
@@ -34,7 +36,7 @@ PS C:\> Add-AzureRmDnsRecordConfig -RecordSet $RecordSet -Ipv4Address 172.16.0.0
 PS C:\> Add-AzureRmDnsRecordConfig -RecordSet $RecordSet -Ipv4Address 172.31.255.255
 PS C:\> Set-AzureRmDnsRecordSet -RecordSet $RecordSet
 
-# These cmdlets can also be piped: 
+# These cmdlets can also be piped:
 
 PS C:\> Get-AzureRmDnsRecordSet -ResourceGroupName MyResourceGroup -ZoneName myzone.com -Name www -RecordType A | Add-AzureRmDnsRecordConfig -Ipv4Address 172.16.0.0 | Add-AzureRmDnsRecordConfig -Ipv4Address 172.31.255.255 | Set-AzureRmDnsRecordSet
 ```
@@ -47,7 +49,7 @@ The final command uses the **Set-AzureRmDnsRecordSet** cmdlet to commit the upda
 
 ### Example 2: Update an SOA record
 ```
-PS C:\>$RecordSet = Get-AzureRmDnsRecordSet -Name "@" -RecordType SOA -Zone $Zone 
+PS C:\>$RecordSet = Get-AzureRmDnsRecordSet -Name "@" -RecordType SOA -Zone $Zone
 PS C:\> $RecordSet.Records[0].Email = "admin.myzone.com"
 PS C:\> Set-AzureRmDnsRecordSet -RecordSet $RecordSet
 ```
@@ -70,7 +72,7 @@ To suppress this behavior, you can use the *Overwrite* parameter, which results 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +87,7 @@ Specifies the **RecordSet** to update.
 ```yaml
 Type: DnsRecordSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -138,6 +140,11 @@ You can pass a **RecordSet** object to this cmdlet.
 This cmdlet returns an object that represents the updated **RecordSet** object.
 
 ## NOTES
+You can use the *Confirm* parameter to control whether this cmdlet prompts you for confirmation.
+By default, the cmdlet prompts you for confirmation if the $ConfirmPreference Windows PowerShell variable has a value of Medium or lower.
+
+If you specify *Confirm* or *Confirm:$True*, this cmdlet prompts you for confirmation before it runs.
+If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation. 
 
 ## RELATED LINKS
 
@@ -146,5 +153,3 @@ This cmdlet returns an object that represents the updated **RecordSet** object.
 [New-AzureRmDnsRecordSet](./New-AzureRmDnsRecordSet.md)
 
 [Remove-AzureRmDnsRecordSet](./Remove-AzureRmDnsRecordSet.md)
-
-
