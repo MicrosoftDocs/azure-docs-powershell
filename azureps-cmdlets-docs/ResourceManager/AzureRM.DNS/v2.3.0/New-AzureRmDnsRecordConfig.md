@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
 ms.assetid: AD97BCAF-69BA-4C16-8B57-AB243D796B71
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -9,7 +9,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a new DNS record local object.
-This cmdlet is used in conjunction with New-AzureRmDnsRecordSet.
 
 ## SYNTAX
 
@@ -70,7 +69,7 @@ PS C:\> $RecordSet = New-AzureRmDnsRecordSet -Name "www" -RecordType A -Resource
 
 PS C:\> $RecordSet = New-AzureRmDnsRecordSet -Name "www" -RecordType A -ResourceGroupName "MyResourceGroup" -TTL 3600 -ZoneName "myzone.com" -DnsRecords (New-AzureRmDnsRecordConfig -IPv4Address 1.2.3.4)
 
-# To create a record set containing multiple records, use New-AzureRmDnsRecordConfig to add each record to the $Records array, 
+# To create a record set containing multiple records, use New-AzureRmDnsRecordConfig to add each record to the $Records array,
 # then call New-AzureRmDnsRecordSet, as follows:
 
 PS C:\> $Records = @()
@@ -184,7 +183,7 @@ Specifies the domain name for a canonical name (CNAME) record.
 ```yaml
 Type: String
 Parameter Sets: CName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,7 +198,7 @@ Specifies the mail exchange server name for a mail exchange (MX) record.
 ```yaml
 Type: String
 Parameter Sets: Mx
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -214,7 +213,7 @@ Specifies an IPv4 address for an A record.
 ```yaml
 Type: String
 Parameter Sets: A
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -229,7 +228,7 @@ Specifies an IPv6 address for an AAAA record.
 ```yaml
 Type: String
 Parameter Sets: Aaaa
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -244,7 +243,7 @@ Specifies the name server name for a name server (NS) record.
 ```yaml
 Type: String
 Parameter Sets: Ns
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -259,7 +258,7 @@ Specifies the port for a service (SRV) record.
 ```yaml
 Type: UInt16
 Parameter Sets: Srv
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -274,7 +273,7 @@ Specifies the preference for an MX record.
 ```yaml
 Type: UInt16
 Parameter Sets: Mx
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -289,7 +288,7 @@ Specifies the priority for an SRV record.
 ```yaml
 Type: UInt16
 Parameter Sets: Srv
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -304,7 +303,7 @@ Specifies the target domain name of a pointer resource (PTR) record.
 ```yaml
 Type: String
 Parameter Sets: Ptr
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -319,7 +318,7 @@ Specifies the target for an SRV record.
 ```yaml
 Type: String
 Parameter Sets: Srv
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -334,7 +333,7 @@ Specifies the value for a TXT record.
 ```yaml
 Type: String
 Parameter Sets: Txt
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -349,7 +348,7 @@ Specifies the weight for an SRV record.
 ```yaml
 Type: UInt16
 Parameter Sets: Srv
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -376,5 +375,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmDnsRecordSet](./New-AzureRmDnsRecordSet.md)
 
 [Remove-AzureRmDnsRecordConfig](./Remove-AzureRmDnsRecordConfig.md)
-
-
