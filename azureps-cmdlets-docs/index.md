@@ -144,15 +144,17 @@ from the PowerShell Gallery or the WebPI.
 
     If you receive a message like the following when attempting to load or execute cmdlets:
 
-        PS C:\> Get-AzureRmResource
-        Get-AzureRmResource : The term 'Get-AzureRmResource' is not recognized as the name of a cmdlet, function,
-        script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is
-        correct and try again.
-        At line:1 char:1
-        + Get-AzureRmResource
-        + ~~~~~~~~~~~~~~~~~~~~~~~
-            + CategoryInfo          : ObjectNotFound: (get-azurermresourcefork:String) [], CommandNotFoundException
-            + FullyQualifiedErrorId : CommandNotFoundException
+    ```powershell
+    PS C:\> Get-AzureRmResource
+    Get-AzureRmResource : The term 'Get-AzureRmResource' is not recognized as the name of a cmdlet, function,
+    script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is
+    correct and try again.
+    At line:1 char:1
+    + Get-AzureRmResource
+    + ~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : ObjectNotFound: (get-azurermresourcefork:String) [], CommandNotFoundException
+        + FullyQualifiedErrorId : CommandNotFoundException
+    ```
 
     This can be corrected by restarting the machine or importing the cmdlets from C:\Program
     Files\WindowsPowerShell\Modules\Azure\XXXX\ as following (where XXXX is the version of PowerShell
