@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-ms.assetid: C2CC10DE-1D36-4937-8A3E-9776BE80DF9A
+ms.assetid: 76369C18-5BED-4310-A30C-B7DA5244B945
 online version: 
 schema: 2.0.0
 ---
@@ -23,10 +23,6 @@ The **Remove-AzureRmApiManagementAuthorizationServer** cmdlet removes an Azure A
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -117,7 +113,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -133,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

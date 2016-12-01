@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E78F45C8-B9B7-48C1-A919-306E52576469
+ms.assetid: 46DFDEFE-9305-4703-866E-4FD0B1F625B6
 ---
 
 # Get-AzureVirtualNetworkGatewayIPsecParameters

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 87FE577F-4470-4790-818D-5E77007DD965
+ms.assetid: 9BBA6B0B-9408-484F-B63B-911EB09F0DC0
 ---
 
 # Remove-AzureVMDiagnosticsExtension

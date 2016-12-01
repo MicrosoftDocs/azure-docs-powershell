@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F4F4295B-A0D9-4C52-86C8-61BC3BD27579
+ms.assetid: 3EE25795-4CFB-4DF0-B37D-BC6FB35B9B80
 ---
 
 # Remove-AzureRmRecoveryServicesVault

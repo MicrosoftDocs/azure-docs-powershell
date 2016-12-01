@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0F493CF0-E3F0-4B2D-BD72-79726D369705
+ms.assetid: 262DED2C-AED6-43A9-A44B-24AAEBE8EE65
 ---
 
 # Remove-AzureVMPuppetExtension

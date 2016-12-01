@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3C89105C-10B4-4C2B-A906-F04EC0068F99
+ms.assetid: 2FEC339F-1FD2-4FCD-9291-BC17038C6944
 ---
 
 # Get-AzureRmOperationalInsightsWorkspaceUsage
@@ -25,14 +25,14 @@ This exposes how much data has been analyzed by the workspace over a certain per
 
 ### Example 1: Get usage data by workspace name
 ```
-PS C:\>Get-AzureRmOperationalInsightsWorkspaceUsage  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"Name "MyWorkspace"
+PS C:\>Get-AzureRmOperationalInsightsWorkspaceUsage -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
 ```
 
 This command gets the usage details for the workspace named MyWorkspace in the specified resource group.
 
 ### Example 2: Get usage data using the pipeline
 ```
-PS C:\>Get-AzureRmOperationalInsightsWorkspace  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"Name "MyWorkspace" | Get-AzureOperationalInsightsWorkspaceUsage
+PS C:\>Get-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" | Get-AzureOperationalInsightsWorkspaceUsage
 ```
 
 This command gets the workspace named MyWorkSpace using the Get-AzureRmOperationalInsightsWorkspace cmdlet, and then passes the workspace to the current cmdlet.

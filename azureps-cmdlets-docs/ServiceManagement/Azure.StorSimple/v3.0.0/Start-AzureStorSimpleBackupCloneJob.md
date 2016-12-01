@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 291C0EB0-DEBB-42B5-9E4E-C976FB205C8F
+ms.assetid: 3F82EECA-3573-4270-AF4B-349F332786B0
 ---
 
 # Start-AzureStorSimpleBackupCloneJob

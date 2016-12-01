@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: AA0EA073-59B6-4441-B866-C7505D4ABD05
+ms.assetid: FA69A2ED-0F27-4858-9396-AAF4AC5AF59F
 ---
 
 # Set-AzureRmDnsZone
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

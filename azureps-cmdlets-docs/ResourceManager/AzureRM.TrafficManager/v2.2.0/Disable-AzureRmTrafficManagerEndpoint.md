@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FA68F0E6-2B13-4400-BDFC-D0CBCFB7B017
+ms.assetid: 4A6EFF24-11E8-4B75-A537-E3ED689B6A16
 ---
 
 # Disable-AzureRmTrafficManagerEndpoint
@@ -55,7 +55,7 @@ Therefore, it does not prompt you for confirmation.
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +170,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml

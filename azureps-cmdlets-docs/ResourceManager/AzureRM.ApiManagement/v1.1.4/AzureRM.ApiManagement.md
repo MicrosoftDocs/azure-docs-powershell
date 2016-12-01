@@ -4,6 +4,7 @@ Module Guid: f875725d-8ce4-423f-a6af-ea880bc63f13
 Download Help Link: None
 Help Version: 2.0.4.1
 Locale: en-US
+ms.assetid: 8952FE41-C8C0-4133-B1DE-A7BCE0C55D6C
 ---
 
 # AzureRM.ApiManagement Module

@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version:
 schema: 2.0.0
+ms.assetid: 7A465DA9-ADED-447F-B51F-918C73911700
 ---
 
 # Remove-AzureRMManagedSubscription

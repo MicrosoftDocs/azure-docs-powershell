@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-ms.assetid: FA68F0E6-2B13-4400-BDFC-D0CBCFB7B017
+ms.assetid: 8CC749F1-B961-4F8F-BAD4-2C0F4385D1C2
 online version: 
 schema: 2.0.0
 ---
@@ -55,7 +55,7 @@ Therefore, it does not prompt you for confirmation.
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +170,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml

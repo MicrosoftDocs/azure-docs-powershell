@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: 1.0.0.0
 Locale: en-US
+ms.assetid: D5AE53BB-9251-439F-941E-61A8911798C2
 ---
 
 # Azure.HDInsight Module
@@ -16,7 +17,7 @@ Adds a Hadoop configuration value customization or a Hive shared library customi
 
 
 ### [Add-AzureHDInsightMetastore](./Add-AzureHDInsightMetastore.md)
-Adds a ssNoVersion database account to an HDInsight cluster configuration.
+Adds a SQL Server database account to an HDInsight cluster configuration.
 
 
 ### [Add-AzureHDInsightScriptAction](./Add-AzureHDInsightScriptAction.md)

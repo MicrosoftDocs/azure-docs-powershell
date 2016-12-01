@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 43CC7C34-F67F-4B85-BDF7-C48435833015
+ms.assetid: 5536B56D-AB91-437B-ABF8-1615ECC4C5CD
 ---
 
 # Set-AzureNetworkInterfaceConfig

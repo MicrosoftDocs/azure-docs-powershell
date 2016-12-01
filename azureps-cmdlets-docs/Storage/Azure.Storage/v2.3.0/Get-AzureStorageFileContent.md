@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-ms.assetid: 7E23B9F6-5F66-49A3-BEB8-E2639C5234D7
+ms.assetid: 6420CBE1-BF9D-493D-BCA8-E8C6688FAF3B
 online version: 
 schema: 2.0.0
 ---
@@ -288,7 +288,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -304,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet. 
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

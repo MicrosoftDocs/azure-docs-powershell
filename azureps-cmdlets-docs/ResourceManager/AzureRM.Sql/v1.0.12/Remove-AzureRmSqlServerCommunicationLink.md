@@ -19,7 +19,8 @@ Remove-AzureRmSqlServerCommunicationLink [-LinkName] <String> [-Force] [-ServerN
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSqlServerCommunicationLink** cmdlet removes a server-to-server communication link for elastic database transactions in ssSDS.
+The **Remove-AzureRmSqlServerCommunicationLink** cmdlet deletes a server-to-server communication link for elastic database transactions in Azure SQL Database.
+
 
 ## EXAMPLES
 

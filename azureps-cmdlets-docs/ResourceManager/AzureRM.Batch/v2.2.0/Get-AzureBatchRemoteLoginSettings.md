@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D6C56A00-A912-4913-8ECD-DB7C5173462A
+ms.assetid: 135D2263-FB60-4B21-AB41-7F1FA4C4BA81
 ---
 
 # Get-AzureBatchRemoteLoginSettings

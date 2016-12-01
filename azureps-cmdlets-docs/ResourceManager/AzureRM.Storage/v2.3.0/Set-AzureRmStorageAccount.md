@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-ms.assetid: BEA384E0-C930-442C-A7F9-0FDCE87E7871
+ms.assetid: 4D7EEDD7-89D4-4B1E-A9A1-B301E759CE72
 online version: 
 schema: 2.0.0
 ---
@@ -43,7 +43,7 @@ This command sets a custom domain for a Storage account.
 
 ### Example 3: Enable encryption and set the access tier value
 ```
-PS C:\>Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "MyStorageAccount"  Â¢ ¢â€šÂ¬"EnableEncryptionService Blob -AccessTier Cool
+PS C:\>Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "MyStorageAccount" -EnableEncryptionService Blob -AccessTier Cool
 ```
 
 This command enables Storage Service encryption for a Storage account.
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -283,7 +283,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml

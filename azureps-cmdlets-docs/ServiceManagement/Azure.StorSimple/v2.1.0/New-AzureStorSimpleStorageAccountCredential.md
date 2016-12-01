@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D6E31A21-F027-4075-955A-D6E0344A6805
+ms.assetid: 61600AA0-CB66-435B-9AE9-5E99C34E7E79
 ---
 
 # New-AzureStorSimpleStorageAccountCredential
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell ‚Â® console.
+Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
 
 ```yaml
 Type: SwitchParameter

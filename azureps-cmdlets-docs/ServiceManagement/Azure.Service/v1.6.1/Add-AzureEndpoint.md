@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5F408E88-F3AA-4DD1-9617-F2D8F8CBC20C
+ms.assetid: F1F6AF66-8CFC-4EC0-B8DE-77A749D04870
 ---
 
 # Add-AzureEndpoint

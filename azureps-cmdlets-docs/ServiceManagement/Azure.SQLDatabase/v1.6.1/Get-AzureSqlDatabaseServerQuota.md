@@ -2,13 +2,13 @@
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: FE6E38A0-9B4D-40CA-994A-C2F73142ECB6
+ms.assetid: D84357D2-7581-4F76-9FA7-5C0714790F7C
 ---
 
 # Get-AzureSqlDatabaseServerQuota
 
 ## SYNOPSIS
-Gets quota information for an ssSDS server.
+Gets quota information for an Azure SQL Database server.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-AzureSqlDatabaseServerQuota [-ServerName] <String> [[-QuotaName] <String>] [
 ```
 
 ## DESCRIPTION
-The **Get-AzureSqlDatabaseServerQuota** cmdlet gets the quota information for a specified instance of ssSDS Server.
+The **Get-AzureSqlDatabaseServerQuota** cmdlet gets the quota information for a specified instance of Azure SQL Database Server.
 Specify a connection context or the server name.
 If you do not specify a quota name, this cmdlet gets all the quota information for the server.
 
@@ -36,7 +36,7 @@ If you do not specify a quota name, this cmdlet gets all the quota information f
 PS C:\>$QuotaPremium = GetAzureSqlDatabaseServerQuota $Context -QuotaName "Premium_Databases"
 ```
 
-This command gets the quota named Premium_Databases from the ssSDS server specified by the connection stored in the $Context variable.
+This command gets the quota named Premium_Databases from the Azure SQL Database server specified by the connection stored in the $Context variable.
 
 ### Example 2: Get information for all quotas
 ```

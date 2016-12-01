@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
-ms.assetid: 3E0927A7-EBB9-4463-826E-9B6A3F52E0C9
+ms.assetid: 44832B1D-42B7-4492-827B-05D792C692C5
 online version: 
 schema: 2.0.0
 ---
@@ -37,7 +37,7 @@ This command disables data collection for the current user on the current comput
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -53,7 +53,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml

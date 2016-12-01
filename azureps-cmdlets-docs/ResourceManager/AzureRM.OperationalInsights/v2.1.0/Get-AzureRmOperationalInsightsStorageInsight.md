@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3314D7A0-A0DB-418B-A0C9-8455819C65AA
+ms.assetid: D7A0C0F4-097D-4AB7-B9D6-86FB8C0EF7CF
 ---
 
 # Get-AzureRmOperationalInsightsStorageInsight
@@ -34,15 +34,15 @@ If you do not specify a name, this cmdlet gets information about all storage ins
 
 ### Example 1: Get a Storage Insight by name
 ```
-PS C:\>Get-AzureRmOperationalInsightsStorageInsight  ¢â‚¬"Name "MyStorageInsight"  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"WorkspaceName "ContosoWorkspace"
+PS C:\>Get-AzureRmOperationalInsightsStorageInsight -Name "MyStorageInsight" -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "ContosoWorkspace"
 ```
 
 This command gets the storage insight named MyStorageInsight from the workspace named ContosoWorkspace.
 
 ### Example 2: Get a Storage Insight by using a workspace object
 ```
-PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"Name "MyWorkspace"
-PS C:\>Get-AzureRmOperationalInsightsStorageInsight  ¢â‚¬"Workspace $Workspace  ¢â‚¬"Name "MyStorageInsight"
+PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
+PS C:\>Get-AzureRmOperationalInsightsStorageInsight -Workspace $Workspace -Name "MyStorageInsight"
 ```
 
 The first command uses the **Get-AzureRmOperationalInsightsWorkspace** cmdlet to get an Operational Insights workspace, and then stores it in the $Workspace variable.

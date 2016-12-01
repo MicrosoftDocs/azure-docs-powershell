@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version:
 schema: 2.0.0
-ms.assetid: 5BD9DDDF-5712-4D7E-9E1C-A4B52FC3313F
+ms.assetid: 456A66A8-9C73-4341-AE7A-27524055439E
 ---
 
 # Set-AzureHDInsightClusterSize

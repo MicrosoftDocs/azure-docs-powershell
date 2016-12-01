@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D9EC4B6F-FB17-4F29-B209-A3D5F212A6F1
+ms.assetid: 99E3C5B6-46B2-403A-ACD5-8F3467AFEA40
 ---
 
 # Get-AzureStorageFile
@@ -52,7 +52,7 @@ It first retrieves both files and directories, passes them to the **where** oper
 
 ### Example 2: List a File Directory
 ```
-PS C:\> Get-AzureStorageFile -ShareName "ContosoShare06"  ¢â‚¬"Path "ContosoWorkingFolder" | Get-AzureStorageFile
+PS C:\> Get-AzureStorageFile -ShareName "ContosoShare06" -Path "ContosoWorkingFolder" | Get-AzureStorageFile
 ```
 
 This command lists the files and folders in the directory ContosoWorkingFolder under the share ContosoShare06.

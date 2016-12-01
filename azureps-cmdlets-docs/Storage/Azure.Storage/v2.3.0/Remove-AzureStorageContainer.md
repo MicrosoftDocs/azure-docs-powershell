@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-ms.assetid: 89D7ED7C-1DB6-4E01-8981-8F34483039FD
+ms.assetid: 6A46DA60-2ACF-4842-B5B3-58944264854A
 online version: 
 schema: 2.0.0
 ---
@@ -26,7 +26,7 @@ The **Remove-AzureStorageContainer** cmdlet removes the specified storage contai
 
 ### Example 1: Remove a container
 ```
-PS C:\>Remove-AzureStorageContainer  Â¢ ¢â€šÂ¬"Name "MyTestContainer"
+PS C:\>Remove-AzureStorageContainer -Name "MyTestContainer"
 ```
 
 This example removes a container named MyTestContainer.

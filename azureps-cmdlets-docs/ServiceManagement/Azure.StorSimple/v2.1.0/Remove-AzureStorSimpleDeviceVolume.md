@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C624BF50-FF3A-4FA8-83BC-CCAA1C14FBD0
+ms.assetid: 6A90A405-EBDD-4326-A8F8-A396F1A00714
 ---
 
 # Remove-AzureStorSimpleDeviceVolume
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell ‚Â® console.
+Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
 
 ```yaml
 Type: SwitchParameter

@@ -2,13 +2,13 @@
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5CD1BEB1-19AC-4C59-8053-B7838B71CAAC
+ms.assetid: 03E9B67D-BF98-446C-8B24-1A4E9E9B8297
 ---
 
 # Start-AzureSqlDatabaseImport
 
 ## SYNOPSIS
-Starts an import operation from blob storage to an ssSDS.
+Starts an import operation from blob storage to an Azure SQL Database.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Start-AzureSqlDatabaseImport [-SqlConnectionContext] <ISqlServerConnectionInform
 ```
 
 ## DESCRIPTION
-The **Start-AzureSqlDatabaseImport** cmdlet starts an import operation from Azure Blob storage to an ssSDS.
+The **Start-AzureSqlDatabaseImport** cmdlet starts an import operation from Azure Blob storage to an Azure SQL Database.
 If the database does not exist, this cmdlet creates it by using the size and edition values that you specify.
 The operation requires a database server connection context.
 Use the Get-AzureSqlDatabaseImportExportStatus cmdlet to get the status of the import operation.
@@ -44,7 +44,7 @@ PS C:\> $Container = Get-AzureStorageContainer -Name $ContainerName -Context $St
 PS C:\> $ImportRequest = Start-AzureSqlDatabaseImport -SqlConnectionContext $SqlContext -StorageContainer $Container -DatabaseName $DatabaseName -BlobName $BlobName
 ```
 
-This example initiates an import process from the Blob storage in the $BlobName variable into the ssSDS named DatabaseName.
+This example initiates an import process from the Blob storage in the $BlobName variable into the Azure SQL Database named DatabaseName.
 
 ## PARAMETERS
 

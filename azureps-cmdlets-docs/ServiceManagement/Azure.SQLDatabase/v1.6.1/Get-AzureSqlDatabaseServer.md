@@ -2,13 +2,13 @@
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: F87727FA-9E12-4D7B-A939-71E64CBACD4E
+ms.assetid: B5FEF7C7-5043-4797-A8D4-9D1C6D6CB8D0
 ---
 
 # Get-AzureSqlDatabaseServer
 
 ## SYNOPSIS
-Gets information about ssSDS servers.
+Gets information about Azure SQL Database servers.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureSqlDatabaseServer [[-ServerName] <String>] [-Profile <AzureSMProfile>] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureSqlDatabaseServer** cmdlet gets information about the instances of ssSDS Server in the current subscription.
+The **Get-AzureSqlDatabaseServer** cmdlet gets information about the instances of Azure SQL Database Server in the current subscription.
 If you specify a server by name, this cmdlet returns an object that contains information about that server.
 Otherwise, the cmdlet returns information about all the servers.
 
@@ -28,7 +28,7 @@ Otherwise, the cmdlet returns information about all the servers.
 PS C:\>Get-AzureSqlDatabaseServer
 ```
 
-This command returns information about all instances of ssSDS Server in the current subscription.
+This command returns information about all instances of Azure SQL Database Server in the current subscription.
 
 ### Example 2: Get information about a specific server
 ```

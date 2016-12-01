@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9C33FB6B-4F01-482D-A723-E67CB0230EB5
+ms.assetid: 720FD3B3-52C4-4205-B68A-44E83C3F629F
 ---
 
 # New-AzureRmOperationalInsightsStorageInsight
@@ -35,11 +35,11 @@ The **New-AzureRmOperationalInsightsStorageInsight** cmdlet creates a new Storag
 
 ### Example 1: Create a Storage Insight by name
 ```
-PS C:\>$Storage = Get-AzureRmStorageAccount  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"Name "ContosoStorage"
+PS C:\>$Storage = Get-AzureRmStorageAccount -ResourceGroupName "ContosoResourceGroup" -Name "ContosoStorage"
 
 PS C:\>$StorageKey = ($Storage | Get-AzureRmStorageAccountKey).Key1
 
-PS C:\>New-AzureRmOperationalInsightsStorageInsight  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"WorkspaceName "MyWorkspace"  ¢â‚¬"Name "MyStorageInsight"  ¢â‚¬"StorageAccountResourceId $Storage.Id  ¢â‚¬"StorageAccountKey $StorageKey  ¢â‚¬"Tables @("WADWindowsEventLogsTable")
+PS C:\>New-AzureRmOperationalInsightsStorageInsight -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "MyWorkspace" -Name "MyStorageInsight" -StorageAccountResourceId $Storage.Id -StorageAccountKey $StorageKey -Tables @("WADWindowsEventLogsTable")
 ```
 
 The first command uses the Get-AzureRmStorageAccount cmdlet to get the storage account named ContosoStorage, and then stores it in the $Storage variable.
@@ -51,13 +51,13 @@ This storage insight consumes data from the WADWindowsEventLogsTable table in th
 
 ### Example 2: Create a Storage Insight by using a workspace object
 ```
-PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"Name "MyWorkspace"
+PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
 
-PS C:\>$Storage = Get-AzureRmStorageAccount  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"Name "ContosoStorage"
+PS C:\>$Storage = Get-AzureRmStorageAccount -ResourceGroupName "ContosoResourceGroup" -Name "ContosoStorage"
 
 PS C:\>$StorageKey = ($Storage | Get-AzureRmStorageAccountKey).Key1
 
-PS C:\>New-AzureRmOperationalInsightsStorageInsight  ¢â‚¬"Workspace $Workspace  ¢â‚¬"Name "MyStorageInsight"  ¢â‚¬"StorageAccountResourceId $Storage.Id  ¢â‚¬"StorageAccountKey $StorageKey  ¢â‚¬"Tables @("WADWindowsEventLogsTable")
+PS C:\>New-AzureRmOperationalInsightsStorageInsight -Workspace $Workspace -Name "MyStorageInsight" -StorageAccountResourceId $Storage.Id -StorageAccountKey $StorageKey -Tables @("WADWindowsEventLogsTable")
 ```
 
 The first command uses the Get-AzureRmOperationalInsightsWorkspace cmdlet to get the workspace named MyWorkspace, and then stores it in the $Workspace variable.
@@ -233,7 +233,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -249,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

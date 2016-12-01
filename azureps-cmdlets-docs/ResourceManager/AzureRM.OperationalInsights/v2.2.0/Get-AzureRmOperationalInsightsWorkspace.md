@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 61CF7249-4D3B-4655-99A9-97CDA93ECAE9
+ms.assetid: 32E008AC-5150-4730-A582-A0BE1866E02D
 ---
 
 # Get-AzureRmOperationalInsightsWorkspace
@@ -26,7 +26,7 @@ If you do not specify a name and resource group, this cmdlet gets information ab
 
 ### Example 1: Get a workspace by name
 ```
-PS C:\>Get-AzureRmOperationalInsightsWorkspace  ¢â‚¬"Name "MyWorkspace"  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"
+PS C:\>Get-AzureRmOperationalInsightsWorkspace -Name "MyWorkspace" -ResourceGroupName "ContosoResourceGroup"
 ```
 
 This command gets a workspace named MyWorkspace in the resource group named ContosoResourceGroup.

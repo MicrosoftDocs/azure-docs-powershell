@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 40184AC0-EA13-4F66-AED2-84C3198699A4
+ms.assetid: F571B2DA-9EF4-43FD-88D8-B24E83FD2809
 ---
 
 # Stop-AzureBatchPoolResize

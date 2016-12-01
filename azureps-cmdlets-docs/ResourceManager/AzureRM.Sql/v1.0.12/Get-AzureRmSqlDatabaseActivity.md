@@ -19,7 +19,7 @@ Get-AzureRmSqlDatabaseActivity [-ServerName] <String> -ElasticPoolName <String> 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabaseActivity** cmdlet gets the status of elastic databases moving into or out of an elastic database pool in ssSDS.
+The **Get-AzureRmSqlDatabaseActivity** cmdlet gets the status of elastic databases moving into or out of an elastic database pool in Azure SQL Database.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ The **Get-AzureRmSqlDatabaseActivity** cmdlet gets the status of elastic databas
 PS C:\>Get-AzureRmSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
 ```
 
-This command returns the operation status of all nextref_database instances in an elastic pool named ElasticPool01.
+This command returns the operation status of all SQL Database instances in an elastic pool named ElasticPool01.
 
 ## PARAMETERS
 

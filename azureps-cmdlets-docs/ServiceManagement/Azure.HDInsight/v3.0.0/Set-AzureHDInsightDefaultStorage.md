@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D2FD22D3-9365-46E5-AC6F-FCEAB817C81B
+ms.assetid: F2BDC2E2-0864-4CF7-9B27-D6CF91B2B615
 ---
 
 # Set-AzureHDInsightDefaultStorage
@@ -34,8 +34,8 @@ The **Set-AzureHDInsightDefaultStorage** cmdlet sets the default storage account
 ### Example 1: Set the default storage account
 ```
 PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
-PS C:\> $Key1 = Get-AzureStorageKey  ¢â‚¬"StorageAccountName "MyBlobStorage" | %{ $_.Primary }
-PS C:\> $Key2 = Get-AzureStorageKey  ¢â‚¬"StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
+PS C:\> $Key1 = Get-AzureStorageKey -StorageAccountName "MyBlobStorage" | %{ $_.Primary }
+PS C:\> $Key2 = Get-AzureStorageKey -StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
 PS C:\> $Creds = Get-Credential
 PS C:\> $OozieCreds = Get-Credential
 PS C:\> $HiveCreds = Get-Credential

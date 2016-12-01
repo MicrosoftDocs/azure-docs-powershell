@@ -8,7 +8,7 @@ ms.assetid: 8ED6F48C-5480-4C24-A3CE-6A7EE6D29FB4
 # Set-AzureRmSqlServerFirewallRule
 
 ## SYNOPSIS
-Modifies a firewall rule in ssSDS server.
+Modifies a firewall rule in Azure SQL Database server.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Set-AzureRmSqlServerFirewallRule [-FirewallRuleName] <String> -StartIpAddress <S
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSqlServerFirewallRule** cmdlet modifies a firewall rule in an ssSDS server.
+The **Set-AzureRmSqlServerFirewallRule** cmdlet modifies a firewall rule in an Azure SQL Database server.
 
 ## EXAMPLES
 

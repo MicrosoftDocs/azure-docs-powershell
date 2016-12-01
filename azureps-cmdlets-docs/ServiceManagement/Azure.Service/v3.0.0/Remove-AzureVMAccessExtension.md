@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 34090E06-49FE-46DB-9DC8-CF74006C9CEF
+ms.assetid: D6CE3B88-1119-4AC0-A5FC-28D0A0FA3B12
 ---
 
 # Remove-AzureVMAccessExtension

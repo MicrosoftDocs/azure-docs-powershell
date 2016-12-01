@@ -4,6 +4,7 @@ Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
 Download Help Link: None
 Help Version: 3.0.0.0
 Locale: en-US
+ms.assetid: 3D93332C-9955-46BA-BA9B-1BA07FEA0765
 ---
 
 # AzureRM.Websites Module

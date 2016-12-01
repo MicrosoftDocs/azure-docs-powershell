@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 27620652-2F92-449B-87FD-EE329C8AA033
+ms.assetid: 9ED87C4E-06D0-4326-AC2D-916F1CB05ADA
 ---
 
 # Set-AzureWalkUpgradeDomain

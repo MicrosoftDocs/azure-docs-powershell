@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 08303A86-A014-4F8A-B3FC-D4931701BF72
+ms.assetid: 5D65AC79-9367-494E-B4FA-C5BAB6971EDB
 ---
 
 # Get-AzureIPForwarding

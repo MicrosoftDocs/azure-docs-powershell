@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 085EC9A1-E5F7-46D7-82EA-B8A71A7CBD9D
+ms.assetid: 5346F7BE-0EE2-4701-B668-CFD1A648E680
 ---
 
 # Get-AzureRmDataFactoryHub

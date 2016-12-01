@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D175417C-D3E6-4A59-896D-9ABCCAC8DE27
+ms.assetid: 0D542661-FBC6-4D2D-9022-17B05F8D5B71
 ---
 
 # Add-AzureRmVirtualNetworkPeering
@@ -26,7 +26,7 @@ The **Add-AzureRmVirtualNetworkPeering** cmdlet creates a peering between two vi
 
 ### Example 1: Create a peering between two virtual networks
 ```
-PS C:\>$vnet1 = Get-AzureRmVirtualNetwork  ¢â‚¬"ResourceGroupName "MyResourceGroup" -Name "vnet1"
+PS C:\>$vnet1 = Get-AzureRmVirtualNetwork -ResourceGroupName "MyResourceGroup" -Name "vnet1"
 PS C:\> $vnet2 = Get-AzureRmVirtualNetwork -ResourceGroupName "MyResourceGroup" -Name "vnet2"
 PS C:\> Add-AzureRmVirtualNetworkPeering -Name "LinkToVNet2" -VirtualNetwork "MyVirtualNetwork" -RemoteVirtualNetworkId $vnet2.id
 PS C:\> Add-AzureRmVirtualNetworkPeering -Name "LinkToVNet1" -VirtualNetwork "MyVirtualNetwork" -RemoteVirtualNetworkId $vnet1.id

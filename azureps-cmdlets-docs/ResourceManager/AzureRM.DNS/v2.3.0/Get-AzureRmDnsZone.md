@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-ms.assetid: B5A63F24-76B7-440C-8D5A-6362849AFC20
-online version: 
+ms.assetid: B831ABE6-348C-4DD6-9295-18D23A1FDF63
+online version:
 schema: 2.0.0
 ---
 
@@ -62,7 +62,7 @@ If you also omit the *ResourceGroupName* parameter, this cmdlet gets all DNS zon
 ```yaml
 Type: String
 Parameter Sets: ResourceGroup
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,13 +74,13 @@ Accept wildcard characters: False
 ### -ResourceGroupName
 Specifies the name of the resource group that contains the DNS zone to get.
 
-If you do not specify the *ResourceGroupName*, then you mus also omit the *Name* parameter.
+If you do not specify the *ResourceGroupName*, then you must also omit the *Name* parameter.
 In this case, this cmdlet gets all DNS zones in the current Azure subscription.
 
 ```yaml
 Type: String
 Parameter Sets: ResourceGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -112,5 +112,3 @@ If the zone name is not specified, an array of zone objects is returned.
 [Remove-AzureRmDnsZone](./Remove-AzureRmDnsZone.md)
 
 [Set-AzureRmDnsZone](./Set-AzureRmDnsZone.md)
-
-

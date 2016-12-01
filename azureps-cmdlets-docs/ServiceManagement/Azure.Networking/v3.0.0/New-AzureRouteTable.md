@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 589D996B-5F9F-41DE-8ED1-DD826431DB63
+ms.assetid: 5A2C3653-6E68-4A2C-A661-F615D66E8FC0
 ---
 
 # New-AzureRouteTable

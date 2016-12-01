@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-ms.assetid: A957D7C7-30CF-4505-93B0-A4C013A4406C
+ms.assetid: 100A5980-31E2-41F9-84D4-2F5F0CB78B8A
 online version: 
 schema: 2.0.0
 ---

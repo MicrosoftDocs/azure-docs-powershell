@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 8350C2EF-E464-45F0-8D73-529D254FB031
+ms.assetid: 32152314-C939-442E-9FFC-01D9D7BF6669
 ---
 
 # New-AzureRmDataFactoryEncryptValue
@@ -35,7 +35,7 @@ The **New-AzureRmDataFactoryEncryptValue** cmdlet encrypts sensitive data, such 
 ### Example 1: Encrypt a non-ODBC connection string
 ```
 PS C:\>$Value = ConvertTo-SecureString 'Data Source=ContosoServer;Initial Catalog=catelog;user id =user123;password=password123' -AsPlainText -Force 
-PS C:\> New-AzureRmDataFactoryEncryptValue -GatewayName "WikiGateway" -DataFactoryName "WikiAdf" -Value $value -ResourceGroupName "ADF"  ¢â‚¬"Type OnPremisesSqlLinkedService
+PS C:\> New-AzureRmDataFactoryEncryptValue -GatewayName "WikiGateway" -DataFactoryName "WikiAdf" -Value $value -ResourceGroupName "ADF" -Type OnPremisesSqlLinkedService
 ```
 
 The first command uses the ConvertTo-SecureString cmdlet to convert the specified connection string to a **SecureString** object, and then stores that object in the $Value variable.

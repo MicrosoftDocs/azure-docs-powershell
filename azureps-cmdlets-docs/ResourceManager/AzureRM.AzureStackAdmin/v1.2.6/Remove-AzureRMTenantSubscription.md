@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version:
 schema: 2.0.0
+ms.assetid: 5ED4C309-2D02-4590-9288-6A5F9D08AE84
 ---
 
 # Remove-AzureRMTenantSubscription

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 51DB90E5-B740-48DE-AEE1-37796352D861
+ms.assetid: 18D27CFF-6D76-4F0F-A7F7-9CAAD9BFE943
 ---
 
 # New-AzureStorSimpleDeviceBackupPolicy
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell ‚Â® console.
+Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
 
 ```yaml
 Type: SwitchParameter

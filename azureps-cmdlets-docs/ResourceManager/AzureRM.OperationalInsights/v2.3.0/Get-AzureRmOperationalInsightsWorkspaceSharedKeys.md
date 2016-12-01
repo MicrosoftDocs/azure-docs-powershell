@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
-ms.assetid: BC39AA99-529A-412C-91BD-67DCD93F7113
+ms.assetid: 112D5C69-3F4F-4BB6-9DA4-52757146B0EF
 online version: 
 schema: 2.0.0
 ---
@@ -25,14 +25,14 @@ The keys are used to connect Operational Insights agents to the workspace.
 
 ### Example 1: Get shared keys by workspace name
 ```
-PS C:\>Get-AzureRmOperationalInsightsWorkspaceSharedKeys  Â¢ ¢â€šÂ¬"ResourceGroupName "ContosoResourceGroup"  Â¢ ¢â€šÂ¬"Name "MyWorkspace"
+PS C:\>Get-AzureRmOperationalInsightsWorkspaceSharedKeys -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
 ```
 
 This command gets the shared keys for the workspace named MyWorkspace in the resource group named ContosoResourceGroup.
 
 ### Example 2: Get shared keys by using the pipeline
 ```
-PS C:\>Get-AzureRmOperationalInsightsWorkspace  Â¢ ¢â€šÂ¬"ResourceGroupName "ContosoResourceGroup"  Â¢ ¢â€šÂ¬"Name "MyWorkspace" | Get-AzureRmOperationalInsightsWorkspaceSharedKeys
+PS C:\>Get-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" | Get-AzureRmOperationalInsightsWorkspaceSharedKeys
 ```
 
 This command gets the workspace named MyWorkspace using the Get-AzureRmOperationalInsightsWorkspace cmdlet, and then passes the workspace to the **Get-AzureRmOperationalInsightsWorkspaceSharedKeys** cmdlet.

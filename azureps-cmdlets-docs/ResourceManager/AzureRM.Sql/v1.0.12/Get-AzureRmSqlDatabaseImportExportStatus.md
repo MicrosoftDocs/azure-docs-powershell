@@ -8,7 +8,7 @@ ms.assetid: 3D74E98C-15CB-4720-BD58-1227B501DD1C
 # Get-AzureRmSqlDatabaseImportExportStatus
 
 ## SYNOPSIS
-Gets the details of an import or export of an ssSDS.
+Gets the details of an import or export of an Azure SQL Database.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRmSqlDatabaseImportExportStatus [-OperationStatusLink] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabaseImportExportStatus** cmdlet gets details of a bacpac file import from a storage account to an ssSDS or an export of an ssSDS as a bacpac file to a storage account.
+The **Get-AzureRmSqlDatabaseImportExportStatus** cmdlet gets details of a bacpac file import from a storage account to an Azure SQL Database or an export of an Azure SQL Database as a bacpac file to a storage account.
 
 This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 

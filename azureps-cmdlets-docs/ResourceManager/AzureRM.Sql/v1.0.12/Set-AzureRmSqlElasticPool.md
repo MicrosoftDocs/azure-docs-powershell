@@ -8,7 +8,7 @@ ms.assetid: 166F3CFF-13A1-45F4-AF29-79E59FC33C13
 # Set-AzureRmSqlElasticPool
 
 ## SYNOPSIS
-Modifies properties of an elastic database pool in a nextref_database.
+Modifies properties of an elastic database pool in a SQL Database.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Set-AzureRmSqlElasticPool [-ElasticPoolName] <String> [-Edition <DatabaseEdition
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSqlElasticPool** cmdlet modifies properties for an elastic database pool in an ssSDS.
+The **Set-AzureRmSqlElasticPool** cmdlet modifies properties for an elastic database pool in an Azure SQL Database.
 This cmdlet can modify the minimum Database Throughput Units (DTUs) per database in addition to the maximum DTUs per database, the number of DTUs for the pool, and the storage limit for the pool.
 
 ## EXAMPLES
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Edition
-Specifies the edition of the ssSDS for the elastic pool.
+Specifies the edition of the Azure SQL Database for the elastic pool.
 You cannot change the edition.
 
 The acceptable values for this parameter are:

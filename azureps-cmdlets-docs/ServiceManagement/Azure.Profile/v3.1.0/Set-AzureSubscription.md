@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
-ms.assetid: D4D16509-63C7-4963-AFE8-35E04164ADAC
+ms.assetid: 6185C6BA-460E-4EEA-B1EF-CD67629AA75E
 online version: 
 schema: 2.0.0
 ---
@@ -55,21 +55,21 @@ To get the version of the module you're using, in the Azure PowerShell console, 
 ```
 C:\PS> $thumbprint = <Thumbprint-2>
 C:\PS> $differentCert = Get-Item cert:\\CurrentUser\My\$thumbprint 
-C:\PS> Set-AzureSubscription  Â¢ ¢â€šÂ¬"SubscriptionName ContosoEngineering -Certificate $differentCert
+C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -Certificate $differentCert
 ```
 
 This example changes the certificate for the subscription named ContosoEngineering.
 
 ### Example 2: Change the service endpoint
 ```
-C:\PS> Set-AzureSubscription  Â¢ ¢â€šÂ¬"SubscriptionName ContosoEngineering -ServiceEndpoint "https://management.core.contoso.com"
+C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -ServiceEndpoint "https://management.core.contoso.com"
 ```
 
 This command adds or changes a custom service endpoint for the ContosoEngineering subscription.
 
 ### Example 3: Clear property values
 ```
-C:\PS> Set-AzureSubscription  Â¢ ¢â€šÂ¬"SubscriptionName ContosoEngineering  Â¢ ¢â€šÂ¬"Certificate $null -ResourceManagerEndpoint $null
+C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -Certificate $null -ResourceManagerEndpoint $null
 ```
 
 This command sets the values of the Certificate and ResourceManagerEndpoint properties to null ($null).

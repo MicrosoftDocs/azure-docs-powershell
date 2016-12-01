@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: EB9E969E-680B-4DDA-98E8-7732ED396F56
+ms.assetid: 7570617C-D02D-4E66-BF0B-6CEB331F32F1
 ---
 
 # Enable-AzureRmDataCollection
@@ -41,7 +41,7 @@ This command enables data collection for the current user on the current compute
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -57,7 +57,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml

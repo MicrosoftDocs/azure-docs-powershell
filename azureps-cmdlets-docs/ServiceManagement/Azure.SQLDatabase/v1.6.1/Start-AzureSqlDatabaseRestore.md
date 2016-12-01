@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 26132033-C038-471A-839E-C4FE41766752
+ms.assetid: B1A0470B-6F2F-4951-BA0E-42D6463E2B5A
 ---
 
 # Start-AzureSqlDatabaseRestore
@@ -42,11 +42,11 @@ Start-AzureSqlDatabaseRestore [-SourceServerName] <String> [-SourceDatabaseName]
 
 ## DESCRIPTION
 The **Start-AzureSqlDatabaseRestore** cmdlet performs a point in time restore of a Basic, Standard or Premium database.
-ssSDS retains Basic database backups 7 days, Standard for 14 days, and Premium for 35 days.
+Azure SQL Database retains Basic database backups 7 days, Standard for 14 days, and Premium for 35 days.
 The restore operation creates a new database.
 If the source database is not deleted, the *SourceDatabaseName* and *TargetDatabaseName* parameter must have different values.
 
-ssSDS does not currently support cross server restore.
+Azure SQL Database does not currently support cross server restore.
 The source and target server names must be the same.
 
 ## EXAMPLES
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ### -TargetServerName
 Specifies the name of the server to which this cmdlet restores the database.
 
-ssSDS does not currently support cross server restore.
+Azure SQL Database does not currently support cross server restore.
 The source and target server names must be the same.
 
 ```yaml

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 172D226F-89E9-4200-BE1C-038B37BBDBD9
+ms.assetid: 1F542A2E-E352-4610-AA66-4A491DDB7CBA
 ---
 
 # Get-AzurePublicIP

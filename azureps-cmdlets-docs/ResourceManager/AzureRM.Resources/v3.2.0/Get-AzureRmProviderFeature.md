@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 84F0E54B-294C-4FAD-A7D1-FC1B352B1337
+ms.assetid: 5E1A5776-75F6-4205-BCAE-39FDCACE561D
 ---
 
 # Get-AzureRmProviderFeature
@@ -29,7 +29,7 @@ The **Get-AzureRmProviderFeature** cmdlet gets the feature name, provider name, 
 
 ### Example 1: Get all available features
 ```
-PS C:\>Get-AzureRmProviderFeature  ¢â‚¬"ListAvailable
+PS C:\>Get-AzureRmProviderFeature -ListAvailable
 ```
 
 This command gets all available features.

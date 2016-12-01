@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 36F44663-AD54-4650-9C9C-434A77EF1579
+ms.assetid: 835B1C17-74FE-4EAB-9809-981FD6DA8555
 ---
 
 # Set-AzureSubnet

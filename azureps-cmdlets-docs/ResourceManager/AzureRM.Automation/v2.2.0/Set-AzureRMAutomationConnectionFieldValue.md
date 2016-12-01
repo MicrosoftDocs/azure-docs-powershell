@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 16CBE4ED-037E-48ED-815E-4DB87894B10B
+ms.assetid: A58D9EA9-B8B6-4F92-82C9-2420C5258CE4
 ---
 
 # Set-AzureRmAutomationConnectionFieldValue

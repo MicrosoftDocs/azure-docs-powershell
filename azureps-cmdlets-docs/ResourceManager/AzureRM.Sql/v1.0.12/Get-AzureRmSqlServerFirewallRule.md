@@ -8,7 +8,7 @@ ms.assetid: 349CE481-B007-4D28-A470-C3C658FE3078
 # Get-AzureRmSqlServerFirewallRule
 
 ## SYNOPSIS
-Gets firewall rules for a nextref_database server.
+Gets firewall rules for a SQL Database server.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureRmSqlServerFirewallRule [[-FirewallRuleName] <String>] [-ServerName] <S
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServerFirewallRule** cmdlet gets firewall rules for an ssSDS server.
+The **Get-AzureRmSqlServerFirewallRule** cmdlet gets firewall rules for an Azure SQL Database server.
 If you specify the name of a firewall rule, this cmdlet gets information about that specific firewall rule.
 
 ## EXAMPLES
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion.
+Specifies the name of the SQL Server.
 
 ```yaml
 Type: String
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the ssNoVersion is assigned.
+Specifies the name of the resource group to which the SQL Server is assigned.
 
 ```yaml
 Type: String

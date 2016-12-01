@@ -8,7 +8,7 @@ ms.assetid: 43FD17DE-3A90-49CE-89C5-5F1A66545FC9
 # Get-AzureRmSqlCapability
 
 ## SYNOPSIS
-Gets nextref_database capabilities for the current subscription.
+Gets SQL Database capabilities for the current subscription.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Get-AzureRmSqlCapability [-LocationName] <String> [-Defaults] [-InformationActio
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlCapability** cmdlet gets the ssSDS capabilities available on the current subscription for a region.
+The **Get-AzureRmSqlCapability** cmdlet gets the Azure SQL Database capabilities available on the current subscription for a region.
 If you specify the *ServerVersionName*, *EditionName*, or *ServiceObjectiveName* parameters, this cmdlet returns the specified values and their predecessors.
 
 ## EXAMPLES
@@ -39,7 +39,7 @@ Status                  : Available
 SupportedServerVersions : {12.0, 2.0}
 ```
 
-This command returns the capabilities for nextref_database instances on the current subscription for the Central US region.
+This command returns the capabilities for SQL Database instances on the current subscription for the Central US region.
 
 ### Example 2: Get default capabilities for the current subscription for a region
 ```

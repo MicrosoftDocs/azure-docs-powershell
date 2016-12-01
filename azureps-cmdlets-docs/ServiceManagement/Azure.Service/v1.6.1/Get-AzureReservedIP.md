@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9E30C05E-0343-4D0C-B0E7-05D8DCA8BC3D
+ms.assetid: 2BDF2FB3-F4C0-41BA-99BC-A02BC0995C7B
 ---
 
 # Get-AzureReservedIP

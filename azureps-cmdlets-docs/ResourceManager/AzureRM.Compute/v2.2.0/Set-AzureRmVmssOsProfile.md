@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9D55E256-553B-4DA0-B802-E5EC189724EB
+ms.assetid: A586C1EC-1B56-41A7-A282-84F583329B7B
 ---
 
 # Set-AzureRmVmssOsProfile
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -Listener
 Specifies the Windows Remote Management (WinRM) listeners.
-This enables remote Windows PowerShell ‚Â®.
+This enables remote Windows PowerShell.
 You can use the Add-AzureRmVmssWinRMListener cmdlet to create the listener.
 
 ```yaml

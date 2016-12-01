@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlAzureServerName
-Specifies the AzuressNoVersion instance to use for this metastore.
+Specifies the AzureSQL Server instance to use for this metastore.
 
 ```yaml
 Type: String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Specifies the database on the AzuressNoVersion instance to use for this metastore.
+Specifies the database on the AzureSQL Server instance to use for this metastore.
 
 ```yaml
 Type: String
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies the credentials to use for the AzuressNoVersion database.
+Specifies the credentials to use for the AzureSQL Server database.
 
 ```yaml
 Type: PSCredential

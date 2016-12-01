@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9557ED7A-2453-4EC6-9486-25922FF89741
+ms.assetid: 1020A457-13C2-4681-BFAF-1A75D46EA077
 ---
 
 # Get-AzureRemoteAppCollectionUsageDetails
@@ -32,7 +32,7 @@ This command gets usage details for the month of December in the year 2014, for 
 ## PARAMETERS
 
 ### -AsJob
-Indicates that the cmdlet runs in the background as a Windows PowerShellÂ® job.
+Indicates that the cmdlet runs in the background as a Windows PowerShell job.
 
 ```yaml
 Type: SwitchParameter

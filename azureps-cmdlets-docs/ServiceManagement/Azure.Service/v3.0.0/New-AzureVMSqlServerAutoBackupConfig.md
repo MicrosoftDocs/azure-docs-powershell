@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0B5E1282-1CE1-4783-AEAD-BC75781814AE
+ms.assetid: 5A9A60D1-DFE2-44AA-BA1C-15B2FE196072
 ---
 
 # New-AzureVMSqlServerAutoBackupConfig

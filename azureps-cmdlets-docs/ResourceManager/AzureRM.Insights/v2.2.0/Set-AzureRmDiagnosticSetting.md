@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 67810F79-AD11-491E-9D70-F3F3DA2E79D1
+ms.assetid: 5D854BC0-56A1-4699-BD51-314BC586E979
 ---
 
 # Set-AzureRmDiagnosticSetting

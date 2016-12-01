@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 36830758-9EF6-48FA-8E36-DCDF186C5819
+ms.assetid: 355D718D-E339-4647-B52C-52EE7D271CEF
 ---
 
 # Set-AzureStorSimpleAccessControlRecord
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell ‚Â® console.
+Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
 
 ```yaml
 Type: SwitchParameter

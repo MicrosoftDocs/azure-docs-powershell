@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
-ms.assetid: 510AF9AE-6D22-4550-B221-376A0CA626C2
+ms.assetid: 32BC6CE6-60EF-4A46-912B-8FE4FCCDF7CC
 online version: 
 schema: 2.0.0
 ---
@@ -57,7 +57,7 @@ This command gets all subscriptions in the account.
 
 ### Example 2: Get a subscription by name
 ```
-C:\PS>Get-AzureSubscription  Â¢ ¢â€šÂ¬"SubscriptionName "MyProdSubscription"
+C:\PS>Get-AzureSubscription -SubscriptionName "MyProdSubscription"
 ```
 
 This command gets only the "MyProdSubsciption" subscription.

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.UsageAggregates.dll-Help.xml
-ms.assetid: BC7092A8-72ED-48E9-BA38-55866B5B6F08
+ms.assetid: 52B3ECCB-80E5-4E16-954A-B83D0BDC7E22
 online version: 
 schema: 2.0.0
 ---

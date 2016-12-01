@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E2A10A0E-3875-4194-99CC-81B5542B04FE
+ms.assetid: ABA7B1A8-415E-4F16-9324-E7ABC4C7338A
 ---
 
 # Set-AzureRmRecoveryServicesVaultContext

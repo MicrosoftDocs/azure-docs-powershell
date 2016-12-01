@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3A34E7C9-EB9B-470D-91E8-5A29F9705BDF
+ms.assetid: BF283702-F94F-472D-B00D-4A8A9F2D9E69
 ---
 
 # Set-AzureAutomationCredential
@@ -26,7 +26,7 @@ The **Set-AzureAutomationCredential** cmdlet modifies a credential as a **PSCred
 ```
 PS C:\> $user = "MyDomain\MyUser"
 PS C:\> $pw = ConvertTo-SecureString "PassWord!" -AsPlainText -Force
-PS C:\> $cred = New-Object  ¢â‚¬"TypeName System.Management.Automation.PSCredential  ¢â‚¬"ArgumentList $user, $pw
+PS C:\> $cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $user, $pw
 PS C:\> New-AzureAutomationCredential -AutomationAccountName "Contos17" -Name "MyCredential" -Value $cred
 ```
 

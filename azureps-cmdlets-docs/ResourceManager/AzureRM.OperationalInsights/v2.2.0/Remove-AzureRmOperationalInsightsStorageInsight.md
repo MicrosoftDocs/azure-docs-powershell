@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 55476204-8793-4342-B7F9-DD881DAC9BEA
+ms.assetid: DFCAD964-3B4C-406A-BEE9-B7EE4E6129F4
 ---
 
 # Remove-AzureRmOperationalInsightsStorageInsight
@@ -31,7 +31,7 @@ The **Remove-AzureRmOperationalInsightsStorageInsight** cmdlet deletes a Storage
 
 ### Example 1: Remove a Storage Insight by name
 ```
-PS C:\>Remove-AzureRmOperationalInsightsStorageInsight  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"WorkspaceName "MyWorkspace"  ¢â‚¬"Name "MyStorageInsight"
+PS C:\>Remove-AzureRmOperationalInsightsStorageInsight -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "MyWorkspace" -Name "MyStorageInsight"
 ```
 
 This command removes the Storage Insight named MyStorageInsight from the workspace named MyWorkspace in the specified resource group.
@@ -39,9 +39,9 @@ The command does not specify the *Force* parameter, so it prompts you for confir
 
 ### Example 2: Remove a Storage Insight without confirmation
 ```
-PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace  ¢â‚¬"ResourceGroupName "ContosoResourceGroup"  ¢â‚¬"Name "MyWorkspace"
+PS C:\>$Workspace = Get-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"
 
-PS C:\>Remove-AzureRmOperationalInsightsStorageInsight  ¢â‚¬"Workspace $Workspace  ¢â‚¬"Name "MyStorageInsight" -Force
+PS C:\>Remove-AzureRmOperationalInsightsStorageInsight -Workspace $Workspace -Name "MyStorageInsight" -Force
 ```
 
 The first command uses the Get-AzureRmOperationalInsightsWorkspace cmdlet to get the workspace named MyWorkspace, and then stores it in the $Workspace variable.The second command removes the storage insight named MyStorageInsight from $Workspace without prompting you for confirmation.
@@ -110,7 +110,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -126,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

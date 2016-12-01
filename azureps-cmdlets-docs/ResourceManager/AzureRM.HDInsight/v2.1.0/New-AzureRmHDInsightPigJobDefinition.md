@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 53C1A4D8-AE0F-422D-A069-D765E4407310
+ms.assetid: D34655BB-16FE-4B49-A489-86CCA4EBD223
 ---
 
 # New-AzureRmHDInsightPigJobDefinition

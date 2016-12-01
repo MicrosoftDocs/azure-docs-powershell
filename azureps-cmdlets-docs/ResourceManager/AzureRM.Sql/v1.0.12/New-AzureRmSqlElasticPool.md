@@ -8,7 +8,7 @@ ms.assetid: C37650CE-7B6A-4833-AA7A-1D44E3A1C13C
 # New-AzureRmSqlElasticPool
 
 ## SYNOPSIS
-Creates an elastic database pool for a nextref_database.
+Creates an elastic database pool for a SQL Database.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzureRmSqlElasticPool -ElasticPoolName <String> [-Edition <DatabaseEdition>]
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSqlElasticPool** cmdlet creates an elastic database pool for an ssSDS.
+The **New-AzureRmSqlElasticPool** cmdlet creates an elastic database pool for an Azure SQL Database.
 
 ## EXAMPLES
 

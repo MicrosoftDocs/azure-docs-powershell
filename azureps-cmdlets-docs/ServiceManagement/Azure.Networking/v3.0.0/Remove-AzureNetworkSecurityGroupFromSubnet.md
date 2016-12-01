@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 66AD8A8A-1097-4806-89E0-B31F6CC71C82
+ms.assetid: 3A88585A-EC93-44E7-A098-4DAB1FFADA4E
 ---
 
 # Remove-AzureNetworkSecurityGroupFromSubnet

@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 317A7D3A-7A30-430A-88AC-5E202B9EE9BD
+ms.assetid: A5C2119B-61AC-45C0-A4E9-0F05B83CFAF9
 ---
 
 # Add-AzureHDInsightScriptAction
@@ -27,7 +27,7 @@ For information about how to use the new HDInsight to create a cluster, see Crea
 For information about how to submit jobs by using Azure PowerShell and other approaches, see Submit Hadoop jobs in HDInsighthttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/.
 For reference information about Azure PowerShell HDInsight, see Azure HDInsight Cmdletshttps://msdn.microsoft.com/en-us/library/mt438705.aspx.
 
-The **Add-AzureHDInsightScriptAction** cmdlet provides Azure HDInsight functionality that is used to install additional software or to change the configuration of applications that run on a Hadoop cluster by using Windows PowerShell ‚Â® scripts.
+The **Add-AzureHDInsightScriptAction** cmdlet provides Azure HDInsight functionality that is used to install additional software or to change the configuration of applications that run on a Hadoop cluster by using Windows PowerShell scripts.
 
 A script action runs on the cluster nodes when HDInsight clusters are deployed, and they run after nodes in the cluster complete HDInsight configuration.
 The script action runs under system administrator account privileges and provides full access rights to the cluster nodes.
@@ -37,8 +37,8 @@ You can provide each cluster with a list of script actions to run in a specified
 
 ### Example 1: Add a script action to a cluster
 ```
-PS C:\>$Config = New-AzureHDInsightClusterConfig  ¢â‚¬"ClusterSizeInNodes 4 
-PS C:\> $Config = Add-AzureHDInsightScriptAction -Config $Config  ¢â‚¬"Name "TestScriptAction"  ¢â‚¬"Uri http://test.com/test.ps1  ¢â‚¬"Parameters "test" -ClusterRoleCollection HeadNode,DataNode
+PS C:\>$Config = New-AzureHDInsightClusterConfig -ClusterSizeInNodes 4 
+PS C:\> $Config = Add-AzureHDInsightScriptAction -Config $Config -Name "TestScriptAction" -Uri http://test.com/test.ps1 -Parameters "test" -ClusterRoleCollection HeadNode,DataNode
 PS C:\> New-AzureHDInsightCluster -Config $Config
 ```
 
@@ -50,8 +50,8 @@ The final command uses the New-AzureHDInsightCluster cmdlet to create a new HDIn
 
 ### Example 2: Add multiple script actions to a cluster
 ```
-PS C:\>$Config = New-AzureHDInsightClusterConfig  ¢â‚¬"ClusterSizeInNodes 4
-PS C:\> $Config = Add-AzureHDInsightScriptAction -Config $Config  ¢â‚¬"Name "TestScriptAction1"  ¢â‚¬"Uri http://test.com/test1.ps1  ¢â‚¬"Parameters "Test1" -ClusterRoleCollection HeadNode,DataNode | Add-AzureHDInsightScriptAction -Config $Config  ¢â‚¬"Name "TestScriptAction2"  ¢â‚¬"Uri http://test.com/test2.ps1 -ClusterRoleCollection HeadNode
+PS C:\>$Config = New-AzureHDInsightClusterConfig -ClusterSizeInNodes 4
+PS C:\> $Config = Add-AzureHDInsightScriptAction -Config $Config -Name "TestScriptAction1" -Uri http://test.com/test1.ps1 -Parameters "Test1" -ClusterRoleCollection HeadNode,DataNode | Add-AzureHDInsightScriptAction -Config $Config -Name "TestScriptAction2" -Uri http://test.com/test2.ps1 -ClusterRoleCollection HeadNode
 PS C:\> New-AzureHDInsightCluster -Config $Config
 ```
 

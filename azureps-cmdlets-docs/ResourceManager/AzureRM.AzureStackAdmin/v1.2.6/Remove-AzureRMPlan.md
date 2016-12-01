@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version:
 schema: 2.0.0
+ms.assetid: 62CE2521-8292-4524-86C2-12B828346542
 ---
 
 # Remove-AzureRMPlan

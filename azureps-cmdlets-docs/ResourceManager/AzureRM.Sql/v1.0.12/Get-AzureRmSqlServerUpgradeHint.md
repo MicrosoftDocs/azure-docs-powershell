@@ -8,7 +8,7 @@ ms.assetid: 932421FF-3AD3-4179-B550-604408F633AC
 # Get-AzureRmSqlServerUpgradeHint
 
 ## SYNOPSIS
-Gets pricing tier hints for upgrading an ssSDS server.
+Gets pricing tier hints for upgrading an Azure SQL Database server.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureRmSqlServerUpgradeHint [-ServerName] <String> [-ExcludeElasticPools <Bo
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlServerUpgradeHint** cmdlet gets pricing tier hints for upgrading an ssSDS server.
+The **Get-AzureRmSqlServerUpgradeHint** cmdlet gets pricing tier hints for upgrading an Azure SQL Database server.
 Hints may contain the elastic database pool and stand-alone database hints.
 Databases that are still in Web and Business pricing tiers get a hint to upgrade to the new Basic, Standard, or Premium pricing tiers, or to go into the elastic database pool.
 This cmdlet returns hints for all databases hosted on the specified server.

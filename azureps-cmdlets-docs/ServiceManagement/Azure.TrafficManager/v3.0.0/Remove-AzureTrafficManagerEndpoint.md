@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5775AC01-3268-4773-AABA-8041ADDD3501
+ms.assetid: 45D3D3A3-F0AC-4102-A6C9-D72E45151CEA
 ---
 
 # Remove-AzureTrafficManagerEndpoint

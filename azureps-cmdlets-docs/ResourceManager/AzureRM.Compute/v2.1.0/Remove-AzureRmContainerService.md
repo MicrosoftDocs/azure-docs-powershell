@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: A31AB17D-C4B0-402F-AE5D-28FCE7B7F6CB
+ms.assetid: 1AA52109-5D5B-4BDA-96ED-F4BB8D8995C2
 ---
 
 # Remove-AzureRmContainerService

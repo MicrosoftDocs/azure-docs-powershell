@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: DE04BA16-C0BE-4169-8C1A-78A0E0CFB134
+ms.assetid: A1312BEE-4A9A-4D9E-A3A1-602EB311B8E7
 ---
 
 # Test-AzureRmDnsAvailability

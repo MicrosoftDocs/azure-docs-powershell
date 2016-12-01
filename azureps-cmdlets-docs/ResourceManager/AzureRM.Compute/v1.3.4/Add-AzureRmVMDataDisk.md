@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 5BB95A2A-83BD-4ACB-B9F3-8858E768048D
 ---
@@ -26,13 +26,13 @@ You can add a data disk when you create a virtual machine, or you can add a data
 
 ### Example 1: Add data disks to a new virtual machine
 ```
-PS C:\>$VirtualMachine = New-AzureRmVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" 
+PS C:\>$VirtualMachine = New-AzureRmVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1"
 PS C:\> $DataDiskVhdUri01 = "https://contoso.blob.core.windows.net/test/data1.vhd"
 PS C:\> $DataDiskVhdUri02 = "https://contoso.blob.core.windows.net/test/data2.vhd"
 PS C:\> $DataDiskVhdUri03 = "https://contoso.blob.core.windows.net/test/data3.vhd"
-PS C:\> $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name 'DataDisk1' -Caching 'ReadOnly' -DiskSizeInGB 10 -Lun 0 -VhdUri $DataDiskVhdUri1 -CreateOption Empty
-PS C:\> $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name 'DataDisk2' -Caching 'ReadOnly' -DiskSizeInGB 11 -Lun 1 -VhdUri $DataDiskVhdUri2 -CreateOption Empty
-PS C:\> $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name 'DataDisk3' -Caching 'ReadOnly' -DiskSizeInGB 12 -Lun 2 -VhdUri $DataDiskVhdUri3 -CreateOption Empty
+PS C:\> $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name 'DataDisk1' -Caching 'ReadOnly' -DiskSizeInGB 10 -Lun 0 -VhdUri $DataDiskVhdUri01 -CreateOption Empty
+PS C:\> $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name 'DataDisk2' -Caching 'ReadOnly' -DiskSizeInGB 11 -Lun 1 -VhdUri $DataDiskVhdUri02 -CreateOption Empty
+PS C:\> $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name 'DataDisk3' -Caching 'ReadOnly' -DiskSizeInGB 12 -Lun 2 -VhdUri $DataDiskVhdUri03 -CreateOption Empty
 ```
 
 The first command creates a virtual machine object, and then stores it in the $VirtualMachine variable.
@@ -61,10 +61,10 @@ The final command updates the state of the virtual machine stored in $VirtualMac
 
 ### Example 3: Add a data disk to a new virtual machine from a generalized user image
 ```
-PS C:\>$VirtualMachine = New-AzureRmVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" 
+PS C:\>$VirtualMachine = New-AzureRmVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1"
 PS C:\> $DataImageUri = "https://contoso.blob.core.windows.net/system/Microsoft.Compute/Images/captured/dataimage.vhd"
 PS C:\> $DataDiskUri = "https://contoso.blob.core.windows.net/test/datadisk.vhd"
-PS C:\> $VirtualMachine = Add-AzureVMDataDisk -VM $VirtualMachine -Name "disk1" -SourceImageUri $DataImageUri -VhdUri $DataDiskUri -Lun 0 -CreateOption FromImage
+PS C:\> $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name "disk1" -SourceImageUri $DataImageUri -VhdUri $DataDiskUri -Lun 0 -DiskSizeinGB 10 -CreateOption FromImage
 ```
 
 The first command creates a virtual machine object and stores it in the $VirtualMachine variable.
@@ -78,9 +78,9 @@ The command specifies the name and location for the disk and other properties of
 
 ### Example 4: Add data disks to a new virtual machine from a specialized user image
 ```
-PS C:\>$VirtualMachine = New-AzureRmVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" 
+PS C:\>$VirtualMachine = New-AzureRmVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1"
 PS C:\> $DataDiskUri = "https://contoso.blob.core.windows.net/test/datadisk.vhd"
-PS C:\> $VirtualMachine = Add-AzureVMDataDisk -VM $VirtualMachine -Name "dd1" -VhdUri $DataDiskUri -Lun 0 -CreateOption Attach
+PS C:\> $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name "dd1" -VhdUri $DataDiskUri -Lun 0 -DiskSizeinGB 10 -CreateOption Attach
 ```
 
 The first command creates a virtual machine object and stores it in the $VirtualMachine variable.
@@ -117,7 +117,7 @@ Specifies the name of the data disk to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -134,7 +134,7 @@ This is the location from which to start the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -149,6 +149,7 @@ psdx_paramvalues
 
 - ReadOnly
 - ReadWrite
+- None
 
 The default value is ReadWrite.
 Changing this value causes the virtual machine to restart.
@@ -158,7 +159,7 @@ This setting affects the consistency and performance of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -173,7 +174,7 @@ Specifies the size, in gigabytes, of an empty disk to attach to a virtual machin
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -188,7 +189,7 @@ Specifies the logical unit number (LUN) for a data disk.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -204,7 +205,7 @@ psdx_paramvalues
 - Attach.
 Specify this option to create a virtual machine from a specialized disk.
 When you specify this option, do not specify the *SourceImageUri* parameter.
-The *VhdUri* is all that is needed in order to tell the Azure platform the location of the virtual hard disk (VHD) to attach as a data disk to the virtual machine. 
+The *VhdUri* is all that is needed in order to tell the Azure platform the location of the virtual hard disk (VHD) to attach as a data disk to the virtual machine.
 - Empty.
 Specify this to create an empty data disk.
 - FromImage.
@@ -215,7 +216,7 @@ The *VhdUri* parameter is used as the location identifying where the data disk V
 ```yaml
 Type: DiskCreateOptionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 6
@@ -294,5 +295,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVM](./Get-AzureRmVM.md)
 
 [New-AzureRmVMConfig](./New-AzureRmVMConfig.md)
-
-

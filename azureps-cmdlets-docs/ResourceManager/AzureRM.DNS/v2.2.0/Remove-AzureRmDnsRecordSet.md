@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E44D0EC6-BB4F-4E0A-9193-3A398DAB4EB8
+ms.assetid: 286CC92A-036E-4ECE-AA6B-1B385A8DDA75
 ---
 
 # Remove-AzureRmDnsRecordSet
@@ -59,13 +59,13 @@ The first command gets the specified record set, and then stores it in the $Reco
 ### Example 2: Remove a record set and suppress all confirmation
 ```
 PS C:\> $RecordSet = Get-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" 
-PS C:\> Remove-AzureRmDnsRecordSet -RecordSet $RecordSet  ¢â‚¬"Confirm:$False  ¢â‚¬"Force  ¢â‚¬"Overwrite 
+PS C:\> Remove-AzureRmDnsRecordSet -RecordSet $RecordSet -Confirm:$False -Force -Overwrite 
 
 # Alternatively, the record set can be removed as follows.  In this case, 
 # because the record set is specified by name rather than by object, the 
 # Overwrite parameter is not applicable.
 
-PS C:\> Remove-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup"  ¢â‚¬"Confirm:$False -Force
+PS C:\> Remove-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" -Confirm:$False -Force
 ```
 
 The first command gets the specified record set.

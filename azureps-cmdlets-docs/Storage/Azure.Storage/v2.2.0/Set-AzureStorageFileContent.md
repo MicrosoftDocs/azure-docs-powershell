@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: CD2E0AA7-3259-4AA5-8494-C432063D34E7
+ms.assetid: 36F9B108-258A-4B15-B200-AD5E1F18F09B
 ---
 
 # Set-AzureStorageFileContent
@@ -40,7 +40,7 @@ The **Set-AzureStorageFileContent** cmdlet uploads the contents of a file to a f
 
 ### Example 1: Upload a file in the current folder
 ```
-PS C:\>Set-AzureStorageFileContent  ¢â‚¬"ShareName "ContosoShare06"  ¢â‚¬"Source "DataFile37"  ¢â‚¬"Path "ContosoWorkingFolder/CurrentDataFile"
+PS C:\>Set-AzureStorageFileContent -ShareName "ContosoShare06" -Source "DataFile37" -Path "ContosoWorkingFolder/CurrentDataFile"
 ```
 
 This command uploads a file that is named DataFile37 in the current folder as a file that is named CurrentDataFile in the folder named ContosoWorkingFolder.

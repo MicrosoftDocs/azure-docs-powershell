@@ -8,7 +8,7 @@ ms.assetid: 19B2FF37-49B9-4EEF-9AE2-7CBB8C4CA741
 # Get-AzureRmSqlElasticPool
 
 ## SYNOPSIS
-Gets elastic pools and their property values in an ssSDS.
+Gets elastic pools and their property values in an Azure SQL Database.
 
 ## SYNTAX
 

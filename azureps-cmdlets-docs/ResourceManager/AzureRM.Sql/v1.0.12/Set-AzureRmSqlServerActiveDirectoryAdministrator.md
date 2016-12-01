@@ -19,7 +19,7 @@ Set-AzureRmSqlServerActiveDirectoryAdministrator [-DisplayName] <String> [[-Obje
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet provisions an Azure Active Directory (Azure AD) administrator for AzuressNoVersion in the current subscription.
+The **Set-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet provisions an Azure Active Directory (Azure AD) administrator for AzureSQL Server in the current subscription.
 
 You can provision only one administrator at a time.
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion for which this cmdlet provisions an administrator.
+Specifies the name of the SQL Server for which this cmdlet provisions an administrator.
 
 ```yaml
 Type: String

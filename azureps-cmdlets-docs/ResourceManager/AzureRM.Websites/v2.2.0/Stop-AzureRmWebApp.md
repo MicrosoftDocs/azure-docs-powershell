@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D6BB2078-E58F-400F-AB45-6757798E073E
+ms.assetid: 336C01E9-C23F-4396-AF21-789B5134F47A
 ---
 
 # Stop-AzureRmWebApp

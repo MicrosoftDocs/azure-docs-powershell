@@ -1,3 +1,7 @@
+---
+ms.assetid: BB5EBF08-3264-4DDB-A1DC-BD5BA1805E0A
+---
+
 # Azure Resource Manager Cmdlets
 
 This section displays the online help files for the Azure Resource Manager.
@@ -5,7 +9,7 @@ The cmdlets in the __AzureRM.*__ modules let you use Resource Manager in Azure P
 
 ## To install the cmdlets
 
-To install the cmdlets by using PowerShell Gallery using **PowerShellGet**, you must have Windows Management Framework (WMF) 5.0. For more information, see [Windows Management Framework 5.0 Production Preview](https://www.microsoft.com/en-us/download/details.aspx?id=48729).
+To install the cmdlets by using PowerShell Gallery using **PowerShellGet**, you must have Windows Management Framework (WMF) 5.0. For more information, see [Windows Management Framework 5.0 Production Preview](https://www.microsoft.com/en-us/download/details.aspx?id=50395).
 By default, WMF 5.0 comes installed on Windows 10.
 Run the following commands from the Windows PowerShell console running as Administrator:
 
@@ -36,7 +40,7 @@ PS C:\> Import-Module AzureRM.Compute
 To see all of the Azure Resource Manager modules installed and their versions, run the following command:
 
 ```PowerShell
-PS C:\> Get-Module –ListAvailable AzureRM*
+PS C:\> Get-Module -ListAvailable AzureRM*
 ```
 
 ## To use the cmdlets
@@ -60,13 +64,13 @@ PS C:\> Get-AzureRmSubscription
 To select a default subscription for your current session, run the following command:
 
 ```PowerShell
-PS C:\> Get-AzureRmSubscription –SubscriptionName "your subscription" | Select-AzureRmSubscription
+PS C:\> Get-AzureRmSubscription -SubscriptionName "your subscription" | Select-AzureRmSubscription
 ```
 
 To select the default storage context for your current session, run the following command:
 
 ```PowerShell
-PS C:\> Set-AzureRmCurrentStorageAccount –ResourceGroupName "your resource group" –StorageAccountName "your storage account name"
+PS C:\> Set-AzureRmCurrentStorageAccount -ResourceGroupName "your resource group" -StorageAccountName "your storage account name"
 ```
 
 To import the **Azure.Storage** data plane module (blob, queue, table), run the following command:

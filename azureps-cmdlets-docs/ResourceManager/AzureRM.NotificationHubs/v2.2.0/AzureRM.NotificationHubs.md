@@ -4,6 +4,7 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+ms.assetid: 8E3CBDB9-9B9D-43F9-93F3-DE6A3AF9CC79
 ---
 
 # AzureRM.NotificationHubs Module

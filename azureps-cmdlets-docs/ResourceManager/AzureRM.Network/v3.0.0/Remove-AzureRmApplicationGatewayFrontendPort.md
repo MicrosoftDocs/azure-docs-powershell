@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: D0D71E14-17B9-49DD-B8D2-B8A5CCAB770B
+ms.assetid: 9161336D-0253-413C-85C7-C978057CC0C2
 ---
 
 # Remove-AzureRmApplicationGatewayFrontendPort

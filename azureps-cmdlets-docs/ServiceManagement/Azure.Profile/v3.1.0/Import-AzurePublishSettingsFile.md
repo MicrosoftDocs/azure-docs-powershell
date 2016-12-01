@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
-ms.assetid: 69DBFA51-E29F-430E-A02D-FCCE02CE0694
+ms.assetid: 79D64D7C-6671-4F03-8776-70A716F36512
 online version: 
 schema: 2.0.0
 ---
@@ -37,14 +37,14 @@ As a security best practice, save the file to a location in your Downloads or Do
 
 ### --------------  Example 1 --------------
 ```
-PS C:\>Import-AzurePublishSettingsFile  Â¢ ¢â€šÂ¬"PublishSettingsFile C:\Temp\MyAccount.publishsettings
+PS C:\>Import-AzurePublishSettingsFile -PublishSettingsFile C:\Temp\MyAccount.publishsettings
 ```
 
 This command imports the "C:\Temp\MyAccount.publishsettings" file.
 
 ### --------------  Example 2 --------------
 ```
-PS C:\>Import-AzurePublishSettingsFile  Â¢ ¢â€šÂ¬"PublishSettingsFile C:\Temp\MyAccount.publishsettings  Â¢ ¢â€šÂ¬"SubscriptionDataFile C:\Subs\Subscriptions.xml
+PS C:\>Import-AzurePublishSettingsFile -PublishSettingsFile C:\Temp\MyAccount.publishsettings -SubscriptionDataFile C:\Subs\Subscriptions.xml
 ```
 
 This command imports the "C:\Temp\MyAccountName-date-credentials.publishsettings" file and then saves the subscription data file in C:\Subs\Subscriptions.xml.

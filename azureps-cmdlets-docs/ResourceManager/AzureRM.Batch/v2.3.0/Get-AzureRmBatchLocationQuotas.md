@@ -21,8 +21,7 @@ Gets the Batch service quotas for the specified subscription at the given locati
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Get the Batch service quotas for the subscription in the West US region --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Get the Batch service quotas for the subscription in the West US region 
 
 ```
 PS C:\>Get-AzureRmBatchLocationQuotas -Location "westus"
@@ -62,5 +61,4 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Azure Batch Cmdlets]()
 

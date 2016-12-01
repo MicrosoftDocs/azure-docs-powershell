@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 454C55AA-CEA2-4A95-8A95-F160CCCABDCA
+ms.assetid: F9BF8E86-E843-4DF6-9F5F-54F4BCCCFA2B
 ---
 
 # Set-AzureReservedIPAssociation

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 5CC8299C-A698-4C80-9962-28F211C593E9
+ms.assetid: 75C8C7A7-FCE8-4E3C-8469-2A0773B63C38
 ---
 
 # Remove-AzureAutomationModule
@@ -24,7 +24,7 @@ The **Remove-AzureAutomationModule** cmdlet removes an Automation account from M
 
 ### Example 1: Remove a module
 ```
-PS C:\> Remove-AzureAutomationModule  ¢â‚¬"AutomationAccountName "Contoso17"  ¢â‚¬"Name "ContosoModule"
+PS C:\> Remove-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule"
 ```
 
 This command removes a module named ContosoModule from the Automation account named Contoso17.

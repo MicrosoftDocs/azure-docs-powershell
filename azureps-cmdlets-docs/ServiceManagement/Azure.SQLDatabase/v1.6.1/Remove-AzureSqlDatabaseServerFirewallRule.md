@@ -2,13 +2,13 @@
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 6F5D1A61-FA1B-4DE8-AFA8-17CACD5FD3B8
+ms.assetid: 5ADACC19-C60C-4822-9D37-95FFD055336B
 ---
 
 # Remove-AzureSqlDatabaseServerFirewallRule
 
 ## SYNOPSIS
-Removes a firewall rule from an ssSDS server.
+Removes a firewall rule from an Azure SQL Database server.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureSqlDatabaseServerFirewallRule [-ServerName] <String> [-RuleName] <St
 ```
 
 ## DESCRIPTION
-The **Remove-AzureSqlDatabaseServerFirewallRule** cmdlet removes a firewall rule from an instance of ssSDS Server in the current subscription.
+The **Remove-AzureSqlDatabaseServerFirewallRule** cmdlet removes a firewall rule from an instance of Azure SQL Database Server in the current subscription.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Remove-AzureSqlDatabaseServerFirewallRule** cmdlet removes a firewall rule
 PS C:\>Remove-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24"
 ```
 
-This command removes the firewall rule named FirewallRule24 from the ssSDS server named lpqd0zbr8y.
+This command removes the firewall rule named FirewallRule24 from the Azure SQL Database server named lpqd0zbr8y.
 
 ## PARAMETERS
 

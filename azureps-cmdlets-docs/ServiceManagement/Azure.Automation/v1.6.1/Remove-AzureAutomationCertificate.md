@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E431BC91-1831-4F99-A268-37479C3E5E73
+ms.assetid: A2F21F67-8F29-427A-8670-B190A626C332
 ---
 
 # Remove-AzureAutomationCertificate

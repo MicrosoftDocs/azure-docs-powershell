@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 ms.assetid: C61FA834-BEBE-4DBF-888F-C6CB8CC95390
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -71,7 +71,7 @@ The object id of the application to remove the credentials from.
 ```yaml
 Type: String
 Parameter Sets: ApplicationObjectIdWithKeyIdParameterSet, ApplicationObjectIdWithAllParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -87,7 +87,7 @@ The key Ids for the application can be obtained using the Get-AzureRmADAppCreden
 ```yaml
 Type: Guid
 Parameter Sets: ApplicationObjectIdWithKeyIdParameterSet, ApplicationIdWithKeyIdParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ Switch to delete credential without a confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -186,7 +186,7 @@ Switch to remove all the credentials associated with the application.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ApplicationObjectIdWithAllParameterSet, ApplicationIdWithAllParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -201,7 +201,7 @@ The id of the application to remove the credentials from.
 ```yaml
 Type: String
 Parameter Sets: ApplicationIdWithAllParameterSet, ApplicationIdWithKeyIdParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -223,6 +223,3 @@ Accept wildcard characters: False
 [New-AzureRmADAppCredential]()
 
 [Get-AzureRmADApplication]()
-
-[]()
-

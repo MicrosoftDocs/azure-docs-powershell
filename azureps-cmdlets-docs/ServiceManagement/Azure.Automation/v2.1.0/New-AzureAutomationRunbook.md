@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 94F81587-D376-4499-B61A-7BEE999D7FBF
+ms.assetid: 5A57A85F-A008-44B0-B362-215A6E260A00
 ---
 
 # New-AzureAutomationRunbook
@@ -28,8 +28,8 @@ New-AzureAutomationRunbook [-Path] <String> [-Description <String>] [-Tags <Stri
 The **New-AzureAutomationRunbook** cmdlet creates a new, empty Microsoft Azure Automation runbook.
 Specify a name to create a new runbook.
 
-You can also specify the path to a Windows PowerShell ‚Â® script (.ps1 ) file to import a runbook.
-The script to import must contain a single Windows PowerShell ‚Â® Workflow definition.
+You can also specify the path to a Windows PowerShell script (.ps1 ) file to import a runbook.
+The script to import must contain a single Windows PowerShell Workflow definition.
 The name of this Windows PowerShell Workflow becomes the name of the runbook.
 
 ## EXAMPLES

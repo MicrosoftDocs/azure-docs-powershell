@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 171388A7-78CA-4CB3-AA6F-1884CD919C06
+ms.assetid: A8953045-3836-4C5A-96F8-461CB1DB6BBD
 online version: 
 schema: 2.0.0
 ---
@@ -34,7 +34,7 @@ The **New-AzureHDInsightMapReduceJobDefinition** cmdlet defines a new MapReduce 
 
 ### Example 1: Define a MapReduce job, run the job, and get the output
 ```
-PS C:\>$SubId = (Get-AzureSubscription  Â¢ ¢â€šÂ¬"Current).SubscriptionId
+PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
 PS C:\> $ClusterName = "MyCluster" 
 PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "WordCount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" 
 PS C:\> $WordCountJob | Start-AzureHDInsightJob -Cluster $ClusterName 

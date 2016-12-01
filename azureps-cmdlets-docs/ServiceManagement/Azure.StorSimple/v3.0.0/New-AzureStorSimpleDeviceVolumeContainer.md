@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 68530AE0-AD6C-40A4-AF2C-C36C867B0528
+ms.assetid: D8A356C4-2360-43B0-B69B-4DDFCBAF87A8
 ---
 
 # New-AzureStorSimpleDeviceVolumeContainer
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell ‚Â® console.
+Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
 
 ```yaml
 Type: SwitchParameter

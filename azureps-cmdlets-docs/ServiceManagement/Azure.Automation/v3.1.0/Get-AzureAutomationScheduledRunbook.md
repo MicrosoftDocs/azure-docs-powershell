@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
-ms.assetid: AF10C3C5-8025-410E-8B56-7A2930E429D8
+ms.assetid: 2F66B0F2-37F3-4046-9FB0-B8C4B90D84A3
 online version: 
 schema: 2.0.0
 ---
@@ -65,14 +65,14 @@ This command gets all scheduled runbooks in the Automation account named Contoso
 
 ### Example 2: Get all schedules associated with a runbook
 ```
-PS C:\> Get-AzureAutomationScheduledRunbook -AutomationAccountName "Contoso17"  Â¢ ¢â€šÂ¬"RunbookName "Runbk01"
+PS C:\> Get-AzureAutomationScheduledRunbook -AutomationAccountName "Contoso17" -RunbookName "Runbk01"
 ```
 
 This command gets all scheduled runbooks for the runbook Runbk01 in the Automation account named Contoso17.
 
 ### Example 3: Get all runbooks associated with a schedule
 ```
-PS C:\> Get-AzureAutomationScheduledRunbook -AutomationAccountName "Contoso17"  Â¢ ¢â€šÂ¬"ScheduleName "Schedule01"
+PS C:\> Get-AzureAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ScheduleName "Schedule01"
 ```
 
 This command gets all scheduled runbooks for the schedule Schedule01 in the Automation account named Contoso17.

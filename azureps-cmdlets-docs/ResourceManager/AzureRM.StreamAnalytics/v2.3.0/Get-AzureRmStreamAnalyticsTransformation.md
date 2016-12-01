@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
-ms.assetid: 54F801D0-3B6F-4254-A326-045914F2536A
+ms.assetid: 34E1CC9E-9F81-4DA6-A777-D816B09BDE1B
 online version: 
 schema: 2.0.0
 ---

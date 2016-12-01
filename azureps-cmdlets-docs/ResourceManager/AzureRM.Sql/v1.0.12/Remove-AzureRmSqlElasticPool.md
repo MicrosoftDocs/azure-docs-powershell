@@ -19,7 +19,7 @@ Remove-AzureRmSqlElasticPool [-ElasticPoolName] <String> [-Force] [-ServerName] 
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSqlElasticPool** cmdlet removes an ssSDS elastic pool.
+The **Remove-AzureRmSqlElasticPool** cmdlet deletes an Azure SQL Database elastic pool.
 
 ## EXAMPLES
 

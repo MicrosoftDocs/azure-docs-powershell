@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
-ms.assetid: F5F75660-547F-4E12-8ECD-230B5278AD43
+ms.assetid: 4682807D-34E8-4057-8894-36820447067B
 online version: 
 schema: 2.0.0
 ---
@@ -26,7 +26,7 @@ The **New-AzureRmOperationalInsightsWorkspace** cmdlet creates a workspace in th
 
 ### Example 1: Create a workspace by name
 ```
-PS C:\>New-AzureRmOperationalInsightsWorkspace  Â¢ ¢â€šÂ¬"ResourceGroupName "ContosoResourceGroup"  Â¢ ¢â€šÂ¬"Name "MyWorkspace"  Â¢ ¢â€šÂ¬"Location "East US"  Â¢ ¢â€šÂ¬"Sku "Standard"
+PS C:\>New-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" -Location "East US" -Sku "Standard"
 ```
 
 This command creates a standard SKU workspace named MyWorkspace in the resource group named ContosoResourceGroup.
@@ -35,7 +35,7 @@ This command creates a standard SKU workspace named MyWorkspace in the resource 
 ```
 PS C:\>$OILinkTargets = Get-AzureRmOperationalInsightsLinkTargets
 
-PS C:\>$OILinkTargets[0] | New-AzureRmOperationalInsightsWorkspace  Â¢ ¢â€šÂ¬"ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace"  Â¢ ¢â€šÂ¬"Sku "Standard"
+PS C:\>$OILinkTargets[0] | New-AzureRmOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" -Sku "Standard"
 ```
 
 The first command uses the Get-AzureRmOperationalInsightsLinkTargets cmdlet to get Operational Insights account link targets, and then stores them in the $OILinkTargets variable.
@@ -198,7 +198,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -214,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter

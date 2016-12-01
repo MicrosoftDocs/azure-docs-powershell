@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 971FAAA3-A772-4DB6-BE59-76D950879197
+ms.assetid: BB0DC497-C221-4B88-BFC3-92C04963E162
 ---
 
 # New-AzureRmBackupRetentionPolicyObject

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 317BD083-023B-407E-B718-7A3A55773368
+ms.assetid: 89DAE6B2-5F84-4A98-BB9C-D82031818128
 ---
 
 # New-AzureVMSqlServerAutoPatchingConfig

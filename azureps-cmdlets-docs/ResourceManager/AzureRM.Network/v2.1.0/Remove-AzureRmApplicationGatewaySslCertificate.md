@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 90D64854-60CA-458D-8685-828F78C48686
+ms.assetid: 5E84D9D4-0A85-4B3D-8F6F-780F5FA952B0
 ---
 
 # Remove-AzureRmApplicationGatewaySslCertificate

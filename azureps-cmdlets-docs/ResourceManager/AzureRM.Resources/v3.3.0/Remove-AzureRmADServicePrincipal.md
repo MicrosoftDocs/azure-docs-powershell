@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 ms.assetid: 0C8C07CA-6720-452F-A952-48C76EBF3BBD
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -54,7 +54,7 @@ If specified, returns the deleted service principal.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,6 +165,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 [Remove-AzureRmADApplication]()
 
 [Remove-AzureRmADAppCredential]()
-
-[]()
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 01D27482-B56F-440D-AD92-5E31D170ABEB
+ms.assetid: EE2ADA86-B2A3-4F6F-96EF-BB61D6DC550F
 online version: 
 schema: 2.0.0
 ---

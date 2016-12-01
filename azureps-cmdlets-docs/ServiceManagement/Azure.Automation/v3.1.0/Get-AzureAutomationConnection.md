@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
-ms.assetid: 98D08DBC-491F-4693-AFD2-D07A8AD50F32
+ms.assetid: DD881317-7366-4B55-B1CC-6AF0286F1C5D
 online version: 
 schema: 2.0.0
 ---
@@ -48,14 +48,14 @@ This command gets all connections in the Automation account named Contoso17.
 
 ### Example 2: Get all connections of a type
 ```
-PS C:\>Get-AzureAutomationConnection -AutomationAccountName "Contoso17"  Â¢ ¢â€šÂ¬"ConnectionTypeName "Azure"
+PS C:\>Get-AzureAutomationConnection -AutomationAccountName "Contoso17" -ConnectionTypeName "Azure"
 ```
 
 This command gets all Azure connections in the Automation account named Contoso17.
 
 ### Example 3: Get a connection
 ```
-PS C:\>Get-AzureAutomationConnection -AutomationAccountName "Contoso17"  Â¢ ¢â€šÂ¬"Name "Azure"
+PS C:\>Get-AzureAutomationConnection -AutomationAccountName "Contoso17" -Name "Azure"
 ```
 
 This command gets the connection named MyConnection.

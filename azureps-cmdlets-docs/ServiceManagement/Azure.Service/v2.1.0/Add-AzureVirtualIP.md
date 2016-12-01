@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 35A98651-FD40-4615-BEB4-A9B32F7D09F6
+ms.assetid: 03FFCFE7-83A4-4B00-AC06-4EE3F2C5CE48
 ---
 
 # Add-AzureVirtualIP

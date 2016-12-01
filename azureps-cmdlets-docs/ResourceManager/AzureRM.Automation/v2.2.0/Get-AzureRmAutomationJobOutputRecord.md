@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: C1C96A93-28B0-4C90-AC7F-29A5DE875C02
+ms.assetid: 51E3FD50-FA05-4849-A7AD-9C2A175251B2
 ---
 
 # Get-AzureRmAutomationJobOutputRecord

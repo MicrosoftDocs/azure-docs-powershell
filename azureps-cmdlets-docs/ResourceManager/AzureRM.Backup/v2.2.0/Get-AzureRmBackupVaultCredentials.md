@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 068A20F0-222D-4726-B3E4-7FA55EF7F78B
+ms.assetid: DAEF6744-37EC-490E-BD1A-7B07EFB5CB14
 ---
 
 # Get-AzureRmBackupVaultCredentials

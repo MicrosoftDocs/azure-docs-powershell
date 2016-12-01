@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-ms.assetid: AA0EA073-59B6-4441-B866-C7505D4ABD05
-online version: 
+ms.assetid: E37ADC54-A37B-41BF-BE94-9E4052C234BB
+online version:
 schema: 2.0.0
 ---
 
@@ -9,7 +9,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Updates the properties of a DNS zone.
-Does not update DNS records within the zone.
 
 ## SYNTAX
 
@@ -29,6 +28,8 @@ The **Set-AzureRmDnsZone** cmdlet updates the specified DNS zone in the Azure DN
 This cmdlet does not update the record sets in the zone.
 
 You can pass a **DnsZone** object as a parameter or by using the pipeline operator, or alternatively you can specify the *ZoneName* and *ResourceGroupName* parameters.
+
+You can use the *Confirm* parameter and $ConfirmPreference Windows PowerShell variable to control whether the cmdlet prompts you for confirmation.
 
 When passing a DNS zone as an object (using the Zone object or via the pipeline), it is not updated if it has been changed in Azure DNS since the local DnsZone object was retrieved.
 This provides protection for concurrent changes.
@@ -64,7 +65,7 @@ Specifies the name of the DNS zone to update.
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -81,7 +82,7 @@ You can suppress this behavior with the *Overwrite* parameter, which updates the
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +100,7 @@ Alternatively, you can specify the zone using a DnsZone object with the *Zone* p
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +133,7 @@ Alternatively, you can specify the zone using the *ZoneName* and *ResourceGroupN
 ```yaml
 Type: DnsZone
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -185,6 +186,12 @@ You can pipe a DnsZone object to this cmdlet.
 This cmdlet returns a DnsZone object that represents the updated DNS zone with a new Etag.
 
 ## NOTES
+You can use the *Confirm* parameter to control whether this cmdlet prompts you for confirmation.
+By default, the cmdlet prompts you for confirmation if the $ConfirmPreference Windows PowerShell variable has a value of Medium or lower.
+
+If you specify *Confirm* or *Confirm:$True*, this cmdlet prompts you for confirmation before it runs.
+If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation. 
+
 
 ## RELATED LINKS
 
@@ -193,5 +200,3 @@ This cmdlet returns a DnsZone object that represents the updated DNS zone with a
 [New-AzureRmDnsZone](./New-AzureRmDnsZone.md)
 
 [Remove-AzureRmDnsZone](./Remove-AzureRmDnsZone.md)
-
-

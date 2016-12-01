@@ -8,7 +8,8 @@ ms.assetid: 350D0F9F-05D4-448F-BE25-6F9A1E3B529D
 # Remove-AzureRmSqlServerFirewallRule
 
 ## SYNOPSIS
-Removes a firewall rule from a nextref_database server.
+Removes a firewall rule from a SQL Database server.
+
 
 ## SYNTAX
 
@@ -19,7 +20,8 @@ Remove-AzureRmSqlServerFirewallRule [-FirewallRuleName] <String> [-Force] [-Serv
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSqlServerFirewallRule** cmdlet removes a firewall rule from the specified ssSDS server.
+The **Remove-AzureRmSqlServerFirewallRule** cmdlet removes a firewall rule from the specified Azure SQL Database server.
+
 
 ## EXAMPLES
 

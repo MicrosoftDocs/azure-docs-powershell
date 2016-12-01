@@ -8,7 +8,7 @@ ms.assetid: 36EEC6AF-EA9C-48CF-8F6C-B08A8EDDFEDA
 # Stop-AzureRmSqlServerUpgrade
 
 ## SYNOPSIS
-Stops the upgrade of a nextref_database server.
+Stops the upgrade of a SQL Database server.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Stop-AzureRmSqlServerUpgrade [-Force] -ServerName <String> [-ResourceGroupName] 
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmSqlServerUpgrade** cmdlet stops the upgrade of an ssSDS server.
+The **Stop-AzureRmSqlServerUpgrade** cmdlet stops the upgrade of an Azure SQL Database server.
 
 ## EXAMPLES
 

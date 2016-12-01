@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 3E0927A7-EBB9-4463-826E-9B6A3F52E0C9
+ms.assetid: 2C58C92D-BEA4-4BF6-A318-274DF70117C9
 ---
 
 # Disable-AzureRmDataCollection
@@ -37,7 +37,7 @@ This command disables data collection for the current user on the current comput
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -53,7 +53,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml

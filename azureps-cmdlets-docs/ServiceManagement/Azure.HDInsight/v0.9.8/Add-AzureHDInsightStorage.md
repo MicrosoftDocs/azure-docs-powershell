@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: B638CE9C-78A0-4C65-84C0-0B44C79EB142
+ms.assetid: 636C0A00-980F-4052-B81B-83BD012A94AA
 ---
 
 # Add-AzureHDInsightStorage
@@ -39,9 +39,9 @@ This command adds a storage account named MyStorage to the configuration object 
 
 ### Example 2: Configure multiple storage accounts
 ```
-PS C:\> $SubId = (Get-AzureSubscription  ¢â‚¬"Current).SubscriptionId
-PS C:\> $Key1 = Get-AzureStorageKey  ¢â‚¬"StorageAccountName "MyBlobStorage" | %{ $_.Primary }
-PS C:\> $Key2 = Get-AzureStorageKey  ¢â‚¬"StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
+PS C:\> $SubId = (Get-AzureSubscription -Current).SubscriptionId
+PS C:\> $Key1 = Get-AzureStorageKey -StorageAccountName "MyBlobStorage" | %{ $_.Primary }
+PS C:\> $Key2 = Get-AzureStorageKey -StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
 PS C:\> $Creds = Get-Credential
 PS C:\> $OozieCreds = Get-Credential
 PS C:\> $HiveCreds = Get-Credential

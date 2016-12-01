@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E47AA091-BCE3-4637-9D34-C5AD9E8E04D9
+ms.assetid: 17EB75DF-F3B0-4418-A3B0-13F1DCEB92CB
 ---
 
 # Get-AzureEndpoint

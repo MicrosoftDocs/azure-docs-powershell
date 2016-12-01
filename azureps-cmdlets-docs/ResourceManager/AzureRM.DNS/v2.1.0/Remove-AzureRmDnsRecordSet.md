@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: E44D0EC6-BB4F-4E0A-9193-3A398DAB4EB8
+ms.assetid: FDDE09B4-3BFD-4734-BB6A-DBFB7CA5B6FD
 ---
 
 # Remove-AzureRmDnsRecordSet
@@ -56,13 +56,13 @@ The first command gets the specified record set, and then stores it in the $Reco
 ### Example 2: Remove a record set and suppress all confirmation
 ```
 PS C:\> $RecordSet = Get-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" 
-PS C:\> Remove-AzureRmDnsRecordSet -RecordSet $RecordSet  ¢â‚¬"Confirm:$False  ¢â‚¬"Overwrite 
+PS C:\> Remove-AzureRmDnsRecordSet -RecordSet $RecordSet -Confirm:$False -Overwrite 
 
 # Alternatively, the record set can be removed as follows.  In this case, 
 # because the record set is specified by name rather than by object, the 
 # Overwrite parameter is not applicable.
 
-PS C:\> Remove-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup"  ¢â‚¬"Confirm:$False
+PS C:\> Remove-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" -Confirm:$False
 ```
 
 The first command gets the specified record set.
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -259,7 +259,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml

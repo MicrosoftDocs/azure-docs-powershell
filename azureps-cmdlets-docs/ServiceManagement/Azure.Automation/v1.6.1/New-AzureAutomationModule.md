@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 0724F805-13E0-42D0-90F5-98E3A7F4CC87
+ms.assetid: B3495BB9-61F5-4C8D-A71F-E063D2249D55
 ---
 
 # New-AzureAutomationModule
@@ -33,7 +33,7 @@ The names of the zip file, the folder in the zip file, and file in the folder (.
 
 ### Example 1: Import a module
 ```
-PS C:\> New-AzureAutomationModule  ¢â‚¬"AutomationAccountName "Contoso17"  ¢â‚¬"Name "ContosoModule"  ¢â‚¬"ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip"
+PS C:\> New-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip"
 ```
 
 This command imports a module named ContosoModule into the Automation account named Contoso17.

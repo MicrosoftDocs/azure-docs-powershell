@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Specifies the name of the nextref_database for which this cmdlet gets a policy.
+Specifies the name of the SQL Database for which this cmdlet gets a policy.
 
 ```yaml
 Type: String

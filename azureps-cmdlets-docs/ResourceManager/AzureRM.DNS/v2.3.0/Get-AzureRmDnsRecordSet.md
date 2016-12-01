@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-ms.assetid: 3D1B6E20-C580-4429-8F4F-A4388441B929
+ms.assetid: 40179CF3-7896-4C45-BC18-4CB653B245B6
 online version: 
 schema: 2.0.0
 ---
@@ -58,7 +58,7 @@ This command gets an array of all record sets in the zone named myzone.com in th
 ### Example 4: Get all record sets in a zone, using a DnsZone object
 ```
 PS C:\> $Zone = Get-AzureRmDnsZone -Name "myzone.com" -ResourceGroupName "MyResourceGroup"
-PS C:\> $RecordSets = Get-AzureRmDnsRecordSet  Â¢ ¢â€šÂ¬"Zone $Zone
+PS C:\> $RecordSets = Get-AzureRmDnsRecordSet -Zone $Zone
 ```
 
 This example is equivalent to Example 3 above.

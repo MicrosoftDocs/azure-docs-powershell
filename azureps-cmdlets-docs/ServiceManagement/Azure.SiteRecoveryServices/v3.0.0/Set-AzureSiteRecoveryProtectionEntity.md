@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 69141231-B9E3-4070-9DA5-0A39791B7088
+ms.assetid: 68F6DC68-FDDF-49CF-97B6-B0711286FB19
 ---
 
 # Set-AzureSiteRecoveryProtectionEntity
@@ -35,7 +35,7 @@ The **Set-AzureSiteRecoveryProtectionEntity** cmdlet enables or disables protect
 ```
 PS C:\>$ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer -Name "Cloud17"
 PS C:\> $ProtectionEntity = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $ProtectionContainer -Name "VM01"
-PS C:\> Set-AzureSiteRecoveryProtectionEntity -ProtectionEntity $ ProtectionEntity -Protection Enable  ¢â‚¬"ProtectionProfile $ProtectionContainer.AvailableProtectionProfiles[0] -OS Windows
+PS C:\> Set-AzureSiteRecoveryProtectionEntity -ProtectionEntity $ ProtectionEntity -Protection Enable -ProtectionProfile $ProtectionContainer.AvailableProtectionProfiles[0] -OS Windows
 ```
 
 The first command gets containers for the current Azure Site vault by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores it in the $ProtectionContainer variable.
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -225,7 +225,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml

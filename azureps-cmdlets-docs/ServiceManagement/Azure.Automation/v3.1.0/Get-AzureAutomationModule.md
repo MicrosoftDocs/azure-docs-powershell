@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
-ms.assetid: 9AED60EE-634B-4F49-8DD6-317A3AB5965F
+ms.assetid: 73F90276-FABD-414A-B29D-83F371C1ED21
 online version: 
 schema: 2.0.0
 ---
@@ -40,7 +40,7 @@ This command gets all modules in the Azure Automation account named Contoso17.
 
 ### Example 2: Get a module
 ```
-PS C:\> Get-AzureAutomationModule -AutomationAccountName "Contoso17"  Â¢ ¢â€šÂ¬"Name "ContosoModule"
+PS C:\> Get-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule"
 ```
 
 This command gets a module named ContosoModule in the Azure Automation account named Contoso17.

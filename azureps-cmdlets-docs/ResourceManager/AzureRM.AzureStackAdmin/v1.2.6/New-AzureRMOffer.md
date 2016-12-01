@@ -2,6 +2,7 @@
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 online version:
 schema: 2.0.0
+ms.assetid: B00D37C0-4AEA-48FC-8E0E-50B5D7AA760F
 ---
 
 # New-AzureRMOffer

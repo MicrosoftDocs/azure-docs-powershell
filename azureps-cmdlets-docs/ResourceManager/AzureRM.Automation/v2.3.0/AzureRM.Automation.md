@@ -4,6 +4,7 @@ Module Guid: bcea1c70-a32b-48c3-a05c-323e1c02f4d3
 Download Help Link: None_Azure
 Help Version: 4.0.0.0
 Locale: en-US
+ms.assetid: D67A0BFC-CC6A-4935-BF34-70F1BD28FE7B
 ---
 
 # AzureRM.Automation Module

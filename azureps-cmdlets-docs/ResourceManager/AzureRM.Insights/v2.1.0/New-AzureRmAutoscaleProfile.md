@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 48A201CC-0085-43D3-8016-F67CDFB5CFCD
+ms.assetid: 3B82DA62-D889-49F6-909E-D454823C4B1D
 ---
 
 # New-AzureRmAutoscaleProfile

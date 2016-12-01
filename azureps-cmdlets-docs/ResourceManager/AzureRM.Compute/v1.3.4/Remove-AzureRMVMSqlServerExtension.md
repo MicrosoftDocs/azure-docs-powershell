@@ -8,7 +8,7 @@ ms.assetid: 78423815-46CD-43C3-9EAD-3A51E0480124
 # Remove-AzureRmVMSqlServerExtension
 
 ## SYNOPSIS
-Removes a ssNoVersion extension from a virtual machine.
+Removes a SQL Server extension from a virtual machine.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRmVMSqlServerExtension [-ResourceGroupName] <String> [-VMName] <Stri
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmVMSqlServerExtension** cmdlet removes an AzuressNoVersion extension from a virtual machine.
+The **Remove-AzureRmVMSqlServerExtension** cmdlet removes an AzureSQL Server extension from a virtual machine.
 
 ## EXAMPLES
 
@@ -27,7 +27,7 @@ The **Remove-AzureRmVMSqlServerExtension** cmdlet removes an AzuressNoVersion ex
 PS C:\>Remove-AzureRMVMSqlServerExtension -ResourceGroupName "ResourceGroup11" -VMName "ContosoVM22" -Name "SqlIaaSAgent"
 ```
 
-This command removes a ssNoVersion extension from the virtual machine named ContosoVM22.
+This command removes a SQL Server extension from the virtual machine named ContosoVM22.
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Specifies the name of the virtual machine from which this cmdlet removes the ssNoVersion extension.
+Specifies the name of the virtual machine from which this cmdlet removes the SQL Server extension.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the ssNoVersion the extension that this cmdlet removes.
+Specifies the name of the SQL Server the extension that this cmdlet removes.
 
 ```yaml
 Type: String

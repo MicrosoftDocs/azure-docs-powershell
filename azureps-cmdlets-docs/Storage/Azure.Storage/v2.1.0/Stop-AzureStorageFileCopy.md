@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: ABC5A8CB-1151-4D5C-9230-D5C3A44F5A4C
+ms.assetid: 5CB4E01F-3ED0-4CD0-9D5E-7FBAB8AC3DE8
 ---
 
 # Stop-AzureStorageFileCopy

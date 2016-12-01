@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
-ms.assetid: 5FCDC4F4-520E-4556-A8D7-4DDC28CC4B08
+ms.assetid: E7F6EEF0-8896-4639-89A8-810F19161211
 online version: 
 schema: 2.0.0
 ---
@@ -27,7 +27,7 @@ The **Restart-AzureWebsite** cmdlet stops and then restarts the specified websit
 
 ### Example 1: Restart a website
 ```
-PS C:\>Restart-AzureWebsite  Â¢ ¢â€šÂ¬"Name MyWebsite
+PS C:\>Restart-AzureWebsite -Name MyWebsite
 ```
 
 This example restarts a website named MyWebsite.

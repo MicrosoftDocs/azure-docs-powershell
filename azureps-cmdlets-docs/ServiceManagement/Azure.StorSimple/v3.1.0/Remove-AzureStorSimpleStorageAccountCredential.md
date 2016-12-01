@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
-ms.assetid: B265B3DF-B352-4801-9A3D-27F363B321EE
+ms.assetid: 1BD296FB-8BFC-473F-951D-D2BF265E50AC
 online version: 
 schema: 2.0.0
 ---
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell â€š ‚Â® console.
+Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
 
 ```yaml
 Type: SwitchParameter

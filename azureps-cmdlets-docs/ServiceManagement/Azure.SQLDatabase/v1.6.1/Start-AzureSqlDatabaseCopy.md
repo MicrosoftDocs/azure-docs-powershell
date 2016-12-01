@@ -2,13 +2,13 @@
 external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 567866F7-7376-4575-B9A3-E826FFE25AF0
+ms.assetid: FCD2F36D-CF64-4D0D-830D-F3A93806416B
 ---
 
 # Start-AzureSqlDatabaseCopy
 
 ## SYNOPSIS
-Starts a copy operation of an ssSDS.
+Starts a copy operation of an Azure SQL Database.
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Start-AzureSqlDatabaseCopy [-ServerName] <String> [-DatabaseName] <String> [-Par
 ```
 
 ## DESCRIPTION
-The **Start-AzureSqlDatabaseCopy** cmdlet starts a one-time copy operation or a continuous copy operation of a specific ssSDS.
+The **Start-AzureSqlDatabaseCopy** cmdlet starts a one-time copy operation or a continuous copy operation of a specific Azure SQL Database.
 This cmdlet is not transactional.
 
 The original database is the source database.
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-Specifies an object that represents the source ssSDS.
+Specifies an object that represents the source Azure SQL Database.
 This parameter accepts pipeline input.
 
 ```yaml

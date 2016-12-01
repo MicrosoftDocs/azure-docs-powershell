@@ -19,7 +19,7 @@ Remove-AzureRmSqlServerActiveDirectoryAdministrator [-Force] [-ServerName] <Stri
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet removes an Azure Active Directory (Azure AD) administrator for AzuressNoVersion in the current subscription.
+The **Remove-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet removes an Azure Active Directory (Azure AD) administrator for AzureSQL Server in the current subscription.
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion for which this cmdlet removes an administrator.
+Specifies the name of the SQL Server for which this cmdlet removes an administrator.
 
 ```yaml
 Type: String
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the ssNoVersion is assigned.
+Specifies the name of the resource group to which the SQL Server is assigned.
 
 ```yaml
 Type: String

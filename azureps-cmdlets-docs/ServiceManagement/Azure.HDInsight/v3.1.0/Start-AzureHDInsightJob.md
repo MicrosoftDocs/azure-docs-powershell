@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 26885C41-7208-4233-9C3B-9A0B2B105261
+ms.assetid: 60A5ACF7-2637-4BDC-BF41-80E81B23F4CD
 online version: 
 schema: 2.0.0
 ---
@@ -43,7 +43,7 @@ The job to start can be a MapReduce job, a streaming job, a Hive job, or a Pig j
 
 ### Example 1: Start an HDInsight job
 ```
-PS C:\>$SubId = (Get-AzureSubscription  Â¢ ¢â€šÂ¬"Current).SubscriptionId
+PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
 PS C:\> $ClusterName = "Cluster01" 
 PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "Wordcount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" 
 PS C:\> $WordCountJob | Start-AzureHDInsightJob -Cluster $ClusterName 

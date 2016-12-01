@@ -2,7 +2,7 @@
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 265824D1-E3D4-4BD4-BC11-466C2100ED3A
+ms.assetid: 9BE04FCE-1EA9-47C4-BB99-335E7123527F
 ---
 
 # Remove-AzureStorageQueue

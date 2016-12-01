@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 online version: 
 schema: 2.0.0
-ms.assetid: 9EFDF497-01A4-42DB-8807-F4F0099C2656
+ms.assetid: 0867ABF9-6D85-4959-86F0-DA1A627FAB5C
 ---
 
 # Get-AzureBatchPool
