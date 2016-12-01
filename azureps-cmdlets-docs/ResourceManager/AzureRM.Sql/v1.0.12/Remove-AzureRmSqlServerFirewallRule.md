@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 350D0F9F-05D4-448F-BE25-6F9A1E3B529D
 ---
@@ -8,7 +8,7 @@ ms.assetid: 350D0F9F-05D4-448F-BE25-6F9A1E3B529D
 # Remove-AzureRmSqlServerFirewallRule
 
 ## SYNOPSIS
-Deletes a firewall rule from a nextref_database server.
+Removes a firewall rule from a nextref_database server.
 
 ## SYNTAX
 
@@ -19,26 +19,26 @@ Remove-AzureRmSqlServerFirewallRule [-FirewallRuleName] <String> [-Force] [-Serv
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSqlServerFirewallRule** cmdlet deletes a firewall rule from the specified ssSDS server.
+The **Remove-AzureRmSqlServerFirewallRule** cmdlet removes a firewall rule from the specified ssSDS server.
 
 ## EXAMPLES
 
-### Example 1: Delete a rule
+### Example 1: Remove a rule
 ```
 PS C:\>Remove-AzureRmSqlServerFirewallRule -FirewallRuleName "Rule01" -ResourceGroupName "RresourceGroup01" -ServerName "Server01"
 ```
 
-This command deletes a firewall rule named Rule01 on the server named Server01.
+This command removes a firewall rule named Rule01 on the server named Server01.
 
 ## PARAMETERS
 
 ### -FirewallRuleName
-Specifies the name of the firewall rule that this cmdlet deletes.
+Specifies the name of the firewall rule that this cmdlet removes.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -48,12 +48,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,7 +68,7 @@ Specifies the name of the server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -83,7 +83,7 @@ Specifies the name of a resource group to which the server is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -182,5 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlServerFirewallRule](./Set-AzureRmSqlServerFirewallRule.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: ED349B22-F13C-4E46-9BFD-74ACEE8526CA
 ---
@@ -8,7 +8,7 @@ ms.assetid: ED349B22-F13C-4E46-9BFD-74ACEE8526CA
 # Remove-AzureRmSqlServerCommunicationLink
 
 ## SYNOPSIS
-Deletes a communication link for elastic database transactions between two servers.
+Removes a communication link for elastic database transactions between two servers.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-AzureRmSqlServerCommunicationLink [-LinkName] <String> [-Force] [-ServerN
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSqlServerCommunicationLink** cmdlet deletes a server-to-server communication link for elastic database transactions in ssSDS.
+The **Remove-AzureRmSqlServerCommunicationLink** cmdlet removes a server-to-server communication link for elastic database transactions in ssSDS.
 
 ## EXAMPLES
 
@@ -28,17 +28,17 @@ The **Remove-AzureRmSqlServerCommunicationLink** cmdlet deletes a server-to-serv
 PS C:\>Remove-AzureRmSqlServerCommunicationLink -ResourceGroupName "ResourceGroup01" -ServerName "ContosoServer17" -LinkName "Link01"
 ```
 
-This command deletes a server-to-server communication link named Link01 on ContosoServer17.
+This command removes a server-to-server communication link named Link01 on ContosoServer17.
 
 ## PARAMETERS
 
 ### -LinkName
-Specifies the name of the server communication link that this cmdlet deletes.
+Specifies the name of the server communication link that this cmdlet removes.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -48,12 +48,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +69,7 @@ This server contains the communication link that this cmdlet deletes.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -84,7 +84,7 @@ Specifies the name of the resource group to which the server specified by the *S
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -180,5 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSqlServerCommunicationLink](./Get-AzureRmSqlServerCommunicationLink.md)
 
 [New-AzureRmSqlServerCommunicationLink](./New-AzureRmSqlServerCommunicationLink.md)
-
-

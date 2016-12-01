@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: B7ABFC85-364D-4C94-BD4B-6902189BDE0F
 ---
@@ -37,16 +37,16 @@ Location                      : Central US
 DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
 Edition                       : Standard
 CollationName                 : SQL_Latin1_General_CP1_CI_AS
-CatalogCollation              : 
+CatalogCollation              :
 MaxSizeBytes                  : 268435456000
 Status                        : Online
 CreationDate                  : 7/3/2015 7:33:37 AM
 CurrentServiceObjectiveId     : f1173c43-91bd-4aaa-973c-54e79e15235b
 CurrentServiceObjectiveName   : S0
 RequestedServiceObjectiveId   : f1173c43-91bd-4aaa-973c-54e79e15235b
-RequestedServiceObjectiveName : 
-ElasticPoolName               : 
-EarliestRestoreDate           : 
+RequestedServiceObjectiveName :
+ElasticPoolName               :
+EarliestRestoreDate           :
 Tags                          :
 ```
 
@@ -62,16 +62,16 @@ Location                      : Central US
 DatabaseId                    : 7bd9d561-42a7-484e-bf05-62ddef8015ab
 Edition                       : Standard
 CollationName                 : SQL_Latin1_General_CP1_CI_AS
-CatalogCollation              : 
+CatalogCollation              :
 MaxSizeBytes                  : 268435456000
 Status                        : Online
 CreationDate                  : 8/26/2015 10:04:29 PM
 CurrentServiceObjectiveId     : d1737d22-a8ea-4de7-9bd0-33395d2a7419
 CurrentServiceObjectiveName   : ElasticPool
 RequestedServiceObjectiveId   : d1737d22-a8ea-4de7-9bd0-33395d2a7419
-RequestedServiceObjectiveName : 
+RequestedServiceObjectiveName :
 ElasticPoolName               : ElasticPool01
-EarliestRestoreDate           : 
+EarliestRestoreDate           :
 Tags                          :
 ```
 
@@ -85,7 +85,7 @@ Specifies the name of the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ Specifies the name of the SQL database collation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Specifies the name of the SQL database catalog collation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ Specifies the maximum size of the database in bytes.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -Edition
 Specifies the edition to assign to the database.
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - Default
 - None
@@ -154,7 +154,7 @@ psdx_paramvalues
 ```yaml
 Type: DatabaseEdition
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Specifies the name of the service objective to assign to the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ Specifies the name of the elastic pool in which to put the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ Specifies a dictionary of tags that this cmdlet associates with the new database
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ Specifies the name of the server that hosts the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -229,7 +229,7 @@ Specifies the name of the resource group to which the server is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -305,5 +305,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Suspend-AzureRmSqlDatabase](./Suspend-AzureRmSqlDatabase.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

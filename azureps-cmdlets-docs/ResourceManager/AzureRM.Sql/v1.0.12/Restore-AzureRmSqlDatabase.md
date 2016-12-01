@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: F514384D-F342-4CD9-A0D5-50DAC670925D
 ---
@@ -100,7 +100,7 @@ Indicates that this cmdlet restores a SQL database from a point-in-time backup.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FromPointInTimeBackup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,7 +118,7 @@ Use this parameter together with the *FromPointInTimeBackup* parameter.
 ```yaml
 Type: DateTime
 Parameter Sets: FromPointInTimeBackup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```yaml
 Type: DateTime
 Parameter Sets: FromDeletedDatabaseBackup
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ Specifies the name of the SQL database server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +160,7 @@ Specifies the name of the database to restore to.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -198,7 +198,7 @@ psdx_paramvalues
 ```yaml
 Type: DatabaseEdition
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ Specifies the name of the service objective.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ Specifies the name of the elastic pool in which to put the SQL database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -243,7 +243,7 @@ Specifies the name of the resource group to which this cmdlet assigns the SQL da
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -293,12 +293,12 @@ Accept wildcard characters: False
 
 ### -FromDeletedDatabaseBackup
 Indicates that this cmdlet restores a database from a backup of a deleted SQL database.
-You can use the Get-AzureRMSqlDeletedDatabaseBackup cmdlet to get the backup of a deleted SQL database.
+You can use the [Get-AzureRMSqlDeletedDatabaseBackup](./Get-AzureRMSqlDeletedDatabaseBackup.md) cmdlet to get the backup of a deleted SQL database.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FromDeletedDatabaseBackup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -314,7 +314,7 @@ To get a **DateTime** object, use the Get-Date cmdlet.
 ```yaml
 Type: DateTime
 Parameter Sets: FromDeletedDatabaseBackup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -330,7 +330,7 @@ You can use the Get-AzureRMSqlDatabaseGeoBackup cmdlet to get a geo-redundant ba
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FromGeoBackup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -345,7 +345,7 @@ Indicates that this cmdlet restores a SQL database from a long term retention ba
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FromLongTermRetentionBackup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -376,5 +376,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRMSqlDatabaseGeoBackup](./Get-AzureRMSqlDatabaseGeoBackup.md)
 
 [Get-AzureRMSqlDeletedDatabaseBackup](./Get-AzureRMSqlDeletedDatabaseBackup.md)
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 39EF07C6-DBF7-42D9-A15E-082FFD4F29C2
 ---
@@ -33,10 +33,10 @@ ResourceGroupName          : RG01
 ServerName                 : Server01
 DatabaseName               : Database01
 StorageKeyType             : StorageAccessKey
-StorageKey                 : 
+StorageKey                 :
 StorageUri                 : http://account01.blob.core.contoso.net/bacpacs/database01.bacpac
 AdministratorLogin         : User
-AdministratorLoginPassword : 
+AdministratorLoginPassword :
 AuthenticationType         : None
 OperationStatusLink        : https://management.contoso.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource01/providers/Microsoft.Sql/servers/server01/databases/database01/importExportOperationResults/00000000-00
                              0-0000-0000-000000000000?api-version=2014-04-01
@@ -54,7 +54,7 @@ Specifies the name of the nextref_database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -77,7 +77,7 @@ psdx_paramvalues
 ```yaml
 Type: DatabaseEdition
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -92,7 +92,7 @@ Specifies the name of the service objective to assign to the ssSDS.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -107,7 +107,7 @@ Specifies the maximum size for the newly imported database.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -122,7 +122,7 @@ Specifies the name of the nextref_database server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -134,17 +134,17 @@ Accept wildcard characters: False
 ### -StorageKeyType
 Specifies the type of access key for the storage account.
 
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - StorageAccessKey.
-Uses the storage account key. 
+Uses the storage account key.
 - SharedAccessKey.
 Uses the Shared Access Signature (SAS) key.
 
 ```yaml
 Type: StorageKeyType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +159,7 @@ Specifies the access key for the storage account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,7 +174,7 @@ Specifies the blob URI of the .bacpac file.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -189,7 +189,7 @@ Specifies the name of the SQL administrator.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +204,7 @@ Specifies the password of the SQL administrator.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -217,11 +217,11 @@ Accept wildcard characters: False
 Specifies the type of authentication used to access the server.
 This parameter defaults to SQL if no authentication type is set.
 
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - SQL.
 SQL authentication.
-Set the *AdministratorLogin* and *AdministratorLoginPassword* parameters to the SQL administrator username and password. 
+Set the *AdministratorLogin* and *AdministratorLoginPassword* parameters to the SQL administrator username and password.
 - ADPassword.
 Azure Active Directory authentication.
 Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure Active Directory administrator username and password.
@@ -231,7 +231,7 @@ This parameter is only available on nextref_database V12 servers.
 ```yaml
 Type: AuthenticationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +246,7 @@ Specifies the name of the resource group for the nextref_database server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -311,5 +311,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmSqlDatabaseImportExportStatus](./Get-AzureRmSqlDatabaseImportExportStatus.md)
 
 [New-AzureRmSqlDatabaseExport](./New-AzureRmSqlDatabaseExport.md)
-
-

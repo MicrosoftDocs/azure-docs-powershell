@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 8A40DE11-385A-4B50-8709-CCC4FD77F9C7
 ---
@@ -57,12 +57,12 @@ This command does not modify any other setting.
 ## PARAMETERS
 
 ### -PassThru
-passthru
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -EventType
 Specifies the event types to audit.
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - PlainSQL_Success
 - PlainSQL_Failure
@@ -82,7 +82,7 @@ psdx_paramvalues
 - StoredProcedure_Success
 - StoredProcedure_Failure
 - Login_Success
-- Login_Failure 
+- Login_Failure
 - TransactionManagement_Success
 - TransactionManagement_Failure
 - All
@@ -95,7 +95,7 @@ If you specify All or None at the same time, the command fails.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ If this is the first time a database auditing policy is defined and you do not s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 ### -StorageKeyType
 Specifies which of the storage access keys to use.
-psdx_paramvalues
+The acceptable values for this parameter are:
 
 - Primary
 - Secondary
@@ -134,7 +134,7 @@ The default value is Primary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ If you specify a value greater than zero, you must also specify a value for the 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Specify this value if you specify a value greater than zero for the *RetentionIn
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ Specifies the name of the server that contains the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -198,7 +198,7 @@ Specifies the name of the resource group that contains the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -264,5 +264,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Use-AzureRmSqlServerAuditingPolicy](./Use-AzureRmSqlServerAuditingPolicy.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: B518AB6E-F4B8-4FD5-98AE-A1D75BDB12A7
 ---
@@ -27,7 +27,7 @@ Get-AzureRmSqlDatabaseReplicationLink [-DatabaseName] <String> -PartnerResourceG
 ```
 
 ## DESCRIPTION
-The **Get-AzureRMSqlDatabaseReplicationLink** cmdlet replaces the **Get-AzureSqlDatabaseCopy** cmdlet.
+The **Get-AzureRmSqlDatabaseReplicationLink** cmdlet replaces the **Get-AzureSqlDatabaseCopy** cmdlet.
 It gets all geo-replication links between the specified ssSDS and a resource group or AzuressNoVersion.
 
 ## EXAMPLES
@@ -40,12 +40,12 @@ It gets all geo-replication links between the specified ssSDS and a resource gro
 ## PARAMETERS
 
 ### -DatabaseName
-Specifies the name of the nextref_database for which to retrieve links.
+Specifies the name of the nextref_database for which to get links.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -60,7 +60,7 @@ Specifies the name of the resource group to which the partner is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -70,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion for the database to retrieve links for.
+Specifies the name of the ssNoVersion for the database to get links for.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -85,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the Azure resource group for the database for which to retrieve links.
+Specifies the name of the Azure resource group for the database for which to get links.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -144,7 +144,7 @@ Specifies the name of the Azure SQL Server for the partner.
 ```yaml
 Type: String
 Parameter Sets: ByPartnerServerName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,5 +169,3 @@ This cmdlet returns a **ReplicationLink** object.
 ## NOTES
 
 ## RELATED LINKS
-
-

@@ -8,99 +8,98 @@ Locale: en-US
 
 # AzureRM.AzureStackAdmin Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Stack Administration cmdlets, which are a part of the Microsoft Azure stack and designed to be used with Azure PowerShell.
 
 ## AzureRM.AzureStackAdmin Cmdlets
 ### [Add-AzureRMGalleryItem](Add-AzureRMGalleryItem.md)
-{{Manually Enter Add-AzureRMGalleryItem Description Here}}
+Adds the gallery item package.
 
 ### [Add-AzureRMResourceProviderRegistration](Add-AzureRMResourceProviderRegistration.md)
-{{Manually Enter Add-AzureRMResourceProviderRegistration Description Here}}
+Adds a resource provider manifest to Azure Stack Resource Manager.
 
 ### [Add-AzureRMUsageConnection](Add-AzureRMUsageConnection.md)
-{{Manually Enter Add-AzureRMUsageConnection Description Here}}
+Adds an usage connection details for a resource provider.
 
 ### [Get-AzureRMGalleryItem](Get-AzureRMGalleryItem.md)
-{{Manually Enter Get-AzureRMGalleryItem Description Here}}
+Get the gallery item.
 
 ### [Get-AzureRMManagedLocation](Get-AzureRMManagedLocation.md)
-{{Manually Enter Get-AzureRMManagedLocation Description Here}}
+Gets the Azure Stack resource manager location as an administrator.
 
 ### [Get-AzureRMManagedSubscription](Get-AzureRMManagedSubscription.md)
-{{Manually Enter Get-AzureRMManagedSubscription Description Here}}
+Gets the tenant target subscription ID.
 
 ### [Get-AzureRMOffer](Get-AzureRMOffer.md)
-{{Manually Enter Get-AzureRMOffer Description Here}}
+Gets the offer as an administrator or as a tenant user.
 
 ### [Get-AzureRMPlan](Get-AzureRMPlan.md)
-{{Manually Enter Get-AzureRMPlan Description Here}}
+Gets the plan details.
 
 ### [Get-AzureRMResourceProviderRegistration](Get-AzureRMResourceProviderRegistration.md)
-{{Manually Enter Get-AzureRMResourceProviderRegistration Description Here}}
+Gets the resource provider manifest registration details.
 
 ### [Get-AzureRMTenantSubscription](Get-AzureRMTenantSubscription.md)
-{{Manually Enter Get-AzureRMTenantSubscription Description Here}}
+Gets the subscriptions associated with the current logged in user.
 
 ### [Get-AzureRMUsageConnection](Get-AzureRMUsageConnection.md)
-{{Manually Enter Get-AzureRMUsageConnection Description Here}}
+Gets the specified usage connection information.
 
 ### [Get-AzureStackToken](Get-AzureStackToken.md)
-{{Manually Enter Get-AzureStackToken Description Here}}
+Gets a token to be used to make calls to Azure Stack Resource Manager.
 
 ### [New-AzureRMManagedLocation](New-AzureRMManagedLocation.md)
-{{Manually Enter New-AzureRMManagedLocation Description Here}}
+Creates a location managed by Azure Stack Resource Manager.
 
 ### [New-AzureRMManagedSubscription](New-AzureRMManagedSubscription.md)
-{{Manually Enter New-AzureRMManagedSubscription Description Here}}
+Creates a subscription as an administrator for the specified tenant user.
 
 ### [New-AzureRMOffer](New-AzureRMOffer.md)
-{{Manually Enter New-AzureRMOffer Description Here}}
+Creates an offer composing of the specified base plans and add ons.
 
 ### [New-AzureRMPlan](New-AzureRMPlan.md)
-{{Manually Enter New-AzureRMPlan Description Here}}
+Creates a plan composing the various quotas of the resource provider.
 
 ### [New-AzureRMTenantSubscription](New-AzureRMTenantSubscription.md)
-{{Manually Enter New-AzureRMTenantSubscription Description Here}}
+Creates a subscription as a tenant for the specified offer.
 
 ### [Remove-AzureRMGalleryItem](Remove-AzureRMGalleryItem.md)
-{{Manually Enter Remove-AzureRMGalleryItem Description Here}}
+Removes the specified gallery item.
 
 ### [Remove-AzureRMManagedLocation](Remove-AzureRMManagedLocation.md)
-{{Manually Enter Remove-AzureRMManagedLocation Description Here}}
+Removes the specified location.
 
 ### [Remove-AzureRMManagedSubscription](Remove-AzureRMManagedSubscription.md)
-{{Manually Enter Remove-AzureRMManagedSubscription Description Here}}
+Removes the specified subscription as an administrator.
 
 ### [Remove-AzureRMOffer](Remove-AzureRMOffer.md)
-{{Manually Enter Remove-AzureRMOffer Description Here}}
+Removes the specified offer.
 
 ### [Remove-AzureRMPlan](Remove-AzureRMPlan.md)
-{{Manually Enter Remove-AzureRMPlan Description Here}}
+Removes the specified plan.
 
 ### [Remove-AzureRMResourceProviderRegistration](Remove-AzureRMResourceProviderRegistration.md)
-{{Manually Enter Remove-AzureRMResourceProviderRegistration Description Here}}
+Removes the resource provider manifest.
 
 ### [Remove-AzureRMTenantSubscription](Remove-AzureRMTenantSubscription.md)
-{{Manually Enter Remove-AzureRMTenantSubscription Description Here}}
+Removes the current logged in user's tenant subscription.
 
 ### [Remove-AzureRMUsageConnection](Remove-AzureRMUsageConnection.md)
-{{Manually Enter Remove-AzureRMUsageConnection Description Here}}
+Removes the usage connection information from the usage service.
 
 ### [Set-AzureRMManagedLocation](Set-AzureRMManagedLocation.md)
-{{Manually Enter Set-AzureRMManagedLocation Description Here}}
+Modifies the existing location.
 
 ### [Set-AzureRMManagedSubscription](Set-AzureRMManagedSubscription.md)
-{{Manually Enter Set-AzureRMManagedSubscription Description Here}}
+Updates any tenant user subscription as a service administrator.
 
 ### [Set-AzureRMOffer](Set-AzureRMOffer.md)
-{{Manually Enter Set-AzureRMOffer Description Here}}
+Updates the existing offer.
 
 ### [Set-AzureRMPlan](Set-AzureRMPlan.md)
-{{Manually Enter Set-AzureRMPlan Description Here}}
+Updates the existing plan with the given modified plan object.
 
 ### [Set-AzureRMResourceProviderRegistration](Set-AzureRMResourceProviderRegistration.md)
-{{Manually Enter Set-AzureRMResourceProviderRegistration Description Here}}
+Updates the provider registration manifest with the new provider registration model.
 
 ### [Set-AzureRMTenantSubscription](Set-AzureRMTenantSubscription.md)
-{{Manually Enter Set-AzureRMTenantSubscription Description Here}}
-
+Updates the current logged user's subscription details.
