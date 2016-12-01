@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 6B7FCDB4-8EEC-4450-9081-57DDE2BF9ED6
 ---
@@ -33,9 +33,9 @@ DatabaseName       : database01
 UseServerDefault   : Disabled
 ResourceGroupName  : resourcegroup01
 ServerName         : server01
-StorageAccountName : 
+StorageAccountName :
 StorageKeyType     : Primary
-EventType          : {PlainSQL_Success, PlainSQL_Failure, ParameterizedSQL_Success, ParameterizedSQL_Failure...} 
+EventType          : {PlainSQL_Success, PlainSQL_Failure, ParameterizedSQL_Success, ParameterizedSQL_Failure...}
 AuditState         : New
 RetentionInDays    : 0
 TableIdentifier    : Server01Database01
@@ -51,7 +51,7 @@ Specifies the name of the server where the database is located.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -66,7 +66,7 @@ Specifies the name of the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -81,7 +81,7 @@ Specifies the name of the resource group to which the database is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -147,5 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlDatabaseAuditingPolicy](./Set-AzureRmSqlDatabaseAuditingPolicy.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

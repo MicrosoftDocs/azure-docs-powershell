@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 4DA71FCA-502C-4CAD-93FB-5AFC26B26DF2
 ---
@@ -8,7 +8,7 @@ ms.assetid: 4DA71FCA-502C-4CAD-93FB-5AFC26B26DF2
 # Get-AzureRmSqlDatabaseRestorePoints
 
 ## SYNOPSIS
-Retrieves the distinct restore points from which a SQL Data Warehouse can be restored.
+Gets the distinct restore points from which a SQL Data Warehouse can be restored.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureRmSqlDatabaseRestorePoints [-ServerName] <String> [-DatabaseName] <Stri
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabaseRestorePoints** cmdlet retrieves the distinct restore points that an Azure SQL Data Warehouse can be restored from.
+The **Get-AzureRmSqlDatabaseRestorePoints** cmdlet gets the distinct restore points that an Azure SQL Data Warehouse can be restored from.
 For an ssSDS, the restore window is continuous.
 This means that any point in time in the backup retention period of the database can be used as a restore point.
 
@@ -35,11 +35,11 @@ ServerName               : server01
 DatabaseName             : database01
 Location                 : Central US
 RestorePointType         : CONTINUOUS
-RestorePointCreationDate : 
+RestorePointCreationDate :
 EarliestRestoreDate      : 8/12/2015 12:00:00 AM
 ```
 
-This command returns all available restore points for the ssSDS named Database01.
+This command gets all available restore points for the ssSDS named Database01.
 
 ## PARAMETERS
 
@@ -49,7 +49,7 @@ Specifies the name of the AzuressNoVersion that hosts the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -64,7 +64,7 @@ Specifies the name of the nextref_database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -79,7 +79,7 @@ Specifies the name of the resource group to which the nextref_database is assign
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -139,5 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

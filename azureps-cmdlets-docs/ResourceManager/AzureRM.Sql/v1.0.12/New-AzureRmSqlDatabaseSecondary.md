@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 62F0C48F-09A6-4AE3-943F-C0A51FC100BA
 ---
@@ -22,7 +22,7 @@ New-AzureRmSqlDatabaseSecondary [-DatabaseName] <String> [-SecondaryServiceObjec
 ```
 
 ## DESCRIPTION
-The **New-AzureRMSqlDatabaseSecondary** cmdlet replaces the Start-AzureSqlDatabaseCopy cmdlet when used for setting up geo-replication for a database.
+The **New-AzureRmSqlDatabaseSecondary** cmdlet replaces the [Start-AzureSqlDatabaseCopy](./Start-AzureSqlDatabaseCopy.md) cmdlet when used for setting up geo-replication for a database.
 It returns the geo-replication link object from the primary to the secondary database.
 
 ## EXAMPLES
@@ -40,7 +40,7 @@ Specifies the name of the database to act as primary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -55,7 +55,7 @@ Specifies the name of the service objective to assign to the secondary database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,7 +70,7 @@ Specifies the name of the elastic pool in which to put the secondary database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +85,7 @@ Specifies the tags to associate with the nextref_database replication link.
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Specifies the name of the Azure Resource Group to which this cmdlet assigns the 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,7 +115,7 @@ Specifies the name of the Azure SQL database server to act as secondary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -126,7 +126,8 @@ Accept wildcard characters: False
 
 ### -AllowConnections
 Specifies the read intent of the secondary ssSDS.
-psdx_paramvalues
+
+The acceptable values for this parameter are:
 
 - No
 - All
@@ -134,7 +135,7 @@ psdx_paramvalues
 ```yaml
 Type: AllowConnections
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,12 +145,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-Specifies the name of the ssNoVersion of the primary  nextref_database.
+Specifies the name of the ssNoVersion of the primary nextref_database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -164,7 +165,7 @@ Specifies the name of the Azure Resource Group to which this cmdlet assigns the 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -234,5 +235,3 @@ This cmdlet returns **ReplicationLink** objects.
 [Remove-AzureRmSqlDatabaseSecondary](./Remove-AzureRmSqlDatabaseSecondary.md)
 
 [Set-AzureRmSqlDatabaseSecondary](./Set-AzureRmSqlDatabaseSecondary.md)
-
-

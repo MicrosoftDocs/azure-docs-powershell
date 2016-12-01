@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: B13B9F46-C0BB-4565-95DB-211D5C5699C6
 ---
@@ -26,12 +26,12 @@ The **Remove-AzureRmSqlServerActiveDirectoryAdministrator** cmdlet removes an Az
 ### Example 1: Remove an administrator
 ```
 PS C:\>Remove-AzureRmSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
-Confirm 
-Are you sure you want to remove the Azure Sql Server Active Directory Administrator on server 'Server01'? 
-[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y 
+Confirm
+Are you sure you want to remove the Azure Sql Server Active Directory Administrator on server 'Server01'?
+[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y
 
-ResourceGroupName ServerName DisplayName ObjectId 
------------------ ---------- ----------- -------- 
+ResourceGroupName ServerName DisplayName ObjectId
+----------------- ---------- ----------- --------
 ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
@@ -40,12 +40,12 @@ This command removes the Azure AD administrator for the server named Server01 as
 ## PARAMETERS
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -60,7 +60,7 @@ Specifies the name of the ssNoVersion for which this cmdlet removes an administr
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -75,7 +75,7 @@ Specifies the name of the resource group to which the ssNoVersion is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -174,5 +174,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlServerActiveDirectoryAdministrator](./Set-AzureRmSqlServerActiveDirectoryAdministrator.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-
