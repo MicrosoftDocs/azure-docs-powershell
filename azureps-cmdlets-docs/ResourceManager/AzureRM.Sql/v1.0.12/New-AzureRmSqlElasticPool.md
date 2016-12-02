@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: C37650CE-7B6A-4833-AA7A-1D44E3A1C13C
 ---
@@ -55,7 +55,7 @@ Specifies the name of the elastic pool that this cmdlet creates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -66,10 +66,11 @@ Accept wildcard characters: False
 
 ### -Edition
 Specifies the edition of the Azure SQL Database used for the elastic pool.
-psdx_paramvalues
 
-- Premium 
-- Basic 
+The acceptable values for this parameter are:
+
+- Premium
+- Basic
 - Standard
 
 For the current preview, the edition must be Standard.
@@ -77,7 +78,7 @@ For the current preview, the edition must be Standard.
 ```yaml
 Type: DatabaseEdition
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,10 +89,10 @@ Accept wildcard characters: False
 
 ### -Dtu
 Specifies the total number of shared DTUs for the elastic pool.
-The default values for the different editions are as follows: 
+The default values for the different editions are as follows:
 
 - Basic.
-100 DTUs 
+100 DTUs
 - Standard.
 100 DTUs
 - Premium.
@@ -100,7 +101,7 @@ The default values for the different editions are as follows:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +124,7 @@ For more information about the relationship between storage and DTUs, see https:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +140,7 @@ The default value is zero (0).
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,10 +151,10 @@ Accept wildcard characters: False
 
 ### -DatabaseDtuMax
 Specifies the maximum number of Database Throughput Units (DTUs) that any single database in the pool can consume.
-The default values for the different editions are as follows: 
+The default values for the different editions are as follows:
 
 - Basic.
-5 DTUs 
+5 DTUs
 - Standard.
 100 DTUs
 - Premium.
@@ -162,7 +163,7 @@ The default values for the different editions are as follows:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +178,7 @@ Specifies a dictionary of tags that this cmdlet associates with the elastic pool
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +193,7 @@ Specifies the name of the server that hosts the elastic pool.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -207,7 +208,7 @@ Specifies the name of the resource group to which this cmdlet assigns the elasti
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -279,5 +280,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlElasticPool](./Set-AzureRmSqlElasticPool.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

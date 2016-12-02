@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: AF45EA1E-5950-48C8-9049-C1DE6CB01D46
 ---
@@ -26,7 +26,7 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ### Example 1: Get database object that has service tier advisor information
 ```
-PS C:\>Get-AzureSqlDatabaseExpanded -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\>Get-AzureRmSqlDatabaseExpanded -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 ```
 
 This command returns the database that has expanded properties that contain the service tier advisor information.
@@ -39,7 +39,7 @@ Specifies the name of the server that hosts the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -54,7 +54,7 @@ Specifies the name of the database to get.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -69,7 +69,7 @@ Specifies the name of the resource group to which the server is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -127,5 +127,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: D194CEAB-47E7-46F0-8AF3-68F8E514E6C6
 ---
@@ -48,7 +48,7 @@ Specifies the name of the Azure SQL Database Secondary.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -63,7 +63,7 @@ Specifies the name of the resource group to which the partner Azure SQL Database
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,7 +78,7 @@ Specifies the name of the SQL Server that hosts the Azure SQL Database Secondary
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -93,7 +93,7 @@ Specifies the name of the resource group to which the Azure SQL Database Seconda
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -147,7 +147,7 @@ Indicates that this operation is a failover.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByFailoverParams
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -162,7 +162,7 @@ Indicates that this failover operation permits data loss.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByFailoverParams
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,5 +193,3 @@ This cmdlet returns a **ReplicationLink**.
 [New-AzureRmSqlDatabaseSecondary](./New-AzureRmSqlDatabaseSecondary.md)
 
 [Remove-AzureRmSqlDatabaseSecondary](./Remove-AzureRmSqlDatabaseSecondary.md)
-
-

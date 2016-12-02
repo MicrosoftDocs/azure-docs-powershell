@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 66A51F4E-705F-4173-91AB-B3D579E23A85
 ---
@@ -36,7 +36,7 @@ Specifies the name of the server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -51,7 +51,7 @@ Specifies the name of the server system recovery configuration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -66,7 +66,7 @@ Specifies the operation ID.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ Specifies the name of the resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -139,5 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

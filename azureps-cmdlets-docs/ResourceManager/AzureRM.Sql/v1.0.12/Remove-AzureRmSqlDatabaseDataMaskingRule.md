@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 520C6733-92D5-4D86-93A6-20C7E2F1A773
 ---
@@ -38,12 +38,12 @@ The database is located on Server01 and assigned to resource group ResourceGroup
 ## PARAMETERS
 
 ### -PassThru
-passthru
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -53,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +73,7 @@ Specifies the name of a schema.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ Specifies the name of an Azure SQL table.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -103,7 +103,7 @@ Specifies the name of the column targeted by the masking rule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,7 +118,7 @@ Specifies the name of the server that hosts the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -133,7 +133,7 @@ Specifies the name of the database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -148,7 +148,7 @@ Specifies the name of the resource group to which the database is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -249,5 +249,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlDatabaseDataMaskingRule](./Set-AzureRmSqlDatabaseDataMaskingRule.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

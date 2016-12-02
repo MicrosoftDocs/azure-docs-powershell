@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 52740669-7E10-4AB0-A4E2-03961F80BB4B
 ---
@@ -21,11 +21,12 @@ New-AzureRmSqlDatabaseCopy [-DatabaseName] <String> [-ServiceObjectiveName <Stri
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSqlDatabaseCopy** cmdlet creates a copy of an Azure SQL Database that uses the snapshot of the data at the current time.
-Use this cmdlet instead of the Start-AzureSqlDatabaseCopy cmdlet to create a one-time database copy.
+The **New-AzureRmSqlDatabaseCopy** cmdlet creates a copy of an ssSDS that uses the snapshot of the data at the current time.
+Use this cmdlet instead of the [Start-AzureSqlDatabaseCopy](./Start-AzureSqlDatabaseCopy.md) cmdlet to create a one-time database copy.
+
 This cmdlet returns the **Database** object of the copy.
 
-Note: Use the New-AzureRmSqlDatabaseSecondary cmdlet to configure geo-replication for a database.
+Note: Use the [New-AzureRmSqlDatabaseSecondary](./New-AzureRmSqlDatabaseSecondary.md) cmdlet to configure geo-replication for a database.
 
 This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
@@ -44,7 +45,7 @@ Specifies the name of the SQL Database to copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -59,7 +60,7 @@ Specifies the name of the service objective to assign to the copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +75,7 @@ Specifies the name of the elastic pool in which to assign the copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +90,7 @@ Specifies the tags to associate with the Azure SQL Database copy.
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ Specifies the name of the Azure Resource Group in which to assign the copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +120,7 @@ Specifies the name of the SQL Server which hosts the copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ Specifies the name of the SQL Database copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +150,7 @@ Specifies the name of the  SQL Server that contains the database to copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -164,7 +165,7 @@ Specifies the name of the  Resource Group to which this cmdlet assigns the copie
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -232,5 +233,3 @@ This cmdlet returns a **Database** object that represents the copied database.
 [New-AzureRmSqlDatabaseSecondary](./New-AzureRmSqlDatabaseSecondary.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

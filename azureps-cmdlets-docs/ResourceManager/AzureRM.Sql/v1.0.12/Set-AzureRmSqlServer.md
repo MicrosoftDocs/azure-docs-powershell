@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 57874E1C-3C62-4BFE-AADC-1689DAB9AD0C
 ---
@@ -33,7 +33,7 @@ ResourceGroupName        : ResourceGroup01
 ServerName               : Server01
 Location                 : Australia East
 SqlAdministratorLogin    : adminLogin
-SqlAdministratorPassword : 
+SqlAdministratorPassword :
 ServerVersion            : 12.0
 Tags                     :
 ```
@@ -48,7 +48,7 @@ Specifies the name of the server that this cmdlet modifies.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -65,7 +65,7 @@ For more information, type `Get-Help ConvertTo-SecureString`.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +80,7 @@ Specifies a dictionary of tags that this cmdlet associates with the server.
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,12 +91,12 @@ Accept wildcard characters: False
 
 ### -ServerVersion
 Specifies the version to which this cmdlet changes the server.
-psdx_paramvalues 2.0 and 12.0.
+The acceptable values for this parameter are: 2.0 and 12.0.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,12 +106,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Specifies the name of the resource group to which the server is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -219,5 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

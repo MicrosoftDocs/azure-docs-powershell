@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: D83879BE-919A-4C1B-854B-E366CCAB5D8C
 ---
@@ -21,8 +21,9 @@ Start-AzureRmSqlServerUpgrade -ServerVersion <String> [-ScheduleUpgradeAfterUtcD
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmSqlServerUpgrade** cmdlet starts the upgrade of an Azure SQL Database server version 11 to version 12.
-You can monitor the progress of an upgrade by using the Get-AzureRmSqlServerUpgrade cmdlet.
+The **Start-AzureRmSqlServerUpgrade** cmdlet starts the upgrade of an ssSDS server version 11 to version 12.
+You can monitor the progress of an upgrade by using the [Get-AzureRmSqlServerUpgrade](./Get-AzureRmSqlServerUpgrade.md) cmdlet.
+
 
 ## EXAMPLES
 
@@ -32,7 +33,7 @@ PS C:\>Start-AzureRmSqlServerUpgrade -ResourceGroupName "ResourceGroup01" -Serve
 ResourceGroupName               : ResourceGroup01
 ServerName                      : Server01
 ServerVersion                   : 12.0
-ScheduleUpgradeAfterUtcDateTime : 
+ScheduleUpgradeAfterUtcDateTime :
 DatabaseCollection              :
 ```
 
@@ -69,7 +70,7 @@ The only valid value is 12.0.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -86,7 +87,7 @@ For more information, type `Get-Help Get-Date`.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +102,7 @@ Specifies an array of **RecommendedDatabaseProperties** objects that this cmdlet
 ```yaml
 Type: RecommendedDatabaseProperties[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +117,7 @@ Specifies an array of **UpgradeRecommendedElasticPoolProperties** objects to use
 ```yaml
 Type: UpgradeRecommendedElasticPoolProperties[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +132,7 @@ Specifies the name of the server that this cmdlet upgrades.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -146,7 +147,7 @@ Specifies the name of the resource group to which the server is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -212,5 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmSqlServerUpgrade](./Stop-AzureRmSqlServerUpgrade.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

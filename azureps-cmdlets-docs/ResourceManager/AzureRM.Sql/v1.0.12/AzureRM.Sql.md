@@ -9,7 +9,7 @@ ms.assetid: 0B025CD9-F209-49EF-924E-E95B6F665A91
 
 # AzureRM.Sql Module
 ## Description
-This topic displays help topics for the Azure SQL Database Cmdlets. 
+This topic displays help topics for the Azure SQL Database Cmdlets.
 
 ## AzureRM.Sql Cmdlets
 ### [Get-AzureRmSqlCapability](./Get-AzureRmSqlCapability.md)
@@ -54,7 +54,7 @@ Gets the geo-replication links between an Azure SQL Database and a resource grou
 
 
 ### [Get-AzureRmSqlDatabaseRestorePoints](./Get-AzureRmSqlDatabaseRestorePoints.md)
-Retrieves the distinct restore points from which a SQL Data Warehouse can be restored.
+Gets the distinct restore points from which a SQL Data Warehouse can be restored.
 
 
 ### [Get-AzureRmSqlDatabaseSecureConnectionPolicy](./Get-AzureRmSqlDatabaseSecureConnectionPolicy.md)
@@ -137,7 +137,7 @@ Gets the status of an Azure SQL Database server upgrade.
 
 
 ### [Get-AzureRmSqlServer](./Get-AzureRmSqlServer.md)
-Returns information about SQL Database servers.
+Gets information about SQL Database servers.
 
 
 ### [New-AzureRmSqlDatabaseCopy](./New-AzureRmSqlDatabaseCopy.md)
@@ -321,6 +321,3 @@ Suspends a SQL Data Warehouse database.
 
 ### [Use-AzureRmSqlServerAuditingPolicy](./Use-AzureRmSqlServerAuditingPolicy.md)
 Specifies that a database uses the auditing policy of its host server.
-
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 90F91FCE-E81B-42D6-B303-9CF0130DC295
 ---
@@ -46,7 +46,7 @@ Specifies the name of the server communication link that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -62,7 +62,7 @@ This server contains a communication link that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -77,7 +77,7 @@ Specifies the name of the resource group to which the server specified by the *S
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -142,5 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSqlServerCommunicationLink](./New-AzureRmSqlServerCommunicationLink.md)
 
 [Remove-AzureRmSqlServerCommunicationLink](./Remove-AzureRmSqlServerCommunicationLink.md)
-
-

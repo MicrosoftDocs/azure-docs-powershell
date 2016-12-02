@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: FF6994BD-7E36-4CC5-BAAE-E6372EFC520A
 ---
@@ -34,12 +34,12 @@ This command removes the threat detection policy from a database named Database0
 ## PARAMETERS
 
 ### -PassThru
-passthru
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -54,7 +54,7 @@ Specifies the name of a server on which the database runs.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -69,7 +69,7 @@ Specifies the name of a database where the threat detection policy should be rem
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -84,7 +84,7 @@ Specifies the name of the resource group the server belongs.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -150,5 +150,3 @@ This cmdlet returns a **DatabaseThreatDetectionPolicyModel** object.
 ## RELATED LINKS
 
 [Set-AzureRmSqlDatabaseThreatDetectionPolicy]()
-
-

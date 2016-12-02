@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: AE72E6B6-5D3A-4E44-9C4A-1C0ADA66AB0F
 ---
@@ -18,7 +18,7 @@ Get-AzureRmSqlDatabaseGeoBackup [-ServerName] <String> [[-DatabaseName] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzureRMSqlDatabaseGeoBackup** cmdlet gets a specified geo-redundant backup of a SQL database or all available geo-redundant backups on a specified server.
+The **Get-AzureRmSqlDatabaseGeoBackup** cmdlet gets a specified geo-redundant backup of a SQL database or all available geo-redundant backups on a specified server.
 
 A geo-redundant backup is a restorable resource using data files from a separate geographic location.
 You can use Geo-Restore to restore a geo-redundant backup in the event of a regional outage to recover your database to a new region.
@@ -29,14 +29,14 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ### Example 1: Get all geo-redundant backups on a server
 ```
-PS C:\>Get-AzureRMSqlDatabaseGeoBackup -ResourceGroupName "ContosoResourceGroup" -ServerName "ContosoServer"
+PS C:\>Get-AzureRmSqlDatabaseGeoBackup -ResourceGroupName "ContosoResourceGroup" -ServerName "ContosoServer"
 ```
 
 This command gets all available geo-redundant backups on a specified server.
 
 ### Example 2: Get a specified geo-redundant backup
 ```
-PS C:\>Get-AzureRMSqlDatabaseGeoBackup -ResourceGroupName "ContosoResourceGroup" -ServerName "ContosoServer" -DatabaseName "ContosoDatabase"
+PS C:\>Get-AzureRmSqlDatabaseGeoBackup -ResourceGroupName "ContosoResourceGroup" -ServerName "ContosoServer" -DatabaseName "ContosoDatabase"
 ```
 
 This command gets the database geo-redundant backup named ContosoDatabase.
@@ -49,7 +49,7 @@ Specifies the name of the server that hosts the backup to restore.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -64,7 +64,7 @@ Specifies the name of the database to get.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -79,7 +79,7 @@ Specifies the name of the resource group to which the SQL database server is ass
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -145,5 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Recover an Azure SQL Database from an outage](http://go.microsoft.com/fwlink/?LinkId=746882)
 
 [Restore-AzureRmSqlDatabase](./Restore-AzureRmSqlDatabase.md)
-
-

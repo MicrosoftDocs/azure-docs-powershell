@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 0BD7D98F-2D43-4FD2-8F1E-6A5169E69C42
 ---
@@ -41,7 +41,7 @@ Specifies the name of the server to remove.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -51,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,7 +71,7 @@ Specifies the name of the resource group to which the server is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -172,5 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlServer](./Set-AzureRmSqlServer.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-
