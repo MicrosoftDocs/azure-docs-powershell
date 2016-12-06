@@ -292,7 +292,5 @@ See the following resources to learn more about using the cmdlets:
 
 * For basic instructions about using Windows PowerShell, see
   [Using Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/fundamental/using-windows-powershell).
-* For reference information about the cmdlets, see
-  [Azure Cmdlet Reference](/powershell/azureps-cmdlets-docs/).
 * For sample scripts and instructions to help you learn to use scripting to manage Azure, see the
-  [Script Center](/documentation/scripts/).
+  [Script Center](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=WindowsAzure&f%5B0%5D.Text=Windows%20Azure).
