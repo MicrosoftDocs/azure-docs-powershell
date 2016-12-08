@@ -8,7 +8,7 @@ ms.assetid: ADA10658-E393-441B-BE5A-7082D8E20C2B
 # New-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-Creates an API Management certificate.
+Creates an API Management certificate for authentication with backend.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ New-AzureRmApiManagementCertificate -Context <PsApiManagementContext> [-Certific
 ```
 
 ## DESCRIPTION
-The **New-AzureRmApiManagementCertificate** cmdlet creates an Azure API Management certificate.
+The **New-AzureRmApiManagementCertificate** cmdlet creates an Azure API Management certificate which can be configured for authentication with backend.
 
 ## EXAMPLES
 

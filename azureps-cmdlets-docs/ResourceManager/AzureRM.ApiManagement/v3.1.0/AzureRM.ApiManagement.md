@@ -100,7 +100,7 @@ Creates an API.
 Creates an authorization server.
 
 ### [New-AzureRmApiManagementCertificate](New-AzureRmApiManagementCertificate.md)
-Creates an API Management certificate.
+Creates an API Management certificate for authentication with backend.
 
 ### [New-AzureRmApiManagementContext](New-AzureRmApiManagementContext.md)
 Creates an instance of PsAzureApiManagementContext.
@@ -154,7 +154,7 @@ Removes an API from a product.
 Removes an authorization server.
 
 ### [Remove-AzureRmApiManagementCertificate](Remove-AzureRmApiManagementCertificate.md)
-Removes an API Management certificate.
+Removes an API Management certificate configured for authentication with backend.
 
 ### [Remove-AzureRmApiManagementGroup](Remove-AzureRmApiManagementGroup.md)
 Removes an existing API management group.
@@ -205,7 +205,7 @@ Modifies an API.
 Modifies an authorization server.
 
 ### [Set-AzureRmApiManagementCertificate](Set-AzureRmApiManagementCertificate.md)
-Modifies an API Management certificate.
+Modifies an API Management certificate which is configured for authentication with backend.
 
 ### [Set-AzureRmApiManagementGroup](Set-AzureRmApiManagementGroup.md)
 Configures an API management group.

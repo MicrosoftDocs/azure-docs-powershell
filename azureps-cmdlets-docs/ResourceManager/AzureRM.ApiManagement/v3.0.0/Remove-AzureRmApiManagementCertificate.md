@@ -8,7 +8,7 @@ ms.assetid: 95C71042-6A61-457C-9EE3-323A34133F2C
 # Remove-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-Removes an API Management certificate.
+Removes an API Management certificate configured for authentication with backend.
 
 ## SYNTAX
 

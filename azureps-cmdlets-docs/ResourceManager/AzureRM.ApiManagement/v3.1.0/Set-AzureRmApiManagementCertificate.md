@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-Modifies an API Management certificate.
+Modifies an API Management certificate which is configured for authentication with backend.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Set-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -Certifica
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmApiManagementCertificate** cmdlet modifies an Azure API Management certificate.
+The **Set-AzureRmApiManagementCertificate** cmdlet modifies an Azure API Management certificate which is configured for authentication with backend.
 
 ## EXAMPLES
 

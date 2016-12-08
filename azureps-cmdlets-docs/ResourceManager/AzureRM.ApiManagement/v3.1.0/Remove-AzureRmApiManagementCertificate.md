@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-Removes an API Management certificate.
+Removes an API Management certificate configured for authentication with backend.
 
 ## SYNTAX
 

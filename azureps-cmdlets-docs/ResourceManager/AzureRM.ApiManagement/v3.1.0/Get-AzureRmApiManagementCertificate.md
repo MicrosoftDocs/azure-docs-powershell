@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-Gets API Management certificates.
+Gets API Management certificates configured for authentication with backend.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -Certifica
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmApiManagementCertificate** cmdlet gets all Azure API Management certificates or certificates that you specify.
+The **Get-AzureRmApiManagementCertificate** cmdlet gets all Azure API Management certificates or certificates that you specify which are configured for Authentication with the Backend.
 
 ## EXAMPLES
 
