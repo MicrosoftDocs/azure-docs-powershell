@@ -8,7 +8,7 @@ ms.assetid: E13E8985-3141-4C52-B2A4-9540306C8891
 # Get-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-Gets API Management certificates.
+Gets API Management certificates configured for authentication with backend.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -Certifica
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmApiManagementCertificate** cmdlet gets all Azure API Management certificates or certificates that you specify.
+The **Get-AzureRmApiManagementCertificate** cmdlet gets all Azure API Management certificates or certificates that you specify which are configured for Authentication with the Backend.
 
 ## EXAMPLES
 
