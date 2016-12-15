@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -OperationId
 Specifies the identifier of the existing API operation.
-If you specify this parameter with *ApiId* the cmdlet returns operation-scope policy.
+If you specify this parameter with the *ApiId* parameter the cmdlet returns operation-scope policy.
 
 ```yaml
 Type: String
@@ -271,5 +271,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementPolicy](./Remove-AzureRmApiManagementPolicy.md)
 
 [Set-AzureRmApiManagementPolicy](./Set-AzureRmApiManagementPolicy.md)
-
-

@@ -72,7 +72,7 @@ This command gets all user groups with the user ID named 0123456789.
 ## PARAMETERS
 
 ### -Context
-Specifies an instance of PsApiManagementContext.
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: PsApiManagementContext
@@ -134,8 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing product.
-If specified will return all groups the product assigned to.
+Specifies the identifier of an existing product.
+If specified this cmdlet returns all groups the product is assigned to.
 This parameter is optional.
 
 ```yaml
@@ -207,5 +207,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementGroup](./Remove-AzureRmApiManagementGroup.md)
 
 [Set-AzureRmApiManagementGroup](./Set-AzureRmApiManagementGroup.md)
-
-
