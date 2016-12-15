@@ -33,7 +33,7 @@ PS C:\>New-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "Conto
 
 This command creates a Developer tier API Management service.
 The command specifies the organization and the administrator address.
-The command does not specify the *SKU* parameter.
+The command does not specify the *Sku* parameter.
 Therefore, the cmdlet uses the default value of Developer.
 
 ### Example 2: Create a Standard tier service that has three units
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Location
 Specifies the location in which this cmdlet creates an API Management deployment.
-To obtain valid locations, use the Get-AzureLocation cmdlets.
+To obtain valid locations, use the **Get-AzureLocation** cmdlets.
 
 Valid values are: 
 
@@ -207,8 +207,11 @@ Accept wildcard characters: False
 ```
 
 ### -VpnType
-Virtual Network Type of the ApiManagement Deployment. Valid Values are 
-- "None" (Default Value. ApiManagement is not part of any Virtual Network")
+Virtual Network Type of the ApiManagement Deployment. 
+
+The acceptable values for this parameter are:
+  
+- "None" (Default Value. ApiManagement is not part of any Virtual Network)
 - "External" (ApiManagement Deployment is setup inside a Virtual Network having an Internet Facing Endpoint)
 - "Internal" (ApiManagement Deployment is setup inside a Virtual Network having an Intranet Facing Endpoint)
 
@@ -311,5 +314,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagement](./Remove-AzureRmApiManagement.md)
 
 [Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
-
-

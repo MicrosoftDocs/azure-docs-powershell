@@ -176,7 +176,7 @@ Accept wildcard characters: False
 
 ### -AuthorizationRequestMethods
 Specifies an array of authorization request methods.
-Valid values are: GET, POST.
+The acceptable values for this parameter are: GET, POST.
 The default value is GET.
 
 ```yaml
@@ -372,4 +372,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -89,7 +89,11 @@ Accept wildcard characters: False
 
 ### -SpecificationFormat
 Specifies the specification format.
-The acceptable values for this parameter are: Wadl, Wsdl, and Swagger.
+The acceptable values for this parameter are: 
+  
+- Wadl
+- Wsdl
+- Swagger
 
 ```yaml
 Type: PsApiManagementApiFormat
@@ -192,7 +196,7 @@ Accept wildcard characters: False
 
 ### -WsdlServiceName
 Specifies the local name of WSDL Service that this cmdlet imports.
-Specify this parameter if you specify Wsdl for *SpecificationFormat*.
+Specify this parameter if you specify Wsdl for the *SpecificationFormat* parameter.
 
 ```yaml
 Type: String
@@ -245,5 +249,3 @@ This cmdlet returns the imported API as a **PsApiManagementApi** object.
 [Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
 
 [Set-AzureRmApiManagementApi](./Set-AzureRmApiManagementApi.md)
-
-

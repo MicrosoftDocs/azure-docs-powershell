@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Specifies the identifier of the product to search for.
+Specifies the identifier of the product that this cmdlet searches for.
 
 ```yaml
 Type: String
@@ -154,5 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementProduct](./Remove-AzureRmApiManagementProduct.md)
 
 [Set-AzureRmApiManagementProduct](./Set-AzureRmApiManagementProduct.md)
-
-
