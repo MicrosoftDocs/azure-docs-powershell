@@ -63,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates that this cmdlet returns a value of $True if the operation succeeds.
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -165,5 +166,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagement](./New-AzureRmApiManagement.md)
 
 [Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
-
-
