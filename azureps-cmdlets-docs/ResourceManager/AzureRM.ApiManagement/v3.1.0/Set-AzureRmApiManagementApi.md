@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiId
-Specifies the ID of the API to modify.
+Specifies the ID of the API that this cmdlet modifies.
 
 ```yaml
 Type: String
@@ -286,5 +286,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementApi](./New-AzureRmApiManagementApi.md)
 
 [Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
-
-
