@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-Specifies the product title.
+Specifies the product title of the new product.
 
 ```yaml
 Type: String
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionRequired
 Indicates whether the product requires a subscription.
-The default value is **$True**.
+The default value is $True.
 
 ```yaml
 Type: Boolean
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -ApprovalRequired
 Indicates whether the subscription to the product requires approval or not.
-By default, this parameter is **$False**.
+By default, this parameter is $False.
 
 ```yaml
 Type: Boolean
@@ -246,5 +246,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementProduct](./Remove-AzureRmApiManagementProduct.md)
 
 [Set-AzureRmApiManagementProduct](./Set-AzureRmApiManagementProduct.md)
-
-

@@ -239,5 +239,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmApiManagementPolicy](./Get-AzureRmApiManagementPolicy.md)
 
 [Set-AzureRmApiManagementPolicy](./Set-AzureRmApiManagementPolicy.md)
-
-

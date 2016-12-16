@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ### -Note
 Specifies a note about the user.
 This parameter is optional.
-The default value of this parameter is $null.
+The default value of this parameter is $Null.
 
 ```yaml
 Type: String
@@ -236,5 +236,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementUser](./New-AzureRmApiManagementUser.md)
 
 [Remove-AzureRmApiManagementUser](./Remove-AzureRmApiManagementUser.md)
-
-

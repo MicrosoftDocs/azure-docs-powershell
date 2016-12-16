@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateId
-Specifies the ID of the certificate to get.
+Specifies the ID of the certificate that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -164,5 +164,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementCertificate](./Remove-AzureRmApiManagementCertificate.md)
 
 [Set-AzureRmApiManagementCertificate](./Set-AzureRmApiManagementCertificate.md)
-
-

@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ### -Location
 Specifies the location of the region that this cmdlet removes.
 
-Valid values are: 
+The acceptable values for this parameter are:
 
 - North Central US
 - South Central US
@@ -142,5 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AzureRmApiManagementRegion](./Add-AzureRmApiManagementRegion.md)
 
 [Update-AzureRmApiManagementRegion](./Update-AzureRmApiManagementRegion.md)
-
-

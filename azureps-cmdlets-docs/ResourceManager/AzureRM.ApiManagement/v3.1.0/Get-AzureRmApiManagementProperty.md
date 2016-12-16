@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmApiManagementProperty
 
 ## SYNOPSIS
+Gets a list or a particular management property.
 
 ## SYNTAX
 
@@ -39,14 +40,11 @@ Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Tag <String
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
-
 ## PARAMETERS
 
 ### -Context
+Specifies an instance of **PsApiManagementContext**.
+
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
@@ -99,6 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyId
+Specifies the identifier of the property that this cmdlet searches for.
+
 ```yaml
 Type: String
 Parameter Sets: Get by property ID
@@ -112,6 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+Specifies the name of the property.
+
 ```yaml
 Type: String
 Parameter Sets: Find properties containing Name
@@ -125,6 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
+Specifies a tag that this cmdlet associates to the property.
+
 ```yaml
 Type: String
 Parameter Sets: Find properties by Tag
@@ -147,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

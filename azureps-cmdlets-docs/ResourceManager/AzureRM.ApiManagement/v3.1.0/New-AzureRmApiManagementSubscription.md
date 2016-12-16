@@ -50,7 +50,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 Specifies the subscription ID.
-This parameter is generated if not specified.
+This parameter is generated automatically if not specified.
 
 ```yaml
 Type: String
@@ -216,5 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementSubscription](./Remove-AzureRmApiManagementSubscription.md)
 
 [Set-AzureRmApiManagementSubscription](./Set-AzureRmApiManagementSubscription.md)
-
-
