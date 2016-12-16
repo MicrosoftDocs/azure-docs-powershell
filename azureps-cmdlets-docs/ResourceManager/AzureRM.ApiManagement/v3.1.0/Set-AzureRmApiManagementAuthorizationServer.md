@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the authorization server to modify.
+Specifies the name of the authorization server that this cmdlet modifies.
 
 ```yaml
 Type: String
@@ -394,5 +394,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementAuthorizationServer](./New-AzureRmApiManagementAuthorizationServer.md)
 
 [Remove-AzureRmApiManagementAuthorizationServer](./Remove-AzureRmApiManagementAuthorizationServer.md)
-
-
