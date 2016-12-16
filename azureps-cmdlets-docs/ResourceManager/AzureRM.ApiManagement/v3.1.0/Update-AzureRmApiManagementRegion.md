@@ -21,7 +21,7 @@ Update-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <St
 ## DESCRIPTION
 The **Update-AzureRmApiManagementRegion** cmdlet updates an existing instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion** in a collection of **AdditionalRegions** objects of a provided instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement**.
 This cmdlet does not deploy anything but updates an instance of **PsApiManagement** in-memory.
-To update a deployment of an API Management use the modified **PsApiManagementInstance** to the Update-AzureRmApiManagementDeployment cmdlet.
+To update a deployment of an API Management use the modified **PsApiManagementInstance** to the [Update-AzureRmApiManagementDeployment](./Update-AzureRmApiManagementDeployment.md) cmdlet.
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ Accept wildcard characters: False
 ### -Location
 Specifies the location of the deployment region to update.
 
-Valid values are:
+The acceptable values for this parameter are:
 
 - North Central US
 - South Central US
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ### -Sku
 Specifies the new tier value for the deployment region.
 
-Valid values are:
+The acceptable values for this parameter are:
 
 - Developer
 - Standard
