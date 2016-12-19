@@ -49,7 +49,7 @@ To see the status for only a particular database, specify both parameters.
 
 ### Example 1: Get the copy status of a database
 ```
-PS C:\>Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf658"
+PS C:\> Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf658"
 ```
 
 This command gets the status of the database named Orders on the server named lpqd0zbr8y.
@@ -57,7 +57,7 @@ The *PartnerServer* parameter restricts this command to the bk0b8kf658 server.
 
 ### Example 2: Get the status of all copies on a serverGet the status of all copies on a server
 ```
-PS C:\>Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y"
+PS C:\> Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y"
 ```
 
 This command gets the status of all active copies on the server named lpqd0zbr8y.

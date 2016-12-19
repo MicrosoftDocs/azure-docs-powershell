@@ -24,7 +24,7 @@ The **Get-AzureSqlDatabaseUsages** cmdlet gets the current size and size limit o
 
 ### Example 1: Get usage information for a SQL Database
 ```
-PS C:\>Get-AzureSqlDatabaseUsages -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Get-AzureSqlDatabaseUsages -ServerName "Server01" -DatabaseName "Database01"
 ```
 
 This command gets the size and size limit information for the SQL Database named Database01 on Server01.

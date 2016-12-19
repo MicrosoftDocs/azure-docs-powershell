@@ -39,14 +39,14 @@ When you create a new database by specifying an Azure SQL Database server, the *
 
 ### Example 1: Create a database
 ```
-PS C:\>$Database01 = New-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01" -Edition "Business" -MaxSizeGB 50 -Collation "SQL_Latin1_General_CP1_CI_AS"
+PS C:\> $Database01 = New-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01" -Edition "Business" -MaxSizeGB 50 -Collation "SQL_Latin1_General_CP1_CI_AS"
 ```
 
 This command creates an Azure SQL Database named Database1, for the Azure SQL Database server connection context $Context.
 
 ### Example 2: Create a database in the current subscription
 ```
-PS C:\>$Database01 = New-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01" -Edition "Business" -MaxSizeGB 50 -Collation "SQL_Latin1_General_CP1_CI_AS"
+PS C:\> $Database01 = New-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01" -Edition "Business" -MaxSizeGB 50 -Collation "SQL_Latin1_General_CP1_CI_AS"
 ```
 
 This example creates a database named Database1, in the specified Azure SQL Database server named lpqd0zbr8y.

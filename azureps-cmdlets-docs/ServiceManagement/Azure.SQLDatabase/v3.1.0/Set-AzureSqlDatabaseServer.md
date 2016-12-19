@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ### -AdminPassword
 Specifies the administrator account password for the Azure SQL Database server.
 You must specify a strong password.
-For more information, see Strong Passwordshttp://go.microsoft.com/fwlink/p/?LinkId=154152 (http://go.microsoft.com/fwlink/p/?LinkId=154152) at the Microsoft Developer Network.
+For more information, see [Strong Passwords](http://go.microsoft.com/fwlink/p/?LinkId=154152) (http://go.microsoft.com/fwlink/p/?LinkId=154152) at the Microsoft Developer Network.
 
 ```yaml
 Type: String

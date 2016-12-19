@@ -34,7 +34,7 @@ You can specify the request object by using the *Request* parameter, or you can 
 
 ### Example 1: Get the status of an export request
 ```
-PS C:\>$ExportRequest = Start-AzureSqlDatabaseExport -SqlConnectionContext $SqlContext -StorageContainer $Container -DatabaseName $DatabaseName -BlobName $BlobName
+PS C:\> $ExportRequest = Start-AzureSqlDatabaseExport -SqlConnectionContext $SqlContext -StorageContainer $Container -DatabaseName $DatabaseName -BlobName $BlobName
 PS C:\> Get-AzureSqlDatabaseImportExportStatus -Request $ExportRequest
 ```
 
