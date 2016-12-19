@@ -35,7 +35,7 @@ A recovery plan gathers virtual machines in a group for the purposes of failover
 
 ### Example 1: Get a recovery plan file
 ```
-PS C:\>$RecoveryPlan = Get-AzureSiteRecoveryRecoveryPlan 
+PS C:\> $RecoveryPlan = Get-AzureSiteRecoveryRecoveryPlan 
 PS C:\> Get-AzureSiteRecoveryRecoveryPlanFile -RecoveryPlan $RecoveryPlan -Path "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
 ```
 

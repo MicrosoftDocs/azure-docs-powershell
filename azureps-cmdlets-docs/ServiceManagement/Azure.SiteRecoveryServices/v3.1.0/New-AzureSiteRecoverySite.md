@@ -24,7 +24,7 @@ The **New-AzureSiteRecoverySite** cmdlet creates an Azure Site Recovery site in 
 
 ### Example 1: Create a Site Recovery site
 ```
-PS C:\>New-AzureSiteRecoverySite -Name "RecoverySite07"
+PS C:\> New-AzureSiteRecoverySite -Name "RecoverySite07"
 ```
 
 This command creates a site recovery site named RecoverySite07.

@@ -32,7 +32,7 @@ The **Get-AzureSiteRecoveryVaultSettingsFile** cmdlet gets the settings file for
 
 ### Example 1: Get the settings file for a vault
 ```
-PS C:\>$Vault = Get-AzureSiteRecoveryVault -Name "ContosoVault"
+PS C:\> $Vault = Get-AzureSiteRecoveryVault -Name "ContosoVault"
 PS C:\> Get-AzureSiteRecoveryVaultSettingsFile -Vault $Vault
 FilePath 
 -------- 

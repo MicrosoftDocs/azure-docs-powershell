@@ -39,7 +39,7 @@ You can use this cmdlet to view the operation information for the current Site R
 
 ### Example 1: Get a job by specifying an ID
 ```
-PS C:\>Get-AzureSiteRecoveryJob -Id "033785cc-9f72-4f07-8e78-e4d1e942a7ae" 
+PS C:\> Get-AzureSiteRecoveryJob -Id "033785cc-9f72-4f07-8e78-e4d1e942a7ae" 
 Name             : SaveRecoveryPlan
 ID               : 033785cc-9f72-4f07-8e78-e4d1e942a7ae
 ClientRequestId  : d604206b-32e1-4d5b-9a23-32b118d14a1e-2015-02-20 07:20:42Z-P
@@ -59,7 +59,7 @@ This command gets the  Azure Site Recovery job that has the specified ID.
 
 ### Example 2: Gets a job based on time
 ```
-PS C:\>Get-AzureSiteRecoveryJob -StartTime "20-02-2015 01:00:00" -EndTime "21-02-2015 01:00:00"
+PS C:\> Get-AzureSiteRecoveryJob -StartTime "20-02-2015 01:00:00" -EndTime "21-02-2015 01:00:00"
 Name             : SaveRecoveryPlan
 ID               : 033785cc-9f72-4f07-8e78-e4d1e942a7ae
 ClientRequestId  : d604206b-32e1-4d5b-9a23-32b118d14a1e-2015-02-20 07:20:42Z-P
