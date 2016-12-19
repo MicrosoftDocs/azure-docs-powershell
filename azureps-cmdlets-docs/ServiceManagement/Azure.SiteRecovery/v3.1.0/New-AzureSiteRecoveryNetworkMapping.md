@@ -60,7 +60,7 @@ PS C:\> New-AzureSiteRecoveryNetworkMapping -PrimaryNetwork $Networks[0] -AzureS
 ```
 
 The first command cmdlet gets servers for the current Azure Site Recovery vault.
-The command stores the Microsoft Azure Site Recovery servers in the **$Servers** array variable.
+The command stores the Microsoft Azure Site Recovery servers in the $Servers array variable.
 
 The second command gets the site recovery network for the first server in the $Servers array.
 The command stores the networks in the $Networks variable.
@@ -179,7 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -AzureVMNetworkId
-Specifies the ID of your Azure virtual machine network.This cmdlet maps the primary network to the network that this parameter specifies.
+Specifies the ID of your Azure virtual machine network.
+This cmdlet maps the primary network to the network that this parameter specifies.
 
 ```yaml
 Type: String
