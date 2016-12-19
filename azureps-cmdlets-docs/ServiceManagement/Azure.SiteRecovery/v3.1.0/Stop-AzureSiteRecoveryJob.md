@@ -33,7 +33,7 @@ To see which actions you can take on a job, look at the **AllowedActions** prope
 
 ### Example 1: Stop all jobs
 ```
-PS C:\>$Jobs= Get-AzureSiteRecoveryJob 
+PS C:\> $Jobs= Get-AzureSiteRecoveryJob 
 PS C:\> Stop-AzureSiteRecoveryJob -Job $Jobs
 ```
 

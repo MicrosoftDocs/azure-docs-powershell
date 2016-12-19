@@ -35,7 +35,7 @@ This cmdlet returns an Azure Site Recovery job.
 
 ### Example 1: Create a mapping between a network and a recovery network
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> $Networks = Get-AzureSiteRecoveryNetwork -Server $Servers[0]
 PS C:\> New-AzureSiteRecoveryNetworkMapping -PrimaryNetwork $Networks[0] -RecoveryNetwork $Networks[1]
 ```
@@ -52,7 +52,7 @@ The command specifies the recovery network as the second element of $Networks.
 
 ### Example 2: Create a mapping between a network and an Azure virtual machine network
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> $Networks = Get-AzureSiteRecoveryNetwork -Server $Servers[0]
 PS C:\> $Subscriptions = Get-AzureSubscription
 PS C:\> $AzureVmNetworks = Get-AzureVNetSite
