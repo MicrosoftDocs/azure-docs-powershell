@@ -39,7 +39,7 @@ The **Set-AzureDeployment** cmdlet modifies the status, configuration settings, 
 You can change the status of the deployment to either Running or Suspended.
 You can change the .cscfg file for the deployment.
 You can set the upgrade mode and update configuration files.
-Use the Set-AzureWalkUpgradeDomain cmdlet to initiate an upgrade.
+Use the **Set-AzureWalkUpgradeDomain** cmdlet to initiate an upgrade.
 
 ## EXAMPLES
 

@@ -47,11 +47,11 @@ You can specify the host-cache mode of the attached data disk.
 PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Add-AzureDataDisk -Import -DiskName "Disk68" -LUN 0 | Update-AzureVM
 ```
 
-This command gets a virtual machine object for the virtual machine named VirtualMachine07 in the ContosoService cloud service by using the Get-AzureVM cmdlet.
+This command gets a virtual machine object for the virtual machine named VirtualMachine07 in the ContosoService cloud service by using the **Get-AzureVM** cmdlet.
 The command passes it to the current cmdlet by using the pipeline operator.
 That command attaches an existing data disk from the repository to the virtual machine.
 The data disk has a LUN of 0.
-The command updates the virtual machine to reflect your changes by using the Update-AzureVM cmdlet.
+The command updates the virtual machine to reflect your changes by using the **Update-AzureVM** cmdlet.
 
 ### Example 2: Add a new data disk
 ```
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -VM
 Specifies the virtual machine object to which this cmdlet attaches a data disk.
-To obtain a virtual machine object, use the Get-AzureVM cmdlet.
+To obtain a virtual machine object, use the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: IPersistentVM

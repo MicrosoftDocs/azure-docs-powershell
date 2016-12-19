@@ -99,7 +99,7 @@ This command configures the DSC extension on a virtual machine using a path to t
 Specifies a user-defined string that can be used to refer to an extension.
 This parameter is specified when the extension is added to the virtual machine for the first time.
 For subsequent updates, you should specify the previously used reference name while you update the extension.
-The *ReferenceName* assigned to an extension is returned using the Get-AzureVM cmdlet.
+The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: String

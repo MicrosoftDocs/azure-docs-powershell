@@ -71,7 +71,7 @@ Specifies the reference name for the extension.
 This parameter is a user-defined string that can be used to refer to an extension.
 It is specified when the extension is added to the virtual machine for the first time.
 For subsequent updates, you need to specify the previously used reference name while updating the extension.
-The *ReferenceName* assigned to an extension is returned using the Get-AzureVM cmdlet.
+The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: String

@@ -27,7 +27,7 @@ The **Get-AzureEndpoint** cmdlet gets information about the endpoints that are a
 PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine12" | Get-AzureEndpoint
 ```
 
-This command retrieves the configuration of a virtual machine named VirtualMachine12 by using the Get-AzureVM cmdlet.
+This command retrieves the configuration of a virtual machine named VirtualMachine12 by using the **Get-AzureVM** cmdlet.
 The command passes it to the current cmdlet by using the pipeline operator.
 This cmdlet gets endpoint information for that virtual machine.
 

@@ -55,15 +55,15 @@ PS C:\> Set-AzureAclConfig -SetRule -RuleId 0 -ACL $Acl -Order 102 -Description 
 PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Set-AzureEndpoint -ACL $Acl -Name "Web" | Update-AzureVM
 ```
 
-The first command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the Get-AzureVM cmdlet.
-The command passes that object to the Get-AzureAclConfig cmdlet by using the pipeline operator.
+The first command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the **Get-AzureVM** cmdlet.
+The command passes that object to the **Get-AzureAclConfig** cmdlet by using the pipeline operator.
 That cmdlet gets the ACL configuration for the endpoint named Web.
 The command stores that ACL configuration object in the $Acl variable.
 
 The second command modifies the rule that has the ID of 0.
 The command changes the order and the description of the rule.
 
-The final command sets the ACL configuration object for that virtual machine by using the Set-AzureEndpoint cmdlet.
+The final command sets the ACL configuration object for that virtual machine by using the **Set-AzureEndpoint** cmdlet.
 The command also updates that virtual machine.
 
 ### Example 3: Remove a rule from an ACL configuration

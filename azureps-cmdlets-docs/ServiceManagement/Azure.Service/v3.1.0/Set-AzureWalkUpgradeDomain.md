@@ -20,7 +20,7 @@ Set-AzureWalkUpgradeDomain [-ServiceName] <String> [-Slot] <String> [-DomainNumb
 
 ## DESCRIPTION
 The **Set-AzureWalkUpgradeDomain** cmdlet initiates the actual upgrade of an Azure deployment.
-The upgrade package and configuration are set by using the Set-AzureDeployment cmdlet with the -Upgrade switch.
+The upgrade package and configuration are set by using the **Set-AzureDeployment** cmdlet with the -Upgrade switch.
 
 ## EXAMPLES
 

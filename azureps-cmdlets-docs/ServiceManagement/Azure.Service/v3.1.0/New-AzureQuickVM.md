@@ -82,9 +82,9 @@ PS C:\> $Images = Get-AzureVMImage
 PS C:\> New-AzureQuickVM -Windows -InstanceSize "Large" -ServiceName "ContosoService03" -Name " VirtualMachine25" -ImageName $images[4].imagename -Password "password" -AdminUsername "AdminMain" -Location $Locations[0].name
 ```
 
-The first command gets locations by using the Get-AzureLocation cmdlet, and then stores them in the $Locations array variable.
+The first command gets locations by using the **Get-AzureLocation** cmdlet, and then stores them in the $Locations array variable.
 
-The second command gets available images by using the Get-AzureVMImage cmdlet, and then stores them in the $Images array variable.
+The second command gets available images by using the **Get-AzureVMImage** cmdlet, and then stores them in the $Images array variable.
 
 The final command creates a large virtual machine named VirtualMachine25.
 The virtual machine runs the Windows operating system.
@@ -406,7 +406,7 @@ Accept wildcard characters: False
 
 ### -DnsSettings
 Specifies an array of DNS server objects that defines the DNS settings for the new deployment.
-To create a **DnsServer** object, use the New-AzureDns cmdlet.
+To create a **DnsServer** object, use the **New-AzureDns** cmdlet.
 
 ```yaml
 Type: DnsServer[]

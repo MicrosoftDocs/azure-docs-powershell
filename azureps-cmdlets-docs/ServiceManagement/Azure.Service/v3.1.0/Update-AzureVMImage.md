@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskConfig
-Specifies the operating system disk and data disk configuration for the virtual machine image created by using the New-AzureVMImageDiskConfigSet, Set-AzureVMImageOSDiskConfig, and Set-AzureVMImageDataDiskConfig cmdlets.
+Specifies the operating system disk and data disk configuration for the virtual machine image created by using the **New-AzureVMImageDiskConfigSet**, **Set-AzureVMImageOSDiskConfig**, and **Set-AzureVMImageDataDiskConfig** cmdlets.
 
 ```yaml
 Type: VirtualMachineImageDiskConfigSet

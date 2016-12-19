@@ -56,7 +56,7 @@ PS C:\> $Image = $Images[4]
 PS C:\> $VirtualMachine02 = New-AzureVMConfig -Name "VirtualMachine02" -InstanceSize ExtraSmall -ImageName $myImage.ImageName | Add-AzureProvisioningConfig -Windows -Password "password" | Add-AzureDataDisk -CreateNew -DiskSizeInGB 50 -DiskLabel "DataDisk50" -LUN 0
 ```
 
-The first two commands get available images by using the Get-AzureVMImage cmdlet, and stores one of them in the $Image variable.
+The first two commands get available images by using the **Get-AzureVMImage** cmdlet, and stores one of them in the $Image variable.
 
 This command creates a provisioning configuration based on a virtual machine configuration for the Windows operating system, and uses it to create a virtual machine with an Azure data disk.
 

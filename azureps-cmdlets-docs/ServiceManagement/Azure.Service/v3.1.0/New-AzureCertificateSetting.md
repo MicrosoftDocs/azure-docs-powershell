@@ -20,9 +20,9 @@ New-AzureCertificateSetting [[-StoreName] <String>] [-Thumbprint] <String>
 ## DESCRIPTION
 The **New-AzureCertificateSetting** cmdlet creates a certificate setting object for a certificate that is in an Azure service.
 
-You can use a certificate setting object to create a configuration object by using the Add-AzureProvisioningConfig cmdlet.
-Use a configuration object to create virtual machine by using the New-AzureVM cmdlet.
-You can use a certificate setting object to create a virtual machine by using the New-AzureQuickVM cmdlet.
+You can use a certificate setting object to create a configuration object by using the **Add-AzureProvisioningConfig** cmdlet.
+Use a configuration object to create virtual machine by using the **New-AzureVM** cmdlet.
+You can use a certificate setting object to create a virtual machine by using the **New-AzureQuickVM** cmdlet.
 
 ## EXAMPLES
 
@@ -41,14 +41,14 @@ PS C:\> $Image = Get-AzureVMImage -ImageName "ContosoStandard"
 PS C:\> New-AzureVMConfig -Name "VirtualMachine17" -InstanceSize Small -ImageName $Image | Add-AzureProvisioningConfig -Windows -Certificates $CertificateSetting -Password "password" | New-AzureVM -ServiceName "ContosoService"
 ```
 
-The first command adds the certificate ContosoCert.cer to the service named ContosoService by using the Add-AzureCertificate cmdlet.
+The first command adds the certificate ContosoCert.cer to the service named ContosoService by using the **Add-AzureCertificate** cmdlet.
 
 The second command creates a certificate setting object, and then stores it in the $CertificateSetting variable.
 
-The third command gets an image from the image repository by using the Get-AzureVMImage cmdlet.
+The third command gets an image from the image repository by using the **Get-AzureVMImage** cmdlet.
 This command store the image in the $Image variable.
 
-The final command creates a virtual machine configuration object based on the image in $Image by using the New-AzureVMConfig cmdlet.
+The final command creates a virtual machine configuration object based on the image in $Image by using the **New-AzureVMConfig** cmdlet.
 The command passes that object to the **Add-AzureProvisioningConfig** cmdlet by using the pipeline operator.
 That cmdlet add provisioning information to the configuration.
 The command passes the object to the **New-AzureVM** cmdlet, which creates the virtual machine.

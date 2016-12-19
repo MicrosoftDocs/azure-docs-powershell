@@ -35,7 +35,7 @@ This command removes the certificate object that has the specified thumbprint fr
 PS C:\> Get-AzureCertificate -ServiceName "ContosoService" | Remove-AzureCertificate
 ```
 
-This command gets all the certificates from the service named ContosoService by using the Get-AzureCertificate cmdlet.
+This command gets all the certificates from the service named ContosoService by using the **Get-AzureCertificate** cmdlet.
 The command passes each certificate to the current cmdlet by using the pipeline operator.
 That cmdlet removes each certificate from the cloud service.
 

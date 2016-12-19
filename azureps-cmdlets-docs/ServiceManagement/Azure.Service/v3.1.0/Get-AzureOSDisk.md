@@ -35,7 +35,7 @@ The current cmdlet gets the operating system disk of that virtual machine.
 
 ### -VM
 Specifies the virtual machine for which this cmdlet gets the operating system disk.
-To obtain a virtual machine object, use the Get-AzureVM cmdlet.
+To obtain a virtual machine object, use the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: IPersistentVM

@@ -19,7 +19,7 @@ Get-AzurePublicIP [[-PublicIPName] <String>] -VM <IPersistentVM> [-Profile <Azur
 
 ## DESCRIPTION
 The **Get-AzurePublicIP** cmdlet gets the Public IP information for an Azure virtual machine.
-To obtain the IP address of the Public IP, use the Get-AzureVM cmdlet.
+To obtain the IP address of the Public IP, use the **Get-AzureVM** cmdlet.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ To obtain the IP address of the Public IP, use the Get-AzureVM cmdlet.
 PS C:\> Get-AzureVM -ServiceName "FTPInAzure" -Name "FTPInstance" | Get-AzurePublicIP
 ```
 
-This command gets the virtual machine named FTPInstance in the service named FTPInAzure by using the Get-AzureVM cmdlet.
+This command gets the virtual machine named FTPInstance in the service named FTPInAzure by using the **Get-AzureVM** cmdlet.
 The command passes that virtual machine to the current cmdlet by using the pipeline operator.
 The current cmdlet gets Public IP configuration from the virtual machine.
 

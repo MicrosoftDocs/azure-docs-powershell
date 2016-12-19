@@ -50,7 +50,7 @@ PS C:\> $VM_Update = Set-AzureVMDiagnosticsExtension -DiagnosticsConfigurationPa
 PS C:\> Update-AzureVM -ServiceName $Service_Name -Name $VM_Name -VM $VM_Update.VM
 ```
 
-The first command uses the Get-AzureVM cmdlet to get a virtual machine.
+The first command uses the **Get-AzureVM** cmdlet to get a virtual machine.
 
 The second command uses the **Set-AzureVMDiagnosticsExtension** cmdlet to update the virtual machine configuration to include the Azure Diagnostics extension.
 

@@ -20,7 +20,7 @@ New-AzureVMImageDiskConfigSet [-InformationAction <ActionPreference>] [-Informat
 ## DESCRIPTION
 The **New-AzureVMImageDiskConfigSet** cmdlet creates a disk configuration set object that is passed to the image update cmdlet.
 It encapsulates the OSDiskConfig and the DataDiskConfig object.
-Use the Set-AzureVMImageOSDiskConfig and Set-AzureVMImageDataDiskConfig cmdlets to set the OS Disk and Data Disk properties for the virtual machine image.
+Use the **Set-AzureVMImageOSDiskConfig** and **Set-AzureVMImageDataDiskConfig** cmdlets to set the OS Disk and Data Disk properties for the virtual machine image.
 
 ## EXAMPLES
 

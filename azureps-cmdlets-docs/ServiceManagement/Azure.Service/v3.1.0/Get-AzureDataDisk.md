@@ -28,7 +28,7 @@ To get a specific data disk object, specify the logical unit number (LUN) of the
 PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk
 ```
 
-This command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the Get-AzureVM cmdlet.
+This command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the **Get-AzureVM** cmdlet.
 The command passes the virtual machine to the current cmdlet by using the pipeline operator.
 The current cmdlet gets all the data disks for this virtual machine.
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 
 ### -VM
 Specifies the virtual machine object for which this cmdlet gets data disks.
-To obtain a virtual machine object, use the Get-AzureVM cmdlet.
+To obtain a virtual machine object, use the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: IPersistentVM

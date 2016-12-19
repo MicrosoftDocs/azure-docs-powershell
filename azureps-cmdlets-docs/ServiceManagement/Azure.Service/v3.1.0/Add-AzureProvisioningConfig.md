@@ -56,11 +56,11 @@ To create an Active Directory domain joined server, specify the fully qualified 
 PS C:\> New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" | New-AzureVM -ServiceName "ContosoService"
 ```
 
-This command creates a virtual machine configuration object by using the New-AzureVMConfig cmdlet.
+This command creates a virtual machine configuration object by using the **New-AzureVMConfig** cmdlet.
 The command passes that object to the current cmdlet by using the pipeline operator.
 The current cmdlet adds provisioning configuration for a virtual machine that runs the Windows operating system.
 The configuration includes the administrator user name and password.
-The command passes the configuration to the New-AzureVM cmdlet, which creates the virtual machine.
+The command passes the configuration to the **New-AzureVM** cmdlet, which creates the virtual machine.
 
 ### Example 2: Create a domain joined virtual machine
 ```

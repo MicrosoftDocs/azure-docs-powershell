@@ -30,7 +30,7 @@ Publish-AzureVMDscConfiguration [-ConfigurationPath] <String> [-Force] [-Configu
 ```
 
 ## DESCRIPTION
-The **Publish-AzureVMDscConfiguration** cmdlet publishes a desired state configuration script to Azure blob storage, which later can be applied to Azure virtual machines using the Set-AzureVMDscExtension cmdlet.
+The **Publish-AzureVMDscConfiguration** cmdlet publishes a desired state configuration script to Azure blob storage, which later can be applied to Azure virtual machines using the **Set-AzureVMDscExtension** cmdlet.
 
 ## EXAMPLES
 
