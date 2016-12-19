@@ -24,7 +24,7 @@ The **Remove-AzureSiteRecoveryStorageMapping** cmdlet removes a Storage object m
 
 ### Example 1: Remove the mapping between a network and a recovery network
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> $StorageMapping = Get-AzureSiteRecoveryStorageMapping -PrimaryServer $Servers[0] -RecoveryServer $Servers[1]
 PS C:\> Remove-AzureSiteRecoveryStorageMapping -StorageMapping $StorageMapping
 Get-AzureSiteRecoveryServerGet-AzureSiteRecoveryStorageMappingNew-AzureSiteRecoveryStorageMapping

@@ -48,7 +48,7 @@ You can check whether the job succeeds by using the **Get-AzureSiteRecoveryJob**
 
 ### Example 1: Start a planned failover job
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer 
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer 
 PS C:\> $Protected = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container 
 PS C:\> Start-AzureSiteRecoveryPlannedFailoverJob -Direction PrimaryToRecovery -ProtectionEntity $Protected -Optimize ForDowntime
 ID               : c38eecdc-731c-405b-a61c-08db99aae2fe
