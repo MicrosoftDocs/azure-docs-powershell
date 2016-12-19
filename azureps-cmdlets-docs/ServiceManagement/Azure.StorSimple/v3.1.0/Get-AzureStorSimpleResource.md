@@ -144,7 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### IEnumerable<ResourceCredentials>, ResourceCredentials
+### IEnumerable\<ResourceCredentials\>, ResourceCredentials
 This cmdlet returns **ResourceCredentials** objects that contain the following properties: 
 
 - **ResourceName**

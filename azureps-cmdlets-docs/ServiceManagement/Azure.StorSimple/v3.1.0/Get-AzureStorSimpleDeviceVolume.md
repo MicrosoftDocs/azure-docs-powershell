@@ -224,7 +224,7 @@ This cmdlet accepts a **DataContainer** object that contains the volume to get.
 
 ## OUTPUTS
 
-### VirtualDisk, IList<VirtualDisk>
+### VirtualDisk, IList\<VirtualDisk\>
 This cmdlet returns a **VirtualDisk** object if you specify the *VolumeName* parameter.
 If you specify the *VolumeContainer*, this cmdlet returns an **IList\<VirtualDisk\>** object.
 

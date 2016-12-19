@@ -306,7 +306,7 @@ You cannot pipe input to this cmdlet.
 
 ## OUTPUTS
 
-### IList<DeviceJobDetails>, DeviceJobDetails
+### IList\<DeviceJobDetails\>, DeviceJobDetails
 This cmdlet returns a list of job details objects, or, if you specify the *InstanceID* parameter, it returns a single job detail object.
 
 ## NOTES

@@ -137,7 +137,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### StorageAccountCredential, IList<StorageAccountCredential>
+### StorageAccountCredential, IList\<StorageAccountCredential\>
 This cmdlet returns a **StorageAccountCredential** object, if you specify the *StorageAccountName* parameter, or if you do not specify that parameter, it returns an **IList\<StorageAccountCredential\>** object.
 
 ## NOTES

@@ -139,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### IList<DataContainerGroup>
+### IList\<DataContainerGroup\>
 This cmdlet returns a list of **VolumeContainer** groups.
 
 ## NOTES
