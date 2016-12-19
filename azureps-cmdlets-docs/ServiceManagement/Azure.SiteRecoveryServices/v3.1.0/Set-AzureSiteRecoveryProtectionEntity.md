@@ -40,9 +40,9 @@ PS C:\> $ProtectionEntity = Get-AzureSiteRecoveryProtectionEntity -ProtectionCon
 PS C:\> Set-AzureSiteRecoveryProtectionEntity -ProtectionEntity $ ProtectionEntity -Protection Enable -ProtectionProfile $ProtectionContainer.AvailableProtectionProfiles[0] -OS Windows
 ```
 
-The first command gets containers for the current Azure Site vault by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores it in the $ProtectionContainer variable.
+The first command gets containers for the current Azure Site vault by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores it in the $ProtectionContainer variable.
 
-The second command gets the protected virtual machines that belong to the container stored in $ProtectionContainer by using the Get-AzureSiteRecoveryProtectionEntity cmdlet.
+The second command gets the protected virtual machines that belong to the container stored in $ProtectionContainer by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
 The command stores the results in the $ProtectionEntity variable.
 
 The final command enables protection for the entities stored in $ProtectionEntity.

@@ -62,9 +62,9 @@ Tasks            : {}
 Errors           : {}
 ```
 
-The first command gets the protected containers in the current Azure Site Recovery vault by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores it in the $Container variable.
+The first command gets the protected containers in the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores it in the $Container variable.
 
-The second command gets the virtual machines that belong to the container stored in $Container by using the Get-AzureSiteRecoveryProtectionEntity cmdlet.
+The second command gets the virtual machines that belong to the container stored in $Container by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
 The command stores the results in the $Protected variable.
 
 The final command sets the direction to RecoverToPrimary for the objects stored in $Protected.

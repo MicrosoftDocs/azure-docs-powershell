@@ -43,7 +43,7 @@ FabricType          : VMM
 VmNetworkSubnetList : {}
 ```
 
-The first command cmdlet gets servers for the current Azure Site Recovery vault by using the Get-AzureSiteRecoveryServer cmdlet.
+The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
 The command stores the Site Recovery servers in the $Servers array variable.
 
 The second command gets the site recovery network for the first server in the $Servers array.

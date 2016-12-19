@@ -29,7 +29,7 @@ PS C:\> $NetworkMapping = Get-AzureSiteRecoveryNetworkMapping -PrimaryServer $Se
 PS C:\> Remove-AzureSiteRecoveryNetworkMapping -NetworkMapping $NetworkMapping
 ```
 
-The first command cmdlet gets servers for the current Azure Site Recovery vault by using the Get-AzureSiteRecoveryServer cmdlet.
+The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
 The command stores the Site Recovery servers in the $Servers array variable.
 
 The second command gets the mapping between the primary network and the recovery network, and then stores it in the $NetworkMapping variable.

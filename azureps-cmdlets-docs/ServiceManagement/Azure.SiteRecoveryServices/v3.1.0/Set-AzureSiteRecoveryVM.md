@@ -40,9 +40,9 @@ Tasks            : {}
 Errors           : {}
 ```
 
-The first command uses the Get-AzureSiteRecoveryProtectionContainer cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
+The first command uses the **Get-AzureSiteRecoveryProtectionContainer** cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
 
-The second command gets the virtual machines in $ProtectionContainer, by using the Get-AzureSiteRecoveryVM cmdlet, and then stores them in the $VitrualMachines variable.
+The second command gets the virtual machines in $ProtectionContainer, by using the **Get-AzureSiteRecoveryVM** cmdlet, and then stores them in the $VitrualMachines variable.
 
 The final command allows updates for the first virtual machine in the $VitrualMachines array, named NewVirtualMachine05.
 

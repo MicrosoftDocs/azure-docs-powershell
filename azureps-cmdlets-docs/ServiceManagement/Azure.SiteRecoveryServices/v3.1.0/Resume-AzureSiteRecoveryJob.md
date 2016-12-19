@@ -46,7 +46,7 @@ Tasks            : {Recovery plan preflight checks, Create test environment, All
 Errors           : {}
 ```
 
-The first command gets all the Azure Site Recovery jobs for the current Site Recovery vault by using the Get-AzureSiteRecoveryJob cmdlet, and then stores the results in the $Jobs variable.
+The first command gets all the Azure Site Recovery jobs for the current Site Recovery vault by using the **Get-AzureSiteRecoveryJob** cmdlet, and then stores the results in the $Jobs variable.
 
 The second command resumes the job specified by $Jobs.
 

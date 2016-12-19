@@ -46,7 +46,7 @@ The command specifies the server for the recovery Storage object as the second e
 
 ### -PrimaryServer
 Specifies the primary server.
-To obtain a server, use the Get-AzureSiteRecoveryServer cmdlet.
+To obtain a server, use the **Get-AzureSiteRecoveryServer** cmdlet.
 
 ```yaml
 Type: ASRServer

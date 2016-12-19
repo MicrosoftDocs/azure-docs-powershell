@@ -50,7 +50,7 @@ The second command gets the site recovery storage for the first server in the $S
 
 ### -Server
 Specifies a server for Azure Site Recovery Storage.
-To obtain an **ASRServer** object, use the Get-AzureSiteRecoveryServer cmdlet.
+To obtain an **ASRServer** object, use the **Get-AzureSiteRecoveryServer** cmdlet.
 
 ```yaml
 Type: ASRServer

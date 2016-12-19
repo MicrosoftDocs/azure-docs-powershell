@@ -35,7 +35,7 @@ PS C:\>$Jobs = Get-AzureSiteRecoveryJob
 PS C:\> Stop-AzureSiteRecoveryJob -Job $Jobs
 ```
 
-The first command gets the Azure Site Recovery jobs for the current Azure Site Recovery vault by using the Get-AzureSiteRecoveryJob cmdlet, and then stores the results in the $Jobs variable.
+The first command gets the Azure Site Recovery jobs for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryJob** cmdlet, and then stores the results in the $Jobs variable.
 
 The second command stops the jobs specified by $Jobs.
 

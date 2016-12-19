@@ -37,7 +37,7 @@ PS C:\> $RecoveryPlan = Get-AzureSiteRecoveryRecoveryPlan
 PS C:\> Remove-AzureSiteRecoveryRecoveryPlan -RecoveryPlan $RecoveryPlan
 ```
 
-The first command uses the Get-AzureSiteRecoveryRecoveryPlan cmdlet to get the Site Recovery plan, and then stores it in the $RecoveryPlan variable.
+The first command uses the **Get-AzureSiteRecoveryRecoveryPlan** cmdlet to get the Site Recovery plan, and then stores it in the $RecoveryPlan variable.
 
 The second command removes the recovery plan in $RecoveryPlan.
 

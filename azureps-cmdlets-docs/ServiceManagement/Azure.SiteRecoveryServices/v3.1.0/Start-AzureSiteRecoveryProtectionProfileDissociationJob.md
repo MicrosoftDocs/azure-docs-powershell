@@ -49,7 +49,7 @@ Tasks            : {}
 Errors           : {}
 ```
 
-The first command gets a protection container by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores that container in the $ProtectionContainer01 variable.
+The first command gets a protection container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores that container in the $ProtectionContainer01 variable.
 
 The second command gets a protection container, and then stores it in the $ProtectionContainer02 variable.
 

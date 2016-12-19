@@ -75,7 +75,7 @@ TestFailoverState           : None
 ReplicationProvider         : HyperVReplica
 ```
 
-The first command uses the Get-AzureSiteRecoveryProtectionContainer cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
+The first command uses the **Get-AzureSiteRecoveryProtectionContainer** cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
 
 The second command gets information about the virtual machines in $ProtectionContainer.
 

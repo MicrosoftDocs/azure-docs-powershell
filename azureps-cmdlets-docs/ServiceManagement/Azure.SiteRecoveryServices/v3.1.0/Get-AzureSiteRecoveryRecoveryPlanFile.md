@@ -63,7 +63,7 @@ Accept wildcard characters: False
 
 ### -RecoveryPlan
 Specifies an **ASRRecoveryPlan** object from which to get the recovery plan.
-To obtain an **ASRRecoveryPlan** object, use the Get-AzureSiteRecoveryRecoveryPlan cmdlet.
+To obtain an **ASRRecoveryPlan** object, use the **Get-AzureSiteRecoveryRecoveryPlan** cmdlet.
 
 ```yaml
 Type: ASRRecoveryPlan

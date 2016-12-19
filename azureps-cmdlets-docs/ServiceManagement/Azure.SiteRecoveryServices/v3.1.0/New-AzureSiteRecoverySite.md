@@ -48,7 +48,7 @@ Accept wildcard characters: False
 
 ### -Vault
 Specifies a vault for which to create the site.
-To obtain an **ASRVault** object, use the Get-AzureSiteRecoveryVault cmdlet.
+To obtain an **ASRVault** object, use the **Get-AzureSiteRecoveryVault** cmdlet.
 
 ```yaml
 Type: ASRVault

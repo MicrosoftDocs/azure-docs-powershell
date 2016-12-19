@@ -50,9 +50,9 @@ Tasks            : {Adding the protection group, Configuring Windows Server 2012
 Errors           : {}
 ```
 
-The first command gets a protection container by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores that container in the $ProtectionContainer01 variable.
+The first command gets a protection container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores that container in the $ProtectionContainer01 variable.
 
-The second command creates a protection profile by using the New-AzureSiteRecoveryProtectionProfileObject cmdlet, and stores that protection profile in the $ProtectionProfile variable.
+The second command creates a protection profile by using the **New-AzureSiteRecoveryProtectionProfileObject** cmdlet, and stores that protection profile in the $ProtectionProfile variable.
 
 The third command gets a protection container, and then stores it in the $ProtectionContainer02 variable.
 

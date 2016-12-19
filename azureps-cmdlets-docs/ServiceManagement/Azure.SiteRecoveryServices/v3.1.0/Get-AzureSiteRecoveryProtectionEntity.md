@@ -77,7 +77,7 @@ TestFailoverStateDescription : Nonev
 ReplicationProvider          : HyperVReplica
 ```
 
-The first command gets a protected container by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores that object in the $Container variable.
+The first command gets a protected container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores that object in the $Container variable.
 
 The second command gets the protected virtual machine that belongs to the container in $Container, and then displays it.
 
