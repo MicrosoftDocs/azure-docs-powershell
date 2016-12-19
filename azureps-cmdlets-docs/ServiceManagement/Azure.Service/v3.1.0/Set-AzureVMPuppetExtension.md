@@ -25,7 +25,7 @@ The **Set-AzureVMPuppetExtension** cmdlet sets the Puppet extension for a virtua
 
 ### Example 1: Set the Puppet extension for a virtual machine
 ```
-PS C:\>Set-AzureVMPuppetExtension -VM $VM
+PS C:\> Set-AzureVMPuppetExtension -VM $VM
 ```
 
 This example sets the Puppet extension for the specified virtual machine as stored in the variable $VM.

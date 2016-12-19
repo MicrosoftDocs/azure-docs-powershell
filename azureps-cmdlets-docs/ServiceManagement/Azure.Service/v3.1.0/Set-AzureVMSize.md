@@ -29,7 +29,7 @@ Note: This cmdlet will require the virtual machine to be re-provisioned and it m
 
 ### Example 1: Set the size of a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "MySvc1" -Name "MyVM3" | Set-AzureVMSize "Small" | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "MySvc1" -Name "MyVM3" | Set-AzureVMSize "Small" | Update-AzureVM
 ```
 
 This command updates a virtual machine to size "Small".

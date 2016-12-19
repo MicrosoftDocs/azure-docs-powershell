@@ -24,7 +24,7 @@ The **Remove-AzurePublicIP** cmdlet removes Public IP configuration from an Azur
 
 ### Example 1: Remove Public IP configuration
 ```
-PS C:\>Get-AzureVM -ServiceName "FTPInAzure" -Name "FTPInstance" | Remove-AzurePublicIP | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "FTPInAzure" -Name "FTPInstance" | Remove-AzurePublicIP | Update-AzureVM
 ```
 
 This command gets the virtual machine named FTPInstance in the service named FTPInAzure by using the Get-AzureVM cmdlet.

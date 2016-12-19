@@ -40,7 +40,7 @@ The **Set-AzureVMAccessExtension** cmdlet sets the VMAccess extension for the vi
 
 ### Example 1: Set the VMAccess extension applied to a specified virtual machine
 ```
-PS C:\>Set-AzureVMAccessExtension -VM $VM -UserName $User -Password $PWD;
+PS C:\> Set-AzureVMAccessExtension -VM $VM -UserName $User -Password $PWD;
 ```
 
 This command sets the VMAccess extension applied to the specified virtual machine as stored in the variable $VM.

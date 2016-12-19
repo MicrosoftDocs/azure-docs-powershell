@@ -33,7 +33,7 @@ Specify which data disk to update by its logical unit number (LUN).
 
 ### Example 1: Modify the host caching for a data disk
 ```
-PS C:\>Get-AzureVM "ContosoService" | Set-AzureDataDisk -VM "VirtualMachine07" -LUN 2 -HostCaching ReadOnly | Update-AzureVM
+PS C:\> Get-AzureVM "ContosoService" | Set-AzureDataDisk -VM "VirtualMachine07" -LUN 2 -HostCaching ReadOnly | Update-AzureVM
 ```
 
 This command gets the virtual machines that run on the service named ContosoService by using the Get-AzureVM cmdlet.
@@ -43,7 +43,7 @@ The command updates the virtual machine to reflect your changes by using the Upd
 
 ### Example 2: Modify the host caching for all data disks on a virtual machine
 ```
-PS C:\>Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk | Set-AzureDataDisk -HostCaching ReadWrite | Update-AzureVM
+PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk | Set-AzureDataDisk -HostCaching ReadWrite | Update-AzureVM
 ```
 
 This command gets an object for the virtual machine named VirtualMachine07 on the ContosoService cloud service.

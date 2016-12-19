@@ -49,7 +49,7 @@ The **Set-AzureVMCustomScriptExtension** cmdlet sets information for an Azure vi
 
 ### Example 1: Set information for a virtual machine custom script extension
 ```
-PS C:\>$VM = Set-AzureVMCustomScriptExtension -VM $VM -ContainerName "Container01" -FileName "script1.ps1","script2.ps1" -Run "script1.ps1" -Argument "arg1 arg2";
+PS C:\> $VM = Set-AzureVMCustomScriptExtension -VM $VM -ContainerName "Container01" -FileName "script1.ps1","script2.ps1" -Run "script1.ps1" -Argument "arg1 arg2";
 PS C:\> New-AzureVM -Location "West US" -ServiceName $SVC -VM $VM;
 ```
 
@@ -57,7 +57,7 @@ This command sets information for a virtual machine custom script extension.
 
 ### Example 2: Set information for a virtual machine custom script extension using a file path
 ```
-PS C:\>Set-AzureVMCustomScriptExtension -VM $VM -FileUri "http://www.blob.core.contoso.net/bar/script1.ps1","http://www.blob.core.contoso.net/baz/script2.ps1" -Run "script1.ps1" -Argument "arg1 arg2";
+PS C:\> Set-AzureVMCustomScriptExtension -VM $VM -FileUri "http://www.blob.core.contoso.net/bar/script1.ps1","http://www.blob.core.contoso.net/baz/script2.ps1" -Run "script1.ps1" -Argument "arg1 arg2";
 PS C:\> Update-AzureVM -ServiceName $SVC -Name $Name -VM VM;
 ```
 

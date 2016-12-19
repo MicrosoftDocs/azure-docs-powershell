@@ -25,7 +25,7 @@ To get a specific data disk object, specify the logical unit number (LUN) of the
 
 ### Example 1: Get all data disks for a virtual machine
 ```
-PS C:\>Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk
+PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk
 ```
 
 This command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the Get-AzureVM cmdlet.
@@ -34,7 +34,7 @@ The current cmdlet gets all the data disks for this virtual machine.
 
 ### Example 2: Get a specific data disk for a vituralvirtual machinevirtual
 ```
-PS C:\>Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk -LUN 2
+PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk -LUN 2
 ```
 
 This command gets the virtual machine named VirtualMachine07 in the service named ContosoService.

@@ -28,7 +28,7 @@ The **Set-AzureVMDscExtension** cmdlet configures the Desired State Configuratio
 
 ### Example 1: Configure the DSC extension on a virtual machine
 ```
-PS C:\>Set-AzureVMDscExtension -VM $VM -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Path = 'C:\MyDirectory' }
+PS C:\> Set-AzureVMDscExtension -VM $VM -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Path = 'C:\MyDirectory' }
 DeploymentName              : my-vm-svc
 Name                        : my-vm
 Label                       : 
@@ -64,7 +64,7 @@ The -*ConfigurationArgument* parameter specifies a hashtable with the arguments 
 
 ### Example 2: Configure the DSC extension on a virtual machine using a path to the configuration data
 ```
-PS C:\>$VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1 
+PS C:\> $VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1 
 DeploymentName              : my-vm-svc
 Name                        : my-vm
 Label                       : 

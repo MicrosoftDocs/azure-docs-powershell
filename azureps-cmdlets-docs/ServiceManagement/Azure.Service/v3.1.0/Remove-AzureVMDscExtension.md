@@ -26,7 +26,7 @@ The output of this cmdlet needs to be piped to the Update-AzureVM cmdlet.
 
 ### Example 1: Remove a DSC extension from a virtual machine
 ```
-PS C:\>Remove-AzureVMDscExtension -VM $VM | Update-AzureVM
+PS C:\> Remove-AzureVMDscExtension -VM $VM | Update-AzureVM
 ```
 
 This command removes an Azure DSC extension from a virtual machine.

@@ -24,7 +24,7 @@ The **Get-AzureAclConfig** cmdlet gets the access control list (ACL) configurati
 
 ### Example 1: Get an ACL configuration object for a virtual machine endpoint
 ```
-PS C:\>$Acl = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Get-AzureAclConfig -EndpointName "Web"
+PS C:\> $Acl = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Get-AzureAclConfig -EndpointName "Web"
 ```
 
 The first command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the Get-AzureVM cmdlet.

@@ -26,7 +26,7 @@ Running **Export-AzureVM**, followed by **Remove-AzureVM** and then **Import-Azu
 
 ### Example 1: Export a virtual machine
 ```
-PS C:\>Export-AzureVM -ServiceName "ContosoService" -Name "ContosoRole06" -Path "C:\vms\VMstate.xml"
+PS C:\> Export-AzureVM -ServiceName "ContosoService" -Name "ContosoRole06" -Path "C:\vms\VMstate.xml"
 ```
 
 This command exports the state of the specified virtual machine to the VMstate.xml file.

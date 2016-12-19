@@ -25,7 +25,7 @@ By default, this cmdlet does not remove the data disk blob from the storage acco
 
 ### Example 1: Remove a data disk
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Remove-AzureDataDisk -LUN 0
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Remove-AzureDataDisk -LUN 0
 ```
 
 This command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the Get-AzureVM cmdlet.
@@ -34,7 +34,7 @@ The current cmdlet removes the data disk that has the LUN 0.
 
 ### Example 2: Remove a data disk and the virtual hard disk file
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Remove-AzureDataDisk -LUN 0 -DeleteVHD | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Remove-AzureDataDisk -LUN 0 -DeleteVHD | Update-AzureVM
 ```
 
 This command gets the virtual machine named VirtualMachine07 in the service named ContosoService.

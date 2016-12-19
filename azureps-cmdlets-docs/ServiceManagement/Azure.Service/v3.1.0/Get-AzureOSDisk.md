@@ -24,7 +24,7 @@ The **Get-AzureOSDisk** cmdlet gets the operating system disk of an Azure virtua
 
 ### Example 1: Get an operating system disk
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine02" | Get-AzureOSDisk
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine02" | Get-AzureOSDisk
 ```
 
 This command gets the virtual machine named VirtualMachine02 in the service named ContosoService by using the **Get-AzureVM** cmdlet.

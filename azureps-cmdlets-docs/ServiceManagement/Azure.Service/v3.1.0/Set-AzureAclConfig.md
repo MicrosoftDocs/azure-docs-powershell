@@ -39,7 +39,7 @@ The **Set-AzureAclConfig** cmdlet modifies an access control list (ACL) configur
 
 ### Example 1: Add a rule to a new ACL configuration
 ```
-PS C:\>$Acl = New-AzureAclConfig
+PS C:\> $Acl = New-AzureAclConfig
 PS C:\> Set-AzureAclConfig -AddRule -ACL $Acl -Action Permit -RemoteSubnet "172.0.0.0/8" -Order 100 -Description "Permit ACL rule"
 ```
 
@@ -50,7 +50,7 @@ The command specifies an action, subnet, order, and description for the rule.
 
 ### Example 2: Modify a rule in an ACL configuration
 ```
-PS C:\>$Acl = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Get-AzureAclConfig -EndpointName "Web"
+PS C:\> $Acl = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Get-AzureAclConfig -EndpointName "Web"
 PS C:\> Set-AzureAclConfig -SetRule -RuleId 0 -ACL $Acl -Order 102 -Description "Web endpoint rule"
 PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Set-AzureEndpoint -ACL $Acl -Name "Web" | Update-AzureVM
 ```
@@ -68,7 +68,7 @@ The command also updates that virtual machine.
 
 ### Example 3: Remove a rule from an ACL configuration
 ```
-PS C:\>$Acl = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Get-AzureAclConfig -EndpointName "Web"
+PS C:\> $Acl = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Get-AzureAclConfig -EndpointName "Web"
 PS C:\> Set-AzureAclConfig -RemoveRule -ID 0 -ACL $Acl
 PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Set-AzureEndpoint -ACL $Acl -Name "Web" | Update-AzureVM
 ```

@@ -24,7 +24,7 @@ The **Get-AzureEndpoint** cmdlet gets information about the endpoints that are a
 
 ### Example 1: Get endpoint information for a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine12" | Get-AzureEndpoint
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine12" | Get-AzureEndpoint
 ```
 
 This command retrieves the configuration of a virtual machine named VirtualMachine12 by using the Get-AzureVM cmdlet.

@@ -26,7 +26,7 @@ The upgrade package and configuration are set by using the Set-AzureDeployment c
 
 ### Example 1: Initiate an upgrade of a production deployment
 ```
-PS C:\>Set-AzureWalkUpgradeDomain -ServiceName "MySvc1" -slot "Production" -UpgradeDomain 2
+PS C:\> Set-AzureWalkUpgradeDomain -ServiceName "MySvc1" -slot "Production" -UpgradeDomain 2
 ```
 
 This command initiates the upgrade of Upgrade Domain 2 of the production deployment of the MySvc1 service.

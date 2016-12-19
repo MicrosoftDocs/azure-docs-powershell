@@ -25,7 +25,7 @@ You must pass the output of this cmdlet to the Update-AzureVM cmdlet.
 
 ### Example 1: Remove the Azure Diagnostics extension from a virtual machine
 ```
-PS C:\>Remove-AzureVMDiagnosticsExtension -VM $VM | Update-AzureVM
+PS C:\> Remove-AzureVMDiagnosticsExtension -VM $VM | Update-AzureVM
 ```
 
 This command removes the Azure Diagnostics extension from a virtual machine.
