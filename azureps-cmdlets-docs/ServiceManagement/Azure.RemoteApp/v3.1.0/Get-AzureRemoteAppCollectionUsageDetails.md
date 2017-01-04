@@ -24,7 +24,7 @@ The **Get-AzureRemoteAppCollectionUsageDetails** cmdlet retrieves usage details 
 
 ### Example 1: Get usage details for a collection
 ```
-PS C:\>Get-AzureRemoteAppCollectionUsageDetails -CollectionName Contoso -UsageMonth 12 -UsageYear 2014
+PS C:\> Get-AzureRemoteAppCollectionUsageDetails -CollectionName Contoso -UsageMonth 12 -UsageYear 2014
 ```
 
 This command gets usage details for the month of December in the year 2014, for an Azure RemoteApp collection named Contoso.

@@ -25,10 +25,6 @@ To force users to be immediately signed out as soon as the collection is updated
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

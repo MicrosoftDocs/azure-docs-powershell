@@ -21,10 +21,6 @@ The **Get-AzureRemoteAppPlan** cmdlet lists Azure RemoteApp plans.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

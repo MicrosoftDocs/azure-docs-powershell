@@ -31,7 +31,7 @@ The **New-AzureRemoteAppTemplateImage** cmdlet uploads or imports an Azure Remot
 
 ### Example 1: Upload a VHD file to create a template image
 ```
-PS C:\>New-AzureRemoteAppTemplateImage -ImageName "ContosoApps" -Location "North Europe" -Path "C:\RemoteAppImages\ContosoApps.vhd"
+PS C:\> New-AzureRemoteAppTemplateImage -ImageName "ContosoApps" -Location "North Europe" -Path "C:\RemoteAppImages\ContosoApps.vhd"
 ```
 
 This command uploads C:\RemoteAppImages\ContosoApps.vhd to create a template image named ContosoApps in the North Europe data center.

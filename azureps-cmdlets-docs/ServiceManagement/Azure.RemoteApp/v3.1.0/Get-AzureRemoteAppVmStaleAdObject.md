@@ -26,7 +26,7 @@ This cmdlet displays the name of each object that it gets.
 
 ### Example 1: Get stale objects for a collection
 ```
-PS C:\>Clear-AzureRemoteAppVmStaleAdObject -CollectionName "Contoso"
+PS C:\> Clear-AzureRemoteAppVmStaleAdObject -CollectionName "Contoso"
 ```
 
 This second command gets the stale objects for the collection named Contoso.
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a credential that has rights to perform this action.
-To obtain a **Credential** object, use the Get-Credential cmdlet.
+To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
 If you do not specify this parameter, this cmdlet uses the current user credentials.
 
 ```yaml
