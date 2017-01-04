@@ -31,7 +31,7 @@ The **Remove-AzureSubscription** cmdlet deletes an Azure subscription from your 
 This cmdlet does not delete the subscription from Microsoft Azure, or change the actual subscription in any way.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ C:\PS> Remove-AzureSubscription -SubscriptionName Test -SubscriptionDataFile C:\
 ```
 
 This command deletes the Test subscription from the MySubscriptions.xml subscription data file.
-The command uses the **Force** parameter to suppress the confirmation prompt.
+The command uses the *Force* parameter to suppress the confirmation prompt.
 
 ### Example 3: Delete a subscription in a script
 ```
@@ -60,7 +60,7 @@ C:\PS> ...if (Remove-AzureSubscription -SubscriptionName Test -PassThru) {...}
 ```
 
 This command uses the **Remove-AzureSubscription** command in an **If** statement.
-It uses the **PassThru** parameter, which returns a Boolean value, to determine whether the script block in the **If** statement is executed.
+It uses the *PassThru* parameter, which returns a Boolean value, to determine whether the script block in the **If** statement is executed.
 
 ## PARAMETERS
 
@@ -78,6 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+Suppresses the confirmation prompt.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -91,6 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+Returns $True if the command succeeds and $False if it fails.
+By default, this cmdlet does not return any output.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -104,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
+
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
@@ -210,7 +218,7 @@ You can pipe input to this cmdlet by property name, but not by value.
 ## OUTPUTS
 
 ### None or System.Boolean
-If you use the **PassThru** parameter, this cmdlet returns a Boolean value.
+If you use the *PassThru* parameter, this cmdlet returns a Boolean value.
 Otherwise, it does not return any output.
 
 ## NOTES
