@@ -32,7 +32,7 @@ The **Set-AzureApplicationGatewayConfig** cmdlet configures an application gatew
 
 ### Example 1: Configure an application gateway by using a configuration object
 ```
-PS C:\>$ConfigReturnObject = Get-AzureApplicationGatewayConfig -Name "ApplicationGateway02"
+PS C:\> $ConfigReturnObject = Get-AzureApplicationGatewayConfig -Name "ApplicationGateway02"
 PS C:\> Set-AzureApplicationGatewayConfig -Name "ApplicationGateway06" -Config $ConfigReturnObject
 ```
 
@@ -43,14 +43,14 @@ The second command sets the configuration for the application named ApplicationG
 
 ### Example 2: Configure an application gateway by using a configuration file
 ```
-PS C:\>Set-AzureApplicationGatewayConfig -Name "ApplicationGateway06" -ConfigFile "D:\config.xml"
+PS C:\> Set-AzureApplicationGatewayConfig -Name "ApplicationGateway06" -ConfigFile "D:\config.xml"
 ```
 
 This command sets the configuration for the application named ApplicationGateway06 by using an application gateway configuration file in the specified location.
 
 ### Example 3: Modify a configuration by using a configuration object
 ```
-PS C:\>$ConfigReturnObject = Get-AzureApplicationGatewayConfig -Name "ApplicationGateway06"
+PS C:\> $ConfigReturnObject = Get-AzureApplicationGatewayConfig -Name "ApplicationGateway06"
 PS C:\> $ConfigReturnObject.Config.FrontendPorts[0].Port = 443
 PS C:\> $ConfigReturnObject | Set-AzureApplicationGatewayConfig -Name "ApplicationGateway06"
 ```
@@ -98,7 +98,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

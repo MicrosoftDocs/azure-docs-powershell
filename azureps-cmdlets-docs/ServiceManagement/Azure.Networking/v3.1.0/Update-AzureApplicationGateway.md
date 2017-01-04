@@ -26,7 +26,7 @@ The **Update-AzureApplicationGateway** cmdlet updates an existing application ga
 
 ### Example 1: Modify an application gateway by using its name
 ```
-PS C:\>Stop-AzureApplicationGateway -Name "ApplicationGateway06"
+PS C:\> Stop-AzureApplicationGateway -Name "ApplicationGateway06"
 PS C:\> Update-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirutalNetwork18" -Subnets @("Subnet05", "Subnet06")
 ```
 
@@ -37,7 +37,7 @@ The second command modifies the virtual subnet and subnets for the application g
 
 ### Example 2: Modify additional properties of an application gateway
 ```
-PS C:\>Update-AzureApplicationGateway -Name "ApplicationGateway06" -InstanceCount 2 -GatewaySize "Large" -Description "Updated application gateway"
+PS C:\> Update-AzureApplicationGateway -Name "ApplicationGateway06" -InstanceCount 2 -GatewaySize "Large" -Description "Updated application gateway"
 ```
 
 This command modifies the instance count, gateway size, and description for the application gateway named ApplicationGateway06.
@@ -46,7 +46,7 @@ Therefore, you do not have to stop the application gateway before you run this c
 
 ### Example 3: Modify an application gateway by using the pipeline
 ```
-PS C:\>$ApplicationGateway = Get-AzureApplicationGateway -Name "ApplicationGateway06"
+PS C:\> $ApplicationGateway = Get-AzureApplicationGateway -Name "ApplicationGateway06"
 PS C:\> $ApplicationGateway.GatewaySize = "Medium"
 PS C:\> $ApplicationGateway | Update-AzureApplicationGateway
 ```
@@ -164,7 +164,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

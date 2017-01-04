@@ -24,7 +24,7 @@ The **Remove-AzureRoute** cmdlet removes a route from a route table.
 
 ### Example 1: Remove a route
 ```
-PS C:\>Get-AzureRouteTable -Name "ApplianceRouteTable" | Remove-AzureRoute -RouteName "InternetRoute"
+PS C:\> Get-AzureRouteTable -Name "ApplianceRouteTable" | Remove-AzureRoute -RouteName "InternetRoute"
 Confirm
 Are you sure you want to remove the Route "InternetRoute" from Route Table "ApplianceRouteTable"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -88,7 +88,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

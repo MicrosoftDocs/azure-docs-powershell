@@ -25,7 +25,7 @@ The **Add-AzureApplicationGatewaySslCertificate** cmdlet adds a Secure Sockets L
 
 ### Example 1: Add an SSL certificate
 ```
-PS C:\>Add-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13" -Password "password" -CertificateFile "c:\Certs\sslCertificate.pfx"
+PS C:\> Add-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13" -Password "password" -CertificateFile "c:\Certs\sslCertificate.pfx"
 ```
 
 This command adds an SSL certificate named SslCertificate13 to the Application Gateway named ApplicationGateway08.
@@ -98,7 +98,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

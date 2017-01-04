@@ -27,7 +27,7 @@ You can specify the type, either StaticRouting or DynamicRouting.
 
 ### Example 1: Create a virtual network gateway
 ```
-PS C:\>New-AzureVNetGateway -VNetName "ContosoVN07" -GatewayType "DynamicRouting" -GatewaySKU "Default"
+PS C:\> New-AzureVNetGateway -VNetName "ContosoVN07" -GatewayType "DynamicRouting" -GatewaySKU "Default"
 ```
 
 This command creates a virtual network gateway for the virtual network named ContosoVN07.
@@ -92,7 +92,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile
