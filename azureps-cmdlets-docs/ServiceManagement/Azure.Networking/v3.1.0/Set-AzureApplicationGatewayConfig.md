@@ -36,7 +36,7 @@ PS C:\> $ConfigReturnObject = Get-AzureApplicationGatewayConfig -Name "Applicati
 PS C:\> Set-AzureApplicationGatewayConfig -Name "ApplicationGateway06" -Config $ConfigReturnObject
 ```
 
-The first command gets the configuration object for the application gateway named ApplicationGateway02 by using the Get-AzureApplicationGatewayConfig cmdlet.
+The first command gets the configuration object for the application gateway named ApplicationGateway02 by using the **Get-AzureApplicationGatewayConfig** cmdlet.
 The command stores it in the $ConfigReturnObject variable.
 
 The second command sets the configuration for the application named ApplicationGateway06 by using an application gateway configuration object stored in the $ConfigReturnObject variable.
@@ -55,7 +55,7 @@ PS C:\> $ConfigReturnObject.Config.FrontendPorts[0].Port = 443
 PS C:\> $ConfigReturnObject | Set-AzureApplicationGatewayConfig -Name "ApplicationGateway06"
 ```
 
-The first command gets the configuration object for the application gateway named ApplicationGateway06 by using the Get-AzureApplicationGatewayConfig cmdlet.
+The first command gets the configuration object for the application gateway named ApplicationGateway06 by using the **Get-AzureApplicationGatewayConfig** cmdlet.
 The command stores it in the $ConfigReturnObject variable.
 
 The second command assigns a port value to a **Port** property in the object stored in $ConfigReturnObject.

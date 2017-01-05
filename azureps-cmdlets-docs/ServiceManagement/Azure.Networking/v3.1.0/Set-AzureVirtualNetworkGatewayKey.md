@@ -27,7 +27,7 @@ The **Set-AzureVirtualNetworkGatewayKey** cmdlet sets the key for an Azure virtu
 ## PARAMETERS
 
 ### -GatewayId
-Specifies the ID of a gateway
+Specifies the ID of a gateway.
 
 ```yaml
 Type: String

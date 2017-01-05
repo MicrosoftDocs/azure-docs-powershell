@@ -27,6 +27,7 @@ The new route takes effect almost immediately on the virtual machines that are a
 ### Example 1: Add a virtual appliance next hop route
 ```
 PS C:\> New-AzureRouteTable -Name "ApplianceRouteTable" -Location "Central US" -Label "Appliance Route Table" | Set-AzureRoute -RouteName "ApplianceRoute03" -AddressPrefix "10.0.0.0/24" -NextHopType VirtualAppliance -NextHopIpAddress "10.0.1.5"
+
 Routes                        Name                          Location                      Label
 ------                        ----                          --------                      -----
 {approute}                    AppRT                         Central US                    Appliance Route Table
@@ -40,6 +41,7 @@ The command specifies the next hop IP address and the address prefix for the rou
 ### Example 2: Add an Internet next hop route
 ```
 PS C:\> Get-AzureRouteTable -Name "ApplianceRouteTable" | Set-AzureRoute -RouteName "InternetRoute" -AddressPrefix "0.0.0.0/0" -NextHopType Internet
+
 Routes                        Name                          Location                      Label
 ------                        ----                          --------                      -----
 {approute, internetroute}     AppRT                         Central US                    Appliance Route Table
