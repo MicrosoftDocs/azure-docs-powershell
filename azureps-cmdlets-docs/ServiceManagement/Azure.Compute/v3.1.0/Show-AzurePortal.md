@@ -19,18 +19,18 @@ Show-AzurePortal [[-Name] <String>] [-Realm <String>] [-Environment <String>] [-
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Show-AzurePortal** cmdlet shows the Azure Management Portal.
 
 ## EXAMPLES
 
-### 1:
+### Example 1: Show information about a web site
 ```
 PS C:\> Show-AzurePortal -Name mySite
 ```
 
-This example opens a browser on the Azure portal, showing information about a website named mySite.
+This example opens a browser on the Azure portal, showing information about a web site named mySite.
 
 ## PARAMETERS
 

@@ -20,16 +20,12 @@ Remove-AzureService [[-ServiceName] <String>] [-Force] [-PassThru] [-DeleteAll] 
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-AzureService** cmdlet stops and removes the current cloud service, or the service matching the specified service and subscription name.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -33,27 +33,27 @@ Set-AzureServiceProjectRole [[-RoleName] <String>] [-PassThru] -VMSize <String> 
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Set-AzureServiceProjectRole** cmdlet sets the number of role instances for the specified role.
 
 ## EXAMPLES
 
-### 1: Set instances for a web role
+### Example 1: Set instances for a web role
 ```
 PS C:\> Set-AzureServiceProjectRole "MyWebRole" 2
 ```
 
 Sets the number of instances for the web role named MyWebRole1 to 2.
 
-### 2: Set instances for a worker role
+### Example 2: Set instances for a worker role
 ```
 PS C:\> Set-AzureServiceProjectRole "MyWorkerRole1" 2
 ```
 
 Sets the role instance count for the worker role named WorkerRole1 to 2.
 
-### 3: Set the runtime version for a role service
+### Example 3: Set the runtime version for a role service
 ```
 PS C:\> Set-AzureServiceProjectRole "MyRole1" node 0.6.20
 ```

@@ -26,7 +26,7 @@ Get-AzureStoreAddOn [[-Name] <String>] [-Profile <AzureSMProfile>] [-Information
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 Gets all the available add-ons for purchasing from the Azure Store, or gets the existing add-on instances for the current subscription.
 

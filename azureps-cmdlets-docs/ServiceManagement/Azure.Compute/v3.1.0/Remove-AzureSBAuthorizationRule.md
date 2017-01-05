@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureSBAuthorizationRule
 
 ## SYNOPSIS
-Removes existing Service Bus authorization rule
+Removes existing Service Bus authorization rule.
 
 ## SYNTAX
 
@@ -30,16 +30,16 @@ Removes existing Service Bus authorization rule.
 
 ## EXAMPLES
 
-### 1: Remove authorization rule at namespace level
+### Example 1: Remove authorization rule at namespace level
 ```
-C:\PS>Remove-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace
+PS C:\> Remove-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace
 ```
 
 Removes authorization rule MyRule from MyNamespace.
 
-### 2: Remove authorization rule for a Queue
+### Example 2: Remove authorization rule for a Queue
 ```
-C:\PS>Remove-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -EntityName MyEntity -EntityType Queue
+PS C:\> Remove-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -EntityName MyEntity -EntityType Queue
 ```
 
 Removes authorization rule called MyRule for a MyEntity Queue on MyNamespace.

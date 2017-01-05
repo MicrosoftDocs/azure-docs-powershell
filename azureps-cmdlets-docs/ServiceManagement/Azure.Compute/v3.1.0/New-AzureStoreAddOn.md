@@ -20,7 +20,7 @@ New-AzureStoreAddOn [-Name] <String> [-AddOn] <String> [-Plan] <String> [-Locati
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 Buys a new add-on instance from the Azure Store.
 

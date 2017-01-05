@@ -20,7 +20,7 @@ Get-AzureSchedulerJobHistory [-Location] <String> [-JobCollectionName] <String> 
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-AzureSchedulerJobHistory** cmdlet gets the history for a scheduler job.
 
@@ -179,7 +179,8 @@ Accept wildcard characters: False
 
 ### -IncludeTotalCount
 Reports the total number of objects in the data set (an integer) followed by the selected objects.
-If the cmdlet cannot determine the total count, it displays "Unknown total count." The integer has an Accuracy property that indicates the reliability of the total count value.
+If the cmdlet cannot determine the total count, it displays "Unknown total count." 
+The integer has an Accuracy property that indicates the reliability of the total count value.
 The value of Accuracy ranges from 0.0 to 1.0 where 0.0 means that the cmdlet could not count the objects, 1.0 means that the count is exact, and a value between 0.0 and 1.0 indicates an increasingly reliable estimate.
 
 ```yaml

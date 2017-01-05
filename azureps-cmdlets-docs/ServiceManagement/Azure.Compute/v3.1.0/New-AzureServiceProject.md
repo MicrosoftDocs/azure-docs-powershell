@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureServiceProject
 
 ## SYNOPSIS
-Creates the required files and configuration (sometimes referred to as scaffolding) for a new service.
+Creates the required files and configuration for a new service.
 
 ## SYNTAX
 
@@ -19,13 +19,13 @@ New-AzureServiceProject [-ServiceName] <String> [-Profile <AzureSMProfile>]
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-AzureServiceProject** cmdlet creates the required files and configuration for a new Azure service in the current directory.
 
 ## EXAMPLES
 
-### 1:
+### Example 1: Create scaffolding for a service
 ```
 PS C:\> New-AzureServiceProject MyService1
 ```

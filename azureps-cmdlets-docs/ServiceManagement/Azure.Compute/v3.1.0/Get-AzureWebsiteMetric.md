@@ -21,7 +21,7 @@ Get-AzureWebsiteMetric [[-MetricNames] <String[]>] [[-StartDate] <DateTime>] [[-
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-AzureWebsiteMetric** cmdlet gets metrics for the Azure website in the current subscription.
 
@@ -30,7 +30,7 @@ The **Get-AzureWebsiteMetric** cmdlet gets metrics for the Azure website in the 
 ### Example 1: Get metrics for the last three hours on a per-instance level for a website
 ```
 PS C:\> Get-AzureWebsiteMetric -Name "ContosoWebSite" -StartDate (get-date).AddHours(-3) -MetricNames "Requests" -InstanceDetails -SlotView -TimeGrain "PT1M" 
-$metrics[1].Data Name : Requests 
+PS C:\> $metrics[1].Data Name : Requests 
 
 Unit : Count 
 

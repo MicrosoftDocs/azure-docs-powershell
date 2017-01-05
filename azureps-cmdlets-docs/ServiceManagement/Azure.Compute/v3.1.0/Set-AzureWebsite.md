@@ -30,20 +30,20 @@ Set-AzureWebsite [-NumberOfWorkers <Int32>] [-DefaultDocuments <String[]>] [-Net
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Set-AzureWebsite** cmdlet configures a website running in Azure.
 
 ## EXAMPLES
 
-### 1: Enable HTTP logging for a website
+### Example 1: Enable HTTP logging for a website
 ```
 PS C:\> Set-AzureWebsite -HttpLoggingEnabled 1
 ```
 
 This example enables HTTP logging.
 
-### 2: Set storage credentials for a website
+### Example 2: Set storage credentials for a website
 ```
 PS C:\> $settings = New-Object Hashtable$settings["AZURE_STORAGE_ACCOUNT"= myaccountname$settings["AZURE_STORAGE_ACCESS_KEY"] = myaccesskeySet-AzureWebsite -AppSettings $settings myWebsite
 ```

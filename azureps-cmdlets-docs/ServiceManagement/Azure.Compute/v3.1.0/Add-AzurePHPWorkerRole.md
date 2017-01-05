@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-AzurePHPWorkerRole
 
 ## SYNOPSIS
-Creates the required files and configuration (sometimes referred to as scaffolding) for a PHP application that will be hosted in Azure through php.exe.
+Creates the required files and configuration for a PHP application that will be hosted in Azure through php.exe.
 
 ## SYNTAX
 
@@ -19,20 +19,20 @@ Add-AzurePHPWorkerRole [[-Name] <String>] [[-Instances] <Int32>] [-Profile <Azur
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
-Creates the required files and configuration (sometimes referred to as scaffolding) for a PHP application that will be hosted in Azure through php.exe.
+Creates the required files and configuration, sometimes referred to as scaffolding, for a PHP application that will be hosted in Azure through php.exe.
 
 ## EXAMPLES
 
-### 1: Create a worker role with a single instance
+### Example 1: Create a worker role with a single instance
 ```
 PS C:\> Add-AzurePHPWorkerRole MyWorkerRole
 ```
 
 This example adds the required files and configuration for a single worker role named MyWorkerRole to the current application.
 
-### 2: Create a worker role with multiple instances
+### Example 2: Create a worker role with multiple instances
 ```
 PS C:\> Add-AzurePHPWorkerRole MyWorkerRole -I 2
 ```

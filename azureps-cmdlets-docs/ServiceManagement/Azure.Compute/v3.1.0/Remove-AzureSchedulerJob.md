@@ -20,7 +20,7 @@ Remove-AzureSchedulerJob [-Force] [[-Location] <String>] [-JobCollectionName] <S
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-AzureSchedulerJob** cmdlet deletes a scheduler job.
 

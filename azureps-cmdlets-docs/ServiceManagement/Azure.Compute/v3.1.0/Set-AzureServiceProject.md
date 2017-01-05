@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AzureServiceProject
 
 ## SYNOPSIS
-Sets default location, subscription, slot, and storage account for the current service
+Sets default location, subscription, slot, and storage account for the current service.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ These values are used whenever the service is published to the cloud.
 
 ### Example 1: Basic settings
 ```
-C:\PS>Set-AzureServiceProject -Location "North Central US" -Slot Production -Storage myStorageAccount -Subscription myAzureSubscription
+PS C:\> Set-AzureServiceProject -Location "North Central US" -Slot Production -Storage myStorageAccount -Subscription myAzureSubscription
 ```
 
 Sets the deployment location for the service to the North Central US region.
