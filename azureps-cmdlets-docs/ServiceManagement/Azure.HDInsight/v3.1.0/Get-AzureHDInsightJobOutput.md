@@ -49,8 +49,8 @@ The first command gets the ID of the current subscription, and then stores it in
 The second command stores the name MyCluster in the $Clustername variable.
 
 The third command creates a MapReduce job definition, and then stores it in the $WordCountJob variable.
-The command passes the job in $WordCountJob to the Start-AzureHDInsightJob cmdlet to start the job.
-It also passes $WordCountJob to the Wait-AzureHDInsightJob cmdlet to wait for the job to finish, and then it uses **Get-AzureHDInsightJobOutput** to get the job output.
+The command passes the job in $WordCountJob to the **Start-AzureHDInsightJob** cmdlet to start the job.
+It also passes $WordCountJob to the **Wait-AzureHDInsightJob** cmdlet to wait for the job to finish, and then it uses **Get-AzureHDInsightJobOutput** to get the job output.
 
 ## PARAMETERS
 
