@@ -30,8 +30,8 @@ The **Remove-WAPackStaticIPAddressPool** cmdlet removes static IP address pool o
 
 ### Example 1: Remove a static IP address pool
 ```
-PS C:\>$StaticIPAddressPool = Get-WAPackStaticIPAddressPool -Name "ContosoStaticIPAddressPool01"
-PS C:\>Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPool
+PS C:\> $StaticIPAddressPool = Get-WAPackStaticIPAddressPool -Name "ContosoStaticIPAddressPool01"
+PS C:\> Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPool
 ```
 
 The first command gets the static IP address pool named ContosoStaticIPAddressPool01 by using the **Get-WAPackStaticIPAddressPool** cmdlet, and then stores that object in the $StaticIPAddressPool variable.
@@ -40,8 +40,8 @@ The command prompts you for confirmation.
 
 ### Example 2: Remove a static IP address pool without confirmation
 ```
-PS C:\>$StaticIPAddressPool = Get-WAPackStaticIPAddressPool -Name "ContosoStaticIPAddressPool02"
-PS C:\>Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPool -Force
+PS C:\> $StaticIPAddressPool = Get-WAPackStaticIPAddressPool -Name "ContosoStaticIPAddressPool02"
+PS C:\> Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPool -Force
 ```
 
 The first command gets the static IP address pool named ContosoStaticIPAddressPool02 by using the **Get-WAPackStaticIPAddressPool** cmdlet, and then stores that object in the $ StaticIPAddressPool variable.

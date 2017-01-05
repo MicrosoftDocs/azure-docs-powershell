@@ -29,7 +29,7 @@ If you do not specify a value for the *Plan* parameter, the cmdlet creates a sta
 
 ### Example 1: Create a scheduler job collection that includes default values
 ```
-PS C:\>New-AzureSchedulerJobCollection -JobCollectionName "JobCollection01" -Location "North Central US" -Plan "Standard"
+PS C:\> New-AzureSchedulerJobCollection -JobCollectionName "JobCollection01" -Location "North Central US" -Plan "Standard"
 ```
 
 This command creates a standard scheduler job collection named JobCollection01.
@@ -37,7 +37,7 @@ The new collection has a default job count and maximum recurrence values for a s
 
 ### Example 2: Create a scheduler job collection with specified values
 ```
-PS C:\>New-AzureSchedulerJobCollection -JobCollectionName "JobCollection02" -Location "North Central US" -Frequency "Hour" -Interval 12 -MaxJobCount 30 -Plan "Standard"
+PS C:\> New-AzureSchedulerJobCollection -JobCollectionName "JobCollection02" -Location "North Central US" -Frequency "Hour" -Interval 12 -MaxJobCount 30 -Plan "Standard"
 ```
 
 This command creates a standard scheduler job collection named JobCollection02.

@@ -27,7 +27,7 @@ Gets all of the available website locations for the current subscription
 
 ### 1: Get all available locations
 ```
-PS C:\>Get-AzureWebsiteLocations
+PS C:\> Get-AzureWebsiteLocations
 ```
 
 This example gets all of the available website locations for the current subscription.

@@ -28,14 +28,14 @@ This cmdlet updates an existing add-on instance from the current subscription.
 
 ### Example 1
 ```
-PS C:\>Set-AzureStoreAddOn MyAddOn NewPlanId
+PS C:\> Set-AzureStoreAddOn MyAddOn NewPlanId
 ```
 
 This example updates an add-on with a new plan ID.
 
 ### Example 2
 ```
-PS C:\>Set-AzureStoreAddOn MyAddOn NewPlanId MyPromoCode
+PS C:\> Set-AzureStoreAddOn MyAddOn NewPlanId MyPromoCode
 ```
 
 This example updates an add-on with a new plan ID and promotional code.

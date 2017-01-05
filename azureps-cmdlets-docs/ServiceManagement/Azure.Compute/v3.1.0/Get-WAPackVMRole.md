@@ -39,21 +39,21 @@ To find out the version of the module you're using, from the Azure PowerShell co
 
 ### Example 1: Get a virtual machine role (created through the portal)
 ```
-PS C:\>Get-WAPackVMRole -Name "ContosoVMRole01"
+PS C:\> Get-WAPackVMRole -Name "ContosoVMRole01"
 ```
 
 This command gets a virtual machine role which has been created through the portal named ContosoVMRole01.
 
 ### Example 2: Get a virtual machine role by using a name and a cloud service name
 ```
-PS C:\>Get-WAPackVMRole -CloudServiceName "ContosoCloudService01" -Name "ContosoVMRole02"
+PS C:\> Get-WAPackVMRole -CloudServiceName "ContosoCloudService01" -Name "ContosoVMRole02"
 ```
 
 This command gets a virtual machine role named ContosoVMRole02 which stand on a cloud service named ContosoCloudService01.
 
 ### Example 3: Get all virtual machine role
 ```
-PS C:\>Get-WAPackVMRole
+PS C:\> Get-WAPackVMRole
 ```
 
 This command gets all existing virtual machine role.

@@ -27,14 +27,14 @@ The **Add-AzurePHPWebRole** cmdlet creates the files and configuration (sometime
 
 ### 1: Add a web role using default values
 ```
-PS C:\>Add-AzurePHPWebRole
+PS C:\> Add-AzurePHPWebRole
 ```
 
 This example adds the required files and configuration for new web role using the default values of a service named "WebRole1" with 1 instance.
 
 ### 2: Add a web role with multiple instances
 ```
-PS C:\>Add-AzurePHPWebRole MyWebRole -I 2
+PS C:\> Add-AzurePHPWebRole MyWebRole -I 2
 ```
 
 This example adds the required files and configuration for a new web role to the current application, using the name "MyWebRole" and a role instance count of 2.

@@ -33,7 +33,7 @@ To change the current subscription, use the **Select-AzureSubscription** cmdlet.
 
 ### Example 1: Get all web hosting plans in a subscription
 ```
-PS C:\>Get-AzureWebHostingPlan 
+PS C:\> Get-AzureWebHostingPlan 
 Name : Default1 
 SKU : Basic 
 WorkerSize : Small 
@@ -55,7 +55,7 @@ This command gets all Azure web hosting plans in the current subscription.
 
 ### Example 2: Get a specific web hosting plan in a subscription
 ```
-PS C:\>Get-AzureWebHostingPlan -WebSpaceName "westeuropewebspace" -Name "Default0" 
+PS C:\> Get-AzureWebHostingPlan -WebSpaceName "westeuropewebspace" -Name "Default0" 
 Name : Default0 
 SKU : Free 
 WorkerSize : Small 

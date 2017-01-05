@@ -30,7 +30,7 @@ The **New-WAPackVNet** cmdlet creates a virtualized network.
 
 ### Example 1: Create a virtualized network
 ```
-PS C:\>$LogicalNetwork = Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
+PS C:\> $LogicalNetwork = Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
 PS C:\> New-WAPackVNet -LogicalNetwork $LogicalNetwork -Name "ContosoVNett01" -Description "A description"
 ```
 

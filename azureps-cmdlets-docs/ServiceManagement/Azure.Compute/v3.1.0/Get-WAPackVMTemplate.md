@@ -42,21 +42,21 @@ The **Get-WAPackVMTemplate** cmdlet gets virtual machine templates.
 
 ### Example 1: Get a virtual machine template by using a name
 ```
-PS C:\>Get-WAPackVMTemplate -Name "ContosoTemplate04"
+PS C:\> Get-WAPackVMTemplate -Name "ContosoTemplate04"
 ```
 
 This command gets the virtual machine template named ContosoTemplate04.
 
 ### Example 2: Get a virtual machine template by using an ID
 ```
-PS C:\>Get-WAPackVMTemplate -Id 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> Get-WAPackVMTemplate -Id 66242D17-189F-480D-87CF-8E1D749998C8
 ```
 
 This command gets the virtual machine template that has the specified ID.
 
 ### Example 3: Get all virtual machine templates
 ```
-PS C:\>Get-WAPackVMTemplate
+PS C:\> Get-WAPackVMTemplate
 ```
 
 This command gets all the virtual machine templates.

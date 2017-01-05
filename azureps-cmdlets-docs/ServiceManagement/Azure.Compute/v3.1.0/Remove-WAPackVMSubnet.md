@@ -29,8 +29,8 @@ The **Remove-WAPackVMSubnet** cmdlet removes virtual machine subnet objects.
 
 ### Example 1: Remove a virtual machine subnet
 ```
-PS C:\>$VMSubnet = Get-WAPackVMSubnet -Name "ContosoVMSubnet01"
-PS C:\>Remove-WAPackVMSubnet -VMSubnet $VMSubnet
+PS C:\> $VMSubnet = Get-WAPackVMSubnet -Name "ContosoVMSubnet01"
+PS C:\> Remove-WAPackVMSubnet -VMSubnet $VMSubnet
 ```
 
 The first command gets the virtual machine subnet named ContosoVMSubnet01 by using the **Get-WAPackVMSubnet** cmdlet, and then stores that object in the $VMSubnet variable.
@@ -39,8 +39,8 @@ The command prompts you for confirmation.
 
 ### Example 2: Remove a virtual machine without confirmation
 ```
-PS C:\>$VMSubnet = Get-WAPackVMSubnet -Name "ContosoVMSubnet02"
-PS C:\>Remove-WAPackVMSubnet -VMSubnet $VMSubnet -Force
+PS C:\> $VMSubnet = Get-WAPackVMSubnet -Name "ContosoVMSubnet02"
+PS C:\> Remove-WAPackVMSubnet -VMSubnet $VMSubnet -Force
 ```
 
 The first command gets the cloud service named ContosoVMSubnet02 by using the **Get-WAPackVMSubnet** cmdlet, and then stores that object in the $VMSubnet variable.

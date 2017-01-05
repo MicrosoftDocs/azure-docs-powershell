@@ -27,7 +27,7 @@ The **Get-AzureSBLocation** cmdlet returns the locations from which the Service 
 
 ### 1: Get the Service Bus location
 ```
-PS C:\>Get-AzureSBLocation
+PS C:\> Get-AzureSBLocation
 ```
 
 This example gets the location of the Service Bus.

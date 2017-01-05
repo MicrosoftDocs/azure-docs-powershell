@@ -27,7 +27,7 @@ The **Get-AzureSBNamespace** cmdlet returns the Service Bus service namespaces a
 
 ### 1: Get the Service Bus namespace
 ```
-PS C:\>Get-AzureSBNamespace
+PS C:\> Get-AzureSBNamespace
 ```
 
 This example gets the Service Bus service namespaces associated with the current subscription.

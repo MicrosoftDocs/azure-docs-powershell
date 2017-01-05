@@ -28,7 +28,7 @@ The **Set-AzureSchedulerJobCollection** cmdlet updates a scheduler job collectio
 
 ### Example 1: Change the maximum job count for a collection
 ```
-PS C:\>Set-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01" -MaxJobCount 30
+PS C:\> Set-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01" -MaxJobCount 30
 ```
 
 This command changes the maximum job count to 30 on the existing scheduler job collection named JobCollection01.

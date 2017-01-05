@@ -30,7 +30,7 @@ The **Remove-WAPackVM** cmdlet removes virtual machine objects.
 
 ### Example 1: Remove a virtual machine
 ```
-PS C:\>$VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
 PS C:\> Remove-WAPackVM -VM $VirtualMachine
 ```
 
@@ -41,7 +41,7 @@ The command prompts you for confirmation.
 
 ### Example 2: Remove a virtual machine without confirmation
 ```
-PS C:\>$VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
 PS C:\> Remove-WAPackVM -VM $VirtualMachine -Force
 ```
 

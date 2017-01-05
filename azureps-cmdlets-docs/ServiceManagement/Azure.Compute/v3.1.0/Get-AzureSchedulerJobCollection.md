@@ -28,21 +28,21 @@ The **Get-AzureSchedulerJobCollection** cmdlet gets one or more scheduler job co
 
 ### Example 1: Get all collections
 ```
-PS C:\>Get-AzureSchedulerJobCollection
+PS C:\> Get-AzureSchedulerJobCollection
 ```
 
 This command gets all scheduler job collections across all locations in the current subscription.
 
 ### Example 2: Get all collections for a location
 ```
-PS C:\>Get-AzureSchedulerJobCollection -Location "North Central US"
+PS C:\> Get-AzureSchedulerJobCollection -Location "North Central US"
 ```
 
 This command gets all scheduler job collections in the location named North Central US.
 
 ### Example 3: Get a collection by using a name
 ```
-PS C:\>Get-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01"
+PS C:\> Get-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01"
 ```
 
 This command gets the scheduler job collection named JobCollection01.

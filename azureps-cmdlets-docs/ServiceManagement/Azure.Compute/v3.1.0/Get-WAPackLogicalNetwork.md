@@ -36,14 +36,14 @@ The **Get-WAPackLogicalNetwork** cmdlet gets logical network objects.
 
 ### Example 1: Get a logical network by using a name
 ```
-PS C:\>Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
+PS C:\> Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
 ```
 
 This command gets a logical network named ContosoLogicalNetwork01.
 
 ### Example 2: Get all logical networks
 ```
-PS C:\>Get-WAPackLogicalNetwork
+PS C:\> Get-WAPackLogicalNetwork
 ```
 
 This command gets all logical networks.

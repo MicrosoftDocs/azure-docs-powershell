@@ -28,7 +28,7 @@ The **Remove-AzureSchedulerJob** cmdlet deletes a scheduler job.
 
 ### Example 1: Delete a scheduler job
 ```
-PS C:\>Remove-AzureSchedulerJob -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job17"
+PS C:\> Remove-AzureSchedulerJob -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job17"
 ```
 
 This command deletes the job named Job17.

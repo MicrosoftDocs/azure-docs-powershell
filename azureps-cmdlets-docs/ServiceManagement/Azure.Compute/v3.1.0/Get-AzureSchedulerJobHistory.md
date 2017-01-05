@@ -28,7 +28,7 @@ The **Get-AzureSchedulerJobHistory** cmdlet gets the history for a scheduler job
 
 ### Example 1: Get history for a job by using its name
 ```
-PS C:\>Get-AzureSchedulerJobHistory -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job01"
+PS C:\> Get-AzureSchedulerJobHistory -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job01"
 ```
 
 This command gets the history of the job named Job01.
@@ -36,7 +36,7 @@ That job belongs to the job collection named JobCollection01 in the specified lo
 
 ### Example 2: Get history for a failed job by using its name
 ```
-PS C:\>Get-AzureSchedulerJobHistory -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job12" -JobStatus "Failed"
+PS C:\> Get-AzureSchedulerJobHistory -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job12" -JobStatus "Failed"
 ```
 
 This command gets the history of the job named Job12 that has a status of Failed.

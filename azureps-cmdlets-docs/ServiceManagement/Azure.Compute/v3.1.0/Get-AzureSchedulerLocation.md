@@ -27,7 +27,7 @@ The **Get-AzureSchedulerLocation** cmdlet gets available scheduler locations.
 
 ### Example 1: Get available scheduler locations
 ```
-PS C:\>Get-AzureSchedulerLocation
+PS C:\> Get-AzureSchedulerLocation
 ```
 
 This command gets available scheduler locations.

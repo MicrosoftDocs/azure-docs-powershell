@@ -42,21 +42,21 @@ The **Get-WAPackVMSizeProfile** cmdlet gets size profile objects for virtual mac
 
 ### Example 1: Get a size profile by using a name
 ```
-PS C:\>Get-WAPackVMSizeProfile -Name "ContosoSizeProfile07"
+PS C:\> Get-WAPackVMSizeProfile -Name "ContosoSizeProfile07"
 ```
 
 This command gets the size profile named ContosoSizeProfile07.
 
 ### Example 2: Get a size profile by using an ID
 ```
-PS C:\>Get-WAPackVMSizeProfile -ID 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> Get-WAPackVMSizeProfile -ID 66242D17-189F-480D-87CF-8E1D749998C8
 ```
 
 This command gets the size profile that has the specified ID.
 
 ### Example 3: Get all size profiles
 ```
-PS C:\>Get-WAPackVMSizeProfile
+PS C:\> Get-WAPackVMSizeProfile
 ```
 
 This command gets all the size profiles.

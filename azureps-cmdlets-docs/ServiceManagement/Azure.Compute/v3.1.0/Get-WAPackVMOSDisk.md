@@ -42,21 +42,21 @@ The **Get-WAPackVMOSDisk** cmdlet gets operating system disk objects for virtual
 
 ### Example 1: Get an operating system disk by using a name
 ```
-PS C:\>Get-WAPackVMOSDisk -Name "ContosoOSDisk"
+PS C:\> Get-WAPackVMOSDisk -Name "ContosoOSDisk"
 ```
 
 This command gets an operating system disk named ContosoOSDisk.
 
 ### Example 2: Get an operating system disk by using an ID
 ```
-PS C:\>Get-WAPackVMOSDisk -Id 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> Get-WAPackVMOSDisk -Id 66242D17-189F-480D-87CF-8E1D749998C8
 ```
 
 This command gets the operating system disk that has the specified ID.
 
 ### Example 3: Get all operating system disks
 ```
-PS C:\>Get-WAPackVMOSDisk
+PS C:\> Get-WAPackVMOSDisk
 ```
 
 This command gets all operating system disks.

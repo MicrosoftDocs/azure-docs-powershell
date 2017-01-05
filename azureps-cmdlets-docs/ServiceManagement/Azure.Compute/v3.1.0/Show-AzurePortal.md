@@ -27,7 +27,7 @@ The **Show-AzurePortal** cmdlet shows the Azure Management Portal.
 
 ### 1:
 ```
-PS C:\>Show-AzurePortal -Name mySite
+PS C:\> Show-AzurePortal -Name mySite
 ```
 
 This example opens a browser on the Azure portal, showing information about a website named mySite.

@@ -29,7 +29,7 @@ The **Restart-WAPackVM** cmdlet restarts virtual machines.
 
 ### Example 1: Restart a virtual machine
 ```
-PS C:\>$VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
 PS C:\> Restart-WAPackVM -VM $VirtualMachine
 ```
 

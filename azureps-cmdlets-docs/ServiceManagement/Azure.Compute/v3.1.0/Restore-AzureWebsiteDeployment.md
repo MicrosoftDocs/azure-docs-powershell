@@ -29,7 +29,7 @@ This process replaces the current deployment with the selected deployment.
 
 ### Example 1: Redeploy a site
 ```
-PS C:\>Restore-AzureWebsiteDeployment -Name "ContosoSite" -CommitId "f876543210"
+PS C:\> Restore-AzureWebsiteDeployment -Name "ContosoSite" -CommitId "f876543210"
 ```
 
 This command redeploys the deployment that has the ID f876543210 for the website named ContosoSite.

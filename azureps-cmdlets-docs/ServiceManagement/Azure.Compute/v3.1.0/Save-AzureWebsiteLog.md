@@ -28,7 +28,7 @@ The **Save-AzureWebsiteLog** cmdlet downloads the logs for a specified website.
 
 ### 1: Download and save logs for a website
 ```
-PS C:\>Save-AzureWebsiteLogs -Name mySite -Output .\logs.zip
+PS C:\> Save-AzureWebsiteLogs -Name mySite -Output .\logs.zip
 ```
 
 This example downloads the runtime and deployment logs for website mySite to the file logs.zip in the current directory.

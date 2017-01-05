@@ -39,14 +39,14 @@ You can specify publishing configuration (such as **Subscription**, **StorageAcc
 
 ### 1: Publish a service project with default values
 ```
-PS C:\>Publish-AzureServiceProject
+PS C:\> Publish-AzureServiceProject
 ```
 
 This example publishes the current service, using the current service settings and the current Azure publish profile.
 
 ### 2: Create a deployment package
 ```
-PS C:\>Publish-AzureServiceProject -PackageOnly
+PS C:\> Publish-AzureServiceProject -PackageOnly
 ```
 
 Creates a deployment package (.cspkg) file in the service directory and does not publish to Windows Azure.

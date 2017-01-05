@@ -29,7 +29,7 @@ The **Stop-WAPackVM** cmdlet stops a virtual machine.
 
 ### Example 1: Stop a virtual machine
 ```
-PS C:\>$VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
 PS C:\> Stop-WAPackVM -VM $VirtualMachine
 ```
 

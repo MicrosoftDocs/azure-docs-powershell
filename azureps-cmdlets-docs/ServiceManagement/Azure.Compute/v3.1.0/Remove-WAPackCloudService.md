@@ -30,8 +30,8 @@ The **Remove-WAPackCloudService** cmdlet removes cloud service objects.
 
 ### Example 1: Remove a cloud service
 ```
-PS C:\>$CloudService = Get-WAPackCloudService -Name "ContosoCloudService01"
-PS C:\>Remove-WAPackVM -VM $CloudService
+PS C:\> $CloudService = Get-WAPackCloudService -Name "ContosoCloudService01"
+PS C:\> Remove-WAPackVM -VM $CloudService
 ```
 
 The first command gets the cloud service named ContosoCloudService01 by using the **Get-WAPackCloudService** cmdlet, and then stores that object in the $CloudService variable.
@@ -40,8 +40,8 @@ The command prompts you for confirmation.
 
 ### Example 2: Remove a cloud service without confirmation
 ```
-PS C:\>$CloudService = Get-WAPackCloudService -Name "ContosoCloudService02"
-PS C:\>Remove-WAPackCloudService -VM $CloudService -Force
+PS C:\> $CloudService = Get-WAPackCloudService -Name "ContosoCloudService02"
+PS C:\> Remove-WAPackCloudService -VM $CloudService -Force
 ```
 
 The first command gets the cloud service named ContosoCloudService02 by using the **Get-WAPackCloudService** cmdlet, and then stores that object in the $CloudService variable.

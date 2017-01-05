@@ -43,7 +43,7 @@ The **Set-AzureSchedulerStorageQueueJob** cmdlet updates a scheduler job that ha
 
 ### Example 1: Update a Storage queue message
 ```
-PS C:\>Set-AzureSchedulerStorageQueueJob -Location "North Central US" -JobCollectionName "JobCollection01 -JobName "Job12" -StorageQueueMessage "Updated message"
+PS C:\> Set-AzureSchedulerStorageQueueJob -Location "North Central US" -JobCollectionName "JobCollection01 -JobName "Job12" -StorageQueueMessage "Updated message"
 ```
 
 This command updates the queue message for the Storage job named Job12.
@@ -51,7 +51,7 @@ The command specifies the job collection name and the location.
 
 ### Example 2: Enable a Storage queue job
 ```
-PS C:\>Set-AzureSchedulerStorageQueueJob -Location "North Central US" -JobCollectionName "JobCollection02" -JobName "Job16" -JobState "Enabled"
+PS C:\> Set-AzureSchedulerStorageQueueJob -Location "North Central US" -JobCollectionName "JobCollection02" -JobName "Job16" -JobState "Enabled"
 ```
 
 This command enables the job named Job16.

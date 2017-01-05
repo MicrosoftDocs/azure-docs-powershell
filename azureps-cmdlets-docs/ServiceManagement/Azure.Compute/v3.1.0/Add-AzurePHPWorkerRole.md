@@ -27,14 +27,14 @@ Creates the required files and configuration (sometimes referred to as scaffoldi
 
 ### 1: Create a worker role with a single instance
 ```
-PS C:\>Add-AzurePHPWorkerRole MyWorkerRole
+PS C:\> Add-AzurePHPWorkerRole MyWorkerRole
 ```
 
 This example adds the required files and configuration for a single worker role named MyWorkerRole to the current application.
 
 ### 2: Create a worker role with multiple instances
 ```
-PS C:\>Add-AzurePHPWorkerRole MyWorkerRole -I 2
+PS C:\> Add-AzurePHPWorkerRole MyWorkerRole -I 2
 ```
 
 This example adds the required files and configuration for a new worker role to the current application, using the name MyWorkerRole with a role instance count of 2.

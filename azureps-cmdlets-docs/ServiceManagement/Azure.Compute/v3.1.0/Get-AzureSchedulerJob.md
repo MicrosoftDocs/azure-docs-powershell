@@ -28,21 +28,21 @@ The **Get-AzureSchedulerJobCollection** cmdlet gets a list of scheduler jobs or 
 
 ### Example 1: Get all jobs in a collection
 ```
-PS C:\>Get-AzureSchedulerJob -Location "North Central US" -JobCollectionName "JobCollection01"
+PS C:\> Get-AzureSchedulerJob -Location "North Central US" -JobCollectionName "JobCollection01"
 ```
 
 This command gets scheduler jobs that are part of the job collection named JobCollection01.
 
 ### Example 2: Get a named job
 ```
-PS C:\>Get-AzureSchedulerJob -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job01"
+PS C:\> Get-AzureSchedulerJob -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job01"
 ```
 
 This command gets the job named Job01 from the collection named JobCollection01 in the specified location.
 
 ### Example 3: Get disabled jobs in a collection
 ```
-PS C:\>Get-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01" -JobState "Disabled"
+PS C:\> Get-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01" -JobState "Disabled"
 ```
 
 This command gets all disabled scheduler jobs that are part of JobCollection01 in the specified location.

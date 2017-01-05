@@ -29,7 +29,7 @@ The **Resume-WAPackVM** cmdlet resumes paused virtual machines.
 
 ### Example 1: Resume a virtual machine
 ```
-PS C:\>$VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
 PS C:\> Resume-WAPackVM -VM $VirtualMachine
 ```
 

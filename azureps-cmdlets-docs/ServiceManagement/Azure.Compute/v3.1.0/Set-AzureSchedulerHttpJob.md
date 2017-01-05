@@ -57,7 +57,7 @@ The **Set-AzureSchedulerHttpJob** cmdlet updates a scheduler job that has an HTT
 
 ### Example 1: Change the state of a job to Disabled
 ```
-PS C:\>Set-AzureSchedulerHttpJob -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job01" -JobState "Disabled"
+PS C:\> Set-AzureSchedulerHttpJob -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job01" -JobState "Disabled"
 ```
 
 This command changes the state of the job named Job01 to Disabled.
@@ -65,7 +65,7 @@ That job is part of the job collection named JobColleciton01 for the specified l
 
 ### Example 2: Update the URI of a job
 ```
-PS C:\>Set-AzureSchedulerHttpJob -Location "North Central US" -JobCollectionName "JobCollection02" -JobName "Job37" -URI http://www.contoso.com
+PS C:\> Set-AzureSchedulerHttpJob -Location "North Central US" -JobCollectionName "JobCollection02" -JobName "Job37" -URI http://www.contoso.com
 ```
 
 This command updates the URI of the job named Job01 to be http://www.contoso.com.

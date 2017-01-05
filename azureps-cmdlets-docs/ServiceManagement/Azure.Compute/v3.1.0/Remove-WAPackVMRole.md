@@ -38,8 +38,8 @@ The **Remove-WAPackVMRole** cmdlet removes virtual machine role objects.
 
 ### Example 1: Remove a virtual machine role (which was created using the WAP portal)
 ```
-PS C:\>$VMRole = Get-WAPackVMRole -Name ?ContosoVMRole01?
-PS C:\>Remove-WAPackVMRole -VMRole $VMRole
+PS C:\> $VMRole = Get-WAPackVMRole -Name ?ContosoVMRole01?
+PS C:\> Remove-WAPackVMRole -VMRole $VMRole
 ```
 
 The first command gets the virtual machine role named ContosoVMRole01 by using the **Get-WAPackVMRole** cmdlet, and then stores that object in the $VMRole variable.
@@ -48,8 +48,8 @@ The command prompts you for confirmation.Assuming this virtual machine role was 
 
 ### Example 2: Remove a virtual machine role which was created after manually creating a cloud service
 ```
-PS C:\>$VMRole = Get-WAPackVMRole -Name "ContosoVMRole02"
-PS C:\>Remove-WAPackVMRole -VMRole $VMRole -CloudServiceName "ContosoCloudService02"
+PS C:\> $VMRole = Get-WAPackVMRole -Name "ContosoVMRole02"
+PS C:\> Remove-WAPackVMRole -VMRole $VMRole -CloudServiceName "ContosoCloudService02"
 ```
 
 The first command gets the virtual machine role named "ContosoVMRole02" by using the **Get-WAPackVMRole** cmdlet, and then stores that object in the $VMRole variable.
@@ -60,8 +60,8 @@ In this case named "ContosoCloudService02".
 
 ### Example 3: Remove a virtual machine role without confirmation
 ```
-PS C:\>$VMRole = Get-WAPackVMRole -Name "ContosoVMRole03"
-PS C:\>Remove-WAPackVMRole -VMRole $VMRole -Force
+PS C:\> $VMRole = Get-WAPackVMRole -Name "ContosoVMRole03"
+PS C:\> Remove-WAPackVMRole -VMRole $VMRole -Force
 ```
 
 The first command gets the cloud service named ContosoVMRole03 by using the **Get-WAPackVMRole** cmdlet, and then stores that object in the $VMRole variable.

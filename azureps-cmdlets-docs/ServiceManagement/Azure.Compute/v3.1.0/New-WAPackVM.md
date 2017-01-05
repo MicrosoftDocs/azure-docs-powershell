@@ -45,7 +45,7 @@ The **New-WAPackVM** cmdlet creates a virtual machine.
 
 ### Example 1: Create a virtual machine for the Windows operating system by using a template
 ```
-PS C:\>$Credentials = Get-Credential PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate04"PS C:\> New-WAPackVM -Name "ContosoV023" -Template $Template -VMCredential $Credentials -Windows
+PS C:\> $Credentials = Get-Credential PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate04"PS C:\> New-WAPackVM -Name "ContosoV023" -Template $Template -VMCredential $Credentials -Windows
 ```
 
 The first command creates a **PSCredential** object, and then stores it in the $Credentials variable.
@@ -59,7 +59,7 @@ The command specifies the *Windows* parameter, and, therefore, the virtual machi
 
 ### Example 2: Create a virtual machine for the Linux operating system by using a template
 ```
-PS C:\>$Credentials = Get-Credential 
+PS C:\> $Credentials = Get-Credential 
 PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate19"
 PS C:\> New-WAPackVM -Linux -Name "ContosoV028" -Template $Template -VMCredential $Credentials
 ```
@@ -73,7 +73,7 @@ The command specifies the *Linux* parameter, and, therefore, the virtual machine
 
 ### Example 3: Create a virtual machine from an operating system disk and size profile
 ```
-PS C:\>$OSDisk = Get-WAPackVMOSDisk -Name "ContosoDiskOS"
+PS C:\> $OSDisk = Get-WAPackVMOSDisk -Name "ContosoDiskOS"
 PS C:\> $SizeProfile = Get-WAPackVMSizeProfile -Name "MediumSizeVM"
 PS C:\> New-WAPackVM -Name "ContosoV073" -OSDisk $OSDisk -VMSizeProfile $SizeProfile
 ```

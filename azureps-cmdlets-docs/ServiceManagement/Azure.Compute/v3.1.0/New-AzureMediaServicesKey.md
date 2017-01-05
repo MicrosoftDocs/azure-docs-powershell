@@ -28,7 +28,7 @@ The `New-AzureMediaServicesKey` cmdlet updates the Primary or Secondary key for 
 
 ### 1: Update a Media Services account key
 ```
-PS C:\>New-AzureMediaServicesKey -Name "mediaservicesaccount" -KeyType "Primary" -Force
+PS C:\> New-AzureMediaServicesKey -Name "mediaservicesaccount" -KeyType "Primary" -Force
 ```
 
 ## PARAMETERS

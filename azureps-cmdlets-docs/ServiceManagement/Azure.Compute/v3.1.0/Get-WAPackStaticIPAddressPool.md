@@ -36,15 +36,15 @@ The **Get-WAPackStaticIPAddressPool** cmdlet gets static IP address pool objects
 
 ### Example 1: Get a static IP address pool from a given VMSubnet
 ```
-PS C:\>$Subnet = Get-WAPackVMSubet -Name "ContosoVMSubnet01"
-PS C:\>Get-WAPackStaticIPAddressPool -VMSubnet $Subnet -Name "ContosoStaticIPAddressPool01"
+PS C:\> $Subnet = Get-WAPackVMSubet -Name "ContosoVMSubnet01"
+PS C:\> Get-WAPackStaticIPAddressPool -VMSubnet $Subnet -Name "ContosoStaticIPAddressPool01"
 ```
 
 This command gets the static IP address pool named ContosoStaticIPAddressPool01 from a specified VMSubnet.
 
 ### Example 2: Get all static IP address pools from a given VMSubnet
 ```
-PS C:\>$Subnet = Get-WAPackVMSubet -Name "ContosoVMSubnet01"
+PS C:\> $Subnet = Get-WAPackVMSubet -Name "ContosoVMSubnet01"
 PS C:\> Get-WAPackStaticIPAddressPool -VMSubnet $Subnet
 ```
 

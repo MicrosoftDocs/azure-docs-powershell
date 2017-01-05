@@ -33,14 +33,14 @@ To get the version of the module you're using, in the Azure PowerShell console, 
 
 ### Example 1: Get all websites in the subscription
 ```
-PS C:\>Get-AzureWebsite
+PS C:\> Get-AzureWebsite
 ```
 
 This command gets all Azure websites in the current subscription.
 
 ### Example 2: Get a website by name
 ```
-PS C:\>Get-AzureWebsite -Name ContosoWeb
+PS C:\> Get-AzureWebsite -Name ContosoWeb
 ```
 
 This command gets detailed information about the ContosoWeb Azure website, including configuration information.
@@ -48,7 +48,7 @@ When you use the *Name* parameter, **Get-AzureWebsite** returns a **SiteWithConf
 
 ### Example 3: Get detailed information about all websites
 ```
-PS C:\>Get-AzureWebsite | ForEach-Object {Get-AzureWebsite -Name $_.Name}
+PS C:\> Get-AzureWebsite | ForEach-Object {Get-AzureWebsite -Name $_.Name}
 ```
 
 This command gets detailed information about all websites in the subscription.
@@ -56,7 +56,7 @@ It uses a **Get-AzureWebsite** command to get all websites and then uses the **F
 
 ### Example 4: Get information about a deployment slot
 ```
-PS C:\>Get-AzureWebsite -Name ContosoWeb -Slot Staging
+PS C:\> Get-AzureWebsite -Name ContosoWeb -Slot Staging
 ```
 
 This command gets the Staging deployment slot of the ContosoWeb website.

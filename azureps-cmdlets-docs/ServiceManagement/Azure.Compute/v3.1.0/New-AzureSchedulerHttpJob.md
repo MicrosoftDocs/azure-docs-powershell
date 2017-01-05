@@ -57,7 +57,7 @@ The **New-AzureSchedulerHttpJob** cmdlet creates a scheduler job that has an HTT
 
 ### Example 1: Create an HTTP job
 ```
-PS C:\>New-AzureSchedulerHttpJob -JobCollectionName "JobCollection01" -JobName "Job01" -Location "North Central US" -Method "GET" -URI http://www.contoso.com
+PS C:\> New-AzureSchedulerHttpJob -JobCollectionName "JobCollection01" -JobName "Job01" -Location "North Central US" -Method "GET" -URI http://www.contoso.com
 ```
 
 This command creates a scheduler HTTP job in the job collection named JobCollection01.
@@ -65,7 +65,7 @@ The command specifies a URI and specifies GET as the method.
 
 ### Example 2: Create an HTTP job for a specific run count
 ```
-PS C:\>New-AzureSchedulerHttpJob -JobCollectionName "JobCollection01 -JobName "Job23" -Location "North Central US" -Method "GET" -URI http://www.contoso.com -ExecutionCount 20
+PS C:\> New-AzureSchedulerHttpJob -JobCollectionName "JobCollection01 -JobName "Job23" -Location "North Central US" -Method "GET" -URI http://www.contoso.com -ExecutionCount 20
 ```
 
 This command creates scheduler http job in the job collection named JobCollection01.

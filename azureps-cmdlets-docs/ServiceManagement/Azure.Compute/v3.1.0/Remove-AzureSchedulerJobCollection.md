@@ -28,7 +28,7 @@ The **Remove-AzureSchedulerJobCollection** cmdlet deletes a scheduler job collec
 
 ### Example 1: Delete a job collection for a location
 ```
-PS C:\>Remove-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01"
+PS C:\> Remove-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01"
 ```
 
 This command deletes the scheduler job collection named JobCollection01 in the North Central US location.
@@ -36,7 +36,7 @@ The command also deletes the jobs under JobCollection01.
 
 ### Example 2: Delete a job location
 ```
-PS C:\>Remove-AzureSchedulerJobCollection -JobCollectionName "JobCollection02"
+PS C:\> Remove-AzureSchedulerJobCollection -JobCollectionName "JobCollection02"
 ```
 
 This command deletes the scheduler job collection named JobCollection02.

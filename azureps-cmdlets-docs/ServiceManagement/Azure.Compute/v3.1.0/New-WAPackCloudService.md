@@ -29,7 +29,7 @@ The **New-WAPackCloudService** cmdlet creates a cloud service.
 
 ### Example 1: Create a cloud service
 ```
-PS C:\>New-WAPackCloudService -Name "ContosoCloudService01" -Label "A label"
+PS C:\> New-WAPackCloudService -Name "ContosoCloudService01" -Label "A label"
 ```
 
 The command creates a cloud service named ?ContosoCloudService01?

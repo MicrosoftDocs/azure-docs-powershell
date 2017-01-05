@@ -27,7 +27,7 @@ The **Start-AzureEmulator** cmdlet starts both the compute and storage emulators
 
 ### 1: Start the emulator and launch a browser
 ```
-PS C:\>Start-AzureEmulator -L
+PS C:\> Start-AzureEmulator -L
 ```
 
 This example runs the service in the Azure emulator and launches a new browser window on the emulated service.

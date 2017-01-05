@@ -29,7 +29,7 @@ The **Set-WAPackVM** cmdlet changes the size properties of a virtual machine.
 
 ### Example 1: Specify the size for a virtual machine
 ```
-PS C:\>$VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
 PS C:\> $SizeProfile = Get-WAPackVMSizeProfile -Name "MediumSizeVM"
 PS C:\> Set-WAPackVM -VM $VirtualMachine -VMSizeProfile $SizeProfile
 ```

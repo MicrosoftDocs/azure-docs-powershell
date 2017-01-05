@@ -42,21 +42,21 @@ The **Get-WAPackVM** cmdlet gets virtual machine objects.
 
 ### Example 1: Get a virtual machine by using a name
 ```
-PS C:\>Get-WAPackVM -Name "ContosoV126"
+PS C:\> Get-WAPackVM -Name "ContosoV126"
 ```
 
 This command gets the virtual machine named ContosoV126.
 
 ### Example 2: Get a virtual machine by using an ID
 ```
-PS C:\>Get-WAPackVM -Id 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> Get-WAPackVM -Id 66242D17-189F-480D-87CF-8E1D749998C8
 ```
 
 This command gets the virtual machine that has the specified ID.
 
 ### Example 3: Get all virtual machines
 ```
-PS C:\>Get-WAPackVM
+PS C:\> Get-WAPackVM
 ```
 
 This command gets all virtual machines.

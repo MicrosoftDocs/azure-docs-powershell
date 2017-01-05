@@ -29,7 +29,7 @@ The **Get-AzureWebsiteMetric** cmdlet gets metrics for the Azure website in the 
 
 ### Example 1: Get metrics for the last three hours on a per-instance level for a website
 ```
-PS C:\>Get-AzureWebsiteMetric -Name "ContosoWebSite" -StartDate (get-date).AddHours(-3) -MetricNames "Requests" -InstanceDetails -SlotView -TimeGrain "PT1M" 
+PS C:\> Get-AzureWebsiteMetric -Name "ContosoWebSite" -StartDate (get-date).AddHours(-3) -MetricNames "Requests" -InstanceDetails -SlotView -TimeGrain "PT1M" 
 $metrics[1].Data Name : Requests 
 
 Unit : Count 

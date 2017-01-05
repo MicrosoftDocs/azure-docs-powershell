@@ -28,14 +28,14 @@ Buys a new add-on instance from the Azure Store.
 
 ### Example 1
 ```
-PS C:\>New-AzureStoreAddOn -Name MyAddOn -AddOn AddonId -Plan PlanId -Location "West US"
+PS C:\> New-AzureStoreAddOn -Name MyAddOn -AddOn AddonId -Plan PlanId -Location "West US"
 ```
 
 This example buys an add-on named MyAddOn with a PlanId in West US location.
 
 ### Example 2
 ```
-PS C:\>New-AzureStoreAddOn -Name MyAddOn -AddOn AddonId -Plan PlanId -Location "West US" -PromotionCode MyPromoCode
+PS C:\> New-AzureStoreAddOn -Name MyAddOn -AddOn AddonId -Plan PlanId -Location "West US" -PromotionCode MyPromoCode
 ```
 
 This example uses a promotional code to buy an add-on.

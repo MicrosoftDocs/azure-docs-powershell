@@ -29,7 +29,7 @@ The **Get-AzureWebHostingPlanMetric** cmdlet gets metrics for Azure web hosting 
 
 ### Example 1: Get metrics for the last three hours at a per-instance level
 ```
-PS C:\>Get-AzureWebHostingPlanMetric -WebSpaceName "eastuswebspace" -StartDate (get-date).AddHours(-3) -InstanceDetails $Metrics[1].Data 
+PS C:\> Get-AzureWebHostingPlanMetric -WebSpaceName "eastuswebspace" -StartDate (get-date).AddHours(-3) -InstanceDetails $Metrics[1].Data 
 Name : CpuPercentage 
 Unit : Percent 
 StartTime : 8/11/2014 7:00:00 AM 

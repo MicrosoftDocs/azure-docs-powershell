@@ -28,21 +28,21 @@ The **Add-AzureWebRole** cmdlet adds a web worker role.
 
 ### Example 1: Add a default role
 ```
-PS C:\>Add-AzureWebRole
+PS C:\> Add-AzureWebRole
 ```
 
 This command add web role that has the default configuration of Webrole1 as the name and a single instance.
 
 ### Example 2: Add a role with a name
 ```
-PS C:\>Add-AzureWebRole -Name "MyWebRole"
+PS C:\> Add-AzureWebRole -Name "MyWebRole"
 ```
 
 This command adds a single web role named MyWebRole to the current application.
 
 ### Example 3: Add a role with a name and instance count
 ```
-PS C:\>Add-AzureWebRole -Name "MyWebRole" -Instance 2
+PS C:\> Add-AzureWebRole -Name "MyWebRole" -Instance 2
 ```
 
 This command adds a web role named MyWebRole to the current application.
@@ -50,7 +50,7 @@ The cmdlet has a role instance count of 2.
 
 ### Example 4: Add a role with a name and template
 ```
-PS C:\>Add-AzureWebRole -Name "MyWebRole" -TemplateFolder ".\MyWebTemplateFolder"
+PS C:\> Add-AzureWebRole -Name "MyWebRole" -TemplateFolder ".\MyWebTemplateFolder"
 ```
 
 This command adds a single web role named MyWebRole to the current application.

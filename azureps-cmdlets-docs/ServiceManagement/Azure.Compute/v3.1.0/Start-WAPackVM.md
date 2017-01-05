@@ -29,7 +29,7 @@ The **Start-WAPackVM** cmdlet starts a virtual machine.
 
 ### Example 1: Start a virtual machine
 ```
-PS C:\>$VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
 PS C:\> Start-WAPackVM -VM $VirtualMachine
 ```
 

@@ -28,21 +28,21 @@ The **Add-AzureWorkerRole** cmdlet creates required files and configuration (som
 
 ### 1: Create a single instance worker role
 ```
-PS C:\>Add-AzureWorkerRole -Name MyWorkerRole
+PS C:\> Add-AzureWorkerRole -Name MyWorkerRole
 ```
 
 This example adds scaffolding for a single worker role named MyWorkerRole to the current application.
 
 ### 2: Create a multiple instance worker role
 ```
-PS C:\>Add-AzureWorkerRole MyWorkerRole -I 2
+PS C:\> Add-AzureWorkerRole MyWorkerRole -I 2
 ```
 
 This example adds scaffolding for a new worker role named MyWorkerRole to the current application, with a role instance count of 2.
 
 ### 3: Create worker role with custom scaffolding
 ```
-PS C:\>Add-AzureWorkerRole MyWorkerRole -TemplateFoldr .\MyWorkerRoleTemplate
+PS C:\> Add-AzureWorkerRole MyWorkerRole -TemplateFoldr .\MyWorkerRoleTemplate
 ```
 
 This example creates a worker role with custom scaffolding.

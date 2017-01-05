@@ -38,14 +38,14 @@ The **Set-AzureWebsite** cmdlet configures a website running in Azure.
 
 ### 1: Enable HTTP logging for a website
 ```
-PS C:\>Set-AzureWebsite -HttpLoggingEnabled 1
+PS C:\> Set-AzureWebsite -HttpLoggingEnabled 1
 ```
 
 This example enables HTTP logging.
 
 ### 2: Set storage credentials for a website
 ```
-PS C:\>$settings = New-Object Hashtable$settings["AZURE_STORAGE_ACCOUNT"= myaccountname$settings["AZURE_STORAGE_ACCESS_KEY"] = myaccesskeySet-AzureWebsite -AppSettings $settings myWebsite
+PS C:\> $settings = New-Object Hashtable$settings["AZURE_STORAGE_ACCOUNT"= myaccountname$settings["AZURE_STORAGE_ACCESS_KEY"] = myaccesskeySet-AzureWebsite -AppSettings $settings myWebsite
 ```
 
 This example sets storage credentials in a website named myWebsite with environment variables for AZURE_STORAGE_ACCOUNT and AZURE_STORAGE_ACCESS_KEY.

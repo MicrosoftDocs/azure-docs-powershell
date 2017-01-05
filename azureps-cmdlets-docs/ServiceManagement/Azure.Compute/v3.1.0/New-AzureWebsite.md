@@ -29,14 +29,14 @@ The cmdlet creates a new website to run in Azure and prepares for deployment thr
 
 ### 1: Create a new website with Git
 ```
-PS C:\>New-AzureWebsite mySite -Git
+PS C:\> New-AzureWebsite mySite -Git
 ```
 
 This example creates a new website in Azure and a local Git repository to use for deploying files to the new website.
 
 ### 2: Create website integrated with Github
 ```
-PS C:\>New-AzureWebsite mysite -Github -GithubRepository myaccount/myrepo
+PS C:\> New-AzureWebsite mysite -Github -GithubRepository myaccount/myrepo
 ```
 
 This example creates a new website linked to a Github repository named myaccount/myrepo.

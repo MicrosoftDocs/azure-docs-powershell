@@ -38,7 +38,7 @@ The **New-WAPackVMRole** cmdlet creates a virtual machine role.
 
 ### Example 1: Create a virtual machine role (emulating WAP behavior)
 ```
-PS C:\>New-WAPackVMRole -Name "ContosoVMRole01" -Label "ContosoVMRoleLabel01" -ResourceDefinition $resdef
+PS C:\> New-WAPackVMRole -Name "ContosoVMRole01" -Label "ContosoVMRoleLabel01" -ResourceDefinition $resdef
 ```
 
 Since we do not specify any cloud service (emulating WAP behavior), the command will create a cloud service for us which will have the same name as the virtual machine role.

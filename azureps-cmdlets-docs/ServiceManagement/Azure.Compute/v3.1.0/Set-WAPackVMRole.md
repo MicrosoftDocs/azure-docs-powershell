@@ -29,8 +29,8 @@ The **Set-WAPackVMRole** cmdlet changes the instance count property of a virtual
 
 ### Example 1: Specify the instance count for a virtual machine role
 ```
-PS C:\>$VMRole = Get-WAPackVMRole -Name "ContosoVMRole01"
-PS C:\>Set-WAPackVMRole -VMRole $VMRole -InstanceCount 3
+PS C:\> $VMRole = Get-WAPackVMRole -Name "ContosoVMRole01"
+PS C:\> Set-WAPackVMRole -VMRole $VMRole -InstanceCount 3
 ```
 
 The first command gets the virtual machine role named ContosoVMRole01 by using the Get-WAPackVMRole cmdlet, and then stores that object in the $VMRole variable.

@@ -28,14 +28,14 @@ The **Remove-AzureWebsite** cmdlet removes the specified website from Azure, eit
 
 ### 1: Remove the current website
 ```
-PS C:\>Remove-AzureWebsite
+PS C:\> Remove-AzureWebsite
 ```
 
 This example removes the website in Azure associated with the current directory.
 
 ### 2: Remove a website without confirmation
 ```
-PS C:\>Remove-AzureWebsite -Name mySite -Force
+PS C:\> Remove-AzureWebsite -Name mySite -Force
 ```
 
 This example deletes the website named mySite without prompting for confirmation.
