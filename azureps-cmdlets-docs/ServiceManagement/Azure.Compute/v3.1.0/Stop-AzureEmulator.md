@@ -26,10 +26,6 @@ Any services currently running in the emulator are removed.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureWebsiteJob
 
 ## SYNOPSIS
-Removes an existing web job for a website
+Removes an existing web job for a website.
 
 ## SYNTAX
 

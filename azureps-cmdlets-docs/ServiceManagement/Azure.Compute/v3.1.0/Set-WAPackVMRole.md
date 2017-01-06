@@ -33,14 +33,15 @@ PS C:\> $VMRole = Get-WAPackVMRole -Name "ContosoVMRole01"
 PS C:\> Set-WAPackVMRole -VMRole $VMRole -InstanceCount 3
 ```
 
-The first command gets the virtual machine role named ContosoVMRole01 by using the Get-WAPackVMRole cmdlet, and then stores that object in the $VMRole variable.
+The first command gets the virtual machine role named ContosoVMRole01 by using the **Get-WAPackVMRole** cmdlet, and then stores that object in the $VMRole variable.
+
 The second and final command sets the new instance count of the virtual machine role stored in $VMRole to 3.
 
 ## PARAMETERS
 
 ### -VMRole
 Specifies a virtual machine role.
-To obtain a virtual machine role, use the Get-WAPackVMRole cmdlet.
+To obtain a virtual machine role, use the **Get-WAPackVMRole** cmdlet.
 
 ```yaml
 Type: VMRole

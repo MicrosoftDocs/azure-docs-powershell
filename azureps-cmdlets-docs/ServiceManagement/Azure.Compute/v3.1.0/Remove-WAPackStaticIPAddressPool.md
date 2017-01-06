@@ -35,6 +35,7 @@ PS C:\> Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPo
 ```
 
 The first command gets the static IP address pool named ContosoStaticIPAddressPool01 by using the **Get-WAPackStaticIPAddressPool** cmdlet, and then stores that object in the $StaticIPAddressPool variable.
+
 The second command removes the static IP address pool stored in $StaticIPAddressPool.
 The command prompts you for confirmation.
 
@@ -45,6 +46,7 @@ PS C:\> Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPo
 ```
 
 The first command gets the static IP address pool named ContosoStaticIPAddressPool02 by using the **Get-WAPackStaticIPAddressPool** cmdlet, and then stores that object in the $ StaticIPAddressPool variable.
+
 The second command removes the static IP address pool stored in $StaticIPAddressPool.
 This command includes the *Force* parameter.
 The command does not prompt you for confirmation.
@@ -53,7 +55,7 @@ The command does not prompt you for confirmation.
 
 ### -StaticIPAddressPool
 Specifies a StaticIPAddressPool.
-To obtain a static IP address pool, use the Get-WAPackStaticIPAddressPool cmdlet.
+To obtain a static IP address pool, use the **Get-WAPackStaticIPAddressPool** cmdlet.
 
 ```yaml
 Type: StaticIPAddressPool

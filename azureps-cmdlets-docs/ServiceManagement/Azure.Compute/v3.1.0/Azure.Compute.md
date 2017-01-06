@@ -341,7 +341,7 @@ Resumes paused virtual machines.
 
 
 ### [Save-AzureServiceProjectPackage](./Save-AzureServiceProjectPackage.md)
-Packages the service project into Azure cloud package (*.cspkg).
+Packages the service project into Azure cloud package.
 
 
 ### [Save-AzureWebsiteLog](./Save-AzureWebsiteLog.md)

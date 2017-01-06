@@ -93,8 +93,21 @@ Accept wildcard characters: False
 
 ### -Location
 The region in which the application will be hosted.
-Possible values are: Anywhere Asia, Anywhere Europe, Anywhere US, East Asia, East US, North Central US, North Europe, South Central US, Southeast Asia, West Europe, West US. 
-If no Location is specified, the location specified in the last call to Set-AzureServiceProject will be used. 
+Possible values are: 
+  
+- Anywhere Asia
+- Anywhere Europe
+- Anywhere US
+- East Asia
+- East US
+- North Central US
+- North Europe
+- South Central US
+- Southeast Asia
+- West Europe
+- West US
+ 
+If no Location is specified, the location specified in the last call to **Set-AzureServiceProject** will be used. 
 If no Location was ever specified, the Location will be randomly chosen from 'North Central US' and 'South Central US' locations.
 
 ```yaml

@@ -30,8 +30,8 @@ PS C:\> Set-AzureServiceProject -Location "North Central US" -Slot Production -S
 ```
 
 Sets the deployment location for the service to the North Central US region.
-Sets the deloyment slot to Production. 
-Sets the storage account ahat will be used to stage the service definition to myStorageAccount.
+Sets the deployment slot to Production. 
+Sets the storage account that will be used to stage the service definition to myStorageAccount.
 Sets the subscription that will host the service to mySubscription.
 Whenever the service is published to the cloud, it will be hosted in a data center in the North Central US region, it will update the deployment slot, and it will use the specified subscription and storage account.
 

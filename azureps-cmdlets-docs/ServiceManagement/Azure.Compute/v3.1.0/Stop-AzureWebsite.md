@@ -25,10 +25,6 @@ The **Stop-AzureWebsite** cmdlet stops the specified website hosted in Azure.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

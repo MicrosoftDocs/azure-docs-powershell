@@ -34,6 +34,7 @@ PS C:\> Remove-WAPackVMSubnet -VMSubnet $VMSubnet
 ```
 
 The first command gets the virtual machine subnet named ContosoVMSubnet01 by using the **Get-WAPackVMSubnet** cmdlet, and then stores that object in the $VMSubnet variable.
+
 The second command removes the virtual machine subnet stored in $VMSubnet.
 The command prompts you for confirmation.
 
@@ -44,6 +45,7 @@ PS C:\> Remove-WAPackVMSubnet -VMSubnet $VMSubnet -Force
 ```
 
 The first command gets the cloud service named ContosoVMSubnet02 by using the **Get-WAPackVMSubnet** cmdlet, and then stores that object in the $VMSubnet variable.
+
 The second command removes the virtual machine subnet stored in $VMSubnet.
 This command includes the *Force* parameter.
 The command does not prompt you for confirmation.
@@ -52,7 +54,7 @@ The command does not prompt you for confirmation.
 
 ### -VMSubnet
 Specifies a virtual machine subnet.
-To obtain a virtual machine subnet, use the Get-WAPackVMSubnet cmdlet.
+To obtain a virtual machine subnet, use the **Get-WAPackVMSubnet** cmdlet.
 
 ```yaml
 Type: VMSubnet

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Save-AzureServiceProjectPackage
 
 ## SYNOPSIS
-Packages the service project into Azure cloud package (*.cspkg).
+Packages the service project into Azure cloud package.
 
 ## SYNTAX
 

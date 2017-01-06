@@ -9,7 +9,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Swaps the production slot for a website with another slot.
-This works on websites with two slots only
 
 ## SYNTAX
 

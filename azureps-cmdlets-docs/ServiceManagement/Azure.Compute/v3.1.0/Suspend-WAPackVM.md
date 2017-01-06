@@ -29,7 +29,8 @@ The **Suspend-WAPackVM** cmdlet suspends a virtual machine.
 
 ### Example 1: Suspend a virtual machine
 ```
-PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"PS C:\> Suspend-WAPackVM -VM $VirtualMachine
+PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+PS C:\> Suspend-WAPackVM -VM $VirtualMachine
 ```
 
 The first command gets the virtual machine named ContosoV126 by using the **Get-WAPackVM** cmdlet, and then stores that object in the $VirtualMachine variable.

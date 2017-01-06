@@ -31,7 +31,7 @@ The **New-WAPackStaticIPAddressPool** cmdlet creates a static IP address pool.
 ### Example 1: Create a static IP address pool
 ```
 PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
-PS C:\> $VMSubnet = Get-WAPackVMSubnet ?VNet $VNet -Name "ContosoVMSubnet01"
+PS C:\> $VMSubnet = Get-WAPackVMSubnet -VNet $VNet -Name "ContosoVMSubnet01"
 PS C:\> New-WAPackStaticIpAddressPool ?VMSubnet $VMSubnet -Name "ContosoStaticIpAddressPool01" -IPAddressRangeStart "192.168.1.0" -IPAddressRangeEnd "192.168.1.10"
 ```
 
