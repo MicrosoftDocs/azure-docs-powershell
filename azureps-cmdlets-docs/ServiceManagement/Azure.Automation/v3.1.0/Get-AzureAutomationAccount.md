@@ -26,7 +26,7 @@ Automation resources include runbooks, jobs, and assets.
 
 ### Example 1: Get an Automation account
 ```
-PS C:\>Get-AzureAutomationAccount -Name "Contoso17"
+PS C:\> Get-AzureAutomationAccount -Name "Contoso17"
 ```
 
 This command gets the Automation account named Contoso17.
