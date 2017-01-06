@@ -25,7 +25,7 @@ The **Start-AzureRmAutomationDscCompilationJob** cmdlet compiles an APS Desired 
 
 ### Example 1: Compile an Azure DSC configuration in Automation
 ```
-PS C:\>$Params = @{"StringParam"="Hello World";"IntegerParam"=32}
+PS C:\> $Params = @{"StringParam"="Hello World";"IntegerParam"=32}
 PS C:\> Start-AzureRmAutomationDscCompilationJob -ConfigurationName "Config01" -Parameters $Params -ResourceGroupName "ResourceGroup01"
 ```
 
@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationDscCompilationJob](./Get-AzureRmAutomationDscCompilationJob.md)
 
 [Get-AzureRmAutomationDscCompilationJobOutput](./Get-AzureRmAutomationDscCompilationJobOutput.md)
-
-

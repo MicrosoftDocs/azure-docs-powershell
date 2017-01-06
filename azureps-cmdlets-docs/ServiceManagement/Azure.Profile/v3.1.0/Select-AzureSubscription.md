@@ -8,7 +8,7 @@ schema: 2.0.0
 # Select-AzureSubscription
 
 ## SYNOPSIS
-Changes the current and default Azure subscriptions
+Changes the current and default Azure subscriptions.
 
 ## SYNTAX
 
@@ -63,7 +63,7 @@ The "default" subscription designation is saved in your subscription data file.
 The session-specific "current" designation is not saved.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 
@@ -123,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+Returns $True if the command succeeds and $False if it fails.
+By default, this cmdlet does not return any output.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -136,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
+
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
@@ -250,7 +256,7 @@ You can pipe input to this cmdlet by property name, but not by value.
 ## OUTPUTS
 
 ### None or System.Boolean
-If you use the **PassThru** parameter, this cmdlet returns a Boolean value.
+If you use the *PassThru* parameter, this cmdlet returns a Boolean value.
 By default, it does not generate any output.
 
 ## NOTES

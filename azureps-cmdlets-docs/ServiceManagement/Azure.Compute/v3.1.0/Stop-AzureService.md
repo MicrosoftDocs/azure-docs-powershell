@@ -19,17 +19,13 @@ Stop-AzureService [[-ServiceName] <String>] [[-Slot] <String>] [-PassThru] [-Pro
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Stop-AzureService** cmdlet stops the current hosted service in the specified slot in Windows Azure.
 If no slot is specified, the cmdlet stops the service in the Production slot.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

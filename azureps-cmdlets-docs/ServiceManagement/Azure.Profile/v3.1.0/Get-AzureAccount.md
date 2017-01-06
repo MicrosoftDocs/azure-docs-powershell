@@ -25,7 +25,8 @@ To make your accounts available to Windows PowerShell, use the **Add-AzureAccoun
 
 ### Example 1: Get all accounts
 ```
-PS C:\>Get-AzureAccount
+PS C:\> Get-AzureAccount
+
 Name                         ActiveDirectories
 ----                         -----------------
 contosoadmin@outlook.com     {{ ActiveDirectoryTenantId = abcde5cd-bcc3-441a-bd86-e6a...
@@ -36,7 +37,8 @@ This command gets all accounts associated with the specified user.
 
 ### Example 2: Get an account by name
 ```
-PS C:\>Get-AzureAccount -Name contosoadmin@outlook.com
+PS C:\> Get-AzureAccount -Name contosoadmin@outlook.com
+
 Name                         ActiveDirectories
 ----                         -----------------
 contosoadmin@outlook.com     {{ ActiveDirectoryTenantId = abcde5cd-bcc3-441a-bd86-e6a...
@@ -66,6 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
+
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)

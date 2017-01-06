@@ -25,7 +25,7 @@ The **Get-AzureSiteRecoveryStorageMapping** cmdlet gets mappings of Azure Site R
 
 ### Example 1: Get the mapping between a Storage object and a recovery Storage object
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryStorageMapping -PrimaryServer $Servers[0] -RecoveryServer $Servers[1]
 PrimaryServerId     : 774859b0-1966-48cc-9df7-759c441b7a8c
 PrimaryStorageId    : 1c1d0c0b-0c50-4675-af1a-1fdac70dbb6d
@@ -46,7 +46,7 @@ The command specifies the server for the recovery Storage object as the second e
 
 ### -PrimaryServer
 Specifies the primary server.
-To obtain a server, use the Get-AzureSiteRecoveryServer cmdlet.
+To obtain a server, use the **Get-AzureSiteRecoveryServer** cmdlet.
 
 ```yaml
 Type: ASRServer

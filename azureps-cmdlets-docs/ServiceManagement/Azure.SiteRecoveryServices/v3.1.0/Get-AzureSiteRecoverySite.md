@@ -24,7 +24,7 @@ The **Get-AzureSiteRecoverySite** cmdlet gets the Hyper-V sites in an Azure Site
 
 ### Example 1: Get recovery sites
 ```
-PS C:\>Get-AzureSiteRecoverySite
+PS C:\> Get-AzureSiteRecoverySite
 Type                                    Name                                    ID
 ----                                    ----                                    --
 HyperVSite                              RecoverySite07                          f16829b4-5b01-4209-a6cf-8e0aff1fe328
@@ -36,7 +36,7 @@ This command gets the recovery sites for the current vault.
 
 ### -Vault
 Specifies a vault for which to get sites.
-To obtain an **ASRVault** object, use the Get-AzureSiteRecoveryVault cmdlet.
+To obtain an **ASRVault** object, use the **Get-AzureSiteRecoveryVault** cmdlet.
 
 ```yaml
 Type: ASRVault

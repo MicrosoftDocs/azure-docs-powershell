@@ -28,7 +28,7 @@ The operation takes about 30 seconds to complete, after which the virtual machin
 
 ### Example 1: Set a reserved IP association
 ```
-PS C:\>Set-AzureReservedIPAssociation -ReservedIPName "ResIp14" -ServiceName "PipTestWestEurope"
+PS C:\> Set-AzureReservedIPAssociation -ReservedIPName "ResIp14" -ServiceName "PipTestWestEurope"
 ```
 
 This command assigns the reserved IP address named ResIp14 to the service PipTestWestEurope.

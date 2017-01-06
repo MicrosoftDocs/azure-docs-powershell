@@ -44,7 +44,7 @@ You can use this cmdlet to get information about the subscription and to pipe th
 Before you run **Get-AzureSubscription**, you must run the **Add-AzureAccount** cmdlet or the cmdlets that download and install a publish settings file (**Get-AzurePublishSettingsFile**, **Import-AzurePublishSettingsFile**.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 
@@ -68,7 +68,7 @@ C:\PS>(Get-AzureSubscription -Default).SubscriptionName
 ```
 
 This command gets only the name of the default subscription.
-The command first gets the subscription and then uses the dot method to get the SubscriptionName property of the subscription.
+The command first gets the subscription and then uses the dot method to get the **SubscriptionName** property of the subscription.
 
 ### Example 4: Get selected subscription properties
 ```
@@ -124,6 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
+
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)

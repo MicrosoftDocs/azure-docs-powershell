@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AzureSBAuthorizationRule
 
 ## SYNOPSIS
-Updates existing Service Bus authorization rule
+Updates existing Service Bus authorization rule.
 
 ## SYNTAX
 
@@ -32,16 +32,16 @@ Updates existing Service Bus authorization rule.
 
 ## EXAMPLES
 
-### 1: Renew primary key for authorization rule at namespace level
+### Example 1: Renew primary key for authorization rule at namespace level
 ```
-C:\PS>Set-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Send")
+PS C:\> Set-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Send")
 ```
 
 The primary key is renewed.
 
-### 2: Update authorization rule permission
+### Example 2: Update authorization rule permission
 ```
-C:\PS>Set-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Listen", "Send") -EntityName MyEntity -EntityType Queue
+PS C:\> Set-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Listen", "Send") -EntityName MyEntity -EntityType Queue
 ```
 
 Updates the permissions.

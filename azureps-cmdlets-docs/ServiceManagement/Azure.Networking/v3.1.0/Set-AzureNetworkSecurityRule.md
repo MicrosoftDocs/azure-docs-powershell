@@ -25,10 +25,6 @@ The **Set-AzureNetworkSecurityRule** cmdlet adds or modifies an Azure network se
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -202,7 +198,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

@@ -37,14 +37,14 @@ This cmdlet applies to Basic, Standard, and Premium service tiers.
 
 ### Example 1: Get all the service objectives by using a connection context
 ```
-PS C:\>Get-AzureSqlDatabaseServiceObjective -Context $Context
+PS C:\> Get-AzureSqlDatabaseServiceObjective -Context $Context
 ```
 
 This command gets all the service objectives for the server that the connection context $Context specifies.
 
 ### Example 2: Get all the service objectives by using a server name
 ```
-PS C:\>Get-AzureSqlDatabaseServiceObjective -ServerName "Server01"
+PS C:\> Get-AzureSqlDatabaseServiceObjective -ServerName "Server01"
 ```
 
 This command gets all the service objectives for the server named Server01.
@@ -81,7 +81,7 @@ Valid values are:
 - Premium (P3): a7c4c615-cfb1-464b-b252-925be0a19446
 
 *Standard (S3) is part of the Latest SQL Database Update V12 (preview).
-For more information, see What's New in the Azure SQL Database V12 Previewhttp://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/.
+For more information, see [What's New in the Azure SQL Database V12 Preview](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/) (`http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/`) in the Azure library.
 
 ```yaml
 Type: ServiceObjective
@@ -190,7 +190,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### IEnumerable<Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.ServiceObjective>
+### IEnumerable\<Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.ServiceObjective\>
 
 ## NOTES
 

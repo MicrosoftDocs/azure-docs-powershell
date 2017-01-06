@@ -39,21 +39,21 @@ The **Get-AzureAutomationJob** cmdlet gets one or more runbook jobs in Microsoft
 
 ### Example 1: Get a specific runbook job
 ```
-PS C:\>Get-AzureAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b647
+PS C:\> Get-AzureAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b647
 ```
 
 This command gets the job that has the specified GUID.
 
 ### Example 2: Get all jobs for a runbook
 ```
-PS C:\>Get-AzureAutomationJob -AutomationAccountName "Contoso17" -RunbookName "MyRunbook"
+PS C:\> Get-AzureAutomationJob -AutomationAccountName "Contoso17" -RunbookName "MyRunbook"
 ```
 
 This command gets all jobs associated with a runbook named MyRunbook.
 
 ### Example 2: Get all running jobs
 ```
-PS C:\>Get-AzureAutomationJob -AutomationAccountName "Contoso17" -Status "Running"
+PS C:\> Get-AzureAutomationJob -AutomationAccountName "Contoso17" -Status "Running"
 ```
 
 This command gets all running jobs in the automation account with the name Contoso17.

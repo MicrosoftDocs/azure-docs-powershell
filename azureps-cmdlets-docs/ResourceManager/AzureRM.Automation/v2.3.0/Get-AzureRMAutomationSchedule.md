@@ -31,7 +31,7 @@ The **Get-AzureRmAutomationSchedule** cmdlet gets an Azure Automation schedule.
 
 ### Example 1: Get a schedule
 ```
-PS C:\>Get-AzureRmAutomationSchedule -AutomationAccountName "Contoso17" -Name "DailySchedule08" -ResourceGroupName "ResourceGroup01"
+PS C:\> Get-AzureRmAutomationSchedule -AutomationAccountName "Contoso17" -Name "DailySchedule08" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command gets the schedule named DailySchedule08.
@@ -101,5 +101,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationSchedule](./Remove-AzureRMAutomationSchedule.md)
 
 [Set-AzureRmAutomationSchedule](./Set-AzureRMAutomationSchedule.md)
-
-

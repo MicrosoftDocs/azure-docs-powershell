@@ -19,22 +19,22 @@ Add-AzureNodeWorkerRole [[-Name] <String>] [[-Instances] <Int32>] [-Profile <Azu
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
-The **Add-AzureNodeWorkerRole** cmdlet creates the required files and folders (sometimes referred to as scaffolding) for a Node.js application to be hosted in the cloud via node.exe.
+The **Add-AzureNodeWorkerRole** cmdlet creates the required files and folders, sometimes referred to as scaffolding, for a Node.js application to be hosted in the cloud via node.exe.
 
 ## EXAMPLES
 
-### 1: Single instance worker role
+### Example 1: Single instance worker role
 ```
-PS C:\>Add-AzureWorkerRole MyWorkerRole
+PS C:\> Add-AzureWorkerRole MyWorkerRole
 ```
 
 This example adds scaffolding for a single worker role named **MyWorkerRole** to the current application.
 
-### 2: Multiple instance worker role
+### Example 2: Multiple instance worker role
 ```
-PS C:\>Add-AzureNodeWorkerRole MyWorkerRole -I 2
+PS C:\> Add-AzureNodeWorkerRole MyWorkerRole -I 2
 ```
 
 This example adds scaffolding for a single worker role named **MyWorkerRole** to the current application, with a role instance count of 2.

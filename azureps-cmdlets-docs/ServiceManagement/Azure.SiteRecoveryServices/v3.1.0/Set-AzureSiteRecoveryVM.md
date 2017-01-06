@@ -25,7 +25,7 @@ The **Set-AzureSiteRecoveryVM** cmdlet sets the recovery-side protection options
 
 ### Example 1: Allow the update on a protected virtual machine
 ```
-PS C:\>$ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer
+PS C:\> $ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer
 PS C:\> $VirtualMachines = Get-AzureSiteRecoveryVM -ProtectionContainer $ProtectionContainer 
 PS C:\> Set-AzureSiteRecoveryVM -VirtualMachine $VirtualMachines[0] -Name "NewVirtualMachine05"
 Name             : 
@@ -40,9 +40,9 @@ Tasks            : {}
 Errors           : {}
 ```
 
-The first command uses the Get-AzureSiteRecoveryProtectionContainer cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
+The first command uses the **Get-AzureSiteRecoveryProtectionContainer** cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
 
-The second command gets the virtual machines in $ProtectionContainer, by using the Get-AzureSiteRecoveryVM cmdlet, and then stores them in the $VitrualMachines variable.
+The second command gets the virtual machines in $ProtectionContainer, by using the **Get-AzureSiteRecoveryVM** cmdlet, and then stores them in the $VitrualMachines variable.
 
 The final command allows updates for the first virtual machine in the $VitrualMachines array, named NewVirtualMachine05.
 

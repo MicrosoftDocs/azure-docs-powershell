@@ -44,7 +44,7 @@ This cmdlet can alternatively create an Azure service that hosts the new virtual
 
 ### Example 1: Create a virtual machine
 ```
-PS C:\>New-AzureQuickVM -Windows -ServiceName "ContosoService17" -Name "VirutalMachine01" -ImageName "Image07" -Password "password" -AdminUsername "AdminMain" -WaitForBoot
+PS C:\> New-AzureQuickVM -Windows -ServiceName "ContosoService17" -Name "VirutalMachine01" -ImageName "Image07" -Password "password" -AdminUsername "AdminMain" -WaitForBoot
 ```
 
 This command creates a virtual machine that runs the Windows operating system in an existing service.
@@ -54,7 +54,7 @@ Therefore, the cmdlet waits for the virtual machine to start.
 
 ### Example 2: Create a virtual machine that by using certificates
 ```
-PS C:\>$certs = Get-ChildItem Cert:\CurrentUser\My
+PS C:\> $certs = Get-ChildItem Cert:\CurrentUser\My
 PS C:\> New-AzureQuickVM -Windows -ServiceName "MySvc1" -name "MyWinVM1" -ImageName "Image07" -Password "password" -AdminUserName "AdminMain" -WinRMCertificate $certs[0] -X509Certificates $certs[1], $certs[2] -WaitForBoot
 ```
 
@@ -68,7 +68,7 @@ The command uploads a WinRM Certificate and X509Certificates to the hosted servi
 
 ### Example 3: Create a virtual machine that runs the Linux operating system
 ```
-PS C:\>New-AzureQuickVM -Linux -ServiceName "ContosoServiceLinux01" -Name "LinuxVirtualMachine01" -ImageName "LinuxImage01" -LinuxUser "RootMain" -Password "password" -Location "Central US"
+PS C:\> New-AzureQuickVM -Linux -ServiceName "ContosoServiceLinux01" -Name "LinuxVirtualMachine01" -ImageName "LinuxImage01" -LinuxUser "RootMain" -Password "password" -Location "Central US"
 ```
 
 This command creates a virtual machine that runs the Linux operating system from an image.
@@ -77,14 +77,14 @@ The command specifies a location for the service.
 
 ### Example 4: Create a virtual machine and create a service to host the new virtual machine
 ```
-PS C:\>$Locations = Get-AzureLocation
+PS C:\> $Locations = Get-AzureLocation
 PS C:\> $Images = Get-AzureVMImage
 PS C:\> New-AzureQuickVM -Windows -InstanceSize "Large" -ServiceName "ContosoService03" -Name " VirtualMachine25" -ImageName $images[4].imagename -Password "password" -AdminUsername "AdminMain" -Location $Locations[0].name
 ```
 
-The first command gets locations by using the Get-AzureLocation cmdlet, and then stores them in the $Locations array variable.
+The first command gets locations by using the **Get-AzureLocation** cmdlet, and then stores them in the $Locations array variable.
 
-The second command gets available images by using the Get-AzureVMImage cmdlet, and then stores them in the $Images array variable.
+The second command gets available images by using the **Get-AzureVMImage** cmdlet, and then stores them in the $Images array variable.
 
 The final command creates a large virtual machine named VirtualMachine25.
 The virtual machine runs the Windows operating system.
@@ -94,7 +94,7 @@ The service is in a location in $Locations.
 
 ### Example 5: Create a virtual machine that has a reserved IP name
 ```
-PS C:\>$Locations = Get-AzureLocation
+PS C:\> $Locations = Get-AzureLocation
 PS C:\> $Images = Get-AzureVMImage
 PS C:\> New-AzureQuickVM -Windows -InstanceSize "Large" -ServiceName "ContosoService04" -Name "VirtualMachine27" -ImageName $Images[4].imagename -Password "password" -AdminUsername "AdminMain" -Location $Locations[0].name -ReservedIPName $ipName
 ```
@@ -406,7 +406,7 @@ Accept wildcard characters: False
 
 ### -DnsSettings
 Specifies an array of DNS server objects that defines the DNS settings for the new deployment.
-To create a **DnsServer** object, use the New-AzureDns cmdlet.
+To create a **DnsServer** object, use the **New-AzureDns** cmdlet.
 
 ```yaml
 Type: DnsServer[]

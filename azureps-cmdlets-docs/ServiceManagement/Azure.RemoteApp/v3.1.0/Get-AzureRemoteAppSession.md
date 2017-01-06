@@ -24,7 +24,7 @@ The **Get-AzureRemoteAppSession** cmdlet lists all active and disconnected Azure
 
 ### Example 1: List all the sessions in a collection
 ```
-PS C:\>Get-AzureRemoteAppSession -CollectionName "ContosoApps"
+PS C:\> Get-AzureRemoteAppSession -CollectionName "ContosoApps"
 ```
 
 This command lists all sessions in the Azure RemoteApp collection named ContosoApps.

@@ -24,7 +24,7 @@ The **Get-AzureVMPuppetExtension** cmdlet gets the Puppet extension applied on a
 
 ### Example 1: Get the Puppet extension applied on a virtual machine
 ```
-PS C:\>Get-AzureVMPuppetExtension -VM $VM
+PS C:\> Get-AzureVMPuppetExtension -VM $VM
 ```
 
 This command gets the Puppet extension applied on a virtual machine.

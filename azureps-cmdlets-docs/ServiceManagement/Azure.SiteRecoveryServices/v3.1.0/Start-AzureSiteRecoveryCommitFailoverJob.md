@@ -47,7 +47,7 @@ The **Start-AzureSiteRecoveryCommitFailoverJob** cmdlet starts the commit failov
 
 ### Example 1: Start a commit failover job
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer 
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer 
 PS C:\> $Protected = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container 
 PS C:\> Start-AzureSiteRecoveryCommitFailoverJob -ProtectionEntity $Protected
 ID               : c38eecdc-731c-405b-a61c-08db99aae2fe
@@ -62,7 +62,7 @@ Tasks            : {}
 Errors           : {}
 ```
 
-The first command gets all protected containers for the current Azure Site Recovery vault by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores the results in the $Container variable.
+The first command gets all protected containers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores the results in the $Container variable.
 
 The second command gets the protected virtual machines that belong to the container stored in $Container by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
 The command stores the results in the $Protected variable.
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -RecoveryPlan
 Specifies a recovery plan object for which to start the job.
-To obtain an **ASRRecoveryPlan** object, use the Get-AzureSiteRecoveryRecoveryPlan cmdlet.
+To obtain an **ASRRecoveryPlan** object, use the **Get-AzureSiteRecoveryRecoveryPlan** cmdlet.
 
 ```yaml
 Type: ASRRecoveryPlan
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 
 ### -ProtectionEntity
 Specifies an **ASRProtectionEntity** object for which to start the job.
-To obtain an **ASRProtectionEntity** object, use the Get-AzureSiteRecoveryProtectionEntity cmdlet.
+To obtain an **ASRProtectionEntity** object, use the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
 
 ```yaml
 Type: ASRProtectionEntity

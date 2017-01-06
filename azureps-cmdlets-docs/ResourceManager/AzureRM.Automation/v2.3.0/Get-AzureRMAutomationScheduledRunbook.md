@@ -51,21 +51,21 @@ Specify the name of a runbook or a schedule or both to see specific runbook sche
 
 ### Example 1: Get all scheduled runbooks
 ```
-PS C:\>Get-AzureRmAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
+PS C:\> Get-AzureRmAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command gets all scheduled runbooks in the Azure Automation account named Contoso17.
 
 ### Example 2: Get all schedules associated with a runbook
 ```
-PS C:\>Get-AzureRmAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -RunbookName "Runbk01"
+PS C:\> Get-AzureRmAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -RunbookName "Runbk01"
 ```
 
 This command gets all scheduled runbooks for the runbook Runbk01 in the Azure Automation account named Contoso17.
 
 ### Example 3: Get all runbooks associated with a schedule
 ```
-PS C:\>Get-AzureRmAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -ScheduleName "Schedule01"
+PS C:\> Get-AzureRmAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -ScheduleName "Schedule01"
 ```
 
 This command gets all scheduled runbooks for the schedule Schedule01 in the Azure Automation account named Contoso17.
@@ -163,5 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-AzureRmAutomationScheduledRunbook](./Register-AzureRMAutomationScheduledRunbook.md)
 
 [Unregister-AzureRmAutomationScheduledRunbook](./Unregister-AzureRMAutomationScheduledRunbook.md)
-
-

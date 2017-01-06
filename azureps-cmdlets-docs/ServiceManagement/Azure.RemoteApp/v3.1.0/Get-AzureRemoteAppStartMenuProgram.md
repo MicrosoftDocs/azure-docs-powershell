@@ -24,7 +24,7 @@ The **Get-AzureRemoteAppStartMenuProgram** cmdlet lists the Start Menu programs 
 
 ### Example 1: List the Start Menu programs for a collection
 ```
-PS C:\>Get-AzureRemoteAppStartMenuProgram -CollectionName "ContosoApps"
+PS C:\> Get-AzureRemoteAppStartMenuProgram -CollectionName "ContosoApps"
 ```
 
 This command returns the list of Start Menu programs for the ContosoApps collection.

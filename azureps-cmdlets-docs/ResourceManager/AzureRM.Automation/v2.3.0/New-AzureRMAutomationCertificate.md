@@ -26,11 +26,11 @@ Provide the path to a certificate file to upload.
 
 ### Example 1: Create a new certificate
 ```
-PS C:\>$Password = ConvertTo-SecureString -String "Password" -AsPlainText -Force
+PS C:\> $Password = ConvertTo-SecureString -String "Password" -AsPlainText -Force
 PS C:\> New-AzureRmAutomationCertificate -AutomationAccountName "Contoso17" -Name "ContosoCertificate" -Path "./cert.pfx" -Password $Password -ResourceGroupName "ResourceGroup01"
 ```
 
-The first command converts a plain text password to be a secure string by using the ConvertTo-SecureString cmdlet.
+The first command converts a plain text password to be a secure string by using the **ConvertTo-SecureString** cmdlet.
 The command stores that object in the $Password variable.
 
 The second command creates a certificate named ContosoCertificate.
@@ -163,5 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationCertificate](./Remove-AzureRMAutomationCertificate.md)
 
 [Set-AzureRmAutomationCertificate](./Set-AzureRMAutomationCertificate.md)
-
-

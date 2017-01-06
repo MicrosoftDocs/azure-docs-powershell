@@ -35,7 +35,7 @@ A recovery plan gathers virtual machines in a group for the purposes of failover
 
 ### Example 1: Get a recovery plan file
 ```
-PS C:\>$RecoveryPlan = Get-AzureSiteRecoveryRecoveryPlan 
+PS C:\> $RecoveryPlan = Get-AzureSiteRecoveryRecoveryPlan 
 PS C:\> Get-AzureSiteRecoveryRecoveryPlanFile -RecoveryPlan $RecoveryPlan -Path "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
 ```
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 
 ### -RecoveryPlan
 Specifies an **ASRRecoveryPlan** object from which to get the recovery plan.
-To obtain an **ASRRecoveryPlan** object, use the Get-AzureSiteRecoveryRecoveryPlan cmdlet.
+To obtain an **ASRRecoveryPlan** object, use the **Get-AzureSiteRecoveryRecoveryPlan** cmdlet.
 
 ```yaml
 Type: ASRRecoveryPlan

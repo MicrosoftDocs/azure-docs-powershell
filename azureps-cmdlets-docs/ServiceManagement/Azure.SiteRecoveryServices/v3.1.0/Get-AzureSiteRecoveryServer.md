@@ -37,7 +37,7 @@ The **Get-AzureSiteRecoveryServer** cmdlet gets information about Azure Site Rec
 
 ### Example 1: Get information about a Site Recovery server
 ```
-PS C:\>Get-AzureSiteRecoveryServer
+PS C:\> Get-AzureSiteRecoveryServer
 ID              : cd7dec80-1144-4531-9ab3-888b8ab39bee
 Name            : server1.contoso.com
 LastHeartbeat   : 9/23/2014 3:51:22 PM

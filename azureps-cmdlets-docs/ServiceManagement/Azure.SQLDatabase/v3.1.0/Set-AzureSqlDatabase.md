@@ -52,14 +52,14 @@ Set-AzureSqlDatabase [-ServerName] <String> [-DatabaseName] <String> [-NewDataba
 The **Set-AzureSqlDatabase** cmdlet sets properties for an Azure SQL Database.
 You can specify the database by name, or pass an Azure SQL Database object through the pipeline.
 You can specify the server by name, or pass an Azure SQL Database server connection context.
-Create a connection context by running the New-AzureSqlDatabaseServerContext cmdlet.
+Create a connection context by running the **New-AzureSqlDatabaseServerContext** cmdlet.
 If you specify the server by name, the cmdlet uses the current Azure subscription information to authenticate the request.
 
 ## EXAMPLES
 
 ### Example 1: Change the size of a database by using a connection context
 ```
-PS C:\>$Database01 = Get-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01"
+PS C:\> $Database01 = Get-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01"
 PS C:\> Set-AzureSqlDatabase -ConnectionContext $Context -Database $Database01 -MaxSizeGB 20
 ```
 
@@ -67,7 +67,7 @@ This example changes the size of the database named Database01 to 20 GB, in the 
 
 ### Example 2: Change the size of a database by using a server name
 ```
-PS C:\>$Database01 = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
+PS C:\> $Database01 = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
 PS C:\> Set-AzureSqlDatabase -ServerName "lpqd0zbr8y" -Database $Database01 -MaxSizeGB 20
 ```
 

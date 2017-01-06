@@ -24,7 +24,7 @@ The **Unregister-AzureRmAutomationDscNode** cmdlet removes an APS Desired State 
 
 ### Example 1: Remove an Azure DSC node from management by an Automation account
 ```
-PS C:\>Unregister-AzureRmAutomationDscNode -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -Id 064a8929-c98b-25e4-80hh-111ca86067j8
+PS C:\> Unregister-AzureRmAutomationDscNode -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -Id 064a8929-c98b-25e4-80hh-111ca86067j8
 ```
 
 This command removes the DSC node that has the specified GUID from management by the Automation account named Contoso17.
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -138,5 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-AzureRmAutomationDscNode](./Register-AzureRmAutomationDscNode.md)
 
 [Set-AzureRmAutomationDscNode](./Set-AzureRmAutomationDscNode.md)
-
-

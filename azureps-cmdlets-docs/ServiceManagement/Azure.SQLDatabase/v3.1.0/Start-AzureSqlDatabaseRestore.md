@@ -57,7 +57,7 @@ The source and target server names must be the same.
 
 ### Example 1: Restore a database specified as an object to a point in time
 ```
-PS C:\>$Database = Get-AzureSqlDatabase -ServerName "Server01" -DatabaseName "Database17" 
+PS C:\> $Database = Get-AzureSqlDatabase -ServerName "Server01" -DatabaseName "Database17" 
 PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceDatabase $Database -TargetDatabaseName "DatabaseRestored" -PointInTime "2013-01-01 06:00:00"
 ```
 
@@ -68,7 +68,7 @@ The command specifies at name for the new database.
 
 ### Example 2: Restore a database specified by name to a point in time
 ```
-PS C:\>$Operation = Start-AzureSqlDatabaseRestore -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored" -PointInTime "2013-01-01 06:00:00"
+PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored" -PointInTime "2013-01-01 06:00:00"
 ```
 
 This command restores the database named Database17 to a specific point in time.
@@ -76,7 +76,7 @@ The command specifies at name for the new database.
 
 ### Example 3: Restore a dropped database specified as an object to a point in time
 ```
-PS C:\>$Database = Get-AzureSqlDatabase -RestorableDropped -ServerName "Server01" -DatabaseName "Database01" -DatabaseDeletionDate "2012-11-09T22:59:43.000Z" 
+PS C:\> $Database = Get-AzureSqlDatabase -RestorableDropped -ServerName "Server01" -DatabaseName "Database01" -DatabaseDeletionDate "2012-11-09T22:59:43.000Z" 
 PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceRestorableDroppedDatabase $Database -TargetDatabaseName "DroppedDatabaseRestored"
 ```
 

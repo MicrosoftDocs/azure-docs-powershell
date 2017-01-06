@@ -23,7 +23,7 @@ The **Get-AzureRemoteAppWorkspace** cmdlet retrieves information about an Azure 
 
 ### Example 1: Retrieve information about a workspace
 ```
-PS C:\>Get-AzureRemoteAppWorkspace
+PS C:\> Get-AzureRemoteAppWorkspace
 ClientUrl                               EndUserFeedName
 ---------                               ---------------
 https://www.remoteapp.windowsazure.com/ Contoso Work Applications

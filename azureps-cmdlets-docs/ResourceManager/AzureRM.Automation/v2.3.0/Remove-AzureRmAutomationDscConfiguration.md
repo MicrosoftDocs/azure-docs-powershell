@@ -22,11 +22,6 @@ The **Remove-AzureRmAutomationDscConfiguration** cmdlet removes APS Desired Stat
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AutomationAccountName
@@ -60,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -136,5 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationDscConfiguration](./Get-AzureRmAutomationDscConfiguration.md)
 
 [Import-AzureRmAutomationDscConfiguration](./Import-AzureRmAutomationDscConfiguration.md)
-
-

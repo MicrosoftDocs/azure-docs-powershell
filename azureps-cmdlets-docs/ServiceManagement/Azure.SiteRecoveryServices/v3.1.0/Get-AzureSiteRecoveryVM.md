@@ -56,7 +56,7 @@ The **Get-AzureSiteRecoveryVM** cmdlet gets information about virtual machines m
 
 ### Example 1: Get information about a virtual machine
 ```
-PS C:\>$ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer
+PS C:\> $ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer
 PS C:\> Get-AzureSiteRecoveryVM -ProtectionContainer $ProtectionContainer
 ID                          : a205fd17-3848-4896-bab6-9dbccc3cd8ed
 ServerId                    : 4a94c4a9-c856-4577-afbd-367fe9b3ce9c
@@ -75,7 +75,7 @@ TestFailoverState           : None
 ReplicationProvider         : HyperVReplica
 ```
 
-The first command uses the Get-AzureSiteRecoveryProtectionContainer cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
+The first command uses the **Get-AzureSiteRecoveryProtectionContainer** cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
 
 The second command gets information about the virtual machines in $ProtectionContainer.
 

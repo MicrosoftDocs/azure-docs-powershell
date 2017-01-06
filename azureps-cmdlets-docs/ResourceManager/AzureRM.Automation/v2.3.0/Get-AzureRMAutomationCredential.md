@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a credential to retrieve.
+Specifies the name of a credential that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the resource group for which this cmdlet retrieves credentials.
+Specifies the resource group for which this cmdlet gets credentials.
 
 ```yaml
 Type: String
@@ -112,5 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationCredential](./Remove-AzureRMAutomationCredential.md)
 
 [Set-AzureRmAutomationCredential](./Set-AzureRMAutomationCredential.md)
-
-

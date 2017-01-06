@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-AzurePHPWebRole
 
 ## SYNOPSIS
-Creates the required files and configuration (sometimes referred to as scaffolding) for a PHP application.
+Creates the required files and configuration for a PHP application.
 
 ## SYNTAX
 
@@ -19,22 +19,22 @@ Add-AzurePHPWebRole [[-Name] <String>] [[-Instances] <Int32>] [-Profile <AzureSM
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
-The **Add-AzurePHPWebRole** cmdlet creates the files and configuration (sometimes referred to as scaffolding) for a PHP application that will be hosted in Azure through IIS.
+The **Add-AzurePHPWebRole** cmdlet creates the files and configuration, sometimes referred to as scaffolding, for a PHP application that will be hosted in Azure through IIS.
 
 ## EXAMPLES
 
-### 1: Add a web role using default values
+### Example 1: Add a web role using default values
 ```
-PS C:\>Add-AzurePHPWebRole
+PS C:\> Add-AzurePHPWebRole
 ```
 
 This example adds the required files and configuration for new web role using the default values of a service named "WebRole1" with 1 instance.
 
-### 2: Add a web role with multiple instances
+### Example 2: Add a web role with multiple instances
 ```
-PS C:\>Add-AzurePHPWebRole MyWebRole -I 2
+PS C:\> Add-AzurePHPWebRole MyWebRole -I 2
 ```
 
 This example adds the required files and configuration for a new web role to the current application, using the name "MyWebRole" and a role instance count of 2.

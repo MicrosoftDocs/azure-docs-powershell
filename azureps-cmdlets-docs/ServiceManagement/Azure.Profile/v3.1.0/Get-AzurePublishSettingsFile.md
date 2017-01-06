@@ -25,7 +25,7 @@ When the command completes, you can use the **Import-PublishSettingsFile** cmdle
 To make your Azure account available to Windows PowerShell, you can use a publish settings file or the **Add-AzureAccount** cmdlet.
 Publish settings files let you prepare the session in advance so you can run scripts and background jobs unattended.
 However, not all services support publish settings files.
-For example, the AzureResourceManager module does not support publish settings files.
+For example, the **AzureResourceManager** module does not support publish settings files.
 
 When you run **Get-AzurePublishSettingsFile**, it opens your default browser and prompts you to sign into your Azure account, select a subscription, and select a file system location for the publish settings file.
 Then, it downloads the publish settings file for your subscription into the file that you selected.
@@ -38,20 +38,20 @@ If  malicious users access your publish settings file,  they can edit, create, a
 As a security best practice, save the file to a location in your Downloads or Documents folder and then delete it after using **Import-AzurePublishSettingsFile** cmdlet to import the settings.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 
 ### Example 1: Download a publish settings file
 ```
-PS C:\>Get-AzurePublishSettingsFile
+PS C:\> Get-AzurePublishSettingsFile
 ```
 
 This command opens your default browser, connects to your Windows Azure account, and then downloads the .publishsettings file for your account.
 
 ### Example 2: Specify a realm
 ```
-PS C:\>Get-AzurePublishSettingsFile -Realm contoso.com -Passthru
+PS C:\> Get-AzurePublishSettingsFile -Realm contoso.com -Passthru
 ```
 
 This command downloads the publish settings file for an account in the contoso.com domain.
@@ -64,7 +64,7 @@ Specifies an Azure environment.
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see Azure Packhttp://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
 
 ```yaml
 Type: String
@@ -97,9 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns True ($true) if the command succeeds and False ($false) if it fails.
+Returns $True if the command succeeds and $False if it fails.
 By default, this cmdlet does not return any output.
-The **PassThru** parameter is typically used in conditional statements in functions and scripts.
 
 ```yaml
 Type: SwitchParameter
@@ -114,9 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
-You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see Azure Packhttp://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
@@ -180,7 +178,7 @@ You can pipe input to this cmdlet by property name, but not by value.
 ## OUTPUTS
 
 ### None or System.Boolean
-When you use the **PassThru** parameter, this cmdlet returns a Boolean value.
+When you use the *PassThru* parameter, this cmdlet returns a Boolean value.
 Otherwise, this cmdlet does not return any output
 
 ## NOTES

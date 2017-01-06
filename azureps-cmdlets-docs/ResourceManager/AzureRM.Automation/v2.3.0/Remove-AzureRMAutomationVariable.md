@@ -24,7 +24,7 @@ The **Remove-AzureRmAutomationVariable** cmdlet removes a variable from Azure Au
 
 ### Example 1: Remove a variable
 ```
-PS C:\>Remove-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -Force -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -Force -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes a variable named StringVariable22 in the Automation account named Contoso17.
@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationVariable](./New-AzureRMAutomationVariable.md)
 
 [Set-AzureRmAutomationVariable](./Set-AzureRMAutomationVariable.md)
-
-

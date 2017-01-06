@@ -19,9 +19,9 @@ New-WAPackCloudService -Name <String> -Label <String> [-Profile <AzureSMProfile>
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-WAPackCloudService** cmdlet creates a cloud service.
 
@@ -29,10 +29,10 @@ The **New-WAPackCloudService** cmdlet creates a cloud service.
 
 ### Example 1: Create a cloud service
 ```
-PS C:\>New-WAPackCloudService -Name "ContosoCloudService01" -Label "A label"
+PS C:\> New-WAPackCloudService -Name "ContosoCloudService01" -Label "A label"
 ```
 
-The command creates a cloud service named ?ContosoCloudService01?
+The command creates a cloud service named ContosoCloudService01
 with a label.
 
 ## PARAMETERS

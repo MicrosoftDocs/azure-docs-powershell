@@ -23,11 +23,6 @@ Automation stores DSC node configuration as a Managed Object Format (MOF) config
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AutomationAccountName
@@ -61,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -153,5 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-AzureRmAutomationDscNodeConfiguration](./Import-AzureRmAutomationDscNodeConfiguration.md)
 
 [Azure Automation Cmdlets](./AzureRM.Automation.md)
-
-

@@ -27,7 +27,7 @@ If there is a deployment in the production environment and no deployment in the 
 
 ### Example 1: Swap deployments for a service
 ```
-PS C:\>Move-AzureDeployment -ServiceName "ContosoService"
+PS C:\> Move-AzureDeployment -ServiceName "ContosoService"
 ```
 
 This command swaps the deployments of the service named ContosoService between the production and staging environments.

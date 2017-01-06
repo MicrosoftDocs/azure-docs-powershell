@@ -95,7 +95,8 @@ Accept wildcard characters: False
 
 ### -Stream
 Specifies the type of output.
-Valid values are: 
+
+The acceptable values for this parameter are:
 
 - Any
 - Debug
@@ -136,5 +137,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmAutomationJob](./Stop-AzureRMAutomationJob.md)
 
 [Suspend-AzureRmAutomationJob](./Suspend-AzureRMAutomationJob.md)
-
-

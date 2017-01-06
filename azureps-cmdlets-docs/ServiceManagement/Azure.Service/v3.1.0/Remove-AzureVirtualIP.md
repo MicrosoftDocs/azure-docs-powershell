@@ -25,7 +25,7 @@ The operation succeeds only if the virtual IP has no endpoints associated with i
 
 ### Example 1: Remove a virtual IP address from a service
 ```
-PS C:\>Remove-AzureVirtualIP -VirtualIPName "Vip01" -ServiceName "ContosoService03"
+PS C:\> Remove-AzureVirtualIP -VirtualIPName "Vip01" -ServiceName "ContosoService03"
 ```
 
 This command removes a virtual IP address from a service.

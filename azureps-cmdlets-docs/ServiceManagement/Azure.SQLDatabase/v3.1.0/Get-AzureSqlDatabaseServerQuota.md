@@ -34,14 +34,14 @@ If you do not specify a quota name, this cmdlet gets all the quota information f
 
 ### Example 1: Get information for a specific quota
 ```
-PS C:\>$QuotaPremium = GetAzureSqlDatabaseServerQuota $Context -QuotaName "Premium_Databases"
+PS C:\> $QuotaPremium = GetAzureSqlDatabaseServerQuota $Context -QuotaName "Premium_Databases"
 ```
 
 This command gets the quota named Premium_Databases from the Azure SQL Database server specified by the connection stored in the $Context variable.
 
 ### Example 2: Get information for all quotas
 ```
-PS C:\>$QuotaList = GetAzureSqlDatabaseServerQuota $Context
+PS C:\> $QuotaList = GetAzureSqlDatabaseServerQuota $Context
 ```
 
 This command gets all quota values from the server specified by the connection $Context.

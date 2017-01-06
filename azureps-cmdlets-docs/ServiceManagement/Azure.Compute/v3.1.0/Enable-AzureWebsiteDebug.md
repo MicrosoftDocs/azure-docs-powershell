@@ -25,7 +25,7 @@ Enables the website's debug feature in Visual Studio.
 
 ### Enable debugging of Visual Studio 2013
 ```
-C:\PS>Enable-AzureWebsiteDebug -Name MyWebsite -Version VS2013
+PS C:\> Enable-AzureWebsiteDebug -Name MyWebsite -Version VS2013
 ```
 
 Enables debugging on VS 2013.

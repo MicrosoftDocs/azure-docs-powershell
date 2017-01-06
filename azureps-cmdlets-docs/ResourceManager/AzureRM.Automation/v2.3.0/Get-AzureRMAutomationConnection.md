@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionTypeName
-Specifies the name of a connection type for which this cmdlet retrieves connections.
+Specifies the name of a connection type for which this cmdlet gets connections.
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a connection that this cmdlet retrieves.
+Specifies the name of a connection that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -138,5 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationConnection](./New-AzureRMAutomationConnection.md)
 
 [Remove-AzureRmAutomationConnection](./Remove-AzureRMAutomationConnection.md)
-
-

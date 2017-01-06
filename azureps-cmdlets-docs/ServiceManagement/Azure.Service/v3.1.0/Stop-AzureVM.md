@@ -32,35 +32,35 @@ The **Stop-AzureVM** cmdlet shuts down a virtual machine.
 
 ### Example 1: Shut down a virtual machine
 ```
-PS C:\>Stop-AzureVM -ServiceName "ContosoService01" -Name "MyVM"
+PS C:\> Stop-AzureVM -ServiceName "ContosoService01" -Name "MyVM"
 ```
 
 This command shuts down a virtual machine that the specified service contains.
 
 ### Example 2: Shut down a virtual machine by using a virtual machine object
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService01" -Name "MyVM" | Stop-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService01" -Name "MyVM" | Stop-AzureVM
 ```
 
 This command shuts down a virtual machine that the specified service contains, by using the virtual machine object that **Get-AzureVM** returns.
 
 ### Example 3: Shut down a VM and keep the VM provisioned
 ```
-PS C:\>Stop-AzureVM -ServiceName "ContosoService01" -Name "MyVM" -StayProvisioned
+PS C:\> Stop-AzureVM -ServiceName "ContosoService01" -Name "MyVM" -StayProvisioned
 ```
 
 This command shuts down a virtual machine that the specified service contains, and keeps it provisioned.
 
 ### Example 4: Shut down a VM and allow deallocation of the last VM in the deployment
 ```
-PS C:\>Stop-AzureVM -ServiceName "ContosoService01" -Name "MyVM" -Force
+PS C:\> Stop-AzureVM -ServiceName "ContosoService01" -Name "MyVM" -Force
 ```
 
 This command shuts down a virtual machine that the specified service contains and allows deallocation of the last virtual machine in the deployment.
 
 ### Example 5: Shut down multiple VMs
 ```
-PS C:\>Stop-AzureVM -ServiceName "PSTestService" -Name "*" -Force
+PS C:\> Stop-AzureVM -ServiceName "PSTestService" -Name "*" -Force
 ```
 
 This command shuts down multiple virtual machines that the specified service contains.

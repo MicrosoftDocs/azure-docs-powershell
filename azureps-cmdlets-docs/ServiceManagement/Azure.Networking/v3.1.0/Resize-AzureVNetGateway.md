@@ -25,7 +25,7 @@ Valid SKUs for a virtual network gateway are Default, Standard, and HighPerforma
 
 ### Example 1: Change the SKU for a virtual network gateway
 ```
-PS C:\>Resize-AzureVNetGateway -VNetName "ContosoVN07" -GatewaySKU "HighPerformance"
+PS C:\> Resize-AzureVNetGateway -VNetName "ContosoVN07" -GatewaySKU "HighPerformance"
 ```
 
 This command changes the SKU of the virtual network gateway for the virtual network named ContosoVN07 to HighPerformance.
@@ -70,7 +70,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

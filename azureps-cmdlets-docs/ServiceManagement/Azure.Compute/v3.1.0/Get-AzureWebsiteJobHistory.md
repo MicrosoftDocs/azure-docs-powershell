@@ -37,23 +37,23 @@ Gets a web job history.
 
 ## EXAMPLES
 
-### 1: Get complete history for a web job
+### Example 1: Get complete history for a web job
 ```
-C:\PS>Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob
+PS C:\> Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob
 ```
 
 Gets complete history for MyWebJob.
 
-### 2: Get latest run for a web job
+### Example 2: Get latest run for a web job
 ```
-C:\PS>Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob -Latest
+PS C:\> Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob -Latest
 ```
 
 Gets latest run info for MyWebJob.
 
-### 3: Get specific run for a web job
+### Example 3: Get specific run for a web job
 ```
-C:\PS>Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob -RunId 10
+PS C:\> Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob -RunId 10
 ```
 
 Gets all info about run with id 10 for MyWebJob.
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunId
-The ID of the run history you want to see.
+Specifies the ID of the run history you want to see.
 
 ```yaml
 Type: String

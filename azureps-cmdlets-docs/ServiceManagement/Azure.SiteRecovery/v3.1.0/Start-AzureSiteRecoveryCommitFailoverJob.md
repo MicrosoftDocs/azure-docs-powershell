@@ -49,7 +49,7 @@ Check whether the job succeeds by using the **Get-AzureSiteRecoveryJob** cmdlet.
 
 ### Example 1: Start a commit failover job
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer 
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer 
 PS C:\> $Protected = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container 
 PS C:\> Start-AzureSiteRecoveryCommitFailoverJob -ProtectionEntity $Protected
 ID               : c38eecdc-731c-405b-a61c-08db99aae2fe

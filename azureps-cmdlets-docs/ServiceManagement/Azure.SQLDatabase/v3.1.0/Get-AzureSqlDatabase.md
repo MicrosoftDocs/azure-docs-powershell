@@ -49,28 +49,28 @@ To return restorable dropped databases that satisfy different criteria, such as 
 
 ### Example 1: Retrieve all databases on a server
 ```
-PS C:\>Get-AzureSqlDatabase -ServerName "lpqd0zbr8y"
+PS C:\> Get-AzureSqlDatabase -ServerName "lpqd0zbr8y"
 ```
 
 This command retrieves all databases on the server named lpqd0zbr8y.
 
 ### Example 2: Retrieve all restorable dropped databases on a server
 ```
-PS C:\>Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -RestorableDropped
+PS C:\> Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -RestorableDropped
 ```
 
 This command retrieves all restorable dropped databases on the server named lpqd0zbr8y.
 
 ### Example 3: Retrieve a database from a server specified by a connection context
 ```
-PS C:\>$Database01 = Get-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01"
+PS C:\> $Database01 = Get-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01"
 ```
 
 This command retrieves database named Database01 from the server specified by the connection context $Context.
 
 ### Example 4: Store a database object in a variable
 ```
-PS C:\>$Database01 = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
+PS C:\> $Database01 = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
 ```
 
 This command retrieves database named Database01 from the server named lpqd0zbr8y.
@@ -78,7 +78,7 @@ The command stores the database object in the $Database01 variable.
 
 ### Example 5: Retrieve a restorable dropped database
 ```
-PS C:\>$DroppedDB = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01" -DatabaseDeletionDate "2012-11-09T22:59:43.000Z" -RestorableDropped
+PS C:\> $DroppedDB = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01" -DatabaseDeletionDate "2012-11-09T22:59:43.000Z" -RestorableDropped
 ```
 
 This command retrieves the restorable dropped database named Database01 that was deleted on 11/9/2012 from the server named lpqd0zbr8y.
@@ -86,7 +86,7 @@ This command stores the results in the $DroppedDB variable.
 
 ### Example 6: Retrieve all restorable dropped databases on a server and filter the results
 ```
-PS C:\>Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -RestorableDropped | Where-Object {$_.Name -eq "ContactDB"}
+PS C:\> Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -RestorableDropped | Where-Object {$_.Name -eq "ContactDB"}
 ```
 
 This command retrieves all restorable dropped databases on the server named lpqd0zbr8y, and then filters the results to only the databases named ContactDB.
@@ -270,10 +270,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### IEnumerable<Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database>
+### IEnumerable\<Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database\>
 This cmdlet returns a *Database* object if you do not specify the *RestorableDropped* parameter.
 
-### IEnumerable<Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.RestorableDroppedDatabase>
+### IEnumerable\<Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.RestorableDroppedDatabase\>
 This cmdlet returns a *RestorableDroppedDatabase* object if you specify the *RestorableDropped* parameter.
 
 ## NOTES

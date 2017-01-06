@@ -26,7 +26,7 @@ This cmdlet is supported only for Virtual Machine Monitor (VMM) to VMM protected
 
 ### Example 1: Update a protection entity
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer
 PS C:\> $ProtectionEntity = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container
 PS C:\> Update-AzureSiteRecoveryProtectionEntity -ProtectionEntity $ProtectionEntity
            Name             : 
@@ -41,7 +41,7 @@ PS C:\> Update-AzureSiteRecoveryProtectionEntity -ProtectionEntity $ProtectionEn
            Errors           : {}
 ```
 
-The first command gets a protected container by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores that object in the $Container variable.
+The first command gets a protected container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores that object in the $Container variable.
 
 The second command gets the protected virtual machine that belongs to the container stored in $Container by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet, and then stores it in the $ProtectionEntity variable.
 
@@ -51,7 +51,7 @@ The final command updates the protection entity in $ProtectionEntity.
 
 ### -ProtectionEntity
 Specifies a protection entity to update.
-To obtain an **ASRProtectionEntity** object, use the Get-AzureSiteRecoveryProtectionEntity cmdlet.
+To obtain an **ASRProtectionEntity** object, use the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
 
 ```yaml
 Type: ASRProtectionEntity

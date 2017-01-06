@@ -29,7 +29,7 @@ PS C:\>$Jobs = Get-AzureRmAutomationDscCompilationJob -ResourceGroupName "Resour
 PS C:\> $Jobs[0] | Get-AzureRmAutomationDscCompilationJobOutput -Stream "Any"
 ```
 
-The first command gets the compilation jobs in the Automation account named Contoso17 by using the Get-AzureRmAutomationDscCompilationJob cmdlet.
+The first command gets the compilation jobs in the Automation account named Contoso17 by using the [Get-AzureRmAutomationDscCompilationJob](./Get-AzureRmAutomationDscCompilationJob.md) cmdlet.
 The command stores those objects in the $Jobs variable.
 
 The second command gets the compilation job output for any stream for the first member of the $Jobs array.
@@ -133,5 +133,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationDscCompilationJob](./Get-AzureRmAutomationDscCompilationJob.md)
 
 [Start-AzureRmAutomationDscCompilationJob](./Start-AzureRmAutomationDscCompilationJob.md)
-
-

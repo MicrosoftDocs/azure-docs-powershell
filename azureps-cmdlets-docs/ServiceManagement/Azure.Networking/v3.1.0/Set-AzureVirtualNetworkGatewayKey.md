@@ -23,15 +23,11 @@ The **Set-AzureVirtualNetworkGatewayKey** cmdlet sets the key for an Azure virtu
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
 ### -GatewayId
-Specifies the ID of a gateway
+Specifies the ID of a gateway.
 
 ```yaml
 Type: String
@@ -78,7 +74,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

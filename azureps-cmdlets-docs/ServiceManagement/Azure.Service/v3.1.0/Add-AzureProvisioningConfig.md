@@ -53,18 +53,18 @@ To create an Active Directory domain joined server, specify the fully qualified 
 
 ### Example 1: Create a standalone virtual machine
 ```
-PS C:\>New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" | New-AzureVM -ServiceName "ContosoService"
+PS C:\> New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" | New-AzureVM -ServiceName "ContosoService"
 ```
 
-This command creates a virtual machine configuration object by using the New-AzureVMConfig cmdlet.
+This command creates a virtual machine configuration object by using the **New-AzureVMConfig** cmdlet.
 The command passes that object to the current cmdlet by using the pipeline operator.
 The current cmdlet adds provisioning configuration for a virtual machine that runs the Windows operating system.
 The configuration includes the administrator user name and password.
-The command passes the configuration to the New-AzureVM cmdlet, which creates the virtual machine.
+The command passes the configuration to the **New-AzureVM** cmdlet, which creates the virtual machine.
 
 ### Example 2: Create a domain joined virtual machine
 ```
-PS C:\>New-AzureVMConfig -Name "DomainVM" -InstanceSize Small -ImageName "Image09" | Add-AzureProvisioningConfig -WindowsDomain -Password "password" -AdminUsername "AdminMain" -ResetPasswordOnFirstLogon -JoinDomain "contoso.com" -Domain "contoso" -DomainUserName "DomainAdminUser" -DomainPassword "DomainPassword" -MachineObjectOU 'OU=AzureVMs,DC=contoso,DC=com' | New-AzureVM -ServiceName "ContosoService"
+PS C:\> New-AzureVMConfig -Name "DomainVM" -InstanceSize Small -ImageName "Image09" | Add-AzureProvisioningConfig -WindowsDomain -Password "password" -AdminUsername "AdminMain" -ResetPasswordOnFirstLogon -JoinDomain "contoso.com" -Domain "contoso" -DomainUserName "DomainAdminUser" -DomainPassword "DomainPassword" -MachineObjectOU 'OU=AzureVMs,DC=contoso,DC=com' | New-AzureVM -ServiceName "ContosoService"
 ```
 
 This command creates a virtual machine configuration object, and then passes it to the current cmdlet.
@@ -75,7 +75,7 @@ The command creates the virtual machine based on the provisioning object.
 
 ### Example 3: Create a Linux-based virtual machine
 ```
-PS C:\>New-AzureVMConfig -Name "LinuxVM" -InstanceSize Small -ImageName "LinuxImage03" | Add-AzureProvisioningConfig -Linux -LinuxUser "LinuxRoot" -Password "password" | New-AzureVM -ServiceName "ContosoService"
+PS C:\> New-AzureVMConfig -Name "LinuxVM" -InstanceSize Small -ImageName "LinuxImage03" | Add-AzureProvisioningConfig -Linux -LinuxUser "LinuxRoot" -Password "password" | New-AzureVM -ServiceName "ContosoService"
 ```
 
 This command creates a virtual machine configuration object, and then passes it to the current cmdlet.
@@ -85,7 +85,7 @@ The command creates the virtual machine based on the provisioning object.
 
 ### Example 4: Create a virtual machine that includes certificates for WinRM
 ```
-PS C:\>$certs = Get-ChildItem Cert:\CurrentUser\My
+PS C:\> $certs = Get-ChildItem Cert:\CurrentUser\My
 New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image11" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -WinRMCertificate $certs[0] -X509Certificates $certs[1], $certs[2] | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
 ```
 
@@ -97,7 +97,7 @@ The command creates the virtual machine based on the provisioning object.
 
 ### Example 5: Create a virtual machine that has WinRM enabled over HTTP
 ```
-PS C:\>New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image14" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -EnableWinRMHttp | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
+PS C:\> New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image14" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -EnableWinRMHttp | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
 ```
 
 This command creates a virtual machine configuration object, and then passes it to the current cmdlet.
@@ -106,7 +106,7 @@ The command creates the virtual machine based on the provisioning object.
 
 ### Example 6: Create a virtual machine that has WinRM disabled over HTTPS
 ```
-PS C:\>New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -DisableWinRMHttps | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
+PS C:\> New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -DisableWinRMHttps | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
 ```
 
 This command creates a virtual machine configuration object, and then passes it to the current cmdlet.
@@ -115,7 +115,7 @@ The command creates the virtual machine based on the provisioning object.
 
 ### Example 7: Create a virtual machine with no key export
 ```
-PS C:\>$certs = Get-ChildItem Cert:\CurrentUser\My
+PS C:\> $certs = Get-ChildItem Cert:\CurrentUser\My
 New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -X509Certificates $certs[0], $certs[1] -NoExportPrivateKey | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
 ```
 

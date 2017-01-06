@@ -24,7 +24,7 @@ The **Remove-AzureRemoteAppUser** cmdlet removes a user from an Azure RemoteApp 
 
 ### Example1: Remove a user from a collection
 ```
-PS C:\>Remove-AzureRemoteAppUser -CollectionName "Contoso" -Type OrgId -UserUpn "PattiFuller@contoso.com"
+PS C:\> Remove-AzureRemoteAppUser -CollectionName "Contoso" -Type OrgId -UserUpn "PattiFuller@contoso.com"
 ```
 
 This command removes the Azure ActiveDirectory user PattiFuller@contoso.com from the Contoso collection.

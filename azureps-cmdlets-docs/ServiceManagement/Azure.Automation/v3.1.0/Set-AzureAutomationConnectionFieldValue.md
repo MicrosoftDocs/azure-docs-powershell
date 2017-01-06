@@ -19,14 +19,10 @@ Set-AzureAutomationConnectionFieldValue [-Name] <String> -ConnectionFieldName <S
 ```
 
 ## DESCRIPTION
-The Set-AzureAutomationConnectionFieldValue cmdlet modifies the value for a field for a connection in Azure Automation.
+The **Set-AzureAutomationConnectionFieldValue** cmdlet modifies the value for a field for a connection in Azure Automation.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

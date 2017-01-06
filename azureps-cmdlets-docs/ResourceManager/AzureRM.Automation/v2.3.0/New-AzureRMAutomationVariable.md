@@ -26,18 +26,18 @@ You cannot modify the encrypted state of a variable after creation.
 
 ### Example 1: Create a variable with a simple value
 ```
-PS C:\>New-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -Encrypted $False -Value "My String" -ResourceGroupName "ResourceGroup01"
+PS C:\> New-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -Encrypted $False -Value "My String" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command creates a variable named StringVariable22 with a string value in the Automation account named Contoso17.
 
 ### Example 2: Create a variable with a complex value
 ```
-PS C:\>$VirtualMachine = Get-AzureVM -ServiceName "VirtualMachine" -Name "VirtualMachine03"
+PS C:\> $VirtualMachine = Get-AzureVM -ServiceName "VirtualMachine" -Name "VirtualMachine03"
 PS C:\> New-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "ComplexVariable01" -Encrypted $False -Value $VirtualMachine -ResourceGroupName "ResourceGroup01"
 ```
 
-The first command gets a virtual machine by using the Get-AzureVM cmdlet.
+The first command gets a virtual machine by using the **Get-AzureVM** cmdlet.
 The command stores it in the $VirtualMachine variable.
 
 The second command creates a variable named ComplexVariable01 in the Automation account named Contoso17.
@@ -151,5 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationVariable](./Remove-AzureRMAutomationVariable.md)
 
 [Set-AzureRmAutomationVariable](./Set-AzureRMAutomationVariable.md)
-
-
