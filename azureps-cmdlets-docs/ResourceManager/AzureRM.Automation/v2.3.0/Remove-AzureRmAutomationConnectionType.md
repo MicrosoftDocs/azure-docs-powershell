@@ -31,7 +31,7 @@ It can have additional fields.
 
 ### Example 1: Remove a connection type
 ```
-PS C:\>Remove-AzureRmAutomationConnectionType -AutomationAccountName "Contoso17" -Name "ContosoConnectionType" -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmAutomationConnectionType -AutomationAccountName "Contoso17" -Name "ContosoConnectionType" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes a connection type named ContosoConnectionType in the Automation account named Contoso17.
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -141,5 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-AzureRmAutomationConnection](./Remove-AzureRMAutomationConnection.md)
-
-

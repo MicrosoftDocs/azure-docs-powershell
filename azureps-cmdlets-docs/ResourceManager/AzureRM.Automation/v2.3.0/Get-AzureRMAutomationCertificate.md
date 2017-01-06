@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a certificate to retrieve.
+Specifies the name of a certificate that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -110,5 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationCertificate](./Remove-AzureRMAutomationCertificate.md)
 
 [Set-AzureRmAutomationCertificate](./Set-AzureRMAutomationCertificate.md)
-
-

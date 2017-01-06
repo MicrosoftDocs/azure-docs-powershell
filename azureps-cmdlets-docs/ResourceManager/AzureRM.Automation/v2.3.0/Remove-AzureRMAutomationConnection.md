@@ -24,7 +24,7 @@ The **Remove-AzureRmAutomationConnection** cmdlet removes a connection from Azur
 
 ### Example 1: Remove a connection
 ```
-PS C:\>Remove-AzureRmAutomationConnection -AutomationAccountName "Contoso17" -Name "ContosoConnection" -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmAutomationConnection -AutomationAccountName "Contoso17" -Name "ContosoConnection" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes a certificate named ContosoConnection in the Automation account named Contoso17.
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -136,5 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationConnection](./Get-AzureRMAutomationConnection.md)
 
 [New-AzureRmAutomationConnection](./New-AzureRMAutomationConnection.md)
-
-

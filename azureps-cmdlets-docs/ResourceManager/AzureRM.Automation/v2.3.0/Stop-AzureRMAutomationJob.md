@@ -25,7 +25,7 @@ Specify a running Automation job.
 
 ### Example 1: Stop a job
 ```
-PS C:\>Stop-AzureRmAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01"
+PS C:\> Stop-AzureRmAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01"
 ```
 
 This command stops the job that has the specified ID.
@@ -95,5 +95,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-AzureRmAutomationJob](./Resume-AzureRMAutomationJob.md)
 
 [Suspend-AzureRmAutomationJob](./Suspend-AzureRMAutomationJob.md)
-
-
