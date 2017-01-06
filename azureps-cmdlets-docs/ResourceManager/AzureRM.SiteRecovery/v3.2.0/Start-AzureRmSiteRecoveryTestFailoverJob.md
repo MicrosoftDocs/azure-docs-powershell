@@ -75,7 +75,7 @@ Start-AzureRmSiteRecoveryTestFailoverJob -ReplicationProtectedItem <ASRReplicati
 
 ## DESCRIPTION
 The **Start-AzureRmSiteRecoveryTestFailoverJob** cmdlet starts test failover of an Azure Site Recovery protection entity or recovery plan.
-You can check whether the job succeeded by using the Get-AzureRmSiteRecoveryJob cmdlet.
+You can check whether the job succeeded by using the **Get-AzureRmSiteRecoveryJob** cmdlet.
 
 ## EXAMPLES
 

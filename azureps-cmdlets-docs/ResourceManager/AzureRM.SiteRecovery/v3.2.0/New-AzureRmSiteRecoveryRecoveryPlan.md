@@ -65,6 +65,8 @@ This command adds the recovery plan named RecoveryPlan.xml to the Azure Site Rec
 ## PARAMETERS
 
 ### -Name
+Specifies a name. 
+
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzureLegacy, EnterpriseToEnterpriseLegacy, EnterpriseToAzureLegacy
