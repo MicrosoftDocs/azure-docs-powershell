@@ -32,13 +32,13 @@ This cmdlet supports basic recovery that uses the last known available backup fo
 The recovery operation creates a new database.
 If you recover a live database on the same server, you must specify a different name for the new database.
 
-To do a point in time restore for a database, use the Start-AzureSqlDatabaseRestore cmdlet instead.
+To do a point in time restore for a database, use the **Start-AzureSqlDatabaseRestore** cmdlet instead.
 
 ## EXAMPLES
 
 ### Example 1: Recover a database specified as an object
 ```
-PS C:\>$Database = Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17" 
+PS C:\> $Database = Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17" 
 PS C:\> $Operation = Start-AzureSqlDatabaseRecovery -SourceDatabase $Database -TargetDatabaseName "DatabaseRestored"
 ```
 
@@ -49,7 +49,7 @@ The second command recovers the database stored in $Database.
 
 ### Example 2: Recover a database specified by name
 ```
-PS C:\>$Operation = Start-AzureSqlDatabaseRecovery -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored"
+PS C:\> $Operation = Start-AzureSqlDatabaseRecovery -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored"
 ```
 
 This command recovers a database using the database name.

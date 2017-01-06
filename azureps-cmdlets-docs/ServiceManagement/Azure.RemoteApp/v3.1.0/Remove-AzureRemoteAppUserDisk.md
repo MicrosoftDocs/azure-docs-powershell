@@ -24,7 +24,7 @@ The **Remove-AzureRemoteAppUserDisk** cmdlet removes the user disk of a user fro
 
 ### Example 1: Remove a user disk
 ```
-PS C:\>Remove-AzureRemoteAppUserDisk -CollectionName "Contoso01" -UserUpn "PattiFuller@contoso.com"
+PS C:\> Remove-AzureRemoteAppUserDisk -CollectionName "Contoso01" -UserUpn "PattiFuller@contoso.com"
 ```
 
 This command removes the user disk of an Azure Active Directory user who has the UPN PattiFuller@contoso.com from the collection Contoso01.

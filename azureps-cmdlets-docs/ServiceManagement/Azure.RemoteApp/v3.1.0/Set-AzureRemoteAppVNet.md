@@ -25,7 +25,7 @@ The **Set-AzureRemoteAppVNet** cmdlet sets the properties of an Azure RemoteApp 
 
 ### Example 1: Set the properties of a virtual network
 ```
-PS C:\>Set-AzureRemoteAppVnet -VNetName "ContosoVNet" -DnsServerIpAddress "131.253.33.200" -LocalNetworkAddressSpace "192.168.0.0/24" -VirtualNetworkAddressSpace "10.10.0.0/24" -VpnDeviceIpAddress "131.253.33.200"
+PS C:\> Set-AzureRemoteAppVnet -VNetName "ContosoVNet" -DnsServerIpAddress "131.253.33.200" -LocalNetworkAddressSpace "192.168.0.0/24" -VirtualNetworkAddressSpace "10.10.0.0/24" -VpnDeviceIpAddress "131.253.33.200"
 ```
 
 This command sets the properties of a virtual network named ContosoVNet.

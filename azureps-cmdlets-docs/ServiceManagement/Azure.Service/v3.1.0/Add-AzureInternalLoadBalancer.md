@@ -41,14 +41,14 @@ For a virtual network, you can specify a subnet or the IP address of the interna
 
 ### Example 1: Add an internal load balancer
 ```
-PS C:\>Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB"
+PS C:\> Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB"
 ```
 
 This command adds an internal load balancer named ContosoILB to the service named ContosoWebsite01.
 
 ### Example 2: Add an internal load balancer for a specified subnet
 ```
-PS C:\>Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB" -SubnetName "FrontEndSubnet"
+PS C:\> Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB" -SubnetName "FrontEndSubnet"
 ```
 
 This command adds an internal load balancer named ContosoILB to the service named ContosoWebsite01.
@@ -56,7 +56,7 @@ The command specifies the subnet named FrontEndSubnet.
 
 ### Example 3: Add an internal load balancer for a specified subnet and address
 ```
-PS C:\>Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB" -SubnetName "FrontEndSubnet" -StaticVNetIPAddress 192.168.4.7
+PS C:\> Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB" -SubnetName "FrontEndSubnet" -StaticVNetIPAddress 192.168.4.7
 ```
 
 This command adds an internal load balancer named ContosoILB to the service named ContosoWebsite01.

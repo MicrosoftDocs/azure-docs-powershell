@@ -20,13 +20,13 @@ Remove-AzureVMDscExtension -VM <IPersistentVM> [-Profile <AzureSMProfile>]
 
 ## DESCRIPTION
 The **Remove-AzureVMDscExtension** cmdlet removes an Azure DSC extension from a virtual machine.
-The output of this cmdlet needs to be piped to the Update-AzureVM cmdlet.
+The output of this cmdlet needs to be piped to the **Update-AzureVM** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Remove a DSC extension from a virtual machine
 ```
-PS C:\>Remove-AzureVMDscExtension -VM $VM | Update-AzureVM
+PS C:\> Remove-AzureVMDscExtension -VM $VM | Update-AzureVM
 ```
 
 This command removes an Azure DSC extension from a virtual machine.

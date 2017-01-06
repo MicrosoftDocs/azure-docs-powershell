@@ -8,7 +8,7 @@ schema: 2.0.0
 # Disable-AzureWebsiteDebug
 
 ## SYNOPSIS
-Disables the website's debugging
+Disables the website's debugging.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Disables the website's debugging in Visual Studio.
 
 ### --------------  Disable website debugging --------------
 ```
-C:\PS>Disable-AzureWebsiteDebug -Name MyWebsite
+PS C:\> Disable-AzureWebsiteDebug -Name MyWebsite
 ```
 
 Disables website debugging on website MyWebsite

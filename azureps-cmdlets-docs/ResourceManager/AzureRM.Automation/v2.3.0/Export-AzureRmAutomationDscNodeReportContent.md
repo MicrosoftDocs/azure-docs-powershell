@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Indicates that this cmdlet replaces an existing local file with a new file that has the same name.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -173,5 +173,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationDscNode](./Get-AzureRmAutomationDscNode.md)
 
 [Get-AzureRmAutomationDscNodeReport](./Get-AzureRmAutomationDscNodeReport.md)
-
-

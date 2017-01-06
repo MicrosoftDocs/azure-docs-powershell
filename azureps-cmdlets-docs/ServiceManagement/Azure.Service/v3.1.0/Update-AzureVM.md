@@ -25,14 +25,14 @@ You can add or remove data disks, modify the cache mode of data or operating sys
 
 ### Example 1: Update the size of a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine04" | Set-AzureVMSize -InstanceSize "Medium" | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine04" | Set-AzureVMSize -InstanceSize "Medium" | Update-AzureVM
 ```
 
 This command changes the size of the virtual machine named VirtualMachine04, running in the service named ContosoService03, to Medium.
 
 ### Example 2: Add a data disk to a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine05" | Add-AzureDataDisk -CreateNew -MediaLocation "https://ContosoStore1.blob.core.azure.com/vhds/Disk22.vhd" -DiskSizeInGB 128 -DiskLabel "Data-128" -LUN 0 | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine05" | Add-AzureDataDisk -CreateNew -MediaLocation "https://ContosoStore1.blob.core.azure.com/vhds/Disk22.vhd" -DiskSizeInGB 128 -DiskLabel "Data-128" -LUN 0 | Update-AzureVM
 ```
 
 This command adds a new data disk to the virtual machine named VirtualMachine05, running in the service named ContosoService03.

@@ -32,7 +32,7 @@ The **Update-AzureDisk** cmdlet changes the label that is associated with a disk
 
 ### Example 1: Change the label of a disk
 ```
-PS C:\>Update-AzureDisk ?DiskName "ContosoOSDisk" -Label "DoNotUse"
+PS C:\> Update-AzureDisk ?DiskName "ContosoOSDisk" -Label "DoNotUse"
 ```
 
 This command changes the label of the disk named ContosoOSDisk to DoNotUse.

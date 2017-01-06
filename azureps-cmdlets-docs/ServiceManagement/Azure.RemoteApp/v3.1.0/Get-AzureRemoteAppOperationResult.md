@@ -25,7 +25,7 @@ Examples of cmdlets that return tracking IDs include **Update-AzureRemoteAppColl
 
 ### Example 1: Use a tracking ID to get an operation result
 ```
-PS C:\>$result = New-AzureRemoteAppCollection -CollectionName Contoso -ImageName "Windows Server 2012 R2" -Plan Standard -Location "West US" -Description CloudOnly
+PS C:\> $result = New-AzureRemoteAppCollection -CollectionName Contoso -ImageName "Windows Server 2012 R2" -Plan Standard -Location "West US" -Description CloudOnly
 PS C:\> Get-AzureRemoteAppOperationResult -TrackingId $result.Tracking
 ```
 

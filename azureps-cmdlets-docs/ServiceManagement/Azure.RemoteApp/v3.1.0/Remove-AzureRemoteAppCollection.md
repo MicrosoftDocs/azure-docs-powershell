@@ -22,10 +22,6 @@ The **Remove-AzureRemoteAppCollection** cmdlet removes an Azure RemoteApp collec
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

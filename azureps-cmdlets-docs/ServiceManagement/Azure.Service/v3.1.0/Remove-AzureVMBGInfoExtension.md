@@ -24,7 +24,7 @@ The **Remove-AzureVMBGInfoExtension** cmdlet removes the BGInfo extension applie
 
 ### Example 1: Remove the BGInfo extension on a virtual machine
 ```
-PS C:\>Remove-AzureVMBGInfoExtension -VM $VM;
+PS C:\> Remove-AzureVMBGInfoExtension -VM $VM;
 ```
 
 This command removes the BGInfo extension applied on a virtual machine.

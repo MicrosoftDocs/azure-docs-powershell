@@ -413,7 +413,7 @@ This cmdlet accepts **BackupPolicyDetails** and **VirtualDisk** objects.
 
 ## OUTPUTS
 
-### IList<Backup>
+### IList\<Backup\>
 This cmdlet returns a list of **Backup** objects.
 
 ## NOTES

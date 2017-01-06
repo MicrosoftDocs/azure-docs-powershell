@@ -25,7 +25,7 @@ The webhook is deleted.
 
 ### Example 1: Remove a webhook
 ```
-PS C:\>Remove-AzureRmAutomationWebhook -Name "Webhook11" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Force
+PS C:\> Remove-AzureRmAutomationWebhook -Name "Webhook11" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Force
 ```
 
 This command removes a webhook named Webhook11 in the Automation account named AutomationAccount01.
@@ -126,5 +126,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationWebhook](./New-AzureRMAutomationWebhook.md)
 
 [Set-AzureRmAutomationWebhook](./Set-AzureRMAutomationWebhook.md)
-
-

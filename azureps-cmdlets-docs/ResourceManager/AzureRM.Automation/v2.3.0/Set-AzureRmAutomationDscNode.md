@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force the command to run without asking for user confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -154,5 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-AzureRmAutomationDscNode](./Register-AzureRmAutomationDscNode.md)
 
 [Unregister-AzureRmAutomationDscNode](./Unregister-AzureRmAutomationDscNode.md)
-
-

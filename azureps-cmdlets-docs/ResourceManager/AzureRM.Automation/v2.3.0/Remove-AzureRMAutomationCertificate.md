@@ -24,7 +24,7 @@ The **Remove-AzureRmAutomationCertificate** cmdlet removes a certificate from Az
 
 ### Example 1: Remove a certificate
 ```
-PS C:\>Remove-AzureRmAutomationCertificate -AutomationAccountName "Contoso17" -Name "Cert01" -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmAutomationCertificate -AutomationAccountName "Contoso17" -Name "Cert01" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes a certificate named Cert01 in the Automation account named Contoso17.
@@ -123,5 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationCertificate](./New-AzureRMAutomationCertificate.md)
 
 [Set-AzureRmAutomationCertificate](./Set-AzureRMAutomationCertificate.md)
-
-

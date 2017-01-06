@@ -32,7 +32,7 @@ To get a specific runbook, specify its name.
 
 ### Example 1: Get all runbooks
 ```
-PS C:\>Get-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
+PS C:\> Get-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command gets all runbooks in the Azure Automation account named Contoso17.
@@ -112,5 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmAutomationRunbook](./Set-AzureRMAutomationRunbook.md)
 
 [Start-AzureRmAutomationRunbook](./Start-AzureRMAutomationRunbook.md)
-
-

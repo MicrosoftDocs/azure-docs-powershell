@@ -20,15 +20,15 @@ Import-AzureRmAutomationRunbook [-Path] <String> [-Description <String>] [-Name 
 
 ## DESCRIPTION
 The **Import-AzureRmAutomationRunbook** cmdlet imports an Azure Automation runbook.
-Specify the path to a wps_2 script (.ps1 ) file to import for wps_2 and wps_2 Workflow runbooks, or to a graphical runbook (.graphrunbook) file for graphical runbooks.
+Specify the path to a Windows PowerShell script (.ps1 ) file to import for Windows PowerShell and Windows PowerShell Workflow runbooks, or to a graphical runbook (.graphrunbook) file for graphical runbooks.
 The name of the file becomes the name of the runbook.
-For wps_2 Workflow runbooks, the script must contain a single wps_2 Workflow definition that matches the name of the file.
+For Windows PowerShell Workflow runbooks, the script must contain a single Windows PowerShellWorkflow definition that matches the name of the file.
 
 ## EXAMPLES
 
 ### Example 1: Import a runbook from a file
 ```
-PS C:\>$Tags = @{"tag01"='value01"; "tag02"="value02"}
+PS C:\> $Tags = @{"tag01"='value01"; "tag02"="value02"}
 PS C:\> Import-AzureRmAutomationRunbook -Path .\GraphicalRunbook06.graphrunbook -Tags $Tags -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Type GraphicalPowershell
 ```
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -272,5 +272,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmAutomationRunbook](./Set-AzureRMAutomationRunbook.md)
 
 [Start-AzureRmAutomationRunbook](./Start-AzureRMAutomationRunbook.md)
-
-

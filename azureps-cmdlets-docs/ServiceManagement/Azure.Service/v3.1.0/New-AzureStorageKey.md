@@ -25,14 +25,14 @@ It returns an object that contains the storage account name, primary key, and se
 
 ### Example 1: Regenerate a primary storage key
 ```
-PS C:\>New-AzureStorageKey -KeyType "Primary" -StorageAccountName "ContosoStore01"
+PS C:\> New-AzureStorageKey -KeyType "Primary" -StorageAccountName "ContosoStore01"
 ```
 
 This command regenerates the primary storage key for the ContosoStore01 storage account.
 
 ### Example 2: Regenerate a secondary storage key and save it in a variable
 ```
-PS C:\>$ContosoStoreKey = New-AzureStorageKey -KeyType "Secondary" -StorageAccountName "ContosoStore01"
+PS C:\> $ContosoStoreKey = New-AzureStorageKey -KeyType "Secondary" -StorageAccountName "ContosoStore01"
 ```
 
 This command regenerate the secondary storage key for the ContosoStore01 storage account and stores the updated storage account key information in the $ContosoStoreKey.

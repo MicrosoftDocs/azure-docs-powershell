@@ -24,7 +24,7 @@ The **Remove-AzureRmAutomationSchedule** cmdlet deletes a schedule from Azure Au
 
 ### Example 1: Remove a schedule
 ```
-PS C:\>Remove-AzureRmAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule01" -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule01" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command modifies the description of the schedule named Schedule01.
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -138,5 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationSchedule](./New-AzureRMAutomationSchedule.md)
 
 [Set-AzureRmAutomationSchedule](./Set-AzureRMAutomationSchedule.md)
-
-

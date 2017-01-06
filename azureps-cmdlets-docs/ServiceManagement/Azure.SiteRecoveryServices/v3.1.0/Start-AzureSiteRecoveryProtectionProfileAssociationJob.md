@@ -34,7 +34,7 @@ The **Start-AzureSiteRecoveryProtectionProfileAssociationJob** cmdlet initiates 
 
 ### Example 1: Associate a protection profile
 ```
-PS C:\>$ProtectionContainer01 = Get-AzureSiteRecoveryProtectionContainer -Id "5ba2ea95-856d-4033-9ca3-91e3e2c080b9"
+PS C:\> $ProtectionContainer01 = Get-AzureSiteRecoveryProtectionContainer -Id "5ba2ea95-856d-4033-9ca3-91e3e2c080b9"
 PS C:\> $ProtectionProfile = New-AzureSiteRecoveryProtectionProfileObject -ReplicationProvider "HyperVReplica" -AllowReplicaDeletion -ApplicationConsistentSnapshotFrequencyInHours 1 -CompressionEnabled -RecoveryPoints 2 -ReplicationFrequencyInSeconds 30 -ReplicationMethod "Online" -ReplicationPort 8085 -ReplicationStartTime 1
 PS C:\> $ProtectionContainer02 = Get-AzureSiteRecoveryProtectionContainer -Id "cf011f2a-aa19-443c-9f60-357f6b8afb77"
 PS C:\> Start-AzureSiteRecoveryProtectionProfileAssociationJob -PrimaryProtectionContainer $ProtectionContainer01 -ProtectionProfile $ProtectionProfile -RecoveryProtectionContainer $ProtectionContainer02
@@ -50,9 +50,9 @@ Tasks            : {Adding the protection group, Configuring Windows Server 2012
 Errors           : {}
 ```
 
-The first command gets a protection container by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores that container in the $ProtectionContainer01 variable.
+The first command gets a protection container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores that container in the $ProtectionContainer01 variable.
 
-The second command creates a protection profile by using the New-AzureSiteRecoveryProtectionProfileObject cmdlet, and stores that protection profile in the $ProtectionProfile variable.
+The second command creates a protection profile by using the **New-AzureSiteRecoveryProtectionProfileObject** cmdlet, and stores that protection profile in the $ProtectionProfile variable.
 
 The third command gets a protection container, and then stores it in the $ProtectionContainer02 variable.
 

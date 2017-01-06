@@ -32,9 +32,9 @@ Get-WAPackVMTemplate [[-Name] <String>] [-Profile <AzureSMProfile>] [-Informatio
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-WAPackVMTemplate** cmdlet gets virtual machine templates.
 
@@ -42,21 +42,21 @@ The **Get-WAPackVMTemplate** cmdlet gets virtual machine templates.
 
 ### Example 1: Get a virtual machine template by using a name
 ```
-PS C:\>Get-WAPackVMTemplate -Name "ContosoTemplate04"
+PS C:\> Get-WAPackVMTemplate -Name "ContosoTemplate04"
 ```
 
 This command gets the virtual machine template named ContosoTemplate04.
 
 ### Example 2: Get a virtual machine template by using an ID
 ```
-PS C:\>Get-WAPackVMTemplate -Id 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> Get-WAPackVMTemplate -Id 66242D17-189F-480D-87CF-8E1D749998C8
 ```
 
 This command gets the virtual machine template that has the specified ID.
 
 ### Example 3: Get all virtual machine templates
 ```
-PS C:\>Get-WAPackVMTemplate
+PS C:\> Get-WAPackVMTemplate
 ```
 
 This command gets all the virtual machine templates.

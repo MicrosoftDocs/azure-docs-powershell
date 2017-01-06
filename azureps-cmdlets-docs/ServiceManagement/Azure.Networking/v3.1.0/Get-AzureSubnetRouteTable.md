@@ -25,7 +25,7 @@ The **Get-AzureSubnetRouteTable** cmdlet gets the route table that is associated
 
 ### Example 1: Display routes for a subnet
 ```
-PS C:\>Get-AzureSubnetRouteTable -VirtualNetworkName "VNetUSCentral" -SubnetName "ContosoSubnet" -Detailed
+PS C:\> Get-AzureSubnetRouteTable -VirtualNetworkName "VNetUSCentral" -SubnetName "ContosoSubnet" -Detailed
 Routes                        Name                          Location                      Label
 ------                        ----                          --------                      -----
 {internetroute}               PublicRT                      Central US                    Sample RT in Central US
@@ -83,7 +83,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

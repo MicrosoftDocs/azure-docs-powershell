@@ -19,13 +19,13 @@ Remove-AzureVMDiagnosticsExtension -VM <IPersistentVM> [-Profile <AzureSMProfile
 
 ## DESCRIPTION
 The **Remove-AzureVMDiagnosticsExtension** cmdlet removes a Microsoft Azure Diagnostics extension from a virtual machine.
-You must pass the output of this cmdlet to the Update-AzureVM cmdlet.
+You must pass the output of this cmdlet to the **Update-AzureVM** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Remove the Azure Diagnostics extension from a virtual machine
 ```
-PS C:\>Remove-AzureVMDiagnosticsExtension -VM $VM | Update-AzureVM
+PS C:\> Remove-AzureVMDiagnosticsExtension -VM $VM | Update-AzureVM
 ```
 
 This command removes the Azure Diagnostics extension from a virtual machine.

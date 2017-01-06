@@ -267,7 +267,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### List<AccessControlRecord>
+### List\<AccessControlRecord\>
 This cmdlet accepts a list of **AccessControlRecord** objects to associate to a volume.
 
 ## OUTPUTS

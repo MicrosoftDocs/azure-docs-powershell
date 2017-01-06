@@ -26,21 +26,21 @@ To view information for a specific disk, specify the name of the disk.
 
 ### Example 1: Get information about a disk
 ```
-PS C:\>Get-AzureDisk -DiskName "ContosoDataDisk"
+PS C:\> Get-AzureDisk -DiskName "ContosoDataDisk"
 ```
 
 This command gets information data about the disk named ContosoDataDisk from the disk repository.
 
 ### Example 2: Get information about all disks
 ```
-PS C:\>Get-AzureDisk
+PS C:\> Get-AzureDisk
 ```
 
 This command gets information about all the disks in the disk repository.
 
 ### Example 3: Get information about a disk
 ```
-PS C:\>Get-AzureDisk | Where-Object {$_.AttachedTo -eq $Null } | Format-Table -AutoSize -Property "DiskName","DiskSizeInGB","MediaLink"
+PS C:\> Get-AzureDisk | Where-Object {$_.AttachedTo -eq $Null } | Format-Table -AutoSize -Property "DiskName","DiskSizeInGB","MediaLink"
 ```
 
 This command gets data for all of the disks in the disk repository that are not currently attached to a virtual machine.

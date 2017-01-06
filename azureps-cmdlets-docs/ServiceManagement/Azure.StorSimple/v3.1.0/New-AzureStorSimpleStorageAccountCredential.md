@@ -277,7 +277,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### IEnumerable<StorageAccountCredentialResponse>, TaskResponse
+### IEnumerable\<StorageAccountCredentialResponse\>, TaskResponse
 This cmdlet returns a list of **StorageAccountCredentialResponse** objects, if you specify the *WaitForComplete* parameter.
 If you do not specify that parameter, the cmdlet returns a **TaskResponse** object.
 A **StorageAccountCredentialResponse** contains the following properties: 

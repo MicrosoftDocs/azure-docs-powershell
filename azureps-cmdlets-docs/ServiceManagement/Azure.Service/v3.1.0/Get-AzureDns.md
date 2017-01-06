@@ -25,10 +25,10 @@ The cmdlet returns the friendly name and IP address of the DNS server in a DNS s
 
 ### Example 1: Get DNS settings
 ```
-PS C:\>Get-AzureDeployment -ServiceName "ContosoService" -Slot "Production" | Get-AzureDNS
+PS C:\> Get-AzureDeployment -ServiceName "ContosoService" -Slot "Production" | Get-AzureDNS
 ```
 
-This command uses the Get-AzureDeployment cmdlet to get the production deployment of the service named ContosoService.
+This command uses the **Get-AzureDeployment** cmdlet to get the production deployment of the service named ContosoService.
 The command passes that object to the current cmdlet by using the pipeline operator.
 The current cmdlet gets the DNS settings.
 

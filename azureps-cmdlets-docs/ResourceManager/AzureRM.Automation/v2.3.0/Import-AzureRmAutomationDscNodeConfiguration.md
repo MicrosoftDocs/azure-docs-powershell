@@ -25,7 +25,7 @@ Specify the path of a .mof file.
 
 ### Example 1: Import a DSC node configuration into Automation
 ```
-PS C:\>Import-AzureRmAutomationDscConfiguration -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -ConfigurationName "ContosoConfiguration" -Path "C:\DSC\webserver.mof" -Force
+PS C:\> Import-AzureRmAutomationDscConfiguration -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -ConfigurationName "ContosoConfiguration" -Path "C:\DSC\webserver.mof" -Force
 ```
 
 This command imports a DSC node configuration from the file named webserver.mof into the Automation account named Contoso17, under the DSC configuration ContosoConfiguration.
@@ -154,5 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Export-AzureRmAutomationDscConfiguration](./Export-AzureRmAutomationDscConfiguration.md)
 
 [Get-AzureRmAutomationDscConfiguration](./Get-AzureRmAutomationDscConfiguration.md)
-
-

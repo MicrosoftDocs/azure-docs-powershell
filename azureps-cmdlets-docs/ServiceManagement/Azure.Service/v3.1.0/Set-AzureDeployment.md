@@ -39,34 +39,34 @@ The **Set-AzureDeployment** cmdlet modifies the status, configuration settings, 
 You can change the status of the deployment to either Running or Suspended.
 You can change the .cscfg file for the deployment.
 You can set the upgrade mode and update configuration files.
-Use the Set-AzureWalkUpgradeDomain cmdlet to initiate an upgrade.
+Use the **Set-AzureWalkUpgradeDomain** cmdlet to initiate an upgrade.
 
 ## EXAMPLES
 
 ### Example 1: Change the status of a deployment
 ```
-PS C:\>Set-AzureDeployment -Status -ServiceName "ContosoService" -Slot "Production" -NewStatus "Running"
+PS C:\> Set-AzureDeployment -Status -ServiceName "ContosoService" -Slot "Production" -NewStatus "Running"
 ```
 
 This command sets the status of the deployment for the service named ContosoService in the production environment to Running.
 
 ### Example 2: Assign a different configuration file to a deployment
 ```
-PS C:\>Set-AzureDeployment -Config -ServiceName "ContosoService" -Slot "Staging" -Configuration "C:\Temp\MyServiceConfig.Cloud.csfg"
+PS C:\> Set-AzureDeployment -Config -ServiceName "ContosoService" -Slot "Staging" -Configuration "C:\Temp\MyServiceConfig.Cloud.csfg"
 ```
 
 This command assigns a different configuration file for the deployment for the service named ContosoService in the staging environment.
 
 ### Example 3: Set the upgrade mode to Auto
 ```
-PS C:\>Set-AzureDeployment -Upgrade -ServiceName "ContosoService" -Mode Auto -Package "C:\packages\ContosoApp.cspkg" -Configuration "C:\Config\ContosoServiceConfig.Cloud.csfg"
+PS C:\> Set-AzureDeployment -Upgrade -ServiceName "ContosoService" -Mode Auto -Package "C:\packages\ContosoApp.cspkg" -Configuration "C:\Config\ContosoServiceConfig.Cloud.csfg"
 ```
 
 This command sets the upgrade mode to Auto, and specifies an upgrade package and a new configuration file.
 
 ### Example 4: Install extension configuration in a service
 ```
-PS C:\>Set-AzureDeployment -Config -ServiceName "ContosoService" -Mode "Automatic" -Package "https://contosostorage.blob.core.windows.net/container06/ContosoPackage.cspkg" -Configuration "C:\packages\ContosoConfiguration.cscfg" -Slot "Production" -ExtensionConfiguration "C:\packages\ContosoExtensionConfig.cscfg"
+PS C:\> Set-AzureDeployment -Config -ServiceName "ContosoService" -Mode "Automatic" -Package "https://contosostorage.blob.core.windows.net/container06/ContosoPackage.cspkg" -Configuration "C:\packages\ContosoConfiguration.cscfg" -Slot "Production" -ExtensionConfiguration "C:\packages\ContosoExtensionConfig.cscfg"
 ```
 
 This command installs the extension configuration in the specified Cloud Service and applies them on roles.

@@ -24,7 +24,7 @@ The **Set-AzureRmAutomationCredential** cmdlet modifies a credential as a **PSCr
 
 ### Example 1: Update a credential
 ```
-PS C:\>$User = "Contoso\DChew"
+PS C:\> $User = "Contoso\DChew"
 PS C:\> $Password = ConvertTo-SecureString "Password" -AsPlainText -Force
 PS C:\> $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $Password
 PS C:\> Set-AzureRmAutomationCredential -AutomationAccountName "Contoso17" -Name "ContosoCredential" -ResourceGroupName "ResourceGroup01" -Value $Credential
@@ -32,7 +32,7 @@ PS C:\> Set-AzureRmAutomationCredential -AutomationAccountName "Contoso17" -Name
 
 The first command assigns a user name to the $User variable.
 
-The second command converts a plain text password into a secure string by using the ConvertTo-SecureString cmdlet.
+The second command converts a plain text password into a secure string by using the **ConvertTo-SecureString** cmdlet.
 The command stores that object in the $Password variable.
 
 The third command creates a credential based on $User and $Password, and then stores it in the $Credential variable.
@@ -134,5 +134,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationCredential](./New-AzureRMAutomationCredential.md)
 
 [Remove-AzureRmAutomationCredential](./Remove-AzureRMAutomationCredential.md)
-
-

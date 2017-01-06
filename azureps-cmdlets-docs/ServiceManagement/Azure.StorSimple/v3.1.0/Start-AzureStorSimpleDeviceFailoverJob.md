@@ -219,7 +219,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### List<DataContainerGroup>
+### List\<DataContainerGroup\>
 You can pipe a list of volume container groups to this cmdlet.
 
 ## OUTPUTS

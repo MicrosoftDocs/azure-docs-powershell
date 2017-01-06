@@ -27,7 +27,7 @@ If you specify the *Verbose* common parameter, this cmdlet displays the name of 
 
 ### Example 1: Clear stale objects for a collection
 ```
-PS C:\>$AdminCredentials = Get-Credential
+PS C:\> $AdminCredentials = Get-Credential
 PS C:\> Clear-AzureRemoteAppVmStaleAdObject -CollectionName "Contoso" -Credential $AdminCredentials
 ```
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a credential that has rights to perform this action.
-To obtain a **Credential** object, use the Get-Credential cmdlet.
+To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
 If you do not specify this parameter, this cmdlet uses the current user credentials.
 
 ```yaml

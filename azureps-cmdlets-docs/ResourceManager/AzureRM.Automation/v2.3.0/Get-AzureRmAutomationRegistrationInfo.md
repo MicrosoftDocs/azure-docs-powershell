@@ -24,7 +24,7 @@ The **Get-AzureRmAutomationRegistrationInfo** cmdlet gets the endpoint and keys 
 
 ### Example 1: Get registration information
 ```
-PS C:\>Get-AzureRmAutomationRegistrationInfo -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
+PS C:\> Get-AzureRmAutomationRegistrationInfo -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
 This command gets the registration information for the Automation account named AutomationAccount01 in the Resource Group named ResourceGroup01.
@@ -78,5 +78,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationDscNode](./Get-AzureRmAutomationDscNode.md)
 
 [New-AzureRmAutomationKey](./New-AzureRmAutomationKey.md)
-
-

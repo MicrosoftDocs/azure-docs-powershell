@@ -62,7 +62,7 @@ Use the Select-AzureSubscriptionhttp://msdn.microsoft.com/library/windowsazure/j
 
 ### Example 1: Create a context by using SQL Server authentication
 ```
-PS C:\>$Credential = Get-Credential
+PS C:\> $Credential = Get-Credential
 PS C:\> $Context = New-AzureSqlDatabaseServerContext -ServerName "lpqd0zbr8y" -Credential $Credential
 PS C:\> $Database17 = New-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database17" -MaxSizeGB 50 -Collation "SQL_Latin1_General_CP1_CI_AS"
 ```
@@ -77,7 +77,7 @@ The final command creates a database named Database17 on the server that is part
 
 ### Example 2: Create a context by using certificate based authentication
 ```
-PS C:\>$SubscriptionId = <Subscription ID>
+PS C:\> $SubscriptionId = <Subscription ID>
 PS C:\> $Thumbprint = <Certificate Thumbprint>
 PS C:\> $Certificate = Get-Item "Cert:\CurrentUser\My\$Thumbprint"
 PS C:\> Set-AzureSubscription -SubscriptionName "Subscription07" -SubscriptionId $SubscriptionId -Certificate $Certificate

@@ -25,7 +25,7 @@ The affinity group object includes the affinity group name, location, label, des
 
 ### Example 1: Get properties of an affinity group
 ```
-PS C:\>Get-AzureAffinityGroup -Name "South01"
+PS C:\> Get-AzureAffinityGroup -Name "South01"
 ```
 
 This command gets the properties of the affinity group named South01.

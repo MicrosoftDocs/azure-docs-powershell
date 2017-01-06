@@ -283,7 +283,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### List<DeviceDetails>, IEnumerable<DeviceInfo>
+### List\<DeviceDetails\>, IEnumerable\<DeviceInfo\>
 This cmdlet returns a **List\<DeviceDetails\>** object, if you specify the *Detailed* parameter.
 If you do not specify that parameter, it returns an **IEnumerable\<DeviceInfo\>** object.
 

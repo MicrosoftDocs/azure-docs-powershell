@@ -24,7 +24,7 @@ The **Remove-AzureVNetGateway** cmdlet deletes an existing virtual private netwo
 
 ### Example 1: Remove a virtual network gateway
 ```
-PS C:\>Remove-AzureVNetGateway -VNetName "ContosoVN07"
+PS C:\> Remove-AzureVNetGateway -VNetName "ContosoVN07"
 ```
 
 This command removes the virtual network gateway from the virtual network named ContosoVN07.
@@ -49,7 +49,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

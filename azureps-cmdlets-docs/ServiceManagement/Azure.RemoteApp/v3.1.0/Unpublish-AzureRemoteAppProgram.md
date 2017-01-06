@@ -23,16 +23,12 @@ After you unpublish a program, it is no longer available to the users of an Azur
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
 ### -Alias
 Specifies an array of aliases of the programs to unpublish.
-Use Get-AzureRemoteAppProgram to retrieve the alias of a program to unpublish.
+Use **Get-AzureRemoteAppProgram** to retrieve the alias of a program to unpublish.
 
 ```yaml
 Type: String[]

@@ -23,10 +23,6 @@ The **Remove-AzureAutomationConnectionType** cmdlet removes an Azure Automation 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

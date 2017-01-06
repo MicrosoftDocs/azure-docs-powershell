@@ -20,7 +20,7 @@ Restore-AzureWebsiteDeployment [[-CommitId] <String>] [-Force] [[-Name] <String>
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Restore-AzureWebsiteDeployment** cmdlet redeploys a previous deployment of a website in Azure.
 This process replaces the current deployment with the selected deployment.
@@ -29,7 +29,7 @@ This process replaces the current deployment with the selected deployment.
 
 ### Example 1: Redeploy a site
 ```
-PS C:\>Restore-AzureWebsiteDeployment -Name "ContosoSite" -CommitId "f876543210"
+PS C:\> Restore-AzureWebsiteDeployment -Name "ContosoSite" -CommitId "f876543210"
 ```
 
 This command redeploys the deployment that has the ID f876543210 for the website named ContosoSite.

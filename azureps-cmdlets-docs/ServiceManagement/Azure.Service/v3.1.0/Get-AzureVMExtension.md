@@ -32,7 +32,7 @@ The **Get-AzureVMExtension** cmdlet gets resource extensions applied to virtual 
 
 ### Example 1: Get the resource extensions applied to a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName $SVC -Name $VM | Get-AzureVMExtension;
+PS C:\> Get-AzureVM -ServiceName $SVC -Name $VM | Get-AzureVMExtension;
 ```
 
 This command gets the resource extensions applied to the specified virtual machine as stored in the variable $VM.

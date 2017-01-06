@@ -32,7 +32,7 @@ Specify the ID or name of a runbook.
 
 ### Example 1: Start a runbook job
 ```
-PS C:\>Start-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ResourceGroupName "ResourceGroup01"
+PS C:\> Start-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command starts a runbook job for the runbook named Runbk01 in the Azure Automation account named Contoso17.
@@ -43,7 +43,7 @@ Start-AzureRmAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01
 ```
 
 This command starts a runbook job for the runbook named Runbk01 in the Azure Automation account named Contoso17.
-This command specifies the _Wait_ parameter.
+This command specifies the *Wait* parameter.
 Therefore, it returns results after the job is completed.
 The cmdlet waits up to 1000 seconds for the results.
 

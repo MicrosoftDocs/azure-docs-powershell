@@ -32,9 +32,9 @@ Get-WAPackVMSubnet [-VNet] <VMNetwork> [-ID] <Guid> [-Profile <AzureSMProfile>]
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-WAPackVMSubnet** cmdlet gets virtual machine subnet objects.
 
@@ -42,24 +42,24 @@ The **Get-WAPackVMSubnet** cmdlet gets virtual machine subnet objects.
 
 ### Example 1: Get a virtual machine subnet by using a name
 ```
-PS C:\>$VNet = Get-WAPackVNet -Name "ContosoVNet01"
-PS C:\>Get-WAPackVMTemplate -VNet $VNet -Name "ContosoSubnet01"
+PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+PS C:\> Get-WAPackVMTemplate -VNet $VNet -Name "ContosoSubnet01"
 ```
 
 This command gets the virtual machine subnet named ContosoSubnet01.
 
 ### Example 2: Get a virtual machine subnet by using an ID
 ```
-PS C:\>$VNet = Get-WAPackVNet -Name "ContosoVNet01"
-PS C:\>Get-WAPackVMSubnet -VNet $VNet -Id 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+PS C:\> Get-WAPackVMSubnet -VNet $VNet -Id 66242D17-189F-480D-87CF-8E1D749998C8
 ```
 
 This command gets the virtual machine subnet that has the specified ID.
 
 ### Example 3: Get all virtual machine subnets from a given virtualized network
 ```
-PS C:\>$VNet = Get-WAPackVNet -Name "ContosoVNet01"
-PS C:\>Get-WAPackVMSubnet -VNet $VNet
+PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+PS C:\> Get-WAPackVMSubnet -VNet $VNet
 ```
 
 This command gets all the virtual machine subnets from a given virtualized network.

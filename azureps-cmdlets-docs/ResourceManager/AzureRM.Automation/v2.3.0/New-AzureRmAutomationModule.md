@@ -22,14 +22,14 @@ The **New-AzureRmAutomationModule** cmdlet imports a module into Azure Automatio
 This command accepts a compressed file that has a .zip file name extension.
 The file contains a folder that includes a file that is one of the following types: 
 
-- wps_2 module, which has a .psm1 or .dll file name extension 
-- wps_2 module manifest, which has a .psd1 file name extension
+- Windows PowerShell module, which has a .psm1 or .dll file name extension 
+- Windows PowerShell module manifest, which has a .psd1 file name extension
 
 The name of the .zip file, the name of the folder, and the name of the file in the folder must be the same.
 
 Specify the .zip file as a URL that the Automation service can access.
 
-If you import a wps_2 module into Automation by using this cmdlet or the Set-AzureRmAutomationModule cmdlet, the operation is asynchronous.
+If you import a Windows PowerShell module into Automation by using this cmdlet or the **Set-AzureRmAutomationModule** cmdlet, the operation is asynchronous.
 The command finishes whether the import succeeds or fails.
 To check whether it succeeded, run the following command:
 
@@ -41,7 +41,7 @@ Check the **ProvisioningState** property for a value of Succeeded.
 
 ### Example 1: Import a module
 ```
-PS C:\>New-AzureRmAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip" -ResourceGroupName "ResourceGroup01"
+PS C:\> New-AzureRmAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command imports a module named ContosoModule into the Automation account named Contoso17.
@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationModule](./Remove-AzureRmAutomationModule.md)
 
 [Set-AzureRmAutomationModule](./Set-AzureRmAutomationModule.md)
-
-

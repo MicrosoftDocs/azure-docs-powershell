@@ -24,7 +24,7 @@ The **Remove-AzureVMChefExtension** cmdlet deletes the Chef extension applied on
 
 ### Example 1: Remove the Chef extension applied on the specified virtual machine
 ```
-PS C:\>Remove-AzureVMChefExtension -VM $VM;
+PS C:\> Remove-AzureVMChefExtension -VM $VM;
 ```
 
 This command removes the Chef extension applied on the virtual machine.

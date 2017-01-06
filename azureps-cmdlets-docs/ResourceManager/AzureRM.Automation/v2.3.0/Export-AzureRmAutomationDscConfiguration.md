@@ -109,7 +109,8 @@ Accept wildcard characters: False
 
 ### -Slot
 Specifies which version of the DSC configuration that this cmdlet exports.
-Valid values are: 
+
+The acceptable values for this parameter are:
 
 - Draft
 - Published 
@@ -174,5 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationDscConfiguration](./Get-AzureRmAutomationDscConfiguration.md)
 
 [Import-AzureRmAutomationDscConfiguration](./Import-AzureRmAutomationDscConfiguration.md)
-
-

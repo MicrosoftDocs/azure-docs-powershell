@@ -25,7 +25,7 @@ The **New-AzureRmAutomationConnection** cmdlet creates a connection in Azure Aut
 
 ### Example 1: Create a connection
 ```
-PS C:\>$FieldValues = @{"AutomationCertificateName"="ContosoCertificate";"SubscriptionID"="81b59010-dc55-45b7-89cd-5ca26db62472"}
+PS C:\> $FieldValues = @{"AutomationCertificateName"="ContosoCertificate";"SubscriptionID"="81b59010-dc55-45b7-89cd-5ca26db62472"}
 PS C:\> New-AzureRmAutomationConnection -Name "Connection12" -ConnectionTypeName Azure -ConnectionFieldValues $FieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
@@ -144,5 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAutomationConnection](./Get-AzureRMAutomationConnection.md)
 
 [Remove-AzureRmAutomationConnection](./Remove-AzureRMAutomationConnection.md)
-
-

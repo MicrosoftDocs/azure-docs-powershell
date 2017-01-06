@@ -27,7 +27,7 @@ The **Register-AzureRmAutomationDscNode** cmdlet registers an Azure virtual mach
 
 ### Example 1: Register an Azure virtual machine as an Azure DSC node
 ```
-PS C:\>Register-AzureAutomationDscNode -AutomationAccountName "Contoso17" -AzureVMName "VirtualMachine01" -ResourceGroupName "ResourceGroup01"-NodeConfigurationName "ContosoConfiguration.webserver"
+PS C:\> Register-AzureAutomationDscNode -AutomationAccountName "Contoso17" -AzureVMName "VirtualMachine01" -ResourceGroupName "ResourceGroup01"-NodeConfigurationName "ContosoConfiguration.webserver"
 ```
 
 This command registers the Azure virtual machine named VirtualMachine01 as a DSC node in the Automation account named Contoso17.
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -AzureVMLocation
 Specifies the location in which this cmdlet registers a virtual machine.
-To obtain valid locations, use the Get-AzureRMLocation cmdlet.
+To obtain valid locations, use the **Get-AzureRMLocation** cmdlet.
 
 ```yaml
 Type: String
@@ -243,5 +243,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmAutomationDscNode](./Set-AzureRmAutomationDscNode.md)
 
 [Unregister-AzureRmAutomationDscNode](./Unregister-AzureRmAutomationDscNode.md)
-
-

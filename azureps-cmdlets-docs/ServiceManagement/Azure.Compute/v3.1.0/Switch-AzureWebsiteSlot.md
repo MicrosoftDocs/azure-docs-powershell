@@ -9,7 +9,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Swaps the production slot for a website with another slot.
-This works on websites with two slots only
 
 ## SYNTAX
 
@@ -25,9 +24,9 @@ This works on websites with two slots only.
 
 ## EXAMPLES
 
-### 1: Switch Website Slot
+### Example 1: Switch Website Slot
 ```
-C:\PS>Switch-AzureWebsiteSlot -Name MyWebsite
+PS C:\> Switch-AzureWebsiteSlot -Name MyWebsite
 ```
 
 Switch the azure website MyWebsite backup slot with production slot.

@@ -47,7 +47,7 @@ The **Set-AzureIPForwarding** cmdlet enables or disables IP forwarding for a vir
 
 ### Example 1: Enable IP forwarding for a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Set-AzureIPForwarding -Enable
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Set-AzureIPForwarding -Enable
 ```
 
 This command gets a virtual machine named ContosoVM06 for the service named ContosoService, and passes that virtual machine object to the current cmdlet.
@@ -55,7 +55,7 @@ The current cmdlet enables IP forwarding for that virtual machine.
 
 ### Example 2: Disable IP forwarding for a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Set-AzureIPForwarding -Disable
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Set-AzureIPForwarding -Disable
 ```
 
 This command gets a virtual machine named ContosoVM06 for the service named ContosoService, and passes that virtual machine object to the current cmdlet.
@@ -143,7 +143,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

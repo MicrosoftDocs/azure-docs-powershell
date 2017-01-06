@@ -51,7 +51,7 @@ Check whether the job succeeds by using the **Get-AzureSiteRecoveryJob** cmdlet.
 
 ### Example 1: Start an unplanned failover job
 ```
-PS C:\>$ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer
+PS C:\> $ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer
 PS C:\> $ProtectionEntity = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $ProtectionContainer 
 PS C:\> Start-AzureSiteRecoveryUnplannedFailoverJob -ProtectionEntity $ProtectionEntity -Direction "PrimaryToRecovery"
 ID               : c38eecdc-731c-405b-a61c-08db99aae2fe

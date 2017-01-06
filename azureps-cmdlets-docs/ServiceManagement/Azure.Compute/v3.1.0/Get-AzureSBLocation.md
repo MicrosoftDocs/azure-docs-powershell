@@ -19,15 +19,15 @@ Get-AzureSBLocation [-Profile <AzureSMProfile>] [-InformationAction <ActionPrefe
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-AzureSBLocation** cmdlet returns the locations from which the Service Bus is available.
 
 ## EXAMPLES
 
-### 1: Get the Service Bus location
+### Example 1: Get the Service Bus location
 ```
-PS C:\>Get-AzureSBLocation
+PS C:\> Get-AzureSBLocation
 ```
 
 This example gets the location of the Service Bus.

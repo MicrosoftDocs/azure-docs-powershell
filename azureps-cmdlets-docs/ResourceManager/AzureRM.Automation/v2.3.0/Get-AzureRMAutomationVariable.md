@@ -32,7 +32,7 @@ To get a specific variable, specify its name.
 
 ### Example 1: Get a variable
 ```
-PS C:\>$Variable = Get-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "Variable06" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Variable = Get-AzureRmAutomationVariable -AutomationAccountName "Contoso17" -Name "Variable06" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Value = $Variable.value
 ```
 
@@ -107,5 +107,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationVariable](./Remove-AzureRMAutomationVariable.md)
 
 [Set-AzureRmAutomationVariable](./Set-AzureRMAutomationVariable.md)
-
-

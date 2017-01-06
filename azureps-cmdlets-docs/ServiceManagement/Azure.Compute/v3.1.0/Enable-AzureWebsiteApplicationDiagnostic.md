@@ -37,22 +37,22 @@ Enable-AzureWebsiteApplicationDiagnostic [-PassThru] [-BlobStorage] -LogLevel <L
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 Enables application diagnostics on an Azure website, and allows you to configure storage of logs on a file system or on Azure storage.
 
 ## EXAMPLES
 
-### 1: Enable diagnostics using file system
+### Example 1: Enable diagnostics using file system
 ```
-C:\PS>Enable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -File -LogLevel Verbose
+PS C:\> Enable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -File -LogLevel Verbose
 ```
 
 This example enables application logging on file system with verbose level.
 
-### 2: Enable logging using Azure Storage
+### Example 2: Enable logging using Azure Storage
 ```
-C:\PS>Enable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -Storage -LogLevel Information -StorageAccountName myaccount
+PS C:\> Enable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -Storage -LogLevel Information -StorageAccountName myaccount
 ```
 
 This example enables application logging using storage account named myaccount with logging level set to Information.

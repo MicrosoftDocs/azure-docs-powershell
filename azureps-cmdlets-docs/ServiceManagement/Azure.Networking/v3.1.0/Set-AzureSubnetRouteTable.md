@@ -25,7 +25,7 @@ The **Set-AzureSubnetRouteTable** cmdlet associates a route table to a subnet.
 
 ### Example 1: Associate a route table to a subnet
 ```
-PS C:\>Set-AzureSubnetRouteTable -VirtualNetworkName "VNetUSCentral" -SubnetName "ContosoSubnet" -RouteTableName "PublicRouteTable"
+PS C:\> Set-AzureSubnetRouteTable -VirtualNetworkName "VNetUSCentral" -SubnetName "ContosoSubnet" -RouteTableName "PublicRouteTable"
 ```
 
 This command associates the route table named PublicRouteTable to the subnet named ContosoSubnet.
@@ -96,7 +96,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads.
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

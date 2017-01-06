@@ -31,30 +31,30 @@ Gets Service bus authorization rules.
 
 ## EXAMPLES
 
-### 1: Get authorization rule at namespace level
+### Example 1: Get authorization rule at namespace level
 ```
-C:\PS>Get-AzureSBAuthorizationRule -Namespace MyNamespace
+PS C:\> Get-AzureSBAuthorizationRule -Namespace MyNamespace
 ```
 
 Gets all available authorization rules at MyNamespace.
 
-### 2: Get authorization rule for a Queue
+### Example 2: Get authorization rule for a Queue
 ```
-C:\PS>Get-AzureSBAuthorizationRule -Namespace MyNamespace -EntityName MyEntity -EntityType Queue
+PS C:\> Get-AzureSBAuthorizationRule -Namespace MyNamespace -EntityName MyEntity -EntityType Queue
 ```
 
 Gets all available authorization rules a MyEntity Queue on MyNamespace.
 
-### 3: Get authorization rule by name
+### Example 3: Get authorization rule by name
 ```
-C:\PS>Get-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace
+PS C:\> Get-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace
 ```
 
 Gets an authorization rule called MyRule on MyNamespace level.
 
-### 4: Get authorization rule by permission
+### Example 4: Get authorization rule by permission
 ```
-C:\PS>Get-AzureSBAuthorizationRule -Namespace MyNamespace -Permission $("Send")
+PS C:\> Get-AzureSBAuthorizationRule -Namespace MyNamespace -Permission $("Send")
 ```
 
 Gets all authorization rules that have send permission on namespace level.

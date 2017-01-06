@@ -24,7 +24,7 @@ The **New-AzureRmAutomationKey** cmdlet regenerates registration keys for an Azu
 
 ### Example 1: Regenerate a key for an Automation account
 ```
-PS C:\>New-AzureAutomationKey -KeyType Primary -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
+PS C:\> New-AzureAutomationKey -KeyType Primary -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
 This command regenerates the primary key for the Azure Automation account named AutomationAccount01 in the resource group named ResourceGroup01.
@@ -92,4 +92,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
