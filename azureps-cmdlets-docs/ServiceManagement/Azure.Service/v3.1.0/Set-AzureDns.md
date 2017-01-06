@@ -24,7 +24,7 @@ The **Set-AzureDns** cmdlet modifies the IP address of a DNS server for an Azure
 
 ### Example 1: Modify the IP address of a DNS server
 ```
-PS C:\>Set-AzureDns -ServiceName "ContosoService" -IPAddress 10.1.2.5 -Name "Dns07"
+PS C:\> Set-AzureDns -ServiceName "ContosoService" -IPAddress 10.1.2.5 -Name "Dns07"
 ```
 
 This command modifies the IP address of the DNS server named Dns07 for the service named ContosoService.

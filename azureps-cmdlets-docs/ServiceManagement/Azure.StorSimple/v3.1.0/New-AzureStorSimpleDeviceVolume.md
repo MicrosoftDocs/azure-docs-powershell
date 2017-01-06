@@ -318,7 +318,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### DataContainer, List<AccessControlRecord>
+### DataContainer, List\<AccessControlRecord\>
 This cmdlet accepts a **DataContainer** object and a list of **AccessControlRecord** objects for the new volume.
 
 ## OUTPUTS

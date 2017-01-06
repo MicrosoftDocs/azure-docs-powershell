@@ -24,10 +24,10 @@ The **Get-AzureInternalLoadBalancer** cmdlet gets the details of the internal lo
 
 ### Example 1: Get details for an internal load balancer
 ```
-PS C:\>Get-AzureService -ServiceName "ContosoService" | Get-AzureInternalLoadBalancer
+PS C:\> Get-AzureService -ServiceName "ContosoService" | Get-AzureInternalLoadBalancer
 ```
 
-This command gets the service named ContosoService by using the Get-AzureService cmdlet.
+This command gets the service named ContosoService by using the **Get-AzureService** cmdlet.
 The command passes that service to the current cmdlet by using the pipeline operator.
 The current cmdlet gets details for the internal load balancer for that service.
 

@@ -158,7 +158,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### List<IscsiConnection>
+### List\<IscsiConnection\>
 This cmdlet returns an iSCSI connection object that contains the following properties: 
 
 - **AcrInstanceId**

@@ -24,7 +24,7 @@ The **Set-AzureStaticVNetIP** cmdlet sets the static virtual network (VNet) IP a
 
 ### Example 1: Set the virtual network IP address associated with a virtual machine
 ```
-PS C:\># Prerequisite: VNet has been set up with SubNet
+PS C:\> # Prerequisite: VNet has been set up with SubNet
           # Set-AzureVNetConfig -ConfigurationPath $vnetConfigPath;
 
           $vm = New-AzureVMConfig -Name $vmname -ImageName $img -InstanceSize $sz | Add-AzureProvisioningConfig -Windows -Password $pwd -AdminUsername $usr;

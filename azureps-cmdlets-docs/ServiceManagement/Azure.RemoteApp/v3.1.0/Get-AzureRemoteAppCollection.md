@@ -24,21 +24,21 @@ It returns an object with information on a specific collection, or if no collect
 
 ### Example 1: Get a list of all collections
 ```
-PS C:\>Get-AzureRemoteAppCollection
+PS C:\> Get-AzureRemoteAppCollection
 ```
 
 This command returns a list of all Azure RemoteApp collections in the subscription.
 
 ### Example 2: Get information about a specified collection
 ```
-PS C:\>Get-AzureRemoteAppCollection ContosoApps
+PS C:\> Get-AzureRemoteAppCollection ContosoApps
 ```
 
 This command returns information about the Azure RemoteApp collection named ContosoApps.
 
 ### Example 3: Get a list of collections by using a wildcard
 ```
-PS C:\>Get-AzureRemoteAppCollection Finance*
+PS C:\> Get-AzureRemoteAppCollection Finance*
 ```
 
 This command returns a list of all Azure RemoteApp collections matching Finance*.

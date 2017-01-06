@@ -24,7 +24,7 @@ The **Get-AzureSiteRecoveryStorage** cmdlet gets Azure Site Recovery Storages fo
 
 ### Example 1: Get site recovery storage
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryStorage -Server $Servers[0]
 Name           : phase2PrimaryStorageClassification
 ID             : 1c1d0c0b-0c50-4675-af1a-1fdac70dbb6d
@@ -50,7 +50,7 @@ The second command gets the site recovery storage for the first server in the $S
 
 ### -Server
 Specifies a server for Azure Site Recovery Storage.
-To obtain an **ASRServer** object, use the Get-AzureSiteRecoveryServer cmdlet.
+To obtain an **ASRServer** object, use the **Get-AzureSiteRecoveryServer** cmdlet.
 
 ```yaml
 Type: ASRServer

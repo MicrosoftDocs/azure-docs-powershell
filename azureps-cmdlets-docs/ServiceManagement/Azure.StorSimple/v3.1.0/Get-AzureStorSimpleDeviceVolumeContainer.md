@@ -167,7 +167,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### DataContainer, IList<DataContainer>
+### DataContainer, IList\<DataContainer\>
 This cmdlet returns a **DataContainer** object, if you specify the *VolumeContainerName* parameter.
 If you do not specify that parameter, this cmdlet returns an **IList\<DataContainer\>** object.
 

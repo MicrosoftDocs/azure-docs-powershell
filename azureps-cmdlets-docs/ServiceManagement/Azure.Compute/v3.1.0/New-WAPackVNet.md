@@ -20,9 +20,9 @@ New-WAPackVNet -LogicalNetwork <LogicalNetwork> -Name <String> [-Description <St
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-WAPackVNet** cmdlet creates a virtualized network.
 
@@ -30,12 +30,13 @@ The **New-WAPackVNet** cmdlet creates a virtualized network.
 
 ### Example 1: Create a virtualized network
 ```
-PS C:\>$LogicalNetwork = Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
+PS C:\> $LogicalNetwork = Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
 PS C:\> New-WAPackVNet -LogicalNetwork $LogicalNetwork -Name "ContosoVNett01" -Description "A description"
 ```
 
 The first command first retrieves the logical network to which we want to add a new virtualized network.
 This logical network is named ContosoLogicalNetwork01.
+
 The second and last command creates a virtualized network using the previously retrieved logical network, a name (ContosoVNett01) and a description (A description).
 
 ## PARAMETERS

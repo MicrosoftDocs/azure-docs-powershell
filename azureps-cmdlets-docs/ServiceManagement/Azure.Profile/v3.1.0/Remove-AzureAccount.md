@@ -32,13 +32,13 @@ When **Remove-AzureAccount** finds both a management certificate and an access t
 The management certificate is still there, so account is still available to Windows PowerShell.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 
 ### Example 1: Remove an account
 ```
-PS C:\>Remove-AzureAccount -Name admin@contoso.com
+PS C:\> Remove-AzureAccount -Name admin@contoso.com
 ```
 
 This command removes the admin@contoso.com from your subscription data file.
@@ -80,8 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns True ($true) if the operation succeeded and False ($false) if it failed.
-By default, the cmdlet does not return any output.
+Returns $True if the command succeeds and $False if it fails.
+By default, this cmdlet does not return any output.
 
 ```yaml
 Type: SwitchParameter
@@ -96,6 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
+
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)
@@ -189,7 +192,7 @@ You can pipe input to this cmdlet by property name, but not by value.
 ## OUTPUTS
 
 ### None or System.Boolean
-If you use the **PassThru** parameter, this cmdlet returns a Boolean value.
+If you use the *PassThru* parameter, this cmdlet returns a Boolean value.
 Otherwise, it does not return any output.
 
 ## NOTES

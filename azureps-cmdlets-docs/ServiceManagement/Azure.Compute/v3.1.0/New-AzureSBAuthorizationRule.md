@@ -32,16 +32,16 @@ The **New-AzureSBAuthorizationRule** cmdlet creates a Service Bus authorization 
 
 ## EXAMPLES
 
-### 1: Create an authorization rule with generated primary key
+### Example 1: Create an authorization rule with generated primary key
 ```
-C:\PS>New-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Send")
+PS C:\> New-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Send")
 ```
 
 Creates new authorization rule on namespace level with Send permission.
 
-### 2: Creates an authorization rule by providing the primary key
+### Example 2: Creates an authorization rule by providing the primary key
 ```
-C:\PS>New-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Manage", "Listen", "Send") -EntityName MyEntity -EntityType Queue -PrimaryKey P+lL/Mnd2Z9sj5hwMrRyAxQDdX8RHfbdqU2eIAqs1rc=
+PS C:\> New-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Manage", "Listen", "Send") -EntityName MyEntity -EntityType Queue -PrimaryKey P+lL/Mnd2Z9sj5hwMrRyAxQDdX8RHfbdqU2eIAqs1rc=
 ```
 
 Creates new authorization rule on MyEntity Queue level with all permissions.
@@ -49,7 +49,7 @@ Creates new authorization rule on MyEntity Queue level with all permissions.
 ## PARAMETERS
 
 ### -Name
-The unique authorization rule name.
+Specifies the unique authorization rule name.
 
 ```yaml
 Type: String
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-The namespace name to apply the authorization rule.
+Specifies the namespace name to apply the authorization rule.
 If no *EntityName* provided the rule will be on the namespace level.
 
 ```yaml
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -EntityName
-The entity name to apply rule at.
+Specifies the entity name to apply rule at.
 
 ```yaml
 Type: String
@@ -110,7 +110,13 @@ Accept wildcard characters: False
 ```
 
 ### -EntityType
-The entity type (Queue, Topic, Relay, NotificationHub).
+Specifies the entity type.
+Valid values are:
+  
+- Queue
+- Topic
+- Relay
+- NotificationHub
 
 ```yaml
 Type: ServiceBusEntityType
@@ -125,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryKey
-The Shared Access Signature primary key.
+Specifies the Shared Access Signature primary key.
 Will be generated if not provided.
 
 ```yaml
@@ -141,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryKey
-The Shared Access Signature secondary key.
+Specifies the Shared Access Signature secondary key.
 
 ```yaml
 Type: String

@@ -20,7 +20,7 @@ Remove-AzureSchedulerJobCollection [-Force] [[-Location] <String>] [-JobCollecti
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-AzureSchedulerJobCollection** cmdlet deletes a scheduler job collection and any jobs under that collection.
 
@@ -28,7 +28,7 @@ The **Remove-AzureSchedulerJobCollection** cmdlet deletes a scheduler job collec
 
 ### Example 1: Delete a job collection for a location
 ```
-PS C:\>Remove-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01"
+PS C:\> Remove-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01"
 ```
 
 This command deletes the scheduler job collection named JobCollection01 in the North Central US location.
@@ -36,7 +36,7 @@ The command also deletes the jobs under JobCollection01.
 
 ### Example 2: Delete a job location
 ```
-PS C:\>Remove-AzureSchedulerJobCollection -JobCollectionName "JobCollection02"
+PS C:\> Remove-AzureSchedulerJobCollection -JobCollectionName "JobCollection02"
 ```
 
 This command deletes the scheduler job collection named JobCollection02.

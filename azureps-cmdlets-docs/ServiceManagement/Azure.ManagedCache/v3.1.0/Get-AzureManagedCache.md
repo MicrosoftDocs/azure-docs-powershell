@@ -23,7 +23,7 @@ By default, it gets all Azure Caches in the account.
 To get a particular Azure Cache, use the *Name* parameter.
 An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see [Azure Cache](http://azure.microsoft.com/en-us/services/cache/) (http://azure.microsoft.com/en-us/services/cache/).
 
 ## EXAMPLES
 
@@ -129,7 +129,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PSCacheService
 
 ## NOTES
-* Before you use this cmdlet, call Add-AzureAccount or Import-AzurePublishSettingsFile to make your Azure account available to Windows PowerShell. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Before you use this cmdlet, call **Add-AzureAccount** or **Import-AzurePublishSettingsFile** to make your Azure account available to Windows PowerShell. 
+For more information, see [How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/) (http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/).
 
 ## RELATED LINKS
 

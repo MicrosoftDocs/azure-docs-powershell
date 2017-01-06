@@ -19,9 +19,9 @@ Remove-WAPackVNet [-VNet] <VMNetwork> [-PassThru] [-Force] [-Profile <AzureSMPro
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-WAPackVNet** cmdlet removes virtual network objects.
 
@@ -29,8 +29,8 @@ The **Remove-WAPackVNet** cmdlet removes virtual network objects.
 
 ### Example 1: Remove a virtualized network
 ```
-PS C:\>$VNet = Get-WAPackVNet -Name "ContosoVNet01"
-PS C:\>Remove-WAPackVM -VNet $VNet
+PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+PS C:\> Remove-WAPackVM -VNet $VNet
 ```
 
 The first command gets the virtualized network named ContosoVNet01 by using the **Get-WAPackVNet** cmdlet, and then stores that object in the $VNet variable.
@@ -39,8 +39,8 @@ The command prompts you for confirmation.
 
 ### Example 2: Remove a virtualized network without confirmation
 ```
-PS C:\>$VNet = Get-WAPackVNet -Name "ContosoVNet02"
-PS C:\>Remove-WAPackVNet -VNet $VNet -Force
+PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet02"
+PS C:\> Remove-WAPackVNet -VNet $VNet -Force
 ```
 
 The first command gets the cloud service named ContosoVNet02 by using the **Get-WAPackVNet** cmdlet, and then stores that object in the $VNet variable.

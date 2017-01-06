@@ -19,9 +19,9 @@ Remove-WAPackVMSubnet -VMSubnet <VMSubnet> [-PassThru] [-Force] [-Profile <Azure
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-WAPackVMSubnet** cmdlet removes virtual machine subnet objects.
 
@@ -29,21 +29,23 @@ The **Remove-WAPackVMSubnet** cmdlet removes virtual machine subnet objects.
 
 ### Example 1: Remove a virtual machine subnet
 ```
-PS C:\>$VMSubnet = Get-WAPackVMSubnet -Name "ContosoVMSubnet01"
-PS C:\>Remove-WAPackVMSubnet -VMSubnet $VMSubnet
+PS C:\> $VMSubnet = Get-WAPackVMSubnet -Name "ContosoVMSubnet01"
+PS C:\> Remove-WAPackVMSubnet -VMSubnet $VMSubnet
 ```
 
 The first command gets the virtual machine subnet named ContosoVMSubnet01 by using the **Get-WAPackVMSubnet** cmdlet, and then stores that object in the $VMSubnet variable.
+
 The second command removes the virtual machine subnet stored in $VMSubnet.
 The command prompts you for confirmation.
 
 ### Example 2: Remove a virtual machine without confirmation
 ```
-PS C:\>$VMSubnet = Get-WAPackVMSubnet -Name "ContosoVMSubnet02"
-PS C:\>Remove-WAPackVMSubnet -VMSubnet $VMSubnet -Force
+PS C:\> $VMSubnet = Get-WAPackVMSubnet -Name "ContosoVMSubnet02"
+PS C:\> Remove-WAPackVMSubnet -VMSubnet $VMSubnet -Force
 ```
 
 The first command gets the cloud service named ContosoVMSubnet02 by using the **Get-WAPackVMSubnet** cmdlet, and then stores that object in the $VMSubnet variable.
+
 The second command removes the virtual machine subnet stored in $VMSubnet.
 This command includes the *Force* parameter.
 The command does not prompt you for confirmation.
@@ -52,7 +54,7 @@ The command does not prompt you for confirmation.
 
 ### -VMSubnet
 Specifies a virtual machine subnet.
-To obtain a virtual machine subnet, use the Get-WAPackVMSubnet cmdlet.
+To obtain a virtual machine subnet, use the **Get-WAPackVMSubnet** cmdlet.
 
 ```yaml
 Type: VMSubnet

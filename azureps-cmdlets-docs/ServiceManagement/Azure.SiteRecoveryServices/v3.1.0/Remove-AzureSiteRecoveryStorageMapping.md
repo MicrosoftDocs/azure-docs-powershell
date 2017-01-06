@@ -24,13 +24,13 @@ The **Remove-AzureSiteRecoveryStorageMapping** cmdlet removes a Storage object m
 
 ### Example 1: Remove the mapping between a network and a recovery network
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> $StorageMapping = Get-AzureSiteRecoveryStorageMapping -PrimaryServer $Servers[0] -RecoveryServer $Servers[1]
 PS C:\> Remove-AzureSiteRecoveryStorageMapping -StorageMapping $StorageMapping
 Get-AzureSiteRecoveryServerGet-AzureSiteRecoveryStorageMappingNew-AzureSiteRecoveryStorageMapping
 ```
 
-The first command cmdlet gets servers for the current Azure Site Recovery vault by using the Get-AzureSiteRecoveryServer cmdlet.
+The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
 The command stores the Site Recovery servers in the $Servers array variable.
 
 The second command gets the mapping between two Storage objects, and then stores it in the $StorageMapping variable.
@@ -43,7 +43,7 @@ The final command removes the mapping in $StorageMapping.
 
 ### -StorageMapping
 Specifies a network mapping.
-To obtain an **ASRStorageMapping**, use the Get-AzureSiteRecoveryStorage cmdlet.
+To obtain an **ASRStorageMapping**, use the **Get-AzureSiteRecoveryStorage** cmdlet.
 
 ```yaml
 Type: ASRStorageMapping

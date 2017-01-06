@@ -47,10 +47,6 @@ The **Set-AzureRemoteAppCollection** cmdlet sets the properties of an Azure Remo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -71,7 +67,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies the credentials of a service account that has permission to join the Azure RemoteApp servers to your domain.
-To obtain a **Credential** object, use the Get-Credential cmdlet.
+To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
 
 ```yaml
 Type: PSCredential
@@ -87,7 +83,7 @@ Accept wildcard characters: False
 
 ### -CustomRdpProperty
 Specifies custom Remote Desktop Protocol (RDP) properties which can be used to configure drive redirection and other settings. 
-See RDP Settings for Remote Desktop Services in Windows Serverhttps://technet.microsoft.com/library/ff393699(v=ws.10).aspx (https://technet.microsoft.com/library/ff393699(v=ws.10).aspx) for details.
+See [RDP Settings for Remote Desktop Services in Windows Server](https://technet.microsoft.com/library/ff393699(v=ws.10).aspx)  `(https://technet.microsoft.com/library/ff393699(v=ws.10).aspx)` for details.
 
 ```yaml
 Type: String

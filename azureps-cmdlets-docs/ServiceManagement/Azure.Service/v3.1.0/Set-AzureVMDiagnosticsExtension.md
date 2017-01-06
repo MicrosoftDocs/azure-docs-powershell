@@ -35,7 +35,7 @@ The **Set-AzureVMDiagnosticsExtension** cmdlet configures the Microsoft Azure Di
 
 ### Example 1: Create a virtual machine with Azure Diagnostics extension applied
 ```
-PS C:\>$VM = New-AzureVMConfig -Name $VM -InstanceSize Small -ImageName $VMImage
+PS C:\> $VM = New-AzureVMConfig -Name $VM -InstanceSize Small -ImageName $VMImage
 PS C:\> $VM = Add-AzureProvisioningConfig -VM $VM -AdminUsername $Username -Password $Password -Windows
 PS C:\> $VM = Set-AzureVMDiagnosticsExtension -DiagnosticsConfigurationPath $Config_Path -Version "1.*" -VM $VM -StorageContext $Storage_Context
 PS C:\> New-AzureVM -Location $Location -ServiceName $Service_Name -VM $VM
@@ -45,12 +45,12 @@ These commands enable the Azure Diagnostics extension on a virtual machine.
 
 ### Example 2: Enable an Azure Diagnostics extension on an existing virtual machine
 ```
-PS C:\>$VM = Get-AzureVM -ServiceName $Service_Name -Name $VM_Name
+PS C:\> $VM = Get-AzureVM -ServiceName $Service_Name -Name $VM_Name
 PS C:\> $VM_Update = Set-AzureVMDiagnosticsExtension -DiagnosticsConfigurationPath $Config_Path -Version "1.*" -VM $VM -StorageContext $Storage_Context
 PS C:\> Update-AzureVM -ServiceName $Service_Name -Name $VM_Name -VM $VM_Update.VM
 ```
 
-The first command uses the Get-AzureVM cmdlet to get a virtual machine.
+The first command uses the **Get-AzureVM** cmdlet to get a virtual machine.
 
 The second command uses the **Set-AzureVMDiagnosticsExtension** cmdlet to update the virtual machine configuration to include the Azure Diagnostics extension.
 

@@ -25,14 +25,14 @@ If no template image is specified, it retrieves information about all the templa
 
 ### Example 1: Get a list of all template images
 ```
-PS C:\>Get-AzureRemoteAppTemplateImage
+PS C:\> Get-AzureRemoteAppTemplateImage
 ```
 
 This command returns the list of all template images.
 
 ### Example 2: Retrieve information about a specified template image
 ```
-PS C:\>Get-AzureRemoteAppTemplateImage -ImageName "ContosoApps"
+PS C:\> Get-AzureRemoteAppTemplateImage -ImageName "ContosoApps"
 ```
 
 This command retrieves information about the template image named ContosoApps.

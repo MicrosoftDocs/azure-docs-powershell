@@ -22,19 +22,20 @@ The **Get-AzureEnvironment** cmdlet gets the Azure environments that are availab
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see Azure Packhttp://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx)  (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
 
 The **Get-AzureEnvironment** cmdlet gets environments from your subscription data file, not from Azure.
 If the subscription data file is outdated, run the **Add-AzureAccount** or **Import-PublishSettingsFile** cmdlet to refresh it.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 
 ### Example 1: Get all environments
 ```
-PS C:\>Get-AzureEnvironment
+PS C:\> Get-AzureEnvironment
+
 EnvironmentName               ServiceEndpoint               ResourceManagerEndpoint       PublishSettingsFileUrl
 ---------------               ---------------               -----------------------       ----------------------
 
@@ -46,7 +47,8 @@ This command gets all environments that are available to Windows PowerShell.
 
 ### Example 2: Get an environment by name
 ```
-PS C:\>Get-AzureEnvironment -Name AzureCloud
+PS C:\> Get-AzureEnvironment -Name AzureCloud
+
 Name                          : AzureCloud
 
 PublishSettingsFileUrl        : http://go.microsoft.com/fwlink/?LinkID=301775
@@ -76,7 +78,7 @@ This example gets the AzureCloud environment.
 
 ### Example 3: Get all properties of all environments
 ```
-PS C:\>Get-AzureEnvironment | ForEach-Object {Get-AzureEnvironment -Name $_.EnvironmentName}
+PS C:\> Get-AzureEnvironment | ForEach-Object {Get-AzureEnvironment -Name $_.EnvironmentName}
 ```
 
 This command gets all properties of all environments.
@@ -108,6 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
+
 ```yaml
 Type: AzureSMProfile
 Parameter Sets: (All)

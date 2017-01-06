@@ -26,29 +26,29 @@ New-AzureRoleTemplate [-Worker] [[-Output] <String>] [-Profile <AzureSMProfile>]
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-AzureRoleTemplate** cmdlet creates web and worker role templates.
 
 ## EXAMPLES
 
-### 1: Create a web role template
+### Example 1: Create a web role template
 ```
-PS C:\>New-AzureRoleTemplate -Web
+PS C:\> New-AzureRoleTemplate -Web
 ```
 
 This example creates a new web role template in a folder named WebRoleTemplate in the current directory.
 
-### 2: Create a worker role template
+### Example 2: Create a worker role template
 ```
-PS C:\>New-AzureRoleTemplate -Worker
+PS C:\> New-AzureRoleTemplate -Worker
 ```
 
 This example creates a new worker role template in a folder named WebRoleTemplate in the current directory.
 
-### 3: Create a role template in a custom directory
+### Example 3: Create a role template in a custom directory
 ```
-PS C:\>New-AzureRoleTemplate -Web -Output C:\MyWebRoleTemplate
+PS C:\> New-AzureRoleTemplate -Web -Output C:\MyWebRoleTemplate
 ```
 
 This example creates a new web role template in directory named MyWebRoleTemplate, instead of in the current directory.

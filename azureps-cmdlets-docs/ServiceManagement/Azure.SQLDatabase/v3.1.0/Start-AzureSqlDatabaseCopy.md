@@ -66,7 +66,7 @@ The offline continuous copy is used to configure Standard Geo-Replication for Az
 
 ### Example 1: Schedule a continuous database copy
 ```
-PS C:\>Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy
+PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy
 ```
 
 This command schedules a continuous copy of the database named Orders on the server named lpqd0zbr8y.
@@ -74,7 +74,7 @@ The command creates a target database on the server named bk0b8kf658.
 
 ### Example 2: Create a one-time copy on the same server
 ```
-PS C:\>Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerDatabase "OrdersCopy"
+PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerDatabase "OrdersCopy"
 ```
 
 This command creates a one-time copy of the database named Orders on the server named lpqd0zbr8y.
@@ -82,7 +82,7 @@ The command creates a copy named OrdersCopy on the same server.
 
 ### Example 3: Schedule a continuous offline database copy
 ```
-PS C:\>Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy -OfflineSecondary
+PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy -OfflineSecondary
 ```
 
 This command schedules a continuous copy of the database named Orders on the server named lpqd0zbr8y.

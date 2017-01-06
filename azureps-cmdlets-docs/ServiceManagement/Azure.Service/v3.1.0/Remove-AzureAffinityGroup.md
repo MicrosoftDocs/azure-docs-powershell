@@ -26,7 +26,7 @@ You must first delete all the members of an affinity group.
 
 ### Example 1: Remove an affinity group
 ```
-PS C:\>Remove-AzureAffinityGroup -Name "South01"
+PS C:\> Remove-AzureAffinityGroup -Name "South01"
 ```
 
 This command deletes the South01 affinity group in the current subscription.

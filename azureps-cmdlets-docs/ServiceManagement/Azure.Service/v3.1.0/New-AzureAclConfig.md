@@ -23,7 +23,7 @@ The **New-AzureAclConfig** cmdlet creates an empty access control list (ACL) con
 
 ### Example 1: Create an ACL configuration object
 ```
-PS C:\>$Acl = New-AzureAclConfig
+PS C:\> $Acl = New-AzureAclConfig
 ```
 
 This command creates an empty ACL configuration object, and then stores it in the $Acl variable.

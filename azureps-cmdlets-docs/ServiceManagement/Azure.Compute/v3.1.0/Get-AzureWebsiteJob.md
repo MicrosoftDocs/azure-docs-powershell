@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureWebsiteJob
 
 ## SYNOPSIS
-Gets the web jobs associated with a website
+Gets the web jobs associated with a website.
 
 ## SYNTAX
 
@@ -19,27 +19,27 @@ Get-AzureWebsiteJob [-JobName <String>] [-JobType <String>] [[-Name] <String>] [
 ```
 
 ## DESCRIPTION
-Gets the web jobs associated with a website
+Gets the web jobs associated with a website.
 
 ## EXAMPLES
 
-### 1: Get specific web job info
+### Example 1: Get specific web job info
 ```
-C:\PS>Get-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob
+PS C:\> Get-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob
 ```
 
 Gets a web job called MyWebJob from MyWebsite production slot.
 
-### 2: Get all web jobs for a website
+### Example 2: Get all web jobs for a website
 ```
-C:\PS>Get-AzureWebsiteJob -Name MyWebsite
+PS C:\> Get-AzureWebsiteJob -Name MyWebsite
 ```
 
 Gets all web jobs associated with MyWebsite production slot.
 
-### 3: Get all triggered web jobs
+### Example 3: Get all triggered web jobs
 ```
-C:\PS>Get-AzureWebsiteJob -Name MyWebsite -Slot staging -Type Triggered
+PS C:\> Get-AzureWebsiteJob -Name MyWebsite -Slot staging -Type Triggered
 ```
 
 Gets all triggered web jobs from staging slot of MyWebsite.

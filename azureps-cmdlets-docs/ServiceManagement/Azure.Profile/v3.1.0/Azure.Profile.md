@@ -13,11 +13,11 @@ The cmdlets in the Azure Profile module (AzureProfile) enable you to manage your
 
 ## Azure.Profile Cmdlets
 ### [Add-AzureAccount](./Add-AzureAccount.md)
-Adds the Azure account to Windows PowerShell
+Adds the Azure account to Windows PowerShell.
 
 
 ### [Add-AzureEnvironment](./Add-AzureEnvironment.md)
-Creates an Azure environment
+Creates an Azure environment.
 
 
 ### [Clear-AzureProfile](./Clear-AzureProfile.md)
@@ -37,7 +37,7 @@ Gets Azure accounts that are available to Azure PowerShell.
 
 
 ### [Get-AzureEnvironment](./Get-AzureEnvironment.md)
-Gets Azure environments
+Gets Azure environments.
 
 
 ### [Get-AzurePublishSettingsFile](./Get-AzurePublishSettingsFile.md)
@@ -61,7 +61,7 @@ Deletes an Azure account from Windows PowerShell.
 
 
 ### [Remove-AzureEnvironment](./Remove-AzureEnvironment.md)
-Deletes an Azure environment from Windows PowerShell
+Deletes an Azure environment from Windows PowerShell.
 
 
 ### [Remove-AzureSubscription](./Remove-AzureSubscription.md)
@@ -73,15 +73,15 @@ Deletes an Azure subscription from Windows PowerShell.
 
 
 ### [Select-AzureSubscription](./Select-AzureSubscription.md)
-Changes the current and default Azure subscriptions
+Changes the current and default Azure subscriptions.
 
 
 ### [Set-AzureEnvironment](./Set-AzureEnvironment.md)
-Changes the properties of an Azure environment
+Changes the properties of an Azure environment.
 
 
 ### [Set-AzureSubscription](./Set-AzureSubscription.md)
-Creates or changes an Azure subscription
+Creates or changes an Azure subscription.
 
 
 

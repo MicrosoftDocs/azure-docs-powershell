@@ -26,14 +26,14 @@ Otherwise, the cmdlet returns information about all the firewall rules on the sp
 
 ### Example 1: Get all firewall rules on a server
 ```
-PS C:\>Get-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y"
+PS C:\> Get-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y"
 ```
 
 This command gets all the firewall rules on the Azure SQL Database server named lpqd0zbr8y.
 
 ### Example 2: Get a firewall rule by using its name
 ```
-PS C:\>Get-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24"
+PS C:\> Get-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24"
 ```
 
 This command gets the firewall rule named FirewallRule24 on the server named lpqd0zbr8y.
@@ -136,7 +136,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### IEnumerable<Microsoft.WindowsAzure.Commands.SqlDatabase.Model.SqlDatabaseServerFirewallRuleContext>
+### IEnumerable\<Microsoft.WindowsAzure.Commands.SqlDatabase.Model.SqlDatabaseServerFirewallRuleContext\>
 
 ## NOTES
 

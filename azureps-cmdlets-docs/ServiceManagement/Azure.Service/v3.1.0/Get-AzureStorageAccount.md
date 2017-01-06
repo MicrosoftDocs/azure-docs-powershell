@@ -25,21 +25,21 @@ If the *StorageAccountName* parameter is specified, then only information about 
 
 ### Example 1: Return all storage accounts
 ```
-PS C:\>Get-AzureStorageAccount
+PS C:\> Get-AzureStorageAccount
 ```
 
 This command returns an object with all the storage accounts associated with the current subscription.
 
 ### Example 2: Return account information for a specified account
 ```
-PS C:\>Get-AzureStorageAccount -StorageAccountName "ContosoStore01"
+PS C:\> Get-AzureStorageAccount -StorageAccountName "ContosoStore01"
 ```
 
 This command returns an object with only the ContosoStore01 account information.
 
 ### Example 3: Display a table of storage accounts
 ```
-PS C:\>Get-AzureStorageAccount | Format-Table -AutoSize -Property @{Label="Name";Expression={$_.StorageAccountName}},"Label","Location"
+PS C:\> Get-AzureStorageAccount | Format-Table -AutoSize -Property @{Label="Name";Expression={$_.StorageAccountName}},"Label","Location"
 ```
 
 This command returns an object with all the storage accounts associated with the current subscription, and outputs them as a table showing the account name, the account label, and the storage location.

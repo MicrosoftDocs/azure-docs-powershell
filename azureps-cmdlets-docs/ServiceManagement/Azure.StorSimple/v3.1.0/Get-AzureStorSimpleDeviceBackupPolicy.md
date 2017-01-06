@@ -171,7 +171,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### IList<BackupPolicy>, BackupPolicyDetails
+### IList\<BackupPolicy\>, BackupPolicyDetails
 This cmdlet returns a **BackupPolicyDetails** object, if you specify the *BackupPolicyName* parameter.
 If you do not specify that parameter, it returns an **IList\<BackupPolicy\>** object.
 

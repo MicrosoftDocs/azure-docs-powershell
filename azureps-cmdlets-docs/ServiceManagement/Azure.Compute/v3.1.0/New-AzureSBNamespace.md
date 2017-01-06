@@ -20,18 +20,19 @@ New-AzureSBNamespace [-Name] <String> [[-Location] <String>] [[-CreateACSNamespa
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-AzureSBNamespace** cmdlet creates a service namespace for use with Service Bus in Azure.
 
 ## EXAMPLES
 
-### 1: Create a service namespace
+### Example 1: Create a service namespace
 ```
-PS C:\> New-AzureSBNamespace -Name myNameSpace -Location East US PS C:\> New-AzureSBNamespace myNameSpace 'East US'
+PS C:\> New-AzureSBNamespace -Name myNameSpace -Location East US 
+PS C:\> New-AzureSBNamespace myNameSpace 'East US'
 ```
 
-The following examples create a service namespace for use with Service Bus in Azure.
+The examples create a service namespace for use with Service Bus in Azure.
 Both examples include the required parameter values, but only the first includes the parameter names.
 The second example can be used because both parameters are positional and their values are given in the required order.
 

@@ -24,7 +24,7 @@ The **Get-AzureVNetGateway** cmdlet gets the status of an existing virtual netwo
 
 ### Example 1: Get the status of a virtual network gateway
 ```
-PS C:\>Get-AzureVNetGateway -VNetName "ContosoVN07"
+PS C:\> Get-AzureVNetGateway -VNetName "ContosoVN07"
 ```
 
 This command gets that status of the virtual network gateway for the virtual network named ContosoVN07.
@@ -49,7 +49,6 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the Azure profile from which this cmdlet reads. 
 If you do not specify a profile, this cmdlet reads from the local default profile.
-By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: AzureSMProfile

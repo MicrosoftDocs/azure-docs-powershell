@@ -20,7 +20,7 @@ New-AzureStoreAddOn [-Name] <String> [-AddOn] <String> [-Plan] <String> [-Locati
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 Buys a new add-on instance from the Azure Store.
 
@@ -28,14 +28,14 @@ Buys a new add-on instance from the Azure Store.
 
 ### Example 1
 ```
-PS C:\>New-AzureStoreAddOn -Name MyAddOn -AddOn AddonId -Plan PlanId -Location "West US"
+PS C:\> New-AzureStoreAddOn -Name MyAddOn -AddOn AddonId -Plan PlanId -Location "West US"
 ```
 
 This example buys an add-on named MyAddOn with a PlanId in West US location.
 
 ### Example 2
 ```
-PS C:\>New-AzureStoreAddOn -Name MyAddOn -AddOn AddonId -Plan PlanId -Location "West US" -PromotionCode MyPromoCode
+PS C:\> New-AzureStoreAddOn -Name MyAddOn -AddOn AddonId -Plan PlanId -Location "West US" -PromotionCode MyPromoCode
 ```
 
 This example uses a promotional code to buy an add-on.

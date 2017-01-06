@@ -24,7 +24,7 @@ The **New-AzureSiteRecoverySite** cmdlet creates an Azure Site Recovery site in 
 
 ### Example 1: Create a Site Recovery site
 ```
-PS C:\>New-AzureSiteRecoverySite -Name "RecoverySite07"
+PS C:\> New-AzureSiteRecoverySite -Name "RecoverySite07"
 ```
 
 This command creates a site recovery site named RecoverySite07.
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 
 ### -Vault
 Specifies a vault for which to create the site.
-To obtain an **ASRVault** object, use the Get-AzureSiteRecoveryVault cmdlet.
+To obtain an **ASRVault** object, use the **Get-AzureSiteRecoveryVault** cmdlet.
 
 ```yaml
 Type: ASRVault

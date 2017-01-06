@@ -26,7 +26,7 @@ This cmdlet is supported only for virtual machine monitor (VMM) to VMM protected
 
 ### Example 1: Update a protection entity
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer
 PS C:\> $ProtectionEntity = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container
 PS C:\> Update-AzureSiteRecoveryProtectionEntity -ProtectionEntity $ProtectionEntity
            Name             : 

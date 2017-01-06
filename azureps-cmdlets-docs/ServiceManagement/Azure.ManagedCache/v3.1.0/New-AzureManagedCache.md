@@ -22,7 +22,7 @@ New-AzureManagedCache [-Name] <String> [-Location] <String> [-Sku <CacheServiceS
 The **New-AzureManagedCache** cmdlet creates an Azure Cache in your Azure account and returns an object that represents the new Azure Cache.
 An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see [Azure Cache](http://azure.microsoft.com/en-us/services/cache/) (http://azure.microsoft.com/en-us/services/cache/).
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ PS C:\>New-AzureManagedCache -Name "ContosoCache" -Location "West Europe"
 ```
 
 This command creates an Azure Cache named ContosoCache in the West Europe Azure data center.
-It uses the default values for the Sku and Memory parameters, which are Basic and 128MB.
+It uses the default values for the Sku and Memory parameters, which are Basic and 128 MB.
 
 ### Example 2: Create a premium Azure Cache
 ```
@@ -82,9 +82,9 @@ Specifies the tier of the Azure Cache.
 The default value is Basic.
 The acceptable values for this parameter are:
 
-- Basic (128MB - 1GB) 
-- Standard (1GB - 10GB) 
-- Premium (5GB - 150GB)
+- Basic (128 MB - 1 GB) 
+- Standard (1 GB - 10 GB) 
+- Premium (5 GB - 150 GB)
 
 ```yaml
 Type: CacheServiceSkuType
@@ -156,14 +156,14 @@ Accept wildcard characters: False
 ### -Memory
 Specifies the size of the Azure Cache.
 The cache size may affect the cost of the service.
-Enter a value followed by MB or GB, such as 128MB or 8GB.
+Enter a value followed by MB or GB, such as `128MB` or `8GB`.
 This value must be compatible with the value of the *Sku* parameter.
 The default value is the lowest value in the range specified by the *Sku* parameter.
 The following are some considerations: 
 
-- When the value of *Sku* is Basic, the value of *Memory* must be divisible by 128MB. 
-- When the value of *Sku* is Standard, the value of *Memory* must be divisible by 1GB. 
-- When the value of *Sku* is Premium, the value of *Memory* must be divisible by 5GB.
+- When the value of *Sku* is Basic, the value of *Memory* must be divisible by 128 MB. 
+- When the value of *Sku* is Standard, the value of *Memory* must be divisible by 1 GB. 
+- When the value of *Sku* is Premium, the value of *Memory* must be divisible by 5 GB.
 
 ```yaml
 Type: String
@@ -189,7 +189,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models .PSCacheService
 
 ## NOTES
-* Use Add-AzureAccount or Import-AzurePublishSettingsFile to make your Azure account available to Windows PowerShell before you use this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use **Add-AzureAccount** or **Import-AzurePublishSettingsFile** to make your Azure account available to Windows PowerShell before you use this cmdlet. 
+For more information, see [How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/) (http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/).
 
 ## RELATED LINKS
 

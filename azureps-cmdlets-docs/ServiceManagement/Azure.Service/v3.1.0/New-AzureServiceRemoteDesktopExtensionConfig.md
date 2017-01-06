@@ -35,14 +35,14 @@ The **New-AzureServiceRemoteDesktopExtensionConfig** cmdlet generates a configur
 
 ### Example 1: Generate a remote desktop extension configuration
 ```
-PS C:\>$rdpConfig = New-AzureServiceRemoteDesktopExtensionConfig -Credential $cred
+PS C:\> $rdpConfig = New-AzureServiceRemoteDesktopExtensionConfig -Credential $cred
 ```
 
 This command generates a remote desktop extension configuration for the specified credentials.
 
 ### Example 2: Generate a remote desktop extension configuration for a specified role
 ```
-PS C:\>$rdpConfig = New-AzureServiceRemoteDesktopExtensionConfig -Credential $cred -Role "WebRole01"
+PS C:\> $rdpConfig = New-AzureServiceRemoteDesktopExtensionConfig -Credential $cred -Role "WebRole01"
 ```
 
 This command generates a remote desktop extension configuration for the specified credentials and the WebRole01 role.

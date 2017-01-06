@@ -24,7 +24,7 @@ The **Get-AzureVMAccessExtension** cmdlet gets the VMAccess extension applied on
 
 ### Example 1: Get the VMAccess extension for a virtual machine
 ```
-PS C:\>Get-AzureVMAccessExtension -VM $VM;
+PS C:\> Get-AzureVMAccessExtension -VM $VM;
 ```
 
 This command gets the VMAccess extension for a virtual machine.

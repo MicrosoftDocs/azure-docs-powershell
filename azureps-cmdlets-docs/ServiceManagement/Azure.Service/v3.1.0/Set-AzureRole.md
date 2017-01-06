@@ -25,7 +25,7 @@ The **Set-AzureRole** cmdlet sets the number of instances of a specified role to
 
 ### 1: Set the number of instances for a role
 ```
-PS C:\>Set-AzureRole -ServiceName "MySvc01" -Slot "Production" -RoleName "MyTestRole03" -Count 3
+PS C:\> Set-AzureRole -ServiceName "MySvc01" -Slot "Production" -RoleName "MyTestRole03" -Count 3
 ```
 
 This command sets the MyTestRole03 role that is running in production on the MySvc01 service to have three instances.

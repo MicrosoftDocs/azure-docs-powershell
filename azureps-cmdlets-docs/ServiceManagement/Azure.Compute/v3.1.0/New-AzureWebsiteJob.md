@@ -23,9 +23,9 @@ The **New-AzureWebsiteJob** cmdlet creates a web job for a website.
 
 ## EXAMPLES
 
-### 1: Create new web job for a website
+### Example 1: Create new web job for a website
 ```
-C:\PS>New-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob -JobType Continuous -JobFile job.bat
+PS C:\> New-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob -JobType Continuous -JobFile job.bat
 ```
 
 Creates a continuous job to call job.bat on website MyWebsite.

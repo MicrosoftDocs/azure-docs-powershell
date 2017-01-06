@@ -32,7 +32,7 @@ The **Get-AzureSiteRecoveryNetworkMapping** cmdlet gets information about Azure 
 
 ### Example 1: Get the mapping between a network and a recovery network
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryNetworkMapping -PrimaryServer $Servers[0] -RecoveryServer $Servers[0]
 PrimaryServerId     : 774859b0-1966-48cc-9df7-759c441b7a8c
 PrimaryNetworkId    : 7cfd636e-5cc2-4e01-873b-8a7aa4962341
@@ -52,7 +52,7 @@ The command specifies the server for the recovery network as the second element 
 
 ### Example 2: Get the mapping between a network and an Azure virtual machine network
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryNetworkMapping -Azure -PrimaryServer $Servers[0] 
 PrimaryServerId     : 774859b0-1966-48cc-9df7-759c441b7a8c
 PrimaryNetworkId    : 7cfd636e-5cc2-4e01-873b-8a7aa4962341

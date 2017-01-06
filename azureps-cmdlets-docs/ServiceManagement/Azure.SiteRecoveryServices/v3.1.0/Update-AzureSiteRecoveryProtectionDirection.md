@@ -47,7 +47,7 @@ The **Update-AzureSiteRecoveryProtectionDirection** cmdlet updates the source an
 
 ### Example 1: Modify the direction for a protected object in a container
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer 
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer 
 PS C:\> $Protected = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container  
 PS C:\> Update-AzureSiteRecoveryProtectionDirection -Direction RecoveryToPrimary -ProtectionEntity $Protected 
 ID               : c38eecdc-731c-405b-a61c-08db99aae2fe
@@ -62,9 +62,9 @@ Tasks            : {}
 Errors           : {}
 ```
 
-The first command gets the protected containers in the current Azure Site Recovery vault by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores it in the $Container variable.
+The first command gets the protected containers in the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores it in the $Container variable.
 
-The second command gets the virtual machines that belong to the container stored in $Container by using the Get-AzureSiteRecoveryProtectionEntity cmdlet.
+The second command gets the virtual machines that belong to the container stored in $Container by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
 The command stores the results in the $Protected variable.
 
 The final command sets the direction to RecoverToPrimary for the objects stored in $Protected.

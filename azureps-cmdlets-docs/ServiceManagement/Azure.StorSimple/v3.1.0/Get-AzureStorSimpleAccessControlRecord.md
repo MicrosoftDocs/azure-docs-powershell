@@ -139,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### AccessControlRecord, IList<AccessControlRecord>
+### AccessControlRecord, IList\<AccessControlRecord\>
 This cmdlet returns an **AccessControlRecord** object or an **IList\<AccessControlRecord\>** object.
 An **AccessControlRecord** object contains the following fields: 
 

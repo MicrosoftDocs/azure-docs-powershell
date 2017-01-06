@@ -33,7 +33,7 @@ To see which actions you can take on a job, look at the **AllowedActions** prope
 
 ### Example 1: Resume all jobs
 ```
-PS C:\>$Jobs = Get-AzureSiteRecoveryJob  
+PS C:\> $Jobs = Get-AzureSiteRecoveryJob  
 PS C:\> Resume-AzureSiteRecoveryJob -Job $Jobs
 ID               : d16397fb-cdf1-4972-b677-c333f3c557b4
 ClientRequestId  : 32ace403-0916-4967-83a1-529176bd6e88-2014-49-06 15:49:24Z-P

@@ -19,15 +19,15 @@ Start-AzureEmulator [-Launch] [-Mode <ComputeEmulatorMode>] [-Profile <AzureSMPr
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Start-AzureEmulator** cmdlet starts both the compute and storage emulators and hosts the current service in the compute emulator.
 
 ## EXAMPLES
 
-### 1: Start the emulator and launch a browser
+### Example 1: Start the emulator and launch a browser
 ```
-PS C:\>Start-AzureEmulator -L
+PS C:\> Start-AzureEmulator -L
 ```
 
 This example runs the service in the Azure emulator and launches a new browser window on the emulated service.

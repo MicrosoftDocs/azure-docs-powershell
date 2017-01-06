@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-AzureWorkerRole
 
 ## SYNOPSIS
-Creates required files and configuration (sometimes referred to as scaffolding) for a custom worker role.
+Creates required files and configuration for a custom worker role.
 
 ## SYNTAX
 
@@ -20,29 +20,29 @@ Add-AzureWorkerRole [[-TemplateFolder] <String>] [[-Name] <String>] [[-Instances
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
-The **Add-AzureWorkerRole** cmdlet creates required files and configuration (sometimes referred to as scaffolding) for a custom worker role.
+The **Add-AzureWorkerRole** cmdlet creates required files and configuration, sometimes referred to as scaffolding, for a custom worker role.
 
 ## EXAMPLES
 
-### 1: Create a single instance worker role
+### Example 1: Create a single instance worker role
 ```
-PS C:\>Add-AzureWorkerRole -Name MyWorkerRole
+PS C:\> Add-AzureWorkerRole -Name MyWorkerRole
 ```
 
 This example adds scaffolding for a single worker role named MyWorkerRole to the current application.
 
-### 2: Create a multiple instance worker role
+### Example 2: Create a multiple instance worker role
 ```
-PS C:\>Add-AzureWorkerRole MyWorkerRole -I 2
+PS C:\> Add-AzureWorkerRole MyWorkerRole -I 2
 ```
 
 This example adds scaffolding for a new worker role named MyWorkerRole to the current application, with a role instance count of 2.
 
-### 3: Create worker role with custom scaffolding
+### Example 3: Create worker role with custom scaffolding
 ```
-PS C:\>Add-AzureWorkerRole MyWorkerRole -TemplateFoldr .\MyWorkerRoleTemplate
+PS C:\> Add-AzureWorkerRole MyWorkerRole -TemplateFoldr .\MyWorkerRoleTemplate
 ```
 
 This example creates a worker role with custom scaffolding.

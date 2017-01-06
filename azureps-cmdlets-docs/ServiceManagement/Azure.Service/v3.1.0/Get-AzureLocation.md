@@ -25,7 +25,7 @@ Before you run this cmdlet, you must set your current subscription by using the 
 
 ### Example 1: Get locations
 ```
-PS C:\>Get-AzureLocation
+PS C:\> Get-AzureLocation
 ```
 
 This command gets a list of available data centers, and their properties, for the current subscription.

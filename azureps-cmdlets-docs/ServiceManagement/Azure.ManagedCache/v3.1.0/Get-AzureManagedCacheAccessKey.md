@@ -24,7 +24,7 @@ Typically, you use the primary key, but use the secondary key to avoid delays wh
 To get new access keys, use the New-AzureManagedCacheAccessKey cmdlet.
 An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see [Azure Cache](http://azure.microsoft.com/en-us/services/cache/) (http://azure.microsoft.com/en-us/services/cache/).
 
 ## EXAMPLES
 

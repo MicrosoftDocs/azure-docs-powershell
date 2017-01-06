@@ -33,14 +33,14 @@ The **Remove-AzureServiceADDomainExtension** cmdlet removes the cloud service Ac
 
 ### Example 1: Remove an AD domain extension
 ```
-PS C:\>Remove-AzureServiceADDomainExtension -ServiceName $Svc
+PS C:\> Remove-AzureServiceADDomainExtension -ServiceName $Svc
 ```
 
 This command removes the extension specified by the $Svc variable.
 
 ### Example 2: Remove an AD Domain extension for a specified role
 ```
-PS C:\>Remove-AzureServiceADDomainExtension -ServiceName $Svc -Role "WebRole1"
+PS C:\> Remove-AzureServiceADDomainExtension -ServiceName $Svc -Role "WebRole1"
 ```
 
 This command removes the service extension for the specified role.
