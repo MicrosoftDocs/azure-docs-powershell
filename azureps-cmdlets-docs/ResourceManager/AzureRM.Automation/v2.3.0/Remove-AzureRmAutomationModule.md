@@ -24,7 +24,7 @@ The **Remove-AzureRmAutomationModule** cmdlet removes a module from an Automatio
 
 ### Example 1: Remove a module
 ```
-PS C:\>Remove-AzureRmAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes a module named ContosoModule from the Automation account named Contoso17.
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -138,5 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationModule](./New-AzureRmAutomationModule.md)
 
 [Set-AzureRmAutomationModule](./Set-AzureRmAutomationModule.md)
-
-

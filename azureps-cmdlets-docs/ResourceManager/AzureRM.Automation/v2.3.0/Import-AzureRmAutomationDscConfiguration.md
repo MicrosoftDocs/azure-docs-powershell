@@ -26,7 +26,7 @@ Specify the path of an APS script that contains a single DSC configuration.
 
 ### Example 1: Import a DSC configuration into Automation
 ```
-PS C:\>Import-AzureRmAutomationDscConfiguration -AutomationAccountName "Contoso17"-ResourceGroupName "ResourceGroup01" -SourcePath "C:\DSC\client.ps1" -Force
+PS C:\> Import-AzureRmAutomationDscConfiguration -AutomationAccountName "Contoso17"-ResourceGroupName "ResourceGroup01" -SourcePath "C:\DSC\client.ps1" -Force
 ```
 
 This command imports the DSC configuration in the file named client.ps1 into the Automation account named Contoso17.
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePath
-Specifies the path of the wps_2 script that contains the DSC configuration that this cmdlet imports.
+Specifies the path of the Windows PowerShell script that contains the DSC configuration that this cmdlet imports.
 
 ```yaml
 Type: String
@@ -201,5 +201,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Export-AzureRmAutomationDscConfiguration](./Export-AzureRmAutomationDscConfiguration.md)
 
 [Get-AzureRmAutomationDscConfiguration](./Get-AzureRmAutomationDscConfiguration.md)
-
-

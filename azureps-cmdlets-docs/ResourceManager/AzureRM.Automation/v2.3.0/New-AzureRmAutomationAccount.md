@@ -36,7 +36,7 @@ This command creates a new automation account named ContosoAutomationAccount in 
 
 ### -Location
 Specifies the location in which this cmdlet creates the Automation account.
-To obtain valid locations, use the Get-AzureRMLocation cmdlet.
+To obtain valid locations, use the **Get-AzureRMLocation** cmdlet.
 
 ```yaml
 Type: String
@@ -131,5 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationAccount](./Remove-AzureRmAutomationAccount.md)
 
 [Set-AzureRmAutomationAccount](./Set-AzureRmAutomationAccount.md)
-
-

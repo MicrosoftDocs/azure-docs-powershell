@@ -20,7 +20,7 @@ Get-AzureRmAutomationJobOutputRecord [-JobId] <Guid> [-Id] <String> [-ResourceGr
 ## DESCRIPTION
 The **Get-AzureRmAutomationJobOutputRecord** cmdlet gets the full output of an Automation job output record.
 
-Although the **Get-AzureRmAutomationJobOutput** cmdlet lists one or more job output records, it returns only a summary, as a string, of the value of any output record.
+Although the [Get-AzureRmAutomationJobOutput](./Get-AzureRmAutomationJobOutput.md) cmdlet lists one or more job output records, it returns only a summary, as a string, of the value of any output record.
 It does not return the full value of an output record's outputted value in its original type.
 In addition, the summary has a maximum length, which the full value that this cmdlet outputs may exceed.
 Unlike **Get-AzureRmAutomationJobOutput**, this cmdlet returns the full value in its originally outputted type, for any output record's outputted value.
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of a job output record for this cmdlet to retrieve.
+Specifies the ID of a job output record that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -108,5 +108,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmAutomationJobOutput](./Get-AzureRMAutomationJobOutput.md)
-
-

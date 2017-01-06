@@ -24,7 +24,7 @@ The **Set-AzureRmAutomationWebhook** cmdlet modifies a webhook for an Azure Auto
 
 ### Example 1: Disable a webhook
 ```
-PS C:\>Set-AzureAutomationWebhook -Name "Webhook01" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -IsEnabled $False
+PS C:\> Set-AzureAutomationWebhook -Name "Webhook01" -ResourceGroup "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -IsEnabled $False
 ```
 
 This command disables a webhook named Webhook01 in the Automation account named AutomationAccount01.
@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationWebhook](./New-AzureRMAutomationWebhook.md)
 
 [Remove-AzureRmAutomationWebhook](./Remove-AzureRMAutomationWebhook.md)
-
-

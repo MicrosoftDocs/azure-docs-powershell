@@ -21,13 +21,13 @@ Resume-AzureRmAutomationJob [-Id] <Guid> [-ResourceGroupName] <String> [-Automat
 The **Resume-AzureRmAutomationJob** cmdlet resumes a suspended Azure Automation job.
 Specify the suspended job.
 
-To suspend a job, use the Suspend-AzureRmAutomationJob cmdlet.
+To suspend a job, use the [Suspend-AzureRmAutomationJob](./Suspend-AzureRmAutomationJob.md) cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Resume a suspended job
 ```
-PS C:\>Resume-AzureRmAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01"
+PS C:\> Resume-AzureRmAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01"
 ```
 
 This command resumes the job that has the specified ID.
@@ -97,5 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmAutomationJob](./Stop-AzureRMAutomationJob.md)
 
 [Suspend-AzureRmAutomationJob](./Suspend-AzureRMAutomationJob.md)
-
-

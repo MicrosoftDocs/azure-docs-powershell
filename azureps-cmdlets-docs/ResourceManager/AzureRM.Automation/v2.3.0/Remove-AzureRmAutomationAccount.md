@@ -20,13 +20,13 @@ Remove-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [
 ## DESCRIPTION
 The **Remove-AzureRmAutomationAccount** cmdlet removes an Azure Automation account from a resource group.
 
-For more information about Automation accounts, see the New-AzureRmAutomationAccount cmdlet.
+For more information about Automation accounts, see the **New-AzureRmAutomationAccount** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Remove an automation account
 ```
-PS C:\>Remove-AzureRmAutomationAccount -Name "ContosoAutomationAccount" -Force -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmAutomationAccount -Name "ContosoAutomationAccount" -Force -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes an automation account named ContosoAutomationAccount without prompting for user validation.
@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationAccount](./New-AzureRmAutomationAccount.md)
 
 [Set-AzureRmAutomationAccount](./Set-AzureRmAutomationAccount.md)
-
-

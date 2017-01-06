@@ -31,14 +31,14 @@ The **Get-AzureRmAutomationModule** cmdlet gets metadata for modules from Azure 
 
 ### Example 1: Get all modules
 ```
-PS C:\>Get-AzureRmAutomationModule -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
+PS C:\> Get-AzureRmAutomationModule -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command gets all modules in the Automation account named Contoso17.
 
 ### Example 2: Get a module
 ```
-PS C:\>Get-AzureRmAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ResourceGroupName "ResourceGroup01"
+PS C:\> Get-AzureRmAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command gets a module named ContosoModule in the Automation account named Contoso17.
@@ -106,5 +106,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAutomationModule](./Remove-AzureRmAutomationModule.md)
 
 [Set-AzureRmAutomationModule](./Set-AzureRmAutomationModule.md)
-
-

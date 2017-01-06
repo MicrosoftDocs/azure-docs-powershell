@@ -24,7 +24,7 @@ The **Remove-AzureRmAutomationCredential** cmdlet removes a credential from Azur
 
 ### Example 1: Remove a credential
 ```
-PS C:\>Remove-AzureRmAutomationCredential -AutomationAccountName "Contoso17" -Name "ContosoCredential" -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmAutomationCredential -AutomationAccountName "Contoso17" -Name "ContosoCredential" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes a credential named ContosoCredential in the Azure Automation account named Contoso17.
@@ -123,5 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationCredential](./New-AzureRMAutomationCredential.md)
 
 [Set-AzureRmAutomationCredential](./Set-AzureRMAutomationCredential.md)
-
-

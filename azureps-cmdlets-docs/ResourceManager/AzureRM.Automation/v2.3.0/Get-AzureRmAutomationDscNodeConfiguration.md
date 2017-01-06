@@ -122,7 +122,8 @@ Accept wildcard characters: False
 
 ### -RollupStatus
 Specifies the rollup status of DSC node configurations that this cmdlet gets.
-Valid values are: 
+
+The acceptable values for this parameter are:
 
 - Bad 
 - Good
@@ -152,5 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Import-AzureRmAutomationDscNodeConfiguration](./Import-AzureRmAutomationDscNodeConfiguration.md)
-
-

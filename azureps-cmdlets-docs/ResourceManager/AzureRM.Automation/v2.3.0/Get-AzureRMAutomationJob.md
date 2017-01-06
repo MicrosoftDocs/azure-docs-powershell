@@ -155,7 +155,8 @@ Accept wildcard characters: False
 ### -Status
 Specifies the status of a job.
 This cmdlet gets jobs that have a status matching this parameter.
-Valid values are: 
+
+The acceptable values for this parameter are:
 
 - Activating
 - Completed
@@ -202,5 +203,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmAutomationJob](./Stop-AzureRMAutomationJob.md)
 
 [Suspend-AzureRmAutomationJob](./Suspend-AzureRMAutomationJob.md)
-
-

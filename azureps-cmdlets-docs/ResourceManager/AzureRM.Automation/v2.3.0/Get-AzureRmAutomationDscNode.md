@@ -177,7 +177,8 @@ Accept wildcard characters: False
 
 ### -Status
 Specifies the status of the DSC nodes that this cmdlet gets.
-Valid values are: 
+
+The acceptable values for this parameter are:
 
 - Compliant 
 - NotCompliant
@@ -215,5 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmAutomationDscNode](./Set-AzureRmAutomationDscNode.md)
 
 [Unregister-AzureRmAutomationDscNode](./Unregister-AzureRmAutomationDscNode.md)
-
-

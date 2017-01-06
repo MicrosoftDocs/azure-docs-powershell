@@ -24,7 +24,7 @@ The **Set-AzureRmAutomationSchedule** cmdlet modifies a schedule in Azure Automa
 
 ### Example 1: Modify a schedule
 ```
-PS C:\>Set-AzureRmAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule01" -Description "Automation Schedule" -ResourceGroupName "ResourceGroup01"
+PS C:\> Set-AzureRmAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule01" -Description "Automation Schedule" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command modifies the description of the schedule named Schedule01.
@@ -124,5 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationSchedule](./New-AzureRMAutomationSchedule.md)
 
 [Remove-AzureRmAutomationSchedule](./Remove-AzureRMAutomationSchedule.md)
-
-

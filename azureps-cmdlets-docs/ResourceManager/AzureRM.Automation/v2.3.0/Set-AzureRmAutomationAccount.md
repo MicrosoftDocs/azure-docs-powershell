@@ -20,13 +20,13 @@ Set-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [-Pl
 ## DESCRIPTION
 The **Set-AzureRmAutomationAccount** cmdlet modifies an Azure Automation account.
 
-For more information about Automation accounts, see the New-AzureRmAutomationAccount cmdlet.
+For more information about Automation accounts, see the [New-AzureRmAutomationAccount](./New-AzureRmAutomationAccount.md) cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Set the tags for an Automation account
 ```
-PS C:\>$Tags = @{"tag01"="value01";"tag02"="value02"}
+PS C:\> $Tags = @{"tag01"="value01";"tag02"="value02"}
 PS C:\> Set-AzureRmAutomationAccount -Name "AutomationAccount01" -ResourceGroupName "ResourceGroup01" -Tags $Tags
 ```
 
@@ -36,7 +36,7 @@ The second command sets tags in $Tags for the Automation account named Automatio
 
 ### Example 2: Change the plan for an Automation account
 ```
-PS C:\>Set-AzureRmAutomationAccount -Name "AutomationAccount01" -ResourceGroupName "ResourceGroup01" -Plan Basic
+PS C:\> Set-AzureRmAutomationAccount -Name "AutomationAccount01" -ResourceGroupName "ResourceGroup01" -Plan Basic
 ```
 
 This command changes the plan to Basic for the Automation account named AutomationAccount01.
@@ -124,5 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAutomationAccount](./New-AzureRmAutomationAccount.md)
 
 [Remove-AzureRmAutomationAccount](./Remove-AzureRmAutomationAccount.md)
-
-
