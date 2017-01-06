@@ -33,6 +33,7 @@ The **New-AzureRMSiteRecoveryNetworkMapping** cmdlet creates a mapping between t
 ## PARAMETERS
 
 ### -Name
+Specifies a name. 
 
 ```yaml
 Type: String
