@@ -37,13 +37,13 @@ The **Add-AzureRmLoadBalancerRuleConfig** cmdlet adds a rule configuration to an
 
 ### Example 1: Add a rule configuration to a load balancer
 ```
-PS C:\>$slb = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
-PS C:\> $slb | Add-AzureRmLoadBalancerRuleConfig -Name "NewRule" -FrontendIPConfiguration $slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350 -EnableFloatingIP
+PS C:\> $Slb = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $Slb | Add-AzureRmLoadBalancerRuleConfig -Name "NewRule" -FrontendIPConfiguration $slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350 -EnableFloatingIP
 ```
 
-The first command gets the load balancer named MyLoadBalancer, and then stores it in the variable $slb.
+The first command gets the load balancer named MyLoadBalancer, and then stores it in the variable $Slb.
 
-The second command uses the pipeline operator to pass the load balancer in $slb to **Add-AzureRmLoadBalancerRuleConfig**, which adds the rule configuration named NewRule.
+The second command uses the pipeline operator to pass the load balancer in $Slb to **Add-AzureRmLoadBalancerRuleConfig**, which adds the rule configuration named NewRule.
 
 ## PARAMETERS
 
@@ -318,5 +318,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmLoadBalancerRuleConfig](./Remove-AzureRmLoadBalancerRuleConfig.md)
 
 [Set-AzureRmLoadBalancerRuleConfig](./Set-AzureRmLoadBalancerRuleConfig.md)
-
-

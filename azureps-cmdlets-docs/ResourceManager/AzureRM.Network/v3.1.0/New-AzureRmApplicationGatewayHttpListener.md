@@ -127,6 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequireServerNameIndication
+Specifies the server name indication.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -260,5 +262,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayHttpListener](./Remove-AzureRmApplicationGatewayHttpListener.md)
 
 [Set-AzureRmApplicationGatewayHttpListener](./Set-AzureRmApplicationGatewayHttpListener.md)
-
-
