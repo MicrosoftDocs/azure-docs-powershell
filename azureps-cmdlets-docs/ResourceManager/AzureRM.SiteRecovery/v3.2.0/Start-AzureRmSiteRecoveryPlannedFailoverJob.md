@@ -36,7 +36,7 @@ Start-AzureRmSiteRecoveryPlannedFailoverJob -ReplicationProtectedItem <ASRReplic
 
 ## DESCRIPTION
 The **Start-AzureRmSiteRecoveryPlannedFailoverJob** cmdlet starts a planned failover for an Azure Site Recovery protection entity or recovery plan.
-You can check whether the job succeeds by using the Get-AzureRmSiteRecoveryJob cmdlet.
+You can check whether the job succeeds by using the **Get-AzureRmSiteRecoveryJob** cmdlet.
 
 ## EXAMPLES
 

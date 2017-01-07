@@ -217,7 +217,7 @@ Specifies the type of authentication used.
 Valid values are:
 
 - Certificate
--  Kerberos
+- Kerberos
 
 ```yaml
 Type: String

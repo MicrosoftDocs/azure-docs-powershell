@@ -29,7 +29,7 @@ The **Remove-AzureRmSiteRecoveryRecoveryPlan** cmdlet removes a site recovery pl
 
 ### Example 1: Remove a recovery plan
 ```
-PS C:\>$RecoveryPlan = Get-AzureRmSiteRecoveryRecoveryPlan 
+PS C:\> $RecoveryPlan = Get-AzureRmSiteRecoveryRecoveryPlan 
 PS C:\> Remove-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan $RecoveryPlan
 ```
 
