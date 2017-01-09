@@ -42,14 +42,14 @@ The **Find-AzureRmResource** cmdlet searches for resources based on specified pa
 
 ### Example 1: Search for resources by type and resource group name
 ```
-PS C:\>Find-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupNameContains "ResourceGroup"
+PS C:\> Find-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupNameContains "ResourceGroup"
 ```
 
 This command searches for resources of the type microsoft.web/sites under resource groups that have names that match the string ResourceGroup.
 
 ### Example 2: Search for resources by type and resource name
 ```
-PS C:\>Find-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceNameContains "test"
+PS C:\> Find-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceNameContains "test"
 ```
 
 This command searches for resources of the type microsoft.web/sites that have a resource name that matches the string test.

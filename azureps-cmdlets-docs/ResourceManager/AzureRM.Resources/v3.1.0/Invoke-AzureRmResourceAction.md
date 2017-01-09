@@ -44,10 +44,6 @@ To get a list of supported actions, use the Azure Resource Explorer tool.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -224,7 +220,7 @@ Accept wildcard characters: False
 Specifies the name of an extension resource for the resource on which this cmdlet invokes an action.
 For instance, to specify a database, use the following format: 
 
-server name`/`database name
+`server name/database name`
 
 ```yaml
 Type: String
