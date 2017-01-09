@@ -24,7 +24,7 @@ The **New-AzureRmRedisCachePatchSchedule** cmdlet adds a patch schedule to a cac
 
 ### Example 1: Create and add a patch schedule on a cache
 ```
-PS C:\>New-AzureRmRedisCachePatchSchedule -ResourceGroupName "ResourceGroup13" -Name "RedisCache06" -Entries @(New-AzureRmRedisCacheScheduleEntry -DayOfWeek "Weekend" -StartHourUtc 2 -MaintenanceWindow "06:00:00")
+PS C:\> New-AzureRmRedisCachePatchSchedule -ResourceGroupName "ResourceGroup13" -Name "RedisCache06" -Entries @(New-AzureRmRedisCacheScheduleEntry -DayOfWeek "Weekend" -StartHourUtc 2 -MaintenanceWindow "06:00:00")
 ```
 
 This command adds a patch schedule to the cache named RedisCache06.
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 
 ### -Entries
 Specifies an array of schedules that this cmdlet sets on a cache. 
-To obtain a **PSScheduleEntry** object, use the New-AzureRmRedisCacheScheduleEntry cmdlet.
+To obtain a **PSScheduleEntry** object, use the **New-AzureRmRedisCacheScheduleEntry** cmdlet.
 
 ```yaml
 Type: PSScheduleEntry[]

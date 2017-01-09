@@ -24,7 +24,7 @@ The **Remove-AzureRmRedisCacheDiagnostics** cmdlet disables diagnostics on an Az
 
 ### Example 1: Disable diagnostics
 ```
-PS C:\>Remove-AzureRmRedisCacheDiagnostics -ResourceGroupName "ContosoResourceGroup" -Name "PeakCache" -Force
+PS C:\> Remove-AzureRmRedisCacheDiagnostics -ResourceGroupName "ContosoResourceGroup" -Name "PeakCache" -Force
 ```
 
 This command disables diagnostics on specified Azure Redis Cache.

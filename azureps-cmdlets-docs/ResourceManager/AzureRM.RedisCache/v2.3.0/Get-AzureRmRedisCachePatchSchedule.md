@@ -23,7 +23,7 @@ The **Get-AzureRmRedisCachePatchSchedule** cmdlet gets a patch schedule for a ca
 
 ### Example 1: Get the patch schedule
 ```
-PS C:\>Get-AzureRmRedisCachePatchSchedule -ResourceGroupName "ResourceGroup13" -Name "RedisCache06"
+PS C:\> Get-AzureRmRedisCachePatchSchedule -ResourceGroupName "ResourceGroup13" -Name "RedisCache06"
 ```
 
 This command gets the patch schedule from the cache named RedisCache06.

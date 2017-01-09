@@ -26,7 +26,7 @@ The **New-AzureRmRedisCache** cmdlet creates an Azure Redis Cache.
 
 ### Example 1: Create a Redis Cache
 ```
-PS C:\>New-AzureRmRedisCache -ResourceGroupName "MyGroup" -Name "MyCache" -Location "North Central US"
+PS C:\> New-AzureRmRedisCache -ResourceGroupName "MyGroup" -Name "MyCache" -Location "North Central US"
 
 
           PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
@@ -51,7 +51,7 @@ This command creates a Redis Cache.
 
 ### Example 2: Create a Standard SKU Redis Cache
 ```
-PS C:\>New-AzureRmRedisCache -ResourceGroupName "MyGroup" -Name "MyCache" -Location "North Central US" -Size 250MB -Sku "Standard" -RedisConfiguration @{"maxmemory-policy" = "allkeys-random"} -Force
+PS C:\> New-AzureRmRedisCache -ResourceGroupName "MyGroup" -Name "MyCache" -Location "North Central US" -Size 250MB -Sku "Standard" -RedisConfiguration @{"maxmemory-policy" = "allkeys-random"} -Force
 
 
           PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
@@ -273,7 +273,7 @@ Configures the number of databases.
 This property can be configured only at cache creation.
 Standard and Premium tiers.
 
-For more information, see Manage Azure Redis Cache with Azure PowerShellhttp://go.microsoft.com/fwlink/?LinkId=800051 (http://go.microsoft.com/fwlink/?LinkId=800051).
+For more information, see [Manage Azure Redis Cache with Azure PowerShell](http://go.microsoft.com/fwlink/?LinkId=800051) (http://go.microsoft.com/fwlink/?LinkId=800051).
 
 ```yaml
 Type: Hashtable
