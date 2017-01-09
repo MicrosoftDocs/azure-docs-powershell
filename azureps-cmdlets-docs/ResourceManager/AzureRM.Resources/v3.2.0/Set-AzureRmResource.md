@@ -43,12 +43,12 @@ Specify a resource to modify by name and type or by ID.
 
 ### Example 1: Modify a resource
 ```
-PS C:\>$Resource = Get-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11" -ResourceName "ContosoSite" 
+PS C:\> $Resource = Get-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11" -ResourceName "ContosoSite" 
 PS C:\> $Resource.Properties.Enabled = "False"
 PS C:\> $Resource | Set-AzureRmResource -Force
 ```
 
-The first command gets the resource named ContosoSite by using the Get-AzureRmResource cmdlet, and then stores it in the $Resource variable.
+The first command gets the resource named ContosoSite by using the **Get-AzureRmResource** cmdlet, and then stores it in the $Resource variable.
 
 The second command modifies a property of $Resource.
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 Specifies the name of an extension resource for the resource.
 For instance, to specify a database, use the following format: 
 
-server name`/`database name
+`server name/database name`
 
 ```yaml
 Type: String
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ### -ResourceId
 Specifies the fully qualified resource ID, including the subscription, as in the following example: 
 
-`/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+`/subscriptions/<subscription ID>/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: String

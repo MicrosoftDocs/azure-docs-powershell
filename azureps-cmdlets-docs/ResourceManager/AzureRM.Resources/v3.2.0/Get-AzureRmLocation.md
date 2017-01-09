@@ -23,7 +23,7 @@ The **Get-AzureRmLocation** cmdlet gets all locations and the supported resource
 
 ### Example 1: Get all locations and the supported resource providers
 ```
-PS C:\>Get-AzureRmLocation
+PS C:\> Get-AzureRmLocation
 ```
 
 This command gets all locations and the supported resource providers for each location.

@@ -75,7 +75,7 @@ This includes the resources that the deployment requires.
 An Azure resource is a user-managed Azure entity, such as a database server, database, website, virtual machine, or Storage account.
 An Azure resource group is a collection of Azure resources that are deployed as a unit, such as the website, database server, and databases that are required for a financial website.
 A resource group deployment uses a template to add resources to a resource group and publishes them so that they are available in Azure.
-To add resources to a resource group without using a template, use the New-AzureRmResource cmdlet.
+To add resources to a resource group without using a template, use the **New-AzureRmResource** cmdlet.
 
 To add a resource group deployment, specify the name of an existing resource group and a resource group template.
 A resource group template is a JSON string that represents a resource group for a complex cloud-based service, such as a web portal.
@@ -94,7 +94,7 @@ Template parameter values that you enter at the command prompt take precedence o
 
 ### Example 1: Use a custom template and parameter file to create a deployment
 ```
-PS C:\>New-AzureRmResourceGroupDeployment -ResourceGroupName "ContosoEngineering" -TemplateFile "D:\Azure\Templates\EngineeringSite.json" -TemplateParameterFile "D:\Azure\Templates\EngSiteParms.json" -TemplateVersion "2.1"
+PS C:\> New-AzureRmResourceGroupDeployment -ResourceGroupName "ContosoEngineering" -TemplateFile "D:\Azure\Templates\EngineeringSite.json" -TemplateParameterFile "D:\Azure\Templates\EngSiteParms.json" -TemplateVersion "2.1"
 ```
 
 This command creates a new deployment by using a custom template and a template file on disk.
