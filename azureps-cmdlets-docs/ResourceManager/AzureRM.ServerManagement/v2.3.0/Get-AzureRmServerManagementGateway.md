@@ -43,7 +43,8 @@ The **Get-AzureRmServerManagementGateway** cmdlet gets one or more Azure Server 
 
 ### Example 1: Get all gateways in a subscription
 ```
-PS C:\>Get-AzureRmServerManagementGateway
+PS C:\> Get-AzureRmServerManagementGateway
+
 Resource Group Location       Auto Upgrade Gateway Name
 -------------- --------       ------------ ------------
 groupOne       centralus      Off          mygateway
@@ -55,7 +56,8 @@ This command gets all Server Management Gateways in the subscription.
 
 ### Example 2: Get gateways in a resource group
 ```
-PS C:\>Get-AzureRmServerManagementGateway -ResourceGroupName "Group001"
+PS C:\> Get-AzureRmServerManagementGateway -ResourceGroupName "Group001"
+
 Resource Group Location       Auto Upgrade Gateway Name
 -------------- --------       ------------ ------------
 myGroup        centralus      Off          mygateway

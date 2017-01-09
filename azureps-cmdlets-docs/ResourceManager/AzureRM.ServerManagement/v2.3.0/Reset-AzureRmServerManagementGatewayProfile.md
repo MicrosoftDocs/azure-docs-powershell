@@ -27,14 +27,10 @@ Reset-AzureRmServerManagementGatewayProfile [-Gateway] <Gateway> [-InformationAc
 ## DESCRIPTION
 The **Reset-AzureRmServerManagementGatewayProfile** cmdlet resets the profile for an Azure Server Management Gateway.
 
-You will need to use the Save-AzureRmServerManagementGatewayProfile cmdlet to download the profile and then the Install-AzureRmServerManagementGatewayProfile cmdlet to save it after you reset the profile.
+You will need to use the **Save-AzureRmServerManagementGatewayProfile** cmdlet to download the profile and then the **Install-AzureRmServerManagementGatewayProfile** cmdlet to save it after you reset the profile.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -110,7 +106,7 @@ Accept wildcard characters: False
 ### -Gateway
 Specifies the gateway for which the cmdlet resets the profile for.
 
-May be specified instead of ResourceGoupName and GatewayName
+May be specified instead of *ResourceGoupName* and *GatewayName*.
 
 ```yaml
 Type: Gateway
