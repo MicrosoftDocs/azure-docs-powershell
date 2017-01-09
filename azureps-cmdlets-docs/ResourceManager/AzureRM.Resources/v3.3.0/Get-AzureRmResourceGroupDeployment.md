@@ -32,10 +32,10 @@ An Azure resource is a user-managed Azure entity, such as a database server, dat
 An Azure resource group is a collection of Azure resources that are deployed as a unit.
 
 A deployment is the operation that makes the resources in the resource group available for use.
-For more information about Azure resources and Azure resource groups, see the New-AzureRmResourceGroup cmdlet.
+For more information about Azure resources and Azure resource groups, see the **New-AzureRmResourceGroup** cmdlet.
 
 You can use this cmdlet for tracking.
-For debugging, use this cmdlet with the Get-AzureRmLog cmdlet.
+For debugging, use this cmdlet with the **Get-AzureRmLog** cmdlet.
 
 ## EXAMPLES
 
@@ -61,9 +61,9 @@ If you do not assign a name, the cmdlets provide a default name based on the tem
 PS C:\> Get-AzureRmResourceGroup | Get-AzureRmResourceGroupDeployment | Format-Table ResourceGroupName, DeploymentName, ProvisioningState
 ```
 
-This command gets all resource groups in your subscription by using the Get-AzureRmResourceGroup cmdlet.
+This command gets all resource groups in your subscription by using the **Get-AzureRmResourceGroup** cmdlet.
 The command passes the resource groups to the current cmdlet by using the pipeline operator.
-The current cmdlet gets all deployments of all resource groups in the subscription, and passes the results to the Format-Table cmdlet to display their **ResourceGroupName**, **DeploymentName**, and **ProvisioningState** property values.
+The current cmdlet gets all deployments of all resource groups in the subscription, and passes the results to the **Format-Table** cmdlet to display their **ResourceGroupName**, **DeploymentName**, and **ProvisioningState** property values.
 
 ## PARAMETERS
 

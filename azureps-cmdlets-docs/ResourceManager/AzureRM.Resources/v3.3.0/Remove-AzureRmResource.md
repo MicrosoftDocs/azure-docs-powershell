@@ -148,7 +148,7 @@ Accept wildcard characters: False
 Specifies the name of an extension resource of the resource that this cmdlet removes.
 For instance, to specify a database, use the following format: 
 
-server name`/`database name
+`server name/database name`
 
 ```yaml
 Type: String
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 Specifies the fully qualified resource ID of the resource that this cmdlet removes.
 The ID includes the subscription, as in the following example: 
 
-`/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+`/subscriptions/<subscription ID>/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: String

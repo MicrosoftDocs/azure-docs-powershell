@@ -277,11 +277,11 @@ Accept wildcard characters: False
 Specifies the scope to which the lock applies.
 For instance, to specify a database, use the following format: 
 
-`/subscriptions/`subscription ID`/resourceGroups/`resource group name`/providers/Microsoft.Sql/servers/`server name`/databases/`database name
+`/subscriptions/<subscription ID>/resourceGroups/<resource group name>/providers/Microsoft.Sql/servers/<server name>/databases/<database name>`
 
 To specify a resource group, use the following format: 
 
-`/subscriptions/`subscription ID`/resourceGroups/`resource group name
+`/subscriptions/<subscription ID>/resourceGroups/<resource group name>`
 
 ```yaml
 Type: String

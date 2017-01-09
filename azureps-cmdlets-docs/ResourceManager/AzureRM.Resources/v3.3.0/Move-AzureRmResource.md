@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationSubscriptionId
-Specifies the ID of the subscription into which this cmdlet moves resources .
+Specifies the ID of the subscription into which this cmdlet moves resources.
 
 ```yaml
 Type: Guid

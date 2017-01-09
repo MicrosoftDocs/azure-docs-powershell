@@ -79,7 +79,7 @@ This command removes the lock named ContosoSiteLock.
 Specifies the name of the resource for which the lock applies.
 For instance, to specify a database, use the following format: 
 
-Server`/`Database
+`Server/Database`
 
 ```yaml
 Type: String
