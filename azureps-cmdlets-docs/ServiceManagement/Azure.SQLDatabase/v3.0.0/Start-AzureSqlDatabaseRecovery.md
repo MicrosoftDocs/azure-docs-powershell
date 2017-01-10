@@ -30,13 +30,13 @@ This cmdlet supports basic recovery that uses the last known available backup fo
 The recovery operation creates a new database.
 If you recover a live database on the same server, you must specify a different name for the new database.
 
-To do a point in time restore for a database, use the Start-AzureSqlDatabaseRestore cmdlet instead.
+To do a point in time restore for a database, use the **Start-AzureSqlDatabaseRestore** cmdlet instead.
 
 ## EXAMPLES
 
 ### Example 1: Recover a database specified as an object
 ```
-PS C:\>$Database = Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17" 
+PS C:\> $Database = Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17" 
 PS C:\> $Operation = Start-AzureSqlDatabaseRecovery -SourceDatabase $Database -TargetDatabaseName "DatabaseRestored"
 ```
 
@@ -47,7 +47,7 @@ The second command recovers the database stored in $Database.
 
 ### Example 2: Recover a database specified by name
 ```
-PS C:\>$Operation = Start-AzureSqlDatabaseRecovery -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored"
+PS C:\> $Operation = Start-AzureSqlDatabaseRecovery -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored"
 ```
 
 This command recovers a database using the database name.
@@ -161,11 +161,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 * You must use certificate-based authentication to run this cmdlet. Run the following commands on the computer where you run this cmdlet: 
 
-`PS C:\\\> $subId = \<Subscription ID\>`
-`PS C:\\\> $thumbprint = \<Certificate Thumbprint\>`
-`PS C:\\\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint`
-`PS C:\\\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert`
-`PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"`
+
+PS C:\\\> $subId = \<Subscription ID\>
+
+PS C:\\\> $thumbprint = \<Certificate Thumbprint\>
+
+PS C:\\\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint
+
+PS C:\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert
+
+PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"
+
 
 ## RELATED LINKS
 

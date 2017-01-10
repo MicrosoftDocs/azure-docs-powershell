@@ -24,7 +24,7 @@ The **Get-AzureRmVirtualNetworkPeering** cmdlet gets the virtual network peering
 
 ### Example 1: Get a peering between two virtual networks
 ```
-PS C:\>Get-AzureRmVirtualNetworkPeering -Name "LinkToVNet2" -VirtualNetwork "MyVirtualNetwork" -ResourceGroupName "MyResourceGroup"
+PS C:\> Get-AzureRmVirtualNetworkPeering -Name "LinkToVNet2" -VirtualNetwork "MyVirtualNetwork" -ResourceGroupName "MyResourceGroup"
 ```
 
 This command gets a previously created virtual network peering named LinkToVNet2 located in MyVirtualNetwork in the resource group named MyResourceGroup.
@@ -131,5 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmVirtualNetworkPeering](./Remove-AzureRmVirtualNetworkPeering.md)
 
 [Set-AzureRmVirtualNetworkPeering](./Set-AzureRmVirtualNetworkPeering.md)
-
-
