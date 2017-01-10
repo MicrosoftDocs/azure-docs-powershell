@@ -19,13 +19,14 @@ Set-AzureStorSimpleStorageAccountCredential [-StorageAccountName] <String> [[-St
 
 ## DESCRIPTION
 The **Set-AzureStorSimpleStorageAccountCredential** cmdlet update an existing Azure storage access credential for use by StorSimple OneSDK cmdlets.
-For more information about how StorSimple cmdlets work with storage accounts, see the help topic for the New-AzureStorSimpleStorageAccountCredential cmdlet.
+For more information about how StorSimple cmdlets work with storage accounts, see the help topic for the **New-AzureStorSimpleStorageAccountCredential** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Modify a credential
 ```
-PS C:\>Set-AzureStorSimpleStorageAccountCredential -StorageAccountName "ContosoStorage01" -UseSSL $False -StorageAccountKey "h9ldH4LlHJB3GujcNwgdxJACy1DaQ1Hak1bfoUBzrDqZ5DPK8+0XGbsgD+jrKfQy5PBepKpYobMViLaOC2XMdg==" -Force -WaitForComplete
+PS C:\> Set-AzureStorSimpleStorageAccountCredential -StorageAccountName "ContosoStorage01" -UseSSL $False -StorageAccountKey "h9ldH4LlHJB3GujcNwgdxJACy1DaQ1Hak1bfoUBzrDqZ5DPK8+0XGbsgD+jrKfQy5PBepKpYobMViLaOC2XMdg==" -Force -WaitForComplete
+
 VERBOSE: ClientRequestId: 20cd2b17-9cff-4ab4-a034-96d60d946295_PS
 VERBOSE: ClientRequestId: a75ed193-1da5-491f-96f5-572b5461d466_PS
 VERBOSE: ClientRequestId: db612c9e-e89a-404f-8406-e66e7f697cd5_PS

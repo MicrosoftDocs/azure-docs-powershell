@@ -24,7 +24,8 @@ The **Set-AzureStorSimpleAccessControlRecord** cmdlet updates the iSCSI qualifie
 
 ### Example 1: Update an access control record
 ```
-PS C:\>Set-AzureStorSimpleAccessControlRecord -ACRName "Acr10" -IQNInitiatorName "IqnUpdated" -WaitForComplete
+PS C:\> Set-AzureStorSimpleAccessControlRecord -ACRName "Acr10" -IQNInitiatorName "IqnUpdated" -WaitForComplete
+
 VERBOSE: ClientRequestId: e4766335-f302-40e0-93bf-fad7aa488ae6_PS
 VERBOSE: ClientRequestId: cfdbbd67-6ba5-4238-b743-b88f604079b9_PS
 VERBOSE: About to run a task to update your Access Control Record! 
