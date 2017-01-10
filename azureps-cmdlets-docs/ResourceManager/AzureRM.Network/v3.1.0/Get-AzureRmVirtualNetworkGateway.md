@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmVirtualNetworkGateway
 
 ## SYNOPSIS
+Gets a virtual network gateway.
 
 ## SYNTAX
 
@@ -17,17 +18,15 @@ Get-AzureRmVirtualNetworkGateway [-Name <String>] -ResourceGroupName <String>
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmVirtualNetworkGateway** cmdlet gets a virtual network gateway.
 
 ## EXAMPLES
-
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
 ### -Name
+Specifies the name of the virtual network gateway that this cmdlet gets.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -41,6 +40,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+Specifies the name of the resource group that contains the virtual network gateway.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -102,4 +103,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -39,7 +39,7 @@ Path map configuration settings are used in application gateway load balancing.
 
 ### Example 1
 ```
-PS C:\>$Gateway = Get-AzureRmApplicationGateway -Name "ContosoApplicationGateway"
+PS C:\> $Gateway = Get-AzureRmApplicationGateway -Name "ContosoApplicationGateway"
 PS C:\> $AddressPool = New-AzureRmApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"
 PS C:\> $HttpSettings = New-AzureRmApplicationGatewayBackendHttpSettings -Name "ContosoHttpSetings" -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled"
 PS C:\> $PathRuleConfig = New-AzureRmApplicationGatewayPathRuleConfig -Paths "/"-BackendAddressPool $AddressPool -BackendHttpSettings $HttpSettings
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -BackendAddressPoolId
 Specifies the ID of an existing backend address pool that can be added to the gateway path rule configuration settings.
-Address pool IDs can be returned by using the Get-AzureRmApplicationGatewayBackendAddressPool cmdlet.
+Address pool IDs can be returned by using the [Get-AzureRmApplicationGatewayBackendAddressPool](./Get-AzureRmApplicationGatewayBackendAddressPool.md) cmdlet.
 After you have the ID you can then use the *DefaultBackendAddressPoolId* parameter instead of the *DefaultBackendAddressPool* parameter.
 For instance:
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -BackendHttpSettingsId
 Specifies the ID of an existing backend HTTP settings collection that can be added to the gateway path rule configuration settings.
-HTTP setting IDs can be returned by using the Get-AzureRmApplicationGatewayBackendHttpSettings cmdlet.
+HTTP setting IDs can be returned by using the [Get-AzureRmApplicationGatewayBackendHttpSettings](./Get-AzureRmApplicationGatewayBackendHttpSettings.md) cmdlet.
 After you have the ID you can then use the *DefaultBackendHttpSettingsId* parameter instead of the *DefaultBackendHttpSettings* parameter.
 For instance:
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 ### -BackendAddressPool
 Specifies an object reference to a collection of backend address pool settings to be added to the gateway path rules configuration settings.
-You can create this object reference by using the New-AzureRmApplicationGatewayBackendAddressPool cmdlet and syntax similar to this:
+You can create this object reference by using the [New-AzureRmApplicationGatewayBackendAddressPool](./New-AzureRmApplicationGatewayBackendAddressPool.md) cmdlet and syntax similar to this:
 
 `$AddressPool = New-AzureRmApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`
 
@@ -259,5 +259,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayUrlPathMapConfig](./Remove-AzureRmApplicationGatewayUrlPathMapConfig.md)
 
 [Set-AzureRmApplicationGatewayUrlPathMapConfig](./Set-AzureRmApplicationGatewayUrlPathMapConfig.md)
-
-

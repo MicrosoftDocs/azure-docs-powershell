@@ -21,11 +21,6 @@ Move-AzureRmExpressRouteCircuit -Name <String> -ResourceGroupName <String> -Loca
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name
@@ -196,5 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmExpressRouteCircuit](./Remove-AzureRmExpressRouteCircuit.md)
 
 [Set-AzureRmExpressRouteCircuit](./Set-AzureRmExpressRouteCircuit.md)
-
-
