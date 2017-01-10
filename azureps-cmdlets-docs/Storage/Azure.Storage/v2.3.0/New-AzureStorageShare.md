@@ -25,7 +25,7 @@ The **New-AzureStorageShare** cmdlet creates a file share.
 
 ### Example 1: Create a file share
 ```
-PS C:\>New-AzureStorageShare -Name "ContosoShare06"
+PS C:\> New-AzureStorageShare -Name "ContosoShare06"
 ```
 
 This command creates a file share named ContosoShare06.

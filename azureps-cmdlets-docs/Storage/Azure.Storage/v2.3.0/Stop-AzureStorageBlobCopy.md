@@ -43,21 +43,21 @@ The **Stop-AzureStorageBlobCopy** cmdlet stops a copy operation to the specified
 
 ### Example 1: Stop copy operation by name
 ```
-PS C:\>Stop-AzureStorageBlobCopy -Container "ContainerName" -Blob "BlobName" -CopyId "CopyID"
+PS C:\> Stop-AzureStorageBlobCopy -Container "ContainerName" -Blob "BlobName" -CopyId "CopyID"
 ```
 
 This command stops the copy operation by name.
 
 ### Example 2: Stop copy operation by using the pipeline
 ```
-PS C:\>Get-AzureStorageContainer container* | Stop-AzureStorageBlobCopy -Blob "BlobName"
+PS C:\> Get-AzureStorageContainer container* | Stop-AzureStorageBlobCopy -Blob "BlobName"
 ```
 
 This command stops the copy operation by passing the container on the pipeline from **Get-AzureStorageContainer**.
 
 ### Example 3: Stop copy operation by using the pipeline and Get-AzureStorageBlob
 ```
-PS C:\>Get-AzureStorageBlob -Container "ContainerName" | Stop-AzureStorageBlobCopy -Force
+PS C:\> Get-AzureStorageBlob -Container "ContainerName" | Stop-AzureStorageBlobCopy -Force
 ```
 
 This example stops the copy operation by passing the container on the pipeline from the Get-AzureStorageBlob cmdlet.
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-You can create the context by using the New-AzureStorageContext cmdlet.
+You can create the context by using the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

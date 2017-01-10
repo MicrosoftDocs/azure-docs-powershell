@@ -233,7 +233,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 
 ### -DestContext
 Specifies an Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 
 ### -SrcShare
 Specifies a **CloudFileShare** object from Azure Storage Client library.
-You can create it or use Get-AzureStorageShare cmdlet.
+You can create it or use **Get-AzureStorageShare** cmdlet.
 
 ```yaml
 Type: CloudFileShare
@@ -492,7 +492,7 @@ Accept wildcard characters: False
 
 ### -SrcFile
 Specifes a **CloudFile** object from Azure Storage Client library.
-You can create it or use Get-AzureStorageFile cmdlet.
+You can create it or use **Get-AzureStorageFile** cmdlet.
 
 ```yaml
 Type: CloudFile

@@ -26,7 +26,7 @@ The **Set-AzureStorageTableStoredAccessPolicy** cmdlet set the stored access pol
 
 ### Example 1: Set a stored access policy in table with full permission
 ```
-PS C:\>Set-AzureStorageTableStoredAccessPolicy -Table "MyTable" -Policy "Policy08"
+PS C:\> Set-AzureStorageTableStoredAccessPolicy -Table "MyTable" -Policy "Policy08"
 ```
 
 This command sets an access policy named Policy08 for storage table named MyTable.
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

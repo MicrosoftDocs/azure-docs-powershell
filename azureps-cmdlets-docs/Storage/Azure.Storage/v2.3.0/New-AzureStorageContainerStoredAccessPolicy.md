@@ -27,7 +27,7 @@ The **New-AzureStorageContainerStoredAccessPolicy** cmdlet creates a stored acce
 
 ### Example 1: Create a stored access policy in a storage container
 ```
-PS C:\>New-AzureStorageContainerStoredAccessPolicy -Container "MyContainer" -Policy "Policy01"
+PS C:\> New-AzureStorageContainerStoredAccessPolicy -Container "MyContainer" -Policy "Policy01"
 ```
 
 This command creates an access policy named Policy01 in the storage container named MyContainer.
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

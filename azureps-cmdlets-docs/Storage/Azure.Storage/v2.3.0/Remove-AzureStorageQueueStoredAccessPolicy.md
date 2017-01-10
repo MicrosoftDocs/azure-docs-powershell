@@ -25,7 +25,7 @@ The **Remove-AzureStorageQueueStoredAccessPolicy** cmdlet removes a stored acces
 
 ### Example 1: Remove a stored access policy from a storage queue
 ```
-PS C:\>Remove-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue" -Policy "Policy04"
+PS C:\> Remove-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue" -Policy "Policy04"
 ```
 
 This command removes an access policy named Policy04 from the storage queue named MyQueue.
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

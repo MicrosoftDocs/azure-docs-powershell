@@ -34,7 +34,7 @@ The **Stop-AzureStorageFileCopy** cmdlet stops copying a file to a destination f
 
 ### Example 1: Stop a copy operation
 ```
-PS C:\>Stop-AzureStorageFileCopy -ShareName "ContosoShare" -FilePath "FilePath" -CopyId "CopyId"
+PS C:\> Stop-AzureStorageFileCopy -ShareName "ContosoShare" -FilePath "FilePath" -CopyId "CopyId"
 ```
 
 This command stops copying a file that has the specified name.
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 
 ### -File
 Specifies a **CloudFile** object.
-You can create a cloud file or obtain one by using the Get-AzureStorageFile cmdlet.
+You can create a cloud file or obtain one by using the **Get-AzureStorageFile** cmdlet.
 
 ```yaml
 Type: CloudFile

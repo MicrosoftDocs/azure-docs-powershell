@@ -35,7 +35,7 @@ The **New-AzureStorageQueueSASToken** cmdlet generates shared access signature t
 
 ### Example 1: Generate a queue SAS token with full permission
 ```
-PS C:\>New-AzureStorageQueueSASToken -Name "Test" -Permission raup
+PS C:\> New-AzureStorageQueueSASToken -Name "Test" -Permission raup
 ```
 
 This example generates a queue SAS token with full permission.

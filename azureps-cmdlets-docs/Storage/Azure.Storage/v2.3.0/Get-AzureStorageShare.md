@@ -33,21 +33,21 @@ The **Get-AzureStorageShare** cmdlet gets a list of file shares for a storage ac
 
 ### Example 1: Get a file share
 ```
-PS C:\>Get-AzureStorageShare -Name "ContosoShare06"
+PS C:\> Get-AzureStorageShare -Name "ContosoShare06"
 ```
 
 This command gets the file share named ContosoShare06.
 
 ### Example 2: Get all file shares that begin with a string
 ```
-PS C:\>Get-AzureStorageShare -Prefix "Contoso"
+PS C:\> Get-AzureStorageShare -Prefix "Contoso"
 ```
 
 This command gets all file shares that have names that begin with Contoso.
 
 ### Example 3: Get all file shares in a specified context
 ```
-PS C:\>$Context = New-AzureStorageContext -Local
+PS C:\> $Context = New-AzureStorageContext -Local
 PS C:\> Get-AzureStorageShare -Context $Context
 ```
 

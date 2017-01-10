@@ -26,7 +26,7 @@ The **New-AzureStorageShareStoredAccessPolicy** cmdlet creates a stored access p
 
 ### Example 1: Create a stored access policy in a share
 ```
-PS C:\>New-AzureStorageShareStoredAccessPolicy -ShareName "ContosoShare" -Policy "GeneralPolicy" -Permission "rwdl"
+PS C:\> New-AzureStorageShareStoredAccessPolicy -ShareName "ContosoShare" -Policy "GeneralPolicy" -Permission "rwdl"
 ```
 
 This command creates a stored access policy that has full permission in a share.

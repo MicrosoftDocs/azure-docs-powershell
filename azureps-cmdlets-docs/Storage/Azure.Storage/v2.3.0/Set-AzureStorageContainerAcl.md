@@ -26,14 +26,14 @@ The **Set-AzureStorageContainerAcl** cmdlet sets the public access permission to
 
 ### Example 1: Set azure storage container ACL by name
 ```
-PS C:\>Set-AzureStorageContainerAcl -Container "Container01" -Permission Off -PassThru
+PS C:\> Set-AzureStorageContainerAcl -Container "Container01" -Permission Off -PassThru
 ```
 
 This command creates a container that has no public access.
 
 ### Example 2: Set azure storage container ACL by using the pipeline
 ```
-PS C:\>Get-AzureStorageContainer container* | Set-AzureStorageContainerAcl -Permission Blob -PassThru
+PS C:\> Get-AzureStorageContainer container* | Set-AzureStorageContainerAcl -Permission Blob -PassThru
 ```
 
 This command gets all storage containers whose name starts with container and then passes the result on the pipeline to set the permission for them all to Blob access.
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-You can create it by using the New-AzureStorageContext cmdlet.
+You can create it by using the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

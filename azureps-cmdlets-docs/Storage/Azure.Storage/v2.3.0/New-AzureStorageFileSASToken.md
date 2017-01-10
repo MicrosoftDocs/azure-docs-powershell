@@ -61,7 +61,7 @@ PS C:\> $EndTime = $StartTime.AddHours(2.0)
 PS C:\> New-AzureStorageFileSASToken -ShareName "ContosoShare" -Path "FilePath" -Permission "rwd" -StartTime $StartTime -ExpiryTime $EndTime
 ```
 
-The first command creates a **DateTime** object by using the Get-Date cmdlet.
+The first command creates a **DateTime** object by using the **Get-Date** cmdlet.
 The command stores the current time in the $StartTime variable.
 
 The second command adds two hours to the object in $StartTime, and then stores the result in the $EndTime variable.
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure Storage context.
-To obtain a context, use the New-AzureStorageContext cmdlet.
+To obtain a context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 
 ### -File
 Specifies a **CloudFile** object.
-You can create a cloud file or obtain one by using the Get-AzureStorageFile cmdlet.
+You can create a cloud file or obtain one by using the **Get-AzureStorageFile** cmdlet.
 
 ```yaml
 Type: CloudFile

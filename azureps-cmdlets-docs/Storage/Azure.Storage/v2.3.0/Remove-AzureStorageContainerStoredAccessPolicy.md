@@ -26,7 +26,7 @@ The **Remove-AzureStorageContainerStoredAccessPolicy** cmdlet removes a stored a
 
 ### Example 1: Remove a stored access policy from a storage container
 ```
-PS C:\>Remove-AzureStorageContainerStoredAccessPolicy -Container "MyContainer" -Policy "Policy03"
+PS C:\> Remove-AzureStorageContainerStoredAccessPolicy -Container "MyContainer" -Policy "Policy03"
 ```
 
 This command removes an access policy named Policy03 from the stored container named MyContainer.
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

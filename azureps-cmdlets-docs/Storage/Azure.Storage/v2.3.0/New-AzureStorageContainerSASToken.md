@@ -35,21 +35,21 @@ The **New-AzureStorageContainerSASToken** cmdlet generates a Shared Access Signa
 
 ### Example 1: Generate a container SAS token with full container permission
 ```
-PS C:\>New-AzureStorageContainerSASToken -Name "Test" -Permission rwdl
+PS C:\> New-AzureStorageContainerSASToken -Name "Test" -Permission rwdl
 ```
 
 This example generates a container SAS token with full container permission.
 
 ### Example 2: Generate multiple container SAS token by pipeline
 ```
-PS C:\>Get-AzureStorageContainer -Container test* | New-AzureStorageContainerSASToken -Permission rwdl
+PS C:\> Get-AzureStorageContainer -Container test* | New-AzureStorageContainerSASToken -Permission rwdl
 ```
 
 This example generates multiple container SAS tokens by using the pipeline.
 
 ### Example 3: Generate container SAS token with shared access policy
 ```
-PS C:\>New-AzureStorageContainerSASToken -Name "Test" -Policy "PolicyName"
+PS C:\> New-AzureStorageContainerSASToken -Name "Test" -Policy "PolicyName"
 ```
 
 This example generates a container SAS token with shared access policy.
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure storage context.
-You can create it by using the New-AzureStorageContext cmdlet.
+You can create it by using the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

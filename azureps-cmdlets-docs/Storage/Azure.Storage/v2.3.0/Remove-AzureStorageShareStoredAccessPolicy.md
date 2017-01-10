@@ -26,7 +26,7 @@ The **Remove-AzureStorageShareStoredAccessPolicy** cmdlet removes a stored acces
 
 ### Example 1: Remove a stored access policy from an Azure Storage share
 ```
-PS C:\>Remove-AzureStorageShareStoredAccessPolicy -ShareName "ContosoShare" -Policy "GeneralPolicy"
+PS C:\> Remove-AzureStorageShareStoredAccessPolicy -ShareName "ContosoShare" -Policy "GeneralPolicy"
 ```
 
 This command removes a stored access policy named GeneralPolicy from ContosoShare.

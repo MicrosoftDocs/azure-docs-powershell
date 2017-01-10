@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ### -Permission
 Specifies the permissions for Storage account.
 Permissions are valid only if they match the specified resource type.
-For more information about acceptable permission values, see Constructing an Account SAShttp://go.microsoft.com/fwlink/?LinkId=799514
+For more information about acceptable permission values, see [Constructing an Account SAS](http://go.microsoft.com/fwlink/?LinkId=799514) (http://go.microsoft.com/fwlink/?LinkId=799514).
 
 ```yaml
 Type: String
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -StartTime
 Specifies the time, as a **DateTime** object, at which the SAS becomes valid.
-To get a **DateTime** object, use the Get-Date cmdlet.
+To get a **DateTime** object, use the **Get-Date** cmdlet.
 
 ```yaml
 Type: DateTime
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-You can use the New-AzureStorageContext cmdlet to get an **AzureStorageContext** object.
+You can use the **New-AzureStorageContext** cmdlet to get an **AzureStorageContext** object.
 
 ```yaml
 Type: AzureStorageContext

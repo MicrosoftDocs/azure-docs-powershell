@@ -24,7 +24,7 @@ The **New-AzureStorageTable** cmdlet creates a storage table associated with the
 
 ### Example 1: Create an azure storage table
 ```
-PS C:\>New-AzureStorageTable -Name "tableabc"
+PS C:\> New-AzureStorageTable -Name "tableabc"
 ```
 
 This command creates a storage table with a name of tableabc.
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the storage context.
-To create it, you can use the New-AzureStorageContext cmdlet.
+To create it, you can use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext
