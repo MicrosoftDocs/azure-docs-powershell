@@ -24,7 +24,7 @@ If the domain name is available, this cmdlet returns a value of $True.
 
 ### Example 1: Check whether a domain name is available
 ```
-PS C:\>Test-AzureTrafficManagerDomainName -DomainName "ContosoApp.trafficmanager.net"
+PS C:\> Test-AzureTrafficManagerDomainName -DomainName "ContosoApp.trafficmanager.net"
 $True
 ```
 
@@ -36,7 +36,7 @@ This command checks whether the domain name ContosoApp.trafficmanager.net is ava
 Specifies the domain name to test.
 You must include the following string: 
 
-.trafficmanager.net
+`.trafficmanager.net`
 
 ```yaml
 Type: String
@@ -51,6 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile

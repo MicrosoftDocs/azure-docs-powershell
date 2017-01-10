@@ -21,21 +21,21 @@ New-AzureTrafficManagerProfile [-Name] <String> [-DomainName] <String> -LoadBala
 ## DESCRIPTION
 The **New-AzureTrafficManagerProfile** cmdlet creates a Microsoft Azure Traffic Manager profile.
 
-After you create a profile where you set the *LoadBalancingMethod* value to "Failover", you can determine the failover order of the endpoints you add to your profile with the Add-AzureTrafficManagerEndpoint cmdlet.
+After you create a profile where you set the *LoadBalancingMethod* value to "Failover", you can determine the failover order of the endpoints you add to your profile with the **Add-AzureTrafficManagerEndpoint** cmdlet.
 For more information, see Example 2 below.
 
 ## EXAMPLES
 
 ### Example 1: Create a Traffic Manager profile
 ```
-PS C:\>New-AzureTrafficManagerProfile -Name "MyProfile" -DomainName "My.profile.trafficmanager.net" -LoadBalancingMethod "RoundRobin" -Ttl 30 -MonitorProtocol "Http" -MonitorPort 80 -MonitorRelativePath "/"
+PS C:\> New-AzureTrafficManagerProfile -Name "MyProfile" -DomainName "My.profile.trafficmanager.net" -LoadBalancingMethod "RoundRobin" -Ttl 30 -MonitorProtocol "Http" -MonitorPort 80 -MonitorRelativePath "/"
 ```
 
 This command creates a Traffic Manager profile named MyProfile in the specified Traffic Manager domain with a Round Robin load balancing method, a TTL of 30 seconds, HTTP monitoring protocol, monitoring port 80, and with the specified path.
 
 ### Example 2: Reorder endpoints to desired failover order
 ```
-PS C:\>$Profile = Get-AzureTrafficManagerProfile -Name "MyProfile"
+PS C:\> $Profile = Get-AzureTrafficManagerProfile -Name "MyProfile"
 PS C:\> $Profile.Endpoints[0],$Profile.Endpoints[1] = $Profile.Endpoints[1],$Profile.Endpoints[0]
 PS C:\> $Profile = Set-AzureTrafficManagerProfile
 ```
@@ -122,7 +122,6 @@ Specifies the protocol to use to monitor endpoint health.
 Valid values are: 
 
 - Http
-
 - Https
 
 ```yaml
@@ -142,13 +141,9 @@ Specifies the path relative to the endpoint domain name to probe for health stat
 The path must meet the following restrictions: 
 
 - The path must be from 1 through 1000 characters.
-
 - It must start with a forward slash, /.
-
 - It must contain no XML elements, \<\>.
-
 - It must contain no double slashes, //.
-
 - It must contain no invalid HTML escape characters.
 For example, %XY.
 
@@ -181,6 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile

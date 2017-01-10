@@ -24,14 +24,14 @@ Specify the *PassThru* parameter to display whether the operation succeeds.
 
 ### Example 1: Enable a Traffic Manager profile
 ```
-PS C:\>Enable-AzureTrafficManagerProfile -Name "MyProfile"
+PS C:\> Enable-AzureTrafficManagerProfile -Name "MyProfile"
 ```
 
 This command enables the Traffic Manager profile named MyProfile.
 
 ### Example 2: Enable a Traffic Manager profile and display the results
 ```
-PS C:\>Enable-AzureTrafficManagerProfile -Name "MyProfile" -PassThru
+PS C:\> Enable-AzureTrafficManagerProfile -Name "MyProfile" -PassThru
 True
 ```
 
@@ -71,6 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile
