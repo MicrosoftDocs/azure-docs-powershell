@@ -32,16 +32,16 @@ An Azure resource is a user-managed Azure entity, such as a database server, dat
 An Azure resource group is a collection of Azure resources that are deployed as a unit.
 
 A deployment is the operation that makes the resources in the resource group available for use.
-For more information about Azure resources and Azure resource groups, see the New-AzureRmResourceGroup cmdlet.
+For more information about Azure resources and Azure resource groups, see the **New-AzureRmResourceGroup** cmdlet.
 
 You can use this cmdlet for tracking.
-For debugging, use this cmdlet with the Get-AzureRmLog cmdlet.
+For debugging, use this cmdlet with the **Get-AzureRmLog** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Get all deployments for a resource group
 ```
-PS C:\>Get-AzureRmResourceGroupDeployment -ResourceGroupName "ContosoLabsRG"
+PS C:\> Get-AzureRmResourceGroupDeployment -ResourceGroupName "ContosoLabsRG"
 ```
 
 This command gets all deployments for the ContosoLabsRG resource group.
@@ -49,7 +49,7 @@ The output shows a deployment for a WordPress blog that used a gallery template.
 
 ### Example 2: Get a deployment by name
 ```
-PS C:\>Get-AzureRmResourceGroupDeployment -ResourceGroupName "ContosoLabsRG" -Name "DeployWebsite01"
+PS C:\> Get-AzureRmResourceGroupDeployment -ResourceGroupName "ContosoLabsRG" -Name "DeployWebsite01"
 ```
 
 This command gets the DeployWebsite01 deployment of the ContosoLabsRG resource group.
@@ -58,12 +58,12 @@ If you do not assign a name, the cmdlets provide a default name based on the tem
 
 ### Example 3: Get the deployments of all resource groups
 ```
-PS C:\>Get-AzureRmResourceGroup | Get-AzureRmResourceGroupDeployment | Format-Table ResourceGroupName, DeploymentName, ProvisioningState
+PS C:\> Get-AzureRmResourceGroup | Get-AzureRmResourceGroupDeployment | Format-Table ResourceGroupName, DeploymentName, ProvisioningState
 ```
 
-This command gets all resource groups in your subscription by using the Get-AzureRmResourceGroup cmdlet.
+This command gets all resource groups in your subscription by using the **Get-AzureRmResourceGroup** cmdlet.
 The command passes the resource groups to the current cmdlet by using the pipeline operator.
-The current cmdlet gets all deployments of all resource groups in the subscription, and passes the results to the Format-Table cmdlet to display their **ResourceGroupName**, **DeploymentName**, and **ProvisioningState** property values.
+The current cmdlet gets all deployments of all resource groups in the subscription, and passes the results to the **Format-Table** cmdlet to display their **ResourceGroupName**, **DeploymentName**, and **ProvisioningState** property values.
 
 ## PARAMETERS
 

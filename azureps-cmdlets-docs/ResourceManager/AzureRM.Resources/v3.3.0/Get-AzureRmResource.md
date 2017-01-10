@@ -73,7 +73,7 @@ The **Get-AzureRmResource** cmdlet gets Azure resources.
 
 ### Example 1: Get a resource
 ```
-PS C:\>Get-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11" -ResourceName "ContosoWebsite"
+PS C:\> Get-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11" -ResourceName "ContosoWebsite"
 ```
 
 This command gets a resource of the type microsoft.web/sites, named ContosoWebsite under ResourceGroup11.
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ### -ResourceId
 Specifies the fully qualified resource ID, including the subscription, as in the following example: 
 
-`/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+`/subscriptions/<subscription ID>/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 This cmdlet gets the resource that has this ID.
 

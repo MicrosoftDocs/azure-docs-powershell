@@ -36,7 +36,7 @@ The **Add-AzureRmApplicationGatewayRequestRoutingRule** cmdlet adds a request ro
 
 ### Example 1: Add a request routing rule to an application gateway
 ```
-PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Appgw = Add-AzureApplicationGatewayRequestRoutingRule -ApplicationGateway $AppGw -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
 ```
 
@@ -235,6 +235,8 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMap
+Specifies the URL path map to the application gateway.
+
 ```yaml
 Type: PSApplicationGatewayUrlPathMap
 Parameter Sets: SetByResource
@@ -269,5 +271,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayRequestRoutingRule](./Remove-AzureRmApplicationGatewayRequestRoutingRule.md)
 
 [Set-AzureRmApplicationGatewayRequestRoutingRule](./Set-AzureRmApplicationGatewayRequestRoutingRule.md)
-
-

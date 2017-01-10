@@ -39,7 +39,7 @@ The **Remove-AzureRmResource** cmdlet removes an Azure resource.
 
 ### Example 1: Remove a website resource
 ```
-PS C:\>Remove-AzureRmResource -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup11/providers/Microsoft.Web/sites/ContosoSite" -Force
+PS C:\> Remove-AzureRmResource -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup11/providers/Microsoft.Web/sites/ContosoSite" -Force
 ```
 
 This command removes the website resource named ContosoSite.
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 Specifies the name of an extension resource of the resource that this cmdlet removes.
 For instance, to specify a database, use the following format: 
 
-server name`/`database name
+`server name/database name`
 
 ```yaml
 Type: String
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 Specifies the fully qualified resource ID of the resource that this cmdlet removes.
 The ID includes the subscription, as in the following example: 
 
-`/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+`/subscriptions/<subscription ID>/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: String

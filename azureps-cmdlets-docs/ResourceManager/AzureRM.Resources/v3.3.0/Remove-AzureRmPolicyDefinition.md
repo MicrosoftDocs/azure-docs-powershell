@@ -33,18 +33,18 @@ The **Remove-AzureRmPolicyDefinition** cmdlet removes a policy definition.
 
 ### Example 1: Remove the policy definition by name
 ```
-PS C:\>Remove-AzureRmPolicyDefinition -Name "VMPolicyDefinition"
+PS C:\> Remove-AzureRmPolicyDefinition -Name "VMPolicyDefinition"
 ```
 
 This command removes the specified policy definition.
 
 ### Example 2: Remove policy definition by resource ID
 ```
-PS C:\>$PolicyDefinition = Get-AzureRmPolicyDefinition -Name "VMPolicyDefinition" 
+PS C:\> $PolicyDefinition = Get-AzureRmPolicyDefinition -Name "VMPolicyDefinition" 
 PS C:\> Remove-AzureRmPolicyDefinition -Id $PolicyDefinition.ResourceId -Force
 ```
 
-The first command gets a policy definition named VMPolicyDefinition by using the Get-AzureRmPolicyDefinition cmdlet.
+The first command gets a policy definition named VMPolicyDefinition by using the **Get-AzureRmPolicyDefinition** cmdlet.
 The command stores it in the $PolicyDefinition variable.
 
 The second command removes the policy definition identified by the **ResourceId** property of $PolicyDefinition.

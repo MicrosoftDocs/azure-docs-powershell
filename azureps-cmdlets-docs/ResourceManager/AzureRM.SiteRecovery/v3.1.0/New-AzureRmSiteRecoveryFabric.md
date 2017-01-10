@@ -25,7 +25,7 @@ The **New-AzureRmSiteRecoveryFabric** cmdlet creates an Azure Site Recovery Fabr
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the Azure Site Recovery Fabric
+Specifies the name of the Azure Site Recovery Fabric.
 
 ```yaml
 Type: String

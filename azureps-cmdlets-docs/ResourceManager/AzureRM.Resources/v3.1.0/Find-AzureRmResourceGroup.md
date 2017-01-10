@@ -23,21 +23,21 @@ The **Find-AzureRmResourceGroup** cmdlet searches for resource groups using the 
 
 ### Example 1: Find all resource groups
 ```
-PS C:\>Find-AzureRmResourceGroup
+PS C:\> Find-AzureRmResourceGroup
 ```
 
 This command finds all resource groups.
 
 ### Example 2: Find resource groups by tag name
 ```
-PS C:\>Find-AzureRmResourceGroup -Tag @{ Name = "testtag" }
+PS C:\> Find-AzureRmResourceGroup -Tag @{ Name = "testtag" }
 ```
 
 This command finds all resource groups that have a tag named testtag.
 
 ### Example 3: Find resource groups by tag name and value
 ```
-PS C:\>Find-AzureRmResourceGroup -Tag @{ Name = "testtag"; Value = "testval" }
+PS C:\> Find-AzureRmResourceGroup -Tag @{ Name = "testtag"; Value = "testval" }
 ```
 
 This command finds all resource groups that have a tag named testtag and the value testval.
@@ -48,8 +48,9 @@ This command finds all resource groups that have a tag named testtag and the val
 Specifies tag information, as a hash table, to filter your results.
 Use the following formats: 
 
-`@{Name = '`tagName`'}`
-`@{Name = '`tagName`'; Value = '`tagValue`'}`
+`@{Name = 'tagName'}`
+
+`@{Name = 'tagName'; Value = 'tagValue'}`
 
 ```yaml
 Type: Hashtable

@@ -30,7 +30,7 @@ The template will still be generated for the parts that were successful.
 
 ### Example 1: Export a resource group
 ```
-PS C:\>Export-AzureRmResourceGroup -ResourceGroupName "TestGroup"
+PS C:\> Export-AzureRmResourceGroup -ResourceGroupName "TestGroup"
 ```
 
 This command captures the resource group named TestGroup as a template, and saves it to a JSON file in the current directory.

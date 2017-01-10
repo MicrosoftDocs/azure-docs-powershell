@@ -33,7 +33,7 @@ The **Set-AzureStorageShareQuota** cmdlet sets the storage capacity for a specif
 
 ### Example 1: Set the storage capacity of a share
 ```
-PS C:\>Set-AzureStorageShareQuota -ShareName "ContosoShare01" -Quota 1024
+PS C:\> Set-AzureStorageShareQuota -ShareName "ContosoShare01" -Quota 1024
 ```
 
 This command sets the storage capacity for a share named ContosoShare01 to 1024 GB.
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 ### -Share
 Specifies a **CloudFileShare** object to represent the share for which this cmdlets sets a quota.
-To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+To obtain a **CloudFileShare** object, use the **Get-AzureStorageShare** cmdlet.
 
 ```yaml
 Type: CloudFileShare

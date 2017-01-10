@@ -24,7 +24,7 @@ The **New-AzureStorageQueue** cmdlet creates a storage queue in Azure.
 
 ### Example 1: Create an Azure storage queue
 ```
-PS C:\>New-AzureStorageQueue -Name "queueabc"
+PS C:\> New-AzureStorageQueue -Name "queueabc"
 ```
 
 This example creates a storage queue named queueabc.
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-You can create it by using the New-AzureStorageContext cmdlet.
+You can create it by using the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

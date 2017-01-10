@@ -37,14 +37,14 @@ This cmdlet gets a specific recoverable database or all recoverable databases on
 
 ### Example 1: Get all recoverable databases
 ```
-PS C:\>Get-AzureSqlRecoverableDatabase -ServerName "server1"
+PS C:\> Get-AzureSqlRecoverableDatabase -ServerName "server1"
 ```
 
 This command gets all recoverable databases on the server named Server01.
 
 ### Example 2: Get a specific recoverable database
 ```
-PS C:\>Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17"
+PS C:\> Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17"
 ```
 
 This command gets retrieves the database named Database17 on the server named Server01.
@@ -126,11 +126,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 * You must use certificate-based authentication to run this cmdlet. Run the following commands on the computer where run this cmdlet: 
 
-`PS C:\\\> $subId = \<Subscription ID\>`
-`PS C:\\\> $thumbprint = \<Certificate Thumbprint\>`
-`PS C:\\\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint`
-`PS C:\\\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert`
-`PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"`
+PS C:\\\> $subId = \<Subscription ID\>
+
+PS C:\\\> $thumbprint = \<Certificate Thumbprint\>
+
+PS C:\\\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint
+
+PS C:\\\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert
+
+PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"
 
 ## RELATED LINKS
 

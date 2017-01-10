@@ -32,7 +32,7 @@ You can get a single route table, or get all the route tables in a resource grou
 
 ### Example 1: Get a route table
 ```
-PS C:\>Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01"
+PS C:\> Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01"
 Name              : routetable01
 ResourceGroupName : ResourceGroup11
 Location          : eastus
@@ -182,5 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmRouteTable](./Remove-AzureRmRouteTable.md)
 
 [Set-AzureRmRouteTable](./Set-AzureRmRouteTable.md)
-
-

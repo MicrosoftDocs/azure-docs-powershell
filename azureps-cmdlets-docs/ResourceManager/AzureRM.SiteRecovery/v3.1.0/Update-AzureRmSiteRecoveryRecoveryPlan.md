@@ -29,7 +29,7 @@ The **Update-AzureRmSiteRecoveryRecoveryPlan** cmdlet updates a recovery plan in
 
 ### Example 1: Update a recovery plan
 ```
-PS C:\>Update-AzureRmSiteRecoveryRecoveryPlan -File "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
+PS C:\> Update-AzureRmSiteRecoveryRecoveryPlan -File "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
 ```
 
 This command updates the specified recovery plan, and then publishes it.

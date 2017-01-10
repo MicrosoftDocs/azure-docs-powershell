@@ -51,7 +51,7 @@ The **New-AzureStorageBlobSASToken** cmdlet generates a Shared Access Signature 
 
 ### Example 1: Generate a blob SAS token with full blob permission
 ```
-PS C:\>New-AzureStorageBlobSASToken -Container "ContainerName" -Blob "BlobName" -Permission rwd
+PS C:\> New-AzureStorageBlobSASToken -Container "ContainerName" -Blob "BlobName" -Permission rwd
 ```
 
 This example generates a blob SAS token with full blob permission.

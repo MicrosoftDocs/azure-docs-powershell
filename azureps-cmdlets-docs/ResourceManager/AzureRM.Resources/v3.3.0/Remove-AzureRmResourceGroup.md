@@ -32,7 +32,7 @@ To delete a resource, but leave the resource group, use the Remove-AzureRmResour
 
 ### Example 1: Remove a resource group
 ```
-PS C:\>Remove-AzureRmResourceGroup -Name "ContosoRG01"
+PS C:\> Remove-AzureRmResourceGroup -Name "ContosoRG01"
 ```
 
 This command removes the ContosoRG01 resource group from the subscription.
@@ -40,7 +40,7 @@ The cmdlet prompts you for confirmation and returns no output.
 
 ### Example 2: Remove a resource group without confirmation
 ```
-PS C:\>Get-AzureRmResourceGroup -Name "ContosoRG01" | Remove-AzureRmResourceGroup -Verbose -Force
+PS C:\> Get-AzureRmResourceGroup -Name "ContosoRG01" | Remove-AzureRmResourceGroup -Verbose -Force
 ```
 
 This command uses the Get-AzureRmResourceGroup cmdlet to get the resource group ContosoRG01, and then passes it to **Remove-AzureRmResourceGroup** by using the pipeline operator.
@@ -48,7 +48,7 @@ The *Verbose* common parameter gets status information about the operation, and 
 
 ### Example 3: Remove all resource groups
 ```
-PS C:\>Get-AzureRmResourceGroup | Remove-AzureRmResourceGroup
+PS C:\> Get-AzureRmResourceGroup | Remove-AzureRmResourceGroup
 ```
 
 This command uses the **Get-AzureRmResourceGroup** cmdlet to get all resource groups, and then passes them to **Remove-AzureRmResourceGroup** by using the pipeline operator.

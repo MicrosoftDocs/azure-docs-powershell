@@ -42,14 +42,14 @@ This cmdlet returns a **CloudFileDirectory** object.
 
 ### Example 1: Create a folder in a file share
 ```
-PS C:\>New-AzureStorageDirectory -ShareName "ContosoShare06" -Path "ContosoWorkingFolder"
+PS C:\> New-AzureStorageDirectory -ShareName "ContosoShare06" -Path "ContosoWorkingFolder"
 ```
 
 This command creates a folder named ContosoWorkingFolder in the file share named ContosoShare06.
 
 ### Example 2: Create a folder in a file share specified in a file share object
 ```
-PS C:\>Get-AzureStorageShare -Name "ContosoShare06" | New-AzureStorageDirectory -Path "ContosoWorkingFolder"
+PS C:\> Get-AzureStorageShare -Name "ContosoShare06" | New-AzureStorageDirectory -Path "ContosoWorkingFolder"
 ```
 
 This command uses the **Get-AzureStorageShare** cmdlet to get the file share named ContosoShare06, and then passes it to the current cmdlet by using the pipeline operator.
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ### -Share
 Specifies a **CloudFileShare** object.
 This cmdlet creates a folder in the file share that this parameter specifies.
-To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+To obtain a **CloudFileShare** object, use the **Get-AzureStorageShare** cmdlet.
 This object contains the storage context.
 If you specify this parameter, do not specify the *Context* parameter.
 
@@ -217,8 +217,8 @@ Accept wildcard characters: False
 ### -Directory
 Specifies a folder as a **CloudFileDirectory** object.
 This cmdlet creates the folder in the location that this parameter specifies.
-To obtain a directory, use the New-AzureStorageDirectory cmdlet.
-You can also use the Get-AzureStorageFile cmdlet to obtain a directory.
+To obtain a directory, use the **New-AzureStorageDirectory** cmdlet.
+You can also use the **Get-AzureStorageFile** cmdlet to obtain a directory.
 
 ```yaml
 Type: CloudFileDirectory

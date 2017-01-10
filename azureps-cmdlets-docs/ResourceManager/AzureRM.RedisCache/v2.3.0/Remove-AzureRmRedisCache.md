@@ -24,7 +24,7 @@ The **Remove-AzureRmRedisCache** cmdlet removes an Azure Redis Cache.
 
 ### Example 1: Remove a Redis Cache and return the result
 ```
-PS C:\>Remove-AzureRmRedisCache -ResourceGroupName "ResourceGroup03" -Name "myCache" -Force -PassThru
+PS C:\> Remove-AzureRmRedisCache -ResourceGroupName "ResourceGroup03" -Name "myCache" -Force -PassThru
 True
 ```
 
@@ -32,7 +32,7 @@ This command removes a Redis Cache and displays whether the operation is success
 
 ### Example 2: Remove a Redis Cache and do not display the result
 ```
-PS C:\>Remove-AzureRmRedisCache -ResourceGroupName "ResourceGroup03" -Name "myCache" -Force
+PS C:\> Remove-AzureRmRedisCache -ResourceGroupName "ResourceGroup03" -Name "myCache" -Force
 ```
 
 This command removes a Redis Cache.

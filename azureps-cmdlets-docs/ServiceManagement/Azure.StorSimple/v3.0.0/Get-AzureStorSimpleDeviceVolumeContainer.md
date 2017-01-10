@@ -37,7 +37,8 @@ The returned object contains the following properties:
 
 ### Example 1: Get all the containers on a device
 ```
-PS C:\>Get-AzureStorSimpleDeviceVolumeContainer -DeviceName "8600-Bravo 001"
+PS C:\> Get-AzureStorSimpleDeviceVolumeContainer -DeviceName "8600-Bravo 001"
+
 InstanceId                           Name                                             IsEncryptionEnabled  Owned BandwidthRate                                    PrimaryStorageAccountCredential                 VolumeCount                                    
 ----------                           ----                                             -------------------  ----- -------------                                    -------------------------------                 -----------                                    
 127135b6-92de-4f53-850d-70e1f9a38cbe Test_Container                                   False                True  0                                                Test_Account                                    6
@@ -47,7 +48,7 @@ This command gets a list of the volume containers on the device named 8600-Bravo
 
 ### Example 2: Get a container by using its name
 ```
-PS C:\>Get-AzureStorSimpleDeviceVolumeContainer -DeviceName "Contoso63-AppVm" -VolumeContainerName "Container08"
+PS C:\> Get-AzureStorSimpleDeviceVolumeContainer -DeviceName "Contoso63-AppVm" -VolumeContainerName "Container08"
 VERBOSE: ClientRequestId: 8027c66a-869b-4ea3-97a2-e17d98ec751c_PS
 VERBOSE: ClientRequestId: 344f9be5-0887-4d37-98ef-e45c557774f1_PS
 VERBOSE: ClientRequestId: 14919be5-d6f5-4f81-b7f1-d7fafff2238c_PS

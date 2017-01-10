@@ -24,13 +24,13 @@ The **Get-AzureRmLoadBalancerBackendAddressPoolConfig** cmdlet gets a single bac
 
 ### Example 1: Get the backend address pool
 ```
-PS C:\>$loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
-PS C:\> Get-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02" -LoadBalancer $loadbalancer
+PS C:\> $Loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> Get-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02" -LoadBalancer $Loadbalancer
 ```
 
-The first command gets an existing load balancer named MyLoadBalancer in the resource group named MyResourceGroup, and then stores it in the $loadbalancer variable.
+The first command gets an existing load balancer named MyLoadBalancer in the resource group named MyResourceGroup, and then stores it in the $Loadbalancer variable.
 
-The second command gets the associated backend address pool configuration named BackendAddressPool02 for the load balancer in $loadbalancer.
+The second command gets the associated backend address pool configuration named BackendAddressPool02 for the load balancer in $Loadbalancer.
 
 ## PARAMETERS
 
@@ -121,5 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmLoadBalancerBackendAddressPoolConfig](./New-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 
 [Remove-AzureRmLoadBalancerBackendAddressPoolConfig](./Remove-AzureRmLoadBalancerBackendAddressPoolConfig.md)
-
-

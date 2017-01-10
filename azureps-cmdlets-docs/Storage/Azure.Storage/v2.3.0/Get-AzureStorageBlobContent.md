@@ -44,21 +44,21 @@ If the blob name is not valid for the local computer, this cmdlet automatically 
 
 ### Example 1: Download blob content by name
 ```
-PS C:\>Get-AzureStorageBlobContent -Container "ContainerName" -Blob "Blob" -Destination "C:\test\"
+PS C:\> Get-AzureStorageBlobContent -Container "ContainerName" -Blob "Blob" -Destination "C:\test\"
 ```
 
 This command downloads a blob by name.
 
 ### Example 2: Download blob content using the pipeline
 ```
-PS C:\>Get-AzureStorageBlob -Container containername -Blob blobname | Get-AzureStorageBlobContent
+PS C:\> Get-AzureStorageBlob -Container containername -Blob blobname | Get-AzureStorageBlobContent
 ```
 
 This command uses the pipeline to find and download blob content.
 
 ### Example 3: Download blob content using the pipeline and a wildcard character
 ```
-PS C:\>Get-AzureStorageContainer container* | Get-AzureStorageBlobContent -Blob "cbox.exe" -Destination "C:\test"
+PS C:\> Get-AzureStorageContainer container* | Get-AzureStorageBlobContent -Blob "cbox.exe" -Destination "C:\test"
 ```
 
 This example uses the asterisk wildcard character and the pipeline to find and download blob content.
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage account from which you want to download blob content.
-You can use the New-AzureStorageContext cmdlet to create a storage context.
+You can use the **New-AzureStorageContext** cmdlet to create a storage context.
 
 ```yaml
 Type: AzureStorageContext

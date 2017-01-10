@@ -26,7 +26,7 @@ The **New-AzureStorageQueueStoredAccessPolicy** cmdlet creates a stored access p
 
 ### Example 1: Create a stored access policy in a storage queue
 ```
-PS C:\>New-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue" -Policy "Policy01"
+PS C:\> New-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue" -Policy "Policy01"
 ```
 
 This command creates an access policy named Policy01 in the storage queue named MyQueue.
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

@@ -48,14 +48,14 @@ Set-AzureSqlDatabase [-ServerName] <String> [-DatabaseName] <String> [-NewDataba
 The **Set-AzureSqlDatabase** cmdlet sets properties for an Azure SQL Database.
 You can specify the database by name, or pass an Azure SQL Database object through the pipeline.
 You can specify the server by name, or pass an Azure SQL Database server connection context.
-Create a connection context by running the New-AzureSqlDatabaseServerContext cmdlet.
+Create a connection context by running the **New-AzureSqlDatabaseServerContext** cmdlet.
 If you specify the server by name, the cmdlet uses the current Azure subscription information to authenticate the request.
 
 ## EXAMPLES
 
 ### Example 1: Change the size of a database by using a connection context
 ```
-PS C:\>$Database01 = Get-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01"
+PS C:\> $Database01 = Get-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01"
 PS C:\> Set-AzureSqlDatabase -ConnectionContext $Context -Database $Database01 -MaxSizeGB 20
 ```
 
@@ -63,7 +63,7 @@ This example changes the size of the database named Database01 to 20 GB, in the 
 
 ### Example 2: Change the size of a database by using a server name
 ```
-PS C:\>$Database01 = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
+PS C:\> $Database01 = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
 PS C:\> Set-AzureSqlDatabase -ServerName "lpqd0zbr8y" -Database $Database01 -MaxSizeGB 20
 ```
 
@@ -144,15 +144,11 @@ Specifies the new maximum size for the database in gigabytes.
 You can specify either this parameter or the *MaxSizeBytes* parameter.
 The acceptable values differ based on edition.
 
-Basic Edition values: 1 or 2
-
-Standard Edition values: 1, 2, 5, 10, 20, 30, 40, 50, 100, 150, 200, or 250
-
-Premium Edition values: 1, 2, 5, 10, 20, 30, 40, 50, 100, 150, 200, 250, 300, 400, or 500
-
-Web Edition values: 1 or 5
-
-Business Edition values: 10, 20, 30, 40, 50, 100, or 150
+- Basic Edition values: 1 or 2
+- Standard Edition values: 1, 2, 5, 10, 20, 30, 40, 50, 100, 150, 200, or 250
+- Premium Edition values: 1, 2, 5, 10, 20, 30, 40, 50, 100, 150, 200, 250, 300, 400, or 500
+- Web Edition values: 1 or 5
+- Business Edition values: 10, 20, 30, 40, 50, 100, or 150
 
 ```yaml
 Type: Int32
@@ -197,7 +193,7 @@ Valid values are:
 - Premium (P3): a7c4c615-cfb1-464b-b252-925be0a19446
 
 *Standard (S3) is part of the Latest SQL Database Update V12 (preview).
-For more information, see What's New in the Azure SQL Database V12 Previewhttp://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/.
+For more information, see [What's New in the Azure SQL Database V12 Preview](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/) (http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).
 
 ```yaml
 Type: ServiceObjective

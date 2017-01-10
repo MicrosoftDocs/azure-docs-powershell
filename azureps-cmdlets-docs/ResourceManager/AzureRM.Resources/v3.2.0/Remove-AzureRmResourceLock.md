@@ -61,7 +61,7 @@ The **Remove-AzureRmResourceLock** cmdlet removes an Azure resource lock.
 
 ### Example 1: Remove a lock
 ```
-PS C:\>Remove-AzureRmResourceLock -LockName "ContosoSiteLock" -ResourceName "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/mystorageaccount/providers/Microsoft.Authorization/locks/test"
+PS C:\> Remove-AzureRmResourceLock -LockName "ContosoSiteLock" -ResourceName "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/mystorageaccount/providers/Microsoft.Authorization/locks/test"
 ```
 
 This command removes the lock named ContosoSiteLock.
@@ -72,7 +72,7 @@ This command removes the lock named ContosoSiteLock.
 Specifies the name of the resource for which the lock applies.
 For instance, to specify a database, use the following format: 
 
-Server`/`Database
+`Server/Database`
 
 ```yaml
 Type: String

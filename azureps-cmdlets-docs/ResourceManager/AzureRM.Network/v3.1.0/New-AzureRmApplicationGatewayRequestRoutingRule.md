@@ -36,7 +36,7 @@ New-AzureRmApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String
 
 ### Example 1: Create a request routing rule for an application gateway
 ```
-PS C:\>$Rule = New-AzureRmApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
+PS C:\> $Rule = New-AzureRmApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
 ```
 
 This command creates a basic request routing rule named Rule01 and stores the result in the variable named $Rule.
@@ -119,6 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMapId
+Specifies the URL path map ID for the routing rule.
+
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
@@ -216,6 +218,8 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMap
+Specifies the URL path map to the request routing rule.
+
 ```yaml
 Type: PSApplicationGatewayUrlPathMap
 Parameter Sets: SetByResource
@@ -250,5 +254,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayRequestRoutingRule](./Remove-AzureRmApplicationGatewayRequestRoutingRule.md)
 
 [Set-AzureRmApplicationGatewayRequestRoutingRule](./Set-AzureRmApplicationGatewayRequestRoutingRule.md)
-
-

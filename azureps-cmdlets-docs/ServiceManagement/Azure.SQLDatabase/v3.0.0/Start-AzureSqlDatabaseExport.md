@@ -29,13 +29,13 @@ Start-AzureSqlDatabaseExport [-SqlConnectionContext] <ISqlServerConnectionInform
 ## DESCRIPTION
 The **Start-AzureSqlDatabaseExport** cmdlet starts an export operation from an Azure SQL Database to Blob storage.
 The operation requires a database server connection context.
-Use the Get-AzureSqlDatabaseImportExportStatus cmdlet to get the status of the export operation.
+Use the **Get-AzureSqlDatabaseImportExportStatus** cmdlet to get the status of the export operation.
 
 ## EXAMPLES
 
 ### Example 1: Export a database
 ```
-PS C:\>$Credential = Get-Credential
+PS C:\> $Credential = Get-Credential
 PS C:\> $SqlContext = New-AzureSqlDatabaseServerContext -ServerName $ServerName -Credentials $Credential
 PS C:\> $StorageContext = New-AzureStorageContext -StorageAccountName $StorageName -StorageAccountKey $StorageKey
 PS C:\> $Container = Get-AzureStorageContainer -Name $ContainerName -Context $StorageContext

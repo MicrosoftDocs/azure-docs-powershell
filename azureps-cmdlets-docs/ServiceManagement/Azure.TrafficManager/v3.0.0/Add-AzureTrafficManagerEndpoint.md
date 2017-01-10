@@ -27,7 +27,7 @@ That cmdlet connects to Azure to save your changes.
 
 ### Example 1: Add an endpoint to a profile
 ```
-PS C:\>$TrafficManagerProfile = Get-AzureTrafficManagerProfile -Name "ContosoProfile"
+PS C:\> $TrafficManagerProfile = Get-AzureTrafficManagerProfile -Name "ContosoProfile"
 PS C:\> Add-AzureTrafficManagerEndpoint -TrafficManagerProfile $TrafficManagerProfile -DomainName "Contoso02App.cloudapp.net" -Status "Enabled" -Type "CloudService" | Set-AzureTrafficManagerProfile
 ```
 
@@ -40,7 +40,7 @@ The command passes the profile object to the **Set-AzureTrafficManagerProfile** 
 
 ### Example 2: Add an endpoint that has a specified location and weight
 ```
-PS C:\>Add-AzureTrafficManagerEndpoint -TrafficManagerProfile ContosoTrafficManagerProfile -DomainName " Contoso02App.cloudapp.net" -Status Enabled -Type CloudService -Weight 2 -Location myLocation | Set-AzureTrafficManagerProfile
+PS C:\> Add-AzureTrafficManagerEndpoint -TrafficManagerProfile ContosoTrafficManagerProfile -DomainName " Contoso02App.cloudapp.net" -Status Enabled -Type CloudService -Weight 2 -Location myLocation | Set-AzureTrafficManagerProfile
 ```
 
 This command adds an endpoint to a Traffic Manager profile.
@@ -71,7 +71,7 @@ Specifies the location of the endpoint the cmdlet adds.
 This must be an Azure location.
 
 This parameter must contain a value for endpoints of the type "Any" or of type "TrafficManager" in a profile that has the load balancing method set to "Performance".
-The possible values are the Azure region names, as listed at  http://azure.microsoft.com/regions/http://azure.microsoft.com/regions/.
+The possible values are the Azure region names, as listed at  [Azure regions](http://azure.microsoft.com/regions/) (http://azure.microsoft.com/regions/).
 
 ```yaml
 Type: String
@@ -92,7 +92,6 @@ Valid values are:
 - CloudService
 - AzureWebsite
 - TrafficManager
-
 - Any 
 
 If there is more than one AzureWebsite endpoint, the endpoints must be in different datacenters.
@@ -179,6 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile

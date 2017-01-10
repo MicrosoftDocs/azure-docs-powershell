@@ -25,7 +25,7 @@ The **Get-AzureStorageCORSRule** cmdlet gets Cross-Origin Resource Sharing (CORS
 
 ### Example 1: Get CORS rules of blob service
 ```
-PS C:\>Get-AzureStorageCORSRule -ServiceType Blob
+PS C:\> Get-AzureStorageCORSRule -ServiceType Blob
 ```
 
 This command gets the CORS rules for the Blob service type.
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure Storage context.
-To obtain a context, use the New-AzureStorageContext cmdlet.
+To obtain a context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

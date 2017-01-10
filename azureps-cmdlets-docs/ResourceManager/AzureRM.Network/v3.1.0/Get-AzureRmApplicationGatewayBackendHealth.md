@@ -18,24 +18,22 @@ Get-AzureRmApplicationGatewayBackendHealth -Name <String> -ResourceGroupName <St
 ```
 
 ## DESCRIPTION
-The Get-AzureRmApplicationGatewayBackendHealth cmdlet gets application gateway backend health.
+The **Get-AzureRmApplicationGatewayBackendHealth** cmdlet gets application gateway backend health.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Gets backend health without expanded resources.  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Get a backend health without expanded resources
 
 ```
-PS C:\>$BackendHealth = Get-AzureRmApplicationGatewayBackendHealth -Name ApplicationGateway01 -ResourceGroupName ResourceGroup01
+PS C:\> $BackendHealth = Get-AzureRmApplicationGatewayBackendHealth -Name ApplicationGateway01 -ResourceGroupName ResourceGroup01
 ```
 
 This command gets the backend health of application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $BackendHealth variable.
 
-### --------------------------  Example 1: Gets backend health with expanded resources.  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Gets backend health with expanded resources
 
 ```
-PS C:\>$BackendHealth = Get-AzureRmApplicationGatewayBackendHealth -Name ApplicationGateway01 -ResourceGroupName ResourceGroup01 -ExpandResource "backendhealth/applicationgatewayresource"
+PS C:\> $BackendHealth = Get-AzureRmApplicationGatewayBackendHealth -Name ApplicationGateway01 -ResourceGroupName ResourceGroup01 -ExpandResource "backendhealth/applicationgatewayresource"
 ```
 
 This command gets the backend health (with expanded resources) of application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $BackendHealth variable.
@@ -73,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandResource
-
+Specifies the name of the resource that is expanded.
 
 ```yaml
 Type: String
@@ -101,4 +99,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 ## RELATED LINKS
 
 [Get-AzureRmApplicationGateway]()
-

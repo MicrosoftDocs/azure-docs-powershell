@@ -24,7 +24,7 @@ The **Remove-AzureRmRedisCachePatchSchedule** cmdlet removes the patch schedule 
 
 ### Example 1: Remove the patch schedule
 ```
-PS C:\>Remove-AzureRmRedisCachePatchSchedule -ResourceGroupName "ResourceGroup13" -Name "RedisCache06"
+PS C:\> Remove-AzureRmRedisCachePatchSchedule -ResourceGroupName "ResourceGroup13" -Name "RedisCache06"
 ```
 
 This command removes the patch schedule from the cache named RedisCache06.

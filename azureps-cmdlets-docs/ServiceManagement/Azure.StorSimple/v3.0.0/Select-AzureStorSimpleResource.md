@@ -25,7 +25,8 @@ After you select a resource, other cmdlets apply within that resource context.
 
 ### Example 1: Select a resource for the first time
 ```
-PS C:\>Select-AzureStorSimpleResource -ResourceName "Contoso64-Tsqa" -RegistrationKey "<your registration key>"
+PS C:\> Select-AzureStorSimpleResource -ResourceName "Contoso64-Tsqa" -RegistrationKey "<your registration key>"
+
 ResourceId           ResourceName
 ----------           ------------
 1909806764156522689  Contoso64-Tsqa
@@ -37,20 +38,22 @@ In this example, the computer has not had this context initialized previously, a
 ### Example 2: Attempt to select a resource
 ```
 This command gets the current context for this computer by using the **Get-AzureStorSimpleResourceContext** cmdlet. The current selected resource is Contoso64-Tsqa. This is consistent with the previous example. 
-PS C:\>Get-AzureStorSimpleResourceContext
+PS C:\> Get-AzureStorSimpleResourceContext
 ResourceId           ResourceName
 ----------           ------------
 1909806764156522689  Contoso64-Tsqa 
 
 This command attempts to reset the resource to be Contoso02-Resource. For this example, this resource has not been previously selected. The registration key is not saved or included in the command. The command cannot select the resource. 
-PS C:\>Select-AzureStorSimpleResource -ResourceName "Contoso02-Resource"
+
+PS C:\> Select-AzureStorSimpleResource -ResourceName "Contoso02-Resource"
 Select-AzureStorSimpleResource : Could not find the persisted secret. Please use Select-AzureStorSimpleResource and
 provide the Registration key once again.
 ```
 
 ### Example 3: Select a previously selected resource
 ```
-PS C:\>Select-AzureStorSimpleResource -ResourceName "Contoso64-Tsqa"
+PS C:\> Select-AzureStorSimpleResource -ResourceName "Contoso64-Tsqa"
+
 ResourceId           ResourceName
 ----------           ------------
 1909806764156522689  Contoso64-Tsqa
@@ -80,7 +83,7 @@ Accept wildcard characters: False
 Specifies a registration key.
 Specify a key the first time that you select a resource.
 After this cmdlet selects the current resource, cmdlets use this key, as required.
-For more information, see Get the service registration keyhttp://msdn.microsoft.com/en-us/library/azure/dn772346.aspx (http://msdn.microsoft.com/en-us/library/azure/dn772346.aspx) on the Microsoft Developer Network.
+For more information, see [Get the service registration key](http://msdn.microsoft.com/en-us/library/azure/dn772346.aspx) (http://msdn.microsoft.com/en-us/library/azure/dn772346.aspx) on the Microsoft Developer Network.
 
 ```yaml
 Type: String

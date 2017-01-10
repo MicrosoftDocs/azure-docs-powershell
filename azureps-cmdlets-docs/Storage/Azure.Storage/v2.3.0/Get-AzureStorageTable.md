@@ -32,21 +32,21 @@ The **Get-AzureStorageTable** cmdlet lists the storage tables associated with th
 
 ### Example 1: List all Azure Storage tables
 ```
-PS C:\>Get-AzureStorageTable
+PS C:\> Get-AzureStorageTable
 ```
 
 This command gets all storage tables for a Storage account.
 
 ### Example 2: List Azure Storage tables using a wildcard character
 ```
-PS C:\>Get-AzureStorageTable -Name table*
+PS C:\> Get-AzureStorageTable -Name table*
 ```
 
 This command uses a wildcard character to get storage tables whose name starts with table.
 
 ### Example 3: List Azure Storage tables using table name prefix
 ```
-PS C:\>Get-AzureStorageTable -Prefix "table"
+PS C:\> Get-AzureStorageTable -Prefix "table"
 ```
 
 This command uses the *Prefix* parameter to get storage tables whose name starts with table.
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the storage context.
-To create it, you can use the New-AzureStorageContext cmdlet.
+To create it, you can use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

@@ -34,7 +34,7 @@ IP configurations contain the subnet in which the application gateway is deploye
 
 ### Example 1: Add an virtual network configuration to an application gateway
 ```
-PS C:\>$Vnet = Get-AzureRmVirtualNetwork -Name "Vnet01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Vnet = Get-AzureRmVirtualNetwork -Name "Vnet01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Subnet = Get-AzureRmVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $Vnet 
 PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $AppGw = Add-AzureRmApplicationGatewayIPConfiguration -ApplicationGateway $AppGw -Name "Appgwsubnet01" -Subnet $Subnet
@@ -43,7 +43,7 @@ PS C:\> $AppGw = Add-AzureRmApplicationGatewayIPConfiguration -ApplicationGatewa
 The first command creates a virtual network.
 The second command creates a subnet using the previously created virtual network.
 The third command gets the application gateway and stores it in the $AppGw variable.
-The fouth command adds the IP configuration to the application gateway stored in $AppGw.
+The fourth command adds the IP configuration to the application gateway stored in $AppGw.
 
 ## PARAMETERS
 
@@ -170,5 +170,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayIPConfiguration](./Remove-AzureRmApplicationGatewayIPConfiguration.md)
 
 [Set-AzureRmApplicationGatewayIPConfiguration](./Set-AzureRmApplicationGatewayIPConfiguration.md)
-
-

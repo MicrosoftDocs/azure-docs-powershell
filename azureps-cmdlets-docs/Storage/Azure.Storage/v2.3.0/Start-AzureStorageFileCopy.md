@@ -101,7 +101,7 @@ The **Start-AzureStorageFileCopy** cmdlet starts to copy a source file to a dest
 
 ### Example 1: Start copy operation from file to file by using share name and file name
 ```
-PS C:\>Start-AzureStorageFileCopy -SrcShareName "ContosoShare01" -SrcFilePath "FilePath01" -DestShareName "ContosoShare02" -DestFilePath "FilePath02"
+PS C:\> Start-AzureStorageFileCopy -SrcShareName "ContosoShare01" -SrcFilePath "FilePath01" -DestShareName "ContosoShare02" -DestFilePath "FilePath02"
 ```
 
 This command starts a copy operation from file to file.
@@ -109,7 +109,7 @@ The command specifies share name and file name
 
 ### Example 2: Start copy operation from blob to file by using container name and blob name
 ```
-PS C:\>Start-AzureStorageFileCopy -SrcContainerName "ContosoContainer01" -SrcBlobName "ContosoBlob01" -DestShareName "ContosoShare" -DestFilePath "FilePath02"
+PS C:\> Start-AzureStorageFileCopy -SrcContainerName "ContosoContainer01" -SrcBlobName "ContosoBlob01" -DestShareName "ContosoShare" -DestFilePath "FilePath02"
 ```
 
 This command starts a copy operation from blob to file.
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure Storage context.
-To obtain a context, use the New-AzureStorageContext cmdlet.
+To obtain a context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 
 ### -DestFile
 Specifies a **CloudFile** object.
-You can create a cloud file or obtain one by using the Get-AzureStorageFile cmdlet.
+You can create a cloud file or obtain one by using the **Get-AzureStorageFile** cmdlet.
 
 ```yaml
 Type: CloudFile
@@ -425,7 +425,7 @@ Accept wildcard characters: False
 
 ### -SrcShare
 Specifies a cloud file share object.
-You can create a cloud file share or obtain one by using the Get-AzureStorageShare cmdlet.
+You can create a cloud file share or obtain one by using the **Get-AzureStorageShare** cmdlet.
 
 ```yaml
 Type: CloudFileShare

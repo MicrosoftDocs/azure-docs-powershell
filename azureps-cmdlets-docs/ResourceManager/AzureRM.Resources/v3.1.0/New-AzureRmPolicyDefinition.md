@@ -25,14 +25,14 @@ The **New-AzureRmPolicyDefinition** cmdlet creates a policy definition that incl
 
 ### Example 1: Create a policy definition by using a policy file
 ```
-PS C:\>New-AzureRmPolicyDefinition -Name "VMPolicyDefinition" -Policy C:\VMPolicy.json
+PS C:\> New-AzureRmPolicyDefinition -Name "VMPolicyDefinition" -Policy C:\VMPolicy.json
 ```
 
 This command creates a policy definition named VMPolicyDefinition that contains the policy rule specified in C:\VMPolicy.json.
 
 ### Example 2: Create a policy definition inline
 ```
-PS C:\>New-AzureRmPolicyDefinition -Name "VMPolicyDefinition" -DisplayName "Virtual Machine policy definition" -Policy "{""if"":{""source"":""action"",""equals"":""Microsoft.Compute/virtualMachines/write""},""then"":{""effect"":""deny""}}"
+PS C:\> New-AzureRmPolicyDefinition -Name "VMPolicyDefinition" -DisplayName "Virtual Machine policy definition" -Policy "{""if"":{""source"":""action"",""equals"":""Microsoft.Compute/virtualMachines/write""},""then"":{""effect"":""deny""}}"
 ```
 
 This command creates a policy definition named VMPolicyDefinition.

@@ -37,14 +37,14 @@ The **Get-AzureRmPolicyDefinition** cmdlet gets all the policy definitions or a 
 
 ### Example 1: Get all policy definition
 ```
-PS C:\>Get-AzureRmPolicyDefinition
+PS C:\> Get-AzureRmPolicyDefinition
 ```
 
 This command gets all the policy definitions.
 
 ### Example 2: Get policy definition by name
 ```
-PS C:\>Get-AzureRmPolicyDefinition -Name "VMPolicyDefinition"
+PS C:\> Get-AzureRmPolicyDefinition -Name "VMPolicyDefinition"
 ```
 
 This command gets the policy definition named VMPolicyDefinition.

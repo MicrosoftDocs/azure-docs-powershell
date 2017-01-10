@@ -29,14 +29,14 @@ The **Get-AzureRmProviderFeature** cmdlet gets the feature name, provider name, 
 
 ### Example 1: Get all available features
 ```
-PS C:\>Get-AzureRmProviderFeature -ListAvailable
+PS C:\> Get-AzureRmProviderFeature -ListAvailable
 ```
 
 This command gets all available features.
 
 ### Example 2: Get information about a specific feature
 ```
-PS C:\>Get-AzureRmProviderFeature -FeatureName "AllowPreReleaseRegions" -ProviderNamespace "Microsoft.Compute"
+PS C:\> Get-AzureRmProviderFeature -FeatureName "AllowPreReleaseRegions" -ProviderNamespace "Microsoft.Compute"
 ```
 
 This command gets information for the feature named AllowPreReleaseRegions for the specified provider.

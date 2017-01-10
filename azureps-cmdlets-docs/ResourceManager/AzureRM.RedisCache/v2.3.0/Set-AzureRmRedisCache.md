@@ -25,7 +25,7 @@ The **Set-AzureRmRedisCache** cmdlet modifies an Azure Redis Cache.
 
 ### Example 1: Modify a Redis Cache
 ```
-PS C:\>Set-AzureRmRedisCache -ResourceGroupName "MyGroup" -Name "MyCache" -RedisConfiguration @{"maxmemory-policy" = "allkeys-random"}
+PS C:\> Set-AzureRmRedisCache -ResourceGroupName "MyGroup" -Name "MyCache" -RedisConfiguration @{"maxmemory-policy" = "allkeys-random"}
 
           PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
           SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
@@ -199,7 +199,7 @@ Configures the number of databases.
 This property can be configured only at cache creation.
 Standard and Premium tiers.
 
-For more information, see Manage Azure Redis Cache with Azure PowerShellhttp://go.microsoft.com/fwlink/?LinkId=800051 (http://go.microsoft.com/fwlink/?LinkId=800051).
+For more information, see [Manage Azure Redis Cache with Azure PowerShell](http://go.microsoft.com/fwlink/?LinkId=800051) (http://go.microsoft.com/fwlink/?LinkId=800051).
 
 ```yaml
 Type: Hashtable

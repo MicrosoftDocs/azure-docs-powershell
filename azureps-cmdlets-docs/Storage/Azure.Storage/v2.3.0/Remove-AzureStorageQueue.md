@@ -25,14 +25,14 @@ The **Remove-AzureStorageQueue** cmdlet removes a storage queue.
 
 ### Example 1: Remove a storage queue by name
 ```
-PS C:\>Remove-AzureStorageQueue "ContosoQueue01"
+PS C:\> Remove-AzureStorageQueue "ContosoQueue01"
 ```
 
 This command removes a queue named ContosoQueue01.
 
 ### Example 2: Remove multiple storage queues
 ```
-PS C:\>Get-AzureStorageQueue "Contoso*" | Remove-AzureStorageQueue
+PS C:\> Get-AzureStorageQueue "Contoso*" | Remove-AzureStorageQueue
 ```
 
 This command removes all queues with names that start with Contoso.
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-To obtain the storage context, the New-AzureStorageContext cmdlet.
+To obtain the storage context, the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

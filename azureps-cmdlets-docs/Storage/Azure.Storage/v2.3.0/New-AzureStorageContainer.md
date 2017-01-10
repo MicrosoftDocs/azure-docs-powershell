@@ -26,7 +26,7 @@ The **New-AzureStorageContainer** cmdlet creates an Azure storage container.
 
 ### Example 1: Create an Azure storage container
 ```
-PS C:\>New-AzureStorageContainer -Name "ContainerName" -Permission Off
+PS C:\> New-AzureStorageContainer -Name "ContainerName" -Permission Off
 ```
 
 This command creates a storage container.

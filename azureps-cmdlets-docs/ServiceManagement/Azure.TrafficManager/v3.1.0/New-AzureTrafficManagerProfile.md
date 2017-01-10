@@ -29,14 +29,14 @@ For more information, see Example 2 below.
 
 ### Example 1: Create a Traffic Manager profile
 ```
-PS C:\>New-AzureTrafficManagerProfile -Name "MyProfile" -DomainName "My.profile.trafficmanager.net" -LoadBalancingMethod "RoundRobin" -Ttl 30 -MonitorProtocol "Http" -MonitorPort 80 -MonitorRelativePath "/"
+PS C:\> New-AzureTrafficManagerProfile -Name "MyProfile" -DomainName "My.profile.trafficmanager.net" -LoadBalancingMethod "RoundRobin" -Ttl 30 -MonitorProtocol "Http" -MonitorPort 80 -MonitorRelativePath "/"
 ```
 
 This command creates a Traffic Manager profile named MyProfile in the specified Traffic Manager domain with a Round Robin load balancing method, a TTL of 30 seconds, HTTP monitoring protocol, monitoring port 80, and with the specified path.
 
 ### Example 2: Reorder endpoints to desired failover order
 ```
-PS C:\>$Profile = Get-AzureTrafficManagerProfile -Name "MyProfile"
+PS C:\> $Profile = Get-AzureTrafficManagerProfile -Name "MyProfile"
 PS C:\> $Profile.Endpoints[0],$Profile.Endpoints[1] = $Profile.Endpoints[1],$Profile.Endpoints[0]
 PS C:\> $Profile = Set-AzureTrafficManagerProfile
 ```

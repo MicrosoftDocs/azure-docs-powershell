@@ -35,7 +35,7 @@ If you specify no parameters, this operation gets every Redis Cache for the curr
 
 ### Example 1: Get a Redis Cache by name
 ```
-PS C:\>Get-AzureRmRedisCache -ResourceGroupName "myGroup" -Name "myexists"
+PS C:\> Get-AzureRmRedisCache -ResourceGroupName "myGroup" -Name "myexists"
 
           ResourceGroupName  : myGroup
 
@@ -63,7 +63,7 @@ This command gets the Redis Cache named myexists.
 
 ### Example 2: Get every Redis Cache in a resource group
 ```
-PS C:\>Get-AzureRmRedisCache -ResourceGroupName "myGroup"
+PS C:\> Get-AzureRmRedisCache -ResourceGroupName "myGroup"
 
 
           ResourceGroupName  : myGroup
@@ -101,7 +101,7 @@ This command gets every Redis Cache in the specified resource group.
 
 ### Example 3: Get every Redis Cache in the current subscription
 ```
-PS C:\>Get-AzureRmRedisCache
+PS C:\> Get-AzureRmRedisCache
 
 
           ResourceGroupName  : myGroup

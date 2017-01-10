@@ -29,7 +29,7 @@ To see the current rules, use the Get-AzureStorageCORSRule cmdlet.
 
 ### Example 1: Assign CORS rules to the blob service
 ```
-PS C:\>$CorsRules = (@{
+PS C:\> $CorsRules = (@{
     AllowedHeaders=@("x-ms-blob-content-type","x-ms-blob-content-disposition");
     AllowedOrigins=@("*");
     MaxAgeInSeconds=30;
@@ -50,7 +50,7 @@ The second command assigns the rules in $CorsRules to the Blob service type.
 
 ### Example 2: Change properties of a CORS rule for blob service
 ```
-PS C:\>$CorsRules = Get-AzureStorageCORSRule -ServiceType Blob
+PS C:\> $CorsRules = Get-AzureStorageCORSRule -ServiceType Blob
 PS C:\> $CorsRules[0].AllowedHeaders = @("x-ms-blob-content-type", "x-ms-blob-content-disposition")
 PS C:\> $CorsRules[0].AllowedMethods = @("Get", "Connect", "Merge")
 PS C:\> Set-AzureStorageCORSRule -ServiceType Blob -CorsRules $CorsRules
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure Storage context.
-To obtain a context, use the New-AzureStorageContext cmdlet.
+To obtain a context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

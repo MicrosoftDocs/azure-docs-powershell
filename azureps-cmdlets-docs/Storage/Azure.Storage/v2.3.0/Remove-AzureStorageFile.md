@@ -50,14 +50,14 @@ The **Remove-AzureStorageFile** cmdlet deletes a file.
 
 ### Example 1: Delete a file from a file share
 ```
-PS C:\>Remove-AzureStorageFile -ShareName "ContosoShare06" -Path "ContosoFile22"
+PS C:\> Remove-AzureStorageFile -ShareName "ContosoShare06" -Path "ContosoFile22"
 ```
 
 This command deletes the file that is named ContosoFile22 from the file share named ContosoShare06.
 
 ### Example 2: Get a file from a file share by using a file share object
 ```
-PS C:\>Get-AzureStorageShare -Name "ContosoShare06" | Remove-AzureStorageFile -Path "ContosoFile22"
+PS C:\> Get-AzureStorageShare -Name "ContosoShare06" | Remove-AzureStorageFile -Path "ContosoFile22"
 ```
 
 This command uses the **Get-AzureStorageShare** cmdlet to get the file share named ContosoShare06, and then passes that object to the current cmdlet by using the pipeline operator.
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ### -Share
 Specifies a **CloudFileShare** object.
 This cmdlet removes the file in the share this parameter specifies.
-To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+To obtain a **CloudFileShare** object, use the **Get-AzureStorageShare** cmdlet.
 This object contains the storage context.
 If you specify this parameter, do not specify the *Context* parameter.
 
@@ -288,7 +288,7 @@ Accept wildcard characters: False
 ### -File
 Specifies a file as a **CloudFile** object.
 This cmdlet removes the file that this parameter specifies.
-To obtain a **CloudFile** object, use the Get-AzureStorageFile cmdlet.
+To obtain a **CloudFile** object, use the **Get-AzureStorageFile** cmdlet.
 
 ```yaml
 Type: CloudFile
