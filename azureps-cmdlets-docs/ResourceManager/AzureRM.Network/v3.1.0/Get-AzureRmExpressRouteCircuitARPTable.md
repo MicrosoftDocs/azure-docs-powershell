@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmExpressRouteCircuitARPTable
 
 ## SYNOPSIS
+Gets the express route circuit ARP Table.
 
 ## SYNTAX
 
@@ -18,13 +19,9 @@ Get-AzureRmExpressRouteCircuitARPTable [-Name <String>] -ResourceGroupName <Stri
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmExpressRouteCircuitARPTable** cmdlet gets the express route circuit ARP Table.
 
 ## EXAMPLES
-
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 
@@ -142,4 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

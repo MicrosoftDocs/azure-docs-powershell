@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmLoadBalancerInboundNatPoolConfig
 
 ## SYNOPSIS
+Gets an inbound NAT pool configuration for a load balancer.
 
 ## SYNTAX
 
@@ -17,17 +18,15 @@ Get-AzureRmLoadBalancerInboundNatPoolConfig [-Name <String>] -LoadBalancer <PSLo
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmLoadBalancerInboundNatPoolConfig** cmdlet gets an inbound NAT pool configuration for a load balancer.
 
 ## EXAMPLES
-
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 
 ### -Name
+Specifies the name of the inbound NAT pool configuration to get.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -41,6 +40,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancer
+Specifies the load balancer that is associated with the inbound NAT pool configuration to get.
+
 ```yaml
 Type: PSLoadBalancer
 Parameter Sets: (All)
@@ -103,3 +104,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmLoadBalancerInboundNatRuleConfig](./Get-AzureRmLoadBalancerInboundNatRuleConfig)

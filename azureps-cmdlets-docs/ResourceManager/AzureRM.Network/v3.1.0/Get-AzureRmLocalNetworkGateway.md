@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmLocalNetworkGateway
 
 ## SYNOPSIS
+Gets the local network gateway.
 
 ## SYNTAX
 
@@ -17,13 +18,9 @@ Get-AzureRmLocalNetworkGateway [-Name <String>] -ResourceGroupName <String>
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmLocalNetworkGateway** cmdlet gets the local network gateway.
 
 ## EXAMPLES
-
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -102,4 +99,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
