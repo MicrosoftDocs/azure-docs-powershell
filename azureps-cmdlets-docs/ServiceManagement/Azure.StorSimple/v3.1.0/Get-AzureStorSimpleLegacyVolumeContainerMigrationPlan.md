@@ -29,7 +29,7 @@ If you do not specify the *LegacyConfigId* parameter, this cmdlet returns a list
 
 ### Example 1: Get the status of a plan
 ```
-PS C:\>Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan -LegacyConfigId "f16463bd-94a9-4c3c-91c2-7a3ba7120087" -LegacyContainerNames "OneSDKAzureCloud"
+PS C:\> Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan -LegacyConfigId "f16463bd-94a9-4c3c-91c2-7a3ba7120087" -LegacyContainerNames "OneSDKAzureCloud"
 VERBOSE: 2015-04-08 13:48:05 ClientRequestId: 51e413fd-c2c9-4108-88cd-a0e792eab80a_PS
 VERBOSE: 2015-04-08 13:48:05 ClientRequestId: 4c6398ef-35a0-4d1c-931e-d9d45599a97a_PS
 VERBOSE: 2015-04-08 13:48:17 ClientRequestId: ef7a7e35-6dff-46cd-9df3-cb5fa25d149e_PS
@@ -56,7 +56,7 @@ The status includes assumed bandwidth, estimated time and, related information.
 
 ### Example 2: Get the IDs of existing plans
 ```
-PS C:\>Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan
+PS C:\> Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan
 VERBOSE: 2015-04-08 13:46:51 ClientRequestId: 813da56c-0cfc-4325-80db-08ef32bdde1e_PS
 VERBOSE: 2015-04-08 13:46:51 ClientRequestId: 9e7cf244-1894-490a-be02-749834a99318_PS
 VERBOSE: List of LegacyConfig Ids on the resource: 

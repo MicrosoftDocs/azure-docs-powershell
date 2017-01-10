@@ -25,7 +25,7 @@ If the domain name is available, this cmdlet returns a value of $True.
 
 ### Example 1: Check whether a domain name is available
 ```
-PS C:\>Test-AzureTrafficManagerDomainName -DomainName "ContosoApp.trafficmanager.net"
+PS C:\> Test-AzureTrafficManagerDomainName -DomainName "ContosoApp.trafficmanager.net"
 $True
 ```
 

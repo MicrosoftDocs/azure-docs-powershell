@@ -25,7 +25,7 @@ The cmdlet gets details you can use to connect to the resources.
 
 ### Example 1: Get all resources
 ```
-PS C:\>Get-AzureStorSimpleResource
+PS C:\> Get-AzureStorSimpleResource
 VERBOSE: ClientRequestId: 5cd61b91-ef40-43b4-986d-156e06d2ed65_PS
 
 ResourceName                                      ResourceId           ResourceState
@@ -42,7 +42,7 @@ In this example, there are three resources.
 
 ### Example 2: Get a resource by using its name
 ```
-PS C:\>Get-AzureStorSimpleResource -ResourceName "Contoso63-Tsqa"
+PS C:\> Get-AzureStorSimpleResource -ResourceName "Contoso63-Tsqa"
 VERBOSE: ClientRequestId: efc3c85c-12aa-4345-b6eb-ccc532de4825_PS
 
 ResourceName                                      ResourceId           ResourceState
@@ -55,7 +55,7 @@ This command gets the resource named Contoso63-Tsqa.
 
 ### Example 3: Attempt to get a nonexistent resource
 ```
-PS C:\>Get-AzureStorSimpleResource -ResourceName "Contoso64-Tsqa"
+PS C:\> Get-AzureStorSimpleResource -ResourceName "Contoso64-Tsqa"
 VERBOSE: ClientRequestId: 5d08d40b-f9d7-4d43-956f-13f01e89625b_PS
 VERBOSE: Invalid input : Could not find a resource named Contoso64-Tsqa in your subscription.
 ```

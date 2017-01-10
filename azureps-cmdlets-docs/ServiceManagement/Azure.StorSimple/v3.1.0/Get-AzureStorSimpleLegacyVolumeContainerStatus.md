@@ -26,7 +26,7 @@ This cmdlet returns status information which includes whether the volume contain
 
 ### Example 1: Get status for a failed migration
 ```
-PS C:\>Get-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId "dcddbb51-2ab2-4d22-8204-fefdbd6b7ba4" -LegacyContainerNames "OneSDKAzureCloud"
+PS C:\> Get-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId "dcddbb51-2ab2-4d22-8204-fefdbd6b7ba4" -LegacyContainerNames "OneSDKAzureCloud"
 ConfigId             : dcddbb51-2ab2-4d22-8204-fefdbd6b7ba4
 MigrationCompleted   : No Cloud Configuration(s) are found to be in Completed state of Migration
 MigrationInprogress  : No Cloud Configuration(s)  are found to be in InProgress state of Migration
@@ -42,7 +42,7 @@ The results show that the migration failed.
 
 ### Example 2: Get status for a migration in progress
 ```
-PS C:\>Get-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId "dcddbb51-2ab2-4d22-8204-fefdbd6b7ba4" -LegacyContainerNames "OneSDKAzureCloud"
+PS C:\> Get-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId "dcddbb51-2ab2-4d22-8204-fefdbd6b7ba4" -LegacyContainerNames "OneSDKAzureCloud"
 ConfigId             : 5a83ec88-9e0a-4722-9fb0-9131caa7387a
 MigrationCompleted   : No Cloud Configuration(s) are found to be in Completed state of Migration
 MigrationInprogress  : CloudConfigurationName: OneSDKAzureCloud
@@ -59,7 +59,7 @@ The results show that the migration is in progress.
 
 ### Example 3: Get status for a completed migration
 ```
-PS C:\>Get-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId dcddbb51-2ab2-4d22-8204-fefdbd6b7ba4 -LegacyContainerNames OneSDKAzureCloud
+PS C:\> Get-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId dcddbb51-2ab2-4d22-8204-fefdbd6b7ba4 -LegacyContainerNames OneSDKAzureCloud
 ConfigId             : 5a83ec88-9e0a-4722-9fb0-9131caa7387a
 MigrationCompleted   : Cloud ConfigurationName: OneSDKAzureCloud
                        PercentageCompleted : 100

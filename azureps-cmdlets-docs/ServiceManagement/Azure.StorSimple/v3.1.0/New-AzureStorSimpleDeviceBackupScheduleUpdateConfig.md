@@ -27,7 +27,7 @@ Use this configuration object to update a backup policy by using the **Set-Azure
 
 ### Example 1: Create a schedule update request
 ```
-PS C:\>New-AzureStorSimpleDeviceBackupScheduleUpdateConfig -Id "147f734d-a31a-4473-8501-6ba38be2cb30" -BackupType CloudSnapshot -RecurrenceType Hourly -RecurrenceValue 1 -RetentionCount 50 -Enabled $True
+PS C:\> New-AzureStorSimpleDeviceBackupScheduleUpdateConfig -Id "147f734d-a31a-4473-8501-6ba38be2cb30" -BackupType CloudSnapshot -RecurrenceType Hourly -RecurrenceValue 1 -RetentionCount 50 -Enabled $True
 VERBOSE: ClientRequestId: ef346641-54b4-4273-8898-7f863e7c5b7e_PS
 
 

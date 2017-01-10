@@ -31,7 +31,7 @@ The **Stop-AzureSiteRecoveryJob** cmdlet stops an Azure Site Recovery job.
 
 ### Example 1: Stop all jobs
 ```
-PS C:\>$Jobs = Get-AzureSiteRecoveryJob 
+PS C:\> $Jobs = Get-AzureSiteRecoveryJob 
 PS C:\> Stop-AzureSiteRecoveryJob -Job $Jobs
 ```
 
