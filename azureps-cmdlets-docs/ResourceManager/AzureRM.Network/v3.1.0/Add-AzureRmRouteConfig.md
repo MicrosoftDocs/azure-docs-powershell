@@ -25,7 +25,7 @@ The **Add-AzureRmRouteConfig** cmdlet adds a route to an Azure route table.
 
 ### Example 1: Add a route to a route table
 ```
-PS C:\>$RouteTable = Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01"
+PS C:\> $RouteTable = Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01"
 PS C:\> Add-AzureRmRouteConfig -Name "Route13" -AddressPrefix 10.3.0.0/16 -NextHopType "VnetLocal" -RouteTable $RouteTable
 ```
 
@@ -37,8 +37,8 @@ This route forwards packets to the local virtual network.
 
 ### Example 2: Add a route to a route table by using the pipeline
 ```
-PS C:\>Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Add-AzureRmRouteConfig -Name "Route02" -AddressPrefix 10.2.0.0/16 -NextHopType VnetLocal | Set-AzureRmRouteTable
-Name              : routetable01
+PS C:\> Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Add-AzureRmRouteConfig -Name "Route02" -AddressPrefix 10.2.0.0/16 -NextHopType VnetLocal | Set-AzureRmRouteTable
+Name              : RouteTable01
 ResourceGroupName : ResourceGroup11
 Location          : eastus
 Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGroup11/providers/Microsoft.Networ
@@ -237,5 +237,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmRouteConfig](./Set-AzureRmRouteConfig.md)
 
 [Set-AzureRmRouteTable](./Set-AzureRmRouteTable.md)
-
-

@@ -37,7 +37,7 @@ Use the Get-AzureSqlDatabaseImportExportStatus cmdlet to get the status of the e
 
 ### Example 1: Export a database
 ```
-PS C:\>$Credential = Get-Credential
+PS C:\> $Credential = Get-Credential
 PS C:\> $SqlContext = New-AzureSqlDatabaseServerContext -ServerName $ServerName -Credentials $Credential
 PS C:\> $StorageContext = New-AzureStorageContext -StorageAccountName $StorageName -StorageAccountKey $StorageKey
 PS C:\> $Container = Get-AzureStorageContainer -Name $ContainerName -Context $StorageContext

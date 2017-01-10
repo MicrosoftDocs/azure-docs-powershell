@@ -25,7 +25,7 @@ You can specify a jobs by supplying an instance ID or a job name.
 
 ### Example 1: Stop jobs for a device
 ```
-PS C:\>Get-AzureStorSimpleJob -DeviceName "Device07" | Stop-AzureStorSimpleJob -Force
+PS C:\> Get-AzureStorSimpleJob -DeviceName "Device07" | Stop-AzureStorSimpleJob -Force
 ```
 
 This command gets the jobs for the device named Device07, by using the **Get-AzureStorSimpleJob** cmdlet.
@@ -35,7 +35,7 @@ The command specifies the *Force* parameter, and, so, it does not prompt you for
 
 ### Example 2: Stop a specific job
 ```
-PS C:\>Stop-AzureStorSimpleJob -InstanceId "574f47e0-44e9-495c-b8a5-0203c57ebf6d" -Force
+PS C:\> Stop-AzureStorSimpleJob -InstanceId "574f47e0-44e9-495c-b8a5-0203c57ebf6d" -Force
 ```
 
 This command stops the job that has the specified instance ID.

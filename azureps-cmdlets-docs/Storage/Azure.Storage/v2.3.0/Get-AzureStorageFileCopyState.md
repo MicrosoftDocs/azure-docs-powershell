@@ -34,7 +34,7 @@ The **Get-AzureStorageFileCopyState** cmdlet gets the state of an Azure Storage 
 
 ### Example 1: Get the copy state by file name
 ```
-PS C:\>Get-AzureStorageFileCopyState -ShareName "ContosoShare" -FilePath "ContosoFile"
+PS C:\> Get-AzureStorageFileCopyState -ShareName "ContosoShare" -FilePath "ContosoFile"
 ```
 
 This command gets the state of the copy operation for a file that has the specified name.
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 ### -File
 Specifies a **CloudFile** object.
-You can create a cloud file or obtain one by using the Get-AzureStorageFile cmdlet.
+You can create a cloud file or obtain one by using the **Get-AzureStorageFile** cmdlet.
 
 ```yaml
 Type: CloudFile

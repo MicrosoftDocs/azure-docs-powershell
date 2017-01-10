@@ -30,7 +30,7 @@ If the iSCSI initiator parameters match one of the entries in an access control 
 
 ### Example 1: Get all access control records
 ```
-PS C:\>Get-AzureStorSimpleAccessControlRecord
+PS C:\> Get-AzureStorSimpleAccessControlRecord
 InstanceId                           Name                        InitiatorName               VolumeCount
 ----------                           ----                        -------------               -----------
 01a31aa5-14de-4b77-b926-2842577f540e Windows_XYUSFL718-RV_ACR    iqn.1991-05.com.microsof... 3
@@ -43,7 +43,7 @@ This command gets all access control records.
 
 ### Example 2: Get a specific access control record
 ```
-PS C:\>Get-AzureStorSimpleAccessControlRecord -ACRName "Acr11"
+PS C:\> Get-AzureStorSimpleAccessControlRecord -ACRName "Acr11"
 VERBOSE: ClientRequestId: 61f261c7-acd3-4bcc-922a-ddfd85eb767b_PS
 VERBOSE: ClientRequestId: 49c6a4c7-d299-46fd-a553-034c52b47487_PS
 

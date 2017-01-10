@@ -64,7 +64,7 @@ The **Set-AzureRmResourceLock** cmdlet modifies a resource lock.
 
 ### Example 1: Update notes for a lock
 ```
-PS C:\>Set-AzureRmResourceLock -LockLevel CanNotDelete -LockNotes "Updated note" -LockName "ContosoSiteLock" -ResourceName "ContosoSite" -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11"
+PS C:\> Set-AzureRmResourceLock -LockLevel CanNotDelete -LockNotes "Updated note" -LockName "ContosoSiteLock" -ResourceName "ContosoSite" -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11"
 ```
 
 This command updates the note for a lock named ContosoSiteLock.
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 Specifies the name of the resource for which the lock applies.
 For instance, to specify a database, use the following format: 
 
-Server`/`Database
+`Server/Database`
 
 ```yaml
 Type: String

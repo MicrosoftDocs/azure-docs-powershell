@@ -23,8 +23,9 @@ The **Get-AzureStorSimpleResourceContext** cmdlet gets the current resource cont
 
 ### Example 1: Get the current context
 ```
-PS C:\>Select-AzureStorSimpleResource -ResourceName "Contoso63-Tsqa" 
+PS C:\> Select-AzureStorSimpleResource -ResourceName "Contoso63-Tsqa" 
 PS C:\> Get-AzureStorSimpleResourceContext
+
 ResourceId           ResourceName
 ----------           ------------
 1909806764156522689  Contoso63-Tsqa
@@ -36,7 +37,8 @@ The second command gets the current resource context.
 
 ### Example 2: Attempt to get the current context
 ```
-PS C:\>Get-AzureStorSimpleResourceContext
+PS C:\> Get-AzureStorSimpleResourceContext
+
 Get-AzureStorSimpleResourceContext : Resource Context is not set for your subscription. Please use
 Select-AzureStorSimpleResource -ResourceName <<name>> to set
 ```

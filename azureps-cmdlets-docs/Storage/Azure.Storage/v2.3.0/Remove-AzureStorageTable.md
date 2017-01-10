@@ -25,14 +25,14 @@ The **Remove-AzureStorageTable** cmdlet removes one or more storage tables from 
 
 ### Example 1: Remove a table
 ```
-PS C:\>Remove-AzureStorageTable -Name "TableABC"
+PS C:\> Remove-AzureStorageTable -Name "TableABC"
 ```
 
 This command removes a table.
 
 ### Example 2: Remove several tables
 ```
-PS C:\>Get-AzureStorageTable table* | Remove-AzureStorageTable
+PS C:\> Get-AzureStorageTable table* | Remove-AzureStorageTable
 ```
 
 This example uses a wildcard character with the *Name* parameter to get all tables that match the pattern table and then passes the result on the pipeline to remove the tables.
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-You can create it by using the New-AzureStorageContext cmdlet.
+You can create it by using the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

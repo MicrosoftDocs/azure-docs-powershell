@@ -22,10 +22,6 @@ The **Unregister-AzureRmResourceProvider** cmdlet unregisters an Azure resource 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

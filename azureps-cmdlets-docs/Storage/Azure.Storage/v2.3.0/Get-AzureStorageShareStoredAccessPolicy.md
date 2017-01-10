@@ -27,14 +27,14 @@ To get a particular policy, specify it by name.
 
 ### Example 1: Get a stored access policy in a share
 ```
-PS C:\>Get-AzureStorageShareStoredAccessPolicy -ShareName "ContosoShare" -Policy "GeneralPolicy"
+PS C:\> Get-AzureStorageShareStoredAccessPolicy -ShareName "ContosoShare" -Policy "GeneralPolicy"
 ```
 
 This command gets a stored access policy named GeneralPolicy in ContosoShare.
 
 ### Example 2: Get all the stored access policies in share
 ```
-PS C:\>Get-AzureStorageShareStoredAccessPolicy -ShareName "ContosoShare"
+PS C:\> Get-AzureStorageShareStoredAccessPolicy -ShareName "ContosoShare"
 ```
 
 This command gets all stored access policies in ContosoShare.

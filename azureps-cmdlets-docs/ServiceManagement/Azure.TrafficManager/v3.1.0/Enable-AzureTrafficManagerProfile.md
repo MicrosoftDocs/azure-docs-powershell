@@ -25,14 +25,14 @@ Specify the *PassThru* parameter to display whether the operation succeeds.
 
 ### Example 1: Enable a Traffic Manager profile
 ```
-PS C:\>Enable-AzureTrafficManagerProfile -Name "MyProfile"
+PS C:\> Enable-AzureTrafficManagerProfile -Name "MyProfile"
 ```
 
 This command enables the Traffic Manager profile named MyProfile.
 
 ### Example 2: Enable a Traffic Manager profile and display the results
 ```
-PS C:\>Enable-AzureTrafficManagerProfile -Name "MyProfile" -PassThru
+PS C:\> Enable-AzureTrafficManagerProfile -Name "MyProfile" -PassThru
 True
 ```
 

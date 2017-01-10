@@ -53,7 +53,7 @@ If the replication status is PENDING, termination that is not forced is not supp
 
 ### Example 1: Terminate a continuous copy relationship
 ```
-PS C:\>Stop-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf658"
+PS C:\> Stop-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf658"
 ```
 
 This command terminates the continuous copy relationship of database named Orders on the server named lpqd0zbr8y.
@@ -61,7 +61,7 @@ The server named bk0b8kf658 hosts the secondary database.
 
 ### Example 2: Forcibly terminate a continuous copy relationship
 ```
-PS C:\>$DatabaseCopy = Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders"
+PS C:\> $DatabaseCopy = Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders"
 PS C:\> $DatabaseCopy | Stop-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -ForcedTermination
 ```
 

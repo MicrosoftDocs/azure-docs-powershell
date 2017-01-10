@@ -27,7 +27,7 @@ The types of storage services for this cmdlet are Blob, Table, Queue, and File.
 
 ### Example 1: Remove CORS rules for the blob service
 ```
-PS C:\>Remove-AzureStorageCORSRule -ServiceType Blob
+PS C:\> Remove-AzureStorageCORSRule -ServiceType Blob
 ```
 
 This command removes CORS rules for the Blob service type.
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-To obtain the storage context, the New-AzureStorageContext cmdlet.
+To obtain the storage context, the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

@@ -24,7 +24,7 @@ The **Get-AzureRmApplicationGatewayURLPathMapConfig** cmdlet gets an array of UR
 
 ### Example 1: Get a URL path map configuration
 ```
-PS C:\>Get-AzureRmApplicationGatewayUrlPathMapConfig -ApplicationGateway Gateway
+PS C:\> Get-AzureRmApplicationGatewayUrlPathMapConfig -ApplicationGateway Gateway
 ```
 
 This command gets the URL path map configurations from the backend server located on the application gateway named Gateway.
@@ -118,5 +118,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayUrlPathMapConfig](./Remove-AzureRmApplicationGatewayUrlPathMapConfig.md)
 
 [Set-AzureRmApplicationGatewayUrlPathMapConfig](./Set-AzureRmApplicationGatewayUrlPathMapConfig.md)
-
-

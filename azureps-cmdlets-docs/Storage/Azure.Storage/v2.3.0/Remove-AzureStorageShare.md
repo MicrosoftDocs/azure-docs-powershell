@@ -34,7 +34,7 @@ The **Remove-AzureStorageShare** cmdlet deletes a file share.
 
 ### Example 1: Remove a file share
 ```
-PS C:\>Remove-AzureStorageShare -Name "ContosoShare06"
+PS C:\> Remove-AzureStorageShare -Name "ContosoShare06"
 ```
 
 This command removes the file share named ContosoShare06.
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ### -Share
 Specifies a **CloudFileShare** object.
 This cmdlet removes the object that this parameter specifies.
-To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+To obtain a **CloudFileShare** object, use the **Get-AzureStorageShare** cmdlet.
 This object contains the storage context.
 If you specify this parameter, do not specify the *Context* parameter.
 

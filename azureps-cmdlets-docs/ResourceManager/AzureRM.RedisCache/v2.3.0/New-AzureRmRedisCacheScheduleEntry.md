@@ -19,13 +19,13 @@ New-AzureRmRedisCacheScheduleEntry -DayOfWeek <String> -StartHourUtc <Int32> [-M
 
 ## DESCRIPTION
 The **New-AzureRmRedisCacheScheduleEntry** cmdlet creates a **PSScheduleEntry** object.
-Azure Redis Cache patch schedule cmdlets, such as the New-AzureRmRedisCachePatchSchedule cmdlet, require schedule entry objects.
+Azure Redis Cache patch schedule cmdlets, such as the **New-AzureRmRedisCachePatchSchedule** cmdlet, require schedule entry objects.
 
 ## EXAMPLES
 
 ### Example 1: Create a schedule entry for weekends
 ```
-PS C:\>New-AzureRmRedisCacheScheduleEntry -DayOfWeek "Weekend" -StartHourUtc 2 -MaintenanceWindow "06:00:00"
+PS C:\> New-AzureRmRedisCacheScheduleEntry -DayOfWeek "Weekend" -StartHourUtc 2 -MaintenanceWindow "06:00:00"
 ```
 
 This command creates a **PSScheduleEntry** object that represents a weekend schedule that has the specified start time and window.

@@ -30,10 +30,6 @@ The **Save-AzureRmServerManagementGatewayProfile** cmdlet downloads the profile 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -124,7 +120,7 @@ Accept wildcard characters: False
 ### -Gateway
 Specifies the gateway that this cmdlet gets the profile for.
 
-May be used instead of specifying ResourceGroupName and GatewayName
+May be used instead of specifying *ResourceGroupName* and *GatewayName*.
 
 ```yaml
 Type: Gateway

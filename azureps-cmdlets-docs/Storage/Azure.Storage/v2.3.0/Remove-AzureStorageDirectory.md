@@ -43,7 +43,7 @@ The **Remove-AzureStorageDirectory** cmdlet deletes a directory.
 
 ### Example 1: Delete a folder
 ```
-PS C:\>Remove-AzureStorageDirectory -ShareName "ContosoShare06" -Path "ContosoWorkingFolder"
+PS C:\> Remove-AzureStorageDirectory -ShareName "ContosoShare06" -Path "ContosoWorkingFolder"
 ```
 
 This command deletes the folder named ContosoWorkingFolder from the file share named ContosoShare06.
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ### -Share
 Specifies a **CloudFileShare** object.
 This cmdlet removes a folder under the file share that this parameter specifies.
-To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+To obtain a **CloudFileShare** object, use the **Get-AzureStorageShare** cmdlet.
 This object contains the storage context.
 If you specify this parameter, do not specify the *Context* parameter.
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ### -Directory
 Specifies a folder as a **CloudFileDirectory** object.
 This cmdlet removes the folder that this parameter specifies.
-To obtain a directory, use the New-AzureStorageDirectory cmdlet.
+To obtain a directory, use the **New-AzureStorageDirectory** cmdlet.
 You can also use the **Get-AzureStorageFile** cmdlet to obtain a directory.
 
 ```yaml

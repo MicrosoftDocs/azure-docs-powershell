@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmExpressRouteCircuit
 
 ## SYNOPSIS
+Gets the express route circuit.
 
 ## SYNTAX
 
@@ -17,17 +18,14 @@ Get-AzureRmExpressRouteCircuit [-Name <String>] [-ResourceGroupName <String>]
 ```
 
 ## DESCRIPTION
-
+The **Get-AzureRmExpressRouteCircuit** cmdlet gets the express route circuit.
 ## EXAMPLES
-
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 
 ### -Name
+Specifies the name of the express route circuit this cmdlet gets.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -41,6 +39,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+Specifies the resource group the express route circuit belongs to.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -102,4 +102,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

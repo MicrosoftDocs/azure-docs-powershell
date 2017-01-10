@@ -26,7 +26,7 @@ The **Remove-AzureStorageContainer** cmdlet removes the specified storage contai
 
 ### Example 1: Remove a container
 ```
-PS C:\>Remove-AzureStorageContainer -Name "MyTestContainer"
+PS C:\> Remove-AzureStorageContainer -Name "MyTestContainer"
 ```
 
 This example removes a container named MyTestContainer.
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies a context for the container you want to remove.
-You can use the New-AzureStorageContext cmdlet to create it.
+You can use the **New-AzureStorageContext** cmdlet to create it.
 
 ```yaml
 Type: AzureStorageContext

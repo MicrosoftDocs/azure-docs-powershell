@@ -24,7 +24,7 @@ The **Get-AzureRmApplicationGatewaySku** cmdlet gets the stock keeping unit (SKU
 
 ### Example 1: Get an application gateway SKU
 ```
-PS C:\>$AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $SKU = Get-AzureRmApplicationGatewaySku -ApplicationGateway $AppGW
 ```
 
@@ -105,5 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApplicationGatewaySku](./New-AzureRmApplicationGatewaySku.md)
 
 [Set-AzureRmApplicationGatewaySku](./Set-AzureRmApplicationGatewaySku.md)
-
-

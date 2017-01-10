@@ -26,15 +26,15 @@ Specify a policy and scope.
 
 ### Example 1: Policy assignment at resource group level
 ```
-PS C:\>$ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11"
+PS C:\> $ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11"
 PS C:\> $Policy = Get-AzureRmPolicyDefinition -Name "VirtualMachinePolicy"
 PS C:\> New-AzureRmPolicyAssignment -Name "VirtualMachinePolicyAssignment" -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId
 ```
 
-The first command gets a resource group named ResourceGroup11 by using the Get-AzureRMResourceGroup cmdlet.
+The first command gets a resource group named ResourceGroup11 by using the **Get-AzureRMResourceGroup** cmdlet.
 The command stores that object in the $ResourceGroup variable.
 
-The second command gets the policy definition named VirtualMachinePolicy by using the Get-AzureRmPolicyDefinition cmdlet.
+The second command gets the policy definition named VirtualMachinePolicy by using the **Get-AzureRmPolicyDefinition** cmdlet.
 The command stores that object in the $Policy variable.
 
 The final command assigns the policy in $Policy at the level of a resource group.
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies the scope at which to assign the policy.
 For instance, to assign a policy to a resource group, specify the following:
 
-`/subscriptions/`subscription ID`/resourcegroups/`resource group name
+`/subscriptions/<subscription ID>/resourcegroups/<resource group name>`
 
 ```yaml
 Type: String

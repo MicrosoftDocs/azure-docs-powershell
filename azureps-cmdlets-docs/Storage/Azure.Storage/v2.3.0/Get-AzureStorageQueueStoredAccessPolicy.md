@@ -25,14 +25,14 @@ The **Get-AzureStorageQueueStoredAccessPolicy** cmdlet lists the stored access p
 
 ### Example 1: Get a stored access policy in the queue
 ```
-PS C:\>Get-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue" -Policy "Policy12"
+PS C:\> Get-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue" -Policy "Policy12"
 ```
 
 This command gets the access policy named Policy12 in the storage queue named MyQueue.
 
 ### Example 2: Get all stored access policies in the queue
 ```
-PS C:\>Get-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue"
+PS C:\> Get-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue"
 ```
 
 This command gets all stored access policies in the queue named MyQueue.
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

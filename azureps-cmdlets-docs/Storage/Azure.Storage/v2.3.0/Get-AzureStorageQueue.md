@@ -32,21 +32,21 @@ The **Get-AzureStorageQueue** cmdlet lists storage queues associated with an Azu
 
 ### Example 1: List all Azure Storage queues
 ```
-PS C:\>Get-AzureStorageQueue
+PS C:\> Get-AzureStorageQueue
 ```
 
 This command gets a list of all storage queues for the current Storage account.
 
 ### Example 2: List Azure Storage queues using a wildcard character
 ```
-PS C:\>Get-AzureStorageQueue -Name queue*
+PS C:\> Get-AzureStorageQueue -Name queue*
 ```
 
 This command uses a wildcard character to get a list of storage queues whose name starts with queue.
 
 ### Example 3: List Azure Storage queues using queue name prefix
 ```
-PS C:\>Get-AzureStorageQueue -Prefix "queue"
+PS C:\> Get-AzureStorageQueue -Prefix "queue"
 ```
 
 This example uses the *Prefix* parameter to get a list of storage queues whose name starts with queue.

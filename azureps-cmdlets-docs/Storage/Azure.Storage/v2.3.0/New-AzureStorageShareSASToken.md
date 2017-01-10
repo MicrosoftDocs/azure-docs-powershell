@@ -35,14 +35,14 @@ The **New-AzureStorageShareSASToken** cmdlet generates a shared access signature
 
 ### Example 1: Generate a shared access signature token for a share
 ```
-PS C:\>New-AzureStorageShareSASToken -ShareName "ContosoShare" -Permission "rwdl"
+PS C:\> New-AzureStorageShareSASToken -ShareName "ContosoShare" -Permission "rwdl"
 ```
 
 This command creates a shared access signature token for the share named ContosoShare.
 
 ### Example 2: Generate multiple shared access signature token by using the pipeline
 ```
-PS C:\>Get-AzureStorageShare -Prefix "test" | New-AzureStorageShareSASToken -Permission "rwdl"
+PS C:\> Get-AzureStorageShare -Prefix "test" | New-AzureStorageShareSASToken -Permission "rwdl"
 ```
 
 This command gets all the Storage shares that match the prefix test.
@@ -51,7 +51,7 @@ The current cmdlet creates a shared access token for each Storage share that has
 
 ### Example 3: Generate a shared access signature token that uses a shared access policy
 ```
-PS C:\>New-AzureStorageShareSASToken -ShareName "ContosoShare" -Policy "ContosoPolicy03"
+PS C:\> New-AzureStorageShareSASToken -ShareName "ContosoShare" -Policy "ContosoPolicy03"
 ```
 
 This command creates a shared access signature token for the Storage share named ContosoShare that has the policy named ContosoPolicy03.
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies an Azure Storage context.
-To obtain a context, use the New-AzureStorageContext cmdlet.
+To obtain a context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

@@ -43,21 +43,21 @@ The **Remove-AzureStorageBlob** cmdlet removes the specified blob from a storage
 
 ### Example 1: Remove a storage blob by name
 ```
-PS C:\>Remove-AzureStorageBlob -Container "ContainerName" -Blob "BlobName"
+PS C:\> Remove-AzureStorageBlob -Container "ContainerName" -Blob "BlobName"
 ```
 
 This command removes a blob identified by its name.
 
 ### Example 2: Remove a storage blob using the pipeline
 ```
-PS C:\>Get-AzureStorageBlob -Container "ContainerName" -Blob "BlobName" | Remove-AzureStorageBlob
+PS C:\> Get-AzureStorageBlob -Container "ContainerName" -Blob "BlobName" | Remove-AzureStorageBlob
 ```
 
 This command uses the pipeline.
 
 ### Example 3: Remove storage blobs using the pipeline
 ```
-PS C:\>Get-AzureStorageContainer -Container container* | Remove-AzureStorageBlob -Blob "BlobName"
+PS C:\> Get-AzureStorageContainer -Container container* | Remove-AzureStorageBlob -Blob "BlobName"
 ```
 
 This command uses the asterisk (*) wildcard character and the pipeline to retrieve the blob or blobs and then removes them.
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-You can use the New-AzureStorageContext cmdlet to create it.
+You can use the **New-AzureStorageContext** cmdlet to create it.
 
 ```yaml
 Type: AzureStorageContext

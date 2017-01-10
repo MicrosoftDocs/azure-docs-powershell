@@ -26,14 +26,14 @@ The **Get-AzureStorageContainerStoredAccessPolicy** cmdlet lists the stored acce
 
 ### Example 1: Get a stored access policy in a storage container
 ```
-PS C:\>Get-AzureStorageContainerStoredAccessPolicy -Container "Container07" -Policy "Policy22"
+PS C:\> Get-AzureStorageContainerStoredAccessPolicy -Container "Container07" -Policy "Policy22"
 ```
 
 This command gets the access policy named Policy22 in the storage container named Container07.
 
 ### Example 2: Get all the stored access policies in a storage container
 ```
-PS C:\>Get-AzureStorageContainerStoredAccessPolicy -Container "Container07"
+PS C:\> Get-AzureStorageContainerStoredAccessPolicy -Container "Container07"
 ```
 
 This command gets all access policies in the storage container named Container07.

@@ -21,14 +21,11 @@ Get-AzureRmExpressRouteCircuitRouteTable [-Name <String>] -ResourceGroupName <St
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 
 ### -Name
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -42,6 +39,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+Specifies the resource group of a circuit route table.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -142,4 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

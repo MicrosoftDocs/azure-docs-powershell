@@ -44,7 +44,7 @@ The **New-AzureRmResource** cmdlet creates an Azure resource, such as a website,
 
 ### Example 1: Create a resource
 ```
-PS C:\>New-AzureRmResource -Location "West US" -Properties @{"test"="test"} -ResourceName "TestSite06" -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11" -Force
+PS C:\> New-AzureRmResource -Location "West US" -Properties @{"test"="test"} -ResourceName "TestSite06" -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11" -Force
 ```
 
 This command creates a resource that is a website in ResourceGroup11.
@@ -57,7 +57,7 @@ Specify data center location, such as Central US or Southeast Asia.
 
 You can place a resource in any location that supports resources of that type.
 Resource groups can contain resources from different locations.
-To determine which locations support each resource type, use the Get-AzureLocation cmdlet.
+To determine which locations support each resource type, use the **Get-AzureLocation** cmdlet.
 
 ```yaml
 Type: String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Specifies the name of an extension resource for the resource.
 For instance, to specify a database, use the following format: 
 
-server name`/`database name
+`server name/database name`
 
 ```yaml
 Type: String

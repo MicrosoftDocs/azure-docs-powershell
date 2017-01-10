@@ -26,14 +26,14 @@ The **New-AzureSqlDatabaseServer** cmdlet creates an instance of Azure SQL Datab
 
 ### Example 1: Create a server
 ```
-PS C:\>New-AzureSqlDatabaseServer -Location "East US" -AdministratorLogin "AdminLogin" -AdministratorLoginPassword "AdminPassword"
+PS C:\> New-AzureSqlDatabaseServer -Location "East US" -AdministratorLogin "AdminLogin" -AdministratorLoginPassword "AdminPassword"
 ```
 
 This command creates a version 11 Azure SQL Database server.
 
 ### Example 2: Create a version 12 server
 ```
-PS C:\>New-AzureSqlDatabaseServer -Location "East US" -AdministratorLogin "AdminLogin" -AdministratorLoginPassword "AdminPassword" -Version "12.0"
+PS C:\> New-AzureSqlDatabaseServer -Location "East US" -AdministratorLogin "AdminLogin" -AdministratorLoginPassword "AdminPassword" -Version "12.0"
 ```
 
 This command creates a version 12 server.

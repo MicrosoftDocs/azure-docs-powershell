@@ -26,7 +26,7 @@ In the current release, you can only update the administrator account password f
 
 ### Example 1: Change the password for a server
 ```
-PS C:\>Set-AzureSqlDatabaseServer -ServerName "lpqd0zbr8y" -AdminPassword "NewPassword"
+PS C:\> Set-AzureSqlDatabaseServer -ServerName "lpqd0zbr8y" -AdminPassword "NewPassword"
 ```
 
 This command changes the administrator account password for the Azure SQL Database server named lpqd0zbr8y.

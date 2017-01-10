@@ -31,7 +31,7 @@ The **Get-AzureRmLoadBalancer** cmdlet gets one or more Azure load balancers tha
 
 ### Example 1: Get a load balancer
 ```
-PS C:\>Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 ```
 
 This command gets the load balancer named MyLoadBalancer.
@@ -40,6 +40,7 @@ A load balancer must exist before you can run this cmdlet.
 ## PARAMETERS
 
 ### -Name
+Specifies the name of the load balancer.
 ```yaml
 Type: String
 Parameter Sets: Expand
@@ -65,6 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+Specifies the resource group that contains the load balancer.
 ```yaml
 Type: String
 Parameter Sets: Expand
@@ -157,5 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmLoadBalancer](./Remove-AzureRmLoadBalancer.md)
 
 [Set-AzureRmLoadBalancer](./Set-AzureRmLoadBalancer.md)
-
-

@@ -52,7 +52,7 @@ This cmdlet does not return the contents of the file.
 
 ### Example 1: Download a file from a folder
 ```
-PS C:\>Get-AzureStorageFileContent -ShareName "ContosoShare06" -Path "ContosoWorkingFolder/CurrentDataFile"
+PS C:\> Get-AzureStorageFileContent -ShareName "ContosoShare06" -Path "ContosoWorkingFolder/CurrentDataFile"
 ```
 
 This command downloads a file that is named CurrentDataFile in the folder ContosoWorkingFolder from the file share ContosoShare06 to current folder.
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ### -Share
 Specifies a **CloudFileShare** object.
 This cmdlet downloads the contents of the file in the share this parameter specifies.
-To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+To obtain a **CloudFileShare** object, use the **Get-AzureStorageShare** cmdlet.
 This object contains the storage context.
 If you specify this parameter, do not specify the *Context* parameter.
 
@@ -339,8 +339,8 @@ Accept wildcard characters: False
 ### -Directory
 Specifies a folder as a **CloudFileDirectory** object.
 This cmdlet gets content for a file in the folder that this parameter specifies.
-To obtain a directory, use the New-AzureStorageDirectory cmdlet.
-You can also use the Get-AzureStorageFile cmdlet to obtain a directory.
+To obtain a directory, use the **New-AzureStorageDirectory** cmdlet.
+You can also use the **Get-AzureStorageFile** cmdlet to obtain a directory.
 
 ```yaml
 Type: CloudFileDirectory
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 ### -File
 Specifies a file as a **CloudFile** object.
 This cmdlet gets the file that this parameter specifies.
-To obtain a **CloudFile** object, use the Get-AzureStorageFile cmdlet.
+To obtain a **CloudFile** object, use the **Get-AzureStorageFile** cmdlet.
 
 ```yaml
 Type: CloudFile

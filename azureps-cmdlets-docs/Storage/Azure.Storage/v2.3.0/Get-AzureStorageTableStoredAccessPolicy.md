@@ -25,14 +25,14 @@ The **Get-AzureStorageTableStoredAccessPolicy** cmdlet lists the stored access p
 
 ### Example 1: Get a stored access policy in a storage table
 ```
-PS C:\>Get-AzureStorageTableStoredAccessPolicy -Table "Table02" -Policy "Policy50"
+PS C:\> Get-AzureStorageTableStoredAccessPolicy -Table "Table02" -Policy "Policy50"
 ```
 
 This command gets the access policy named Policy50 in the storage table named Table02.
 
 ### Example 2: Get all stored access policies in a storage table
 ```
-PS C:\>Get-AzureStorageTableStoredAccessPolicy -Table "Table02"
+PS C:\> Get-AzureStorageTableStoredAccessPolicy -Table "Table02"
 ```
 
 This command gets all access policies in the table named Table02.
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the Azure storage context.
-To obtain a storage context, use the New-AzureStorageContext cmdlet.
+To obtain a storage context, use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

@@ -33,7 +33,7 @@ The **Import-AzureStorSimpleLegacyVolumeContainer** cmdlet starts the migration 
 
 ### Example 1: Import a legacy volume container
 ```
-PS C:\>Import-AzureStorSimpleLegacyVolumeContainer -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -LegacyContainerNames "OneSDKAzureCloud"
+PS C:\> Import-AzureStorSimpleLegacyVolumeContainer -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -LegacyContainerNames "OneSDKAzureCloud"
 Import started, Please check status with Get-AzureStorSimpleLegacyVolumeContainerStatus commandlet
 ```
 
@@ -42,7 +42,7 @@ The cmdlet starts the import, and then returns a message.
 
 ### Example 2: Import all legacy volume containers
 ```
-PS C:\>Import-AzureStorSimpleLegacyVolumeContainer -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -All
+PS C:\> Import-AzureStorSimpleLegacyVolumeContainer -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -All
 Import started, Please check status with Get-AzureStorSimpleLegacyVolumeContainerStatus commandlet
 ```
 

@@ -28,7 +28,7 @@ Use the ID to get the current status of the task.
 
 ### Example 1: Get the status of a task
 ```
-PS C:\>Get-AzureStorSimpleTask -TaskId "53816d8d-a8b5-4c1d-a177-e59007608d6d"
+PS C:\> Get-AzureStorSimpleTask -TaskId "53816d8d-a8b5-4c1d-a177-e59007608d6d"
 VERBOSE: ClientRequestId: d9c1e8a7-994f-4698-8b42-064600b45cad_PS
 VERBOSE: ClientRequestId: aae17c82-6fd3-435e-a965-1c66b3c955fe_PS
 

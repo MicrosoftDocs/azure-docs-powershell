@@ -35,14 +35,14 @@ The **Get-AzureStorageContainer** cmdlet lists the storage containers associated
 
 ### Example 1: Get Azure Storage blob by name
 ```
-PS C:\>Get-AzureStorageContainer -Name container*
+PS C:\> Get-AzureStorageContainer -Name container*
 ```
 
 This example uses a wildcard character to return a list of all containers with a name that starts with container.
 
 ### Example 2: Get Azure Storage container by container name prefix
 ```
-PS C:\>Get-AzureStorageContainer -Prefix "container"
+PS C:\> Get-AzureStorageContainer -Prefix "container"
 ```
 
 This example uses the *Prefix* parameter to return a list of all containers with a name that starts with container.
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Context
 Specifies the storage context.
-To create it, you can use the New-AzureStorageContext cmdlet.
+To create it, you can use the **New-AzureStorageContext** cmdlet.
 
 ```yaml
 Type: AzureStorageContext

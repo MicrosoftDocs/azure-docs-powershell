@@ -25,7 +25,7 @@ You can use the *PassThru* parameter to display whether the operation succeeds.
 
 ### Example 1: Disable a Traffic Manager profile and display the results
 ```
-PS C:\>Disable-AzureTrafficManagerProfile -Name "MyProfile" -PassThru
+PS C:\> Disable-AzureTrafficManagerProfile -Name "MyProfile" -PassThru
 True
 ```
 
@@ -34,7 +34,7 @@ The command specifies the *PassThru* parameter to display whether the command su
 
 ### Example 2: Disable a Traffic Manager profile and display no results
 ```
-PS C:\>Disable-AzureTrafficManagerProfile -Name "MyProfile"
+PS C:\> Disable-AzureTrafficManagerProfile -Name "MyProfile"
 ```
 
 This command disables the Traffic Manager profile named MyProfile but does not display whether the command succeeded.
