@@ -24,7 +24,7 @@ The **Remove-AzureSqlDatabaseServerFirewallRule** cmdlet removes a firewall rule
 
 ### Example 1: Remove a rule
 ```
-PS C:\>Remove-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24"
+PS C:\> Remove-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24"
 ```
 
 This command removes the firewall rule named FirewallRule24 from the Azure SQL Database server named lpqd0zbr8y.

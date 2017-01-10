@@ -37,7 +37,7 @@ If you do not specify a firewall rule name, this cmdlet assigns the default name
 
 ### Example 1: Create a firewall rule
 ```
-PS C:\>New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24" -StartIpAddress 10.1.1.1 -EndIpAddress 10.1.1.2
+PS C:\> New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24" -StartIpAddress 10.1.1.1 -EndIpAddress 10.1.1.2
 ```
 
 This command creates a firewall rule FirewallRule24 on the Azure SQL Database server named lpqd0zbr8y.
@@ -45,14 +45,14 @@ The command specifies an IP address range.
 
 ### Example 2: Create a rule that allows all Azure services
 ```
-PS C:\>New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -AllowAllAzureServices -RuleName "AzureConnections"
+PS C:\> New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -AllowAllAzureServices -RuleName "AzureConnections"
 ```
 
 This command creates a firewall rule named AzureConnections on the server named lpqd0zbr8y that allows Azure connections.
 
 ### Example 3: Create a rule that allows all Azure services that uses the default name Create a rule that allows all Azure services that uses the default name
 ```
-PS C:\>New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -AllowAllAzureServices
+PS C:\> New-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -AllowAllAzureServices
 ```
 
 This command creates a firewall rule on the specified server named lpqd0zbr8y that allows Azure connections.
