@@ -25,7 +25,7 @@ The **Remove-AzureRmApplicationGateway** cmdlet removes an application gateway.
 
 ### Example 1: Remove a specified application gateway
 ```
-PS C:\>Remove-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> Remove-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command removes the application gateway named ApplicationGateway01 in the resource group named ResourceGroup01.
@@ -177,5 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmApplicationGateway](./Set-AzureRmApplicationGateway.md)
-
-

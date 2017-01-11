@@ -26,7 +26,7 @@ The **New-AzureRmRouteTable** cmdlet creates an Azure route table.
 
 ### Example 1: Create a route table that contains a route
 ```
-PS C:\>$Route = New-AzureRmRouteConfig -Name "Route07" -AddressPrefix 10.1.0.0/16 -NextHopType "VnetLocal"
+PS C:\> $Route = New-AzureRmRouteConfig -Name "Route07" -AddressPrefix 10.1.0.0/16 -NextHopType "VnetLocal"
 PS C:\> New-AzureRmRouteTable -Name "RouteTable01" -ResourceGroupName "ResourceGroup11" -Location "EASTUS" -Route $Route
 Name              : routetable01
 ResourceGroupName : ResourceGroup11
@@ -51,7 +51,7 @@ Routes            : [
 Subnets           : []
 ```
 
-The first command creates a route named Route07 by using the New-AzureRmRouteConfig cmdlet, and then stores it in the $Route variable.
+The first command creates a route named Route07 by using the [New-AzureRmRouteConfig](./New-AzureRmRouteConfig.md) cmdlet, and then stores it in the $Route variable.
 This route forwards packets to the local virtual network.
 
 The second command creates a route table named RouteTable01, and adds the route stored in $Route to the new table.
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Location
 Specifies the Azureregion in which this cmdlet creates a route table.
-For more information, see Azure Regionshttp://azure.microsoft.com/en-us/regions/ (http://azure.microsoft.com/en-us/regions/).
+For more information, see [Azure Regions](http://azure.microsoft.com/en-us/regions/) (http://azure.microsoft.com/en-us/regions/).
 
 ```yaml
 Type: String
@@ -238,5 +238,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmRouteTable](./Remove-AzureRmRouteTable.md)
 
 [Set-AzureRmRouteTable](./Set-AzureRmRouteTable.md)
-
-

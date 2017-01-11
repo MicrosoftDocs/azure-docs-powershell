@@ -29,7 +29,7 @@ When that happens the corresponding virtual network is no longer able to use the
 
 ### Example 1: Remove a circuit authorization from an ExpressRoute circuit
 ```
-PS C:\>$Circuit = Get-AzureRmExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
+PS C:\> $Circuit = Get-AzureRmExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
 PS C:\> Remove-AzureRmExpressRouteCircuitAuthorization -Name "ContosoCircuitAuthorization" -Circuit $Circuit
 PS C:\> Set-AzureRmExpressRouteCircuit -ExpressRouteCircuit $Circuit
 ```
@@ -39,7 +39,7 @@ The first command uses the **Get-AzureRmExpressRouteCircuit** cmdlet to create a
 
 The second command marks the circuit authorization ContosoCircuitAuthorization for removal.
 
-The third command uses the Set-AzureRmExpressRouteCircuit cmdlet to confirm the removal of the ExpressRoute circuit stored in the $Circuit variable.
+The third command uses the [Set-AzureRmExpressRouteCircuit](./Set-AzureRmExpressRouteCircuit.md) cmdlet to confirm the removal of the ExpressRoute circuit stored in the $Circuit variable.
 
 ## PARAMETERS
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-Specifies the ExpressRouteCircuit object that this cmdlet removes.
+Specifies the **ExpressRouteCircuit** object that this cmdlet removes.
 
 ```yaml
 Type: PSExpressRouteCircuit
@@ -138,5 +138,3 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 [New-AzureRmExpressRouteCircuitAuthorization](./New-AzureRmExpressRouteCircuitAuthorization.md)
 
 [Set-AzureRmExpressRouteCircuit](./Set-AzureRmExpressRouteCircuit.md)
-
-
