@@ -21,16 +21,16 @@ Resize-AzureRmVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGate
 The **Resize-AzureRmVirtualNetworkGateway** cmdlet enables you to change the stock-keeping unit (SKU) for a virtual network gateway.
 SKUs determine the capabilities of a gateway, including such things as throughput and the maximum number of IP tunnels that are allowed.
 Azure supports Basic, Standard, and High-Performance SKUs (sometimes referred to as Small, Medium, and Large SKUs).
-For detailed information about the capabilities of each SKU type, see https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/.https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/.
+For detailed information about the capabilities of each SKU type, see [https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/).
 
 Keep in mind that SKUs differ in pricing as well as capabilities.
-For more information, see https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/.
+For more information, see [https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/](https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/).
 
 ## EXAMPLES
 
 ### Example 1: Change the size of a virtual network gateway
 ```
-PS C:\>$Gateway = Get-AzureRmVirtualNetworkGateway -Name "ContosoVirtualGateway"
+PS C:\> $Gateway = Get-AzureRmVirtualNetworkGateway -Name "ContosoVirtualGateway"
 PS C:\> Resize-AzureRmVirtualNetworkGateway -VirtualNetworkGateway $Gateway -GatewaySku "Basic"
 ```
 
@@ -44,7 +44,7 @@ The second command then uses the **Resize-AzureRmVirtualNetworkGateway** cmdlet 
 
 ### -VirtualNetworkGateway
 Specifies an object reference to the virtual network gateway to be resized.
-You can create this object reference by using the Get-AzureRmVirtualNetworkGateway and specifying the name of the gateway.
+You can create this object reference by using the [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md) and specifying the name of the gateway.
 
 ```yaml
 Type: PSVirtualNetworkGateway
@@ -139,5 +139,3 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
 [Set-AzureRmVirtualNetworkGatewayVpnClientConfig](./Set-AzureRmVirtualNetworkGatewayVpnClientConfig.md)
-
-

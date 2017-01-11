@@ -23,11 +23,6 @@ The **Remove-AzureRmVirtualNetworkGateway** cmdlet removes a virtual network gat
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name
@@ -171,4 +166,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
