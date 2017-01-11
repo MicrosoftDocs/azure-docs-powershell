@@ -41,14 +41,14 @@ The **New-AzureServiceExtensionConfig** cmdlet creates a cloud service extension
 
 ### Example 1: Create an extension configuration
 ```
-PS C:\>New-AzureServiceExtensionConfig -ExtensionName 'RDP' -Version '1.0' -ProviderNamespace Microsoft.Windows.Azure.Extensions -PublicConfiguration $p1 -PrivateConfiguration $p2;
+PS C:\> New-AzureServiceExtensionConfig -ExtensionName 'RDP' -Version '1.0' -ProviderNamespace Microsoft.Windows.Azure.Extensions -PublicConfiguration $p1 -PrivateConfiguration $p2;
 ```
 
 This command specifies an extension configuration.
 
 ### Example 2: Create an extension configuration for a role
 ```
-PS C:\>New-AzureServiceExtensionConfig -Role WebRole1 -ExtensionName 'RDP' -ProviderNamespace Microsoft.Windows.Azure.Extensions -PublicConfiguration $p1 -PrivateConfiguration $p2;
+PS C:\> New-AzureServiceExtensionConfig -Role WebRole1 -ExtensionName 'RDP' -ProviderNamespace Microsoft.Windows.Azure.Extensions -PublicConfiguration $p1 -PrivateConfiguration $p2;
 ```
 
 This command specifies an extension configuration for the role WebRole1.

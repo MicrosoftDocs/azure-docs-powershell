@@ -23,7 +23,7 @@ The **Remove-AzureVMAccessExtension** cmdlet removes the VMAccess extension appl
 
 ### Example 1: Remove a VMAccess extension from a virtual machine
 ```
-PS C:\>Remove-AzureVMAccessExtension -VM $VM;
+PS C:\> Remove-AzureVMAccessExtension -VM $VM;
 ```
 
 This command removes a VMAccess extension from a virtual machine.

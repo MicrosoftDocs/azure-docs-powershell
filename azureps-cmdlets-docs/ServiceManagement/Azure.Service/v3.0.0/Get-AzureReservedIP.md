@@ -23,14 +23,14 @@ The **Get-AzureReservedIP** cmdlet gets a reserved IP address by its name or lis
 
 ### Example 1: Get all reserved IP addresses
 ```
-PS C:\>Get-AzureReservedIP
+PS C:\> Get-AzureReservedIP
 ```
 
 This command gets all reserved IP addresses.
 
 ### Example 2: Get a reserved IP address with a specified name
 ```
-PS C:\>Get-AzureReservedIP -ReservedIPName $IpName
+PS C:\> Get-AzureReservedIP -ReservedIPName $IpName
 ```
 
 This command gets the reserved IP address that has the name specified by the $IpName variable.

@@ -24,7 +24,7 @@ The **Add-AzureCertificate** cmdlet uploads a certificate for an Azure service.
 
 ### Example 1: Upload a certificate and password
 ```
-PS C:\>Add-AzureCertificate -ServiceName "ContosoService" -CertToDeploy ContosoCertificate.pfx -Password "password"
+PS C:\> Add-AzureCertificate -ServiceName "ContosoService" -CertToDeploy ContosoCertificate.pfx -Password "password"
 ```
 
 This command uploads the certificate file ContosoCertificate.pfx to a cloud service.
@@ -32,7 +32,7 @@ The command specifies the password for the certificate.
 
 ### Example 2: Upload a certificate file
 ```
-PS C:\>Add-AzureCertificate -serviceName "MyService" -CertToDeploy ContosoCertificate.cer
+PS C:\> Add-AzureCertificate -serviceName "MyService" -CertToDeploy ContosoCertificate.cer
 ```
 
 This command uploads the certificate file ContosoCertificate.cer to a cloud service.
@@ -40,7 +40,7 @@ The command specifies the password for the certificate.
 
 ### Example 3: Upload a certificate object
 ```
-PS C:\>$Certificate = Get-Item cert:\PATTIFULLER\MY\1D6E34B526723E06C235BE8E5457784BF12C9F39
+PS C:\> $Certificate = Get-Item cert:\PATTIFULLER\MY\1D6E34B526723E06C235BE8E5457784BF12C9F39
 PS C:\> Add-AzureCertificate -ServiceName "ContosoService" -CertToDeploy $Certificate
 ```
 

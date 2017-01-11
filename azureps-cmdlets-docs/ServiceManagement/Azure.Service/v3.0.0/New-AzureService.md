@@ -31,14 +31,14 @@ The **New-AzureService** cmdlet creates a new Azure service in the current subsc
 
 ### Example 1: Create a service
 ```
-PS C:\>New-AzureService -ServiceName "MySvc01" -Label "MyTestService" -Location "South Central US"
+PS C:\> New-AzureService -ServiceName "MySvc01" -Label "MyTestService" -Location "South Central US"
 ```
 
 This command creates a new service named MySvc01 in the South Central US location.
 
 ### Example 2: Create a service in an affinity group
 ```
-PS C:\>New-AzureService -ServiceName "MySvc01" -AffinityGroup NorthRegion
+PS C:\> New-AzureService -ServiceName "MySvc01" -AffinityGroup NorthRegion
 ```
 
 This command creates a new service named MySvc01 using the NorthRegion affinity group.

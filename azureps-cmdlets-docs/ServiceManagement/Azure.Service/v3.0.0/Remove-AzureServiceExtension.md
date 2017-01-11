@@ -31,14 +31,14 @@ The **Remove-AzureServiceExtension** cmdlet removes cloud service extensions tha
 
 ### Example 1: Remove a service extension
 ```
-PS C:\>Remove-AzureServiceExtension -ServiceName $Svc -Slot "Production" -ExtensionName "RDP" -ProviderNamespace "Microsoft.Windows.Azure.Extensions"
+PS C:\> Remove-AzureServiceExtension -ServiceName $Svc -Slot "Production" -ExtensionName "RDP" -ProviderNamespace "Microsoft.Windows.Azure.Extensions"
 ```
 
 This command removes a service extension.
 
 ### Example 2: Remove a service extension and uninstall all configurations
 ```
-PS C:\>Remove-AzureServiceExtension -ServiceName $Svc -Slot "Production" -ExtensionName "RDP" -ProviderNamespace "Microsoft.Windows.Azure.Extensions" -UninstallConfiguration
+PS C:\> Remove-AzureServiceExtension -ServiceName $Svc -Slot "Production" -ExtensionName "RDP" -ProviderNamespace "Microsoft.Windows.Azure.Extensions" -UninstallConfiguration
 ```
 
 This command removes a service extension and uninstalls all configurations.

@@ -21,10 +21,6 @@ Add-AzureNetworkInterfaceConfig [-Name] <String> [-SubnetName] <String> [[-Stati
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

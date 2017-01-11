@@ -31,7 +31,7 @@ The **Set-AzureVMImageOSDiskConfig** cmdlet sets the operating system disk prope
 
 ### Example 1: Set the operating system disk properties on a virtual machine image
 ```
-PS C:\>$Disk = New-AzureDiskConfigSet
+PS C:\> $Disk = New-AzureDiskConfigSet
 PS C:\> $Disk = Set-AzureOSDiskConfig -DiskConfig $Disk -HostCaching ReadWrite
 PS C:\> $Disk = Set-AzureDataDiskConfig -DiskConfig $Disk -Name "Test" -HostCaching "ReadWrite" -LUN 0
 PS C:\> Update-AzureVMImage -ImageName "Image2" -Label "Test1" -Description "Test1" -DiskConfigSet $Disk;
@@ -61,8 +61,8 @@ Specifies the host cache attribute for the operating system disk.
 
 Valid values are:
 
---ReadOnly
---ReadWrite
+- ReadOnly
+- ReadWrite
 
 ```yaml
 Type: String

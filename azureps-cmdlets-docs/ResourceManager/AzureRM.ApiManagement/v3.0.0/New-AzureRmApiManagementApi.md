@@ -26,7 +26,7 @@ The **New-AzureRmApiManagementApi** cmdlet creates an Azure API Management API.
 
 ### Example 1: Create an API
 ```
-PS C:\>New-AzureRmApiManagementApi -Context $ApiMgmtContext -Name "Echo api" -ServiceUrl "https://contoso.com/apis/echo" -Protocols @("http", "https") -Path "testapi"
+PS C:\> New-AzureRmApiManagementApi -Context $ApiMgmtContext -Name "Echo api" -ServiceUrl "https://contoso.com/apis/echo" -Protocols @("http", "https") -Path "testapi"
 ```
 
 This command creates an API named EchoApi with the specified URL.

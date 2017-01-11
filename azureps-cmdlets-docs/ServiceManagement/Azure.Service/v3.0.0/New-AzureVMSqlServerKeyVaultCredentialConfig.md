@@ -21,10 +21,6 @@ New-AzureVMSqlServerKeyVaultCredentialConfig [-Enable] [[-CredentialName] <Strin
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

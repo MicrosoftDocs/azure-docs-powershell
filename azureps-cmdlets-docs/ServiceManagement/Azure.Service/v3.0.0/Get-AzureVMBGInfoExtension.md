@@ -23,10 +23,10 @@ The **Get-AzureVMBGInfoExtension** cmdlet gets the BGInfo extension applied on a
 
 ### Example 1: Get the BGInfo extension applied on a specified virtual machine
 ```
-PS C:\>Get-AzureVMBGInfoExtension -VM $VM;
+PS C:\> Get-AzureVMBGInfoExtension -VM $VM;
 ```
 
-This command gets the BGInfo extension applied on a specified virtual machine
+This command gets the BGInfo extension applied on a specified virtual machine.
 
 ## PARAMETERS
 

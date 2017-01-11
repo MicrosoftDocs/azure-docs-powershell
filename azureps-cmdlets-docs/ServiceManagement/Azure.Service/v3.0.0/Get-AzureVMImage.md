@@ -24,21 +24,21 @@ The cmdlet returns information for all images in the repository, or about a spec
 
 ### Example 1: Get a specific image object from the current image repository.
 ```
-PS C:\>Get-AzureVMImage -ImageName Image001
+PS C:\> Get-AzureVMImage -ImageName Image001
 ```
 
 This command gets the image object named Image001 from the current image repository.
 
 ### Example 2: Get all images from the current image repository
 ```
-PS C:\>Get-AzureVMImage
+PS C:\> Get-AzureVMImage
 ```
 
 This command retrieves all the images from the current image repository.
 
 ### Example 3: Set the subscription context and then get all the images
 ```
-PS C:\>$SubsId = <MySubscriptionID>
+PS C:\> $SubsId = <MySubscriptionID>
 C:\PS>$Cert = Get-AzureCertificate cert:\LocalMachine\MY\<CertificateThumbprint>
 C:\PS>$MyOSImages = Get-AzureVMImage
 ```

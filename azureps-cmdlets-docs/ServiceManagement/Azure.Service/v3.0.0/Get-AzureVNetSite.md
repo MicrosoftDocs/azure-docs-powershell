@@ -24,14 +24,14 @@ If you specify a virtual network name, only information for that virtual network
 
 ### Example 1: Get information about all virtual networks in the current subscription
 ```
-PS C:\>Get-AzureVNetSite
+PS C:\> Get-AzureVNetSite
 ```
 
 This command gets information about all the virtual networks in the current subscription.
 
 ### Example 2: Get information about a specific virtual network in the current subscription
 ```
-PS C:\>Get-AzureVNetSite -VNetName "MyProductionNetwork"
+PS C:\> Get-AzureVNetSite -VNetName "MyProductionNetwork"
 ```
 
 This command retrieves information on the MyProductionNetwork virtual network only.

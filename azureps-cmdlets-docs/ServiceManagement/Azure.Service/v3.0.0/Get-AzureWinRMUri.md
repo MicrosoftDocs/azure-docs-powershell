@@ -23,14 +23,14 @@ The **Get-AzureWinRMUri** cmdlet gets the URI of the Windows Remote Management (
 
 ### Example 1: Get the URI of the WinRM https listener to a virtual machine
 ```
-PS C:\>Get-AzureWinRMUri -ServiceName MyService -Name MyVM
+PS C:\> Get-AzureWinRMUri -ServiceName MyService -Name MyVM
 ```
 
 This command gets the UIR of the WinRM https listener to a virtual machine.
 
 ### Example 2: Get the URI of the WinRM https listener to a virtual machine of a specific service
 ```
-PS C:\>Get-AzureWinRMUri -ServiceName MyService
+PS C:\> Get-AzureWinRMUri -ServiceName MyService
 ```
 
 This command gets the UIR of the WinRM https listener to a virtual machine.

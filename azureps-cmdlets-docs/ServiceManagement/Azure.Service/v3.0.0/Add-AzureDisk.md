@@ -26,7 +26,7 @@ To add a system disk, specify an operating system type by using the *OS* paramet
 
 ### Example 1: Add a startup disk that uses the Windows operating system
 ```
-PS C:\>Add-AzureDisk -DiskName "MyWinDisk" -MediaLocation "http://contosostorage.blob.core.azure.com/vhds/winserver-system.vhd" -Label "StartupDisk" -OS "Windows"
+PS C:\> Add-AzureDisk -DiskName "MyWinDisk" -MediaLocation "http://contosostorage.blob.core.azure.com/vhds/winserver-system.vhd" -Label "StartupDisk" -OS "Windows"
 ```
 
 This command adds a system disk to your disk repository.
@@ -34,14 +34,14 @@ The system disk uses the Windows operating system.
 
 ### Example 2: Add a data disk
 ```
-PS C:\>Add-AzureDisk -DiskName "MyDataDisk" -MediaLocation "http://yourstorageaccount.blob.core.azure.com/vhds/winserver-data.vhd" -Label "DataDisk"
+PS C:\> Add-AzureDisk -DiskName "MyDataDisk" -MediaLocation "http://yourstorageaccount.blob.core.azure.com/vhds/winserver-data.vhd" -Label "DataDisk"
 ```
 
 This command adds a data disk.
 
 ### Example 3: Add a Linux system disk
 ```
-PS C:\>Add-AzureDisk -DiskName "MyLinuxDisk" -MediaLocation "http://yourstorageaccount.blob.core.azure.com/vhds/linuxsys.vhd" -OS "Linux"
+PS C:\> Add-AzureDisk -DiskName "MyLinuxDisk" -MediaLocation "http://yourstorageaccount.blob.core.azure.com/vhds/linuxsys.vhd" -OS "Linux"
 ```
 
 This command adds a Linux system disk.

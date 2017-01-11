@@ -43,21 +43,21 @@ The **Move-AzureVirtualNetwork** cmdlet migrates a virtual network to a resource
 
 ### Example 1: Prepare virtual network migration
 ```
-PS C:\>Move-AzureVirtualNetwork -Prepare -VirtualNetworkName "ContosoVNET"
+PS C:\> Move-AzureVirtualNetwork -Prepare -VirtualNetworkName "ContosoVNET"
 ```
 
 This command prepares the virtual network named ContosoVNET for migration to the Azure Resource Manager stack.
 
 ### Example 2: Start virtual network migration
 ```
-PS C:\>Move-AzureVirtualNetwork -Commit -VirtualNetworkName "ContosoVNET"
+PS C:\> Move-AzureVirtualNetwork -Commit -VirtualNetworkName "ContosoVNET"
 ```
 
 This command starts migration of the virtual network named ContosoVNET to the Azure Resource Manager stack.
 
 ### Example 3: Validate virtual network migration
 ```
-PS C:\>Move-AzureVirtualNetwork -Validate -VirtualNetworkName "ContosoVNET"
+PS C:\> Move-AzureVirtualNetwork -Validate -VirtualNetworkName "ContosoVNET"
 ```
 
 This command validates migration for the virtual network named ContosoVNET to the Azure Resource Manager stack.
@@ -65,7 +65,7 @@ This command validates migration for the virtual network named ContosoVNET to th
 ## PARAMETERS
 
 ### -VirtualNetworkName
-Name of the Virtual Network to migrate
+Specifies the name of the Virtual Network to migrate.
 
 ```yaml
 Type: String

@@ -32,7 +32,7 @@ The **Export-AzureRmApiManagementApi** cmdlet exports an Azure API Management AP
 
 ### Example 1: Export an API in Web Application Description Language (WADL) format
 ```
-PS C:\>Export-AzureRmApiManagementApi -Context $ApiMgmtContext -ApiId "0123456789" -SpecificationFormat "Wadl" -SaveAs "C:\contoso\specifications\0123456789.wadl"
+PS C:\> Export-AzureRmApiManagementApi -Context $ApiMgmtContext -ApiId "0123456789" -SpecificationFormat "Wadl" -SaveAs "C:\contoso\specifications\0123456789.wadl"
 ```
 
 This command exports an API to a WADL file.

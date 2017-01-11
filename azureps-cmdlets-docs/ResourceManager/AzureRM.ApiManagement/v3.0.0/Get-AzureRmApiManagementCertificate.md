@@ -30,14 +30,14 @@ The **Get-AzureRmApiManagementCertificate** cmdlet gets all Azure API Management
 
 ### Example 1: Get all certificates
 ```
-PS C:\>Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext
+PS C:\> Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext
 ```
 
 This command gets all API Management certificates.
 
 ### Example 2: Get a certificate by its ID
 ```
-PS C:\>Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext -CertificateId "0123456789"
+PS C:\> Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext -CertificateId "0123456789"
 ```
 
 This command gets the API Management certificate with the specified ID.

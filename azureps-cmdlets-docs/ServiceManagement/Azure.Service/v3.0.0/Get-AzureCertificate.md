@@ -24,14 +24,14 @@ The **Get-AzureCertificate** cmdlet gets a certificate object from an Azure serv
 
 ### Example 1: Get certificates from a service
 ```
-PS C:\>$AzureCert = Get-AzureCertificate -ServiceName "ContosoService"
+PS C:\> $AzureCert = Get-AzureCertificate -ServiceName "ContosoService"
 ```
 
 This command gets certificate objects from the service named ContosoService, and then stores them in the $AzureCert variable.
 
 ### Example 2: Get a certificate from a service
 ```
-PS C:\>$AzureCert = Get-AzureCertificate -ServiceName "ContosoService" -Thumbprint '5383CE0343CB6563281CA97C1D4D712209CFFA97'
+PS C:\> $AzureCert = Get-AzureCertificate -ServiceName "ContosoService" -Thumbprint '5383CE0343CB6563281CA97C1D4D712209CFFA97'
 ```
 
 This command gets the certificate object identified by the specified thumbprint from the service named ContosoService, and then stores it in the $AzureCert variable.

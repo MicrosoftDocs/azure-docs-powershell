@@ -36,21 +36,21 @@ The **Get-AzureRmApiManagementOpenIdConnectProvider** cmdlet gets OpenID Connect
 
 ### Example 1: Get all providers
 ```
-PS C:\>Get-AzureRmApiManagementOpenIdConnectProvider -Context $ApimContext
+PS C:\> Get-AzureRmApiManagementOpenIdConnectProvider -Context $ApimContext
 ```
 
 This command gets all OpenID Connect providers for the specified context.
 
 ### Example 2: Get a provider by using an ID
 ```
-PS C:\>Get-AzureRmApiManagementOpenIdConnectProvider -Context $ApimContext -OpenIdConnectProviderId "OICProvicer01"
+PS C:\> Get-AzureRmApiManagementOpenIdConnectProvider -Context $ApimContext -OpenIdConnectProviderId "OICProvicer01"
 ```
 
 This command gets the provider that has the ID OICProvicer01.
 
 ### Example 3: Get a provider by using a name
 ```
-PS C:\>Get-AzureRmApiManagementOpenIdConnectProvider -Context $ApimContext -Name "Contoso OpenID Connect Provider"
+PS C:\> Get-AzureRmApiManagementOpenIdConnectProvider -Context $ApimContext -Name "Contoso OpenID Connect Provider"
 ```
 
 This command gets the provider named Contoso OpenID Connect Provider.

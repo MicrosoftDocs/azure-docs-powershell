@@ -36,10 +36,6 @@ For a virtual network, you can specify a subnet or the IP address of the interna
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

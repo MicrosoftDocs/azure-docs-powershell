@@ -18,13 +18,13 @@ Get-AzureLocation [-Profile <AzureSMProfile>] [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-AzureLocation** cmdlet gets a list of the available Azure data centers and their properties for the current Azure subscription.
-Before you run this cmdlet, you must set your current subscription by using the Select-AzureSubscription and Set-AzureSubscription cmdlets.
+Before you run this cmdlet, you must set your current subscription by using the **Select-AzureSubscription** and **Set-AzureSubscription** cmdlets.
 
 ## EXAMPLES
 
 ### Example 1: Get locations
 ```
-PS C:\>Get-AzureLocation
+PS C:\> Get-AzureLocation
 ```
 
 This command gets a list of available data centers, and their properties, for the current subscription.

@@ -26,7 +26,7 @@ Running **Export-AzureVM**, followed by **Remove-AzureVM** and then **Import-Azu
 
 ### Example 1: Import a virtual machine state
 ```
-PS C:\>Import-AzureVM -Path "C:\VMstate.xml" | New-AzureVM -ServiceName "ContosoService02"
+PS C:\> Import-AzureVM -Path "C:\VMstate.xml" | New-AzureVM -ServiceName "ContosoService02"
 ```
 
 This command imports the state of a virtual machine from the VMstate.xml file, and then creates a virtual machine in the specified cloud service.

@@ -23,7 +23,7 @@ The **Get-AzureVMDiagnosticsExtension** cmdlet gets the settings of the Microsof
 
 ### Example 1: Get the diagnostics extension applied to a virtual machine
 ```
-PS C:\>Get-AzureVMDiagnosticsExtension -VM $VM
+PS C:\> Get-AzureVMDiagnosticsExtension -VM $VM
 ```
 
 This command gets the diagnostics extension applied to the specified virtual machine as stored in the variable $VM.

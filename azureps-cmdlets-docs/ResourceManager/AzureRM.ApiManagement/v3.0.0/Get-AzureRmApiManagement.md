@@ -34,14 +34,14 @@ The **Get-AzureRmApiManagement** cmdlet gets a list of all API Management servic
 
 ### Example 1: Get all API Management services
 ```
-PS C:\>Get-AzureRmApiManagement
+PS C:\> Get-AzureRmApiManagement
 ```
 
 This command gets all API Management services within a subscription.
 
 ### Example 2: Get all API Management services by a specific name
 ```
-PS C:\>Get-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
+PS C:\> Get-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
 ```
 
 This command gets all API Management service by name.

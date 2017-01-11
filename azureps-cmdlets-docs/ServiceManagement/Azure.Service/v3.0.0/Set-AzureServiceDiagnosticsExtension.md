@@ -43,14 +43,14 @@ The **Set-AzureServiceDiagnosticsExtension** cmdlet enables Azure Diagnostics ex
 
 ### Example 1: Enable Azure Diagnostics extension
 ```
-PS C:\>Set-AzureServiceDiagnosticsExtension -ServiceName $Svc -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML
+PS C:\> Set-AzureServiceDiagnosticsExtension -ServiceName $Svc -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML
 ```
 
 This command enables the Azure Diagnostics extension for all roles.
 
 ### Example 2: Enable Azure Diagnostics extension for a specified role
 ```
-PS C:\>Set-AzureServiceDiagnosticsExtension -ServiceName $Svc -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML -Role "WebRole01"
+PS C:\> Set-AzureServiceDiagnosticsExtension -ServiceName $Svc -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML -Role "WebRole01"
 ```
 
 This command enables the Azure Diagnostics extension for a specified role.

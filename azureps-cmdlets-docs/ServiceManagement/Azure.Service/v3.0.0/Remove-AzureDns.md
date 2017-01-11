@@ -24,7 +24,7 @@ The **Remove-AzureDns** cmdlet removes a DNS server from an Azure service.
 
 ### Example 1: Remove a DNS server from a service
 ```
-PS C:\>Remove-AzureDns -ServiceName "ContosoService" -Name "Dns07"
+PS C:\> Remove-AzureDns -ServiceName "ContosoService" -Name "Dns07"
 ```
 
 This command removes the DNS server named Dns07 from ContosoService.

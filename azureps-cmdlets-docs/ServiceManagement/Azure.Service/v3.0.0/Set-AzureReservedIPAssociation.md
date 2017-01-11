@@ -27,7 +27,7 @@ The operation takes about 30 seconds to complete, after which the virtual machin
 
 ### Example 1: Set a reserved IP association
 ```
-PS C:\>Set-AzureReservedIPAssociation -ReservedIPName "ResIp14" -ServiceName "PipTestWestEurope"
+PS C:\> Set-AzureReservedIPAssociation -ReservedIPName "ResIp14" -ServiceName "PipTestWestEurope"
 ```
 
 This command assigns the reserved IP address named ResIp14 to the service PipTestWestEurope.
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 
 ### -VirtualIPName
 Specifies the name of an existing VIP to associate with a reserved IP.
-See Add-AzureVirtualIP to add VIPs to your cloud service.
+See [Add-AzureVirtualIP](./Add-AzureVirtualIP.md) to add VIPs to your cloud service.
 
 ```yaml
 Type: String
