@@ -37,14 +37,14 @@ The **Set-AzureRmLoadBalancerRuleConfig** cmdlet sets the goal state for a load 
 
 ### Example 1: Modify a load balancing rule configuration
 ```
-PS C:\>$slb = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $slb = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 PS C:\> $slb | Add-AzureRmLoadBalancerRuleConfig -Name "NewRule" -FrontendIPConfiguration $slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350 -EnableFloatingIP
 PS C:\> $slb | Set-AzureRmLoadBalancerRuleConfig -Name "NewRule" -FrontendIPConfiguration $slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350
 ```
 
 The first command gets the load balancer named MyLoadBalancer, and then stores it in the $slb variable.
 
-The second command uses the pipeline operator to pass the load balancer in $slb to Add-AzureRmLoadBalancerRuleConfig, which adds a rule named NewRule to it.
+The second command uses the pipeline operator to pass the load balancer in $slb to [Add-AzureRmLoadBalancerRuleConfig](./Add-AzureRmLoadBalancerRuleConfig.md), which adds a rule named NewRule to it.
 
 The third command passes the load balancer to **Set-AzureRmLoadBalancerRuleConfig**, which sets the new rule configuration.
 Note that the configuration does not enable a floating IP address, which had been enabled by the previous command.
@@ -323,5 +323,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmLoadBalancerRuleConfig](./New-AzureRmLoadBalancerRuleConfig.md)
 
 [Remove-AzureRmLoadBalancerRuleConfig](./Remove-AzureRmLoadBalancerRuleConfig.md)
-
-

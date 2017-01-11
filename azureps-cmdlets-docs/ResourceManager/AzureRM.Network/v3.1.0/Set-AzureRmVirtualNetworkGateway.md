@@ -29,7 +29,7 @@ The **Set-AzureRmVirtualNetworkGateway** cmdlet updates a virtual network gatewa
 
 ### Example 1: Set the goal state a virtual network gateway
 ```
-PS C:\>$Gateway = Get-AzureRmVirtualNetworkGateway -ResourceGroupName "ResourceGroup001" -Name "Gateway001"
+PS C:\> $Gateway = Get-AzureRmVirtualNetworkGateway -ResourceGroupName "ResourceGroup001" -Name "Gateway001"
 PS C:\> Set-AzureRmVirtualNetworkGateway -VirtualNetworkGateway $Gateway -Asn 1337
 ```
 
@@ -42,7 +42,7 @@ The command also sets the ASN to 1337.
 
 ### -VirtualNetworkGateway
 Specifies the virtual network gateway object to base modifications off of.
-You can use the Get-AzureRmVirtualNetworkGateway cmdlet to get the virtual network gateway object.
+You can use the [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md) cmdlet to get the virtual network gateway object.
 
 ```yaml
 Type: PSVirtualNetworkGateway
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerWeight
-Specifies the weight added to routes learned over BGP from this virtual network gateway
+Specifies the weight added to routes learned over BGP from this virtual network gateway.
 
 ```yaml
 Type: Int32
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableActiveActiveFeature
-Enables the active-active feature.
+Indicates that the cmdlet enables the active-active feature.
 
 ```yaml
 Type: SwitchParameter
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableActiveActiveFeature
-Disables the active-active feature.
+Indicates that the cmdlet disables the active-active feature.
 
 ```yaml
 Type: SwitchParameter
@@ -260,5 +260,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Reset-AzureRmVirtualNetworkGateway](./Reset-AzureRmVirtualNetworkGateway.md)
 
 [Resize-AzureRmVirtualNetworkGateway](./Resize-AzureRmVirtualNetworkGateway.md)
-
-

@@ -27,14 +27,14 @@ The **Set-AzureRmNetworkSecurityRuleConfig** cmdlet sets the goal state for an A
 
 ### Example 1: Change the access configuration in a network security rule
 ```
-PS C:\>$nsg = Get-AzureRmNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
+PS C:\> $nsg = Get-AzureRmNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
 PS C:\> $nsg | Get-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule"
 PS C:\> Set-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule" -NetworkSecurityGroup $nsg -Access "Deny"
 ```
 
 The first command gets the network security group named NSG-FrontEnd, and then stores it in the variable $nsg.
 
-The second command uses the pipeline operator to pass the security group in $nsg to Get-AzureRmNetworkSecurityRuleConfig, which gets the security rule configuration named rdp-rule.
+The second command uses the pipeline operator to pass the security group in $nsg to [Get-AzureRmNetworkSecurityRuleConfig](./Get-AzureRmNetworkSecurityRuleConfig.md), which gets the security rule configuration named rdp-rule.
 
 The third command changes the access configuration of rdp-rule to Deny.
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Specifies the network protocol that a rule configuration applies to.
 The acceptable values for this parameter are:
 
- --Tcp
+- Tcp
 - Udp
 - A wildcard character (*) to match both
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -Priority
 Specifies the priority of a rule configuration.
-The acceptable values for this parameter are:An integer between 100 and 4096.
+The acceptable values for this parameter are: An integer between 100 and 4096.
 
 The priority number must be unique for each rule in the collection.
 The lower the priority number, the higher the priority of the rule.
@@ -298,5 +298,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmNetworkSecurityRuleConfig](./New-AzureRmNetworkSecurityRuleConfig.md)
 
 [Remove-AzureRmNetworkSecurityRuleConfig](./Remove-AzureRmNetworkSecurityRuleConfig.md)
-
-
