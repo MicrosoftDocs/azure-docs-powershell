@@ -30,21 +30,21 @@ It returns an object with information on a specific virtual machine, or if no vi
 
 ### Example 1: Retrieve information on a specified virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService01" -Name "VirtualMachine02"
+PS C:\> Get-AzureVM -ServiceName "ContosoService01" -Name "VirtualMachine02"
 ```
 
 This command returns an object with information on the VirtualMachine02 virtual machine running in the ContosoService01 cloud service.
 
 ### Example 2: Retrieve information on all virtual machines
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService01"
+PS C:\> Get-AzureVM -ServiceName "ContosoService01"
 ```
 
 This command retrieves a list object with information on all of the virtual machines running in the ContosoService01 cloud service.
 
 ### Example 3: Display a table of virtual machine statuses
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService01"  | Format-Table AutoSize -Property "Name",@{Expression={$_.InstanceUpgradeDomain};Label="UpgDom";Align="Right"},"InstanceStatus"
+PS C:\> Get-AzureVM -ServiceName "ContosoService01"  | Format-Table AutoSize -Property "Name",@{Expression={$_.InstanceUpgradeDomain};Label="UpgDom";Align="Right"},"InstanceStatus"
 ```
 
 This command displays a table showing the virtual machines running on the ContosoService01 service, their Upgrade Domain, and the current status of each virtual machine.

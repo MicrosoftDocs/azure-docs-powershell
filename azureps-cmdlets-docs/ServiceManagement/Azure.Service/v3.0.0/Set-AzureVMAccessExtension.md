@@ -37,7 +37,7 @@ The **Set-AzureVMAccessExtension** cmdlet sets the VMAccess extension for the vi
 
 ### Example 1: Set the VMAccess extension applied to a specified virtual machine
 ```
-PS C:\>Set-AzureVMAccessExtension -VM $VM -UserName $User -Password $PWD;
+PS C:\> Set-AzureVMAccessExtension -VM $VM -UserName $User -Password $PWD;
 ```
 
 This command sets the VMAccess extension applied to the specified virtual machine as stored in the variable $VM.
@@ -80,7 +80,7 @@ Specifies the reference name of the access extension.
 This is a user-defined string that is used to refer to an extension.
 It is specified when the extension is added to the virtual machine for the first time.
 For subsequent updates, you should specify the previously used reference name while updating the extension.
-The *ReferenceName* assigned to an extension is returned using the Get-AzureVM cmdlet.
+The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: String

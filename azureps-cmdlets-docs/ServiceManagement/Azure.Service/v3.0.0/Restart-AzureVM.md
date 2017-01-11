@@ -46,14 +46,14 @@ The **Restart-AzureVM** cmdlet requests a restart of an Azure virtual machine.
 
 ### Example 1: Restart a virtual machine
 ```
-PS C:\>Restart-AzureVM -ServiceName "MyService01" -Name "MyVM"
+PS C:\> Restart-AzureVM -ServiceName "MyService01" -Name "MyVM"
 ```
 
 This command restarts the VirtualMachine27 virtual machine running in the Azure service named Service01.
 
 ### Example 2: Restart a virtual machine by using a virtual machine object
 ```
-PS C:\>Get-AzureVM -ServiceName "MyService01" -Name "VirtualMachine27" | Restart-AzureVM
+PS C:\> Get-AzureVM -ServiceName "MyService01" -Name "VirtualMachine27" | Restart-AzureVM
 ```
 
 This command retrieves the virtual machine object for the virtual machine named MyVM and then restarts it.

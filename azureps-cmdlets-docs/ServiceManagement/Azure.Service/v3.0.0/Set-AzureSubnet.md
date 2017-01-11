@@ -24,7 +24,7 @@ Use with **New-AzureVM** to set the subnets for a virtual machine.
 
 ### Example 1: Add a subnet to a virtual machine configuration
 ```
-PS C:\>New-AzureVMConfig -Name "VirtualMachine04" -ImageName $image -InstanceSize "Small" | Add-AzureProvisioningConfig -Windows -Password "password" | Set-AzureSubnet "PubSubnet","PrivSubnet" | New-AzureVM -ServiceName "ContosoService03"
+PS C:\> New-AzureVMConfig -Name "VirtualMachine04" -ImageName $image -InstanceSize "Small" | Add-AzureProvisioningConfig -Windows -Password "password" | Set-AzureSubnet "PubSubnet","PrivSubnet" | New-AzureVM -ServiceName "ContosoService03"
 ```
 
 This command adds a subnet to the virtual machine configuration, and then creates the virtual machine named VirtualMachine04.

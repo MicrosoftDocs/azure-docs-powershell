@@ -24,7 +24,7 @@ The **Get-AzureServiceDiagnosticsExtension** cmdlet gets the cloud service diagn
 
 ### Example 1: Enable a diagnostic extension
 ```
-PS C:\>Get-AzureServiceDiagnosticsExtension -ServiceName $Svc
+PS C:\> Get-AzureServiceDiagnosticsExtension -ServiceName $Svc
 ```
 
 This command enables a diagnostic service across all roles.

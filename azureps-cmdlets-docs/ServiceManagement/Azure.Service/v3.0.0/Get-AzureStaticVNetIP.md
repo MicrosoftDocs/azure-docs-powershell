@@ -21,10 +21,6 @@ The **Get-AzureStaticVNetIP** cmdlet gets the static virtual network (VNet) IP a
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

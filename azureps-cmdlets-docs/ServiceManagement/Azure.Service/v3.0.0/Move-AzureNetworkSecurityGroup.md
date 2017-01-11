@@ -41,10 +41,6 @@ The **Move-AzureNetworkSecurityGroup** cmdlet migrates a Network Security Group 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -25,7 +25,7 @@ When the operation completes, the reserved IP address is free and the VM/VIP get
 
 ### Example 1: Remove a reserved IP association
 ```
-PS C:\>Remove-AzureReservedIPAssociation -ReservedIPName "ResIp14" -ServiceName "PipTestWestEurope"
+PS C:\> Remove-AzureReservedIPAssociation -ReservedIPName "ResIp14" -ServiceName "PipTestWestEurope"
 ```
 
 This command disassociates the reserved IP address named ResIp14 from the service named PipTestWestEurope.

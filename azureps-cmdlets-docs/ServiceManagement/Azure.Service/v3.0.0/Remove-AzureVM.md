@@ -25,14 +25,14 @@ This process does not delete the underlying .vhd files of the disks mounted on t
 
 ### Example 1: Remove a virtual machine from a service
 ```
-PS C:\>Remove-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine03"
+PS C:\> Remove-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine03"
 ```
 
 This command removes the virtual machine named VirtualMachine03 that runs in the ContosoService03 service.
 
 ### Example 2: Remove a virtual machine and delete the .vhd files
 ```
-PS C:\>Remove-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine04" -DeleteVHD
+PS C:\> Remove-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine04" -DeleteVHD
 ```
 
 This command removes the VirtualMachine04 virtual machine that runs in the ContosoService03 service, and specifies to remove the .vhd files using the *DeleteVHD* parameter.

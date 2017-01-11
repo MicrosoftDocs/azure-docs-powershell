@@ -20,10 +20,6 @@ Set-AzureNetworkSecurityGroupConfig [-NetworkSecurityGroupName] <String> -VM <IP
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

@@ -23,7 +23,7 @@ The **Get-AzureVMDscExtension** cmdlet gets the settings of the DSC extension on
 
 ### Example 1: Get the setting of the DSC Extension on a virtual machine
 ```
-PS C:\>Get-AzureVMDscExtension -VM $VMModulesUrl
+PS C:\> Get-AzureVMDscExtension -VM $VMModulesUrl
 https://myaccount.blob.core.contoso.net/windows-powershell-dsc/MyConfiguration.ps1.zipConfigurationFunction : MyConfiguration.ps1\MyConfigurationProperties            : {ServerName}ExtensionName         : DSCPublisher             : Microsoft.PowershellVersion               : 1.*PrivateConfiguration  :PublicConfiguration   : {"ModulesUrl": "https://myaccount.blob.core.contoso.net/windows-powershell-dsc/MyConfiguration.ps1.zip","ConfigurationFunction": "MyConfiguration.ps1\\MyConfiguration","Properties": {"ServerName": "C:\\MyDirectory"}}ReferenceName         : DSCState                 : EnableRoleName              : my-vm
 ```
 

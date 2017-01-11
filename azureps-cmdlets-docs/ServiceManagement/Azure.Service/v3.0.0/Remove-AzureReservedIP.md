@@ -23,7 +23,7 @@ The **Remove-AzureReservedIP** cmdlet removes a reserved IP address by its name.
 
 ### Example 1: Remove a reserved IP address by its name
 ```
-PS C:\>Remove-AzureReservedIP -ReservedIPName $name
+PS C:\> Remove-AzureReservedIP -ReservedIPName $name
 ```
 
 This command removes a reserved IP address by its name.

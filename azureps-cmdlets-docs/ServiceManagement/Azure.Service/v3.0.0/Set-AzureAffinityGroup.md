@@ -25,10 +25,11 @@ You can change the label and the description.
 
 ### Example 1: Modify an affinity group
 ```
-PS C:\>Set-AzureAffinityGroup -Name "South01" -Label "SouthUSProduction" -Description "Production applications for Southern US locations"
+PS C:\> Set-AzureAffinityGroup -Name "South01" -Label "SouthUSProduction" -Description "Production applications for Southern US locations"
 ```
 
-This command modifies the label of the affinity group named South01 to be SouthUSProduction The command also modifies the description.
+This command modifies the label of the affinity group named South01 to be SouthUSProduction.
+The command also modifies the description.
 
 ## PARAMETERS
 

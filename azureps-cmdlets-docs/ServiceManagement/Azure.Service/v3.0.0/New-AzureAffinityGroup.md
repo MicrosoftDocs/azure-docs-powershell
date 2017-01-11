@@ -30,7 +30,7 @@ You can add services to an affinity group only when you create it.
 
 ### Example 1: Create an affinity group
 ```
-PS C:\>New-AzureAffinityGroup -Name "South01" -Location "South Central US" -Label "South Region" -Description "Affinity group for production applications in southern region."
+PS C:\> New-AzureAffinityGroup -Name "South01" -Location "South Central US" -Label "South Region" -Description "Affinity group for production applications in southern region."
 ```
 
 This command creates an affinity group named South01 in the South Central US region.

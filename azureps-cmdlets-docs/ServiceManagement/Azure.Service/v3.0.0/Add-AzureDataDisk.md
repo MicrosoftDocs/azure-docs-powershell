@@ -42,18 +42,18 @@ You can specify the host-cache mode of the attached data disk.
 
 ### Example 1: Import a data disk from the repository
 ```
-PS C:\>Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Add-AzureDataDisk -Import -DiskName "Disk68" -LUN 0 | Update-AzureVM
+PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Add-AzureDataDisk -Import -DiskName "Disk68" -LUN 0 | Update-AzureVM
 ```
 
-This command gets a virtual machine object for the virtual machine named VirtualMachine07 in the ContosoService cloud service by using the Get-AzureVM cmdlet.
+This command gets a virtual machine object for the virtual machine named VirtualMachine07 in the ContosoService cloud service by using the **Get-AzureVM** cmdlet.
 The command passes it to the current cmdlet by using the pipeline operator.
 That command attaches an existing data disk from the repository to the virtual machine.
 The data disk has a LUN of 0.
-The command updates the virtual machine to reflect your changes by using the Update-AzureVM cmdlet.
+The command updates the virtual machine to reflect your changes by using the **Update-AzureVM** cmdlet.
 
 ### Example 2: Add a new data disk
 ```
-PS C:\>Get-AzureVM "ContosoService" -Name "VirtualMachine08" | Add-AzureDataDisk -CreateNew -DiskSizeInGB 128 -DiskLabel "main" -LUN 0 | Update-AzureVM
+PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine08" | Add-AzureDataDisk -CreateNew -DiskSizeInGB 128 -DiskLabel "main" -LUN 0 | Update-AzureVM
 ```
 
 This command gets a virtual machine object for the virtual machine named VirtualMachine08.
@@ -64,7 +64,7 @@ The command updates the virtual machine to reflect your changes.
 
 ### Example 3: Add a data disk from a specified location
 ```
-PS C:\>Get-AzureVM "ContosoService" -Name "Database" | Add-AzureDataDisk -ImportFrom -MediaLocation "https://contosostorage.blob.core.windows.net/container07/Disk14.vhd" -DiskLabel "main" -LUN 0 | Update-AzureVM
+PS C:\> Get-AzureVM "ContosoService" -Name "Database" | Add-AzureDataDisk -ImportFrom -MediaLocation "https://contosostorage.blob.core.windows.net/container07/Disk14.vhd" -DiskLabel "main" -LUN 0 | Update-AzureVM
 ```
 
 This command gets a virtual machine object for the virtual machine named Database.
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -VM
 Specifies the virtual machine object to which this cmdlet attaches a data disk.
-To obtain a virtual machine object, use the Get-AzureVM cmdlet.
+To obtain a virtual machine object, use the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: IPersistentVM

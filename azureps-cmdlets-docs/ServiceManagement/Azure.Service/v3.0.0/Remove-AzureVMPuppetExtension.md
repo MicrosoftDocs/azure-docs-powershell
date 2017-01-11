@@ -23,7 +23,7 @@ The **Remove-AzureVMPuppetExtension** cmdlet removes the Puppet extension applie
 
 ### Example 1: Remove the Puppet extension applied on a virtual machine
 ```
-PS C:\>Remove-AzureVMPuppetExtension -VM $VM;
+PS C:\> Remove-AzureVMPuppetExtension -VM $VM;
 ```
 
 This command removes the Puppet extension applied on the specified virtual machine.

@@ -25,7 +25,7 @@ To delete the VHD, specify the *DeleteVHD* parameter.
 
 ### Example 1: Remove a disk
 ```
-PS C:\>Remove-AzureDisk -DiskName "ContosoDataDisk"
+PS C:\> Remove-AzureDisk -DiskName "ContosoDataDisk"
 ```
 
 This command removes the disk named ContosoDataDisk disk from the disk repository.
@@ -33,7 +33,7 @@ The command does not delete the VHD.
 
 ### Example 2: Remove and delete a disk
 ```
-PS C:\>Remove-AzureDisk -DiskName "ContosoDataDisk" -DeleteVHD
+PS C:\> Remove-AzureDisk -DiskName "ContosoDataDisk" -DeleteVHD
 ```
 
 This command removes the disk named ContosoDataDisk disk from the disk repository.

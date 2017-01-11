@@ -27,14 +27,14 @@ It returns an image object with information about the updated image.
 
 ### Example 1: Update an image by changing the image label
 ```
-PS C:\>Update-AzureVMImage -ImageName "Windows-Server-2008-SP2" -Label "DoNotUse"
+PS C:\> Update-AzureVMImage -ImageName "Windows-Server-2008-SP2" -Label "DoNotUse"
 ```
 
 This command updates the image named Windows-Server-2008-SP2 by changing the image label to DoNotUse.
 
 ### Example 2: Get all operating systems by label and then update the label
 ```
-PS C:\>Get-AzureVMImage | Where-Object {$_.Label -eq "DoNotUse" } | Update-AzureVMImage -Label "Updated"
+PS C:\> Get-AzureVMImage | Where-Object {$_.Label -eq "DoNotUse" } | Update-AzureVMImage -Label "Updated"
 ```
 
 This command gets all the operating system images labeled DoNotUse and changes the label to Updated.
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskConfig
-Specifies the operating system disk and data disk configuration for the virtual machine image created by using the New-AzureVMImageDiskConfigSet, Set-AzureVMImageOSDiskConfig, and Set-AzureVMImageDataDiskConfig cmdlets.
+Specifies the operating system disk and data disk configuration for the virtual machine image created by using the **New-AzureVMImageDiskConfigSet**, **Set-AzureVMImageOSDiskConfig**, and **Set-AzureVMImageDataDiskConfig** cmdlets.
 
 ```yaml
 Type: VirtualMachineImageDiskConfigSet

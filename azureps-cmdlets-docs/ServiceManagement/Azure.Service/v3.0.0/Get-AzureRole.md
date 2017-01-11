@@ -26,28 +26,28 @@ If you specify the *InstanceDetails* parameter, additional, instance-specific de
 
 ### Example 1: Get a list of roles for a service
 ```
-PS C:\>Get-AzureRole -ServiceName "MySvc01" -Slot "Production"
+PS C:\> Get-AzureRole -ServiceName "MySvc01" -Slot "Production"
 ```
 
 This command returns an object with details on all the production roles running on the MySvc01 service.
 
 ### Example 2: Get details on a role running on a service
 ```
-PS C:\>Get-AzureRole -ServiceName "MySvc1" -Slot "Staging" -RoleName "MyTestVM3"
+PS C:\> Get-AzureRole -ServiceName "MySvc1" -Slot "Staging" -RoleName "MyTestVM3"
 ```
 
 This command returns an object with details on the MyTestVM3 role, running on the staging environment of the MySvc01 service.
 
 ### Example 3: Get instance information on instances of a role running on a service
 ```
-PS C:\>Get-AzureRole -ServiceName "MySvc01" -Slot "Production" -RoleName "MyTestVM02" -InstanceDetails
+PS C:\> Get-AzureRole -ServiceName "MySvc01" -Slot "Production" -RoleName "MyTestVM02" -InstanceDetails
 ```
 
 This command returns an object with details on the instances of the MyTestVM02 role running in the production environment on the MySvc01 service.
 
 ### Example 4: Get a table of the role instances associated with a service
 ```
-PS C:\>Get-AzureRole -ServiceName "MySvc01" -Slot "Production" -InstanceDetails | Format-Table -Auto "InstanceName", "InstanceSize", "InstanceStatus"
+PS C:\> Get-AzureRole -ServiceName "MySvc01" -Slot "Production" -InstanceDetails | Format-Table -Auto "InstanceName", "InstanceSize", "InstanceStatus"
 ```
 
 This command returns a table of the instance name, size, and status of all role instances running in the production environment on the MySvc01 service.

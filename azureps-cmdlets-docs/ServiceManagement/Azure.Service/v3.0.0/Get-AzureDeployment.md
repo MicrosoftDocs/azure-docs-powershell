@@ -24,7 +24,7 @@ Specify the name of the Azure service and the slot of the deployment.
 
 ### Example 1: Get details for a production deployment
 ```
-PS C:\>Get-AzureDeployment -ServiceName "ContosoService"
+PS C:\> Get-AzureDeployment -ServiceName "ContosoService"
 ```
 
 This command returns the details of the deployment for the service named ContosoService.
@@ -33,7 +33,7 @@ Therefore, the command uses the default value of Production.
 
 ### Example 2: Get details for a staging deployment
 ```
-PS C:\>Get-AzureDeployment -ServiceName "ContosoService" -Slot "Staging"
+PS C:\> Get-AzureDeployment -ServiceName "ContosoService" -Slot "Staging"
 ```
 
 This command returns the details of the staging deployment of ContosoService.

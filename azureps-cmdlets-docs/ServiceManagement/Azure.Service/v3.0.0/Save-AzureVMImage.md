@@ -26,7 +26,7 @@ After the image is captured, the virtual machine is deleted.
 
 ### Example 1: Save an existing virtual machine and then delete it from a deployment
 ```
-PS C:\>Save-AzureVMImage -ServiceName "MyService" -Name "MyVM" -NewImageName "MyBaseImage" -NewImageLabel "MyBaseVM"
+PS C:\> Save-AzureVMImage -ServiceName "MyService" -Name "MyVM" -NewImageName "MyBaseImage" -NewImageLabel "MyBaseVM"
 ```
 
 This command captures an existing virtual machine and deletes it from the deployment.

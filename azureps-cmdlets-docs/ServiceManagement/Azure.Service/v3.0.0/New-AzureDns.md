@@ -24,7 +24,7 @@ You can use a DNS settings object when you create a virtual machine by using the
 
 ### Example 1: Create a DNS settings object
 ```
-PS C:\>$Dns = New-AzureDns -Name "Dns01" -IPAddress "10.1.2.4"
+PS C:\> $Dns = New-AzureDns -Name "Dns01" -IPAddress "10.1.2.4"
 ```
 
 This command creates an Azure DNS settings object.

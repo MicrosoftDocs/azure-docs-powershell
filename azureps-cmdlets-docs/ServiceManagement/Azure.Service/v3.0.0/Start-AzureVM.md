@@ -29,14 +29,14 @@ The **Start-AzureVM** cmdlet requests the start of an Azure virtual machine.
 
 ### Example 1: Start a virtual machine
 ```
-PS C:\>Start-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine04"
+PS C:\> Start-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine04"
 ```
 
 This command starts the virtual machine named VirtualMachine04 that runs in the Azure service named ContosoService03.
 
 ### Example 2: Start a virtual machine by using a virtual machine object
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService03" -Name "DatabaseServer" | Start-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService03" -Name "DatabaseServer" | Start-AzureVM
 ```
 
 This command retrieves the virtual machine object for the virtual machine whose name is DatabaseServer, and then requests to start it.

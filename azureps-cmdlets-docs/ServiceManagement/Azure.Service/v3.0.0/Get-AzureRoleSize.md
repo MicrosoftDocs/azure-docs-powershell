@@ -67,7 +67,7 @@ This command gets role size information for the specified role size.
 
 ### Example 3: Get role size information for all virtual machines in all of the Azure services
 ```
-PS C:\>Get-AzureService | Get-AzureVM | Get-AzureRoleSize
+PS C:\> Get-AzureService | Get-AzureVM | Get-AzureRoleSize
 ```
 
 This command gets role size information for all virtual machines in all of the Azure services.

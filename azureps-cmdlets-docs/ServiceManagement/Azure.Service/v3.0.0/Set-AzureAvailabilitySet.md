@@ -24,10 +24,10 @@ The **Set-AzureAvailabilitySet** cmdlet sets the name of the availability set on
 
 ### Example 1: Modify the name of an availability set
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine24" | Set-AzureAvailabilitySet -Name "AvailabilitySet14" | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine24" | Set-AzureAvailabilitySet -Name "AvailabilitySet14" | Update-AzureVM
 ```
 
-The first command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the Get-AzureVM cmdlet.
+The first command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the **Get-AzureVM** cmdlet.
 The command passes that object to the current cmdlet by using the pipeline operator.
 That cmdlet modifies the name of the availability set for that virtual machine.
 The command updates the virtual machine.

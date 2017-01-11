@@ -27,7 +27,8 @@ The **Set-AzureVMDscExtension** cmdlet configures the Desired State Configuratio
 
 ### Example 1: Configure the DSC extension on a virtual machine
 ```
-PS C:\>Set-AzureVMDscExtension -VM $VM -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Path = 'C:\MyDirectory' }
+PS C:\> Set-AzureVMDscExtension -VM $VM -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Path = 'C:\MyDirectory' }
+
 DeploymentName              : my-vm-svc
 Name                        : my-vm
 Label                       : 
@@ -63,7 +64,8 @@ The -*ConfigurationArgument* parameter specifies a hashtable with the arguments 
 
 ### Example 2: Configure the DSC extension on a virtual machine using a path to the configuration data
 ```
-PS C:\>$VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1 
+PS C:\> $VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1 
+
 DeploymentName              : my-vm-svc
 Name                        : my-vm
 Label                       : 
@@ -98,7 +100,7 @@ This command configures the DSC extension on a virtual machine using a path to t
 Specifies a user-defined string that can be used to refer to an extension.
 This parameter is specified when the extension is added to the virtual machine for the first time.
 For subsequent updates, you should specify the previously used reference name while you update the extension.
-The *ReferenceName* assigned to an extension is returned using the Get-AzureVM cmdlet.
+The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: String
@@ -137,7 +139,7 @@ Accept wildcard characters: False
 
 ### -ConfigurationDataPath
 Specifies the path of a .psd1 file that specifies the data for the configuration function.
-This file must contain a hashtable as described in Separating Configuration and Environment Datahttps://msdn.microsoft.com/en-us/PowerShell/DSC/configData.
+This file must contain a hashtable as described in [Separating Configuration and Environment Data](https://msdn.microsoft.com/en-us/PowerShell/DSC/configData) (https://msdn.microsoft.com/en-us/PowerShell/DSC/configData).
 
 ```yaml
 Type: String
@@ -152,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationArchive
-Specifies the name of the configuration package (.zip file) that was previously uploaded by Publish-AzureVMDscConfiguration.
+Specifies the name of the configuration package (.zip file) that was previously uploaded by **Publish-AzureVMDscConfiguration**.
 This parameter must specify only the name of the file, without any path.
 
 ```yaml
@@ -271,9 +273,9 @@ This parameter specifies which version of the update to install on the virtual m
 The acceptable values for this parameter are:
 
 - 4.0.
-Installs KB3000850http://support.microsoft.com/kb/3000850 (http://support.microsoft.com/kb/3000850) on Windows 8.1 or Windows Server 2012 R2, or WMF 4.0http://www.microsoft.com/en-us/download/details.aspx?id=40855 (http://www.microsoft.com/en-us/download/details.aspx?id=40855) on other versions of the Windows operating system, unless a newer version is already installed. 
+Installs [KB3000850](http://support.microsoft.com/kb/3000850) (http://support.microsoft.com/kb/3000850) on Windows 8.1 or Windows Server 2012 R2, or [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) (http://www.microsoft.com/en-us/download/details.aspx?id=40855) on other versions of the Windows operating system, unless a newer version is already installed. 
 - 5.0.
-Installs the latest release of WMF 5.0https://www.microsoft.com/en-us/download/details.aspx?id=50395 (https://www.microsoft.com/en-us/download/details.aspx?id=50395). 
+Installs the latest release of [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) (https://www.microsoft.com/en-us/download/details.aspx?id=50395). 
 - latest.
 Installs the latest WMF, currently WMF 5.0. 
 

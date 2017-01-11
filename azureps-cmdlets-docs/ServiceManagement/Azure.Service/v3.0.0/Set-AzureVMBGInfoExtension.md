@@ -31,7 +31,7 @@ The **Set-AzureVMBGInfoExtension** cmdlet sets the BGInfo extension for a virtua
 
 ### Example 1: Set the BGInfo extension for a virtual machine
 ```
-PS C:\>Set-AzureVMBGInfoExtension -VM $VM
+PS C:\> Set-AzureVMBGInfoExtension -VM $VM
 ```
 
 This command sets the BGInfo extension for the specified virtual machine as stored in the variable $VM.

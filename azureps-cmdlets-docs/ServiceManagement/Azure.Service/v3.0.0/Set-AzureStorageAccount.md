@@ -32,21 +32,21 @@ Properties that can be set are: **Label**, **Description**, **Type** and **GeoRe
 
 ### Example 1: Update the label for a storage account
 ```
-PS C:\>Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -Label "ContosoAccnt" -Description "Contoso storage account"
+PS C:\> Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -Label "ContosoAccnt" -Description "Contoso storage account"
 ```
 
 This command updates the **Label** and **Description** properties for the storage account named ContosoStorage01.
 
 ### Example 2: Enable geo-replication for a storage account
 ```
-PS C:\>Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -GeoReplicationEnabled $False
+PS C:\> Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -GeoReplicationEnabled $False
 ```
 
 This command sets the **GeoReplicationEnabled** property to $False for the storage account named ContosoStorage01.
 
 ### Example 3: Disable geo-replication for a storage account
 ```
-PS C:\>Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -GeoReplicationEnabled $True
+PS C:\> Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -GeoReplicationEnabled $True
 ```
 
 This command sets the **GeoReplicationEnabled** property to $True for the storage account named ContosoStorage01.

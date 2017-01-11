@@ -41,10 +41,6 @@ The **Move-AzureReservedIP** cmdlet migrates a reserved IP address to a resource
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
