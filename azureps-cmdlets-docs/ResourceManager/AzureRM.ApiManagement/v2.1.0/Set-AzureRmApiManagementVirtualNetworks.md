@@ -25,7 +25,7 @@ The **Set-AzureRmApiManagementVirtualNetworks** cmdlet sets Virtual Network conf
 
 ### Example 1: Set virtual networks for an API Management service
 ```
-PS C:\>Set-AzureRmApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetworks $VirtualNetworks
+PS C:\> Set-AzureRmApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetworks $VirtualNetworks
 ```
 
 This command sets virtual networks for an API Management service.
