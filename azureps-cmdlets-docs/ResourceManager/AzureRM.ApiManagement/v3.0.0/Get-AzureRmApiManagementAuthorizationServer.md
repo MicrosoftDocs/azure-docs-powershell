@@ -45,6 +45,7 @@ This command gets the specified authorization server.
 ## PARAMETERS
 
 ### -Context
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
 Type: PsApiManagementContext
@@ -59,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
+Specifies the ID of the Server to get.
 
 ```yaml
 Type: String
@@ -90,5 +92,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementAuthorizationServer](./Remove-AzureRmApiManagementAuthorizationServer.md)
 
 [Set-AzureRmApiManagementAuthorizationServer](./Set-AzureRmApiManagementAuthorizationServer.md)
-
-
