@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureRmLoadBalancerInboundNatPoolConfig
 
 ## SYNOPSIS
+Creates an inbound NAT pool configuration for a load balancer.
 
 ## SYNTAX
 
@@ -27,17 +28,15 @@ New-AzureRmLoadBalancerInboundNatPoolConfig -Name <String>
 ```
 
 ## DESCRIPTION
+The **New-AzureRmLoadBalancerInboundNatPoolConfig** cmdlet creates an inbound network address translation (NAT) pool configuration for an Azure load balancer.
 
 ## EXAMPLES
-
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
 ### -Name
+Specifies the name of the pool configuration that this cmdlet creates.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -51,6 +50,8 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfigurationId
+Specifies the ID for a front-end IP address configuration.
+
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
@@ -64,6 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
+Specifies a protocol.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -178,3 +181,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AzureRmLoadBalancerInboundNatPoolConfig](./Add-AzureRmLoadBalancerInboundNatPoolConfig.md)
+
+[Get-AzureRmLoadBalancerInboundNatPoolConfig](./Get-AzureRmLoadBalancerInboundNatPoolConfig.md)
