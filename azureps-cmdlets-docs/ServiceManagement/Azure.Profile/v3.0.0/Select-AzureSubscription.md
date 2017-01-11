@@ -8,7 +8,7 @@ ms.assetid: 6E4DF37A-CCED-490E-991E-2331875D0747
 # Select-AzureSubscription
 
 ## SYNOPSIS
-Changes the current and default Azure subscriptions
+Changes the current and default Azure subscriptions.
 
 ## SYNTAX
 
@@ -59,7 +59,7 @@ The "default" subscription designation is saved in your subscription data file.
 The session-specific "current" designation is not saved.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 

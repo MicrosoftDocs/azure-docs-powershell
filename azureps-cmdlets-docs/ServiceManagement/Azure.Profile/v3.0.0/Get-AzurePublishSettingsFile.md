@@ -37,20 +37,20 @@ If  malicious users access your publish settings file,  they can edit, create, a
 As a security best practice, save the file to a location in your Downloads or Documents folder and then delete it after using **Import-AzurePublishSettingsFile** cmdlet to import the settings.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 
 ### Example 1: Download a publish settings file
 ```
-PS C:\>Get-AzurePublishSettingsFile
+PS C:\> Get-AzurePublishSettingsFile
 ```
 
 This command opens your default browser, connects to your Windows Azure account, and then downloads the .publishsettings file for your account.
 
 ### Example 2: Specify a realm
 ```
-PS C:\>Get-AzurePublishSettingsFile -Realm contoso.com -Passthru
+PS C:\> Get-AzurePublishSettingsFile -Realm contoso.com -Passthru
 ```
 
 This command downloads the publish settings file for an account in the contoso.com domain.
@@ -63,7 +63,7 @@ Specifies an Azure environment.
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see Azure Packhttp://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx) (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
 
 ```yaml
 Type: String
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ### -Profile
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see Azure Packhttp://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx) (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
 
 ```yaml
 Type: AzureSMProfile

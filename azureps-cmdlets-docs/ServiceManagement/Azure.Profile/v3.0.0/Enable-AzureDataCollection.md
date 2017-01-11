@@ -19,10 +19,6 @@ Enable-AzureDataCollection [-Profile <AzureSMProfile>] [<CommonParameters>]
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

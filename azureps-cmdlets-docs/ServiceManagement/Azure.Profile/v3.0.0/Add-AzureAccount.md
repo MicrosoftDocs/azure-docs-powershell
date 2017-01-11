@@ -8,7 +8,7 @@ ms.assetid: 5C42ED39-B6EA-40C6-9B51-448250B3E7B2
 # Add-AzureAccount
 
 ## SYNOPSIS
-Adds the Azure account to Windows PowerShell
+Adds the Azure account to Windows PowerShell.
 
 ## SYNTAX
 
@@ -35,28 +35,28 @@ When the command completes, you can manage your Azure account in Windows PowerSh
 
 There are two different ways to make your Azure account available to Windows PowerShell.
 You can use the **Add-AzureAccount** cmdlet, which uses Azure Active Directory (Azure AD) authentication access tokens, or **Import-AzurePublishSettingsFile**, which uses a management certificate.
-For guidance on which method to use, see "How to: Connect to your subscriptionhttp://azure.microsoft.com/documentation/articles/install-configure-powershell/" (http://azure.microsoft.com/documentation/articles/install-configure-powershell/#Connect).
+For guidance on which method to use, see [How to: Connect to your subscription](http://azure.microsoft.com/documentation/articles/install-configure-powershell/) (http://azure.microsoft.com/documentation/articles/install-configure-powershell/#Connect).
 
 When you run **Add-AzureAccount**, it displays an interactive window that prompts you to sign into your Azure account.
 This sign-in is valid until the access token expires.
 When it expires, cmdlets that require access to your account prompt you to run **Add-AzureAccount** again.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 
-### ---------- Example 1: Add an account ----------
+### Example 1: Add an account 
 ```
-PS C:\>Add-AzureAccount
+PS C:\> Add-AzureAccount
 ```
 
 This command adds an Azure account to Windows PowerShell.
 When you run the command, a windows pops up to request the user name and password of the account.
 
-### ---------- Example 2: Use an alternate subscription data file ----------
+### Example 2: Use an alternate subscription data file 
 ```
-PS C:\>Add-AzureAccount -SubscriptionDataFile C:\Testing\SDF.xml
+PS C:\> Add-AzureAccount -SubscriptionDataFile C:\Testing\SDF.xml
 ```
 
 This command uses the **SubscriptionDataFile** parameter to direct **Add-AzureAccount** to store the account data in the C:\Testing\SDF.xml file, instead of the default file.

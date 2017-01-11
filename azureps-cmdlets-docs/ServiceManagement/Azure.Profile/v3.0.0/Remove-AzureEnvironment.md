@@ -8,7 +8,7 @@ ms.assetid: E9653C03-621A-4A3D-AF99-3604E9BE7473
 # Remove-AzureEnvironment
 
 ## SYNOPSIS
-Deletes an Azure environment from Windows PowerShell
+Deletes an Azure environment from Windows PowerShell.
 
 ## SYNTAX
 
@@ -22,20 +22,20 @@ This cmdlet does not delete the environment from Microsoft Azure, or change the 
 
 An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
 You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
-For more information, see Azure Packhttp://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
+For more information, see [Azure Pack](http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx) (http://www.microsoft.com/server-cloud/products/windows-azure-pack/default.aspx).
 
 ## EXAMPLES
 
 ### Example 1: Delete an environment
 ```
-PS C:\>Remove-AzureEnvironment -Name ContosoEnv
+PS C:\> Remove-AzureEnvironment -Name ContosoEnv
 ```
 
 This command deletes the ContosoEnv environment from Windows PowerShell.
 
 ### Example 2: Delete multiple environments
 ```
-PS C:\>Get-AzureEnvironment | Where-Object EnvironmentName -like "Contoso*" | ForEach-Object {Remove-AzureEnvironment -Name $_.EnvironmentName }
+PS C:\> Get-AzureEnvironment | Where-Object EnvironmentName -like "Contoso*" | ForEach-Object {Remove-AzureEnvironment -Name $_.EnvironmentName }
 ```
 
 This command deletes environments whose names begin with "Contoso" from Windows PowerShell.
