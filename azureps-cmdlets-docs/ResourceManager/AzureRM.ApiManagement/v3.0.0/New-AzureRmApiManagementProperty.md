@@ -25,7 +25,7 @@ The **New-AzureRmApiManagementProperty** cmdlet creates an Azure API Management 
 ### Example 1: Create a property that includes tags
 ```
 PS C:\> $Tags = 'sdk', 'powershell'
-PS C:\>  New-AzureRmApiManagementProperty -Context $ApimContext -PropertyId "Property11" -Name "Property Name" -Value "Property Value" -Tags $Tags
+PS C:\> New-AzureRmApiManagementProperty -Context $ApimContext -PropertyId "Property11" -Name "Property Name" -Value "Property Value" -Tags $Tags
 ```
 
 The first command assigns two values to the $Tags variable.
@@ -155,5 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementProperty](./Remove-AzureRmApiManagementProperty.md)
 
 [Set-AzureRmApiManagementProperty](./Set-AzureRmApiManagementProperty.md)
-
-
