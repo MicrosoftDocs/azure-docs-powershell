@@ -41,10 +41,10 @@ This command updates deployment of an API Management instance to a three unit ca
 ### Example 2: Get an ApiManagement instance and rescale it
 ```
 PS C:\> $ApiManagement = Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi"
-PS C:\>  $ApiManagement.Sku = "Premium"
-PS C:\>  $ApiManagement.Capacity = 5
-PS C:\>  $ApiManagement.AddRegion("Central US", "Premium", 3)
-PS C:\>  Update-AzureRmApiManagementDeployment -ApiManagement $ApiManagement
+PS C:\> $ApiManagement.Sku = "Premium"
+PS C:\> $ApiManagement.Capacity = 5
+PS C:\> $ApiManagement.AddRegion("Central US", "Premium", 3)
+PS C:\> Update-AzureRmApiManagementDeployment -ApiManagement $ApiManagement
 ```
 
 This example gets an Api Management instance, scales it to five premium units and then adds an additional three units to the premium region.
