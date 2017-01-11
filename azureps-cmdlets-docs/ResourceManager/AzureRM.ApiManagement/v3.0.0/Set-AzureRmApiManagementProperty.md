@@ -25,7 +25,7 @@ The **Set-AzureRmApiManagementProperty** cmdlet modifies an Azure API Management
 ### Example 1: Change the tags on a property
 ```
 PS C:\> $Tags = 'sdk', 'powershell'
-PS C:\>  Set-AzureRmApiManagementProperty -Context $ApimContext -PropertyId "Property11" -Tags $Tags -PassThru
+PS C:\> Set-AzureRmApiManagementProperty -Context $ApimContext -PropertyId "Property11" -Tags $Tags -PassThru
 ```
 
 The first command assigns two values to the $Tags variable.
