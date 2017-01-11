@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -TemplateParameters
 Specifies an array or parameters defined in parameter *UrlTemplate*.
-If you do not specify a value, a default value will be generated based on the UrlTemplate.
+If you do not specify a value, a default value will be generated based on the *UrlTemplate*.
 Use the parameter to give more details on parameters such as description, type, and other possible values.
 
 ```yaml
@@ -220,5 +220,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementOperation](./New-AzureRmApiManagementOperation.md)
 
 [Remove-AzureRmApiManagementOperation](./Remove-AzureRmApiManagementOperation.md)
-
-

@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementLogger](./New-AzureRmApiManagementLogger.md)
 
 [Set-AzureRmApiManagementLogger](./Set-AzureRmApiManagementLogger.md)
-
-

@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementSubscription](./New-AzureRmApiManagementSubscription.md)
 
 [Set-AzureRmApiManagementSubscription](./Set-AzureRmApiManagementSubscription.md)
-
-
