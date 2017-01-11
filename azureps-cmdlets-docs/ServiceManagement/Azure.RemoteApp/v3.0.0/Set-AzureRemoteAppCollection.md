@@ -47,10 +47,6 @@ The **Set-AzureRemoteAppCollection** cmdlet sets the properties of an Azure Remo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -87,7 +83,7 @@ Accept wildcard characters: False
 
 ### -CustomRdpProperty
 Specifies custom Remote Desktop Protocol (RDP) properties which can be used to configure drive redirection and other settings. 
-See RDP Settings for Remote Desktop Services in Windows Serverhttps://technet.microsoft.com/library/ff393699(v=ws.10).aspx (https://technet.microsoft.com/library/ff393699(v=ws.10).aspx) for details.
+See [RDP Settings for Remote Desktop Services in Windows Server](https://technet.microsoft.com/library/ff393699.aspx) (https://technet.microsoft.com/library/ff393699.aspx) for details.
 
 ```yaml
 Type: String

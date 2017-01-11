@@ -25,7 +25,7 @@ The user's client disconnects from their Azure RemoteApp session, but the user's
 
 ### Example 1: Disconnect a user's session
 ```
-PS C:\>Disconnect-AzureRemoteAppSession -CollectionName "ContosoApps" -UserUpn "PattiFuller@contoso.com"
+PS C:\> Disconnect-AzureRemoteAppSession -CollectionName "ContosoApps" -UserUpn "PattiFuller@contoso.com"
 ```
 
 This command disconnects the Azure RemoteApp session in the ContosoApps collection for the user whose UPN is PattiFuller@contoso.com.

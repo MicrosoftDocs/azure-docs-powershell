@@ -25,7 +25,7 @@ This cmdlet displays the name of each object that it gets.
 
 ### Example 1: Get stale objects for a collection
 ```
-PS C:\>Clear-AzureRemoteAppVmStaleAdObject -CollectionName "Contoso"
+PS C:\> Clear-AzureRemoteAppVmStaleAdObject -CollectionName "Contoso"
 ```
 
 This second command gets the stale objects for the collection named Contoso.

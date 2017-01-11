@@ -26,7 +26,7 @@ If you specify the *Verbose* common parameter, this cmdlet displays the name of 
 
 ### Example 1: Clear stale objects for a collection
 ```
-PS C:\>$AdminCredentials = Get-Credential
+PS C:\> $AdminCredentials = Get-Credential
 PS C:\> Clear-AzureRemoteAppVmStaleAdObject -CollectionName "Contoso" -Credential $AdminCredentials
 ```
 
