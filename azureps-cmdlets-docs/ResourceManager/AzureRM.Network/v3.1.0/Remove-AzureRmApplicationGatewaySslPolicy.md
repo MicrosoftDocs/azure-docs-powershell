@@ -18,15 +18,14 @@ Remove-AzureRmApplicationGatewaySslPolicy -ApplicationGateway <PSApplicationGate
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmApplicationGatewaySslPolicy cmdlet removes SSL policy from an Azure application gateway.
+The **Remove-AzureRmApplicationGatewaySslPolicy** cmdlet removes SSL policy from an Azure application gateway.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Remove an SSL policy from an application gateway  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Remove an SSL policy from an application gateway
 
 ```
-PS C:\>$AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $AppGW = Remove-AzureRmApplicationGatewaySslPolicy -ApplicationGateway $AppGW
 ```
 
@@ -65,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -113,4 +112,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 [New-AzureRmApplicationGatewaySslPolicy]()
 
 [Get-AzureRmApplicationGatewaySslPolicy]()
-
