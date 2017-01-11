@@ -8,7 +8,7 @@ schema: 2.0.0
 # Stop-AzureRmApplicationGateway
 
 ## SYNOPSIS
-Stops an application gateway
+Stops an application gateway.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ The **Stop-AzureRmApplicationGateway** cmdlet stops an application gateway.
 
 ### Example 1: Stop an application gateway
 ```
-PS C:\>Stop-AzureRmApplicationGateway -ApplicationGateway $AppGw
+PS C:\> Stop-AzureRmApplicationGateway -ApplicationGateway $AppGw
 ```
 
 This command stops the application gateway stored in the $AppGw variable.
@@ -107,5 +107,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmApplicationGateway](./Set-AzureRmApplicationGateway.md)
 
 [Start-AzureRmApplicationGateway](./Start-AzureRmApplicationGateway.md)
-
-
