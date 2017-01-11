@@ -24,7 +24,7 @@ The **Remove-AzureRmApiManagementSubscription** cmdlet deletes an existing subsc
 
 ### Example 1: Delete a subscription
 ```
-PS C:\>Remove-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789" -Force
+PS C:\> Remove-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789" -Force
 ```
 
 This command deletes an existing subscription.
