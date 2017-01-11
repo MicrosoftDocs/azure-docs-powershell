@@ -29,7 +29,8 @@ The **Restart-AzureSiteRecoveryJob** cmdlet restarts an Azure Site Recovery job.
 
 ### Example 1: Restart a job
 ```
-PS C:\>Restart-AzureSiteRecoveryJob -Id "bbf0b839-9aaa-49e1-8354-601c9145966d"
+PS C:\> Restart-AzureSiteRecoveryJob -Id "bbf0b839-9aaa-49e1-8354-601c9145966d"
+
 ID               : bbf0b839-9aaa-49e1-8354-601c9145966d
 ClientRequestId  : ef42c8b0-640c-4442-960b-349f83d161a5-2014-24-06 14:24:04Z-P
 State            : Failed

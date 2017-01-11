@@ -24,7 +24,7 @@ The **New-AzureRmLoadBalancerBackendAddressPoolConfig** cmdlet creates a backend
 
 ### Example 1: Create a backend address pool configuration for a load balancer
 ```
-PS C:\>New-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02"
+PS C:\> New-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02"
 ```
 
 This command creates a backend address pool configuration named BackendAddressPool02 for a load balancer.
@@ -101,5 +101,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmLoadBalancerBackendAddressPoolConfig](./Get-AzureRmLoadBalancerBackendAddressPoolConfig.md)
 
 [Remove-AzureRmLoadBalancerBackendAddressPoolConfig](./Remove-AzureRmLoadBalancerBackendAddressPoolConfig.md)
-
-

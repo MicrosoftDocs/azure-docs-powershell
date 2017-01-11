@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureRmLocalNetworkGateway
 
 ## SYNOPSIS
+Creates a local network gateway.
 
 ## SYNTAX
 
@@ -20,17 +21,15 @@ New-AzureRmLocalNetworkGateway -Name <String> -ResourceGroupName <String> -Locat
 ```
 
 ## DESCRIPTION
+The **New-AzureRmLocalNetworkGateway** cmdlet creates a local network gateway.
 
 ## EXAMPLES
-
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
 ### -Name
+Specifies the local network gateway that this cmdlet creates.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -250,5 +249,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmLocalNetworkGateway](./Remove-AzureRmLocalNetworkGateway.md)
 
 [Set-AzureRmLocalNetworkGateway](./Set-AzureRmLocalNetworkGateway.md)
-
-

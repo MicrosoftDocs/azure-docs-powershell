@@ -27,14 +27,11 @@ The **New-AzureRmExpressRouteCircuit** cmdlet creates an Azure express route cir
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
-
 ## PARAMETERS
 
 ### -Name
+Specifies the name of the express route circuit this cmdlet creates.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -48,6 +45,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+Specifies the name of the resource group that contains the express route circuit.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -285,4 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

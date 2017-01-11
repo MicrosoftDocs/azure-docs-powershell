@@ -36,7 +36,8 @@ Protection policies define replication settings for protected items and can be a
 
 ### Example 1: Get protected containers
 ```
-PS C:\>Get-AzureSiteRecoveryProtectionContainer
+PS C:\> Get-AzureSiteRecoveryProtectionContainer
+
 Name                        : PrimaryCloud
 ID                          : fd00d920-79e4-4f2d-a282-a779c0cecb7f_ce995917-c962-45d0-b7f3-9f408a4e1429
 FabricObjectId              : fd00d920-79e4-4f2d-a282-a779c0cecb7f

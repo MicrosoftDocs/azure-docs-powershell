@@ -26,7 +26,8 @@ A recovery plan gathers virtual machines in a group for the purposes of failover
 
 ### Example 1: Add a recovery plan to an Azure Site Recovery vault
 ```
-PS C:\>New-AzureSiteRecoveryRecoveryPlan -File "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
+PS C:\> New-AzureSiteRecoveryRecoveryPlan -File "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
+
 ID               : 189283c7-7fd9-4010-8bf1-d2a2e4a46df4
 ClientRequestId  : 6c56d96e-dfdd-4898-81cf-8562f51a8129-2014-34-06 15:34:23Z-P
 State            : NotStarted

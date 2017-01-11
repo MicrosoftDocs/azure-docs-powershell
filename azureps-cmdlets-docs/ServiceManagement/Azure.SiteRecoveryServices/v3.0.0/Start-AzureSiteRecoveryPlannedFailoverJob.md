@@ -38,13 +38,13 @@ Start-AzureSiteRecoveryPlannedFailoverJob -ProtectionEntity <ASRProtectionEntity
 
 ## DESCRIPTION
 The **Start-AzureSiteRecoveryPlannedFailoverJob** cmdlet starts a planned failover for an Azure Site Recovery protection entity or recovery plan.
-You can check whether the job succeeds by using the Get-AzureSiteRecoveryJob cmdlet.
+You can check whether the job succeeds by using the **Get-AzureSiteRecoveryJob** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Start a planned failover job
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer 
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer 
 PS C:\> $Protected = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container 
 PS C:\> Start-AzureSiteRecoveryPlannedFailoverJob -Direction PrimaryToRecovery -ProtectionEntity $Protected -Optimize ForDowntime
 ID               : c38eecdc-731c-405b-a61c-08db99aae2fe
@@ -59,7 +59,7 @@ Tasks            : {}
 Errors           : {}
 ```
 
-The first command gets all protected containers in the current Azure Site Recovery vault by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores the results in the $Container variable.
+The first command gets all protected containers in the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores the results in the $Container variable.
 In this example, there is a single container.
 
 The second command gets the protected virtual machines that belong to the container stored in $Container by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -ProtectionEntityId
 Specifies an **ASRProtectionEntity** object for which to start the job.
-To obtain an **ASRProtectionEntity** object, use the Get-AzureSiteRecoveryProtectionEntity cmdlet.
+To obtain an **ASRProtectionEntity** object, use the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
 
 ```yaml
 Type: String
