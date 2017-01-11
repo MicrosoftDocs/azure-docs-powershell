@@ -42,7 +42,7 @@ PS C:\> New-AzureVMConfig -Name "FTPInstance" -InstanceSize Small -ImageName "Im
 This command creates a virtual machine configuration object by using the **New-AzureVMConfig** cmdlet.
 The command passes that object to the **Add-AzureProvisioningConfig** cmdlet, which provides additional configuration.
 The current cmdlet adds the Public IP name ftpip.
-The command passes the configuration to the New-AzureVM cmdlet, which creates the virtual machine.
+The command passes the configuration to the **New-AzureVM** cmdlet, which creates the virtual machine.
 
 ### Example 3: Add a Public IP and label to an existing virtual machine
 ```

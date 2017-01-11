@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ### -VirtualIPName
 Specifies the name of a virtual IP address that Azure associates to the endpoint.
 Your service can have multiple virtual IPs.
-To create virtual IPs, use the Add-AzureVirtualIP cmdlet.
+To create virtual IPs, use the **Add-AzureVirtualIP** cmdlet.
 
 ```yaml
 Type: String

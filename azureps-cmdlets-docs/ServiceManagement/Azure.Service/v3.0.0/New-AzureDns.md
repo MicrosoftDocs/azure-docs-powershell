@@ -18,7 +18,7 @@ New-AzureDns [-Name] <String> [-IPAddress] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 The **New-AzureDns** cmdlet creates an Azure DNS settings object.
-You can use a DNS settings object when you create a virtual machine by using the New-AzureVM cmdlet.
+You can use a DNS settings object when you create a virtual machine by using the **New-AzureVM** cmdlet.
 
 ## EXAMPLES
 

@@ -20,7 +20,7 @@ New-AzureCertificateSetting [[-StoreName] <String>] [-Thumbprint] <String> [<Com
 The **New-AzureCertificateSetting** cmdlet creates a certificate setting object for a certificate that is in an Azure service.
 
 You can use a certificate setting object to create a configuration object by using the **Add-AzureProvisioningConfig** cmdlet.
-Use a configuration object to create virtual machine by using the New-AzureVM cmdlet.
+Use a configuration object to create virtual machine by using the **New-AzureVM** cmdlet.
 You can use a certificate setting object to create a virtual machine by using the New-AzureQuickVM cmdlet.
 
 ## EXAMPLES

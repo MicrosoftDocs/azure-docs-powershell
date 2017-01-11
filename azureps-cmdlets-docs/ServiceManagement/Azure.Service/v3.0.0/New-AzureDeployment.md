@@ -23,7 +23,7 @@ The **New-AzureDeployment** cmdlet creates an Azure deployment from a service th
 This cmdlet creates a deployment based on a package file (.cspkg) and a service configuration file (.cscfg).
 Specify a name that is unique within deployment environment.
 
-Use the New-AzureVM cmdlet to create a deployment based on Azure virtual machines.
+Use the **New-AzureVM** cmdlet to create a deployment based on Azure virtual machines.
 
 ## EXAMPLES
 

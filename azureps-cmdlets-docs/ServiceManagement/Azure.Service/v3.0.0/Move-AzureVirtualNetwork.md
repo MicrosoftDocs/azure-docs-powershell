@@ -65,7 +65,7 @@ This command validates migration for the virtual network named ContosoVNET to th
 ## PARAMETERS
 
 ### -VirtualNetworkName
-Name of the Virtual Network to migrate
+Specifies the name of the Virtual Network to migrate.
 
 ```yaml
 Type: String
