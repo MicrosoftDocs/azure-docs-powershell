@@ -8,6 +8,7 @@ schema: 2.0.0
 # Set-AzureRmLoadBalancerInboundNatPoolConfig
 
 ## SYNOPSIS
+Sets an inbound NAT pool configuration for a load balancer.
 
 ## SYNTAX
 
@@ -28,17 +29,15 @@ Set-AzureRmLoadBalancerInboundNatPoolConfig -Name <String> -LoadBalancer <PSLoad
 ```
 
 ## DESCRIPTION
+The **Set-AzureRmLoadBalancerInboundNatPoolConfig** cmdlet sets an inbound network address translation (NAT) pool configuration for an Azure load balancer.
 
 ## EXAMPLES
-
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 
 ### -Name
+Specifies the name of an inbound NAT pool configuration.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -52,6 +51,9 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancer
+Specifies a load balancer.
+This cmdlet sets an inbound NAT pool configuration for the load balancer that this parameter specifies.
+
 ```yaml
 Type: PSLoadBalancer
 Parameter Sets: (All)
@@ -65,6 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfigurationId
+Specifies the ID for a front-end IP address configuration.
+
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
@@ -78,6 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
+Specifies the protocol that is matched by an inbound NAT rule configuration.
+The acceptable values for this parameter are: Tcp or Udp.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -199,5 +206,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmLoadBalancerInboundNatPoolConfig](./New-AzureRmLoadBalancerInboundNatPoolConfig.md)
 
 [Remove-AzureRmLoadBalancerInboundNatPoolConfig](./Remove-AzureRmLoadBalancerInboundNatPoolConfig.md)
-
-

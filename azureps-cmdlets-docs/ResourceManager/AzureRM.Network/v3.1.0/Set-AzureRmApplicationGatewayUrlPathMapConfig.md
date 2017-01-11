@@ -34,11 +34,6 @@ The **Set-AzureRmApplicationGatewayUrlPathMapConfig** cmdlet sets configuration 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGateway
@@ -157,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultBackendAddressPool
-Specifies the default backend address pool to route in case none of the rules specified in the *pathRules* parameter match.
+Specifies the default backend address pool to route in case none of the rules specified in the *PathRules* parameter match.
 
 ```yaml
 Type: PSApplicationGatewayBackendAddressPool
@@ -172,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultBackendHttpSettings
-Specifies the default backend HTTP settings to use in case none of the rules specified in the *pathRules* parameter match.
+Specifies the default backend HTTP settings to use in case none of the rules specified in the *PathRules* parameter match.
 
 ```yaml
 Type: PSApplicationGatewayBackendHttpSettings
@@ -204,5 +199,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApplicationGatewayUrlPathMapConfig](./New-AzureRmApplicationGatewayUrlPathMapConfig.md)
 
 [Remove-AzureRmApplicationGatewayUrlPathMapConfig](./Remove-AzureRmApplicationGatewayUrlPathMapConfig.md)
-
-

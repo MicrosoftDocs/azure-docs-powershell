@@ -23,15 +23,10 @@ The **Set-AzureRmVirtualNetworkGatewayConnection** cmdlet configures a virtual n
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -VirtualNetworkGatewayConnection
-Specifies the PSVirtualNetworkGatewayConnection object that this cmdlet uses to modify the virtual network gateway connection.
+Specifies the **PSVirtualNetworkGatewayConnection** object that this cmdlet uses to modify the virtual network gateway connection.
 
 ```yaml
 Type: PSVirtualNetworkGatewayConnection
@@ -146,5 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetworkGatewayConnection](./New-AzureRmVirtualNetworkGatewayConnection.md)
 
 [Remove-AzureRmVirtualNetworkGatewayConnection](./Remove-AzureRmVirtualNetworkGatewayConnection.md)
-
-

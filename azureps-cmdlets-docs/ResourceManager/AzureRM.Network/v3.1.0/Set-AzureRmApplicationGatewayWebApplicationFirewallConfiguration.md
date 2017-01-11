@@ -24,7 +24,7 @@ The **Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration** cmdlet 
 
 ### Example 1: Update the application gateway web application firewall configuration
 ```
-PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration -ApplicationGateway $AppGw -Enabled $True -FirewallMode "Detection"
 ```
 
@@ -36,7 +36,7 @@ The second command enables the firewall configuration for the application gatewa
 
 ### -ApplicationGateway
 Specifies an application gateway object.
-You can use the Get-AzureRmApplicationGateway cmdlet to get an application gateway object.
+You can use the [Get-AzureRmApplicationGateway](./Get-AzureRmApplicationGateway.md) cmdlet to get an application gateway object.
 
 ```yaml
 Type: PSApplicationGateway
@@ -133,5 +133,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
 
 [New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
-
-

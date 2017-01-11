@@ -28,7 +28,7 @@ Forced tunneling is carried out by using a virtual private network (VPN) tunnel;
 
 ### Example 1: Assign a default site to a virtual network gateway
 ```
-PS C:\>$LocalGateway = Get-AzureRmLocalNetworkGateway -Name "ContosoLocalGateway " -ResourceGroup "ContosoResourceGroup"
+PS C:\> $LocalGateway = Get-AzureRmLocalNetworkGateway -Name "ContosoLocalGateway " -ResourceGroup "ContosoResourceGroup"
 PS C:\> $VirtualGateway = Get-AzureRmVirtualNetworkGateway -Name "ContosoVirtualGateway"
 PS C:\> Set-AzureRmVirtualNetworkGatewayDefaultSite -GatewayDefaultSite $LocalGateway -VirtualNetworkGateway $VirtualGateway
 ```
@@ -47,7 +47,7 @@ The third command uses the **Set-AzureRmVirtualNetworkGatewayDefaultSite** cmdle
 
 ### -VirtualNetworkGateway
 Specifies an object reference to the virtual network gateway where the default site will be assigned.
-You can create an object reference to a virtual network gateway by using the **Get-AzureRmVirtualNetworkGateway** and specifying the name of the gateway.
+You can create an object reference to a virtual network gateway by using the [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md) and specifying the name of the gateway.
 
 The variable $VirtualGateway can then be used as the parameter value for the *VirtualNetworkGateway* parameter:
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 ### -GatewayDefaultSite
 Specifies an object reference to the local network gateway to be assigned as the default site for the specified virtual network.
-You can use the Get-AzureRmLocalNetworkGateway cmdlet to create an object reference to a local gateway.
+You can use the [Get-AzureRmLocalNetworkGateway](./Get-AzureRmLocalNetworkGateway.md) cmdlet to create an object reference to a local gateway.
 
 ```yaml
 Type: PSLocalNetworkGateway
@@ -140,5 +140,3 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
 [Remove-AzureRmVirtualNetworkGatewayDefaultSite](./Remove-AzureRmVirtualNetworkGatewayDefaultSite.md)
-
-

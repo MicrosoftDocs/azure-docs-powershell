@@ -22,7 +22,7 @@ The **New-AzureRmVpnClientRootCertificate** cmdlet creates a new VPN root certif
 Root certificates are X.509 certificates that identify your Root Certification Authority: all other certificates used on the gateway trust the root certificate.
 
 This cmdlet creates a stand-alone certificate that is not assigned to a virtual gateway.
-Instead, the certificate created by **New-AzureRmVpnClientRootCertificate** is used in conjunction with the New-AzureRmVirtualNetworkGateway cmdlet when creating a new gateway.
+Instead, the certificate created by **New-AzureRmVpnClientRootCertificate** is used in conjunction with the [New-AzureRmVirtualNetworkGateway](./New-AzureRmVirtualNetworkGateway.md) cmdlet when creating a new gateway.
 For example, suppose you create a new certificate and store it in a variable named $Certificate.
 You can then use that certificate object when creating a new virtual gateway.
 For instance,
@@ -33,7 +33,7 @@ For more information, see the documentation for the New-AzureRmVirtualNetworkGat
 
 ## EXAMPLES
 
-### Example 1: Create aclient root certificate
+### Example 1: Create a client root certificate
 ```
 PS C:\> $Text = Get-Content -Path "C:\Azure\Certificates\ExportedCertficate.cer"
 PS C:\> $CertificateText = for ($i=1; $i -lt $Text.Length -1 ; $i++){$Text[$i]}
@@ -154,5 +154,3 @@ This cmdlet creates new instances of the **Microsoft.Azure.Commands.Network.Mode
 [Get-AzureRmVpnClientRootCertificate](./Get-AzureRmVpnClientRootCertificate.md)
 
 [Remove-AzureRmVpnClientRootCertificate](./Remove-AzureRmVpnClientRootCertificate.md)
-
-
