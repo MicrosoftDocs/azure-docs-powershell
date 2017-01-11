@@ -24,7 +24,7 @@ The **Rename-AzureRemoteAppTemplateImage** cmdlet renames an Azure RemoteApp tem
 
 ### Example 1: Rename a template image
 ```
-PS C:\>Rename-AzureRemoteAppTemplateImage -ImageName "ContosoApps" -NewName "ContosoFinanceApps"
+PS C:\> Rename-AzureRemoteAppTemplateImage -ImageName "ContosoApps" -NewName "ContosoFinanceApps"
 ```
 
 This command renames the Azure RemoteApp template image named ContosoApps to ContosoFinanceApps.

@@ -24,7 +24,7 @@ The **Invoke-AzureRemoteAppSessionLogoff** cmdlet immediately logs off a user fr
 
 ### Example 1: Log off a user
 ```
-PS C:\>Invoke-AzureRemoteAppSessionLogoff -CollectionName ContosoApps -UserUpn PattiFuller@contoso.com
+PS C:\> Invoke-AzureRemoteAppSessionLogoff -CollectionName ContosoApps -UserUpn PattiFuller@contoso.com
 ```
 
 This command logs off the user whose UPN is PattiFuller@contoso.com.

@@ -23,7 +23,7 @@ The **Get-AzureRemoteAppVpnDevice** cmdlet retrieves information about a virtual
 
 ### Example 1: Return the available VPN device configurations for a virtual network
 ```
-PS C:\>Get-AzureRemoteVpnDevice -VNetName "ContosoVNet"
+PS C:\> Get-AzureRemoteVpnDevice -VNetName "ContosoVNet"
 
 
 Name                   Platforms

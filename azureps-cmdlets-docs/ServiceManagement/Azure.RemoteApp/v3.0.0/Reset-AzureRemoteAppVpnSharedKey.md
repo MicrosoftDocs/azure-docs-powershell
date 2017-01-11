@@ -24,7 +24,7 @@ The **Reset-AzureRemoteAppVpnSharedKey** cmdlet resets the Azure RemoteApp virtu
 
 ### Example 1: Reset the shared key on a virtual network
 ```
-PS C:\>Reset-AzureRemoteAppVpnSharedKey -VNetName "ContosoVNet"
+PS C:\> Reset-AzureRemoteAppVpnSharedKey -VNetName "ContosoVNet"
 ```
 
 This command resets the shared key on the virtual network named ContosoVNet.

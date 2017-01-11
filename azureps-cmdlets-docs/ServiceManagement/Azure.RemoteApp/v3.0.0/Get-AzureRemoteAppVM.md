@@ -23,7 +23,7 @@ The **Get-AzureRemoteAppVM** cmdlet gets the virtual machines created under an A
 
 ### Example 1: Display the virtual machines in a collection
 ```
-PS C:\>Get-AzureRemoteAppVM -CollectionName "Contoso"
+PS C:\> Get-AzureRemoteAppVM -CollectionName "Contoso"
 ```
 
 This command displays the virtual machines used for session hosting in an Azure RemoteApp collection named Contoso.

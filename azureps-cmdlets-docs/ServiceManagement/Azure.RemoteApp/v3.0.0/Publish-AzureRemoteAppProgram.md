@@ -31,7 +31,7 @@ The **Publish-AzureRemoteAppProgram** cmdlet publishes an Azure RemoteApp progra
 
 ### Example 1: Publish a program in a collection
 ```
-PS C:\>Publish-AzureRemoteAppProgram -CollectionName "ContosoApps" -StartMenuAppId "a3732322-89a5-4cbc-9844-9634c74d337f" -DisplayName "Finance App"
+PS C:\> Publish-AzureRemoteAppProgram -CollectionName "ContosoApps" -StartMenuAppId "a3732322-89a5-4cbc-9844-9634c74d337f" -DisplayName "Finance App"
 ```
 
 This command publishes the program in the ContosoApps collection with the specified *StartMenuAppId* to add the program to the Start Menu.

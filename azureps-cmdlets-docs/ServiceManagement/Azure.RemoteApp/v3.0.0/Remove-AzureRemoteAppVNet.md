@@ -23,10 +23,10 @@ The **Remove-AzureRemoteAppVNet** cmdlet deletes an Azure RemoteApp virtual netw
 
 ### Example 1: Delete a specified virtual network
 ```
-PS C:\>Remove-AzureRemoteAppVnet -VNetName "ContosoVNet"
+PS C:\> Remove-AzureRemoteAppVnet -VNetName "ContosoVNet"
 ```
 
-This command deletes the virtual network named ContosoVNet
+This command deletes the virtual network named ContosoVNet.
 
 ## PARAMETERS
 

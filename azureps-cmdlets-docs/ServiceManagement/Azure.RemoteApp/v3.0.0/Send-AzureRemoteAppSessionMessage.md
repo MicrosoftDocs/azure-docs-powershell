@@ -24,7 +24,7 @@ The **Send-AzureRemoteAppSessionMessage** cmdlet sends a message to a user who i
 
 ### Example 1: Send a message to a user
 ```
-PS C:\>Send-AzureRemoteAppSessionMessage -CollectionName "ContosoApps" -UserUpn "PattiFuller@contoso.com" -Message "The system will be going down for maintenance soon.  Please save your work and close your RemoteApps."
+PS C:\> Send-AzureRemoteAppSessionMessage -CollectionName "ContosoApps" -UserUpn "PattiFuller@contoso.com" -Message "The system will be going down for maintenance soon.  Please save your work and close your RemoteApps."
 ```
 
 This command sends a message to the user whose UPN is PattiFuller@contoso.com.

@@ -24,14 +24,14 @@ The **Add-AzureRemoteAppUser** cmdlet adds a user to an Azure RemoteApp collecti
 
 ### Example 1: Add a user using a Microsoft Account
 ```
-PS C:\>Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType MicrosoftAccount -UserUpn "PattiFuller@contoso.com"
+PS C:\> Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType MicrosoftAccount -UserUpn "PattiFuller@contoso.com"
 ```
 
 This command adds the Microsoft Account PattiFuller@contoso.com to the collection named Contoso.
 
 ### Example 2: Add a user using an Azure Active Directory account
 ```
-PS C:\>Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType OrgId -UserUpn "PattiFuller@contoso.com"
+PS C:\> Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType OrgId -UserUpn "PattiFuller@contoso.com"
 ```
 
 This command adds the Azure Active Directory account PattiFuller@contoso.com to the collection named Contoso.

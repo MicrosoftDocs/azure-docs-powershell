@@ -25,7 +25,7 @@ A template image can deleted only if it is not linked to any Azure RemoteApp col
 
 ### Example 1: Delete a template image
 ```
-PS C:\>Remove-AzureRemoteAppTemplateImage -ImageName "ContosoApps"
+PS C:\> Remove-AzureRemoteAppTemplateImage -ImageName "ContosoApps"
 ```
 
 This command deletes the template image named ContosoApps.
