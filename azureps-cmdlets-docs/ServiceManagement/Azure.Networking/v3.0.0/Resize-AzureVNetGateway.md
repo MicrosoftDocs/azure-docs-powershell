@@ -25,7 +25,7 @@ Valid SKUs for a virtual network gateway are Default, Standard, and HighPerforma
 
 ### Example 1: Change the SKU for a virtual network gateway
 ```
-PS C:\>Resize-AzureVNetGateway -VNetName "ContosoVN07" -GatewaySKU "HighPerformance"
+PS C:\> Resize-AzureVNetGateway -VNetName "ContosoVN07" -GatewaySKU "HighPerformance"
 ```
 
 This command changes the SKU of the virtual network gateway for the virtual network named ContosoVN07 to HighPerformance.

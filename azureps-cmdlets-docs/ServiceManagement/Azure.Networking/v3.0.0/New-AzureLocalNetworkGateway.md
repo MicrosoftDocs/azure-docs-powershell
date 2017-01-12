@@ -23,10 +23,6 @@ The **New-AzureLocalNetworkGateway** cmdlet creates an Azure local network gatew
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

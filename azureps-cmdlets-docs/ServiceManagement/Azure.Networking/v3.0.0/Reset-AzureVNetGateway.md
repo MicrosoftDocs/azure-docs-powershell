@@ -23,7 +23,7 @@ The **Reset-AzureVNetGateway** cmdlet resets and restarts a virtual private netw
 
 ### Example 1: Reset a virtual network gateway
 ```
-PS C:\>Reset-AzureVNetGateway -VNetName "ContosoVN07"
+PS C:\> Reset-AzureVNetGateway -VNetName "ContosoVN07"
 ```
 
 This command resets the virtual network gateway from the virtual network named ContosoVN07.

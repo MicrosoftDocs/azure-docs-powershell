@@ -22,10 +22,6 @@ This command saves the results of the diagnostics session to the storage account
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -23,7 +23,7 @@ The **Stop-AzureApplicationGateway** cmdlet stops an application gateway.
 
 ### Example 1: Stop an application gateway
 ```
-PS C:\>Stop-AzureApplicationGateway -Name "ApplicationGateway06"
+PS C:\> Stop-AzureApplicationGateway -Name "ApplicationGateway06"
 ```
 
 This command stops the application gateway named ApplicationGateway06.

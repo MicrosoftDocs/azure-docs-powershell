@@ -23,10 +23,6 @@ Specify the *Detailed* parameter to display the network security rules.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

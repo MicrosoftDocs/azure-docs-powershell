@@ -23,10 +23,6 @@ The **Set-AzureVNetGatewayIPsecParameters** cmdlet sets Internet Protocol securi
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

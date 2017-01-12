@@ -23,7 +23,7 @@ The **Start-AzureApplicationGateway** cmdlet starts an application gateway.
 
 ### Example 1: Start an application gateway
 ```
-PS C:\>Start-AzureApplicationGateway -Name "ApplicationGateway06"
+PS C:\> Start-AzureApplicationGateway -Name "ApplicationGateway06"
 ```
 
 This command starts the application gateway named ApplicationGateway06.

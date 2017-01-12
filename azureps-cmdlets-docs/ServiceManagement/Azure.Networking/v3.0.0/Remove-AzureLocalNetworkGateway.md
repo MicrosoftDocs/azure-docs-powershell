@@ -21,10 +21,6 @@ The **Remove-AzureLocalNetworkGateway** cmdlet removes an Azure local network ga
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

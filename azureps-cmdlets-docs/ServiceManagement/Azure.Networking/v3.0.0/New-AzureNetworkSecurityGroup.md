@@ -22,10 +22,6 @@ The **New-AzureNetworkSecurityGroup** cmdlet creates an Azure network security g
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -46,7 +42,7 @@ Accept wildcard characters: False
 
 ### -Location
 Specifies the Azure location in which this cmdlet creates a network security group.
-To obtain valid locations, use the Get-AzureLocation cmdlet.
+To obtain valid locations, use the **Get-AzureLocation** cmdlet.
 
 ```yaml
 Type: String

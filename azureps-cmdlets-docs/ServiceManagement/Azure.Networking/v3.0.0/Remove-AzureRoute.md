@@ -24,7 +24,8 @@ The **Remove-AzureRoute** cmdlet removes a route from a route table.
 
 ### Example 1: Remove a route
 ```
-PS C:\>Get-AzureRouteTable -Name "ApplianceRouteTable" | Remove-AzureRoute -RouteName "InternetRoute"
+PS C:\> Get-AzureRouteTable -Name "ApplianceRouteTable" | Remove-AzureRoute -RouteName "InternetRoute"
+
 Confirm
 Are you sure you want to remove the Route "InternetRoute" from Route Table "ApplianceRouteTable"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -56,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+
 
 ```yaml
 Type: String

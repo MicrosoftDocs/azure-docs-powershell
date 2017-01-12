@@ -24,10 +24,6 @@ You can associate the route table to a subnet in a virtual network.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -77,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+
 
 ```yaml
 Type: String

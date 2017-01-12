@@ -19,14 +19,10 @@ Stop-AzureVirtualNetworkGatewayDiagnostics [-GatewayId] <String> [-Profile <Azur
 
 ## DESCRIPTION
 The **Stop-AzureVirtualNetworkGatewayDiagnostics** cmdlet stops a running virtual network gateway diagnostics session.
-This command saves the results of the diagnostics session to the storage account that the Start-AzureVirtualNetworkGatewayDiagnostics cmdlet specifies.
+This command saves the results of the diagnostics session to the storage account that the **Start-AzureVirtualNetworkGatewayDiagnostics** cmdlet specifies.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
