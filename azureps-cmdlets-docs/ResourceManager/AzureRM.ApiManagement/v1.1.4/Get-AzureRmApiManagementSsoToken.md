@@ -24,7 +24,7 @@ The **Get-AzureRmApiManagementSsoToken** cmdlet returns a link (URL) containing 
 
 ### Example 1: Get the SSO token of an API Management service
 ```
-PS C:\>Get-AzureRmApiManagementSsoToken -ResourceGroupName "Contoso" -Name "ContosoApi"
+PS C:\> Get-AzureRmApiManagementSsoToken -ResourceGroupName "Contoso" -Name "ContosoApi"
 ```
 
 This command gets the SSO token of an API Management service.

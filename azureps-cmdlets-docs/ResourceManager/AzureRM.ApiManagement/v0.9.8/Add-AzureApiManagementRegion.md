@@ -27,14 +27,14 @@ To update the deployment of API Management, pass the modified **PsApiManagementI
 
 ### Example 1: Add new deployment regions to a PsApiManagement instance
 ```
-PS C:\>Add-AzureApiManagementRegion -ApiManagement $ApiManagement -Location "East US" -Sku "Premium" -Capacity 2
+PS C:\> Add-AzureApiManagementRegion -ApiManagement $ApiManagement -Location "East US" -Sku "Premium" -Capacity 2
 ```
 
 This command adds two premium SKU units and the region named East US to the **PsApiManagement** instance.
 
 ### Example 2: Add new deployment regions to a PsApiManagement instance and then update deployment
 ```
-PS C:\>Get-AzureApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi" | Add-AzureApiManagementRegion -Location "East US" -Sku "Premium" -Capacity 2
+PS C:\> Get-AzureApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi" | Add-AzureApiManagementRegion -Location "East US" -Sku "Premium" -Capacity 2
 ```
 
 This command gets a **PsApiManagement** object, adds two premium SKU units for the region named East US, and then updates deployment.
