@@ -50,7 +50,7 @@ The **Set-AzureVMExtension** cmdlet sets resource extensions for virtual machine
 
 ### Example 1: Create a virtual machine with resource extensions applied
 ```
-PS C:\>$X = New-AzureVMConfig -Name $VM -InstanceSize Small -ImageName $IMG;$X = Add-AzureProvisioningConfig -VM $X -Password $PWD -AdminUsername $USR -Windows;$X = Set-AzureVMExtension -VM $X -ExtensionName $Ext1 -Publisher $Publisher -Version $VER -PublicConfiguration $P1 -PrivateConfiguration $P2;$X = Set-AzureVMExtension -VM $X -ExtensionName $Ext2 -Publisher $Publisher -Version $VER -PublicConfiguration $P3 -PrivateConfiguration $P4;New-AzureVM -Location $LOC -ServiceName $SVC -VM $X;
+PS C:\> $X = New-AzureVMConfig -Name $VM -InstanceSize Small -ImageName $IMG;$X = Add-AzureProvisioningConfig -VM $X -Password $PWD -AdminUsername $USR -Windows;$X = Set-AzureVMExtension -VM $X -ExtensionName $Ext1 -Publisher $Publisher -Version $VER -PublicConfiguration $P1 -PrivateConfiguration $P2;$X = Set-AzureVMExtension -VM $X -ExtensionName $Ext2 -Publisher $Publisher -Version $VER -PublicConfiguration $P3 -PrivateConfiguration $P4;New-AzureVM -Location $LOC -ServiceName $SVC -VM $X;
 ```
 
 This command creates a virtual machine with resource extensions applied.
@@ -108,7 +108,7 @@ Specifies the reference name of the extension.
 This is a user-defined string that can be used to refer to an extension.
 You need to specify it when the extension is added to the virtual machine for the first time.
 For subsequent updates, you need to specify the previously used reference name while updating the extension.
-The ReferenceName assigned to an extension is returned using the Get-AzureVM cmdlet.
+The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: String

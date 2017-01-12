@@ -23,10 +23,6 @@ The **Reset-AzureLocalNetworkGateway** cmdlet resets a local network gateway.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

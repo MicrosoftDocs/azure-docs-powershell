@@ -37,14 +37,14 @@ The **New-AzureReservedIP** cmdlet creates a reserved IP address.
 
 ### Example 1: Create a new reserved IP
 ```
-PS C:\>New-AzureReservedIP -ReservedIPName $Name -Label $Label -Location $Location
+PS C:\> New-AzureReservedIP -ReservedIPName $Name -Label $Label -Location $Location
 ```
 
 This command creates a new reserved IP address in the subscription, which can be used for creating cloud services that include Web, Worker, and Virtual Machines.
 
 ### Example 2: Create a reserved IP based on an existing IP
 ```
-PS C:\>New-AzureReservedIP -ReservedIPName resip14 -Location "West Europe" -ServiceName piptestwesteurope
+PS C:\> New-AzureReservedIP -ReservedIPName resip14 -Location "West Europe" -ServiceName piptestwesteurope
 ```
 
 This command creates an existing VIP (Virtual IP) on the specified service.

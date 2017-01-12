@@ -42,28 +42,28 @@ The **Get-AzureRmApiManagementGroup** cmdlet gets all or specific API management
 
 ### Example 1: Get all groups
 ```
-PS C:\>Get-AzureRmApiManagementGroup -Context $APImContext
+PS C:\> Get-AzureRmApiManagementGroup -Context $APImContext
 ```
 
 This command gets all groups.
 
 ### Example 2: Get a group by ID
 ```
-PS C:\>Get-AzureRmApiManagementGroup -Context $APImContext -GroupId "0123456789"
+PS C:\> Get-AzureRmApiManagementGroup -Context $APImContext -GroupId "0123456789"
 ```
 
 This command gets  the group ID named 0123456789.
 
 ### Example 3: Get a group by name
 ```
-PS C:\>Get-AzureRmApiManagementGroup -Context $APImContext -Name "Group0002"
+PS C:\> Get-AzureRmApiManagementGroup -Context $APImContext -Name "Group0002"
 ```
 
 This command gets the group named Group0002.
 
 ### Example 4: Get all user groups
 ```
-PS C:\>Get-AzureRmApiManagementGroup -Context $APImContext -UserId "0123456789"
+PS C:\> Get-AzureRmApiManagementGroup -Context $APImContext -UserId "0123456789"
 ```
 
 This command gets all user groups with the user ID named 0123456789.
@@ -167,5 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementGroup](./Remove-AzureRmApiManagementGroup.md)
 
 [Set-AzureRmApiManagementGroup](./Set-AzureRmApiManagementGroup.md)
-
-

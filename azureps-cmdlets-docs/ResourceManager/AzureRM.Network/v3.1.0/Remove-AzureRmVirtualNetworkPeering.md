@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmVirtualNetworkPeering
 
 ## SYNOPSIS
-
+Removes the virtual network peering.
 ## SYNTAX
 
 ```
@@ -23,7 +23,7 @@ Remove-AzureRmVirtualNetworkPeering -VirtualNetworkName <String> -Name <String> 
 
 ### Example 1: Remove a virtual network peering
 ```
-PS C:\>Remove-AzureRmVirtualNetworkPeering -Name "LinkToVNet2" -VirtualNetworkName "MyVirtualNetwork" -ResourceGroupName "MyResourceGroup"
+PS C:\> Remove-AzureRmVirtualNetworkPeering -Name "LinkToVNet2" -VirtualNetworkName "MyVirtualNetwork" -ResourceGroupName "MyResourceGroup"
 ```
 
 This command removes the virtual network peering named LinkToVNet2 located in MyVirtualNetwork in the resource group named MyResourceGroup.
@@ -31,7 +31,7 @@ This command removes the virtual network peering named LinkToVNet2 located in My
 ## PARAMETERS
 
 ### -VirtualNetworkName
-The virtual network name.
+Specifies the virtual network name.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The virtual network peering name.
+Specifies the virtual network peering name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name
+Specifies the resource group name.
 
 ```yaml
 Type: String
@@ -186,4 +186,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

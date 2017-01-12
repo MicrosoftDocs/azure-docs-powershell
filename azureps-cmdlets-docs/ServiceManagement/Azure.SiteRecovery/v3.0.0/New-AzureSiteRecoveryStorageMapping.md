@@ -24,7 +24,7 @@ The **New-AzureSiteRecoveryStorageMapping** cmdlet creates a mapping between an 
 
 ### Example 1: Create a mapping between a storage object and a recovery storage object
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> $Storages = Get-AzureSiteRecoveryStorage -Server $Servers[0]
 PS C:\> New-AzureSiteRecoveryStorageMapping -PrimaryStorage $Storages[0] -RecoveryStorage $Storages[1]
 ```

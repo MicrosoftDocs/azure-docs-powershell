@@ -34,7 +34,8 @@ The **Get-AzureSiteRecoveryRecoveryPlan** cmdlet gets a recovery plan in Azure S
 
 ### Example 1: Get a recovery plan
 ```
-PS C:\>Get-AzureSiteRecoveryRecoveryPlan
+PS C:\> Get-AzureSiteRecoveryRecoveryPlan
+
 ID                            Name                          ServerId                      TargetServerId
 --                            ----                          --------                      --------------
 71de8ebc-1e9a-4242-aec3-ee... ContosoPlan                   4a94c4a9-c856-4577-afbd-36... 78facf56-b273-4941-82fd-cc...

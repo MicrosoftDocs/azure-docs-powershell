@@ -24,11 +24,6 @@ The **Set-AzureRmLocalNetworkGateway** cmdlet modifies a local network gateway.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -LocalNetworkGateway
@@ -151,5 +146,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmLocalNetworkGateway](./New-AzureRmLocalNetworkGateway.md)
 
 [Remove-AzureRmLocalNetworkGateway](./Remove-AzureRmLocalNetworkGateway.md)
-
-

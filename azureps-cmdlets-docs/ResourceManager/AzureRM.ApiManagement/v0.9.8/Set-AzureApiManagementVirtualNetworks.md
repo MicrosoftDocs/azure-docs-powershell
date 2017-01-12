@@ -25,7 +25,7 @@ The **Set-AzureApiManagementVirtualNetworks** cmdlet sets Virtual Network config
 
 ### Example 1: Set virtual networks for an API Management service
 ```
-PS C:\>Set-AzureApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetworks $VirtualNetworks
+PS C:\> Set-AzureApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetworks $VirtualNetworks
 ```
 
 This command sets virtual networks for an API Management service.

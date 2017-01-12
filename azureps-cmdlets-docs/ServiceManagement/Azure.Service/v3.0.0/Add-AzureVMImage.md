@@ -36,7 +36,7 @@ The image is a generalized operating system image, using either Sysprep for Wind
 
 ### Example 1: Add an operating system image to the repository
 ```
-PS C:\>$S = New-AzureVMImageDiskConfigSet
+PS C:\> $S = New-AzureVMImageDiskConfigSet
 PS C:\> Set-AzureVMImageOSDiskConfig -DiskConfig $S -HostCaching ReadWrite -OSState "Generalized" -OS "Windows" -MediaLink $Link
 PS C:\> Set-AzureVMImageDataDiskConfig -DiskConfig $S -DataDiskName "Test1" -HostCaching ReadWrite -Lun 0 -MediaLink $Link1
 PS C:\> Set-AzureVMImageDataDiskConfig -DiskConfig $S -DataDiskName "Test4" -HostCaching ReadWrite -Lun 0 -MediaLink $Link

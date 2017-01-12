@@ -23,7 +23,7 @@ The **Remove-AzureVNetGateway** cmdlet deletes an existing virtual private netwo
 
 ### Example 1: Remove a virtual network gateway
 ```
-PS C:\>Remove-AzureVNetGateway -VNetName "ContosoVN07"
+PS C:\> Remove-AzureVNetGateway -VNetName "ContosoVN07"
 ```
 
 This command removes the virtual network gateway from the virtual network named ContosoVN07.

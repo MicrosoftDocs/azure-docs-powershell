@@ -25,10 +25,6 @@ If you run this cmdlet while a gateway diagnostics session is running, this cmdl
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

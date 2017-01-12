@@ -23,7 +23,8 @@ The **Set-AzureRemoteAppWorkspace** cmdlet sets the properties of an Azure Remot
 
 ### Example 1: Set the workspace name
 ```
-PS C:\>Set-AzureRemoteAppWorkspace -WorkspaceName "Contoso Work Applications"
+PS C:\> Set-AzureRemoteAppWorkspace -WorkspaceName "Contoso Work Applications"
+
 TrackingId
 ----------
 12345

@@ -22,10 +22,6 @@ The **Get-AzureVNetGatewayIPsecParameters** cmdlet gets current Internet Protoco
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -19,13 +19,13 @@ New-AzureRmApiManagementHostnameConfiguration -CertificateThumbprint <String> -H
 
 ## DESCRIPTION
 The **New-AzureRmApiManagementHostnameConfiguration** cmdlet is a helper command that creates an instance of **PsApiManagementHostnameConfiguration**.
-This command is used with the Set-AzureRmApiManagementHostnames cmdlet.
+This command is used with the [Set-AzureRmApiManagementHostnames](./Set-AzureRmApiManagementHostnames.md) cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Create and initialize an instance of PsApiManagementHostnameConfiguration
 ```
-PS C:\>New-AzureRmApiManagementHostnameConfiguration -Hostname "portal.contoso.com" -CertificateThumbprint "33CC47C6FCA848DC9B14A6F071C1EF7C"
+PS C:\> New-AzureRmApiManagementHostnameConfiguration -Hostname "portal.contoso.com" -CertificateThumbprint "33CC47C6FCA848DC9B14A6F071C1EF7C"
 ```
 
 This command creates and initializes an instance of **PsApiManagementHostnameConfiguration**.
@@ -34,7 +34,7 @@ This command creates and initializes an instance of **PsApiManagementHostnameCon
 
 ### -CertificateThumbprint
 Specifies the certificate thumbprint.
-The certificate must be first imported with the Import-AzureRmApiManagementHostnameCertificate cmdlet.
+The certificate must be first imported with the [Import-AzureRmApiManagementHostnameCertificate](./Import-AzureRmApiManagementHostnameCertificate.md) cmdlet.
 
 ```yaml
 Type: String
@@ -77,5 +77,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-AzureRmApiManagementHostnameCertificate](./Import-AzureRmApiManagementHostnameCertificate.md)
 
 [Set-AzureRmApiManagementHostnames](./Set-AzureRmApiManagementHostnames.md)
-
-

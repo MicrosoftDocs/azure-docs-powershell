@@ -42,14 +42,14 @@ The **New-AzureServiceDiagnosticsExtensionConfig** cmdlet generates a configurat
 
 ### Example 1: Create the Azure Diagnostics extension for all roles in the cloud service
 ```
-PS C:\>$WadConfig = New-AzureServiceDiagnosticExtensionConfig -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML
+PS C:\> $WadConfig = New-AzureServiceDiagnosticExtensionConfig -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML
 ```
 
 This command creates the Azure Diagnostics extension for all of the roles in the cloud service.
 
 ### Example 2: Create the Azure Diagnostics extension for a role
 ```
-PS C:\>$WadConfig = New-AzureServiceDiagnosticExtensionConfig -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML -Role "WebRole1"
+PS C:\> $WadConfig = New-AzureServiceDiagnosticExtensionConfig -StorageContext $StorageContext -DiagnosticsConfigurationPath $WadConfigXML -Role "WebRole1"
 ```
 
 This command creates the Azure Diagnostics extension for the role WebRole01 in the cloud service.

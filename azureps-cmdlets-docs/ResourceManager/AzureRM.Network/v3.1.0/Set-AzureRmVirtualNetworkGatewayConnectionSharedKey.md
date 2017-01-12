@@ -23,11 +23,6 @@ The **Set-AzureRmVirtualNetworkGatewayConnectionSharedKey** cmdlet configures th
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name
@@ -46,7 +41,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that the virtual network gateway belongs to
+Specifies the name of the resource group that the virtual network gateway belongs to.
 
 ```yaml
 Type: String
@@ -174,5 +169,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVirtualNetworkGatewayConnectionSharedKey](./Get-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
 
 [Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey](./Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
-
-

@@ -25,7 +25,7 @@ The **Set-AzureRmApiManagementProduct** cmdlet sets the API Management product d
 
 ### Example 1: Update the product details
 ```
-PS C:\>Set-AzureRmApiManagementProduct -Context $APImContext -ProductId "0123456789" -Title "Starter" -Description "Starter Product" -LegalTerms "Free for all" -SubscriptionRequired $True -State "NotPublished"
+PS C:\> Set-AzureRmApiManagementProduct -Context $APImContext -ProductId "0123456789" -Title "Starter" -Description "Starter Product" -LegalTerms "Free for all" -SubscriptionRequired $True -State "NotPublished"
 ```
 
 This command updates the API Management product details, requires a subscription, and then unpublishes.
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionRequired
 Indicates whether the product requires a subscription.
-The default value for this parameter is **$True**.
+The default value for this parameter is $True.
 
 ```yaml
 Type: Boolean
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ApprovalRequired
 Indicates whether the subscription to the product requires approval.
-The default value is **$False**.
+The default value is $False.
 
 ```yaml
 Type: Boolean
@@ -208,5 +208,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementProduct](./New-AzureRmApiManagementProduct.md)
 
 [Remove-AzureRmApiManagementProduct](./Remove-AzureRmApiManagementProduct.md)
-
-

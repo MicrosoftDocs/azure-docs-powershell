@@ -37,14 +37,14 @@ The **Get-AzureRmApiManagementProduct** cmdlet gets a list or a particular produ
 
 ### Example 1: Get all products
 ```
-PS C:\>Get-AzureRmApiManagementProduct -Context $APImContext
+PS C:\> Get-AzureRmApiManagementProduct -Context $APImContext
 ```
 
 This command get all API Management products.
 
 ### Example 2: Get a product by ID
 ```
-PS C:\>Get-AzureRmApiManagementProduct -Context $APImContext -ProductId "0123456789"
+PS C:\> Get-AzureRmApiManagementProduct -Context $APImContext -ProductId "0123456789"
 ```
 
 This command get an API Management product by ID.

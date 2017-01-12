@@ -32,7 +32,7 @@ The cmdlet can launch a remote desktop connection to the specified virtual machi
 
 ### Example 1: Get an RDP file
 ```
-PS C:\>Get-AzureRemoteDesktopFile -ServiceName "ContosoService" -Name "VirtualMachine07" -LocalPath "C:\temp\VirtualMachine07.rdp"
+PS C:\> Get-AzureRemoteDesktopFile -ServiceName "ContosoService" -Name "VirtualMachine07" -LocalPath "C:\temp\VirtualMachine07.rdp"
 ```
 
 This command gets an RDP file for the VirtualMachine07 virtual machine named VirtualMachine07 that runs on the service named ContosoService.
@@ -40,7 +40,7 @@ The command stores that file as C:\temp\VirtualMachine07.rdp.
 
 ### Example 2: Start a remote session
 ```
-PS C:\>Get-AzureRemoteDesktopFile -ServiceName "ContosoService" -Name "VirtualMachine07" -Launch
+PS C:\> Get-AzureRemoteDesktopFile -ServiceName "ContosoService" -Name "VirtualMachine07" -Launch
 ```
 
 This command gets an RDP file for the VirtualMachine07 virtual machine named VirtualMachine07 that runs on the service named ContosoService.

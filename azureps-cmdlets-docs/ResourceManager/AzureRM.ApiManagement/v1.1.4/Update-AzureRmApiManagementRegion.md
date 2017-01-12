@@ -25,7 +25,6 @@ To update a deployment of an API Management use the modified **PsApiManagementIn
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -ApiManagement

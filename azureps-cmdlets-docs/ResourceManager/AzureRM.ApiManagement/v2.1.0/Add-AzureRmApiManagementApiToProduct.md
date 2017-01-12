@@ -24,7 +24,7 @@ The **Add-AzureRmApiManagementApiToProduct** cmdlet adds an Azure API Management
 
 ### Example 1: Add an API to a product
 ```
-PS C:\>Add-AzureRmApiManagementApiToProduct -Context $ApiMgmtContext -ProductId "0123456789" -ApiId "0001"
+PS C:\> Add-AzureRmApiManagementApiToProduct -Context $ApiMgmtContext -ProductId "0123456789" -ApiId "0001"
 ```
 
 This command adds the specified API to the specified product.
@@ -145,5 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-AzureRmApiManagementApiFromProduct](./Remove-AzureRmApiManagementApiFromProduct.md)
-
-

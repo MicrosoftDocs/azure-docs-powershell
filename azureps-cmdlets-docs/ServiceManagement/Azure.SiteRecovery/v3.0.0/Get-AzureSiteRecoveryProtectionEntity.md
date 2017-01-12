@@ -55,7 +55,7 @@ The **Get-AzureSiteRecoveryProtectionEntity** cmdlet gets protected objects in M
 
 ### Example 1: Display a protected virtual machine in a container
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer
 PS C:\> Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container 
 ID                           : 43aaab46-1cb0-4c39-8077-9a091c3b05ce
 ServerId                     : 4a94c4a9-c856-4577-afbd-367fe9b3ce9c

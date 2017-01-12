@@ -32,7 +32,7 @@ The **Start-AzureSiteRecoveryProtectionProfileDissociationJob** cmdlet initiates
 
 ### Example 1: Dissociate a protection profile
 ```
-PS C:\>$ProtectionContainer01 = Get-AzureSiteRecoveryProtectionContainer -Id "5ba2ea95-856d-4033-9ca3-91e3e2c080b9"
+PS C:\> $ProtectionContainer01 = Get-AzureSiteRecoveryProtectionContainer -Id "5ba2ea95-856d-4033-9ca3-91e3e2c080b9"
 PS C:\> $ProtectionContainer02 = Get-AzureSiteRecoveryProtectionContainer -Id "cf011f2a-aa19-443c-9f60-357f6b8afb77"
 PS C:\> Start-AzureSiteRecoveryProtectionProfileDissociationJob -PrimaryProtectionContainer $ProtectionContainer01 -ProtectionProfile $ProtectionContainer01.AvailableProtectionProfiles[0] -RecoveryProtectionContainer $ProtectionContainer02
 Name             : MyProtectionProfile
@@ -47,7 +47,7 @@ Tasks            : {}
 Errors           : {}
 ```
 
-The first command gets a protection container by using the Get-AzureSiteRecoveryProtectionContainer cmdlet, and then stores that container in the $ProtectionContainer01 variable.
+The first command gets a protection container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores that container in the $ProtectionContainer01 variable.
 
 The second command gets a protection container, and then stores it in the $ProtectionContainer02 variable.
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ### -ProtectionProfile
 Specifies the protection profile settings to disassociate from the protection containers.
 Specifies the protection profile settings to apply to the protection containers.
-To obtain an **ASRProtectionProfile** object, use the New-AzureSiteRecoveryProtectionProfileObject cmdlet.
+To obtain an **ASRProtectionProfile** object, use the **New-AzureSiteRecoveryProtectionProfileObject** cmdlet.
 
 ```yaml
 Type: ASRProtectionProfile

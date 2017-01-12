@@ -26,7 +26,7 @@ The **New-AzureRMApiManagement** cmdlet creates an API Management deployment in 
 
 ### Example 1: Create at Developer tier API Management service
 ```
-PS C:\>New-AzureApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com"
+PS C:\> New-AzureApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com"
 ```
 
 This command creates a Developer tier API Management service.
@@ -36,7 +36,7 @@ Therefore, the cmdlet uses the default value of Developer.
 
 ### Example 2: Create a Standard tier service that has three units
 ```
-PS C:\>New-AzureApiManagement -ResourceGroupName "ContosoGroup02 -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com" -Sku Standard -Capacity 3
+PS C:\> New-AzureApiManagement -ResourceGroupName "ContosoGroup02 -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com" -Sku Standard -Capacity 3
 ```
 
 This command creates a Standard tier API Management service that has three units.

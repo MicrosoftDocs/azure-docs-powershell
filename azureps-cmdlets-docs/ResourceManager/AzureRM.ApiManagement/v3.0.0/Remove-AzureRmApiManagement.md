@@ -24,7 +24,7 @@ The **Remove-AzureRmApiManagement** cmdlet removes an Azure API Management servi
 
 ### Example 1: Remove an API Management service
 ```
-PS C:\>Remove-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi"
+PS C:\> Remove-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi"
 ```
 
 This command removes the API Management service named ContosoApi.
@@ -125,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagement](./New-AzureRmApiManagement.md)
 
 [Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
-
-

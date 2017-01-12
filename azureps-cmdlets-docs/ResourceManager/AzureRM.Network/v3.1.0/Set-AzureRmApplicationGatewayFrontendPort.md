@@ -24,8 +24,8 @@ The **Set-AzureRmApplicationGatewayFrontendPort** cmdlet modifies a front-end po
 
 ### Example 1: Set an application gateway front-end port to 80
 ```
-PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
-C:\> $ AppGw = Set-AzureRmApplicationGatewayFrontendPort -ApplicationGateway $AppGw -Name -FrontEndPort01? -Port 80
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Set-AzureRmApplicationGatewayFrontendPort -ApplicationGateway $AppGw -Name -FrontEndPort01? -Port 80
 ```
 
 The first command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $AppGw variable.
@@ -136,5 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApplicationGatewayFrontendPort](./New-AzureRmApplicationGatewayFrontendPort.md)
 
 [Remove-AzureRmApplicationGatewayFrontendPort](./Remove-AzureRmApplicationGatewayFrontendPort.md)
-
-

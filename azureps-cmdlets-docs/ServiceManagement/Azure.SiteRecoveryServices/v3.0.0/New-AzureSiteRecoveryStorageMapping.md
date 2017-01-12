@@ -24,12 +24,12 @@ The **New-AzureSiteRecoveryStorageMapping** cmdlet creates a mapping between an 
 
 ### Example 1: Create a mapping between a storage object and a recovery storage object
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> $Storages = Get-AzureSiteRecoveryStorage -Server $Servers[0]
 PS C:\> New-AzureSiteRecoveryStorageMapping -PrimaryStorage $Storages[0] -RecoveryStorage $Storages[1]
 ```
 
-The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
+The first command gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
 The command stores the Site Recovery servers in the $Servers array variable.
 
 The second command gets the site recovery storage for the first server in the $Servers array, and then stores it in the $Storages.

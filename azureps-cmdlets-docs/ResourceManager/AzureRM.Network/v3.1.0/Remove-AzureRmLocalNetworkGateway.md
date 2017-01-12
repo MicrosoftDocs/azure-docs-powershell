@@ -23,11 +23,6 @@ The **Remove-AzureRmLocalNetworkGateway** cmdlet removes a local network gateway
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name
@@ -177,5 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmLocalNetworkGateway](./New-AzureRmLocalNetworkGateway.md)
 
 [Set-AzureRmLocalNetworkGateway](./Set-AzureRmLocalNetworkGateway.md)
-
-

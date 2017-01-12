@@ -24,7 +24,7 @@ The **Get-AzureRemoteAppUser** cmdlet lists the users in an Azure RemoteApp coll
 
 ### Example 1: List the users of a collection
 ```
-PS C:\>Get-AzureRemoteAppUser -CollectionName "Contoso"
+PS C:\> Get-AzureRemoteAppUser -CollectionName "Contoso"
 ```
 
 This command lists the users who have access to the Azure RemoteApp collection named Contoso.

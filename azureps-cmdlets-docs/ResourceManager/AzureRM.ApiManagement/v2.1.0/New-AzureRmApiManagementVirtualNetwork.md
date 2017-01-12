@@ -25,7 +25,7 @@ This command is used with Set-AzureRmApiManagementVirtualNetworks cmdlet.
 
 ### Example 1: Create a virtual network
 ```
-PS C:\>$VirtualNetworks = @()
+PS C:\> $VirtualNetworks = @()
 PS C:\> $VirtualNetworks += New-AzureRmApiManagementVirtualNetwork -Location "East US" -SubtenName "ContosoNet" -VnetId "089D3F4D-B986-4DFD-9259-9112BA7A1F03"
 PS C:\> Set-AzureRmApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetworks $VirtualNetworks
 ```

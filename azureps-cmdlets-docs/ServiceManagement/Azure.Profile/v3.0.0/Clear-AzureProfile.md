@@ -19,10 +19,6 @@ Clear-AzureProfile [-Force] [-Profile <AzureSMProfile>] [<CommonParameters>]
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

@@ -24,7 +24,7 @@ The **Get-AzureRemoteAppCollectionUsageSummary** cmdlet retrieves a usage summar
 
 ### Example 1: Get a usage summary
 ```
-PS C:\>Get-AzureRemoteAppCollectionUsageSummary -CollectionName Contoso -UsageMonth 12 -UsageYear 2014
+PS C:\> Get-AzureRemoteAppCollectionUsageSummary -CollectionName Contoso -UsageMonth 12 -UsageYear 2014
 ```
 
 This command gets a usage summary for the month of December in the year 2014, for a collection named Contoso.

@@ -25,7 +25,7 @@ This command is used with the Set-AzureApiManagementHostnames cmdlet.
 
 ### Example 1
 ```
-PS C:\>New-AzureApiManagementHostnameConfiguration -Hostname "portal.contoso.com" -CertificateThumbprint "33CC47C6FCA848DC9B14A6F071C1EF7C"
+PS C:\> New-AzureApiManagementHostnameConfiguration -Hostname "portal.contoso.com" -CertificateThumbprint "33CC47C6FCA848DC9B14A6F071C1EF7C"
 ```
 
 Create and initialize instance of Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameConfiguration type.

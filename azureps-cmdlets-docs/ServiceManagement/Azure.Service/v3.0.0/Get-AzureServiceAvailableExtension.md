@@ -37,7 +37,7 @@ The **Get-AzureServiceAvailableExtension** cmdlet gets information for the lates
 
 ### Example 1: Get available extensions
 ```
-PS C:\>Get-AzureServiceAvailableExtension
+PS C:\> Get-AzureServiceAvailableExtension
 
           ProviderNameSpace          : Microsoft.Windows.Azure.Extensions
           ExtensionName              : RDP
@@ -62,7 +62,7 @@ This command gets all available extensions.
 
 ### Example 2: Get extensions in a specified namespace
 ```
-PS C:\>Get-AzureServiceAvailableExtension -ProviderNamespace Microsoft.Windows.Azure.Extensions -ExtensionName "RDP" -AllVersions
+PS C:\> Get-AzureServiceAvailableExtension -ProviderNamespace Microsoft.Windows.Azure.Extensions -ExtensionName "RDP" -AllVersions
 
           ProviderNameSpace          : Microsoft.Windows.Azure.Extensions
           ExtensionName              : RDP
@@ -87,7 +87,7 @@ This command gets the extensions with a specified name in a specified namespace.
 
 ### Example 3: Get a specific version of an extension
 ```
-PS C:\>Get-AzureServiceAvailableExtension -ProviderNamespace Microsoft.Windows.Azure.Extensions -ExtensionName "RDP" -Version 1.0.0.1
+PS C:\> Get-AzureServiceAvailableExtension -ProviderNamespace Microsoft.Windows.Azure.Extensions -ExtensionName "RDP" -Version 1.0.0.1
 
           ProviderNameSpace          : Microsoft.Windows.Azure.Extensions
           ExtensionName              : RDP

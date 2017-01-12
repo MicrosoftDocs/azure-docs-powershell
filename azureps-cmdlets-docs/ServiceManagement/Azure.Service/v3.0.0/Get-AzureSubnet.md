@@ -24,7 +24,7 @@ Use **Get-AzureVM** to specify the virtual machine.
 
 ### Example 1: Get subnets for a virtual machine
 ```
-PS C:\>$VM = Get-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine01"
+PS C:\> $VM = Get-AzureVM -ServiceName "ContosoService03" -Name "VirtualMachine01"
 C:\PS> Get-AzureSubnet -VM $VM
 ```
 

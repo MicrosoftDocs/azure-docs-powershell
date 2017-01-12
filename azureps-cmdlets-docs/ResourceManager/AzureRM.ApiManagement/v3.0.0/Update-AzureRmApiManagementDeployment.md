@@ -33,14 +33,14 @@ The **Update-AzureRmApiManagementDeployment** cmdlet updates current deployments
 
 ### Example 1: Update a deployment of an ApiManagement instance
 ```
-PS C:\>Update-AzureRmApiManagementDeployment -ResourceGroupName "Contoso" -Name "ContosoApi" -Sku "Standard" -Capacity 3
+PS C:\> Update-AzureRmApiManagementDeployment -ResourceGroupName "Contoso" -Name "ContosoApi" -Sku "Standard" -Capacity 3
 ```
 
 This command updates deployment of an API Management instance to a three unit capacity standard.
 
 ### Example 2: Get an ApiManagement instance and rescale it
 ```
-PS C:\>$ApiManagement = Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi"
+PS C:\> $ApiManagement = Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi"
 PS C:\> $ApiManagement.Sku = "Premium"
 PS C:\> $ApiManagement.Capacity = 5
 PS C:\> $ApiManagement.AddRegion("Central US", "Premium", 3)

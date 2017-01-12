@@ -23,10 +23,6 @@ The **Set-AzureVirtualNetworkGatewayIPsecParameters** cmdlet sets IPsec paramete
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

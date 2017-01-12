@@ -22,10 +22,6 @@ If a binary large object (blob) exists where the **Start-AzureVNetGatewayDiagnos
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

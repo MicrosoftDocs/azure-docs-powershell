@@ -23,7 +23,7 @@ The **Remove-AzureVNetConfig** cmdlet removes all virtual network settings from 
 
 ### Example 1: Remove a virtual network configuration from the current subscription
 ```
-PS C:\>Remove-AzureVNetConfig
+PS C:\> Remove-AzureVNetConfig
 ```
 
 This command removes the virtual network configuration from the current subscription.

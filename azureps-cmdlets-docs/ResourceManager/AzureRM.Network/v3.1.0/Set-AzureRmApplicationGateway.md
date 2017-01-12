@@ -24,7 +24,7 @@ The **Set-AzureRmApplicationGateway** cmdlet updates an Azure application gatewa
 
 ### Example 1: Update an application gateway
 ```
-PS C:\>$UpdatedAppGw = Set-AzureRmApplicationGateway -ApplicationGateway $AppGw
+PS C:\> $UpdatedAppGw = Set-AzureRmApplicationGateway -ApplicationGateway $AppGw
 ```
 
 This command updates the application gateway with settings in the $AppGw variable and stores the updated gateway in the $UpdatedAppGw variable.
@@ -97,5 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Start-AzureRmApplicationGateway](./Start-AzureRmApplicationGateway.md)
-
-

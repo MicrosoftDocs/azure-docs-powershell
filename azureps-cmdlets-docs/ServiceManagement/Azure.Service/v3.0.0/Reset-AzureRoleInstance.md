@@ -37,21 +37,21 @@ Any data that is written to a local directory other than that defined by the loc
 
 ### Example 1: Reboot a role instance
 ```
-PS C:\>ReSet-AzureRoleInstance -ServiceName "MySvc01" -Slot "Staging" -InstanceName "MyWebRole_IN_0" -Reboot
+PS C:\> ReSet-AzureRoleInstance -ServiceName "MySvc01" -Slot "Staging" -InstanceName "MyWebRole_IN_0" -Reboot
 ```
 
 This command reboots the role instance named MyWebRole_IN_0 in the staging deployment of the MySvc01 service.
 
 ### Example 2: Reimage a role instance
 ```
-PS C:\>ReSet-AzureRoleInstance -ServiceName "MySvc01" -Slot "Staging" -Reimage
+PS C:\> ReSet-AzureRoleInstance -ServiceName "MySvc01" -Slot "Staging" -Reimage
 ```
 
 This command reimages the role instances in the staging deployment of the MySvc01 cloud service.
 
 ### Example 3: Reimage all role instances
 ```
-PS C:\>ReSet-AzureRoleInstance -ServiceName "MySvc1" -Slot "Production" -Reimage
+PS C:\> ReSet-AzureRoleInstance -ServiceName "MySvc1" -Slot "Production" -Reimage
 ```
 
 This command reimages all role instances in the production deployment of the MySvc01 service.

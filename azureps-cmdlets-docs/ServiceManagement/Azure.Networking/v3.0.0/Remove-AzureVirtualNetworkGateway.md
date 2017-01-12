@@ -21,10 +21,6 @@ The **Remove-AzureVirtualNetworkGateway** cmdlet removes a virtual network gatew
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -24,7 +24,7 @@ The **Get-AzureRemoteAppVpnDeviceConfigScript** cmdlet retrieves the configurati
 
 ### Example 1: Get a configuration script for a VPN device
 ```
-PS C:\>Get-AzureRemoteAppVpnDeviceConfigScript -VNetName "ContosoVNet" -Vendor "Microsoft Corporation" -OSFamily "Windows Server 2012 R2"
+PS C:\> Get-AzureRemoteAppVpnDeviceConfigScript -VNetName "ContosoVNet" -Vendor "Microsoft Corporation" -OSFamily "Windows Server 2012 R2"
 ```
 
 This command returns the script or configuration file used to configure the VPN device for the virtual network named ContosoVNet.

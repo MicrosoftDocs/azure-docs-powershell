@@ -22,10 +22,6 @@ The **Get-AzureVNetGatewayKey** cmdlet gets the pre-shared key for the connectio
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -23,10 +23,6 @@ The **New-AzureVirtualNetworkGatewayConnection** cmdlet creates an Azure virtual
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

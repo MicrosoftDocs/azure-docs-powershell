@@ -24,21 +24,21 @@ If you specify the *ServiceName* parameter, **Get-AzureService** returns informa
 
 ### Example 1: Get information about all services
 ```
-PS C:\>Get-AzureService
+PS C:\> Get-AzureService
 ```
 
 This command returns an object that contains information about all of the Azure services associated with the current subscription.
 
 ### Example 2: Get information about a specified service
 ```
-PS C:\>Get-AzureService -ServiceName $MySvc
+PS C:\> Get-AzureService -ServiceName $MySvc
 ```
 
 This command returns information about the $MySvc service.
 
 ### Example 3: Display available methods and properties
 ```
-PS C:\>Get-AzureService | Get-Member
+PS C:\> Get-AzureService | Get-Member
 ```
 
 This command displays the properties and methods that are available from the **Get-AzureService** cmdlet.

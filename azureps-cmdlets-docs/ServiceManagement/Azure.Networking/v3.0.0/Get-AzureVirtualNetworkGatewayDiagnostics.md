@@ -22,10 +22,6 @@ The **Get-AzureVirtualNetworkGatewayDiagnostics** cmdlet gets the results of Azu
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

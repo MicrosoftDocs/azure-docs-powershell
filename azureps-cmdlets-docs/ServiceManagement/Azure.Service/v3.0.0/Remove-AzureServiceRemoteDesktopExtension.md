@@ -31,14 +31,14 @@ The **Remove-AzureServiceRemoteDesktopExtension** cmdlet removes the cloud servi
 
 ### Example 1: Remove the remote desktop extension
 ```
-PS C:\>Remove-AzureServiceRemoteDesktopExtension -ServiceName $svc
+PS C:\> Remove-AzureServiceRemoteDesktopExtension -ServiceName $svc
 ```
 
 This command removes the remote desktop extension.
 
 ### Example 2: Remove the remote desktop extension from a specified role
 ```
-PS C:\>Remove-AzureServiceRemoteDesktopExtension -ServiceName $svc -Role "WebRole1"
+PS C:\> Remove-AzureServiceRemoteDesktopExtension -ServiceName $svc -Role "WebRole1"
 ```
 
 This command removes the remote desktop extension from a specified role.

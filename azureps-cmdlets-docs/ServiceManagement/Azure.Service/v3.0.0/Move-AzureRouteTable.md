@@ -41,10 +41,6 @@ The **Move-AzureRouteTable** cmdlet migrates a route table to a resource group i
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

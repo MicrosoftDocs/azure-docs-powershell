@@ -54,10 +54,6 @@ New-AzureProfile [-Properties] <Hashtable> [<CommonParameters>]
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

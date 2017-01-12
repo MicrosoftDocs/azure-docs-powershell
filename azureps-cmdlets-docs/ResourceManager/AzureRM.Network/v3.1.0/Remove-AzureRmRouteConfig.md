@@ -24,7 +24,7 @@ The **Remove-AzureRmRouteConfig** cmdlet removes a route from an Azure route tab
 
 ### Example 1: Remove a route
 ```
-PS C:\>Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Remove-AzureRmRouteConfig -Name "Route02" | Set-AzureRmRouteTable
+PS C:\> Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Remove-AzureRmRouteConfig -Name "Route02" | Set-AzureRmRouteTable
 Name              : RouteTable01
 ResourceGroupName : ResourceGroup11
 Location          : eastus
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteTable
-Specifies the route table that contains the route that this cmdlet deletes.
+Specifies the route table that contains the route that this cmdlet removes.
 
 ```yaml
 Type: PSRouteTable
@@ -142,5 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmRouteConfig](./New-AzureRmRouteConfig.md)
 
 [Set-AzureRmRouteConfig](./Set-AzureRmRouteConfig.md)
-
-

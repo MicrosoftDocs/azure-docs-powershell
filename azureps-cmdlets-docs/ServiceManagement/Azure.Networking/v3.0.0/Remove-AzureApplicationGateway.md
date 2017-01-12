@@ -23,7 +23,7 @@ The **Remove-AzureApplicationGateway** cmdlet removes an application gateway.
 
 ### Example 1: Remove an application gateway
 ```
-PS C:\>Remove-AzureApplicationGateway -Name "ApplicationGateway06"
+PS C:\> Remove-AzureApplicationGateway -Name "ApplicationGateway06"
 ```
 
 This command removes the application gateway named ApplicationGateway06.

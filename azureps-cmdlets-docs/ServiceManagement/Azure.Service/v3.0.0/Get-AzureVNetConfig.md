@@ -24,14 +24,14 @@ If the *ExportToFile* parameter is specified, a network configuration file is cr
 
 ### Example 1: Get the virtual network configuration of a current Azure subscription
 ```
-PS C:\>Get-AzureVNetConfig
+PS C:\> Get-AzureVNetConfig
 ```
 
 This command gets the virtual network configuration of the current Azure subscription and displays it.
 
 ### Example 2: Get the virtual network configuration of the current Azure subscription and save it to a local file
 ```
-PS C:\>Get-AzureVNetConfig -ExportToFile "c:\temp\MyAzNets.netcfg"
+PS C:\> Get-AzureVNetConfig -ExportToFile "c:\temp\MyAzNets.netcfg"
 ```
 
 This command gets the virtual network configuration of the current Azure subscription and then saves it to a local file.

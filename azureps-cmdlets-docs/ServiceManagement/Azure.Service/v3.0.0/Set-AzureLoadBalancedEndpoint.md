@@ -45,7 +45,7 @@ The **Set-AzureLoadBalancedEndpoint** cmdlet modifies all of the endpoints in a 
 
 ### Example 1: Modify the endpoints in a load balancer set
 ```
-PS C:\>Set-AzureLoadBalancedEndpoint -ServiceName "ContosoService" -LBSetName "LBSet01" -Protocol "TCP" -LocalPort 80 -ProbeProtocolTCP -ProbePort 8080
+PS C:\> Set-AzureLoadBalancedEndpoint -ServiceName "ContosoService" -LBSetName "LBSet01" -Protocol "TCP" -LocalPort 80 -ProbeProtocolTCP -ProbePort 8080
 ```
 
 This command modifies all endpoints in the load balancer set named LBSet01 to use the TCP protocol and private port 80.
@@ -53,7 +53,7 @@ The command sets the load balancer probe to use the TCP protocol on port 8080.
 
 ### Example 2: Specify a different virtual IP
 ```
-PS C:\>Set-AzureLoadBalancedEndpoint -ServiceName "ContosoService" -LBSetName "LBSet02" -VirtualIPName "Vip01"
+PS C:\> Set-AzureLoadBalancedEndpoint -ServiceName "ContosoService" -LBSetName "LBSet02" -VirtualIPName "Vip01"
 ```
 
 This command modifies the load balancer that has the load balancer set name to use a virtual IP named Vip01.
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 
 ### -VirtualIPName
 Specifies the name of a virtual IP address that Azure associates to the endpoints.
-To add virtual IPs to your service, use the Add-AzureVirtualIP cmdlet.
+To add virtual IPs to your service, use the **Add-AzureVirtualIP** cmdlet.
 
 ```yaml
 Type: String

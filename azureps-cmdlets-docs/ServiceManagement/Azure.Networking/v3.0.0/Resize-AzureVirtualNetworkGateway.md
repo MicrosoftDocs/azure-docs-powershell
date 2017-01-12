@@ -18,14 +18,10 @@ Resize-AzureVirtualNetworkGateway [-GatewayId] <String> [-GatewaySKU] <String> [
 ```
 
 ## DESCRIPTION
-The Resize-AzureVirtualNetworkGateway cmdlet resizes a virtual network gateway.
+The **Resize-AzureVirtualNetworkGateway** cmdlet resizes a virtual network gateway.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

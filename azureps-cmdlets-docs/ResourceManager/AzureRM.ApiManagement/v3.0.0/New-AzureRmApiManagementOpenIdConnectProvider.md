@@ -25,7 +25,7 @@ The **New-AzureRmApiManagementOpenIdConnectProvider** cmdlet creates an OpenID C
 
 ### Example 1: Create a provider
 ```
-PS C:\>New-AzureRmApiManagementOpenIdConnectProvider -Context $ApimContext -OpenIdConnectProviderId "OICProvicer01" -Name "Contoso OpenID Connect Provider" -MetadataEndpointUri "https://openid.provider/configuration" -ClientId "12432143" -Description "OpenID Connect provider description"
+PS C:\> New-AzureRmApiManagementOpenIdConnectProvider -Context $ApimContext -OpenIdConnectProviderId "OICProvicer01" -Name "Contoso OpenID Connect Provider" -MetadataEndpointUri "https://openid.provider/configuration" -ClientId "12432143" -Description "OpenID Connect provider description"
 ```
 
 This command creates an OpenID Connect **Provider** named Contoso OpenID Connect Provider
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description.
+Specifies a description for the provider.
 
 ```yaml
 Type: String
@@ -156,5 +156,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementOpenIdConnectProvider](./Remove-AzureRmApiManagementOpenIdConnectProvider.md)
 
 [Set-AzureRmApiManagementOpenIdConnectProvider](./Set-AzureRmApiManagementOpenIdConnectProvider.md)
-
-

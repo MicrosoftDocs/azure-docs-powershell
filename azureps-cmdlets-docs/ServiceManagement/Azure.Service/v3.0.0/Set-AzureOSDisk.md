@@ -32,7 +32,7 @@ If you run this cmdlet on a virtual machine that is running, that virtual machin
 
 ### Example 1: Set the host cache mode to ReadOnly by using the pipeline
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine02" | Set-AzureOSDisk -HostCaching "ReadOnly"
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine02" | Set-AzureOSDisk -HostCaching "ReadOnly"
 ```
 
 This command gets the virtual machine named VirtualMachine02 in the service named ContosoService by using the **Get-AzureVM** cmdlet.
@@ -41,7 +41,7 @@ The current cmdlet sets the host cache mode of the operating system disk of that
 
 ### Example 2: Set the host cache mode to ReadWrite
 ```
-PS C:\>$VM = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine02"
+PS C:\> $VM = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine02"
 PS C:\> Set-AzureOSDisk "ReadWrite" -VM $myVM2
 ```
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -VM
 Specifies the virtual machine for which this cmdlet modifies the operating system disk.
-To obtain a virtual machine object, use the Get-AzureVM cmdlet.
+To obtain a virtual machine object, use the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: IPersistentVM

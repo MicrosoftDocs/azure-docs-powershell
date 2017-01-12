@@ -24,7 +24,7 @@ The **Remove-AzureSubnetRouteTable** cmdlet removes a route table association fr
 
 ### Example 1: Remove an association between a route table and a subnet
 ```
-PS C:\>Remove-AzureSubnetRouteTable -VirtualNetworkName "VNetUSCentral" -SubnetName "ContosoSubnet"
+PS C:\> Remove-AzureSubnetRouteTable -VirtualNetworkName "VNetUSCentral" -SubnetName "ContosoSubnet"
 ```
 
 This command removes the association of the route table named PublicRouteTable to the subnet named ContosoSubnet.
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+
 
 ```yaml
 Type: String

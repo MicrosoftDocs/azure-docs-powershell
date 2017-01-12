@@ -23,7 +23,7 @@ The **Remove-AzureStorageAccount** cmdlet removes an account from an Azure subsc
 
 ### Example 1: Remove a storage account
 ```
-PS C:\>Remove-AzureStorageAccount -StorageAccountName "ContosoStore01"
+PS C:\> Remove-AzureStorageAccount -StorageAccountName "ContosoStore01"
 ```
 
 This command removes the ContosoStore01 storage account from the specified subscription.

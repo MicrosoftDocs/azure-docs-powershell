@@ -22,10 +22,6 @@ The **Set-AzureNetworkSecurityGroupToSubnet** cmdlet associates an Azure network
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

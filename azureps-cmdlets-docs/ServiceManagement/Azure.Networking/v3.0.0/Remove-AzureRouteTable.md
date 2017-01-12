@@ -25,7 +25,7 @@ If a route table is associated to a subnet, you cannot remove the table.
 
 ### Example 1: Remove a route table
 ```
-PS C:\>Remove-AzureRouteTable -Name "PublicRouteTable"
+PS C:\> Remove-AzureRouteTable -Name "PublicRouteTable"
 ```
 
 This command removes the route table named PublicRouteTable.
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+
 
 ```yaml
 Type: String

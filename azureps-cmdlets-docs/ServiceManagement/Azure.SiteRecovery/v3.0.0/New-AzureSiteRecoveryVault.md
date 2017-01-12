@@ -23,7 +23,8 @@ The **New-AzureSiteRecoveryVault** cmdlet creates an Azure Site Recovery vault.
 
 ### Example 1: Create a vault
 ```
-PS C:\>New-AzureSiteRecoveryVault -Location "West US" -Name "ContosoVault" 
+PS C:\> New-AzureSiteRecoveryVault -Location "West US" -Name "ContosoVault" 
+
 Response
 --------
 Vault has been created

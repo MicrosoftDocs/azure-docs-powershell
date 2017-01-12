@@ -26,7 +26,7 @@ Virtual private network (VPN) clients that connect to this gateway will be assig
 
 ### Example 1: Assign a VPN client address pool to a virtual network gateway
 ```
-PS C:\>$Gateway = Get-AzureRmVirtualNetworkGateway -Name "ContosoVirtualGateway"
+PS C:\> $Gateway = Get-AzureRmVirtualNetworkGateway -Name "ContosoVirtualGateway"
 PS C:\> Set-AzureRmVirtualNetworkGatewayVpnClientConfig -VirtualNetworkGateway $Gateway -VpnClientAddressPool "10.0.0.0/16"
 ```
 
@@ -40,7 +40,7 @@ The second command in the example then uses the **Set-AzureRmVirtualNetworkGatew
 
 ### -VirtualNetworkGateway
 Specifies an object reference to the virtual network gateway that contains the VPN client configuration settings that this cmdlet modifies.
-You can create an object reference to a virtual network gateway by using the Get-AzureRmVirtualNetworkGateway and specifying the name of the gateway.
+You can create an object reference to a virtual network gateway by using the [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md) and specifying the name of the gateway.
 
 ```yaml
 Type: PSVirtualNetworkGateway
@@ -130,5 +130,3 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
 [Resize-AzureRmVirtualNetworkGateway](./Resize-AzureRmVirtualNetworkGateway.md)
-
-

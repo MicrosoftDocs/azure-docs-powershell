@@ -22,7 +22,7 @@ The **Add-AzureVirtualIP** cmdlet adds a new virtual IP (VIP) to your Azure serv
 The new virtual IP has a name but is not allocated an IP address.
 
 The IP address is allocated only when you associate an endpoint to the VIP.
-See Add-AzureEndpoint for more details.
+See **Add-AzureEndpoint** for more details.
 
 Your subscription is charged for extra VIPs only once they are associated with an endpoint.
 
@@ -30,7 +30,8 @@ Your subscription is charged for extra VIPs only once they are associated with a
 
 ### Example 1: Add a virtual IP to a service
 ```
-PS C:\>Add-AzureVirtualIP -VirtualIPName "Vip01" -ServiceName "ContosoService03"
+PS C:\> Add-AzureVirtualIP -VirtualIPName "Vip01" -ServiceName "ContosoService03"
+
 OperationDescription OperationId                          OperationStatus
 -------------------- -----------                          ---------------
 Add-AzureVirtualIP   4bd7b638-d2e7-216f-ba38-5221233d70ce Succeeded

@@ -31,7 +31,7 @@ The **Get-AzureRemoteAppProgram** cmdlet retrieves the properties of one or more
 
 ### Example 1: Retrieve the properties of a program
 ```
-PS C:\>Get-AzureRemoteAppProgram -CollectionName "ContosoApps" -RemoteAppProgram "Finance App"
+PS C:\> Get-AzureRemoteAppProgram -CollectionName "ContosoApps" -RemoteAppProgram "Finance App"
 
 Alias                : edc85816-4b9e-4284-b3dc-faedb505f5d9
 

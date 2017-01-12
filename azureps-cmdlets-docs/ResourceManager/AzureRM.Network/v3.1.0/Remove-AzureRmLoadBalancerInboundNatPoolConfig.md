@@ -8,6 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmLoadBalancerInboundNatPoolConfig
 
 ## SYNOPSIS
+Removes an inbound NAT pool configuration from a load balancer.
 
 ## SYNTAX
 
@@ -17,17 +18,15 @@ Remove-AzureRmLoadBalancerInboundNatPoolConfig [-Name <String>] -LoadBalancer <P
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRmLoadBalancerInboundNatPoolConfig** cmdlet removes an inbound network address translation (NAT) pool configuration from an Azure load balancer.
 
 ## EXAMPLES
-
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 
 ### -Name
+Specifies the name of the inbound NAT pool configuration that this cmdlet removes.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -41,6 +40,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancer
+Specifies the **LoadBalancer** object that contains the inbound NAT pool configuration that this cmdlet removes.
+
 ```yaml
 Type: PSLoadBalancer
 Parameter Sets: (All)
@@ -103,3 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AzureRmLoadBalancerInboundNatPoolConfig](./Add-AzureRmLoadBalancerInboundNatPoolConfig.md)
+
+[Get-AzureRmLoadBalancerInboundNatPoolConfig](./Get-AzureRmLoadBalancerInboundNatPoolConfig.md)
+
+[New-AzureRmLoadBalancerInboundNatPoolConfig](./New-AzureRmLoadBalancerInboundNatPoolConfig.md)
+
+[Set-AzureRmLoadBalancerInboundNatPoolConfig](./Set-AzureRmLoadBalancerInboundNatPoolConfig.md)

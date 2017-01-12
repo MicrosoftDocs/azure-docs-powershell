@@ -21,10 +21,6 @@ The **Get-AzureRemoteAppLocation** cmdlet lists the locations that Azure RemoteA
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

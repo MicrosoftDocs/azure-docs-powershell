@@ -25,7 +25,7 @@ The **Remove-AzureRmNetworkSecurityGroup** cmdlet removes an Azure network secur
 
 ### Example 1: Remove a network security group
 ```
-PS C:\>Remove-AzureRmNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
+PS C:\> Remove-AzureRmNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
 ```
 
 This command removes the security group named NSG-FrontEnd in the resource group named TestRG.
@@ -179,5 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmNetworkSecurityGroup](./New-AzureRmNetworkSecurityGroup.md)
 
 [Set-AzureRmNetworkSecurityGroup](./Set-AzureRmNetworkSecurityGroup.md)
-
-

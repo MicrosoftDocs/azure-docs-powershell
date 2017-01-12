@@ -37,7 +37,7 @@ Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Tag <String
 
 ### 1:
 ```
-PS C:\>
+PS C:\> 
 ```
 
 ## PARAMETERS

@@ -39,28 +39,28 @@ The **Set-AzureVMSqlServerExtension** cmdlet sets the Azure SQL Server extension
 
 ### Example 1: Set auto-patching settings on a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ServiceName" -Name "VMName" | Set-AzureVMSqlServerExtension -AutoPatchingSettings $APS | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ServiceName" -Name "VMName" | Set-AzureVMSqlServerExtension -AutoPatchingSettings $APS | Update-AzureVM
 ```
 
 This command sets auto-patching settings on an Azure virtual machine.
 
 ### Example 2: Set auto-backup settings on a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ServiceName" -Name "VMName" | Set-AzureVMSqlServerExtension -AutoBackupSettings $ABS | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ServiceName" -Name "VMName" | Set-AzureVMSqlServerExtension -AutoBackupSettings $ABS | Update-AzureVM
 ```
 
 This command sets auto-backup settings on Azure virtual machine.
 
 ### Example 3: Disable an SQL Server extension on a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "Service" -Name "VMName" | Set-AzureVMSqlServerExtension -Disable
+PS C:\> Get-AzureVM -ServiceName "Service" -Name "VMName" | Set-AzureVMSqlServerExtension -Disable
 ```
 
 This command disables SQL Server virtual machine extension on a given virtual machine.
 
 ### Example 4: Uninstall an SQL Server extension on a specific virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "Service" -Name "VMName" | Set-AzureVMSqlServerExtension -Uninstall
+PS C:\> Get-AzureVM -ServiceName "Service" -Name "VMName" | Set-AzureVMSqlServerExtension -Uninstall
 ```
 
 This command uninstalls a SQL Server virtual machine extension on the virtual machine named VMName.
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Specifies the version of the SQL Server extension that Get-AzureVMSqlServerExtension retrieves settings from.
+Specifies the version of the SQL Server extension that **Get-AzureVMSqlServerExtension** retrieves settings from.
 
 ```yaml
 Type: String

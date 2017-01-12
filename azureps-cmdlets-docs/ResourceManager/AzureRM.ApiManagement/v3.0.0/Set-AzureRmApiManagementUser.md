@@ -25,7 +25,7 @@ The **Set-AzureRmApiManagementUser** cmdlet sets user details.
 
 ### Example 1: Change a user's password, email address and state
 ```
-PS C:\>Set-AzureRmApiManagementUser -Context $apimContext -UserId "0123456789" -Email "patti.fuller@contoso.com" -Password "asdfgh" -State "Blocked"
+PS C:\> Set-AzureRmApiManagementUser -Context $APImContext -UserId "0123456789" -Email "patti.fuller@contoso.com" -Password "asdfgh" -State "Blocked"
 ```
 
 This command sets a new user password and email address and blocks the user.
@@ -196,5 +196,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementUser](./New-AzureRmApiManagementUser.md)
 
 [Remove-AzureRmApiManagementUser](./Remove-AzureRmApiManagementUser.md)
-
-

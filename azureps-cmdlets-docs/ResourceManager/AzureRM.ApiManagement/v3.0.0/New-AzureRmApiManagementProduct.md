@@ -25,7 +25,7 @@ The **New-AzureRmApiManagementProduct** cmdlet creates an API Management product
 
 ### Example 1: Create a product that does not require a subscription
 ```
-PS C:\>New-AzureRmApiManagementProduct -Context $APImContext -ProductId "0123456789" -Title "Starter" -Description "Starter Product" -LegalTerms "Free for all" -SubscriptionRequired $False -State "Published"
+PS C:\> New-AzureRmApiManagementProduct -Context $APImContext -ProductId "0123456789" -Title "Starter" -Description "Starter Product" -LegalTerms "Free for all" -SubscriptionRequired $False -State "Published"
 ```
 
 This command creates an API Management product.
@@ -33,7 +33,7 @@ No subscription is required.
 
 ### Example 2: Create a product that requires a subscription and approval
 ```
-PS C:\>New-AzureRmApiManagementProduct -Context $APImContext -ProductId "9876543210" -Title "Unlimited" -Description "Subscribers have completely unlimited access to the API. Administrator approval is required." -LegalTerms "Free for all" -ApprovalRequired $True -State "Published" -NotificationPeriod "D10" -SubscriptionPeriod "Y1"
+PS C:\> New-AzureRmApiManagementProduct -Context $APImContext -ProductId "9876543210" -Title "Unlimited" -Description "Subscribers have completely unlimited access to the API. Administrator approval is required." -LegalTerms "Free for all" -ApprovalRequired $True -State "Published" -NotificationPeriod "D10" -SubscriptionPeriod "Y1"
 ```
 
 This command creates a product.
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionRequired
 Indicates whether the product requires a subscription.
-The default value is **$True**.
+The default value is $True.
 
 ```yaml
 Type: Boolean
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -ApprovalRequired
 Indicates whether the subscription to the product requires approval or not.
-By default, this parameter is **$False**.
+By default, this parameter is $False.
 
 ```yaml
 Type: Boolean
@@ -206,5 +206,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementProduct](./Remove-AzureRmApiManagementProduct.md)
 
 [Set-AzureRmApiManagementProduct](./Set-AzureRmApiManagementProduct.md)
-
-

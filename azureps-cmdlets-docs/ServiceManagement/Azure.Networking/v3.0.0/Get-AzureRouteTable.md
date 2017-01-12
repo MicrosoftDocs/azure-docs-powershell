@@ -25,7 +25,8 @@ Specify the *Detailed* parameter to list the routes in the route table.
 
 ### Example 1: Get details of a route table
 ```
-PS C:\>Get-AzureRouteTable -Name "ApplianceRouteTable" -Detailed
+PS C:\> Get-AzureRouteTable -Name "ApplianceRouteTable" -Detailed
+
 Routes                        Name                          Location                      Label
 ------                        ----                          --------                      -----
 {approute}                    ApplianceRouteTable           Central US                    Appliance Route Table
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+
 
 ```yaml
 Type: String

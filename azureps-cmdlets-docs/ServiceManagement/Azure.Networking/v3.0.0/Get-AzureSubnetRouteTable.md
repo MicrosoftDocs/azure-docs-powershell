@@ -24,7 +24,7 @@ The **Get-AzureSubnetRouteTable** cmdlet gets the route table that is associated
 
 ### Example 1: Display routes for a subnet
 ```
-PS C:\>Get-AzureSubnetRouteTable -VirtualNetworkName "VNetUSCentral" -SubnetName "ContosoSubnet" -Detailed
+PS C:\> Get-AzureSubnetRouteTable -VirtualNetworkName "VNetUSCentral" -SubnetName "ContosoSubnet" -Detailed
 Routes                        Name                          Location                      Label
 ------                        ----                          --------                      -----
 {internetroute}               PublicRT                      Central US                    Sample RT in Central US
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+
 
 ```yaml
 Type: String

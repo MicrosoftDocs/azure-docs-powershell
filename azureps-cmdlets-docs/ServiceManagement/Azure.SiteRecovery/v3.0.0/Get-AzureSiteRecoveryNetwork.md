@@ -23,8 +23,9 @@ The **Get-AzureSiteRecoveryNetwork** cmdlet gets Azure Site Recovery networks fo
 
 ### Example 1: Get site recovery networks
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryNetwork -Server $Servers[0]
+
 Name                : phase2RecoveryVMNetwork
 ID                  : 7cfd636e-5cc2-4e01-873b-8a7aa4962341
 FabricObjectID      : 7cfd636e-5cc2-4e01-873b-8a7aa4962341

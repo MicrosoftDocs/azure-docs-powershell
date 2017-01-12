@@ -25,7 +25,7 @@ In other words, this cmdlet assigns a group to a product.
 
 ### Example 1: Add a product to a group
 ```
-PS C:\>Add-AzureRmApiManagementProductToGroup -Context $apimContext -GroupId "0001" -ProductId "0123456789"
+PS C:\> Add-AzureRmApiManagementProductToGroup -Context $apimContext -GroupId "0001" -ProductId "0123456789"
 ```
 
 This command adds a product to an existing group.
@@ -110,5 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-AzureRmApiManagementProductFromGroup](./Remove-AzureRmApiManagementProductFromGroup.md)
-
-

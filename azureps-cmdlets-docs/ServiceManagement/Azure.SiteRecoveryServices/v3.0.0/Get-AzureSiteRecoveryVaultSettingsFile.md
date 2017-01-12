@@ -31,14 +31,15 @@ The **Get-AzureSiteRecoveryVaultSettingsFile** cmdlet gets the settings file for
 
 ### Example 1: Get the settings file for a vault
 ```
-PS C:\>$Vault = Get-AzureSiteRecoveryVault -Name "ContosoVault"
+PS C:\> $Vault = Get-AzureSiteRecoveryVault -Name "ContosoVault"
 PS C:\> Get-AzureSiteRecoveryVaultSettingsFile -Vault $Vault
+
 FilePath 
 -------- 
 C:\Users\ContosoAdmin\ContosoVault_2015-02-02T05-39-23.VaultCredentials
 ```
 
-The first command gets the active Azure Site Recovery vault named ContosoVault by using the Get-AzureSiteRecoveryVault cmdlet.
+The first command gets the active Azure Site Recovery vault named ContosoVault by using the **Get-AzureSiteRecoveryVault** cmdlet.
 The command stores that vault in the $Vault variable.
 
 The second command gets the settings file for the vault stored in $Vault.
@@ -77,7 +78,7 @@ Accept wildcard characters: False
 
 ### -Site
 Specifies a site for which to get a settings file.
-To obtain a **Site** object, use the Get-AzureSiteRecoverySite cmdlet.
+To obtain a **Site** object, use the **Get-AzureSiteRecoverySite** cmdlet.
 
 ```yaml
 Type: ASRSite

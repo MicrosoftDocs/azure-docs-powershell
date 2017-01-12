@@ -26,7 +26,7 @@ If no virtual network is specified, this cmdlet returns information about all th
 
 ### Example 1: Retrieve information about a virtual network
 ```
-PS C:\>Get-AzureRemoteAppVNet -VNetName "ContosoVNet"
+PS C:\> Get-AzureRemoteAppVNet -VNetName "ContosoVNet"
 ```
 
 This command gets information about the virtual network named ContosoVNet.

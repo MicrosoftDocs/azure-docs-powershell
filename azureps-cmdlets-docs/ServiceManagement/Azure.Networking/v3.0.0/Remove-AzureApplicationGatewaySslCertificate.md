@@ -24,7 +24,7 @@ The **Remove-AzureApplicationGatewaySslCertificate** cmdlet removes a Secure Soc
 
 ### Example 1: Remove an SSL certificate
 ```
-PS C:\>Remove-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13"
+PS C:\> Remove-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13"
 ```
 
 This command removes an SSL certificate named SslCertificate13 from the application gateway named ApplicationGateway08.

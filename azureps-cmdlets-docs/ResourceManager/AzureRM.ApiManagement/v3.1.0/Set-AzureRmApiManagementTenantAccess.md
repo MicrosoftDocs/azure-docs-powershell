@@ -24,7 +24,7 @@ The **Set-AzureRmApiManagementTenantAccess** cmdlet enables or disables tenant a
 
 ### Example 1: Enable tenant access
 ```
-PS C:\>Set-AzureRmApiManagementTenantAccess -Context $ApimContext -Enabled $True
+PS C:\> Set-AzureRmApiManagementTenantAccess -Context $ApimContext -Enabled $True
 ```
 
 This command enables tenant access in the specified context.
