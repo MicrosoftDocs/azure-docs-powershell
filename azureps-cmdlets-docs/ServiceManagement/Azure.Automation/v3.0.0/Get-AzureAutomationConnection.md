@@ -40,21 +40,21 @@ To get all connections of a certain type, specify the connection type name.
 
 ### Example 1: Get all connections
 ```
-PS C:\>Get-AzureAutomationConnection -AutomationAccountName "Contoso17"
+PS C:\> Get-AzureAutomationConnection -AutomationAccountName "Contoso17"
 ```
 
 This command gets all connections in the Automation account named Contoso17.
 
 ### Example 2: Get all connections of a type
 ```
-PS C:\>Get-AzureAutomationConnection -AutomationAccountName "Contoso17" -ConnectionTypeName "Azure"
+PS C:\> Get-AzureAutomationConnection -AutomationAccountName "Contoso17" -ConnectionTypeName "Azure"
 ```
 
 This command gets all Azure connections in the Automation account named Contoso17.
 
 ### Example 3: Get a connection
 ```
-PS C:\>Get-AzureAutomationConnection -AutomationAccountName "Contoso17" -Name "Azure"
+PS C:\> Get-AzureAutomationConnection -AutomationAccountName "Contoso17" -Name "Azure"
 ```
 
 This command gets the connection named MyConnection.

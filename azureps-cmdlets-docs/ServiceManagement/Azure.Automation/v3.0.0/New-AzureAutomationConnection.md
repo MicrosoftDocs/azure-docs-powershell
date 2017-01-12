@@ -23,10 +23,6 @@ The **New-AzureAutomationConnection** cmdlet creates a connection in Microsoft A
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
