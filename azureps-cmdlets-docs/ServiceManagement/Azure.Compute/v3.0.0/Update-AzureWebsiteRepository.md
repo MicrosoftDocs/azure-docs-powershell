@@ -24,15 +24,15 @@ The **Update-AzureWebsiteRepository** cmdlet updates the remote repositories of 
 
 ### Example 1: Update Website Remote Repositories
 ```
-C:\PS>Update-AzureWebsiteRepository -Name MyWebsite
+PS C:\> Update-AzureWebsiteRepository -Name MyWebsite
 ```
 
-Updates the remote repositories of a local git repository for all the slots for website MyWebsite.
+This command updates the remote repositories of a local git repository for all the slots for website MyWebsite.
 
 ## PARAMETERS
 
 ### -Name
-The name of the website.
+Specifies the name of the website.
 
 ```yaml
 Type: String

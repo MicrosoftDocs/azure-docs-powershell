@@ -24,9 +24,9 @@ Get-WAPackLogicalNetwork [[-Name] <String>] [-Profile <AzureSMProfile>] [<Common
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see  [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-WAPackLogicalNetwork** cmdlet gets logical network objects.
 
@@ -34,14 +34,14 @@ The **Get-WAPackLogicalNetwork** cmdlet gets logical network objects.
 
 ### Example 1: Get a logical network by using a name
 ```
-PS C:\>Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
+PS C:\> Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
 ```
 
 This command gets a logical network named ContosoLogicalNetwork01.
 
 ### Example 2: Get all logical networks
 ```
-PS C:\>Get-WAPackLogicalNetwork
+PS C:\> Get-WAPackLogicalNetwork
 ```
 
 This command gets all logical networks.

@@ -60,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
+Specifies the ID of the authorization server that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -130,5 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementAuthorizationServer](./Remove-AzureRmApiManagementAuthorizationServer.md)
 
 [Set-AzureRmApiManagementAuthorizationServer](./Set-AzureRmApiManagementAuthorizationServer.md)
-
-

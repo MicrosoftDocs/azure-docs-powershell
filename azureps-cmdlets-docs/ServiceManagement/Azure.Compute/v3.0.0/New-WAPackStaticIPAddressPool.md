@@ -19,9 +19,9 @@ New-WAPackStaticIPAddressPool -VMSubnet <VMSubnet> -Name <String> -IPAddressRang
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see  [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-WAPackStaticIPAddressPool** cmdlet creates a static IP address pool.
 
@@ -29,9 +29,9 @@ The **New-WAPackStaticIPAddressPool** cmdlet creates a static IP address pool.
 
 ### Example 1: Create a static IP address pool
 ```
-PS C:\>$VNet = Get-WAPackVNet -Name "ContosoVNet01"
-PS C:\>$VMSubnet = Get-WAPackVMSubnet ?VNet $VNet -Name "ContosoVMSubnet01"
-PS C:\>New-WAPackStaticIpAddressPool ?VMSubnet $VMSubnet -Name "ContosoStaticIpAddressPool01" -IPAddressRangeStart "192.168.1.0" -IPAddressRangeEnd "192.168.1.10"
+PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+PS C:\> $VMSubnet = Get-WAPackVMSubnet ?VNet $VNet -Name "ContosoVMSubnet01"
+PS C:\> New-WAPackStaticIpAddressPool ?VMSubnet $VMSubnet -Name "ContosoStaticIpAddressPool01" -IPAddressRangeStart "192.168.1.0" -IPAddressRangeEnd "192.168.1.10"
 ```
 
 The first command first retrieves the virtual machine network to which we want to add the static IP address pool.

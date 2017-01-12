@@ -30,16 +30,16 @@ The **New-AzureSBAuthorizationRule** cmdlet creates a Service Bus authorization 
 
 ## EXAMPLES
 
-### 1: Create an authorization rule with generated primary key
+### Example 1: Create an authorization rule with generated primary key
 ```
-C:\PS>New-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Send")
+PS C:\> New-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Send")
 ```
 
 Creates new authorization rule on namespace level with Send permission.
 
-### 2: Creates an authorization rule by providing the primary key
+### Example 2: Creates an authorization rule by providing the primary key
 ```
-C:\PS>New-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Manage", "Listen", "Send") -EntityName MyEntity -EntityType Queue -PrimaryKey P+lL/Mnd2Z9sj5hwMrRyAxQDdX8RHfbdqU2eIAqs1rc=
+PS C:\> New-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Manage", "Listen", "Send") -EntityName MyEntity -EntityType Queue -PrimaryKey P+lL/Mnd2Z9sj5hwMrRyAxQDdX8RHfbdqU2eIAqs1rc=
 ```
 
 Creates new authorization rule on MyEntity Queue level with all permissions.

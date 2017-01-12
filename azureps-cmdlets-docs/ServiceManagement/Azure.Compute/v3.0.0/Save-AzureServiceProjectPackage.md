@@ -18,15 +18,15 @@ Save-AzureServiceProjectPackage [-Local] [-Profile <AzureSMProfile>] [<CommonPar
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Save-AzureServiceProjectPackage** cmdlet packages the service project into an Azure cloud package (*.cspkg).
 
 ## EXAMPLES
 
-### 1: Create a service project package
+### Example 1: Create a service project package
 ```
-PS C:\>Save-AzureServiceProjectPackage
+PS C:\> Save-AzureServiceProjectPackage
 ```
 
 This example creates a *.cspgk for a service project named MyAzureServiceProject.

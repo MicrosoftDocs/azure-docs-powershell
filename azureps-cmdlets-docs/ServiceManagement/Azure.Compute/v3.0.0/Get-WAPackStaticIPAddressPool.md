@@ -25,9 +25,9 @@ Get-WAPackStaticIPAddressPool [-VMSubnet] <VMSubnet> [-Name] <String> [-Profile 
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see  [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-WAPackStaticIPAddressPool** cmdlet gets static IP address pool objects.
 
@@ -35,15 +35,15 @@ The **Get-WAPackStaticIPAddressPool** cmdlet gets static IP address pool objects
 
 ### Example 1: Get a static IP address pool from a given VMSubnet
 ```
-PS C:\>$Subnet = Get-WAPackVMSubet -Name "ContosoVMSubnet01"
-PS C:\>Get-WAPackStaticIPAddressPool -VMSubnet $Subnet -Name "ContosoStaticIPAddressPool01"
+PS C:\> $Subnet = Get-WAPackVMSubet -Name "ContosoVMSubnet01"
+PS C:\> Get-WAPackStaticIPAddressPool -VMSubnet $Subnet -Name "ContosoStaticIPAddressPool01"
 ```
 
 This command gets the static IP address pool named ContosoStaticIPAddressPool01 from a specified VMSubnet.
 
 ### Example 2: Get all static IP address pools from a given VMSubnet
 ```
-PS C:\>$Subnet = Get-WAPackVMSubet -Name "ContosoVMSubnet01"
+PS C:\> $Subnet = Get-WAPackVMSubet -Name "ContosoVMSubnet01"
 PS C:\> Get-WAPackStaticIPAddressPool -VMSubnet $Subnet
 ```
 

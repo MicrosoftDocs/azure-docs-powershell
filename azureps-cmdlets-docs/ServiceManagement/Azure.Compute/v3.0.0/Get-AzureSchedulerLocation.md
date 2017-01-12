@@ -18,7 +18,7 @@ Get-AzureSchedulerLocation [-Profile <AzureSMProfile>] [<CommonParameters>]
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-AzureSchedulerLocation** cmdlet gets available scheduler locations.
 
@@ -26,7 +26,7 @@ The **Get-AzureSchedulerLocation** cmdlet gets available scheduler locations.
 
 ### Example 1: Get available scheduler locations
 ```
-PS C:\>Get-AzureSchedulerLocation
+PS C:\> Get-AzureSchedulerLocation
 ```
 
 This command gets available scheduler locations.

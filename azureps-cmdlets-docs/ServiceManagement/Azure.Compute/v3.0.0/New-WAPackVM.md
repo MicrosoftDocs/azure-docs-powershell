@@ -32,9 +32,9 @@ New-WAPackVM -Name <String> -Template <VMTemplate> -VMCredential <PSCredential> 
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see  [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-WAPackVM** cmdlet creates a virtual machine.
 
@@ -42,7 +42,7 @@ The **New-WAPackVM** cmdlet creates a virtual machine.
 
 ### Example 1: Create a virtual machine for the Windows operating system by using a template
 ```
-PS C:\>$Credentials = Get-Credential PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate04"PS C:\> New-WAPackVM -Name "ContosoV023" -Template $Template -VMCredential $Credentials -Windows
+PS C:\> $Credentials = Get-Credential PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate04"PS C:\> New-WAPackVM -Name "ContosoV023" -Template $Template -VMCredential $Credentials -Windows
 ```
 
 The first command creates a **PSCredential** object, and then stores it in the $Credentials variable.
@@ -56,7 +56,7 @@ The command specifies the *Windows* parameter, and, therefore, the virtual machi
 
 ### Example 2: Create a virtual machine for the Linux operating system by using a template
 ```
-PS C:\>$Credentials = Get-Credential 
+PS C:\> $Credentials = Get-Credential 
 PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate19"
 PS C:\> New-WAPackVM -Linux -Name "ContosoV028" -Template $Template -VMCredential $Credentials
 ```
@@ -70,7 +70,7 @@ The command specifies the *Linux* parameter, and, therefore, the virtual machine
 
 ### Example 3: Create a virtual machine from an operating system disk and size profile
 ```
-PS C:\>$OSDisk = Get-WAPackVMOSDisk -Name "ContosoDiskOS"
+PS C:\> $OSDisk = Get-WAPackVMOSDisk -Name "ContosoDiskOS"
 PS C:\> $SizeProfile = Get-WAPackVMSizeProfile -Name "MediumSizeVM"
 PS C:\> New-WAPackVM -Name "ContosoV073" -OSDisk $OSDisk -VMSizeProfile $SizeProfile
 ```

@@ -20,24 +20,24 @@ New-AzureManagedCacheAccessKey [-Name] <String> [[-KeyType] <String>] [-Profile 
 ## DESCRIPTION
 The **New-AzureManagedCacheAccessKey** cmdlet creates primary or secondary access keys for an Azure Cache.
 When you create an Azure Cache, it includes a set of access keys.
-Use the Get-AzureManagedCacheAccessKey cmdlet to get the current access keys.
+Use the **Get-AzureManagedCacheAccessKey** cmdlet to get the current access keys.
 You can use these keys to allow clients, such as web applications, to access to your Azure Cache.
 An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see [Azure Cache](http://azure.microsoft.com/en-us/services/cache/) (http://azure.microsoft.com/en-us/services/cache/).
 
 ## EXAMPLES
 
 ### Example 1: Create a new primary key
 ```
-PS C:\>New-AzureManagedCacheAccessKey -Name "ContosoCache"
+PS C:\> New-AzureManagedCacheAccessKey -Name "ContosoCache"
 ```
 
 This command creates a new primary key for the Azure Cache named ContosoCache.
 
 ### Example 2: Create a new secondary key
 ```
-PS C:\>New-AzureManagedCacheAccessKey -Name "ContosoCache" -KeyType Secondary
+PS C:\> New-AzureManagedCacheAccessKey -Name "ContosoCache" -KeyType Secondary
 ```
 
 This command creates a new secondary key for the Azure Cache named ContosoCache.

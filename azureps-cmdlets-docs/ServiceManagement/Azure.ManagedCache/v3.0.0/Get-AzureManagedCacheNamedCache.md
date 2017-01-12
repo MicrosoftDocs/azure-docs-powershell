@@ -24,14 +24,14 @@ The **Get-AzureManagedCacheNamedCache** cmdlet gets a specific named cache or al
 
 ### Example 1: Get the details of a specific named cache
 ```
-PS C:\>Get-AzureManagedCacheNamedCache -Name contosocache -NamedCache "ContosoNamedCache"
+PS C:\> Get-AzureManagedCacheNamedCache -Name contosocache -NamedCache "ContosoNamedCache"
 ```
 
 This command gets details about the cache named ContosoNamedCache.
 
 ### Example 2: Get the details of all Named Caches in a Managed Cache Service
 ```
-PS C:\>Get-AzureManagedCacheNamedCache -Name "ContosoCache"
+PS C:\> Get-AzureManagedCacheNamedCache -Name "ContosoCache"
 ```
 
 This command gets details about all Named Caches in the Managed Cache Service instance named ContosoCache.
@@ -97,7 +97,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PSCacheServiceWithNamedCaches
 
 ## NOTES
-* Use Add-AzureAccount or Import-AzurePublishSettingsFile to make your Azure account available to Windows PowerShell before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use **Add-AzureAccount** or **Import-AzurePublishSettingsFile** to make your Azure account available to Windows PowerShell before using this cmdlet. For more information, see [How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/) (http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/).
 
 ## RELATED LINKS
 

@@ -24,23 +24,14 @@ Get-WAPackCloudService [[-Name] <String>] [-Profile <AzureSMProfile>] [<CommonPa
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see  [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-WAPackCloudService** cmdlet gets cloud service objects.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
-### 2:
-```
-
-```
 
 ## PARAMETERS
 
