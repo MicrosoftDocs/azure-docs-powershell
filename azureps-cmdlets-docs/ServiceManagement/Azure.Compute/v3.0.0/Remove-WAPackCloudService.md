@@ -34,6 +34,7 @@ PS C:\> Remove-WAPackVM -VM $CloudService
 ```
 
 The first command gets the cloud service named ContosoCloudService01 by using the **Get-WAPackCloudService** cmdlet, and then stores that object in the $CloudService variable.
+
 The second command removes the cloudservice stored in $CloudService.
 The command prompts you for confirmation.
 
@@ -44,6 +45,7 @@ PS C:\> Remove-WAPackCloudService -VM $CloudService -Force
 ```
 
 The first command gets the cloud service named ContosoCloudService02 by using the **Get-WAPackCloudService** cmdlet, and then stores that object in the $CloudService variable.
+
 The second command removes the cloud service stored in $CloudService.
 This command includes the *Force* parameter.
 The command does not prompt you for confirmation.
@@ -83,7 +85,7 @@ Accept wildcard characters: False
 
 ### -CloudService
 Specifies a cloud service object.
-To obtain a cloud service, use the Get-WAPackCloudService cmdlet.
+To obtain a cloud service, use the **Get-WAPackCloudService** cmdlet.
 
 ```yaml
 Type: CloudService

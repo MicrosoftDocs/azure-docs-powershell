@@ -34,7 +34,7 @@ To find out the version of the module you're using, from the Azure PowerShell co
 
 ## EXAMPLES
 
-### Example 1: Get a virtual machine role (created through the portal)
+### Example 1: Get a virtual machine role created through the portal
 ```
 PS C:\> Get-WAPackVMRole -Name "ContosoVMRole01"
 ```

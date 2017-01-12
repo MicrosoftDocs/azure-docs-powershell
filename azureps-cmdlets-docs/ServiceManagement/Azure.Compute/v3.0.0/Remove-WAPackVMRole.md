@@ -34,13 +34,14 @@ The **Remove-WAPackVMRole** cmdlet removes virtual machine role objects.
 
 ## EXAMPLES
 
-### Example 1: Remove a virtual machine role (which was created using the WAP portal)
+### Example 1: Remove a virtual machine role which was created using the WAP portal
 ```
-PS C:\> $VMRole = Get-WAPackVMRole -Name ?ContosoVMRole01?
+PS C:\> $VMRole = Get-WAPackVMRole -Name -ContosoVMRole01?
 PS C:\> Remove-WAPackVMRole -VMRole $VMRole
 ```
 
 The first command gets the virtual machine role named ContosoVMRole01 by using the **Get-WAPackVMRole** cmdlet, and then stores that object in the $VMRole variable.
+
 The second command removes the virtual machine role stored in $VMRole.
 The command prompts you for confirmation.Assuming this virtual machine role was created using the WAP portal, there's no need to specify the cloud service name.
 
@@ -51,6 +52,7 @@ PS C:\> Remove-WAPackVMRole -VMRole $VMRole -CloudServiceName "ContosoCloudServi
 ```
 
 The first command gets the virtual machine role named "ContosoVMRole02" by using the **Get-WAPackVMRole** cmdlet, and then stores that object in the $VMRole variable.
+
 The second command removes the virtual machine role stored in $VMRole.
 The command prompts you for confirmation.
 Assuming this virtual machine role was not created using the portal, the user needs to specify the cloud service name.
@@ -63,6 +65,7 @@ PS C:\> Remove-WAPackVMRole -VMRole $VMRole -Force
 ```
 
 The first command gets the cloud service named ContosoVMRole03 by using the **Get-WAPackVMRole** cmdlet, and then stores that object in the $VMRole variable.
+
 The second command removes the virtual machine role stored in $VMRole.
 This command includes the *Force* parameter.
 The command does not prompt you for confirmation.
@@ -102,7 +105,7 @@ Accept wildcard characters: False
 
 ### -VMRole
 Specifies a virtual machine role.
-To get a virtual machine role, use the Get-WAPackVMRole cmdlet.
+To get a virtual machine role, use the **Get-WAPackVMRole** cmdlet.
 
 ```yaml
 Type: VMRole

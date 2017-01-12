@@ -26,7 +26,7 @@ The **Add-AzureNodeWebRole** creates required files and folders (sometimes refer
 
 ### Example 1: Single instance web role
 ```
-PS C:\>>Add-AzureNodeWebRole -Name MyWebRole
+PS C:\> Add-AzureNodeWebRole -Name MyWebRole
 ```
 
 This example adds scaffolding for a single web role named **MyWebRole** to the current application.

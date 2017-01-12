@@ -33,6 +33,7 @@ PS C:\> Remove-WAPackVM -VNet $VNet
 ```
 
 The first command gets the virtualized network named ContosoVNet01 by using the **Get-WAPackVNet** cmdlet, and then stores that object in the $VNet variable.
+
 The second command removes the virtualized network stored in $VNet.
 The command prompts you for confirmation.
 
@@ -43,6 +44,7 @@ PS C:\> Remove-WAPackVNet -VNet $VNet -Force
 ```
 
 The first command gets the cloud service named ContosoVNet02 by using the **Get-WAPackVNet** cmdlet, and then stores that object in the $VNet variable.
+
 The second command removes the virtualized network stored in $VNet.
 This command includes the *Force* parameter.
 The command does not prompt you for confirmation.
