@@ -21,10 +21,6 @@ The **Reset-AzureVirtualNetworkGateway** cmdlet resets a virtual network gateway
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

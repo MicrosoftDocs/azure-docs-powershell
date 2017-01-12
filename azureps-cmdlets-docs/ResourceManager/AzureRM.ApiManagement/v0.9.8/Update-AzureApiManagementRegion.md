@@ -25,11 +25,6 @@ To update a deployment of an API Management use the modified **PsApiManagementIn
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApiManagement
@@ -161,5 +156,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Update-AzureApiManagementDeployment](./Update-AzureApiManagementDeployment.md)
-
-

@@ -24,10 +24,6 @@ If the keys do not match, a connection cannot establish.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -22,10 +22,6 @@ The **Remove-AzureNetworkSecurityGroupFromSubnet** cmdlet dissociates an Azure n
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

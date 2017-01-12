@@ -22,10 +22,6 @@ The **Remove-AzureNetworkSecurityRule** cmdlet removes an Azure network security
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -61,7 +57,7 @@ Accept wildcard characters: False
 
 ### -NetworkSecurityGroup
 Specifies the network security group that this cmdlet modifies.
-To obtain an **INetworkSecurityGroup** object, use the Get-AzureNetworkSecurityGroup cmdlet.
+To obtain an **INetworkSecurityGroup** object, use the **Get-AzureNetworkSecurityGroup** cmdlet.
 
 ```yaml
 Type: INetworkSecurityGroup

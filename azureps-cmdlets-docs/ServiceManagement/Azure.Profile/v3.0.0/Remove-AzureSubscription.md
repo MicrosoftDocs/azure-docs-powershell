@@ -29,7 +29,7 @@ The **Remove-AzureSubscription** cmdlet deletes an Azure subscription from your 
 This cmdlet does not delete the subscription from Microsoft Azure, or change the actual subscription in any way.
 
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 ## EXAMPLES
 

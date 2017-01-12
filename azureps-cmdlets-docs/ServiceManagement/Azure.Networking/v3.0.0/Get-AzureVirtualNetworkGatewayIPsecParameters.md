@@ -22,10 +22,6 @@ The **Get-AzureVirtualNetworkGatewayIPsecParameters** cmdlet gets the IPsec para
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

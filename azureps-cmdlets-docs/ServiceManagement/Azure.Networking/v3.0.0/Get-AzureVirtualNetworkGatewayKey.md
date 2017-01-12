@@ -22,10 +22,6 @@ The **Get-AzureVirtualNetworkGatewayKey** cmdlet gets the key for an Azure virtu
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

@@ -33,7 +33,7 @@ The **Get-AzureIPForwarding** cmdlet gets the status of IP forwarding.
 
 ### Example 1: Get IP forwarding status for a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Get-AzureIPForwarding
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Get-AzureIPForwarding
 Disabled
 ```
 
@@ -58,7 +58,6 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
 
 ```yaml
 Type: String

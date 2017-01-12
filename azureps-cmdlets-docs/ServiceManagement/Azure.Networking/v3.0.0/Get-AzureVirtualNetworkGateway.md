@@ -21,10 +21,6 @@ The **Get-AzureVirtualNetworkGateway** cmdlet gets an Azure virtual network gate
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

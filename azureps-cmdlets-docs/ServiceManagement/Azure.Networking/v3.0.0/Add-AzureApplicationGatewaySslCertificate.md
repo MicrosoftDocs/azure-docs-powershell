@@ -24,7 +24,7 @@ The **Add-AzureApplicationGatewaySslCertificate** cmdlet adds a Secure Sockets L
 
 ### Example 1: Add an SSL certificate
 ```
-PS C:\>Add-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13" -Password "password" -CertificateFile "c:\Certs\sslCertificate.pfx"
+PS C:\> Add-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13" -Password "password" -CertificateFile "c:\Certs\sslCertificate.pfx"
 ```
 
 This command adds an SSL certificate named SslCertificate13 to the Application Gateway named ApplicationGateway08.

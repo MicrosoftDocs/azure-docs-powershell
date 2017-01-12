@@ -24,7 +24,7 @@ This cmdlet removes the route from an Azure virtual private network (VPN) gatewa
 
 ### Example 1: Remove a route to the default site
 ```
-PS C:\>Remove-AzureVNetGatewayDefaultSite -VnetName "ContosoVNet01"
+PS C:\> Remove-AzureVNetGatewayDefaultSite -VnetName "ContosoVNet01"
 ```
 
 This command removes the route to the default site from the VPN of the virtual network named ContosoVNet01.

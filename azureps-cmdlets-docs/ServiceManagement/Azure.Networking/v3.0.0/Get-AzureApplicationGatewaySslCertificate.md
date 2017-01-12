@@ -24,14 +24,14 @@ The **Get-AzureApplicationGatewaySslCertificate** cmdlet gets Secure Sockets Lay
 
 ### Example 1: Get an SSL certificate
 ```
-PS C:\>Get-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13"
+PS C:\> Get-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13"
 ```
 
 This command gets an SSL certificate named SslCertificate13 on the Application Gateway named ApplicationGateway08.
 
 ### Example 2: Get all SSL certificates
 ```
-PS C:\>Get-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08"
+PS C:\> Get-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08"
 ```
 
 This command gets all the SSL certificates on the Application Gateway named ApplicationGateway08.

@@ -22,10 +22,6 @@ The **Remove-AzureNetworkSecurityGroup** cmdlet deletes an Azure network securit
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

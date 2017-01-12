@@ -23,14 +23,14 @@ The **Get-AzureApplicationGateway** cmdlet gets an existing Azure Application Ga
 
 ### Example 1: Get an Application Gateway
 ```
-PS C:\>Get-AzureApplicationGateway -Name "ApplicationGateway06"
+PS C:\> Get-AzureApplicationGateway -Name "ApplicationGateway06"
 ```
 
 This command gets the Application Gateway named ApplicationGateway06.
 
 ### Example 2: Get all Application Gateways
 ```
-PS C:\>Get-AzureApplicationGateway
+PS C:\> Get-AzureApplicationGateway
 ```
 
 This command gets all the Application Gateways under your subscription.

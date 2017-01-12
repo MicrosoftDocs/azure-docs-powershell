@@ -39,7 +39,7 @@ The **Get-AzureNetworkSecurityGroupAssociation** cmdlet gets the network securit
 
 ### Example 1: Get the network security group for a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Get-AzureNetworkSecurityGroupAssociation
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Get-AzureNetworkSecurityGroupAssociation
 ```
 
 This command gets a virtual machine named ContosoVM06 for the service named ContosoService, and passes that virtual machine object to the current cmdlet.
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+
 
 ```yaml
 Type: String

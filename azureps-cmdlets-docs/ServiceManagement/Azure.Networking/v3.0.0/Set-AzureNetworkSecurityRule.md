@@ -24,10 +24,6 @@ The **Set-AzureNetworkSecurityRule** cmdlet adds or modifies an Azure network se
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

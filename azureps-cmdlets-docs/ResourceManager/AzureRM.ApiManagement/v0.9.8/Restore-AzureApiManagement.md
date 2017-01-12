@@ -25,7 +25,7 @@ The **Restore-AzureApiManagement** cmdlet restores an API Management Service fro
 
 ### Example 1: Restore an API Management service
 ```
-PS C:\>Restore-AzureApiManagement -ResourceGroupName "ContosoGroup" -Name "RestoredContosoApi" -StorageContext $StorageContext -SourceContainerName "ContosoBackups" -SourceBlobName "ContosoBackup.apimbackup"
+PS C:\> Restore-AzureApiManagement -ResourceGroupName "ContosoGroup" -Name "RestoredContosoApi" -StorageContext $StorageContext -SourceContainerName "ContosoBackups" -SourceBlobName "ContosoBackup.apimbackup"
 ```
 
 This command restores an API Management service from Azure storage blob.
