@@ -25,7 +25,7 @@ The **Set-AzureManagedCacheNamedCache** cmdlet updates a named cache in the spec
 
 ### Example 1: Update a named cache in the Managed Cache Service instance
 ```
-PS C:\>Set-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache"
+PS C:\> Set-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache"
 ```
 
 This command updates a named cache named ContosoNamedCache in the Managed Cache Service instance named ContosoCache.
@@ -33,7 +33,7 @@ It will update the named cache to use default values.
 
 ### Example 2: Update a named cache with all parameters specified
 ```
-PS C:\>Set-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache" -ExpiryPolicy "Sliding" -ExpiryTime 10 -WithNotifications -WithHighAvailability -WithoutEviction
+PS C:\> Set-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache" -ExpiryPolicy "Sliding" -ExpiryTime 10 -WithNotifications -WithHighAvailability -WithoutEviction
 ```
 
 This command updates a named cache named ContosoNamedCache in the Managed Cache Service instance named ContosoCache.
@@ -199,7 +199,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PSCacheServiceWithNamedCaches
 
 ## NOTES
-* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlet to make your Azure account available to Windows PowerShell before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use the **Add-AzureAccount** or **Import-AzurePublishSettingsFile** cmdlet to make your Azure account available to Windows PowerShell before using this cmdlet. For more information, see [How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/) (http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/).
 
 ## RELATED LINKS
 
