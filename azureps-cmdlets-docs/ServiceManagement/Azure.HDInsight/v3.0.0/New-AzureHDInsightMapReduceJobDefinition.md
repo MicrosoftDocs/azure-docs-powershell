@@ -23,9 +23,9 @@ This version of Azure PowerShell HDInsight is deprecated.
 These cmdlets will be removed by January 1, 2017.
 Please use the newer version of Azure PowerShell HDInsight.
 
-For information about how to use the new HDInsight to create a cluster, see Create Linux-based clusters in HDInsight using Azure PowerShellhttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/.
-For information about how to submit jobs by using Azure PowerShell and other approaches, see Submit Hadoop jobs in HDInsighthttps://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/.
-For reference information about Azure PowerShell HDInsight, see Azure HDInsight Cmdletshttps://msdn.microsoft.com/en-us/library/mt438705.aspx.
+For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
+For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](https://msdn.microsoft.com/en-us/library/mt438705.aspx) (https://msdn.microsoft.com/en-us/library/mt438705.aspx).
 
 The **New-AzureHDInsightMapReduceJobDefinition** cmdlet defines a new MapReduce job to run on an Azure HDInsight cluster.
 
@@ -33,7 +33,7 @@ The **New-AzureHDInsightMapReduceJobDefinition** cmdlet defines a new MapReduce 
 
 ### Example 1: Define a MapReduce job, run the job, and get the output
 ```
-PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
+PS C:\> $SubId = (Get-AzureSubscription -Current).SubscriptionId
 PS C:\> $ClusterName = "MyCluster" 
 PS C:\> $WordCountJob = New-AzureHDInsightMapReduceJobDefinition -JarFile "/Example/Apps/Hadoop-examples.jar" -ClassName "WordCount" -Defines @{ "mapred.map.tasks" = "3" } -Arguments "/Example/Data/Gutenberg/Davinci.txt", "/Example/Output/WordCount" 
 PS C:\> $WordCountJob | Start-AzureHDInsightJob -Cluster $ClusterName 
@@ -49,9 +49,9 @@ The third command uses the **New-AzureHDInsightMapReduceJobDefinition** cmdlet t
 
 The fourth command performs a sequence of operations by using these cmdlets: 
 
-- Start-AzureHDInsightJob to start the job on $ClusterName. 
-- Wait-AzureHDInsightJob to wait for the job to finish and to display the progress toward completion.
-- Get-AzureHDInsightJobOutput to get the job output.
+- **Start-AzureHDInsightJob** to start the job on $ClusterName. 
+- **Wait-AzureHDInsightJob** to wait for the job to finish and to display the progress toward completion.
+- **Get-AzureHDInsightJobOutput** to get the job output.
 
 ## PARAMETERS
 
