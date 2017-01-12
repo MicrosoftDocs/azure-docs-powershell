@@ -34,21 +34,21 @@ The **Get-WAPackVNet** cmdlet gets virtual networks.
 
 ### Example 1: Get all virtual networks
 ```
-PS C:\>Get-WAPackVNet
+PS C:\> Get-WAPackVNet
 ```
 
 This command gets all virtual networks.
 
 ### Example 2: Get a virtual network by using an ID
 ```
-PS C:\>Get-WAPackVNet -ID 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> Get-WAPackVNet -ID 66242D17-189F-480D-87CF-8E1D749998C8
 ```
 
 This command gets the virtual network that has the specified ID.
 
 ### Example 3: Get a virtual network by using a name
 ```
-PS C:\>Get-WAPackVNet -Name "ContosoVNet08"
+PS C:\> Get-WAPackVNet -Name "ContosoVNet08"
 ```
 
 This command gets the virtual network named ContosoVNet08.

@@ -19,22 +19,22 @@ Remove-AzureWebsite [-Force] [[-Name] <String>] [-Slot <String>] [-Profile <Azur
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-AzureWebsite** cmdlet removes the specified website from Azure, either with or without a prompt for confirmation.
 
 ## EXAMPLES
 
-### 1: Remove the current website
+### Example 1: Remove the current website
 ```
-PS C:\>Remove-AzureWebsite
+PS C:\> Remove-AzureWebsite
 ```
 
 This example removes the website in Azure associated with the current directory.
 
 ### 2: Remove a website without confirmation
 ```
-PS C:\>Remove-AzureWebsite -Name mySite -Force
+PS C:\> Remove-AzureWebsite -Name mySite -Force
 ```
 
 This example deletes the website named mySite without prompting for confirmation.

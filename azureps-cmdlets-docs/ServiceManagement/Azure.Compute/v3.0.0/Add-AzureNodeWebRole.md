@@ -18,22 +18,22 @@ Add-AzureNodeWebRole [[-Name] <String>] [[-Instances] <Int32>] [-Profile <AzureS
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Add-AzureNodeWebRole** creates required files and folders (sometimes referred to as scaffolding) for a Node.js application to be hosted in the cloud via IIS.
 
 ## EXAMPLES
 
-### 1: Single instance web role
+### Example 1: Single instance web role
 ```
 PS C:\>>Add-AzureNodeWebRole -Name MyWebRole
 ```
 
 This example adds scaffolding for a single web role named **MyWebRole** to the current application.
 
-### 2: Multiple instance web role
+### Example 2: Multiple instance web role
 ```
-PS C:\>Add-AzureNodeWebRole MyWebRole -I 2
+PS C:\> Add-AzureNodeWebRole MyWebRole -I 2
 ```
 
 This example adds scaffolding for a new web role named **MyWebRole** to the current application, with a role instance count of 2.

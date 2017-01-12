@@ -26,7 +26,7 @@ Get-AzureWebsiteLog [-ListPath] [[-Name] <String>] [[-Slot] <String>] [-Profile 
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 Gets log for the specified website.
 
@@ -34,28 +34,28 @@ Gets log for the specified website.
 
 ### Example 1
 ```
-C:\PS>Get-AzureWebsiteLog -Tail
+PS C:\> Get-AzureWebsiteLog -Tail
 ```
 
 This example starts log streaming for all application logs.
 
 ### Example 2
 ```
-C:\PS>Get-AzureWebsiteLog -Tail -Path http
+PS C:\> Get-AzureWebsiteLog -Tail -Path http
 ```
 
 This example starts log streaming for http logs.
 
 ### Example 3
 ```
-C:\PS>Get-AzureWebsiteLog -Tail -Message Error
+PS C:\> Get-AzureWebsiteLog -Tail -Message Error
 ```
 
 This example starts log streaming and show error logs only.
 
 ### Example 4
 ```
-C:\PS>Get-AzureWebsiteLog -Name MyWebsite -ListPath
+PS C:\> Get-AzureWebsiteLog -Name MyWebsite -ListPath
 ```
 
 This example lists all available log paths in the website.

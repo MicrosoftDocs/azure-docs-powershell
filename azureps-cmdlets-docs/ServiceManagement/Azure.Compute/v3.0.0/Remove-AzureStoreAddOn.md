@@ -18,7 +18,7 @@ Remove-AzureStoreAddOn [-Name] <String> [-PassThru] [-Profile <AzureSMProfile>] 
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 Removes an existing add-on instance from the current subscription.
 
@@ -26,7 +26,7 @@ Removes an existing add-on instance from the current subscription.
 
 ### Example 1
 ```
-PS C:\>Remove-AzureStoreAddOn MyAddOn
+PS C:\> Remove-AzureStoreAddOn MyAddOn
 ```
 
 This example removes an add-on named MyAddOn from the current subscription.

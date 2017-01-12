@@ -19,9 +19,9 @@ Remove-WAPackStaticIPAddressPool [-StaticIPAddressPool] <StaticIPAddressPool> [-
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see  [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-WAPackStaticIPAddressPool** cmdlet removes static IP address pool objects.
 
@@ -29,8 +29,8 @@ The **Remove-WAPackStaticIPAddressPool** cmdlet removes static IP address pool o
 
 ### Example 1: Remove a static IP address pool
 ```
-PS C:\>$StaticIPAddressPool = Get-WAPackStaticIPAddressPool -Name "ContosoStaticIPAddressPool01"
-PS C:\>Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPool
+PS C:\> $StaticIPAddressPool = Get-WAPackStaticIPAddressPool -Name "ContosoStaticIPAddressPool01"
+PS C:\> Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPool
 ```
 
 The first command gets the static IP address pool named ContosoStaticIPAddressPool01 by using the **Get-WAPackStaticIPAddressPool** cmdlet, and then stores that object in the $StaticIPAddressPool variable.
@@ -39,8 +39,8 @@ The command prompts you for confirmation.
 
 ### Example 2: Remove a static IP address pool without confirmation
 ```
-PS C:\>$StaticIPAddressPool = Get-WAPackStaticIPAddressPool -Name "ContosoStaticIPAddressPool02"
-PS C:\>Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPool -Force
+PS C:\> $StaticIPAddressPool = Get-WAPackStaticIPAddressPool -Name "ContosoStaticIPAddressPool02"
+PS C:\> Remove-WAPackStaticIPAddressPool -StaticIPAddressPool $StaticIPAddressPool -Force
 ```
 
 The first command gets the static IP address pool named ContosoStaticIPAddressPool02 by using the **Get-WAPackStaticIPAddressPool** cmdlet, and then stores that object in the $ StaticIPAddressPool variable.

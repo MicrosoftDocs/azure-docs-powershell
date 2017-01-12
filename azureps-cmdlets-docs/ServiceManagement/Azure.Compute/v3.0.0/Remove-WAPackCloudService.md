@@ -19,9 +19,9 @@ Remove-WAPackCloudService [-CloudService] <CloudService> [-PassThru] [-Force] [-
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see  [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-WAPackCloudService** cmdlet removes cloud service objects.
 
@@ -29,8 +29,8 @@ The **Remove-WAPackCloudService** cmdlet removes cloud service objects.
 
 ### Example 1: Remove a cloud service
 ```
-PS C:\>$CloudService = Get-WAPackCloudService -Name "ContosoCloudService01"
-PS C:\>Remove-WAPackVM -VM $CloudService
+PS C:\> $CloudService = Get-WAPackCloudService -Name "ContosoCloudService01"
+PS C:\> Remove-WAPackVM -VM $CloudService
 ```
 
 The first command gets the cloud service named ContosoCloudService01 by using the **Get-WAPackCloudService** cmdlet, and then stores that object in the $CloudService variable.
@@ -39,8 +39,8 @@ The command prompts you for confirmation.
 
 ### Example 2: Remove a cloud service without confirmation
 ```
-PS C:\>$CloudService = Get-WAPackCloudService -Name "ContosoCloudService02"
-PS C:\>Remove-WAPackCloudService -VM $CloudService -Force
+PS C:\> $CloudService = Get-WAPackCloudService -Name "ContosoCloudService02"
+PS C:\> Remove-WAPackCloudService -VM $CloudService -Force
 ```
 
 The first command gets the cloud service named ContosoCloudService02 by using the **Get-WAPackCloudService** cmdlet, and then stores that object in the $CloudService variable.

@@ -22,9 +22,9 @@ The **Start-AzureWebsiteJob** cmdlet starts a web job for a website.
 
 ## EXAMPLES
 
-### 1: Start a web job for a website
+### Example 1: Start a web job for a website
 ```
-C:\PS>Start-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob -JobType Continuous
+PS C:\> Start-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob -JobType Continuous
 ```
 
 Starts a web job called MyWebJob for MyWebSite.

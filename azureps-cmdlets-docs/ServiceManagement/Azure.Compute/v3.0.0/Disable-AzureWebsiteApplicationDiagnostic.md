@@ -19,23 +19,23 @@ Disable-AzureWebsiteApplicationDiagnostic [-PassThru] [-File] [-TableStorage] [-
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 Disables application diagnostics for an Azure website.
 Disables logging configured to be stored on a file system or on Azure.
 
 ## EXAMPLES
 
-### 1:  Disable application logging file
+### Example 1:  Disable application logging file
 ```
-C:\PS>Disable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -File
+PS C:\> Disable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -File
 ```
 
 The following example disables application logging on the file system.
 
-### 2:  Disable logging using Azure storage
+### Example 2:  Disable logging using Azure storage
 ```
-C:\PS>Disable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -Storage
+PS C:\> Disable-AzureWebsiteApplicationDiagnostic -Name MyWebsite -Storage
 ```
 
 The following example disables application logging using storage.
