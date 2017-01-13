@@ -43,7 +43,7 @@ By default, connections are turned off.
 
 ### Example 1: Get all connections for a device
 ```
-PS C:\>Get-AzureStorSimpleDeviceConnectedInitiator -DeviceName "Contoso63-AppVm"
+PS C:\> Get-AzureStorSimpleDeviceConnectedInitiator -DeviceName "Contoso63-AppVm"
 VERBOSE: ClientRequestId: bec615b9-79ab-4671-88b0-287adeb6bf68_PS
 VERBOSE: ClientRequestId: ef976c58-2660-41c8-aa15-c84e70c9d01c_PS
 VERBOSE: ClientRequestId: 9b306b96-8e76-47ed-beda-d3bd2fb2bb82_PS

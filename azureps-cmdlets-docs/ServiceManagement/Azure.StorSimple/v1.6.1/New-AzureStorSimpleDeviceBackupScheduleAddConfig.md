@@ -26,7 +26,7 @@ Use this configuration object to create new backup policy by using the **New-Azu
 
 ### Example 1: Create a backup configuration object
 ```
-PS C:\>New-AzureStorSimpleDeviceBackupScheduleAddConfig -BackupType CloudSnapshot -RecurrenceType Daily -RecurrenceValue 1 -RetentionCount 100 -Enabled $True
+PS C:\> New-AzureStorSimpleDeviceBackupScheduleAddConfig -BackupType CloudSnapshot -RecurrenceType Daily -RecurrenceValue 1 -RetentionCount 100 -Enabled $True
 VERBOSE: ClientRequestId: 426a79ee-fed3-4d3d-9123-e371f83222b3_PS
 
 

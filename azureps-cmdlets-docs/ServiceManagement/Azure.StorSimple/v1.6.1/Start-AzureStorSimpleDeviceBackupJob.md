@@ -33,7 +33,8 @@ To create a cloud backup, specify a value of CloudSnapshot for the *BackupType* 
 
 ### Example 1: Create a local snapshot backup
 ```
-PS C:\>Start-AzureStorSimpleDeviceBackupJob -DeviceName "Contoso63-AppVm" -BackupPolicyId "de088eac-b283-4d92-b501-a759845fdf3f"
+PS C:\> Start-AzureStorSimpleDeviceBackupJob -DeviceName "Contoso63-AppVm" -BackupPolicyId "de088eac-b283-4d92-b501-a759845fdf3f"
+
 JobId                                                                StatusCode RequestId
 -----                                                                ---------- ---------
 fb9acdca-ed6f-4b69-93f2-5c0bce0a1e08                                 Accepted   456cf6bafd427103b71c07145e26d35c
@@ -48,7 +49,8 @@ To see the status of the job, use the **Get-AzureStorSimpleTask** cmdlet.
 
 ### Example 2: Create a cloud snapshot backup and wait to finish
 ```
-PS C:\>Start-AzureStorSimpleDeviceBackupJob -DeviceName "Contoso63-AppVm" -BackupPolicyId "de088eac-b283-4d92-b501-a759845fdf3f" -BackupType CloudSnapshot -WaitForComplete
+PS C:\> Start-AzureStorSimpleDeviceBackupJob -DeviceName "Contoso63-AppVm" -BackupPolicyId "de088eac-b283-4d92-b501-a759845fdf3f" -BackupType CloudSnapshot -WaitForComplete
+
 Error      : Microsoft.WindowsAzure.Management.StorSimple.Models.ErrorDetails
 JobId      : fb9acdca-ed6f-4b69-93f2-5c0bce0a1e08
 JobSteps   : {}
@@ -127,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Indicates that this cmdlet waits for the operation to complete before it returns control to the wps_1 console.
+Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
 
 ```yaml
 Type: SwitchParameter
