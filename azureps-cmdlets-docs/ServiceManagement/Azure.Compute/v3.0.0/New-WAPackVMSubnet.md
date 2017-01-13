@@ -24,8 +24,8 @@ The **New-WAPackVMSubnet** cmdlet creates a virtual machine subnet.
 
 ### Example 1: Create a virtual machine subnet
 ```
-PS C:\>$VNet = Get-WAPackVNet -Name "ContosoVNet01"
-PS C:\>New-WAPackVMSubnet -VNet $VNet -Name "ContosoVMSubnet01" -Subnet "192.168.1.0/24"
+PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+PS C:\> New-WAPackVMSubnet -VNet $VNet -Name "ContosoVMSubnet01" -Subnet "192.168.1.0/24"
 ```
 
 The first command first retrieves the virtual machine network to which we want to add a new virtual machine subnet.

@@ -19,17 +19,13 @@ Start-AzureService [[-ServiceName] <String>] [[-Slot] <String>] [-PassThru] [-Pr
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Start-AzureService** cmdlet starts the specified hosted service in Windows Azure, if the service is in the stopped state.
 Note that the **Publish-AzureServiceProject** cmdlet automatically attempts to start the service.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

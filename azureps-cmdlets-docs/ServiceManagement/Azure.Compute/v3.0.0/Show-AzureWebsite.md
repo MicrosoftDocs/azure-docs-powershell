@@ -18,16 +18,12 @@ Show-AzureWebsite [[-Name] <String>] [-Slot <String>] [-Profile <AzureSMProfile>
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Show-AzureWebsite** cmdlet opens a browser on a specified website.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

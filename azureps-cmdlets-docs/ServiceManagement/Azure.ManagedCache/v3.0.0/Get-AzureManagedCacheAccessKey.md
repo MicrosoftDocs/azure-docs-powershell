@@ -20,16 +20,16 @@ Get-AzureManagedCacheAccessKey [-Name] <String> [-Profile <AzureSMProfile>] [<Co
 The **Get-AzureManagedCacheAccessKey** cmdlet gets the primary and secondary access keys for an Azure Cache.
 You can use these keys to allow clients, such as web applications, to access to your Azure Cache.
 Typically, you use the primary key, but use the secondary key to avoid delays while the primary key is being regenerated.
-To get new access keys, use the New-AzureManagedCacheAccessKey cmdlet.
+To get new access keys, use the **New-AzureManagedCacheAccessKey** cmdlet.
 An Azure Cache is a secure, dedicated cache that provides extremely fast access to data.
 This distributed, in-memory, scalable solution enables you to build highly scalable and responsive applications.
-For more information about Azure Cache, see Azure Cachehttp://azure.microsoft.com/en-us/services/cache/.
+For more information about Azure Cache, see [Azure Cache](http://azure.microsoft.com/en-us/services/cache/) (http://azure.microsoft.com/en-us/services/cache/).
 
 ## EXAMPLES
 
 ### Example 1: Get the access key for an Azure Cache
 ```
-PS C:\>Get-AzureManagedCacheAccessKey -Name "ContosoCache"
+PS C:\> Get-AzureManagedCacheAccessKey -Name "ContosoCache"
 ```
 
 This command gets the access key for the Azure Cache named ContosoCache.

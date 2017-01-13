@@ -20,7 +20,7 @@ Set-AzureSchedulerJobCollection -Location <String> -JobCollectionName <String> [
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Set-AzureSchedulerJobCollection** cmdlet updates a scheduler job collection.
 
@@ -28,7 +28,7 @@ The **Set-AzureSchedulerJobCollection** cmdlet updates a scheduler job collectio
 
 ### Example 1: Change the maximum job count for a collection
 ```
-PS C:\>Set-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01" -MaxJobCount 30
+PS C:\> Set-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01" -MaxJobCount 30
 ```
 
 This command changes the maximum job count to 30 on the existing scheduler job collection named JobCollection01.

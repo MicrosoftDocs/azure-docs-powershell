@@ -29,14 +29,14 @@ The **Get-WAPackCloudVMRoleSizeProfile** cmdlet gets Cloud VM Role size profile 
 
 ### Example 1: Get a Cloud VM Role size profile by using a name
 ```
-PS C:\>Get-WAPackCloudVMRoleSizeProfile -Name "Small"
+PS C:\> Get-WAPackCloudVMRoleSizeProfile -Name "Small"
 ```
 
 This command gets the size profile named Small.
 
 ### Example 2: Get all Cloud VM Role size profiles
 ```
-PS C:\>Get-WAPackCloudVMRoleSizeProfile
+PS C:\> Get-WAPackCloudVMRoleSizeProfile
 ```
 
 This command gets all the size profiles.

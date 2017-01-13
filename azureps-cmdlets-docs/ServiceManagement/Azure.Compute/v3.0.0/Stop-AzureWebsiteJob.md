@@ -22,9 +22,9 @@ The **Stop-AzureWebsiteJob** cmdlet stops a web job for a website.
 
 ## EXAMPLES
 
-### 1: Stop a web job for a website
+### Example 1: Stop a web job for a website
 ```
-C:\PS>Stop-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob -JobType Continuous
+PS C:\> Stop-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob -JobType Continuous
 ```
 
 Stops a web job called MyWebJob for MyWebSite.

@@ -24,7 +24,7 @@ The **Remove-AzureManagedCacheNamedCache** cmdlet removes a named cache from the
 
 ### Example 1: Remove the specified named cache from the specified Managed Cache Service instance
 ```
-PS C:\>Remove-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache" -Force -PassThru
+PS C:\> Remove-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache" -Force -PassThru
 ```
 
 This command removes an Azure cache named ContosoNamedCache.
@@ -119,7 +119,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Boolean
 
 ## NOTES
-* Use the Add-AzureAccount or Import-AzurePublishSettingsFile to make your Azure account available to Windows PowerShell before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use the **Add-AzureAccount** or **Import-AzurePublishSettingsFile** to make your Azure account available to Windows PowerShell before using this cmdlet. For more information, see [How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/) (http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/).
 
 ## RELATED LINKS
 

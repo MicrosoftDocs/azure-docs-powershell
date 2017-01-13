@@ -22,9 +22,9 @@ Removes an existing web job for a website.
 
 ## EXAMPLES
 
-### 1: Remove an existing web job for a website
+### Example 1: Remove an existing web job for a website
 ```
-C:\PS>Remove-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob -JobType Continuous
+PS C:\> Remove-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob -JobType Continuous
 ```
 
 Removes a web job called MyWebJob for MyWebSite.

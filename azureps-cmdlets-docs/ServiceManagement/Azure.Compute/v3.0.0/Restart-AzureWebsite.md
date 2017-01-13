@@ -19,7 +19,7 @@ Restart-AzureWebsite [-PassThru] [[-Name] <String>] [-Slot <String>] [-Profile <
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Restart-AzureWebsite** cmdlet stops and then restarts the specified website.
 
@@ -27,7 +27,7 @@ The **Restart-AzureWebsite** cmdlet stops and then restarts the specified websit
 
 ### Example 1: Restart a website
 ```
-PS C:\>Restart-AzureWebsite -Name MyWebsite
+PS C:\> Restart-AzureWebsite -Name MyWebsite
 ```
 
 This example restarts a website named MyWebsite.

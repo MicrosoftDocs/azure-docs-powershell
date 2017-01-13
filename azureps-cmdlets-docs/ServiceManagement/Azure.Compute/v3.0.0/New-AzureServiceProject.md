@@ -18,15 +18,15 @@ New-AzureServiceProject [-ServiceName] <String> [-Profile <AzureSMProfile>] [<Co
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-AzureServiceProject** cmdlet creates the required files and configuration for a new Azure service in the current directory.
 
 ## EXAMPLES
 
-### 1:
+### Example 1: Create scaffolding
 ```
-PS C:\>New-AzureServiceProject MyService1
+PS C:\> New-AzureServiceProject MyService1
 ```
 
 This example creates scaffolding for a new Azure service named MyService1 in the current directory.

@@ -29,9 +29,9 @@ Get-WAPackVM [[-ID] <Guid>] [-Profile <AzureSMProfile>] [<CommonParameters>]
 
 ## DESCRIPTION
 These topics are deprecated and will be removed in the future.
-For the updated topics, see  Azure WAPack Cmdletshttp://msdn.microsoft.com/library/dn776450.aspx.
+For the updated topics, see  [Azure WAPack Cmdlets](http://msdn.microsoft.com/library/dn776450.aspx) (http://msdn.microsoft.com/library/dn776450.aspx).
 This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
-To find out the version of the module you're using, from the Azure PowerShell console, type (get-module azure).version.
+To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-WAPackVM** cmdlet gets virtual machine objects.
 
@@ -39,21 +39,21 @@ The **Get-WAPackVM** cmdlet gets virtual machine objects.
 
 ### Example 1: Get a virtual machine by using a name
 ```
-PS C:\>Get-WAPackVM -Name "ContosoV126"
+PS C:\> Get-WAPackVM -Name "ContosoV126"
 ```
 
 This command gets the virtual machine named ContosoV126.
 
 ### Example 2: Get a virtual machine by using an ID
 ```
-PS C:\>Get-WAPackVM -Id 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> Get-WAPackVM -Id 66242D17-189F-480D-87CF-8E1D749998C8
 ```
 
 This command gets the virtual machine that has the specified ID.
 
 ### Example 3: Get all virtual machines
 ```
-PS C:\>Get-WAPackVM
+PS C:\> Get-WAPackVM
 ```
 
 This command gets all virtual machines.

@@ -26,7 +26,7 @@ Named caches are supported in the Standard and Premium cache offerings, and are 
 
 ### Example 1: Create a named cache in the Managed Cache Service instance
 ```
-PS C:\>New-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache"
+PS C:\> New-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache"
 ```
 
 This command creates a named cache named ContosoNamedCache in the Managed Cache Service instance named ContosoCache.
@@ -34,7 +34,7 @@ It uses default values for all the other parameters.
 
 ### Example 2: Create a named cache in the specified Managed Cache Service instance with all parameters specified
 ```
-PS C:\>New-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache" -ExpiryPolicy "Sliding" -ExpiryTime 10 -WithNotifications -WithHighAvailability -WithoutEviction
+PS C:\> New-AzureManagedCacheNamedCache -Name "ContosoCache" -NamedCache "ContosoNamedCache" -ExpiryPolicy "Sliding" -ExpiryTime 10 -WithNotifications -WithHighAvailability -WithoutEviction
 ```
 
 This command creates a named cache named ContosoNamedCache in the Managed Cache Service instance named ContosoCache.
@@ -184,7 +184,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.ManagedCache.Models.PSCacheServiceWithNamedCaches
 
 ## NOTES
-* Use the Add-AzureAccount or Import-AzurePublishSettingsFile cmdlets to make your Azure account available to Windows PowerShell before using this cmdlet. For more information, see How to install and configure Azure PowerShellhttp://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/.
+* Use the **Add-AzureAccount** or **Import-AzurePublishSettingsFile** cmdlets to make your Azure account available to Windows PowerShell before using this cmdlet. For more information, see [How to install and configure Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/) (http://azure.microsoft.com/en-us/documentation/articles/install-configure-powershell/).
 
 ## RELATED LINKS
 

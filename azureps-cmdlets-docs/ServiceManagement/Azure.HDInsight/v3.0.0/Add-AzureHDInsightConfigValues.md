@@ -38,7 +38,7 @@ The custom settings are added to the configuration files of the relevant Hadoop 
 
 ### Example 1: Configure a cluster
 ```
-PS C:\>$HiveConfigValues = New-Object 'Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.DataObjects.AzureHDInsightHiveConfiguration'
+PS C:\> $HiveConfigValues = New-Object 'Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.DataObjects.AzureHDInsightHiveConfiguration'
 PS C:\> $HiveConfigValues.Configuration = @{ hive.exec.compress.output = true }
 PS C:\> $HiveConfigValues.AdditionalLibraries = New-Object 'Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.DataObjects.AzureHDInsightDefaultStorageAccount'
 PS C:\> $HiveConfigValues.AdditionalLibraries.StorageAccountName = "MyStorageAccount.blob.core.windows.net"
@@ -64,10 +64,10 @@ The eighth command creates a configuration value for Oozie, and then stores that
 The ninth command creates an **AzureHDInsightMapReduceConfiguration** object, and then stores it in the $MapredConfigValues variable.
 The next two commands create configuration values for MapReduce and store those values as members of $MapredConfigValues.
 
-The twelfth command uses the New-AzureHDInsightClusterConfig cmdlet to create an HDInsight cluster configuration, and then stores it in the $Config variable.
-The command uses the pipeline operator to pass $Config to the Set-AzureHDInsightDefaultStorage cmdlet to update the default storage setting and to the **Add-AzureHDInsightConfigValues** cmdlet to add the new configuration values to the cluster configuration.
+The twelfth command uses the **New-AzureHDInsightClusterConfig** cmdlet to create an HDInsight cluster configuration, and then stores it in the $Config variable.
+The command uses the pipeline operator to pass $Config to the **Set-AzureHDInsightDefaultStorage** cmdlet to update the default storage setting and to the **Add-AzureHDInsightConfigValues** cmdlet to add the new configuration values to the cluster configuration.
 
-The final command uses the pipeline operator to pass $Config to the New-AzureHDInsightCluster cmdlet to create a new HDInsight cluster with the customized settings.
+The final command uses the pipeline operator to pass $Config to the **New-AzureHDInsightCluster** cmdlet to create a new HDInsight cluster with the customized settings.
 
 ## PARAMETERS
 

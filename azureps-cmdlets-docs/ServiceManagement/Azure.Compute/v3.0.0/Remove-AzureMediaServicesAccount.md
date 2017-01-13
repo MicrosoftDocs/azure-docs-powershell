@@ -19,13 +19,13 @@ Remove-AzureMediaServicesAccount [-Name] <String> [-Force] [-Profile <AzureSMPro
 
 ## DESCRIPTION
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
-To get the version of the module you're using, in the Azure PowerShell console, type (Get-Module -Name Azure).Version.
+To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Remove-AzureMediaServicesAccount** cmdlet removes a Media Services account.
 
 ## EXAMPLES
 
-### 1: Delete a Media Services account
+### Example 1: Delete a Media Services account
 ```
 PS C:\> Remove-AzureMediaServicesAccount -Name "mediaservicesaccount" -Force
 ```
