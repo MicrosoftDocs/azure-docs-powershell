@@ -26,7 +26,7 @@ This cmdlet returns the legacy appliance configuration metadata.
 
 ### Example 1: Import a configuration file
 ```
-PS C:\>Import-AzureStorSimpleLegacyApplianceConfig -ConfigFilePath "C:\MigrationData\LegacyStorSimpleConfig.sse" -TargetDeviceName "8100-123456789" -ConfigDecryptionKey "fWs793hHVhR90NKdDYTeNq"
+PS C:\> Import-AzureStorSimpleLegacyApplianceConfig -ConfigFilePath "C:\MigrationData\LegacyStorSimpleConfig.sse" -TargetDeviceName "8100-123456789" -ConfigDecryptionKey "fWs793hHVhR90NKdDYTeNq"
 LegacyConfigId      : e2d5c9b1-b528-4c21-b8ae-533feefc8a41
 ImportedOn          : 4/8/2015 7:23:04 PM
 ConfigFile          : D:\configs\StorSimpleConfig_27_Mar_15_12_19.xml.sse
