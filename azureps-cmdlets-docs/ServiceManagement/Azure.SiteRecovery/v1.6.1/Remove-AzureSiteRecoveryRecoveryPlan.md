@@ -31,8 +31,9 @@ The **Remove-AzureSiteRecoveryRecoveryPlan** cmdlet removes a recovery plan from
 
 ### Example 1: Remove a recovery plan
 ```
-PS C:\>$RecoveryPlan = Get-AzureSiteRecoveryRecoveryPlan 
+PS C:\> $RecoveryPlan = Get-AzureSiteRecoveryRecoveryPlan 
 PS C:\> Remove-AzureSiteRecoveryRecoveryPlan -RecoveryPlan $RecoveryPlan
+
 ID               : 20329f92-9ed6-4529-8b74-d83309623248
 ClientRequestId  : 6c967844-096f-4ca6-a166-55936fd6d61c-2014-36-06 15:36:40Z-P
 State            : NotStarted

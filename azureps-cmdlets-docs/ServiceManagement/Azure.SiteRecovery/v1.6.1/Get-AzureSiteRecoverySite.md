@@ -23,7 +23,8 @@ The **Get-AzureSiteRecoverySite** cmdlet gets Azure Site Recovery sites in an Az
 
 ### Example 1: Get recovery sites
 ```
-PS C:\>Get-AzureSiteRecoverySite
+PS C:\> Get-AzureSiteRecoverySite
+
 Type                                    Name                                    ID
 ----                                    ----                                    --
 HyperVSite                              RecoverySite07                          f16829b4-5b01-4209-a6cf-8e0aff1fe328
