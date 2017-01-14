@@ -33,14 +33,14 @@ When included as part of a virtual machine creation script, this adds the specif
 
 ### Example 1: Create a certificate setting object
 ```
-PS C:\>$myLxCert = New-AzureSSHKey -Fingerprint "D7BECD4D63EBAF86023BB4F1A5FBF5C2C924902A" -Path "/home/username/.ssh/authorized_keys"
+PS C:\> $myLxCert = New-AzureSSHKey -Fingerprint "D7BECD4D63EBAF86023BB4F1A5FBF5C2C924902A" -Path "/home/username/.ssh/authorized_keys"
 ```
 
 This command creates a certificate setting object for an existing certificate and then stores the object in a variable for later use.
 
 ### Example 2: Add a certificate to a service
 ```
-PS C:\>Add-AzureCertificate -ServiceName "MySvc" -CertToDeploy "C:\temp\MyLxCert.cer"
+PS C:\> Add-AzureCertificate -ServiceName "MySvc" -CertToDeploy "C:\temp\MyLxCert.cer"
 $myLxCert = New-AzureSSHKey ?Fingerprint "D7BECD4D63EBAF86023BB4F1A5FBF5C2C924902A" -Path "/home/username/.ssh/authorized_keys"
 New-AzureVMConfig -Name "MyVM2" -InstanceSize Small -ImageName $LxImage `
           | Add-AzureProvisioningConfig -Linux -LinuxUser $lxUser -SSHPublicKeys $myLxCert -Password 'pass@word1' `

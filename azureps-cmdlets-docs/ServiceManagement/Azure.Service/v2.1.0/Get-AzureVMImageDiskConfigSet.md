@@ -24,7 +24,7 @@ The **Get-AzureVMImageDiskConfigSet** cmdlet gets a disk configuration set objec
 
 ### Example 1: Get a disk configuration set object from a virtual machine
 ```
-PS C:\>Get-AzureVMImage -ImageName $Img | Get-AzureVMImageDiskConfigSet
+PS C:\> Get-AzureVMImage -ImageName $Img | Get-AzureVMImageDiskConfigSet
 ```
 
 This command gets a disk configuration set object from a virtual machine.

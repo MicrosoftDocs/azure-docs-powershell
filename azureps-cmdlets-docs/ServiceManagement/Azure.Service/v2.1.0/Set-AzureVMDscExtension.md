@@ -28,7 +28,7 @@ The **Set-AzureVMDscExtension** cmdlet configures the Desired State Configuratio
 
 ### Example 1: Configure the DSC extension on a virtual machine
 ```
-PS C:\>Set-AzureVMDscExtension -VM $VM -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Path = 'C:\MyDirectory' }
+PS C:\> Set-AzureVMDscExtension -VM $VM -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Path = 'C:\MyDirectory' }
 DeploymentName              : my-vm-svc
 Name                        : my-vm
 Label                       : 
@@ -64,7 +64,7 @@ The -*ConfigurationArgument* parameter specifies a hashtable with the arguments 
 
 ### Example 2: Configure the DSC extension on a virtual machine using a path to the configuration data
 ```
-PS C:\>$VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1 
+PS C:\> $VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1 
 DeploymentName              : my-vm-svc
 Name                        : my-vm
 Label                       : 
@@ -99,7 +99,7 @@ This command configures the DSC extension on a virtual machine using a path to t
 Specifies a user-defined string that can be used to refer to an extension.
 This parameter is specified when the extension is added to the virtual machine for the first time.
 For subsequent updates, you should specify the previously used reference name while you update the extension.
-The *ReferenceName* assigned to an extension is returned using the Get-AzureVM cmdlet.
+The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: String

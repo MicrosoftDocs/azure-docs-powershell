@@ -21,10 +21,6 @@ Remove-AzureNetworkSecurityGroupConfig [[-NetworkSecurityGroupName] <String>] -V
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

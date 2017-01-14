@@ -25,14 +25,14 @@ The network configuration file defines DNS servers and subnets for cloud service
 
 ### Example 1: Update the network configuration of the Azure subscription to a local file
 ```
-PS C:\>Set-AzureVNetConfig  -ConfigurationPath "c:\temp\MyAzNets.netcfg"
+PS C:\> Set-AzureVNetConfig  -ConfigurationPath "c:\temp\MyAzNets.netcfg"
 ```
 
 This command updates the network configuration of the current Microsoft Azure subscription to that in the local file "c:\temp\MyAzNets.netcfg".
 
 ### Example 2: Set the Azure subscription and then update the network configuration
 ```
-PS C:\>$SubsId = "5bea2bc2-88a5-44b8-abe1-3e76733b6783"
+PS C:\> $SubsId = "5bea2bc2-88a5-44b8-abe1-3e76733b6783"
 C:\PS> $Cert = Get-Item cert:\LocalMachine\MY\82F105B2DA81149204A6257A9A91EC452B8C52C3
 C:\PS> Set-AzureVNetConfig  -ConfigurationPath "c:\temp\MyAzNets.netcfg"
 ```

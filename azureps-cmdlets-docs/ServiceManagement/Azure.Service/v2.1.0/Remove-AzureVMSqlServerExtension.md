@@ -22,10 +22,6 @@ The **Remove-AzureVMSqlServerExtension** cmdlet removes an Azure virtual machine
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

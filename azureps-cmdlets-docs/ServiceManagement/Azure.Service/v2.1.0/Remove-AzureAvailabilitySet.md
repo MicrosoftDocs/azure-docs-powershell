@@ -22,10 +22,6 @@ The **Remove-AzureAvailabilitySet** cmdlet removes an availability set from an A
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

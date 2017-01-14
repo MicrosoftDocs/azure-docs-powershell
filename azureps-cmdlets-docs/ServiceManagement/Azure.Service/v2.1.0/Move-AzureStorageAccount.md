@@ -43,21 +43,21 @@ The **Move-AzureStorageAccount** cmdlet migrates a storage account to a resource
 
 ### Example 1: Prepare storage account migration
 ```
-PS C:\>Move-AzureStorageAccount -Prepare -StorageAccountName "ContosoStorageName"
+PS C:\> Move-AzureStorageAccount -Prepare -StorageAccountName "ContosoStorageName"
 ```
 
 This command prepares the storage account named ContosoStorageName for migration to the Azure Resource Manager stack.
 
 ### Example 2: Start storage account migration
 ```
-PS C:\>Move-AzureStorageAccount -Commit -StorageAccountName "ContosoStorageName"
+PS C:\> Move-AzureStorageAccount -Commit -StorageAccountName "ContosoStorageName"
 ```
 
 This command starts migration of the storage account named ContosoStorageName to the Azure Resource Manager stack.
 
 ### Example 3: Validate storage account migration
 ```
-PS C:\>Move-AzureStorageAccount -Validate -StorageAccountName "ContosoStorageName"
+PS C:\> Move-AzureStorageAccount -Validate -StorageAccountName "ContosoStorageName"
 ```
 
 This command validates migration for the storage account named ContosoStorageName to the Azure Resource Manager stack.

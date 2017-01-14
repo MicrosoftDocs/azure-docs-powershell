@@ -24,14 +24,14 @@ The **Get-AzureStorageKey** cmdlet returns an object with the Azure Storage acco
 
 ### Example 1: Get an object that contains primary and secondary storage keys
 ```
-PS C:\>Get-AzureStorageKey -StorageAccountName "ContosoStore01"
+PS C:\> Get-AzureStorageKey -StorageAccountName "ContosoStore01"
 ```
 
 This command gets an object with the primary and secondary storage keys for the ContosoStore01 storage account.
 
 ### Example 2: Get the primary storage account key and store it in a variable
 ```
-PS C:\>$ContosoStoreKey = (Get-AzureStorageKey -StorageAccountName "ContosoStore01").Primary
+PS C:\> $ContosoStoreKey = (Get-AzureStorageKey -StorageAccountName "ContosoStore01").Primary
 ```
 
 This command puts the primary storage account key for the ContosoStore01 storage account in the $ContosoStoreKey variable.

@@ -69,10 +69,6 @@ The **Set-AzureServiceADDomainExtension** cmdlet enables an AD (Active Directory
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

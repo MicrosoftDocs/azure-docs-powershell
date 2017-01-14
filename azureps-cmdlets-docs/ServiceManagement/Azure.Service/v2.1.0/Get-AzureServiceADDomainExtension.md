@@ -24,7 +24,7 @@ The **Get-AzureServiceADDomainExtension** cmdlet gets the cloud service AD domai
 
 ### Example 1: Get the AD domain extension for a specified service
 ```
-PS C:\>Get-AzureServiceADDomainExtension -ServiceName $Svc
+PS C:\> Get-AzureServiceADDomainExtension -ServiceName $Svc
 ```
 
 This command gets the AD domain extension for the service specified in $Svc.

@@ -19,8 +19,8 @@ Set-AzureVMSize [-InstanceSize] <String> -VM <IPersistentVM> [-Profile <AzureSMP
 
 ## DESCRIPTION
 The **Set-AzureVMSize** cmdlet updates the size of a virtual machine.
-It has two parameters: *InstanceSize*, which is the new size of the virtual machine, and *VM*, which is a virtual machine object retrieved by using the Get-AzureVM cmdlet.
-The result of **Set-AzureVMSize** can be piped to the Update-AzureVM cmdlet or stored in a variable for later use.
+It has two parameters: *InstanceSize*, which is the new size of the virtual machine, and *VM*, which is a virtual machine object retrieved by using the **Get-AzureVM** cmdlet.
+The result of **Set-AzureVMSize** can be piped to the **Update-AzureVM** cmdlet or stored in a variable for later use.
 No actual change is made until **Update-AzureVM** is executed.
 
 Note: This cmdlet will require the virtual machine to be re-provisioned and it might get a new IP address.
@@ -29,7 +29,7 @@ Note: This cmdlet will require the virtual machine to be re-provisioned and it m
 
 ### Example 1: Set the size of a virtual machine
 ```
-PS C:\>Get-AzureVM -ServiceName "MySvc1" -Name "MyVM3" | Set-AzureVMSize "Small" | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "MySvc1" -Name "MyVM3" | Set-AzureVMSize "Small" | Update-AzureVM
 ```
 
 This command updates a virtual machine to size "Small".
