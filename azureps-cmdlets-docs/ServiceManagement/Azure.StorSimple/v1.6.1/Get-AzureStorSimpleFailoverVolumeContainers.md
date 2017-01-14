@@ -33,7 +33,7 @@ Only groups that have a value of $True for the **IsDCGroupEligibleForDR** proper
 
 ### Example 1: Get failover volume containers
 ```
-PS C:\>Get-AzureStorSimpleFailoverVolumeContainers -DeviceName "ChewD_App7"
+PS C:\> Get-AzureStorSimpleFailoverVolumeContainers -DeviceName "ChewD_App7"
 
 DCGroup                    IneligibilityMessage          IsDCGroupEligibleForDR
 -------                    --------------------          ----------------------

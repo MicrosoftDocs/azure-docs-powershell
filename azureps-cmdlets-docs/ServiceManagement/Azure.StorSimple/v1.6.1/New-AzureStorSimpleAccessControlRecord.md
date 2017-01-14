@@ -25,7 +25,8 @@ You can use an **AccessControlRecord** object to configure volumes.
 
 ### Example 1: Create an Access Controlaccess control record and wait for the resultaccess control
 ```
-PS C:\>New-AzureStorSimpleAccessControlRecord -ACRName "Acr10" -IQNInitiatorName "Iqn10" -WaitForComplete
+PS C:\> New-AzureStorSimpleAccessControlRecord -ACRName "Acr10" -IQNInitiatorName "Iqn10" -WaitForComplete
+
 Error      : Microsoft.WindowsAzure.Management.StorSimple.Models.ErrorDetails
 JobId      : 08719243-3a76-43a5-a88b-e5f2b63ed3d9
 JobSteps   : {}
@@ -41,7 +42,7 @@ This command specifies the *WaitForComplete* parameter, and, therefore, the comm
 
 ### Example 2: Create an Access Controlaccess control recordaccess control
 ```
-PS C:\>New-AzureStorSimpleAccessControlRecord -ACRName "Acr11" -IQNInitiatorName "Iqn11"
+PS C:\> New-AzureStorSimpleAccessControlRecord -ACRName "Acr11" -IQNInitiatorName "Iqn11"
 VERBOSE: The create job is submitted successfully. Please use the command Get-AzureStorSimpleTask -InstanceId
 2bd56fbb-4b95-4f2c-b99f-6321231a018d for tracking the job status
 ```
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForComplete
-Indicates that this cmdlet waits for the operation to complete before it returns control to the wps_1 console.
+Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
 
 ```yaml
 Type: SwitchParameter

@@ -39,14 +39,11 @@ Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Tag <String
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\> 
-```
-
 ## PARAMETERS
 
 ### -Context
+Specifies a **PsApiManagementContext** object.
+
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
@@ -99,6 +96,10 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyId
+Specifies an ID for the property.
+Maximum length is 256 characters.
+If you do not specify an ID, this cmdlet generates one.
+
 ```yaml
 Type: String
 Parameter Sets: Get by property ID
@@ -112,6 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+Specifies the name of the management property that this cmdlet gets.
+
 ```yaml
 Type: String
 Parameter Sets: Find properties containing Name
@@ -125,6 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
+Specifies a tag.
+
 ```yaml
 Type: String
 Parameter Sets: Find properties by Tag
@@ -148,4 +153,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementProperty](./New-AzureRmApiManagementProperty.md)
 
+[Remove-AzureRmApiManagementProperty](./Remove-AzureRmApiManagementProperty.md)
+
+[Set-AzureRmApiManagementProperty](./Set-AzureRmApiManagementProperty.md)

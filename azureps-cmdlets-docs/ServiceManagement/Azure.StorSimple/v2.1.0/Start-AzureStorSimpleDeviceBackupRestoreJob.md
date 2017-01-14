@@ -32,7 +32,7 @@ Specify a backup ID and an optional snapshot ID.
 
 ### Example 1: Start a job to restore a backup
 ```
-PS C:\>Start-AzureStorSimpleDeviceBackupRestoreJob -DeviceName "Contoso63-AppVm" -BackupId "b3b50534-763c-4b05-9724-5ecf62bde721" -WaitForComplete
+PS C:\> Start-AzureStorSimpleDeviceBackupRestoreJob -DeviceName "Contoso63-AppVm" -BackupId "b3b50534-763c-4b05-9724-5ecf62bde721" -WaitForComplete
 Confirm
 Are you sure you want to restore the backup with backupId b3b50534-763c-4b05-9724-5ecf62bde721? 
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -53,7 +53,7 @@ The command specifies the *WaitForComplete* parameter, so the job finishes befor
 
 ### Example 2: Start a job to restore a specific snapshot
 ```
-PS C:\>Start-AzureStorSimpleDeviceBackupRestoreJob -DeviceName "Contoso63-AppVm" -BackupId "b3b50534-763c-4b05-9724-5ecf62bde721" -SnapshotId "2d0cfad7-46bf-4266-8859-96549646e947_0000000000000000" -Force
+PS C:\> Start-AzureStorSimpleDeviceBackupRestoreJob -DeviceName "Contoso63-AppVm" -BackupId "b3b50534-763c-4b05-9724-5ecf62bde721" -SnapshotId "2d0cfad7-46bf-4266-8859-96549646e947_0000000000000000" -Force
 
 The start job is submitted successfully. Please use the command Get-AzureStorSimpleTask -InstanceId 9102ed9a-078f-4648-a
 721-3cffbba31336 for tracking the job status

@@ -21,7 +21,7 @@ New-AzureMediaServicesKey [-Name] <String> [-KeyType] <MediaServicesKeyType> [-F
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
 To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
-The `New-AzureMediaServicesKey` cmdlet updates the Primary or Secondary key for the specified Media Services account.
+The **New-AzureMediaServicesKey** cmdlet updates the Primary or Secondary key for the specified Media Services account.
 
 ## EXAMPLES
 

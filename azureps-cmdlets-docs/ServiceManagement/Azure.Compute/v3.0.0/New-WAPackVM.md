@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ### -Template
 Specifies a template.
 The cmdlet creates a virtual machine based on the template that you specify.
-To obtain a template object, use the Get-WAPackVMTemplate cmdlet.
+To obtain a template object, use the **Get-WAPackVMTemplate** cmdlet.
 
 ```yaml
 Type: VMTemplate

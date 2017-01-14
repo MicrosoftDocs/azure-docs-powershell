@@ -24,14 +24,14 @@ The **Remove-AzureTrafficManagerProfile** cmdlet removes a Microsoft Azure Traff
 
 ### Example 1: Remove a Traffic Manager profile
 ```
-PS C:\>Remove-AzureTrafficManagerProfile -Name "MyProfile"
+PS C:\> Remove-AzureTrafficManagerProfile -Name "MyProfile"
 ```
 
 This command removes the Traffic Manager profile named MyProfile.
 
 ### Example 2: Remove a Traffic Manager profile
 ```
-PS C:\>Remove-AzureTrafficManagerProfile -Name "MyProfile" -Force -PassThru
+PS C:\> Remove-AzureTrafficManagerProfile -Name "MyProfile" -Force -PassThru
 ```
 
 This command removes the Traffic Manager profile named MyProfile without prompting you for confirmation, and returns the results.
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile

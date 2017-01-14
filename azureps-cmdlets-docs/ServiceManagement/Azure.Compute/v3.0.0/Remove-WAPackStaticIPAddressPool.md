@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -StaticIPAddressPool
 Specifies a StaticIPAddressPool.
-To obtain a static IP address pool, use the Get-WAPackStaticIPAddressPool cmdlet.
+To obtain a static IP address pool, use the **Get-WAPackStaticIPAddressPool** cmdlet.
 
 ```yaml
 Type: StaticIPAddressPool

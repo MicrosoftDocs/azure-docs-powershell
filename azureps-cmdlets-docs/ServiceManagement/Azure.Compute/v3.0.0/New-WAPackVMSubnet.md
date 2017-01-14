@@ -30,6 +30,7 @@ PS C:\> New-WAPackVMSubnet -VNet $VNet -Name "ContosoVMSubnet01" -Subnet "192.16
 
 The first command first retrieves the virtual machine network to which we want to add a new virtual machine subnet.
 This virtual machine network is named ContosoVNet01.
+
 The second command creates a virtual machine subnet using the previously retrieve virtual machine network, a name ContosoVMSubnet01 and a subnet 192.168.1.0/24.
 
 ## PARAMETERS

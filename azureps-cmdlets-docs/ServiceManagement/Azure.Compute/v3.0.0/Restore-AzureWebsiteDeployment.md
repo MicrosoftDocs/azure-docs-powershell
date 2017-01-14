@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If enabled, redeploys the previous deployment without prompting for confirmation.
+Redeploys the previous deployment without prompting for confirmation.
 
 ```yaml
 Type: SwitchParameter
