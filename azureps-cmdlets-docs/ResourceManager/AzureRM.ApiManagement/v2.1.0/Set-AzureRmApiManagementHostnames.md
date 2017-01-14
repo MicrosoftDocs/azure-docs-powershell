@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -PortalHostnameConfiguration
 Specifies the custom portal hostname configuration.
-Passing $null to the cmdlet sets the default hostname.
+Passing $Null to the cmdlet sets the default hostname.
 
 ```yaml
 Type: PsApiManagementHostnameConfiguration
@@ -198,5 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-AzureRmApiManagementHostnameCertificate](./Import-AzureRmApiManagementHostnameCertificate.md)
 
 [New-AzureRmApiManagementHostnameConfiguration](./New-AzureRmApiManagementHostnameConfiguration.md)
-
-

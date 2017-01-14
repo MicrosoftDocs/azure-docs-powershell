@@ -20,7 +20,7 @@ Remove-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <St
 ## DESCRIPTION
 The **Remove-AzureRmApiManagementRegion** cmdlet removes instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion** from a collection of **AdditionalRegions** of provided the instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement**.
 This cmdlet does not modify deployment by itself but updates the instance of **PsApiManagement** in-memory.
-To update a deployment of an API Management, pass the modified **PsApiManagementInstance** to **Update-AzureRmApiManagement**.
+To update a deployment of an API Management, pass the modified **PsApiManagementInstance** to [Update-AzureRmApiManagement](./Update-AzureRmApiManagement.md).
 
 ## EXAMPLES
 
@@ -142,5 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AzureRmApiManagementRegion](./Add-AzureRmApiManagementRegion.md)
 
 [Update-AzureRmApiManagementRegion](./Update-AzureRmApiManagementRegion.md)
-
-
