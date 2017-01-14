@@ -31,13 +31,13 @@ Start-AzureSqlDatabaseImport [-SqlConnectionContext] <ISqlServerConnectionInform
 The **Start-AzureSqlDatabaseImport** cmdlet starts an import operation from Azure Blob storage to an Azure SQL Database.
 If the database does not exist, this cmdlet creates it by using the size and edition values that you specify.
 The operation requires a database server connection context.
-Use the Get-AzureSqlDatabaseImportExportStatus cmdlet to get the status of the import operation.
+Use the **Get-AzureSqlDatabaseImportExportStatus** cmdlet to get the status of the import operation.
 
 ## EXAMPLES
 
 ### Example 1: Import a database
 ```
-PS C:\>$Credential = Get-Credential
+PS C:\> $Credential = Get-Credential
 PS C:\> $SqlContext = New-AzureSqlDatabaseServerContext -ServerName $ServerName -Credentials $Credential
 PS C:\> $StorageContext = New-AzureStorageContext -StorageAccountName $StorageName -StorageAccountKey $StorageKey
 PS C:\> $Container = Get-AzureStorageContainer -Name $ContainerName -Context $StorageContext

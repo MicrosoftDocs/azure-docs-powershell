@@ -37,14 +37,14 @@ This cmdlet gets a specific recoverable database or all recoverable databases on
 
 ### Example 1: Get all recoverable databases
 ```
-PS C:\>Get-AzureSqlRecoverableDatabase -ServerName "server1"
+PS C:\> Get-AzureSqlRecoverableDatabase -ServerName "server1"
 ```
 
 This command gets all recoverable databases on the server named Server01.
 
 ### Example 2: Get a specific recoverable database
 ```
-PS C:\>Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17"
+PS C:\> Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17"
 ```
 
 This command gets retrieves the database named Database17 on the server named Server01.
