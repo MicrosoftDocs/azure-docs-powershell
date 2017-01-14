@@ -22,7 +22,7 @@ New-AzureWebsite [[-Location] <String>] [[-Hostname] <String>] [[-PublishingUser
 This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
 To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
-The cmdlet creates a new website to run in Azure and prepares for deployment through Github.
+The **New-AzureWebsite** cmdlet creates a new website to run in Azure and prepares for deployment through Github.
 
 ## EXAMPLES
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublishingUsername
-The user name you have specified in the Azure Portal for Git deployment.
+Specifies the user name you have specified in the Azure Portal for Git deployment.
 
 ```yaml
 Type: String
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -GitHub
-If enabled, this parameter links the new website to an existing Github repository.
+Links the new website to an existing Github repository.
 Commits to the Giuthub repository are pushed to the website in Azure.
 
 ```yaml

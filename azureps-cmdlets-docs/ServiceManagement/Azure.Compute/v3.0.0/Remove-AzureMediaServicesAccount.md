@@ -33,7 +33,7 @@ PS C:\> Remove-AzureMediaServicesAccount -Name "mediaservicesaccount" -Force
 ## PARAMETERS
 
 ### -Name
-The Media Services account name.
+Specifies the Media Services account name.
 
 ```yaml
 Type: String
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If the *Force* switch is specified, the deletion is not confirmed.
+Indicates that the deletion is not confirmed.
 
 ```yaml
 Type: SwitchParameter

@@ -24,21 +24,21 @@ If you do not specify the *Name* parameter, the cmdlet lists the Traffic Manager
 
 ### Example 1: Get the list of Traffic Manager profiles in a subscription
 ```
-PS C:\>Get-AzureTrafficManagerProfile
+PS C:\> Get-AzureTrafficManagerProfile
 ```
 
 This command gets the list of Traffic Manager profiles in your subscription.
 
 ### Example 2: Get a Traffic Manager profile
 ```
-PS C:\>Get-AzureTrafficManagerProfile -Name "MyProfile"
+PS C:\> Get-AzureTrafficManagerProfile -Name "MyProfile"
 ```
 
 This command gets the Traffic Manager profile named MyProfile.
 
 ### Example 3: Add an endpoint to a Traffic Manager profile
 ```
-PS C:\>Get-AzureTrafficManagerProfile -Name "MyProfile" | Add-AzureTrafficManagerEndpoint -DomainName "Myapp2.cloudapp.net" -TrafficManagerProfile $MyTrafficManagerProfile -Type "CloudService" -Status "Enabled" | Set-AzureTrafficManagerProfile
+PS C:\> Get-AzureTrafficManagerProfile -Name "MyProfile" | Add-AzureTrafficManagerEndpoint -DomainName "Myapp2.cloudapp.net" -TrafficManagerProfile $MyTrafficManagerProfile -Type "CloudService" -Status "Enabled" | Set-AzureTrafficManagerProfile
 ```
 
 This command adds an endpoint to a Traffic Manager profile, and then saves the profile.
@@ -61,7 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-In-memory profile.
+Specifies the Azure profile from which this cmdlet reads. 
+If you do not specify a profile, this cmdlet reads from the local default profile.
 
 ```yaml
 Type: AzureSMProfile

@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -VMSubnet
 Specifies a virtual machine subnet.
-To obtain a virtual machine subnet, use the Get-WAPackVMSubnet cmdlet.
+To obtain a virtual machine subnet, use the **Get-WAPackVMSubnet** cmdlet.
 
 ```yaml
 Type: VMSubnet

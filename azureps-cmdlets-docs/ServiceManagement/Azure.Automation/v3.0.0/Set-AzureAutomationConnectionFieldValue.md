@@ -22,10 +22,6 @@ The Set-AzureAutomationConnectionFieldValue cmdlet modifies the value for a fiel
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

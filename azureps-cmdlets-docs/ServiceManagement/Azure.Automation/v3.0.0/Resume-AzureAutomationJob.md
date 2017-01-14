@@ -21,7 +21,7 @@ Resume-AzureAutomationJob [-Id] <Guid> [-AutomationAccountName] <String> [-Profi
 The **Resume-AzureAutomationJob** cmdlet resumes a suspended Microsoft Azure Automation job.
 Use the *Id* parameter to specify the suspended job.
 
-To suspend a job, use the Suspend-AzureAutomationJob cmdlet.
+To suspend a job, use the **Suspend-AzureAutomationJob** cmdlet.
 
 ## EXAMPLES
 

@@ -35,6 +35,7 @@ PS C:\> New-WAPackVNet -LogicalNetwork $LogicalNetwork -Name "ContosoVNett01" -D
 
 The first command first retrieves the logical network to which we want to add a new virtualized network.
 This logical network is named ContosoLogicalNetwork01.
+
 The second and last command creates a virtualized network using the previously retrieved logical network, a name (ContosoVNett01) and a description (A description).
 
 ## PARAMETERS

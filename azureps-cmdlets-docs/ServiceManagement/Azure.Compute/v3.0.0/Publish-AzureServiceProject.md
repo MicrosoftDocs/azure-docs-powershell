@@ -55,7 +55,7 @@ Creates a deployment package (.cspkg) file in the service directory and does not
 Specifies the name to be used for the service when publishing to Windows Azure.
 The name determines part of the label in the cloudapp.net subdomain that is used to address the service when hosted in Windows Azure (that is, **name**.cloudapp.net).
 Any name specified while publishing the service overrides the name given when the service was created.
-(See the New-AzureServiceProject cmdlet).
+(See the **New-AzureServiceProject** cmdlet).
 
 ```yaml
 Type: String

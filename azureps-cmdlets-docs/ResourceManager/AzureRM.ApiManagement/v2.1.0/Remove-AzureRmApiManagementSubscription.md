@@ -8,7 +8,7 @@ ms.assetid: 7BD63F30-F68A-4BC4-B118-A9D5194F8551
 # Remove-AzureRmApiManagementSubscription
 
 ## SYNOPSIS
-Deletes an existing subscription.
+Removes an existing subscription.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-AzureRmApiManagementSubscription -Context <PsApiManagementContext> -Subsc
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmApiManagementSubscription** cmdlet deletes an existing subscription.
+The **Remove-AzureRmApiManagementSubscription** cmdlet removes an existing subscription.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ The **Remove-AzureRmApiManagementSubscription** cmdlet deletes an existing subsc
 PS C:\> Remove-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789" -Force
 ```
 
-This command deletes an existing subscription.
+This command removes an existing subscription.
 
 ## PARAMETERS
 
@@ -165,5 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementSubscription](./New-AzureRmApiManagementSubscription.md)
 
 [Set-AzureRmApiManagementSubscription](./Set-AzureRmApiManagementSubscription.md)
-
-

@@ -47,7 +47,8 @@ The returned object contains the following properties:
 
 ### Example 1: Get volumes in a specified container
 ```
-PS C:\>Get-AzureStorSimpleDeviceVolumeContainer -DeviceName "Contoso63-AppVm" -VolumeContainerName "Container03" | Get-AzureStorSimpleDeviceVolume -DeviceName "Contoso63-AppVm"
+PS C:\> Get-AzureStorSimpleDeviceVolumeContainer -DeviceName "Contoso63-AppVm" -VolumeContainerName "Container03" | Get-AzureStorSimpleDeviceVolume -DeviceName "Contoso63-AppVm"
+
 InstanceId             : BA-1503262017214433280-ade42af6-dabb-449d-b66b-4f5d06891d4c
 Name                   : Volume 1 Clone
 Online                 : True
@@ -94,7 +95,7 @@ That cmdlet gets all the volumes in that container for the device named Contoso6
 
 ### Example 2: Get a volume by using its name
 ```
-PS C:\>Get-AzureStorSimpleDeviceVolume -DeviceName "Contoso63-AppVm" -VolumeName "Volume18"
+PS C:\> Get-AzureStorSimpleDeviceVolume -DeviceName "Contoso63-AppVm" -VolumeName "Volume18"
 InstanceId             : SS-VOL-c75e9636-1dcf-43db-92df-3af1ecf3f18a
 Name                   : Volume18
 Online                 : True

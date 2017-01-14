@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -SaveAs
 Specifies the file path to save the result to.
-If you do not specify this parameter the result is pipelined as a sting.
+If you do not specify this parameter the result is pipelined as a string.
 
 ```yaml
 Type: String
@@ -271,5 +271,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementPolicy](./Remove-AzureRmApiManagementPolicy.md)
 
 [Set-AzureRmApiManagementPolicy](./Set-AzureRmApiManagementPolicy.md)
-
-
