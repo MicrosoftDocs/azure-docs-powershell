@@ -28,14 +28,14 @@ You can use a certificate setting object to create a virtual machine by using th
 
 ### Example 1: Create a certificate setting object
 ```
-PS C:\>New-AzureCertificateSetting -Thumbprint "D7BECD4D63EBAF86023BB41FA5FBF5C2C924902A" -StoreName "My"
+PS C:\> New-AzureCertificateSetting -Thumbprint "D7BECD4D63EBAF86023BB41FA5FBF5C2C924902A" -StoreName "My"
 ```
 
 This command creates a certificate setting object for an existing certificate.
 
 ### Example 2: Create a virtual machine that uses a configuration setting object
 ```
-PS C:\>Add-AzureCertificate -ServiceName "ContosoService" -CertToDeploy "C:\temp\ContosoCert.cer"
+PS C:\> Add-AzureCertificate -ServiceName "ContosoService" -CertToDeploy "C:\temp\ContosoCert.cer"
 PS C:\> $CertificateSetting = New-AzureCertificateSetting -Thumbprint "D7BECD4D63EBAF86023BB41FA5FBF5C2C924902A" -StoreName "My" 
 PS C:\> $Image = Get-AzureVMImage -ImageName "ContosoStandard"
 PS C:\> New-AzureVMConfig -Name "VirtualMachine17" -InstanceSize Small -ImageName $Image | Add-AzureProvisioningConfig -Windows -Certificates $CertificateSetting -Password "password" | New-AzureVM -ServiceName "ContosoService"
@@ -45,7 +45,7 @@ The first command adds the certificate ContosoCert.cer to the service named Cont
 
 The second command creates a certificate setting object, and then stores it in the $CertificateSetting variable.
 
-The third command gets an image from the image repository by using the Get-AzureVMImage cmdlet.
+The third command gets an image from the image repository by using the **Get-AzureVMImage** cmdlet.
 This command store the image in the $Image variable.
 
 The final command creates a virtual machine configuration object based on the image in $Image by using the New-AzureVMConfig cmdlet.

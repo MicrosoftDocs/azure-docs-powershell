@@ -28,13 +28,13 @@ You can specify changes to an endpoint that is not load balanced.
 
 ### Example 1: Modify an endpoint to listen on a port
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirutalMachine01" | Set-AzureEndpoint -Name "Web" -PublicPort 443 -LocalPort 443 -Protocol tcp | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirutalMachine01" | Set-AzureEndpoint -Name "Web" -PublicPort 443 -LocalPort 443 -Protocol tcp | Update-AzureVM
 ```
 
-This command retrieves the configuration of a virtual machine named VirtualMachine01 by using the Get-AzureVM cmdlet.
+This command retrieves the configuration of a virtual machine named VirtualMachine01 by using the **Get-AzureVM** cmdlet.
 The command passes it to the current cmdlet by using the pipeline operator.
 This cmdlet modifies the endpoint named Web to listen on port 443.
-The command passes the virtual machine object to the Update-AzureVM cmdlet, which implements your changes.
+The command passes the virtual machine object to the **Update-AzureVM** cmdlet, which implements your changes.
 
 ## PARAMETERS
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ### -VirtualIPName
 Specifies the name of a virtual IP address that Azure associates to the endpoint.
 Your service can have multiple virtual IPs.
-To create virtual IPs, use the Add-AzureVirtualIP cmdlet.
+To create virtual IPs, use the **Add-AzureVirtualIP** cmdlet.
 
 ```yaml
 Type: String

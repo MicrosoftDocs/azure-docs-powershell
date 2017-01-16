@@ -34,14 +34,14 @@ The **Update-AzureRmApiManagementDeployment** cmdlet updates current deployments
 
 ### Example 1: Update a deployment of an ApiManagement instance
 ```
-PS C:\>Update-AzureRmApiManagementDeployment -ResourceGroupName "Contoso" -Name "ContosoApi" -Sku "Standard" -Capacity 3
+PS C:\> Update-AzureRmApiManagementDeployment -ResourceGroupName "Contoso" -Name "ContosoApi" -Sku "Standard" -Capacity 3
 ```
 
 This command updates deployment of an API Management instance to a three unit capacity standard.
 
 ### Example 2: Get an ApiManagement instance and rescale it
 ```
-PS C:\>$ApiManagement = Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi"
+PS C:\> $ApiManagement = Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi"
 PS C:\> $ApiManagement.Sku = "Premium"
 PS C:\> $ApiManagement.Capacity = 5
 PS C:\> $ApiManagement.AddRegion("Central US", "Premium", 3)
@@ -52,19 +52,19 @@ This example gets an Api Management instance, scales it to five premium units an
 
 ### Example 3: Move API Management instance inside a Virtual Network
 ```
-PS C:\># Create a Virtual Network Object
-PS C:\>$virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "North Central US" -SubnetResourceId
+PS C:\> # Create a Virtual Network Object
+PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "North Central US" -SubnetResourceId
 "/subscriptions/20010444-2b48-4245-a95c-090db6312d5f/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNe
 tworks/contosoVnet/subnets/default"
 
-PS C:\># Get the service
-PS C:\>$service = Get-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Name "contosoapim"
+PS C:\> # Get the service
+PS C:\> $service = Get-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Name "contosoapim"
 
-PS C:\>$service.VirtualNetwork = $virtualNetwork
-PS C:\>$service.VpnType = "External"
+PS C:\> $service.VirtualNetwork = $virtualNetwork
+PS C:\> $service.VpnType = "External"
 
-PS C:\># Update the Deployment with Virtual Network
-PS C:\>Update-AzureRmApiManagementDeployment -ApiManagement $service
+PS C:\> # Update the Deployment with Virtual Network
+PS C:\> Update-AzureRmApiManagementDeployment -ApiManagement $service
 ```
 
 This example moves an existing API Management deployment inside a Virtual Network configures external *VpnType*.

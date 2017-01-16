@@ -24,7 +24,7 @@ The **Get-AzureVMCustomScriptExtension** cmdlet gets information from an Azure v
 
 ### Example 1: Get an Azure virtual machine script extension
 ```
-PS C:\>Get-AzureVMCustomScriptExtension -VM $VM;
+PS C:\> Get-AzureVMCustomScriptExtension -VM $VM;
 ```
 
 This command gets an Azure virtual machine script extension stored in the variable $VM.

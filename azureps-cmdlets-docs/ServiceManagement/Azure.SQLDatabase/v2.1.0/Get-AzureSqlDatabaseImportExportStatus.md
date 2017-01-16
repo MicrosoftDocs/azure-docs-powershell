@@ -26,14 +26,14 @@ Get-AzureSqlDatabaseImportExportStatus [-Request] <ImportExportRequest> [-Profil
 
 ## DESCRIPTION
 The **Get-AzureSqlDatabaseImportExportStatus** cmdlet gets the status of an import or export request.
-The Start-AzureSqlDatabaseImport or Start-AzureSqlDatabaseExport cmdlet initiates requests.
+The **Start-AzureSqlDatabaseImport** or **Start-AzureSqlDatabaseExport** cmdlet initiates requests.
 You can specify the request object by using the *Request* parameter, or you can identify the request by using the *RequestId* parameter and the *Username*, *Password*, and *ServerName* parameters.
 
 ## EXAMPLES
 
 ### Example 1: Get the status of an export request
 ```
-PS C:\>$ExportRequest = Start-AzureSqlDatabaseExport -SqlConnectionContext $SqlContext -StorageContainer $Container -DatabaseName $DatabaseName -BlobName $BlobName
+PS C:\> $ExportRequest = Start-AzureSqlDatabaseExport -SqlConnectionContext $SqlContext -StorageContainer $Container -DatabaseName $DatabaseName -BlobName $BlobName
 PS C:\> Get-AzureSqlDatabaseImportExportStatus -Request $ExportRequest
 ```
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -Request
 Specifies an **ImportExportRequest** object.
-To obtain an import or export request object, use the Start-AzureSqlDatabaseImport or Start-AzureSqlDatabaseExport cmdlet.
+To obtain an import or export request object, use the **Start-AzureSqlDatabaseImport** or **Start-AzureSqlDatabaseExport** cmdlet.
 
 ```yaml
 Type: ImportExportRequest

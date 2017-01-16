@@ -26,23 +26,23 @@ To delete the associated virtual hard drive (VHD), use the **DeleteVHD** paramet
 
 ### Example 1: Remove an image from the image repository
 ```
-PS C:\>Remove-AzureVMImage -ImageName "Image001"
+PS C:\> Remove-AzureVMImage -ImageName "Image001"
 ```
 
 This command removes the image named Image001 from the image repository.
 
 ### Example 2: Remove an image from the image repository and also the VHD
 ```
-PS C:\>Remove-AzureVMImage -ImageName " Image001" -DeleteVHD
+PS C:\> Remove-AzureVMImage -ImageName " Image001" -DeleteVHD
 ```
 
 This command removes the image named Image001 from the image repository and also deletes the physical VHD image from the storage account.
 
 ### Example 3: Set a subscription context and then remove all the images
 ```
-PS C:\>$SubsId = &amp;lt;MySubscriptionID&amp;gt;
+PS C:\> $SubsId = &amp;lt;MySubscriptionID&amp;gt;
 PS C:\> $Cert = Get-AzureCertificate cert:\LocalMachine\MY\&amp;lt;CertificateThumbprint&amp;gt;
-PS C:\>Get-AzureVMImage `
+PS C:\> Get-AzureVMImage `
 | Where-Object {$_.Label -match "Beta" }`
 | Foreach-Object {Remove-AzureVMImage -ImageName $_.name }
 ```

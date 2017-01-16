@@ -24,7 +24,7 @@ The **Get-AzureVMChefExtension** cmdlet gets the Chef extension applied on a vir
 
 ### Example 1: Get the Chef extension applied on the specified virtual machine
 ```
-PS C:\>Get-AzureVMChefExtension -VM $VM;
+PS C:\> Get-AzureVMChefExtension -VM $VM;
 ```
 
 This command gets the Chef extension applied on the specified virtual machine.

@@ -25,7 +25,7 @@ This cmdlet deletes all databases on the server.
 
 ### Example 1: Remove a database server
 ```
-PS C:\>Remove-AzureSqlDatabaseServer -ServerName "lpqd0zbr8y"
+PS C:\> Remove-AzureSqlDatabaseServer -ServerName "lpqd0zbr8y"
 ```
 
 This command removes the Azure SQL Database server named lpqd0zbr8y.

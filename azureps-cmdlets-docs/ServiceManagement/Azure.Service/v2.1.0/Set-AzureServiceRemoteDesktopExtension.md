@@ -35,14 +35,14 @@ The **Set-AzureServiceRemoteDesktopExtension** cmdlet enables remote desktop ext
 
 ### Example 1: Enable remote desktop extension
 ```
-PS C:\>Set-AzureServiceRemoteDesktopExtension -ServiceName $svc -Credentials $creds
+PS C:\> Set-AzureServiceRemoteDesktopExtension -ServiceName $svc -Credentials $creds
 ```
 
 This command enables the remote desktop extension for the specified service.
 
 ### Example 2: Enable remote desktop extension for a specified role
 ```
-PS C:\>Set-AzureServiceRemoteDesktopExtension -ServiceName $svc -Credentials $creds -Role "WebRole1"
+PS C:\> Set-AzureServiceRemoteDesktopExtension -ServiceName $svc -Credentials $creds -Role "WebRole1"
 ```
 
 This command enables the remote desktop extension for the specified service and role.

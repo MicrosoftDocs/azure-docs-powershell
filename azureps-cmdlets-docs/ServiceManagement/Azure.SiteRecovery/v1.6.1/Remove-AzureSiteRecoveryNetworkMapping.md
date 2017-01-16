@@ -24,7 +24,7 @@ The **Remove-AzureSiteRecoveryNetworkMapping** cmdlet removes a network mapping 
 
 ### Example 1: Remove the mapping between a network and a recovery network
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> $NetworkMapping = Get-AzureSiteRecoveryNetworkMapping -PrimaryServer $Servers[0] -RecoveryServer $Servers[0]
 PS C:\> Remove-AzureSiteRecoveryNetworkMapping -NetworkMapping $NetworkMapping
 ```
@@ -40,13 +40,13 @@ The final command removes the network mapping in $NetworkMapping.
 
 ### Example 2: Remove the mapping between a network and an Azure virtual machine network
 ```
-PS C:\>$Servers = Get-AzureSiteRecoveryServer
+PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> $NetworkMapping = Get-AzureSiteRecoveryNetworkMapping -PrimaryServer $Servers[0] -Azure
 PS C:\> Remove-AzureSiteRecoveryNetworkMapping -NetworkMapping $NetworkMapping
 ```
 
 The first command cmdlet gets servers for the current Azure Site Recovery vault.
-The command stores the Microsoft Azure Site Recovery servers in the **$Servers** array variable.
+The command stores the Microsoft Azure Site Recovery servers in the $Servers array variable.
 
 The second command gets a mapping between the primary network and an Azure virtual machine network, and then stores it in the $NetworkMapping variable.
 The command specifies the primary server for the network as the first element of $Servers.

@@ -22,10 +22,6 @@ The **Test-AzureStaticVNetIP** cmdlet tests the availability of a static virtual
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

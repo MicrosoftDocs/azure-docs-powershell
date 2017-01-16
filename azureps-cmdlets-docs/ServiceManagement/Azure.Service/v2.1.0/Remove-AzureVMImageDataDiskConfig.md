@@ -31,7 +31,7 @@ The **Remove-AzureVMImageDataDiskConfig** cmdlet removes the data disk configura
 
 ### Example 1: Remove the data disk configuration from the DiskConfigSet object
 ```
-PS C:\>$Disk = New-AzureDiskConfigSet
+PS C:\> $Disk = New-AzureDiskConfigSet
 PS C:\> $Disk = Set-AzureDataDiskConfig -DiskConfig $Disk -HostCaching ReadWrite
 PS C:\> Remove-AzureVMImageDataDiskConfig -DiskConfig $Disk
 ```

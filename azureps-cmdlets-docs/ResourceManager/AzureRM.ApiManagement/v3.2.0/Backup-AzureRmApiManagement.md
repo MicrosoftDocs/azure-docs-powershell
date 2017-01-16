@@ -26,7 +26,7 @@ This cmdlet stores the backup as an Azure Storage blob.
 
 ### Example 1: Back up an API Management service
 ```
-PS C:\>Backup-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -StorageContext $StorageContext -TargetContainerName "ContosoBackups" -TargetBlobName "ContosoBackup.apimbackup"
+PS C:\> Backup-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -StorageContext $StorageContext -TargetContainerName "ContosoBackups" -TargetBlobName "ContosoBackup.apimbackup"
 ```
 
 This command backs up an API Management service to a Storage blob.

@@ -48,21 +48,21 @@ For a continuous copy, the source and target databases cannot reside on the same
 
 If you do not specify the *ContinuousCopy* parameter, this cmdlet creates a one-time copy of the source database.
 When the response is received, the operation can still be in progress.
-You can monitor the operation by using the Get-AzureSqlDatabaseCopy or Get-AzureSqlDatabaseOperation cmdlet.
+You can monitor the operation by using the **Get-AzureSqlDatabaseCopy** or **Get-AzureSqlDatabaseOperation** cmdlet.
 
 If you specify *ContinuousCopy*, this cmdlet creates a continuous copy of the source database.
 When the response is received, the operation will be in progress.
 You can monitor the operation by using **Get-AzureSqlDatabaseCopy** or **Get-AzureSqlDatabaseOperation**.
 
 You can create a continuous copy as an online or offline database.
-The online continuous copy is used to configure Active Geo-Replication for Azure SQL Databasehttps://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/.
-The offline continuous copy is used to configure Standard Geo-Replication for Azure SQL Databasehttps://azure.microsoft.com/en-us/documentation/articles/sql-database-business-continuity-scenarios/.
+The online continuous copy is used to configure [Active Geo-Replication for Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/) (https://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/).
+The offline continuous copy is used to configure [Standard Geo-Replication for Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-business-continuity-scenarios/) (https://azure.microsoft.com/en-us/documentation/articles/sql-database-business-continuity-scenarios/).
 
 ## EXAMPLES
 
 ### Example 1: Schedule a continuous database copy
 ```
-PS C:\>Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy
+PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy
 ```
 
 This command schedules a continuous copy of the database named Orders on the server named lpqd0zbr8y.
@@ -70,7 +70,7 @@ The command creates a target database on the server named bk0b8kf658.
 
 ### Example 2: Create a one-time copy on the same server
 ```
-PS C:\>Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerDatabase "OrdersCopy"
+PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerDatabase "OrdersCopy"
 ```
 
 This command creates a one-time copy of the database named Orders on the server named lpqd0zbr8y.
@@ -78,7 +78,7 @@ The command creates a copy named OrdersCopy on the same server.
 
 ### Example 3: Schedule a continuous offline database copy
 ```
-PS C:\>Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy -OfflineSecondary
+PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy -OfflineSecondary
 ```
 
 This command schedules a continuous copy of the database named Orders on the server named lpqd0zbr8y.
@@ -298,7 +298,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.WindowsAzure.Commands.SqlDatabase.Model.DatabaseCopy
 
 ## NOTES
-* Authentication: This cmdlet requires certificate-based authentication. For an example of how to use certificate-based authentication to set the current subscription, see New-AzureSqlDatabaseServerContext cmdlet.
+* Authentication: This cmdlet requires certificate-based authentication. For an example of how to use certificate-based authentication to set the current subscription, see **New-AzureSqlDatabaseServerContext** cmdlet.
 * Monitoring: To check for the status of one or more continuous copy relationships that are active on the server, use the **Get-AzureSqlDatabaseCopy** cmdlet. To verify the status of the operations at both the source and target of the continuous copy relationship, use the **Get-AzureSqlDatabaseOperation** cmdlet.
 
 ## RELATED LINKS

@@ -25,7 +25,7 @@ If any endpoint currently refers to the internal load balancer, this cmdlet cann
 
 ### Example 1: Remove an internal load balancer configuration
 ```
-PS C:\>Remove-AzureInternalLoadBalancer -ServiceName "ContosoService"
+PS C:\> Remove-AzureInternalLoadBalancer -ServiceName "ContosoService"
 ```
 
 This command removes the internal load balancer configuration for the service named ContosoService.

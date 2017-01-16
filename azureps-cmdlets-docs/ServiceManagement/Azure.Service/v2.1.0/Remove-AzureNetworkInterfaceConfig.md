@@ -20,10 +20,6 @@ Remove-AzureNetworkInterfaceConfig [-Name] <String> -VM <IPersistentVM> [-Profil
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

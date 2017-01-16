@@ -38,14 +38,14 @@ The **Remove-AzureVMExtension** cmdlet removes resource extensions from a virtua
 
 ### Example 1: Remove an extension using a specific name and publisher
 ```
-PS C:\>$VM = Remove-AzureVMExtension -VM $VM -ExtensionName $EXT -Publisher $PUB;
+PS C:\> $VM = Remove-AzureVMExtension -VM $VM -ExtensionName $EXT -Publisher $PUB;
 ```
 
 This command removes an extension with the specified name and publisher.
 
 ### Example 2: Remove all extensions from a specific virtual machine
 ```
-PS C:\>$VM = Remove-AzureVMExtension -VM $VM -RemoveAll;
+PS C:\> $VM = Remove-AzureVMExtension -VM $VM -RemoveAll;
 ```
 
 This command removes all extensions from the specified virtual machine as stored in the variable $VM.

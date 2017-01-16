@@ -33,10 +33,6 @@ This cmdlet returns a list of events that identify the role instance or virtual 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

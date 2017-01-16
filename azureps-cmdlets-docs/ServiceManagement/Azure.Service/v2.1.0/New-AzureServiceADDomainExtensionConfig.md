@@ -71,7 +71,7 @@ The **New-AzureServiceADDomainExtensionConfig** cmdlet generates the configurati
 
 ### Example 1: Specify an AD domain configuration
 ```
-PS C:\>$ExtensionCfg = New-AzureServiceADDomainExtensionConfig -Role WorkerRole1 -DomainName $Domain -Credential $Cred -JoinOption 35;
+PS C:\> $ExtensionCfg = New-AzureServiceADDomainExtensionConfig -Role WorkerRole1 -DomainName $Domain -Credential $Cred -JoinOption 35;
 
 PS C:\> New-AzureDeployment -ServiceName $CloudSvc -Slot "Production" -Package $Pkg -Configuration $Config -ExtensionConfiguration $ExtensionCfg;
 ```

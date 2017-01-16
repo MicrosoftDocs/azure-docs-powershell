@@ -33,17 +33,17 @@ Specify which data disk to update by its logical unit number (LUN).
 
 ### Example 1: Modify the host caching for a data disk
 ```
-PS C:\>Get-AzureVM "ContosoService" | Set-AzureDataDisk -VM "VirtualMachine07" -LUN 2 -HostCaching ReadOnly | Update-AzureVM
+PS C:\> Get-AzureVM "ContosoService" | Set-AzureDataDisk -VM "VirtualMachine07" -LUN 2 -HostCaching ReadOnly | Update-AzureVM
 ```
 
-This command gets the virtual machines that run on the service named ContosoService by using the Get-AzureVM cmdlet.
+This command gets the virtual machines that run on the service named ContosoService by using the **Get-AzureVM** cmdlet.
 The command passes them to the current cmdlet by using the pipeline operator.
 That cmdlet sets the data disk at LUN 2 of the virtual machine named VirtualMachine07 to use ReadOnly host caching.
-The command updates the virtual machine to reflect your changes by using the Update-AzureVM cmdlet.
+The command updates the virtual machine to reflect your changes by using the **Update-AzureVM** cmdlet.
 
 ### Example 2: Modify the host caching for all data disks on a virtual machine
 ```
-PS C:\>Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk | Set-AzureDataDisk -HostCaching ReadWrite | Update-AzureVM
+PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk | Set-AzureDataDisk -HostCaching ReadWrite | Update-AzureVM
 ```
 
 This command gets an object for the virtual machine named VirtualMachine07 on the ContosoService cloud service.
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -VM
 Specifies the virtual machine object that is attached to the data disk.
-To obtain a virtual machine object, use the Get-AzureVM cmdlet.
+To obtain a virtual machine object, use the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: IPersistentVM
