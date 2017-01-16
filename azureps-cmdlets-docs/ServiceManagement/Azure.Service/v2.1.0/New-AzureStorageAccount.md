@@ -35,14 +35,14 @@ The account is the parent namespace for the Blob, Queue, and Table services.
 
 ### Example 1: Create a storage account for a specified affinity group
 ```
-PS C:\>New-AzureStorageAccount -StorageAccountName "azure01" -Label "AzureOne" -AffinityGroup "prodapps"
+PS C:\> New-AzureStorageAccount -StorageAccountName "azure01" -Label "AzureOne" -AffinityGroup "prodapps"
 ```
 
 This command creates a storage account for a specified affinity group.
 
 ### Example 1: Create a storage account in a specified location
 ```
-PS C:\>New-AzureStorageAccount -StorageAccountName "azure02" -Label "AzureTwo" -Location "North Central US"
+PS C:\> New-AzureStorageAccount -StorageAccountName "azure02" -Label "AzureTwo" -Location "North Central US"
 ```
 
 This command creates a storage account in a specified location.

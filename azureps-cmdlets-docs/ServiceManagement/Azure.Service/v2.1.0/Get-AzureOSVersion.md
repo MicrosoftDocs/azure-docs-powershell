@@ -24,14 +24,14 @@ The **Get-AzureOSVersion** cmdlet lists all the available Azure guest operating 
 
 ### Example 1: Get all available operating systems
 ```
-PS C:\>Get-AzureOSVersion
+PS C:\> Get-AzureOSVersion
 ```
 
 This command retrieves an object that contains a list of all versions of guest operating systems that are available in the current subscription.
 
 ### Example 2: Display operating system information in a table
 ```
-PS C:\>Get-AzureOSVersion | Format-Table -AutoSize -Property "Family", "FamilyLabel", "Version"
+PS C:\> Get-AzureOSVersion | Format-Table -AutoSize -Property "Family", "FamilyLabel", "Version"
 ```
 
 This command retrieves an object that contains a list of all versions of guest operating systems that are available in the current subscription.

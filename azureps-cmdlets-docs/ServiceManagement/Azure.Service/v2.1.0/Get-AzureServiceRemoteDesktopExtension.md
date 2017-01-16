@@ -24,7 +24,7 @@ The **Get-AzureServiceRemoteDesktopExtension** cmdlet gets the cloud service rem
 
 ### Example 1: Get remote desktop extension for the specified service
 ```
-PS C:\>Get-AzureServiceRemoteDesktopExtension -ServiceName $svc
+PS C:\> Get-AzureServiceRemoteDesktopExtension -ServiceName $svc
 ```
 
 This command gets the remote desktop extension for the specified service.

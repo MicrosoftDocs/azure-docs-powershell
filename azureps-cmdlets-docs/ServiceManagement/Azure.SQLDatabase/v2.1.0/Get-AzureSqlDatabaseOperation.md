@@ -34,14 +34,14 @@ If you specify an operation GUID, and *ServerName* or *ConnectionContext*, the c
 
 ### Example 1: Get the status of all database operations for a database
 ```
-PS C:\>$Operations = Get-AzureSqlDatabaseOperation -ConnectionContext $Context -DatabaseName "Database17"
+PS C:\> $Operations = Get-AzureSqlDatabaseOperation -ConnectionContext $Context -DatabaseName "Database17"
 ```
 
 This command gets the status of all database operations on the database named Database17 on the server that the connection context $Context specifies.
 
 ### Example 2: Get the status of all database operations for a server
 ```
-PS C:\>$Operations = Get-AzureSqlDatabaseOperation -ConnectionContext $Context
+PS C:\> $Operations = Get-AzureSqlDatabaseOperation -ConnectionContext $Context
 ```
 
 This command gets the status of all database operations on the server that the connection context $Context specifies.

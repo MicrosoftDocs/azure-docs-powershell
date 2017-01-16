@@ -50,7 +50,7 @@ If the replication status is PENDING, termination that is not forced is not supp
 
 ### Example 1: Terminate a continuous copy relationship
 ```
-PS C:\>Stop-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf658"
+PS C:\> Stop-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf658"
 ```
 
 This command terminates the continuous copy relationship of database named Orders on the server named lpqd0zbr8y.
@@ -58,7 +58,7 @@ The server named bk0b8kf658 hosts the secondary database.
 
 ### Example 2: Forcibly terminate a continuous copy relationship
 ```
-PS C:\>$DatabaseCopy = Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders"
+PS C:\> $DatabaseCopy = Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders"
 PS C:\> $DatabaseCopy | Stop-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -ForcedTermination
 ```
 
@@ -257,14 +257,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## NOTES
-* Authentication: This cmdlet requires certificate-based authentication. For an example of how to use certificate-based authentication to set the current subscription, see the New-AzureSqlDatabaseServerContext cmdlet.
+* Authentication: This cmdlet requires certificate-based authentication. For an example of how to use certificate-based authentication to set the current subscription, see the **New-AzureSqlDatabaseServerContext** cmdlet.
 * Restrictions: On the server that hosts the secondary database, only forced termination is supported.
 * Impact of termination on the former secondary database: After termination, the secondary database becomes an independent database. If seeding already completed on the secondary database, after termination this database is open for full access. If the source database is a read-write database, the former secondary database becomes a read-write database, too.
 
   If seeding is currently in progress, seeding is aborted, and the former secondary database never becomes visible on the server that hosts the secondary database.
 
 * You can set the source database to read-only mode. This guarantees that source and secondary databases are synchronized after termination, and makes sure that no transactions are committed during termination. Once the termination finishes, set the source back to read-write mode. Optionally, you can also set the former secondary database to read-write mode.
-* Monitoring: To verify the status of the operations at both the source and target of the continuous copy relationship, use the Get-AzureSqlDatabaseOperation cmdlet.
+* Monitoring: To verify the status of the operations at both the source and target of the continuous copy relationship, use the **Get-AzureSqlDatabaseOperation** cmdlet.
 
 ## RELATED LINKS
 

@@ -29,7 +29,8 @@ The **Get-AzureSiteRecoveryVault** cmdlet gets the active Azure Site Recovery va
 
 ### Example 1: Get the active vault
 ```
-PS C:\>Get-AzureSiteRecoveryVault
+PS C:\> Get-AzureSiteRecoveryVault
+
 Name             : ContosoVault
 ID               : 6467459117394545458
 CloudServiceName : CS-West-US-RecoveryServices

@@ -25,7 +25,8 @@ You can download the vault settings file from an Azure Site Recovery vault when 
 
 ### Example 1: Import a vault settings file
 ```
-PS C:\>Import-AzureSiteRecoveryVaultSettingsFile -Path "C:\Users\Contoso\Contosovault Monday, October 6, 2014.VaultCredentials"
+PS C:\> Import-AzureSiteRecoveryVaultSettingsFile -Path "C:\Users\Contoso\Contosovault Monday, October 6, 2014.VaultCredentials"
+
 VERBOSE: Vault Settings File path: C:\Users\Contoso\Contosovault Monday, October 6, 2014.VaultCredentials
 
 ResourceName                                                CloudServiceName

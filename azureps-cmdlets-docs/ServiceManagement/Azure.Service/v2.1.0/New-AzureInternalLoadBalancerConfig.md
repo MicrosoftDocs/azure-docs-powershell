@@ -40,7 +40,7 @@ You can use an internal load balancer configuration when you create an Azure vir
 
 ### Example 1: Create an internal load balancer configuration
 ```
-PS C:\>$IlbConfig = New-AzureInternalLoadBalancerConfig -InternalLoadBalancerName "Contoso" -SubnetName "FrontEndSubnet"
+PS C:\> $IlbConfig = New-AzureInternalLoadBalancerConfig -InternalLoadBalancerName "Contoso" -SubnetName "FrontEndSubnet"
 ```
 
 This command creates an internal load balancer configuration for the subnet named FrontEndSubnet.

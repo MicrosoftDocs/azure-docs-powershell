@@ -53,7 +53,7 @@ The source and target server names must be the same.
 
 ### Example 1: Restore a database specified as an object to a point in time
 ```
-PS C:\>$Database = Get-AzureSqlDatabase -ServerName "Server01" -DatabaseName "Database17" 
+PS C:\> $Database = Get-AzureSqlDatabase -ServerName "Server01" -DatabaseName "Database17" 
 PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceDatabase $Database -TargetDatabaseName "DatabaseRestored" -PointInTime "2013-01-01 06:00:00"
 ```
 
@@ -64,7 +64,7 @@ The command specifies at name for the new database.
 
 ### Example 2: Restore a database specified by name to a point in time
 ```
-PS C:\>$Operation = Start-AzureSqlDatabaseRestore -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored" -PointInTime "2013-01-01 06:00:00"
+PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored" -PointInTime "2013-01-01 06:00:00"
 ```
 
 This command restores the database named Database17 to a specific point in time.
@@ -72,7 +72,7 @@ The command specifies at name for the new database.
 
 ### Example 3: Restore a dropped database specified as an object to a point in time
 ```
-PS C:\>$Database = Get-AzureSqlDatabase -RestorableDropped -ServerName "Server01" -DatabaseName "Database01" -DatabaseDeletionDate "2012-11-09T22:59:43.000Z" 
+PS C:\> $Database = Get-AzureSqlDatabase -RestorableDropped -ServerName "Server01" -DatabaseName "Database01" -DatabaseDeletionDate "2012-11-09T22:59:43.000Z" 
 PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceRestorableDroppedDatabase $Database -TargetDatabaseName "DroppedDatabaseRestored"
 ```
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -SourceRestorableDroppedDatabase
 Specifies an object that represents the restorable dropped database that this cmdlet restores.
-To obtain a **RestorableDroppedDatabase** object, use the Get-AzureSqlDatabase cmdlet, and specify the *RestorableDropped* parameter.
+To obtain a **RestorableDroppedDatabase** object, use the **Get-AzureSqlDatabase** cmdlet, and specify the *RestorableDropped* parameter.
 
 ```yaml
 Type: RestorableDroppedDatabase
@@ -272,11 +272,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 * You must use certificate based authentication to run this cmdlet. Run the following commands on the computer where run this cmdlet: 
 
-`PS C:\\\> $subId = \<Subscription ID\>`
-`PS C:\\\> $thumbprint = \<Certificate Thumbprint\>`
-`PS C:\\\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint`
-`PS C:\\\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert`
-`PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"`
+`PS C:\> $subId = <Subscription ID>`
+
+`PS C:\> $thumbprint = <Certificate Thumbprint>`
+
+`PS C:\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint`
+
+`PS C:\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert`
+
+`PS C:\> Select-AzureSubscription -SubscriptionName "mySubscription"`
 
 ## RELATED LINKS
 

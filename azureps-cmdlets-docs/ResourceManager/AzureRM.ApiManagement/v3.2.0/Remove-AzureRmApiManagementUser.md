@@ -25,7 +25,7 @@ The **Remove-AzureRmApiManagementUser** cmdlet removes an existing user.
 
 ### Example 1: Delete a user
 ```
-PS C:\>Remove-AzureRmApiManagementUser -Context $apimContext -UserId "0123456789" -Force
+PS C:\> Remove-AzureRmApiManagementUser -Context $apimContext -UserId "0123456789" -Force
 ```
 
 This command removes an existing user.

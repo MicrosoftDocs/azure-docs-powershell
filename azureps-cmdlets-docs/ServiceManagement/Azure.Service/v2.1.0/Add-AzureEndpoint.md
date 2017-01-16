@@ -56,18 +56,18 @@ The **Add-AzureEndpoint** cmdlet adds an endpoint to an Azure virtual machine ob
 
 ### Example 1: Add an endpoint
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirutalMachine01" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -PublicPort 80 -LocalPort 8080 | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirutalMachine01" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -PublicPort 80 -LocalPort 8080 | Update-AzureVM
 ```
 
-This command retrieves the configuration of a virtual machine named VirtualMachine01 by using the Get-AzureVM cmdlet.
+This command retrieves the configuration of a virtual machine named VirtualMachine01 by using the **Get-AzureVM** cmdlet.
 The command passes it to the current cmdlet by using the pipeline operator.
 This cmdlet adds an endpoint named HttpIn.
 The endpoint has a public port 80 and local port 8080.
-The command passes the virtual machine object to the Update-AzureVM cmdlet, which implements your changes.
+The command passes the virtual machine object to the **Update-AzureVM** cmdlet, which implements your changes.
 
 ### Example 2: Add an endpoint that belongs to a load balanced group
 ```
-PS C:\>Get-AzureVM -ServiceName "LoadBalancedService" -Name "VirtualMachine12" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -PublicPort 80 -LocalPort 8080 -LBSetName "WebFarm" -ProbePort 80 -ProbeProtocol "http" -ProbePath '/' | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "LoadBalancedService" -Name "VirtualMachine12" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -PublicPort 80 -LocalPort 8080 -LBSetName "WebFarm" -ProbePort 80 -ProbeProtocol "http" -ProbePath '/' | Update-AzureVM
 ```
 
 This command retrieves the configuration of a virtual machine named VirtualMachine07.
@@ -79,7 +79,7 @@ The command implements your changes.
 
 ### Example 3: Associate a virtual IP to an endpoint
 ```
-PS C:\>Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine25" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -LocalPort 8080 -PublicPort 80 -VirtualIPName "ContosoVip11" | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine25" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -LocalPort 8080 -PublicPort 80 -VirtualIPName "ContosoVip11" | Update-AzureVM
 ```
 
 This command retrieves the configuration of a virtual machine named VirtualMachine25.
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ### -VirtualIPName
 Specifies the name of a virtual IP address that Azure associates to the endpoint.
 Your service can have multiple virtual IPs.
-To create virtual IPs, use the Add-AzureVirtualIP cmdlet.
+To create virtual IPs, use the **Add-AzureVirtualIP** cmdlet.
 
 ```yaml
 Type: String

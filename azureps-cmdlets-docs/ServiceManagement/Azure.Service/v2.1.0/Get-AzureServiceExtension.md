@@ -25,7 +25,7 @@ The **Get-AzureServiceExtension** cmdlet gets existing cloud service extensions 
 
 ### Example 1: Get a specified extension
 ```
-PS C:\>Get-AzureServiceExtension -ServiceName $Svc -Slot "Production" -ExtensionName "RDP" -ProviderNamespace "Microsoft.Windows.Azure.Extensions"
+PS C:\> Get-AzureServiceExtension -ServiceName $Svc -Slot "Production" -ExtensionName "RDP" -ProviderNamespace "Microsoft.Windows.Azure.Extensions"
 ```
 
 This command gets the cloud service extension with the specified name and namespace.

@@ -46,9 +46,10 @@ Check whether the operation succeeds by using the **Get-AzureSiteRecoveryProtect
 
 ### Example 1: Modify the direction for a protected object in a container
 ```
-PS C:\>$Container = Get-AzureSiteRecoveryProtectionContainer 
+PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer 
 PS C:\> $Protected = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container  
 PS C:\> Update-AzureSiteRecoveryProtectionDirection -Direction RecoveryToPrimary -ProtectionEntity $Protected 
+
 ID               : c38eecdc-731c-405b-a61c-08db99aae2fe
 ClientRequestId  : 32ace403-0916-4967-83a1-529176bd6e88-2014-49-06 15:49:24Z-P
 State            : NotStarted

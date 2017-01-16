@@ -23,7 +23,8 @@ The **Get-AzureSiteRecoveryVaultSettings** cmdlet gets settings information abou
 
 ### Example 1: Get settings information
 ```
-PS C:\>Get-AzureSiteRecoveryVaultSettings
+PS C:\> Get-AzureSiteRecoveryVaultSettings
+
 ResourceName                                                CloudServiceName
 ------------                                                ----------------
 ContosoVault                                                RecoveryServices-6JP23WE3SKKOM5AFQG2YQAI22MNOWK52QDKWMUP...

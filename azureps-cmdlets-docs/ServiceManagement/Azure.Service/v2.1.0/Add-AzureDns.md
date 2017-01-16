@@ -24,7 +24,7 @@ The **Add-AzureDns** cmdlet adds a DNS server to an Azure service.
 
 ### Example 1: Add a DNS server
 ```
-PS C:\>Add-AzureDns -ServiceName "ContosoService" -IPAddress 10.1.2.4 -Name "Dns07"
+PS C:\> Add-AzureDns -ServiceName "ContosoService" -IPAddress 10.1.2.4 -Name "Dns07"
 ```
 
 This command adds the DNS server that has the address 10.1.2.4 to ContosoService.

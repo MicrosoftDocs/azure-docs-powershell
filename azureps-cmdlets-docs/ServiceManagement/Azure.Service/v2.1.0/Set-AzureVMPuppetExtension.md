@@ -25,7 +25,7 @@ The **Set-AzureVMPuppetExtension** cmdlet sets the Puppet extension for a virtua
 
 ### Example 1: Set the Puppet extension for a virtual machine
 ```
-PS C:\>Set-AzureVMPuppetExtension -VM $VM
+PS C:\> Set-AzureVMPuppetExtension -VM $VM
 ```
 
 This example sets the Puppet extension for the specified virtual machine as stored in the variable $VM.
@@ -83,7 +83,7 @@ Specifies the reference name of the extension.
 This is a user-defined string that is used to refer to an extension.
 It is specified when the extension is added to the virtual machine for the first time.
 For subsequent updates, you need to specify the previously used reference name when you update the extension.
-The ReferenceName assigned to an extension is returned using the Get-AzureVM cmdlet.
+The ReferenceName assigned to an extension is returned using the **Get-AzureVM** cmdlet.
 
 ```yaml
 Type: String

@@ -22,10 +22,6 @@ The **Remove-AzureStaticVNetIP** cmdlet removes the static virtual network (VNet
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

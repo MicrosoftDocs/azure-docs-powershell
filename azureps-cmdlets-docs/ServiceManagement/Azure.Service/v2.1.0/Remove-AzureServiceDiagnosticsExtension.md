@@ -33,14 +33,14 @@ The **Remove-AzureServiceDiagnosticsExtension** cmdlet removes the cloud service
 
 ### Example 1: Remove the diagnostic extension for a service
 ```
-PS C:\>Remove-AzureServiceDiagnosticsExtension -ServiceName $Svc
+PS C:\> Remove-AzureServiceDiagnosticsExtension -ServiceName $Svc
 ```
 
 This command removes the diagnostic extension for a specified role.
 
 ### Example 2: Remove the diagnostic extension for a service in a specified role
 ```
-PS C:\>Remove-AzureServiceDiagnosticsExtension -ServiceName $Svc -Role "WebRole01"
+PS C:\> Remove-AzureServiceDiagnosticsExtension -ServiceName $Svc -Role "WebRole01"
 ```
 
 This command removes the diagnostic extension for a specified role.

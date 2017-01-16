@@ -29,10 +29,6 @@ The **Get-AzureVMDscExtensionStatus** cmdlet gets the Desired State Configuratio
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
 
 ## PARAMETERS
 

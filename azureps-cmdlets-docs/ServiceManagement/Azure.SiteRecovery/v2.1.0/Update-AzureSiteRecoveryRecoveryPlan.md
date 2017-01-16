@@ -26,7 +26,7 @@ A recovery plan gathers virtual machines in a group for the purposes of failover
 
 ### Example 1: Update a recovery plan
 ```
-PS C:\>Update-AzureSiteRecoveryRecoveryPlan -File "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
+PS C:\> Update-AzureSiteRecoveryRecoveryPlan -File "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
 ```
 
 This command updates the specified recovery plan, and then publishes it.

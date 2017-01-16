@@ -26,7 +26,7 @@ To delete a deployment, first suspend it.
 
 ### Example 1: Remove a deployment
 ```
-PS C:\>Remove-AzureDeployment -ServiceName "ContosoService"
+PS C:\> Remove-AzureDeployment -ServiceName "ContosoService"
 ```
 
 This command removes the deployment of the Azure service named ContosoService.
@@ -34,7 +34,7 @@ Because this command does not specify a slot, it removes the service from the pr
 
 ### Example 2: Remove a deployment and virtual hard disks
 ```
-PS C:\>Remove-AzureDeployment -ServiceName "ContosoService" -DeleteVHD
+PS C:\> Remove-AzureDeployment -ServiceName "ContosoService" -DeleteVHD
 ```
 
 This command removes the deployment of the service named ContosoService from the production environment.
