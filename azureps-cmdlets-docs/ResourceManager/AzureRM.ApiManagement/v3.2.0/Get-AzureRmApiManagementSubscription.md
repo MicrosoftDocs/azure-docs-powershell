@@ -43,28 +43,28 @@ The **Get-AzureRmApiManagementSubscription** cmdlet gets a specified subscriptio
 
 ### Example 1: Get all subscriptions
 ```
-PS C:\> Get-AzureRmApiManagementSubscription -Context $apimContext
+PS C:\> Get-AzureRmApiManagementSubscription -Context $APImContext
 ```
 
 This command gets all subscriptions.
 
 ### Example 2: Get a subscription with a specified ID
 ```
-PS C:\> Get-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789"
+PS C:\> Get-AzureRmApiManagementSubscription -Context $APImContext -SubscriptionId "0123456789"
 ```
 
 This command gets a subscription by ID.
 
 ### Example 3: Get all subscriptions for a user
 ```
-PS C:\> Get-AzureRmApiManagementSubscription -Context $apimContext -UserId "777"
+PS C:\> Get-AzureRmApiManagementSubscription -Context $APImContext -UserId "777"
 ```
 
 This command gets a user's subscriptions.
 
 ### Example 4: Get all subscriptions for a product
 ```
-PS C:\> Get-AzureRmApiManagementSubscription -Context $apimContext -ProductId "999"
+PS C:\> Get-AzureRmApiManagementSubscription -Context $APImContext -ProductId "999"
 ```
 
 This command gets all subscriptions for the product.
@@ -191,5 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementSubscription](./Remove-AzureRmApiManagementSubscription.md)
 
 [Set-AzureRmApiManagementSubscription](./Set-AzureRmApiManagementSubscription.md)
-
-

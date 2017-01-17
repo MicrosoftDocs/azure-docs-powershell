@@ -147,5 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementOperation](./Remove-AzureRmApiManagementOperation.md)
 
 [Set-AzureRmApiManagementOperation](./Set-AzureRmApiManagementOperation.md)
-
-

@@ -29,23 +29,21 @@ Get the identity provider configuration details.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Get all the identity provider configurations on the service.
 
 ```
-Get-AzureRmApiManagementIdentityProvider -Context $context
+Get-AzureRmApiManagementIdentityProvider -Context $Context
 ```
 
-Get all the identity provider Configuration on the service.
+This command gets all the identity provider configurations on the service.
 
-### --------------------------  Example 2  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 2: Get the Identity Provider configuration of Azure Active Directory.
 
 ```
-Get-AzureRmApiManagementIdentityProvider -Context $context -Type Aad
+Get-AzureRmApiManagementIdentityProvider -Context $Context -Type Aad
 ```
 
-Gets the Identity Provider Configuration of Azure Active Directory.
+This command gets the Identity Provider configuration of Azure Active Directory.
 
 ## PARAMETERS
 
@@ -66,7 +64,17 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
+
 
 ```yaml
 Type: ActionPreference
@@ -81,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -123,4 +131,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
