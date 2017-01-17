@@ -73,7 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApiType
-This parameter is optional with a default value of Http. The Soap option is only applicable when importing WSDL and will create a SOAP Passthrough API.```yaml
+This parameter is optional with a default value of Http. The Soap option is only applicable when importing WSDL and will create a SOAP Passthrough API.
+
+```yaml
 Type: PsApiManagementApiType
 Parameter Sets: (All)
 Aliases: 

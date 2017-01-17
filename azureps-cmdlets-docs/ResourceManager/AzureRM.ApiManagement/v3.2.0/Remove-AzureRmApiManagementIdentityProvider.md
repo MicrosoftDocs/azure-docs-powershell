@@ -18,23 +18,22 @@ Remove-AzureRmApiManagementIdentityProvider -Context <PsApiManagementContext>
 ```
 
 ## DESCRIPTION
-Removes an existing Identity Provider Configuration.
+The **Remove-AzureRmApiManagementIdentityProvider** cmdlet removes an existing Identity Provider Configuration.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Remove an Identity Provider configuration
 
 ```
-Remove-AzureRmApiManagementIdentityProvider -Context $apimContext -Type 'Facebook' -PassThru
+Remove-AzureRmApiManagementIdentityProvider -Context $ApimContext -Type 'Facebook' -PassThru
 ```
 
-Deletes configuration related to Facebook Identity provider configuration.
+This cmdlet removes configuration related to Facebook Identity provider configuration.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
+Specifies an instance of **PsApiManagementContext**.
 This parameter is required.
 
 ```yaml
@@ -50,7 +49,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -65,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -80,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-@{Text=}
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -111,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-@{Text=}
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -126,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-@{Text=}
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -149,4 +159,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
