@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmApiManagementIdentityProvider
 
 ## SYNOPSIS
-Creates a new Identity Provider configuration.
+Creates an Identity Provider configuration.
 
 ## SYNTAX
 
@@ -19,23 +19,22 @@ New-AzureRmApiManagementIdentityProvider -Context <PsApiManagementContext>
 ```
 
 ## DESCRIPTION
-Creates a new Identity Provider configuration.
+The **New-AzureRmApiManagementIdentityProvider** cmdlet creates an Identity Provider configuration.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Create an Identity Provider configuration
 
 ```
-New-AzureRmApiManagementIdentityProvider -Context $apimContext -Type 'Facebook' -ClientId 'sdfsfwerwerw' -ClientSecret 'sdgsdfgfst43tewfewrf'
+New-AzureRmApiManagementIdentityProvider -Context $ApimContext -Type 'Facebook' -ClientId 'sdfsfwerwerw' -ClientSecret 'sdgsdfgfst43tewfewrf'
 ```
 
-Create an Identity Provider for Developer Portal of Type Facebook
+This command creates an Identity Provider configuration for Developer Portal of Type Facebook.
 
 ## PARAMETERS
 
 ### -AllowedTenants
-List of allowed Azure Active Directory Tenants
+Specifies a list of allowed Azure Active Directory Tenants.
 
 ```yaml
 Type: String[]
@@ -50,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientId
-Client Id of the Application in the external Identity Provider.
+Specifies the client ID of the Application in the external Identity Provider.
 It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
 
 ```yaml
@@ -66,8 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientSecret
-Client secret of the Application in external Identity Provider, used to authenticate login request.
-For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.
+Specifies the client secret of the Application in external Identity Provider, used to authenticate login request.
+For instance, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.
 
 ```yaml
 Type: String
@@ -82,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
+Specifies an instance of **PsApiManagementContext**.
 This parameter is required.
 
 ```yaml
@@ -98,7 +97,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -113,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies an information variable.
 
 ```yaml
 Type: String
@@ -128,8 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Identifier of a Identity Provider.
-If specified will try to find identity provider configuration by the identifier.
+Specifies the ID of a Identity Provider.
+If specified this cmdlet will attempt to find identity provider configuration by the identifier.
 This parameter is optional.
 
 ```yaml
@@ -145,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-@{Text=}
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-@{Text=}
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -184,3 +193,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[Remove-AzureRmApiManagementIdentityProvider](./Remove-AzureRmApiManagementIdentityProvider.md)
+
+[Set-AzureRmApiManagementIdentityProvider](./Set-AzureRmApiManagementIdentityProvider.md)

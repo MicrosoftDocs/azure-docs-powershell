@@ -19,33 +19,33 @@ New-AzureRmApiManagementRegion -Location <String> [-Capacity <Int32>]
 ```
 
 ## DESCRIPTION
-Helper command to create an instance of **PsApiManagementRegion**.
+The **New-AzureRmApiManagementRegion** cmdlet creates an instance of **PsApiManagementRegion**.
 This command is to be used with [New-AzureRmApiManagement](./New-AzureRmApiManagement.md) command.
 
 ## EXAMPLES
 
 ### Example 1: Create an ApiManagement service
 ```
-$apimRegion = New-AzureRmApiManagementRegion -Location "Central US" 
+$ApimRegion = New-AzureRmApiManagementRegion -Location "Central US" 
 
-$additionalRegions = @($apimRegion)
+$AdditionalRegions = @($ApimRegion)
 
-New-AzureRmApiManagement -ResourceGroupName ContosoGroup -Location "West US" -Name ContosoApi -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $additionalRegions -Sku "Premium"
+New-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $AdditionalRegions -Sku "Premium"
 ```
 
 This example creates an ApiManagement service in West US Region, with an Additional Region in Central US that has a Premium Sku and an organization named Contoso.
 
 ### Example 2: Create an ApiManagement service with an external VpnType
 ```
-$apimRegionVirtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "Central US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/centralusvirtualNetwork/subnets/backendSubnet"
+$ApimRegionVirtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "Central US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/centralusvirtualNetwork/subnets/backendSubnet"
 
-$apimRegion = New-AzureRmApiManagementRegion -Location "Central US" -VirtualNetwork $apimRegionVirtualNetwork 
+$ApimRegion = New-AzureRmApiManagementRegion -Location "Central US" -VirtualNetwork $ApimRegionVirtualNetwork 
 
-$additionalRegions = @($apimRegion)
+$AdditionalRegions = @($apimRegion)
 
-$virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "West US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc2-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
+$VirtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "West US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc2-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
 
-New-AzureRmApiManagement -ResourceGroupName ContosoGroup -Location "West US" -Name ContosoApi -Organization Contoso -AdminEmail admin@contoso.com -AdditionalRegions $additionalRegions -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
+New-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name ContosoApi -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $AdditionalRegions -VirtualNetwork $VirtualNetwork -VpnType "External" -Sku "Premium"
 ```
 
 This example creates an ApiManagement service of External VpnType in West US Region, with an Additional Region in Central US.
@@ -149,3 +149,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AzureRmApiManagementRegion](./Add-AzureRmApiManagementRegion.md)
+
+[Remove-AzureRmApiManagementRegion](./Remove-AzureRmApiManagementRegion.md)
