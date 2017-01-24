@@ -23,7 +23,7 @@ The **Resume-AzureRmAnalysisServicesServer** cmdlet resumes a Microsoft SQL Serv
 
 ### Example 1: Resume an Analysis Services server
 ```
-PS C:\> Resume-AzureRmAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup"
+PS C:\> Resume-AzureRmAnalysisServicesServer -Name "ContosoServer03" -ResourceGroupName "ContosoResourceGroup"
 ```
 
 This command resumes a paused Analysis Services server named ContosoServer03 in ContosoResourceGroup.

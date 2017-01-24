@@ -20,7 +20,7 @@ The **Get-AzureRmAnalysisServicesServer** cmdlet gets details for a Microsoft SQ
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get Analysis Services servers in a resource group 
 ```
 PS C:\> Get-AzureRmAnalysisServicesServer -ResourceGroupName "ContosoResourceGroup"
 ```
