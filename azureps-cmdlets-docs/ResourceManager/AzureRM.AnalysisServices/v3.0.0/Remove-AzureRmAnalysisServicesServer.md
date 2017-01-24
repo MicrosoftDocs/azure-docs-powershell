@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-AzureRmAnalysisServicesServer
 
 ## SYNOPSIS
-Deletes an instance of Analysis Services server
+Deletes an Analysis Services server.
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Remove-AzureRmAnalysisServicesServer [-Name] <String> [[-ResourceGroupName] <Str
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmAnalysisServicesServer cmdlet  deletes an instance of Analysis Services server
+The **Remove-AzureRmAnalysisServicesServer** cmdlet deletes a Microsoft SQL Server Analysis Services server.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an Analysis Services server
 ```
-PS C:\> Remove-AzureRmAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup"
+PS C:\> Remove-AzureRmAnalysisServicesServer -Name "ContosoServer03" -ResourceGroupName "ContosoResourceGroup"
 ```
 
-This command will remove the server named testserver in the resourcegroup testgroup
+This command removes the Analysis Services server named ContosoServer03 in ContosoResourceGroup.
 
 ## PARAMETERS
 
 ### -Name
-Name of the Analysis Services server
+Specifies the name of an Analysis Services server.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Will return the deleted server details if the operation completes successfully
+Indicates that this cmdlet returns the Analysis Services server details, if the operation succeeds.
 
 ```yaml
 Type: SwitchParameter
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Azure resource group to which the server belongs
+Specifies the name of the Azure resource group to which the Analysis Services server belongs.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts user to confirm whether to perform the operation
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -91,7 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Describes the actions the current operation will perform without actually performing them
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -112,11 +113,18 @@ Accept wildcard characters: False
 ### Microsoft.Azure.Commands.AnalysisServices.Models.AzureAnalysisServicesServer
 
 ## NOTES
-Alias: Remove-AzureAs
+Alias: **Remove-AzureAs**
 
 ## RELATED LINKS
 
-[Get-AzureRmAnalysisServicesServer]()
+[Get-AzureRmAnalysisServicesServer](./Get-AzureRmAnalysisServicesServer.md)
 
-[New-AzureRmAnalysisServicesServer]()
+[New-AzureRmAnalysisServicesServer](./New-AzureRmAnalysisServicesServer.md)
 
+[Resume-AzureRmAnalysisServicesServer](./Resume-AzureRmAnalysisServicesServer.md)
+
+[Set-AzureRmAnalysisServicesServer](./Set-AzureRmAnalysisServicesServer.md)
+
+[Suspend-AzureRmAnalysisServicesServer](./Suspend-AzureRmAnalysisServicesServer.md)
+
+[Test-AzureRmAnalysisServicesServer](./Test-AzureRmAnalysisServicesServer.md)

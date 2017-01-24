@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmAnalysisServicesServer
 
 ## SYNOPSIS
-Creates a new Analysis Services server
+Creates an Analysis Services server.
 
 ## SYNTAX
 
@@ -17,24 +17,23 @@ New-AzureRmAnalysisServicesServer [-ResourceGroupName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-The New-AzureRmAnalysisServicesServer cmdlet creates a new Analysis Services server
+The **New-AzureRmAnalysisServicesServer** cmdlet creates a Microsoft SQL Server Analysis Services server.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an Analysis Services server 
 ```
-PS C:\> New-AzureRmAnalysisServicesServer -ResourceGroupName "testresourcegroup" -Name "testserver" -Location "West-US" -Sku "S1"
+PS C:\> New-AzureRmAnalysisServicesServer -ResourceGroupName "ContosoResourceGroup" -Name "ContosoServer03" -Location "West-US" -Sku "S1"
 ```
 
-Creates a server named testserver in the Azure region West-US and in resource group testresrourcegroup.
-The sku level for the server will be S1.
+This command creates an Analysis Services server named ContosoServer03 in the resource group named ContosoResourceGroup in the West-US Azure region.
+The SKU level for the server is S1.
 
 ## PARAMETERS
 
 ### -Administrator
-A string representing a comma separated list of users or groups to be set as administrators on the server.
-The users or groups need to be specified UPN format e.g.
-user@contoso.com or groups@contoso.com
+Specifies a comma separated list of users or groups that are administrators on the Analysis Services server.
+Specify users and groups in UPN format, such as `PattiFuller@contoso.com` or `BasicAdmins@contoso.com`.
 
 ```yaml
 Type: String
@@ -49,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The Azure region where the Analysis Services server is hosted
+Specifies the Azure region which hosts the Analysis Services server.
 
 ```yaml
 Type: String
@@ -64,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Analysis Services server
+Specifies a name for the Analysis Services server.
 
 ```yaml
 Type: String
@@ -79,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Azure resource group to which the server belongs
+Specifies the name of the Azure resource group to which the Analysis Services server belongs.
 
 ```yaml
 Type: String
@@ -94,8 +93,14 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-The name of the Sku for the server.
-The supported values are 'S1', 'S2', 'S4' for the Standard tier and 'D1' for Development.
+Specifies the name of the SKU for the Analysis Services server.
+Valid values for the standard tier are:
+- S1
+- S2
+- S4
+
+Valid values for the development tier are:
+- D1
 
 ```yaml
 Type: String
@@ -110,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Key-value pairs in the form of a hash table set as tags on the server.
+Specifies tags for the Analysis Services server as a hash table of key/value pairs.
 
 ```yaml
 Type: Hashtable
@@ -125,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts user to confirm whether to perform the operation
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -140,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Describes the actions the current operation will perform without actually performing them
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -161,11 +167,18 @@ Accept wildcard characters: False
 ### Microsoft.Azure.Commands.AnalysisServices.Models.AzureAnalysisServicesServer
 
 ## NOTES
-Alias: New-AzureAs
+Alias: **New-AzureAs**
 
 ## RELATED LINKS
 
-[Get-AzureRmAnalysisServicesServer]()
+[Get-AzureRmAnalysisServicesServer](./Get-AzureRmAnalysisServicesServer.md)
 
-[Remove-AzureRmAnalysisServicesServer]()
+[Remove-AzureRmAnalysisServicesServer](./Remove-AzureRmAnalysisServicesServer.md)
 
+[Resume-AzureRmAnalysisServicesServer](./Resume-AzureRmAnalysisServicesServer.md)
+
+[Set-AzureRmAnalysisServicesServer](./Set-AzureRmAnalysisServicesServer.md)
+
+[Suspend-AzureRmAnalysisServicesServer](./Suspend-AzureRmAnalysisServicesServer.md)
+
+[Test-AzureRmAnalysisServicesServer](./Test-AzureRmAnalysisServicesServer.md)

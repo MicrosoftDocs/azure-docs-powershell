@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmAnalysisServicesServer
 
 ## SYNOPSIS
-Gets the details of an Analysis Services server.
+Gets details of an Analysis Services server.
 
 ## SYNTAX
 
@@ -16,28 +16,28 @@ Get-AzureRmAnalysisServicesServer [[-ResourceGroupName] <String>] [[-Name] <Stri
 ```
 
 ## DESCRIPTION
-The Get-AzureRmAnalysisServicesServer cmdlet gets the details of an Analysis Services server.
+The **Get-AzureRmAnalysisServicesServer** cmdlet gets details for a Microsoft SQL Server Analysis Services server.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>Get-AzureRmAnalysisServicesServer -ResourceGroupName "ResourceGroup03"
+PS C:\> Get-AzureRmAnalysisServicesServer -ResourceGroupName "ContosoResourceGroup"
 ```
 
-This command gets all Azure Analysis Services servers in the resource group named ResourceGroup03.
+This command gets all Analysis Services servers in the resource group named ContosoResourceGroup.
 
 ### Example 2: Get a server
 ```
-PS C:\>Get-AzureRmAnalysisServicesServer -ResourceGroupName "ResourceGroup03" -Name "testserver"
+PS C:\> Get-AzureRmAnalysisServicesServer -ResourceGroupName "ContosoResourceGroup" -Name "ContosoServer03"
 ```
 
-This command gets the Azure Analysis Services server named testserver in the resource group named ResourceGroup03.
+This command gets an Analysis Services server named ContosoServer03 in the resource group named ContosoResourceGroup.
 
 ## PARAMETERS
 
 ### -Name
-Name of the Analysis Services server
+Specifies the name of an Analysis Services server.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Azure resource group to which the server belongs
+Specifies the name of the Azure resource group to which the Analysis Services server belongs.
 
 ```yaml
 Type: String
@@ -71,11 +71,18 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ## NOTES
-Alias: Get-AzureAs
+Alias: **Get-AzureAs**
 
 ## RELATED LINKS
 
-[New-AzureRmAnalysisServicesServer]()
+[New-AzureRmAnalysisServicesServer](./New-AzureRmAnalysisServicesServer.md)
 
-[Remove-AzureRmAnalysisServicesServer]()
+[Remove-AzureRmAnalysisServicesServer](./Remove-AzureRmAnalysisServicesServer.md)
 
+[Resume-AzureRmAnalysisServicesServer](./Resume-AzureRmAnalysisServicesServer.md)
+
+[Set-AzureRmAnalysisServicesServer](./Set-AzureRmAnalysisServicesServer.md)
+
+[Suspend-AzureRmAnalysisServicesServer](./Suspend-AzureRmAnalysisServicesServer.md)
+
+[Test-AzureRmAnalysisServicesServer](./Test-AzureRmAnalysisServicesServer.md)
