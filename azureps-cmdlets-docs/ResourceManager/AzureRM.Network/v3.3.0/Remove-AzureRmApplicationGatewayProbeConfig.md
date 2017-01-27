@@ -24,7 +24,7 @@ The **Remove-AzureRmApplicationGatewayProbeConfig** cmdlet removes a heath probe
 
 ### Example 1: Remove a health probe from an existing application gateway
 ```
-PS C:\>$Gateway = Remove-AzureRmApplicationGatewayProbeConfig -ApplicationGateway Gateway -Name "Probe04"
+PS C:\> $Gateway = Remove-AzureRmApplicationGatewayProbeConfig -ApplicationGateway Gateway -Name "Probe04"
 ```
 
 This command removes the health probe named Probe04 from the application gateway named Gateway.

@@ -23,7 +23,7 @@ Get-AzureRmExpressRouteCircuitStats [-Name <String>] -ResourceGroupName <String>
 
 ### 1:
 ```
-PS C:\>
+PS C:\> 
 ```
 
 ## PARAMETERS

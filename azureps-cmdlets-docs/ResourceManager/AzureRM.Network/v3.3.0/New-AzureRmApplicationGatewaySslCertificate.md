@@ -24,7 +24,7 @@ The **New-AzureRmApplicationGatewaySslCertificate** cmdlet creates an SSL certif
 
 ### Example 1: Create an SSL certificate for an Azure application gateway.
 ```
-PS C:\>$Cert = New-AzureRmApplicationGatewaySslCertificate -Name "Cert01" -CertificateFile "D:\cert01.pfx" -Password "Password01"
+PS C:\> $Cert = New-AzureRmApplicationGatewaySslCertificate -Name "Cert01" -CertificateFile "D:\cert01.pfx" -Password "Password01"
 ```
 
 This command creates a SSL certificate named Cert01 for the default application gateway and stores the result in the variable named $Cert.

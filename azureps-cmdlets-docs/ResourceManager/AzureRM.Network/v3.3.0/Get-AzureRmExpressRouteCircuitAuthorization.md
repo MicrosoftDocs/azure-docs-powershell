@@ -27,7 +27,7 @@ Authorization keys, as well as other information about the authorization, can be
 
 ### Example 1: Get all ExpressRoute authorizations
 ```
-PS C:\>$Circuit = Get-AzureRmExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
+PS C:\> $Circuit = Get-AzureRmExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
 PS C:\> Get-AzureRmExpressRouteCircuitAuthorization -Circuit $Circuit
 ```
 
@@ -37,7 +37,7 @@ The second command then uses that object reference and the **Get-AzureRmExpressR
 
 ### Example 2: Get all ExpressRoute authorizations using the Where-Object cmdlet
 ```
-PS C:\>$Circuit = Get-AzureRmExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
+PS C:\> $Circuit = Get-AzureRmExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
 PS C:\> Get-AzureRmExpressRouteCircuitAuthorization -Circuit $Circuit | Where-Object {$_.AuthorizationUseStatus -eq "Available"}
 ```
 

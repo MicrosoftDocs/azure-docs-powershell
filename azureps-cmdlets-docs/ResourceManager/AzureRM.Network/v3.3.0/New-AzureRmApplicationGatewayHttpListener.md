@@ -36,14 +36,14 @@ The **New-AzureRmApplicationGatewayHttpListener** cmdlet creates an HTTP listene
 
 ### Example 1: Create an HTTP listener
 ```
-PS C:\>$Listener = New-AzureRmApplicationGatewayHttpListener -Name "Listener01" -Protocol "Http" -FrontendIpConfiguration $FIp01 -FrontendPort $FP01
+PS C:\> $Listener = New-AzureRmApplicationGatewayHttpListener -Name "Listener01" -Protocol "Http" -FrontendIpConfiguration $FIp01 -FrontendPort $FP01
 ```
 
 This command creates an HTTP listener named Listener01 and stores the result in the variable named $Listener.
 
 ### Example 2: Create an HTTP listener with SSL
 ```
-PS C:\>$Listener = New-AzureRmApplicationGatewayHttpListener -Name "Listener01" -Protocol "Https" -FrontendIpConfiguration $FIp01 -FrontendPort $FP01 -SslCertificate $SSLCert01
+PS C:\> $Listener = New-AzureRmApplicationGatewayHttpListener -Name "Listener01" -Protocol "Https" -FrontendIpConfiguration $FIp01 -FrontendPort $FP01 -SslCertificate $SSLCert01
 ```
 
 This command creates an HTTP listener that uses SSL offload and provides the SSL certificate in the $SSLCert01 variable.

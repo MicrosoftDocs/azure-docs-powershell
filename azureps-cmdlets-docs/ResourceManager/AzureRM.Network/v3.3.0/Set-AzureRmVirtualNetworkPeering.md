@@ -24,7 +24,7 @@ The **Set-AzureRmVirtualNetworkPeering** cmdlet configures a virtual network pee
 
 ### Example 1: Change forwarded traffic configuration of a virtual network peering
 ```
-PS C:\>$LinkToVNet2 = Get-AzureRmVirtualNetworkPeering -VirtualNetworkName "VirtualNetwork17" -ResourceGroupName "ResourceGroup001" -Name "LinkToVNet2"
+PS C:\> $LinkToVNet2 = Get-AzureRmVirtualNetworkPeering -VirtualNetworkName "VirtualNetwork17" -ResourceGroupName "ResourceGroup001" -Name "LinkToVNet2"
 PS C:\> $LinkToVNet2.AllowForwardedTraffic = $True
 PS C:\> Set-AzureRmVirtualNetworkPeering -VirtualNetworkPeering $LinkToVNet2
 ```
@@ -40,7 +40,7 @@ The final command updates the settings for the LinkToVNet2 virtual network peeri
 
 ### Example 2: Change virtual network access of a virtual network peering
 ```
-PS C:\>$LinkToVNet2 = Get-AzureRmVirtualNetworkPeering -VirtualNetworkName "VirtualNetwork17" -ResourceGroupName "ResourceGroup001" -Name "LinkToVNet2"
+PS C:\> $LinkToVNet2 = Get-AzureRmVirtualNetworkPeering -VirtualNetworkName "VirtualNetwork17" -ResourceGroupName "ResourceGroup001" -Name "LinkToVNet2"
 PS C:\> $LinkToVNet2.AllowVirtualNetworkAccess = $False
 PS C:\> Set-AzureRmVirtualNetworkPeering -VirtualNetworkPeering $LinkToVNet2
 ```
@@ -56,7 +56,7 @@ The final command updates the settings for the LinkToVNet2 virtual network peeri
 
 ### Example 3: Change gateway transit property configuration of a virtual network peering
 ```
-PS C:\>$LinkToVNet2 = Get-AzureRmVirtualNetworkPeering -VirtualNetworkName "VirtualNetwork17" -ResourceGroupName "001ResourceGroup" -Name "LinkToVNet2"
+PS C:\> $LinkToVNet2 = Get-AzureRmVirtualNetworkPeering -VirtualNetworkName "VirtualNetwork17" -ResourceGroupName "001ResourceGroup" -Name "LinkToVNet2"
 PS C:\> $LinkToVNet2.AllowGatewayTransit = $True
 PS C:\> Set-AzureRmVirtualNetworkPeering -VirtualNetworkPeering $LinkToVNet2
 ```
@@ -72,7 +72,7 @@ The final command updates the settings for the LinkToVNet2 virtual network peeri
 
 ### Example 4: Use remote gateways in virtual network peering
 ```
-PS C:\>$LinkToVNet2 = Get-AzureRmVirtualNetworkPeering -VirtualNetworkName "VirtualNetwork17" -ResourceGroupName "ResourceGroup001" -Name "LinkToVNet2"
+PS C:\> $LinkToVNet2 = Get-AzureRmVirtualNetworkPeering -VirtualNetworkName "VirtualNetwork17" -ResourceGroupName "ResourceGroup001" -Name "LinkToVNet2"
 PS C:\> $LinkToVNet2.UseRemoteGateways = $True
 PS C:\> Set-AzureRmVirtualNetworkPeering -VirtualNetworkPeering $LinkToVNet2
 ```

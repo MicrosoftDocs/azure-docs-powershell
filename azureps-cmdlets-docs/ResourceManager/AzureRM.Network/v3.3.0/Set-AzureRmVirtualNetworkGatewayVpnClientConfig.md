@@ -26,7 +26,7 @@ Virtual private network (VPN) clients that connect to this gateway will be assig
 
 ### Example 1: Assign a VPN client address pool to a virtual network gateway
 ```
-PS C:\>$Gateway = Get-AzureRmVirtualNetworkGateway -Name "ContosoVirtualGateway"
+PS C:\> $Gateway = Get-AzureRmVirtualNetworkGateway -Name "ContosoVirtualGateway"
 PS C:\> Set-AzureRmVirtualNetworkGatewayVpnClientConfig -VirtualNetworkGateway $Gateway -VpnClientAddressPool "10.0.0.0/16"
 ```
 

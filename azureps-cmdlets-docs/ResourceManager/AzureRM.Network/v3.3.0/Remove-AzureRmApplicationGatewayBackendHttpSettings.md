@@ -24,7 +24,7 @@ The **Remove-AzureRmApplicationGatewayBackendHttpSettings** cmdlet removes back-
 
 ### Example 1: Remove back-end HTTP settings from an application gateway
 ```
-PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> Remove-AzureRmApplicationGatewayBackendHttpSettings -ApplicationGateway $AppGw -Name "BackEndSetting02"
 ```
 

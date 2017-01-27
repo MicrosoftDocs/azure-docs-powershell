@@ -29,14 +29,14 @@ By default, **Get-AzureRmVpnClientRootCertificate** returns information about al
 
 ### Example 1: Get information about all root certificates
 ```
-PS C:\>Get-AzureRmVpnClientRootCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup"
+PS C:\> Get-AzureRmVpnClientRootCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup"
 ```
 
 This command gets information about all the root certificates assigned to a virtual network gateway named ContosoVirtualNetwork.
 
 ### Example 2: Get information about specific root certificates
 ```
-PS C:\>Get-AzureRmVpnClientRootCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup" -VpnClientRootCertificateName "ContosoRootClientCertificate"
+PS C:\> Get-AzureRmVpnClientRootCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName "ContosoResourceGroup" -VpnClientRootCertificateName "ContosoRootClientCertificate"
 ```
 
 This command is a variation of the command shown in Example 1.

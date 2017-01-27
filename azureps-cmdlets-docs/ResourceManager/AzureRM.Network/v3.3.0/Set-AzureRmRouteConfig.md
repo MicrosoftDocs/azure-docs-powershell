@@ -25,7 +25,7 @@ The **Set-AzureRmRouteConfig** cmdlet sets the goal state for an Azure route.
 
 ### Example 1: Modify a route
 ```
-PS C:\>Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Set-AzureRmRouteConfig -Name "Route02" -AddressPrefix 10.4.0.0/16 -NextHopType VnetLocal | Set-AzureRmRouteTable
+PS C:\> Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Set-AzureRmRouteConfig -Name "Route02" -AddressPrefix 10.4.0.0/16 -NextHopType VnetLocal | Set-AzureRmRouteTable
 Name              : Routetable01
 ResourceGroupName : ResourceGroup11
 Location          : eastus

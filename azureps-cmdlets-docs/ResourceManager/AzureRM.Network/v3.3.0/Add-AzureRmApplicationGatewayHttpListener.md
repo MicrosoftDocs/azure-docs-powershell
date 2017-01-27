@@ -214,6 +214,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequireServerNameIndication
+Specifies the server name indication.
+
 ```yaml
 Type: String
 Parameter Sets: (All)

@@ -24,7 +24,7 @@ The **Remove-AzureRmApplicationGatewayRequestRoutingRule** cmdlet removes a requ
 
 ### Example 1: Remove a request routing rule from an application gateway
 ```
-PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> Remove-AzureRmApplicationGatewayRequestRoutingRule -ApplicationGateway $AppGw -Name "Rule02"
 ```
 
