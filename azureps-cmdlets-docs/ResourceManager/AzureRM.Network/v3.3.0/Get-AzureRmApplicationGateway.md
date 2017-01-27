@@ -24,21 +24,21 @@ The **Get-AzureRmApplicationGateway** cmdlet gets an application gateway.
 
 ### Example 1: Get a specified application gateway
 ```
-PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 ```
 
 This command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $AppGw variable.
 
 ### Example 2: Get a list of application gateways in a resource group
 ```
-PS C:\>$AppGwList = Get-AzureRmApplicationGateway -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGwList = Get-AzureRmApplicationGateway -ResourceGroupName "ResourceGroup01"
 ```
 
 This command gets a list of all the application gateways in the resource group named ResourceGroup01 and stores it in the $AppGwList variable.
 
 ### Example 3: Get a list of application gateways in a subscription
 ```
-PS C:\>$AppGwList = Get-AzureRmApplicationGateway
+PS C:\> $AppGwList = Get-AzureRmApplicationGateway
 ```
 
 This command gets a list of all the application gateways in the subscription and stores it in the $AppGwList variable.

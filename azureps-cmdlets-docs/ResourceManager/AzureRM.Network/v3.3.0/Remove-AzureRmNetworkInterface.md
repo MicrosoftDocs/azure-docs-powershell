@@ -25,7 +25,7 @@ The **Remove-AzureRmNetworkInterface** cmdlet removes an Azure network interface
 
 ### Example 1: Remove a network interface
 ```
-PS C:\>Remove-AzureRmNetworkInterface -Name "NetworkInterface1" -ResourceGroup "ResourceGroup1"
+PS C:\> Remove-AzureRmNetworkInterface -Name "NetworkInterface1" -ResourceGroup "ResourceGroup1"
 ```
 
 This command removes the network interface NetworkInterface1 in resource group ResourceGroup1.
@@ -33,7 +33,7 @@ Because the *Force* parameter is not used, the user will be prompted to confirm 
 
 ### Example 2: Remove a network interface
 ```
-PS C:\>Get-AzureRmNetworkInterface -ResourceGroupName "ResourceGroup1" | Remove-AzureRmNetworkInterface -Force
+PS C:\> Get-AzureRmNetworkInterface -ResourceGroupName "ResourceGroup1" | Remove-AzureRmNetworkInterface -Force
 ```
 
 This command removes all network interfaces in resource group ResourceGroup1.

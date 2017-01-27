@@ -24,7 +24,7 @@ The **Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration** cmdlet 
 
 ### Example 1: Update the application gateway web application firewall configuration
 ```
-PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration -ApplicationGateway $AppGw -Enabled $True -FirewallMode "Detection"
 ```
 

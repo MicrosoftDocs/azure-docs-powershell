@@ -24,7 +24,7 @@ The **Remove-AzureRmLoadBalancerFrontendIpConfig** cmdlet removes a front-end IP
 
 ### Example 1: Remove a front-end IP configuration from a load balancer
 ```
-PS C:\>$loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 PS C:> Remove-AzureRmLoadBalancerFrontendIpConfig -Name "frontendName" -LoadBalancer $loadbalancer
 ```
 

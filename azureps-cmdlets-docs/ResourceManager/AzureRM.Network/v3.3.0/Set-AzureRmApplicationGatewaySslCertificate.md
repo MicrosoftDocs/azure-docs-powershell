@@ -25,7 +25,7 @@ The **Set-AzureRmApplicationGatewaySslCertificate** cmdlet sets the goal state o
 
 ### Example 1: Set the goal state of an SSL certificate
 ```
-PS C:\>$AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Cert = Set-AzureRmApplicationGatewaySslCertificate -ApplicationGateway $AppGW -Name "Cert01" -CertificateFile "D:\cert01.pfx" -Password "Password01"
 ```
 

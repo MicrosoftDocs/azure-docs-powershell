@@ -24,7 +24,7 @@ The **Get-AzureRmApplicationGatewayHttpListener** cmdlet gets the HTTP listener 
 
 ### Example 1: Get a specific HTTP listener
 ```
-PS C:\>$Appgw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Appgw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Listener = Get-AzureRmApplicationGatewayHttpListener -Name "Listener01" -ApplicationGateway $Appgw
 ```
 
@@ -32,7 +32,7 @@ This command gets an HTTP listener named Listener01.
 
 ### Example 2: Get a list of HTTP listeners
 ```
-PS C:\>$Appgw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Appgw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Listeners = Get-AzureRmApplicationGatewayHttpListener -ApplicationGateway $Appgw
 ```
 

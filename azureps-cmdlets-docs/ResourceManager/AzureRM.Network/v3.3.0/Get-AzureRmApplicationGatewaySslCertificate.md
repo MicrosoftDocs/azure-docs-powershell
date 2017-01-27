@@ -24,7 +24,7 @@ The **Get-AzureRmApplicationGatewaySslCertificate** cmdlet gets an SSL certifica
 
 ### Example 1: Get a specific SSL certificate
 ```
-PS C:\>$AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Cert = Get-AzureRmApplicationGatewaySslCertificate -Name "Cert01" -ApplicationGateway $AppGW
 ```
 
@@ -34,7 +34,7 @@ The command stores the certificate in the variable named $Cert.
 
 ### Example 2: Get a list of SSL certificates
 ```
-PS C:\>$AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Certs = Get-AzureRmApplicationGatewaySslCertificate -ApplicationGateway $AppGW
 ```
 

@@ -31,11 +31,6 @@ The **Add-AzureRmVirtualNetworkSubnetConfig** cmdlet adds a subnet configuration
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AddressPrefix
@@ -139,6 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -RouteTable
+Specifies the route table to which this cmdlet adds a virtual network subnet configuration.
+
 ```yaml
 Type: PSRouteTable
 Parameter Sets: SetByResource
@@ -152,6 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -RouteTableId
+Specifies the ID of the route table associated with the subnet configuration.
+
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
@@ -197,5 +196,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmVirtualNetworkSubnetConfig](./Remove-AzureRmVirtualNetworkSubnetConfig.md)
 
 [Set-AzureRmVirtualNetworkSubnetConfig](./Set-AzureRmVirtualNetworkSubnetConfig.md)
-
-

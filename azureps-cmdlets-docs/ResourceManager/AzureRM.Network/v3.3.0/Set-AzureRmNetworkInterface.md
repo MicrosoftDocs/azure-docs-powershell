@@ -24,7 +24,7 @@ The **Set-AzureRmNetworkInterface** sets the goal state for an Azure network int
 
 ### Example 1: Configure a network interface
 ```
-PS C:\>$Nic = Get-AzureRmNetworkInterface -ResourceGroupName "ResourceGroup1" -Name "NetworkInterface1"
+PS C:\> $Nic = Get-AzureRmNetworkInterface -ResourceGroupName "ResourceGroup1" -Name "NetworkInterface1"
 PS C:\> $Nic.IpConfigurations[0].PrivateIpAddress = "10.0.1.20"
 PS C:\> $Nic.IpConfigurations[0].PrivateIpAllocationMethod = "Static"
 PS C:\> $Nic.Tag = @{Name = "Name"; Value = "Value"}

@@ -25,7 +25,7 @@ You can specify a route by name.
 
 ### Example 1: Get a route table
 ```
-PS C:\>Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Get-AzureRmRouteConfig -Name "Route07"
+PS C:\> Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Get-AzureRmRouteConfig -Name "Route07"
 Name              : route07
 Id                : 
 Etag              : 

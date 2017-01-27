@@ -24,7 +24,7 @@ The **New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration** cmdlet 
 
 ### Example 1: Create a web application firewall configuration for an application gateway
 ```
-PS C:\>$FirewallConfig = New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration -Enabled $True -FirewallMode "Prevention"
+PS C:\> $FirewallConfig = New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration -Enabled $True -FirewallMode "Prevention"
 ```
 
 This command creates a configuiration that prevents requests when matched by the WAF, and then stores it in the $FirewallConfig variable.
