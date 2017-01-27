@@ -22,20 +22,21 @@ The **Get-AzureRmNetworkSecurityRuleConfig** cmdlet gets a network security rule
 
 ## EXAMPLES
 
-### 1: Retrieving a network security rule config
+### Example 1: Get a network security rule configuration
 ```
-Get-AzureRmNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1 
-    | Get-AzureRmNetworkSecurityRuleConfig -Name AllowInternetOutBound -DefaultRules
+PS C:\> Get-AzureRmNetworkSecurityGroup -Name  "NSG01" -ResourceGroupName "ResourceGroup03" | Get-AzureRmNetworkSecurityRuleConfig -Name "AllowInternetOutBound" -DefaultRules
 ```
-This command retrieves the default rule named "AllowInternetOutBound" from Azure network security group named "nsg1" in resource group "rg1"
 
+This command gets a network security group named NSG01 in ResourceGroup03, and then passes it to the current cmdlet. 
+The command retrieves the default rule named AllowInternetOutBound from that group.
 
-### 2: Retrieving a network security rule config using only the name
+### Example 2: Retrieving a network security rule config using only the name
 ```
- Get-AzureRmNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1 
-    | Get-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule"
+PS C:\> Get-AzureRmNetworkSecurityGroup -Name  "NSG01" -ResourceGroupName ResourceGroup03 | Get-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule"
 ```
-This command retrieves user defined rule named "rdp-rule" from Azure network security group named "nsg1" in resource group "rg1"
+
+This command gets a network security group named NSG01 in ResourceGroup03, and then passes it to the current cmdlet. 
+The command retrieves user defined rule named rdp-rule from that group.
 
 ## PARAMETERS
 
@@ -135,6 +136,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Add-AzureRmNetworkSecurityRuleConfig](./Add-AzureRmNetworkSecurityRuleConfig.md)
+
+[Get-AzureRmNetworkSecurityGroup](./Get-AzureRmNetworkSecurityGroup.md)
 
 [New-AzureRmNetworkSecurityRuleConfig](./New-AzureRmNetworkSecurityRuleConfig.md)
 

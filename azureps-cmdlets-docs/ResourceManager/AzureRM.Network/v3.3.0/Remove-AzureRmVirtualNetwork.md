@@ -23,20 +23,12 @@ The **Remove-AzureRmVirtualNetwork** cmdlet removes an Azure virtual network.
 
 ## EXAMPLES
 
-### 1: Create and delete a virtual network 
+### Example 1: Delete a virtual network 
 ```
-New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
-    $frontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet 
-    -AddressPrefix "10.0.1.0/24"
-    $backendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix 
-    "10.0.2.0/24"
+PS C:\> Remove-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03"
+```
 
-New-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup 
-    -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet,$backendSubnet
-    
-Remove-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup
-```
-This example creates a virtual network in a resource group and then immediately deletes it. To suppress the prompt when deleting the virtual network, use the -Force flag.
+This command deletes a virtual network named MyVirtualNetwork in the resource group named ResourceGroup03. 
 
 ## PARAMETERS
 
