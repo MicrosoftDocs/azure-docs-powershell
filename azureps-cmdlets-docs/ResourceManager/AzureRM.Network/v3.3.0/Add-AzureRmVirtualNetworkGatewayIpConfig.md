@@ -33,11 +33,6 @@ The **Add-AzureRmVirtualNetworkGatewayIpConfig** cmdlet adds an IP configuration
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction
@@ -172,7 +167,7 @@ Accept wildcard characters: False
 ### -VirtualNetworkGateway
 Specifies a **PSVirtualNetworkGateway** object.
 This cmdlet modifies the **PSVirtualNetworkGateway** object that you specify.
-You can use the Get-AzureRmVirtualNetworkGateway cmdlet to retrieve a **PSVirtualNetworkGateway** object.
+You can use the [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md) cmdlet to get a **PSVirtualNetworkGateway** object.
 
 ```yaml
 Type: PSVirtualNetworkGateway
@@ -233,5 +228,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetworkGatewayIpConfig](./New-AzureRmVirtualNetworkGatewayIpConfig.md)
 
 [Remove-AzureRmVirtualNetworkGatewayIpConfig](./Remove-AzureRmVirtualNetworkGatewayIpConfig.md)
-
-

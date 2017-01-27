@@ -29,7 +29,7 @@ Alternatively, you can use **New-AzureRmExpressRouteCircuitAuthorization** to cr
 
 ### Example 1: Create a new circuit authorization
 ```
-PS C:\>$Authorization = New-AzureRmExpressRouteCircuitAuthorization -Name "ContosoCircuitAuthorization"
+PS C:\> $Authorization = New-AzureRmExpressRouteCircuitAuthorization -Name "ContosoCircuitAuthorization"
 ```
 
 This command creates a new circuit authorization named ContosoCircuitAuthorization and then stores that object in a variable named $Authorization.

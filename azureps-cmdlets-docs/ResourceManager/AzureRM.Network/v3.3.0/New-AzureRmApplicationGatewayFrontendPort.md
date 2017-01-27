@@ -24,7 +24,7 @@ The **New-AzureRmApplicationGatewayFrontendPort** cmdlet creates a front-end por
 
 ### Example1: Create a front-end port
 ```
-PS C:\>$FrontEndPort = New-AzureRmApplicationGatewayFrontendPort -Name "FrontEndPort01" -Port 80
+PS C:\> $FrontEndPort = New-AzureRmApplicationGatewayFrontendPort -Name "FrontEndPort01" -Port 80
 ```
 
 This command creates a front-end port named FrontEndPort01 on port 80 and stores the result in the variable named $FrontEndPort.

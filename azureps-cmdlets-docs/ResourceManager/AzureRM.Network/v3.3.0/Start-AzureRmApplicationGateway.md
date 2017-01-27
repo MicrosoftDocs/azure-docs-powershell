@@ -24,7 +24,7 @@ The **Start-AzureRmApplicationGateway** cmdlet starts an Azure application gatew
 
 ### Example1: Start an application gateway
 ```
-PS C:\>$AppGw = Start-AzureRmApplicationGateway -ApplicationGateway $AppGw
+PS C:\> $AppGw = Start-AzureRmApplicationGateway -ApplicationGateway $AppGw
 ```
 
 This command starts the application gateway stored in the $AppGw variable.

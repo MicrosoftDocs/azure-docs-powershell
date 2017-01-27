@@ -24,7 +24,7 @@ The **Get-AzureRmEffectiveRouteTable** cmdlet returns the effective route table 
 
 ### Example 1: Get the effective route table on a network interface
 ```
-PS C:\>Get-AzureRmEffectiveRouteTable -NetworkInterfaceName "MyNetworkInterface" -ResourceGroupName "MyResourceGroup"
+PS C:\> Get-AzureRmEffectiveRouteTable -NetworkInterfaceName "MyNetworkInterface" -ResourceGroupName "MyResourceGroup"
 ```
 
 This command gets the effective route table associated with network interface named MyNetworkInterface in the resource group named MyResourceGroup.

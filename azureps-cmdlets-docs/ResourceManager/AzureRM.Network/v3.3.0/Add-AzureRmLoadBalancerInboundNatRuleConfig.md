@@ -36,10 +36,10 @@ The **Add-AzureRmLoadBalancerInboundNatRuleConfig** cmdlet adds an inbound netwo
 ### Example 1: Add an inbound NAT rule configuration to a load balancer
 ```
 PS C:\> $Slb = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
-PS C:\> $Slb | Add-AzureRmLoadBalancerInboundNatRuleConfig -Name "NewNatRule" -FrontendIPConfiguration $slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350  -EnableFloatingIP
+PS C:\> $Slb | Add-AzureRmLoadBalancerInboundNatRuleConfig -Name "NewNatRule" -FrontendIPConfiguration $Slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350  -EnableFloatingIP
 ```
 
-The first command gets the load balancer named MyloadBalancer, and then stores it in the variable $slb.
+The first command gets the load balancer named MyloadBalancer, and then stores it in the variable $Slb.
 
 The second command uses the pipeline operator to pass the load balancer in $Slb to **Add-AzureRmLoadBalancerInboundNatRuleConfig**, which adds an inbound NAT rule configuration to the load balancer.
 

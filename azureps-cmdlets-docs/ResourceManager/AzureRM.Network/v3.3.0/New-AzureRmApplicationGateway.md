@@ -12,7 +12,7 @@ Creates an application gateway.
 
 ## SYNTAX
 
-```
+``
 New-AzureRmApplicationGateway -Name <String> -ResourceGroupName <String> -Location <String>
  -Sku <PSApplicationGatewaySku> [-SslPolicy <PSApplicationGatewaySslPolicy>]
  -GatewayIPConfigurations <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayIPConfiguration]>
@@ -87,7 +87,7 @@ The first command creates an IP configuration named GatewayIp01 for the subnet c
 The second command creates a back-end server pool named Pool01 with a list of back-end IP addresses and stores the pool in the $Pool variable.
 The third command creates the settings for the back-end server pool and stores the settings in the $PoolSetting variable.
 The forth command creates a front-end port on port 80, names it FrontEndPort01, and stores the port in the $FrontEndPort variable.
-The fifth command creates a public IP address by using New-AzureRmPublicIpAddress.
+The fifth command creates a public IP address by using [New-AzureRmPublicIpAddress](./New-AzureRmPublicIpAddress.md).
 The sixth command creates a front-end IP configuration using $PublicIp, names it FrontEndPortConfig01, and stores it in the $FrontEndIpConfig variable.
 The seventh command creates a listener using the previously created $FrontEndIpConfig $FrontEndPort.
 The eighth command creates a rule for the listener.
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 
 ### -WebApplicationFirewallConfiguration
 Specifies a web application firewall (WAF) configuration.
-You can use the Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration cmdlet to get a WAF.
+You can use the [Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md) cmdlet to get a WAF.
 
 ```yaml
 Type: PSApplicationGatewayWebApplicationFirewallConfiguration
@@ -486,5 +486,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 
 [New-AzureRmVirtualNetworkSubnetConfig](./New-AzureRmVirtualNetworkSubnetConfig.md)
-
-

@@ -24,7 +24,7 @@ The **Get-AzureRmApplicationGatewayProbeConfig** cmdlet gets an existing health 
 
 ### Example 1: Get an existing probe from an application gateway
 ```
-PS C:\>Get-AzureRmApplicationGatewayProbeConfig -ApplicationGateway Gateway -Name "Probe02"
+PS C:\> Get-AzureRmApplicationGatewayProbeConfig -ApplicationGateway Gateway -Name "Probe02"
 ```
 
 This command gets the health probe named Probe02 from the application gateway named Gateway.

@@ -27,7 +27,7 @@ The **Set-AzureRmNetworkSecurityRuleConfig** cmdlet sets the goal state for an A
 
 ### Example 1: Change the access configuration in a network security rule
 ```
-PS C:\>$nsg = Get-AzureRmNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
+PS C:\> $nsg = Get-AzureRmNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
 PS C:\> $nsg | Get-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule"
 PS C:\> Set-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule" -NetworkSecurityGroup $nsg -Access "Deny"
 ```

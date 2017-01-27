@@ -32,11 +32,12 @@ The **Add-AzureRmVirtualNetworkSubnetConfig** cmdlet adds a subnet configuration
 ## EXAMPLES
 
 ### Example 1: Add a subnet to an existing virtual network
-```
+```<
 PS C:\> New-AzureRmResourceGroup -Name "ResourceGroup03" -Location centralus 
 PS C:\> $FrontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name "FrontendSubnet" -AddressPrefix "10.0.1.0/24"
 PS C:\> $VirtualNetwork = New-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03" -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $FrontendSubnet
 PS C:\> Add-AzureRmVirtualNetworkSubnetConfig -Name "BackendSubnet" -VirtualNetwork $VirtualNetwork -AddressPrefix "10.0.2.0/24" $VirtualNetwork | Set-AzureRmVirtualNetwork
+
 ```
 
 The first command creates a resource group as a container of the resources to be created. 
@@ -47,6 +48,7 @@ The third command creates a virtual network named MyVirtualNetwork.
 
 The final command adds a subnet to the in-memory representation of the virtual network by using the **Add-AzureRmVirtualNetworkSubnetConfig** cmdlet.  
 The command updates the existing virtual network with the new subnet by using the **Set-AzureRmVirtualNetwork** cmdlet.
+
 
 ## PARAMETERS
 
@@ -151,6 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -RouteTable
+Specifies the route table to which this cmdlet adds a virtual network subnet configuration.
+
 ```yaml
 Type: PSRouteTable
 Parameter Sets: SetByResource
@@ -164,6 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -RouteTableId
+Specifies the ID of the route table associated with the subnet configuration.
+
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId

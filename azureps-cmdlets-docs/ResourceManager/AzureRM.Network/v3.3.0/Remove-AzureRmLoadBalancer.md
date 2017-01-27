@@ -25,7 +25,7 @@ The **Remove-AzureRmLoadBalancer** cmdlet removes an Azure load balancer.
 
 ### Example 1: Remove a load balancer
 ```
-PS C:\>Remove-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> Remove-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 ```
 
 This command deletes a load balancer named MyLoadBalancer in the resource group named MyResourceGroup.

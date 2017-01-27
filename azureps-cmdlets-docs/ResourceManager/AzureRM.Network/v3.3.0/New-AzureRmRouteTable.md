@@ -26,7 +26,7 @@ The **New-AzureRmRouteTable** cmdlet creates an Azure route table.
 
 ### Example 1: Create a route table that contains a route
 ```
-PS C:\>$Route = New-AzureRmRouteConfig -Name "Route07" -AddressPrefix 10.1.0.0/16 -NextHopType "VnetLocal"
+PS C:\> $Route = New-AzureRmRouteConfig -Name "Route07" -AddressPrefix 10.1.0.0/16 -NextHopType "VnetLocal"
 PS C:\> New-AzureRmRouteTable -Name "RouteTable01" -ResourceGroupName "ResourceGroup11" -Location "EASTUS" -Route $Route
 Name              : routetable01
 ResourceGroupName : ResourceGroup11
