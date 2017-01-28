@@ -25,7 +25,7 @@ New-AzureRmExpressRouteCircuitPeeringConfig -Name <String> -PeeringType <String>
 
 ### 1:
 ```
-PS C:\>
+PS C:\> 
 ```
 
 ## PARAMETERS

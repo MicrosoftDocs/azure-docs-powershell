@@ -8,6 +8,7 @@ schema: 2.0.0
 # Add-AzureRmLoadBalancerInboundNatPoolConfig
 
 ## SYNOPSIS
+Adds an inbound NAT pool configuration to a load balancer.
 
 ## SYNTAX
 
@@ -28,6 +29,7 @@ Add-AzureRmLoadBalancerInboundNatPoolConfig -Name <String> -LoadBalancer <PSLoad
 ```
 
 ## DESCRIPTION
+The **Add-AzureRmLoadBalancerInboundNatPoolConfig** cmdlet adds an inbound NAT pool configuration to a load balancer.
 
 ## EXAMPLES
 
@@ -186,4 +188,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

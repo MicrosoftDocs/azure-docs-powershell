@@ -22,7 +22,7 @@ Remove-AzureRmLoadBalancerInboundNatPoolConfig [-Name <String>] -LoadBalancer <P
 
 ### 1:
 ```
-PS C:\>
+PS C:\> 
 ```
 
 ## PARAMETERS

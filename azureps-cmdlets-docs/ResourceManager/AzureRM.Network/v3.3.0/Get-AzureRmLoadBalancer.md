@@ -31,7 +31,7 @@ The **Get-AzureRmLoadBalancer** cmdlet gets one or more Azure load balancers tha
 
 ### Example 1: Get a load balancer
 ```
-PS C:\>Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 ```
 
 This command gets the load balancer named MyLoadBalancer.

@@ -22,7 +22,7 @@ Get-AzureRmExpressRouteServiceProvider [-InformationAction <ActionPreference>] [
 
 ### 1:
 ```
-PS C:\>
+PS C:\> 
 ```
 
 ## PARAMETERS
