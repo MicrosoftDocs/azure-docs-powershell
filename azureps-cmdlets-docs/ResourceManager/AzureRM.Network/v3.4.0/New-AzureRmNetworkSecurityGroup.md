@@ -31,7 +31,7 @@ The **New-AzureRmNetworkSecurityGroup** cmdlet creates an Azure network security
 ```
 This command ceates a new Azure network security group named "nsg1" in resource group "rg1" in location "westus".
 
-### 1: Create a detailed network security group
+### 2: Create a detailed network security group
 ```
 $rule1 = New-AzureRmNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" 
     -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix 
