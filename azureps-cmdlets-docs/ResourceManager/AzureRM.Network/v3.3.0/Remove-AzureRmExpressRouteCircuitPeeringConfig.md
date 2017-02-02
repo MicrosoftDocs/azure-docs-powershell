@@ -22,14 +22,11 @@ The **Remove-AzureRmExpressRouteCircuitPeeringConfig** cmdlet removes an Express
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ExpressRouteCircuit
+Specifies the express route circuit for which this cmdlet gets the peering configuration.
+
 ```yaml
 Type: PSExpressRouteCircuit
 Parameter Sets: (All)
@@ -82,6 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+Specifies the name of the express route circuit peering configuration.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -104,4 +103,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

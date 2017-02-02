@@ -29,11 +29,6 @@ The **Get-AzureRmPublicIPAddress** cmdlet gets one or more public IP addresses i
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ExpandResource
@@ -158,5 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmPublicIpAddress](./Remove-AzureRmPublicIpAddress.md)
 
 [Set-AzureRmPublicIpAddress](./Set-AzureRmPublicIpAddress.md)
-
-

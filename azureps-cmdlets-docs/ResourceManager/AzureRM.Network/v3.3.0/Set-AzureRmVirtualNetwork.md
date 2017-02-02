@@ -22,11 +22,6 @@ The **Set-AzureRmVirtualNetwork** cmdlet sets the goal state for an Azure virtua
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction
@@ -101,5 +96,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 
 [Remove-AzureRmVirtualNetwork](./Remove-AzureRmVirtualNetwork.md)
-
-

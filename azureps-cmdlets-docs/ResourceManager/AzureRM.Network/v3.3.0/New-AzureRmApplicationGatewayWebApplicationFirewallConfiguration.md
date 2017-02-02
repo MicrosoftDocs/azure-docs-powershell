@@ -27,7 +27,7 @@ The **New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration** cmdlet 
 PS C:\> $FirewallConfig = New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration -Enabled $True -FirewallMode "Prevention"
 ```
 
-This command creates a configuiration that prevents requests when matched by the WAF, and then stores it in the $FirewallConfig variable.
+This command creates a configuration that prevents requests when matched by the WAF, and then stores it in the $FirewallConfig variable.
 
 ## PARAMETERS
 
@@ -112,5 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./Get-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
 
 [Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
-
-

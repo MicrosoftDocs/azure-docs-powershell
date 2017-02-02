@@ -29,11 +29,6 @@ The **Get-AzureRmNetworkSecurityGroup** cmdlet gets an Azure network security gr
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ExpandResource
@@ -158,5 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmNetworkSecurityGroup](./Remove-AzureRmNetworkSecurityGroup.md)
 
 [Set-AzureRmNetworkSecurityGroup](./Set-AzureRmNetworkSecurityGroup.md)
-
-

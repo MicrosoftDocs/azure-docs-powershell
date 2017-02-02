@@ -92,6 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+Specifies the name of the load balancer that this cmdlet gets.
+
 ```yaml
 Type: String
 Parameter Sets: Expand
@@ -117,6 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+Specifies the name of the resource group that contains the load balancer.
+
 ```yaml
 Type: String
 Parameter Sets: Expand
@@ -157,5 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmLoadBalancer](./Remove-AzureRmLoadBalancer.md)
 
 [Set-AzureRmLoadBalancer](./Set-AzureRmLoadBalancer.md)
-
-

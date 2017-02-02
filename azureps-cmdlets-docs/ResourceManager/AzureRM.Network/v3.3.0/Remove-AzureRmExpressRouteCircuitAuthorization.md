@@ -35,11 +35,11 @@ PS C:\> Set-AzureRmExpressRouteCircuit -ExpressRouteCircuit $Circuit
 ```
 
 This example removes a circuit authorization from an ExpressRoute circuit.
-The first command uses the **Get-AzureRmExpressRouteCircuit** cmdlet to create an object reference to an ExpressRoute circuit named ContosoCircuit and stores the result in the variable named $Circuit.
+The first command uses the [Get-AzureRmExpressRouteCircuit](./Get-AzureRmExpressRouteCircuit.md) cmdlet to create an object reference to an ExpressRoute circuit named ContosoCircuit and stores the result in the variable named $Circuit.
 
 The second command marks the circuit authorization ContosoCircuitAuthorization for removal.
 
-The third command uses the Set-AzureRmExpressRouteCircuit cmdlet to confirm the removal of the ExpressRoute circuit stored in the $Circuit variable.
+The third command uses the [Set-AzureRmExpressRouteCircuit](./Set-AzureRmExpressRouteCircuit.md) cmdlet to confirm the removal of the ExpressRoute circuit stored in the $Circuit variable.
 
 ## PARAMETERS
 
@@ -138,5 +138,3 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 [New-AzureRmExpressRouteCircuitAuthorization](./New-AzureRmExpressRouteCircuitAuthorization.md)
 
 [Set-AzureRmExpressRouteCircuit](./Set-AzureRmExpressRouteCircuit.md)
-
-

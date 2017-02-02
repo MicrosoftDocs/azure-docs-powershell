@@ -23,7 +23,7 @@ The **Add-AzureRmLoadBalancerProbeConfig** cmdlet adds a probe configuration to 
 
 ## EXAMPLES
 
-### Example 1 Add a probe configuration to a load balancer
+### Example 1: Add a probe configuration to a load balancer
 ```
 PS C:\> Get-AzureRmLoadBalancer -Name "myLb" -ResourceGroupName "myRg" | Add-AzureRmLoadBalancerProbeConfig -Name "probeName" -RequestPath healthcheck2.aspx -Protocol http -Port 81 -IntervalInSeconds 16 -ProbeCount 3 | Set-AzureRmLoadBalancer
 ```

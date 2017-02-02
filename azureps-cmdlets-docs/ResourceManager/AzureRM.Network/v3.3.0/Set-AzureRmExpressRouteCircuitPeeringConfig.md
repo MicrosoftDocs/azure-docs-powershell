@@ -24,11 +24,6 @@ Set-AzureRmExpressRouteCircuitPeeringConfig -Name <String> -ExpressRouteCircuit 
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\> 
-```
-
 ## PARAMETERS
 
 ### -ExpressRouteCircuit
@@ -223,4 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

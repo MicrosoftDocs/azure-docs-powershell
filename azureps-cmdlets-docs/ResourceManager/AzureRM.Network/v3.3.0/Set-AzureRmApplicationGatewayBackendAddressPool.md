@@ -45,7 +45,7 @@ The first command gets the application gateway named ApplicationGateway01 in the
 
 The second command updates the back-end address pool of the application gateway in $AppGw by using IP addresses.
 
-### Example 3: Setting a back-end address pool by using the ID of the backend server?s IP address
+### Example 3: Setting a back-end address pool by using the ID of the backend server's IP address
 ```
 PS C:\> $Nic01 = Get-AzureRmNetworkInterface -Name "Nic01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Nic02 = Get-AzureRmNetworkInterface -Name "Nic02" -ResourceGroupName "ResourceGroup01"
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendFqdns
-Specifies a list of back-end IP addresses to use as a back-end server pool.
+Specifies a list of back-end FQDN addresses to use as a back-end server pool.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -94,6 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -BackendIPAddresses
+Specifies a list of back-end IP addresses to use as a back-end server pool.
+
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
@@ -214,5 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApplicationGatewayBackendAddressPool](./New-AzureRmApplicationGatewayBackendAddressPool.md)
 
 [Remove-AzureRmApplicationGatewayBackendAddressPool](./Remove-AzureRmApplicationGatewayBackendAddressPool.md)
-
-

@@ -22,11 +22,6 @@ The **Set-AzureRmExpressRouteCircuit** cmdlet modifies an ExpressRoute circuit.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ExpressRouteCircuit
@@ -101,5 +96,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmExpressRouteCircuit](./New-AzureRmExpressRouteCircuit.md)
 
 [Remove-AzureRmExpressRouteCircuit](./Remove-AzureRmExpressRouteCircuit.md)
-
-

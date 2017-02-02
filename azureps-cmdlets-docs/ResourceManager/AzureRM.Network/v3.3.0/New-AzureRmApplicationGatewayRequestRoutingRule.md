@@ -203,6 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMap
+Specifies the URL path map to the application gateway.
+
 ```yaml
 Type: PSApplicationGatewayUrlPathMap
 Parameter Sets: SetByResource
@@ -216,6 +218,8 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMapId
+Specifies the URL path map ID for the routing rule.
+
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
@@ -250,5 +254,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayRequestRoutingRule](./Remove-AzureRmApplicationGatewayRequestRoutingRule.md)
 
 [Set-AzureRmApplicationGatewayRequestRoutingRule](./Set-AzureRmApplicationGatewayRequestRoutingRule.md)
-
-

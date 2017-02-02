@@ -32,7 +32,7 @@ PS C:\> $slb | Set-AzureRmLoadBalancerProbeConfig -Name "NewProbe" -Port 80 -Int
 
 The first command gets the loadbalancer named MyLoadBalancer, and then stores it in the $slb variable.
 
-The second command uses the pipeline operator to pass the load balancer in $slb to Add-AzureRmLoadBalancerProbeConfig, which adds a new probe configuration to it.
+The second command uses the pipeline operator to pass the load balancer in $slb to [Add-AzureRmLoadBalancerProbeConfig](./Add-AzureRmLoadBalancerProbeConfig.md), which adds a new probe configuration to it.
 
 The third command passes the load balancer to **Set-AzureRmLoadBalancerProbeConfig**, which sets the new configuration.
 Note that it is necessary to specify several of the same parameters that were specified in the previous command because they are required by the current cmdlet.
@@ -205,5 +205,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmLoadBalancerProbeConfig](./New-AzureRmLoadBalancerProbeConfig.md)
 
 [Remove-AzureRmLoadBalancerProbeConfig](./Remove-AzureRmLoadBalancerProbeConfig.md)
-
-

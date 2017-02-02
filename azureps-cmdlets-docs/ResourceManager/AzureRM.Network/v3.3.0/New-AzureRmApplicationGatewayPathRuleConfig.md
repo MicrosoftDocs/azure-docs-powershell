@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -BackendHttpSettings
 Specifies an object reference to a collection of backend HTTP settings to be added to the gateway path rule configuration settings.
-You can create this object reference by using the New-AzureRmApplicationGatewayBackendHttpSettings cmdlet and syntax similar to this:
+You can create this object reference by using the [New-AzureRmApplicationGatewayBackendHttpSettings](./New-AzureRmApplicationGatewayBackendHttpSettings.md) cmdlet and syntax similar to this:
 
 $HttpSettings = New-AzureRmApplicationGatewayBackendHttpSettings -Name "ContosoHttpSetings" -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled"
 

@@ -47,7 +47,7 @@ The third command uses the **Set-AzureRmVirtualNetworkGatewayDefaultSite** cmdle
 
 ### -GatewayDefaultSite
 Specifies an object reference to the local network gateway to be assigned as the default site for the specified virtual network.
-You can use the Get-AzureRmLocalNetworkGateway cmdlet to create an object reference to a local gateway.
+You can use the [Get-AzureRmLocalNetworkGateway](./Get-AzureRmLocalNetworkGateway.md) cmdlet to create an object reference to a local gateway.
 
 ```yaml
 Type: PSLocalNetworkGateway
@@ -140,5 +140,3 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
 [Remove-AzureRmVirtualNetworkGatewayDefaultSite](./Remove-AzureRmVirtualNetworkGatewayDefaultSite.md)
-
-

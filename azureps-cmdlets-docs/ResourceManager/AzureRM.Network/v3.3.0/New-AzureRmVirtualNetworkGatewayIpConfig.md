@@ -29,11 +29,6 @@ New-AzureRmVirtualNetworkGatewayIpConfig -Name <String> [-PrivateIpAddress <Stri
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction
@@ -163,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -VirtualNetworkGateway
 Specifies an object reference to the virtual network gateway that contains the VPN client configuration settings that this cmdlet modifies.
-You can create an object reference to a virtual network gateway by using the Get-AzureRmVirtualNetworkGateway and specifying the name of the gateway.
+You can create an object reference to a virtual network gateway by using the [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md) and specifying the name of the gateway.
 
 ```yaml
 Type: PSVirtualNetworkGateway
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -VpnClientAddressPool
-Specifies the IP addresses to be assigned to clients connecting to this gateway
+Specifies the IP addresses to be assigned to clients connecting to this gateway.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -130,5 +130,3 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md)
 
 [Resize-AzureRmVirtualNetworkGateway](./Resize-AzureRmVirtualNetworkGateway.md)
-
-

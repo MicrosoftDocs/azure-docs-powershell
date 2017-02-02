@@ -31,7 +31,7 @@ PS C:\> Set-AzureRmVirtualNetworkPeering -VirtualNetworkPeering $LinkToVNet2
 
 This example changes the forwarded traffic configuration to $True from the default value $False on a previously established VNet peering link.
 
-The first command gets the link named LinkToVNet2 in ResourceGroup001 in the virtual network named VirtualNetwork17 by using the Get-AzureRmVirtualNetworkPeering cmdlet.
+The first command gets the link named LinkToVNet2 in ResourceGroup001 in the virtual network named VirtualNetwork17 by using the [Get-AzureRmVirtualNetworkPeering](./Get-AzureRmVirtualNetworkPeering.md) cmdlet.
 The command stores the result in the $LinkToVNet2 variable.
 
 The second command changes the **AllowForwardedTraffic** property to $True.
@@ -163,5 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVirtualNetworkPeering](./Get-AzureRmVirtualNetworkPeering.md)
 
 [Remove-AzureRmVirtualNetworkPeering](./Remove-AzureRmVirtualNetworkPeering.md)
-
-

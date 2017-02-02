@@ -21,11 +21,6 @@ Get-AzureRmExpressRouteCircuitARPTable [-Name <String>] -ResourceGroupName <Stri
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\> 
-```
-
 ## PARAMETERS
 
 ### -DevicePath
@@ -42,6 +37,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuitName
+Specifies the name of the express route circuit.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -142,4 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

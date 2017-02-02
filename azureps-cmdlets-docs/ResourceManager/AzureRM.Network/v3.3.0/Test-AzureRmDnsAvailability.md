@@ -20,11 +20,6 @@ Test-AzureRmDnsAvailability -DomainNameLabel <String> -Location <String>
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DomainNameLabel
@@ -80,6 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -Location
+Specifies the region in which to test DNS availability.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -102,4 +99,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

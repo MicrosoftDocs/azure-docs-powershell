@@ -23,11 +23,6 @@ The **Remove-AzureRmVirtualNetwork** cmdlet removes an Azure virtual network.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force
@@ -177,5 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 
 [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
-
-

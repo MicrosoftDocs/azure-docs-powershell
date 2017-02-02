@@ -22,14 +22,14 @@ The **New-AzureRmVpnClientRevokedCertificate** cmdlet creates a new virtual priv
 Client-revocation certificates prevent client computers from using the specified certificate for authentication.
 
 This cmdlet creates a stand-alone certificate that is not assigned to a virtual gateway.
-Instead, the certificate created by **New-AzureRmVpnClientRevokedCertificate** is used in conjunction with the New-AzureRmVirtualNetworkGateway cmdlet when it creates a new gateway.
+Instead, the certificate created by **New-AzureRmVpnClientRevokedCertificate** is used in conjunction with the [New-AzureRmVirtualNetworkGateway](./New-AzureRmVirtualNetworkGateway.md) cmdlet when it creates a new gateway.
 For instance, suppose you create a new certificate and store it in a variable named $Certificate.
 You can then use that certificate object when you create a new virtual gateway.
 For instance,
 
 `New-AzureRmVirtualNetworkGateway -Name "ContosoVirtualGateway" -ResourceGroupName "ContosoResourceGroup" -Location "West US" -GatewayType "VPN" -IpConfigurations $Ipconfig  -VPNType "RouteBased" -VpnClientRevokedCertificates $Certificate`
 
-For more information, see the documentation for the New-AzureRmVirtualNetworkGateway cmdlet.
+For more information, see the documentation for the [New-AzureRmVirtualNetworkGateway](./New-AzureRmVirtualNetworkGateway.md) cmdlet.
 
 ## EXAMPLES
 
@@ -140,5 +140,3 @@ This cmdlet creates new instances of the **Microsoft.Azure.Commands.Network.Mode
 [Get-AzureRmVpnClientRevokedCertificate](./Get-AzureRmVpnClientRevokedCertificate.md)
 
 [Remove-AzureRmVpnClientRevokedCertificate](./Remove-AzureRmVpnClientRevokedCertificate.md)
-
-

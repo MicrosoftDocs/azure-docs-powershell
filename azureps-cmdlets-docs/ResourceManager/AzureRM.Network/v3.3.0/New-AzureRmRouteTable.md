@@ -51,7 +51,7 @@ Routes            : [
 Subnets           : []
 ```
 
-The first command creates a route named Route07 by using the New-AzureRmRouteConfig cmdlet, and then stores it in the $Route variable.
+The first command creates a route named Route07 by using the [New-AzureRmRouteConfig](./New-AzureRmRouteConfig.md) cmdlet, and then stores it in the $Route variable.
 This route forwards packets to the local virtual network.
 
 The second command creates a route table named RouteTable01, and adds the route stored in $Route to the new table.
@@ -238,5 +238,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmRouteTable](./Remove-AzureRmRouteTable.md)
 
 [Set-AzureRmRouteTable](./Set-AzureRmRouteTable.md)
-
-

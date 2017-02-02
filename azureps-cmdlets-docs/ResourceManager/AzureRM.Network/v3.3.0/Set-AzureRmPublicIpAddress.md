@@ -22,11 +22,6 @@ The **Set-AzureRmPublicIpAddress** cmdlet sets the goal state for a public IP ad
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction
@@ -101,5 +96,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmPublicIpAddress](./New-AzureRmPublicIpAddress.md)
 
 [Remove-AzureRmPublicIpAddress](./Remove-AzureRmPublicIpAddress.md)
-
-
