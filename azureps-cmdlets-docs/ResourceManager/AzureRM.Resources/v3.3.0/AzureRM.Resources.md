@@ -22,7 +22,7 @@ Searches for resources based on specified parameters.
 Searches for resource groups.
 
 ### [Get-AzureRmADAppCredential](Get-AzureRmADAppCredential.md)
-Retrieves a list of credentials associated with an application.
+Gets a list of credentials associated with an application.
 
 ### [Get-AzureRmADApplication](Get-AzureRmADApplication.md)
 Lists existing azure active directory applications.
@@ -209,4 +209,3 @@ Validates a resource group deployment.
 
 ### [Unregister-AzureRmResourceProvider](Unregister-AzureRmResourceProvider.md)
 Unregisters a resource provider.
-
