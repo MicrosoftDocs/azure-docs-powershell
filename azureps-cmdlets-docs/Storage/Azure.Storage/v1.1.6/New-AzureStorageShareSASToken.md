@@ -89,7 +89,6 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-### -Protocol
 Specifies the protocol permitted for a request.
 The acceptable values for this parameter are:
 * HttpsOnly

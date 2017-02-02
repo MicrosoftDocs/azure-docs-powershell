@@ -22,6 +22,23 @@ The **Remove-AzureRmVirtualNetworkSubnetConfig** cmdlet removes a subnet from an
 
 ## EXAMPLES
 
+### Example 1: Remove a subnet from a virtual network and update the virtual network
+```
+PS C:\> New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
+
+PS C:\> $backendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix 
+    "10.0.2.0/24"
+
+PS C:\> $virtualNetwork = New-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName 
+    TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet 
+    $frontendSubnet,$backendSubnet
+
+PS C:\> Remove-AzureRmVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork 
+    $virtualNetwork
+    $virtualNetwork | Set-AzureRmVirtualNetwork
+```
+This command creates a resource group and a virtual network with two subnets. It then uses the [Remove-AzureRmVirtualNetworkSubnetConfig](./Remove-AzureRmVirtualNetworkSubnetConfig.md) command to remove the backend subnet from the in-memory representation of the virtual network. [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md) is then called to modify the virtual network on the server side.
+
 ## PARAMETERS
 
 ### -InformationAction
