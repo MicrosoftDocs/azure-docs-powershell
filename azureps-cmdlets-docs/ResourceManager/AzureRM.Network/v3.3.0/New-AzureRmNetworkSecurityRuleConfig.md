@@ -33,6 +33,7 @@ This command creates a security rule that allows access from the Internet to por
 The command stores the rule in the $Rule01 variable.
 
 ### Example 2: Create a network security rule for web access
+
 ```
 PS C:\> $Rule02 = New-AzureRmNetworkSecurityRuleConfig -Name web-rule -Description "Allow HTTP" -Access Allow -Protocol Tcp -Direction Inbound -Priority 101 -SourceAddressPrefix Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 80
 ```
