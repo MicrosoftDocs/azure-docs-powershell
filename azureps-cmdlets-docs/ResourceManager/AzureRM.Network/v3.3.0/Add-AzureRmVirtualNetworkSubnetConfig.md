@@ -31,17 +31,23 @@ The **Add-AzureRmVirtualNetworkSubnetConfig** cmdlet adds a subnet configuration
 
 ## EXAMPLES
 
-### 1: Add a subnet to an existing virtual network
+### Example 1: Add a subnet to an existing virtual network
+```<
+PS C:\> New-AzureRmResourceGroup -Name "ResourceGroup03" -Location centralus 
+PS C:\> $FrontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name "FrontendSubnet" -AddressPrefix "10.0.1.0/24"
+PS C:\> $VirtualNetwork = New-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03" -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $FrontendSubnet
+PS C:\> Add-AzureRmVirtualNetworkSubnetConfig -Name "BackendSubnet" -VirtualNetwork $VirtualNetwork -AddressPrefix "10.0.2.0/24" $VirtualNetwork | Set-AzureRmVirtualNetwork
+
 ```
-PNew-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
-    $frontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24"
-    $virtualNetwork = New-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet
-    Add-AzureRmVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork $virtualNetwork -AddressPrefix "10.0.2.0/24"
-    $virtualNetwork | Set-AzureRmVirtualNetwork
-```
-  This example first creates a resource group as a container of the resources to be created. It then creates a subnet configuration and uses it to create a virtual network. The 
-    Add-AzureRmVirtualNetworkSubnetConfig is then used to add a subnet to the in-memory representation of the virtual network. The Set-AzureRmVirtualNetwork command updates the existing virtual 
-    network with the new subnet.
+
+The first command creates a resource group as a container of the resources to be created. 
+
+The second command creates a subnet configuration named FrontendSubnet.
+
+The third command creates a virtual network named MyVirtualNetwork.
+
+The final command adds a subnet to the in-memory representation of the virtual network by using the **Add-AzureRmVirtualNetworkSubnetConfig** cmdlet.  
+The command updates the existing virtual network with the new subnet by using the **Set-AzureRmVirtualNetwork** cmdlet.
 
 
 ## PARAMETERS
@@ -207,5 +213,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetworkSubnetConfig](./New-AzureRmVirtualNetworkSubnetConfig.md)
 
 [Remove-AzureRmVirtualNetworkSubnetConfig](./Remove-AzureRmVirtualNetworkSubnetConfig.md)
+
+[Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
 
 [Set-AzureRmVirtualNetworkSubnetConfig](./Set-AzureRmVirtualNetworkSubnetConfig.md)

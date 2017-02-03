@@ -22,17 +22,21 @@ The **Get-AzureRmVirtualNetworkSubnetConfig** cmdlet gets one or more subnet con
 
 ## EXAMPLES
 
-### 1: Get a subnet in a virtual network 
+### Example 1: Get a subnet in a virtual network 
 ```
- New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
-    $frontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet 
-    -AddressPrefix "10.0.1.0/24"
-    $virtualNetwork = New-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName 
-    TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet
-    Get-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNetwork
+PS C:\> New-AzureRmResourceGroup -Name "ResourceGroup03" -Location centralus
+PS C:\> $FrontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name "FrontendSubnet" -AddressPrefix "10.0.1.0/24"
+PS C:\> $VirtualNetwork = New-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03" -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $FrontendSubnet
+PS C:\> Get-AzureRmVirtualNetworkSubnetConfig -Name "FrontendSubnet" -VirtualNetwork $VirtualNetwork
 ```
 
-This example creates a resource group and a virtual network with a single subnet in that resource group. It then retrieves data about that subnet.
+The first command creates a resource group named ResourceGroup03 by using the **New-AzureRmResourceGroup** cmdlet.
+
+The second command creates a subnet called FrontendSubnet by using the **New-AzureRmVirtualNetworkSubnetConfig** cmdlet, and stores it in the $FrontendSubnet variable.
+
+The third command creates a virtual network named MyVirtualNetwork, and stores it in the $VirtualNetwork variable.
+
+The final command gets data about the subnet named FrontendSubnet in the new virtual network.
 
 ## PARAMETERS
 
@@ -117,6 +121,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Add-AzureRmVirtualNetworkSubnetConfig](./Add-AzureRmVirtualNetworkSubnetConfig.md)
+
+[New-AzureRmResourceGroup](./New-AzureRmResourceGroup.md)
+ 
+[New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 
 [New-AzureRmVirtualNetworkSubnetConfig](./New-AzureRmVirtualNetworkSubnetConfig.md)
 
