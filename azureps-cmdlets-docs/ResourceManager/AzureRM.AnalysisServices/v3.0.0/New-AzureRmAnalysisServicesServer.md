@@ -17,7 +17,7 @@ New-AzureRmAnalysisServicesServer [-ResourceGroupName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-The **New-AzureRmAnalysisServicesServer** cmdlet creates a Microsoft SQL Server Analysis Services server.
+The **New-AzureRmAnalysisServicesServer** cmdlet creates an Azure Server Analysis Services server.
 
 ## EXAMPLES
 
