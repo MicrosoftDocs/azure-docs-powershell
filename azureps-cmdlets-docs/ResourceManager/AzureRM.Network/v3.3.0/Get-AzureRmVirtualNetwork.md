@@ -29,11 +29,12 @@ The **Get-AzureRmVirtualNetwork** cmdlet gets one or more virtual networks n a r
 
 ## EXAMPLES
 
-### 1: Retrieve a virtual network
+### Example 1: Retrieve a virtual network
 ```
-Get-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup
+PS C:\> Get-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03"
 ```
-This command gets the virtual network named MyVirtualNetwork in the resource group TestResourceGroup
+
+This command gets the virtual network named MyVirtualNetwork in the resource group ResourceGroup03.
 
 ## PARAMETERS
 

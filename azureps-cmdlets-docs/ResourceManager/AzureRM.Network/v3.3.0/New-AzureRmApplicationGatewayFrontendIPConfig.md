@@ -31,7 +31,7 @@ The **New-AzureRmApplicationGatewayFrontendIPConfig** cmdlet creates a front-end
 An application gateway supports two types of front-end IP configuration: 
 
 - Public IP addresses 
- -- Private IP addresses using internal load balancing (ILB).
+- Private IP addresses using internal load balancing (ILB).
 
 An application gateway can have at most one public IP address and one private IP address.
 The public IP address and private IP address should be added separately as front-end IP addresses.
@@ -49,7 +49,7 @@ The second command uses $PublicIP to create a new front-end IP configuration nam
 
 ### Example 2: Create a static private IP as the front-end IP address
 ```
-PS C:\> $VNet = Get-AzureRmvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $VNet = Get-AzureRmVirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Subnet = Get-AzureRmVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $VNet
 PS C:\> $FrontEnd = New-AzureRmApplicationGatewayFrontendIPConfig -Name "FrontendIP02" -Subnet $Subnet -PrivateIPAddress 10.0.1.1
 ```
