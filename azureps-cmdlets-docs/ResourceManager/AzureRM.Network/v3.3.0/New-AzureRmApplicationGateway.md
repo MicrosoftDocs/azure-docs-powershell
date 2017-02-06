@@ -14,17 +14,17 @@ Creates an application gateway.
 ```
 New-AzureRmApplicationGateway -Name <String> -ResourceGroupName <String> -Location <String>
  -Sku <PSApplicationGatewaySku> [-SslPolicy <PSApplicationGatewaySslPolicy>]
- -GatewayIPConfigurations <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayIPConfiguration]>
- [-SslCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate]>]
- [-AuthenticationCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]>]
- [-FrontendIPConfigurations <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration]>]
- -FrontendPorts <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort]>
- [-Probes <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe]>]
- -BackendAddressPools <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool]>
- -BackendHttpSettingsCollection <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings]>
- -HttpListeners <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener]>
- [-UrlPathMaps <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap]>]
- -RequestRoutingRules <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRequestRoutingRule]>
+ -GatewayIPConfigurations <System.Collections.Generic.List`1[System.String]>
+ [-SslCertificates <System.Collections.Generic.List`1[System.String]>]
+ [-AuthenticationCertificates <System.Collections.Generic.List`1[System.String]>]
+ [-FrontendIPConfigurations <System.Collections.Generic.List`1[System.String]>]
+ -FrontendPorts <System.Collections.Generic.List`1[System.String]>
+ [-Probes <System.Collections.Generic.List`1[System.String]>]
+ -BackendAddressPools <System.Collections.Generic.List`1[System.String]>
+ -BackendHttpSettingsCollection <System.Collections.Generic.List`1[System.String]>
+ -HttpListeners <System.Collections.Generic.List`1[System.String]>
+ [-UrlPathMaps <System.Collections.Generic.List`1[System.String]>]
+ -RequestRoutingRules <System.Collections.Generic.List`1[System.String]>
  [-WebApplicationFirewallConfiguration <PSApplicationGatewayWebApplicationFirewallConfiguration>]
  [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
