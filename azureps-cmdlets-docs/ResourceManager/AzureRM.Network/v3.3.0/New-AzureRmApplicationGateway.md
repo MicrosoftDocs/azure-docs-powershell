@@ -29,6 +29,7 @@ New-AzureRmApplicationGateway -Name <String> -ResourceGroupName <String> -Locati
  [-WebApplicationFirewallConfiguration <PSApplicationGatewayWebApplicationFirewallConfiguration>]
  [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+ 
 ```
 
 ## DESCRIPTION
@@ -39,15 +40,10 @@ An application gateway requires the following:
 - A resource group. 
 - A virtual network. 
 - A back-end server pool, containing the IP addresses of the back-end servers. 
-- Back-end server pool settings.
-Each pool has settings such as port, protocol and cookie-based affinity, that are applied to all servers within the pool. 
-- Front-end IP addresses, which are the IP addresses opened on the application gateway.
-A front-end IP address can be a public IP address or an internal IP address. 
-- Front-end ports, which are the public ports opened on the application gateway.
-Traffic that hits these ports is redirected to the back-end servers. 
-- A request routing rule that binds the listener and the back-end server pool.
-The rule defines which back-end server pool the traffic should be directed to when it hits a particular listener.
-A listener has a front-end port, front-end IP address, protocol (HTTP or HTTPS) and Secure Sockets Layer (SSL) certificate name (if configuring SSL offload).
+- Back-end server pool settings. Each pool has settings such as port, protocol and cookie-based affinity, that are applied to all servers within the pool. 
+- Front-end IP addresses, which are the IP addresses opened on the application gateway. A front-end IP address can be a public IP address or an internal IP address. 
+- Front-end ports, which are the public ports opened on the application gateway. Traffic that hits these ports is redirected to the back-end servers. 
+- A request routing rule that binds the listener and the back-end server pool. The rule defines which back-end server pool the traffic should be directed to when it hits a particular listener. A listener has a front-end port, front-end IP address, protocol (HTTP or HTTPS) and Secure Sockets Layer (SSL) certificate name (if configuring SSL offload).
 
 ## EXAMPLES
 
@@ -77,7 +73,7 @@ The example creates an application gateway by first creating a resource group an
 - Front-end IP addresses
 - A request routing rule
 
-These four commands create a virtual network.
+These 4 commands create a virtual network.
 The first command creates a subnet configuration.
 The second command creates a virtual network.
 The third command verifies the subnet configuration and the fourth command verifies that the virtual network is created successfully.
