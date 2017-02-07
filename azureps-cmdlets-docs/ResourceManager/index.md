@@ -15,7 +15,6 @@ Run the following commands from the Windows PowerShell console running as Admini
 
 ```PowerShell
 PS C:\> Install-Module AzureRM
-PS C:\> Install-AzureRM
 ```
 
 The first command installs the **AzureRM** module from the PowerShell Gallery.
@@ -28,7 +27,7 @@ To import all of the **AzureRM** modules into the current run space run the foll
 To import all of the __AzureRM.*__ modules within the known semantic version range, run this command:
 
 ```PowerShell
-PS C:\> Import-AzureRM
+PS C:\> Import-Module AzureRM
 ```
 
 To import a single **AzureRM** module, specify the module by name, as in the following example for the **AzureRM.Compute** module:
