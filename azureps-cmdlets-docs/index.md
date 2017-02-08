@@ -19,7 +19,7 @@ such as creating and configuring cloud services, virtual machines, virtual netwo
 
 Azure PowerShell recommends installing from the PowerShell Gallery.  You need the PowerShellGet
 module to use the [PowerShell Gallery](https://www.powershellgallery.com/). Alternatively, use the
-[Web Platform Installer (WebPI)](azureps-webpi.md), or the MSI file available from
+Web Platform Installer (WebPI), or the MSI file available from
 [GitHub](https://github.com/Azure/azure-powershell/releases/latest).
 
 Install the latest Azure PowerShell from the PowerShell Gallery using an elevated Windows PowerShell
