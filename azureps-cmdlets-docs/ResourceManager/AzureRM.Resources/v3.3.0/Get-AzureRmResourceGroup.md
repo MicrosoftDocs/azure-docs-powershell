@@ -41,7 +41,7 @@ This command gets the Azure resource group in your subscription named EngineerBl
 
 ### Example 2: Get all tags of a resource group
 ```
-PS C:\>(Get-AzureRmResourceGroup -Name "ContosoRG").Tags
+PS C:\> (Get-AzureRmResourceGroup -Name "ContosoRG").Tags
 ```
 
 This command gets the resource group named ContosoRG, and displays the tags associated with that group.

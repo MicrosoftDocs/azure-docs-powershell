@@ -24,20 +24,15 @@ The **Remove-AzureRmVirtualNetworkSubnetConfig** cmdlet removes a subnet from an
 
 ### Example 1: Remove a subnet from a virtual network and update the virtual network
 ```
-PS C:\> New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
-
-PS C:\> $backendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix 
-    "10.0.2.0/24"
-
-PS C:\> $virtualNetwork = New-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName 
-    TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet 
-    $frontendSubnet,$backendSubnet
-
-PS C:\> Remove-AzureRmVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork 
-    $virtualNetwork
-    $virtualNetwork | Set-AzureRmVirtualNetwork
+PS C:\> Remove-AzureRmVirtualNetworkSubnetConfig -Name "BackendSubnet" -VirtualNetwork $VirtualNetwork
+PS C:\> $VirtualNetwork | Set-AzureRmVirtualNetwork
 ```
-This command creates a resource group and a virtual network with two subnets. It then uses the [Remove-AzureRmVirtualNetworkSubnetConfig](./Remove-AzureRmVirtualNetworkSubnetConfig.md) command to remove the backend subnet from the in-memory representation of the virtual network. [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md) is then called to modify the virtual network on the server side.
+
+The first command removes a subnet called BackendSubnet from a virtual network.
+The virtual network was previously stored in the $VirtualNetwork variable.
+
+The second command updates the virtual network on the server by using the **Set-AzureRmVirtualNetwork** cmdlet. 
+   
 
 ## PARAMETERS
 
@@ -126,5 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVirtualNetworkSubnetConfig](./Get-AzureRmVirtualNetworkSubnetConfig.md)
 
 [New-AzureRmVirtualNetworkSubnetConfig](./New-AzureRmVirtualNetworkSubnetConfig.md)
+
+[Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
 
 [Set-AzureRmVirtualNetworkSubnetConfig](./Set-AzureRmVirtualNetworkSubnetConfig.md)

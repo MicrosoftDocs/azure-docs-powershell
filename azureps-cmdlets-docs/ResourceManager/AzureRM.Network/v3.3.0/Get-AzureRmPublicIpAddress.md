@@ -31,9 +31,11 @@ The **Get-AzureRmPublicIPAddress** cmdlet gets one or more public IP addresses i
 
 ### Example 1: Get a public IP resource
 ```
-$publicIp = Get-AzureRmPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName $publicIp
+PS C:\> $PublicIp = Get-AzureRmPublicIpAddress -Name $PublicIpName -ResourceGroupName "ResourceGroup03" 
 ```
-This command gets a public IP address resource with name $publicIPName in the resource group $rgName.
+
+This command gets a public IP address resource with name $publicIPName in the resource group named ResourceGroup03.
+The command stores the result in the $PublicIp variable for use in other commands.
 
 ## PARAMETERS
 

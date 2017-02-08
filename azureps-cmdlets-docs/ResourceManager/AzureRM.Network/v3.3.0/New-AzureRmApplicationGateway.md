@@ -11,24 +11,24 @@ schema: 2.0.0
 Creates an application gateway.
 
 ## SYNTAX
-
 ```
 New-AzureRmApplicationGateway -Name <String> -ResourceGroupName <String> -Location <String>
  -Sku <PSApplicationGatewaySku> [-SslPolicy <PSApplicationGatewaySslPolicy>]
- -GatewayIPConfigurations <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayIPConfiguration]>
- [-SslCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate]>]
- [-AuthenticationCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]>]
- [-FrontendIPConfigurations <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration]>]
- -FrontendPorts <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort]>
- [-Probes <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe]>]
- -BackendAddressPools <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool]>
- -BackendHttpSettingsCollection <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings]>
- -HttpListeners <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener]>
- [-UrlPathMaps <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap]>]
- -RequestRoutingRules <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRequestRoutingRule]>
+ -GatewayIPConfigurations <System.Collections.Generic.List`1[System.String]>
+ [-SslCertificates <System.Collections.Generic.List`1[System.String]>]
+ [-AuthenticationCertificates <System.Collections.Generic.List`1[System.String]>]
+ [-FrontendIPConfigurations <System.Collections.Generic.List`1[System.String]>]
+ -FrontendPorts <System.Collections.Generic.List`1[System.String]>
+ [-Probes <System.Collections.Generic.List`1[System.String]>]
+ -BackendAddressPools <System.Collections.Generic.List`1[System.String]>
+ -BackendHttpSettingsCollection <System.Collections.Generic.List`1[System.String]>
+ -HttpListeners <System.Collections.Generic.List`1[System.String]>
+ [-UrlPathMaps <System.Collections.Generic.List`1[System.String]>]
+ -RequestRoutingRules <System.Collections.Generic.List`1[System.String]>
  [-WebApplicationFirewallConfiguration <PSApplicationGatewayWebApplicationFirewallConfiguration>]
  [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+ 
 ```
 
 ## DESCRIPTION
@@ -39,24 +39,19 @@ An application gateway requires the following:
 - A resource group. 
 - A virtual network. 
 - A back-end server pool, containing the IP addresses of the back-end servers. 
-- Back-end server pool settings.
-Each pool has settings such as port, protocol and cookie-based affinity, that are applied to all servers within the pool. 
-- Front-end IP addresses, which are the IP addresses opened on the application gateway.
-A front-end IP address can be a public IP address or an internal IP address. 
-- Front-end ports, which are the public ports opened on the application gateway.
-Traffic that hits these ports is redirected to the back-end servers. 
-- A request routing rule that binds the listener and the back-end server pool.
-The rule defines which back-end server pool the traffic should be directed to when it hits a particular listener.
-A listener has a front-end port, front-end IP address, protocol (HTTP or HTTPS) and Secure Sockets Layer (SSL) certificate name (if configuring SSL offload).
+- Back-end server pool settings. Each pool has settings such as port, protocol and cookie-based affinity, that are applied to all servers within the pool. 
+- Front-end IP addresses, which are the IP addresses opened on the application gateway. A front-end IP address can be a public IP address or an internal IP address. 
+- Front-end ports, which are the public ports opened on the application gateway. Traffic that hits these ports is redirected to the back-end servers. 
+- A request routing rule that binds the listener and the back-end server pool. The rule defines which back-end server pool the traffic should be directed to when it hits a particular listener. A listener has a front-end port, front-end IP address, protocol (HTTP or HTTPS) and Secure Sockets Layer (SSL) certificate name (if configuring SSL offload).
 
 ## EXAMPLES
 
 ### Example 1: Create an application gateway
 ```
-PS C:\> $ResourceGroup = New-AzureRmResourceGroup -Name "ResourceGroup01" -Location "West US" -Tags @{Name = "Department"; Value = "Marketing"} PS C:\> $Subnet = New-AzureRmVirtualNetworkSubnetConfig -Name "Subnet01" -AddressPrefix 10.0.0.0/24
-PS C:\> $VNet = New-AzureRmvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01" -Location "West US" -AddressPrefix 10.0.0.0/16 -Subnet $Subnet
-PS C:\> $VNet = Get-AzureRmvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
-PS C:\> $Subnet = Get-AzureRmVirtualNetworkSubnetConfig -Name $Subnet01 -VirtualNetwork $VNet PS C:\> $GatewayIPconfig = New-AzureRmApplicationGatewayIPConfiguration -Name "GatewayIp01" -Subnet $Subnet
+PS C:\> $ResourceGroup = New-AzureRmResourceGroup -Name "ResourceGroup01" -Location "West US" -Tags @{Name = "Department"; Value = "Marketing"} PS C:\>$Subnet = New-AzureRmVirtualNetworkSubnetConfig -Name "Subnet01" -AddressPrefix 10.0.0.0/24
+PS C:\> $VNet = New-AzureRmVirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01" -Location "West US" -AddressPrefix 10.0.0.0/16 -Subnet $Subnet
+PS C:\> $VNet = Get-AzureRmVirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Subnet = Get-AzureRmVirtualNetworkSubnetConfig -Name $Subnet01 -VirtualNetwork $VNet PS C:\>$GatewayIPconfig = New-AzureRmApplicationGatewayIPConfiguration -Name "GatewayIp01" -Subnet $Subnet
 PS C:\> $Pool = New-AzureRmApplicationGatewayBackendAddressPool -Name "Pool01" -BackendIPAddresses 10.10.10.1, 10.10.10.2, 10.10.10.3
 PS C:\> $PoolSetting = New-AzureRmApplicationGatewayBackendHttpSettings -Name "PoolSetting01"  -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled"
 PS C:\> $FrontEndPort = New-AzureRmApplicationGatewayFrontendPort -Name "FrontEndPort01"  -Port 80
@@ -69,7 +64,7 @@ PS C:\> $Sku = New-AzureRmApplicationGatewaySku -Name "Standard_Small" -Tier Sta
 PS C:\> $Gateway = New-AzureRmApplicationGateway -Name "AppGateway01" -ResourceGroupName "ResourceGroup01" -Location "West US" -BackendAddressPools $Pool -BackendHttpSettingsCollection $PoolSetting -FrontendIpConfigurations $FrontEndIpConfig  -GatewayIpConfigurations $GatewayIpConfig -FrontendPorts $FrontEndPort -HttpListeners $Listener -RequestRoutingRules $Rule -Sku $Sku
 ```
 
-The following example creates an application gateway by first creating a resource group and a virtual network, as well as the following: 
+The example creates an application gateway by first creating a resource group and a virtual network, as well as the following: 
 
 - A back-end server pool
 - Back-end server pool settings
@@ -77,7 +72,7 @@ The following example creates an application gateway by first creating a resourc
 - Front-end IP addresses
 - A request routing rule
 
-These four commands create a virtual network.
+These 4 commands create a virtual network.
 The first command creates a subnet configuration.
 The second command creates a virtual network.
 The third command verifies the subnet configuration and the fourth command verifies that the virtual network is created successfully.

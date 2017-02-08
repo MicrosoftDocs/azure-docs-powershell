@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Top
-Specifies the number of resources to retrieve.
+Specifies the number of resources that this cmdlet gets.
 
 ```yaml
 Type: Int32
@@ -316,5 +316,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmResource](./Remove-AzureRmResource.md)
 
 [Set-AzureRmResource](./Set-AzureRmResource.md)
-
-

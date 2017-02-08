@@ -32,43 +32,41 @@ The **Set-AzureRmVirtualNetworkSubnetConfig** cmdlet configures the goal state f
 ## EXAMPLES
 
 ### Example 1: Modify the address prefix of a subnet
+
 ```
-PS C:\> New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
-
-PS C:\> $frontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24"
-
-PS C:\> $virtualNetwork = New-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup    
-    -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet
-
-PS C:\> Set-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNetwork -AddressPrefix "10.0.3.0/23"
-
-PS C:\> $virtualNetwork | Set-AzureRmVirtualNetwork
-    
+PS C:\> $VirtualNetwork = Get-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03"
+PS C:\> Set-AzureRmVirtualNetworkSubnetConfig -Name "FrontendSubnet" -VirtualNetwork $VirtualNetwork -AddressPrefix "10.0.3.0/23"
+PS C:\> $VirtualNetwork | Set-AzureRmVirtualNetwork    
 ```
-This example creates a virtual network with one subnet. Then it calls  [Set-AzureRmVirtualNetworkSubnetConfig](./Set-AzureRmVirtualNetworkSubnetConfig.md) to modify the AddressPrefix for the subnet. This only impacts the in-memory representation of the virtual network. The [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md) is then called to modify the virtual network in Azure.
+
+The first command gets a virtual network named MyVirtualNetwork by using the **Get-AzureRmVirtualNetwork** cmdlet. 
+The command stores this value in the $VirtualNetwork variable.
+
+The second command modifies the *AddressPrefix* of on of the virtual network's subnets. 
+This changes only the local representation of the virtual network. 
+
+The final command persists the change to the virtual network to the service side by using the **Set-AzureRmVirtualNetwork** cmdlet. 
 
 ### Example 2: Add a network security group to a subnet
 ```
-PS C:\> New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
-
-PS C:\> $frontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24"
-
-PS C:\> $virtualNetwork = New-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup 
-    -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet
-
-PS C:\> $rdpRule = New-AzureRmNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" -Access Allow 
-    -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
-
-PS C:\> $networkSecurityGroup = New-AzureRmNetworkSecurityGroup -ResourceGroupName 
-    TestResourceGroup -Location centralus -Name "NSG-FrontEnd" -SecurityRules $rdpRule
-
-PS C:\> Set-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNetwork -AddressPrefix 
-    "10.0.1.0/24" -NetworkSecurityGroup $networkSecurityGroup
-
-PS C:\> $virtualNetwork | Set-AzureRmVirtualNetwork
+PS C:\> $VirtualNetwork = Get-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03"
+PS C:\> $RdpRule = New-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule" -Description "Allow RDP" -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
+PS C:\> $NetworkSecurityGroup = New-AzureRmNetworkSecurityGroup -ResourceGroupName "ResourceGroup03" -Location centralus -Name "NSG-FrontEnd" -SecurityRules $RdpRule
+PS C:\> Set-AzureRmVirtualNetworkSubnetConfig -Name "FrontendSubnet" -VirtualNetwork $VirtualNetwork -AddressPrefix "10.0.1.0/24" -NetworkSecurityGroup $NetworkSecurityGroup
+PS C:\> $VirtualNetwork | Set-AzureRmVirtualNetwork
 ```
 
-This example creates a resource group with one virtual network containing just one subnet. It then creates a network security group with an allow rule for RDP traffic. The [Set-AzureRmVirtualNetworkSubnetConfig](./Set-AzureRmVirtualNetworkSubnetConfig.md) cmdlet is used to modify the in-memory representation of the frontend subnet so that it points to the newly created network security group. The **Set-AzureRmVirtualNetwork** cmdlet is then called to write the modified state back to the service.
+The first command gets a virtual network named MyVirtualNetwork and stores it in the $VirtualNetwork variable.
+
+The second command creates a rule that allows RDP traffic by using the **New-AzureRmNetworkSecurityRuleConfig** cmdlet. 
+The command stores the rule in the $RdpRule variable. 
+
+The third command creates a network security group named NSG-FrontEnd that includes the rule in $RdpRule by using the **New-AzureRmNetworkSecurityRuleConfig** cmdlet. 
+The command stores the group in the $NetworkSecurityGroup variable. 
+
+The fourth command modifies the local representation stored in $VirtualNetwork so that the frontend subnet points to the security group in $NetworkSecurityGroup.
+
+The final command persists the change to the virtual network to the service side by using the **Set-AzureRmVirtualNetwork** cmdlet. 
 
 ## PARAMETERS
 
@@ -229,8 +227,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-AzureRmVirtualNetworkSubnetConfig](./Add-AzureRmVirtualNetworkSubnetConfig.md)
 
+[Get-AzureRmVirtualNetwork](./Get-AzureRmVirtualNetwork.md)
+
 [Get-AzureRmVirtualNetworkSubnetConfig](./Get-AzureRmVirtualNetworkSubnetConfig.md)
 
 [New-AzureRmVirtualNetworkSubnetConfig](./New-AzureRmVirtualNetworkSubnetConfig.md)
 
+[New-AzureRmNetworkSecurityRuleConfig](./New-AzureRmNetworkSecurityRuleConfig.md)
+
 [Remove-AzureRmVirtualNetworkSubnetConfig](./Remove-AzureRmVirtualNetworkSubnetConfig.md)
+
+[Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
+
