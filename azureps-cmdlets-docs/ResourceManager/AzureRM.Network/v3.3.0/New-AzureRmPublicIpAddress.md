@@ -26,7 +26,9 @@ The **New-AzureRmPublicIpAddress** cmdlet creates a public IP address.
 
 ### Example 1: Create a new public IP address
 ```
+
 PS C:\> $PublicIp = New-AzureRmPublicIpAddress -Name $PublicIpName -ResourceGroupName "ResourceGroup03" -AllocationMethod Static -DomainNameLabel $dnsPrefix -Location $location
+
 ```
 
 This command creates a public IP address resource.
@@ -40,11 +42,13 @@ If you specify a value of Dynamic, a public IP address is allocated only when yo
 PS C:\> $PublicIp = New-AzureRmPublicIpAddress -Name $PublicIpName -ResourceGroupName "ResourceGroup03" -AllocationMethod Static -DomainNameLabel $dnsPrefix -Location $location -ReverseFqdn $customFqdn
 ```
 
+
 This command creates a public IP address resource.
 
 This command specifies a value for the *ReverseFqdn* parameter, therefore, Azure creates a DNS PTR record, for reverse-lookup for the public IP address allocated to this resource. 
 The reverse-lookup points to the value stored in the $customFqdn variable.
 As a pre-requisite, the $customFqdn, for example, webapp.contoso.com, should have a DNS CNAME record, or forward-lookup record, that points to $dnsPrefix.$location.cloudapp.azure.com.
+
 
 ## PARAMETERS
 
@@ -285,5 +289,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmPublicIpAddress](./Remove-AzureRmPublicIpAddress.md)
 
 [Set-AzureRmPublicIpAddress](./Set-AzureRmPublicIpAddress.md)
-
-

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmADApplication
 
 ## SYNOPSIS
-Lists existing azure active directory applications.
+Gets existing Azure Active Directory applications.
 
 ## SYNTAX
 
@@ -42,9 +42,9 @@ Get-AzureRmADApplication -IdentifierUri <String> [-InformationAction <ActionPref
 ```
 
 ## DESCRIPTION
-Lists existing azure active directory applications.
-Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.
-If no parameter is provided, it fetches all applications under the tenant.
+The **Get-AzureRmADApplication** cmdlet get existing Azure Active Directory (AAD) applications.
+Application lookup can be done by the *ObjectId*, *ApplicationId*, *IdentifierUri*, or *DisplayName* parameters.
+If no parameter is provided, the cmdlet gets all applications under the tenant.
 
 ## EXAMPLES
 
@@ -186,4 +186,3 @@ Accept wildcard characters: False
 [Set-AzureRmADApplication]()
 
 [New-AzureRmADApplication]()
-

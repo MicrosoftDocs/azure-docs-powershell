@@ -21,11 +21,6 @@ Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey -Name <String> -ResourceGr
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force
@@ -164,5 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVirtualNetworkGatewayConnectionSharedKey](./Get-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
 
 [Set-AzureRmVirtualNetworkGatewayConnectionSharedKey](./Set-AzureRmVirtualNetworkGatewayConnectionSharedKey.md)
-
-

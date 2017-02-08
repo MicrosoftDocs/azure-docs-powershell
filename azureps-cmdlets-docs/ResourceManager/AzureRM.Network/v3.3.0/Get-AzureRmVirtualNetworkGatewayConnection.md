@@ -20,11 +20,6 @@ Get-AzureRmVirtualNetworkGatewayConnection [-Name <String>] -ResourceGroupName <
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction
@@ -102,4 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

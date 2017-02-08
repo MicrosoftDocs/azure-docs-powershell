@@ -30,11 +30,6 @@ New-AzureRmLoadBalancerInboundNatPoolConfig -Name <String>
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -BackendPort
@@ -177,4 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

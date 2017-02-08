@@ -24,14 +24,11 @@ The **Set-AzureRmLocalNetworkGateway** cmdlet modifies a local network gateway.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AddressPrefix
+Specifies the destination, in Classless Interdomain Routing (CIDR) format, to which the gateway applies.
+
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
@@ -45,6 +42,8 @@ Accept wildcard characters: False
 ```
 
 ### -Asn
+Specifies the virtual network gateway Autonomous System Number (ASN) that is used to set up Border Gateway Protocol (BGP) sessions inside IPsec tunnels.
+
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
@@ -151,5 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmLocalNetworkGateway](./New-AzureRmLocalNetworkGateway.md)
 
 [Remove-AzureRmLocalNetworkGateway](./Remove-AzureRmLocalNetworkGateway.md)
-
-

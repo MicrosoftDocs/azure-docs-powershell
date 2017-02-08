@@ -24,10 +24,13 @@ The **New-AzureRmNetworkSecurityGroup** cmdlet creates an Azure network security
 
 ## EXAMPLES
 
+
 ### Example 1: Create a network security group
 ```
 PS C:\> New-AzureRmNetworkSecurityGroup -Name "NSG01" -ResourceGroupName "ResourceGroup03"  -Location  "westus"
+
 ```
+
 
 
 This command creates an Azure network security group named NSG01 in the resource group named ResourceGroup03 in location westus.
@@ -45,7 +48,8 @@ The first command creates a security rule that allows access from the Internet t
 The second command creates a security rule that allows access from the Internet to port 80.
 
 The final command adds the rules created in the first two commands to a new network security group named NSG-FrontEnd.
-    
+   
+
 
 ## PARAMETERS
 
@@ -228,5 +232,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmNetworkSecurityGroup](./Remove-AzureRmNetworkSecurityGroup.md)
 
 [Set-AzureRmNetworkSecurityGroup](./Set-AzureRmNetworkSecurityGroup.md)
-
-

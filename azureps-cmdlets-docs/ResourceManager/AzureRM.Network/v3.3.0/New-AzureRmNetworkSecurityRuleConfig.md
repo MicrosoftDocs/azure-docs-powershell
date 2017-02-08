@@ -26,16 +26,17 @@ The **New-AzureRmNetworkSecurityRuleConfig** cmdlet creates an Azure network sec
 
 ### Example 1: Create a network security rule
 ```
+
 PS C:\> $Rule01 = New-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule" -Description "Allow RDP" -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389
+
 ```
 
-This command creates a security rule that allows access from the Internet to port 3389.
-The command stores the rule in the $Rule01 variable.
 
 ### Example 2: Create a network security rule for web access
 
 ```
 PS C:\> $Rule02 = New-AzureRmNetworkSecurityRuleConfig -Name web-rule -Description "Allow HTTP" -Access Allow -Protocol Tcp -Direction Inbound -Priority 101 -SourceAddressPrefix Internet -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 80
+
 ```
 
 This command creates a security rule that allows access from the Internet to port 80.
@@ -284,5 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmNetworkSecurityRuleConfig](./Remove-AzureRmNetworkSecurityRuleConfig.md)
 
 [Set-AzureRmNetworkSecurityRuleConfig](./Set-AzureRmNetworkSecurityRuleConfig.md)
-
-

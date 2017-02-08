@@ -33,13 +33,14 @@ The **New-AzureRmLoadBalancerRuleConfig** cmdlet creates a rule configuration fo
 
 ## EXAMPLES
 
-### Example 1: Creating a rule configuration for an Azure Load Balancer
+### Example 1: Create a rule configuration for an Azure Load Balancer
 ```
 PS C:\> $PublicIp = New-AzureRmPublicIpAddress -ResourceGroupName "ResourceGroup03" -Name MyPublicIP -Location 'West US' -AllocationMethod Dynamic
 PS C:\> $FrontEnd = New-AzureRmLoadBalancerFrontendIpConfig -Name "MyFrontEnd" -PublicIpAddress $PublicIp 
 PS C:\> $Probe = New-AzureRmLoadBalancerProbeConfig -Name "MyProbe" -Protocol http -Port 80 -IntervalInSeconds 15 -ProbeCount 2 -RequestPath healthcheck.aspx
 PS C:\> New-AzureRmLoadBalancerRuleConfig -Name "MyLBrule" -FrontendIPConfiguration $FrontEnd -BackendAddressPool $backendAddressPool -Probe $Probe -Protocol Tcp -FrontendPort 80 -BackendPort 80 -IdleTimeoutInMinutes 15 -EnableFloatingIP -LoadDistribution SourceIP
 ```
+
 
 The first command creates a public IP address in the resource group named ResourceGroup03, and stores it in the $PublicIp variable.
 
@@ -48,7 +49,8 @@ The second command creates a front end, and stores it in the $FrontEnd variable.
 The third command creates a probe, and stores it in the $Probe variable.
 
 The final command creates a rule called MyLBrule.
-    
+   
+
 ## PARAMETERS
 
 ### -BackendAddressPool
@@ -315,5 +317,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmLoadBalancerRuleConfig](./Remove-AzureRmLoadBalancerRuleConfig.md)
 
 [Set-AzureRmLoadBalancerRuleConfig](./Set-AzureRmLoadBalancerRuleConfig.md)
-
-

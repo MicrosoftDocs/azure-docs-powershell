@@ -21,11 +21,6 @@ Get-AzureRmExpressRouteCircuitStats [-Name <String>] -ResourceGroupName <String>
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\> 
-```
-
 ## PARAMETERS
 
 ### -ExpressRouteCircuitName
@@ -129,4 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

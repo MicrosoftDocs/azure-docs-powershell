@@ -161,5 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmPublicIpAddress](./Remove-AzureRmPublicIpAddress.md)
 
 [Set-AzureRmPublicIpAddress](./Set-AzureRmPublicIpAddress.md)
-
-

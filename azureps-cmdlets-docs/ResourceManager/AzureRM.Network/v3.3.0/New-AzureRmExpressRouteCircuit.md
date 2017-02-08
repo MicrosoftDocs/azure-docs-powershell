@@ -27,11 +27,6 @@ The **New-AzureRmExpressRouteCircuit** cmdlet creates an Azure express route cir
 
 ## EXAMPLES
 
-### 1:
-```
-PS C:\> 
-```
-
 ## PARAMETERS
 
 ### -AllowClassicOperations
@@ -285,4 +280,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

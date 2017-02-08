@@ -50,7 +50,7 @@ The eighth command creates a load balancer named MyLoadBalancer in the resource 
 The ninth and last command gets the new load balancer to ensure it was successfully created.
 
 Note that this example only shows how to create a load balancer.
-You must also configure it using the Add-AzureRmNetworkInterfaceIpConfig cmdlet to assign the NICs to different virtual machines.
+You must also configure it using the [Add-AzureRmNetworkInterfaceIpConfig](./Add-AzureRmNetworkInterfaceIpConfig.md) cmdlet to assign the NICs to different virtual machines.
 
 ## PARAMETERS
 
@@ -305,5 +305,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmLoadBalancer](./Remove-AzureRmLoadBalancer.md)
 
 [Set-AzureRmLoadBalancer](./Set-AzureRmLoadBalancer.md)
-
-

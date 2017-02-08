@@ -36,7 +36,7 @@ The second command gets the firewall configuration of the application gateway in
 
 ### -ApplicationGateway
 Specifies an application gateway object.
-You can use the Get-AzureRmApplicationGateway cmdlet to get an application gateway object.
+You can use the [Get-AzureRmApplicationGateway](./Get-AzureRmApplicationGateway.md) cmdlet to get an application gateway object.
 
 ```yaml
 Type: PSApplicationGateway
@@ -68,5 +68,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
 
 [Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration](./Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration.md)
-
-

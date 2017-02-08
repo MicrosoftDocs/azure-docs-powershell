@@ -22,6 +22,7 @@ The **Remove-AzureRmLoadBalancerInboundNatRuleConfig** cmdlet removes an inbound
 
 ## EXAMPLES
 
+
 ### 1: Delete an inbound NAT rule from an Azure load balancer
 ```
 $loadbalancer = Get-AzureRmLoadBalancer -Name mylb -ResourceGroupName myrg
@@ -120,5 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmLoadBalancerInboundNatRuleConfig](./New-AzureRmLoadBalancerInboundNatRuleConfig.md)
 
 [Set-AzureRmLoadBalancerInboundNatRuleConfig](./Set-AzureRmLoadBalancerInboundNatRuleConfig.md)
-
-

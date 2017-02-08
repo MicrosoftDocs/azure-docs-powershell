@@ -23,6 +23,7 @@ The **Get-AzureRmNetworkSecurityRuleConfig** cmdlet gets a network security rule
 ## EXAMPLES
 
 ### Example 1: Get a network security rule configuration
+
 ```
 PS C:\> Get-AzureRmNetworkSecurityGroup -Name  "NSG01" -ResourceGroupName "ResourceGroup03" | Get-AzureRmNetworkSecurityRuleConfig -Name "AllowInternetOutBound" -DefaultRules
 ```
@@ -30,13 +31,16 @@ PS C:\> Get-AzureRmNetworkSecurityGroup -Name  "NSG01" -ResourceGroupName "Resou
 This command gets a network security group named NSG01 in ResourceGroup03, and then passes it to the current cmdlet. 
 The command retrieves the default rule named AllowInternetOutBound from that group.
 
-### Example 2: Retrieving a network security rule config using only the name
+
+### Example 2: Retrieve a network security rule config using only the name
+
 ```
 PS C:\> Get-AzureRmNetworkSecurityGroup -Name  "NSG01" -ResourceGroupName ResourceGroup03 | Get-AzureRmNetworkSecurityRuleConfig -Name "rdp-rule"
 ```
 
 This command gets a network security group named NSG01 in ResourceGroup03, and then passes it to the current cmdlet. 
 The command retrieves user defined rule named rdp-rule from that group.
+
 
 ## PARAMETERS
 
@@ -144,5 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmNetworkSecurityRuleConfig](./Remove-AzureRmNetworkSecurityRuleConfig.md)
 
 [Set-AzureRmNetworkSecurityRuleConfig](./Set-AzureRmNetworkSecurityRuleConfig.md)
-
-

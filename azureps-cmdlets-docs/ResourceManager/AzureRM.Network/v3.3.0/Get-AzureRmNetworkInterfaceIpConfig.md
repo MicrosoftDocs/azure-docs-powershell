@@ -22,7 +22,7 @@ The **Get-AzureRmNetworkInterfaceIPConfig** cmdlet gets a network interface IP c
 
 ## EXAMPLES
 
-### 1: Get an IP configuration of a network interface
+### E1: Get an IP configuration of a network interface
 ```
 $nic1 = Get-AzureRmNetworkInterface -Name mynic -ResourceGroupName $myrg
 
@@ -31,6 +31,7 @@ Get-AzureRmNetworkInterfaceIpConfig -Name ipconfig1 -NetworkInterface $nic1
 The first command gets an existing network interface called mynic and stores it in the
     variable $nic1. The second command gets the IP configuration called ipconfig1 of this
     network interface.
+
 
 ## PARAMETERS
 
@@ -122,5 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmNetworkInterfaceIpConfig](./Remove-AzureRmNetworkInterfaceIpConfig.md)
 
 [Set-AzureRmNetworkInterfaceIpConfig](./Set-AzureRmNetworkInterfaceIpConfig.md)
-
-

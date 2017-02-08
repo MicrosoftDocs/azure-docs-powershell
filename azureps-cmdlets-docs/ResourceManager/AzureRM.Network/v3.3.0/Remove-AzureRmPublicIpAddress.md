@@ -179,5 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmPublicIpAddress](./New-AzureRmPublicIpAddress.md)
 
 [Set-AzureRmPublicIpAddress](./Set-AzureRmPublicIpAddress.md)
-
-
