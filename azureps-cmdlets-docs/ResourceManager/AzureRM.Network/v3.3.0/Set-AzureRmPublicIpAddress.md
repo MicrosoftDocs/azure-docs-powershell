@@ -23,6 +23,7 @@ The **Set-AzureRmPublicIpAddress** cmdlet sets the goal state for a public IP ad
 ## EXAMPLES
 
 ### Example 1: Change allocation method of a public IP address
+
 ```
 PS C:\> $PublicIp = Get-AzureRmPublicIpAddress -Name $PublicIpName -ResourceGroupName "ResourceGroup03"
 PS C:\> $PublicIp.PublicIpAllocationMethod = "Static"
@@ -39,12 +40,14 @@ PS C:\> Set-AzureRmPublicIpAddress -PublicIpAddress $PublicIp
 
 ### Example 2: Change DNS domain label of a public IP address
 ```
+
 PS C:\> $PublicIp = Get-AzureRmPublicIpAddress -Name $PublicIpName -ResourceGroupName "ResourceGroup03"
 PS C:\> $PublicIp.DnsSettings.DomainNameLabel = "newdnsprefix"
 PS C:\> Set-AzureRmPublicIpAddress -PublicIpAddress $PublicIp
 ```
 
 The first command gets the public IP address resource with name $PublicIPName in the resource group ResourceGroup03, and stores it in the $PublicIp variable.
+
 
 The second command sets the DomainNameLabel property of $PublicIp to a different value.
 
@@ -125,5 +128,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmPublicIpAddress](./New-AzureRmPublicIpAddress.md)
 
 [Remove-AzureRmPublicIpAddress](./Remove-AzureRmPublicIpAddress.md)
-
-

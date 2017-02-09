@@ -67,8 +67,8 @@ Routes            : [
 Subnets           : []
 ```
 
-This command gets the route table named RouteTable01 by using Get-AzureRmRouteTable cmdlet.
-The command passes that table to the Add-AzureRmRouteConfig cmdlet by using the pipeline operator.
+This command gets the route table named RouteTable01 by using [Get-AzureRmRouteTable](./Get-AzureRmRouteTable.md) cmdlet.
+The command passes that table to the [Add-AzureRmRouteConfig](./Add-AzureRmRouteConfig.md) cmdlet by using the pipeline operator.
 **Add-AzureRmRouteConfig** adds the route named Route07, and then passes the result to the current cmdlet, which updates the table to reflect your changes.
 
 ## PARAMETERS
@@ -145,5 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmRouteTable](./New-AzureRmRouteTable.md)
 
 [Remove-AzureRmRouteTable](./Remove-AzureRmRouteTable.md)
-
-

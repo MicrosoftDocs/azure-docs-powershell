@@ -30,6 +30,7 @@ PS C:\> Remove-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName
 
 This command deletes a virtual network named MyVirtualNetwork in the resource group named ResourceGroup03. 
 
+
 ## PARAMETERS
 
 ### -Force
@@ -179,5 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 
 [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
-
-

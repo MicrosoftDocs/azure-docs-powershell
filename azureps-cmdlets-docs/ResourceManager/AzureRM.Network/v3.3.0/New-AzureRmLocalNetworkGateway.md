@@ -23,11 +23,6 @@ New-AzureRmLocalNetworkGateway -Name <String> -ResourceGroupName <String> -Locat
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AddressPrefix
@@ -44,6 +39,8 @@ Accept wildcard characters: False
 ```
 
 ### -Asn
+Specifies the virtual network gateway Autonomous System Number (ASN) that is used to set up Border Gateway Protocol (BGP) sessions inside IPsec tunnels.
+
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
@@ -250,5 +247,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmLocalNetworkGateway](./Remove-AzureRmLocalNetworkGateway.md)
 
 [Set-AzureRmLocalNetworkGateway](./Set-AzureRmLocalNetworkGateway.md)
-
-

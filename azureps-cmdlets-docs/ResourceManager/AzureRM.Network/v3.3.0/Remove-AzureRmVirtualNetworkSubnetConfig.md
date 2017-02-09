@@ -32,7 +32,8 @@ The first command removes a subnet called BackendSubnet from a virtual network.
 The virtual network was previously stored in the $VirtualNetwork variable.
 
 The second command updates the virtual network on the server by using the **Set-AzureRmVirtualNetwork** cmdlet. 
-    
+   
+
 ## PARAMETERS
 
 ### -InformationAction
@@ -124,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
 
 [Set-AzureRmVirtualNetworkSubnetConfig](./Set-AzureRmVirtualNetworkSubnetConfig.md)
-
-

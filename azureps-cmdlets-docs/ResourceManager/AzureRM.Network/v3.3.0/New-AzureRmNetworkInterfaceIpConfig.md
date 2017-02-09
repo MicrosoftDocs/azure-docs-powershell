@@ -37,6 +37,7 @@ The **New-AzureRmNetworkInterfaceIpConfig** cmdlet creates an Azure network inte
 
 ## EXAMPLES
 
+
 ### 1: Create an IP configuration with a public IP address for a network interface
 ```
 $vnet = Get-AzureRmVirtualNetwork -Name myvnet -ResourceGroupName myrg
@@ -70,6 +71,7 @@ The first two commands get a virtual network called myvnet and a subnet called m
     previously created. These are stored in $vnet and $Subnet respectively.  The third command creates a new IP
     configuration called "IPConfig-2" with a private IP address 10.0.0.5 associated with it.
     The last command then creates a network interface called mynic1 using this IP configuration.
+
 
 ## PARAMETERS
 
@@ -346,5 +348,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmNetworkInterfaceIpConfig](./Remove-AzureRmNetworkInterfaceIpConfig.md)
 
 [Set-AzureRmNetworkInterfaceIpConfig](./Set-AzureRmNetworkInterfaceIpConfig.md)
-
-

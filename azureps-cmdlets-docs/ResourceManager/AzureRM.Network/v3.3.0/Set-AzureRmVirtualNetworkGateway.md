@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerWeight
-Specifies the weight added to routes learned over BGP from this virtual network gateway
+Specifies the weight added to routes learned over BGP from this virtual network gateway.
 
 ```yaml
 Type: Int32
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 ### -VirtualNetworkGateway
 Specifies the virtual network gateway object to base modifications off of.
-You can use the Get-AzureRmVirtualNetworkGateway cmdlet to get the virtual network gateway object.
+You can use the [Get-AzureRmVirtualNetworkGateway](./Get-AzureRmVirtualNetworkGateway.md) cmdlet to get the virtual network gateway object.
 
 ```yaml
 Type: PSVirtualNetworkGateway
@@ -260,5 +260,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Reset-AzureRmVirtualNetworkGateway](./Reset-AzureRmVirtualNetworkGateway.md)
 
 [Resize-AzureRmVirtualNetworkGateway](./Resize-AzureRmVirtualNetworkGateway.md)
-
-

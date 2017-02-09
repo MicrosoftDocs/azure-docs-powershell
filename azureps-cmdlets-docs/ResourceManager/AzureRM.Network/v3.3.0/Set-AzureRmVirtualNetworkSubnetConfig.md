@@ -32,6 +32,7 @@ The **Set-AzureRmVirtualNetworkSubnetConfig** cmdlet configures the goal state f
 ## EXAMPLES
 
 ### Example 1: Modify the address prefix of a subnet
+
 ```
 PS C:\> $VirtualNetwork = Get-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03"
 PS C:\> Set-AzureRmVirtualNetworkSubnetConfig -Name "FrontendSubnet" -VirtualNetwork $VirtualNetwork -AddressPrefix "10.0.3.0/23"
@@ -237,3 +238,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmVirtualNetworkSubnetConfig](./Remove-AzureRmVirtualNetworkSubnetConfig.md)
 
 [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
+

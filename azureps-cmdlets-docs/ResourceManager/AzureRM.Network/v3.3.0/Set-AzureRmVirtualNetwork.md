@@ -23,6 +23,7 @@ The **Set-AzureRmVirtualNetwork** cmdlet sets the goal state for an Azure virtua
 ## EXAMPLES
 
 ### Example 1: Creates a virtual network and removes one of its subnets
+
 ```
 PS C:\> $VirtualNetwork = Get-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03"
 PS C:\> Remove-AzureRmVirtualNetworkSubnetConfig -Name "BackendSubnet" -VirtualNetwork $VirtualNetwork
@@ -34,8 +35,10 @@ The command stores this value in the $VirtualNetwork variable.
 
 The second command removes a subnet from the in-memory representation stored in $VirtualNetwork.
 
+
 The final command persists the change to the virtual network to the service side. 
     
+
 ## PARAMETERS
 
 ### -InformationAction
@@ -110,5 +113,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetwork](./New-AzureRmVirtualNetwork.md)
 
 [Remove-AzureRmVirtualNetwork](./Remove-AzureRmVirtualNetwork.md)
-
-

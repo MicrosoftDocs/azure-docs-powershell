@@ -33,8 +33,8 @@ The **Get-AzureRmNetworkSecurityGroup** cmdlet gets an Azure network security gr
 ```
 PS C:\> Get-AzureRmNetworkSecurityGroup -Name  "NSG01" -ResourceGroupName "ResourceGroup03"
 ```
-
 This command returns contents of Azure network security group NSG01 in resource group named ResourceGroup03.
+
 
 ## PARAMETERS
 
@@ -160,5 +160,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmNetworkSecurityGroup](./Remove-AzureRmNetworkSecurityGroup.md)
 
 [Set-AzureRmNetworkSecurityGroup](./Set-AzureRmNetworkSecurityGroup.md)
-
-

@@ -25,7 +25,7 @@ Searches for resource groups.
 Gets a list of credentials associated with an application.
 
 ### [Get-AzureRmADApplication](Get-AzureRmADApplication.md)
-Lists existing azure active directory applications.
+Lists existing Azure active directory applications.
 
 ### [Get-AzureRmADGroup](Get-AzureRmADGroup.md)
 Filters active directory groups.

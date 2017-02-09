@@ -30,6 +30,7 @@ The **Get-AzureRmVirtualNetwork** cmdlet gets one or more virtual networks n a r
 ## EXAMPLES
 
 ### Example 1: Retrieve a virtual network
+
 ```
 PS C:\> Get-AzureRmVirtualNetwork -Name "MyVirtualNetwork" -ResourceGroupName "ResourceGroup03"
 ```
@@ -160,5 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmVirtualNetwork](./Remove-AzureRmVirtualNetwork.md)
 
 [Set-AzureRmVirtualNetwork](./Set-AzureRmVirtualNetwork.md)
-
-

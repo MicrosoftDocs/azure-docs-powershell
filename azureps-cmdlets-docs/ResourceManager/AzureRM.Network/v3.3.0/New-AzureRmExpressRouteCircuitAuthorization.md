@@ -34,9 +34,9 @@ PS C:\> $Authorization = New-AzureRmExpressRouteCircuitAuthorization -Name "Cont
 
 This command creates a new circuit authorization named ContosoCircuitAuthorization and then stores that object in a variable named $Authorization.
 Saving the object to a variable is important: although **New-AzureRmExpressRouteCircuitAuthorization** can create a circuit authorization it cannot add that authorization to a circuit route.
-Instead, the variable $Authorization is used New-AzureRmExpressRouteCircuit when creating a brand-new ExpressRoute circuit.
+Instead, the variable $Authorization is used [New-AzureRmExpressRouteCircuit](./New-AzureRmExpressRouteCircuit.md) when creating a brand-new ExpressRoute circuit.
 
-For more information, see the documentation for the New-AzureRmExpressRouteCircuit cmdlet.
+For more information, see the documentation for the **New-AzureRmExpressRouteCircuit** cmdlet.
 
 ## PARAMETERS
 
@@ -116,5 +116,3 @@ This cmdlet creates instances of the **Microsoft.Azure.Commands.Network.Models.P
 [Get-AzureRmExpressRouteCircuitAuthorization](./Get-AzureRmExpressRouteCircuitAuthorization.md)
 
 [Remove-AzureRmExpressRouteCircuitAuthorization](./Remove-AzureRmExpressRouteCircuitAuthorization.md)
-
-

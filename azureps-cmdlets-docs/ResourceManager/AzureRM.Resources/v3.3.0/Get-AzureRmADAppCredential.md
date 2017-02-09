@@ -42,7 +42,7 @@ This command gets a list of credentials associated with the application with obj
 ## PARAMETERS
 
 ### -ObjectId
-The object id of the application to retrieve credentials from.
+Specifies the object ID of the application that this cmdlet gets credentials from.
 
 ```yaml
 Type: String
