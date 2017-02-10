@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-AzureRmEventHubNamespaceAuthorizationRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the authorization rule on the specified Event Hubs namespace.
 
 ## SYNTAX
 
@@ -18,95 +18,18 @@ Set-AzureRmEventHubNamespaceAuthorizationRule [-ResourceGroupName] <String> [-Na
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmEventHubNamespaceAuthorizationRule** cmdlet updates the authorization rule on the specified Event Hubs namespace.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AuthorizationRuleName MyAuthRuleName -Rights @("Manage")
 ```
 
-{{ Add example description here }}
+Updates the authorization rule `MyAuthRuleName` to grant **Manage** rights.
 
 ## PARAMETERS
-
-### -AuthorizationRuleName
-AuthorizationRule Name - Required if 'AuthruleObj' not specified.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AuthRuleObj
-EventHub NameSpace AuthorizationRule Object.
-
-```yaml
-Type: SharedAccessAuthorizationRuleAttributes
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NamespaceName
-EventHub Namespace Name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Resource Group Name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Rights
-Required if 'AuthruleObj' not specified.
-Rights - e.g. 
-@("Listen","Send","Manage")
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -123,6 +46,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NamespaceName
+The Event Hubs namespace name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Resource group name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -136,6 +89,53 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthorizationRuleName
+The authorization rule name. Required if **-AuthruleObj** is not specified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthRuleObj
+The Event Hubs namespace authorization rule object.
+
+```yaml
+Type: SharedAccessAuthorizationRuleAttributes
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rights
+Required if **-AuthruleObj** is not specified.
+Rights; for example, 
+@("Listen","Send","Manage")
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

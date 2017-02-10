@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmEventHubAuthorizationRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details of an authorization rule, or gets a list of authorization rules.
 
 ## SYNTAX
 
@@ -17,36 +17,28 @@ Get-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-NamespaceNa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmEventHubAuthorizationRule** cmdlet gets either the details of an authorization rule, or a list of all authorization rules for a specified Event Hub. If the name of an authorization rule is provided, the details of that single authorization rule are returned. If the name of an authorization rule is not provided, a list of all authorization rules for the specified Event Hub is returned.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRule MyAuthRuleName
 ```
 
-{{ Add example description here }}
+Gets the authorization rule `MyAuthRuleName` in the Event Hub `MyEventHubName`, which is scoped by the namespace `MyNamespaceName`.
+
+### Example 2
+```
+PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
+```
+
+Gets a list of all authorization rules in the Event Hub `MyEventHubName`, which is scoped by the namespace `MyNamespaceName`.
 
 ## PARAMETERS
 
-### -AuthorizationRuleName
-EventHub AuthorizationRule Name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -EventHubName
-EventHub Name.
+The Event Hub name.
 
 ```yaml
 Type: String
@@ -61,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Namespace Name.
+The Event Hubs namespace name.
 
 ```yaml
 Type: String
@@ -76,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Resource group name.
 
 ```yaml
 Type: String
@@ -85,6 +77,21 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthorizationRuleName
+Event Hub authorization rule name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
