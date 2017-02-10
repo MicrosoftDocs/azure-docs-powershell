@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmEventHub
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details of a single Event Hub, or gets a list of Event Hubs.
 
 ## SYNTAX
 
@@ -17,21 +17,28 @@ Get-AzureRmEventHub [-ResourceGroupName] <String> [-NamespaceName] <String> [[-E
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmEventHub** cmdlet returns either the details of an Event Hub, or a list of all Event Hubs in the current namespace. If the Event Hub name is provided, the details of a single Event Hub are returned. If an Event Hub name is not provided, a list of all Event Hubs in the specified namespace is returned.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmEventHub -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
 ```
 
-{{ Add example description here }}
+Returns the details of the Event Hub `EventHubName`.
+
+### Example 2
+```
+PS C:\> Get-AzureRmEventHub -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName
+```
+
+Returns a list of Event Hubs in the namespace `MyNamespaceName`.
 
 ## PARAMETERS
 
 ### -EventHubName
-EventHub Name.
+The Event Hub name.
 
 ```yaml
 Type: String
@@ -46,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Namespace Name.
+The Event Hubs namespace name.
 
 ```yaml
 Type: String
@@ -61,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Resource group name.
 
 ```yaml
 Type: String
