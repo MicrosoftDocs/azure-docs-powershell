@@ -42,7 +42,6 @@ This command gets the details of all Event Hubs that belong to the namespace nam
 ## PARAMETERS
 
 ### -EventHubName
-
 Specifies the name of the Event Hub that this cmdlet gets.
 
 
@@ -59,7 +58,6 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-
 Specifies the name of the namespace that this cmdlet gets Event Hubs from.
 
 
@@ -76,7 +74,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
 Specifies the name of the resource group.
 
 ```yaml
