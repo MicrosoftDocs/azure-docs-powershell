@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmEventHubAuthorizationRule
 
 ## SYNOPSIS
-Creates a new Event Hubs authorization rule.
+Creates an Event Hubs authorization rule.
 
 ## SYNTAX
 
@@ -18,16 +18,16 @@ New-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-NamespaceNa
 ```
 
 ## DESCRIPTION
-The **New-AzureRmEventHubAuthorizationRule** cmdlet creates a new Event Hubs authorization rule.
+The **New-AzureRmEventHubAuthorizationRule** cmdlet creates an Event Hubs authorization rule.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an Events Hub authorization rule
 ```
-PS C:\> New-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName -Rights @("Listen","Send")
+PS C:\> New-AzureRmEventHubAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -AuthorizationRuleName "AuthRule001" -Rights @("Listen","Send")
 ```
 
-Creates an authorization rule `MyAuthRuleName` granting **Listen** and **Send** rights to the Event Hub `MyEventHubName` in namespace `MyNamespaceName`, with resource group `MyResourceGroupName`.
+This command creates an authorization rule named AuthRule001 granting **Listen** and **Send** rights to the Event Hub named MyEventHubName in the namespace named MyNamespaceName that belongs to the resource group named MyResourceGroupName.
 
 ## PARAMETERS
 
@@ -47,7 +47,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-
 Specifies the name of the Event Hub.
 
 
@@ -64,7 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-
 Specifies the name of the namespace.
 
 
@@ -81,7 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
 Specifies the name of the resource group that contains the Event Hub.
 
 
@@ -129,8 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Rights; for example
-@("Listen","Send","Manage").
+Specifies rights that this cmdlet sets when creating the authorization rule.
+For instance: @("Listen","Send","Manage").
 
 ```yaml
 Type: String[]
@@ -159,3 +156,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubAuthorizationRule](./Get-AzureRmEventHubAuthorizationRule.md)
+
+[Remove-AzureRmEventHubAuthorizationRule](./Remove-AzureRmEventHubAuthorizationRule.md)
+
+[Set-AzureRmEventHubAuthorizationRule](./Set-AzureRmEventHubAuthorizationRule.md)
