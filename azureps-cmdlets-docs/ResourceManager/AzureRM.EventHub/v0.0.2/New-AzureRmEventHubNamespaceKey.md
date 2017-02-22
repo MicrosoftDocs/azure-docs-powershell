@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Namespace Name.
+Specifies the name of the namespace.
 
 ```yaml
 Type: String

@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmEventHubAuthorizationRule
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details of an authorization rule, or gets a list of authorization rules.
 
 ## SYNTAX
 
@@ -17,21 +17,29 @@ Get-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-NamespaceNa
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmEventHubAuthorizationRule** cmdlet gets the details of an authorization rule or a list of all authorization rules for a specified Event Hub. If the name of an authorization rule is provided, the details of that single authorization rule are returned. If the name of an authorization rule is not provided, a list of all authorization rules for the specified Event Hub is returned.
+
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get an Event Hub authorization rule
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -AuthorizationRule "MyAuthRuleName"
 ```
 
-{{ Add example description here }}
+This command gets the authorization rule named MyAuthRuleName in the Event Hub named MyEventHubName that is contained in the namespace named Namespace001.
+
+### Example 2: Get an Event Hub authorization rule
+```
+PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName"
+```
+
+This command gets the all authorization rules in the Event Hub named MyEventHubName that is contained in the namespace named Namespace001.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-EventHub AuthorizationRule Name.
+Specifies the name of the Event Hub Authorization Rule that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -46,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-EventHub Name.
+Specifies name of the Event Hub.
 
 ```yaml
 Type: String
@@ -61,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Namespace Name.
+Specifies the name of the namespace.
 
 ```yaml
 Type: String
@@ -76,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -105,3 +113,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmEventHubAuthorizationRule](./New-AzureRmEventHubAuthorizationRule.md)
+
+[Remove-AzureRmEventHubAuthorizationRule](./Remove-AzureRmEventHubAuthorizationRule.md)
+
+[Set-AzureRmEventHubAuthorizationRule](./Set-AzureRmEventHubAuthorizationRule.md)

@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmEventHubConsumerGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details of a specified Event Hubs consumer group, or gets a list of consumer groups in an Event Hub.
 
 ## SYNTAX
 
@@ -17,21 +17,28 @@ Get-AzureRmEventHubConsumerGroup [-ResourceGroupName] <String> [-NamespaceName] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmEventHubConsumerGroup** cmdlet gets either the details of a specified Event Hubs consumer group, or a list of consumer groups in a given Event Hub. If the name of a consumer group is provided, the details of a single consumer group details are returned. If the name of a consumer group is not provided, a list of consumer groups in the specified Event Hub is returned.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a specific Event Hub consumer group
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmEventHubConsumerGroup -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -ConsumerGroupName "MyConsumerGroupName"
 ```
 
-{{ Add example description here }}
+This command gets the consumer group named MyConsumerGroupName in the Event Hub named MyEventHubName that exists in the namespace named MyNamespaceName.
+
+### Example 2: Get all Event Hub consumer groups
+```
+PS C:\> Get-AzureRmEventHubConsumerGroup -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName"
+```
+
+This command gets all consumer groups in the Event Hub named MyEventHubName that exists in the namespace named MyNamespaceName.
 
 ## PARAMETERS
 
 ### -ConsumerGroupName
-ConsumerGroup Name.
+Specifies the name of the consumer group that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -46,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-EventHub Name.
+Specifies the name of the Event Hub.
 
 ```yaml
 Type: String
@@ -61,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Namespace Name.
+Specifies the name of the namespace.
 
 ```yaml
 Type: String
@@ -76,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Specifies the name of the resource group that contains the Event Hub.
 
 ```yaml
 Type: String
@@ -104,4 +111,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

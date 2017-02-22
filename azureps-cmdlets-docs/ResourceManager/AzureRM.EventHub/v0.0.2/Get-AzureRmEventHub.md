@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmEventHub
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the details of a single Event Hub, or gets a list of Event Hubs.
 
 ## SYNTAX
 
@@ -17,21 +17,28 @@ Get-AzureRmEventHub [-ResourceGroupName] <String> [-NamespaceName] <String> [[-E
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmEventHub** cmdlet gets either the details of an Event Hub, or a list of all Event Hubs in the current namespace. If the Event Hub name is provided, the details of a single Event Hub are returned. If an Event Hub name is not provided, a list of all Event Hubs in the specified namespace is returned.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get details of a specific Event Hub
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmEventHub -ResourceGroupName "ResourceGroup001" -NamespaceName "ContosoNamespace" -EventHubName "EventHub002"
 ```
 
-{{ Add example description here }}
+This command gets the details of the Event Hub named EventHub002 that is contained in the resource group named ResourceGroup001.
+
+### Example 2: Get details of all Event Hubs in the specified namespace
+```
+PS C:\> Get-AzureRmEventHub -ResourceGroup "ResourceGroup002" -NamespaceName "ContosoNamespace"
+```
+
+This command gets the details of all Event Hubs that belong to the namespace named ContosoNamespace that is contained in the resource group named ResourceGroup001.
 
 ## PARAMETERS
 
 ### -EventHubName
-EventHub Name.
+Specifies the name of the Event Hub that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -46,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Namespace Name.
+Specifies the name of the namespace that this cmdlet gets Event Hubs from.
 
 ```yaml
 Type: String
@@ -61,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -89,3 +96,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzureRmEventHub](./New-AzureRmEventHub.md)
+
+[Remove-AzureRmEventHub](./Remove-AzureRmEventHub.md)
+
+[Set-AzureRmEventHub](./Set-AzureRmEventHub.md)
