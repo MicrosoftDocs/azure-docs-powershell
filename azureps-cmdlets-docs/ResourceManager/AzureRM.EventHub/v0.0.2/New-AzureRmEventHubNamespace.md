@@ -17,16 +17,16 @@ New-AzureRmEventHubNamespace [-ResourceGroupName] <String> [-NamespaceName] <Str
 ```
 
 ## DESCRIPTION
-The **New-AzureRmEventHubNamespace** cmdlet creates a new namespace of type Event Hubs.
+The **New-AzureRmEventHubNamespace** cmdlet creates a namespace of type Event Hubs.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an Event Hubs namespace
 ```
-PS C:\> New-AzureRmEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location MyLocation
+PS C:\> New-AzureRmEventHubNamespace -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -Location "USWest"
 ```
 
-Creates an Event Hubs namespace `MyNamespaceName` in the specified geographic location `MyLocation`, in resource group `MyResourceGroupName`.
+This command creates an Event Hubs namespace named MyNamespaceName in the specified geographic location USWest that belongs to the resource group named MyResourceGroupName.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Event Hubs namespace geo-location.
+Specifies the geographic location of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -61,8 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-
-The Event Hubs namespace name.
+Specifies the name of the Event Hubs namespace that this cmdlet creates.
 
 
 ```yaml
@@ -78,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
 Specifies the name of the resource group that contains the Event Hub.
 
 
@@ -95,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuCapacity
-The Event Hub throughput units.
+Specifies the SKU capacity of the Event Hub namespace.
 
 ```yaml
 Type: Int32
@@ -110,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Namespace Sku name.
+Specifies the name of the SKU in the Event Hub namespace.
 
 ```yaml
 Type: String
@@ -126,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Hashtables that represent resource tags.
+Specifies a hashtable that represent resource tags.
 
 ```yaml
 Type: Hashtable
@@ -172,3 +170,8 @@ System.Nullable\`1\[\[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, 
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubNamespace](./Get-AzureRmEventHubNamespace.md)
+
+[Remove-AzureRmEventHubNamespace](./Remove-AzureRmEventHubNamespace.md)
+
+[Set-AzureRmEventHubNamespace](./Set-AzureRmEventHubNamespace.md)
