@@ -47,7 +47,9 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.
+
+Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -91,8 +93,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+
 ### -ResourceGroupName
 Resource group name.
+
 
 ```yaml
 Type: String
@@ -122,8 +126,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
 ### -messageRetentionInDays
 Event Hub message retention period, in days.
+
 
 ```yaml
 Type: Int64

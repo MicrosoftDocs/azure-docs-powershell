@@ -45,8 +45,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+
 ### -ResourceGroupName
 Resource group name.
+
 
 ```yaml
 Type: String
@@ -62,6 +64,7 @@ Accept wildcard characters: False
 
 ### -AuthorizationRuleName
 The name of the authorization rule on the Event Hubs namespace.
+
 
 ```yaml
 Type: String

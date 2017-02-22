@@ -49,6 +49,7 @@ Accept wildcard characters: False
 ### -NamespaceName
 The Event Hubs namespace name.
 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -62,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group that contains the Event Hub.
 
 ```yaml
 Type: String

@@ -30,7 +30,9 @@ Gets the details of the Event Hubs namespace `MyNamespaceName` in the resource g
 ## PARAMETERS
 
 ### -NamespaceName
-The Event Hubs namespace name.
+
+EventHub Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -45,7 +47,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+
+Specifies the name of the resource group that contains the Event Hub.
+
 
 ```yaml
 Type: String
