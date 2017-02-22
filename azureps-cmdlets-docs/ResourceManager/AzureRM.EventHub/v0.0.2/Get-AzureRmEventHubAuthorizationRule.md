@@ -26,7 +26,6 @@ The **Get-AzureRmEventHubAuthorizationRule** cmdlet gets the details of an autho
 
 ### Example 1: Get an Event Hub authorization rule
 ```
-
 PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -AuthorizationRule "MyAuthRuleName"
 ```
 

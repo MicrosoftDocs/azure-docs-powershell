@@ -40,7 +40,6 @@ This command gets all consumer groups in the Event Hub named MyEventHubName that
 ## PARAMETERS
 
 ### -ConsumerGroupName
-
 Specifies the name of the consumer group that this cmdlet gets.
 
 
@@ -57,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-
 Specifies the name of the Event Hub.
 
 
@@ -74,7 +72,6 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-
 Specifies the name of the namespace.
 
 
@@ -91,7 +88,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
 Specifies the name of the resource group that contains the Event Hub.
 
 
@@ -121,3 +117,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzureRmEventHubConsumerGroup](./New-AzureRmEventHubConsumerGroup.md)
+
+[Remove-AzureRmEventHubConsumerGroup](./Remove-AzureRmEventHubConsumerGroup.md)
+
+[Set-AzureRmEventHubConsumerGroup](./Set-AzureRmEventHubConsumerGroup.md)
