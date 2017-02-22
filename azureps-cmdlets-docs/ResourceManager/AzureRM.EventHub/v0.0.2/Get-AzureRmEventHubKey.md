@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmEventHubKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the primary key details of the specified Event Hubs authorization rule.
 
 ## SYNTAX
 
@@ -17,36 +17,21 @@ Get-AzureRmEventHubKey [-ResourceGroupName] <String> [-NamespaceName] <String> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmEventHubKey** cmdlet returns the primary key details of the specified Event Hubs authorization rule.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmEventHubKey -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName
 ```
 
-{{ Add example description here }}
+Gets details of the primary key for the authorization rule `MyAuthRuleName`.
 
 ## PARAMETERS
 
-### -AuthorizationRuleName
-EventHub AuthorizationRule Name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -EventHubName
-Specifies the name of the Event Hub.
+The Event Hub name.
 
 ```yaml
 Type: String
@@ -60,8 +45,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NamespaceName
-Specifies the name of the namespace.
+
+### -EventHubName
+Specifies the name of the Event Hub.
+
 
 ```yaml
 Type: String
@@ -75,8 +62,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the resource group that contains the Event Hub.
+
+### -NamespaceName
+Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -85,6 +74,23 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the Event Hub.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

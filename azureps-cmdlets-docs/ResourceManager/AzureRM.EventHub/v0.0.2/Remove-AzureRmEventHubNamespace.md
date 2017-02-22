@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-AzureRmEventHubNamespace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes the specified Event Hubs namespace.
 
 ## SYNTAX
 
@@ -17,21 +17,38 @@ Remove-AzureRmEventHubNamespace [-ResourceGroupName] <String> [-NamespaceName] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmEventHubNamespace** cmdlet removes and deletes the specified Event Hubs namespace.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName
 ```
 
-{{ Add example description here }}
+Removes the Event Hubs namespace `MyNamespaceName` in resource group `MyResourceGroupName`.
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NamespaceName
-EventHub Specifies the name of the namespace.
+
+The Event Hubs namespace name.
+
 
 ```yaml
 Type: String
@@ -46,7 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+
 Specifies the name of the resource group that contains the Event Hub.
+
 
 ```yaml
 Type: String
@@ -57,21 +76,6 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

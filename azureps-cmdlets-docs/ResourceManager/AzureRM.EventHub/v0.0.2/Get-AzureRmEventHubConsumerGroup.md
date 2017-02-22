@@ -23,6 +23,7 @@ The **Get-AzureRmEventHubConsumerGroup** cmdlet gets either the details of a spe
 
 ### Example 1: Get a specific Event Hub consumer group
 ```
+
 PS C:\> Get-AzureRmEventHubConsumerGroup -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -ConsumerGroupName "MyConsumerGroupName"
 ```
 
@@ -35,10 +36,13 @@ PS C:\> Get-AzureRmEventHubConsumerGroup -ResourceGroupName "MyResourceGroupName
 
 This command gets all consumer groups in the Event Hub named MyEventHubName that exists in the namespace named MyNamespaceName.
 
+
 ## PARAMETERS
 
 ### -ConsumerGroupName
+
 Specifies the name of the consumer group that this cmdlet gets.
+
 
 ```yaml
 Type: String
@@ -53,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
+
 Specifies the name of the Event Hub.
+
 
 ```yaml
 Type: String
@@ -68,7 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
+
 Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -83,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+
 Specifies the name of the resource group that contains the Event Hub.
+
 
 ```yaml
 Type: String

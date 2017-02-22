@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmEventHubNamespaceKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the primary key details of the specified Event Hubs namespace authorization rule.
 
 ## SYNTAX
 
@@ -17,36 +17,21 @@ Get-AzureRmEventHubNamespaceKey [-ResourceGroupName] <String> [-NamespaceName] <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmEventHubNamespaceKey** cmdlet returns the primary key details of the specified authorization rule in the given Event Hubs namespace.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmEventHubNamespaceKey -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AuthorizationRuleName MyAuthRuleName
 ```
 
-{{ Add example description here }}
+Gets details of the primary key for the authorization rule `MyAuthRuleName` on the Event Hubs namespace `MyNamespaceName` in the resource group `MyResourceGroupName`.
 
 ## PARAMETERS
 
-### -AuthorizationRuleName
-EventHub Namespace AuthorizationRule Name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -NamespaceName
-EventHub Specifies the name of the namespace.
+The Event Hubs namespace name.
 
 ```yaml
 Type: String
@@ -60,8 +45,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the Event Hub.
+Resource group name.
+
 
 ```yaml
 Type: String
@@ -70,6 +57,22 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthorizationRuleName
+The name of the authorization rule on the Event Hubs namespace.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

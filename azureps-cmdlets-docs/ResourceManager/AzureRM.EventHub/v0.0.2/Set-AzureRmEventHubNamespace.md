@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-AzureRmEventHubNamespace
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates the specified Event Hubs namespace.
 
 ## SYNTAX
 
@@ -18,21 +18,36 @@ Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> [-NamespaceName] <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmEventHubNamespace** cmdlet updates the properties of the specified Event Hubs namespace.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzureRmEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location "WestUS" -State Created
 ```
 
-{{ Add example description here }}
+Updates the state of namespace `MyNamespaceName` to **Created**.
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
-EventHub Namespace Location.
+Event Hubs namespace geo-location.
 
 ```yaml
 Type: String
@@ -47,7 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
+
 EventHub Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -62,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+
 Specifies the name of the resource group that contains the Event Hub.
 
 ```yaml
@@ -77,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuCapacity
-The eventhub throughput units.
+The Event Hub throughput units.
 
 ```yaml
 Type: Int32
@@ -92,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Namespace Sku Name.
+Namespace Sku name.
 
 ```yaml
 Type: String
@@ -108,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -State
-Disable/Enable Namespace.
+Specifies the state (disabled or enabled) of the namespace.
 
 ```yaml
 Type: NamespaceState
@@ -124,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Hashtables which represents resource Tags.
+Hashtables that represent resource tags.
 
 ```yaml
 Type: Hashtable
@@ -135,21 +153,6 @@ Required: False
 Position: 6
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
