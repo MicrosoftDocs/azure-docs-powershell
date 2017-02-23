@@ -22,19 +22,18 @@ Get a group members.
 
 ## EXAMPLES
 
-### --------------------------  Filters group members using group object id  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Filter group members using group object ID
 
 ```
 PS C:\> Get-AzureRmADGroupMember -GroupObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
 ```
 
-Gets group members with 85F89C90-780E-4AA6-9F4F-6F268D322EEE id
+This command gets group members with ID 85F89C90-780E-4AA6-9F4F-6F268D322EEE.
 
 ## PARAMETERS
 
 ### -GroupObjectId
-Object id of the group.
+Specifies the object ID of the group that this cmdlet gets.
 
 ```yaml
 Type: Guid
@@ -95,9 +94,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADUser]()
+[Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Get-AzureRmADServicePrincipal]()
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADGroupMemberMember]()
-
+[Get-AzureRmADGroupMemberMember](./Get-AzureRmADGroupMemberMember.md)

@@ -203,5 +203,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmPolicyAssignment](./Remove-AzureRmPolicyAssignment.md)
 
 [Set-AzureRmPolicyAssignment](./Set-AzureRmPolicyAssignment.md)
-
-

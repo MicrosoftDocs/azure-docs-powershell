@@ -48,23 +48,21 @@ If no parameter is provided, the cmdlet gets all applications under the tenant.
 
 ## EXAMPLES
 
-Example 1:
-@{paragraph=PS C:\\\>}
+### Example 1: List all applications under a tenant
 
 ```
-PS E:\> Get-AzureRmADApplication
+PS C:\> Get-AzureRmADApplication
 ```
 
-Lists all the applications under a tenant.
+This command lists all the applications under a tenant.
 
-Example 2:
-@{paragraph=PS C:\\\>}
+### Example 2: Get a specific application using an identifier URI
 
 ```
 PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
 ```
 
-Gets the application with identifier uri as "http://mySecretApp1".
+This command gets the application with identifier URI as "http://mySecretApp1".
 
 ## PARAMETERS
 
@@ -175,14 +173,14 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Remove-AzureRmADAppCredential]()
+[Get-AzureRmADAppCredential](./Get-AzureRmADAppCredential.md)
 
-[New-AzureRmADAppCredential]()
+[New-AzureRmADAppCredential](./New-AzureRmADAppCredential.md)
 
-[Get-AzureRmADAppCredential]()
+[Remove-AzureRmADAppCredential](./Remove-AzureRmADAppCredential.md)
 
-[Remove-AzureRmADApplication]()
+[New-AzureRmADApplication](./New-AzureRmADApplication.md)
 
-[Set-AzureRmADApplication]()
+[Remove-AzureRmADApplication](./Remove-AzureRmADApplication.md)
 
-[New-AzureRmADApplication]()
+[Set-AzureRmADApplication](./Set-AzureRmADApplication.md)
