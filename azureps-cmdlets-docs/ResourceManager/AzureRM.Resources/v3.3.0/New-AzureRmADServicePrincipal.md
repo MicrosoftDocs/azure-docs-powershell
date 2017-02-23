@@ -84,7 +84,7 @@ In order to update the application specific parameters please use Set-AzureRmADA
 
 ## EXAMPLES
 
-Example 1:
+### Example 1:
 
 
 ```
@@ -331,4 +331,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 [New-AzureRmADSpCredential]()
 
 [Remove-AzureRmADSpCredential]()
-

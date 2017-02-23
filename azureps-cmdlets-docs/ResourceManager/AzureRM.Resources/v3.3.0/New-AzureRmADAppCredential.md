@@ -44,7 +44,7 @@ The application is identified by supplying either the application object id or a
 
 ## EXAMPLES
 
-Example 1:
+### Example 1:
 
 
 ```
@@ -54,7 +54,7 @@ PS E:\> New-AzureRmADAppCredential -ObjectId 1f89cf81-0146-4f4e-beae-2007d066841
 A new password credential is added to an existing application.
 In this example, the supplied password value is added to the application using the application object id.
 
-Example 2:
+### Example 2:
 
 
 ```
@@ -258,4 +258,3 @@ Accept wildcard characters: False
 [Remove-AzureRmADAppCredential]()
 
 [Get-AzureRmADApplication]()
-

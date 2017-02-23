@@ -31,13 +31,12 @@ Get-AzureRmRoleDefinition [-Scope <String>] [-Custom] [-AtScopeAndBelow]
 ```
 
 ## DESCRIPTION
-Use the Get-AzureRmRoleDefinition command with a particular role name to view its details.
+Use the **Get-AzureRmRoleDefinition** command with a particular role name to view its details.
 To inspect individual operations that a role grants access to, review the Actions and NotActions properties of the role.
 
 ## EXAMPLES
 
-Example 1:
-
+### Example 1:
 
 ```
 PS C:\> Get-AzureRmRoleDefinition -Name Reader
@@ -45,8 +44,7 @@ PS C:\> Get-AzureRmRoleDefinition -Name Reader
 
 Get the Reader role definition
 
-Example 2:
-
+### Example 2:
 
 ```
 PS C:\> Get-AzureRmRoleDefinition
@@ -188,4 +186,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 [New-AzureRmRoleDefinition]()
 
 [Remove-AzureRmRoleDefinition]()
-
