@@ -44,8 +44,8 @@ The application is identified by supplying either the application object id or a
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
+Example 1:
+
 
 ```
 PS E:\> New-AzureRmADAppCredential -ObjectId 1f89cf81-0146-4f4e-beae-2007d0668416 -Password P@ssw0rd!
@@ -54,8 +54,8 @@ PS E:\> New-AzureRmADAppCredential -ObjectId 1f89cf81-0146-4f4e-beae-2007d066841
 A new password credential is added to an existing application.
 In this example, the supplied password value is added to the application using the application object id.
 
-### --------------------------  Example 2  --------------------------
-@{paragraph=PS C:\\\>}
+Example 2:
+
 
 ```
 $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate 
@@ -72,8 +72,8 @@ PS E:\> New-AzureRmADAppCredential -ApplicationId 4589cd6b-3d79-4bb4-93b8-a0b99f
 A new key credential is added to an existing application.
 In this example, the supplied base64 encoded public X509 certificate ("myapp.cer") is added to the application using the applicationId.
 
-### --------------------------  Example 3  --------------------------
-@{paragraph=PS C:\\\>}
+Example 3:
+
 
 ```
 PS E:\> New-AzureRmADAppCredential -ApplicationId 4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58 -CertValue $credValue

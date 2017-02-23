@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmResource
 
 ## SYNOPSIS
-Gets resources.
+Gets Azure resources.
 
 ## SYNTAX
 
@@ -118,6 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
+Specifies the resource type.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type, Get a single resource at the tenant level.
@@ -155,6 +157,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
+Specifies API version.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -168,6 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandProperties
+Indicates that this cmdlet expands properties.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -181,6 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
+Specifies the extension resource name.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type, Get resource by name and group, Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get a single resource at the tenant level.
@@ -194,6 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
+Specifies the extension resource type.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type, Get resource by name and group, Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get a single resource at the tenant level.
@@ -219,6 +229,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsCollection
+Indicates that this cmdlet gets the resources as a collection.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Get resource by name and group, Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get a single resource at the tenant level., Get resource collection
@@ -277,6 +289,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
+Specifies the name of the resource that this cmdlet gets.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type, Get a single resource at the tenant level.
@@ -349,5 +363,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmResource](./Remove-AzureRmResource.md)
 
 [Set-AzureRmResource](./Set-AzureRmResource.md)
-
-

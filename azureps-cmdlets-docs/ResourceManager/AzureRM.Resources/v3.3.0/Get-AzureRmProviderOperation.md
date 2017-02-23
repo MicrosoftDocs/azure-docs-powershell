@@ -22,37 +22,39 @@ The Get-AzureRmProviderOperation gets the operations exposed by Azure resource p
 Operations can be composed to create custom roles in Azure RBAC.
 The command takes as input an operation search string (with possible wildcard(*) character(s)) which determines the operations details to display.
 
-Use Get-AzureRmProviderOperation * to get all operations for all Azure resource providers.
+Use **Get-AzureRmProviderOperation** to get all operations for all Azure resource providers.
 
-Use Get-AzureRmProviderOperation Microsoft.Compute/* to get all operations of Microsoft.Compute resource provider.
+Use **Get-AzureRmProviderOperation** Microsoft.Compute to get all operations of Microsoft.Compute resource provider.
 
 ## EXAMPLES
 
-### --------------------------  Get all actions for all providers  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Get all actions for all providers
 
 ```
 PS C:\> Get-AzureRmProviderOperation *
 ```
 
-### --------------------------  Get actions for a particular resource provider  --------------------------
-@{paragraph=PS C:\\\>}
+This command get all action for all providers.
 
+### Example 2: Get actions for a particular resource provider
 ```
 PS C:\> Get-AzureRmProviderOperation Microsoft.Insights/*
 ```
 
-### --------------------------  Get all actions that can be performed on virtual machines  --------------------------
-@{paragraph=PS C:\\\>}
+This command get actions for the specified resource provider.
+
+### Example 3: Get all actions that can be performed on virtual machines
 
 ```
 PS C:\> Get-AzureRmProviderOperation */virtualMachines/*
 ```
 
+This command gets all actions that can be performed on virtual machines.
+
 ## PARAMETERS
 
 ### -OperationSearchString
-The operation search string (with possible wildcard (*) characters)
+Specifies the operation search string (with possible wildcard (*) characters).
 
 ```yaml
 Type: String
@@ -113,4 +115,3 @@ Accept wildcard characters: False
 Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
-

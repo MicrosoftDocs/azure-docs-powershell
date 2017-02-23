@@ -28,7 +28,7 @@ The **Get-AzureRmResourceGroup** cmdlet gets Azure resource groups in the curren
 You can get all resource groups, or specify a resource group by name or by other properties.
 By default, this cmdlet gets all resource groups in the current subscription.
 
-For more information about Azure resources and Azure resource groups, see the New-AzureRmResourceGroup cmdlet.
+For more information about Azure resources and Azure resource groups, see the [New-AzureRmResourceGroup](./New-AzureRmResourceGroup.md) cmdlet.
 
 ## EXAMPLES
 
@@ -148,5 +148,3 @@ This cmdlet returns resource groups.
 [Remove-AzureRmResourceGroup](./Remove-AzureRmResourceGroup.md)
 
 [Set-AzureRmResourceGroup](./Set-AzureRmResourceGroup.md)
-
-

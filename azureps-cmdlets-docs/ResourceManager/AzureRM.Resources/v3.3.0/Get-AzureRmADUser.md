@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmADUser
 
 ## SYNOPSIS
-Filters active directory users.
+Gets active directory users.
 
 ## SYNTAX
 
@@ -41,41 +41,35 @@ Get-AzureRmADUser -Mail <String> [-InformationAction <ActionPreference>] [-Infor
 ```
 
 ## DESCRIPTION
-Filters active directory users.
+The **Get-AzureRmADUser** cmdlet gets active directory users.
 
 ## EXAMPLES
 
-### --------------------------  Filters users using UPN  --------------------------
-@{paragraph=PS C:\\\>}
-
+### Example 1: Get a user using UPN
 ```
-PS C:\> Get-AzureRmADUser -UPN foo@domain.com
+PS C:\> Get-AzureRmADUser -UPN "pattifuller@contoso.com"
 ```
 
-Gets user with foo@domain.com
+This command gets the user named pattifuller@contoso.com
 
-### --------------------------  Filters users using Search String  --------------------------
-@{paragraph=PS C:\\\>}
-
+### Example 2: Get users using a search string
 ```
-PS C:\> Get-AzureRmADUser -SearchString Joe
+PS C:\> Get-AzureRmADUser -SearchString "contoso"
 ```
 
-Filters all ad users that has Joe in the display name.
+This command gets all Active Directory users that has contoso in the display name.
 
-### --------------------------  List AD users  --------------------------
-@{paragraph=PS C:\\\>}
-
+### Example 3: Get all Active Directory users
 ```
 PS C:\> Get-AzureRmADUser
 ```
 
-Gets all AD users
+This command gets all Active Directory users.
 
 ## PARAMETERS
 
 ### -UserPrincipalName
-UPN of the user.
+Specifies the user principal name (UPN) of the user that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -171,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mail
-
+Specifies the email of the user.
 
 ```yaml
 Type: String
@@ -193,9 +187,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-AzureRmADUser]()
+[New-AzureRmADUser](./New-AzureRmADUser.md)
 
-[Set-AzureRmADUser]()
+[Set-AzureRmADUser](./Set-AzureRmADUser.md)
 
-[Remove-AzureRmADUser]()
-
+[Remove-AzureRmADUser](./Remove-AzureRmADUser.md)

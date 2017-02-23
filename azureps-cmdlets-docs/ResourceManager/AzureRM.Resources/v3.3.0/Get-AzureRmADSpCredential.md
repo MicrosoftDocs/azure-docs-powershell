@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmADSpCredential
 
 ## SYNOPSIS
-Retrieves a list of credentials associated with a service principal.
+Gets a list of credentials associated with a service principal.
 
 ## SYNTAX
 
@@ -25,24 +25,23 @@ Get-AzureRmADSpCredential -ServicePrincipalName <String> [-InformationAction <Ac
 ```
 
 ## DESCRIPTION
-The Get-AzureRmADSpCredential cmdlet can be used to retrieve a list of credentials associated with a service principal.
-This command will retrieve all of the credential properties (but not the credential value) associated with the service principal.
+The **Get-AzureRmADSpCredential** cmdlet gets a list of credentials associated with a service principal.
+This command gets all of the credential properties, but not the credential value, associated with the service principal.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Get a list of credentials associated with a service principal
 
 ```
 PS E:\> Get-AzureRmADSpCredential -ServicePrincipalName http://test12345
 ```
 
-Returns a list of credentials associated with the service principal having SPN 'http://test12345'.
+This command gets a list of credentials associated with the service principal having SPN 'http://test12345'.
 
 ## PARAMETERS
 
 ### -ObjectId
-The object id of the service principal to retrieve credentials from.
+Specifies the object ID of the service principal that this cmdlet gets credentials from.
 
 ```yaml
 Type: String
@@ -118,9 +117,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-AzureRmADSpCredential]()
+[New-AzureRmADSpCredential](./New-AzureRmADSpCredential.md)
 
-[Remove-AzureRmADSpCredential]()
+[Remove-AzureRmADSpCredential](./Remove-AzureRmADSpCredential.md)
 
-[Get-AzureRmADServicePrincipal]()
-
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)

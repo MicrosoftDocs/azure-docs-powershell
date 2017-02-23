@@ -106,8 +106,8 @@ ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - 
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
+Example 1:
+
 
 ```
 PS C:\> New-AzureRmRoleAssignment -ResourceGroupName rg1 -SignInName allen.young@live.com -RoleDefinitionName Reader
@@ -115,8 +115,8 @@ PS C:\> New-AzureRmRoleAssignment -ResourceGroupName rg1 -SignInName allen.young
 
 Grant Reader role access to a user at a resource group scope
 
-### --------------------------  Example 2  --------------------------
-@{paragraph=PS C:\\\>}
+Example 2:
+
 
 ```
 PS C:\> Get-AzureRMADGroup -SearchString "Christine Koch Team"
@@ -130,8 +130,8 @@ PS C:\> Get-AzureRMADGroup -SearchString "Christine Koch Team"
 
 Grant access to a security group
 
-### --------------------------  Example 3  --------------------------
-@{paragraph=PS C:\\\>}
+Example 3:
+
 
 ```
 PS C:\> New-AzureRmRoleAssignment -SignInName john.doe@contoso.com -RoleDefinitionName Owner -Scope "/subscription/86f81fc3-b00f-48cd-8218-3879f51ff362/resourcegroups/rg1/providers/Microsoft.Web/sites/site1"
@@ -139,8 +139,8 @@ PS C:\> New-AzureRmRoleAssignment -SignInName john.doe@contoso.com -RoleDefiniti
 
 Grant access to a user at a resource (website)
 
-### --------------------------  Example 4  --------------------------
-@{paragraph=PS C:\\\>}
+Example 4:
+
 
 ```
 PS C:\> New-AzureRMRoleAssignment -ObjectId 5ac84765-1c8c-4994-94b2-629461bd191b -RoleDefinitionName "Virtual Machine Contributor" -ResourceName Devices-Engineering-ProjectRND -ResourceType Microsoft.Network/virtualNetworks/subnets -ParentResource virtualNetworks/VNET-EASTUS-01 -ResourceGroupName Network

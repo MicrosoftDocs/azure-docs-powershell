@@ -84,8 +84,8 @@ In order to update the application specific parameters please use Set-AzureRmADA
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
+Example 1:
+
 
 ```
 New-AzureRmADServicePrincipal -ApplicationId 34a28ad2-dec4-4a41-bc3b-d22ddf90000e
@@ -97,8 +97,8 @@ DisplayName                    Type                           ObjectId
 -----------                    ----                           --------
 DemoApp                        ServicePrincipal               f95b6f5c-fc98-4af0-bb8a-34a14ca1dca1
 
-### --------------------------  Example 2  --------------------------
-@{paragraph=PS C:\\\>}
+Example 2:
+
 
 ```
 New-AzureRmADServicePrincipal -DisplayName SPForNoExistingApp

@@ -41,37 +41,32 @@ Filters active directory service principals.
 
 ## EXAMPLES
 
-### --------------------------  Filters service principals using SPN  --------------------------
-@{paragraph=PS C:\\\>}
-
+### Example 1: Get service principals using the service principal name
 ```
 PS C:\> Get-AzureRmADServicePrincipal -SPN 36f81fc3-b00f-48cd-8218-3879f51ff39f
 ```
 
-Gets service principals with 36f81fc3-b00f-48cd-8218-3879f51ff39f SPN.
+This command gets service principals with the ID 36f81fc3-b00f-48cd-8218-3879f51ff39f.
 
-### --------------------------  Filters service principals using Search String  --------------------------
-@{paragraph=PS C:\\\>}
-
+### Example 2: Get service principals using a search string
 ```
 PS C:\> Get-AzureRmADServicePrincipal -SearchString "Web"
 ```
 
-Filters all ad service principals that have display name starting with "Web".
+This command gets all Active Directory service principals that have display name starting with Web.
 
-### --------------------------  List AD service principals  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 3: Get all Active Directory service principals
 
 ```
 PS C:\> Get-AzureRmADServicePrincipal
 ```
 
-Gets all AD service principals.
+This command gets all Active Directory service principals.
 
 ## PARAMETERS
 
 ### -ServicePrincipalName
-SPN of the service.
+Specifies the service principal name (SPN) of the service.
 
 ```yaml
 Type: String
@@ -137,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchString
-Fetches all service principals that have the display name starting with this value.
+Specifies all service principals that have the display name starting with this value.
 
 ```yaml
 Type: String
@@ -152,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Object id of the service principal.
+Specifies the object ID of the service principal that this cmdlet gets.
 
 ```yaml
 Type: Guid
@@ -174,13 +169,12 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-AzureRmADServicePrincipal]()
+[New-AzureRmADServicePrincipal](./New-AzureRmADServicePrincipal.md)
 
-[Set-AzureRmADServicePrincipal]()
+[Remove-AzureRmADServicePrincipal](./Remove-AzureRmADServicePrincipal.md)
 
-[Remove-AzureRmADServicePrincipal]()
+[Set-AzureRmADServicePrincipal](./Set-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADApplication]()
+[Get-AzureRmADApplication](./Get-AzureRmADApplication.md)
 
-[Get-AzureRmADSpCredential]()
-
+[Get-AzureRmADSpCredential](Get-AzureRmADSpCredential.md)
