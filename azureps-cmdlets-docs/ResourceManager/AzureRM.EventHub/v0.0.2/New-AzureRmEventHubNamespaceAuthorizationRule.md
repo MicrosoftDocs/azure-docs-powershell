@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Specifies rights that this cmdlet sets when createing the authorization rule.
+Specifies rights that this cmdlet sets when creating the authorization rule.
 For instance, @("Listen","Send","Manage").
 
 ```yaml
