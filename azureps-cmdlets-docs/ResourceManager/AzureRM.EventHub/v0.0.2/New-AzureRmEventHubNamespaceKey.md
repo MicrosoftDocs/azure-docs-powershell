@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmEventHubNamespaceKey
 
 ## SYNOPSIS
-Creates a new primary or secondary key for the authorization rule on the specified Event Hubs namespace.
+Creates a primary or secondary key for the authorization rule on the specified Event Hubs namespace.
 
 ## SYNTAX
 
@@ -23,10 +23,10 @@ The **New-AzureRmEventHubNamespaceKey** cmdlet regenerates the primary or second
 
 ### Example 1
 ```
-PS C:\> New-AzureRmEventHubNameSpaceKey -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName  -AuthorizationRuleName MyAuthRuleName -RegenerateKeys PrimaryKey
+PS C:\> New-AzureRmEventHubNameSpaceKey -ResourceGroup "MyResourceGroupName" -NamespaceName "MyNamespaceName" -AuthorizationRuleName "AuthRule001" -RegenerateKeys "PrimaryKey"
 ```
 
-Regenerates the primary key for the authorization rule `MyAuthRuleName` in the Event Hubs namespace `MyNamespaceName`, with resource group `MyResourceGroupName`.
+This command regenerates the primary key for the authorization rule named AuthRule001 in the Event Hubs namespace named MyNamespaceName that belongs to the resource group named MyResourceGroupName.
 
 ## PARAMETERS
 
@@ -46,7 +46,8 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -61,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -RegenerateKeys
-Key to regenerate: `PrimaryKey` or `SecondaryKey`.
+Specifies the type of key that this cmdlet regenerates.
+Valid values are: PrimaryKey or SecondaryKey.
 
 ```yaml
 Type: String
@@ -77,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group.
+Specifies the name of the resource group that contains the Event Hub.
 
 ```yaml
 Type: String
@@ -108,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-Authorization rule name.
+Specifies the name of the authorization rule that this cmdlet creates.
 
 ```yaml
 Type: String
@@ -137,3 +139,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubNamespaceKey](./Get-AzureRmEventHubNamespaceKey.md)
+
+[Remove-AzureRmEventHubNamespaceKey](./Remove-AzureRmEventHubNamespaceKey.md)
+
+[Set-AzureRmEventHubNamespaceKey](./Set-AzureRmEventHubNamespaceKey.md)

@@ -21,17 +21,17 @@ The **Get-AzureRmEventHubKey** cmdlet returns the primary key details of the spe
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the primary key detail from a specific authorization rule
 ```
-PS C:\> Get-AzureRmEventHubKey -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName
+PS C:\> Get-AzureRmEventHubKey -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -AuthorizationRuleName "MyAuthRuleName"
 ```
 
-Gets details of the primary key for the authorization rule `MyAuthRuleName`.
+This command gets details of the primary key for the authorization rule named MyAuthRuleName.
 
 ## PARAMETERS
 
 ### -EventHubName
-The Event Hub name.
+Specifies the name of the Event Hub.
 
 ```yaml
 Type: String
@@ -45,8 +45,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NamespaceName
-The Event Hubs namespace name.
+
+### -EventHubName
+Specifies the name of the Event Hub.
+
 
 ```yaml
 Type: String
@@ -60,8 +62,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Resource group name.
+
+### -NamespaceName
+Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -75,8 +79,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AuthorizationRuleName
-Event Hubs authorization rule name.
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the Event Hub.
+
 
 ```yaml
 Type: String
@@ -105,3 +111,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmEventHubKey](./New-AzureRmEventHubKey.md)

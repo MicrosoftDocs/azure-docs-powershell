@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmEventHub
 
 ## SYNOPSIS
-Creates a new Event Hub.
+Creates an Azure Event Hub.
 
 ## SYNTAX
 
@@ -18,16 +18,16 @@ New-AzureRmEventHub [-ResourceGroupName] <String> [-NamespaceName] <String> -Loc
 ```
 
 ## DESCRIPTION
-The **New-AzureRmEventHub** cmdlet creates a new Azure Event Hub.
+The **New-AzureRmEventHub** cmdlet creates an Azure Event Hub.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an Event Hub
 ```
 PS C:\> New-AzureRmEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location WestUS -EventHubName MyEventHubName -MessageRetentionInDays 3 -PartitionCount 2
 ```
 
-Creates an Event Hub named `MyEventHubName` with a 3-day message retention period and two partitions, in the `WestUS` location, with resource group `MyResourceGroupName`.
+This command creates an Event Hub named MyEventHubName with a 3-day message retention period and two partitions, in the WestUS location, that belongs to the resource group named MyResourceGroupName.
 
 ## PARAMETERS
 
@@ -47,7 +47,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.
+Specifies the name of the Event Hub.
+
 
 ```yaml
 Type: String
@@ -62,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubObj
-The Event Hubs object.
+Specifies the Event Hubs object.
 
 ```yaml
 Type: EventHubAttributes
@@ -77,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -91,8 +92,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group that contains the Event Hub.
+
 
 ```yaml
 Type: String
@@ -122,8 +125,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
 ### -Location
-Namespace geographic location.
+Specifies the namespace geographic location.
+
 
 ```yaml
 Type: String
@@ -138,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageRetentionInDays
-Event Hubs message retention time in days.
+Specifies the Event Hubs message retention time in days.
 
 ```yaml
 Type: Int64
@@ -153,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionCount
-Number of partitions in the Event Hub.
+Specifies the number of partitions in the Event Hub.
 
 ```yaml
 Type: Int64
@@ -182,3 +187,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubNamespace](./Get-AzureRmEventHubNamespace.md)
+
+[Remove-AzureRmEventHubNamespace](./Remove-AzureRmEventHubNamespace.md)
+
+[Set-AzureRmEventHubNamespace](./Set-AzureRmEventHubNamespace.md)

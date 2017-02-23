@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmEventHubNamespace
 
 ## SYNOPSIS
-Gets the details of an Event Hubs namespace, or gets a list of all Event Hubs namespaces in the current Azure subscription.
+Gets the details of an Event Hubs namespace or gets a list of all Event Hubs namespaces in the current Azure subscription.
 
 ## SYNTAX
 
@@ -16,21 +16,22 @@ Get-AzureRmEventHubNamespace [[-ResourceGroupName] <String>] [[-NamespaceName] <
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmEventHubNamespace** cmdlet gets either the details of a specified Event Hubs namespace, or a list of all Event Hubs namespaces in the current Azure subscription. If the namespace name is provided, the details of a single Event Hubs namespace is returned. If the namespace name is not provided, a list of namespaces is returned.
+The **Get-AzureRmEventHubNamespace** cmdlet gets either the details of a specified Event Hubs namespace or a list of all Event Hubs namespaces in the current Azure subscription. If the namespace name is provided, the details of a single Event Hubs namespace is returned. If the namespace name is not provided, a list of namespaces is returned.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> Get-AzureRmEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName
+PS C:\> Get-AzureRmEventHubNamespace -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName"
 ```
 
-Gets the details of the Event Hubs namespace `MyNamespaceName` in the resource group `MyResourceGroupName`.
+This command gets the details of the Event Hubs namespace named MyNamespaceName that is contained in the resource group named MyResourceGroupName.
 
 ## PARAMETERS
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -45,7 +46,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group that contains the Event Hub.
+
 
 ```yaml
 Type: String
@@ -74,3 +76,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmEventHubNamespace](./New-AzureRmEventHubNamespace.md)
+
+[Remove-AzureRmEventHubNamespace](./Remove-AzureRmEventHubNamespace.md)
+
+[Set-AzureRmEventHubNamespace](./Set-AzureRmEventHubNamespace.md)

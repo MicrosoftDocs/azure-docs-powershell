@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmEventHubKey
 
 ## SYNOPSIS
-Creates a new primary or secondary key for the specified Event Hubs authorization rule.
+Creates a primary or secondary key for the specified Event Hubs authorization rule.
 
 ## SYNTAX
 
@@ -21,19 +21,19 @@ The **New-AzureRmEventHubKey** cmdlet regenerates the primary or secondary SAS k
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Regenerate the primary key for an authorization rule
 ```
-PS C:\> New-AzureRmEventHubKey -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName -RegenerateKey PrimaryKey
-```
-
-Regenerates the primary key for the authorization rule `MyAuthRuleName`.
-
-### Example 2
-```
-PS C:\> New-AzureRmEventHubKey -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName -RegenerateKey SecondaryKey
+PS C:\> New-AzureRmEventHubKey -ResourceGroup "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -AuthorizationRuleName "MyAuthRuleName" -RegenerateKey "PrimaryKey"
 ```
 
-Regenerates the secondary key for the authorization rule `MyAuthRuleName`.
+This command regenerates the primary key for the authorization rule named MyAuthRuleName.
+
+### Example 2: Regenerate the secondary key for an authorization rule
+```
+PS C:\> New-AzureRmEventHubKey -ResourceGroup "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -AuthorizationRuleName "MyAuthRuleName" -RegenerateKey "SecondaryKey"
+```
+
+This command regenerates the secondary key for the authorization rule MyAuthRuleName.
 
 ## PARAMETERS
 
@@ -53,7 +53,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.
+Specifies the name of the Event Hub.
+
 
 ```yaml
 Type: String
@@ -68,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -83,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegenerateKey
-Key to regenerate: `PrimaryKey` or `SecondaryKey`.
+Specifies the key that this cmdlet regenerates.
+
+Valid values are: PrimaryKey or SecondaryKey.
 
 ```yaml
 Type: String
@@ -99,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group.
+Specifies the name of the resource group that contains the Event Hub.
 
 ```yaml
 Type: String
@@ -130,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-Authorization rule name.
+Specifies the name of the authorization rule that this cmdlet regenerates.
 
 ```yaml
 Type: String
@@ -159,3 +163,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubKey](./Get-AzureRmEventHubKey.md)

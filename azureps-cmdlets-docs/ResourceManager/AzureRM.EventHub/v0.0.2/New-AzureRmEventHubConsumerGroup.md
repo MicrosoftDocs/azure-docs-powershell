@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmEventHubConsumerGroup
 
 ## SYNOPSIS
-Creates a new consumer group for the specified Event Hub.
+Creates a consumer group for the specified Event Hub.
 
 ## SYNTAX
 
@@ -18,16 +18,16 @@ New-AzureRmEventHubConsumerGroup [-ResourceGroupName] <String> [-NamespaceName] 
 ```
 
 ## DESCRIPTION
-The **New-AzureRmEventHubConsumerGroup** cmdlet creates a new consumer group for the specified Event Hub.
+The **New-AzureRmEventHubConsumerGroup** cmdlet creates a consumer group for the specified Event Hub.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a consumer group for the specified Event Hub
 ```
-PS C:\> New-AzureRmEventHubConsumerGroup -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -ConsumerGroupName MyConsumerGroupName
+PS C:\> New-AzureRmEventHubConsumerGroup -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -ConsumerGroupName "ConsumerGroup001"
 ```
 
-Creates the consumer group `MyConsumerGroupName` in the Event Hub `MyEventHubName`, scoped to the namespace `MyNamespaceName`, with resource group `MyResourceGroupName`.
+Creates the consumer group named ConsumerGroup001 in the Event Hub named MyEventHubName that is scoped to the namespace named MyNamespaceName.
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConsumerGroupName
-Consumer group name.
+Specifies the name Consumer group name.
 
 ```yaml
 Type: String
@@ -62,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.
+Specifies the name of the Event Hub.
+
 
 ```yaml
 Type: String
@@ -77,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the namespace.
+
 
 ```yaml
 Type: String
@@ -92,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group that contains the Event Hub.
+
 
 ```yaml
 Type: String
@@ -152,3 +155,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubConsumerGroup](./Get-AzureRmEventHubConsumerGroup.md)
+
+[Remove-AzureRmEventHubConsumerGroup](./Remove-AzureRmEventHubConsumerGroup.md)
+
+[Set-AzureRmEventHubConsumerGroup](./Set-AzureRmEventHubConsumerGroup.md)
