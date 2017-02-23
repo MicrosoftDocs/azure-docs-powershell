@@ -33,37 +33,34 @@ Filters active directory groups.
 
 ## EXAMPLES
 
-### --------------------------  Filters groups using object id  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Filter groups using an object ID
 
 ```
 PS C:\> Get-AzureRmADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
 ```
 
-Gets group with 85F89C90-780E-4AA6-9F4F-6F268D322EEE id
+This command gets group with with ID 85F89C90-780E-4AA6-9F4F-6F268D322EEE.
 
-### --------------------------  Filters groups using Search String  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 2: Filter groups using a search string
 
 ```
-PS C:\> Get-AzureRmADGroup -SearchString Joe
+PS C:\> Get-AzureRmADGroup -SearchString "PattiFuller"
 ```
 
-Filters all ad groups that has Joe in the display name.
+This command filters all Active Directory groups that has PattiFuller in the display name.
 
-### --------------------------  List AD groups  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 3: List all Active Directory groups
 
 ```
 PS C:\> Get-AzureRmADGroup
 ```
 
-Gets all AD groups
+This command gets all Active Directory groups
 
 ## PARAMETERS
 
 ### -ObjectId
-Object id of the group.
+Specifies the object ID of the group.
 
 ```yaml
 Type: Guid
@@ -129,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchString
-The group display name
+Specifies the group display name that this cmdlet uses as a filter.
 
 ```yaml
 Type: String
@@ -151,9 +148,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADUser]()
+[Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Get-AzureRmADServicePrincipal]()
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADGroupMember]()
-
+[Get-AzureRmADGroupMember](./Get-AzureRmADGroupMember.md)
