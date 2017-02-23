@@ -22,12 +22,12 @@ The **Set-AzureRmEventHub** cmdlet updates the properties of the specified Event
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update a specific Event Hub
 ```
-PS C:\> Set-AzureRmEventHub -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -EventHubObj MyCreatedEventHub -messageRetentionInDays 4 -partitionCount 2
+PS C:\> Set-AzureRmEventHub -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -EventHubObj "MyCreatedEventHub" -messageRetentionInDays 4 -partitionCount 2
 ```
 
-Updates the Event Hub `MyEventHubName` represented by the `MyCreatedEventHub` object, setting the message retention period to 4 days, and the number of partitions to 2.
+This command updates the Event Hub named MyEventHubName represented by the MyCreatedEventHub object, sets the message retention period to 4 days, and the number of partitions to 2.
 
 ## PARAMETERS
 
@@ -47,7 +47,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-
 Specifies the name of the namespace.
 
 
@@ -64,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubObj
-The Event Hubs object.
+Specifies the Event Hubs object.
 
 ```yaml
 Type: EventHubAttributes
@@ -95,7 +94,7 @@ Accept wildcard characters: False
 
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group.
 
 
 ```yaml
@@ -128,7 +127,7 @@ Accept wildcard characters: False
 
 
 ### -messageRetentionInDays
-Event Hub message retention period, in days.
+Specifies the Event Hub message retention period, in days.
 
 
 ```yaml
@@ -144,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -partitionCount
-Number of partitions on this Event Hub.
+Specifies the number of partitions on this Event Hub.
 
 ```yaml
 Type: Int64
@@ -173,3 +172,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHub](./Get-AzureRmEventHub.md)
+
+[New-AzureRmEventHub](./New-AzureRmEventHub.md)
+
+[Remove-AzureRmEventHub](./Remove-AzureRmEventHub.md)
