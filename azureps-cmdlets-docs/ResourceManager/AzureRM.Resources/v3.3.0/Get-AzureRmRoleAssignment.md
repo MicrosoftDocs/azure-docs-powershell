@@ -154,7 +154,7 @@ Use the IncludeClassicAdministrators switch to also display the subscription adm
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+Example 1:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -163,7 +163,7 @@ PS C:\> Get-AzureRmRoleAssignment
 
 List all role assignments in the subscription
 
-### --------------------------  Example 2  --------------------------
+Example 2:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -172,7 +172,7 @@ PS C:\> Get-AzureRmRoleAssignment -ResourceGroupName testRG -SignInName john.doe
 
 Gets all role assignments made to user john.doe@contoso.com, and the groups of which he is member, at the testRG scope or above.
 
-### --------------------------  Example 3  --------------------------
+Example 3:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -181,7 +181,7 @@ PS C:\> Get-AzureRmRoleAssignment -ServicePrincipalName "http://testapp1.com"
 
 Gets all role assignments of the specified service principal
 
-### --------------------------  Example 4  --------------------------
+Example 4:
 @{paragraph=PS C:\\\>}
 
 ```

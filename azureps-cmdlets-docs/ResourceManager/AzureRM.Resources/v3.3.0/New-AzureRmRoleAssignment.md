@@ -106,7 +106,7 @@ ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - 
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+Example 1:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -115,7 +115,7 @@ PS C:\> New-AzureRmRoleAssignment -ResourceGroupName rg1 -SignInName allen.young
 
 Grant Reader role access to a user at a resource group scope
 
-### --------------------------  Example 2  --------------------------
+Example 2:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -130,7 +130,7 @@ PS C:\> Get-AzureRMADGroup -SearchString "Christine Koch Team"
 
 Grant access to a security group
 
-### --------------------------  Example 3  --------------------------
+Example 3:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -139,7 +139,7 @@ PS C:\> New-AzureRmRoleAssignment -SignInName john.doe@contoso.com -RoleDefiniti
 
 Grant access to a user at a resource (website)
 
-### --------------------------  Example 4  --------------------------
+Example 4:
 @{paragraph=PS C:\\\>}
 
 ```
