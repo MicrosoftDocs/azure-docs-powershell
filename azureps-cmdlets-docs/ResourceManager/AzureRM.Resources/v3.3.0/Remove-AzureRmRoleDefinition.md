@@ -35,14 +35,14 @@ If there are existing role assignments made to the custom role to be deleted, th
 
 ## EXAMPLES
 
-Example 1:
+### Example 1:
 
 
 ```
 Get-AzureRmRoleDefinition -Name "Virtual Machine Operator" | Remove-AzureRmRoleDefinition
 ```
 
-Example 2:
+### Example 2:
 
 
 ```
@@ -209,4 +209,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 [Get-AzureRmRoleDefinition]()
 
 [Set-AzureRmRoleDefinition]()
-

@@ -44,7 +44,7 @@ The service principal is identified by supplying either the object id or service
 
 ## EXAMPLES
 
-Example 1:
+### Example 1:
 
 
 ```
@@ -54,7 +54,7 @@ PS E:\> New-AzureRmADSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476
 A new password credential is added to an existing service principal.
 In this example, the supplied password value is added to the service principal using the objectId.
 
-Example 2:
+### Example 2:
 
 
 ```
@@ -258,6 +258,3 @@ Accept wildcard characters: False
 [Remove-AzureRmADSpCredential]()
 
 [Get-AzureRmADServicePrincipal]()
-
-
-

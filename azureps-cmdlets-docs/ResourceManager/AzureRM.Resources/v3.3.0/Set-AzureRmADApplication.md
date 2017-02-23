@@ -32,7 +32,7 @@ To update the credentials associated with this application, please use New-Azure
 
 ## EXAMPLES
 
-Example 1:
+### Example 1:
 
 
 ```
@@ -41,7 +41,7 @@ PS E:\> Set-AzureRmADApplication -ObjectId fb7b3405-ca44-4b5b-8584-12392f5d96d7 
 
 Updates the properties of an existing azure active directory application with objectId "fb7b3405-ca44-4b5b-8584-12392f5d96d7".
 
-Example 2:
+### Example 2:
 
 
 ```
@@ -245,4 +245,3 @@ Accept wildcard characters: False
 [Get-AzureRmADAppCredential]()
 
 [Remove-AzureRmADAppCredential]()
-
