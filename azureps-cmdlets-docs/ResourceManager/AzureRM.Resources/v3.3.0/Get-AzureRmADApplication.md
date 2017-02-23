@@ -48,7 +48,7 @@ If no parameter is provided, the cmdlet gets all applications under the tenant.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+Example 1:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -57,7 +57,7 @@ PS E:\> Get-AzureRmADApplication
 
 Lists all the applications under a tenant.
 
-### --------------------------  Example 2  --------------------------
+Example 2:
 @{paragraph=PS C:\\\>}
 
 ```

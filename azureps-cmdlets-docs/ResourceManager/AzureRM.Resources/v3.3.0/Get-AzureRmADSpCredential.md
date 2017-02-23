@@ -30,7 +30,7 @@ This command will retrieve all of the credential properties (but not the credent
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+Example 1:
 @{paragraph=PS C:\\\>}
 
 ```
