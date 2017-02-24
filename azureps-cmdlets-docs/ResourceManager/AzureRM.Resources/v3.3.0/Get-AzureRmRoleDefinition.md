@@ -36,28 +36,32 @@ To inspect individual operations that a role grants access to, review the Action
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get a specific role definition
 
 ```
-PS C:\> Get-AzureRmRoleDefinition -Name Reader
+PS C:\> Get-AzureRmRoleDefinition -Name "Reader"
 ```
 
-Get the Reader role definition
+This command gets the role definition named Reader.
 
-### Example 2:
+### Example 2: Get all RBAC role definitions
 
 ```
 PS C:\> Get-AzureRmRoleDefinition
 ```
 
-Lists all RBAC role definitions
+This command lists all RBAC role definitions.
 
 ## PARAMETERS
 
 ### -Name
-Role definition name.
-For e.g.
-Reader, Contributor, Virtual Machine Contributor.
+Specifies the name of the role definition.
+
+Valid values are:
+
+- Reader
+- Contributor
+- Virtual Machine Contributor
 
 ```yaml
 Type: String
@@ -72,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Role definition scope.
+Specifies the role definition scope.
 
 ```yaml
 Type: String
@@ -87,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -AtScopeAndBelow
-If specified, displays all role definitions.
+Indicates that the cmdlet displays all role definitions.
 
 ```yaml
 Type: SwitchParameter
@@ -141,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Role definition Id.
+Specifies the ID of the role definition.
 
 ```yaml
 Type: Guid
@@ -156,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Custom
-If specified, only displays the custom created roles in the directory.
+Indicates that the cmdlet displays the custom created roles in the directory.
 
 ```yaml
 Type: SwitchParameter
@@ -179,10 +183,10 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[New-AzureRmRoleAssignment]()
+[Get-AzureRmRoleAssignment](./Get-AzureRmRoleAssignment.md)
 
-[Get-AzureRmRoleAssignment]()
+[New-AzureRmRoleAssignment](./New-AzureRmRoleAssignment.md)
 
-[New-AzureRmRoleDefinition]()
+[New-AzureRmRoleDefinition](./New-AzureRmRoleDefinition.md)
 
-[Remove-AzureRmRoleDefinition]()
+[Remove-AzureRmRoleDefinition](./Remove-AzureRmRoleDefinition.md)
