@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmADUser
 
 ## SYNOPSIS
-Deletes an active directory user.
+Removes an Azure Active Directory user.
 
 ## SYNTAX
 
@@ -18,21 +18,14 @@ Remove-AzureRmADUser -UPNOrObjectId <String> [-Force] [-InformationAction <Actio
 ```
 
 ## DESCRIPTION
-Deletes an active directory user (work/school account also popularly known as org-id).
+The **Remove-AzureRmADUser** cmdlet removes an Active Directory User.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -UPNOrObjectId
-The user principal name or the objectId of the user to be deleted.
+Specifies the user principal name or the object ID of the user that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -47,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If specified, doesn't ask for confirmation for deleting user.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -101,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -138,9 +132,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-AzureRmADUser]()
+[New-AzureRmADUser](./New-AzureRmADUser.md)
 
-[Get-AzureRmADUser]()
+[Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Set-AzureRmADUser]()
-
+[Set-AzureRmADUser](Set-AzureRmADUser.md)

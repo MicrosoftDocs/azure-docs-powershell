@@ -91,10 +91,10 @@ Moves a resource to a different resource group or subscription.
 Adds a credential to an existing application.
 
 ### [New-AzureRmADApplication](New-AzureRmADApplication.md)
-Creates a new azure active directory application.
+Creates a new Azure Active Directory application.
 
 ### [New-AzureRmADServicePrincipal](New-AzureRmADServicePrincipal.md)
-Creates a new azure active directory service principal.
+Creates a new Azure Active Directory service principal.
 
 ### [New-AzureRmADSpCredential](New-AzureRmADSpCredential.md)
 Adds a credential to an existing service principal.
@@ -136,10 +136,10 @@ Registers a resource provider.
 Removes a credential from an application.
 
 ### [Remove-AzureRmADApplication](Remove-AzureRmADApplication.md)
-Deletes the azure active directory application.
+Deletes the Azure Active Directory application.
 
 ### [Remove-AzureRmADServicePrincipal](Remove-AzureRmADServicePrincipal.md)
-Deletes the azure active directory service principal.
+Deletes the Azure Active Directory service principal.
 
 ### [Remove-AzureRmADSpCredential](Remove-AzureRmADSpCredential.md)
 Removes a credential from a service principal.
@@ -175,10 +175,10 @@ Deletes a custom role in Azure RBAC.
 Saves a resource group deployment template to a file.
 
 ### [Set-AzureRmADApplication](Set-AzureRmADApplication.md)
-Updates an existing azure active directory application.
+Updates an existing Azure Active Directory application.
 
 ### [Set-AzureRmADServicePrincipal](Set-AzureRmADServicePrincipal.md)
-Updates an existing azure active directory service principal.
+Updates an existing Azure Active Directory service principal.
 
 ### [Set-AzureRmADUser](Set-AzureRmADUser.md)
 Updates an existing active directory user.

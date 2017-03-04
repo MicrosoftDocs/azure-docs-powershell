@@ -106,7 +106,7 @@ Specifies a hash table of tags.
 To add or change a tag, you must replace the collection of tags for the resource group.
 
 A tag is a name-value pair that you can create and apply to resources and resource groups.
-After you assign tags to resources and groups, you can use the *Tag* parameter of **Get-AzureRmResource** and **Get-AzureRmResourceGroup** to search for resources and groups by tag name or name and value.
+After you assign tags to resources and groups, you can use the *Tag* parameter of [Get-AzureRmResource](./Get-AzureRmResource.md) and [Get-AzureRmResourceGroup](./Get-AzureRmResourceGroup.md) to search for resources and groups by tag name or name and value.
 You can use tags to categorize your resources, such as by department or cost center, or to track notes or comments about the resources.
 
 Each tag must have a Name key.
@@ -182,5 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmResourceGroup](./New-AzureRmResourceGroup.md)
 
 [Remove-AzureRmResourceGroup](./Remove-AzureRmResourceGroup.md)
-
-

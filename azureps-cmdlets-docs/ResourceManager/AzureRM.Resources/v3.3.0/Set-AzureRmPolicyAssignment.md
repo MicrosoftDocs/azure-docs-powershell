@@ -37,10 +37,10 @@ PS C:\> $PolicyAssignment = Get-AzureRmPolicyAssignment -Name "PolicyAssignment"
 PS C:\> Set-AzureRmPolicyAssignment -Id $PolicyAssignment.ResourceId -DisplayName "Do not allow VM creation"
 ```
 
-The first command gets a resource group named ResourceGroup11 by using the Get-AzureRMResourceGroup cmdlet.
+The first command gets a resource group named ResourceGroup11 by using the [Get-AzureRMResourceGroup](./Get-AzureRMResourceGroup.md) cmdlet.
 The command stores that object in the $ResourceGroup variable.
 
-The second command gets the policy assignment named PolicyAssignment by using the Get-AzureRmPolicyAssignment cmdlet.
+The second command gets the policy assignment named PolicyAssignment by using the [Get-AzureRmPolicyAssignment](./Get-AzureRmPolicyAssignment.md) cmdlet.
 The command stores that object in the $PolicyAssignment variable.
 
 The final command updates the display name on the policy assignment identified by the **ResourceId** property of $PolicyAssignment.
@@ -193,5 +193,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmPolicyAssignment](./New-AzureRmPolicyAssignment.md)
 
 [Remove-AzureRmPolicyAssignment](./Remove-AzureRmPolicyAssignment.md)
-
-
