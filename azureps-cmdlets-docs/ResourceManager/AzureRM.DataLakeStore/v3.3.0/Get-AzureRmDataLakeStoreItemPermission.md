@@ -24,7 +24,7 @@ The **Get-AzureRmDataLakeStoreItemPermission** cmdlet gets the the permission oc
 
 ### Example 1: Set the permission octal for a file
 ```
-PS C:\>Get-AzureRmDataLakeStoreItemPermission -AccountName "ContosoADL" -Path "/file.txt"
+PS C:\> Get-AzureRmDataLakeStoreItemPermission -AccountName "ContosoADL" -Path "/file.txt"
 ```
 
 This command gets the permission octal for a file.

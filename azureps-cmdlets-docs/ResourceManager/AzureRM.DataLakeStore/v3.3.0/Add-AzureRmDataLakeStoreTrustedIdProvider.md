@@ -18,27 +18,21 @@ Add-AzureRmDataLakeStoreTrustedIdProvider [-Account] <String> [-Name] <String> [
 ```
 
 ## DESCRIPTION
-The Add-AzureRmDataLakeStoreTrustedIdProvider cmdlet adds a trusted identity provider to the specified Data Lake Store account.
+The **Add-AzureRmDataLakeStoreTrustedIdProvider** cmdlet adds a trusted identity provider to the specified Data Lake Store account.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Add a trusted identity provider  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
-
+### Example 1: Add a trusted identity provider
 ```
 PS C:\> Add-AzureRmDataLakeStoreTrustedIdProvider -AccountName "ContosoADL" -Name MyProvider -ProviderEndpoint "https://sts.windows.net/6b04908c-b91f-40ce-8024-7ee8a4fd6150"
 ```
 
-Adds the provider "MyProvider" to account "ContosoADL" with the provider endpoint "https://sts.windows.net/6b04908c-b91f-40ce-8024-7ee8a4fd6150"
+This command adds the provider named MyProvider to the account named ContosoADL with the provider endpoint "https://sts.windows.net/6b04908c-b91f-40ce-8024-7ee8a4fd6150".
 
 ## PARAMETERS
 
 ### -Account
-The name of the Data Lake Store account to add the specified trusted identity provider to.
+Specifies the name of the Data Lake Store account to add the specified trusted identity provider to.
 
 ```yaml
 Type: String
@@ -53,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the trusted identity provider to add
+Specifies the name of the trusted identity provider that this cmdlet adds.
 
 ```yaml
 Type: String
@@ -68,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderEndpoint
-The valid trusted provider endpoint in the format: https://sts.windows.net/\<provider identity\>"
+Specifies the valid trusted provider endpoint in the format: https://sts.windows.net/\<provider identity\>".
 
 ```yaml
 Type: String
@@ -83,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which the account to add the trusted identity provider is.
+Specifies the name of resource group under which the account to add the trusted identity provider.
 
 ```yaml
 Type: String
@@ -113,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -138,3 +135,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmDataLakeStoreTrustedIdProvider](./Get-AzureRmDataLakeStoreTrustedIdProvider.md)
+
+[Remove-AzureRmDataLakeStoreTrustedIdProvider](./Remove-AzureRmDataLakeStoreTrustedIdProvider.md)
+
+[Set-AzureRmDataLakeStoreTrustedIdProvider](./Set-AzureRmDataLakeStoreTrustedIdProvider.md)

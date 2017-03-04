@@ -24,7 +24,7 @@ The **Move-AzureRmDataLakeStoreItem** cmdlet moves or renames a file or folder i
 
 ### Example 1: Move and rename an item
 ```
-PS C:\>Move-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/Original/Path/File.txt" -Destination "/New/Path/RenamedFile.txt"
+PS C:\> Move-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/Original/Path/File.txt" -Destination "/New/Path/RenamedFile.txt"
 ```
 
 This command renames the item File.txt to RenamedFile.txt and moves it to a different folder.

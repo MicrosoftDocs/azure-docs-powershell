@@ -32,7 +32,7 @@ The **Set-AzureRmDataLakeStoreItemAclEntry** cmdlet modifies an entry (ACE) in t
 
 ### Example 1: Modify permissions for an ACE
 ```
-PS C:\>Set-AzureRmDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId -Permissions All
+PS C:\> Set-AzureRmDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId -Permissions All
 ```
 
 This command modifies the ACE for Patti Fuller to have all permissions.

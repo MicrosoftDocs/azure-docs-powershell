@@ -24,7 +24,7 @@ The **Set-AzureRmDataLakeStoreItemOwner** cmdlet modifies the owner of a file or
 
 ### Example 1: Set the owner for an item
 ```
-PS C:\>Set-AzureRmDataLakeStoreItemOwner -AccountName "ContosoADL" -Path / -Type User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId
+PS C:\> Set-AzureRmDataLakeStoreItemOwner -AccountName "ContosoADL" -Path / -Type User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId
 ```
 
 This command sets the owner for the root directory to Patti Fuller.
