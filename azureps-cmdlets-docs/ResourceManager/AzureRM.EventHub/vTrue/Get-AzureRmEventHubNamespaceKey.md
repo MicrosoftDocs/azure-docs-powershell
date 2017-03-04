@@ -21,17 +21,17 @@ The **Get-AzureRmEventHubNamespaceKey** cmdlet returns the primary key details o
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get details of the primary key for an authorization rule
 ```
 PS C:\> Get-AzureRmEventHubNamespaceKey -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AuthorizationRuleName MyAuthRuleName
 ```
 
-Gets details of the primary key for the authorization rule `MyAuthRuleName` on the Event Hubs namespace `MyNamespaceName` in the resource group `MyResourceGroupName`.
+This command gets details of the primary key for the authorization rule named MyAuthRuleName on the Event Hubs namespace named MyNamespaceName that is contained in the resource group named MyResourceGroupName.
 
 ## PARAMETERS
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group this cmdlet gets.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-The name of the authorization rule on the Event Hubs namespace.
+Specifies the name of the authorization rule on the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -90,3 +90,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmEventHubNamespaceKey](./New-AzureRmEventHubNamespaceKey.md)

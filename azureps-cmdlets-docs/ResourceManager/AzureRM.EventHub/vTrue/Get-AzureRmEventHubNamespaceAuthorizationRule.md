@@ -21,31 +21,31 @@ The **Get-AzureRmEventHubNamespaceAuthorizationRule** cmdlet gets either the det
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get an authorization rule
 ```
-PS C:\> Get-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AuthorizationRuleName MyAuthRuleName
-```
-
-Returns the authorization rule `MyAuthRuleName` in the Event Hubs namespace `MyNamespaceName`, with the resource group `MyResourceGroupName`.
-
-### Example 2
-```
-PS C:\> Get-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AuthorizationRuleName RootManageSharedAccessKey
+PS C:\> Get-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -AuthorizationRuleName "MyAuthRuleName"
 ```
 
-Returns the default authorization rule `RootManageSharedAccessKey` in the Event Hubs namespace `MyNamespaceName`, with the resource group `MyResourceGroupName`.
+This command gets the authorization rule named MyAuthRuleName in the Event Hubs namespace named MyNamespaceName, that is contained in the resource group named MyResourceGroupName.
 
-### Example 3
+### Example 2: Get an authorization rule 
 ```
-PS C:\> Get-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName
+PS C:\> Get-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -AuthorizationRuleName "RootManageSharedAccessKey"
 ```
 
-Returns all authorization rules in the Event Hubs namespace `MyNamespaceName`, with the resource group `MyResourceGroupName`.
+This command gets the default authorization rule named RootManageSharedAccessKey in the Event Hubs namespace named MyNamespaceName, that is contained in the resource group named MyResourceGroupName.
+
+### Example 3: Get all authorization rules
+```
+PS C:\> Get-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName"
+```
+
+This command gets all authorization rules in the Event Hubs namespace nmaed MyNamespaceName, that is contained in the resource group named MyResourceGroupName.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-The Event Hubs namespace authorization rule name.
+Specifies the name of the Event Hubs namespace authorization rule.
 
 ```yaml
 Type: String
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -104,3 +104,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmEventHubNamespaceAuthorizationRule](./New-AzureRmEventHubNamespaceAuthorizationRule.md)
+
+[Remove-AzureRmEventHubNamespaceAuthorizationRule](./Remove-AzureRmEventHubNamespaceAuthorizationRule.md)
+
+[Set-AzureRmEventHubNamespaceAuthorizationRule](./Set-AzureRmEventHubNamespaceAuthorizationRule.md)
