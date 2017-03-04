@@ -82,40 +82,38 @@ New-AzureRmRoleAssignment -ServicePrincipalName <String> [-Scope <String>] -Role
 ```
 
 ## DESCRIPTION
-Use the New-AzureRMRoleAssignment command to grant access.
+The **New-AzureRMRoleAssignment** cmdlet assigns the specified RBAC role to the specified principal, at the specified scope.
 Access is granted by assigning the appropriate RBAC role to them at the right scope.
 To grant access to the entire subscription, assign a role at the subscription scope.
 To grant access to a specific resource group within a subscription, assign a role at the resource group scope.
 
 The subject of the assignment must be specified.
-To specify a user, use SignInName or Azure AD ObjectId parameters.
-To specify a security group, use Azure AD ObjectId parameter.
-And to specify an Azure AD application, use ServicePrincipalName or ObjectId parameters.
+To specify a user, use *SignInName* or Azure AD *ObjectId* parameters.
+To specify a security group, use Azure AD *ObjectId* parameter.
+And to specify an Azure AD application, use the *ServicePrincipalName* or *ObjectId* parameters.
 
-The role that is being assigned must be specified using the RoleDefinitionName parameter.
+The role that is being assigned must be specified using the *RoleDefinitionName* parameter.
 
 The scope at which access is being granted may be specified.
 It defaults to the selected subscription. 
-The scope of the assignment can be specified using one of the following parameter combinations
-        a.
-Scope - This is the fully qualified scope starting with /subscriptions/\<subscriptionId\>
-        b.
-ResourceGroupName - to grant access to the specified resource group.
-        c.
-ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - to specify a particular resource within a resource group to grant access to.
+The scope of the assignment can be specified using one of the following parameter combinations:
+
+- Scope - This is the fully qualified scope starting with /subscriptions/\<subscriptionId\>
+- ResourceGroupName - to grant access to the specified resource group.
+- ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - to specify a particular resource within a resource group to grant access to.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Grant Reader role access 
 
 
 ```
 PS C:\> New-AzureRmRoleAssignment -ResourceGroupName rg1 -SignInName allen.young@live.com -RoleDefinitionName Reader
 ```
 
-Grant Reader role access to a user at a resource group scope
+This command grants Reader role access to a user at a resource group scope.
 
-### Example 2:
+### Example 2: Grant access to a security group
 
 
 ```
@@ -128,30 +126,30 @@ PS C:\> Get-AzureRMADGroup -SearchString "Christine Koch Team"
           PS C:\> New-AzureRmRoleAssignment -ObjectId 2f9d4375-cbf1-48e8-83c9-2a0be4cb33fb -RoleDefinitionName Contributor  -ResourceGroupName rg1
 ```
 
-Grant access to a security group
+This command grants access to a security group.
 
-### Example 3:
+### Example 3: Grant a user access to a website
 
 
 ```
 PS C:\> New-AzureRmRoleAssignment -SignInName john.doe@contoso.com -RoleDefinitionName Owner -Scope "/subscription/86f81fc3-b00f-48cd-8218-3879f51ff362/resourcegroups/rg1/providers/Microsoft.Web/sites/site1"
 ```
 
-Grant access to a user at a resource (website)
+This command grants access to a user at a resource (website).
 
-### Example 4:
+### Example 4: Grant access to a group through a subnet
 
 
 ```
 PS C:\> New-AzureRMRoleAssignment -ObjectId 5ac84765-1c8c-4994-94b2-629461bd191b -RoleDefinitionName "Virtual Machine Contributor" -ResourceName Devices-Engineering-ProjectRND -ResourceType Microsoft.Network/virtualNetworks/subnets -ParentResource virtualNetworks/VNET-EASTUS-01 -ResourceGroupName Network
 ```
 
-Grant access to a group at a nested resource (subnet)
+This command grants access to a group at a nested resource (subnet).
 
 ## PARAMETERS
 
 ### -ObjectId
-Azure AD Objectid of the user, group or service principal.
+Specifies an Azure Active Directory object ID of the user, group, or service principal.
 
 ```yaml
 Type: Guid
@@ -166,9 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-The Scope of the role assignment.
+Specfies the Scope of the role assignment.
 In the format of relative URI.
-For e.g.
+For instance:
 "/subscriptions/9004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/TestRG".
 If not specified, will create the role assignment at subscription level.
 If specified, it should start with "/subscriptions/{id}".
@@ -198,8 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleDefinitionName
-Name of the RBAC role that needs to be assigned to the principal i.e.
-Reader, Contributor, Virtual Network Administrator, etc.
+Specifies the name of the RBAC role that needs to be assigned to the principal.
 
 ```yaml
 Type: String
@@ -253,9 +250,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the  resource group.
 Creates an assignment that is effective at the specified resource group.
-When used in conjunction with ResourceName, ResourceType and (optionally)ParentResource parameters, the command constructs a hierarchical scope in the form of a relative URI that identifies a resource.
+When used in conjunction with the *ResourceName*, *ResourceType*, and *ParentResource* parameters, the command constructs a hierarchical scope in the form of a relative URI that identifies a resource.
 
 ```yaml
 Type: String
@@ -270,10 +267,10 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-The resource name.
-For e.g.
+Specifies the resource name.
+For instance:
 storageaccountprod.
-Should only be used in conjunction with ResourceGroupName, ResourceType and (optionally)ParentResource parameters to construct a hierarchical scope in the form of a  relative URI that identifies a resource.
+Should only be used in conjunction with the *ResourceName*, *ResourceType*, and *ParentResource* parameters to construct a hierarchical scope in the form of a  relative URI that identifies a resource.
 
 ```yaml
 Type: String
@@ -288,8 +285,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The resource type.
-For e.g.
+Specifies the resource type.
+For instance:
 Microsoft.Network/virtualNetworks.
 Should only be used in conjunction with ResourceGroupName, ResourceName and (optionally)ParentResource parameters to construct a hierarchical scope in  the form of a relative URI that identifies a resource.
 
@@ -306,8 +303,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentResource
-The parent resource in the hierarchy(of the resource specified using ResourceName parameter).
-Should only be  used in conjunction with ResourceGroupName, ResourceType and ResourceName parameters to construct a hierarchical scope in the form of a relative URI that identifies a resource.
+Specifies the parent resource in the hierarchy.
+Should only be  used in conjunction with the *ResourceName*, *ResourceType*, and *ParentResource* parameters to construct a hierarchical scope in the form of a relative URI that identifies a resource.
 
 ```yaml
 Type: String
@@ -322,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleDefinitionId
-Id of the RBAC role that needs to be assigned to the principal.
+Specifies the ID of the RBAC role that needs to be assigned to the principal.
 
 ```yaml
 Type: Guid
@@ -337,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignInName
-The email address or the user principal name of the user.
+Specifies the email address or the user principal name of the user.
 
 ```yaml
 Type: String
@@ -352,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The ServicePrincipalName of the Azure AD application
+Specifies the Service Principal Name (SPN) of the Azure Active Directory application.
 
 ```yaml
 Type: String
@@ -375,8 +372,8 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[Get-AzureRmRoleAssignment]()
+[Get-AzureRmRoleAssignment](./Get-AzureRmRoleAssignment.md)
 
-[Remove-AzureRmRoleAssignment]()
+[Remove-AzureRmRoleAssignment](./Remove-AzureRmRoleAssignment.md)
 
-[Get-AzureRmRoleDefinition]()
+[Get-AzureRmRoleDefinition](./Get-AzureRmRoleDefinition.md)
