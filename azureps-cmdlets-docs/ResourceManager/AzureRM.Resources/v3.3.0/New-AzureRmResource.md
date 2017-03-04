@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plan
-A hash table that represents resource plan properties.
+Specifies a hash table that represents resource plan properties.
 
 ```yaml
 Type: Hashtable
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-A hash table that represents sku properties.
+Specifies a hash table that represents SKU properties.
 
 ```yaml
 Type: Hashtable
@@ -392,5 +392,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmResource](./Remove-AzureRmResource.md)
 
 [Set-AzureRmResource](./Set-AzureRmResource.md)
-
-

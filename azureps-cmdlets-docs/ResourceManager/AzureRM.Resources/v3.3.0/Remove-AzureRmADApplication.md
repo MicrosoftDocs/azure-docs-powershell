@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmADApplication
 
 ## SYNOPSIS
-Deletes the azure active directory application.
+Removes the Azure Active Directory application.
 
 ## SYNTAX
 
@@ -18,23 +18,23 @@ Remove-AzureRmADApplication -ObjectId <Guid> [-Force] [-InformationAction <Actio
 ```
 
 ## DESCRIPTION
-Deletes the azure active directory application.
+The **Remove-AzureRmADApplication** cmdlet removes the Azure Active Directory application.
 
 ## EXAMPLES
 
-### --------------------------  Delete AAD application.  --------------------------
+### Example 1: Delete and Azure Active Directory application
 
 
 ```
 PS C:\> Remove-AzureRmADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 -Force
 ```
 
-Deletes the azure active directory application.
+This command removes the specified Azure Active Directory application.
 
 ## PARAMETERS
 
 ### -ObjectId
-The object id of the application to delete.
+Specifies the object ID of the application that this cmdlet removes.
 
 ```yaml
 Type: Guid
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Switch to delete an application without a confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -141,11 +142,10 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[New-AzureRmADApplication]()
+[New-AzureRmADApplication](./New-AzureRmADApplication.md)
 
-[Get-AzureRmADApplication]()
+[Get-AzureRmADApplication](./Get-AzureRmADApplication.md)
 
-[Set-AzureRmADApplication]()
+[Set-AzureRmADApplication](./Set-AzureRmADApplication.md)
 
-[Remove-AzureRmADAppCredential]()
-
+[Remove-AzureRmADAppCredential](./Remove-AzureRmADAppCredential.md)

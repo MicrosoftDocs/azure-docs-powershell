@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureRmADUser
 
 ## SYNOPSIS
-Creates a new active directory user.
+Creates an Azure Active Directory user.
 
 ## SYNTAX
 
@@ -19,23 +19,15 @@ New-AzureRmADUser -DisplayName <String> -UserPrincipalName <String> -Password <S
 ```
 
 ## DESCRIPTION
-Creates a new active directory user (work/school account also popularly known as org-id).
+The **New-AzureRmADUser** cmdlet creates an Active Directory user (work/school account also popularly known as org-id).
 For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -DisplayName
-The name to display in the address book for the user.
-example 'Alex Wu'.
+Specifies the name to display in the address book for the user.
 
 ```yaml
 Type: String
@@ -50,8 +42,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The user principal name.
-Example-'someuser@contoso.com'.
+Specifies the name of the user principal.
+
 
 ```yaml
 Type: String
@@ -66,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Password for the user.
+Specifies the password for the user.
 It must meet the tenant's password complexity requirements.
 It is recommended to set a strong password.
 
@@ -83,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutableId
-It needs to be specified only if you are using a federated domain for the user's user principal name (upn) property.
+Specifies the user's user principal name (UPN) property. It needs to be specified only if you are using a federated domain.
 
 ```yaml
 Type: String
@@ -98,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceChangePasswordNextLogin
-It must be specified if the user must change the password on the next successful login (true).
+Indicates that the user must change the password on the next successful login.
 Default behavior is (false) to not change the password on the next successful login.
 
 ```yaml
@@ -153,7 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -190,8 +183,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADUser]()
+[Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Set-AzureRmADUser]()
+[Remove-AzureRmADUser](./Remove-AzureRmADUser.md)
 
-[Remove-AzureRmADUser]()
+[Set-AzureRmADUser](./Set-AzureRmADUser.md)
