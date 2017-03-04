@@ -20,17 +20,17 @@ The **Get-AzureRmEventHubNamespace** cmdlet gets either the details of a specifi
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the details of an Event Hub
 ```
 PS C:\> Get-AzureRmEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName
 ```
 
-Gets the details of the Event Hubs namespace `MyNamespaceName` in the resource group `MyResourceGroupName`.
+This command gets the details of the Event Hubs namespace named MyNamespaceName in the resource group named MyResourceGroupName.
 
 ## PARAMETERS
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -45,7 +45,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -74,3 +74,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmEventHubNamespace](./New-AzureRmEventHubNamespace.md)
+
+[Remove-AzureRmEventHubNamespace](./Remove-AzureRmEventHubNamespace.md)
+
+[Set-AzureRmEventHubNamespace](./Set-AzureRmEventHubNamespace.md)
