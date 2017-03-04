@@ -18,27 +18,22 @@ Remove-AzureRmDataLakeStoreTrustedIdProvider [-Account] <String> [[-Name] <Strin
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmDataLakeStoreTrustedIdProvider cmdlet removes the specified trusted identity provider in the specified Data Lake Store.
+The **Remove-AzureRmDataLakeStoreTrustedIdProvider** cmdlet removes the specified trusted identity provider in the specified Data Lake Store.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Remove a trusted identity provider.  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
+### Example 1: Remove a trusted identity provider
 
 ```
-PS C:\> Remove-AzureRmDataLakeStoreTrustedIdProvider -AccountName "ContosoADL" -Name MyProvider
+PS C:\> Remove-AzureRmDataLakeStoreTrustedIdProvider -AccountName "ContosoADL" -Name "MyProvider"
 ```
 
-Removes the provider "MyProvider" from account "ContosoADL"
+This command removes the provider named MyProvider from account named ContosoADL.
 
 ## PARAMETERS
 
 ### -Account
-The Data Lake Store account to remove the trusted identity provider from
+Specifies the Data Lake Store account that this cmdlet removes the trusted identity provider.
 
 ```yaml
 Type: String
@@ -53,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the trusted identity provider.
+Specifies the name of the trusted identity provider.
 
 ```yaml
 Type: String
@@ -68,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates a boolean response should be returned indicating the result of the delete operation.
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the account to remove the trusted identity provider from.
+Specifies the name of the resource group that contains the account that this cmdlet removes the trusted identity provider from.
 
 ```yaml
 Type: String
@@ -113,6 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -138,3 +136,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AzureRmDataLakeStoreTrustedIdProvider](./Add-AzureRmDataLakeStoreTrustedIdProvider.md)
+
+[Get-AzureRmDataLakeStoreTrustedIdProvider](./Get-AzureRmDataLakeStoreTrustedIdProvider.md)
+
+[Set-AzureRmDataLakeStoreTrustedIdProvider](./Set-AzureRmDataLakeStoreTrustedIdProvider.md)

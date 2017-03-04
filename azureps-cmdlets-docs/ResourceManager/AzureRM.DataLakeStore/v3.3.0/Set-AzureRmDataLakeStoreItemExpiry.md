@@ -21,29 +21,21 @@ The Set-AzureRmDataLakeStoreItemExpiry cmdlet sets or removes the expire time fo
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Set the expiration time for a file  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Set the expiration time for a file
 ```
 PS C:\> Set-AzureRmDataLakeStoreItemExpiry -AccountName "ContosoADL" -Path /myfile.txt -Expiration [DateTimeOffset]::Now.AddHours(2)
 ```
 
-Sets expiration on the file myfile.txt in account ContosoADL to be two hours from now.
+This command sets expiration on the file myfile.txt in account ContosoADL to be two hours from now.
 This will cause the file to expire (be marked for delete) in two hours.
 
-### --------------------------  Example 2: Remove the expiration on a file  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 2: Remove the expiration on a file
 ```
 PS C:\> Set-AzureRmDataLakeStoreItemExpiry -AccountName "ContosoADL" -Path /myfile.txt
 ```
 
-Removes any expiration that was previously set on file 'myfile.txt' in account 'ContosoADL'.
-This means the file will not automatically expire (be marked for delete) and will need to be manually deleted or set to expire again.
+This command removes any expiration that was previously set on file myfile.txt in the account named ContosoADL.
+The file will not automatically expire (be marked for delete) and needs to be manually deleted or set to expire again.
 
 ## PARAMETERS
 
@@ -63,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Expiration
-The absolute expiration time for the specified file.
+Specifies the absolute expiration time for the specified file.
 If no value or set to MaxValue, the file will never expire.
 
 ```yaml
@@ -94,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-@{Text=}
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-@{Text=}
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -137,5 +130,4 @@ Alias: Set-AdlStoreItemExpiry
 
 ## RELATED LINKS
 
-[Get-AzureRmDataLakeStoreItem]()
-
+[Get-AzureRmDataLakeStoreItem](./Get-AzureRmDataLakeStoreItem.md)

@@ -33,7 +33,7 @@ This command adds the specified tag to the Data Lake Store account named Contoso
 ## PARAMETERS
 
 ### -DefaultGroup
-Specifies the ID of an AzureActive Directory group.
+Specifies the ID of an Azure Active Directory group.
 This group is the default group for files and folders that you create.
 
 ```yaml
@@ -49,7 +49,9 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallState
-Optionally enable or disable existing firewall rules.```yaml
+Specifies the existing firewall rules.
+
+```yaml
 Type: FirewallState
 Parameter Sets: (All)
 Aliases: 
@@ -77,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the Data Lake Store account to modify.
+Specifies the name of the resource group that contains the Data Lake Store account that this cmdlet modifies.
 
 ```yaml
 Type: String
@@ -108,7 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The desired commitment tier for this account to use.```yaml
+Specifies the desired commitment tier for this account to use.
+
+```yaml
 Type: TierType
 Parameter Sets: (All)
 Aliases: 
@@ -121,7 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedIdProviderState
-Optionally enable or disable the existing trusted ID providers.```yaml
+Specifies the existing trusted ID providers.
+
+```yaml
 Type: TrustedIdProviderState
 Parameter Sets: (All)
 Aliases: 
@@ -151,5 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmDataLakeStoreAccount](./Remove-AzureRmDataLakeStoreAccount.md)
 
 [Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
-
-
