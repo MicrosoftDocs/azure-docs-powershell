@@ -33,7 +33,7 @@ The **Import-AzureRmDataLakeStoreItem** cmdlet uploads a local file or directory
 
 ### Example 1: Upload a file
 ```
-PS C:\>Import-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "C:\SrcFile.csv" -Destination "/MyFiles/File.csv"
+PS C:\> Import-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "C:\SrcFile.csv" -Destination "/MyFiles/File.csv"
 ```
 
 This command uploads the file SrcFile.csv and adds it to the MyFiles folder in the Data Lake Store as File.csv.

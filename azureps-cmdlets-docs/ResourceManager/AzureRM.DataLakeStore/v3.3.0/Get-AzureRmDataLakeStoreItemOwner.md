@@ -24,7 +24,7 @@ The **Get-AzureRmDataLakeStoreItemOwner** cmdlet gets the owner of a file or fol
 
 ### Example 1: Get the owner for a directory
 ```
-PS C:\>Get-AzureRmDataLakeStoreItemOwner -AccountName "ContosoADL" -Path / -Type User
+PS C:\> Get-AzureRmDataLakeStoreItemOwner -AccountName "ContosoADL" -Path / -Type User
 ```
 
 This command gets the user owner for the root directory of the ContosoADL account.

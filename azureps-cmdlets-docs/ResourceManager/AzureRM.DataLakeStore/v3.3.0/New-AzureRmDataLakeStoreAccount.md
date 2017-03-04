@@ -33,7 +33,7 @@ The **New-AzureRmDataLakeStoreAccount** cmdlet creates a new Data Lake Store acc
 
 ### Example 1: Create an account
 ```
-PS C:\>New-AzureRmDataLakeStoreAccount -Name "ContosoADL" -ResourceGroupName "ContosoOrg" -Location "East US 2"
+PS C:\> New-AzureRmDataLakeStoreAccount -Name "ContosoADL" -ResourceGroupName "ContosoOrg" -Location "East US 2"
 ```
 
 This command creates a Data Lake Store account named ContosoADL for the East US 2 location.

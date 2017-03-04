@@ -24,7 +24,7 @@ The **New-AzureRmDataLakeStoreItem** cmdlet creates a new file or folder in Data
 
 ### Example 1: Create a new file and a new folder
 ```
-PS C:\>New-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/NewFile.txt"
+PS C:\> New-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/NewFile.txt"
 PS C:\> New-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/NewFolder" -Folder
 ```
 
