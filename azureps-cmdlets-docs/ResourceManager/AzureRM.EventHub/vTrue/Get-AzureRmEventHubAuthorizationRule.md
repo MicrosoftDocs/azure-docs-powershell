@@ -21,24 +21,24 @@ The **Get-AzureRmEventHubAuthorizationRule** cmdlet gets either the details of a
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get an authorization rule
 ```
 PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRule MyAuthRuleName
 ```
 
-Gets the authorization rule `MyAuthRuleName` in the Event Hub `MyEventHubName`, which is scoped by the namespace `MyNamespaceName`.
+This command gets the authorization rule named MyAuthRuleName in the Event Hub named  MyEventHubName, which is scoped by the namespace named MyNamespaceName.
 
-### Example 2
+### Example 2: Get all authorization rules
 ```
 PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
 ```
 
-Gets a list of all authorization rules in the Event Hub `MyEventHubName`, which is scoped by the namespace `MyNamespaceName`.
+This command gets a list of all authorization rules in the Event Hub named MyEventHubName, which is scoped by the namespace named MyNamespaceName.
 
 ## PARAMETERS
 
 ### -EventHubName
-The Event Hub name.
+Specifies the name of the Event Hub.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group that contains the authorization rule.
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-Event Hub authorization rule name.
+Specifies the name of the Event Hub authorization rule.
 
 ```yaml
 Type: String
@@ -112,3 +112,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmEventHubAuthoritationRule](./New-AzureRmEventHubAuthoritationRule.md)
+
+[Remove-AzureRmEventHubAuthoritationRule](./Remove-AzureRmEventHubAuthoritationRule.md)
+
+[Set-AzureRmEventHubAuthoritationRule](./Set-AzureRmEventHubAuthoritationRule.md)

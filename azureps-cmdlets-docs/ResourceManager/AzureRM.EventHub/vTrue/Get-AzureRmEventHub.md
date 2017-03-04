@@ -21,24 +21,24 @@ The **Get-AzureRmEventHub** cmdlet returns either the details of an Event Hub, o
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get details of an Event Hub
 ```
-PS C:\> Get-AzureRmEventHub -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
-```
-
-Returns the details of the Event Hub `EventHubName`.
-
-### Example 2
-```
-PS C:\> Get-AzureRmEventHub -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName
+PS C:\> Get-AzureRmEventHub -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName"
 ```
 
-Returns a list of Event Hubs in the namespace `MyNamespaceName`.
+This command gets the details of the Event Hub EventHubName.
+
+### Example 2: Get a list of Event Hubs
+```
+PS C:\> Get-AzureRmEventHub -ResourceGroup "MyResourceGroupName" -NamespaceName "MyNamespaceName"
+```
+
+This command gets a list of Event Hubs in the namespace MyNamespaceName.
 
 ## PARAMETERS
 
 ### -EventHubName
-The Event Hub name.
+Specifies the name of the Event Hub.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -97,3 +97,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmEventHub](./New-AzureRmEventHub.md)
+
+[Remove-AzureRmEventHub](./Remove-AzureRmEventHub.md)
+
+[Set-AzureRmEventHub](./Set-AzureRmEventHub.md)
