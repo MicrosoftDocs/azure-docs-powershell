@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Offset
-Specifies the number of bytes to skip in a file before getting content.
+Specifies the number of bytes to skip in a file before this cmdlet gets content.
 
 ```yaml
 Type: Int64
@@ -177,3 +177,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AzureRmDataLakeStoreItemContent](./Add-AzureRmDataLakeStoreItemContent.md)
