@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AzureRmADServicePrincipal
 
 ## SYNOPSIS
-Updates an existing azure active directory service principal.
+Updates an existing Azure Active Directory service principal.
 
 ## SYNTAX
 
@@ -25,34 +25,32 @@ Set-AzureRmADServicePrincipal -ServicePrincipalName <String> -DisplayName <Strin
 ```
 
 ## DESCRIPTION
-Updates an existing azure active directory service principal. 
-To update the credentials associated with this service principal, please use New-AzureRmADSpCredential cmdlet. 
-To update the properties associated with the underlying application, please use Set-AzureRmADApplication cmdlet.
+The **Set-AzureRmADServicePrincipal** cmdlet updates an existing Azure Active Directory service principal. 
+To update the credentials associated with this service principal, use the [New-AzureRmADSpCredential](./New-AzureRmADSpCredential.md) cmdlet. 
+To update the properties associated with the underlying application, use the [Set-AzureRmADApplication](./Set-AzureRmADApplication.md) cmdlet.
 
 ## EXAMPLES
 
-### Example 1:
-
-
-```
-Set-AzureRmADServicePrincipal -ObjectId 784136ca-3ae2-4fdd-a388-89d793e7c780 -DisplayName "UpdatedNameForSp"
-```
-
-Updates the display name for the service principal with specified object id.
-
-### Example 2:
-
+### Example 1: Update the display name for the specified service principal by object ID
 
 ```
-Set-AzureRmADServicePrincipal -ServicePrincipalName "http://MyApp1" -DisplayName "UpdatedNameforSp"
+PS C:\> Set-AzureRmADServicePrincipal -ObjectId 784136ca-3ae2-4fdd-a388-89d793e7c780 -DisplayName "UpdatedNameForSp"
 ```
 
-Updates the display name for the service principal with specified service principal name.
+This command updates the display name for the service principal with specified object ID.
+
+### Example 2: Update the display name for the specified service principal by name
+
+```
+PS C:\> Set-AzureRmADServicePrincipal -ServicePrincipalName "http://MyApp1" -DisplayName "UpdatedNameforSp"
+```
+
+This command updates the display name for the service principal with specified service principal name.
 
 ## PARAMETERS
 
 ### -ObjectId
-The object id of the service principal to update.
+Specifies the object id of the service principal that this cmdlet updates.
 
 ```yaml
 Type: String
@@ -67,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-New display name for the service principal.
+Specifies the new display name for the service principal.
 
 ```yaml
 Type: String
@@ -121,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -151,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The SPN of service principal to update.
+Specifies the Service Principal Name (SPN) of service principal that this cmdlet updates.
 
 ```yaml
 Type: String
@@ -173,14 +172,14 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-AzureRmADServicePrincipal]()
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADServicePrincipal]()
+[New-AzureRmADServicePrincipal](./New-AzureRmADServicePrincipal.md)
 
-[Remove-AzureRmADServicePrincipal]()
+[Remove-AzureRmADServicePrincipal](./Remove-AzureRmADServicePrincipal.md)
 
-[Set-AzureRmADApplication]()
+[Set-AzureRmADApplication](./Set-AzureRmADApplication.md)
 
-[New-AzureRmADSpCredential]()
+[New-AzureRmADSpCredential](./New-AzureRmADSpCredential.md)
 
-[Remove-AzureRmADSpCredential]()
+[Remove-AzureRmADSpCredential](./Remove-AzureRmADSpCredential.md)

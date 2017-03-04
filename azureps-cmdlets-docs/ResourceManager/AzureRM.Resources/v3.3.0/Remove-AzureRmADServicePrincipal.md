@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified, returns the deleted service principal.
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
