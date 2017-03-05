@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.
+Specifies the name of Event Hub.
 
 ```yaml
 Type: String

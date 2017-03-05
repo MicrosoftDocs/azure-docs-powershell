@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-AzureRmEventHubConsumerGroup
 
 ## SYNOPSIS
-Deletes the specified Event Hubs consumer group.
+Removes the specified Event Hubs consumer group.
 
 ## SYNTAX
 
@@ -21,12 +21,12 @@ The **Remove-AzureRmEventHubConsumerGroup** cmdlet removes and deletes the speci
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove the specified Event Hubs consumer group
 ```
 PS C:\> Remove-AzureRmEventHubConsumerGroup -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -ConsumerGroupName MyConsumerGroupName
 ```
 
-Deletes the consumer group `MyConsumerGroupName` from the Event Hub `MyEventHubName`, scoped to the `MyNamespaceName` namespace.
+This command removes and deletes the consumer group named MyConsumerGroupName from the Event Hub named MyEventHubName.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConsumerGroupName
-Consumer group Name.
+Specifies the name of the consumer group.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.
+Specifies the name of Event Hub.
 
 ```yaml
 Type: String
@@ -136,3 +136,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubConsumerGroup](./Get-AzureRmEventHubConsumerGroup.md)
+
+[New-AzureRmEventHubConsumerGroup](./New-AzureRmEventHubConsumerGroup.md)
+
+[Set-AzureRmEventHubConsumerGroup](./Set-AzureRmEventHubConsumerGroup.md)
