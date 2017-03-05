@@ -21,12 +21,12 @@ The **New-AzureRmEventHubNamespace** cmdlet creates a new namespace of type Even
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an Event Hubs namespace
 ```
-PS C:\> New-AzureRmEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location MyLocation
+PS C:\> New-AzureRmEventHubNamespace -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -Location "MyLocation"
 ```
 
-Creates an Event Hubs namespace `MyNamespaceName` in the specified geographic location `MyLocation`, in resource group `MyResourceGroupName`.
+Creates an Event Hubs namespace named MyNamespaceName in the specified geographic location named MyLocation.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Event Hubs namespace geo-location.
+Specifies the geographic location of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of the Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource group name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuCapacity
-The Event Hub throughput units.
+Specifies the Event Hub throughput units.
 
 ```yaml
 Type: Int32
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Namespace Sku name.
+Specifies the name of the namespace SKU.
 
 ```yaml
 Type: String
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Hashtables that represent resource tags.
+Specifies the hashtables that represent resource tags.
 
 ```yaml
 Type: Hashtable
@@ -168,3 +168,8 @@ System.Nullable\`1\[\[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, 
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubNamespace](./Get-AzureRmEventHubNamespace.md)
+
+[Remove-AzureRmEventHubNamespace](./Remove-AzureRmEventHubNamespace.md)
+
+[Set-AzureRmEventHubNamespace](./Set-AzureRmEventHubNamespace.md)
