@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmEventHubNamespaceKey
 
 ## SYNOPSIS
-Creates a new primary or secondary key for the authorization rule on the specified Event Hubs namespace.
+Creates a primary or secondary key for the authorization rule on the specified Event Hubs namespace.
 
 ## SYNTAX
 
@@ -21,12 +21,12 @@ The **New-AzureRmEventHubNamespaceKey** cmdlet regenerates the primary or second
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Regenerate the primary key for an authorization rule
 ```
-PS C:\> New-AzureRmEventHubNameSpaceKey -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName  -AuthorizationRuleName MyAuthRuleName -RegenerateKeys PrimaryKey
+PS C:\> New-AzureRmEventHubNameSpaceKey -ResourceGroup "MyResourceGroupName" -NamespaceName "MyNamespaceName"  -AuthorizationRuleName "MyAuthRuleName" -RegenerateKeys "PrimaryKey"
 ```
 
-Regenerates the primary key for the authorization rule `MyAuthRuleName` in the Event Hubs namespace `MyNamespaceName`, with resource group `MyResourceGroupName`.
+This command regenerates the primary key for the authorization rule named MyAuthRuleName in the Event Hubs namespace named MyNamespaceName.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.
+Specifies the name of Event Hubs namespace.
 
 ```yaml
 Type: String
@@ -61,7 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -RegenerateKeys
-Key to regenerate: `PrimaryKey` or `SecondaryKey`.
+Specifies the key to regenerate.
+
+Valid values are: PrimaryKey or SecondaryKey.
 
 ```yaml
 Type: String
@@ -77,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -108,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-Authorization rule name.
+Specifies the name of the authorization rule.
 
 ```yaml
 Type: String
@@ -137,3 +139,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubNamespaceKey](./Get-AzureRmEventHubNamespaceKey.md)
