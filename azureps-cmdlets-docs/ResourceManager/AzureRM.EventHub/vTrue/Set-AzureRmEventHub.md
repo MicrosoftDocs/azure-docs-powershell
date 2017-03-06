@@ -22,12 +22,12 @@ The **Set-AzureRmEventHub** cmdlet updates the properties of the specified Event
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update the specified Event Hub
 ```
-PS C:\> Set-AzureRmEventHub -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -EventHubObj MyCreatedEventHub -messageRetentionInDays 4 -partitionCount 2
+PS C:\> Set-AzureRmEventHub -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -EventHubObj "MyCreatedEventHub" -MessageRetentionInDays 4 -PartitionCount 2
 ```
 
-Updates the Event Hub `MyEventHubName` represented by the `MyCreatedEventHub` object, setting the message retention period to 4 days, and the number of partitions to 2.
+This command updates the Event Hub named MyEventHubName represented by the MyCreatedEventHub object, setting the message retention period to 4 days, and the number of partitions to 2.
 
 ## PARAMETERS
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubObj
-The Event Hubs object.
+Specifies the Event Hubs object.
 
 ```yaml
 Type: EventHubAttributes
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -messageRetentionInDays
-Event Hub message retention period, in days.
+Specifies the Event Hub message retention period, in days.
 
 ```yaml
 Type: Int64
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -partitionCount
-Number of partitions on this Event Hub.
+Specifies the number of partitions on this Event Hub.
 
 ```yaml
 Type: Int64
@@ -167,3 +167,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHub](./Get-AzureRmEventHub.md)
+
+[New-AzureRmEventHub](./New-AzureRmEventHub.md)
+
+[Remove-AzureRmEventHub](./Remove-AzureRmEventHub.md)
