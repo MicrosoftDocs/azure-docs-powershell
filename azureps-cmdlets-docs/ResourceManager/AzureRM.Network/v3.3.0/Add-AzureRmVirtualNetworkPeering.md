@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowGatewayTransit
-Flag to allow gatewayLinks be used in remote virtual network's link to this virtual network
+Specifies a flag to allow gateway links to be used in remote virtual network's link to this virtual network.
 
 ```yaml
 Type: SwitchParameter
@@ -208,5 +208,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmVirtualNetworkPeering](./Remove-AzureRmVirtualNetworkPeering.md)
 
 [Set-AzureRmVirtualNetworkPeering](./Set-AzureRmVirtualNetworkPeering.md)
-
-
