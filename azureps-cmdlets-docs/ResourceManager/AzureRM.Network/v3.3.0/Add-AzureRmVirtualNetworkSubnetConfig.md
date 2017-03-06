@@ -46,7 +46,7 @@ The second command creates a subnet configuration named FrontendSubnet.
 
 The third command creates a virtual network named MyVirtualNetwork.
 
-The final command adds a subnet to the in-memory representation of the virtual network by using the **Add-AzureRmVirtualNetworkSubnetConfig** cmdlet.  
+The fourth command adds a subnet to the in-memory representation of the virtual network by using the **Add-AzureRmVirtualNetworkSubnetConfig** cmdlet.  
 The command updates the existing virtual network with the new subnet by using the **Set-AzureRmVirtualNetwork** cmdlet.
 
 
