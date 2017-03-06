@@ -22,12 +22,12 @@ The **Set-AzureRmEventHubNamespaceAuthorizationRule** cmdlet updates the authori
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update the specified authorization rule
 ```
-PS C:\> Set-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AuthorizationRuleName MyAuthRuleName -Rights @("Manage")
+PS C:\> Set-AzureRmEventHubNamespaceAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -AuthorizationRuleName "MyAuthRuleName" -Rights @("Manage")
 ```
 
-Updates the authorization rule `MyAuthRuleName` to grant **Manage** rights.
+This command updates the authorization rule named MyAuthRuleName to grant **Manage** rights.
 
 ## PARAMETERS
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-The Specifies the name of the authorization rule. Required if **-AuthruleObj** is not specified.
+Specifies the name of the authorization rule. Required if the *AuthruleObj* parameter is not specified.
 
 ```yaml
 Type: String
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthRuleObj
-The Event Hubs namespace authorization rule object.
+Specifies the Event Hubs namespace authorization rule object.
 
 ```yaml
 Type: SharedAccessAuthorizationRuleAttributes
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Required if **-AuthruleObj** is not specified.
+Required if the *AuthruleObj* parameter is not specified.
 Rights; for example, 
 @("Listen","Send","Manage")
 
@@ -154,3 +154,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubNamespaceAuthorizationRule](./Get-AzureRmEventHubNamespaceAuthorizationRule.md)
+
+[New-AzureRmEventHubNamespaceAuthorizationRule](./New-AzureRmEventHubNamespaceAuthorizationRule.md)
+
+[Remove-AzureRmEventHubNamespaceAuthorizationRule](./Remove-AzureRmEventHubNamespaceAuthorizationRule.md)

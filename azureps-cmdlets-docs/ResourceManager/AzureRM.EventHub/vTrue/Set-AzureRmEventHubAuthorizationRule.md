@@ -22,12 +22,12 @@ The **Set-AzureRmEventHubAuthorizationRule** cmdlet updates the specified author
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update the specified authorization rule
 ```
-PS C:\> Set-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName -Rights @("Manage")
+PS C:\> Set-AzureRmEventHubAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -AuthorizationRuleName "MyAuthRuleName" -Rights @("Manage")
 ```
 
-Updates the authorization rule `MyAuthRuleName` to grant **Manage** rights to the Event Hub `MyEventHubName`, scoped by the namespace `MyNamespaceName`.
+This command updates the authorization rule named MyAuthRuleName to grant **Manage** rights to the Event Hub named MyEventHubName.
 
 ## PARAMETERS
 
@@ -169,3 +169,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmEventHubAuthoritationRule](./Get-AzureRmEventHubAuthoritationRule.md)
+
+[New-AzureRmEventHubAuthoritationRule](./New-AzureRmEventHubAuthoritationRule.md)
+
+[Remove-AzureRmEventHubAuthoritationRule](./Remove-AzureRmEventHubAuthoritationRule.md)
