@@ -26,7 +26,7 @@ By design, all certificates used on the gateway trust the root certificate.
 This cmdlet assigns an existing certificate as a gateway root certificate.
 If you do not have an X.509 certificate available you can generate one through your public key infrastructure or use a certificate generator such as makecert.exe.
 
-To add a root certificate, you must specify the certificate name and provide a text-only representation of the certificate (see *the PublicCertData* parameter for more information).
+To add a root certificate, you must specify the certificate name and provide a text-only representation of the certificate (see the *PublicCertData* parameter for more information).
 Azure allows you to assign more than one root certificate to a gateway.
 Multiple root certificates are often deployed by organizations that include users from more than one company.
 
@@ -177,5 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVpnClientRootCertificate](./New-AzureRmVpnClientRootCertificate.md)
 
 [Remove-AzureRmVpnClientRootCertificate](./Remove-AzureRmVpnClientRootCertificate.md)
-
-

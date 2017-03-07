@@ -29,7 +29,8 @@ PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -Res
 PS C:\> $GatewaySubnet = Get-AzureRmApplicationGatewayIPConfiguration -Name "GatewaySubnet01" -ApplicationGateway $AppGw
 ```
 
-The first command gets an application gateway and stores it in the $AppGw variable.The second command gets an IP configuration named GateSubnet01 from the gateway stored in $AppGw.
+The first command gets an application gateway and stores it in the $AppGw variable.
+The second command gets an IP configuration named GateSubnet01 from the gateway stored in $AppGw.
 
 ### Example 2: Get a list of IP configurations
 ```
@@ -37,7 +38,8 @@ PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -Res
 PS C:\> $GatewaySubnets = Get-AzureRmApplicationGatewayIPConfiguration -ApplicationGateway $AppGw
 ```
 
-The first command gets an application gateway and stores it in the $AppGw variable.The second command gets a list of all IP configurations.
+The first command gets an application gateway and stores it in the $AppGw variable.
+The second command gets a list of all IP configurations.
 
 ## PARAMETERS
 
@@ -132,5 +134,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayIPConfiguration](./Remove-AzureRmApplicationGatewayIPConfiguration.md)
 
 [Set-AzureRmApplicationGatewayIPConfiguration](./Set-AzureRmApplicationGatewayIPConfiguration.md)
-
-
