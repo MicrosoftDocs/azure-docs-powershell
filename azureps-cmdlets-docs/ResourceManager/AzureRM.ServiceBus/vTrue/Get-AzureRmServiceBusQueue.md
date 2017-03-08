@@ -31,7 +31,7 @@ Returns the description of the queue.
 ## PARAMETERS
 
 ### -NamespaceName
-The Service Bus namespace name.
+Specifies the name of the Service Bus namespace.
 
 ```yaml
 Type: String
