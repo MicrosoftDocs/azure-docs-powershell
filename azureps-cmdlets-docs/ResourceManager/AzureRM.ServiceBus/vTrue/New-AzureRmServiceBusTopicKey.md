@@ -38,7 +38,7 @@ Regenerates the secondary connection string for the namespace.
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-The authorization rule name.
+Specifies the name of the authorization rule.
 
 ```yaml
 Type: String

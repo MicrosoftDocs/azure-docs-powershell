@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-The Service Bus queue name.
+Specifies the name of the Service Bus queue.
 
 ```yaml
 Type: String

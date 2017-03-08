@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-The authorization rule name. Required if **-AuthruleObj** is not specified.
+Specifies the name of the authorization rule. Required if **-AuthruleObj** is not specified.
 
 ```yaml
 Type: String

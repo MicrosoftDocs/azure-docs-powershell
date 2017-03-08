@@ -32,7 +32,7 @@ Creates authorization rule `SBTopicAuthoRule1` with **Listen** and **Send** righ
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-The authorization rule name.
+Specifies the name of the authorization rule.
 
 ```yaml
 Type: String
