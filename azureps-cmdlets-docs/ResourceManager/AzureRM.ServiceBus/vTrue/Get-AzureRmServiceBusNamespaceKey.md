@@ -21,17 +21,17 @@ The **Get-AzureRmServiceBusNamespaceKey** cmdlet returns the primary and seconda
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the primary and secondary connection key for the specified namespace
 ```
-PS C:\> Get-AzureRmServiceBusNamespaceKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1
+PS C:\> Get-AzureRmServiceBusNamespaceKey -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -AuthorizationRuleName "AuthoRule1"
 ```
 
-Primary and secondary connection string to the specified namespace.
+This command gets the primary and secondary connection strings for the namespace named SB-Example1.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Service Bus namespace authorization rule name.
+Specifies the name of the namespace authorization rule.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -104,3 +104,4 @@ KeyName                   : AuthoRule1
 
 ## RELATED LINKS
 
+[New-AzureRmServiceBusNamespaceKey](./New-AzureRmServiceBusNamespaceKey.md)

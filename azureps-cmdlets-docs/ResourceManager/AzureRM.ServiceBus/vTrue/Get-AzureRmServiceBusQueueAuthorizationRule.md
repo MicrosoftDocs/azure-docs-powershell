@@ -21,17 +21,17 @@ The **Get-AzureRmServiceBusQueueAuthorizationRule** cmdlet gets the description 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get an authorization rule description from a Service Bus queue
 ```
-PS C:\> Get-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1
+PS C:\> Get-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthorizationRuleName "SBAuthoRule1"
 ```
 
-Returns the specified authorization rule description for a given Service Bus queue.
+This command gets the authorization rule description from the authorization rule named SBAuthoRule1 for the Service Bus queue named SB-Queue_example1.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-The authorization rule name.
+Specifies the name of the authorization rule.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-The queue name.
+Specifies the name of the queue.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -125,3 +125,8 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
+[New-AzureRmServiceBusQueueAuthorizationRule](./New-AzureRmServiceBusQueueAuthorizationRule.md)
+
+[Remove-AzureRmServiceBusQueueAuthorizationRule](./Remove-AzureRmServiceBusQueueAuthorizationRule.md)
+
+[Set-AzureRmServiceBusQueueAuthorizationRule](./Set-AzureRmServiceBusQueueAuthorizationRule.md)
