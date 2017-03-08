@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmServiceBusSubscription
 
 ## SYNOPSIS
-Returns a subscription description for the specified topic.
+Gets a subscription description for the specified topic.
 
 ## SYNTAX
 
@@ -17,16 +17,16 @@ Get-AzureRmServiceBusSubscription [-ResourceGroup] <String> [-NamespaceName] <St
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmServiceBusSubscription** cmdlet returns a subscription description for the specified Service Bus topic.
+The **Get-AzureRmServiceBusSubscription** cmdlet gets a subscription description for the specified Service Bus topic.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a Service Bus subscription description
 ```
-PS C:\> Get-AzureRmServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionName SB-TopicSubscription-Example1
+PS C:\> Get-AzureRmServiceBusSubscription -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -SubscriptionName "SB-TopicSubscription-Example1"
 ```
 
-Returns a subscription description for the specified Service Bus topic.
+This command gets a subscription description for the Service Bus topic named SB-TopicSubscription-Example1.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionName
-The subscription name.
+Specifies the subscription name.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-The topic name.
+Specifies the topic name.
 
 ```yaml
 Type: String
@@ -137,3 +137,8 @@ UpdatedAt                                 : 1/20/2017 3:18:54 AM
 
 ## RELATED LINKS
 
+[New-AzureRmServiceBusSubscription](./New-AzureRmServiceBusSubscription.md)
+
+[Remove-AzureRmServiceBusSubscription](./Remove-AzureRmServiceBusSubscription.md)
+
+[Set-AzureRmServiceBusSubscription](./Set-AzureRmServiceBusSubscription.md)

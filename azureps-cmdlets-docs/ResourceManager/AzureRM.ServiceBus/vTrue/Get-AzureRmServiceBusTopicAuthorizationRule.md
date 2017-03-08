@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmServiceBusTopicAuthorizationRule
 
 ## SYNOPSIS
-Returns the description of the specified authorization rule description for the given topic.
+Gets the description of the specified authorization rule description for the given topic.
 
 ## SYNTAX
 
@@ -21,17 +21,17 @@ The **Get-AzureRmServiceBusTopicAuthorizationRule** cmdlet gets the description 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the description of an authorization rule
 ```
-PS C:\> Get-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_example1 -AuthorizationRuleName SBTopicAuthoRule1
+PS C:\> Get-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -AuthorizationRuleName "SBTopicAuthoRule1"
 ```
 
-Returns the description of the specified authorization rule for the given topic.
+This command gets the description of the specified authorization rule for the given topic.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-The topic authorization rule name.
+Specifies the name of the topic authorization rule.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-The Service Bus topic name.
+Specifies the name of the Service Bus topic.
 
 ```yaml
 Type: String
@@ -125,3 +125,8 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
+[New-AzureRmServiceBusTopicAuthorizationRule](./New-AzureRmServiceBusTopicAuthorizationRule.md)
+
+[Remove-AzureRmServiceBusTopicAuthorizationRule](./Remove-AzureRmServiceBusTopicAuthorizationRule.md)
+
+[Set-AzureRmServiceBusTopicAuthorizationRule](./Set-AzureRmServiceBusTopicAuthorizationRule.md)

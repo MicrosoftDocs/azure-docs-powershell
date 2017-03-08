@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-The name of the resource group.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-The Service Bus topic name.
+Specifies the name of the Service Bus topic.
 
 ```yaml
 Type: String
