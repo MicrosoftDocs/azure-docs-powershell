@@ -31,7 +31,7 @@ Returns a subscription description for the specified Service Bus topic.
 ## PARAMETERS
 
 ### -NamespaceName
-The Service Bus namespace name.
+Specifies the name of the Service Bus namespace.
 
 ```yaml
 Type: String
