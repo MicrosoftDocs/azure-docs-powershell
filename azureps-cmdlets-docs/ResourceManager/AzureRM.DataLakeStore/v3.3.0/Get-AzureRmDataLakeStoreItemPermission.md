@@ -18,13 +18,13 @@ Get-AzureRmDataLakeStoreItemPermission [-Account] <String> [-Path] <DataLakeStor
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmDataLakeStoreItemPermission** cmdlet gets the the permission octal of a file or folder in Data Lake Store.
+The **Get-AzureRmDataLakeStoreItemPermission** cmdlet gets the permission octal of a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
 ### Example 1: Set the permission octal for a file
 ```
-PS C:\>Get-AzureRmDataLakeStoreItemPermission -AccountName "ContosoADL" -Path "/file.txt"
+PS C:\> Get-AzureRmDataLakeStoreItemPermission -AccountName "ContosoADL" -Path "/file.txt"
 ```
 
 This command gets the permission octal for a file.
@@ -76,5 +76,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmDataLakeStoreItemPermission](./Set-AzureRmDataLakeStoreItemPermission.md)
-
-

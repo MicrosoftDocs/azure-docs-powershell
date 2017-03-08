@@ -9,10 +9,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Modifies a custom role in Azure RBAC.
-Provide the modified role definition either as a JSON file or as a PSRoleDefinition.
-First, use the Get-AzureRmRoleDefinition command to retrieve the custom role that you wish to modify.
-Then, modify the properties that you wish to change.
-Finally, save the role definition using this command.
 
 ## SYNTAX
 
@@ -29,12 +25,12 @@ Set-AzureRmRoleDefinition -Role <PSRoleDefinition> [-InformationAction <ActionPr
 ```
 
 ## DESCRIPTION
-The Set-AzureRmRoleDefinition cmdlet updates an existing custom role in Azure Role-Based Access Control.
-Provide the updated role definition as an input to the command as a JSON file or a PSRoleDefinition object.
+The **Set-AzureRmRoleDefinition** cmdlet updates an existing custom role in Azure Role-Based Access Control.
+Provide the updated role definition as an input to the command as a JSON file or a **PSRoleDefinition** object.
 The role definition for the updated custom role MUST contain the Id and all other required properties of the role even if they are not updated: DisplayName, Description, Actions, AssignableScopes.
 NotActions is optional.
 
-Following is a sample updated role definition json for Set-AzureRmRoleDefinition
+The following example is a sample updated role definition JSON for **Set-AzureRmRoleDefinition**.
 
 {
         "Id": "52a6cc13-ff92-47a8-a39b-2a8205c3087e",
@@ -51,7 +47,7 @@ Following is a sample updated role definition json for Set-AzureRmRoleDefinition
 
 ## EXAMPLES
 
-### --------------------------  Update using PSRoleDefinitionObject  --------------------------
+### Example 1: Update a custom role using PSRoleDefinitionObject
 
 
 ```
@@ -63,7 +59,7 @@ PS C:\> $roleDef = Get-AzureRmRoleDefinition "Contoso On-Call"
           PS C:\> New-AzureRmRoleDefinition -Role $roleDef
 ```
 
-### --------------------------  Create using JSON file  --------------------------
+### Example 2: Create an custom role using a JSON file 
 
 
 ```
@@ -73,9 +69,9 @@ PS C:\> Set-AzureRmRoleDefinition -InputFile C:\Temp\roleDefinition.json
 ## PARAMETERS
 
 ### -InputFile
-File name containing a single json role definition to be updated.
+Specifies the file name containing a single JSON role definition to be updated.
 Only include the properties that are to be updated in the JSON.
-Id property is Required.
+The *Id* parameter is required.
 
 ```yaml
 Type: String
@@ -129,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Role definition object to be updated
+Specifies the role definition object that this cmdlet updates.
 
 ```yaml
 Type: PSRoleDefinition
@@ -152,11 +148,10 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[Get-AzureRmProviderOperation]()
+[Get-AzureRmProviderOperation](./Get-AzureRmProviderOperation.md)
 
-[Get-AzureRmRoleDefinition]()
+[Get-AzureRmRoleDefinition](./Get-AzureRmRoleDefinition.md)
 
-[New-AzureRmRoleDefinition]()
+[New-AzureRmRoleDefinition](./New-AzureRmRoleDefinition.md)
 
-[Remove-AzureRmRoleDefinition]()
-
+[Remove-AzureRmRoleDefinition](./Remove-AzureRmRoleDefinition.md)

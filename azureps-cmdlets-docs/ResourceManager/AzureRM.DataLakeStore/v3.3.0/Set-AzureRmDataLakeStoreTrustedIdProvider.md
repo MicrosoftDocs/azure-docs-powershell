@@ -18,27 +18,21 @@ Set-AzureRmDataLakeStoreTrustedIdProvider [-Account] <String> [-Name] <String> [
 ```
 
 ## DESCRIPTION
-The Set-AzureRmDataLakeStoreTrustedIdProvider cmdlet modifies the specified trusted identity provider in the specified Data Lake Store.
+The **Set-AzureRmDataLakeStoreTrustedIdProvider** cmdlet modifies the specified trusted identity provider in the specified Data Lake Store.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Update a Trusted Identity Provider Endpoint  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
-
+### Example 1: Update a Trusted Identity Provider Endpoint
 ```
 PS C:\> Set-AzureRmDataLakeStoreTrustedIdProvider -AccountName "ContosoADL" -Name MyProvider -ProviderEndpoint "https://sts.windows.net/6b04908c-b91f-40ce-8024-7ee8a4fd6150"
 ```
 
-This updates the provider endpoing for firewall rule "MyProvider" in account "ContosoADL" to "https://sts.windows.net/6b04908c-b91f-40ce-8024-7ee8a4fd6150"
+This command updates the provider endpoint for the firewall rule named MyProvider in the account named ContosoADL to "https://sts.windows.net/6b04908c-b91f-40ce-8024-7ee8a4fd6150".
 
 ## PARAMETERS
 
 ### -Account
-The Data Lake Store account to add the trusted identity provider to
+Specifies the Data Lake Store account that this cmdlet adds the trusted identity provider.
 
 ```yaml
 Type: String
@@ -53,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the trusted identity provider.
+Specifies the name of the trusted identity provider.
 
 ```yaml
 Type: String
@@ -68,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderEndpoint
-The valid trusted provider endpoint in the format: https://sts.windows.net/\<provider identity\>
+Specifies the valid trusted provider endpoint in the format: https://sts.windows.net/\<provider identity\>.
 
 ```yaml
 Type: String
@@ -113,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -138,3 +135,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AzureRmDataLakeStoreTrustedIdProvider](./Add-AzureRmDataLakeStoreTrustedIdProvider.md)
+
+[Get-AzureRmDataLakeStoreTrustedIdProvider](./Get-AzureRmDataLakeStoreTrustedIdProvider.md)
+
+[Remove-AzureRmDataLakeStoreTrustedIdProvider](./Remove-AzureRmDataLakeStoreTrustedIdProvider.md)

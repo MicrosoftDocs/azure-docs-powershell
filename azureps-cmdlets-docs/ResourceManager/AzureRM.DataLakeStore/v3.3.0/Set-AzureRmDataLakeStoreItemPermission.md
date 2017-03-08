@@ -24,7 +24,7 @@ The **Set-AzureRmDataLakeStoreItemPermission** cmdlet modifies the permission oc
 
 ### Example 1: Set the permission octal for an item
 ```
-PS C:\>Set-AzureRmDataLakeStoreItemPermission -AccountName "ContosoADL" -Path "/file.txt" -Permission 0770
+PS C:\> Set-AzureRmDataLakeStoreItemPermission -AccountName "ContosoADL" -Path "/file.txt" -Permission 0770
 ```
 
 This command sets the permission octal for a file to 0770, which translates to clearing the sticky bit, setting read/write/execute permissions for the owner of the file, setting read/write/execute permissions for the owning group of the file, and clearing read/write/execute permissions for other.
@@ -62,8 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-The permissions to set for the file or folder, expressed as an octal (e.g.
-'777')
+Specifies the permissions to set for the file or folder, expressed as an octal.
+For instance, 777.
 
 ```yaml
 Type: Int32
@@ -123,5 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmDataLakeStoreItemPermission](./Get-AzureRmDataLakeStoreItemPermission.md)
-
-

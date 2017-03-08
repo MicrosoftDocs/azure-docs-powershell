@@ -24,7 +24,7 @@ The **Set-AzureRmDataLakeStoreItemAcl** cmdlet modifies the access control list 
 
 ### Example 1: Set the ACL for a file and a folder
 ```
-PS C:\>$ACL = Get-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path /
+PS C:\> $ACL = Get-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path /
 PS C:\> Set-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path "/MyFiles/Test.txt" -Acl $ACL
 ```
 
@@ -65,7 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates the resulting ACL should be returned.```yaml
+Indicates the resulting ACL should be returned.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -134,3 +136,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-AzureRmDataLakeStoreItemAclEntry](./Set-AzureRmDataLakeStoreItemAclEntry.md)

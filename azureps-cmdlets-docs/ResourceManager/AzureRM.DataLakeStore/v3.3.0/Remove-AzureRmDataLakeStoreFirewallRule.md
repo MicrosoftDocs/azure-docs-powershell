@@ -18,27 +18,21 @@ Remove-AzureRmDataLakeStoreFirewallRule [-Account] <String> [[-Name] <String>] [
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmDataLakeStoreFirewallRule cmdlet removes the specified firewall rule in the specified Data Lake Store.
+The **Remove-AzureRmDataLakeStoreFirewallRule** cmdlet removes the specified firewall rule in the specified Data Lake Store.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Remove a firewall rule from an account  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
-
+###  Example 1: Remove a firewall rule from an account
 ```
 PS C:\> Remove-AzureRmDataLakeStoreFirewallRule -AccountName "ContosoADL" -Name MyFirewallRule
 ```
 
-Removes firewall rule "MyFirewallRule" from account "ContosoADL"
+This command removes the firewall rule named MyFirewallRule from the account named ContosoADL.
 
 ## PARAMETERS
 
 ### -Account
-The Data Lake Store account to update the firewall rule in
+Specifies the Data Lake Store account that this cmdlet updates the firewall rule.
 
 ```yaml
 Type: String
@@ -53,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the firewall rule to delete.
+Specifies the name of the firewall rule that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -68,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates a boolean response should be returned indicating the result of the delete operation.
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the account to remove the firewall rule from.
+Specifies the name of the resource group that contains the account that this cmdlet removes the firewall rule.
 
 ```yaml
 Type: String
@@ -113,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -138,3 +135,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AzureRmDataLakeStoreFirewallRule](./Add-AzureRmDataLakeStoreFirewallRule.md)
+
+[Get-AzureRmDataLakeStoreFirewallRule](./Get-AzureRmDataLakeStoreFirewallRule.md)
+
+[Set-AzureRmDataLakeStoreFirewallRule](./Set-AzureRmDataLakeStoreFirewallRule.md)

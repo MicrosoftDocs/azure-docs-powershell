@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureRmDataLakeStoreAccount
 
 ## SYNOPSIS
-Creates a new Data Lake Store account.
+Creates a Data Lake Store account.
 
 ## SYNTAX
 
@@ -27,13 +27,13 @@ New-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-Name] <String> [
 ```
 
 ## DESCRIPTION
-The **New-AzureRmDataLakeStoreAccount** cmdlet creates a new Data Lake Store account.
+The **New-AzureRmDataLakeStoreAccount** cmdlet creates a Data Lake Store account.
 
 ## EXAMPLES
 
 ### Example 1: Create an account
 ```
-PS C:\>New-AzureRmDataLakeStoreAccount -Name "ContosoADL" -ResourceGroupName "ContosoOrg" -Location "East US 2"
+PS C:\> New-AzureRmDataLakeStoreAccount -Name "ContosoADL" -ResourceGroupName "ContosoOrg" -Location "East US 2"
 ```
 
 This command creates a Data Lake Store account named ContosoADL for the East US 2 location.
@@ -41,7 +41,7 @@ This command creates a Data Lake Store account named ContosoADL for the East US 
 ## PARAMETERS
 
 ### -DefaultGroup
-Specifies the object ID of the AzureActive Directory group to use as the default group owner for new files and folders.
+Specifies the object ID of the Azure Active Directory group to use as the default group owner for new files and folders.
 
 ```yaml
 Type: String
@@ -56,7 +56,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEncryption
-Indicates that the account will not have any form of encryption applied to it.```yaml
+Indicates that the account will not have any form of encryption applied to it.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: Disable Encryption
 Aliases: 
@@ -69,6 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Encryption
+Specifies the type of encryption that this cmdlet applies to the new account.
+
 ```yaml
 Type: EncryptionConfigType
 Parameter Sets: User or System assigned encryption
@@ -139,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the account to create.
+Specifies the name of the account that this cmdlet creates.
 
 ```yaml
 Type: String
@@ -185,7 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The desired commitment tier for this account to use.```yaml
+Specifies the desired commitment tier for this account to use.
+
+```yaml
 Type: TierType
 Parameter Sets: (All)
 Aliases: 
@@ -215,5 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmDataLakeStoreAccount](./Set-AzureRmDataLakeStoreAccount.md)
 
 [Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
-
-

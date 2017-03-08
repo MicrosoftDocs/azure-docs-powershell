@@ -52,7 +52,7 @@ The first command gets the resource named ContosoSite by using the **Get-AzureRm
 
 The second command modifies a property of $Resource.
 
-The final command updates the resource to match $Resource.
+The third command updates the resource to match $Resource.
 
 ## PARAMETERS
 
@@ -378,5 +378,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmResource](./New-AzureRmResource.md)
 
 [Remove-AzureRmResource](./Remove-AzureRmResource.md)
-
-

@@ -8,9 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmRoleDefinition
 
 ## SYNOPSIS
-Deletes a custom role in Azure RBAC.
-The role to be deleted is specified using the Id property of the role.
-Delete will fail if there are existing role assignments made to the custom role.
+Removes a custom role in Azure RBAC.
 
 ## SYNTAX
 
@@ -27,32 +25,32 @@ Remove-AzureRmRoleDefinition [-Name] <String> [-Scope <String>] [-Force] [-PassT
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmRoleDefinition cmdlet deletes a custom role in Azure Role-Based Access Control.
-        Provide the Id parameter of an existing custom role to delete that custom role.
-By default, Remove-AzureRmRoleDefinition prompts you for confirmation.
-To suppress the prompt, use the Force parameter.
+The **Remove-AzureRmRoleDefinition** cmdlet removes a custom role in Azure Role-Based Access Control (RBAC).
+You must provide the *Id* parameter of an existing custom role to delete that custom role.
+By default, **Remove-AzureRmRoleDefinition** prompts you for confirmation.
+To suppress the prompt, use the *Force* parameter.
 If there are existing role assignments made to the custom role to be deleted, the delete will fail.
 
 ## EXAMPLES
 
-### Example 1:
-
-
-```
-Get-AzureRmRoleDefinition -Name "Virtual Machine Operator" | Remove-AzureRmRoleDefinition
-```
-
-### Example 2:
-
+### Example 1: Remove a custom role
 
 ```
-Remove-AzureRmRoleDefinition -Id "52a6cc13-ff92-47a8-a39b-2a8205c3087e"
+PS C:\> Get-AzureRmRoleDefinition -Name "Virtual Machine Operator" | Remove-AzureRmRoleDefinition
 ```
+This command removes the custom role named Virtual Machine Operator.
+
+### Example 2: Remove a custom role by the specified ID
+
+```
+PS C:\> Remove-AzureRmRoleDefinition -Id "52a6cc13-ff92-47a8-a39b-2a8205c3087e"
+```
+This command removes the custom role by the specified ID.
 
 ## PARAMETERS
 
 ### -Id
-Id of the Role definition to be deleted
+Specifies the ID of the Role definition that this cmdlet removes.
 
 ```yaml
 Type: Guid
@@ -67,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Role definition scope.
+Specifies the role definition scope.
 
 ```yaml
 Type: String
@@ -82,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If set, does not prompt for a confirmation before deleting the custom role
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -97,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -151,7 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -181,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Role definition to be deleted.
+Specifies the name of the Role definition that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -204,8 +203,8 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[New-AzureRmRoleDefinition]()
+[Get-AzureRmRoleDefinition](./Get-AzureRmRoleDefinition.md)
 
-[Get-AzureRmRoleDefinition]()
+[New-AzureRmRoleDefinition](./New-AzureRmRoleDefinition.md)
 
-[Set-AzureRmRoleDefinition]()
+[Set-AzureRmRoleDefinition](./Set-AzureRmRoleDefinition.md)

@@ -294,8 +294,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzureRmNetworkSecurityRuleConfig](./Remove-AzureRmNetworkSecurityRuleConfig.md)
 
-
 [Set-AzureRmNetworkSecurityGroup](./Set-AzureRmNetworkSecurityGroup.md)
 
 [Set-AzureRmNetworkSecurityRuleConfig](./Set-AzureRmNetworkSecurityRuleConfig.md)
-

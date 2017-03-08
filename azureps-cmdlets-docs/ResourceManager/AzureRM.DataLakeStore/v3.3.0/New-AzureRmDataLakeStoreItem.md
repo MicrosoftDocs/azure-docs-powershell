@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureRmDataLakeStoreItem
 
 ## SYNOPSIS
-Creates a new file or folder in Data Lake Store.
+Creates a file or folder in Data Lake Store.
 
 ## SYNTAX
 
@@ -18,19 +18,19 @@ New-AzureRmDataLakeStoreItem [-Account] <String> [-Path] <DataLakeStorePathInsta
 ```
 
 ## DESCRIPTION
-The **New-AzureRmDataLakeStoreItem** cmdlet creates a new file or folder in Data Lake Store.
+The **New-AzureRmDataLakeStoreItem** cmdlet creates a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
-### Example 1: Create a new file and a new folder
+### Example 1: Create a file and a folder
 ```
-PS C:\>New-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/NewFile.txt"
+PS C:\> New-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/NewFile.txt"
 PS C:\> New-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/NewFolder" -Folder
 ```
 
 The first command creates the file NewFile.txt for the specified account.
 
-The second command creates the folder NewFolder at the root folder.
+The second command creates the folder named NewFolder at the root folder.
 
 ## PARAMETERS
 
@@ -190,5 +190,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmDataLakeStoreItem](./Remove-AzureRmDataLakeStoreItem.md)
 
 [Test-AzureRmDataLakeStoreItem](./Test-AzureRmDataLakeStoreItem.md)
-
-

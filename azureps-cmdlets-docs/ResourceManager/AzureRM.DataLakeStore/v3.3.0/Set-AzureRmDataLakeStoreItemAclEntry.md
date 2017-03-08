@@ -32,7 +32,7 @@ The **Set-AzureRmDataLakeStoreItemAclEntry** cmdlet modifies an entry (ACE) in t
 
 ### Example 1: Modify permissions for an ACE
 ```
-PS C:\>Set-AzureRmDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId -Permissions All
+PS C:\> Set-AzureRmDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId -Permissions All
 ```
 
 This command modifies the ACE for Patti Fuller to have all permissions.
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the object ID of the AzureActive Directory user, group, or service principal for which to modify an ACE.
+Specifies the object ID of the Azure Active Directory user, group, or service principal for which to modify an ACE.
 
 ```yaml
 Type: Guid
@@ -121,7 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates the resulting ACL should be returned.```yaml
+Indicates the resulting ACL should be returned.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -216,5 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-AzureRmDataLakeStoreItemAclEntry](./Remove-AzureRmDataLakeStoreItemAclEntry.md)
-
-

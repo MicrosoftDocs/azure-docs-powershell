@@ -31,7 +31,7 @@ The **Remove-AzureRmDataLakeStoreItemAclEntry** cmdlet removes an entry (ACE) fr
 
 ### Example 1: Remove a user entry
 ```
-PS C:\>Remove-AzureRmDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId
+PS C:\> Remove-AzureRmDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId
 ```
 
 This command removes the user ACE for Patti Fuller from the ContosoADL account.
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Acl
-Specifies the ACL object that contains the entries to be removed.
+Specifies the ACL object that contains the entries that this cmdlet removes.
 
 ```yaml
 Type: DataLakeStoreItemAce[]
@@ -120,7 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates a boolean response should be returned indicating the result of the delete operation.```yaml
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -190,5 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmDataLakeStoreItemAclEntry](./Set-AzureRmDataLakeStoreItemAclEntry.md)
-
-
