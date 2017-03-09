@@ -21,19 +21,19 @@ The **New-AzureRmServiceBusQueueKey** cmdlet regenerates the primary or secondar
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Regenerate the primary connection string
 ```
-PS C:\> New-AzureRmServiceBusQueueKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1 -RegenerateKeys PrimaryKey
+PS C:\> New-AzureRmServiceBusQueueKey -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthorizationRuleName "SBAuthoRule1" -RegenerateKeys "PrimaryKey"
 ```
 
-Regenerates the primary connection string for the namespace.
+This command regenerates the primary connection string for the namespace named SB-Example1.
 
-### Example 2
+### Example 2: Regenerate the secondary connection string
 ```
 PS C:\> New-AzureRmServiceBusQueueKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1 -RegenerateKeys SecondaryKey
 ```
 
-Regenerates the secondary connection string for the namespace.
+This command regenerates the secondary connection string for the namespace named SB-Example1.
 
 ## PARAMETERS
 
@@ -183,3 +183,4 @@ KeyName                   : SBAuthoRule1
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusQueueKey](./Get-AzureRmServiceBusQueueKey.md)

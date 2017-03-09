@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionName
-The subscription name.
+Specifies the name of the subscription.
 
 ```yaml
 Type: String
