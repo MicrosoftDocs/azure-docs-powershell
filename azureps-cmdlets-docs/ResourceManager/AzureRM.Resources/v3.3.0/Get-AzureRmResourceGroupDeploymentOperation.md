@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmResourceGroupDeploymentOperation
 
 ## SYNOPSIS
-Gets the resource group deployment operation
+Gets the resource group deployment operation.
 
 ## SYNTAX
 

@@ -34,7 +34,7 @@ This command will retrieve all of the credential properties (but not the credent
 @{paragraph=PS C:\\\>}
 
 ```
-PS E:\> Get-AzureRmADSpCredential -ServicePrincipalName http://test12345
+PS C:\> Get-AzureRmADSpCredential -ServicePrincipalName http://test12345
 ```
 
 Returns a list of credentials associated with the service principal having SPN 'http://test12345'.

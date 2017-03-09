@@ -35,7 +35,7 @@ This command will retrieve all of the credential properties (but not the credent
 @{paragraph=PS C:\\\>}
 
 ```
-PS E:\> Get-AzureRmADAppCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476
+PS C:\> Get-AzureRmADAppCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476
 ```
 
 Returns a list of credentials associated with the application having object id '1f99cf81-0146-4f4e-beae-2007d0668476'.

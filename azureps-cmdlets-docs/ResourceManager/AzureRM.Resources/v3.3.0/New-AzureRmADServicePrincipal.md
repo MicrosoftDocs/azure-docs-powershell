@@ -77,7 +77,7 @@ New-AzureRmADServicePrincipal -DisplayName <String> -CertValue <String> [-StartD
 ```
 
 ## DESCRIPTION
-Creates an Azure Active Directory service principal.
+The **New-AzureRmADServicePrincipal** cmdlet creates an Azure Active Directory service principal.
 
 The cmdlet also implicitly creates an application and sets its properties (if the *ApplicationId* parameter is not provided).
 In order to update the application specific parameters, use the [Set-AzureRmADApplication](./Set-AzureRmADApplication.md) cmdlet.

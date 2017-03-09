@@ -40,14 +40,14 @@ New-AzureRmADAppCredential -ApplicationId <String> -Password <String> [-StartDat
 
 ## DESCRIPTION
 The **New-AzureRmADAppCredential** cmdlet can be used to add a new credential or to roll credentials for an application.
-The application is identified by supplying either the application object id or application Id.
+The application is identified by supplying either the application object id or application ID.
 
 ## EXAMPLES
 
 ### Example 1: Add a new password credential to an existing application
 
 ```
-PS E:\> New-AzureRmADAppCredential -ObjectId 1f89cf81-0146-4f4e-beae-2007d0668416 -Password "P@ssw0rd!""
+PS C:\> New-AzureRmADAppCredential -ObjectId 1f89cf81-0146-4f4e-beae-2007d0668416 -Password "P@ssw0rd!""
 ```
 
 This command adds a new password credential to an existing application.
@@ -64,7 +64,7 @@ $binCert = $cer.GetRawCertData()
 
 $credValue = [System.Convert]::ToBase64String($binCert)
 
-PS E:\> New-AzureRmADAppCredential -ApplicationId 4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58 -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
+PS C:\> New-AzureRmADAppCredential -ApplicationId 4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58 -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
 ```
 
 This example adds a new key credential to an existing application.

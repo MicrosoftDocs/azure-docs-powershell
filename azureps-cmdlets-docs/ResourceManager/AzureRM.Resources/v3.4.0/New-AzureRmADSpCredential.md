@@ -52,7 +52,7 @@ The service principal is identified by supplying either the object id or service
 
 
 ```
-PS E:\> New-AzureRmADSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476 -Password "P@ssw0rd!"
+PS C:\> New-AzureRmADSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476 -Password "P@ssw0rd!"
 ```
 
 A new password credential is added to an existing service principal.
@@ -72,7 +72,7 @@ $binCert = $cer.GetRawCertData()
 
 $credValue = [System.Convert]::ToBase64String($binCert)
 
-PS E:\> New-AzureRmADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
+PS C:\> New-AzureRmADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
 ```
 
 A new key credential is added to an existing service principal.
@@ -84,7 +84,7 @@ In this example, the supplied base64 encoded public X509 certificate ("myapp.cer
 
 
 ```
-PS E:\> New-AzureRmADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue
+PS C:\> New-AzureRmADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue
 ```
 
 ## PARAMETERS

@@ -157,7 +157,7 @@ Use the *IncludeClassicAdministrators* parameter switch to also display the subs
 PS C:\> Get-AzureRmRoleAssignment
 ```
 
-This command list all role assignments in the subscription
+This command list all role assignments in the subscription.
 
 ### Example 2: Get all role assignments
 ```
@@ -172,7 +172,7 @@ This command gets all role assignments made to user pattifuller@contoso.com, and
 PS C:\> Get-AzureRmRoleAssignment -ServicePrincipalName "http://testapp1.com"
 ```
 
-This command gets all role assignments of the specified service principal
+This command gets all role assignments of the specified service principal.
 
 ### Example 4: Get role assignments from a website
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeClassicAdministrators
-Indicatest that the cmdlet lists subscription classic administrators role assignments.
+Indicates that the cmdlet lists subscription classic administrators role assignments.
 
 ```yaml
 Type: SwitchParameter
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the Azure Active Directory ObjectId of the User, Group or Service Principal.
+Specifies the Azure Active Directory ObjectId of the User, Group, or Service Principal.
 Filters all assignments that are made to the specified principal.
 
 ```yaml
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group.
 Lists role assignments that are effective at the specified resource group.
 When used in conjunction with *ResourceName*, *ResourceType*, and *ParentResource* parameters, the command lists assignments effective at resources within the resource group.
 
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-Specifies the name of the resource
+Specifies the name of the resource.
 Must be used in conjunction with *esourceGroupName*, *ResourceType*, and *ParentResource* parameters.
 
 ```yaml
