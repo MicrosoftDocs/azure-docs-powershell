@@ -20,16 +20,16 @@ New-AzureRmServiceBusSubscription [-ResourceGroup] <String> [-NamespaceName] <St
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServiceBusSubscription** cmdlet creates a new subscription to the specified Service Bus topic.
+The **New-AzureRmServiceBusSubscription** cmdlet creates a subscription to the specified Service Bus topic.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a subscription to a specific Service Bus topic
 ```
-PS C:\> New-AzureRmServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionName SB-TopicSubscription-Example1
+PS C:\> New-AzureRmServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_example1 -SubscriptionName SB-TopicSubscription-Example1
 ```
 
-Creates	the subscription `SB-TopicSubscription-Example1` for the specified Service Bus topic `SB-Topic_exampl1`.
+This command creates the subscription named SB-TopicSubscription-Example1 for the Service Bus topic named SB-Topic_example1.
 
 ## PARAMETERS
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeadLetteringOnFilterEvaluationExceptions
-Indicates if a subscription has dead letter support on Filter evaluation exceptions.
+Indicates whether a subscription has dead letter support on Filter evaluation exceptions.
 
 ```yaml
 Type: Boolean
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeadLetteringOnMessageExpiration
-Indicates if a subscription has deadletter support when a message expires.
+Indicates whether a subscription has deadletter support when a message expires.
 
 ```yaml
 Type: Boolean
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionName
-The subscription name.
+Specifies the name of the subscription.
 
 ```yaml
 Type: String
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-The topic name.
+Specifies the name of the topic.
 
 ```yaml
 Type: String
@@ -295,3 +295,8 @@ UpdatedAt                                 : 1/20/2017 3:18:54 AM
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusSubscription](./Get-AzureRmServiceBusSubscription.md)
+
+[Remove-AzureRmServiceBusSubscription](./Remove-AzureRmServiceBusSubscription.md)
+
+[Set-AzureRmServiceBusSubscription](./Set-AzureRmServiceBusSubscription.md)
