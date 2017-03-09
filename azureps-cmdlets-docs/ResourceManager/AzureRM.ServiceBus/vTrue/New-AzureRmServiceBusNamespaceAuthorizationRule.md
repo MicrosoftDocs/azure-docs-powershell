@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmServiceBusNamespaceAuthorizationRule
 
 ## SYNOPSIS
-Creates a new authorization rule for the specified Service Bus namespace
+Creates an authorization rule for the specified Service Bus namespace
 
 ## SYNTAX
 
@@ -17,16 +17,16 @@ New-AzureRmServiceBusNamespaceAuthorizationRule [-ResourceGroup] <String> [-Name
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet creates a new authorization rule for the specified Service Bus namespace.
+The **New-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet creates an authorization rule for the specified Service Bus namespace.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an authorization rule for the specified namespace
 ```
 PS C:\> New-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1 -Rights @("Listen","Send")
 ```
 
-Creates `AuthoRule1` with **Listen** and **Send** rights for the namespace `SB-Example1`.
+This command creates the authorization rule named AuthoRule1 with **Listen** and **Send** rights for the namespace named SB-Example1.
 
 ## PARAMETERS
 
@@ -156,3 +156,8 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusNamespaceAuthorizationRule](./Get-AzureRmServiceBusNamespaceAuthorizationRule.md)
+
+[Remove-AzureRmServiceBusNamespaceAuthorizationRule](./Remove-AzureRmServiceBusNamespaceAuthorizationRule.md)
+
+[Set-AzureRmServiceBusNamespaceAuthorizationRule](./Set-AzureRmServiceBusNamespaceAuthorizationRule.md)

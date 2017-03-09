@@ -21,17 +21,17 @@ The **Remove-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet removes the au
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an authorization rule of a Service Bus namespace from a resource group
 ```
-PS C:\> Remove-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1
+PS C:\> Remove-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -AuthorizationRuleName "AuthoRule1"
 ```
 
-Removes the authorization rule `SBAuthoRule1` of namespace `SB-Example1` from the specified resource group.
+This command removes the authorization rule named SBAuthoRule1 of the namespace named SB-Example1 from the resource group named SB-Example1.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-The namespace authorization rule name.
+Specifies the name of the namespace authorization rule.
 
 ```yaml
 Type: String
@@ -126,3 +126,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusNamespaceAuthorizationRule](./Get-AzureRmServiceBusNamespaceAuthorizationRule.md)
+
+[New-AzureRmServiceBusNamespaceAuthorizationRule](./New-AzureRmServiceBusNamespaceAuthorizationRule.md)
+
+[Set-AzureRmServiceBusNamespaceAuthorizationRule](./Set-AzureRmServiceBusNamespaceAuthorizationRule.md)

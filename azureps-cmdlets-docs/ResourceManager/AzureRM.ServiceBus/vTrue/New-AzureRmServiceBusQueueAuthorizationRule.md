@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmServiceBusQueueAuthorizationRule
 
 ## SYNOPSIS
-Creates a new authorization rule for the specified Service Bus queue.
+Creates an authorization rule for the specified Service Bus queue.
 
 ## SYNTAX
 
@@ -18,16 +18,16 @@ New-AzureRmServiceBusQueueAuthorizationRule [-ResourceGroup] <String> [-Namespac
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServiceBusQueueAuthorizationRule** cmdlet creates a new authorization rule for the specified Service Bus queue.
+The **New-AzureRmServiceBusQueueAuthorizationRule** cmdlet creates an authorization rule for the specified Service Bus queue.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an authorization rule for a specific Service Bus queue
 ```
-PS C:\> New-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1 -Rights @("Listen","Send")
+PS C:\> New-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthorizationRuleName "SBAuthoRule1" -Rights @("Listen","Send")
 ```
 
-Creates authorization rule `SBAuthoRule1` with **Listen and Send** rights for the queue `SB-Queue_exampl1`.
+This command creates an authorization rule named SBAuthoRule1 with **Listen and Send** rights for the queue named SB-Queue_example1.
 
 ## PARAMETERS
 
@@ -173,3 +173,8 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusNamespaceAuthorizationRule](./Get-AzureRmServiceBusNamespaceAuthorizationRule.md)
+
+[Remove-AzureRmServiceBusNamespaceAuthorizationRule](./Remove-AzureRmServiceBusNamespaceAuthorizationRule.md)
+
+[Set-AzureRmServiceBusNamespaceAuthorizationRule](./Set-AzureRmServiceBusNamespaceAuthorizationRule.md)

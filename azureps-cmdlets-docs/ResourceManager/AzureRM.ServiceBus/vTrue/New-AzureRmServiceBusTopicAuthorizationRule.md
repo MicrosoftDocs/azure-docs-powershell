@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmServiceBusTopicAuthorizationRule
 
 ## SYNOPSIS
-Creates a new authorization rule for the specified Service Bus topic.
+Creates an authorization rule for the specified Service Bus topic.
 
 ## SYNTAX
 
@@ -18,16 +18,16 @@ New-AzureRmServiceBusTopicAuthorizationRule [-ResourceGroup] <String> [-Namespac
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServiceBusTopicAuthorizationRule** cmdlet creates a new authorization rule for the specified Service Bus topic.
+The **New-AzureRmServiceBusTopicAuthorizationRule** cmdlet creates an authorization rule for the specified Service Bus topic.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an authorization rule for a Service Bus topic
 ```
-PS C:\> New-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -AuthorizationRuleName SBTopicAuthoRule1 -Rights @("Listen","Send")
+PS C:\> New-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -AuthorizationRuleName "SBTopicAuthoRule1" -Rights @("Listen","Send")
 ```
 
-Creates authorization rule `SBTopicAuthoRule1` with **Listen** and **Send** rights for the topic `SB-Topic_exampl1`.
+This command creates an authorization rule named SBTopicAuthoRule1 with **Listen** and **Send** rights for the topic named SB-Topic_example1.
 
 ## PARAMETERS
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-The rights; for example, 
+Specifies The rights; for instance: 
 @("Listen","Send","Manage")
 
 ```yaml
@@ -173,3 +173,8 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusTopicAuthorizationRule](./Get-AzureRmServiceBusTopicAuthorizationRule.md)
+
+[Remove-AzureRmServiceBusTopicAuthorizationRule](./Remove-AzureRmServiceBusTopicAuthorizationRule.md)
+
+[Set-AzureRmServiceBusTopicAuthorizationRule](./Set-AzureRmServiceBusTopicAuthorizationRule.md)

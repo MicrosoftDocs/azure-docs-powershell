@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmServiceBusTopic
 
 ## SYNOPSIS
-Creates a new Service Bus topic in  the specified Service Bus namespace.
+Creates a Service Bus topic in the specified Service Bus namespace.
 
 ## SYNTAX
 
@@ -22,16 +22,16 @@ New-AzureRmServiceBusTopic [-ResourceGroup] <String> [-NamespaceName] <String> [
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServiceBusTopic** cmdlet creates a new Service Bus topic in the specified Service Bus namespace.
+The **New-AzureRmServiceBusTopic** cmdlet creates a Service Bus topic in the specified Service Bus namespace.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a Service Bus topic
 ```
-PS C:\> New-AzureRmServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -EnablePartitioning $True
+PS C:\> New-AzureRmServiceBusTopic -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -EnablePartitioning $True
 ```
 
-Creates a new Service Bus topic `SB-Topic_exampl1` in the specified Service Bus namespace `SB-Example1`.
+This command creates a Service Bus topic named SB-Topic_example1 in the Service Bus namespace named SB-Example1 that enables partitioning.
 
 ## PARAMETERS
 
@@ -384,3 +384,4 @@ UpdatedAt                           : 1/20/2017 3:16:43 AM
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusTopic](./Get-AzureRmServiceBusTopic.md)
