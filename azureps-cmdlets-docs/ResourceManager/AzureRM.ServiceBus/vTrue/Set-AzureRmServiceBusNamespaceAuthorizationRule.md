@@ -22,16 +22,16 @@ The **Set-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet updates the descr
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update the description for the specified authorization rule
 ```
 PS C:\> $authRuleObj = Get-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1
 
 PS C:\> $authRuleObj.Rights.Remove("Manage")
 
-PS C:\> Set-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthRuleObj $authRuleObj
+PS C:\> Set-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -AuthRuleObj $authRuleObj
 ```
 
-Removes **Manage** from the access rights of the authorization rule `AuthoRule1` in namespace `SB-Example1`.
+This command removes **Manage** from the access rights of the authorization rule named AuthoRule1 in the namespace SB-Example1.
 
 ## PARAMETERS
 
@@ -111,8 +111,10 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Rights; for example
-@("Listen","Send","Manage"). Required if **AuthruleObj** is not specified.
+Specifies rights; for example
+@("Listen","Send","Manage"). 
+
+This parameter is required if **AuthruleObj** is not specified.
 
 ```yaml
 Type: String[]
@@ -170,3 +172,8 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusNamespaceAuthorizationRule](./Get-AzureRmServiceBusNamespaceAuthorizationRule.md)
+
+[New-AzureRmServiceBusNamespaceAuthorizationRule](./New-AzureRmServiceBusNamespaceAuthorizationRule.md)
+
+[Remove-AzureRmServiceBusNamespaceAuthorizationRule](./Remove-AzureRmServiceBusNamespaceAuthorizationRule.md)

@@ -21,7 +21,7 @@ The **Set-AzureRmServiceBusTopic** cmdlet updates a description object for a Ser
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update a description object for a Service Bus topic
 ```
 PS C:\> $topicObj = Get-AzureRmServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1
 
@@ -30,7 +30,7 @@ PS C:\> $topicObj.EnableExpress = $True
 PS C:\> Set-AzureRmServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -TopicObj $topicObj
 ```
 
-Updates the specified topic with a new description in the specified namespace. This example updates the **EnableExpress** property to **true**. 
+This example updates the specified topic with a new description in the specified namespace. This example updates the **EnableExpress** property to **true**. 
 
 ## PARAMETERS
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicObj
-The Service Bus topic definition.
+Specifies the Service Bus topic definition.
 
 ```yaml
 Type: TopicAttributes
@@ -176,3 +176,8 @@ UpdatedAt                           : 1/20/2017 7:12:16 PM
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusTopic](./Get-AzureRmServiceBusTopic.md)
+
+[New-AzureRmServiceBusTopic](./New-AzureRmServiceBusTopic.md)
+
+[Remove-AzureRmServiceBusTopic](./Remove-AzureRmServiceBusTopic.md)

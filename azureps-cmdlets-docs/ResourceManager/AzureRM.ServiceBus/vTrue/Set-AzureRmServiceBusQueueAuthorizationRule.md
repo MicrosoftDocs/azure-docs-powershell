@@ -22,16 +22,16 @@ The **Set-AzureRmServiceBusQueueAuthorizationRule** cmdlet updates the descripti
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update the description for an authorization rule
 ```
-PS C:\> $authRuleObj = Get-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1
+PS C:\> $authRuleObj = Get-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthorizationRuleName "SBAuthoRule1"
 
 PS C:\> $authRuleObj.Rights.Add("Manage")
 
-PS C:\> Set-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthRuleObj $authRuleObj
+PS C:\> Set-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthRuleObj $authRuleObj
 ```
 
-Adds **Manage** to the access rights of the authorization rule `SBAuthoRule1` of the queue `SB-Queue_exampl1`.
+This example Adds **Manage** to the access rights of the authorization rule named SBAuthoRule1 of the queue named SB-Queue_example1.
 
 ## PARAMETERS
 
@@ -126,8 +126,10 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-The rights; for example 
-@("Listen","Send","Manage"). Required if 'AuthruleObj' not specified.
+Specifies the rights; for instance: 
+@("Listen","Send","Manage"). 
+
+Required if the *AuthruleObj* parameter is not specified.
 
 ```yaml
 Type: String[]
@@ -182,3 +184,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusQueueAuthorizationRule](./Get-AzureRmServiceBusQueueAuthorizationRule.md)
+
+[New-AzureRmServiceBusQueueAuthorizationRule](./New-AzureRmServiceBusQueueAuthorizationRule.md)
+
+[Remove-AzureRmServiceBusQueueAuthorizationRule](./Remove-AzureRmServiceBusQueueAuthorizationRule.md)
