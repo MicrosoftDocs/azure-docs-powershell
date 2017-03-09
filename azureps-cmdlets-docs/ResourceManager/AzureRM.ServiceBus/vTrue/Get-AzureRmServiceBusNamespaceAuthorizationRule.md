@@ -21,12 +21,12 @@ The **Get-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet gets the descript
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get an authorization rule description for the specified namespace
 ```
-PS C:\> Get-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1
+PS C:\> Get-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -AuthorizationRuleName "AuthoRule1"
 ```
 
-Returns the specified authorization rule description for a specified namespace.
+This command gets the specified authorization rule description for a specified namespace.
 
 ## PARAMETERS
 

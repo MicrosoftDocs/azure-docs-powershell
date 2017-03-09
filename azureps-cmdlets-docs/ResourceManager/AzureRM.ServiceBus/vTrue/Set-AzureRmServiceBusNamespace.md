@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The Service Bus namespace location.
+Specifies the location of the Service Bus namespace.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the resource group name.
 
 ```yaml
 Type: String
