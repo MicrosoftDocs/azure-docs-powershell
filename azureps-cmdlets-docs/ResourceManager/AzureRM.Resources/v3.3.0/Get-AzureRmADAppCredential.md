@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-The id of the application to retrieve credentials from.
+Specifies The ID of the application to which this cmdlet gets credentials from.
 
 ```yaml
 Type: String

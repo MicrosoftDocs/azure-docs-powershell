@@ -29,7 +29,7 @@ Get-AzureRmADGroup -ObjectId <Guid> [-InformationAction <ActionPreference>] [-In
 ```
 
 ## DESCRIPTION
-Filters active directory groups.
+The **Get-AzureRmADGroup** cmdlet filters active directory groups.
 
 ## EXAMPLES
 

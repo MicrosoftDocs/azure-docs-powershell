@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The name (SPN) of the service principal to retrieve credentials from.
+Specifies the name of the service principal name (SPN) that this cmdlet gets credentials from.
 
 ```yaml
 Type: String

@@ -33,7 +33,7 @@ This command gets all of the credential properties, but not the credential value
 ### Example 1: Get a list of credentials associated with a service principal
 
 ```
-PS E:\> Get-AzureRmADSpCredential -ServicePrincipalName http://test12345
+PS C:\> Get-AzureRmADSpCredential -ServicePrincipalName "http://test12345"
 ```
 
 This command gets a list of credentials associated with the service principal having SPN 'http://test12345'.
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The name (SPN) of the service principal to retrieve credentials from.
+Specifies the name of the service principal name (SPN) that this cmdlet gets credentials from.
 
 ```yaml
 Type: String

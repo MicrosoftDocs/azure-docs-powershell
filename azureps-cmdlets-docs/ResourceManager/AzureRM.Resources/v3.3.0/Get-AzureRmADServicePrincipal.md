@@ -37,7 +37,7 @@ Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [-InformationAction
 ```
 
 ## DESCRIPTION
-Filters active directory service principals.
+The **Get-AzureRmADServicePrincipal** cmdlet filters active directory service principals.
 
 ## EXAMPLES
 
