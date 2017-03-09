@@ -21,7 +21,7 @@ The **Set-AzureRmServiceBusQueue** cmdlet updates the description for the Servic
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update a queue with a new description
 ```
 PS C:\> $QueueObj = Get-AzureRmServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1
 
@@ -31,7 +31,7 @@ PS C:\> $QueueObj.SupportOrdering = $True
 PS C:\> Set-AzureRmServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -QueueObj $QueueObj
 ```
 
-Updates the specified queue with a new description in the specified namespace. This example updates the **DeadLetteringOnMessageExpiration** property to **true** and **SupportOrdering** to **true**.
+This example updates the specified queue with a new description in the specified namespace. This example updates the **DeadLetteringOnMessageExpiration** property to **true** and **SupportOrdering** to **true**.
 
 ## PARAMETERS
 
@@ -175,3 +175,8 @@ UpdatedAt                           : 1/20/2017 6:16:18 PM
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusQueue](./Get-AzureRmServiceBusQueue.md)
+
+[New-AzureRmServiceBusQueue](./New-AzureRmServiceBusQueue.md)
+
+[Remove-AzureRmServiceBusQueue](./Remove-AzureRmServiceBusQueue.md)

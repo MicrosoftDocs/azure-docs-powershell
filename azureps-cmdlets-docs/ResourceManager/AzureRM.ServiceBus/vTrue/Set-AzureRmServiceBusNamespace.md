@@ -21,12 +21,12 @@ The **Set-AzureRmServiceBusNamespace** cmdlet updates the description of the spe
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update a Service Bus namespace with a new description
 ```
-PS C:\> Set-AzureRmServiceBusNamespace -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -Location WestUs -SkuName Premium -SkuCapacity 10 -Tag @{Tag2="Tag2Value"}
+PS C:\> Set-AzureRmServiceBusNamespace -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -Location "WestUs" -SkuName "Premium" -SkuCapacity 10 -Tag @{Tag2="Tag2Value"}
 ```
 
-Updates the Service Bus namespace with a new description.
+This command updates the Service Bus namespace named SB-Example1 with a new description.
 
 ## PARAMETERS
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-The namespace SKU name.
+Specifies the name of the namespace SKU.
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Hashtables that represent resource tags.
+Specifies a hashtable that represents resource tags.
 
 ```yaml
 Type: Hashtable
@@ -175,3 +175,8 @@ Enabled            : False
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusNamespace](./Get-AzureRmServiceBusNamespace.md)
+
+[New-AzureRmServiceBusNamespace](./New-AzureRmServiceBusNamespace.md)
+
+[Remove-AzureRmServiceBusNamespace](./Remove-AzureRmServiceBusNamespace.md)

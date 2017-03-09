@@ -21,7 +21,7 @@ The **Set-AzureRmServiceBusSubscription** cmdlet updates the description of the 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update the subscription for a Service Bus topic
 ```
 PS C:\> $subscriptionObj = Get-AzureRmServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionName SB-TopicSubscription-Example1
 
@@ -31,7 +31,7 @@ PS C:\> $subscriptionObj.MaxDeliveryCount = 9
 PS C:\> Set-AzureRmServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionObj $subscriptionObj
 ```
 
-Updates the description for the specified subscription to the given topic. This example updates the **DeadLetteringOnMessageExpiration** property to **true** and **MaxDeliveryCount** to 9.
+This example updates the description for the specified subscription to the given topic. This example updates the **DeadLetteringOnMessageExpiration** property to **true** and **MaxDeliveryCount** to 9.
 
 ## PARAMETERS
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionObj
-The Service Bus subscription definition.
+Specifies the Service Bus subscription definition.
 
 ```yaml
 Type: SubscriptionAttributes
@@ -169,3 +169,8 @@ UpdatedAt                                 : 1/20/2017 9:59:15 PM
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusSubscription](./Get-AzureRmServiceBusSubscription.md)
+
+[New-AzureRmServiceBusSubscription](./New-AzureRmServiceBusSubscription.md)
+
+[Remove-AzureRmServiceBusSubscription](./Remove-AzureRmServiceBusSubscription.md)
