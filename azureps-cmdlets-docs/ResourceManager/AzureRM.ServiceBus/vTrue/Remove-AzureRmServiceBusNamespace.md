@@ -21,12 +21,12 @@ The **Remove-AzureRmServiceBusNamespace** cmdlet removes the namespace from the 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove the specified namespace
 ```
-PS C:\> Remove-AzureRmServiceBusNamespace -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1
+PS C:\> Remove-AzureRmServiceBusNamespace -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1"
 ```
 
-Removes the Service Bus namespace `SB-Example1` from the specified resource group `Default-ServiceBus-WestUS`.
+This command removes the Service Bus namespace named SB-Example1 from the resource group named Default-ServiceBus-WestUS.
 
 ## PARAMETERS
 
@@ -110,3 +110,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusNamespace](./Get-AzureRmServiceBusNamespace.md)
+
+[New-AzureRmServiceBusNamespace](./New-AzureRmServiceBusNamespace.md)
+
+[Set-AzureRmServiceBusNamespace](./Set-AzureRmServiceBusNamespace.md)
