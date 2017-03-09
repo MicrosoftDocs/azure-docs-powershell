@@ -21,12 +21,12 @@ The **Remove-AzureRmServiceBusTopicAuthorizationRule** cmdlet removes the author
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an authorization rule of a topic from a namespace
 ```
-PS C:\> Remove-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -AuthorizationRuleName SBTopicAuthoRule1
+PS C:\> Remove-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -AuthorizationRuleName "SBTopicAuthoRule1"
 ```
 
-Removes the authorization rule `SBTopicAuthoRule1` of the topic `SB-Topic_exampl1` from the namespace `SB-Example1`.
+This command removes the authorization rule named SBTopicAuthoRule1 of the topic named SB-Topic_example1 from the namespace named SB-Example1.
 
 ## PARAMETERS
 
@@ -146,3 +146,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusTopicAuthorizationRule](./Get-AzureRmServiceBusTopicAuthorizationRule.md)
+
+[New-AzureRmServiceBusTopicAuthorizationRule](./New-AzureRmServiceBusTopicAuthorizationRule.md)
+
+[Set-AzureRmServiceBusTopicAuthorizationRule](./Set-AzureRmServiceBusTopicAuthorizationRule.md)

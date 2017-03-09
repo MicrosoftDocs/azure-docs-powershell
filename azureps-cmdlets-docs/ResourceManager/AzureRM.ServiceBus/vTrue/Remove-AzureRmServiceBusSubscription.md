@@ -21,12 +21,12 @@ The **Remove-AzureRmServiceBusSubscription** cmdlet removes the subscription to 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a subscription from a topic
 ```
-PS C:\> Remove-AzureRmServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionName SB-TopicSubscription-Example1
+PS C:\> Remove-AzureRmServiceBusSubscription -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -SubscriptionName "SB-TopicSubscription-Example1"
 ```
 
-Removes the subscription `SB-TopicSubscription-Example1` to the topic `SB-Topic_exampl1` in the specified Service Bus namespace `SB-Example1`.
+This command removes the subscription named SB-TopicSubscription-Example1 to the topic named SB-Topic_example1 in the specified Service Bus namespace named SB-Example1.
 
 ## PARAMETERS
 
@@ -146,3 +146,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmServiceBusSubscription](./Get-AzureRmServiceBusSubscription.md)
+
+[New-AzureRmServiceBusSubscription](./New-AzureRmServiceBusSubscription.md)
+
+[Set-AzureRmServiceBusSubscription](./Set-AzureRmServiceBusSubscription.md)
