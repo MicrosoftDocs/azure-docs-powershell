@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The object id of the application to fetch.
+Specifies the object ID of the application that this cmdlet gets.
 
 ```yaml
 Type: Guid
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-The application id of the application to fetch.
+Specifies the application ID of the application to that this cmdlet gets.
 
 ```yaml
 Type: Guid
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNameStartWith
-Fetch all applications starting with the display name.
+Specifies the display name of all applications that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUri
-Unique identifier Uri of the application to fetch.
+Specifies the unique identifier URI of the application that this cmdlet gets.
 
 ```yaml
 Type: String

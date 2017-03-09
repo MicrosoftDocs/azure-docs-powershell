@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmADGroupMember
 
 ## SYNOPSIS
-Get a group members.
+Get group members.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AzureRmADGroupMember [-GroupObjectId <Guid>] [-InformationAction <ActionPref
 ```
 
 ## DESCRIPTION
-Get a group members.
+The **Get-AzureRmADGroupMember** cmdlet gets group members.
 
 ## EXAMPLES
 
