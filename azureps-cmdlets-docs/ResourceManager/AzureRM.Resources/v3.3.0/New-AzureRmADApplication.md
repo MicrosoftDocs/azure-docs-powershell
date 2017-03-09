@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-Specifeis the effective start date of the credential usage.
+Specifies the effective start date of the credential usage.
 The default start date value is today. 
 For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
