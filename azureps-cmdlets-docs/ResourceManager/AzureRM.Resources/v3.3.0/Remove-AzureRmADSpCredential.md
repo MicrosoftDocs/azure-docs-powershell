@@ -55,7 +55,6 @@ In this example, the key with Id "9044423a-60a3-45ac-9ab1-09534157ebb" will be r
 
 ### Example 2: Remove all credential keys from a service principal
 
-
 ```
 PS C:\> Remove-AzureRmADSpCredential -ServicePrincipalName http://test123 -All
 ```
@@ -66,7 +65,7 @@ In this example, all credentials will be removed from the service principal asso
 ## PARAMETERS
 
 ### -ObjectId
-The object id of the service principal to remove the credentials from.
+Specifies the object ID of the service principal that this cmdlet removes the credentials from.
 
 ```yaml
 Type: String
@@ -82,7 +81,7 @@ Accept wildcard characters: False
 
 ### -KeyId
 Specifies the credential key to be removed.
-The key Ids for a service principal can be obtained using the Get-AzureRmADSpCredential cmdlet.
+The key Ids for a service principal can be obtained using the [Get-AzureRmADSpCredential](./Get-AzureRmADSpCredential.md) cmdlet.
 
 ```yaml
 Type: Guid
