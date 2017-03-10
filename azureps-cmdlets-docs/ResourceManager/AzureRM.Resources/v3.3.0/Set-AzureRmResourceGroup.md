@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the ID of the resource group to modify.
+Specifies the ID of the resource group that this cmdlet modifies.
 
 ```yaml
 Type: String
