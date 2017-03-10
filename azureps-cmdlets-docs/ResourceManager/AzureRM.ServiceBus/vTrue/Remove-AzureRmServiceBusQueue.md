@@ -21,12 +21,12 @@ The **Remove-AzureRmServiceBusQueue** cmdlet removes the queue from the specifie
 
 ## EXAMPLES
 
-### Example 1: Remove the specified queue from a namespace
+### Example 1
 ```
-PS C:\> Remove-AzureRmServiceBusQueue -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1"
+PS C:\> Remove-AzureRmServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1
 ```
 
-This command removes the queue named SB-Queue_example1 from the namespace named SB-Example1.
+Removes the queue `SB-Queue_exampl1` from the namespace `SB-Example1`.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-Specifies the name of the Service Bus queue.
+The Service Bus queue name.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -128,8 +128,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusTopic](./Get-AzureRmServiceBusTopic.md)
-
-[New-AzureRmServiceBusTopic](./New-AzureRmServiceBusTopic.md)
-
-[Set-AzureRmServiceBusTopic](./Set-AzureRmServiceBusTopic.md)

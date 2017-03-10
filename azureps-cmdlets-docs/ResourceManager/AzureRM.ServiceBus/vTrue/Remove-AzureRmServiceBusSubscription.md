@@ -21,12 +21,12 @@ The **Remove-AzureRmServiceBusSubscription** cmdlet removes the subscription to 
 
 ## EXAMPLES
 
-### Example 1: Remove a subscription from a topic
+### Example 1
 ```
-PS C:\> Remove-AzureRmServiceBusSubscription -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -SubscriptionName "SB-TopicSubscription-Example1"
+PS C:\> Remove-AzureRmServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionName SB-TopicSubscription-Example1
 ```
 
-This command removes the subscription named SB-TopicSubscription-Example1 to the topic named SB-Topic_example1 in the specified Service Bus namespace named SB-Example1.
+Removes the subscription `SB-TopicSubscription-Example1` to the topic `SB-Topic_exampl1` in the specified Service Bus namespace `SB-Example1`.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionName
-Specifies the name of the subscription.
+The subscription name.
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-Specifies the name of the Service Bus topic.
+The Service Bus topic name.
 
 ```yaml
 Type: String
@@ -146,8 +146,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusSubscription](./Get-AzureRmServiceBusSubscription.md)
-
-[New-AzureRmServiceBusSubscription](./New-AzureRmServiceBusSubscription.md)
-
-[Set-AzureRmServiceBusSubscription](./Set-AzureRmServiceBusSubscription.md)

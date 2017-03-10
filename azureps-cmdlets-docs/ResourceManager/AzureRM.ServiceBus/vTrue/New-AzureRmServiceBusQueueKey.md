@@ -21,24 +21,24 @@ The **New-AzureRmServiceBusQueueKey** cmdlet regenerates the primary or secondar
 
 ## EXAMPLES
 
-### Example 1: Regenerate the primary connection string
+### Example 1
 ```
-PS C:\> New-AzureRmServiceBusQueueKey -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthorizationRuleName "SBAuthoRule1" -RegenerateKeys "PrimaryKey"
+PS C:\> New-AzureRmServiceBusQueueKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1 -RegenerateKeys PrimaryKey
 ```
 
-This command regenerates the primary connection string for the namespace named SB-Example1.
+Regenerates the primary connection string for the namespace.
 
-### Example 2: Regenerate the secondary connection string
+### Example 2
 ```
 PS C:\> New-AzureRmServiceBusQueueKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1 -RegenerateKeys SecondaryKey
 ```
 
-This command regenerates the secondary connection string for the namespace named SB-Example1.
+Regenerates the secondary connection string for the namespace.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Specifies the name of the authorization rule.
+The authorization rule name.
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-Specifies the name of the Service Bus queue.
+The Service Bus queue name.
 
 ```yaml
 Type: String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -183,4 +183,3 @@ KeyName                   : SBAuthoRule1
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusQueueKey](./Get-AzureRmServiceBusQueueKey.md)

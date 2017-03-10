@@ -21,12 +21,12 @@ The **Remove-AzureRmEventHubAuthorizationRule** cmdlet removes and deletes the s
 
 ## EXAMPLES
 
-### Example 1: Remove the specified Event Hub authorization rule
+### Example 1
 ```
-PS C:\> Remove-AzureRmEventHubAuthorizationRule -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -AuthorizationRuleName "MyAuthRuleName"
+PS C:\> Remove-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName
 ```
 
-This command removes the authorization rule named MyAuthRuleName from the Event Hub named MyEventHubName.
+Removes the authorization rule `MyAuthRuleName` from the Event Hub `MyEventHubName`.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-Specifies the name of Event Hub.
+The Event Hub name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of Event Hubs namespace.
+The Event Hubs namespace name.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group.
+Resource group name.
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-The Event Hub Specifies the name of the authorization rule.
+The Event Hub authorization rule name.
 
 ```yaml
 Type: String
@@ -136,8 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmEventHubNamespaceAuthorizationRule](./Get-AzureRmEventHubNamespaceAuthorizationRule.md)
-
-[New-AzureRmEventHubNamespaceAuthorizationRule](./New-AzureRmEventHubNamespaceAuthorizationRule.md)
-
-[Set-AzureRmEventHubNamespaceAuthorizationRule](./Set-AzureRmEventHubNamespaceAuthorizationRule.md)

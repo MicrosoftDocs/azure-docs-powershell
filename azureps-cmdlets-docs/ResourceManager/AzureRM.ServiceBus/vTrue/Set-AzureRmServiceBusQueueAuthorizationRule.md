@@ -22,16 +22,16 @@ The **Set-AzureRmServiceBusQueueAuthorizationRule** cmdlet updates the descripti
 
 ## EXAMPLES
 
-### Example 1: Update the description for an authorization rule
+### Example 1
 ```
-PS C:\> $authRuleObj = Get-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthorizationRuleName "SBAuthoRule1"
+PS C:\> $authRuleObj = Get-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1
 
 PS C:\> $authRuleObj.Rights.Add("Manage")
 
-PS C:\> Set-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthRuleObj $authRuleObj
+PS C:\> Set-AzureRmServiceBusQueueAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthRuleObj $authRuleObj
 ```
 
-This example Adds **Manage** to the access rights of the authorization rule named SBAuthoRule1 of the queue named SB-Queue_example1.
+Adds **Manage** to the access rights of the authorization rule `SBAuthoRule1` of the queue `SB-Queue_exampl1`.
 
 ## PARAMETERS
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-Specifies the name of the authorization rule. Required if **-AuthruleObj** is not specified.
+The authorization rule name. Required if **-AuthruleObj** is not specified.
 
 ```yaml
 Type: String
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-Specifies the name of the Service Bus queue.
+The Service Bus queue name.
 
 ```yaml
 Type: String
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -126,10 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Specifies the rights; for instance: 
-@("Listen","Send","Manage"). 
-
-Required if the *AuthruleObj* parameter is not specified.
+The rights; for example 
+@("Listen","Send","Manage"). Required if 'AuthruleObj' not specified.
 
 ```yaml
 Type: String[]
@@ -184,8 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusQueueAuthorizationRule](./Get-AzureRmServiceBusQueueAuthorizationRule.md)
-
-[New-AzureRmServiceBusQueueAuthorizationRule](./New-AzureRmServiceBusQueueAuthorizationRule.md)
-
-[Remove-AzureRmServiceBusQueueAuthorizationRule](./Remove-AzureRmServiceBusQueueAuthorizationRule.md)

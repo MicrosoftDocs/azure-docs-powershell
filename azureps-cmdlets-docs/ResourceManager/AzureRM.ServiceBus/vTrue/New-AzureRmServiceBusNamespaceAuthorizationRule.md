@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmServiceBusNamespaceAuthorizationRule
 
 ## SYNOPSIS
-Creates an authorization rule for the specified Service Bus namespace
+Creates a new authorization rule for the specified Service Bus namespace
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ New-AzureRmServiceBusNamespaceAuthorizationRule [-ResourceGroup] <String> [-Name
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet creates an authorization rule for the specified Service Bus namespace.
+The **New-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet creates a new authorization rule for the specified Service Bus namespace.
 
 ## EXAMPLES
 
-### Example 1: Create an authorization rule for the specified namespace
+### Example 1
 ```
 PS C:\> New-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1 -Rights @("Listen","Send")
 ```
 
-This command creates the authorization rule named AuthoRule1 with **Listen** and **Send** rights for the namespace named SB-Example1.
+Creates `AuthoRule1` with **Listen** and **Send** rights for the namespace `SB-Example1`.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Specifies the name of the authorization rule.
+The authorization rule name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -156,8 +156,3 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusNamespaceAuthorizationRule](./Get-AzureRmServiceBusNamespaceAuthorizationRule.md)
-
-[Remove-AzureRmServiceBusNamespaceAuthorizationRule](./Remove-AzureRmServiceBusNamespaceAuthorizationRule.md)
-
-[Set-AzureRmServiceBusNamespaceAuthorizationRule](./Set-AzureRmServiceBusNamespaceAuthorizationRule.md)

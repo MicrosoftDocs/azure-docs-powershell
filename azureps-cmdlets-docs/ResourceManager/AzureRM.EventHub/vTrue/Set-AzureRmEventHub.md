@@ -22,12 +22,12 @@ The **Set-AzureRmEventHub** cmdlet updates the properties of the specified Event
 
 ## EXAMPLES
 
-### Example 1: Update the specified Event Hub
+### Example 1
 ```
-PS C:\> Set-AzureRmEventHub -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -EventHubObj "MyCreatedEventHub" -MessageRetentionInDays 4 -PartitionCount 2
+PS C:\> Set-AzureRmEventHub -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -EventHubObj MyCreatedEventHub -messageRetentionInDays 4 -partitionCount 2
 ```
 
-This command updates the Event Hub named MyEventHubName represented by the MyCreatedEventHub object, setting the message retention period to 4 days, and the number of partitions to 2.
+Updates the Event Hub `MyEventHubName` represented by the `MyCreatedEventHub` object, setting the message retention period to 4 days, and the number of partitions to 2.
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-Specifies the name of Event Hub.
+The Event Hub name.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubObj
-Specifies the Event Hubs object.
+The Event Hubs object.
 
 ```yaml
 Type: EventHubAttributes
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of Event Hubs namespace.
+The Event Hubs namespace name.
 
 ```yaml
 Type: String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group.
+Resource group name.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -messageRetentionInDays
-Specifies the Event Hub message retention period, in days.
+Event Hub message retention period, in days.
 
 ```yaml
 Type: Int64
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -partitionCount
-Specifies the number of partitions on this Event Hub.
+Number of partitions on this Event Hub.
 
 ```yaml
 Type: Int64
@@ -167,8 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmEventHub](./Get-AzureRmEventHub.md)
-
-[New-AzureRmEventHub](./New-AzureRmEventHub.md)
-
-[Remove-AzureRmEventHub](./Remove-AzureRmEventHub.md)

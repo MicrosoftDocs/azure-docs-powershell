@@ -21,17 +21,17 @@ The **Get-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet gets the descript
 
 ## EXAMPLES
 
-### Example 1: Get an authorization rule description for the specified namespace
+### Example 1
 ```
-PS C:\> Get-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -AuthorizationRuleName "AuthoRule1"
+PS C:\> Get-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1
 ```
 
-This command gets the specified authorization rule description for a specified namespace.
+Returns the specified authorization rule description for a specified namespace.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Specifies the name of the namespace authorization rule.
+The Service Bus namespace authorization rule name.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -105,8 +105,3 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
-[New-AzureRmServiceBusNamespaceAuthorizationRule](./New-AzureRmServiceBusNamespaceAuthorizationRule.md)
-
-[Remove-AzureRmServiceBusNamespaceAuthorizationRule](./Remove-AzureRmServiceBusNamespaceAuthorizationRule.md)
-
-[Set-AzureRmServiceBusNamespaceAuthorizationRule](./Set-AzureRmServiceBusNamespaceAuthorizationRule.md)

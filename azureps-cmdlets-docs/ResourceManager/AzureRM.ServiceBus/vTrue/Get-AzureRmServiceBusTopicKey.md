@@ -21,17 +21,17 @@ The **Get-AzureRmServiceBusTopicKey** cmdlet returns the primary and secondary c
 
 ## EXAMPLES
 
-### Example 1: Get the primary and secondary connection strings for a Service Bus topic
+### Example 1
 ```
-PS C:\> Get-AzureRmServiceBusTopicKey -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -AuthorizationRuleName "SBTopicAuthoRule1"
+PS C:\> Get-AzureRmServiceBusTopicKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -AuthorizationRuleName SBTopicAuthoRule1
 ```
 
-This commmand gets the primary and secondary connection strings for the specified Service Bus topic.
+Returns the primary and secondary connection strings for the specified Service Bus topic.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Specifies the name of the topic authorization rule.
+The topic authorization rule name.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-Specifies the name of the Service Bus topic.
+The Service Bus topic name.
 
 ```yaml
 Type: String
@@ -125,4 +125,3 @@ KeyName                   : SBTopicAuthoRule1
 
 ## RELATED LINKS
 
-[New-AzureRmServiceBusTopicKey](./New-AzureRmServiceBusTopicKey.md)

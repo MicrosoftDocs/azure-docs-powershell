@@ -20,17 +20,17 @@ The **Get-AzureRmServiceBusNamespace** cmdlet gets a description for the specifi
 
 ## EXAMPLES
 
-### Example 1: Get a description of the specified Service bus namespace
+### Example 1
 ```
-PS C:\> Get-AzureRmServiceBusNamespace -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1"
+PS C:\> Get-AzureRmServiceBusNamespace -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1
 ```
 
-This command gets a description of the Service Bus namespace named SB-Example1.
+Returns a description of the specified Service Bus namespace.
 
 ## PARAMETERS
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -45,7 +45,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -88,8 +88,3 @@ Enabled            : True
 
 ## RELATED LINKS
 
-[New-AzureRmServiceBusNamespace](./New-AzureRmServiceBusNamespace.md)
-
-[Remove-AzureRmServiceBusNamespace](./Remove-AzureRmServiceBusNamespace.md)
-
-[Set-AzureRmServiceBusNamespace](./Set-AzureRmServiceBusNamespace.md)

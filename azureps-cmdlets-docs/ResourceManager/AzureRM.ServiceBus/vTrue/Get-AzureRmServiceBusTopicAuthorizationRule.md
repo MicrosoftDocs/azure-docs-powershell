@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmServiceBusTopicAuthorizationRule
 
 ## SYNOPSIS
-Gets the description of the specified authorization rule description for the given topic.
+Returns the description of the specified authorization rule description for the given topic.
 
 ## SYNTAX
 
@@ -21,17 +21,17 @@ The **Get-AzureRmServiceBusTopicAuthorizationRule** cmdlet gets the description 
 
 ## EXAMPLES
 
-### Example 1: Get the description of an authorization rule
+### Example 1
 ```
-PS C:\> Get-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -AuthorizationRuleName "SBTopicAuthoRule1"
+PS C:\> Get-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_example1 -AuthorizationRuleName SBTopicAuthoRule1
 ```
 
-This command gets the description of the specified authorization rule for the given topic.
+Returns the description of the specified authorization rule for the given topic.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Specifies the name of the topic authorization rule.
+The topic authorization rule name.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-Specifies the name of the Service Bus topic.
+The Service Bus topic name.
 
 ```yaml
 Type: String
@@ -125,8 +125,3 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
-[New-AzureRmServiceBusTopicAuthorizationRule](./New-AzureRmServiceBusTopicAuthorizationRule.md)
-
-[Remove-AzureRmServiceBusTopicAuthorizationRule](./Remove-AzureRmServiceBusTopicAuthorizationRule.md)
-
-[Set-AzureRmServiceBusTopicAuthorizationRule](./Set-AzureRmServiceBusTopicAuthorizationRule.md)

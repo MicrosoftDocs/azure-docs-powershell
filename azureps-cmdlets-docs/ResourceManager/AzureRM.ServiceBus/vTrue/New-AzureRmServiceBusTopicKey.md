@@ -17,28 +17,28 @@ New-AzureRmServiceBusTopicKey [-ResourceGroup] <String> [-NamespaceName] <String
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServiceBusTopicKey** cmdlet generates a primary or secondary connection string for the specified Service Bus topic and authorization rule.
+The **New-AzureRmServiceBusTopicKey** cmdlet generates a new primary or secondary connection string for the specified Service Bus topic and authorization rule.
 
 ## EXAMPLES
 
-### Example 1: Regenerate the primary connection string for a namespace
+### Example 1
 ```
-PS C:\> New-AzureRmServiceBusTopicKey -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -AuthorizationRuleName "SBTopicAuthoRule1" -RegenerateKeys "PrimaryKey"
-```
-
-This command regenerates the primary connection string for the namespace named SB-Example1.
-
-### Example 2: Regenerate the secondary connection string for a namespace
-```
-PS C:\> New-AzureRmServiceBusTopicKey -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -AuthorizationRuleName S"BTopicAuthoRule1" -RegenerateKeys "SecondaryKey"
+PS C:\> New-AzureRmServiceBusTopicKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -AuthorizationRuleName SBTopicAuthoRule1 -RegenerateKeys PrimaryKey
 ```
 
-This command regenerates the secondary connection string for the namespace named SB-Example1.
+Regenerates the primary connection string for the namespace.
+
+### Example 2
+```
+PS C:\> New-AzureRmServiceBusTopicKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -AuthorizationRuleName SBTopicAuthoRule1 -RegenerateKeys SecondaryKey
+```
+
+Regenerates the secondary connection string for the namespace.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Specifies the name of the authorization rule.
+The authorization rule name.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-Specifies the name of the Service Bus topic.
+The Service Bus topic name.
 
 ```yaml
 Type: String
@@ -183,4 +183,3 @@ KeyName                   : SBTopicAuthoRule1
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusTopicKey](./Get-AzureRmServiceBusTopicKey.md)

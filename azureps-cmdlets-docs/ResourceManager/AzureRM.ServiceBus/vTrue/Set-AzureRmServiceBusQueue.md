@@ -21,7 +21,7 @@ The **Set-AzureRmServiceBusQueue** cmdlet updates the description for the Servic
 
 ## EXAMPLES
 
-### Example 1: Update a queue with a new description
+### Example 1
 ```
 PS C:\> $QueueObj = Get-AzureRmServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1
 
@@ -31,7 +31,7 @@ PS C:\> $QueueObj.SupportOrdering = $True
 PS C:\> Set-AzureRmServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -QueueObj $QueueObj
 ```
 
-This example updates the specified queue with a new description in the specified namespace. This example updates the **DeadLetteringOnMessageExpiration** property to **true** and **SupportOrdering** to **true**.
+Updates the specified queue with a new description in the specified namespace. This example updates the **DeadLetteringOnMessageExpiration** property to **true** and **SupportOrdering** to **true**.
 
 ## PARAMETERS
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-Specifies the name of the Service Bus queue.
+The Service Bus queue name.
 
 ```yaml
 Type: String
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -175,8 +175,3 @@ UpdatedAt                           : 1/20/2017 6:16:18 PM
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusQueue](./Get-AzureRmServiceBusQueue.md)
-
-[New-AzureRmServiceBusQueue](./New-AzureRmServiceBusQueue.md)
-
-[Remove-AzureRmServiceBusQueue](./Remove-AzureRmServiceBusQueue.md)

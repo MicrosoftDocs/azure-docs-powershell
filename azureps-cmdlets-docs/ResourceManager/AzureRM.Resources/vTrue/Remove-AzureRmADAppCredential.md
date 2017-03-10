@@ -47,7 +47,7 @@ The credential to be removed is identified by its key ID if an individual creden
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\> Remove-AzureRmADAppCredential -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5ee82 -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
+PS E:\> Remove-AzureRmADAppCredential -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5ee82 -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
 ```
 
 This command removes a credential key from an application.
@@ -57,7 +57,7 @@ In this example, the key with Id "9044423a-60a3-45ac-9ab1-09534157ebb" will be r
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\> Remove-AzureRmADAppCredential -ApplicationId 4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58 -All
+PS E:\> Remove-AzureRmADAppCredential -ApplicationId 4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58 -All
 ```
 
 This command removes a credential key from an application.

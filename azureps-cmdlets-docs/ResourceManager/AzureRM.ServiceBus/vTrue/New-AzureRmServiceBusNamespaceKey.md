@@ -21,17 +21,17 @@ The **New-AzureRmServiceBusNamespace** cmdlet generates new primary or secondary
 
 ## EXAMPLES
 
-### Example 1: Regenerate the primary key connection string for a namespace
+### Example 1
 ```
-PS C:\> New-AzureRmServiceBusNamespaceKey -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -AuthorizationRuleName "AuthoRule1" -RegenerateKeys "PrimaryKey"
+PS C:\> New-AzureRmServiceBusNamespaceKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1 -RegenerateKeys PrimaryKey
 ```
 
-This command regenerates the primary connection strings for the namespace named SB-Example1.
+Regenerates the primary or secondary connection strings for the namespace.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Specifies the name of the authorization rule.
+The authorization rule name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -76,9 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegenerateKeys
-Specifies the key that this cmdlet regenerates
-
-Valid values are: PrimaryKey or SecondaryKey.
+Regenerate Keys: PrimaryKey/SecondaryKey.
 
 ```yaml
 Type: String
@@ -94,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -157,4 +155,3 @@ KeyName                   : AuthoRule1
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusNamespaceKey](./Get-AzureRmServiceBusNamespaceKey.md)

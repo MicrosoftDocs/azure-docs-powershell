@@ -21,17 +21,17 @@ The **Get-AzureRmServiceBusQueue** cmdlet returns a description of the specified
 
 ## EXAMPLES
 
-### Example 1: Get the description of the specified Service Bus queue
+### Example 1
 ```
-PS C:\> Get-AzureRmServiceBusQueue -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1"
+PS C:\> Get-AzureRmServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_example1
 ```
 
-This command gets the description of the queue named SB-Queue_example1. 
+Returns the description of the queue. 
 
 ## PARAMETERS
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-Specifies the name of the queue.
+The queue name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -126,8 +126,3 @@ Location                            : West US
 
 ## RELATED LINKS
 
-[New-AzureRmServiceBusQueue](./New-AzureRmServiceBusQueue.md)
-
-[Remove-AzureRmServiceBusQueue](./Remove-AzureRmServiceBusQueue.md)
-
-[Set-AzureRmServiceBusQueue](./Set-AzureRmServiceBusQueue.md)

@@ -18,7 +18,7 @@ Get-AzureRmProviderOperation [-OperationSearchString] <String> [-InformationActi
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmProviderOperation** cmdlet gets the operations exposed by Azure resource providers.
+The Get-AzureRmProviderOperation gets the operations exposed by Azure resource providers.
 Operations can be composed to create custom roles in Azure RBAC.
 The command takes as input an operation search string (with possible wildcard(*) character(s)) which determines the operations details to display.
 

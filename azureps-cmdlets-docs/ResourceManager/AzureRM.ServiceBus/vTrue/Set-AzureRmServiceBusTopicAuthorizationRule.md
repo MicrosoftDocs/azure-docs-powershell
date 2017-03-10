@@ -22,7 +22,7 @@ The **Set-AzureRmServiceBusTopicAuthorizationRule** cmdlet updates the descripti
 
 ## EXAMPLES
 
-### Example 1: Update the description for an authorization rule
+### Example 1
 ```
 PS C:\> $authRuleObj = Get-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -AuthorizationRuleName SBTopicAuthoRule1
 
@@ -31,12 +31,12 @@ PS C:\> $authRuleObj.Rights.Add("Manage")
 PS C:\> Set-AzureRmServiceBusTopicAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -AuthRuleObj $authRuleObj
 ```
 
-This example adds **Manage** to the access rights of the authorization rule named SBTopicAuthoRule1 on the topic named SB-Topic_exampl1.
+Adds **Manage** to the access rights of the authorization rule `SBTopicAuthoRule1` on topic `SB-Topic_exampl1`.
 
 ## PARAMETERS
 
 ### -AuthRuleObj
-Specifies the Service Bus topic authorization rule object.
+The Service Bus topic authorization rule object.
 
 ```yaml
 Type: SharedAccessAuthorizationRuleAttributes
@@ -51,9 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-Specifies the name of the authorization rule. 
-
-This parameter is required if the *AuthruleObj* parameter is not specified.
+The authorization rule name. Required if **-AuthruleObj** is not specified.
 
 ```yaml
 Type: String
@@ -83,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -98,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -113,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Specifies the rights; for instance, 
+Rights; for example, 
 @("Listen","Send","Manage"). Required if **-AuthruleObj** is not specified.
 
 ```yaml
@@ -129,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-Specifies the name of the Service Bus topic.
+The Service Bus topic name.
 
 ```yaml
 Type: String
@@ -191,8 +189,3 @@ Rights   : {Listen, Send, Manage}
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusTopicAuthorizationRule](./Get-AzureRmServiceBusTopicAuthorizationRule.md)
-
-[New-AzureRmServiceBusTopicAuthorizationRule](./New-AzureRmServiceBusTopicAuthorizationRule.md)
-
-[Remove-AzureRmServiceBusTopicAuthorizationRule](./Remove-AzureRmServiceBusTopicAuthorizationRule.md)

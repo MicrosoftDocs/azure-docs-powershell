@@ -26,12 +26,12 @@ The **New-AzureRmServiceBusQueue** cmdlet creates a Service Bus queue in the spe
 
 ## EXAMPLES
 
-### Example 1: Create a Service Bus queue
+### Example 1
 ```
-PS C:\> New-AzureRmServiceBusQueue -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -EnablePartitioning $True
+PS C:\> New-AzureRmServiceBusQueue -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -EnablePartitioning $True
 ```
 
-This command creates a Service Bus queue named SB-Queue_example1 in the Service Bus namespace named SB-Example1.
+Creates a new Service Bus queue `SB-Queue_exampl1` in the specified Service Bus namespace `SB-Example1`.
 
 ## PARAMETERS
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-Specifies the name of the Service Bus queue.
+The Service Bus queue name.
 
 ```yaml
 Type: String
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -SizeInBytes
-Specifies the size of the queue in bytes.
+The size of the queue in bytes.
 
 ```yaml
 Type: Int64
@@ -392,8 +392,3 @@ UpdatedAt                           : 1/20/2017 2:51:37 AM
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusQueue](./Get-AzureRmServiceBusQueue.md)
-
-[Remove-AzureRmServiceBusQueue](./Remove-AzureRmServiceBusQueue.md)
-
-[Set-AzureRmServiceBusQueue](./Set-AzureRmServiceBusQueue.md)

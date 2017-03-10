@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchString
-Specifies the name of the user display.
+The user display name
 
 ```yaml
 Type: String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the object ID of the user.
+Object id of the user.
 
 ```yaml
 Type: Guid

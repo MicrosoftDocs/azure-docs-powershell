@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmServiceBusTopic
 
 ## SYNOPSIS
-Creates a Service Bus topic in the specified Service Bus namespace.
+Creates a new Service Bus topic in  the specified Service Bus namespace.
 
 ## SYNTAX
 
@@ -22,16 +22,16 @@ New-AzureRmServiceBusTopic [-ResourceGroup] <String> [-NamespaceName] <String> [
 ```
 
 ## DESCRIPTION
-The **New-AzureRmServiceBusTopic** cmdlet creates a Service Bus topic in the specified Service Bus namespace.
+The **New-AzureRmServiceBusTopic** cmdlet creates a new Service Bus topic in the specified Service Bus namespace.
 
 ## EXAMPLES
 
-### Example 1: Create a Service Bus topic
+### Example 1
 ```
-PS C:\> New-AzureRmServiceBusTopic -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -EnablePartitioning $True
+PS C:\> New-AzureRmServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -EnablePartitioning $True
 ```
 
-This command creates a Service Bus topic named SB-Topic_example1 in the Service Bus namespace named SB-Example1 that enables partitioning.
+Creates a new Service Bus topic `SB-Topic_exampl1` in the specified Service Bus namespace `SB-Example1`.
 
 ## PARAMETERS
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-Specifies the name of the Service Bus topic.
+The Service Bus topic name.
 
 ```yaml
 Type: String
@@ -384,4 +384,3 @@ UpdatedAt                           : 1/20/2017 3:16:43 AM
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusTopic](./Get-AzureRmServiceBusTopic.md)

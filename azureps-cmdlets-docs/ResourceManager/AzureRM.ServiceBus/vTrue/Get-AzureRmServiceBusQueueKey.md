@@ -17,21 +17,21 @@ Get-AzureRmServiceBusQueueKey [-ResourceGroup] <String> [-NamespaceName] <String
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmServiceBusQueueKey** cmdlet gets the primary and secondary connection strings for the given Service Bus queue. 
+The **Get-AzureRmServiceBusQueueKey** cmdlet returns the primary and secondary connection strings for the given Service Bus queue. 
 
 ## EXAMPLES
 
-### Example 1: Get the primary and secndary connection strings for a Service Bus queue
+### Example 1
 ```
-PS C:\> Get-AzureRmServiceBusQueueKey -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -QueueName "SB-Queue_example1" -AuthorizationRuleName "SBAuthoRule1"
+PS C:\> Get-AzureRmServiceBusQueueKey -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -QueueName SB-Queue_exampl1 -AuthorizationRuleName SBAuthoRule1
 ```
 
-This command gets the primary and secondary connection strings for the Service Bus queue named SB-Queue_example1.
+Returns the primary and secondary connection strings for the specified Service Bus queue.
 
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Specifies the name of the queue authorization rule.
+The queue authorization rule name.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueName
-Specifies the name of the Service Bus queue.
+The Service Bus queue name.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -125,4 +125,3 @@ KeyName                   : SBAuthoRule1
 
 ## RELATED LINKS
 
-[New-AzureRmServiceBusQueueKey](./New-AzureRmServiceBusQueueKey.md)

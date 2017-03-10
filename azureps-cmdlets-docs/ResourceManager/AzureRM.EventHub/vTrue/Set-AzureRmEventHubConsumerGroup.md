@@ -22,12 +22,12 @@ The **Set-AzureRmEventHubConsumerGroup** cmdlet updates the specified Event Hubs
 
 ## EXAMPLES
 
-### Example 1: Update the specified Event Hubs consumer group
+### Example 1
 ```
-PS C:\> Set-AzureRmEventHubConsumerGroup -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName" -ConsumerGroupName "MyConsumerGroupName" -UserMetadata "Testing"
+PS C:\> Set-AzureRmEventHubConsumerGroup -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -ConsumerGroupName MyConsumerGroupName -UserMetadata "Testing"
 ```
 
-This command sets the user metadata of the consumer group named MyConsumerGroupName to Testing.
+Sets the user metadata of the consumer group `MyConsumerGroupName` to "Testing."
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConsumerGroupName
-Specifies the name of the consumer group.
+The consumer group name.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-Specifies the name of Event Hub.
+The Event Hub name.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of Event Hubs namespace.
+The Event Hubs namespace name.
 
 ```yaml
 Type: String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group.
+Resource group name.
 
 ```yaml
 Type: String
@@ -123,8 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserMetadata
-Specifies the user metadata for the consumer group.
-This parameter is optional.
+User metadata for the consumer group (optional).
 
 ```yaml
 Type: String
@@ -153,8 +152,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmEventHubConsumerGroup](./Get-AzureRmEventHubConsumerGroup.md)
-
-[New-AzureRmEventHubConsumerGroup](./New-AzureRmEventHubConsumerGroup.md)
-
-[Remove-AzureRmEventHubConsumerGroup](./Remove-AzureRmEventHubConsumerGroup.md)

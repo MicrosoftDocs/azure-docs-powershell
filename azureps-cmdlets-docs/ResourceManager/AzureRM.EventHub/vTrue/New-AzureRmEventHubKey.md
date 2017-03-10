@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmEventHubKey
 
 ## SYNOPSIS
-Creates a primary or secondary key for the specified Event Hubs authorization rule.
+Creates a new primary or secondary key for the specified Event Hubs authorization rule.
 
 ## SYNTAX
 
@@ -21,19 +21,19 @@ The **New-AzureRmEventHubKey** cmdlet regenerates the primary or secondary SAS k
 
 ## EXAMPLES
 
-### Example 1: Regenerate the primary key for the specified authorization rule
+### Example 1
 ```
 PS C:\> New-AzureRmEventHubKey -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName -RegenerateKey PrimaryKey
 ```
 
-This command regenerates the primary key for the authorization rule named MyAuthRuleName.
+Regenerates the primary key for the authorization rule `MyAuthRuleName`.
 
-### Example 2: Regenerate the secondary key for the specified authorization rule
+### Example 2
 ```
 PS C:\> New-AzureRmEventHubKey -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName -RegenerateKey SecondaryKey
 ```
 
-This command regenerates the secondary key for the authorization rule named MyAuthRuleName.
+Regenerates the secondary key for the authorization rule `MyAuthRuleName`.
 
 ## PARAMETERS
 
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-Specifies the name of The Event Hub.
+The Event Hub name.
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Event Hubs namespace.
+The Event Hubs namespace name.
 
 ```yaml
 Type: String
@@ -83,9 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegenerateKey
-Specifies the key that this cmdlet regenerates.
-
-Valid values are: PrimaryKey or SecondaryKey.
+Key to regenerate: `PrimaryKey` or `SecondaryKey`.
 
 ```yaml
 Type: String
@@ -101,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -132,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-Specifies the name of the authorization rule.
+Authorization rule name.
 
 ```yaml
 Type: String
@@ -161,4 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmEventHubKey](./Get-AzureRmEventHubKey.md)

@@ -52,7 +52,7 @@ If no parameter is provided, it fetches all applications under the tenant.
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\> Get-AzureRmADApplication
+PS E:\> Get-AzureRmADApplication
 ```
 
 Lists all the applications under a tenant.
@@ -61,7 +61,7 @@ Lists all the applications under a tenant.
 @{paragraph=PS C:\\\>}
 
 ```
-PS C:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
+PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
 ```
 
 Gets the application with identifier uri as "http://mySecretApp1".
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the object ID of the application that this cmdlet gets.
+The object id of the application to fetch.
 
 ```yaml
 Type: Guid
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies the application ID of the application to that this cmdlet gets.
+The application id of the application to fetch.
 
 ```yaml
 Type: Guid
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNameStartWith
-Specifies the display name of all applications that this cmdlet gets.
+Fetch all applications starting with the display name.
 
 ```yaml
 Type: String
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUri
-Specifies the unique identifier URI of the application that this cmdlet gets.
+Unique identifier Uri of the application to fetch.
 
 ```yaml
 Type: String

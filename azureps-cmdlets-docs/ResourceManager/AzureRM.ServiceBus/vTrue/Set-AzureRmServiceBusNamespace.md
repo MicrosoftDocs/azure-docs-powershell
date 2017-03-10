@@ -21,12 +21,12 @@ The **Set-AzureRmServiceBusNamespace** cmdlet updates the description of the spe
 
 ## EXAMPLES
 
-### Example 1: Update a Service Bus namespace with a new description
+### Example 1
 ```
-PS C:\> Set-AzureRmServiceBusNamespace -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -Location "WestUs" -SkuName "Premium" -SkuCapacity 10 -Tag @{Tag2="Tag2Value"}
+PS C:\> Set-AzureRmServiceBusNamespace -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -Location WestUs -SkuName Premium -SkuCapacity 10 -Tag @{Tag2="Tag2Value"}
 ```
 
-This command updates the Service Bus namespace named SB-Example1 with a new description.
+Updates the Service Bus namespace with a new description.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the location of the Service Bus namespace.
+The Service Bus namespace location.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the resource group name.
+The resource group name.
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Specifies the name of the namespace SKU.
+The namespace SKU name.
 
 ```yaml
 Type: String
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Specifies a hashtable that represents resource tags.
+Hashtables that represent resource tags.
 
 ```yaml
 Type: Hashtable
@@ -175,8 +175,3 @@ Enabled            : False
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusNamespace](./Get-AzureRmServiceBusNamespace.md)
-
-[New-AzureRmServiceBusNamespace](./New-AzureRmServiceBusNamespace.md)
-
-[Remove-AzureRmServiceBusNamespace](./Remove-AzureRmServiceBusNamespace.md)

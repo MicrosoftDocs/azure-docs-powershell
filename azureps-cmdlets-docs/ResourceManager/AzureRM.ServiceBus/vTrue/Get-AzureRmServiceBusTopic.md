@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmServiceBusTopic
 
 ## SYNOPSIS
-Gets a description for the specified Service Bus topic.
+Returns a description for the specified Service Bus topic.
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Get-AzureRmServiceBusTopic [-ResourceGroup] <String> [-NamespaceName] <String> [
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmServiceBusTopic** cmdlet gets a topic description for the specified Service Bus namespace.
+The **Get-AzureRmServiceBusTopic** cmdlet returns a topic description for the specified Service Bus namespace.
 
 ## EXAMPLES
 
-### Example 1: Get the description of the specified topic for a Service Bus namespace
+### Example 1
 ```
-PS C:\> Get-AzureRmServiceBusTopic -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1"
+PS C:\> Get-AzureRmServiceBusTopic -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1
 ```
 
-This command gets the description of the specified topic for the given Service Bus namespace.
+Returns the description of the specified topic for the given Service Bus namespace.
 
 ## PARAMETERS
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-Specifies the name of the Service Bus topic.
+The Service Bus topic name.
 
 ```yaml
 Type: String
@@ -125,8 +125,3 @@ UpdatedAt                           : 1/20/2017 3:16:43 AM
 
 ## RELATED LINKS
 
-[New-AzureRmServiceBusTopic](./New-AzureRmServiceBusTopic.md)
-
-[Remove-AzureRmServiceBusTopic](./Remove-AzureRmServiceBusTopic.md)
-
-[Set-AzureRmServiceBusTopic](./Set-AzureRmServiceBusTopic.md)

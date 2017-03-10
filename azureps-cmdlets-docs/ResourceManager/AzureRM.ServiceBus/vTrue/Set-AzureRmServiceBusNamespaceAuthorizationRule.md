@@ -22,16 +22,16 @@ The **Set-AzureRmServiceBusNamespaceAuthorizationRule** cmdlet updates the descr
 
 ## EXAMPLES
 
-### Example 1: Update the description for the specified authorization rule
+### Example 1
 ```
 PS C:\> $authRuleObj = Get-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthorizationRuleName AuthoRule1
 
 PS C:\> $authRuleObj.Rights.Remove("Manage")
 
-PS C:\> Set-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -AuthRuleObj $authRuleObj
+PS C:\> Set-AzureRmServiceBusNamespaceAuthorizationRule -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -AuthRuleObj $authRuleObj
 ```
 
-This command removes **Manage** from the access rights of the authorization rule named AuthoRule1 in the namespace SB-Example1.
+Removes **Manage** from the access rights of the authorization rule `AuthoRule1` in namespace `SB-Example1`.
 
 ## PARAMETERS
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRuleName
-Specifies the name of the authorization rule. Required if **-AuthruleObj** is not specified.
+The authorization rule name. Required if **-AuthruleObj** is not specified.
 
 ```yaml
 Type: String
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -111,10 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Specifies rights; for example
-@("Listen","Send","Manage"). 
-
-This parameter is required if **AuthruleObj** is not specified.
+Rights; for example
+@("Listen","Send","Manage"). Required if **AuthruleObj** is not specified.
 
 ```yaml
 Type: String[]
@@ -172,8 +170,3 @@ Rights   : {Listen, Send}
 
 ## RELATED LINKS
 
-[Get-AzureRmServiceBusNamespaceAuthorizationRule](./Get-AzureRmServiceBusNamespaceAuthorizationRule.md)
-
-[New-AzureRmServiceBusNamespaceAuthorizationRule](./New-AzureRmServiceBusNamespaceAuthorizationRule.md)
-
-[Remove-AzureRmServiceBusNamespaceAuthorizationRule](./Remove-AzureRmServiceBusNamespaceAuthorizationRule.md)

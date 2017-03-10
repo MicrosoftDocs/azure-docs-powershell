@@ -21,12 +21,12 @@ The **Remove-AzureRmEventHub** cmdlet removes and deletes the specified Event Hu
 
 ## EXAMPLES
 
-### Example 1: Remove the specified Event Hub
+### Example 1
 ```
-PS C:\> Remove-AzureRmEventHub -ResourceGroupName "MyResourceGroupName" -NamespaceName "MyNamespaceName" -EventHubName "MyEventHubName"
+PS C:\> Remove-AzureRmEventHub -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
 ```
 
-This command removes the Event Hub named MyEventHubName.
+Removes the Event Hub `MyEventHubName`.
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-Specifies the name of the Event Hub that this cmdlet removes.
+Name of the Event Hub to remove.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-Specifies the name of Event Hubs namespace.
+The Event Hubs namespace name.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group.
+Resource group name.
 
 ```yaml
 Type: String
@@ -121,8 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmEventHub](./Get-AzureRmEventHub.md)
-
-[New-AzureRmEventHub](./New-AzureRmEventHub.md)
-
-[Set-AzureRmEventHub](./Set-AzureRmEventHub.md)

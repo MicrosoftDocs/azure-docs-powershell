@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmServiceBusSubscription
 
 ## SYNOPSIS
-Gets a subscription description for the specified topic.
+Returns a subscription description for the specified topic.
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Get-AzureRmServiceBusSubscription [-ResourceGroup] <String> [-NamespaceName] <St
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmServiceBusSubscription** cmdlet gets a subscription description for the specified Service Bus topic.
+The **Get-AzureRmServiceBusSubscription** cmdlet returns a subscription description for the specified Service Bus topic.
 
 ## EXAMPLES
 
-### Example 1: Get a Service Bus subscription description
+### Example 1
 ```
-PS C:\> Get-AzureRmServiceBusSubscription -ResourceGroup "Default-ServiceBus-WestUS" -NamespaceName "SB-Example1" -TopicName "SB-Topic_example1" -SubscriptionName "SB-TopicSubscription-Example1"
+PS C:\> Get-AzureRmServiceBusSubscription -ResourceGroup Default-ServiceBus-WestUS -NamespaceName SB-Example1 -TopicName SB-Topic_exampl1 -SubscriptionName SB-TopicSubscription-Example1
 ```
 
-This command gets a subscription description for the Service Bus topic named SB-TopicSubscription-Example1.
+Returns a subscription description for the specified Service Bus topic.
 
 ## PARAMETERS
 
 ### -NamespaceName
-Specifies the name of the Service Bus namespace.
+The Service Bus namespace name.
 
 ```yaml
 Type: String
@@ -46,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.
+The name of the resource group.
 
 ```yaml
 Type: String
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionName
-Specifies the subscription name.
+The subscription name.
 
 ```yaml
 Type: String
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopicName
-Specifies the topic name.
+The topic name.
 
 ```yaml
 Type: String
@@ -137,8 +137,3 @@ UpdatedAt                                 : 1/20/2017 3:18:54 AM
 
 ## RELATED LINKS
 
-[New-AzureRmServiceBusSubscription](./New-AzureRmServiceBusSubscription.md)
-
-[Remove-AzureRmServiceBusSubscription](./Remove-AzureRmServiceBusSubscription.md)
-
-[Set-AzureRmServiceBusSubscription](./Set-AzureRmServiceBusSubscription.md)
