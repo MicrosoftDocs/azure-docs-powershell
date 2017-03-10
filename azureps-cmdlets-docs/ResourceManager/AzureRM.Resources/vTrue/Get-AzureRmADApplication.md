@@ -52,7 +52,7 @@ If no parameter is provided, it fetches all applications under the tenant.
 @{paragraph=PS C:\\\>}
 
 ```
-PS E:\> Get-AzureRmADApplication
+PS C:\> Get-AzureRmADApplication
 ```
 
 Lists all the applications under a tenant.
@@ -61,7 +61,7 @@ Lists all the applications under a tenant.
 @{paragraph=PS C:\\\>}
 
 ```
-PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
+PS C:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
 ```
 
 Gets the application with identifier uri as "http://mySecretApp1".

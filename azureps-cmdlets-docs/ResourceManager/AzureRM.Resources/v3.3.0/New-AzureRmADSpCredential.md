@@ -39,7 +39,7 @@ New-AzureRmADSpCredential -ServicePrincipalName <String> -CertValue <String> [-S
 ```
 
 ## DESCRIPTION
-The **New-AzureRmADSpCredential** cmdlet can be used to add a new credential or to roll credentials for a service principal.
+The **New-AzureRmADSpCredential** cmdlet adds a new credential or to roll credentials for a service principal.
 The service principal is identified by supplying either the object id or service principal name.
 
 ## EXAMPLES
@@ -47,7 +47,7 @@ The service principal is identified by supplying either the object id or service
 ### Example 1: Add a password credential 
 
 ```
-PS E:\> New-AzureRmADSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476 -Password "P@ssw0rd!"
+PS C:\> New-AzureRmADSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476 -Password "P@ssw0rd!"
 ```
 
 This command adds a new password credential to an existing service principal.
@@ -64,7 +64,7 @@ $binCert = $cer.GetRawCertData()
 
 $credValue = [System.Convert]::ToBase64String($binCert)
 
-PS E:\> New-AzureRmADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
+PS C:\> New-AzureRmADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
 ```
 
 This example adds a new key credential to an existing service principal.

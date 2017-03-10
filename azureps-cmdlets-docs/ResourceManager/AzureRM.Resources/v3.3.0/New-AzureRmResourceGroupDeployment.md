@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -TemplateUri
 Specifies the URI of a JSON template file.
-This file can be a custom template or a gallery template that is saved as a JSON file, such as by using **Save-AzureRmResourceGroupGalleryTemplate**.
+This file can be a custom template or a gallery template that is saved as a JSON file, such as by using [Save-AzureRmResourceGroupGalleryTemplate](./Save-AzureRmResourceGroupGalleryTemplate.md).
 
 ```yaml
 Type: String

@@ -81,6 +81,8 @@ This command gets a resource of the type microsoft.web/sites, named ContosoWebsi
 ## PARAMETERS
 
 ### -ResourceGroupName
+Specifies the name of the resource group.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type
@@ -157,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies API version.
+Specifies the API version of the resource.
 
 ```yaml
 Type: String
