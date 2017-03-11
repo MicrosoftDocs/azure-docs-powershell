@@ -55,7 +55,7 @@ The **Edit-AzureRmSiteRecoveryRecoveryPlan** cmdlet edits an Azure Site Recovery
 ## PARAMETERS
 
 ### -AddProtectedEntities
-Specifies an array of protected entities to add.
+Specifies an array of protected entities that this cmdlet adds.
 
 ```yaml
 Type: ASRProtectionEntity[]
@@ -70,6 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -AddProtectedItems
+Specifies an array of protected items that this cmdlet adds.
+
 ```yaml
 Type: ASRReplicationProtectedItem[]
 Parameter Sets: AddReplicationProtectedItems
@@ -128,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveGroup
-Removes the specified Site Recovery recovery plan group.
+Specifies that this cmdlet removes the specified Site Recovery recovery plan group.
 
 ```yaml
 Type: ASRRecoveryPlanGroup
@@ -158,6 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProtectedItems
+Specifies an array of protected items.
+
 ```yaml
 Type: ASRReplicationProtectedItem[]
 Parameter Sets: RemoveReplicationProtectedItems
