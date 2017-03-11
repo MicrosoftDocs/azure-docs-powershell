@@ -52,6 +52,8 @@ Protection policies define replication settings for protected items and can be a
 ## PARAMETERS
 
 ### -Fabric
+Specifies the Azure Site Recovery Fabric object.
+
 ```yaml
 Type: ASRFabric
 Parameter Sets: ByObjectWithName, ByObjectWithFriendlyName, ByFabricObject
@@ -104,4 +106,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
