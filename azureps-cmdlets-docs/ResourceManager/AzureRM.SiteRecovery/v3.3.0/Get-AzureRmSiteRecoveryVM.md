@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the virtual machine.
+Specifies the name of the virtual machine that this cmdlet gets information from.
 
 ```yaml
 Type: String
