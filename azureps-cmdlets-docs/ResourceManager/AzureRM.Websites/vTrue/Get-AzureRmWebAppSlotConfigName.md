@@ -27,7 +27,7 @@ The **Get-AzureRmWebAppSlotConfigName** cmdlet retrieves the list of App Setting
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Get-AzureRmWebAppSlotConfigName -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```

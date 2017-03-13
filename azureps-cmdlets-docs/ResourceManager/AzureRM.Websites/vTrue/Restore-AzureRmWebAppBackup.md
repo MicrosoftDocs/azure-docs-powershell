@@ -29,7 +29,7 @@ The **Restore-AzureRmWebAppBackup** cmdlet restores an Azure Web App Backup.
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Restore-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net" -BlobName "myBlob"
 ```

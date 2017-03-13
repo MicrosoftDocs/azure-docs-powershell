@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-App Service Plan object
+Specifies the App Service Plan object.
 
 ```yaml
 Type: ServerFarmWithRichSku
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location
+Specifies the geographical location of the WebApp.
 
 ```yaml
 Type: String
@@ -121,5 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
 
 [Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)
-
-

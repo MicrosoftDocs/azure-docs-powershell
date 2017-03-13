@@ -27,7 +27,7 @@ The **Reset-AzureRmWebAppSlotPublishingProfile** cmdlet resets the publishing pr
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Reset-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "slot001"
 ```

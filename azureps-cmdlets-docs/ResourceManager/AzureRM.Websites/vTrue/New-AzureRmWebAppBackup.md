@@ -28,7 +28,7 @@ The **New-AzureRmWebAppBackup** cmdlet creates an Azure Web App Backup.
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> New-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net"
 ```

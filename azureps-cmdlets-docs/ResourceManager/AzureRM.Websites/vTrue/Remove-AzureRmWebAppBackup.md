@@ -27,7 +27,7 @@ The **Remove-AzureRmWebAppBackup** cmdlet gets the specified backup of an Azure 
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Remove-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -BackupId "12345"
 ```
@@ -37,7 +37,7 @@ This command removes the backup with backup with ID of "12345" from the Web App 
 ## PARAMETERS
 
 ### -BackupId
-Backup Id
+Specifies the backup ID.
 
 ```yaml
 Type: String

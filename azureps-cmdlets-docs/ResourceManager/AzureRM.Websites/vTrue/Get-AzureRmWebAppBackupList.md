@@ -27,7 +27,7 @@ The **Get-AzureRmWebAppBackupList** cmdlet gets a list of backups for an Azure W
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Get-AzureRmWebAppBackupList -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard"
 ```
