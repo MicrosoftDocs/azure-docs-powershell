@@ -34,8 +34,7 @@ The **Get-AzureRmWebAppMetrics** gets Web App metrics.
 PS C:\> Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["Requests"]
 ```
 
-This command gets Requests of the Web App ContosoWebApp 
-    per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
+This command gets Requests of the Web App ContosoWebApp per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
 
 ## PARAMETERS
 
@@ -55,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-Granularity
+Specifies the granularity of the App Service metrics.
 
 ```yaml
 Type: String
@@ -85,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metrics
-Metrics as a string array
+Specifies a string array of metrics.
 
 ```yaml
 Type: String[]
@@ -100,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -145,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-WebApp object
+Specifies the WebApp object.
 
 ```yaml
 Type: Site
@@ -168,4 +167,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-AzureRmWebAppCertificate](./Get-AzureRmWebAppCertificate.md)
-

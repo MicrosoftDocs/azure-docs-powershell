@@ -42,7 +42,7 @@ The command specifies a Basic Tier and allocates two small workers.
 ## PARAMETERS
 
 ### -Location
-Location 
+Specifies the geographical location of the Azure App Service Plan.
 
 ```yaml
 Type: String
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-Tier
+Specifies the Azure App Service plan tier.
 
 ```yaml
 Type: String
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberofWorkers
-Number Of Workers
+Specifies the number of workers.
 
 ```yaml
 Type: Int32
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerSize
-Size of web worker
+Specifies the size of the web worker.
 
 ```yaml
 Type: String
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-App Service Environment Name
+Specifies the name of the App Service environment.
 
 ```yaml
 Type: String
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-App Service Environment Specifies the name of the resource group.
+Specifies the name of the App Service Environment resource group.
 
 ```yaml
 Type: String
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-Specifies the Specifies the App Service Plan object..
+Specifies the Specifies the App Service Plan object.
 
 ```yaml
 Type: ServerFarmWithRichSku
@@ -192,5 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
 
 [Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)
-
-

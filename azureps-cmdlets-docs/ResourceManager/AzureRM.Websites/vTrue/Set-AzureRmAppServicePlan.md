@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberofWorkers
-Number Of Workers
+Specifies the number of workers.
 
 ```yaml
 Type: Int32
@@ -180,5 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
 
 [Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)
-
-

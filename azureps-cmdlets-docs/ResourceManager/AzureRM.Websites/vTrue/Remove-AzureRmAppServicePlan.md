@@ -39,7 +39,8 @@ This command removes the Azure App Service plan named ContosoAppPlan that belong
 ## PARAMETERS
 
 ### -Force
-Forcefully Remove Option
+Forces the command to run without asking for user confirmation.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-Specifies the Specifies the App Service Plan object..
+Specifies the Specifies the App Service Plan object.
 
 ```yaml
 Type: ServerFarmWithRichSku
@@ -145,5 +146,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAppServicePlan](./New-AzureRmAppServicePlan.md)
 
 [Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)
-
-

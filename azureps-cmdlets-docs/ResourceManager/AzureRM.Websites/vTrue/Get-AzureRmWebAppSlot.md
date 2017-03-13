@@ -38,7 +38,7 @@ This command gets the slot named Slot001 from the Web App named WebAppStandard t
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-Specifies an WebApp object.
+Specifies a Web App object.
 
 ```yaml
 Type: Site

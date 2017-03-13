@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-AzureRmWebAppBackup
 
 ## SYNOPSIS
+Creates an Azure Web App Backup.
 
 ## SYNTAX
 
@@ -38,7 +39,7 @@ Creates a backup of the specified app ContosoWebApp that is within resource grou
 ## PARAMETERS
 
 ### -BackupName
-Backup Name
+Specifies the name of the backup.
 
 ```yaml
 Type: String
@@ -68,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -128,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-Specifies an WebApp object.
+Specifies a Web App object.
 
 ```yaml
 Type: Site
@@ -153,3 +154,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebAppBackup](./Get-AzureRmWebAppBackup.md)
+
+[Remove-AzureRmWebAppBackup](./Remove-AzureRmWebAppBackup.md)

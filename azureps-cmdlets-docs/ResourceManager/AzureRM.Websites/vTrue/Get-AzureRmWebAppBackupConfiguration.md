@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmWebAppBackupConfiguration
 
 ## SYNOPSIS
+Gets the backup configuration of an Azure Web App.
 
 ## SYNTAX
 
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Slot Name
+Specifies the name of the WebApp slot.
 
 ```yaml
 Type: String
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: Site
@@ -106,4 +107,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

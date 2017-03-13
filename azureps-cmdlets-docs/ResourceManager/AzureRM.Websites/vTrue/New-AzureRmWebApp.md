@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location
+Specifies the geographical location of the Web App.
 
 ```yaml
 Type: String
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-Specifies the name of an App service plan.
+Specifies the name of an Web App service plan.
 
 ```yaml
 Type: String
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceWebApp
-Source Specifies an WebApp object.
+Specifies the source of a WebApp object.
 
 ```yaml
 Type: Site
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfileId
-Traffic Manager Profile Id
+Specifies the ID of the traffic manager profile.
 
 ```yaml
 Type: String
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSourceControl
-Ignore Source Control Option
+Indicates that the cmdlet ignores the source control option.
 
 ```yaml
 Type: SwitchParameter
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreCustomHostNames
-Ignore Custom Host Names Option
+Indicates that the cmdlet ignores the custom host names option.
 
 ```yaml
 Type: SwitchParameter
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettingsOverrides
-App Settings Overrides HashTable
+Specifies a hashtable of App Settings overrides.
 
 ```yaml
 Type: Hashtable
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-App Service Environment Name
+Specifies the name of the App Service environment.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-App Service Environment Specifies the name of the resource group.
+Specifies the name of the App Service environment resource group.
 
 ```yaml
 Type: String
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSourceWebAppSlots
-Include Source WebApp Slots Option
+Indicates that this cmdlet includes the source WebApp slots option.
 
 ```yaml
 Type: SwitchParameter
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfileName
-Traffic Manager Profile Name
+Specifies the name of the traffic manager profile.
 
 ```yaml
 Type: String
@@ -258,5 +258,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
 
 [Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)
-
-
