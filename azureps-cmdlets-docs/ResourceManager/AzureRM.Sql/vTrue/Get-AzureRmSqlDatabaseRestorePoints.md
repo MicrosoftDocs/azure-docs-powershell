@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmSqlDatabaseRestorePoints
 
 ## SYNOPSIS
-Retrieves the distinct restore points from which a SQL Data Warehouse can be restored.
+Gets the distinct restore points from which a SQL Data Warehouse can be restored.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzureRmSqlDatabaseRestorePoints [-ServerName] <String> [-DatabaseName] <Stri
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmSqlDatabaseRestorePoints** cmdlet retrieves the distinct restore points that an Azure SQL Data Warehouse can be restored from.
+The **Get-AzureRmSqlDatabaseRestorePoints** cmdlet gets the distinct restore points that an Azure SQL Data Warehouse can be restored from.
 For an Azure SQL Database, the restore window is continuous.
 This means that any point in time in the backup retention period of the database can be used as a restore point.
 
@@ -29,7 +29,7 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ### Example 1: Get all restore points
 ```
-PS C:\>Get-AzureRmSqlDatabaseRestorePoints -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Get-AzureRmSqlDatabaseRestorePoints -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 ResourceGroupName        : resourcegroup01
 ServerName               : server01
 DatabaseName             : database01
@@ -170,5 +170,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

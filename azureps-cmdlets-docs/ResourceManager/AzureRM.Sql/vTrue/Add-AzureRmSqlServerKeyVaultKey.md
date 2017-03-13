@@ -17,13 +17,12 @@ Add-AzureRmSqlServerKeyVaultKey [-KeyId] <String> [-ServerName] <String> [-Resou
 ```
 
 ## DESCRIPTION
-The Add-AzureRmSqlServerKeyVaultKey cmdlet adds a Key Vault key to the provided SQL server.
+The **Add-AzureRmSqlServerKeyVaultKey** cmdlet adds a Key Vault key to the provided SQL server.
 The server must have 'get, wrapKey, unwrapKey' permissions to the vault.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Add Key Vault key  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Add a Key Vault key 
 
 ```
 PS C:\> Add-AzureRmSqlServerKeyVaultKey -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' -ServerName 'ContosoServer' -ResourceGroupName 'ContosoResourceGroup'
@@ -42,7 +41,7 @@ CreationDate      : 1/1/2017 12:00:00 AM
 ## PARAMETERS
 
 ### -KeyId
-The Azure Key Vault KeyId.
+Specifies the Azure Key Vault KeyId.
 
 ```yaml
 Type: String
@@ -57,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -72,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The Azure Sql Server name.
+Specifies the name of the Azure SQL Server.
 
 ```yaml
 Type: String
@@ -129,3 +128,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[Get-AzureRmSqlServerKeyVaultKey](./Get-AzureRmSqlServerKeyVaultKey.md)
+
+[Remove-AzureRmSqlServerKeyVaultKey](./Remove-AzureRmSqlServerKeyVaultKey.md)

@@ -25,7 +25,7 @@ The **Suspend-AzureRmSqlDatabase** cmdlet suspends an Azure SQL Data Warehouse d
 
 ### Example 1: Suspends an Azure SQL Data Warehouse database
 ```
-PS C:\>Suspend-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Suspend-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 ```
 
 This command suspends an active Azure SQL Data Warehouse database.

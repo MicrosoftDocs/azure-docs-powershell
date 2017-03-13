@@ -27,7 +27,7 @@ This cmdlet returns a policy that is used by the Azure SQL databases that are bo
 
 ### Example 1: Get the auditing policy of an Azure SQL server with Table auditing defined on it
 ```
-PS C:\>Get-AzureRmSqlServerAuditingPolicy -ResourceGroupName "resourcegroup01" -ServerName "server01"
+PS C:\> Get-AzureRmSqlServerAuditingPolicy -ResourceGroupName "resourcegroup01" -ServerName "server01"
 EventType              : {PlainSQL_Success, PlainSQL_Failure, ParameterizedSQL_Success, ParameterizedSQL_Failure...} 
 TableIdentifier        : MyAuditTableName
 FullAuditLogsTableName : SQLDBAuditLogsMyAuditTableName
@@ -42,7 +42,7 @@ RetentionInDays        : 0
 
 ### Example 2: Get the auditing policy of an Azure SQL server with Blob auditing defined on it
 ```
-PS C:\>Get-AzureRmSqlServerAuditingPolicy -ResourceGroupName "resourcegroup01" -ServerName "server01"
+PS C:\> Get-AzureRmSqlServerAuditingPolicy -ResourceGroupName "resourcegroup01" -ServerName "server01"
 AuditActionGroup       : {SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP,
                           BATCH_COMPLETED_GROUP, ...} 
 ResourceGroupName      : resourcegroup01

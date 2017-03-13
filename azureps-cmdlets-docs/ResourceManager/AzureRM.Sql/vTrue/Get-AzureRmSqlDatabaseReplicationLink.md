@@ -33,11 +33,6 @@ It gets all geo-replication links between the specified Azure SQL Database and a
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DatabaseName
@@ -200,4 +195,3 @@ This cmdlet returns a **ReplicationLink** object.
 ## NOTES
 
 ## RELATED LINKS
-

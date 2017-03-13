@@ -26,7 +26,7 @@ Currently, this cmdlet supports the values Enabled, Disabled, and Default.
 
 ### Example 1: Enable auto execute for an advisor
 ```
-PS C:\>Set-AzureRmSqlDatabaseAdvisorAutoExecuteStatus -ResourceGroupName "ContosoRunnersProd" -ServerName "runner-australia-east" -DatabaseName "ContosoRunner" -AdvisorName "CreateIndex" -AutoExecuteStatus Enabled
+PS C:\> Set-AzureRmSqlDatabaseAdvisorAutoExecuteStatus -ResourceGroupName "ContosoRunnersProd" -ServerName "runner-australia-east" -DatabaseName "ContosoRunner" -AdvisorName "CreateIndex" -AutoExecuteStatus Enabled
 DatabaseName                   : ContosoRunner
 ResourceGroupName              : ContosoRunnersProd
 ServerName                     : runner-australia-east

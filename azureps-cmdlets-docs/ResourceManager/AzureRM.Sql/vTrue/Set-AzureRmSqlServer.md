@@ -25,7 +25,7 @@ The **Set-AzureRmSqlServer** cmdlet modifies properties of an Azure SQL Database
 
 ### Example 1: Reset the administrator password
 ```
-PS C:\>$ServerPassword = "newpassword"
+PS C:\> $ServerPassword = "newpassword"
 PS C:\> $SecureString = ConvertTo-SecureString $ServerPassword -AsPlainText -Force
 PS C:\> Set-AzureRmSqlServer -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -SqlAdministratorPassword $secureString
 ResourceGroupName        : ResourceGroup01

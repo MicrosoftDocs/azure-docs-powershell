@@ -27,7 +27,7 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ### Example 1: Get the import and export status of a SQL database
 ```
-PS C:\>Get-AzureRmSqlDatabaseImportExportStatus -OperationStatusLink "https://management.contoso.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource01/providers/Microsoft.Sql/servers/server01/databases/database01/importExportOperationResults/00000000-000-0000-0000-000000000000?api-version=2014-04-01"
+PS C:\> Get-AzureRmSqlDatabaseImportExportStatus -OperationStatusLink "https://management.contoso.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource01/providers/Microsoft.Sql/servers/server01/databases/database01/importExportOperationResults/00000000-000-0000-0000-000000000000?api-version=2014-04-01"
 OperationStatusLink : 
 ErrorMessage        : 
 LastModifiedTime    : 4/15/2016 10:16:14 PM
@@ -41,7 +41,7 @@ This command gets the status of an import or export request for a database at th
 ## PARAMETERS
 
 ### -OperationStatusLink
-Specifies the status link that is returned from the New-AzureRmSqlDatabaseExport or New-AzureRmSqlDatabaseImport cmdlets.
+Specifies the status link that is returned from the [New-AzureRmSqlDatabaseExport](./New-AzureRmSqlDatabaseExport.md) or [New-AzureRmSqlDatabaseImport](./New-AzureRmSqlDatabaseImport.md) cmdlets.
 
 ```yaml
 Type: String
@@ -140,5 +140,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSqlDatabaseExport](./New-AzureRmSqlDatabaseExport.md)
 
 [New-AzureRmSqlDatabaseImport](./New-AzureRmSqlDatabaseImport.md)
-
-

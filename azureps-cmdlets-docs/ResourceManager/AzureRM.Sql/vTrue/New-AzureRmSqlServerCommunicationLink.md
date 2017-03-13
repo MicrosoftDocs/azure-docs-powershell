@@ -28,7 +28,7 @@ Therefore, elastic database transactions can span across a larger number of serv
 
 ### Example 1: Create a communication link
 ```
-PS C:\>New-AzureRmSqlServerCommunicationLink -ResourceGroupName "ResourceGroup01" -ServerName "ContosoServer17" -LinkName "Link01" -PartnerServer "ContosoServer02"
+PS C:\> New-AzureRmSqlServerCommunicationLink -ResourceGroupName "ResourceGroup01" -ServerName "ContosoServer17" -LinkName "Link01" -PartnerServer "ContosoServer02"
 ```
 
 This command creates a link named Link01 between ContosoServer17 and ContosoServer02.

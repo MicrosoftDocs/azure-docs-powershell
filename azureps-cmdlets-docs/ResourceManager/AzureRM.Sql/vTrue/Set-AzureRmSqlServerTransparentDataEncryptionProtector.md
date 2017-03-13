@@ -22,7 +22,7 @@ Changing the TDE protector type will rotate the protector.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Set the Transparent Data Encryption (TDE) protector type to ServiceManaged  --------------------------
+### Example 1: Set the Transparent Data Encryption (TDE) protector type to ServiceManaged  --------------------------
 ```
 PS C:\> Set-AzureRmSqlServerTransparentDataEncryptionProtector -Type ServiceManaged -ServerName 'ContosoServer' -ResourceGroup 'ContosoResourceGroup'
 ```
@@ -33,7 +33,7 @@ ResourceGroupName ServerName                   Type ServerKeyVaultKeyName
 ----------------- ----------                   ---- ---------------------
 ContosoResourceGroup ContosoServer ServiceManaged ServiceManaged
 
-### --------------------------  Example 2: Set the Transparent Data Encryption protector type to Azure Key Vault  --------------------------
+### Example 2: Set the Transparent Data Encryption protector type to Azure Key Vault  --------------------------
 ```
 PS C:\> Set-AzureRmSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' -ServerName 'ContosoServer' -ResourceGroup 'ContosoResourceGroup'
 ```
@@ -47,7 +47,7 @@ ContosoResourceGroup ContosoServer AzureKeyVault contoso_contosokey_012345678901
 ## PARAMETERS
 
 ### -KeyId
-The Azure Key Vault KeyId.
+Specifies the Azure Key Vault KeyId.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The Azure Sql Server name.
+Specifies the name of the Azure SQL Server.
 
 ```yaml
 Type: String

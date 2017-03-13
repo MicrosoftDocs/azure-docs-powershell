@@ -29,7 +29,7 @@ If the host uses server level auditing, threat detection is removed.
 
 ### Example 1: Configure a database to use the auditing policy of its server
 ```
-PS C:\>Use-AzureRmSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server02" -DatabaseName "Database01"
+PS C:\> Use-AzureRmSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server02" -DatabaseName "Database01"
 ```
 
 This command specifies that the database named Database01 on Server02 uses the auditing policy of the server.

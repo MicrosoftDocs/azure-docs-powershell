@@ -28,7 +28,7 @@ You can monitor the progress of an upgrade by using the Get-AzureRmSqlServerUpgr
 
 ### Example 1: Upgrade a server
 ```
-PS C:\>Start-AzureRmSqlServerUpgrade -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ServerVersion 12.0
+PS C:\> Start-AzureRmSqlServerUpgrade -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ServerVersion 12.0
 ResourceGroupName               : ResourceGroup01
 ServerName                      : Server01
 ServerVersion                   : 12.0
@@ -40,7 +40,7 @@ This command upgrades the server named server01 assigned to resource group Tesou
 
 ### Example 2: Upgrade a server by using schedule time and database recommendation
 ```
-PS C:\>$ScheduleTime = (Get-Date).AddMinutes(5).ToUniversalTime()
+PS C:\> $ScheduleTime = (Get-Date).AddMinutes(5).ToUniversalTime()
 PS C:\> $DatabaseMap = New-Object -TypeName Microsoft.Azure.Management.Sql.Models.RecommendedDatabaseProperties
 PS C:\> $DatabaseMap.Name = "contosodb"
 PS C:\> $DatabaseMap.TargetEdition = "Standard"

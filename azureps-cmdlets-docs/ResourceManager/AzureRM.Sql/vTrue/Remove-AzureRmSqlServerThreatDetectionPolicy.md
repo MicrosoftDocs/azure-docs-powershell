@@ -25,7 +25,7 @@ To use this cmdlet, specify the ResourceGroupName and ServerName parameters to i
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Remove a threat detection policy for a database  --------------------------
+### Example 1: Remove a threat detection policy for a database  --------------------------
 @{paragraph=PS C:\\\>}
 
 

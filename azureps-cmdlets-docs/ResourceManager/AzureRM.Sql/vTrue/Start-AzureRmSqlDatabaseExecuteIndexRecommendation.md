@@ -25,7 +25,7 @@ The **Start-AzureRmSqlDatabaseExecuteIndexRecommendation** cmdlet starts the wor
 
 ### Example 1: Run an index recommendation
 ```
-PS C:\>Start-AzureRmSqlDatabaseExecuteIndexRecommendation -ResourceGroup "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -IndexRecommendationName "INDEX_NAME"
+PS C:\> Start-AzureRmSqlDatabaseExecuteIndexRecommendation -ResourceGroup "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -IndexRecommendationName "INDEX_NAME"
 ```
 
 This command runs an index recommendation.

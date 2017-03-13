@@ -26,7 +26,7 @@ You can specify the name of an elastic database in Azure SQL Database to see the
 
 ### Example 1: Get all databases in an elastic pool
 ```
-PS C:\>Get-AzureRmSqlElasticPoolDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
+PS C:\> Get-AzureRmSqlElasticPoolDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
 ```
 
 This command gets all databases in an elastic pool named ElasticPool01.
