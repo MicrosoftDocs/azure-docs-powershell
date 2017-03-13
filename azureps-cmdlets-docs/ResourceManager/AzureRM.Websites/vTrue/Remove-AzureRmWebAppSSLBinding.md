@@ -33,7 +33,7 @@ SSL bindings are used to associate a Web App with a certificate.
 
 ### Example 1: Remove an SSL binding for a web app
 ```
-PS C:\>Remove-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com"
+PS C:\> Remove-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com"
 ```
 
 This command removes the SSL binding for the web app ContosoWebApp.
@@ -41,7 +41,7 @@ Since the *DeleteCertificate* parameter is not included, the certificate will be
 
 ### Example 2: Remove an SSL binding without removing the certificate
 ```
-PS C:\>Remove-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com" -DeleteCertificate $False
+PS C:\> Remove-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com" -DeleteCertificate $False
 ```
 
 Similar to Example 1, this command also removes the SSL binding for the Web App ContosoWebApp.
@@ -50,7 +50,7 @@ That means that the certificate will not be deleted regardless of whether it has
 
 ### Example 3: Use an object reference to remove an SSL binding
 ```
-PS C:\>$WebApp = Get-AzureRmWebApp -Name "ContosoWebApp"
+PS C:\> $WebApp = Get-AzureRmWebApp -Name "ContosoWebApp"
 PS C:\> Remove-AzureRmWebAppSSLBinding -WebApp $WebApp -Name "www.contoso.com"
 ```
 

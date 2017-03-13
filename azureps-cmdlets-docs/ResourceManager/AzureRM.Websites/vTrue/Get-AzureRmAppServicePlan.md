@@ -29,14 +29,14 @@ The **Get-AzureRmAppServicePlan** cmdlet gets an Azure App Service plan in the s
 
 ### Example 1: Get an App Service plan from a resource group
 ```
-PS C:\>Get-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan"
+PS C:\> Get-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan"
 ```
 
 This command gets the App Service plan named ContosoAppServPlan that belongs to the resource group named Default-Web-WestUS.
 
 ### Example 2: Get all App Service plans in a location
 ```
-PS C:\>Get-AzureRmAppServicePlan -Location "West US"
+PS C:\> Get-AzureRmAppServicePlan -Location "West US"
 ```
 
 This command gets all App Service plans located in the "West US" region.
@@ -44,7 +44,7 @@ This command gets all App Service plans located in the "West US" region.
 ## PARAMETERS
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-App Service Plan Name
+Specifies the name of an App service plan.
 
 ```yaml
 Type: String
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location 
+Specifies the geographical location.
 
 ```yaml
 Type: String
@@ -104,5 +104,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
 
 [Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)
-
-
