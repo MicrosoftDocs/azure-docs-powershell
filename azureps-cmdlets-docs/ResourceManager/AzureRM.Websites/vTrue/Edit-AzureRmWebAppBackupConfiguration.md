@@ -8,6 +8,7 @@ schema: 2.0.0
 # Edit-AzureRmWebAppBackupConfiguration
 
 ## SYNOPSIS
+Edits the current configuration backup for an Azure Web App.
 
 ## SYNTAX
 
@@ -34,7 +35,7 @@ The **Edit-AzureRmWebAppBackupConfiguration** cmdlet edits the current configura
 ## PARAMETERS
 
 ### -FrequencyInterval
-Frequency Interval
+Specifies the frequency interval.
 
 ```yaml
 Type: Int32
@@ -49,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyUnit
-Frequency Unit
+Specifies the frequency unit.
 
 ```yaml
 Type: String
@@ -64,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPeriodInDays
-Retention Period In Days
+Specifies the retention period in days.
 
 ```yaml
 Type: Int32
@@ -94,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeepAtLeastOneBackup
-Keep At Least One Backup Option
+Indicates that the cmdlet keeps at least one backup option.
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -139,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-WebApp Slot Name
+Specifies the name of the WebApp slot.
 
 ```yaml
 Type: String
@@ -154,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-Storage Account Url
+Specifies the link, as a URL, to the storage account.
 
 ```yaml
 Type: String
@@ -169,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Databases
-Databases of type DatabaseBackupSetting[]
+Specifies an array of databases.
 
 ```yaml
 Type: DatabaseBackupSetting[]
@@ -184,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-WebApp Object
+Specifies an WebApp object.
 
 ```yaml
 Type: Site
@@ -210,5 +211,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmWebAppBackupConfiguration](./Get-AzureRmWebAppBackupConfiguration.md)
-
-

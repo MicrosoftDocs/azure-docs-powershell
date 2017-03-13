@@ -33,7 +33,7 @@ The **New-AzureRmAppServicePlan** cmdlet creates an Azure App Service plan in a 
 
 ### Example 1: Create an App Service plan
 ```
-PS C:\>New-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -Location "West US" -Tier "Basic" -NumberofWorkers 2 -WorkerSize "Small"
+PS C:\> New-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -location "West US" -Tier Basic -NumberofWorkers 2 -WorkerSize Small
 ```
 
 This command creates an App Service plan named ContosoASP in the resource group named Default-Web-WestUS in Geo location West US.
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-App Service Environment Resource Group Name
+App Service Environment Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-App Service Plan Name
+Specifies the name of an App service plan.
 
 ```yaml
 Type: String

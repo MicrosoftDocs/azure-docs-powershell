@@ -31,7 +31,7 @@ Creates a database backup setting (connection string) of type SqlAzure for the s
 ## PARAMETERS
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String

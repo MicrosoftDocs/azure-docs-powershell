@@ -28,18 +28,17 @@ The **Get-AzureRmAppServicePlanMetrics** gets App Service Plan metrics.
 
 ## EXAMPLES
 
-### 1:
+### Example 1: Get the CPU percentage of an App Service Plan
 ```
-PS C:\>Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["CPU Percentage"]
+PS C:\> Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["CPU Percentage"]
 ```
 
-This command gets CPU percentage of the App Service Plan 
-    per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
+This command gets CPU percentage of the App Service Plan per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
 
 ## PARAMETERS
 
 ### -Metrics
-Metrics
+Specifies the metrics for which this cmdlet gets.
 
 ```yaml
 Type: String[]
@@ -114,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -129,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-App Service Plan Name
+Specifies the name of an App service plan.
 
 ```yaml
 Type: String
@@ -168,4 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

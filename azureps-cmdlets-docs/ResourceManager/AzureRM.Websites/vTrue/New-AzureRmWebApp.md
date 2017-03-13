@@ -35,7 +35,7 @@ The **New-AzureRmWebApp** cmdlet creates an Azure Web App in a given a resource 
 
 ### Example 1: Create a Web App
 ```
-PS C:\>New-AzureRmWebApp -ResourceGroupName Default-Web-WestUS -Name "ContosoSite" -Location "West US" -AppServicePlan "ContosoServicePlan"
+PS C:\> New-AzureRmWebApp -ResourceGroupName Default-Web-WestUS -Name "ContosoSite" -Location "West US" -AppServicePlan "ContosoServicePlan"
 ```
 
 This command creates an Azure Web App named ContosoSite in the existing resource group named Default-Web-WestUS in data center West US.
@@ -44,7 +44,7 @@ The command uses an existing App Service plan named ContosoServicePlan.
 ## PARAMETERS
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-App Service Plan Name
+Specifies the name of an App service plan.
 
 ```yaml
 Type: String
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceWebApp
-Source WebApp Object
+Source Specifies an WebApp object.
 
 ```yaml
 Type: Site
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-App Service Environment Resource Group Name
+App Service Environment Specifies the name of the resource group.
 
 ```yaml
 Type: String

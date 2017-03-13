@@ -29,7 +29,7 @@ The **Get-AzureRmWebAppBackupList** cmdlet gets a list of backups for an Azure W
 
 ### 1:
 ```
-PS C:\>Get-AzureRmWebAppBackupList -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard"
+PS C:\> Get-AzureRmWebAppBackupList -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard"
 ```
 
 This command returns a backup list pertaining to WebApp WebAppStandard associated with the resource group ContosoResourceGroup.
@@ -37,7 +37,7 @@ This command returns a backup list pertaining to WebApp WebAppStandard associate
 ## PARAMETERS
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String

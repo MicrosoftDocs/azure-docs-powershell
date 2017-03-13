@@ -29,7 +29,7 @@ The **Start-AzureRmWebApp** cmdlet starts an Azure Web App.
 
 ### Example 1: Start a Web App
 ```
-PS C:\>Start-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
+PS C:\> Start-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
 ```
 
 This command starts the Web App named ContosoWebApp that belongs to the resource group named Default-Web-WestUS.
@@ -37,7 +37,7 @@ This command starts the Web App named ContosoWebApp that belongs to the resource
 ## PARAMETERS
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-WebApp Object
+Specifies an WebApp object.
 
 ```yaml
 Type: Site

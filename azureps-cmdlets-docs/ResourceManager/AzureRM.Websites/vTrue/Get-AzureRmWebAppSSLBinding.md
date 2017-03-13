@@ -32,14 +32,14 @@ Web Apps can be bound to multiple certificates.
 
 ### Example 1: Get SSL bindings for a Web App
 ```
-PS C:\>Get-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp"
+PS C:\> Get-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp"
 ```
 
 This command retrieves the SSL bindings for the Web App ContosoWebApp, which is associated with the resource group ContosoResourceGroup.
 
 ### Example 2: Use an object reference to get SSL bindings for a Web App
 ```
-PS C:\>$WebApp = Get-AzureRmWebApp -Name "ContosoWebApp"
+PS C:\> $WebApp = Get-AzureRmWebApp -Name "ContosoWebApp"
 PS C:\> Get-AzureRmWebAppSSLBinding -WebApp $WebApp
 ```
 

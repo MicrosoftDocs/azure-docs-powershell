@@ -29,7 +29,7 @@ The **Get-AzureRmWebAppBackupConfiguration** cmdlet gets the backup configuratio
 
 ### 1:
 ```
-PS C:\>Get-AzureRmWebAppBackupConfiguration -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard"
+PS C:\> Get-AzureRmWebAppBackupConfiguration -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard"
 ```
 
 This command gets the backup configuration from the Web App named WebAppStandard that belongs to the resource group Default-Web-WestUS.
@@ -37,7 +37,7 @@ This command gets the backup configuration from the Web App named WebAppStandard
 ## PARAMETERS
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: Site
