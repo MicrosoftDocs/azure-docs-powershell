@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -StorageMB
 Specifies the storage limit, in megabytes, for the elastic pool.
-For more information, see the New-AzureRmSqlElasticPool cmdlet.
+For more information, see the [New-AzureRmSqlElasticPool](./New-AzureRmSqlElasticPool.md) cmdlet.
 
 ```yaml
 Type: Int32
@@ -302,5 +302,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSqlElasticPool](./New-AzureRmSqlElasticPool.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

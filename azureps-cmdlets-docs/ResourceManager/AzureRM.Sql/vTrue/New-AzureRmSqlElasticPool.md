@@ -117,7 +117,7 @@ We recommend that you do not specify the *StorageMB* parameter.
 
 If you specify *StorageMB*, but do not specify *Dtu*, the cmdlet calculates a value for *Dtu*.
 If you specify values for both, the values must be consistent.
-For more information about the relationship between storage and DTUs, see https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/.
+For more information about the relationship between storage and DTUs, see [https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/](https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/) (https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/).
 
 ```yaml
 Type: Int32
@@ -309,5 +309,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlElasticPool](./Set-AzureRmSqlElasticPool.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

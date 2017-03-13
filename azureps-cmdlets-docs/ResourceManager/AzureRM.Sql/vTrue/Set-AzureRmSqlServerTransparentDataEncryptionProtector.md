@@ -17,32 +17,32 @@ Set-AzureRmSqlServerTransparentDataEncryptionProtector [-Type] <EncryptionProtec
 ```
 
 ## DESCRIPTION
-The Set-AzureRmSqlServerTransparentDataEncryptionProtector cmdlet sets the TDE protector for a SQL server.
+The **Set-AzureRmSqlServerTransparentDataEncryptionProtector** cmdlet sets the TDE protector for a SQL server.
 Changing the TDE protector type will rotate the protector.
 
 ## EXAMPLES
 
-### Example 1: Set the Transparent Data Encryption (TDE) protector type to ServiceManaged  --------------------------
+### Example 1: Set the Transparent Data Encryption (TDE) protector type to ServiceManaged  
 ```
 PS C:\> Set-AzureRmSqlServerTransparentDataEncryptionProtector -Type ServiceManaged -ServerName 'ContosoServer' -ResourceGroup 'ContosoResourceGroup'
 ```
 
 This command updates a server's TDE protector type to Service Managed.
 
-ResourceGroupName ServerName                   Type ServerKeyVaultKeyName
------------------ ----------                   ---- ---------------------
+ResourceGroupName    ServerName    Type           ServerKeyVaultKeyName
+-----------------    ----------    ----           ---------------------
 ContosoResourceGroup ContosoServer ServiceManaged ServiceManaged
 
-### Example 2: Set the Transparent Data Encryption protector type to Azure Key Vault  --------------------------
+### Example 2: Set the Transparent Data Encryption protector type to Azure Key Vault  
 ```
 PS C:\> Set-AzureRmSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' -ServerName 'ContosoServer' -ResourceGroup 'ContosoResourceGroup'
 ```
 
 This command updates a server to use the Server Key Vault Key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' as the TDE protector.
 
-ResourceGroupName ServerName                   Type ServerKeyVaultKeyName
------------------ ----------                   ---- ---------------------
-ContosoResourceGroup ContosoServer AzureKeyVault contoso_contosokey_01234567890123456789012345678901
+ResourceGroupName    ServerName      Type          ServerKeyVaultKeyName
+-----------------    ----------      ----          ---------------------
+ContosoResourceGroup ContosoServer   AzureKeyVault contoso_contosokey_01234567890123456789012345678901
 
 ## PARAMETERS
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The Azure Sql Database TDE protector type.
+Specifies the Azure SQL Database TDE protector type.
 
 ```yaml
 Type: EncryptionProtectorType
@@ -150,4 +150,3 @@ System.String
 ## NOTES
 
 ## RELATED LINKS
-

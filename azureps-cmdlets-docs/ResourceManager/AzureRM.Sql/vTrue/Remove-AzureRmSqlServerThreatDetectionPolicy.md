@@ -19,16 +19,13 @@ Remove-AzureRmSqlServerThreatDetectionPolicy [-PassThru] [-ServerName] <String> 
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmSqlServerThreatDetectionPolicy cmdlet removes the threat detection policy from an Azure SQL server.
+The **Remove-AzureRmSqlServerThreatDetectionPolicy** cmdlet removes the threat detection policy from an Azure SQL server.
 
-To use this cmdlet, specify the ResourceGroupName and ServerName parameters to identify the server from which this cmdlet removes the policy.
+To use this cmdlet, specify the *ResourceGroupName* and *ServerName* parameters to identify the server from which this cmdlet removes the policy.
 
 ## EXAMPLES
 
-### Example 1: Remove a threat detection policy for a database  --------------------------
-@{paragraph=PS C:\\\>}
-
-
+### Example 1: Remove a threat detection policy for a database 
 
 ```
 PS C:\> Remove-AzureRmSqlServerThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01"
@@ -174,4 +171,3 @@ This cmdlet returns a ServerThreatDetectionPolicyModel object.
 [Get-AzureRmSqlServerThreatDetectionPolicy]()
 
 [Set-AzureRmSqlServerThreatDetectionPolicy]()
-
