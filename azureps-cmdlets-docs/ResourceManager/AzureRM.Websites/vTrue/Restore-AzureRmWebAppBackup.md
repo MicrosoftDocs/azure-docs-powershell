@@ -8,6 +8,7 @@ schema: 2.0.0
 # Restore-AzureRmWebAppBackup
 
 ## SYNOPSIS
+Restores an Azure Web App Backup.
 
 ## SYNTAX
 
@@ -29,12 +30,12 @@ The **Restore-AzureRmWebAppBackup** cmdlet restores an Azure Web App Backup.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Restore an Azure Web App backup
 ```
 PS C:\> Restore-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net" -BlobName "myBlob"
 ```
 
-Restores a backup of the specified app ContosoWebApp that is within resource group Default-Web-WestUS in blob "myBlob" located at https://storageaccount.file.core.windows.net
+This command restores a backup of the specified app ContosoWebApp that is within resource group Default-Web-WestUS in blob myBlob located at https://storageaccount.file.core.windows.net.
 
 ## PARAMETERS
 
@@ -54,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreConflictingHostNames
-Ignore Conflicting HostNames Option
+Indicates that this cmdlet ignores the conflicting HostNames option.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Specifies the name of the WebApp slot.
+Specifies the name of the Web App slot.
 
 ```yaml
 Type: String
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlobName
-Blob Name
+Specifies the blob name.
 
 ```yaml
 Type: String
@@ -144,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-Overwrite Option
+Indicates that this cmdlet uses the overwrite option.
 
 ```yaml
 Type: SwitchParameter
@@ -184,4 +185,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

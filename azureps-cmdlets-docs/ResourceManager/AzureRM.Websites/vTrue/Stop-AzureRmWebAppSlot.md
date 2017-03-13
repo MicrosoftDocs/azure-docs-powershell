@@ -27,7 +27,7 @@ The **Stop-AzureRmWebAppSlot** cmdlet stops an Azure Web App Slot.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Stop an Azure Web App slot
 ```
 PS C:\> Stop-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001"
 ```
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Specifies the name of the WebApp slot.
+Specifies the name of the Web App slot.
 
 ```yaml
 Type: String
@@ -104,3 +104,18 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
+
+[New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
+
+[Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
+
+[Restart-AzureRMWebAppSlot](./Restart-AzureRMWebAppSlot.md)
+
+[Set-AzureRMWebAppSlot](./Set-AzureRMWebAppSlot.md)
+
+[Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
+
+[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
+
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)

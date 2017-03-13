@@ -31,18 +31,18 @@ The **Switch-AzureRmWebAppSlot** switches two slots associated with an Azure Web
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Swap two slots with a Web App
 ```
 PS C:\> Switch-AzureRmWebAppSlot -SourceSlotName "sourceslot" -DestinationSlotName "destinationslot" -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
  
 ```
 
-This command will switch slot "sourceslot" slot with "destinationslot" for for Web App ContosoWebApp associated with the resource group Default-Web-WestUS
+This command will switch slot sourceslot slot with destinationslot for for Web App ContosoWebApp associated with the resource group Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -SourceSlotName
-Source Slot Name
+Specifies the name of the source slot.
 
 ```yaml
 Type: String
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationSlotName
-Destination Slot Name
+Specifies the name of the destination slot.
 
 ```yaml
 Type: String
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -SwapWithPreviewAction
-Swap With Preview Action
+Indicates that the cmdlet swaps with preview action.
 
 ```yaml
 Type: SwapWithPreviewAction
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveVnet
-Preserve Vnet Boolean
+Indicates whether the cmdlet rreserves Vnet.
 
 ```yaml
 Type: Boolean
@@ -184,4 +184,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

@@ -24,7 +24,7 @@ Restart-AzureRmWebApp [-WebApp] <Site> [<CommonParameters>]
 
 ## DESCRIPTION
 The **Restart-AzureRmWebApp** cmdlet stops and then starts an Azure Web App.
-If the Web App is in a stopped state, use the Start-AzureRmWebApp cmdlet.
+If the Web App is in a stopped state, use the [Start-AzureRmWebApp](./Start-AzureRmWebApp.md) cmdlet.
 
 ## EXAMPLES
 
@@ -102,5 +102,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
 
 [Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)
-
-

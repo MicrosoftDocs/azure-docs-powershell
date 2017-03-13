@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettings
-App Settings HashTable
+Specifies a hashtable of App settings.
 
 ```yaml
 Type: Hashtable
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSwapSlotName
-Destination slot name for auto swap
+Specifies the destination slot name for auto swap.
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStrings
-Connection Strings HashTable
+Specifies a hashtable of connection strings.
 
 ```yaml
 Type: Hashtable
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultDocuments
-Default Documents String Array
+Specifies an array of default documents.
 
 ```yaml
 Type: String[]
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedErrorLoggingEnabled
-Detailed Error Logging Enabled Boolean
+Indicates whether the cmdlet includes detailed error logging.
 
 ```yaml
 Type: Boolean
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -HandlerMappings
-Handler Mappings IList
+Specifies an IList of handler mappings.
 
 ```yaml
 Type: System.Collections.Generic.IList`1[Microsoft.Azure.Management.WebSites.Models.HandlerMapping]
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostNames
-WebApp HostNames String Array
+Specifies an array of Web App HostNames.
 
 ```yaml
 Type: String[]
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpLoggingEnabled
-HttpLoggingEnabled Boolean
+Indicates whether the cmdlet enables Http logging.
 
 ```yaml
 Type: Boolean
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedPipelineMode
-Managed Pipeline Mode Name
+Specifies the name of the managed pipeline mode.
 
 ```yaml
 Type: String
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetFrameworkVersion
-Net Framework Version
+Specifies the version of the .Net Framework.
 
 ```yaml
 Type: String
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfWorkers
-The number of workers to be allocated
+Specifies the number of workers to be allocated.
 
 ```yaml
 Type: Int32
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhpVersion
-Php Version
+Specifies the Php version.
 
 ```yaml
 Type: String
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestTracingEnabled
-Request Tracing Enabled
+Indicates whether request tracing is enabled.
 
 ```yaml
 Type: Boolean
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### -Use32BitWorkerProcess
-Use 32-bit Worker Process Boolean
+Indicates whether the cmdlet uses 32-bit worker process.
 
 ```yaml
 Type: Boolean
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebSocketsEnabled
-WebSocketsEnabled Boolean
+Indicates whether the cmdlet enables Web Sockets.
 
 ```yaml
 Type: Boolean
