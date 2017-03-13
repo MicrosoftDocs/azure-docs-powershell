@@ -7,6 +7,7 @@ schema: 2.0.0
 # Remove-AzureRmWebAppSlot
 
 ## SYNOPSIS
+Removes an Azure Web App Slot provided the resource group and Web App name.
 
 ## SYNTAX
 
@@ -38,7 +39,7 @@ This command removes the Slot named Slot001 associated with Web App ContosoSite 
 ## PARAMETERS
 
 ### -Force
-Forcefully Remove Option
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -53,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-Specifies an WebApp object.
+Specifies a Web App object.
 
 ```yaml
 Type: Site

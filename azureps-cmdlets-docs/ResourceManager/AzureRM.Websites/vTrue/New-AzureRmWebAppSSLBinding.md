@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -Slot
 Specifies the name of the Web App deployment slot.
-You can use the Get-AzureRMWebAppSlot cmdlet to get a slot.
+You can use the [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md) cmdlet to get a slot.
 
 Deployment slots provide a way for you to stage and validate web apps without those apps being accessible over the Internet.
 Typically you will deploy your changes to a staging site, validate those changes, and then deploy to the production (Internet-accessible) site.
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -WebApp
 Specifies a Web App.
-To get a Web App, use the Get-AzureRmWebApp cmdlet.
+To get a Web App, use the [Get-AzureRmWebApp](./Get-AzureRmWebApp.md) cmdlet.
 
 You cannot use the *WebApp* parameter in the same command as the *ResourceGroupName* parameter and/or the *WebAppName*.
 
@@ -242,5 +242,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
 
 [Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
-
-

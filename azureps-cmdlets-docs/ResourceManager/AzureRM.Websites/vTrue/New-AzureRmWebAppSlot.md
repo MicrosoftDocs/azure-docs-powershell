@@ -23,7 +23,7 @@ The **New-AzureRmWebApp** cmdlet creates an Azure Web App Slot in a given a reso
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an Azure Web App slot
 ```
 PS C:\> New-AzureRmWebApp -ResourceGroupName Default-Web-WestUS -Name "ContosoSite" -Location "West US" -AppServicePlan "ContosoServicePlan" -Slot "Slot001"
 ```
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettingsOverrides
-App Settings Overrides Hashtable
+Specifies a hashtable of App Settings overrides.
 
 ```yaml
 Type: Hashtable
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-App Service Environment Name
+Specifies the name of the App Service environment.
 
 ```yaml
 Type: String
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-App Service Environment Specifies the name of the resource group.
+Specifies the name of the App Service environment resource group.
 
 ```yaml
 Type: String
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreCustomHostNames
-Ignore Custom HostNames Option
+Indicates that the cmdlet ignores the custom HostNames option.
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSourceControl
-Ignore Source Control Option
+Indicates that the cmdlet ignores the source control option.
 
 ```yaml
 Type: SwitchParameter
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Webapp Name
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Webapp Slot Name
+Specifies the name of the Web App slot.
 
 ```yaml
 Type: String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceWebApp
-Source Specifies an WebApp object.
+Specifies the source of a WebApp object.
 
 ```yaml
 Type: Site

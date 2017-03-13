@@ -34,8 +34,7 @@ The **Get-AzureRmWebAppSlotMetrics** gets Web App metrics for the specified slot
 PS C:\> Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["Requests"]
 ```
 
-This command gets Request of the specified Web App 
-    per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
+This command gets Request of the specified Web App per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
 
 ## PARAMETERS
 
@@ -55,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-Granularity
+Specifies the granularity of the Web App slot metrics.
 
 ```yaml
 Type: String
@@ -85,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metrics
-Metrics
+Specifies an array of metrics that this cmdlet gets.
 
 ```yaml
 Type: String[]
@@ -100,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -160,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-Specifies an WebApp object.
+Specifies a Web App object.
 
 ```yaml
 Type: Site

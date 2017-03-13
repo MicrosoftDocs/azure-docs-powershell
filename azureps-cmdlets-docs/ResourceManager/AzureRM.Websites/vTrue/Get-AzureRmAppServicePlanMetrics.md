@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-Specifies the Specifies the App Service Plan object..
+Specifies the Specifies the App Service Plan object.
 
 ```yaml
 Type: ServerFarmWithRichSku
