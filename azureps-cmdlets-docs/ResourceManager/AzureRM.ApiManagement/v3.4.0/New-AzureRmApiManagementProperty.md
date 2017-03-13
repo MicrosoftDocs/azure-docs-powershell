@@ -25,7 +25,7 @@ The **New-AzureRmApiManagementProperty** cmdlet creates an Azure API Management 
 
 ### Example 1: Create a property that includes tags
 ```
-PS C:\>$Tags = 'sdk', 'powershell'
+PS C:\> $Tags = 'sdk', 'powershell'
 PS C:\> New-AzureRmApiManagementProperty -Context $ApimContext -PropertyId "Property11" -Name "Property Name" -Value "Property Value" -Tags $Tags
 ```
 
@@ -35,7 +35,7 @@ The second command creates a property and assigns the strings in $Tags as tags o
 
 ### Example 2: Create a property that has a secret value
 ```
-PS C:\>New-AzureRmApiManagementProperty -Context $apimContext -PropertyId "Property12" -Name "Secret Property -Value "Secret Property Value" -Secret
+PS C:\> New-AzureRmApiManagementProperty -Context $apimContext -PropertyId "Property12" -Name "Secret Property -Value "Secret Property Value" -Secret
 ```
 
 This command creates a **Property** that has a value that is encrypted.
