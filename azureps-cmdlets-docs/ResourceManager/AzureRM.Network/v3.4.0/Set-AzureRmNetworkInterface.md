@@ -22,7 +22,6 @@ The **Set-AzureRmNetworkInterface** sets the goal state for an Azure network int
 
 ## EXAMPLES
 
-### Example 1: Configure a network interface
 ```
 $Nic = Get-AzureRmNetworkInterface -ResourceGroupName "ResourceGroup1" -Name "NetworkInterface1"
 $Nic.IpConfigurations[0].PrivateIpAddress = "10.0.1.20"
@@ -63,7 +62,7 @@ $subnet2 = Get-AzureRmVirtualNetworkSubnetConfig -Name Subnet2 -VirtualNetwork $
 $nic.IpConfigurations[0].Subnet.Id = $subnet2.Id
 $nic | Set-AzureRmNetworkInterface
 ```
-The first command gets the network interface NetworkInterface1 and stores it in the ```$nic``` variable. The second command gets the virtual network associated with the subnet that the network interface is going to be associated with. The second command gets the subnet and stores it in the ```$subnet2``` variable. The third command associated the primary private IP address of the network interfafce with the new subnet. Finally the last command applied these changes on the network interface.
+The first command gets the network interface NetworkInterface1 and stores it in the ```$nic``` variable. The second command gets the virtual network associated with the subnet that the network interface is going to be associated with. The second command gets the subnet and stores it in the ```$subnet2``` variable. The third command associated the primary private IP address of the network interface with the new subnet. Finally the last command applied these changes on the network interface.
 
 >[!NOTE] 
 >The IP configurations must be dynamic before you can change the subnet. If you have static IP configurations, change then to dynamic before proceeding. 
