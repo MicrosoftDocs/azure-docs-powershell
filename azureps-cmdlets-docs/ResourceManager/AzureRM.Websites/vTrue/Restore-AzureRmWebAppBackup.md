@@ -29,7 +29,7 @@ The **Restore-AzureRmWebAppBackup** cmdlet restores an Azure Web App Backup.
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Restore-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net" -BlobName "myBlob"
 ```
@@ -39,7 +39,7 @@ Restores a backup of the specified app ContosoWebApp that is within resource gro
 ## PARAMETERS
 
 ### -Databases
-Databases of type DatabaseBackupSetting[]
+Specifies an array of databases.
 
 ```yaml
 Type: DatabaseBackupSetting[]
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-WebApp Slot Name
+Specifies the name of the WebApp slot.
 
 ```yaml
 Type: String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-Storage Account Url
+Specifies the link, as a URL, to the storage account.
 
 ```yaml
 Type: String
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-WebApp Object
+Specifies an WebApp object.
 
 ```yaml
 

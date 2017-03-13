@@ -31,7 +31,7 @@ This cmdlet, by default, also removes all slots and metrics.
 
 ### Example 1: Remove a Web App
 ```
-PS C:\>Remove-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
+PS C:\> Remove-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
 This command removes the Azure Web App named ContosoSite that belongs to the resource group named Default-Web-WestUS.
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-WebApp Object
+Specifies an WebApp object.
 
 ```yaml
 Type: Site

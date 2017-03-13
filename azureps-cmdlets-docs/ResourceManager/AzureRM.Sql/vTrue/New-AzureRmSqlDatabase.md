@@ -29,7 +29,7 @@ You can also create an elastic database by setting the *ElasticPoolName* paramet
 
 ### Example 1: Create a database on a specified server
 ```
-PS C:\>New-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> New-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 ResourceGroupName             : ResourceGroup01
 ServerName                    : Server01
 DatabaseName                  : Database01
@@ -54,7 +54,7 @@ This command creates a database named Database01 on server Server01.
 
 ### Example 2: Create an elastic database on a specified server
 ```
-PS C:\>New-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -ElasticPoolName "ElasticPool01"
+PS C:\> New-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -ElasticPoolName "ElasticPool01"
 ResourceGroupName             : ResourceGroup01
 ServerName                    : Server01
 DatabaseName                  : Database02

@@ -25,7 +25,7 @@ The **Set-AzureRmSqlServerFirewallRule** cmdlet modifies a firewall rule in an A
 
 ### Example 1: Modify a firewall rule
 ```
-PS C:\>Set-AzureRmSqlServerFirewallRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -FirewallRuleName "Rule01" -StartIpAddress "192.168.0.197" -EndIpAddress "192.168.0.199"
+PS C:\> Set-AzureRmSqlServerFirewallRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -FirewallRuleName "Rule01" -StartIpAddress "192.168.0.197" -EndIpAddress "192.168.0.199"
 ResourceGroupName : ResourceGroup01
 ServerName        : Server01
 StartIpAddress    : 192.168.0.199

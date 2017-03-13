@@ -21,21 +21,21 @@ The Get-AzureRmSqlServerTransparentDataEncryptionProtector cmdlet gets informati
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Get the Transparent Data Encryption (TDE) protector  --------------------------
+### Example 1: Get the Transparent Data Encryption (TDE) protector  
 ```
 PS C:\> Get-AzureRmSqlServerTransparentDataEncryptionProtector -ServerName 'ContosoServer' -ResourceGroup 'ContosoResourceGroup'
 ```
 
 This command gets the TDE protector for the server named ContosoServer in resource group named ContosoResourceGroup.
 
-ResourceGroupName ServerName                   Type ServerKeyVaultKeyName
------------------ ----------                   ---- ---------------------
-ContosoResourceGroup ContosoServer ServiceManaged ServiceManaged
+ResourceGroupName    ServerName       Type           ServerKeyVaultKeyName
+-----------------    ----------       ----           ---------------------
+ContosoResourceGroup ContosoServer    ServiceManaged ServiceManaged
 
 ## PARAMETERS
 
 ### -ResourceGroupName
-The name of the resource group
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The Azure Sql Server name.
+Specifies the name of the Azure SQL Server.
 
 ```yaml
 Type: String
@@ -106,4 +106,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

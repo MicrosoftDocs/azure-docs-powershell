@@ -28,18 +28,17 @@ The **Get-AzureRmAppServicePlanMetrics** gets App Service Plan metrics.
 
 ## EXAMPLES
 
-### 1:
+### Example 1: Get the CPU percentage of an App Service Plan
 ```
-PS C:\>Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["CPU Percentage"]
+PS C:\> Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["CPU Percentage"]
 ```
 
-This command gets CPU percentage of the App Service Plan 
-    per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
+This command gets CPU percentage of the App Service Plan per minute(PT1M - Poll Time 1 minute) between StartTime and EndTime
 
 ## PARAMETERS
 
 ### -Metrics
-Metrics
+Specifies the metrics for which this cmdlet gets.
 
 ```yaml
 Type: String[]
@@ -54,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Start Time in UTC
+Specifies the start time in UTC.
 
 ```yaml
 Type: DateTime
@@ -69,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-End Time in UTC
+Specifies the end time in UTC.
 
 ```yaml
 Type: DateTime
@@ -84,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-Granularity
+Specifies the granularity of the App Service Plan.
 
 ```yaml
 Type: String
@@ -99,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceDetails
-Instance Details
+Indicates that the cmdlet gets instance details.
 
 ```yaml
 Type: SwitchParameter
@@ -114,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -129,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-App Service Plan Name
+Specifies the name of an App service plan.
 
 ```yaml
 Type: String
@@ -144,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-App Service Plan Object
+Specifies the Specifies the App Service Plan object..
 
 ```yaml
 Type: ServerFarmWithRichSku
@@ -168,4 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

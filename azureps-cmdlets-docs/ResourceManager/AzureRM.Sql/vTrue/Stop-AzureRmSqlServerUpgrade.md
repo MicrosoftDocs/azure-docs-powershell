@@ -25,7 +25,7 @@ The **Stop-AzureRmSqlServerUpgrade** cmdlet stops the upgrade of an Azure SQL Da
 
 ### Example 1: Stop a server upgrade
 ```
-PS C:\>Stop-AzureRmSqlServerUpgrade -ResourceGroupName "ResourceGroup01" -ServerName "Server02"
+PS C:\> Stop-AzureRmSqlServerUpgrade -ResourceGroupName "ResourceGroup01" -ServerName "Server02"
 ```
 
 This command stops the request to upgrade the server named Server02 assigned to the resource group named ResourceGroup01.

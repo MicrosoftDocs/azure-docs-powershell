@@ -26,7 +26,7 @@ To use this cmdlet, specify the *ResourceGroupName* and *ServerName* parameters 
 
 ### Example 1: Remove a threat detection policy for a database
 ```
-PS C:\>Remove-AzureRmSqlDatabaseThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Remove-AzureRmSqlDatabaseThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01"
 ```
 
 This command removes the threat detection policy from a database named Database01 on the server named Server01.

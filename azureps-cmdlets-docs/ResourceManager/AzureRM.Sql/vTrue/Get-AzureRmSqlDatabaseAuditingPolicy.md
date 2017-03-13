@@ -27,7 +27,7 @@ To use the cmdlet, use the *ResourceGroupName*, *ServerName*, and *DatabaseName*
 
 ### Example 1: Get the auditing policy of an Azure SQL database with Table auditing defined on it
 ```
-PS C:\>Get-AzureRmSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Get-AzureRmSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 DatabaseName           : database01
 UseServerDefault       : Disabled
 EventType              : {PlainSQL_Success, PlainSQL_Failure, ParameterizedSQL_Success, ParameterizedSQL_Failure...} 
@@ -44,7 +44,7 @@ RetentionInDays        : 0
 
 ### Example 2: Get the auditing policy of an Azure SQL database with Blob auditing defined on it
 ```
-PS C:\>Get-AzureRmSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Get-AzureRmSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 DatabaseName           : database01
 AuditAction            : {}
 AuditActionGroup       : {SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP,

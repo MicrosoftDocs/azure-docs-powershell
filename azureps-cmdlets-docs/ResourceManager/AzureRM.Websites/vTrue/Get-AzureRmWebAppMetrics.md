@@ -40,7 +40,7 @@ This command gets Requests of the Web App ContosoWebApp
 ## PARAMETERS
 
 ### -EndTime
-End Time in UTC
+Specifies the end time in UTC.
 
 ```yaml
 Type: DateTime
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceDetails
-Instance Details
+Indicates that the cmdlet gets instance details.
 
 ```yaml
 Type: SwitchParameter
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Start Time in UTC
+Specifies the start time in UTC.
 
 ```yaml
 Type: DateTime

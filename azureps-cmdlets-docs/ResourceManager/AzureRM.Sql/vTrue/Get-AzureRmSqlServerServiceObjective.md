@@ -25,7 +25,7 @@ The **Get-AzureRmSqlServerServiceObjective** cmdlet gets the available service o
 
 ### Example 1: Get service objectives
 ```
-PS C:\>Get-AzureRmSqlServerServiceObjective -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Get-AzureRmSqlServerServiceObjective -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 ResourceGroupName ServerName ServiceObjectiveName Description Enabled IsDefault IsSystem
 ----------------- ---------- -------------------- ----------- ------- --------- --------
 resourcegroup01   server01   ElasticPool                         True     False    False

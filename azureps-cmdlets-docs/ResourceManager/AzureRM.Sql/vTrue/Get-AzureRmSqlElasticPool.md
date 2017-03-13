@@ -25,7 +25,7 @@ Specify the name of an existing elastic pool to see the property values for only
 
 ### Example 1: Get all elastic pools
 ```
-PS C:\>Get-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+PS C:\> Get-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
 ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
 ResourceGroupName : resourcegroup01
 ServerName        : server01
@@ -59,7 +59,7 @@ This command gets all of the elastic pools on the server named Server01.
 
 ### Example 2: Get a specific elastic pool
 ```
-PS C:\>Get-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool27"
+PS C:\> Get-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool27"
 ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
 ResourceGroupName : resourcegroup01
 ServerName        : server01
@@ -79,7 +79,7 @@ This command gets the elastic pool named ElasticPool0127 on the server named Ser
 
 ### Example 3: Get metrics for a Azure SQL Elastic Database Pool
 ```
-PS C:\>Get-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" | Get-Metrics -TimeGrain 0:5:0
+PS C:\> Get-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" | Get-Metrics -TimeGrain 0:5:0
 DimensionName  : 
 DimensionValue : 
 Name           : cpu_percent

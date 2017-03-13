@@ -37,7 +37,7 @@ This command restarts the slot Slot001 for the web app ContosoWebApp associated 
 ## PARAMETERS
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-WebApp Slot Name
+Specifies the name of the WebApp slot.
 
 ```yaml
 Type: String
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-WebApp Object
+Specifies an WebApp object.
 
 ```yaml
 Type: Site

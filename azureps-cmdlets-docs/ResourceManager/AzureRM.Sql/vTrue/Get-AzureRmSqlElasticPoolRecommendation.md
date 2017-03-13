@@ -35,7 +35,7 @@ These recommendations include the following values:
 
 ### Example 1: Get recommendations for a server
 ```
-PS C:\>Get-AzureRmSqlElasticPoolRecommendation -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+PS C:\> Get-AzureRmSqlElasticPoolRecommendation -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
 ```
 
 This command gets the elastic pool recommendations for the server named Server01.

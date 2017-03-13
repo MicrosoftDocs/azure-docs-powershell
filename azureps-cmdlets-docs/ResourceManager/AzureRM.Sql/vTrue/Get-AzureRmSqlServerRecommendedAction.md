@@ -24,7 +24,7 @@ The **Get-AzureRmSqlServerRecommendedAction** cmdlet gets one or more recommende
 
 ### Example 1: Get a list of  all recommended actions for a specific Advisor
 ```
-PS C:\>Get-AzureRmSqlServerRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex"
+PS C:\> Get-AzureRmSqlServerRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex"
 ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east
 AdvisorName                : CreateIndex
@@ -117,7 +117,7 @@ This command gets a list of all recommended actions of for the SQL Server Adviso
 
 ### Example 2: Get a single recommended action for an Advisor
 ```
-PS C:\>Get-AzureRmSqlServerRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex" -RecommendedActionName 
+PS C:\> Get-AzureRmSqlServerRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -AdvisorName "CreateIndex" -RecommendedActionName 
 IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
 ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east

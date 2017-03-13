@@ -25,7 +25,7 @@ The **Get-AzureRmSqlDatabaseActivity** cmdlet gets the status of elastic databas
 
 ### Example 1: Get status for all SQL Database instances
 ```
-PS C:\>Get-AzureRmSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
+PS C:\> Get-AzureRmSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
 ```
 
 This command returns the operation status of all SQL Database instances in an elastic pool named ElasticPool01.

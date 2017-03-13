@@ -34,14 +34,14 @@ Server identifiers include **ResourceGroupName** and **ServerName**.
 
 ### Example 1: Set the auditing policy of an Azure SQL server use Table auditing
 ```
-PS C:\>Set-AzureRmSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -AuditType Table -StorageAccountName "Storage22"
+PS C:\> Set-AzureRmSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -AuditType Table -StorageAccountName "Storage22"
 ```
 
 This command sets the auditing policy of the server named Server01 to use a storage account named Storage22.
 
 ### Example 2: Set the storage account key of an existing auditing policy of an Azure SQL server
 ```
-PS C:\>Set-AzureRmSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -StorageAccountKey Secondary
+PS C:\> Set-AzureRmSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -StorageAccountKey Secondary
 ```
 
 This command sets the auditing policy of the server named Server01 to use the secondary key.
@@ -49,12 +49,12 @@ The command does not modify the storage account name.
 
 ### Example 3: Set the auditing policy of an Azure SQL server to use a specific event type
 ```
-PS C:\>Set-AzureRmSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -EventType Login_Failure
+PS C:\> Set-AzureRmSqlServerAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -EventType Login_Failure
 ```
 
 ### Example 4: Set the auditing policy of a database to use Blob auditing
 ```
-PS C:\>Set-AzureRmSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -AuditType Blob -StorageAccountName "Storage31" -AuditActionGroup "SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP", "FAILED_DATABASE_AUTHENTICATION_GROUP" -RetentionInDays 8
+PS C:\> Set-AzureRmSqlDatabaseAuditingPolicy -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -AuditType Blob -StorageAccountName "Storage31" -AuditActionGroup "SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP", "FAILED_DATABASE_AUTHENTICATION_GROUP" -RetentionInDays 8
 ```
 
 This command sets the auditing policy of the server named Server01 to use the Login_Failure event type.

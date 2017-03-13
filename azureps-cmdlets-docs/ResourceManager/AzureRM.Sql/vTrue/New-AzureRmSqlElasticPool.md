@@ -26,7 +26,7 @@ The **New-AzureRmSqlElasticPool** cmdlet creates an elastic database pool for an
 
 ### Example 1: Create an elastic pool
 ```
-PS C:\>New-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" -Edition "Standard" -Dtu 400 -DatabaseDtuMin 10 -DatabaseDtuMax 100
+PS C:\> New-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" -Edition "Standard" -Dtu 400 -DatabaseDtuMin 10 -DatabaseDtuMax 100
 ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
 ResourceGroupName : resourcegroup01
 ServerName        : server01
@@ -117,7 +117,7 @@ We recommend that you do not specify the *StorageMB* parameter.
 
 If you specify *StorageMB*, but do not specify *Dtu*, the cmdlet calculates a value for *Dtu*.
 If you specify values for both, the values must be consistent.
-For more information about the relationship between storage and DTUs, see https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/.
+For more information about the relationship between storage and DTUs, see [https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/](https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/) (https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/).
 
 ```yaml
 Type: Int32
@@ -309,5 +309,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlElasticPool](./Set-AzureRmSqlElasticPool.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

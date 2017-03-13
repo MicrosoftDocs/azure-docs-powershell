@@ -27,7 +27,7 @@ This cmdlet can modify the minimum Database Throughput Units (DTUs) per database
 
 ### Example 1: Modify properties for an elastic pool
 ```
-PS C:\>Set-AzureRmSqlDatabaseElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" -Dtu 1000 -DatabaseDtuMax 100 -DatabaseDtuMin 20
+PS C:\> Set-AzureRmSqlDatabaseElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" -Dtu 1000 -DatabaseDtuMax 100 -DatabaseDtuMin 20
 ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/Server01/elasticPools/ElasticPool01
 ResourceGroupName : ResourceGroup01
 ServerName        : Server01
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -StorageMB
 Specifies the storage limit, in megabytes, for the elastic pool.
-For more information, see the New-AzureRmSqlElasticPool cmdlet.
+For more information, see the [New-AzureRmSqlElasticPool](./New-AzureRmSqlElasticPool.md) cmdlet.
 
 ```yaml
 Type: Int32
@@ -302,5 +302,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSqlElasticPool](./New-AzureRmSqlElasticPool.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

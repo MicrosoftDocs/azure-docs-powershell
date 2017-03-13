@@ -28,7 +28,7 @@ If a database is already in an elastic pool, you can use the *RequestedServiceOb
 
 ### Example 1: Update a database to a Standard S2 database
 ```
-PS C:\>Set-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -Edition "Standard" -RequestedServiceObjectiveName "S2"
+PS C:\> Set-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -Edition "Standard" -RequestedServiceObjectiveName "S2"
 ResourceGroupName             : ResourceGroup01
 ServerName                    : Server01
 DatabaseName                  : Database01
@@ -53,7 +53,7 @@ This command updates a database named Database01 to a Standard S2 database on a 
 
 ### Example 2: Add a database to an elastic pool
 ```
-PS C:\>Set-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
+PS C:\> Set-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
 ResourceGroupName             : ResourceGroup01
 ServerName                    : Server01
 DatabaseName                  : Database01
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 
 ### -RequestedServiceObjectiveName
 Specifies the name of the service objective to assign to the database.
-For information about service objectives, see Azure SQL Database Service Tiers and Performance Levelshttps://msdn.microsoft.com/en-us/library/azure/dn741336.aspx (https://msdn.microsoft.com/en-us/library/azure/dn741336.aspx) in the Microsoft Developer Network Library.
+For information about service objectives, see [Azure SQL Database Service Tiers and Performance Levels](https://msdn.microsoft.com/en-us/library/azure/dn741336.aspx) (https://msdn.microsoft.com/en-us/library/azure/dn741336.aspx) in the Microsoft Developer Network Library.
 
 ```yaml
 Type: String
@@ -303,5 +303,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Suspend-AzureRmSqlDatabase](./Suspend-AzureRmSqlDatabase.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

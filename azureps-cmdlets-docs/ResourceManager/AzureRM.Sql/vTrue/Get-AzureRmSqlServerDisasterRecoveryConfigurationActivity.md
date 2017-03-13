@@ -24,11 +24,6 @@ The **Get-AzureRmSqlServerDisasterRecoveryConfigurationActivity** cmdlet gets ac
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ServerName
@@ -171,4 +166,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

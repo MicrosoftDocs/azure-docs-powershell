@@ -26,7 +26,7 @@ The **New-AzureRmSqlServer** cmdlet creates an Azure SQL Database server.
 
 ### Example 1: Create a new Azure SQL Database server
 ```
-PS C:\>New-AzureRmSqlServer -ResourceGroupName "ResourceGroup01" -Location "Central US" -ServerName "server01" -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential)
+PS C:\> New-AzureRmSqlServer -ResourceGroupName "ResourceGroup01" -Location "Central US" -ServerName "server01" -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential)
 ResourceGroupName        : resourcegroup01
 ServerName               : server01
 Location                 : Central US
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -SqlAdministratorCredentials
 Specifies the SQL Database server administrator credentials for the new server.
-To obtain a **PSCredential** object, use the Get-Credential cmdlet.
+To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
 For more information, type `Get-Help Get-Credential`.
 
 ```yaml
@@ -227,5 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSqlServerFirewallRule](./New-AzureRmSqlServerFirewallRule.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

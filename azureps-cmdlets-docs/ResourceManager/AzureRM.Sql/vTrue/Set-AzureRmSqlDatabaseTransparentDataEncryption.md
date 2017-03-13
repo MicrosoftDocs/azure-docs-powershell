@@ -21,7 +21,7 @@ Set-AzureRmSqlDatabaseTransparentDataEncryption [-State] <TransparentDataEncrypt
 
 ## DESCRIPTION
 The **Set-AzureRmSqlDatabaseTransparentDataEncryption** cmdlet modifies the Transparent Data Encryption (TDE) property of an Azure SQL database.
-For more information, see Transparent Data Encryption with Azure SQL Databasehttps://msdn.microsoft.com/library/dn948096 (https://msdn.microsoft.com/library/dn948096) in the Microsoft Developer Network Library.
+For more information, see Transparent Data Encryption with [Azure SQL Database](https://msdn.microsoft.com/library/dn948096) (https://msdn.microsoft.com/library/dn948096) in the Microsoft Developer Network Library.
 
 This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
@@ -29,7 +29,7 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ### Example 1: Enable TDE for a database
 ```
-PS C:\>Set-AzureRmSqlDatabaseTransparentDataEncryption -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -State Enabled
+PS C:\> Set-AzureRmSqlDatabaseTransparentDataEncryption -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -State Enabled
 ResourceGroupName             ServerName                    DatabaseName                                          State
 -----------------             ----------                    ------------                                          -----
 ResourceGroup01               Server01                      Database01                                            Enabled

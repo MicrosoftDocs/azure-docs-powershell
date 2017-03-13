@@ -85,7 +85,7 @@ This command gets the advisor named CreateIndex for the server named wi-runner-a
 
 ### Example 3: List all the advisors with their recommended actions included in the response
 ```
-PS C:\>Get-AzureRmSqlServerAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ExpandRecommendedActions
+PS C:\> Get-AzureRmSqlServerAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -ExpandRecommendedActions
 ResourceGroupName              : WIRunnersProd
 ServerName                     : wi-runner-australia-east
 AdvisorName                    : CreateIndex

@@ -24,7 +24,7 @@ The **Get-AzureRmSqlDatabaseRecommendedAction** cmdlet gets one or more recommen
 
 ### Example 1: List all the recommended actions for an Advisor
 ```
-PS C:\>Get-AzureRmSqlDatabaseRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex"
+PS C:\> Get-AzureRmSqlDatabaseRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex"
 DatabaseName               : WIRunner
 ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east
@@ -119,7 +119,7 @@ This command gets a list of all recommended actions of the Advisor named CreateI
 
 ### Example 2: Get a single recommended action for an Advisor
 ```
-PS C:\>Get-AzureRmSqlDatabaseRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex" -RecommendedActionName "IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893"
+PS C:\> Get-AzureRmSqlDatabaseRecommendedAction -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex" -RecommendedActionName "IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893"
 DatabaseName               : WIRunner
 ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east

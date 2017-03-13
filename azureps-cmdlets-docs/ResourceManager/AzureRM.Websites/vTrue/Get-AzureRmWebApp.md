@@ -34,7 +34,7 @@ The **Get-AzureRmWebApp** cmdlet gets information about an Azure Web App.
 
 ### Example 1: Get a Web App from a resource group
 ```
-PS C:\>Get-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite" -SlotName "Slot001"
+PS C:\> Get-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite" -SlotName "Slot001"
 ```
 
 This command gets the Web App named ContosoSite that belongs to the resource group Default-Web-WestUS.
@@ -42,7 +42,7 @@ This command gets the Web App named ContosoSite that belongs to the resource gro
 ## PARAMETERS
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-App Service Plan object
+Specifies the App Service Plan object.
 
 ```yaml
 Type: ServerFarmWithRichSku
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location
+Specifies the geographical location of the WebApp.
 
 ```yaml
 Type: String
@@ -121,5 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
 
 [Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)
-
-

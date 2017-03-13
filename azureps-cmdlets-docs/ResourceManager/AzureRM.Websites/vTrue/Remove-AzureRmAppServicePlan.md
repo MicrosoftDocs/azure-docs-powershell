@@ -31,7 +31,7 @@ The **Remove-AzureRmAppServicePlan** cmdlet removes an Azure App Service plan.
 
 ### Example 1: Remove an App Service plan
 ```
-PS C:\>Remove-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -AppServicePlanName "ContosoAppPlan"
+PS C:\> Remove-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -AppServicePlanName "ContosoAppPlan"
 ```
 
 This command removes the Azure App Service plan named ContosoAppPlan that belongs to the resource group named Default-Web-WestUS.
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-App Service Plan Name
+Specifies the name of an App service plan.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-App Service Plan Object
+Specifies the Specifies the App Service Plan object..
 
 ```yaml
 Type: ServerFarmWithRichSku

@@ -24,11 +24,6 @@ The vault is an Azure Backup resource used to store backup data.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ServerName
@@ -143,5 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmSqlServerBackupLongTermRetentionVault](./Set-AzureRmSqlServerBackupLongTermRetentionVault.md)
-
-

@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmWebAppBackup
 
 ## SYNOPSIS
+Gets the specified backup of an Azure Web App.
 
 ## SYNTAX
 
@@ -27,9 +28,9 @@ The **Get-AzureRmWebAppBackup** cmdlet gets the specified backup of an Azure Web
 
 ## EXAMPLES
 
-### 1:
+### Example 1: Get
 ```
-PS C:\>Get-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -BackupId "12345"
+PS C:\> Get-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -BackupId "12345"
 ```
 
 This command gets the backup with ID "12345" from the Web App named WebAppStandard that belongs to the resource group Default-Web-WestUS.
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -121,4 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

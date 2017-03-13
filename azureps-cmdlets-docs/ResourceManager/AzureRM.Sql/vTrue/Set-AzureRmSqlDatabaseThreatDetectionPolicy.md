@@ -32,7 +32,7 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ### Example 1: Set the threat detection policy for a database
 ```
-PS C:\>Set-AzureRmSqlDatabaseThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability", "SQL_Injection" -StorageAccountName "mystorageAccount"
+PS C:\> Set-AzureRmSqlDatabaseThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability", "SQL_Injection" -StorageAccountName "mystorageAccount"
 ```
 
 This command sets the threat detection policy for a database named Database01 on the server named Server01.
@@ -205,7 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Specifies the name of the storage account to be used. Wildcards are not permitted. This parameter is not required. When this parameter is not provided, the cmdlet will use the storage account that was defined previously as part of the threat detection policy of the database. If this is the first time a database threat detection policy is defined and this parameter is not provided, the cmdlet will fail.```yaml
+Specifies the name of the storage account to be used. Wildcards are not permitted. This parameter is not required. When this parameter is not provided, the cmdlet will use the storage account that was defined previously as part of the threat detection policy of the database. If this is the first time a database threat detection policy is defined and this parameter is not provided, the cmdlet will fail.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -270,5 +272,3 @@ This cmdlet returns a **Model.DatabaseThreatDetectionPolicyModel** object.
 [Remove-AzureRmSqlDatabaseThreatDetectionPolicy](./Remove-AzureRmSqlDatabaseThreatDetectionPolicy.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

@@ -30,7 +30,7 @@ If the Web App is in a stopped state, use the Start-AzureRmWebApp cmdlet.
 
 ### Example 1: Restart a Web App
 ```
-PS C:\>Restart-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
+PS C:\> Restart-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
 This command stops the Azure Web App named ContosoSite that belongs to the resource group named Default-Web-WestUS and then restarts it.
@@ -38,7 +38,7 @@ This command stops the Azure Web App named ContosoSite that belongs to the resou
 ## PARAMETERS
 
 ### -ResourceGroupName
-Resource Group Name
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-WebApp Name
+Specifies the name of the WebApp.
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-WebApp Object
+Specifies an WebApp object.
 
 ```yaml
 Type: Site

@@ -27,7 +27,7 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ### Example 1: Get all databases on a server
 ```
-PS C:\>Get-AzureRmSqlDatabase -ResourceGroupName "resourcegroup01" -ServerName "server01"
+PS C:\> Get-AzureRmSqlDatabase -ResourceGroupName "resourcegroup01" -ServerName "server01"
 ResourceGroupName             : resourcegroup01
 ServerName                    : server01
 DatabaseName                  : master
@@ -71,7 +71,7 @@ This command gets all databases on the server named server01.
 
 ### Example 2: Get a database by name on a server
 ```
-PS C:\>Get-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database02"
+PS C:\> Get-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database02"
 ResourceGroupName             : resourcegroup01
 ServerName                    : server01
 DatabaseName                  : database01
@@ -235,5 +235,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Suspend-AzureRmSqlDatabase](./Suspend-AzureRmSqlDatabase.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-
