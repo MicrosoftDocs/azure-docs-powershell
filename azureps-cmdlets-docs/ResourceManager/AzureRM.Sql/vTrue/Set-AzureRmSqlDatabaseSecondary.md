@@ -35,11 +35,6 @@ In the latter case, the secondary database is synchronized with the primary befo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DatabaseName
@@ -224,5 +219,3 @@ This cmdlet returns a **ReplicationLink**.
 [New-AzureRmSqlDatabaseSecondary](./New-AzureRmSqlDatabaseSecondary.md)
 
 [Remove-AzureRmSqlDatabaseSecondary](./Remove-AzureRmSqlDatabaseSecondary.md)
-
-

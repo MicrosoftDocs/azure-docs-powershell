@@ -58,7 +58,7 @@ Accept wildcard characters: False
 
 ### -SqlAdministratorPassword
 Specifies a new password, as a **SecureString**, for the database server administrator.
-To obtain a **SecureString**, use the Get-Credential cmdlet.
+To obtain a **SecureString**, use the **Get-Credential** cmdlet.
 For more information, type `Get-Help ConvertTo-SecureString`.
 
 ```yaml
@@ -218,5 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

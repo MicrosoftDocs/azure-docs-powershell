@@ -21,15 +21,10 @@ Remove-AzureRmSqlDatabaseSecondary [-DatabaseName] <String> -PartnerResourceGrou
 
 ## DESCRIPTION
 The **Remove-AzureRmSqlDatabaseSecondary** cmdlet forces termination of a geo-replication link.
-This cmdlet replaces the Stop-AzureSqlDatabaseCopy cmdlet.
+This cmdlet replaces the **Stop-AzureSqlDatabaseCopy** cmdlet.
 There is no replication synchronization before termination.
 
 ## EXAMPLES
-
-### 1:
-```
-
-```
 
 ## PARAMETERS
 
@@ -200,5 +195,3 @@ This cmdlet does not generate any output.
 [New-AzureRmSqlDatabaseSecondary](./New-AzureRmSqlDatabaseSecondary.md)
 
 [Set-AzureRmSqlDatabaseSecondary](./Set-AzureRmSqlDatabaseSecondary.md)
-
-
