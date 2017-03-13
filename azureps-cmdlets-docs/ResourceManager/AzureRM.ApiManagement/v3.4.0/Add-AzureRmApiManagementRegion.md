@@ -21,7 +21,7 @@ Add-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <Strin
 ## DESCRIPTION
 The **Add-AzureRmApiManagementRegion** cmdlet adds new instance of type **PsApiManagementRegion** to the collection of **AdditionalRegions** of provided instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement**.
 This cmdlet does not deploy anything by itself but updates instance of **PsApiManagement** in-memory.
-To update a deployment of an API Management pass the modified **PsApiManagement** Instance to Update-AzureRmApiManagementDeployment.
+To update a deployment of an API Management pass the modified **PsApiManagement** Instance to [Update-AzureRmApiManagementDeployment](./Update-AzureRmApiManagementDeployment.md).
 
 ## EXAMPLES
 
@@ -195,5 +195,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Update-AzureRmApiManagementRegion](./Update-AzureRmApiManagementRegion.md)
 
 [Update-AzureRmApiManagementDeployment](./Update-AzureRmApiManagementDeployment.md)
-
-

@@ -57,7 +57,7 @@ This command gets tenant level policy and saves it to a file named tenantpolicy.
 PS C:\> Get-AzureRmApiManagementPolicy -Context $APImContext -ProductId "0123456789"
 ```
 
-This command gets product-scope policy
+This command gets product-scope policy.
 
 ### Example 3: Get the API-scope policy
 ```
@@ -271,5 +271,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementPolicy](./Remove-AzureRmApiManagementPolicy.md)
 
 [Set-AzureRmApiManagementPolicy](./Set-AzureRmApiManagementPolicy.md)
-
-
