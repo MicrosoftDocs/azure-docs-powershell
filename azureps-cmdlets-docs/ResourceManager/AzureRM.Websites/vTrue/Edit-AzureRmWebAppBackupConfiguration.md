@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Specifies the name of the WebApp slot.
+Specifies the name of the Web App slot.
 
 ```yaml
 Type: String
