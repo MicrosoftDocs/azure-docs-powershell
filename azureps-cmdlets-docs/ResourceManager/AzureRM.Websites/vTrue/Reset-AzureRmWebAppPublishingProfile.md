@@ -8,6 +8,7 @@ schema: 2.0.0
 # Reset-AzureRmWebAppPublishingProfile
 
 ## SYNOPSIS
+Resets the publishing profile for the specified Web App.
 
 ## SYNTAX
 
@@ -51,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the WebApp.
+Specifies the name of the Web App.
 
 ```yaml
 Type: String
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-Specifies an WebApp object.
+Specifies a Web App object.
 
 ```yaml
 Type: Site
@@ -90,4 +91,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

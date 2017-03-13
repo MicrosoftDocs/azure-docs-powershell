@@ -56,7 +56,7 @@ PS C:\> Remove-AzureRmWebAppSSLBinding -WebApp $WebApp -Name "www.contoso.com"
 
 This example uses an object reference to the Web App website to remove the SSL binding for a Web App.
 
-The first command uses the Get-AzureRmWebApp cmdlet to create an object reference to the Web App named ContosoWebApp.
+The first command uses the [Get-AzureRmWebApp](./Get-AzureRmWebApp.md) cmdlet to create an object reference to the Web App named ContosoWebApp.
 That object reference is stored in a variable named $WebApp.
 
 The second command uses the object reference and the **Remove-AzureRmWebAppSSLBinding** cmdlet to remove the SSL binding.
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -DeleteCertificate
 Specifies the action to take place if the SSL binding being removed is the only binding used by the certificate.
-If *DeleteCertificate* is set to $False, the certificate will not be deleted when the binding is deleted.
+If the *DeleteCertificate* parameter is set to $False, the certificate will not be deleted when the binding is deleted.
 If *DeleteCertificate* is set to $True or is not included in the command, the certificate will be deleted along with the SSL binding.
 
 The certificate will only be deleted if the SSL binding being removed is the only binding used by the certificate.
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -Slot
 Specifies the Web App deployment slot.
-To get a deployment slot, use the Get-AzureRMWebAppSlot cmdlet.
+To get a deployment slot, use the [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md) cmdlet.
 
 ```yaml
 Type: String
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 ### -WebApp
 Specifies a Web App.
-To get a Web App, use the Get-AzureRmWebApp cmdlet.
+To get a Web App, use the [Get-AzureRmWebApp](./Get-AzureRmWebApp.md) cmdlet.
 
 You cannot use the *WebApp* parameter in the same command as the *ResourceGroupName* parameter and/or the *WebAppName*.
 
@@ -198,7 +198,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -231,5 +230,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
 
 [Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
-
-
