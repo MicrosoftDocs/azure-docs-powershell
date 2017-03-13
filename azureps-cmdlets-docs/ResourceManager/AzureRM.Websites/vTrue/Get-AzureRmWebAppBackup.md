@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-AzureRmWebAppBackup
 
 ## SYNOPSIS
+Gets the specified backup of an Azure Web App.
 
 ## SYNTAX
 
@@ -27,7 +28,7 @@ The **Get-AzureRmWebAppBackup** cmdlet gets the specified backup of an Azure Web
 
 ## EXAMPLES
 
-### 1:
+### Example 1: Get
 ```
 PS C:\> Get-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -BackupId "12345"
 ```
@@ -121,4 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -21,7 +21,7 @@ The **New-AzureRmWebAppDatabaseBackupSetting** cmdlet creates a new Azure Web Ap
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> New-AzureRmWebAppDatabaseBackupSetting -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -ConnectionString "MyConnectionString" -DatabaseType "SqlAzure"
 ```

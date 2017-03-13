@@ -27,7 +27,7 @@ The **Get-AzureRmWebAppBackupConfiguration** cmdlet gets the backup configuratio
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Get-AzureRmWebAppBackupConfiguration -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard"
 ```

@@ -30,7 +30,7 @@ The **Set-AzureRmWebAppSlotConfigName** cmdlet marks App Settings and Connection
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Set-AzureRmWebAppSlotConfigName -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001" -RemoveAllAppSettingNames -RemoveAllConnectionStringNames
 ```

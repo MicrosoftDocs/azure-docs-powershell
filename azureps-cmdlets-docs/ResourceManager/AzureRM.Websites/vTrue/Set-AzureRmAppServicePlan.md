@@ -28,7 +28,7 @@ The **Set-AzureRmAppServicePlan** cmdlet sets an Azure App Service plan.
 
 ## EXAMPLES
 
-### 1:
+### Example 1:
 ```
 PS C:\> Set-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -PerSiteScaling  $true
 ```
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-App Service Plan Object
+Specifies the Specifies the App Service Plan object..
 
 ```yaml
 Type: ServerFarmWithRichSku
