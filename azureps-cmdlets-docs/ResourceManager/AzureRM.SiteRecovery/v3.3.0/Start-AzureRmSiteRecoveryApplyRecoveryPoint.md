@@ -8,7 +8,7 @@ schema: 2.0.0
 # Start-AzureRmSiteRecoveryApplyRecoveryPoint
 
 ## SYNOPSIS
-Changes a recovery point for a failed over protected item before commiting the failover operation.
+Changes a recovery point for a failed over protected item before committing the failover operation.
 
 ## SYNTAX
 

@@ -29,11 +29,11 @@ The **Remove-AzureRmSiteRecoveryRecoveryPlan** cmdlet removes a site recovery pl
 
 ### Example 1: Remove a recovery plan
 ```
-PS C:\>$RecoveryPlan = Get-AzureRmSiteRecoveryRecoveryPlan 
+PS C:\> $RecoveryPlan = Get-AzureRmSiteRecoveryRecoveryPlan 
 PS C:\> Remove-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan $RecoveryPlan
 ```
 
-The first command uses the Get-AzureRmSiteRecoveryRecoveryPlan cmdlet to get the Site Recovery plan, and then stores it in the $RecoveryPlan variable.
+The first command uses the [Get-AzureRmSiteRecoveryRecoveryPlan](./Get-AzureRmSiteRecoveryRecoveryPlan.md) cmdlet to get the Site Recovery plan, and then stores it in the $RecoveryPlan variable.
 
 The second command removes the recovery plan in $RecoveryPlan.
 
@@ -85,5 +85,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSiteRecoveryRecoveryPlan](./New-AzureRmSiteRecoveryRecoveryPlan.md)
 
 [Update-AzureRmSiteRecoveryRecoveryPlan](./Update-AzureRmSiteRecoveryRecoveryPlan.md)
-
-

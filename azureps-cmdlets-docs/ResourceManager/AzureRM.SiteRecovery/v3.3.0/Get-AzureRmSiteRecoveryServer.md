@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the server.
+Specifies the name of the server that this cmdlet gets information from.
 
 ```yaml
 Type: String

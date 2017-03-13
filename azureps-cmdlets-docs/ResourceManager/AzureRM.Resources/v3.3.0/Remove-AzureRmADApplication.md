@@ -24,7 +24,6 @@ The **Remove-AzureRmADApplication** cmdlet removes the Azure Active Directory ap
 
 ### Example 1: Delete and Azure Active Directory application
 
-
 ```
 PS C:\> Remove-AzureRmADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 -Force
 ```

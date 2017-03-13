@@ -30,13 +30,13 @@ To stop a deployment, the deployment must have an incomplete provisioning state,
 
 An Azure resource is a user-managed entity, such as a website, database, or database server.
 A resource group is a collection of resources that are deployed as a unit.
-To deploy a resource group, use the **New-AzureRmResourceGroupDeployment** cmdlet.
+To deploy a resource group, use the [New-AzureRmResourceGroupDeployment](./New-AzureRmResourceGroupDeployment.md) cmdlet.
 
 The **New-AzureRmResource** cmdlet creates a new resource, but it does not trigger a resource group deployment operation that this cmdlet can stop.
 This cmdlet stops only one running deployment.
 
 Use the *Name* parameter to stop a specific deployment.
-If you omit the *Name* parameter, **Stop-AzureRmResourceGroupDeployment** searches for a running deployment and stops it.
+If you omit the *Name* parameter, [Stop-AzureRmResourceGroupDeployment](./Stop-AzureRmResourceGroupDeployment.md) searches for a running deployment and stops it.
 If the cmdlet finds more than one running deployment, the command fails.
 
 ## EXAMPLES
@@ -65,7 +65,7 @@ Specifies the name of the resource group deployment to stop.
 
 If you do not specify this parameter, this cmdlet searches for a running deployment in the resource group and stops it.
 If it finds more than one running deployment, the command fails.
-To get the deployment name, use the **Get-AzureRmResourceGroupDeployment** cmdlet.
+To get the deployment name, use the [Get-AzureRmResourceGroupDeployment](./Get-AzureRmResourceGroupDeployment.md) cmdlet.
 
 ```yaml
 Type: String
@@ -182,5 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmResourceGroupDeployment](./Remove-AzureRmResourceGroupDeployment.md)
 
 [Test-AzureRmResourceGroupDeployment](./Test-AzureRmResourceGroupDeployment.md)
-
-

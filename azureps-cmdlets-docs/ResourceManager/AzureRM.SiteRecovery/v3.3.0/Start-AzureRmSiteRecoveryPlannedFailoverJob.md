@@ -43,6 +43,8 @@ You can check whether the job succeeds by using the **Get-AzureRmSiteRecoveryJob
 ## PARAMETERS
 
 ### -CreateVmIfNotFound
+Specifies whether the cmdlet creates a virtual machine if one is not found.
+
 The acceptable values for this parameter are:
 
 - Yes
@@ -217,4 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

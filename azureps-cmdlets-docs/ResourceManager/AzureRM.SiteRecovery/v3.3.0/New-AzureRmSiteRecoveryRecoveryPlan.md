@@ -57,7 +57,7 @@ A recovery plan gathers virtual machines in a group for the purposes of failover
 
 ### Example 1: Add a recovery plan to a Site Recovery vault
 ```
-PS C:\>New-AzureRmSiteRecoveryRecoveryPlan -Path "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
+PS C:\> New-AzureRmSiteRecoveryRecoveryPlan -Path "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
 ```
 
 This command adds the recovery plan named RecoveryPlan.xml to the Azure Site Recovery vault.
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name. 
+Specifies a name of the recovery plan this cmdlet adds. 
 
 ```yaml
 Type: String
@@ -227,5 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmSiteRecoveryRecoveryPlan](./Remove-AzureRmSiteRecoveryRecoveryPlan.md)
 
 [Update-AzureRmSiteRecoveryRecoveryPlan](./Update-AzureRmSiteRecoveryRecoveryPlan.md)
-
-

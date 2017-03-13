@@ -106,7 +106,6 @@ The scope of the assignment can be specified using one of the following paramete
 
 ### Example 1: Grant Reader role access 
 
-
 ```
 PS C:\> New-AzureRmRoleAssignment -ResourceGroupName rg1 -SignInName allen.young@live.com -RoleDefinitionName Reader
 ```
@@ -114,7 +113,6 @@ PS C:\> New-AzureRmRoleAssignment -ResourceGroupName rg1 -SignInName allen.young
 This command grants Reader role access to a user at a resource group scope.
 
 ### Example 2: Grant access to a security group
-
 
 ```
 PS C:\> Get-AzureRMADGroup -SearchString "Christine Koch Team"

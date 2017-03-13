@@ -17,7 +17,7 @@ Remove-AzureRmSiteRecoverySite -Site <ASRSite> [-Force] [-WhatIf] [-Confirm] [<C
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmSiteRecoverySite** cmdlet deletes an Azure Site Recovery site from the current vault.
+The **Remove-AzureRmSiteRecoverySite** cmdlet removes an Azure Site Recovery site from the current vault.
 
 ## EXAMPLES
 

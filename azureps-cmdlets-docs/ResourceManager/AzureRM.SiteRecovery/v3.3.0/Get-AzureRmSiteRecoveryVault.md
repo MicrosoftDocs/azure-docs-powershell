@@ -24,7 +24,7 @@ The **Get-AzureRmSiteRecoveryVault** cmdlet gets a list of Azure Site Recovery v
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the vault.
+Specifies the name of the vault that this cmdlet gets.
 
 ```yaml
 Type: String

@@ -36,7 +36,7 @@ To update the credentials associated with this application, use the [New-AzureRm
 
 
 ```
-PS C:\> Set-AzureRmADApplication -ObjectId fb7b3405-ca44-4b5b-8584-12392f5d96d7 -DisplayName "UpdatedAppName" -HomePage "http://www.microsoft.com" -IdentifierUris "http://UpdatedApp" -AvailableToOtherTenants $false
+PS C:\> Set-AzureRmADApplication -ObjectId fb7b3405-ca44-4b5b-8584-12392f5d96d7 -DisplayName "UpdatedAppName" -HomePage "http://www.microsoft.com" -IdentifierUris "http://UpdatedApp" -AvailableToOtherTenants $False
 ```
 
 This command updates the properties of an existing Azure Active Directory application with object ID fb7b3405-ca44-4b5b-8584-12392f5d96d7.

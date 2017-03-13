@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmSiteRecoveryProtectableItem
 
 ## SYNOPSIS
-Get the protectable items in a Protection Container.
+Get the protectable items in an Azure Site Protection Container.
 
 ## SYNTAX
 

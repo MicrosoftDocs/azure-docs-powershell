@@ -122,6 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+Specifies the name of the server.
+
 ```yaml
 Type: ASRServer
 Parameter Sets: ByFriendlyNameLegacy, ByNameLegacy, ByServerObject
@@ -144,4 +146,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

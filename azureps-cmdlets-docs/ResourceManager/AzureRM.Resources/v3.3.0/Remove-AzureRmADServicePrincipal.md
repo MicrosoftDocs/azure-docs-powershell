@@ -24,7 +24,6 @@ The **Remove-AzureRmADServicePrincipal** cmdlet remvoves the Azure Active Direct
 
 ### Example 1: Remove an Azure Active Directory service principal
 
-
 ```
 PS C:\> Remove-AzureRmADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
 ```

@@ -48,7 +48,7 @@ PS C:\> $Resource.Properties.Enabled = "False"
 PS C:\> $Resource | Set-AzureRmResource -Force
 ```
 
-The first command gets the resource named ContosoSite by using the **Get-AzureRmResource** cmdlet, and then stores it in the $Resource variable.
+The first command gets the resource named ContosoSite by using the [Get-AzureRmResource](./Get-AzureRmResource.md) cmdlet, and then stores it in the $Resource variable.
 
 The second command modifies a property of $Resource.
 
