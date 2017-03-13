@@ -25,7 +25,7 @@ The **Remove-AzureRmApiManagementProduct** cmdlet removes an existing API Manage
 
 ### Example 1: Remove an existing product and all subscriptions
 ```
-PS C:\>Remove-AzureRmApiManagementProduct -Context $APImContext -Id "0123456789" -DeleteSubscriptions -Force
+PS C:\> Remove-AzureRmApiManagementProduct -Context $APImContext -Id "0123456789" -DeleteSubscriptions -Force
 ```
 
 This command removes an existing product and all subscriptions.
