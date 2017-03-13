@@ -26,7 +26,7 @@ If you specify the name of a firewall rule, this cmdlet gets information about t
 
 ### Example 1: Get all rules for a server
 ```
-PS C:\>Get-AzureRmSqlServerFirewallRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+PS C:\> Get-AzureRmSqlServerFirewallRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
 ResourceGroupName : ResourceGroup01
 ServerName        : server01
 StartIpAddress    : 0.0.0.0

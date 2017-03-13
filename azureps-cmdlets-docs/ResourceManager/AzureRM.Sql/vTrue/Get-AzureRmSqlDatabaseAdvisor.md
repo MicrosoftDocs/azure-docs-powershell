@@ -24,7 +24,7 @@ The **Get-AzureRmSqlDatabaseAdvisor** cmdlet gets one or more Azure SQL Database
 
 ### Example 1: List all the advisors for the specified database
 ```
-PS C:\>Get-AzureRmSqlDatabaseAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner"
+PS C:\> Get-AzureRmSqlDatabaseAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner"
 DatabaseName                   : WIRunner
 ResourceGroupName              : WIRunnersProd
 ServerName                     : wi-runner-australia-east
@@ -74,7 +74,7 @@ This command gets lists all the advisors for the database named WIRunner that be
 
 ### Example 2: Get a single advisor for the specified database
 ```
-PS C:\>Get-AzureRmSqlDatabaseAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex"
+PS C:\> Get-AzureRmSqlDatabaseAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex"
 DatabaseName                   : WIRunner
 ResourceGroupName              : WIRunnersProd
 ServerName                     : wi-runner-australia-east
@@ -91,7 +91,7 @@ This command gets the Advisor named CreateIndex for the database named WIRunner.
 
 ### Example 3: List all the advisors with their recommended actions included in the response
 ```
-PS C:\>Get-AzureRmSqlDatabaseAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -ExpandRecommendedActions
+PS C:\> Get-AzureRmSqlDatabaseAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -ExpandRecommendedActions
 DatabaseName                   : WIRunner
 ResourceGroupName              : WIRunnersProd
 ServerName                     : wi-runner-australia-east
@@ -148,7 +148,7 @@ Since the command uses the *ExpandRecommendedActions* parameter, the cmdlet gets
 
 ### Example 4: Get a single advisor with its recommended actions included in the response
 ```
-PS C:\>Get-AzureRmSqlDatabaseAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex" -ExpandRecommendedActions
+PS C:\> Get-AzureRmSqlDatabaseAdvisor -ResourceGroupName "WIRunnersProd" -ServerName "wi-runner-australia-east" -DatabaseName "WIRunner" -AdvisorName "CreateIndex" -ExpandRecommendedActions
 DatabaseName                   : WIRunner
 ResourceGroupName              : WIRunnersProd
 ServerName                     : wi-runner-australia-east

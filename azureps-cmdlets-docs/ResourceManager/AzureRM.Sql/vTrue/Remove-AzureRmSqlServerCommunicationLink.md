@@ -25,7 +25,7 @@ The **Remove-AzureRmSqlServerCommunicationLink** cmdlet deletes a server-to-serv
 
 ### Example 1: Delete a communication link
 ```
-PS C:\>Remove-AzureRmSqlServerCommunicationLink -ResourceGroupName "ResourceGroup01" -ServerName "ContosoServer17" -LinkName "Link01"
+PS C:\> Remove-AzureRmSqlServerCommunicationLink -ResourceGroupName "ResourceGroup01" -ServerName "ContosoServer17" -LinkName "Link01"
 ```
 
 This command deletes a server-to-server communication link named Link01 on ContosoServer17.

@@ -26,7 +26,7 @@ Specify the name of a server to see information for only that server.
 
 ### Example 1: Get all instances of SQL Server assigned to a resource group
 ```
-PS C:\>Get-AzureRmSqlServer -ResourceGroupName "ResourceGroup01"
+PS C:\> Get-AzureRmSqlServer -ResourceGroupName "ResourceGroup01"
 ResourceGroupName        : resourcegroup01
 ServerName               : server01
 Location                 : Central US
@@ -47,7 +47,7 @@ This command gets information about all the Azure SQL Database servers assigned 
 
 ### Example 2: Get information about an Azure SQL Database server
 ```
-PS C:\>Get-AzureRmSqlServer -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+PS C:\> Get-AzureRmSqlServer -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
 ResourceGroupName        : resourcegroup01
 ServerName               : server01
 Location                 : Central US
@@ -61,7 +61,7 @@ This command gets information about the Azure SQL Database server named Server01
 
 ### Example 3: Get all instances of SQL Server in the subscription
 ```
-PS C:\>Get-AzureRmResourceGroup | Get-AzureRmSqlServer
+PS C:\> Get-AzureRmResourceGroup | Get-AzureRmSqlServer
 ResourceGroupName        : resourcegroup01
 ServerName               : server01
 Location                 : Central US

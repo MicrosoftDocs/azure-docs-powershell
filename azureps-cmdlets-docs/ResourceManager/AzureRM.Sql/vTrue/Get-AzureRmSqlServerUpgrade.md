@@ -25,7 +25,7 @@ The **Get-AzureRmSqlServerUpgrade** cmdlet gets the status of an Azure SQL Datab
 
 ### Example 1: Get the status of an upgrade
 ```
-PS C:\>Get-AzureRmSqlServerUpgrade -ResourceGroupName "ResourceGroup01" -ServerName "Server01" | Format-List
+PS C:\> Get-AzureRmSqlServerUpgrade -ResourceGroupName "ResourceGroup01" -ServerName "Server01" | Format-List
 ResourceGroupName               : resourcegroup01
 ServerName                      : server01
 Status                          : Queued

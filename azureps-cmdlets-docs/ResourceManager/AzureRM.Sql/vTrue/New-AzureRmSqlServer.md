@@ -26,7 +26,7 @@ The **New-AzureRmSqlServer** cmdlet creates an Azure SQL Database server.
 
 ### Example 1: Create a new Azure SQL Database server
 ```
-PS C:\>New-AzureRmSqlServer -ResourceGroupName "ResourceGroup01" -Location "Central US" -ServerName "server01" -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential)
+PS C:\> New-AzureRmSqlServer -ResourceGroupName "ResourceGroup01" -Location "Central US" -ServerName "server01" -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential)
 ResourceGroupName        : resourcegroup01
 ServerName               : server01
 Location                 : Central US

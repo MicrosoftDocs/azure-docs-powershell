@@ -27,7 +27,7 @@ To use this cmdlet, specify the *ResourceGroupName*, *ServerName*, and *Database
 
 ### Example 1: Get the threat detection policy for a database
 ```
-PS C:\>Get-AzureRmSqlDatabaseThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Get-AzureRmSqlDatabaseThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01"
 DatabaseName                 : Database01
 ResourceGroupName            : ResourceGroup11
 ServerName                   : Server01

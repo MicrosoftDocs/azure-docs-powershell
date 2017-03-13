@@ -25,7 +25,7 @@ The **Remove-AzureRmSqlElasticPool** cmdlet deletes an Azure SQL Database elasti
 
 ### Example 1: Delete an elastic pool
 ```
-PS C:\>Remove-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
+PS C:\> Remove-AzureRmSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01"
 ```
 
 This command deletes an elastic pool named ElasticPool01.

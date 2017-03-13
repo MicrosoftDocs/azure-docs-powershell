@@ -27,7 +27,7 @@ To remove a key from Key Vault, use Remove-AzureKeyVaultKey.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Remove a Key Vault key  --------------------------
+### Example 1: Remove a Key Vault key  --------------------------
 ```
 PS C:\> Remove-AzureRmSqlServerKeyVaultKey -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' -ServerName 'ContosoServer' -ResourceGroupName 'ContosoResourceGroup'
 ```
@@ -45,7 +45,7 @@ CreationDate      : 1/1/2017 12:00:00 AM
 ## PARAMETERS
 
 ### -KeyId
-The Azure Key Vault KeyId.
+Specifies the Azure Key Vault KeyId.
 
 ```yaml
 Type: String
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The Azure Sql Server name.
+Specifies the name of the Azure SQL Server.
 
 ```yaml
 Type: String

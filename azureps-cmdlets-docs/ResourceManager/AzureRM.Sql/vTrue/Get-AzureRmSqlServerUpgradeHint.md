@@ -28,7 +28,7 @@ This cmdlet returns hints for all databases hosted on the specified server.
 
 ### Example 1: Get combined recommendations
 ```
-PS C:\>Get-AzureRmSqlServerUpgradeHint -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
+PS C:\> Get-AzureRmSqlServerUpgradeHint -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
 ElasticPools Databases           
 ------------ ---------           
 {}           {database01, database02}

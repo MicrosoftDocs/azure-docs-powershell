@@ -21,7 +21,7 @@ Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity [-ServerName] <String> [
 ## DESCRIPTION
 The **Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity** cmdlet gets the progress of a Transparent Data Encryption (TDE) scan of an Azure SQL database.
 If no encryption span is running, this cmdlet returns an empty list.
-For more information, see Transparent Data Encryption with Azure SQL Databasehttps://msdn.microsoft.com/library/dn948096 (https://msdn.microsoft.com/library/dn948096) in the Microsoft Developer Network Library.
+For more information, see Transparent Data Encryption with [Azure SQL Database](https://msdn.microsoft.com/library/dn948096) (https://msdn.microsoft.com/library/dn948096) in the Microsoft Developer Network Library.
 
 This cmdlet is also supported by the SQL Server Stretch Database service on Azure.
 
@@ -29,7 +29,7 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ### Example 1: Get TDE activity for a database
 ```
-PS C:\>Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity -ServerName "server01" -ResourceGroupName "resourcegroup01" -DatabaseName "database01"
+PS C:\> Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity -ServerName "server01" -ResourceGroupName "resourcegroup01" -DatabaseName "database01"
 ResourceGroupName : resourcegroup01
 ServerName        : server01
 DatabaseName      : database01
@@ -174,5 +174,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlDatabaseTransparentDataEncryption](./Set-AzureRmSqlDatabaseTransparentDataEncryption.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
-
-

@@ -25,7 +25,7 @@ The **Resume-AzureRmSqlDatabase** cmdlet resumes an Azure SQL Data Warehouse dat
 
 ### Example 1: Resumes an Azure SQL Data Warehouse database
 ```
-PS C:\>Resume-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+PS C:\> Resume-AzureRmSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
 ```
 
 This command resumes a suspended Azure SQL Data Warehouse database.
