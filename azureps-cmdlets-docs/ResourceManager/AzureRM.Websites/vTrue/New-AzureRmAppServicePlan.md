@@ -37,7 +37,7 @@ PS C:\> New-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name 
 ```
 
 This command creates an App Service plan named ContosoASP in the resource group named Default-Web-WestUS in Geo location West US.
-The command uses a Basic SKU and allocates two small workers.
+The command specifies a Basic Tier and allocates two small workers.
 
 ## PARAMETERS
 
