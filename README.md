@@ -1,3 +1,2 @@
-Docs for PowerShell docs thats publishing on docs.microsoft.com
+Cmdlet help Docs for Azure PowerShell services thats publishing on docs.microsoft.com
 
-More to come..
