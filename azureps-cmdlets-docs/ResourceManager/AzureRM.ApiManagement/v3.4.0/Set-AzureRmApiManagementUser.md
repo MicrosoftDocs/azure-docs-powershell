@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ### -Note
 Specifies a note about the user.
 This parameter is optional.
-The default value of this parameter is $null.
+The default value of this parameter is $Null.
 
 ```yaml
 Type: String

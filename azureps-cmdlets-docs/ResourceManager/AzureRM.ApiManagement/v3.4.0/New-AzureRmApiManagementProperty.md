@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureRmApiManagementProperty
 
 ## SYNOPSIS
-Creates a new Property.
+Creates an Azure API Management Property.
 
 ## SYNTAX
 
@@ -195,5 +195,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementProperty](./Remove-AzureRmApiManagementProperty.md)
 
 [Set-AzureRmApiManagementProperty](./Set-AzureRmApiManagementProperty.md)
-
-

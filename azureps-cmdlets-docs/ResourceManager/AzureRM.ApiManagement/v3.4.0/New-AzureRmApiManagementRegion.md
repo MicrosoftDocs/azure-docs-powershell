@@ -19,43 +19,41 @@ New-AzureRmApiManagementRegion -Location <String> [-Capacity <Int32>]
 ```
 
 ## DESCRIPTION
-Helper command to create an instance of PsApiManagementRegion.
-This command is to be used with New-AzureRmApiManagement command.
+Helper command to create an instance of **PsApiManagementRegion**.
+This command is to be used with [New-AzureRmApiManagement](./New-AzureRmApiManagement.md) command.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Create an instance of PsApiManagementRegion
 
 ```
-$apimRegion = New-AzureRmApiManagementRegion -Location "Central US" 
+$ApiMRegion = New-AzureRmApiManagementRegion -Location "Central US" 
 
-$additionalRegions = @($apimRegion)
+$AdditionalRegions = @($ApiMRegion)
 
-New-AzureRmApiManagement -ResourceGroupName "Contoso"Group -Location "West US" -Name ContosoApi -Organization Contoso -AdminEmail admin@contoso.com -AdditionalRegions $additionalRegions -Sku "Premium"
+New-AzureRmApiManagement -ResourceGroupName "Contoso"Group -Location "West US" -Name ContosoApi -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $AdditionalRegions -Sku "Premium"
 ```
 
-### --------------------------  Example 2  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 2: an instance of PsApiManagementRegion with an additional region
 
 ```
-$apimRegionVirtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "Central US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/centralusvirtualNetwork/subnets/backendSubnet"
+$ApiMRegionVirtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "Central US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/centralusvirtualNetwork/subnets/backendSubnet"
 
-$apimRegion = New-AzureRmApiManagementRegion -Location "Central US" -VirtualNetwork $apimRegionVirtualNetwork 
+$ApiMRegion = New-AzureRmApiManagementRegion -Location "Central US" -VirtualNetwork $ApiMRegionVirtualNetwork 
 
-$additionalRegions = @($apimRegion)
+$AdditionalRegions = @($ApiMRegion)
 
 $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "West US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc2-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
 
-New-AzureRmApiManagement -ResourceGroupName "Contoso"Group -Location "West US" -Name ContosoApi -Organization Contoso -AdminEmail admin@contoso.com -AdditionalRegions $additionalRegions -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
+New-AzureRmApiManagement -ResourceGroupName "Contoso"Group -Location "West US" -Name ContosoApi -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $AdditionalRegions -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
 ```
 
-Creates an ApiManagement service of External VpnType in West US Region, with an Additional Region in Central US.
+This example creates an ApiManagement service of External VpnType in West US Region, with an Additional Region in Central US.
 
 ## PARAMETERS
 
 ### -Location
-Location of the additional deployment region.
+Specifies the geographical location of the additional deployment region.
 
 ```yaml
 Type: String
@@ -70,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Capacity
-Sku capacity of the Azure API Management service additional region.
+Specifies the SKU capacity of the Azure API Management service additional region.
 Default value is 1.
 
 ```yaml
@@ -86,8 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-Virtual Network Configuration of Azure API Management deployment region.
-Default value is $null.
+Specifies the Virtual Network Configuration of Azure API Management deployment region.
+Default value is $Null.
 
 ```yaml
 Type: PsApiManagementVirtualNetwork
@@ -148,3 +146,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[Add-AzureRmApiManagementRegion](./Add-AzureRmApiManagementRegion.md)
+
+[Remove-AzureRmApiManagementRegion](./Remove-AzureRmApiManagementRegion.md)
+
+[Update-AzureRmApiManagementRegion](./Update-AzureRmApiManagementRegion.md)

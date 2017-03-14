@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -PortalHostnameConfiguration
 Specifies the custom portal hostname configuration.
-Passing $null to the cmdlet sets the default hostname.
+Passing $Null to the cmdlet sets the default hostname.
 
 ```yaml
 Type: PsApiManagementHostnameConfiguration
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 
 ### -ProxyHostnameConfiguration
 Specifies the custom proxy hostname configuration.
-Passing $null sets the default hostname.
+Passing $Null sets the default hostname.
 
 ```yaml
 Type: PsApiManagementHostnameConfiguration
