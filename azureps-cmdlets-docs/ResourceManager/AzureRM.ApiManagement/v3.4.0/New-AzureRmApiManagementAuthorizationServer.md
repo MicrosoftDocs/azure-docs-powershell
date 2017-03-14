@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the authorization server to create.
+Specifies the name of the authorization server that this cmdlet creates.
 
 ```yaml
 Type: String
@@ -372,4 +372,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

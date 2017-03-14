@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiId
-Specifies the ID of the API to create.
+Specifies the ID of the API that this cmdlet creates.
 If you do not specify this parameter, this cmdlet generates an ID for you.
 
 ```yaml
@@ -289,5 +289,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
 
 [Set-AzureRmApiManagementApi](./Set-AzureRmApiManagementApi.md)
-
-

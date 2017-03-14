@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description.
+Specifies a description for the API management logger.
 
 ```yaml
 Type: String
@@ -186,5 +186,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementLogger](./Remove-AzureRmApiManagementLogger.md)
 
 [Set-AzureRmApiManagementLogger](./Set-AzureRmApiManagementLogger.md)
-
-

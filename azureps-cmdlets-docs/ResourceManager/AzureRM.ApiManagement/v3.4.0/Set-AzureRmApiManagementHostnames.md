@@ -33,7 +33,7 @@ The **Set-AzureRmApiManagementHostnames** cmdlet applies a custom hostname confi
 
 ### Example 1: Set the custom hostname configuration for a proxy and portal
 ```
-PS C:\> Set-AzureRmApiManagementHostnames -Name ContosoApi -ResourceGroupName Contoso -PortalHostnameConfiguration $portalHostnameConf -ProxyHostnameConfiguration $proxyHostnameConf
+PS C:\> Set-AzureRmApiManagementHostnames -Name ContosoApi -ResourceGroupName "Contoso" -PortalHostnameConfiguration $portalHostnameConf -ProxyHostnameConfiguration $proxyHostnameConf
 ```
 
 This command sets the custom hostname configuration for proxy and portal.

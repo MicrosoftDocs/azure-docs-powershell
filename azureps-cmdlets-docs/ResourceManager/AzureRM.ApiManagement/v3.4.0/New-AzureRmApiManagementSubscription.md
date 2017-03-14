@@ -26,7 +26,7 @@ The **New-AzureRmApiManagementSubscription** cmdlet creates a subscription.
 
 ### Example 1: Subscribe a user to a product
 ```
-PS C:\> New-AzureRmApiManagementSubscription -Context $apimContext -UserId "777" -ProductId "999"
+PS C:\> New-AzureRmApiManagementSubscription -Context $ApiMContext -UserId "777" -ProductId "999"
 ```
 
 This command subscribes an existing user to a product.
