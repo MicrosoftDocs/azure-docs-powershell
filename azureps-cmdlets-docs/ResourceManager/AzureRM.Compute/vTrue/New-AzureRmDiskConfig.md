@@ -37,7 +37,7 @@ PS C:\> $diskconfig = Set-AzureRmDiskKeyEncryptionKey -Disk $diskconfig -KeyUrl 
 PS C:\> New-AzureRmDisk -ResourceGroupName 'ResourceGroup01' -DiskName 'Disk01' -Disk $diskconfig;
 ```
 
-The first command creates a local empty disk object with size 5GB in Standard_LRS storage account type.  It also sets Windows OS type and enables encryption settings.
+The first command creates a local empty disk object with size 5GB in Standard_LRS storage account type.  It also sets Windows operating system type and enables encryption settings.
 The second and third commands set the disk encryption key and key encryption key settings for the disk object.
 The last command takes the disk object and creates a disk with name 'Disk01' in resource group 'ResourceGroup01'.
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsType
-Specifies the OS type.
+Specifies the operating systemtype.
 
 ```yaml
 Type: OperatingSystemTypes
@@ -294,4 +294,3 @@ Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
 ## NOTES
 
 ## RELATED LINKS
-

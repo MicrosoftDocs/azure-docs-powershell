@@ -40,9 +40,9 @@ PS C:\> $diskupdateconfig = Set-AzureRmDiskUpdateKeyEncryptionKey -DiskUpdate $d
 PS C:\> Update-AzureRmDisk -ResourceGroupName 'ResourceGroup01' -DiskName 'Disk01' -DiskUpdate $diskupdateconfig;
 ```
 
-The first command creates a local empty disk update object with size 10GB in Premium_LRS storage account type.  It also sets Windows OS type and enables encryption settings.
+The first command creates a local empty disk update object with size 10GB in Premium_LRS storage account type.  It also sets Windows operating system type and enables encryption settings.
 The second and third commands set the disk encryption key and key encryption key settings for the disk update object.
-The last command takes the disk update object and updates an existing disk with name 'Disk01' in resource group 'ResourceGroup01'.
+The last command takes the disk update object and updates an existing disk with name Disk01 in resource group ResourceGroup01.
 
 ### Example 2
 ```
@@ -169,4 +169,3 @@ Microsoft.Azure.Management.Compute.Models.Disk
 ## NOTES
 
 ## RELATED LINKS
-

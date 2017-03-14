@@ -29,7 +29,7 @@ PS C:\> $diskupdateconfig = Set-AzureRmDiskUpdateImageReference -Disk $diskupdat
 PS C:\> Update-AzureRmDisk -ResourceGroupName 'ResourceGroup01' -DiskName 'Disk01' -DiskUpdate $diskupdateconfig;
 ```
 
-The first command creates a local disk update object with size 10GB in Premium_LRS storage account type.  It also sets Windows OS type.
+The first command creates a local disk update object with size 10GB in Premium_LRS storage account type.  It also sets Windows operating system type.
 The second command sets the image id and the logical unit number 0 for the disk update object.
 The last command takes the disk update object and updates an existing disk with name 'Disk01' in resource group 'ResourceGroup01'.
 
@@ -126,4 +126,3 @@ System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, Pub
 ## NOTES
 
 ## RELATED LINKS
-
