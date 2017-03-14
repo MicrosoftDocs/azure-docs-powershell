@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmApiManagementAuthorizationServer
 
 ## SYNOPSIS
-Removes an authorization server.
+Removes an Azure API Management authorization server.
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
-Specifies the ID of the authorization server to remove.
+Specifies the ID of the authorization server that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -160,5 +160,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementAuthorizationServer](./New-AzureRmApiManagementAuthorizationServer.md)
 
 [Set-AzureRmApiManagementAuthorizationServer](./Set-AzureRmApiManagementAuthorizationServer.md)
-
-
