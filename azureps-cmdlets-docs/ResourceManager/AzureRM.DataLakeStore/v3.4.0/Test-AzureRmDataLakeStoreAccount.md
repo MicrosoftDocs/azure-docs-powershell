@@ -23,7 +23,7 @@ The **Test-AzureRmDataLakeStoreAccount** cmdlet tests the existence of a Data La
 
 ### Example 1: Test an account
 ```
-PS C:\>Test-AzureRmDataLakeStoreAccount -Name "ContosoADL"
+PS C:\> Test-AzureRmDataLakeStoreAccount -Name "ContosoADL"
 ```
 
 This command tests whether the account named ContosoADL exists.

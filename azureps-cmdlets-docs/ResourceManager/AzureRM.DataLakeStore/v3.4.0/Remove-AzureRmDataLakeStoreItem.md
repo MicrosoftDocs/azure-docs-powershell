@@ -24,7 +24,7 @@ The **Remove-AzureRmDataLakeStoreItem** cmdlet deletes a file or folder in Data 
 
 ### Example 1: Remove multiple items
 ```
-PS C:\>Remove-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Paths "/File01.txt","/MyFiles/File.csv"
+PS C:\> Remove-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Paths "/File01.txt","/MyFiles/File.csv"
 ```
 
 This command removes the files File01.txt and File.csv from the Data Lake Store.

@@ -23,7 +23,7 @@ The **Get-AzureRmDataLakeStoreChildItem** cmdlet gets the list of items in a fol
 
 ### Example 1: Get the child items for a folder
 ```
-PS C:\>Get-AzureRmDataLakeStoreChildItem -AccountName "ContosoADL" -Path "/MyFiles/"
+PS C:\> Get-AzureRmDataLakeStoreChildItem -AccountName "ContosoADL" -Path "/MyFiles/"
 ```
 
 This command gets the child items for the MyFiles folder.

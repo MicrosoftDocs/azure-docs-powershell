@@ -32,7 +32,7 @@ Adds the provider "MyProvider" to account "ContosoADL" with the provider endpoin
 ## PARAMETERS
 
 ### -Account
-The name of the Data Lake Store account to add the specified trusted identity provider to.
+Specifies the name of the Data Lake Store account to add the specified trusted identity provider to.
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the trusted identity provider to add
+Specifies The name of the trusted identity provider that this cmdlet adds.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderEndpoint
-The valid trusted provider endpoint in the format: https://sts.windows.net/\<provider identity\>"
+Specifies the valid trusted provider endpoint in the format: https://sts.windows.net/\<provider identity\>".
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which the account to add the trusted identity provider is.
+Specifies the name of resource group under which the account to add the trusted identity provider is.
 
 ```yaml
 Type: String
@@ -107,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -133,3 +136,6 @@ The added Trusted Identity Provider.
 
 ## RELATED LINKS
 
+[Get-AzureRmDataLakeStoreTrustedIdProvider](./Get-AzureRmDataLakeStoreTrustedIdProvider.md)
+
+[Set-AzureRmDataLakeStoreTrustedIdProvider](./Set-AzureRmDataLakeStoreTrustedIdProvider.md)

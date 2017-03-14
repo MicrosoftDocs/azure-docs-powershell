@@ -24,7 +24,7 @@ The **Set-AzureRmDataLakeStoreItemAcl** cmdlet modifies the access control list 
 
 ### Example 1: Set the ACL for a file and a folder
 ```
-PS C:\>$ACL = Get-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path /
+PS C:\> $ACL = Get-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path /
 PS C:\> Set-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path "/MyFiles/Test.txt" -Acl $ACL
 ```
 

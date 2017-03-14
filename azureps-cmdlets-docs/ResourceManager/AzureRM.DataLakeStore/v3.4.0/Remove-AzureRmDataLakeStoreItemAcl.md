@@ -24,7 +24,7 @@ The **Remove-AzureRmDataLakeStoreItemAcl** cmdlet clears the access control list
 
 ### Example 1: Remove the ACL from a folder
 ```
-PS C:\>Remove-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path "/"
+PS C:\> Remove-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path "/"
 ```
 
 This command removes the ACL for the root directory for the ContosoADL account.

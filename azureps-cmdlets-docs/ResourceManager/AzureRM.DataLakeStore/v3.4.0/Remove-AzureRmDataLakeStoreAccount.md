@@ -24,7 +24,7 @@ The **Remove-AzureRmDataLakeStoreAccount** cmdlet deletes a Data Lake Store acco
 
 ### Example 1: Remove a Data Lake Store account
 ```
-PS C:\>Remove-AzureRmDataLakeStoreAccount -Name "ContosoADL"
+PS C:\> Remove-AzureRmDataLakeStoreAccount -Name "ContosoADL"
 ```
 
 This command removes the account named ContosoADL from the Data Lake Store.
