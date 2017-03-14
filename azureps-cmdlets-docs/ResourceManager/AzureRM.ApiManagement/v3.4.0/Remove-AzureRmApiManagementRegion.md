@@ -33,7 +33,7 @@ This command removes the region named East US from the **PsApiManagement** insta
 
 ### Example 2: Remove a region from a PsApiManagement instance using a series of commands
 ```
-PS C:\> Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name ContosoApi | Remove-AzureRmApiManagementRegion -Location "East US" | Update-AzureRmApiManagementDeployment
+PS C:\> Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi" | Remove-AzureRmApiManagementRegion -Location "East US" | Update-AzureRmApiManagementDeployment
 ```
 
 This first command gets an instance of **PsApiManagement** from the resource group named Contoso named ContosoApi.
@@ -142,5 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AzureRmApiManagementRegion](./Add-AzureRmApiManagementRegion.md)
 
 [Update-AzureRmApiManagementRegion](./Update-AzureRmApiManagementRegion.md)
-
-

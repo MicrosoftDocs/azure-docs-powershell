@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmApiManagementUser
 
 ## SYNOPSIS
-Deletes an existing user.
+Removes an existing user.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-AzureRmApiManagementUser -Context <PsApiManagementContext> -UserId <Strin
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmApiManagementUser** cmdlet deletes an existing user.
+The **Remove-AzureRmApiManagementUser** cmdlet removes an existing user.
 
 ## EXAMPLES
 
@@ -183,5 +183,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementUser](./New-AzureRmApiManagementUser.md)
 
 [Set-AzureRmApiManagementUser](./Set-AzureRmApiManagementUser.md)
-
-

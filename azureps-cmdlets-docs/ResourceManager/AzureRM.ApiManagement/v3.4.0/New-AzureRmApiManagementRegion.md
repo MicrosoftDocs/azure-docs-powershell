@@ -31,7 +31,7 @@ $ApiMRegion = New-AzureRmApiManagementRegion -Location "Central US"
 
 $AdditionalRegions = @($ApiMRegion)
 
-New-AzureRmApiManagement -ResourceGroupName "Contoso"Group -Location "West US" -Name ContosoApi -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $AdditionalRegions -Sku "Premium"
+New-AzureRmApiManagement -ResourceGroupName "Contoso"Group -Location "West US" -Name "ContosoApi" -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $AdditionalRegions -Sku "Premium"
 ```
 
 ### Example 2: an instance of PsApiManagementRegion with an additional region
@@ -45,7 +45,7 @@ $AdditionalRegions = @($ApiMRegion)
 
 $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "West US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc2-4174-a1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
 
-New-AzureRmApiManagement -ResourceGroupName "Contoso"Group -Location "West US" -Name ContosoApi -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $AdditionalRegions -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
+New-AzureRmApiManagement -ResourceGroupName "Contoso"Group -Location "West US" -Name "ContosoApi" -Organization "Contoso" -AdminEmail "admin@contoso.com" -AdditionalRegions $AdditionalRegions -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
 ```
 
 This example creates an ApiManagement service of External VpnType in West US Region, with an Additional Region in Central US.
