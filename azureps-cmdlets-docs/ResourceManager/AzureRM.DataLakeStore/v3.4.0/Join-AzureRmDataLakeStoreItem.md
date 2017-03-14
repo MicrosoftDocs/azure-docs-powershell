@@ -24,7 +24,7 @@ The **Join-AzureRmDataLakeStoreItem** cmdlet joins one or more files to create o
 
 ### Example 1: Join two items
 ```
-PS C:\>Join-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Paths "/MyFiles/File01.txt","/MyFiles/File02.txt" -Destination "/MyFiles/CombinedFile.txt"
+PS C:\> Join-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Paths "/MyFiles/File01.txt","/MyFiles/File02.txt" -Destination "/MyFiles/CombinedFile.txt"
 ```
 
 This command joins File01.txt and File02.txt to create the file CombinedFile.txt.

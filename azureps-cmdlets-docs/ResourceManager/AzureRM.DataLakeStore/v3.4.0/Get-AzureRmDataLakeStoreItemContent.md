@@ -25,7 +25,7 @@ The **Get-AzureRmDataLakeStoreItemContent** cmdlet gets the contents of a file i
 
 ### Example 1: Get the contents of a file
 ```
-PS C:\>Get-AzureRmDataLakeStoreItemContent -AccountName "ContosoADL" -Path "/MyFile.txt"
+PS C:\> Get-AzureRmDataLakeStoreItemContent -AccountName "ContosoADL" -Path "/MyFile.txt"
 ```
 
 This command gets the contents of the file MyFile.txt in the ContosoADL account.

@@ -31,7 +31,7 @@ The **Remove-AzureRmDataLakeStoreItemAclEntry** cmdlet removes an entry (ACE) fr
 
 ### Example 1: Remove a user entry
 ```
-PS C:\>Remove-AzureRmDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId
+PS C:\> Remove-AzureRmDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzureRmADUser -Mail "PattiFuller@contoso.com").ObjectId
 ```
 
 This command removes the user ACE for Patti Fuller from the ContosoADL account.

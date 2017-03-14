@@ -34,7 +34,7 @@ The **Get-AzureRmDataLakeStoreAccount** cmdlet gets details of a Data Lake Store
 
 ### Example 1: Get a Data Lake Store account
 ```
-PS C:\>Get-AzureRmDataLakeStoreAccount -Name "ContosoADL"
+PS C:\> Get-AzureRmDataLakeStoreAccount -Name "ContosoADL"
 ```
 
 This command gets the account named ContosoADL.
@@ -42,7 +42,7 @@ This command gets the account named ContosoADL.
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the account to get.
+Specifies the name of the account that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the Data Lake Store account to get.
+Specifies the name of the resource group that contains the Data Lake Store account that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -107,5 +107,3 @@ A list of Data Lake Store accounts in the resource group or subscription specifi
 [Set-AzureRmDataLakeStoreAccount](./Set-AzureRmDataLakeStoreAccount.md)
 
 [Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
-
-

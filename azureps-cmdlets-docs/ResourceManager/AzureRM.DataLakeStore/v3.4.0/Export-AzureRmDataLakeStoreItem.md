@@ -33,7 +33,7 @@ The **Export-AzureRmDataLakeStoreItem** cmdlet downloads a file from Data Lake S
 
 ### Example 1: Download an item from the Data Lake Store
 ```
-PS C:\>Export-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path /myFiles/TestSource.csv -Destination "C:\Test.csv"
+PS C:\> Export-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path /myFiles/TestSource.csv -Destination "C:\Test.csv"
 ```
 
 This command downloads the file TestSource.csv from the Data Lake Store to C:\Test.csv.
@@ -87,7 +87,10 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticLogLevel
-Optionally indicates the diagnostic log level to use to record events during the file or folder import. Default is Error.```yaml
+Specifies the diagnostic log level to use to record events during the file or folder import. 
+Default is Error.
+
+```yaml
 Type: LogLevel
 Parameter Sets: Include diagnostic logging
 Aliases: 
@@ -100,7 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticLogPath
-Specifies the path for the diagnostic log to record events to during the file or folder import.```yaml
+Specifies the path for the diagnostic log to record events to during the file or folder import.
+
+```yaml
 Type: String
 Parameter Sets: Include diagnostic logging
 Aliases: 
@@ -247,5 +252,3 @@ The path where the file or folder was downloaded to.
 [Remove-AzureRmDataLakeStoreItem](./Remove-AzureRmDataLakeStoreItem.md)
 
 [Test-AzureRmDataLakeStoreItem](./Test-AzureRmDataLakeStoreItem.md)
-
-

@@ -23,7 +23,7 @@ The **Get-AzureRmDataLakeStoreItem** cmdlet gets the details of a file or folder
 
 ### Example 1: Get details of a file from the Data Lake Store
 ```
-PS C:\>Get-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/MyFiles/Test.csv"
+PS C:\> Get-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/MyFiles/Test.csv"
 ```
 
 This command gets the details of the file Test.csv from the Data Lake Store.

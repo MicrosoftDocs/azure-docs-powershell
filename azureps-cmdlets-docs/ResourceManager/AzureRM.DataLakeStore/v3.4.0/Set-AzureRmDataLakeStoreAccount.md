@@ -26,7 +26,7 @@ The **Set-AzureRmDataLakeStoreAccount** cmdlet modifies a Data Lake Store accoun
 
 ### Example 1: Add a tag to an account
 ```
-PS C:\>Set-AzureRmDataLakeStoreAccount -Name "ContosoADL" -Tags @{"stage"="production"}
+PS C:\> Set-AzureRmDataLakeStoreAccount -Name "ContosoADL" -Tags @{"stage"="production"}
 ```
 
 This command adds the specified tag to the Data Lake Store account named ContosoADL.

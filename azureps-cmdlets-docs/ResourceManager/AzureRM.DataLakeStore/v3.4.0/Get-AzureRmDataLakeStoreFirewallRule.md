@@ -9,7 +9,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Gets the specified firewall rules in the specified Data Lake Store.
-If no firewall rule is specified, then lists all firewall rules for the account.
 
 ## SYNTAX
 
@@ -19,7 +18,7 @@ Get-AzureRmDataLakeStoreFirewallRule [-Account] <String> [[-Name] <String>] [[-R
 ```
 
 ## DESCRIPTION
-The Get-AzureRmDataLakeStoreFirewallRule cmdlet gets the specified firewall rules in the specified Data Lake Store.
+The **Get-AzureRmDataLakeStoreFirewallRule** cmdlet gets the specified firewall rules in the specified Data Lake Store.
 If no firewall rule is specified, then lists all firewall rules for the account.
 
 ## EXAMPLES
@@ -29,19 +28,19 @@ If no firewall rule is specified, then lists all firewall rules for the account.
 PS C:\> Get-AzureRmDataLakeStoreFirewallRule -AccountName "ContosoADL" -Name MyFirewallRule
 ```
 
-Returns the firewall rule named "MyFirewallRule" from account "ContosoADL"
+This command gets the firewall rule named MyFirewallRule from the account named ContosoADL.
 
 ### Example 2: List all firewall rules in an account
 ```
 PS C:\> Get-AzureRmDataLakeStoreFirewallRule -AccountName "ContosoADL"
 ```
 
-Returns all firewall rules in account "ContosoADL"
+This command gets all firewall rules in the account named ContosoADL.
 
 ## PARAMETERS
 
 ### -Account
-The Data Lake Store account to retrieve the firewall rule from.
+Specifies the Data Lake Store account that this cmdlet gets the firewall rule from.
 
 ```yaml
 Type: String
@@ -56,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the firewall rule to retrieve
+Specifies the name of the firewall rule that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -71,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which want to retrieve the specified account's specified firewall rule.
+Specifies the name of the resource group under which this cmdlet gets the specified account's specified firewall rule.
 
 ```yaml
 Type: String
@@ -102,3 +101,8 @@ The list of firewall rules in the specified account.
 
 ## RELATED LINKS
 
+[Add-AzureRmDataLakeStoreFirewallRule](./Add-AzureRmDataLakeStoreFirewallRule.md)
+
+[Remove-AzureRmDataLakeStoreFirewallRule](./Remove-AzureRmDataLakeStoreFirewallRule.md)
+
+[Set-AzureRmDataLakeStoreFirewallRule](./Set-AzureRmDataLakeStoreFirewallRule.md)

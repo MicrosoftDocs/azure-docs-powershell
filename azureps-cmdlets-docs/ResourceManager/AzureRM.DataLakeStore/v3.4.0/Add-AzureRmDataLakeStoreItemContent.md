@@ -24,7 +24,7 @@ The **Add-AzureRmDataLakeStoreItemContent** cmdlet adds content to an item in an
 
 ### Example 1: Add content to a file
 ```
-PS C:\>Add-AzureRmDataLakeStoreItemContent -AccountName "ContosoADLS" -Path /abc/myFile.txt -Value "My content here"
+PS C:\> Add-AzureRmDataLakeStoreItemContent -AccountName "ContosoADLS" -Path /abc/myFile.txt -Value "My content here"
 ```
 
 This command adds content to the file myFile.txt.
@@ -119,5 +119,3 @@ Returns true on success.
 ## RELATED LINKS
 
 [Get-AzureRmDataLakeStoreItemContent](./Get-AzureRmDataLakeStoreItemContent.md)
-
-

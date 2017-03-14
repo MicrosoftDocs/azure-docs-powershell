@@ -24,7 +24,7 @@ The **Test-AzureRmDataLakeStoreItem** cmdlet tests the existence of a file or fo
 
 ### Example 1: Test a file
 ```
-PS C:\>Test-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/MyFiles/Test.csv"
+PS C:\> Test-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "/MyFiles/Test.csv"
 ```
 
 This command tests whether the file Test.csv exists in the ContosoADL account.
