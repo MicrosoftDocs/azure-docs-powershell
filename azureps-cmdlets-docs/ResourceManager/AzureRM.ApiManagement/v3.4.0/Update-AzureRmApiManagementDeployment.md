@@ -48,17 +48,17 @@ PS C:\> $ApiManagement.AddRegion("Central US", "Premium", 3)
 PS C:\> Update-AzureRmApiManagementDeployment -ApiManagement $ApiManagement
 ```
 
-This example gets an Api Management instance, scales it to five premium units and then adds an additional three units to the premium region.
+This example gets an API Management instance, scales it to five premium units and then adds an additional three units to the premium region.
 
 ### Example 3: Update deployment (external VNET)
-```PowerShell
+```
 PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "East US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/Api-Default-West-US/providers/Microsoft.ClassicNetwork/virtualNetworks/dfVirtualNetwork/subnets/backendSubnet"
 PS C:\> Update-AzureRmApiManagementDeployment -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetwork $virtualNetwork -VpnType "External"
 ```
 This command updates an existing API Management deployment and joins to an external *VpnType*.
 
 ### Example 4: Update deployment (internal VNET)
-```PowerShell
+```
 PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "East US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/Api-Default-West-US/providers/Microsoft.ClassicNetwork/virtualNetworks/dfVirtualNetwork/subnets/backendSubnet"
 PS C:\> Update-AzureRmApiManagementDeployment -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetwork $virtualNetwork -VpnType "Internal"
 ```
@@ -301,5 +301,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmApiManagement](./Get-AzureRmApiManagement.md)
-
-
