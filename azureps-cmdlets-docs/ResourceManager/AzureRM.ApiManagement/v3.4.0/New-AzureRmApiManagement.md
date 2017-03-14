@@ -28,24 +28,24 @@ The **New-AzureRmApiManagement** cmdlet creates an API Management deployment in 
 
 ### Example 1: Create a Developer tier API Management service
 ```
-PS C:\>New-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com"
+PS C:\> New-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com"
 ```
 
 This command creates a Developer tier API Management service.
 The command specifies the organization and the administrator address.
-The command does not specify the *SKU* parameter.
+The command does not specify the *Sku* parameter.
 Therefore, the cmdlet uses the default value of Developer.
 
 ### Example 2: Create a Standard tier service that has three units
 ```
-PS C:\>New-AzureRmApiManagement -ResourceGroupName "ContosoGroup02 -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com" -Sku Standard -Capacity 3
+PS C:\> New-AzureRmApiManagement -ResourceGroupName "ContosoGroup02 -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com" -Sku Standard -Capacity 3
 ```
 This command creates a Standard tier API Management service that has three units.
 
 ### Example 3: Create an API Management service for an external virtual network
 ```PowerShell
 PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "West US" -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-b1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
-PS C:\> New-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization Contoso -AdminEmail admin@contoso.com -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
+PS C:\> New-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization "Contoso" -AdminEmail "admin@contoso.com" -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
 ```
 This command creates a Premium-tier API Management service in an Azure virtual network subnet having an external-facing gateway endpoint with a master region in the West US.
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Location
 Specifies the location in which this cmdlet creates an API Management deployment.
-To obtain valid locations, use the Get-AzureLocation cmdlets.
+To obtain valid locations, use the [Get-AzureLocation](./Get-AzureLocation.md) cmdlets.
 
 Valid values are: 
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-Virtual Network Configuration of master Azure API Management deployment region.
+Specifies the virtual network configuration of the master Azure API Management deployment region.
 
 ```yaml
 Type: PsApiManagementVirtualNetwork
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalRegions
-Additional deployment regions of Azure API Management.
+Specifies an array of additional deployment regions of Azure API Management.
 
 ```yaml
 Type: PsApiManagementRegion[]
@@ -311,5 +311,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagement](./Remove-AzureRmApiManagement.md)
 
 [Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
-
-

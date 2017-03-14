@@ -8,6 +8,7 @@ schema: 2.0.0
 # Restart-AzureRmWebAppSlot
 
 ## SYNOPSIS
+Stops and then starts an Azure Web App Slot.
 
 ## SYNTAX
 
@@ -27,12 +28,12 @@ If the Web App Slot is in a stopped state, use the Start-AzureRmWebAppSlot cmdle
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Restart an Azure Web App slot
 ```
 PS C:\> Restart-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001"
 ```
 
-This command restarts the slot Slot001 for the web app ContosoWebApp associated with the resource group Default-Web-WestUS
+This command restarts the slot Slot001 for the web app ContosoWebApp associated with the resource group Default-Web-WestUS.
 
 ## PARAMETERS
 
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Specifies the name of the WebApp slot.
+Specifies the name of the Web App slot.
 
 ```yaml
 Type: String

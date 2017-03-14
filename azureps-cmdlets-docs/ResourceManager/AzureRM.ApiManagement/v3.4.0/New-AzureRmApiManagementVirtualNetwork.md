@@ -19,13 +19,13 @@ New-AzureRmApiManagementVirtualNetwork -Location <String> -SubnetResourceId <Str
 
 ## DESCRIPTION
 The **New-AzureRmApiManagementVirtualNetwork** cmdlet is a helper command to create an instance of **PsApiManagementVirtualNetwork**.
-This command is used with **Set-AzureRMApiManagementVirtualNetworks** cmdlet.
+This command is used with [Set-AzureRMApiManagementVirtualNetworks](./Set-AzureRMApiManagementVirtualNetworks.md) cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Create a virtual network
 ```
-PS C:\>$VirtualNetworks = @()
+PS C:\> $VirtualNetworks = @()
 PS C:\> $VirtualNetworks += New-AzureRmApiManagementVirtualNetwork -Location "East US" -SubtenName "ContosoNet" -VnetId "089D3F4D-B986-4DFD-9259-9112BA7A1F03"
 PS C:\> Set-AzureRmApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetworks $VirtualNetworks
 ```
@@ -132,3 +132,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-AzureRMApiManagementVirtualNetworks](./Set-AzureRMApiManagementVirtualNetworks.md)

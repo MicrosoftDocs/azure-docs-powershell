@@ -25,7 +25,7 @@ The **Remove-AzureRmApiManagementSubscription** cmdlet deletes an existing subsc
 
 ### Example 1: Delete a subscription
 ```
-PS C:\>Remove-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789" -Force
+PS C:\> Remove-AzureRmApiManagementSubscription -Context $ApiMContext -SubscriptionId "0123456789" -Force
 ```
 
 This command deletes an existing subscription.
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates that this cmdlet returns a value of $True, if it succeeds, or a value of $false, otherwise.
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter

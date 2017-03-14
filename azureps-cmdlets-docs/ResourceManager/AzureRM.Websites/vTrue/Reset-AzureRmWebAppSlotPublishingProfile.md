@@ -8,6 +8,7 @@ schema: 2.0.0
 # Reset-AzureRmWebAppSlotPublishingProfile
 
 ## SYNOPSIS
+Resets the publishing profile for the specified Web App Slot.
 
 ## SYNTAX
 
@@ -27,7 +28,7 @@ The **Reset-AzureRmWebAppSlotPublishingProfile** cmdlet resets the publishing pr
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Reset the publishing profile for a specific Web App slot
 ```
 PS C:\> Reset-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "slot001"
 ```
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Specifies the name of the WebApp slot.
+Specifies the name of the Web App slot.
 
 ```yaml
 Type: String
@@ -106,4 +107,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

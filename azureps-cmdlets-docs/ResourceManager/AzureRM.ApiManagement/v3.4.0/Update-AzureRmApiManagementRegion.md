@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -VirtualNetwork
 Specifies a virtual network configuration for the deployment region.
-Passing $null will remove virtual network configuration for the region.
+Passing $Null will remove virtual network configuration for the region.
 
 ```yaml
 Type: PsApiManagementVirtualNetwork

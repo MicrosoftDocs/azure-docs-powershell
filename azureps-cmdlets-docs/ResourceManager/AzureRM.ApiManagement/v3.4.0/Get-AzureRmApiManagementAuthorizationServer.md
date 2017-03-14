@@ -31,14 +31,14 @@ The **Get-AzureRmApiManagementAuthorizationServer** cmdlet gets all Azure API Ma
 
 ### Example 1: Get all authorization servers
 ```
-PS C:\>Get-AzureRmApiManagementAuthrizarionServer -Context $ApiMgmtContext
+PS C:\> Get-AzureRmApiManagementAuthrizarionServer -Context $ApiMgmtContext
 ```
 
 This command gets all API Management authorization servers.
 
 ### Example 2: Get a specified authorization server
 ```
-PS C:\>Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext -ServerId "0123456789"
+PS C:\> Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext -ServerId "0123456789"
 ```
 
 This command gets the specified authorization server.
@@ -59,6 +59,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
+Specifies the server ID.
+
 ```yaml
 Type: String
 Parameter Sets: Get by Id
@@ -128,5 +130,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagementAuthorizationServer](./Remove-AzureRmApiManagementAuthorizationServer.md)
 
 [Set-AzureRmApiManagementAuthorizationServer](./Set-AzureRmApiManagementAuthorizationServer.md)
-
-

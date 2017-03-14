@@ -33,13 +33,12 @@ The **Set-AzureRmAppServicePlan** cmdlet sets an Azure App Service plan.
 PS C:\> Set-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -PerSiteScaling  $true
 ```
 
-This command sets the PerSiteScaling option to true on the App Service plan named ContosoAppServPlan 
-    that belongs to the resource group named Default-Web-WestUS.
+This command sets the PerSiteScaling option to true on the App Service plan named ContosoAppServPlan that belongs to the resource group named Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -AdminSiteName
-Admin Site Name
+Specifies the name Admin Site. 
 
 ```yaml
 Type: String
@@ -54,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-Tier
+Specifies the tier of the service plan.
 
 ```yaml
 Type: String
@@ -84,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerSize
-Worker Size
+Specifies the worker size.
 
 ```yaml
 Type: String
@@ -99,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -PerSiteScaling
-Per Site Scaling Boolean
+Indicates whether the cmdlet scales per site.
 
 ```yaml
 Type: Boolean
@@ -144,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-Specifies the Specifies the App Service Plan object..
+Specifies the Specifies the App Service Plan object.
 
 ```yaml
 Type: ServerFarmWithRichSku

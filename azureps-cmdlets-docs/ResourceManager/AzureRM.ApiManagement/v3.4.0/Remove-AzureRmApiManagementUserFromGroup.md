@@ -24,7 +24,7 @@ The **Remove-AzureRmApiManagementUserFromGroup** cmdlet removes a user from an e
 
 ### Example 1: Remove a user from a group
 ```
-PS C:\>Remove-AzureRmApiManagementUserFromGroup -Context $apimContext -GroupId "0001" -UserId "0123456789"
+PS C:\> Remove-AzureRmApiManagementUserFromGroup -Context $ApiMContext -GroupId "0001" -UserId "0123456789"
 ```
 
 This command removes a user from a group.
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates that this cmdlet returns a value of $True, if it succeeds, or a value of $False, otherwise.
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter

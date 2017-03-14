@@ -25,7 +25,7 @@ The **New-AzureRmApiManagementUser** cmdlet registers a new user.
 
 ### Example 1: Register a new user
 ```
-PS C:\>New-AzureRmApiManagementUser -Context $apimContext -FirstName "Patti" -LastName "Fuller" -Email "Patti.Fuller@contoso.com" -Password "qwerty"
+PS C:\> New-AzureRmApiManagementUser -Context $ApiMContext -FirstName "Patti" -LastName "Fuller" -Email "Patti.Fuller@contoso.com" -Password "qwerty"
 ```
 
 This command registers a new user named Patti Fuller.
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Specifies the user ID.
+Specifies the user ID that this cmdlet creates.
 This parameter is optional.
 If this parameter is not specified, this cmdlet generates a user ID.
 
@@ -216,5 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmApiManagementUser](./Get-AzureRmApiManagementUser.md)
 
 [Set-AzureRmApiManagementUser](./Set-AzureRmApiManagementUser.md)
-
-

@@ -24,7 +24,7 @@ The **Get-AzureRmApiManagementTenantSyncState** cmdlet gets the status of the mo
 
 ### Example 1: Get the status of the most recent synchronization
 ```
-PS C:\>Get-AzureRmApiManagementTenantSyncState -Context $ApimContext
+PS C:\> Get-AzureRmApiManagementTenantSyncState -Context $ApimContext
 ```
 
 This command gets the status of the most recent synchronization between the configuration database and the Git repository.
@@ -98,3 +98,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementTenantGitAccess](./Get-AzureRmApiManagementTenantGitAccess.md)

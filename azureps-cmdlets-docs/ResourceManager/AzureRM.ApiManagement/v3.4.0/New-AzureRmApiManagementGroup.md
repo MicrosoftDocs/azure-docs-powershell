@@ -25,7 +25,7 @@ The **New-AzureRmApiManagementGroup** cmdlet creates an API management group.
 
 ### Example 1: Create a management group
 ```
-PS C:\>New-AzureRmApiManagementGroup -Context $APImContext -Name "Group0001"
+PS C:\> New-AzureRmApiManagementGroup -Context $APImContext -Name "Group0001"
 ```
 
 This command creates a management group.

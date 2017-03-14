@@ -30,17 +30,17 @@ The **Set-AzureRmWebAppSlotConfigName** cmdlet marks App Settings and Connection
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Set a Web App slot config name
 ```
 PS C:\> Set-AzureRmWebAppSlotConfigName -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001" -RemoveAllAppSettingNames -RemoveAllConnectionStringNames
 ```
 
-This command removes all app settings and connection strings for Web App ContosoWebApp associated with the resource group Default-Web-WestUS
+This command removes all app settings and connection strings for Web App ContosoWebApp associated with the resource group Default-Web-WestUS.
 
 ## PARAMETERS
 
 ### -AppSettingNames
-App Settings Names String Array
+Specifies an array of App Settings names.
 
 ```yaml
 Type: String[]
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStringNames
-Connection String Names String Array
+Specifies an array of connection string names.
 
 ```yaml
 Type: String[]
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAllAppSettingNames
-Remove All App Setting Names Option
+Indicates that this cmdlet removes all App Setting names.
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAllConnectionStringNames
-Remove All Connection String Names Option
+Indicates that this cmdlet removes all connection string names.
 
 ```yaml
 Type: SwitchParameter
@@ -154,4 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
