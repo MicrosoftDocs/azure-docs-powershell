@@ -27,12 +27,12 @@ The **Add-AzureRmDataLakeStoreFirewallRule** cmdlet adds a firewall rule to the 
 PS C:\> Add-AzureRmDataLakeStoreFirewallRule -AccountName "ContosoADL" -Name MyRule -StartIpAddress "127.0.0.1" -EndIpAddress "127.0.0.2"
 ```
 
-This creates a new firewall rule called "MyRule" in account "ContosoADL" with an IP range of 127.0.0.1 - 127.0.0.2
+This command creates a new firewall rule named MyRule in the account named ContosoADL with an IP range of 127.0.0.1 - 127.0.0.2.
 
 ## PARAMETERS
 
 ### -Account
-The Data Lake Store account to add the firewall rule to
+Specifies the Data Lake Store account to add the firewall rule to.
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndIpAddress
-The end of the valid ip range for the firewall rule
+Specifies the end of the valid IP range for the firewall rule.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the firewall rule to add.
+Specifies the name of the firewall rule that this cmdlet adds.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which the account to add the firewall rule is.
+Specifies the name of resource group under which the account to add the firewall rule is.
 
 ```yaml
 Type: String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartIpAddress
-The start of the valid ip range for the firewall rule
+Specifies the start of the valid IP range for the firewall rule.
 
 ```yaml
 Type: String
@@ -122,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -148,3 +151,8 @@ The firewall rule that was added.
 
 ## RELATED LINKS
 
+[Get-AzureRmDataLakeStoreFirewallRule](./Get-AzureRmDataLakeStoreFirewallRule.md)
+
+[Remove-AzureRmDataLakeStoreFirewallRule](./Remove-AzureRmDataLakeStoreFirewallRule.md)
+
+[Set-AzureRmDataLakeStoreFirewallRule](./Set-AzureRmDataLakeStoreFirewallRule.md)
