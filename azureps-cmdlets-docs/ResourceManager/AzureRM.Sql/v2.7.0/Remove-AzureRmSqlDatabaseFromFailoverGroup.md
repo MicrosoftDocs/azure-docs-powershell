@@ -35,7 +35,7 @@ PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName myrg2 -Dat
 Remove all databases in a server from the Failover Group
 
 PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName myrg2 | Remove-AzureRmSqlDatabaseFromFailoverGroup -FailoverGroupName testfg -ResourceGroupName rg2 -ServerName testsvr
-
+```
 
 ## PARAMETERS
 
