@@ -133,13 +133,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-This cmdlet accepts pipelined instances of the
-**Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit** object.
+### 
+This cmdlet accepts pipelined instances of the **Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit** object.
 
 ## OUTPUTS
 
-This cmdlet modifies existing instances of the
-**Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit** object.
+### 
+This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit** object.
 
 ## NOTES
 
