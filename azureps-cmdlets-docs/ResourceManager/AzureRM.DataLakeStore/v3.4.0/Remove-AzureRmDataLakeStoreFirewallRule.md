@@ -24,15 +24,15 @@ The **Remove-AzureRmDataLakeStoreFirewallRule** cmdlet removes the specified fir
 
 ### Example 1: Remove a firewall rule from an account
 ```
-PS C:\> Remove-AzureRmDataLakeStoreFirewallRule -AccountName "ContosoADL" -Name MyFirewallRule
+PS C:\> Remove-AzureRmDataLakeStoreFirewallRule -AccountName "ContosoADL" -Name "MyFirewallRule"
 ```
 
-Removes firewall rule "MyFirewallRule" from account "ContosoADL"
+This command removes the firewall rule named MyFirewallRule from the account named ContosoADL.
 
 ## PARAMETERS
 
 ### -Account
-The Data Lake Store account to update the firewall rule in
+Specifies the Data Lake Store account that this cmdlet updates the firewall rule in.
 
 ```yaml
 Type: String
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the firewall rule to delete.
+Specifies the name of the firewall rule that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -107,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -133,3 +136,8 @@ If PassThru is specified, returns true upon successful completion.
 
 ## RELATED LINKS
 
+[Add-AzureRmDataLakeStoreFirewallRule](./Add-AzureRmDataLakeStoreFirewallRule.md)
+
+[Get-AzureRmDataLakeStoreFirewallRule](./Get-AzureRmDataLakeStoreFirewallRule.md)
+
+[Set-AzureRmDataLakeStoreFirewallRule](./Set-AzureRmDataLakeStoreFirewallRule.md)

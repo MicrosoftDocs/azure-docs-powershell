@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmDataLakeStoreAccount
 
 ## SYNOPSIS
-Deletes a Data Lake Store account permanently.
+Removes a Data Lake Store account permanently.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRmDataLakeStoreAccount [-Name] <String> [[-ResourceGroupName] <Strin
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmDataLakeStoreAccount** cmdlet deletes a Data Lake Store account permanently.
+The **Remove-AzureRmDataLakeStoreAccount** cmdlet removes a Data Lake Store account permanently.
 
 ## EXAMPLES
 
@@ -144,5 +144,3 @@ If PassThru is specified, returns true upon successful completion.
 [Set-AzureRmDataLakeStoreAccount](./Set-AzureRmDataLakeStoreAccount.md)
 
 [Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
-
-
