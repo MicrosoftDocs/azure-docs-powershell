@@ -26,22 +26,22 @@ If no provider is specified, then lists all providers for the account.
 
 ### Example 1: Get a specific trusted identity provider
 ```
-PS C:\> Get-AzureRmDataLakeStoreTrustedIdProvider -AccountName "ContosoADL" -Name MyProvider
+PS C:\> Get-AzureRmDataLakeStoreTrustedIdProvider -AccountName "ContosoADL" -Name "MyProvider"
 ```
 
-Returns the provider named "MyProvider" from account "ContosoADL"
+This command returns the provider named MyProvider from the account named ContosoADL.
 
 ### Example 2: List all providers in an account
 ```
 PS C:\> Get-AzureRmDataLakeStoreTrustedIdProvider -AccountName "ContosoADL"
 ```
 
-Lists all providers under the account "ContosoADL"
+This command lists all providers under the account named ContosoADL.
 
 ## PARAMETERS
 
 ### -Account
-The Data Lake Store account to retrieve the trusted identity provider from
+Specifies the Data Lake Store account that this cmdlet gets the trusted identity provider.
 
 ```yaml
 Type: String
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the trusted identity provider to retrieve
+Specifies the name of the trusted identity provider that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which want to retrieve the specified account's specified trusted identity provider.
+Specifies the name of the resource group under which this cmdlet gets the specified account's specified trusted identity provider.
 
 ```yaml
 Type: String
@@ -102,3 +102,6 @@ The list of trusted identity providers in the specified account.
 
 ## RELATED LINKS
 
+[Add-AzureRmDataLakeStoreTrustedIdProvider](./Add-AzureRmDataLakeStoreTrustedIdProvider.md)
+
+[Set-AzureRmDataLakeStoreTrustedIdProvider](./Set-AzureRmDataLakeStoreTrustedIdProvider.md)
