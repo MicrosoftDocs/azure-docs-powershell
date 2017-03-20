@@ -41,7 +41,7 @@ This command creates a Data Lake Store account named ContosoADL for the East US 
 ## PARAMETERS
 
 ### -DefaultGroup
-Specifies the object ID of the AzureActive Directory group to use as the default group owner for new files and folders.
+Specifies the object ID of the Azure Active Directory group to use as the default group owner for new files and folders.
 
 ```yaml
 Type: String
@@ -56,7 +56,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEncryption
-Indicates that the account will not have any form of encryption applied to it.```yaml
+Indicates that the account will not have any form of encryption applied to it.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: Disable Encryption
 Aliases: 
@@ -218,5 +220,3 @@ The created account details.
 [Set-AzureRmDataLakeStoreAccount](./Set-AzureRmDataLakeStoreAccount.md)
 
 [Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
-
-

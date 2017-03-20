@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the object ID of the AzureActive Directory user, group, or service principal for which to remove an ACE.
+Specifies the object ID of the Azure Active Directory user, group, or service principal for which to remove an ACE.
 
 ```yaml
 Type: Guid
@@ -120,7 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates a boolean response should be returned indicating the result of the delete operation.```yaml
+Indicates a boolean response should be returned indicating the result of the delete operation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -193,5 +195,3 @@ If PassThru is specified, returns true upon successful completion.
 ## RELATED LINKS
 
 [Set-AzureRmDataLakeStoreItemAclEntry](./Set-AzureRmDataLakeStoreItemAclEntry.md)
-
-

@@ -1,89 +1,60 @@
 ---
-ms.assetid: BB5EBF08-3264-4DDB-A1DC-BD5BA1805E0A
+title: Overview of Azure PowerShell modules | Microsoft Docs
+description: An introduction to the PowerShell modules available to manage Azure resources.
+services: azure
+author: sdwheeler
+manager: carmonm
+ms.assetid: ee92f7b5-b84e-4939-a516-709b6abb0fa7
+ms.product: azure
+ms.service: powershell
+ms.devlang: powershell
+ms.topic: reference
+ms.date: 03/09/2017
+ms.author: sewhee
 ---
 
-# Azure Resource Manager Cmdlets
+# Options for managing Azure using PowerShell
 
-This section displays the online help files for the Azure Resource Manager.
-The cmdlets in the __AzureRM.*__ modules let you use Resource Manager in Azure PowerShell.
+There are several PowerShell module packages available to assist you with management of your Azure
+resources. These Azure PowerShell modules allow you to automate repetitive IT admin tasks to save
+you time and resources.
 
-## To install the cmdlets
+## Azure Resource Manager
 
-To install the cmdlets by using PowerShell Gallery using **PowerShellGet**, you must have Windows Management Framework (WMF) 5.0. For more information, see [Windows Management Framework 5.0 Production Preview](https://www.microsoft.com/en-us/download/details.aspx?id=50395).
-By default, WMF 5.0 comes installed on Windows 10.
-Run the following commands from the Windows PowerShell console running as Administrator:
+[Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) enables you to work
+with the resources in your solution as a group. You can deploy, update, or delete all the resources
+for your solution in a single, coordinated operation. You use a template for deployment and that
+template can work for different environments such as testing, staging, and production. Resource
+Manager provides security, auditing, and tagging features to help you manage your resources after
+deployment. Azure Resource Manager is the preferred deployment model. This module allows you to
+manage your Azure resources using this model.
 
-```PowerShell
-PS C:\> Install-Module AzureRM
-```
+## Azure Active Directory
 
-The first command installs the **AzureRM** module from the PowerShell Gallery.
-The second command installs all the component modules of Azure Resource Manager in the module version range specified in the **AzureRM** module.
+Azure Active Directory PowerShell is the primary interface for managing Azure Active Directory.
+These cmdlets provide capabilities to retrieve data from the directory, create new objects in the
+directory, or change existing objects and configure the directory and its features.
 
-Azure Resource Manager is broken into component modules.
-For example, Azure Resource Management modules for compute services are in module **AzureRM.Compute**.
-To import all of the **AzureRM** modules into the current run space run the following commands.
+There are two PowerShell modules. The newer AzureAD v2 module and the older MSOnline module. The
+MSOnline module is used for functionality that is not yet available in the AzureAD module. If you
+are developing new PowerShell scripts with Azure AD cmdlets you should use the newer AzureAD v2
+cmdlets whenever possible. The older MSOnline module will be deprecated when all of the
+functionality of that module has been migrated to the newer AzureAD module.
 
-To import all of the __AzureRM.*__ modules within the known semantic version range, run this command:
+## Learn more
 
-```PowerShell
-PS C:\> Import-Module AzureRM
-```
+To use these cmdlets, you should have a good understanding of PowerShell and how it works. You
+should also have some experience with Microsoft Azure as the cmdlets you will use perform the same
+functions available through the portal GUI. You’ll also need to know basic PowerShell scripting
+techniques.
 
-To import a single **AzureRM** module, specify the module by name, as in the following example for the **AzureRM.Compute** module:
+If you need to brush up on PowerShell before you get started, see
+[Scripting with PowerShell](https://technet.microsoft.com/library/bb978526.aspx).
 
-```PowerShell
-PS C:\> Import-Module AzureRM.Compute
-```
+You can also watch this video:
+[PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/azps-conceptsBasicsPart1).
 
-To see all of the Azure Resource Manager modules installed and their versions, run the following command:
+If you are new to Azure, see [the Azure documentation](https://docs.microsoft.com/azure/).
 
-```PowerShell
-PS C:\> Get-Module -ListAvailable AzureRM*
-```
-
-## To use the cmdlets
-
-To start working with the Azure Resource Manager cmdlets, first log on to your Azure account by using the **Add-AzureRMAccount** cmdlet.
-
-After logging into Azure, Azure PowerShell creates a context for the given session.
-That context contains the Azure PowerShell environment, account, tenant, and subscription that will be used for all cmdlets within that session. The context can be manipulated by using the **Set-AzureRMContext** or **Select-AzureRmSubscription** cmdlet.
-To view your current context, run the following command:
-
-```PowerShell
-PS C:\> Get-AzureRmContext
-```
-
-To view all subscriptions for your account, run the following command:
-
-```PowerShell
-PS C:\> Get-AzureRmSubscription
-```
-
-To select a default subscription for your current session, run the following command:
-
-```PowerShell
-PS C:\> Get-AzureRmSubscription -SubscriptionName "your subscription" | Select-AzureRmSubscription
-```
-
-To select the default storage context for your current session, run the following command:
-
-```PowerShell
-PS C:\> Set-AzureRmCurrentStorageAccount -ResourceGroupName "your resource group" -StorageAccountName "your storage account name"
-```
-
-To import the **Azure.Storage** data plane module (blob, queue, table), run the following command:
-
-```PowerShell
-PS C:\> Import-Module Azure.Storage
-```
-
-To list all of the blobs in all of your containers in all of your accounts, run the following command:
-
-```PowerShell
-PS C:\> Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
-```
-
-## See Also
-
-[Azure Resource Manager Overview](http://azure.microsoft.com/en-us/documentation/articles/resource-group-overview/)
+Watch this video:
+[Take Control of the Cloud with the Microsoft Azure PowerShell Cmdlets](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/WAD-B305#fbid=).

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmDataLakeStoreItem
 
 ## SYNOPSIS
-Deletes a file or folder in Data Lake Store.
+Removes a file or folder in Data Lake Store.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRmDataLakeStoreItem [-Account] <String> [-Paths] <DataLakeStorePathI
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmDataLakeStoreItem** cmdlet deletes a file or folder in Data Lake Store.
+The **Remove-AzureRmDataLakeStoreItem** cmdlet removes a file or folder in Data Lake Store.
 
 ## EXAMPLES
 
@@ -180,5 +180,3 @@ If PassThru is specified, returns the result of the operation.
 [New-AzureRmDataLakeStoreItem](./New-AzureRmDataLakeStoreItem.md)
 
 [Test-AzureRmDataLakeStoreItem](./Test-AzureRmDataLakeStoreItem.md)
-
-
