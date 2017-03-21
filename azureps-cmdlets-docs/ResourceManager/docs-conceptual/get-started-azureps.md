@@ -51,100 +51,6 @@ Login-AzureRmAccount -Credential $cred
 Once you have signed in to an Azure account, you can use the Azure PowerShell cmdlets to access and
 manager the resources in your subscription.
 
-## Listing resources
-
-### List Virtual Machines
-
-```powershell
-Get-AzureRmVM
-```
-
-```
-ResourceGroupName          Name   Location          VmSize  OsType              NIC ProvisioningState
------------------          ----   --------          ------  ------              --- -----------------
-MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
-MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
-```
-
-### List Virtual Networks
-
-```powershell
-Get-AzureRmVirtualNetwork
-```
-
-```
-Name                   : MyWestEURG-vnet
-ResourceGroupName      : MyWestEURG
-Location               : westeurope
-Id                     : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/virtualNetworks/MyWestEURG-vnet
-Etag                   : W/"12345678-9abc-def0-1234-56789abcedf0"
-ResourceGuid           : 79ba0a1a-a1a2-4491-822b-2ef874b1a628
-ProvisioningState      : Succeeded
-Tags                   :
-AddressSpace           : {
-                           "AddressPrefixes": [
-                             "10.0.0.0/24"
-                           ]
-                         }
-DhcpOptions            : null
-Subnets                : [
-                           {
-                             "Name": "default",
-                             "Etag": "W/\"12345678-9abc-def0-1234-56789abcedf0\"",
-                             "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/virtualNetworks/MyWestEURG-vnet/subnets/default",
-                             "AddressPrefix": "10.0.0.0/24",
-                             "IpConfigurations": [
-                               {
-                                 "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/networkInterfaces/mywin2016vm880/ipConfigurations/ipconfig1"
-                               },
-                               {
-                                 "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/networkInterfaces/myunbuntu1610980/ipConfigurations/ipconfig1"
-                               }
-                             ],
-                             "ResourceNavigationLinks": [],
-                             "ProvisioningState": "Succeeded"
-                           }
-                         ]
-VirtualNetworkPeerings : []
-```
-
-### List Azure locations
-
-```powershell
-Get-AzureRmLocation | Select-Object Location
-```
-
-```
-Location
---------
-eastasia
-southeastasia
-centralus
-eastus
-eastus2
-westus
-northcentralus
-southcentralus
-northeurope
-westeurope
-japanwest
-japaneast
-brazilsouth
-australiaeast
-australiasoutheast
-southindia
-centralindia
-westindia
-canadacentral
-canadaeast
-uksouth
-ukwest
-westcentralus
-westeurope2
-koreacentral
-koreasouth
-```
-
 ## Create a resource group
 
 A resource group is a container that holds related resources for an Azure solution. The resource
@@ -258,4 +164,96 @@ SnapshotTime      :
 ContinuationToken :
 Context           : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
 Name              : MyUnbuntu161020170307141436.vhd
+```
+
+### List Virtual Machines
+
+```powershell
+Get-AzureRmVM
+```
+
+```
+ResourceGroupName          Name   Location          VmSize  OsType              NIC ProvisioningState
+-----------------          ----   --------          ------  ------              --- -----------------
+MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
+MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
+```
+
+### List Virtual Networks
+
+```powershell
+Get-AzureRmVirtualNetwork
+```
+
+```
+Name                   : MyWestEURG-vnet
+ResourceGroupName      : MyWestEURG
+Location               : westeurope
+Id                     : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/virtualNetworks/MyWestEURG-vnet
+Etag                   : W/"12345678-9abc-def0-1234-56789abcedf0"
+ResourceGuid           : 79ba0a1a-a1a2-4491-822b-2ef874b1a628
+ProvisioningState      : Succeeded
+Tags                   :
+AddressSpace           : {
+                           "AddressPrefixes": [
+                             "10.0.0.0/24"
+                           ]
+                         }
+DhcpOptions            : null
+Subnets                : [
+                           {
+                             "Name": "default",
+                             "Etag": "W/\"12345678-9abc-def0-1234-56789abcedf0\"",
+                             "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/virtualNetworks/MyWestEURG-vnet/subnets/default",
+                             "AddressPrefix": "10.0.0.0/24",
+                             "IpConfigurations": [
+                               {
+                                 "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/networkInterfaces/mywin2016vm880/ipConfigurations/ipconfig1"
+                               },
+                               {
+                                 "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/networkInterfaces/myunbuntu1610980/ipConfigurations/ipconfig1"
+                               }
+                             ],
+                             "ResourceNavigationLinks": [],
+                             "ProvisioningState": "Succeeded"
+                           }
+                         ]
+VirtualNetworkPeerings : []
+```
+
+### List Azure locations
+
+```powershell
+Get-AzureRmLocation | Select-Object Location
+```
+
+```
+Location
+--------
+eastasia
+southeastasia
+centralus
+eastus
+eastus2
+westus
+northcentralus
+southcentralus
+northeurope
+westeurope
+japanwest
+japaneast
+brazilsouth
+australiaeast
+australiasoutheast
+southindia
+centralindia
+westindia
+canadacentral
+canadaeast
+uksouth
+ukwest
+westcentralus
+westeurope2
+koreacentral
+koreasouth
 ```
