@@ -3,7 +3,8 @@
 ## [Get started](../get-started-azureps)
 ## [Log in](../authenticate-azureps)
 ### [Create a service principal](../create-azure-service-principal-azureps)
-## [Queries and formatting](../queries-formatting)
+## [Queries](../queries-azureps)
+## [Formatting](../formatting-output)
 ## [Subscriptions](../manage-subscriptions-azureps)
 ## [Release notes](../release-notes-azureps)
 
