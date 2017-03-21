@@ -65,7 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates the resulting ACL should be returned.```yaml
+Indicates the resulting ACL should be returned.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -136,4 +138,3 @@ If PassThru is specified, will return the resulting list of ACL entries.
 ## NOTES
 
 ## RELATED LINKS
-

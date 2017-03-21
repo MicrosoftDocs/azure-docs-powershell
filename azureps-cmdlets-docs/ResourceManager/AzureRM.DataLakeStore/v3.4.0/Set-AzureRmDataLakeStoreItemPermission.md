@@ -62,8 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-The permissions to set for the file or folder, expressed as an octal (e.g.
-'777')
+Specifies the permissions to set for the file or folder, expressed as an octal.
 
 ```yaml
 Type: Int32
@@ -124,5 +123,3 @@ Returns true upon successfully updating the permission.
 ## RELATED LINKS
 
 [Get-AzureRmDataLakeStoreItemPermission](./Get-AzureRmDataLakeStoreItemPermission.md)
-
-

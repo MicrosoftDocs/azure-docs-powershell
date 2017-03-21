@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the object ID of the AzureActive Directory user, group, or service principal to use as the owner.
+Specifies the object ID of the Azure Active Directory user, group, or service principal to use as the owner.
 
 ```yaml
 Type: Guid
@@ -62,7 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates the resulting updated owner should be returned.```yaml
+Indicates the resulting updated owner should be returned.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -151,5 +153,3 @@ If PassThru is specified, returns the updated owner.
 ## RELATED LINKS
 
 [Get-AzureRmDataLakeStoreItemOwner](./Get-AzureRmDataLakeStoreItemOwner.md)
-
-
