@@ -28,7 +28,7 @@ The **Add-AzureRmLoadBalancerProbeConfig** cmdlet adds a probe configuration to 
 PS C:\> Get-AzureRmLoadBalancer -Name "myLb" -ResourceGroupName "myRg" | Add-AzureRmLoadBalancerProbeConfig -Name "probeName" -RequestPath healthcheck2.aspx -Protocol http -Port 81 -IntervalInSeconds 16 -ProbeCount 3 | Set-AzureRmLoadBalancer
 ```
 
-This command gets the load balancer named myLb, adds the specified probe configuration to it, and then uses the **Set-AzureRmLoadBalancer** cmdlet to update the load balancer.
+This command gets the load balancer named myLb, adds the specified probe configuration to it, and then uses the [Set-AzureRmLoadBalancer](./Set-AzureRmLoadBalancer.md) cmdlet to update the load balancer.
 
 ## PARAMETERS
 
