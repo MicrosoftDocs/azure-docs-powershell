@@ -34,6 +34,8 @@ Add-AzureRmLoadBalancerInboundNatPoolConfig -Name <String> -LoadBalancer <PSLoad
 ## PARAMETERS
 
 ### -BackendPort
+Specifies the backend port for traffic matched by a pool configuration.
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -47,6 +49,8 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfiguration
+Specifies the load balancer front-end IP resource object.
+
 ```yaml
 Type: PSFrontendIPConfiguration
 Parameter Sets: SetByResource
@@ -60,6 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIpConfigurationId
+Specifies the load balancer front-end IP ID.
+
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
@@ -138,6 +144,9 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancer
+Specifies a **LoadBalancer** object.
+This cmdlet adds a front-end IP configuration to the load balancer that this parameter specifies.
+
 ```yaml
 Type: PSLoadBalancer
 Parameter Sets: (All)
@@ -151,6 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+Specifies the name of the load balancer inbound NAT pool configuration.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -164,6 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
+Specifies the protocol that is matched by an inbound NAT pool.
+The acceptable values for this parameter are: Tcp or Udp.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -187,3 +201,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmLoadBalancerInboundNatPoolConfig](./Get-AzureRmLoadBalancerInboundNatPoolConfig.md)
+
+[New-AzureRmLoadBalancerInboundNatPoolConfig](./New-AzureRmLoadBalancerInboundNatPoolConfig.md)
+
+[Remove-AzureRmLoadBalancerInboundNatPoolConfig](./Remove-AzureRmLoadBalancerInboundNatPoolConfig.md)
+
+[Set-AzureRmLoadBalancerInboundNatPoolConfig](./Set-AzureRmLoadBalancerInboundNatPoolConfig.md)
