@@ -25,7 +25,7 @@ The **New-AzureRmLoadBalancerProbeConfig** cmdlet creates a probe configuration 
 
 ### Example 1: Create a probe configuration
 ```
-PS C:\>New-AzureRmLoadBalancerProbeConfig -Name "MyProbe" -Protocol "http" -Port 80 -IntervalInSeconds 15 -ProbeCount 15
+PS C:\> New-AzureRmLoadBalancerProbeConfig -Name "MyProbe" -Protocol "http" -Port 80 -IntervalInSeconds 15 -ProbeCount 15
 ```
 
 This command creates a probe configuration named MyProbe using the HTTP protocol.

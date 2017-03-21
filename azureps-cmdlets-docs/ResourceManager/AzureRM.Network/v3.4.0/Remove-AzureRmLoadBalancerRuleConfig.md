@@ -24,7 +24,7 @@ The **Remove-AzureRmLoadBalancerRuleConfig** cmdlet removes a rule configuration
 
 ### Example 1: Remove a rule configuration from a load balancer
 ```
-PS C:\>$loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 PS C:> Remove-AzureRmLoadBalancerRuleConfig -Name "MyLBruleName" -LoadBalancer $loadbalancer
 ```
 

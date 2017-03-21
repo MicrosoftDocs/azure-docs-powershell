@@ -29,7 +29,7 @@ The **Set-AzureRmVirtualNetworkGateway** cmdlet updates a virtual network gatewa
 
 ### Example 1: Set the goal state a virtual network gateway
 ```
-PS C:\>$Gateway = Get-AzureRmVirtualNetworkGateway -ResourceGroupName "ResourceGroup001" -Name "Gateway001"
+PS C:\> $Gateway = Get-AzureRmVirtualNetworkGateway -ResourceGroupName "ResourceGroup001" -Name "Gateway001"
 PS C:\> Set-AzureRmVirtualNetworkGateway -VirtualNetworkGateway $Gateway -Asn 1337
 ```
 

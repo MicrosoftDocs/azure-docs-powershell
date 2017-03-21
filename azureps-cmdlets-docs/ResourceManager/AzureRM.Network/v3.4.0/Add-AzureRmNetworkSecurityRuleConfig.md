@@ -27,13 +27,13 @@ The **Add-AzureRmNetworkSecurityRuleConfig** cmdlet adds a network security rule
 
 ### 1: Adding a network security group
 ```
-Get-AzureRmNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1 | 
-Add-AzureRmNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" -Access 
+PS C:\> Get-AzureRmNetworkSecurityGroup -Name  nsg1 -ResourceGroupName rg1 | 
+PS C:\> Add-AzureRmNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" -Access 
     Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix Internet 
     -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389 | 
     Set-AzureRmNetworkSecurityGroup
 ```
-The first command retrieves an Azure network security group named "nsg1" from resource group "rg1". The second command dds a network security rule named "rdp-rule" that allows traffic from internet on port 3389 to the retrieved network security group object. Persists the modified Azure network security group.
+The first command retrieves an Azure network security group named nsg1 from resource group rg1. The second command adds a network security rule named rdp-rule that allows traffic from internet on port 3389 to the retrieved network security group object. Persists the modified Azure network security group.
     
 ## PARAMETERS
 
@@ -243,7 +243,7 @@ The acceptable values for this parameter are:
 - A source IP range
 - A wildcard character (*) to match any IP address.
 
-You can also use tags such as VirtualNetwork, AzureLoadBalancer and Internet.
+You can also use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
 
 ```yaml
 Type: String
@@ -291,5 +291,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmNetworkSecurityRuleConfig](./Remove-AzureRmNetworkSecurityRuleConfig.md)
 
 [Set-AzureRmNetworkSecurityRuleConfig](./Set-AzureRmNetworkSecurityRuleConfig.md)
-
-

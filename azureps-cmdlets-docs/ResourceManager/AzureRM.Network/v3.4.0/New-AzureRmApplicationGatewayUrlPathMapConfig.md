@@ -36,7 +36,7 @@ The **New-AzureRmApplicationGatewayUrlPathMapConfig** cmdlet creates an array of
 
 ### Example 1: Create an array of URL path mappings to a backend server pool
 ```
-PS C:\>New-AzureRmApplicationGatewayUrlPathMapConfig -Name $UrlPathMapName -PathRules $VideoPathRule, $ImagePathRule -DefaultBackendAddressPool $Pool -DefaultBackendHttpSettings $PoolSetting02
+PS C:\> New-AzureRmApplicationGatewayUrlPathMapConfig -Name $UrlPathMapName -PathRules $VideoPathRule, $ImagePathRule -DefaultBackendAddressPool $Pool -DefaultBackendHttpSettings $PoolSetting02
 ```
 
 This command creates an array of URL path mappings to a backend server pool.

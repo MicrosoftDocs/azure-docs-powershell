@@ -29,7 +29,7 @@ When that happens the corresponding virtual network is no longer able to use the
 
 ### Example 1: Remove a circuit authorization from an ExpressRoute circuit
 ```
-PS C:\>$Circuit = Get-AzureRmExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
+PS C:\> $Circuit = Get-AzureRmExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
 PS C:\> Remove-AzureRmExpressRouteCircuitAuthorization -Name "ContosoCircuitAuthorization" -Circuit $Circuit
 PS C:\> Set-AzureRmExpressRouteCircuit -ExpressRouteCircuit $Circuit
 ```

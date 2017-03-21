@@ -22,7 +22,7 @@ Get-AzureRmExpressRouteCircuitPeeringConfig [-Name <String>] -ExpressRouteCircui
 
 ### 1:
 ```
-PS C:\>
+PS C:\> 
 ```
 
 ## PARAMETERS

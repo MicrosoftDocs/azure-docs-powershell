@@ -24,7 +24,7 @@ The **Remove-AzureRmLoadBalancerProbeConfig** cmdlet removes a probe configurati
 
 ### Example 1: Remove a probe configuration from a load balancer
 ```
-PS C:\>$loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 PS C:> Remove-AzureRmLoadBalancerProbeConfig -Name "MyProbe" -LoadBalancer $loadbalancer
 ```
 

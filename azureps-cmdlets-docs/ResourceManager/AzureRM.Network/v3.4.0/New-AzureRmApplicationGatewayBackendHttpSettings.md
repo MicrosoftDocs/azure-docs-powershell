@@ -28,7 +28,7 @@ Back-end HTTP settings are applied to all back-end servers in a pool.
 
 ### Example 1: Create back-end HTTP settings
 ```
-PS C:\>$Setting = New-AzureRmApplicationGatewayBackendHttpSettings -Name "Setting01" -Port 80 -Protocol Http -CookieBasedAffinity Disabled
+PS C:\> $Setting = New-AzureRmApplicationGatewayBackendHttpSettings -Name "Setting01" -Port 80 -Protocol Http -CookieBasedAffinity Disabled
 ```
 
 This command creates back-end HTTP settings named Setting01 on port 80, using the HTTP protocol, with cookie-based affinity disabled.
