@@ -23,7 +23,7 @@ Get-AzureRmExpressRouteCircuitRouteTableSummary [-Name <String>] -ResourceGroupN
 
 ### 1:
 ```
-PS C:\>
+PS C:\> 
 ```
 
 ## PARAMETERS

@@ -45,14 +45,14 @@ The **Get-AzureRmNetworkInterface** cmdlet gets an Azure network interface or a 
 
 ### Example 1: Get all network interfaces
 ```
-PS C:\>Get-AzureRmNetworkInterface
+PS C:\> Get-AzureRmNetworkInterface
 ```
 
 This command gets all network interfaces for the current subscription.
 
 ### Example 2: Get all network interfaces with a specific provisioning state
 ```
-PS C:\>Get-AzureRmNetworkInterface -ResourceGroupName "ResourceGroup1" | Where-Object {$_.ProvisioningState -eq 'Succeeded'}
+PS C:\> Get-AzureRmNetworkInterface -ResourceGroupName "ResourceGroup1" | Where-Object {$_.ProvisioningState -eq 'Succeeded'}
 ```
 
 This command gets all network interfaces in the resource group named ResourceGroup1 that has a provisioning state of succeeded.

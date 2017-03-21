@@ -24,7 +24,7 @@ The **Set-AzureRmLoadBalancer** cmdlet sets the goal state for an Azure load bal
 
 ### Example 1: Modify a load balancer
 ```
-PS C:\>$slb = Get-AzureRmLoadBalancer -Name "NRPLB" -ResourceGroupName "NRP-RG"
+PS C:\> $slb = Get-AzureRmLoadBalancer -Name "NRPLB" -ResourceGroupName "NRP-RG"
 PS C:\> $slb | Add-AzureRmLoadBalancerInboundNatRuleConfig -Name "NewRule" -FrontendIpConfiguration $slb.FrontendIpConfigurations[0] -FrontendPort 81 -BackendPort 8181 -Protocol "TCP"
 PS C:\> $slb | Set-AzureRmLoadBalancer
 ```

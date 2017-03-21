@@ -24,7 +24,7 @@ The **Get-AzureRmLoadBalancerBackendAddressPoolConfig** cmdlet gets a single bac
 
 ### Example 1: Get the backend address pool
 ```
-PS C:\>$loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+PS C:\> $loadbalancer = Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
 PS C:\> Get-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02" -LoadBalancer $loadbalancer
 ```
 

@@ -39,7 +39,7 @@ Path map configuration settings are used in application gateway load balancing.
 
 ### Example 1
 ```
-PS C:\>$Gateway = Get-AzureRmApplicationGateway -Name "ContosoApplicationGateway"
+PS C:\> $Gateway = Get-AzureRmApplicationGateway -Name "ContosoApplicationGateway"
 PS C:\> $AddressPool = New-AzureRmApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"
 PS C:\> $HttpSettings = New-AzureRmApplicationGatewayBackendHttpSettings -Name "ContosoHttpSetings" -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled"
 PS C:\> $PathRuleConfig = New-AzureRmApplicationGatewayPathRuleConfig -Paths "/"-BackendAddressPool $AddressPool -BackendHttpSettings $HttpSettings

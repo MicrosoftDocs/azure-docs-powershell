@@ -36,7 +36,7 @@ New-AzureRmApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String
 
 ### Example 1: Create a request routing rule for an application gateway
 ```
-PS C:\>$Rule = New-AzureRmApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
+PS C:\> $Rule = New-AzureRmApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
 ```
 
 This command creates a basic request routing rule named Rule01 and stores the result in the variable named $Rule.

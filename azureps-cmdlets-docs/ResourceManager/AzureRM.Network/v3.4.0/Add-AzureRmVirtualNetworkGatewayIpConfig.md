@@ -33,11 +33,6 @@ The **Add-AzureRmVirtualNetworkGatewayIpConfig** cmdlet adds an IP configuration
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction
@@ -233,5 +228,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmVirtualNetworkGatewayIpConfig](./New-AzureRmVirtualNetworkGatewayIpConfig.md)
 
 [Remove-AzureRmVirtualNetworkGatewayIpConfig](./Remove-AzureRmVirtualNetworkGatewayIpConfig.md)
-
-

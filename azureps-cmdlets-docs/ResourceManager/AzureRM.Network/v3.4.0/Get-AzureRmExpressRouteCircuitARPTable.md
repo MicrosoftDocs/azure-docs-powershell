@@ -23,7 +23,7 @@ Get-AzureRmExpressRouteCircuitARPTable [-Name <String>] -ResourceGroupName <Stri
 
 ### 1:
 ```
-PS C:\>
+PS C:\> 
 ```
 
 ## PARAMETERS

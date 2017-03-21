@@ -24,7 +24,7 @@ The **Get-AzureRmEffectiveNetworkSecurityGroup** cmdlet returns the effective ne
 
 ### Example 1: Get the effective network security group on a network interface
 ```
-PS C:\>Get-AzureRmEffectiveNetworkSecurityGroup -NetworkInterfaceName "MyNetworkInterface" -ResourceGroupName "myResourceGroup"
+PS C:\> Get-AzureRmEffectiveNetworkSecurityGroup -NetworkInterfaceName "MyNetworkInterface" -ResourceGroupName "myResourceGroup"
 ```
 
 This command gets all of the effective network security rules associated with the network interface named MyNetworkInterface in the resource group named myResourceGroup.
