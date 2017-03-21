@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowGatewayTransit
-Flag to allow gatewayLinks be used in remote virtual network's link to this virtual network
+Indicates that the cmdlet uses gatewayLinks in remote virtual network's link to this virtual network.
 
 ```yaml
 Type: SwitchParameter

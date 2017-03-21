@@ -22,7 +22,7 @@ The Remove-AzureRmApplicationGatewaySslPolicy cmdlet removes SSL policy from an 
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Remove an SSL policy from an application gateway  --------------------------
+### Example 1: Remove an SSL policy from an application gateway  --------------------------
 @{paragraph=PS C:\\\>}
 
 
