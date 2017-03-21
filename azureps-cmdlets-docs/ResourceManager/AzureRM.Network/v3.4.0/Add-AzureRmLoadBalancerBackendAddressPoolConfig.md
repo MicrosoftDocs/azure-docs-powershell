@@ -27,7 +27,7 @@ The **Add-AzureRmLoadBalancerBackend** cmdlet adds a backend address pool to an 
 PS C:\> Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "myrg" | Add-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02" | Set-AzureRmLoadBalancer
 ```
 
-This command gets the load balancer named MyLoadBalancer, adds the backend address pool named BackendAddressPool02 to MyLoadBalancer, and then uses the **Set-AzureRmLoadBalancer** cmdlet to update MyLoadBalancer.
+This command gets the load balancer named MyLoadBalancer, adds the backend address pool named BackendAddressPool02 to MyLoadBalancer, and then uses the [Set-AzureRmLoadBalancer](./Set-AzureRmLoadBalancer.md) cmdlet to update MyLoadBalancer.
 
 ## PARAMETERS
 

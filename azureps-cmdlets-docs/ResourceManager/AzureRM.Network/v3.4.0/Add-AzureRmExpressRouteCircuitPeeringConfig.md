@@ -27,6 +27,8 @@ Add-AzureRmExpressRouteCircuitPeeringConfig -Name <String> -ExpressRouteCircuit 
 ## PARAMETERS
 
 ### -ExpressRouteCircuit
+Specifies the ExpressRoute circuit that this cmdlet adds the peering configuration to.
+
 ```yaml
 Type: PSExpressRouteCircuit
 Parameter Sets: (All)
@@ -118,6 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+Specifies the name of the express route circuit.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -219,3 +223,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmExpressRouteCircuitPeeringConfig](./Get-AzureRmExpressRouteCircuitPeeringConfig.md)
+
+[New-AzureRmExpressRouteCircuitPeeringConfig](./New-AzureRmExpressRouteCircuitPeeringConfig.md)
+
+[Remove-AzureRmExpressRouteCircuitPeeringConfig](./Remove-AzureRmExpressRouteCircuitPeeringConfig.md)
+
+[Set-AzureRmExpressRouteCircuitPeeringConfig](./Set-AzureRmExpressRouteCircuitPeeringConfig.md)
