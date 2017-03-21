@@ -40,7 +40,7 @@ PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -Res
 PS C:\> $Appgw = Add-AzureRmApplicationGatewayHttpListener -ApplicationGateway $AppGw -Name "listener01" -Protocol "Http" -FrontendIpConfiguration $FIP01 -FrontendPort $FP01
 ```
 
-The first command gets the application gateway and stores it in the $AppGw variable.The second command adds the HTTP listener to the application gateway.
+The first command gets the application gateway and stores it in the $AppGw variable. The second command adds the HTTP listener to the application gateway.
 
 ### Example 2: Add a HTTPS listener with SSL
 ```
