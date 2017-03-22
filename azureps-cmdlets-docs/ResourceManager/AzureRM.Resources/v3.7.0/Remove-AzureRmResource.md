@@ -39,7 +39,7 @@ The **Remove-AzureRmResource** cmdlet removes an Azure resource.
 
 ### Example 1: Remove a website resource
 ```
-PS C:\>Remove-AzureRmResource -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup11/providers/Microsoft.Web/sites/ContosoSite" -Force
+PS C:\> Remove-AzureRmResource -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup11/providers/Microsoft.Web/sites/ContosoSite" -Force
 ```
 
 This command removes the website resource named ContosoSite.

@@ -33,7 +33,7 @@ The **Set-AzureRmPolicyDefinition** cmdlet modifies a policy definition.
 
 ### Example 1: Update the description of a policy definition
 ```
-PS C:\>$PolicyDefinition = Get-AzureRmPolicyDefinition -Name "VMPolicyDefinition"
+PS C:\> $PolicyDefinition = Get-AzureRmPolicyDefinition -Name "VMPolicyDefinition"
 PS C:\> Set-AzureRmPolicyDefinition -Id $Policy.ResourceId -Description "Updated policy to not allow virtual machine creation"
 ```
 
