@@ -4,12 +4,11 @@ description: Manage Azure subscriptions with Azure PowerShell
 keywords: Azure PowerShell, subscription
 author: sdwheeler
 manager: carmonm
-ms.assetid: d68e757e-ef7c-4e7c-a63b-073822ede538
 ms.product: azure
 ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 03/06/2017
+ms.date: 03/22/2017
 ms.author: sewhee
 ---
 

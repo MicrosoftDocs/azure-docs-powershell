@@ -8,13 +8,13 @@ ms.product: azure
 ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 03/06/2017
+ms.date: 03/22/2017
 ms.author: sewhee
 ---
 
 # Querying for Azure resources
 
-## Understanding how queries work in PowerShell
+## How queries work in PowerShell
 
 There is no special query language required to query resources using Azure PowerShell. In
 PowerShell, cmdlet names take the form of **_Verb-Noun_**. The cmdlets using the verb **_Get_** are
@@ -44,21 +44,9 @@ Import
 ...
 ```
 
-The previous output is truncated for brevity in this example. As shown in the following example,
-there are 40 Verbs used in the AzureRM module.
+The previous output is truncated for brevity in this example. There are 40 Verbs used in the
+AzureRM module.
 
-```powershell
-Get-Command -Module AzureRM  | Select-Object -Unique Verb | Measure-Object
-```
-
-```
-Count    : 40
-Average  :
-Sum      :
-Maximum  :
-Minimum  :
-Property :
-```
 
 The following commands get a list of the 676 Nouns defined in the AzureRM module.
 
@@ -85,3 +73,19 @@ Cmdlet      Stop-AzureRmVM    3.7.0   AzureRM
 Cmdlet      Update-AzureRmVM  3.7.0   AzureRM
 ```
 
+Use the `Get-AzureRmVM` cmdlet to query for a list of VMs in your account.
+
+```powershell
+Get-AzureRmVM
+```
+
+The default output is automatically formatted as a table.
+
+```
+ResourceGroupName          Name   Location          VmSize  OsType              NIC ProvisioningState
+-----------------          ----   --------          ------  ------              --- -----------------
+MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
+MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
+```
+
+For more information about formatting output, see [Formatting query results](formatting-output.md).

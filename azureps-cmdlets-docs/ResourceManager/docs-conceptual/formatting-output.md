@@ -1,5 +1,5 @@
 ---
-title: Querying for Azure resources and formatting results | Microsoft Docs
+title: Formatting query results | Microsoft Docs
 description: How to query for resources in Azure and format the results.
 services: azure
 author: sdwheeler
@@ -8,7 +8,7 @@ ms.product: azure
 ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 03/06/2017
+ms.date: 03/22/2017
 ms.author: sewhee
 ---
 

@@ -9,22 +9,14 @@ ms.product: azure
 ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 03/06/2017
+ms.date: 03/22/2017
 ms.author: sewhee
 ---
 
 # Log in with Azure PowerShell
 
 There are several ways to log in and authenticate with the Azure PowerShell. The simplest way to
-get started is to log in interactively through your browser, or to log in at the command line. The
-recommended approach is to use service principals, which provide a way for you to create
-non-interactive accounts that you can use to manipulate resources. By granting just the appropriate
-permissions needed to a service principal, you can ensure your automation scripts are even more
-secure.
-
-Commands that you run are run against your default subscription. If you have more than one
-subscription, you may want to
-[confirm your default subscription](manage-subscriptions-azureps.md) and change it appropriately.
+get started is to log in interactively at the command line.
 
 ## Interactive log in
 
@@ -50,11 +42,18 @@ Login-AzureRmAccount -Credential $cred
 > For more information on signing up for Microsoft Azure with a work or school account, see
 [How to get an Azure Active Directory tenant](/azure/active-directory/develop/active-directory-howto-tenant).
 
+Once you have authenticated, you are connected to your default subscription. If you have more than
+one subscription, you should [confirm your default subscription](manage-subscriptions-azureps.md)
+and change to appropriate subscription. For more information, see
+[Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md).
+
 ## Log in with a service principal
 
-Service principals are like user accounts to which you can apply rules using Azure Active Directory.
-Authenticating with a service principal is the best way to secure the usage of your Azure resources
-from either your scripts or applications that manipulate resources.
+The recommended approach is to use service principals, which provide a way for you to create
+non-interactive accounts that you can use to manipulate resources. Service principals are like user
+accounts to which you can apply rules using Azure Active Directory. By granting the minimum
+permissions needed to a service principal, you can ensure your automation scripts are even more
+secure.
 
 1. If you don't already have a service principal, [create one](create-azure-service-principal-azureps.md).
 
