@@ -94,7 +94,7 @@ Template parameter values that you enter at the command prompt take precedence o
 
 ### Example 1: Use a custom template and parameter file to create a deployment
 ```
-PS C:\>New-AzureRmResourceGroupDeployment -ResourceGroupName "ContosoEngineering" -TemplateFile "D:\Azure\Templates\EngineeringSite.json" -TemplateParameterFile "D:\Azure\Templates\EngSiteParms.json" -TemplateVersion "2.1"
+PS C:\> New-AzureRmResourceGroupDeployment -ResourceGroupName "ContosoEngineering" -TemplateFile "D:\Azure\Templates\EngineeringSite.json" -TemplateParameterFile "D:\Azure\Templates\EngSiteParms.json" -TemplateVersion "2.1"
 ```
 
 This command creates a new deployment by using a custom template and a template file on disk.

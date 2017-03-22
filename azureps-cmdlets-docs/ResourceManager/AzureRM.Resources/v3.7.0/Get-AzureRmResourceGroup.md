@@ -34,14 +34,14 @@ For more information about Azure resources and Azure resource groups, see the Ne
 
 ### Example 1: Get a resource group by name
 ```
-PS C:\>Get-AzureRmResourceGroup -Name "EngineerBlog"
+PS C:\> Get-AzureRmResourceGroup -Name "EngineerBlog"
 ```
 
 This command gets the Azure resource group in your subscription named EngineerBlog.
 
 ### Example 2: Get all tags of a resource group
 ```
-PS C:\>(Get-AzureRmResourceGroup -Name "ContosoRG").Tags
+PS C:\> (Get-AzureRmResourceGroup -Name "ContosoRG").Tags
 ```
 
 This command gets the resource group named ContosoRG, and displays the tags associated with that group.

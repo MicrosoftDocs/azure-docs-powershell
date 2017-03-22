@@ -31,7 +31,7 @@ An Azure resource group is a collection of Azure resources that are deployed as 
 
 ### Example 1: Create an empty resource group
 ```
-PS C:\>New-AzureRmResourceGroup -Name "RG01" -Location "South Central US"
+PS C:\> New-AzureRmResourceGroup -Name "RG01" -Location "South Central US"
 ```
 
 This command creates a resource group that has no resources.
@@ -39,7 +39,7 @@ You can use the **New-AzureRmResource** or **New-AzureRmResourceGroupDeployment*
 
 ### Example 2: Create a resource group with tags
 ```
-PS C:\>New-AzureRmResourceGroup -Name "RG01" -Location "South Central US" -Tag @{Name="Empty"}, @{Name="Department";Value="Marketing"}
+PS C:\> New-AzureRmResourceGroup -Name "RG01" -Location "South Central US" -Tag @{Name="Empty"}, @{Name="Department";Value="Marketing"}
 ```
 
 This command creates an empty resource group.

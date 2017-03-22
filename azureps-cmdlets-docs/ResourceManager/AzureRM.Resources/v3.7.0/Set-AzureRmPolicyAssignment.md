@@ -32,7 +32,7 @@ Specify an assignment by ID or by name and scope.
 
 ### Example 1: Update the display name
 ```
-PS C:\>$ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11"
+PS C:\> $ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11"
 PS C:\> $PolicyAssignment = Get-AzureRmPolicyAssignment -Name "PolicyAssignment" -Scope $ResourceGroup.ResourceId
 PS C:\> Set-AzureRmPolicyAssignment -Id $PolicyAssignment.ResourceId -DisplayName "Do not allow VM creation"
 ```

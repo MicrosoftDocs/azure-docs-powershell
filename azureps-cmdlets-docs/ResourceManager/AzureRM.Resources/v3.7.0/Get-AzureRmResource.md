@@ -73,7 +73,7 @@ The **Get-AzureRmResource** cmdlet gets Azure resources.
 
 ### Example 1: Get a resource
 ```
-PS C:\>Get-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11" -ResourceName "ContosoWebsite"
+PS C:\> Get-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11" -ResourceName "ContosoWebsite"
 ```
 
 This command gets a resource of the type microsoft.web/sites, named ContosoWebsite under ResourceGroup11.

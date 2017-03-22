@@ -33,7 +33,7 @@ The **Remove-AzureRmPolicyAssignment** cmdlet removes the specified policy assig
 
 ### Example 1: Remove policy assignment by name and scope
 ```
-PS C:\>$ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11"
+PS C:\> $ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11"
 PS C:\> Remove-AzureRmPolicyAssignment -Name "PolicyAssignment07" -Scope $ResourceGroup.ResourceId -Force
 ```
 
@@ -45,7 +45,7 @@ The **ResourceId** property of $ResourceGroup identifies the resource group.
 
 ### Example 2: Remove policy assignment by ID
 ```
-PS C:\>$ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11" 
+PS C:\> $ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11" 
 PS C:\> $PolicyAssignment = Get-AzureRmPolicyAssignment -Name "PolicyAssignment07" -Scope $ResourceGroup.ResourceId
 PS C:\> Remove-AzureRmPolicyAssignment -Id $PolicyAssignment.ResourceId -Force
 ```

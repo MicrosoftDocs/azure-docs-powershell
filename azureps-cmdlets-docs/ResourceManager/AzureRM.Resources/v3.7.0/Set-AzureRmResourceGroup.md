@@ -33,14 +33,14 @@ You cannot use this cmdlet to change the name of a resource group.
 
 ### Example 1: Apply a tag to a resource group
 ```
-PS C:\>Set-AzureRmResourceGroup -Name "ContosoRG" -Tag @{Name="Department";Value="IT"}
+PS C:\> Set-AzureRmResourceGroup -Name "ContosoRG" -Tag @{Name="Department";Value="IT"}
 ```
 
 This command applies a Department tag with a value of IT to a resource group that has no existing tags.
 
 ### Example 2: Add tags to a resource group
 ```
-PS C:\>$Tags = (Get-AzureRmResourceGroup -Name "ContosoRG").Tags
+PS C:\> $Tags = (Get-AzureRmResourceGroup -Name "ContosoRG").Tags
 PS C:\> $Tags
 PS C:\> $Tags += @{Name="Status";Value="Approved"}, @{Name="FY2016"}
 PS C:\> Set-AzureRmResourceGroup -Name "ContosoRG" -Tag $Tags
@@ -64,7 +64,7 @@ The output shows that the resource group has the Department tag and the two new 
 
 ### Example 3: Delete all tags for a resource group
 ```
-PS C:\>Set-AzureRmResourceGroup -Name "ContosoRG" -Tag @{}
+PS C:\> Set-AzureRmResourceGroup -Name "ContosoRG" -Tag @{}
 ```
 
 This command specifies the *Tag* parameter with an empty hash table value to delete all tags from the ContosoRG resource group.
