@@ -1,0 +1,1982 @@
+﻿
+[Update-MarkdownHelpModule] 03/23/2017 10:55:25 Determined module name for C:\temp\ResourceManager\AzureRM.Network\v1.0.4.3 as AzureRM.Network
+[Update-MarkdownHelpModule] 03/23/2017 10:55:25 [Update-MarkdownHelpModule]3/23/2017 10:55:25 AM
+[Update-MarkdownHelpModule] 03/23/2017 10:55:25 Updating docs for Module AzureRM.Network in C:\temp\ResourceManager\AzureRM.Network\v1.0.4.3
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayBackendAddressPool ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayBackendAddressPool ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayBackendHttpSettings ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayBackendHttpSettings ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayFrontendIPConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayFrontendIPConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayFrontendPort ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayFrontendPort ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayHttpListener ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayHttpListener ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayIPConfiguration ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayIPConfiguration ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayProbeConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayRequestRoutingRule ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayRequestRoutingRule ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewaySslCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewaySslCertificate ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmExpressRouteCircuitAuthorization ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmExpressRouteCircuitAuthorization ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmExpressRouteCircuitPeeringConfig ----
+
+	Parameter Set Added: MicrosoftPeeringConfig
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: MicrosoftPeeringConfig
+		Old Set: 
+		New Set: MicrosoftPeeringConfig
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmExpressRouteCircuitPeeringConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmLoadBalancerBackendAddressPoolConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmLoadBalancerBackendAddressPoolConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmLoadBalancerFrontendIpConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmLoadBalancerFrontendIpConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmLoadBalancerProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmLoadBalancerProbeConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmLoadBalancerRuleConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmLoadBalancerRuleConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmNetworkSecurityRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmNetworkSecurityRuleConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmRouteConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmRouteConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmVirtualNetworkSubnetConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmVirtualNetworkSubnetConfig ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmVpnClientRevokedCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmVpnClientRevokedCertificate ----
+
+
+---- UPDATING Cmdlet : Add-AzureRmVpnClientRootCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Add-AzureRmVpnClientRootCertificate ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGateway ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayBackendAddressPool ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayBackendAddressPool ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayBackendHttpSettings ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayBackendHttpSettings ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayFrontendIPConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayFrontendIPConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayFrontendPort ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayFrontendPort ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayHttpListener ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayHttpListener ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayIPConfiguration ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayIPConfiguration ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayProbeConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayRequestRoutingRule ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayRequestRoutingRule ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewaySku ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewaySku ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewaySslCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewaySslCertificate ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmExpressRouteCircuit ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmExpressRouteCircuit ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmExpressRouteCircuitAuthorization ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmExpressRouteCircuitAuthorization ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmExpressRouteCircuitPeeringConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmExpressRouteCircuitPeeringConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmExpressRouteServiceProvider ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmExpressRouteServiceProvider ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmLoadBalancer ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmLoadBalancer ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmLoadBalancerBackendAddressPoolConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmLoadBalancerBackendAddressPoolConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmLoadBalancerFrontendIpConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmLoadBalancerFrontendIpConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmLoadBalancerProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmLoadBalancerProbeConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmLoadBalancerRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmLoadBalancerRuleConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmLocalNetworkGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmLocalNetworkGateway ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmNetworkInterface ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmNetworkInterface ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmNetworkSecurityGroup ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmNetworkSecurityGroup ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmNetworkSecurityRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmNetworkSecurityRuleConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmPublicIpAddress ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmPublicIpAddress ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmRouteConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmRouteConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmRouteTable ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmRouteTable ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmVirtualNetwork ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmVirtualNetwork ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmVirtualNetworkGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmVirtualNetworkGateway ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmVirtualNetworkGatewayConnection ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmVirtualNetworkGatewayConnection ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmVirtualNetworkGatewayConnectionSharedKey ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmVirtualNetworkGatewayConnectionSharedKey ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmVirtualNetworkSubnetConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmVirtualNetworkSubnetConfig ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmVpnClientPackage ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmVpnClientPackage ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmVpnClientRevokedCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmVpnClientRevokedCertificate ----
+
+
+---- UPDATING Cmdlet : Get-AzureRmVpnClientRootCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Get-AzureRmVpnClientRootCertificate ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGateway ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayBackendAddressPool ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayBackendAddressPool ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayBackendHttpSettings ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayBackendHttpSettings ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayFrontendIPConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayFrontendIPConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayFrontendPort ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayFrontendPort ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayHttpListener ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayHttpListener ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayIPConfiguration ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayIPConfiguration ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayPathRuleConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayPathRuleConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayProbeConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayRequestRoutingRule ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayRequestRoutingRule ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewaySku ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewaySku ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewaySslCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewaySslCertificate ----
+
+
+---- UPDATING Cmdlet : New-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmExpressRouteCircuit ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmExpressRouteCircuit ----
+
+
+---- UPDATING Cmdlet : New-AzureRmExpressRouteCircuitAuthorization ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmExpressRouteCircuitAuthorization ----
+
+
+---- UPDATING Cmdlet : New-AzureRmExpressRouteCircuitPeeringConfig ----
+
+	Parameter Set Added: MicrosoftPeeringConfig
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: MicrosoftPeeringConfig
+		Old Set: 
+		New Set: MicrosoftPeeringConfig
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmExpressRouteCircuitPeeringConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmLoadBalancer ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmLoadBalancer ----
+
+
+---- UPDATING Cmdlet : New-AzureRmLoadBalancerBackendAddressPoolConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmLoadBalancerBackendAddressPoolConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmLoadBalancerFrontendIpConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmLoadBalancerFrontendIpConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmLoadBalancerProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmLoadBalancerProbeConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmLoadBalancerRuleConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmLoadBalancerRuleConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmLocalNetworkGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmLocalNetworkGateway ----
+
+
+---- UPDATING Cmdlet : New-AzureRmNetworkInterface ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmNetworkInterface ----
+
+
+---- UPDATING Cmdlet : New-AzureRmNetworkSecurityGroup ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmNetworkSecurityGroup ----
+
+
+---- UPDATING Cmdlet : New-AzureRmNetworkSecurityRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmNetworkSecurityRuleConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmPublicIpAddress ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmPublicIpAddress ----
+
+
+---- UPDATING Cmdlet : New-AzureRmRouteConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmRouteConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmRouteTable ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmRouteTable ----
+
+
+---- UPDATING Cmdlet : New-AzureRmVirtualNetwork ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmVirtualNetwork ----
+
+
+---- UPDATING Cmdlet : New-AzureRmVirtualNetworkGateway ----
+
+	Parameter Set Added: SetByResource
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: SetByResource
+		Old Set: 
+		New Set: SetByResource
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmVirtualNetworkGateway ----
+
+
+---- UPDATING Cmdlet : New-AzureRmVirtualNetworkGatewayConnection ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmVirtualNetworkGatewayConnection ----
+
+
+---- UPDATING Cmdlet : New-AzureRmVirtualNetworkGatewayIpConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmVirtualNetworkGatewayIpConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmVirtualNetworkSubnetConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmVirtualNetworkSubnetConfig ----
+
+
+---- UPDATING Cmdlet : New-AzureRmVpnClientRevokedCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmVpnClientRevokedCertificate ----
+
+
+---- UPDATING Cmdlet : New-AzureRmVpnClientRootCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : New-AzureRmVpnClientRootCertificate ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGateway ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayBackendAddressPool ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayBackendAddressPool ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayBackendHttpSettings ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayBackendHttpSettings ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayFrontendIPConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayFrontendIPConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayFrontendPort ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayFrontendPort ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayHttpListener ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayHttpListener ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayIPConfiguration ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayIPConfiguration ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayProbeConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayRequestRoutingRule ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayRequestRoutingRule ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewaySslCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewaySslCertificate ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmExpressRouteCircuit ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmExpressRouteCircuit ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmExpressRouteCircuitAuthorization ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmExpressRouteCircuitAuthorization ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmExpressRouteCircuitPeeringConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmExpressRouteCircuitPeeringConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmLoadBalancer ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmLoadBalancer ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmLoadBalancerBackendAddressPoolConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmLoadBalancerBackendAddressPoolConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmLoadBalancerFrontendIpConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmLoadBalancerFrontendIpConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmLoadBalancerProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmLoadBalancerProbeConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmLoadBalancerRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmLoadBalancerRuleConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmLocalNetworkGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmLocalNetworkGateway ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmNetworkInterface ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmNetworkInterface ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmNetworkSecurityGroup ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmNetworkSecurityGroup ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmNetworkSecurityRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmNetworkSecurityRuleConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmPublicIpAddress ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmPublicIpAddress ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmRouteConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmRouteConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmRouteTable ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmRouteTable ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmVirtualNetwork ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmVirtualNetwork ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmVirtualNetworkGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmVirtualNetworkGateway ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmVirtualNetworkGatewayConnection ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmVirtualNetworkGatewayConnection ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmVirtualNetworkGatewayDefaultSite ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmVirtualNetworkGatewayDefaultSite ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmVirtualNetworkSubnetConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmVirtualNetworkSubnetConfig ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmVpnClientRevokedCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmVpnClientRevokedCertificate ----
+
+
+---- UPDATING Cmdlet : Remove-AzureRmVpnClientRootCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Remove-AzureRmVpnClientRootCertificate ----
+
+
+---- UPDATING Cmdlet : Reset-AzureRmVirtualNetworkGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Reset-AzureRmVirtualNetworkGateway ----
+
+
+---- UPDATING Cmdlet : Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Reset-AzureRmVirtualNetworkGatewayConnectionSharedKey ----
+
+
+---- UPDATING Cmdlet : Resize-AzureRmVirtualNetworkGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Resize-AzureRmVirtualNetworkGateway ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGateway ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayBackendAddressPool ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayBackendAddressPool ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayBackendHttpSettings ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayBackendHttpSettings ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayFrontendIPConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayFrontendIPConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayFrontendPort ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayFrontendPort ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayHttpListener ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayHttpListener ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayIPConfiguration ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayIPConfiguration ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayProbeConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayRequestRoutingRule ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayRequestRoutingRule ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewaySku ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewaySku ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewaySslCertificate ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewaySslCertificate ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmApplicationGatewayUrlPathMapConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmExpressRouteCircuit ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmExpressRouteCircuit ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmExpressRouteCircuitPeeringConfig ----
+
+	Parameter Set Added: MicrosoftPeeringConfig
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: MicrosoftPeeringConfig
+		Old Set: 
+		New Set: MicrosoftPeeringConfig
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmExpressRouteCircuitPeeringConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmLoadBalancer ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmLoadBalancer ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmLoadBalancerFrontendIpConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmLoadBalancerFrontendIpConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmLoadBalancerInboundNatPoolConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmLoadBalancerInboundNatRuleConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmLoadBalancerProbeConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmLoadBalancerProbeConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmLoadBalancerRuleConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmLoadBalancerRuleConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmLocalNetworkGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmLocalNetworkGateway ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmNetworkInterface ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmNetworkInterface ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmNetworkSecurityGroup ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmNetworkSecurityGroup ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmNetworkSecurityRuleConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmNetworkSecurityRuleConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmPublicIpAddress ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmPublicIpAddress ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmRouteConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmRouteConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmRouteTable ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmRouteTable ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmVirtualNetwork ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmVirtualNetwork ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmVirtualNetworkGatewayConnection ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmVirtualNetworkGatewayConnection ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmVirtualNetworkGatewayConnectionSharedKey ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmVirtualNetworkGatewayConnectionSharedKey ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmVirtualNetworkGatewayDefaultSite ----
+
+	Parameter Set Added: SetByResource
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: SetByResource
+		Old Set: 
+		New Set: SetByResource
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmVirtualNetworkGatewayDefaultSite ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmVirtualNetworkGatewayVpnClientConfig ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmVirtualNetworkGatewayVpnClientConfig ----
+
+
+---- UPDATING Cmdlet : Set-AzureRmVirtualNetworkSubnetConfig ----
+
+	No updates done
+
+---- COMPLETED UPDATING Cmdlet : Set-AzureRmVirtualNetworkSubnetConfig ----
+
+
+---- UPDATING Cmdlet : Start-AzureRmApplicationGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Start-AzureRmApplicationGateway ----
+
+
+---- UPDATING Cmdlet : Stop-AzureRmApplicationGateway ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Stop-AzureRmApplicationGateway ----
+
+
+---- UPDATING Cmdlet : Test-AzureRmDnsAvailability ----
+
+	Parameter Set Added: __AllParameterSets
+
+	Parameter Set Deleted: 
+
+	Parameter Set Name Updated: __AllParameterSets
+		Old Set: 
+		New Set: __AllParameterSets
+
+---- COMPLETED UPDATING Cmdlet : Test-AzureRmDnsAvailability ----
+
+
