@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmADApplication
 
 ## SYNOPSIS
-Lists existing azure active directory applications.
+Lists existing Azure Active Directory applications.
 
 ## SYNTAX
 
@@ -42,29 +42,25 @@ Get-AzureRmADApplication -IdentifierUri <String> [-InformationAction <ActionPref
 ```
 
 ## DESCRIPTION
-Lists existing azure active directory applications.
-Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.
+The **Get-AzureRmADApplication** cmdlet lists existing Azure Active Directory applications.
+Application lookup can be performed by using the *ObjectId*, *ApplicationId*, *IdentifierUri*, or *DisplayName* parameters.
 If no parameter is provided, it fetches all applications under the tenant.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
-
+### Example 1: List all applications 
 ```
-PS E:\> Get-AzureRmADApplication
+PS C:\> Get-AzureRmADApplication
 ```
 
-Lists all the applications under a tenant.
+This command lists all the applications under a tenant.
 
-### --------------------------  Example 2  --------------------------
-@{paragraph=PS C:\\\>}
-
+### Example 2: Get an application by identifier URI
 ```
-PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
+PS C:\> Get-AzureRmADApplication -IdentifierUri "http://mySecretApp1"
 ```
 
-Gets the application with identifier uri as "http://mySecretApp1".
+Gets the application with identifier URI as http://mySecretApp1.
 
 ## PARAMETERS
 
@@ -108,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The object id of the application to fetch.
+Specifies the object ID of the application that this cmdlet gets.
 
 ```yaml
 Type: Guid
@@ -123,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-The application id of the application to fetch.
+Specifies the application ID of the application that this cmdlet gets.
 
 ```yaml
 Type: Guid
@@ -138,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNameStartWith
-Fetch all applications starting with the display name.
+Specifies a search string that this cmdlet gets all applications starting with the display name.
 
 ```yaml
 Type: String
@@ -153,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUri
-Unique identifier Uri of the application to fetch.
+Specifies the unique identifier URI of the application that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -175,15 +171,14 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Remove-AzureRmADAppCredential]()
+[Get-AzureRmADAppCredential](./Get-AzureRmADAppCredential.md)
 
-[New-AzureRmADAppCredential]()
+[New-AzureRmADAppCredential](./New-AzureRmADAppCredential.md)
 
-[Get-AzureRmADAppCredential]()
+[Remove-AzureRmADAppCredential](./Remove-AzureRmADAppCredential.md)
 
-[Remove-AzureRmADApplication]()
+[New-AzureRmADApplication](./New-AzureRmADApplication.md)
 
-[Set-AzureRmADApplication]()
+[Remove-AzureRmADApplication](./Remove-AzureRmADApplication.md)
 
-[New-AzureRmADApplication]()
-
+[Set-AzureRmADApplication](./Set-AzureRmADApplication.md)

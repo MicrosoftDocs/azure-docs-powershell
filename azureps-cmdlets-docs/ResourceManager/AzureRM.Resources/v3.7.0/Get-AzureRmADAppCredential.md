@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmADAppCredential
 
 ## SYNOPSIS
-Retrieves a list of credentials associated with an application.
+Gets a list of credentials associated with an application.
 
 ## SYNTAX
 
@@ -25,25 +25,23 @@ Get-AzureRmADAppCredential -ApplicationId <String> [-InformationAction <ActionPr
 ```
 
 ## DESCRIPTION
-The Get-AzureRmADAppCredential cmdlet can be used to retrieve a list of credentials associated with an application.
+The **Get-AzureRmADAppCredential** cmdlet can be used to gets a list of credentials associated with an application.
 
-This command will retrieve all of the credential properties (but not the credential value) associated with the application.
+This command gets all of the credential properties (but not the credential value) associated with the application.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
-
+### Example 1: Get a list of credentials
 ```
-PS E:\> Get-AzureRmADAppCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476
+PS C:\> Get-AzureRmADAppCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476
 ```
 
-Returns a list of credentials associated with the application having object id '1f99cf81-0146-4f4e-beae-2007d0668476'.
+This command gets a list of credentials associated with the application having object id 1f99cf81-0146-4f4e-beae-2007d0668476.
 
 ## PARAMETERS
 
 ### -ObjectId
-The object id of the application to retrieve credentials from.
+Specifies the object ID of the application to gets credentials from.
 
 ```yaml
 Type: String
@@ -97,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-The id of the application to retrieve credentials from.
+Specifies the ID of the application to get credentials from.
 
 ```yaml
 Type: String
@@ -119,9 +117,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-AzureRmADAppCredential]()
+[Get-AzureRmADApplication](./Get-AzureRmADApplication.md)
 
-[Remove-AzureRmADAppCredential]()
+[New-AzureRmADAppCredential](./New-AzureRmADAppCredential.md)
 
-[Get-AzureRmADApplication]()
-
+[Remove-AzureRmADAppCredential](./Remove-AzureRmADAppCredential.md)

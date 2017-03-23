@@ -123,6 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -TagName
+Specifies the name of the tag.
+
 ```yaml
 Type: String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
@@ -136,6 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -TagValue
+Specifies the value of the tag.
+
 ```yaml
 Type: String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
@@ -316,5 +320,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmResource](./Remove-AzureRmResource.md)
 
 [Set-AzureRmResource](./Set-AzureRmResource.md)
-
-

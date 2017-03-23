@@ -84,7 +84,7 @@ In order to update the application specific parameters please use Set-AzureRmADA
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -97,7 +97,7 @@ DisplayName                    Type                           ObjectId
 -----------                    ----                           --------
 DemoApp                        ServicePrincipal               f95b6f5c-fc98-4af0-bb8a-34a14ca1dca1
 
-### --------------------------  Example 2  --------------------------
+### Example 2:
 @{paragraph=PS C:\\\>}
 
 ```

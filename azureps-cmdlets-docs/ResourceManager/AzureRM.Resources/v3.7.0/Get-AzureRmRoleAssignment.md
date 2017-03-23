@@ -154,7 +154,7 @@ Use the IncludeClassicAdministrators switch to also display the subscription adm
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1:
 @{paragraph=PS C:\\\>}
 
 ```
@@ -163,7 +163,7 @@ PS C:\> Get-AzureRmRoleAssignment
 
 List all role assignments in the subscription
 
-### --------------------------  Example 2  --------------------------
+### Example 2:
 @{paragraph=PS C:\\\>}
 
 ```
