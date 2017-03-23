@@ -146,3 +146,8 @@ These resources provide help for specific cmdlets:
     + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
 * For basic instructions about using Windows PowerShell, see
   [Using Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/fundamental/using-windows-powershell).
+
+> [!NOTE]
+> If you have deployments that use the classic deployment model that cannot be converted you can
+install the Service Management version of Azure PowerShell. For more information, see [Install the
+Azure PowerShell Service Management module](../servicemanagement/install-azure-ps.md).

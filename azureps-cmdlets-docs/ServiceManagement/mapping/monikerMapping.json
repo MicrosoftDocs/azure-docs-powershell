@@ -1,0 +1,50 @@
+{
+    "azsmps-3.7.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "2.7.0"
+            },
+            "AzureRM.Profile": {
+                "_displayName": "AzureRM.Profile",
+                "_version": "2.7.0"
+            }
+        }
+    },
+    "azsmps-3.4.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "2.5.0"
+            },
+            "AzureRM.Profile": {
+                "_displayName": "AzureRM.Profile",
+                "_version": "2.5.0"
+            }
+        }
+    },
+    "azsmps-2.1.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "2.1.0"
+            },
+            "AzureRM.Profile": {
+                "_displayName": "AzureRM.Profile",
+                "_version": "2.1.0"
+            }
+        }
+    },
+    "azsmps-1.6.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "1.1.5"
+            },
+            "AzureRM.Profile": {
+                "_displayName": "AzureRM.Profile",
+                "_version": "1.1.5"
+            }
+        }
+    }
+}
