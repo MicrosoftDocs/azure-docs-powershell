@@ -1,6 +1,6 @@
 branches:
   only:
-    - marchrelease
+    - master
 clone_folder: c:\projects\azure-docs-powershell
 environment:
   nodejs_version: "6"
