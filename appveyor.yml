@@ -15,8 +15,8 @@ before_build:
   - ps: ac "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
   - git clone -q https://github.com/MicrosoftDocs/azure-psdocs-ciscripts.git c:\projects\ciscripts
   - cd c:\projects\ciscripts
-  - git clone -q https://github.com/MicrosoftDocs/azure-psdocs-processing.git azure-psdocs-processing -b dev
-  - git clone -q https://github.com/Azure/azure-docs-powershell -b marchrelease
+  - git clone -q https://github.com/MicrosoftDocs/azure-psdocs-processing.git azure-psdocs-processing -b dev-test
+  - git clone -q https://github.com/Azure/azure-docs-powershell -b master
   - npm install
   - npm install -g typescript
   - tsc
