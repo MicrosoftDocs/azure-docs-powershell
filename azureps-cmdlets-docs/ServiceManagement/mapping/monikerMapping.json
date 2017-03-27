@@ -1,5 +1,5 @@
 {
-    "azsmps-3.7.0": {
+    "azuresmps-3.7.0": {
         "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
             "Azure.Storage": {
                 "_displayName": "Azure.Storage",
