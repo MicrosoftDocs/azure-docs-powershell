@@ -1,5 +1,5 @@
 ---
-title: Overview of the Azure PowerShell | Microsoft Docs
+title: Overview of Azure PowerShell | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 author: sdwheeler
 manager: carmonm
@@ -12,7 +12,7 @@ ms.manager: carmonm
 ms.date: 03/22/2017
 ---
 
-# Overview of the Azure PowerShell
+# Overview of Azure PowerShell
 
 Azure PowerShell provides a set of cmdlets that use the
 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) model for managing
@@ -43,7 +43,8 @@ To learn more about automating with Azure PowerShell, watch this video:
 
 ### Need help with PowerShell?
 
-You also need a working knowledge PowerShell. To get started with PowerShell, see
+If you are unfamiliar with PowerShell, you may find an introduction to PowerShell helpful. To get
+started with PowerShell, see
 [Scripting with PowerShell](https://technet.microsoft.com/library/bb978526.aspx).
 
 You can also watch this video:
