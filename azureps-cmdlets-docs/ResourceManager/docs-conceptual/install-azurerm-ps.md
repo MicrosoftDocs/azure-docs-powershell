@@ -103,7 +103,7 @@ Update-Module -Name AzureRM -Force
 > [!NOTE]
 > If you have deployments that use the classic deployment model that cannot be converted you can
 install the Service Management version of Azure PowerShell. For more information, see
-[Install the Azure PowerShell Service Management module](../servicemanagement/install-azure-ps.md).
+[Install the Azure PowerShell Service Management module](overview?view=azuresmps-3.7.0).
 The Azure and AzureRM modules share common dependencies. So if you use both modules you should
 update both.
 
