@@ -43,8 +43,7 @@ To learn more about automating with Azure PowerShell, watch this video:
 
 ### Need help with PowerShell?
 
-If you are unfamiliar with PowerShell, you may find an introduction to PowerShell helpful. To get
-started with PowerShell, see
+If you are unfamiliar with PowerShell you may find an introduction to PowerShell helpful. To get started with PowerShell, see
 [Scripting with PowerShell](https://technet.microsoft.com/library/bb978526.aspx).
 
 You can also watch this video:

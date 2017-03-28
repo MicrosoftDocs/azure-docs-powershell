@@ -71,8 +71,13 @@ For more information about using Azure PowerShell, see the following articles:
 * [Get started with Azure PowerShell](get-started-azureps.md)
 * [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
 * [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
+* Read the Release notes about migrating from an older release:
+  [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
+* Get help from the community:
+  + [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
+  + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
 
-## Troubleshooting installation
+## Optional installation tasks
 
 ### How to get PowerShellGet
 
@@ -81,37 +86,6 @@ For more information about using Azure PowerShell, see the following articles:
 |I have Windows 10 or Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
 |I want to upgrade to PowerShell 5|[Install the latest version of WMF](http://go.microsoft.com/fwlink/?LinkId=398175)|
 |I am running on a version of Windows with PowerShell 3 or PowerShell 4|[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)|
-
-### Installing module versions side-by-side
-
- If you are using Azure Stack you will need to install Azure PowerShell v1.2.9. For complete
-instructions on using Azure PowerShell with Azure Stack see
-[Install PowerShell for Azure Stack](/azure/azure-stack/azure-stack-powershell-install).
-
-The PowerShellGet method of installation is the only method that supports the installation of
-multiple versions. The following commands illustrate how to install multiple versions of Azure
-PowerShell:
-
-```powershell
-Install-Module -Name AzureRM -RequiredVersion 3.7.0
-Install-Module -Name AzureRM -RequiredVersion 1.2.9
-Install-Module -Name AzureStack
-```
-
-Only one version of the module can be loaded in a PowerShell session. You must open a new
-PowerShell window and use `Import-Module` to import a specific version of the AzureRM cmdlets:
-
-```powershell
-Import-Module AzureRM -RequiredVersion 1.2.9
-Import-Module AzureStack
-```
-
-> [!NOTE]
-> Version 2.1.0 and version 1.2.6 are the first module versions designed to be installed and used
-side-by-side. When loading an earlier version of the Azure PowerShell modules using a
-command like the one above, incompatible versions of the **AzureRM.Profile** module will be loaded,
-resulting in the cmdlets asking you to log in whenever you execute a cmdlet, even after you have
-logged in.
 
 ### Updating to a new version of Azure PowerShell
 
@@ -127,27 +101,40 @@ Update-Module -Name AzureRM -Force
 ```
 
 > [!NOTE]
-> The Azure and AzureRM modules share common dependencies. So if you use both modules you should
+> If you have deployments that use the classic deployment model that cannot be converted you can
+install the Service Management version of Azure PowerShell. For more information, see
+[Install the Azure PowerShell Service Management module](../servicemanagement/install-azure-ps.md).
+The Azure and AzureRM modules share common dependencies. So if you use both modules you should
 update both.
+
+
+### Installing module versions side-by-side
+
+The PowerShellGet method of installation is the only method that supports the installation of
+multiple versions. For example, you may have scripts written using a previous version of Azure
+PowerShell that you don't have the time or resources to updated. The following commands illustrate
+how to install multiple versions of Azure PowerShell:
+
+```powershell
+Install-Module -Name AzureRM -RequiredVersion 3.7.0
+Install-Module -Name AzureRM -RequiredVersion 1.2.9
+```
+
+Only one version of the module can be loaded in a PowerShell session. You must open a new
+PowerShell window and use `Import-Module` to import a specific version of the AzureRM cmdlets:
+
+```powershell
+Import-Module AzureRM -RequiredVersion 1.2.9
+```
+
+> [!NOTE]
+> Version 2.1.0 and version 1.2.6 are the first module versions designed to be installed and used
+side-by-side. When loading an earlier version of the Azure PowerShell modules using a
+command like the one above, incompatible versions of the **AzureRM.Profile** module will be loaded,
+resulting in the cmdlets asking you to log in whenever you execute a cmdlet, even after you have
+logged in.
 
 ### Other installation methods
 
 For information about installing using the Web Platform Installer or the MSI Package, see
 [Other installation methods](other-install.md)
-
-## Learn More
-
-These resources provide help for specific cmdlets:
-
-* Release notes for migrating to a newer release can be found at:
-  [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
-* For help from the community, try these popular forums:
-    + [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-    + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
-* For basic instructions about using Windows PowerShell, see
-  [Using Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/fundamental/using-windows-powershell).
-
-> [!NOTE]
-> If you have deployments that use the classic deployment model that cannot be converted you can
-install the Service Management version of Azure PowerShell. For more information, see [Install the
-Azure PowerShell Service Management module](../servicemanagement/install-azure-ps.md).

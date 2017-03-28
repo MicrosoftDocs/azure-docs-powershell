@@ -92,7 +92,11 @@ $parameters = @{
 New-AzureRmStorageAccount @parameters
 ```
 
-## Associate a Storage Account in your session
+## Associate a storage account in your session
+
+To ensure that any storage commands are targeting the proper storage account, you need to set the
+current storage account in your session context. The following commands show how to set the current
+storage account:
 
 ```powershell
 Set-AzureRmCurrentStorageAccount -ResourceGroupName "mysouthcentralusrg" -StorageAccountName "mysouthcentstorage"
@@ -222,6 +226,10 @@ VirtualNetworkPeerings : []
 ```
 
 ### List Azure locations
+
+Azure is generally available in many regions around the world to achieve high performance supports
+customers' preferences regarding data location. The following example shows how to get a list of
+regional locations from Azure:
 
 ```powershell
 Get-AzureRmLocation | Select-Object Location

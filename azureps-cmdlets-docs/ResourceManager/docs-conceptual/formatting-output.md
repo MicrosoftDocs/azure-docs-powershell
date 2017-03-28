@@ -14,9 +14,7 @@ ms.author: sewhee
 
 # Formatting query results
 
-By default each PowerShell cmdlet has predefined formatting of output making it easy to read.
-PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a
-different format with the following cmdlets:
+By default each PowerShell cmdlet has predefined formatting of output making it easy to read.  PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a different format with the following cmdlets:
 
 | Formatting      | Conversion       |
 |-----------------|------------------|
@@ -27,8 +25,7 @@ different format with the following cmdlets:
 
 ## Formatting examples
 
-In this example we get a list of Azure VMs in our default subscription. The Get-AzureRmVM command
-defaults output into a table format.
+In this example we get a list of Azure VMs in our default subscription.  The Get-AzureRmVM command defaults output into a table format.
 
 ```powershell
 Get-AzureRmVM
@@ -41,10 +38,7 @@ MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610
 MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
 ```
 
-If you would like to limit the columns returned you can use the `Format-Table` cmdlet. In the
-following example we get the same list of virtual machines but restrict the output to just the name
-of the VM, the resource group, and the location of the VM. The `-Autosize` parameter sizes the
-columns according to the size of the data.
+If you would like to limit the columns returned you can use the `Format-Table` cmdlet. In the following example we get the same list of virtual machines but restrict the output to just the name of the VM, the resource group, and the location of the VM.  The `-Autosize` parameter sizes the columns according to the size of the data. 
 
 ```powershell
 Get-AzureRmVM | Format-Table Name,ResourceGroupName,Location -AutoSize
@@ -57,8 +51,7 @@ MyUnbuntu1610 MYWESTEURG        westeurope
 MyWin2016VM   MYWESTEURG        westeurope
 ```
 
-If you would prefer you can view information in a list format. The following example shows this
-using the `Format-List` cmdlet.
+If you would prefer you can view information in a list format. The following example shows this using the`Format-List` cmdlet.
 
 ```powershell
 Get-AzureVM | Format-List Name,VmId,Location,ResourceGroupName
@@ -78,10 +71,7 @@ ResourceGroupName : MYWESTEURG
 
 ## Converting to other data types
 
-PowerShell also offers multiple output format you can use to meet your needs. In the following
-example we use the `Select-Object` cmdlet to get attributes of the virtual machines in our
-subscription and and convert the output to CSV format for easy import into a database or
-spreadsheet.
+PowerShell also offers multiple output format you can use to meet your needs.  In the following example we use the `Select-Object` cmdlet to get attributes of the virtual machines in our subscription and and convert the output to CSV format for easy import into a database or spreadsheet.  
 
 ```powershell
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation
@@ -93,8 +83,7 @@ Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,Provisioni
 "MYWESTUERG","/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MYWESTUERG/providers/Microsoft.Compute/virtualMachines/MyWin2016VM","4650c755-fc2b-4fc7-a5bc-298d5c00808f","MyWin2016VM","westeurope","Succeeded"
 ```
 
-You can also convert the output into JSON format. The following example creates the same list of
-VMs but changes the output format to JSON.
+You can also convert the output into JSON format.  The following example creates the same list of VMs but changes the output format to JSON.
 
 ```powershell
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Json

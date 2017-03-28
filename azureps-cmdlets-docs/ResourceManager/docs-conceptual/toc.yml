@@ -3,9 +3,6 @@
   items:
   - name: Install
     href: install-azurerm-ps.md
-    items:
-    - name: Other installation methods
-      href: other-install.md
   - name: Get started
     href: get-started-azureps.md
   - name: Log in
