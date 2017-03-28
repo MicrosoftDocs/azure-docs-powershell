@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmADServicePrincipal
 
 ## SYNOPSIS
-Deletes the azure active directory service principal.
+Deletes the azure Active Directory service principal.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRmADServicePrincipal -ObjectId <Guid> [-PassThru] [-Force] [-Informa
 ```
 
 ## DESCRIPTION
-Deletes the azure active directory service principal.
+Deletes the azure Active Directory service principal.
 
 ## EXAMPLES
 
@@ -29,7 +29,7 @@ Deletes the azure active directory service principal.
 PS C:\> Remove-AzureRmADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
 ```
 
-Deletes the given azure active directory service principal.
+Deletes the given azure Active Directory service principal.
 
 ## PARAMETERS
 

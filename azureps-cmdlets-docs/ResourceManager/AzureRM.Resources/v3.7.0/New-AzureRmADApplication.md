@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureRmADApplication
 
 ## SYNOPSIS
-Creates a new azure active directory application.
+Creates a new azure Active Directory application.
 
 ## SYNTAX
 
@@ -50,7 +50,7 @@ New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-Home
 ```
 
 ## DESCRIPTION
-Creates a new azure active directory application.
+Creates a new azure Active Directory application.
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ Creates a new azure active directory application.
 PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http://NewApplication"
 ```
 
-Creates a new azure active directory application without any credentials.
+Creates a new azure Active Directory application without any credentials.
 
 ### --------------------------  Create new AAD application with password.  --------------------------
 @{paragraph=PS C:\\\>}
@@ -71,7 +71,7 @@ PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http:/
 //NewApplication" -Password "password"
 ```
 
-Creates a new azure active directory application and associates password credentials with it.
+Creates a new azure Active Directory application and associates password credentials with it.
 
 ## PARAMETERS
 
