@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AzureRmADUser
 
 ## SYNOPSIS
-Updates an existing active directory user.
+Updates an existing Active Directory user.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Set-AzureRmADUser -UPNOrObjectId <String> [-DisplayName <String>] [-EnableAccoun
 ```
 
 ## DESCRIPTION
-Updates an existing active directory user (work/school account also popularly known as org-id).
+Updates an existing Active Directory user (work/school account also popularly known as org-id).
 For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#UpdateUser
 
 ## EXAMPLES

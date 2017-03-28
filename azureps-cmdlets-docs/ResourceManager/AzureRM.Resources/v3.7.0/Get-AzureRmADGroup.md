@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmADGroup
 
 ## SYNOPSIS
-Filters active directory groups.
+Filters Active Directory groups.
 
 ## SYNTAX
 
@@ -29,41 +29,38 @@ Get-AzureRmADGroup -ObjectId <Guid> [-InformationAction <ActionPreference>] [-In
 ```
 
 ## DESCRIPTION
-Filters active directory groups.
+The **Get-AzureRmADGroup** cmdlet filters Active Directory groups.
 
 ## EXAMPLES
 
-### --------------------------  Filters groups using object id  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Get an AD group by ID
 
 ```
 PS C:\> Get-AzureRmADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
 ```
 
-Gets group with 85F89C90-780E-4AA6-9F4F-6F268D322EEE id
+This command gets the group with the ID 85F89C90-780E-4AA6-9F4F-6F268D322EEE.
 
-### --------------------------  Filters groups using Search String  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 2: Get a group by search string
 
 ```
-PS C:\> Get-AzureRmADGroup -SearchString Joe
+PS C:\> Get-AzureRmADGroup -SearchString "PattiFuller"
 ```
 
-Filters all ad groups that has Joe in the display name.
+This command gets all AD groups that have PattiFuller in the display name.
 
-### --------------------------  List AD groups  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 3: Get all AD groups
 
 ```
 PS C:\> Get-AzureRmADGroup
 ```
 
-Gets all AD groups
+This command gets all AD groups.
 
 ## PARAMETERS
 
 ### -ObjectId
-Object id of the group.
+Specifies the object ID of the Active Directory Group.
 
 ```yaml
 Type: Guid
@@ -129,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchString
-The group display name
+Specifies the display name of the group.
 
 ```yaml
 Type: String
@@ -151,9 +148,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADUser]()
+[Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Get-AzureRmADServicePrincipal]()
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADGroupMember]()
-
+[Get-AzureRmADGroupMember](./Get-AzureRmADGroupMember.md)

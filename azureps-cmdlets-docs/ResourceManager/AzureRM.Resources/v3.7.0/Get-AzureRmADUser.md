@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRmADUser
 
 ## SYNOPSIS
-Filters active directory users.
+Filters Active Directory users.
 
 ## SYNTAX
 
@@ -41,7 +41,7 @@ Get-AzureRmADUser -Mail <String> [-InformationAction <ActionPreference>] [-Infor
 ```
 
 ## DESCRIPTION
-Filters active directory users.
+Filters Active Directory users.
 
 ## EXAMPLES
 

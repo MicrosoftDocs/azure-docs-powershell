@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureRmADUser
 
 ## SYNOPSIS
-Creates a new active directory user.
+Creates a new Active Directory user.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-AzureRmADUser -DisplayName <String> -UserPrincipalName <String> -Password <S
 ```
 
 ## DESCRIPTION
-Creates a new active directory user (work/school account also popularly known as org-id).
+Creates a new Active Directory user (work/school account also popularly known as org-id).
 For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#CreateUser
 
 ## EXAMPLES

@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureRmADServicePrincipal
 
 ## SYNOPSIS
-Creates a new azure active directory service principal.
+Creates a new azure Active Directory service principal.
 
 ## SYNTAX
 
@@ -77,7 +77,7 @@ New-AzureRmADServicePrincipal -DisplayName <String> -CertValue <String> [-StartD
 ```
 
 ## DESCRIPTION
-Creates a new azure active directory service principal.
+Creates a new azure Active Directory service principal.
 
 Note: The cmdlet also implicitly creates an application and sets its properties (if the ApplicationId is not provided).
 In order to update the application specific parameters please use Set-AzureRmADApplication cmdlet.
@@ -91,7 +91,7 @@ In order to update the application specific parameters please use Set-AzureRmADA
 New-AzureRmADServicePrincipal -ApplicationId 34a28ad2-dec4-4a41-bc3b-d22ddf90000e
 ```
 
-Creates a new azure active directory service principal.
+Creates a new azure Active Directory service principal.
 
 DisplayName                    Type                           ObjectId
 -----------                    ----                           --------

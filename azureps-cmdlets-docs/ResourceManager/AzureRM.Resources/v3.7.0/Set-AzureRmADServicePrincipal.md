@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AzureRmADServicePrincipal
 
 ## SYNOPSIS
-Updates an existing azure active directory service principal.
+Updates an existing azure Active Directory service principal.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Set-AzureRmADServicePrincipal -ServicePrincipalName <String> -DisplayName <Strin
 ```
 
 ## DESCRIPTION
-Updates an existing azure active directory service principal. 
+Updates an existing azure Active Directory service principal. 
 To update the credentials associated with this service principal, please use New-AzureRmADSpCredential cmdlet. 
 To update the properties associated with the underlying application, please use Set-AzureRmADApplication cmdlet.
 

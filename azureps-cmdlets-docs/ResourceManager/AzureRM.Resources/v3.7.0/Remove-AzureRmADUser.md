@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmADUser
 
 ## SYNOPSIS
-Deletes an active directory user.
+Deletes an Active Directory user.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-AzureRmADUser -UPNOrObjectId <String> [-Force] [-InformationAction <Actio
 ```
 
 ## DESCRIPTION
-Deletes an active directory user (work/school account also popularly known as org-id).
+Deletes an Active Directory user (work/school account also popularly known as org-id).
 
 ## EXAMPLES
 
