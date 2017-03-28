@@ -51,7 +51,7 @@ You can also watch this video:
 
 ## Other Azure PowerShell modules
 
-* [Azure Active Directory](/azps-concepts/azuread)
-* [Azure Information Protection](/azps-concepts/azureinfoprotection)
-* [Azure Service Fabric](/azps-concepts/servicefabric)
-* [Azure ElasticDB](/azps-concepts/elasticdb)
+* [Azure Active Directory](overview?view=azureadps-2.0)
+* [Azure Information Protection](overview?view=azureipps)
+* [Azure Service Fabric](overview?view=azureservicefabricps)
+* [Azure ElasticDB](overview?view=azureelasticdbjobsps-0.8.33)
