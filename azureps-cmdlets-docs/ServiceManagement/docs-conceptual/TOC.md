@@ -1,2 +1,2 @@
-# [Overview](overview)
-## [Install](install-azure-ps)
+# [Overview](overview.md)
+## [Install](install-azure-ps.md)

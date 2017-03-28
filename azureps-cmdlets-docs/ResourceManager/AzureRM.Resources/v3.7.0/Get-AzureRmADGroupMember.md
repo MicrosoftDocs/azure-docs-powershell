@@ -18,23 +18,22 @@ Get-AzureRmADGroupMember [-GroupObjectId <Guid>] [-InformationAction <ActionPref
 ```
 
 ## DESCRIPTION
-Get a group members.
+The **Get-AzureRmADGroupMember** cmdlet gets Active Directory group members.
 
 ## EXAMPLES
 
-### --------------------------  Filters group members using group object id  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Filter group members using the group object ID
 
 ```
 PS C:\> Get-AzureRmADGroupMember -GroupObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
 ```
 
-Gets group members with 85F89C90-780E-4AA6-9F4F-6F268D322EEE id
+This command gets group members with the specified group object ID.
 
 ## PARAMETERS
 
 ### -GroupObjectId
-Object id of the group.
+Specifies the object ID of the group.
 
 ```yaml
 Type: Guid
@@ -95,9 +94,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADUser]()
+[Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Get-AzureRmADServicePrincipal]()
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADGroupMemberMember]()
-
+[Get-AzureRmADGroupMemberMember](./Get-AzureRmADGroupMemberMember.md)
