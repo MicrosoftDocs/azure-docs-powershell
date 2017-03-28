@@ -1,6 +1,6 @@
 ---
 title: Get started with Azure PowerShell | Microsoft Docs
-description: This is a running history of changes made to Azure PowerShell in each release.
+description:
 services: azure
 author: sdwheeler
 manager: carmonm
@@ -8,260 +8,183 @@ ms.product: azure
 ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 03/06/2017
+ms.date: 03/22/2017
 ms.author: sewhee
 ---
 # Getting started with Azure PowerShell
 
-You can run the cmdlets from the standard Windows PowerShell console, or from PowerShell Integrated
-Scripting Environment (ISE). The cmdlets need your subscription information so they can manage your
-services.
+Azure PowerShell is designed for managing and administering Azure resources from the command line,
+and for building automation scripts that work against the Azure Resource Manager. This article
+helps get you started using it, and teaches you the core concepts behind it.
 
 This article assumes that you have already installed Azure PowerShell and loaded the module.
 
-## Signing on to Azure
+## Install Azure PowerShell
+The first step is to make sure you have the latest version of the Azure PowerShell installed:
+
+1. [Install Azure PowerShell](install-azurerm-ps.md).
+
+2. To verify the installation was successful, run `Get-Module AzureRM` from your
+   command line.
+
+You should see the version number of the AzureRM module installed and loaded in your PowerShell
+session.
+
+## Log in to Azure
 
 Sign on interactively:
 
-1. Type `Login-AzureRmAccount`
+1. Type `Login-AzureRmAccount`.  You will get dialog box asking for your Azure credentials.
 
 2. Type the email address and password associated with your account. Azure authenticates and saves
    the credential information, and then closes the window.
-
---OR--
-
-Sign into your work or school account:
-
-```powershell
-$cred = Get-Credential
-Login-AzureRmAccount -Credential $cred
-```
-
-> [!NOTE]
-> This non-interactive log in method only works with a work or school account. A work or
-> school account is a user that is managed by your work or school, and defined in the Azure Active
-> Directory instance for your work or school.
->
-> For more information on signing up for Microsoft Azure with a work or school account, see [Sign up
-> for Microsoft Azure as an Organization](/azure/active-directory/sign-up-organization.md).
->
-> For more information about authentication and subscription management in Azure, see
-> [Manage Accounts, Subscriptions, and Administrative Roles](/azure/active-directory/role-based-access-control-configure.md).
 
 Once you have signed in to an Azure account, you can use the Azure PowerShell cmdlets to access and
 manager the resources in your subscription.
 
 ## Create a resource group
 
-A resource group is a container that holds related resources for an Azure solution. The resource
-group can include all the resources for the solution, or only those resources that you want to
-manage as a group. Resource groups can be used to manage role-based access controls (RBAC) for a
-group of resources. For example, in your solution, you may want separate resource groups for VMs
-and Virtual Networks so that you can assign RBAC permissions to different users for different
-roles.
+Now that we've got everything set up, let's use Azure PowerShell to create resources within Azure.
+
+First, create a Resource Group. Resource Groups in Azure provide a way to manage multiple resources
+that you want to logically group together. For example, you might create a Resource Group for an
+application or project and add a virtual machine, a database and a CDN service within it.
+
+Let's create a resource group named "MyResourceGroup" in the westus2 region of Azure. To do so type
+the following command:
 
 ```powershell
-New-AzureRmResourceGroup -Name 'MySouthCentralUSRG' -Location 'southcentralus'
+New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
 ```
-ResourceGroupName : MySouthCentralUSRG
-Location          : southcentralus
+ResourceGroupName : myResourceGroup
+Location          : westeurope
 ProvisioningState : Succeeded
 Tags              :
-ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MySouthCentralUSRG
+ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myResourceGroup
 ```
 
-## Create a storage account
+## Create a Windows Virtual Machine
 
-An Azure storage account provides a unique namespace to store and access your Azure Storage data
-objects. All objects in a storage account are billed together as a group. By default, the data in
-your account is available only to you, the account owner.
+Now that we have our resource group, let's create a Linux VM within it. To create a new VM we must
+first create the other required resources and assign them to a configuration. When we can use that
+configuration to create the VM.
 
-The following example creates a general-purpose storage account that supports storing Blobs,
-Tables, Queues, Files and Disks.
+### Create the required network resources
+
+First we need to create a subnet configuration to be used with the virtual network creation
+process. We also create a public IP address so that we can connect to this VM. We create a network
+security group to secure access to the public address. Finally we create the virtual NIC using all
+of the previous resources.
 
 ```powershell
-$parameters = @{
-  ResourceGroupName="myresourcegroup"
-  AccountName="mystorageaccount"
-  Location="westeurope"
-  SkuName="Standard_GRS"
-  Kind="Storage"
-}
-New-AzureRmStorageAccount @parameters
+# Variables for common values
+$resourceGroup = "myResourceGroup"
+$location = "westeurope"
+$vmName = "myVM"
+
+# Create a subnet configuration
+$subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet -AddressPrefix 192.168.1.0/24
+
+# Create a virtual network
+$vnet = New-AzureRmVirtualNetwork -ResourceGroupName $resourceGroup -Location $location `
+  -Name MYvNET -AddressPrefix 192.168.0.0/16 -Subnet $subnetConfig
+
+# Create a public IP address and specify a DNS name
+$pip = New-AzureRmPublicIpAddress -ResourceGroupName $resourceGroup -Location $location `
+  -Name "mypublicdns$(Get-Random)" -AllocationMethod Static -IdleTimeoutInMinutes 4
+
+# Create an inbound network security group rule for port 3389
+$nsgRuleRDP = New-AzureRmNetworkSecurityRuleConfig -Name myNetworkSecurityGroupRuleRDP  -Protocol Tcp `
+  -Direction Inbound -Priority 1000 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * `
+  -DestinationPortRange 3389 -Access Allow
+
+# Create a network security group
+$nsg = New-AzureRmNetworkSecurityGroup -ResourceGroupName $resourceGroup -Location $location `
+  -Name myNetworkSecurityGroup -SecurityRules $nsgRuleRDP
+
+# Create a virtual network card and associate with public IP address and NSG
+$nic = New-AzureRmNetworkInterface -Name myNic -ResourceGroupName $resourceGroup -Location $location `
+  -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $pip.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-## Associate a storage account in your session
+### Create the virtual machine
 
-To ensure that any storage commands are targeting the proper storage account, you need to set the
-current storage account in your session context. The following commands show how to set the current
-storage account:
+First we need a set of credentials for the OS.
 
 ```powershell
-Set-AzureRmCurrentStorageAccount -ResourceGroupName "mysouthcentralusrg" -StorageAccountName "mysouthcentstorage"
-Get-AzureRmContext
+# Create user object
+$cred = Get-Credential -Message "Enter a username and password for the virtual machine."
 ```
 
-```
-Environment           : AzureCloud
-Account               : username@contoso.com
-TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-SubscriptionId        : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-SubscriptionName      : Microsoft Azure Internal Consumption
-CurrentStorageAccount : mysouthcentstorage
-```
-
-To view a list of what is currently contained in the storage account:
+Now that we have the required resources we can create the VM. For this step, we create a VM
+configuration object, then we use tje configuration to create the VM.
 
 ```powershell
-Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
+# Create a virtual machine configuration
+$vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
+  Set-AzureRmVMOperatingSystem -Windows -ComputerName $vmName -Credential $cred |
+  Set-AzureRmVMSourceImage -PublisherName MicrosoftWindowsServer -Offer WindowsServer -Skus 2016-Datacenter -Version latest |
+  Add-AzureRmVMNetworkInterface -Id $nic.Id
+
+# Create a virtual machine
+New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 ```
 
-```
-ICloudBlob        : Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob
-BlobType          : PageBlob
-Length            : 614912
-ContentType       : image/bmp
-LastModified      : 3/7/2017 11:45:15 PM +00:00
-SnapshotTime      :
-ContinuationToken :
-Context           : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
-Name              : MyWin2016VM.12345678-9abc-def0-1234-56789abcedf0.screenshot.bmp
+Now you have a Windows VM. You can log in and begin using your new VM.
 
-ICloudBlob        : Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob
-BlobType          : PageBlob
-Length            : 614912
-ContentType       : image/bmp
-LastModified      : 3/7/2017 11:44:57 PM +00:00
-SnapshotTime      :
-ContinuationToken :
-Context           : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
-Name              : MyUnbuntu1610.12345678-9abc-def0-1234-56789abcedf0.screenshot.bmp
+## Listing deployed resources
 
-ICloudBlob        : Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob
-BlobType          : PageBlob
-Length            : 56832
-ContentType       : text/plain
-LastModified      : 3/7/2017 11:16:57 PM +00:00
-SnapshotTime      :
-ContinuationToken :
-Context           : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
-Name              : MyUnbuntu1610.12345678-9abc-def0-1234-56789abcedf0.serialconsole.log
-
-ICloudBlob        : Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob
-BlobType          : PageBlob
-Length            : 136367309312
-ContentType       : application/octet-stream
-LastModified      : 3/7/2017 11:45:18 PM +00:00
-SnapshotTime      :
-ContinuationToken :
-Context           : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
-Name              : MyWin2016VM20170307125106.vhd
-
-ICloudBlob        : Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob
-BlobType          : PageBlob
-Length            : 32212255232
-ContentType       : application/octet-stream
-LastModified      : 3/7/2017 11:45:20 PM +00:00
-SnapshotTime      :
-ContinuationToken :
-Context           : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
-Name              : MyUnbuntu161020170307141436.vhd
-```
-
-### List Virtual Machines
+You can use the `Get-AzureRmResource` cmdlet to list the resources running in Azure. The following
+example shows the resources we just created in the new resource group.
 
 ```powershell
-Get-AzureRmVM
+Get-AzureRmResource |
+  Where-Object ResourceGroupName -eq myResourceGroup |
+    Select-Object Name,Location,ResourceType
 ```
 
 ```
-ResourceGroupName          Name   Location          VmSize  OsType              NIC ProvisioningState
------------------          ----   --------          ------  ------              --- -----------------
-MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
-MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
+Name                                              Location   ResourceType
+----                                              --------   ------------
+myWinVM_OsDisk_1_a3fb3fa77a1c4b4e9e44fd95a2850b45 westeurope Microsoft.Compute/disks
+myWinVM                                           westeurope Microsoft.Compute/virtualMachines
+myWinVM/BGInfo                                    westeurope Microsoft.Compute/virtualMachines/extensions
+myNic                                             westeurope Microsoft.Network/networkInterfaces
+myNetworkSecurityGroup                            westeurope Microsoft.Network/networkSecurityGroups
+mypublicdns468205664                              westeurope Microsoft.Network/publicIPAddresses
+MYvNET                                            westeurope Microsoft.Network/virtualNetworks
+micromyresomywi032813340                          westeurope Microsoft.Storage/storageAccounts
 ```
 
-### List Virtual Networks
+## Clean up the deployment
 
-```powershell
-Get-AzureRmVirtualNetwork
-```
-
-```
-Name                   : MyWestEURG-vnet
-ResourceGroupName      : MyWestEURG
-Location               : westeurope
-Id                     : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/virtualNetworks/MyWestEURG-vnet
-Etag                   : W/"12345678-9abc-def0-1234-56789abcedf0"
-ResourceGuid           : 79ba0a1a-a1a2-4491-822b-2ef874b1a628
-ProvisioningState      : Succeeded
-Tags                   :
-AddressSpace           : {
-                           "AddressPrefixes": [
-                             "10.0.0.0/24"
-                           ]
-                         }
-DhcpOptions            : null
-Subnets                : [
-                           {
-                             "Name": "default",
-                             "Etag": "W/\"12345678-9abc-def0-1234-56789abcedf0\"",
-                             "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/virtualNetworks/MyWestEURG-vnet/subnets/default",
-                             "AddressPrefix": "10.0.0.0/24",
-                             "IpConfigurations": [
-                               {
-                                 "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/networkInterfaces/mywin2016vm880/ipConfigurations/ipconfig1"
-                               },
-                               {
-                                 "Id": "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyWestEURG/providers/Microsoft.Network/networkInterfaces/myunbuntu1610980/ipConfigurations/ipconfig1"
-                               }
-                             ],
-                             "ResourceNavigationLinks": [],
-                             "ProvisioningState": "Succeeded"
-                           }
-                         ]
-VirtualNetworkPeerings : []
-```
-
-### List Azure locations
-
-Azure is generally available in many regions around the world to achieve high performance supports
-customers' preferences regarding data location. The following example shows how to get a list of
-regional locations from Azure:
+To clean up your Azure account, you want to remove the resources we created in this example. You
+can remove each resource, individually with the associated `Remove-*` cmdlet. However, the easiest
+way is to remove the resource group. This will automatically remove all of the resources in the
+group. Run the following command to remove the resource group, VM, and all related resources.
 
 ```powershell
-Get-AzureRmLocation | Select-Object Location
+Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
+You will be prompted to confirm that you want to remove the resource group.
 
 ```
-Location
---------
-eastasia
-southeastasia
-centralus
-eastus
-eastus2
-westus
-northcentralus
-southcentralus
-northeurope
-westeurope
-japanwest
-japaneast
-brazilsouth
-australiaeast
-australiasoutheast
-southindia
-centralindia
-westindia
-canadacentral
-canadaeast
-uksouth
-ukwest
-westcentralus
-westeurope2
-koreacentral
-koreasouth
+Confirm
+Are you sure you want to remove resource group 'myResourceGroup'
+[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
+
+This can take several minutes to complete.
+
+## Next steps
+
+* [Login with Azure PowerShell](authenticate-azureps.md)
+* [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
+* [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
+* Read the Release notes about migrating from an older release:
+  [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
+* Get help from the community:
+  + [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
+  + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)

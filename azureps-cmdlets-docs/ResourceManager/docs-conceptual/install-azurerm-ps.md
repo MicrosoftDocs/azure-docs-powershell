@@ -67,17 +67,9 @@ Import-Module AzureRM
 
 For more information about using Azure PowerShell, see the following articles:
 
-* [Sign on with Azure PowerShell](authenticate-azureps.md)
 * [Get started with Azure PowerShell](get-started-azureps.md)
-* [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
-* [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
-* Read the Release notes about migrating from an older release:
-  [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
-* Get help from the community:
-  + [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
 
-## Optional installation tasks
+## Frequently asked questions
 
 ### How to get PowerShellGet
 

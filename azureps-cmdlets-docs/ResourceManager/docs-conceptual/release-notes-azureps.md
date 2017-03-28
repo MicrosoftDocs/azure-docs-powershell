@@ -16,11 +16,12 @@ ms.author: sewhee
 
 # Release notes
 
-This is a history of changes made to Azure PowerShell in the latest release. For a comprehensive
-history of changes, see the [Change log](https://github.com/Azure/azure-powershell/blob/dev/ChangeLog.md)
-on GitHub.
+This is a list of changes made to Azure PowerShell in the latest release.
 
-## 2017.03.09 - Version 3.7.0
+## March 9, 2017
+
+### Version 3.7.0
+
 * ApiManagement
     * Added new cmdlets to manage Backend entity
         - New-AzureRmApiManagementBackend

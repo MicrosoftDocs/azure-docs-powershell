@@ -15,37 +15,15 @@ ms.author: sewhee
 
 # Log in with Azure PowerShell
 
-There are several ways to log in and authenticate with the Azure PowerShell. The simplest way to
-get started is to log in interactively at the command line.
+Azure PowerShell supports multiple login methods. The simplest way to get started is to log in
+interactively at the command line.
 
 ## Interactive log in
 
-1. Type `Login-AzureRmAccount`
+1. Type `Login-AzureRmAccount`. You will get dialog box asking for your Azure credentials.
 
 2. Type the email address and password associated with your account. Azure authenticates and saves
    the credential information, and then closes the window.
-
-## Non-interactive log in
-
-Log in using your work or school account:
-
-```powershell
-$cred = Get-Credential
-Login-AzureRmAccount -Credential $cred
-```
-
-> [!NOTE]
-> This non-interactive log in method only works with a work or school account. A work or
-> school account is a user that is managed by your work or school, and defined in the Azure Active
-> Directory instance for your work or school.
->
-> For more information on signing up for Microsoft Azure with a work or school account, see
-[How to get an Azure Active Directory tenant](/azure/active-directory/develop/active-directory-howto-tenant).
-
-Once you have authenticated, you are connected to your default subscription. If you have more than
-one subscription, you should [confirm your default subscription](manage-subscriptions-azureps.md)
-and change to appropriate subscription. For more information, see
-[Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md).
 
 ## Log in with a service principal
 

@@ -24,19 +24,19 @@ release, see the [release notes](release-notes-azureps.md).
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
-* [Linux Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
-* [Windows Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
-* [Web Apps](https://docs.microsoft.com/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
-* [SQL Databases](https://docs.microsoft.com/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
+* [Linux Virtual Machines](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
+* [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
+* [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
+* [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
 
 > [!NOTE]
 > If you have deployments that use the classic deployment model that cannot be converted you can
 install the Service Management version of Azure PowerShell. For more information, see
-[Install the Azure PowerShell Service Management module](install-azure-ps.md).
+[Install the Azure PowerShell Service Management module](/powershell/azure/install-azure-ps?view=azuresmps-3.7.0).
 
 ### Need a better understanding of Azure?
 
-For more information about Azure, consult the [Azure documentation](https://docs.microsoft.com/azure/).
+For more information about Azure, consult the [Azure documentation](/azure/).
 
 To learn more about automating with Azure PowerShell, watch this video:
 [Take Control of the Cloud with the Microsoft Azure PowerShell Cmdlets](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/WAD-B305#fbid=).
@@ -51,7 +51,7 @@ You can also watch this video:
 
 ## Other Azure PowerShell modules
 
-* [Azure Active Directory](/azps-concepts/azuread)
-* [Azure Information Protection](/azps-concepts/azureinfoprotection)
-* [Azure Service Fabric](/azps-concepts/servicefabric)
-* [Azure ElasticDB](/azps-concepts/elasticdb)
+* [Azure Active Directory](/powershell/azure/overview?view=azureadps-2.0)
+* [Azure Information Protection](/powershell/azure/overview?view=azureipps)
+* [Azure Service Fabric](/powershell/azure/overview?view=azureservicefabricps)
+* [Azure ElasticDB](/powershell/azure/overview?view=azureelasticdbjobsps-0.8.33)
