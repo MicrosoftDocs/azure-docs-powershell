@@ -52,7 +52,7 @@ Following is a sample updated role definition json for Set-AzureRmRoleDefinition
 ## EXAMPLES
 
 ### --------------------------  Update using PSRoleDefinitionObject  --------------------------
-@{paragraph=PS C:\\\>}
+
 
 ```
 PS C:\> $roleDef = Get-AzureRmRoleDefinition "Contoso On-Call"
@@ -64,7 +64,7 @@ PS C:\> $roleDef = Get-AzureRmRoleDefinition "Contoso On-Call"
 ```
 
 ### --------------------------  Create using JSON file  --------------------------
-@{paragraph=PS C:\\\>}
+
 
 ```
 PS C:\> Set-AzureRmRoleDefinition -InputFile C:\Temp\roleDefinition.json

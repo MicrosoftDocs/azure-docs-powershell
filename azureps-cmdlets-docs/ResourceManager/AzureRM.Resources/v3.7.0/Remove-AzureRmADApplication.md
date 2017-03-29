@@ -23,7 +23,7 @@ Deletes the azure Active Directory application.
 ## EXAMPLES
 
 ### --------------------------  Delete AAD application.  --------------------------
-@{paragraph=PS C:\\\>}
+
 
 ```
 PS C:\> Remove-AzureRmADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 -Force
