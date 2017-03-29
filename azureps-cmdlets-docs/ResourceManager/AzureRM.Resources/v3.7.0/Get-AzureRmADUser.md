@@ -41,41 +41,38 @@ Get-AzureRmADUser -Mail <String> [-InformationAction <ActionPreference>] [-Infor
 ```
 
 ## DESCRIPTION
-Filters Active Directory users.
+The **Get-AzureRmADUser** cmdlet filters Active Directory users.
 
 ## EXAMPLES
 
-### --------------------------  Filters users using UPN  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Filter users using UPN
 
 ```
-PS C:\> Get-AzureRmADUser -UPN foo@domain.com
+PS C:\> Get-AzureRmADUser -UPN "pattifuller@contoso.com"
 ```
 
-Gets user with foo@domain.com
+This command gets the user named pattifuller@contoso.com
 
-### --------------------------  Filters users using Search String  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 2: Filters users using Search String 
 
 ```
-PS C:\> Get-AzureRmADUser -SearchString Joe
+PS C:\> Get-AzureRmADUser -SearchString "PattiFuller"
 ```
 
-Filters all ad users that has Joe in the display name.
+This command filters all Active Directory users that has PattiFuller in the display name.
 
-### --------------------------  List AD users  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 3: List all AD users
 
 ```
 PS C:\> Get-AzureRmADUser
 ```
 
-Gets all AD users
+This command gets all Active Directory users.
 
 ## PARAMETERS
 
 ### -UserPrincipalName
-UPN of the user.
+Specifies the User principal name (UPN) of the user.
 
 ```yaml
 Type: String
@@ -141,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchString
-The user display name
+Specifies the user display name.
 
 ```yaml
 Type: String
@@ -156,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Object id of the user.
+Specifies the object ID of the user.
 
 ```yaml
 Type: Guid
@@ -171,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mail
-
+Specifies the email address of the user.
 
 ```yaml
 Type: String
@@ -193,9 +190,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-AzureRmADUser]()
+[New-AzureRmADUser](./New-AzureRmADUser.md)
 
-[Set-AzureRmADUser]()
+[Remove-AzureRmADUser](./Remove-AzureRmADUser.md)
 
-[Remove-AzureRmADUser]()
-
+[Set-AzureRmADUser](./Set-AzureRmADUser.md)
