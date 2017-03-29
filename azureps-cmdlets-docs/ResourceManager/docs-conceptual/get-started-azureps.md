@@ -57,7 +57,7 @@ type the following command:
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
-```output
+```
 ResourceGroupName : myResourceGroup
 Location          : westeurope
 ProvisioningState : Succeeded
@@ -135,7 +135,7 @@ New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfi
 
 The `New-AzureRmVM` command outputs results once the VM has been fully created and is ready to be used.
 
-```output
+```
 RequestId IsSuccessStatusCode StatusCode ReasonPhrase
 --------- ------------------- ---------- ------------
                          True         OK OK
@@ -148,7 +148,7 @@ of the VM. The following command displays the public IP address created in the p
 $pip | Select-Object Name,IpAddress
 ```
 
-```output
+```
 Name                  IpAddress
 ----                  ---------
 mypublicdns1400512543 xx.xx.xx.xx
@@ -157,7 +157,7 @@ mypublicdns1400512543 xx.xx.xx.xx
 If you are on a Windows-based system, you can do this from the command line using the mstsc
 command:
 
-```output
+```
 mstsc /v:xx.xxx.xx.xxx
 ```
 
@@ -241,7 +241,7 @@ address of the VM you created:
 ssh xx.xxx.xxx.xxx
 ```
 
-```output
+```
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-65-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com/
@@ -322,7 +322,7 @@ Get-AzureRmResource |
     Select-Object Name,Location,ResourceType
 ```
 
-```output
+```
 Name                                                  Location   ResourceType
 ----                                                  --------   ------------
 myLinuxVM_OsDisk_1_36ca038791f642ba91270879088c249a   westeurope Microsoft.Compute/disks
@@ -355,7 +355,7 @@ Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 
 You will be prompted to confirm that you want to remove the resource.
 
-```output
+```
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -369,7 +369,7 @@ tutorial. This removes the resource group and all of the resources in it.
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 
-```output
+```
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
