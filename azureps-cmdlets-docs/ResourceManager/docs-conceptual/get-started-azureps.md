@@ -344,9 +344,7 @@ micromyresomywi032907510                              westeurope Microsoft.Stora
 ## Deleting resources
 
 To clean up your Azure account, you want to remove the resources we created in this example. You
-can remove each resource, individually with the associated `Remove-AzureRm*` cmdlet.
-
-You can use the `Remove-AzureRm*` cmdlet to delete the resources you no longer need. To remove the
+can use the `Remove-AzureRm*` cmdlets to delete the resources you no longer need. To remove the
 Windows VM we created, using the following command:
 
 ```powershell
