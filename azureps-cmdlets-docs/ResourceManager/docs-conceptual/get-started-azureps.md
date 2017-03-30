@@ -17,7 +17,6 @@ Azure PowerShell is designed for managing and administering Azure resources from
 and for building automation scripts that work against the Azure Resource Manager. This article
 helps get you started using it, and teaches you the core concepts behind it.
 
-This article assumes that you have already installed Azure PowerShell and loaded the module.
 
 ## Install Azure PowerShell
 The first step is to make sure you have the latest version of the Azure PowerShell installed:
