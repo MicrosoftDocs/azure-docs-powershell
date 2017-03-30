@@ -5,10 +5,10 @@ services: azure
 author: sdwheeler
 manager: carmonm
 ms.product: azure
-ms.service: powershell
+ms.service: azure-resource-manager
 ms.devlang: powershell
-ms.topic: reference
-ms.date: 03/22/2017
+ms.topic: conceptual
+ms.date: 03/30/2017
 ms.author: sewhee
 ---
 

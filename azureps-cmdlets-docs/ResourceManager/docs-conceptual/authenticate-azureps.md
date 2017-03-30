@@ -4,12 +4,11 @@ description: Log in with Azure PowerShell
 services: azure
 author: sdwheeler
 manager: carmonm
-ms.assetid: 02b18f6b-8bc5-44b2-abbb-4ef7bedb2964
 ms.product: azure
 ms.service: powershell
 ms.devlang: powershell
-ms.topic: reference
-ms.date: 03/22/2017
+ms.topic: conceptual
+ms.date: 03/30/2017
 ms.author: sewhee
 ---
 

@@ -4,12 +4,12 @@ description: An overview of Azure PowerShell with links to installation and conf
 author: sdwheeler
 manager: carmonm
 ms.product: azure
-ms.service: powershell
+ms.service: azure-resource-manager
 ms.devlang: powershell
-ms.topic: reference
+ms.topic: conceptual
 ms.author: sewhee
 ms.manager: carmonm
-ms.date: 03/22/2017
+ms.date: 03/30/2017
 ---
 
 # Overview of Azure PowerShell

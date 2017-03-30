@@ -4,13 +4,12 @@ description: This is a history of changes made to Azure PowerShell in the latest
 services: azure
 author: sdwheeler
 manager: carmonm
-ms.assetid: e2dec06a-4179-49e3-b6b1-b0f278956d11
-ms.service:
+ms.service: azure-resource-manager
 ms.product: azure
 ms.devlang: powershell
-ms.topic: reference
+ms.topic: conceptual
 ms.workload:
-ms.date: 03/22/2017
+ms.date: 03/30/2017
 ms.author: sewhee
 ---
 
