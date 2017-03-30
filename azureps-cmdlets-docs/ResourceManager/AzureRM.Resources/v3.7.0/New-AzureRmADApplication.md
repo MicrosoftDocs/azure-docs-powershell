@@ -55,7 +55,7 @@ Creates a new azure Active Directory application.
 ## EXAMPLES
 
 ### --------------------------  Create new AAD application.  --------------------------
-@{paragraph=PS C:\\\>}
+
 
 ```
 PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http://NewApplication"
@@ -64,7 +64,7 @@ PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http:/
 Creates a new azure Active Directory application without any credentials.
 
 ### --------------------------  Create new AAD application with password.  --------------------------
-@{paragraph=PS C:\\\>}
+
 
 ```
 PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http:

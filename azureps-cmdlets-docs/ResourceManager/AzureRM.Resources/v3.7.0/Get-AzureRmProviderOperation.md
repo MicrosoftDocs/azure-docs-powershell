@@ -18,32 +18,32 @@ Get-AzureRmProviderOperation [-OperationSearchString] <String> [-InformationActi
 ```
 
 ## DESCRIPTION
-The Get-AzureRmProviderOperation gets the operations exposed by Azure resource providers.
+The **Get-AzureRmProviderOperation** gets the operations exposed by Azure resource providers.
 Operations can be composed to create custom roles in Azure RBAC.
 The command takes as input an operation search string (with possible wildcard(*) character(s)) which determines the operations details to display.
 
-Use Get-AzureRmProviderOperation * to get all operations for all Azure resource providers.
+Use **Get-AzureRmProviderOperation** * to get all operations for all Azure resource providers.
 
-Use Get-AzureRmProviderOperation Microsoft.Compute/* to get all operations of Microsoft.Compute resource provider.
+Use **Get-AzureRmProviderOperation** Microsoft.Compute/* to get all operations of Microsoft.Compute resource provider.
 
 ## EXAMPLES
 
-### --------------------------  Get all actions for all providers  --------------------------
-@{paragraph=PS C:\\\>}
+### Example 1: Get all actions for all providers 
+
 
 ```
 PS C:\> Get-AzureRmProviderOperation *
 ```
 
 ### --------------------------  Get actions for a particular resource provider  --------------------------
-@{paragraph=PS C:\\\>}
+
 
 ```
 PS C:\> Get-AzureRmProviderOperation Microsoft.Insights/*
 ```
 
 ### --------------------------  Get all actions that can be performed on virtual machines  --------------------------
-@{paragraph=PS C:\\\>}
+
 
 ```
 PS C:\> Get-AzureRmProviderOperation */virtualMachines/*
@@ -113,4 +113,3 @@ Accept wildcard characters: False
 Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
-
