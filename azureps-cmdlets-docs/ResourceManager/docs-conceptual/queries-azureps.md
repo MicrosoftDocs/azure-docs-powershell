@@ -90,7 +90,7 @@ RGDEMO001          KBDemo020
 With the next example, the results will return the VMs that have the vmSize 'Standard_DS1_V2'.
 
 ```powershell
-Get-AzureRmVM | Where-Object vmSize -eq "'Standard_DS1_V2'" | Select-Object ResourceGroupName,Name
+Get-AzureRmVM | Where-Object vmSize -eq 'Standard_DS1_V2'
 ```
 
 ```
