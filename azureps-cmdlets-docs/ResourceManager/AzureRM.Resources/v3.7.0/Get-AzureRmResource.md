@@ -81,6 +81,8 @@ This command gets a resource of the type microsoft.web/sites, named ContosoWebsi
 ## PARAMETERS
 
 ### -ResourceGroupName
+Specifies the name of the resource group.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type
@@ -118,6 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
+Specifies the resource type of the resource this cmdlet gets.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type, Get a single resource at the tenant level.
@@ -155,6 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
+Specifies the API version of the resource that this cmdlet gets.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -181,6 +187,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
+Specifies the name of the extension resource.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type, Get resource by name and group, Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get a single resource at the tenant level.
@@ -194,6 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
+Specifies the type of the extension resource.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type, Get resource by name and group, Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get a single resource at the tenant level.
@@ -219,6 +229,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsCollection
+Indicates that the resource is a collection.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Get resource by name and group, Get a resource by name and type., Lists the resources based on the specified scope at the tenant level., Get a single resource at the tenant level., Get resource collection
@@ -277,6 +289,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
+Specifies the name of the resource.
+
 ```yaml
 Type: String
 Parameter Sets: Get resource by name, group and type, Get a single resource at the tenant level.
@@ -349,5 +363,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmResource](./Remove-AzureRmResource.md)
 
 [Set-AzureRmResource](./Set-AzureRmResource.md)
-
-

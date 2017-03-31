@@ -30,29 +30,33 @@ Use **Get-AzureRmProviderOperation** Microsoft.Compute/* to get all operations o
 
 ### Example 1: Get all actions for all providers 
 
-
 ```
 PS C:\> Get-AzureRmProviderOperation *
 ```
 
-### --------------------------  Get actions for a particular resource provider  --------------------------
+This command gets all actions from all resource providers.
 
+### Example 2: Get actions for a particular resource provider
 
 ```
 PS C:\> Get-AzureRmProviderOperation Microsoft.Insights/*
 ```
 
-### --------------------------  Get all actions that can be performed on virtual machines  --------------------------
+This command gets all actions from the resource provider named Microsoft.Insights.
 
+### Example 3: Get all actions that can be performed on virtual machines
 
 ```
 PS C:\> Get-AzureRmProviderOperation */virtualMachines/*
 ```
 
+This command gets all actions that can be performed on virtual machines.
+
+
 ## PARAMETERS
 
 ### -OperationSearchString
-The operation search string (with possible wildcard (*) characters)
+Specifies the operation search string (with possible wildcard (*) characters).
 
 ```yaml
 Type: String
