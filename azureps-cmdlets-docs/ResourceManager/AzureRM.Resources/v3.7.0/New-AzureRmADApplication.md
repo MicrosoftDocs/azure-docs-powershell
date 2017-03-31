@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AzureRmADApplication
 
 ## SYNOPSIS
-Creates a new azure Active Directory application.
+Creates an Azure Active Directory application.
 
 ## SYNTAX
 
@@ -50,20 +50,20 @@ New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-Home
 ```
 
 ## DESCRIPTION
-Creates a new azure Active Directory application.
+The **New-AzureRmADAppliaction** cmdlet creates an Azure Active Directory application.
 
 ## EXAMPLES
 
-### --------------------------  Create new AAD application.  --------------------------
+### Example 1: Create an Azure Active Directory application
 
 
 ```
 PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http://NewApplication"
 ```
 
-Creates a new azure Active Directory application without any credentials.
+This command creates an Azure Active Directory application without any credentials.
 
-### --------------------------  Create new AAD application with password.  --------------------------
+### Example 2: Create an Azure Active Directory with a password
 
 
 ```
@@ -71,12 +71,12 @@ PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http:/
 //NewApplication" -Password "password"
 ```
 
-Creates a new azure Active Directory application and associates password credentials with it.
+This command creates an Azure Active Directory application and associates password credentials with it.
 
 ## PARAMETERS
 
 ### -DisplayName
-Display name of the new application.
+Specifies the display name of the new application.
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUris
-The URIs that identify the application.
+Specifies the URIs that identify the application.
 
 ```yaml
 Type: String[]
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -HomePage
-The URL to the application homepage.
+Specifies the URL to the application homepage.
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplyUrls
-The application reply urls.
+Specifies the application reply URLs.
 
 ```yaml
 Type: String[]
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableToOtherTenants
-The value specifying whether the application is a single tenant or a multi-tenant.
+Indicates whether the application is a single tenant or a multi-tenant.
 
 ```yaml
 Type: Boolean
@@ -190,7 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -220,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The password to be associated with the application.
+Specifies the password to be associated with the application.
 
 ```yaml
 Type: String
@@ -235,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-The effective start date of the credential usage.
+Specifies the effective start date of the credential usage.
 The default start date value is today. 
 For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
@@ -252,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-The effective end date of the credential usage.
+Specifies the effective end date of the credential usage.
 The default end date value is one year from today. 
 For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
@@ -269,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordCredentials
-The list of password credentials associated with the application.
+Specifies the list of password credentials associated with the application.
 
 ```yaml
 Type: PSADPasswordCredential[]
@@ -284,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertValue
-The value of the "asymmetric" credential type.
+Specifies the value of the "asymmetric" credential type.
 It represents the base 64 encoded certificate.
 
 ```yaml
@@ -300,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyCredentials
-The list of certificate credentials associated with the application.
+Specifies the list of certificate credentials associated with the application.
 
 ```yaml
 Type: PSADKeyCredential[]
@@ -323,15 +324,14 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[Remove-AzureRmADApplication]()
+[Get-AzureRmADApplication](./Get-AzureRmADApplication.md)
 
-[Get-AzureRmADApplication]()
+[Remove-AzureRmADApplication](./Remove-AzureRmADApplication.md)
 
-[New-AzureRmADServicePrincipal]()
+[New-AzureRmADServicePrincipal](./New-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADAppCredential]()
+[Get-AzureRmADAppCredential](./Get-AzureRmADAppCredential.md)
 
-[New-AzureRmADAppCredential]()
+[New-AzureRmADAppCredential](./New-AzureRmADAppCredential.md)
 
-[Remove-AzureRmADAppCredential]()
-
+[Remove-AzureRmADAppCredential](./Remove-AzureRmADAppCredential.md)
