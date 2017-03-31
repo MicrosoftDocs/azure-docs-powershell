@@ -25,21 +25,21 @@ This is the same information provided in the deployment details on the portal.
 
 To get the request and the response content, enable the setting when submitting a deployment through **New-AzureRmResourceGroupDeployment**.
 It can potentially log and expose secrets like passwords used in the resource property or **listKeys** operations that are then returned when you retrieve the deployment operations.
-For more on this setting and how to enable it, see New-AzureRmResourceGroupDeployment and Debugging ARM template deployments
+For more on this setting and how to enable it, see [New-AzureRmResourceGroupDeployment](./New-AzureRmResourceGroupDeployment.md) and Debugging ARM template deployments.
 
 ## EXAMPLES
 
-### --------------------------  Get1  --------------------------
+### Example 1: Get a group deployment operation
 ```
-PS C:\> Get-AzureRmResourceGroupDeploymentOperation -DeploymentName test -ResourceGroupName test
+PS C:\> Get-AzureRmResourceGroupDeploymentOperation -DeploymentName "Test01" -ResourceGroupName "RG002"
 ```
 
-Gets deployment operation with name "test" under resource group "test"
+This command gets the deployment operation named Test01 under resource group named RG002.
 
 ## PARAMETERS
 
 ### -DeploymentName
-The deployment name.
+Specifies the deployment name.
 
 ```yaml
 Type: String
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The subscription to use.
+Specifies the subscription ID that this cmdlet gets.
 
 ```yaml
 Type: Guid
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
+Specifies the version of the resource provider API to use.
 If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+Indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
 Type: SwitchParameter
@@ -163,4 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -29,11 +29,6 @@ The **Get-AzureRmResourceProvider** cmdlet gets an Azure resource provider.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ListAvailable
@@ -126,5 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-AzureRmResourceProvider](./Register-AzureRmResourceProvider.md)
 
 [Unregister-AzureRmResourceProvider](./Unregister-AzureRmResourceProvider.md)
-
-

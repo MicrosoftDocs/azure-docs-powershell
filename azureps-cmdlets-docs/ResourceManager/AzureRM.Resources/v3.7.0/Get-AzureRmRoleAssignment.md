@@ -122,17 +122,17 @@ Get-AzureRmRoleAssignment [-RoleDefinitionName <String>] -Scope <String> [-Inclu
 ```
 
 ## DESCRIPTION
-Use the Get-AzureRMRoleAssignment command to list all role assignments that are effective on a scope.
+The **Get-AzureRMRoleAssignment** cmdlet lists all role assignments that are effective on a scope.
 
 Without any parameters, this command returns all the role assignments made under the subscription.
 This list can  be filtered using filtering parameters for principal, role and scope.
 
 The subject of the assignment must be specified.
-To specify a user, use SignInName or Azure AD ObjectId parameters.
-To specify a security group, use Azure AD ObjectId parameter.
-And to specify an Azure AD application, use ServicePrincipalName or ObjectId parameters.
+To specify a user, use the *SignInName* or Azure AD *ObjectId* parameters.
+To specify a security group, use the Azure AD *ObjectId* parameter.
+And to specify an Azure AD application, use the *ServicePrincipalName* or *ObjectId* parameters.
 
-The role that is being assigned must be specified using the RoleDefinitionName parameter.
+The role that is being assigned must be specified using the *RoleDefinitionName* parameter.
 
 The scope at which access is being granted may be specified.
 It defaults to the selected subscription. 
@@ -147,53 +147,53 @@ This will filter assignments effective at the specified resource group
         c.
 ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - Identifies a particular resource under the subscription and will filter assignments effective at that resource scope.
 
-To determine what access a particular user has in the subscription, use the ExpandPrincipalGroups switch.
+To determine what access a particular user has in the subscription, use the *ExpandPrincipalGroups* parameter.
 This will list all roles assigned to the user, and to the groups that the user is member of.
 
-Use the IncludeClassicAdministrators switch to also display the subscription admins and co-admins.
+Use the *IncludeClassicAdministrators* parameter to also display the subscription admins and co-admins.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get all role assignments in the subscription
 
 
 ```
 PS C:\> Get-AzureRmRoleAssignment
 ```
 
-List all role assignments in the subscription
+This command gets all role assignments in the subscription.
 
-### Example 2:
+### Example 2: Get all role assignments for a specified user
 
 
 ```
-PS C:\> Get-AzureRmRoleAssignment -ResourceGroupName testRG -SignInName john.doe@contoso.com -ExpandPrincipalGroups
+PS C:\> Get-AzureRmRoleAssignment -ResourceGroupName "TestRG" -SignInName "patty.fuller@contoso.com" -ExpandPrincipalGroups
 ```
 
-Gets all role assignments made to user john.doe@contoso.com, and the groups of which he is member, at the testRG scope or above.
+This command gets all role assignments made to the user named patty.fuller@contoso.com, and the groups of which she is a member, at the TestRG scope or above.
 
-### --------------------------  Example 3  --------------------------
+### Example 3: Get all role assignments for the specified service principal
 
 
 ```
 PS C:\> Get-AzureRmRoleAssignment -ServicePrincipalName "http://testapp1.com"
 ```
 
-Gets all role assignments of the specified service principal
+This command gets all role assignments of the specified service principal.
 
-### --------------------------  Example 4  --------------------------
+### Example 4: Get all role assignments for the specified scope
 
 
 ```
 PS C:\> Get-AzureRmRoleAssignment -Scope "/subscriptions/96231a05-34ce-4eb4-aa6a-70759cbb5e83/resourcegroups/rg1/providers/Microsoft.Web/sites/site1"
 ```
 
-Gets role assignments at the 'site1' website scope.
+This command gets role assignments at the site1 website scope.
 
 ## PARAMETERS
 
 ### -RoleDefinitionName
-Role that is assigned to the principal i.e.
+Specifies a role that is assigned to the service principal.
 Reader, Contributor, Virtual Network Administrator, etc.
 
 ```yaml
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeClassicAdministrators
-If specified, also lists subscription classic administrators (co-admins, service admins, etc.) role assignments.
+Indicates that the cmdlet also lists subscription classic administrators (co-admins, service admins, etc.) role assignments.
 
 ```yaml
 Type: SwitchParameter
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The Azure AD ObjectId of the User, Group or Service Principal.
+Specifies The Azure Active Directory ObjectId of the User, Group, or Service Principal.
 Filters all assignments that are made to the specified principal.
 
 ```yaml
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandPrincipalGroups
-If specified, returns roles directly assigned to the user and to the groups of which the user is a member (transitively).
+Indicaates that this cmdlet returns roles directly assigned to the user and to the groups of which the user is a member (transitively).
 Supported only for a user principal.
 
 ```yaml
@@ -307,9 +307,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+Specifies the name of the resource group.
 Lists role assignments that are effective at the specified resource group.
-When used in conjunction with ResourceName, ResourceType, and ParentResource parameters, the command lists assignments effective at resources within the resource group.
+When used in conjunction with the *ResourceName*, *ResourceType*, and *ParentResource* parameters, the command lists assignments effective at resources within the resource group.
 
 ```yaml
 Type: String
@@ -324,10 +324,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-The resource name.
-For e.g.
-storageaccountprod.
-Must be used in conjunction with ResourceGroupName, ResourceType, and (optionally)ParentResource parameters.
+Specifies the name of the resource that this cmdlet gets.
+This parameter must be used in conjunction with the *ResourceGroupName*, *ResourceType*, and *ParentResource* parameters.
 
 ```yaml
 Type: String
@@ -342,10 +340,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The resource type.
-For e.g.
-Microsoft.Network/virtualNetworks.
-Must be used in conjunction with ResourceGroupName, ResourceName, and (optionally)ParentResource parameters.
+Specifies the resource type.
+This parameter must be used in conjunction with the *ResourceGroupName*, *ResourceType*, and *ParentResource* parameters.
 
 ```yaml
 Type: String
@@ -360,8 +356,8 @@ Accept wildcard characters: False
 ```
 
 ### -ParentResource
-The parent resource in the hierarchy of the resource specified using ResourceName parameter.
-Must be used in conjunction with ResourceGroupName, ResourceType, and ResourceName parameters.
+Specifies the parent resource in the hierarchy of the resource specified using the *ResourceName* parameter.
+This parameter must be used in conjunction with the *ResourceGroupName*, *ResourceType*, and *ResourceName* parameters.
 
 ```yaml
 Type: String
@@ -376,10 +372,9 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-The Scope of the role assignment.
-In the format of relative URI.
-For e.g.
-/subscriptions/9004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/TestRG.
+Specifies the Scope of the role assignment.
+In the format of the relative URI.
+For instance, /subscriptions/9004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/TestRG.
 It must start with "/subscriptions/{id}".
 The command filters all assignments that are effective at that scope.
 
@@ -408,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleDefinitionId
-Id of the Role that is assigned to the principal.
+Specifeis the ID of the Role that is assigned to the principal.
 
 ```yaml
 Type: Guid
@@ -423,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignInName
-The email address or the user principal name of the user.
+Specifies the email address or the user principal name of the user.
 Filters all assignments that are made to the specified user.
 
 ```yaml
@@ -439,7 +434,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The ServicePrincipalName of the service principal.
+Specifies the Service Principal Name of the service principal.
 Filters all assignments that are made to the specified Azure AD application.
 
 ```yaml
@@ -463,9 +458,8 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[New-AzureRmRoleAssignment]()
+[New-AzureRmRoleAssignment](./New-AzureRmRoleAssignment.md)
 
-[Remove-AzureRmRoleAssignment]()
+[Remove-AzureRmRoleAssignment](./Remove-AzureRmRoleAssignment.md)
 
-[Get-AzureRmRoleDefinition]()
-
+[Get-AzureRmRoleDefinition](./Get-AzureRmRoleDefinition.md)
