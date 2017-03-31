@@ -62,10 +62,10 @@ For more information about authentication and subscription management in Azure, 
 
 Azure PowerShell cmdlets for role management
 
-* [Get-AzureRmRoleAssignment](../ref/Get-AzureRmRoleAssignment.md)
-* [Get-AzureRmRoleDefinition](../ref/Get-AzureRmRoleDefinition.md)
-* [New-AzureRmRoleAssignment](../ref/New-AzureRmRoleAssignment.md)
-* [New-AzureRmRoleDefinition](../ref/New-AzureRmRoleDefinition.md)
-* [Remove-AzureRmRoleAssignment](../ref/Remove-AzureRmRoleAssignment.md)
-* [Remove-AzureRmRoleDefinition](../ref/Remove-AzureRmRoleDefinition.md)
-* [Set-AzureRmRoleDefinition](../ref/Set-AzureRmRoleDefinition.md)
+* [Get-AzureRmRoleAssignment](/module/AzureRM.Resources/Get-AzureRmRoleAssignment)
+* [Get-AzureRmRoleDefinition](/module/AzureRM.Resources/Get-AzureRmRoleDefinition)
+* [New-AzureRmRoleAssignment](/module/AzureRM.Resources/New-AzureRmRoleAssignment)
+* [New-AzureRmRoleDefinition](/module/AzureRM.Resources/New-AzureRmRoleDefinition)
+* [Remove-AzureRmRoleAssignment](/module/AzureRM.Resources/Remove-AzureRmRoleAssignment)
+* [Remove-AzureRmRoleDefinition](/module/AzureRM.Resources/Remove-AzureRmRoleDefinition)
+* [Set-AzureRmRoleDefinition](/module/AzureRM.Resources/Set-AzureRmRoleDefinition)

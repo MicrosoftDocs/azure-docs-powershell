@@ -17,4 +17,4 @@ Azure Service Management is the classic deployment model. This module allows you
 classic Azure deployments that have not been converted to Azure Resource Manager. Any new
 deployments should use the Azure Resource Manager methods. To use the cmdlets, you need to install
 and configure Azure PowerShell to connect it to your account. For more information, see
-[Install and configure Azure PowerShell](install-azureps.md).
+[Install and configure Azure PowerShell](install-azure-ps.md).

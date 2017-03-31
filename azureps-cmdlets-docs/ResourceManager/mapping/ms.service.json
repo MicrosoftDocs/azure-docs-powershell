@@ -1,7 +1,7 @@
 {  
    "ApiManagement.ServiceManagement":"api-management",
-   "Azure.storage":"storage",
-   "azurerm.analysisservices":"analysis-services",
+   "Azure.Storage":"storage",
+   "AzureRM.AnalysiServices":"analysis-services",
    "AzureRM.ApiManagement":"api-Management",
    "AzureRM.Automation":"automation",
    "AzureRM.AzureStackAdmin":"azure-stack",

@@ -156,7 +156,7 @@ This is a list of changes made to Azure PowerShell in the latest releases.
   * Consistency with other PowerShell cmdlets, so that PowerShell scripting knowledge from other cmdlets is immediately applicable to the Azure PowerShell cmdlets.
 
 **Notice that now to *automatically skip all Prompts in all Circumstances* Azure PowerShell cmdlets require the user to supply two parameters:**
-```
+```powershell
 My-CmdletWithConfirmation –Confirm:$false -Force
 ```
 * Azure Compute
