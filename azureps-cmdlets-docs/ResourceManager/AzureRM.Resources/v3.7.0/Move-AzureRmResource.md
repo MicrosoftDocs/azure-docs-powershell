@@ -30,7 +30,7 @@ PS C:\> $Resource = Get-AzureRmResource -ResourceType "Microsoft.ClassicCompute/
 PS C:\> Move-AzureRmResource -ResourceId $Resource.ResourceId -DestinationResourceGroupName "ResourceGroup14"
 ```
 
-The first command gets a resource named ContosoStorageAccount by using the Get-AzureRmResource cmdlet, and then stores that resource in the $Resource variable.
+The first command gets a resource named ContosoStorageAccount by using the [Get-AzureRmResource](./Get-AzureRmResource.md) cmdlet, and then stores that resource in the $Resource variable.
 
 The second command moves that resource into the resource group named ResourceGroup14.
 The command identifies the resource to move by using the **ResourceId** property of $Resource.
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationSubscriptionId
-Specifies the ID of the subscription into which this cmdlet moves resources .
+Specifies the ID of the subscription into which this cmdlet moves resources.
 
 ```yaml
 Type: Guid
@@ -218,5 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmResource](./Remove-AzureRmResource.md)
 
 [Set-AzureRmResource](./Set-AzureRmResource.md)
-
-
