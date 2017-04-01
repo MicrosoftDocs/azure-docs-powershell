@@ -1,7 +1,5 @@
 {  
-   "ServiceManagement":{
-      "Azure.Storage":"storage",
-      "AzureRM.Profile":"subscription",
-      "Azure":"azure-asm"
-   }
+   "Azure.Storage":"storage",
+   "AzureRM.Profile":"subscription",
+   "Azure":"azure-asm"
 }
