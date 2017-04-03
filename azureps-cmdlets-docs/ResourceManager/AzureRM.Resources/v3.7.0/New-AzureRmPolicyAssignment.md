@@ -35,7 +35,7 @@ New-AzureRmPolicyAssignment -Name <String> -Scope <String> [-DisplayName <String
 
 ## DESCRIPTION
 The **New-AzureRmPolicyAssignment** cmdlet creates a policy assignment.
-Specify a policy and scope.
+This cmdlet specifies a policy and scope.
 
 ## EXAMPLES
 
@@ -46,10 +46,10 @@ PS C:\> $Policy = Get-AzureRmPolicyDefinition -Name "VirtualMachinePolicy"
 PS C:\> New-AzureRmPolicyAssignment -Name "VirtualMachinePolicyAssignment" -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId
 ```
 
-The first command gets a resource group named ResourceGroup11 by using the Get-AzureRMResourceGroup cmdlet.
+The first command gets a resource group named ResourceGroup11 by using the [Get-AzureRMResourceGroup](,/Get-AzureRmResourceGroup.md) cmdlet.
 The command stores that object in the $ResourceGroup variable.
 
-The second command gets the policy definition named VirtualMachinePolicy by using the Get-AzureRmPolicyDefinition cmdlet.
+The second command gets the policy definition named VirtualMachinePolicy by using the [Get-AzureRmPolicyDefinition](./Get-AzureRmRoleDefinition.md) cmdlet.
 The command stores that object in the $Policy variable.
 
 The final command assigns the policy in $Policy at the level of a resource group.
@@ -238,5 +238,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmPolicyAssignment](./Remove-AzureRmPolicyAssignment.md)
 
 [Set-AzureRmPolicyAssignment](./Set-AzureRmPolicyAssignment.md)
-
-
