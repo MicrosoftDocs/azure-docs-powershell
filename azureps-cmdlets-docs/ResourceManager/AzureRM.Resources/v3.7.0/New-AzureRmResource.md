@@ -55,7 +55,7 @@ Specify data center location, such as Central US or Southeast Asia.
 
 You can place a resource in any location that supports resources of that type.
 Resource groups can contain resources from different locations.
-To determine which locations support each resource type, use the Get-AzureLocation cmdlet.
+To determine which locations support each resource type, use the **Get-AzureLocation** cmdlet.
 
 ```yaml
 Type: String
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plan
-A hash table that represents resource plan properties.
+Specifies a hash table that represents resource plan properties.
 
 ```yaml
 Type: Hashtable
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-A hash table that represents sku properties.
+Specifies a hash table that represents SKU properties.
 
 ```yaml
 Type: Hashtable
@@ -392,5 +392,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmResource](./Remove-AzureRmResource.md)
 
 [Set-AzureRmResource](./Set-AzureRmResource.md)
-
-
