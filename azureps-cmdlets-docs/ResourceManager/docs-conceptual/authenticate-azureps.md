@@ -58,7 +58,7 @@ secure.
 ## Learn more about managing Azure role-based access
 
 For more information about authentication and subscription management in Azure, see
-[Manage Accounts, Subscriptions, and Administrative Roles](/azure/active-directory/role-based-access-control-configure.md).
+[Manage Accounts, Subscriptions, and Administrative Roles](/azure/active-directory/role-based-access-control-configure).
 
 Azure PowerShell cmdlets for role management
 
