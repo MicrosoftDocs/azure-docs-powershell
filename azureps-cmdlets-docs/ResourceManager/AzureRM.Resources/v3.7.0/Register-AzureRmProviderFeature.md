@@ -22,11 +22,6 @@ The **Register-AzureRmProviderFeature** cmdlet registers an Azure provider featu
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FeatureName
@@ -102,5 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmProviderFeature](./Get-AzureRmProviderFeature.md)
-
-

@@ -22,11 +22,6 @@ The **Register-AzureRmResourceProvider** cmdlet registers an Azure resource prov
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ProviderNamespace
@@ -45,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiVersion
-Specifies the API version that is supported by the resource Provider.
+Specifies the API version that is supported by the resource provider.
 You can specify a different version than the default version.
 
 ```yaml
@@ -120,5 +115,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmResourceProvider](./Get-AzureRmResourceProvider.md)
 
 [Unregister-AzureRmResourceProvider](./Unregister-AzureRmResourceProvider.md)
-
-

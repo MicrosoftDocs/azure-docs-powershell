@@ -55,12 +55,12 @@ Following is a sample updated role definition json for Set-AzureRmRoleDefinition
 
 
 ```
-PS C:\> $roleDef = Get-AzureRmRoleDefinition "Contoso On-Call"
-          PS C:\> $roleDef.Actions.Add("Microsoft.ClassicCompute/virtualmachines/start/action")
-          PS C:\> $roleDef.Description = "Can monitor all resources and start and restart virtual machines"
-          PS C:\> $roleDef.AssignableScopes = @("/subscriptions/eb910d4f-edbf-429b-94F6-d76bae7ff401", "/subscriptions/a846d197-5eac-45c7-b885-a6227fe6d388")
+PS C:\> $RoleDef = Get-AzureRmRoleDefinition "Contoso On-Call"
+          PS C:\> $RoleDef.Actions.Add("Microsoft.ClassicCompute/virtualmachines/start/action")
+          PS C:\> $RoleDef.Description = "Can monitor all resources and start and restart virtual machines"
+          PS C:\> $RoleDef.AssignableScopes = @("/subscriptions/eb910d4f-edbf-429b-94F6-d76bae7ff401", "/subscriptions/a846d197-5eac-45c7-b885-a6227fe6d388")
 
-          PS C:\> New-AzureRmRoleDefinition -Role $roleDef
+          PS C:\> New-AzureRmRoleDefinition -Role $RoleDef
 ```
 
 ### --------------------------  Create using JSON file  --------------------------
