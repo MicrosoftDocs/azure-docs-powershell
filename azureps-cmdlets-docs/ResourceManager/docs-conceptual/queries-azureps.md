@@ -14,7 +14,7 @@ ms.author: sewhee
 
 # Querying for Azure resources
 
-There is no special query language required to query resources using Azure PowerShell. In
+Querying in PowerShell can be completed by using built-in cmdlets. In
 PowerShell, cmdlet names take the form of **_Verb-Noun_**. The cmdlets using the verb **_Get_** are
 the query cmdlets. The cmdlet nouns are the types of Azure resources that are acted upon by the
 cmdlet verbs.
@@ -61,7 +61,7 @@ path to that nested property. The following example shows how to select the VM N
 from the `Get-AzureRmVM` cmdlet.
 
 ```powershell
-Get-AzureRmVM | Select-Object name,@{n='OSType';e={$_.StorageProfile.OSDisk.OSType}}
+Get-AzureRmVM | Select-Object name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
 ```
