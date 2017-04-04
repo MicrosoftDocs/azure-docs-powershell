@@ -20,15 +20,13 @@ helps get you started using it, and teaches you the core concepts behind it.
 
 
 ## Install Azure PowerShell
-The first step is to make sure you have the latest version of the Azure PowerShell installed:
+The first step is to make sure you have the latest version of the Azure PowerShell installed.  The latest version is 3.7.0.
 
 1. [Install Azure PowerShell](install-azurerm-ps.md).
 
 2. To verify the installation was successful, run `Get-Module AzureRM` from your
    command line.
 
-You should see the version number of the AzureRM module installed and loaded in your PowerShell
-session.  The latest version is can be found in the [release notes](release-notes-azureps.md).
 
 ## Log in to Azure
 
