@@ -10,7 +10,6 @@ ms.service: powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.author: sewhee
 ---
 
 # Log in with Azure PowerShell
