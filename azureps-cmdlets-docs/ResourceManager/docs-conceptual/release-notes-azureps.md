@@ -11,7 +11,6 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
 ms.date: 03/30/2017
-ms.author: sewhee
 ---
 
 # Release notes

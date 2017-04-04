@@ -8,7 +8,6 @@ ms.product: azure
 ms.service: azure-resource-manager
 ms.devlang: powershell
 ms.topic: conceptual
-ms.author: sewhee
 ms.manager: carmonm
 ms.date: 03/30/2017
 ---

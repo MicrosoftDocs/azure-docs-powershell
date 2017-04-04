@@ -11,7 +11,6 @@ ms.service: azure-resource-manager
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.author: sewhee
 ---
 
 # Create an Azure service principal with Azure PowerShell

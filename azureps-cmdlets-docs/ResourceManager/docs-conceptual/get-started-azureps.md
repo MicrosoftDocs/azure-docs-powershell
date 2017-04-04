@@ -10,7 +10,6 @@ ms.service: azure-resource-manager
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 03/30/2017
-ms.author: sewhee
 ---
 # Getting started with Azure PowerShell
 
