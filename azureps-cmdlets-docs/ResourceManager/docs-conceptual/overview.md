@@ -2,6 +2,7 @@
 title: Overview of Azure PowerShell | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 author: sdwheeler
+ms.author: sewhee
 manager: carmonm
 ms.product: azure
 ms.service: azure-resource-manager

@@ -3,6 +3,7 @@ title: Azure PowerShell Change Log | Microsoft Docs
 description: This is a history of changes made to Azure PowerShell in the latest release.
 services: azure
 author: sdwheeler
+ms.author: sewhee
 manager: carmonm
 ms.service: azure-resource-manager
 ms.product: azure

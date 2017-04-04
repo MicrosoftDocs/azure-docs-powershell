@@ -3,6 +3,7 @@ title: Manage Azure subscriptions with Azure PowerShell | Microsoft Docs
 description: Manage Azure subscriptions with Azure PowerShell
 keywords: Azure PowerShell, subscription
 author: sdwheeler
+ms.author: sewhee
 manager: carmonm
 ms.product: azure
 ms.service: azure-resource-manager

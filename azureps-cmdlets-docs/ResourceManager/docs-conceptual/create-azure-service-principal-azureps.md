@@ -4,6 +4,7 @@ description: Learn how to create a service principal for your app or service wit
 keywords: Azure PowerShell, Azure Active Directory, Azure Active directory, AD, RBAC
 services: azure
 author: sdwheeler
+ms.author: sewhee
 manager: carmonm
 ms.product: azure
 ms.service: azure-resource-manager
@@ -39,7 +40,7 @@ subscription. Specifically, you must be able to create an app in the Active Dire
 role to the service principal.
 
 The easiest way to check whether your account has adequate permissions is through the portal. See
-[Check required permission in portal](/azure/azure-resource-manager/resource-group-create-service-principal-portal.md#required-permissions).
+[Check required permission in portal](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions).
 
 ## Create a service principal for your app
 
@@ -135,9 +136,9 @@ see [RBAC: Built-in roles](/azure/active-directory/role-based-access-built-in-ro
 
 Azure PowerShell provides the following cmdlets to manage role assignments:
 
-* [Get-AzureRmRoleAssignment](get-azurermroleassignment.md)
-* [New-AzureRmRoleAssignment](new-azurermroleassignment.md)
-* [Remove-AzureRmRoleAssignment](remove-azurermroleassignment.md)
+* [Get-AzureRmRoleAssignment](/powershell/module/azurerm.resources/get-azurermroleassignment)
+* [New-AzureRmRoleAssignment](/powershell/module/azurerm.resources/new-azurermroleassignment)
+* [Remove-AzureRmRoleAssignment](/powershell/module/azurerm.resources/remove-azurermroleassignment)
 
 The default role for a service principal is **Contributor**. It may not be the best choice
 depending on the scope of your app's interactions with Azure services, given its broad permissions.
@@ -185,10 +186,10 @@ ObjectType         : ServicePrincipal
 
 Other Azure PowerShell cmdlets for role management:
 
-* [Get-AzureRmRoleDefinition](../ref/Get-AzureRmRoleDefinition.md)
-* [New-AzureRmRoleDefinition](../ref/New-AzureRmRoleDefinition.md)
-* [Remove-AzureRmRoleDefinition](../ref/Remove-AzureRmRoleDefinition.md)
-* [Set-AzureRmRoleDefinition](../ref/Set-AzureRmRoleDefinition.md)
+* [Get-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Get-AzureRmRoleDefinition)
+* [New-AzureRmRoleDefinition](/powershell/module/azurerm.resources/New-AzureRmRoleDefinition)
+* [Remove-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Remove-AzureRmRoleDefinition)
+* [Set-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Set-AzureRmRoleDefinition)
 
 ## Change the credentials of the security principal
 

@@ -3,6 +3,7 @@ title: Get started with Azure PowerShell | Microsoft Docs
 description:
 services: azure
 author: sdwheeler
+ms.author: sewhee
 manager: carmonm
 ms.product: azure
 ms.service: azure-resource-manager
