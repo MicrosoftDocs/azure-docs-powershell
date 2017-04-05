@@ -34,7 +34,7 @@ This command gets the backend health of application gateway named ApplicationGat
 PS C:\> $BackendHealth = Get-AzureRmApplicationGatewayBackendHealth -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01" -ExpandResource "backendhealth/applicationgatewayresource"
 ```
 
-This command gets the backend health (with expanded resources) of application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $BackendHealth variable.
+This command gets the backend health, with expanded resources, of an application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $BackendHealth variable.
 
 ## PARAMETERS
 
