@@ -8,7 +8,6 @@ schema: 2.0.0
 # Get-AzureRmVM
 
 ## SYNOPSIS
-Gets the properties of a virtual machine.
 
 ## SYNTAX
 
