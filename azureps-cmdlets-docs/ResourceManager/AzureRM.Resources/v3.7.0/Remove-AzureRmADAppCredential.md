@@ -151,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -181,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -All
-Switch to remove all the credentials associated with the application.
+Indicates that the cmdlet removes all the credentials associated with the application.
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-The id of the application to remove the credentials from.
+Specifies the ID of the application that this cmdlet removes the credentials from.
 
 ```yaml
 Type: String
@@ -218,8 +219,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADAppCredential]()
+[Get-AzureRmADAppCredential](./Get-AzureRmADAppCredential.md)
 
-[New-AzureRmADAppCredential]()
+[New-AzureRmADAppCredential](./New-AzureRmADAppCredential.md)
 
-[Get-AzureRmADApplication]()
+[Get-AzureRmADApplication](./Get-AzureRmADApplication.md)

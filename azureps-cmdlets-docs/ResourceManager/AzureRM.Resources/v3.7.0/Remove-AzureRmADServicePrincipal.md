@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AzureRmADServicePrincipal
 
 ## SYNOPSIS
-Deletes the azure Active Directory service principal.
+Removes the Azure Active Directory service principal.
 
 ## SYNTAX
 
@@ -18,23 +18,23 @@ Remove-AzureRmADServicePrincipal -ObjectId <Guid> [-PassThru] [-Force] [-Informa
 ```
 
 ## DESCRIPTION
-Deletes the azure Active Directory service principal.
+The **Remove-AzureRmADServicePrincipal** cmdlet removes the Azure Active Directory service principal.
 
 ## EXAMPLES
 
-### --------------------------  Delete AAD service principal.  --------------------------
+### Example 1: Delete an Azure Active Directory service principal
 
 
 ```
 PS C:\> Remove-AzureRmADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
 ```
 
-Deletes the given azure Active Directory service principal.
+This command removes the given Azure Active Directory service principal.
 
 ## PARAMETERS
 
 ### -ObjectId
-The object id of the service principal to delete.
+Specifies the object ID of the service principal that this cmdlet removes.
 
 ```yaml
 Type: Guid
@@ -103,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -133,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -156,12 +157,12 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[New-AzureRmADServicePrincipal]()
+[New-AzureRmADServicePrincipal](./New-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADServicePrincipal]()
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)
 
-[Set-AzureRmADServicePrincipal]()
+[Set-AzureRmADServicePrincipal](./Set-AzureRmADServicePrincipal.md)
 
-[Remove-AzureRmADApplication]()
+[Remove-AzureRmADApplication](./Remove-AzureRmADApplication.md)
 
-[Remove-AzureRmADAppCredential]()
+[Remove-AzureRmADAppCredential](./Remove-AzureRmADAppCredential.md)
