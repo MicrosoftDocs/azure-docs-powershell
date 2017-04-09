@@ -44,7 +44,7 @@ PS C:\> $PolicyDefinition = Get-AzureRmPolicyDefinition -Name "VMPolicyDefinitio
 PS C:\> Remove-AzureRmPolicyDefinition -Id $PolicyDefinition.ResourceId -Force
 ```
 
-The first command gets a policy definition named VMPolicyDefinition by using the Get-AzureRmPolicyDefinition cmdlet.
+The first command gets a policy definition named VMPolicyDefinition by using the [Get-AzureRmPolicyDefinition](./Get-AzureRmPolicyDefinition.md) cmdlet.
 The command stores it in the $PolicyDefinition variable.
 
 The second command removes the policy definition identified by the **ResourceId** property of $PolicyDefinition.
@@ -213,5 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmPolicyDefinition](./New-AzureRmPolicyDefinition.md)
 
 [Set-AzureRmPolicyDefinition](./Set-AzureRmPolicyDefinition.md)
-
-

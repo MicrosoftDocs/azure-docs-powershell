@@ -29,11 +29,6 @@ The **Remove-AzureRmResourceGroupDeployment** cmdlet removes an Azure resource g
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name
@@ -161,5 +156,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmResourceGroupDeployment](./Stop-AzureRmResourceGroupDeployment.md)
 
 [Test-AzureRmResourceGroupDeployment](./Test-AzureRmResourceGroupDeployment.md)
-
-
