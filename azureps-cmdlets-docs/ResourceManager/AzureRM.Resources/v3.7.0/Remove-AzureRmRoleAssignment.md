@@ -83,16 +83,15 @@ Remove-AzureRmRoleAssignment -ServicePrincipalName <String> [-Scope <String>] -R
 ```
 
 ## DESCRIPTION
-Use the Remove-AzureRmRoleAssignment commandlet to revoke access to any principal at given scope and given role.
+The **Remove-AzureRmRoleAssignment** cmdlet revokes access to any principal at given scope and given role.
 
 The object of the assignment i.e.
 the principal MUST be specified.
-The principal can be a user (use SignInName or ObjectId parameters to identify a user), security group (use ObjectId parameter to identify a group) or service principal (use ServicePrincipalName or ObjectId parameters to identify a ServicePrincipal.
+The principal can be a user (use the *SignInName* or *ObjectId* parameters to identify a user), security group (use the *ObjectId* parameter to identify a group), or service principal (use the *ServicePrincipalName* or *ObjectId* parameters to identify a ServicePrincipal).
 
-The role that the principal is assigned to MUST be specified using the RoleDefinitionName parameter.
+The role that the principal is assigned to MUST be specified using the *RoleDefinitionName* parameter.
 
-The scope of the assignment MAY be specified and if not specified, defaults to the subscription scope i.e.
-it will try to delete an assignment to the specified principal and role at the subscription scope.
+The scope of the assignment MAY be specified and if not specified. This cmdlet will attempt to delete an assignment to the specified principal and role at the subscription scope.
 The scope of the assignment can be specified using one of the following parameters.
         a.
 Scope - This is the fully qualified scope starting with /subscriptions/\<subscriptionId\>
@@ -103,29 +102,28 @@ ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - 
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove a role assignment for a user
 
 
 ```
-PS C:\> Remove-AzureRmRoleAssignment -ResourceGroupName rg1 -SignInName john.doe@contoso.com -RoleDefinitionName Reader
+PS C:\> Remove-AzureRmRoleAssignment -ResourceGroupName "rg1" -SignInName "patti.fuller@contoso.com" -RoleDefinitionName "Reader"
 ```
 
-Removes a role assignment for john.doe@contoso.com who is assigned to the Reader role at the rg1 resourcegroup scope.
+This command removes a role assignment for patti.fuller@contoso.com who is assigned to the Reader role at the rg1 resource group scope.
 
-### Example 2:
-
+### Example 2: Remove a role assignment for a group
 
 ```
-PS C:\> Remove-AzureRmRoleAssignment -ObjectId 36f81fc3-b00f-48cd-8218-3879f51ff39f -RoleDefinitionName Reader
+PS C:\> Remove-AzureRmRoleAssignment -ObjectId 36f81fc3-b00f-48cd-8218-3879f51ff39f -RoleDefinitionName "Reader"
 ```
 
-Removes the role assignment to the group principal identified by the ObjectId and assigned to the Reader role.
+This command removes the role assignment to the group principal identified by the *ObjectId* parameter and assigned to the Reader role.
 Defaults to using the current subscription as the scope to find the assignment to be deleted.
 
 ## PARAMETERS
 
 ### -ObjectId
-Azure AD ObjectId of the user, group or service principal.
+Specifies the Azure Active Directory ObjectId of the user, group, or service principal.
 
 ```yaml
 Type: Guid
@@ -140,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-The Scope of the role assignment to be deleted.
+Specifies the Scope of the role assignment to be deleted.
 In the format of relative URI.
 For e.g.
 "/subscriptions/9004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/TestRG".
@@ -387,4 +385,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 [Get-AzureRmRoleAssignment]()
 
 [Get-AzureRmRoleDefinition]()
-
