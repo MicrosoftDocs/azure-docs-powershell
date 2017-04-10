@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -DefinitionFile
 Specifies the path to a file on disk containing the definition of the web service resource, in JSON format.
-You can find the latest specification for the web service definition in the swagger specification file under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearninghttps://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning(https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning).
+You can find the latest specification for the web service definition in the swagger specification file under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning.
 
 ```yaml
 Type: String
