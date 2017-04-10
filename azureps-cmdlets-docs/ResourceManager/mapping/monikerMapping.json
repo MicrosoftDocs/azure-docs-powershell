@@ -1,4 +1,184 @@
 {
+    "azurermps-3.8.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager": {
+            "AzureRM.Backup": {
+                "_displayName": "AzureRM.Backup",
+                "_version": "2.8.0"
+            },
+            "AzureRM.RecoveryServices.Backup": {
+                "_displayName": "AzureRM.RecoveryServices.Backup",
+                "_version": "2.8.0"
+            },
+            "AzureRM.RedisCache": {
+                "_displayName": "AzureRM.RedisCache",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Tags": {
+                "_displayName": "AzureRM.Tags",
+                "_version": "2.8.0"
+            },
+            "AzureRM.DataLakeAnalytics": {
+                "_displayName": "AzureRM.DataLakeAnalytics",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Insights": {
+                "_displayName": "AzureRM.Insights",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Profile": {
+                "_displayName": "AzureRM.Profile",
+                "_version": "2.8.0"
+            },
+            "AzureRM.OperationalInsights": {
+                "_displayName": "AzureRM.OperationalInsights",
+                "_version": "2.8.0"
+            },
+            "AzureRM.LogicApp": {
+                "_displayName": "AzureRM.LogicApp",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Dns": {
+                "_displayName": "AzureRM.Dns",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Network": {
+                "_displayName": "AzureRM.Network",
+                "_version": "3.7.0"
+            },
+            "AzureRM.UsageAggregates": {
+                "_displayName": "AzureRM.UsageAggregates",
+                "_version": "2.8.0"
+            },
+            "AzureRM.DevTestLabs": {
+                "_displayName": "AzureRM.DevTestLabs",
+                "_version": "2.8.0"
+            },
+            "AzureRM.ServerManagement": {
+                "_displayName": "AzureRM.ServerManagement",
+                "_version": "2.8.0"
+            },
+            "AzureRM.MachineLearning": {
+                "_displayName": "AzureRM.MachineLearning",
+                "_version": "0.13.0"
+            },
+            "AzureRM.RecoveryServices": {
+                "_displayName": "AzureRM.RecoveryServices",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Scheduler": {
+                "_displayName": "AzureRM.Scheduler",
+                "_version": "0.13.0"
+            },
+            "AzureRM.Compute": {
+                "_displayName": "AzureRM.Compute",
+                "_version": "2.9.0"
+            },
+            "AzureRM.TrafficManager": {
+                "_displayName": "AzureRM.TrafficManager",
+                "_version": "2.8.0"
+            },
+            "AzureRM.HDInsight": {
+                "_displayName": "AzureRM.HDInsight",
+                "_version": "2.8.0"
+            },
+            "AzureRM.CognitiveServices": {
+                "_displayName": "AzureRM.CognitiveServices",
+                "_version": "0.6.0"
+            },
+            "AzureRM.DataFactories": {
+                "_displayName": "AzureRM.DataFactories",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Storage": {
+                "_displayName": "AzureRM.Storage",
+                "_version": "2.8.0"
+            },
+            "AzureRM.DataLakeStore": {
+                "_displayName": "AzureRM.DataLakeStore",
+                "_version": "3.6.0"
+            },
+            "Azure.AnalysisServices": {
+                "_displayName": "Azure.AnalysisServices",
+                "_version": "0.2.0"
+            },
+            "AzureRM.Sql": {
+                "_displayName": "AzureRM.Sql",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Cdn": {
+                "_displayName": "AzureRM.Cdn",
+                "_version": "2.8.0"
+            },
+            "AzureRM.EventHub": {
+                "_displayName": "AzureRM.EventHub",
+                "_version": "0.2.0"
+            },
+            "AzureRM.Automation": {
+                "_displayName": "AzureRM.Automation",
+                "_version": "2.8.0"
+            },
+            "AzureRM.ApiManagement": {
+                "_displayName": "AzureRM.ApiManagement",
+                "_version": "3.6.0"
+            },
+            "AzureRM.Resources": {
+                "_displayName": "AzureRM.Resources",
+                "_version": "3.8.0"
+            },
+            "AzureRM.Websites": {
+                "_displayName": "AzureRM.Websites",
+                "_version": "2.8.0"
+            },
+            "AzureRM.StreamAnalytics": {
+                "_displayName": "AzureRM.StreamAnalytics",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Media": {
+                "_displayName": "AzureRM.Media",
+                "_version": "0.5.0"
+            },
+            "AzureRM.Batch": {
+                "_displayName": "AzureRM.Batch",
+                "_version": "2.8.0"
+            },
+            "AzureRM.IoTHub": {
+                "_displayName": "AzureRM.IoTHub",
+                "_version": "1.4.0"
+            },
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "2.8.0"
+            },
+            "AzureRM.PowerBIEmbedded": {
+                "_displayName": "AzureRM.PowerBIEmbedded",
+                "_version": "2.8.0"
+            },
+            "AzureRM.NotificationHubs": {
+                "_displayName": "AzureRM.NotificationHubs",
+                "_version": "2.8.0"
+            },
+            "AzureRM.ServiceBus": {
+                "_displayName": "AzureRM.ServiceBus",
+                "_version": "0.2.0"
+            },
+            "AzureRM.SiteRecovery": {
+                "_displayName": "AzureRM.SiteRecovery",
+                "_version": "3.7.0"
+            },
+            "AzureRM.AnalysisServices": {
+                "_displayName": "AzureRM.AnalysisServices",
+                "_version": "0.2.0"
+            },
+            "AzureRM.KeyVault": {
+                "_displayName": "AzureRM.KeyVault",
+                "_version": "2.8.0"
+            },
+            "AzureRM.Billing": {
+                "_displayName": "AzureRM.Billing",
+                "_version": "0.11.0"
+            }
+        }
+    },
     "azurermps-3.7.0": {
         "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager": {
             "AzureRM.Backup": {
