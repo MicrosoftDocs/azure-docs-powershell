@@ -22,7 +22,6 @@ The **Remove-AzureRmADUser** cmdlet removes an Active Directory user (work/schoo
 
 ## EXAMPLES
 
-### Example 1
 
 ## PARAMETERS
 
