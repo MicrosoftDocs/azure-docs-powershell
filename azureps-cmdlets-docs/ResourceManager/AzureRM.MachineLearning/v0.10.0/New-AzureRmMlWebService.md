@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ### -NewWebServiceDefinition
 Specifies the definition of the web service resource, that contains all the properties that make up the service.
 This parameter is required and represents an instance of the **Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService** class.
-You can find the latest specification for the web service definition in the swagger specification under https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2016-05-01-preview/swagger/webservices.json.https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2016-05-01-preview/swagger/webservices.json (https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2016-05-01-preview/swagger/webservices.json).
+You can find the latest specification for the web service definition in the swagger specification under https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2016-05-01-preview/swagger/webservices.
 This parameter can come from a pipeline.
 
 ```yaml
