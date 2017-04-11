@@ -23,6 +23,7 @@ before_build:
 build_script:
   - node ./out/index azure-docs-powershell/azureps-cmdlets-docs/ResourceManager/mapping/monikerMapping.json azure-psdocs-processing
   - node ./out/index azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement/mapping/monikerMapping.json azure-psdocs-processing
+  - node ./out/index azure-docs-powershell/azureps-cmdlets-docs/AzureStack/mapping/monikerMapping.json azure-psdocs-processing
 test: off
 on_success:
   - cd azure-psdocs-processing
