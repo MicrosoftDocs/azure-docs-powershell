@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.AzureStackstorage Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the storage cmdlets operated by the Azure Stack administrator.
 
 ## AzureRM.AzureStackstorage Cmdlets
 ### [Add-ACSFarm](Add-ACSFarm.md)

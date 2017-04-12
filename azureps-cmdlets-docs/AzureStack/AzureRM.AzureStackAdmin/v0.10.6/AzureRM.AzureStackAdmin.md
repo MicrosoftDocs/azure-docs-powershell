@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.AzureStackAdmin Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Stack administrator Cmdlets.
 
 ## AzureRM.AzureStackAdmin Cmdlets
 ### [Add-AzureRMGalleryItem](Add-AzureRMGalleryItem.md)
