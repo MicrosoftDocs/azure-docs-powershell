@@ -38,6 +38,9 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 If you do not have PowerShellGet installed, see the [How to get PowerShellGet](#how-to-get-powershellget)
 section of this article.
 
+> [!NOTE] > Using PowerShellGet requires an Execution Policy that allows you to run scripts. For
+> more information about PowerShell's Execution Policy, see
+> [About Execution Policies](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).
 
 ## Step 2: Install Azure PowerShell
 
@@ -83,7 +86,7 @@ For more information about using Azure PowerShell, see the following articles:
 <a id="helpmechoose"></a>
 ### Checking the version of Azure PowerShell
 
-Although we encourage you to upgrade to the latest version as early as possible, several versions of Azure PowerShell are support.  To determine the version of Azure PowerShell you have installed, run `Get-Module AzureRM` from your command line.  
+Although we encourage you to upgrade to the latest version as early as possible, several versions of Azure PowerShell are support.  To determine the version of Azure PowerShell you have installed, run `Get-Module AzureRM` from your command line.
 
 ```powershell
 Get-Module AzureRM
