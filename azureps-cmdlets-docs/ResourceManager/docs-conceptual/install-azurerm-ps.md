@@ -89,7 +89,7 @@ For more information about using Azure PowerShell, see the following articles:
 Although we encourage you to upgrade to the latest version as early as possible, several versions of Azure PowerShell are support.  To determine the version of Azure PowerShell you have installed, run `Get-Module AzureRM` from your command line.
 
 ```powershell
-Get-Module AzureRM
+Get-Module AzureRM -list | Select-Object Name,Version,Path
 ```
 
 
