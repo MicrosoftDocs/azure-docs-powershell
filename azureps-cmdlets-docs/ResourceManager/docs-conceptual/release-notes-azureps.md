@@ -55,8 +55,8 @@ This is a list of changes made to Azure PowerShell in the latest releases.
         - New parameter 'GeoMapping' for the New-AzureRmTrafficManagerEndpoint and Add-AzureRmTrafficManagerEndpointConfig
         - Fix piping for Get-AzureRmTrafficManagerProfile when it returns a collection of profiles
 * ServiceManagement
-    * Add initiate maintenance PowerShell cmdlet.
-    * Add Maintenance Status field to Get-AzureVM response.
+    * Restart-AzureVM: Added InitiateMaintenance parameter for performing maintenance during VM restart.
+    * Get-AzureVM: Added Maintenance Status field.
     * Added new cmdlets to support Recovery Services vault upgrade
         - Test-AzureRecoveryServicesVaultUpgrade
         - Invoke-AzureRecoveryServicesVaultUpgrade
