@@ -9,7 +9,7 @@ ms.assetid: B91038DD-5BA4-4249-AE2C-1F69BE9E35F3
 
 # AzureRM.MachineLearning Module
 ## Description
-This topic displays help topics for the Machine Learning web service feature in Azure App Service cmdlets. 
+This topic displays help topics for the Machine Learning web service feature in Azure Machine Learning cmdlets. 
 
 ## AzureRM.MachineLearning Cmdlets
 ### [Export-AzureRmMlWebService](./Export-AzureRmMlWebService.md)
