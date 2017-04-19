@@ -13,7 +13,7 @@ before_build:
   - git clone -q https://github.com/MicrosoftDocs/azure-psdocs-ciscripts.git c:\projects\ciscripts
   - cd c:\projects\ciscripts
   - git clone -q https://github.com/MicrosoftDocs/azure-psdocs-processing.git azure-psdocs-processing
-  - git clone -q https://github.com/Azure/azure-docs-powershell
+  - git clone -q https://github.com/Azure/azure-docs-powershell -b %APPVEYOR_REPO_BRANCH%
   - npm install
   - npm install -g typescript
   - tsc
