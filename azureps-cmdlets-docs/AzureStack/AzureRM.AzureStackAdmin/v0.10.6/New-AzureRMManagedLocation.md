@@ -22,7 +22,7 @@ New-AzureRMManagedLocation -Name <String> -DisplayName <String> -Latitude <Doubl
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 New-AzureRMManagedLocation -Name "LocationName" -DisplayName "LocationName" -Latitude 80.5 -Longitude -45.5
 ```

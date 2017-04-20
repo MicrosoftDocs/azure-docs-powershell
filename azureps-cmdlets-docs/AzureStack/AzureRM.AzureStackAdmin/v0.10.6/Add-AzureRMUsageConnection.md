@@ -26,7 +26,7 @@ Add-AzureRMUsageConnection -Name <String> -ResourceGroup <String> -ArmLocation <
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Add-AzureRmUsageConnection @usageConnectionParams
 ```

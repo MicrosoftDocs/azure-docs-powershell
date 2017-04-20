@@ -20,7 +20,7 @@ Remove-AzureRMUsageConnection -Name <String> [-ResourceGroup <String>] [-Informa
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRmUsageConnection -Name SqlRpUsageConnection -ResourceGroup System
 ```

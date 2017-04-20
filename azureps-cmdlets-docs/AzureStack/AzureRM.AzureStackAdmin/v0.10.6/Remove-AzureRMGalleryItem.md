@@ -20,7 +20,7 @@ Remove-AzureRMGalleryItem -Name <String> [-InformationAction <ActionPreference>]
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0"
 ```

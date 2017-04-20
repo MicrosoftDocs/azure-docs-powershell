@@ -21,7 +21,7 @@ The Set-AzureRMManagedLocation cmdlet modifies the existing location
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $location = Get-AzureRMManagedLocation -Name "Chicago"; location.Longitude = 80.5;  Set-AzureRMManagedLocation -Location $location
 ```

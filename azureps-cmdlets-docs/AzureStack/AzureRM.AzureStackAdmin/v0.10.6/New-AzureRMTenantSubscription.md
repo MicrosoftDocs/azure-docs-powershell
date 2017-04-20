@@ -20,7 +20,7 @@ New-AzureRMTenantSubscription -OfferId <String> [-DisplayName <String>] [-Inform
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 New-AzureRmTenantSubscription  -OfferId $offer.Id -DisplayName "Compute Subscription"
 ```

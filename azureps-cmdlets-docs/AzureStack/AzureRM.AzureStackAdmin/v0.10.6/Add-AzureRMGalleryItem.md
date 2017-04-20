@@ -7,9 +7,7 @@ schema: 2.0.0
 # Add-AzureRMGalleryItem
 
 ## SYNOPSIS
-The Add-AzureRMGalleryItem cmdlet adds the gallery item package.
-The gallery item uri needs to be a http/https uri accessible to the gallery service. 
-Typically .azpkg file is uploaded to a publicly accessible blob container and its uri is provided as the GallelryItemUri parameter
+Adds the gallery item package.
 
 ## SYNTAX
 
@@ -19,10 +17,13 @@ Add-AzureRMGalleryItem -GalleryItemUri <String> [-InformationAction <ActionPrefe
 ```
 
 ## DESCRIPTION
+The **Add-AzureRMGalleryItem** cmdlet adds the gallery item package.
+The gallery item uri needs to be a http/https uri accessible to the gallery service. 
+Typically .azpkg file is uploaded to a publicly accessible blob container and its uri is provided as the GallelryItemUri parameter
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Add-AzureRMGalleryItem -ApiVersion 2015-04-01 -GalleryItemUri "http://127.0.0.1:10000/devstoreaccount1/sqlrpgallery/Microsoft.SqlDatabase.0.1.0.azpkg"
 ```
@@ -111,4 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

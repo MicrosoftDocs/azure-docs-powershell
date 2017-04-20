@@ -22,7 +22,7 @@ New-AzureRMOffer -Name <String> [-DisplayName <String>] [-State <AccessibilitySt
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 New-AzureRMOffer -Name "ComputePlan" -DisplayName "ComputePlan" -State Private -BasePlanIds $BasePlanIds -ArmLocation "local"-ResourceGroup "OfferGroup"
 ```

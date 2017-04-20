@@ -20,7 +20,7 @@ Get-AzureRMManagedLocation [-Name <String>] [-InformationAction <ActionPreferenc
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRMManagedLocation -Name "Chicago"
 ```

@@ -21,7 +21,7 @@ Remove-AzureRMPlan -Name <String> -ResourceGroup <String> [-InformationAction <A
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remover-AzureRMPlan -Name ComputePlan
 ```

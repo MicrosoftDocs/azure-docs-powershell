@@ -20,7 +20,7 @@ Remove-AzureRMManagedSubscription -TargetSubscriptionId <Guid> [-InformationActi
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRmManagedSubscription -TargetSubscriptionId "83a3cff6-b856-4db1-8d1b-86386ff9d515"
 ```

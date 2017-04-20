@@ -33,7 +33,7 @@ Get-AzureRMOffer [-Name <String>] -ResourceGroup <String> [-Managed] [-Informati
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "OfferGroup" -Managed
 ```
@@ -44,7 +44,7 @@ Description
 
 The example gets an offer as a service administrator
 
-### -------------------------- EXAMPLE 2 --------------------------
+### Example 2:
 ```
 Get-AzureRMOffer -Provider "default" | Where-Object name -eq "ComputeOffer"
 ```
