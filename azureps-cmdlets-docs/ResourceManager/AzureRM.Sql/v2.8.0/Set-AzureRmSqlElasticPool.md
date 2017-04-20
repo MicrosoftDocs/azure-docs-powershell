@@ -59,9 +59,9 @@ Location          : Central US
 CreationDate      : 8/26/2015 10:00:17 PM
 State             : Ready
 Edition           : Premium
-Dtu               : 200
-DatabaseDtuMax    : 100
-DatabaseDtuMin    : 20
+Dtu               : 1000
+DatabaseDtuMax    : 125
+DatabaseDtuMin    : 25
 StorageMB         : 2097152
 Tags              :
 ```
