@@ -136,8 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageMB
-Specifies the storage limit, in megabytes, for the elastic pool.
-For more information, see the New-AzureRmSqlElasticPool cmdlet.
+Specifies the storage limit, in megabytes, for the elastic pool. See [eDTU and storage limits](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool#edtu-and-storage-limits-for-elastic-pools) for possible values.
 
 ```yaml
 Type: Int32
