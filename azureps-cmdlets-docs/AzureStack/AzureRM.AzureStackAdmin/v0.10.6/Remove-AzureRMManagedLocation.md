@@ -20,7 +20,7 @@ Remove-AzureRMManagedLocation -Name <String> [-InformationAction <ActionPreferen
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRmManagedLocation -Name Chicago
 ```

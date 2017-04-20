@@ -30,7 +30,7 @@ Get-AzureStackToken [-Authority] <String> -Resource <String> -AadTenantId <Strin
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureStackToken -Authority $aadAuthorityEndpoint -AadTenantId $AadTenantId -Resource $aadResource -Credential (Get-Credential) -Verbose
 ```

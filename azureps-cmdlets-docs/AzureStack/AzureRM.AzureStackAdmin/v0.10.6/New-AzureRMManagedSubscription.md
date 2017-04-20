@@ -21,7 +21,7 @@ New-AzureRMManagedSubscription -Owner <String> -OfferId <String> [-DisplayName <
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 New-AzureRmManagedSubscription -Owner "tenanuser@contoso.com" -OfferId $OfferId -DisplayName "Displayname"
 ```

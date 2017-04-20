@@ -21,7 +21,7 @@ Remove-AzureRMResourceProviderRegistration -Name <String> -ResourceGroup <String
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-ResourceProviderRegistration -Name "Microsoft.Sql.Admin" -ResourceGroup system
 ```

@@ -22,7 +22,7 @@ The Get-AzureRmResourceProviderRegistration cmdlet gets the resource provider ma
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $registration = Get-AzureRMResourceProviderRegistration -Name "Microsoft.Sql.Admin" -ResourceGroup System
 ```

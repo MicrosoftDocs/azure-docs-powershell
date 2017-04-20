@@ -20,7 +20,7 @@ Remove-AzureRMOffer -Name <String> -ResourceGroup <String> [-InformationAction <
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "ComputeOfferGroup"
 ```

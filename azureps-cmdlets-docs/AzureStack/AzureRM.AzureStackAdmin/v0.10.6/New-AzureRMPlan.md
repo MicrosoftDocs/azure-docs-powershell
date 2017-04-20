@@ -21,7 +21,7 @@ New-AzureRMPlan -Name <String> [-DisplayName <String>] -ArmLocation <String> -Re
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 New-AzureRMPlan -Name $PlanName -DisplayName "ComputePlan" -ArmLocation "local" -ResourceGroup $ResourceGroupName -QuotaIds $quotaIds
 ```

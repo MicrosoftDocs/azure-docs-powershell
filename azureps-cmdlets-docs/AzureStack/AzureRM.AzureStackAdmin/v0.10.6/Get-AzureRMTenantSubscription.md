@@ -20,7 +20,7 @@ Get-AzureRMTenantSubscription [-InformationAction <ActionPreference>] [-Informat
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRmTenantSubscription
 ```

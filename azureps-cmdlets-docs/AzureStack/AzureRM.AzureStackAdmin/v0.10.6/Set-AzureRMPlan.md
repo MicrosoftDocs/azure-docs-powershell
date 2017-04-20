@@ -20,7 +20,7 @@ Set-AzureRMPlan -Plan <AdminPlanModel> -ResourceGroup <String> [-InformationActi
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $Plan = Get-AzureRMPlan -Name "ComputePlan" -ResourceGroup "PlanGroup" -Managed; # Modify the plan object for the need;  Set-AzureRMPlan -Plan $Plan -ResourceGroup "PlanGroup"
 ```

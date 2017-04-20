@@ -34,7 +34,7 @@ Add-AzureRMResourceProviderRegistration -Name <String> -Namespace <String> -Reso
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 
 ```

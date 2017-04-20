@@ -21,7 +21,7 @@ Remove-AzureRMTenantSubscription -TargetSubscriptionId <Guid> [-InformationActio
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRMTenantSubscription -TargetSubscriptionId $TenantSubscriptionId
 ```
