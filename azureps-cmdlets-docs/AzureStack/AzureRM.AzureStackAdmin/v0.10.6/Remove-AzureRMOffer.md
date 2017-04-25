@@ -21,7 +21,7 @@ The **Remove-AzureRmOffer** cmdlet removes the specified offer.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "ComputeOfferGroup"
 ```

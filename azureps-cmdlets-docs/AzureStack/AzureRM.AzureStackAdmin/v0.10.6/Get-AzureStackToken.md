@@ -30,7 +30,7 @@ The **Get-AzureStackToken** cmdlet gets a token that is used to make calls to th
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $endpoints = Invoke-RestMethod -Method Get -Uri "$($ArmEndpoint.TrimEnd('/'))/metadata/endpoints?api-version=2015-01-01" -Verbose
 $aadAuthorityEndpoint = $endpoints.authentication.loginEndpoint

@@ -34,14 +34,14 @@ The **Get-AzureRMOffer** cmdlet gets an offer. This cmdlet can be executed as a 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "OfferGroup" -Managed
 ```
 
 This command gets the offer named "ComputeOffer" and created in the "OfferGroup" resource group. This command is being executed as a service administrator.
 
-### -------------------------- EXAMPLE 2 --------------------------
+### Example 2:
 ```
 Get-AzureRMOffer -Provider "default" | Where-Object name -eq "ComputeOffer"
 ```

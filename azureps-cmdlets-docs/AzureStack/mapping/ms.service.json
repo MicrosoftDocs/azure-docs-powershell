@@ -1,0 +1,4 @@
+{  
+   "AzureRM.AzureStackAdmin":"azure-stack",
+   "AzureRM.AzureStackStorage":"azure-stack"
+}

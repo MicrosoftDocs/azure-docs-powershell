@@ -21,7 +21,7 @@ The **Remove-AzureRMGalleryItem** cmdlet removes the specified gallery item.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0"
 ```

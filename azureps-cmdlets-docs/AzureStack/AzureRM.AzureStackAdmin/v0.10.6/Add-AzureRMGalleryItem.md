@@ -17,11 +17,12 @@ Add-AzureRMGalleryItem -GalleryItemUri <String> [-InformationAction <ActionPrefe
 ```
 
 ## DESCRIPTION
+
 The **Add-AzureRMGalleryItem** cmdlet adds the gallery item package. Typically a .azpkg file is uploaded to a publicly accessible blob container and its URI is provided as the **GallelryItemUri** parameter.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Add-AzureRMGalleryItem -ApiVersion 2015-04-01 -GalleryItemUri "http://127.0.0.1:10000/devstoreaccount1/sqlrpgallery/Microsoft.SqlDatabase.0.1.0.azpkg"
 ```

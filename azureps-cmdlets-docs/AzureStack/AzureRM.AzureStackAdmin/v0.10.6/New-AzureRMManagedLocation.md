@@ -22,7 +22,7 @@ The **New-AzureRmManagedLocation** cmdlet creates a new location managed by the 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 New-AzureRMManagedLocation -Name "LocationName" -DisplayName "LocationName" -Latitude 80.5 -Longitude -45.5
 ```

@@ -21,7 +21,7 @@ The **Remove-AzureRMUsageConnection** cmdlet removes the usage connection inform
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRmUsageConnection -Name "SqlRpUsageConnection" -ResourceGroup "System"
 ```

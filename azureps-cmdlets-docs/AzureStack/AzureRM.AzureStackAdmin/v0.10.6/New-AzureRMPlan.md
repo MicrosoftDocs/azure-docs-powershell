@@ -22,7 +22,7 @@ The **New-AzureRmPlan** cmdlet creates a new plan comprising the various quotas 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $quotaIds = @()
 $computeQuota = New-ComputeQuota -QuotaName "Basic" -Location "local"

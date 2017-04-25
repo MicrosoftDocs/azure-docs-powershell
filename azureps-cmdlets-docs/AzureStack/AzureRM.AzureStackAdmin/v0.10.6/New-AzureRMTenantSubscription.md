@@ -21,7 +21,7 @@ The **New-AzureRMTenantSubscription** cmdlet creates a subscription as a tenant 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $Offer =  Get-AzureRMOffer -Provider "default" | Where-Object name -eq "ComputeOffer"
 New-AzureRmTenantSubscription  -OfferId $offer.Id -DisplayName "Compute Subscription"

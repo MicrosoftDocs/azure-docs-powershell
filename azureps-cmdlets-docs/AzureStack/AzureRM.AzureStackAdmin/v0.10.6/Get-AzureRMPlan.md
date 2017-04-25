@@ -34,7 +34,7 @@ The **Get-AzureRmPlan** cmdlet gets the details of a plan. This cmdlet can be ex
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRMPlan -Name "ComputePlan" -ResourceGroup "PlanGroup" -Managed
 ```

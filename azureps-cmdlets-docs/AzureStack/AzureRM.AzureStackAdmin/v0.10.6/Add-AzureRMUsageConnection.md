@@ -24,7 +24,7 @@ The **Add-AzureRMUsageConnection** cmdlet adds usage connection details for a re
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $usageConnectionId = "sqlrpusageconnection"
 $location = "local"

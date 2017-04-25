@@ -23,7 +23,7 @@ The **New-AzureRmOffer** cmdlet creates an offer comprising the specified base p
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 New-AzureRMOffer -Name "ComputePlan" -DisplayName "ComputePlan" -State Private -BasePlanIds $BasePlanIds -ArmLocation "local" -ResourceGroup "OfferGroup"
 ```

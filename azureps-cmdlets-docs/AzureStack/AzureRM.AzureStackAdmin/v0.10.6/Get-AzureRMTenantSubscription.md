@@ -21,7 +21,7 @@ The **Get-AzureRmTenantSubscription** cmdlet gets the subscriptions associated w
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRmTenantSubscription
 ```

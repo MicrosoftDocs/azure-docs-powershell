@@ -175,7 +175,7 @@
             },
             "AzureRM.Billing": {
                 "_displayName": "AzureRM.Billing",
-                "_version": "0.11.0"
+                "_version": "2.8.0"
             }
         }
     },

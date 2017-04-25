@@ -34,7 +34,7 @@ The **Add-AzureRMResourceProviderRegistration** cmdlet adds a resource provider 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
     # Make sure to provide the resource types json of the resource provider being registered
     $adminResourceTypesFile="$PSScriptRoot\AdminResourceTypes.json"

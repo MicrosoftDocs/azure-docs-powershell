@@ -21,7 +21,7 @@ The **Remove-AzureRMTenantSubscription** cmdlet removes the current logged-in us
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRMTenantSubscription -TargetSubscriptionId $TenantSubscriptionId
 ```

@@ -21,7 +21,7 @@ The **Remove-AzureRMPlan** cmdlet removes the specified plan. For successful rem
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remover-AzureRMPlan -Name "ComputePlan"
 ```

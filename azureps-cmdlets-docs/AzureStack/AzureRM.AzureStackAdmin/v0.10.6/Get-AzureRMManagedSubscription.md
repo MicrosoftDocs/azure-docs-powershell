@@ -21,7 +21,7 @@ The **Get-AzureRMManagedSubscription** cmdlet gets details about the target subs
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRMManagedSubscription -TargetSubscriptionId "2fff214f-8589-4d25-b468-dc99320724bc"
 ```

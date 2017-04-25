@@ -21,7 +21,7 @@ The **Get-AzureRmMangedLocation** cmdlet gets the details about a location manag
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRMManagedLocation -Name "Chicago"
 ```

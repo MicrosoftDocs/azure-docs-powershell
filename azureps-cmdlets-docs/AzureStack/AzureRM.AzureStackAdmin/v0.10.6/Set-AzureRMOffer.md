@@ -22,7 +22,7 @@ The **Set-AzureRmOffer** cmdlet updates an existing offer.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $offerUpdated = Get-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "OfferGroup" -Managed
 $offerUpdated.DisplayName ="New Compute Offer"

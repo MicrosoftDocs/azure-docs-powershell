@@ -21,7 +21,7 @@ The **Set-AzureRMPlan** cmdlet updates the existing plan with the given modified
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $planUpdated = Get-AzureRMPlan -Name "ComputePlan" -ResourceGroup "PlanGroup" -Managed
 Set-AzureRMPlan -Plan $planUpdated -ResourceGroup "PlanGroup"

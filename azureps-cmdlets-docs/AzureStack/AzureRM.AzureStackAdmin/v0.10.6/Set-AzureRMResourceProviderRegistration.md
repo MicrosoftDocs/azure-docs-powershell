@@ -22,7 +22,7 @@ The **Set-AzureRMResourceProviderRegistration** cmdlet updates the provider regi
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 $manifest = Get-AzureRMResourceProviderRegistration -Name "Microsoft.Compute" -ResourceGroup "system" -Managed
 Set-AzureRMResourceProviderRegistration -ProviderRegistration $manifest -ResourceGroup "System"

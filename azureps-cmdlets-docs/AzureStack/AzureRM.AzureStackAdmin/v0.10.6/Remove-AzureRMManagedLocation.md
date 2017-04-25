@@ -21,7 +21,7 @@ The **Remove-AzureRmManagedLocation** cmdlet removes the specified managed locat
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Remove-AzureRmManagedLocation -Name "Chicago"
 ```

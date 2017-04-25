@@ -21,7 +21,7 @@ The **Get-AzureRmGalleryItem** cmdlet gets the gallery item.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1:
 ```
 Get-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0" -ApiVersion "2015-04-01"
 ```
