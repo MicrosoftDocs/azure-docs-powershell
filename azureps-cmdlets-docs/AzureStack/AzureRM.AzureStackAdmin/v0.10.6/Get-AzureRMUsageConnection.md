@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRMUsageConnection
 
 ## SYNOPSIS
-The Get-AzureRMUsageConnection cmdlet gets the specified usage connection information
+Gets information about a usage connection.
 
 ## SYNTAX
 
@@ -17,23 +17,21 @@ Get-AzureRMUsageConnection [-Name <String>] -ResourceGroup <String> [-Informatio
 ```
 
 ## DESCRIPTION
-The Get-AzureRMUsageConnection cmdlet gets the specified usage connection information
+The **Get-AzureRMUsageConnection** cmdlet gets information about a usage connection.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+Get-AzureRMUsageConnection -Name "sqlrpusageconnection" -ResourceGroup "UsageConnectionRG"
 ```
 
-{{ Add example description here }}
+This command gets information for the "sqlrpusageconnection" usage connection in the "UsageConnectionRG" resource group.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not Specified.
 
 ```yaml
 Type: ActionPreference
@@ -49,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -64,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the usage connection
+Specifies the name of the usage connection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -94,12 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Name of the resource group where the usage connection was created
+Specifies the name of the resource group where the usage connection was created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,6 +111,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.UsageConnectionModel
@@ -120,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

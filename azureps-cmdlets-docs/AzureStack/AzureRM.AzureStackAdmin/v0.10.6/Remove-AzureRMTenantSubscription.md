@@ -1,14 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRMTenantSubscription
 
 ## SYNOPSIS
-The Remove-AzureRMTenantSubscription cmdlet removes the current logged in user's specified subscription.
-There should not be any resources under the subscription to be removed
+Removes the current logged-in user's tenant subscription.
 
 ## SYNTAX
 
@@ -18,6 +17,7 @@ Remove-AzureRMTenantSubscription -TargetSubscriptionId <Guid> [-InformationActio
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRMTenantSubscription** cmdlet removes the current logged-in user's tenant subscription. For successful removal, there must not be any resources under the subscription.
 
 ## EXAMPLES
 
@@ -26,18 +26,12 @@ Remove-AzureRMTenantSubscription -TargetSubscriptionId <Guid> [-InformationActio
 Remove-AzureRMTenantSubscription -TargetSubscriptionId $TenantSubscriptionId
 ```
 
-Description
-
------------
-
-The example removes the specified tenant subscription id.
+This command removes the tenant subscription that is specified by the ID that is stored in the $TenantSubscriptionId variable.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -53,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -68,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -83,12 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetSubscriptionId
-The current logged in user's Subscription Id to be removed
+Specifies the ID of the current logged-in user's subscription that is to be removed.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,6 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -109,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

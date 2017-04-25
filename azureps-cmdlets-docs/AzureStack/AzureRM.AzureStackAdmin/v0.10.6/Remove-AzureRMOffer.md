@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRMOffer
 
 ## SYNOPSIS
-The Remove-AzureRmOffer cmdlet removes the specified offer
+Removes the specified offer.
 
 ## SYNTAX
 
@@ -17,6 +17,7 @@ Remove-AzureRMOffer -Name <String> -ResourceGroup <String> [-InformationAction <
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRmOffer** cmdlet removes the specified offer.
 
 ## EXAMPLES
 
@@ -25,18 +26,12 @@ Remove-AzureRMOffer -Name <String> -ResourceGroup <String> [-InformationAction <
 Remove-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "ComputeOfferGroup"
 ```
 
-Description
-
------------
-
-The example removes the offer named 'ComputeOffer' which is contained in the resource group 'ComputeOfferGroup'
+This command removes the offer named "ComputeOffer" that is contained in the resource group "ComputeOfferGroup".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -52,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -67,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the offer that is to be removed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -97,12 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the resource group name
+Specifies the name of the resource group that contains the offer.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,6 +111,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -123,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

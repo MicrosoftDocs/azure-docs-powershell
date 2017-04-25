@@ -1,15 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Add-AzureRMGalleryItem
 
 ## SYNOPSIS
-The Add-AzureRMGalleryItem cmdlet adds the gallery item package.
-The gallery item uri needs to be a http/https uri accessible to the gallery service. 
-Typically .azpkg file is uploaded to a publicly accessible blob container and its uri is provided as the GallelryItemUri parameter
+Adds the gallery item package.
 
 ## SYNTAX
 
@@ -19,6 +17,7 @@ Add-AzureRMGalleryItem -GalleryItemUri <String> [-InformationAction <ActionPrefe
 ```
 
 ## DESCRIPTION
+The **Add-AzureRMGalleryItem** cmdlet adds the gallery item package. Typically a .azpkg file is uploaded to a publicly accessible blob container and its URI is provided as the **GallelryItemUri** parameter.
 
 ## EXAMPLES
 
@@ -26,23 +25,17 @@ Add-AzureRMGalleryItem -GalleryItemUri <String> [-InformationAction <ActionPrefe
 ```
 Add-AzureRMGalleryItem -ApiVersion 2015-04-01 -GalleryItemUri "http://127.0.0.1:10000/devstoreaccount1/sqlrpgallery/Microsoft.SqlDatabase.0.1.0.azpkg"
 ```
-
-Description
-
------------
-
-The example uploads and registers the gallery package with the gallery service
+This command uploads and registers the gallery package with the gallery service.
 
 ## PARAMETERS
 
 ### -GalleryItemUri
-The http/https uri containing the .azpkg file.
-The Uri should be accessible to the gallery service
+Specifies the http/https URI of the publicly accessible blob that contains the .azpkg file and is accessible to the gallery service.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -52,9 +45,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not Specified.
 
 ```yaml
 Type: ActionPreference
@@ -70,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -85,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -104,6 +95,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -111,4 +104,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

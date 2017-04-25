@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRMManagedLocation
 
 ## SYNOPSIS
-The Remove-AzureRmManagedLocation cmdlet removes the specified location
+Removes the specified managed location.
 
 ## SYNTAX
 
@@ -17,26 +17,21 @@ Remove-AzureRMManagedLocation -Name <String> [-InformationAction <ActionPreferen
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRmManagedLocation** cmdlet removes the specified managed location.
 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-Remove-AzureRmManagedLocation -Name Chicago
+Remove-AzureRmManagedLocation -Name "Chicago"
 ```
 
-Description
-
------------
-
-The example removes the location named Chicago
+This command removes the location named "Chicago".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -52,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -67,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the location
+Specifies the name of the managed location to be removed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -101,6 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -108,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

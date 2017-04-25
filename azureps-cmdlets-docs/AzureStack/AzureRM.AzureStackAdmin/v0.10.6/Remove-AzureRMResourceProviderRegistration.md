@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRMResourceProviderRegistration
 
 ## SYNOPSIS
-The Remove-ResourceProviderRegistration cmdlet removes the resource provider manifest
+Removes the resource provider manifest.
 
 ## SYNTAX
 
@@ -18,26 +18,21 @@ Remove-AzureRMResourceProviderRegistration -Name <String> -ResourceGroup <String
 ```
 
 ## DESCRIPTION
+The **Remove-ResourceProviderRegistration** cmdlet removes the resource provider manifest.
 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-Remove-ResourceProviderRegistration -Name "Microsoft.Sql.Admin" -ResourceGroup system
+Remove-ResourceProviderRegistration -Name "Microsoft.Sql.Admin" -ResourceGroup "system"
 ```
 
-Description
-
------------
-
-The example removes the resource provider manifest for the namespace Microsoft.Sql.Admin
+This command removes the resource provider manifest named "Microsoft.Sql.Admin" that is in the "system" resource group.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -53,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -68,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the resource provider manifest to be removed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -83,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -98,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-@{Text=}
+Specifies the resource group that the contains the resource provider manifest to be removed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,6 +112,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -124,4 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRMGalleryItem
 
 ## SYNOPSIS
-The Remove-AzureRMGalleryItem cmdlet removes the specified gallery item
+Removes the specified gallery item.
 
 ## SYNTAX
 
@@ -17,6 +17,7 @@ Remove-AzureRMGalleryItem -Name <String> [-InformationAction <ActionPreference>]
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRMGalleryItem** cmdlet removes the specified gallery item.
 
 ## EXAMPLES
 
@@ -25,18 +26,12 @@ Remove-AzureRMGalleryItem -Name <String> [-InformationAction <ActionPreference>]
 Remove-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0"
 ```
 
-Description
-
------------
-
-The example removes the gallery item named Microsoft.SqlDatabase.0.1.0
+This command removes the gallery item named "Microsoft.SqlDatabase.0.1.0".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -52,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -67,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the gallery item to be removed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -101,6 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -108,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

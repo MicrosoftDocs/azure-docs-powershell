@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRMTenantSubscription
 
 ## SYNOPSIS
-The cmdlet New-AzureRMTenantSubscription creates a subscription as a tenant for the specified offer
+Creates a subscription as a tenant for the specified offer.
 
 ## SYNTAX
 
@@ -17,32 +17,27 @@ New-AzureRMTenantSubscription -OfferId <String> [-DisplayName <String>] [-Inform
 ```
 
 ## DESCRIPTION
+The **New-AzureRMTenantSubscription** cmdlet creates a subscription as a tenant for the specified offer.
 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
+$Offer =  Get-AzureRMOffer -Provider "default" | Where-Object name -eq "ComputeOffer"
 New-AzureRmTenantSubscription  -OfferId $offer.Id -DisplayName "Compute Subscription"
 ```
 
-Description
-
------------
-
-The example creates a subscription for the logged in tenant user
-
-            $Offer =  Get-AzureRMOffer -Provider "default" | Where-Object name -eq "ComputeOffer"
-            New-AzureRmTenantSubscription  -OfferId $offer.Id -DisplayName "Compute Subscription"
+This example creates a subscription for the logged-in tenant user.
 
 ## PARAMETERS
 
 ### -DisplayName
-@{Text=}
+Specifies the name of the tenant subscription.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -52,9 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -70,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -85,12 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -OfferId
-Specifies the Id of the offer to which the tenant subscribes to create a new subscription
+Specifies the ID of the offer to which the tenant is subscribing.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -100,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -119,6 +112,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.SubscriptionDefinition
@@ -126,4 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

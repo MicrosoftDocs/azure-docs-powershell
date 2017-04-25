@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRMGalleryItem
 
 ## SYNOPSIS
-The Get-AzureRmGalleryItem cmdlet gets the gallery item
+Gets the gallery item.
 
 ## SYNTAX
 
@@ -17,6 +17,7 @@ Get-AzureRMGalleryItem [-Name <String>] [-InformationAction <ActionPreference>] 
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmGalleryItem** cmdlet gets the gallery item.
 
 ## EXAMPLES
 
@@ -25,18 +26,12 @@ Get-AzureRMGalleryItem [-Name <String>] [-InformationAction <ActionPreference>] 
 Get-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0" -ApiVersion "2015-04-01"
 ```
 
-Description
-
------------
-
-The example gets the gallery item named 'Microsoft.SqlDatabase.0.1.0'
+This command gets the gallery item named 'Microsoft.SqlDatabase.0.1.0'.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not Specified.
 
 ```yaml
 Type: ActionPreference
@@ -52,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -67,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the gallery item name
+Specifies the name of the gallery item to be retrieved.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -101,6 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.GalleryItemModel
@@ -108,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,14 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRMManagedLocation
 
 ## SYNOPSIS
-The cmdlet New-AzureRmManagedLocation creates a new location managed by Azurestack Resource Manager.
-The resource providers can be deployed in the new location
+Creates a new location managed by the Azure stack Resource Manager.
 
 ## SYNTAX
 
@@ -19,6 +18,7 @@ New-AzureRMManagedLocation -Name <String> -DisplayName <String> -Latitude <Doubl
 ```
 
 ## DESCRIPTION
+The **New-AzureRmManagedLocation** cmdlet creates a new location managed by the Azure stack Resource Manager. The resource providers can be deployed in the new location.
 
 ## EXAMPLES
 
@@ -27,21 +27,17 @@ New-AzureRMManagedLocation -Name <String> -DisplayName <String> -Latitude <Doubl
 New-AzureRMManagedLocation -Name "LocationName" -DisplayName "LocationName" -Latitude 80.5 -Longitude -45.5
 ```
 
-Description
-
------------
-
-The example creates a new location
+This command creates a new location named "LocationName".
 
 ## PARAMETERS
 
 ### -DisplayName
-@{Text=}
+Specifies the display name of the managed location.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -51,9 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not Specified.
 
 ```yaml
 Type: ActionPreference
@@ -69,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -84,12 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-Specifies the latitude of the location in decimal format
+Specifies the latitude of the location in decimal format.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-Specifies the Longitude of the location in decimal format
+Specifies the Longitude of the location in decimal format.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,12 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the location
+Specifies the name of the location.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -148,6 +142,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.Location
@@ -155,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
