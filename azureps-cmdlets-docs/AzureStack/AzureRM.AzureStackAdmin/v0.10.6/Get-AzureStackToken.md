@@ -41,7 +41,7 @@ Get-AzureStackToken -Authority $aadAuthorityEndpoint -AadTenantId $AadTenantId -
 
 This example gets the access token for the specified user.
 
-# PARAMETERS
+## PARAMETERS
 
 ### -AadTenantId
 Specifies the Azure active directory (AAD) tenant Id of the user belonging to the AAD tenant group.
