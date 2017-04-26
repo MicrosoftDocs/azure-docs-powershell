@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -SettingAccessString
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-@{Text=}
+
 
 ```yaml
 Type: String

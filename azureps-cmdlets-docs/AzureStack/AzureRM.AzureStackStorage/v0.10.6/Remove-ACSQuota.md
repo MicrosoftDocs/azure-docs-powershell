@@ -37,7 +37,7 @@ Remove-ACSQuota -Location $Location -Name "BasicStorage_Quota"
 ## PARAMETERS
 
 ### -AdminUri
-@{Text=}
+
 
 ```yaml
 Type: Uri
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-@{Text=}
+
 
 ```yaml
 Type: SwitchParameter
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-@{Text=}
+
 
 ```yaml
 Type: SwitchParameter
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-@{Text=}
+
 
 ```yaml
 Type: SwitchParameter

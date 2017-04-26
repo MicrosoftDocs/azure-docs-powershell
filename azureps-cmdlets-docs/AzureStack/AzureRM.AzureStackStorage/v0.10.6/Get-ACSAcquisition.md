@@ -42,7 +42,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AcquisitionId
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminUri
-@{Text=}
+
 
 ```yaml
 Type: Uri
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Container
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-@{Text=}
+
 
 ```yaml
 Type: SwitchParameter
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantSubscriptionId
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-@{Text=}
+
 
 ```yaml
 Type: String
