@@ -19,8 +19,8 @@ Add-ACSFarm [-ResourceGroupName] <String> [-FarmName] <String> [-SettingAccessSt
 ```
 
 ## DESCRIPTION
-The **Add-ACSFarm** cmdlet registers a provisioned ACS farm.
-Service Admin uses the cmdlet to registered that farm to SRP.
+The **Add-ACSFarm** cmdlet registers a provisioned Access Control Server (ASS) farm.
+Service Admin uses the cmdlet to registered that farm to Service Resource Provider (SRP).
 
 ## EXAMPLES
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -SettingAccessString
-
+Specifies the access settings string.
 
 ```yaml
 Type: String
@@ -235,3 +235,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSFarm](./Get-ACSFarm.md)
+
+[Set-ACSFarm](./Set-ACSFarm.md)
