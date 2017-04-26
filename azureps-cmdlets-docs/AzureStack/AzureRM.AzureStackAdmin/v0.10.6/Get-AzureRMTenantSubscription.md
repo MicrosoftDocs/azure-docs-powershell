@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRMTenantSubscription
 
 ## SYNOPSIS
-The Get-AzureRmTenantSubscription gets the subscriptions associated with the current logged in user.
+Gets the subscriptions associated with the current logged-in user.
 
 ## SYNTAX
 
@@ -17,6 +17,7 @@ Get-AzureRMTenantSubscription [-InformationAction <ActionPreference>] [-Informat
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmTenantSubscription** cmdlet gets the subscriptions associated with the current logged-in user.
 
 ## EXAMPLES
 
@@ -25,18 +26,12 @@ Get-AzureRMTenantSubscription [-InformationAction <ActionPreference>] [-Informat
 Get-AzureRmTenantSubscription
 ```
 
-Description
-
------------
-
-Simply execute Get-AzureRmTenantSubscription after logging in with Add-AzureRmAccount
+This command lists the user's subscriptions after the user logged in with the **Add-AzureRmAccount** cmdlet.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not Specified.
 
 ```yaml
 Type: ActionPreference
@@ -52,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -67,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -86,6 +81,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.SubscriptionDefinition
@@ -93,4 +90,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

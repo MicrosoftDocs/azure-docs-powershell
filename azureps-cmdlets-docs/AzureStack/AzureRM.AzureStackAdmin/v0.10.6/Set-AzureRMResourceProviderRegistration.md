@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRMResourceProviderRegistration
 
 ## SYNOPSIS
-Updates the provider registration manifest with the new provider registration model
+Updates the provider registration manifest with the new provider registration model.
 
 ## SYNTAX
 
@@ -18,26 +18,22 @@ Set-AzureRMResourceProviderRegistration -ProviderRegistration <ProviderRegistrat
 ```
 
 ## DESCRIPTION
+The **Set-AzureRMResourceProviderRegistration** cmdlet updates the provider registration manifest with the new provider registration model.
 
 ## EXAMPLES
 
 ### Example 1:
 ```
-$manifest = Get-AzureRMResourceProviderRegistration -Name "Microsoft.Compute" -ResourceGroup "system" -Managed; # Modify the manifest object for the need;  Set-AzureRMResourceProviderRegistration -ProviderRegistration $manifest -ResourceGroup "System"
+$manifest = Get-AzureRMResourceProviderRegistration -Name "Microsoft.Compute" -ResourceGroup "system" -Managed
+Set-AzureRMResourceProviderRegistration -ProviderRegistration $manifest -ResourceGroup "System"
 ```
 
-Description
-
------------
-
-The example shows how to get the Provider Registration object and then update for the changes
+This example gets a **ProviderRegistrationModel** object, modifies the object, and then uses this object to update the provider registration manifest.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -53,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -68,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -83,13 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProviderRegistration
-Provider Registration Model object.
-Get the object through Get-AzureRmResourceProviderRegistration and modify the values needed
+Specifies an updated **ProviderRegistrationModel** object to be used for updating the existing provider registration data.
 
 ```yaml
 Type: ProviderRegistrationModel
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Resource group name
+Specifies the name of the resource group that contains the provider registration.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,6 +113,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.ProviderRegistrationModel
@@ -125,4 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRMManagedSubscription
 
 ## SYNOPSIS
-The Set-AzureRMManagedSubscription updates any tenant user subscription as a service administrator
+Updates the subscription of any tenant user.
 
 ## SYNTAX
 
@@ -18,23 +18,23 @@ Set-AzureRMManagedSubscription -Subscription <AdminSubscriptionDefinition>
 ```
 
 ## DESCRIPTION
-The Set-AzureRMManagedSubscription updates any tenant user subscription as a service administrator
+The **Set-AzureRMManagedSubscription** cmdlet updates the subscription of any tenant user. The user must be logged in as a service administrator before issuing this cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- EXAMPLE 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+$subscriptionUpdated = Get-AzureRMManagedSubscription -TargetSubscriptionId "2fff214f-8589-4d25-b468-dc99320724bc"
+$subscriptionUpdated.OfferId = "Abc123"
+Set-AzureRMManagedSubscription -Subscription $subscriptionUpdated
 ```
 
-{{ Add example description here }}
+This example modifies the **OfferId** property of a **SubscriptionDefinition** object and then passes the object in the **Subscription** parameter of the ** Set-AzureRMManagedSubscription** cmdlet.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -80,12 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -Subscription
-Updated AdminSubscriptionDefinition object
+Specifies an updated **AdminSubscriptionDefinition** object to be used for updating the existing subscription data.
 
 ```yaml
 Type: AdminSubscriptionDefinition
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,4 +108,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
