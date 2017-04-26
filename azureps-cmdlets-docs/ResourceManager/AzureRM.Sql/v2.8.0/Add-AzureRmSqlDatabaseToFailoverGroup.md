@@ -31,12 +31,12 @@ PS C:\> Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGr
 ```
 
 ### Example 2
-```
-Using Pipe Line to pipe in the database objects 
 
+Using Pipe Line to pipe in the database objects 
+```
 PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName rg2 | Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGroupName myRg -ServerName mysvr
 
-
+```
 
 ## PARAMETERS
 
@@ -54,7 +54,8 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverGroupName
-The name of the Azure SQL Failover Group.```yaml
+The name of the Azure SQL Failover Group.
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -67,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.```yaml
+The name of the resource group.
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -80,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Failover Group is in.```yaml
+The name of the Azure SQL Server the Failover Group is in.
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -93,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tags to associate with the Azure Sql Elastic Pool```yaml
+The tags to associate with the Azure Sql Elastic Pool
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tag
