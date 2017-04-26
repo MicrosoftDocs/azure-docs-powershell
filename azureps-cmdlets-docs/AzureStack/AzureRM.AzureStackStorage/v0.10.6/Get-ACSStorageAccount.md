@@ -47,7 +47,7 @@ Get-ACSStorageAccount -ResourceGroupName $resourceGroup -FarmName $farm.Name -Pa
 ## PARAMETERS
 
 ### -AccountId
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminUri
-@{Text=}
+
 
 ```yaml
 Type: Uri
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Detail
-@{Text=}
+
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartialAccountName
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-@{Text=}
+
 
 ```yaml
 Type: SwitchParameter
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountStatus
-@{Text=}
+
 
 ```yaml
 Type: Int32
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantSubscriptionId
-@{Text=}
+
 
 ```yaml
 Type: String
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-@{Text=}
+
 
 ```yaml
 Type: String
