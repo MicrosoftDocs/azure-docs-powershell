@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSBlobService
 
 ## SYNOPSIS
-Retrieve the status and settings of Blob service
+Gets the status and settings of a Blob service.
 
 ## SYNTAX
 
@@ -18,22 +18,26 @@ Get-ACSBlobService [-ResourceGroupName] <String> [-FarmName] <String> [[-Subscri
 ```
 
 ## DESCRIPTION
-Retrieve the status and settings of Blob service
+The **Get-ACSBlobService** gets the status and settings of a Blob service.
 
 ## EXAMPLES
 
 ### Example 1:
-@{paragraph=PS C:\\\>}
-
-
 
 ```
-$resourceGroup = 'System' 
+PS C:\> $ResourceGroup = "System" 
 
-$farm = Get-ACSFarm -ResourceGroupName $resourceGroup
+PS C:\> $Farm = Get-ACSFarm -ResourceGroupName $ResourceGroup
 
-Get-ACSBlobService -ResourceGroupName $resourceGroup -FarmName $farm.Name | fl
+PS C:\> Get-ACSBlobService -ResourceGroupName $ResourceGroup -FarmName $Farm.Name | fl
 ```
+
+The first command stores the resource group named System to the variable named $ResourceGroup.
+
+The second command uses the [Get-ACSFarm](./Get-ACSFarm.md) cmdlet to get the farm and stores the result in the variable named $Farm.
+
+The third command then uses **Get-ACSBlobService** to get the Blob service from the farm stored in the $Farm variable. 
+
 
 ## PARAMETERS
 
@@ -122,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter

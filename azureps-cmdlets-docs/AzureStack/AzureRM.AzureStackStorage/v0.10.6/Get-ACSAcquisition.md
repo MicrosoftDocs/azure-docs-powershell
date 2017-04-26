@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSAcquisition
 
 ## SYNOPSIS
-Get or list acquisitions
+Gets or lists acquisitions.
 
 ## SYNTAX
 
@@ -27,22 +27,15 @@ Get-ACSAcquisition [-ResourceGroupName] <String> [-FarmName] <String> [-TenantSu
 ```
 
 ## DESCRIPTION
-Get acquisition by acquisition ID
-List acquisition by subscription, storage account or Blob container
+The **Get-ACSAcquisition** gets or lists acquisitions by acquisition ID
+This cmdlet lists acquisition by subscription, storage account, or Blob container.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AcquisitionId
-
+Specifies the acquisition ID that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -87,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the server farm.
 
 ```yaml
 Type: String
@@ -141,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the acquisition.
 
 ```yaml
 Type: String
@@ -156,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -171,6 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
+Specifies the name of the storage account that contains the acquisition.
 
 
 ```yaml
@@ -186,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the ID of the subscription that contains the acquisition.
 
 ```yaml
 Type: String
@@ -201,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantSubscriptionId
-
+Specifies the ID of the tenant subscription.
 
 ```yaml
 Type: String
@@ -244,3 +238,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-ACSAcquisition](./[Remove-ACSAcquisition.md)
