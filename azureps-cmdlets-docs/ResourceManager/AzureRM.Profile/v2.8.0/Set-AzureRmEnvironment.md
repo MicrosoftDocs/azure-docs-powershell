@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Profile/Commands.Profile/help/Set-AzureRmEnvironment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Profile/Commands.Profile/help/Set-AzureRmEnvironment.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/ef96857354968eb0d7f4b36c5fa0cec6b6263180
 ---
 
 # Set-AzureRmEnvironment

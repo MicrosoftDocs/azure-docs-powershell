@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 ms.assetid: BFC38930-DBB4-4EBB-8E29-73B901FAF486
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/Edit-AzureRmWebAppBackupConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/Edit-AzureRmWebAppBackupConfiguration.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/b52f0d63e7962572172f1e746220a2dacede9a2b
 ---
 
 # Edit-AzureRmWebAppBackupConfiguration

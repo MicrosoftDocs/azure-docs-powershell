@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: F22E14D6-B18B-4136-B1DF-710DA34372C3
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlDatabaseSecureConnectionPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlDatabaseSecureConnectionPolicy.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/a716374f36b127ce5dad7368d0ad1021fc7e301e
 ---
 
 # Get-AzureRmSqlDatabaseSecureConnectionPolicy

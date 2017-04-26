@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlDatabaseFromFailoverGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlDatabaseFromFailoverGroup.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/1844a179dcdc378afe538856e5f5140acffa4760
 ---
 
 # Remove-AzureRmSqlDatabaseFromFailoverGroup
@@ -24,19 +27,18 @@ This command must be executed on the primary server. The command drops the corre
 ## EXAMPLES
 
 ### Example 1
-
+```
 Remove one database from the Failover Group
 
-```
 PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName myrg2 -DatabaseName testdb | Remove-AzureRmSqlDatabaseFromFailoverGroup -FailoverGroupName testfg -ResourceGroupName rg2 -ServerName testsvr
 ```
 
 ### Example 2
-
+```
 Remove all databases in a server from the Failover Group
-```
+
 PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName myrg2 | Remove-AzureRmSqlDatabaseFromFailoverGroup -FailoverGroupName testfg -ResourceGroupName rg2 -ServerName testsvr
-```
+
 
 ## PARAMETERS
 

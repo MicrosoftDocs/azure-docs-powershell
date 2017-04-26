@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: 009899E5-83BF-4A3F-877E-70C16D5CD1AC
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlElasticPool.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlElasticPool.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # New-AzureRmSqlElasticPool
@@ -109,9 +112,15 @@ Accept wildcard characters: False
 ```
 
 ### -StorageMB
+Specifies the storage limit, in megabytes, for the elastic pool.
+You cannot specify a value for this parameter for the Premium edition.
 
-Specifies the storage limit, in megabytes, for the elastic pool. If you do not specify this parameter, this cmdlet calculates a value that depends on the value of the *Dtu* parameter. See [eDTU and storage limits](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool#edtu-and-storage-limits-for-elastic-pools) for possible values.
+If you do not specify this parameter, this cmdlet calculates a value that depends on the value of the *Dtu* parameter.
+We recommend that you do not specify the *StorageMB* parameter.
 
+If you specify *StorageMB*, but do not specify *Dtu*, the cmdlet calculates a value for *Dtu*.
+If you specify values for both, the values must be consistent.
+For more information about the relationship between storage and DTUs, see https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/https://azure.microsoft.com/en-us/documentation/articles/sql-database-elastic-pool-reference/.
 
 ```yaml
 Type: Int32
@@ -303,4 +312,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmSqlElasticPool](./Set-AzureRmSqlElasticPool.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
 

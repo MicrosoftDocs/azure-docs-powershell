@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Add-AzureRmSqlDatabaseToFailoverGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Add-AzureRmSqlDatabaseToFailoverGroup.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/1844a179dcdc378afe538856e5f5140acffa4760
 ---
 
 # Add-AzureRmSqlDatabaseToFailoverGroup
@@ -28,11 +31,11 @@ PS C:\> Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGr
 ```
 
 ### Example 2
-
+```
 Using Pipe Line to pipe in the database objects 
-```
+
 PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName rg2 | Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGroupName myRg -ServerName mysvr
-```
+
 
 
 ## PARAMETERS

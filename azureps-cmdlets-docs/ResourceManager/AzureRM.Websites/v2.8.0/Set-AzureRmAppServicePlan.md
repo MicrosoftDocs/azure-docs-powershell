@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 ms.assetid: 32D45795-FBCD-4157-BF45-41BD1F61782E
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/Set-AzureRmAppServicePlan.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/Set-AzureRmAppServicePlan.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/0e1a3c2bbee2f195a4410897fd3f8da11c847bbd
 ---
 
 # Set-AzureRmAppServicePlan
