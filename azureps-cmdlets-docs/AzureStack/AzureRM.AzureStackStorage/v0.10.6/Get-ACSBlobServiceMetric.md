@@ -26,7 +26,7 @@ The **Get-ACSBlobServiceMetric** cmdlet gets the metrics of a BLOB service.
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service admin.
 
 ```yaml
 Type: Uri

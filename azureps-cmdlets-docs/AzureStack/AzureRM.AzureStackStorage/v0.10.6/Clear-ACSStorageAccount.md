@@ -25,7 +25,7 @@ The **Clear-ACSStorageAccount** cmdlet clears tenant storage accounts, regardles
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service admin.
 
 ```yaml
 Type: Uri
