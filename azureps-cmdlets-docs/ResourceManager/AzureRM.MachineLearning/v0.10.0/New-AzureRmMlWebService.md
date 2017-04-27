@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -DefinitionFile
 Specifies the path to a file on disk containing the definition of the web service resource, in JSON format.
-You can find the latest specification for the web service definition in the swagger specification file under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearninghttps://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning(https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning).
+You can find the latest specification for the web service definition in the swagger specification file under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning.
 
 ```yaml
 Type: String
@@ -140,7 +140,31 @@ Accept wildcard characters: False
 ### -NewWebServiceDefinition
 Specifies the definition of the web service resource, that contains all the properties that make up the service.
 This parameter is required and represents an instance of the **Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService** class.
-You can find the latest specification for the web service definition in the swagger specification under https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2016-05-01-preview/swagger/webservices.json.https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2016-05-01-preview/swagger/webservices.json (https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2016-05-01-preview/swagger/webservices.json).
+You can find the latest specification for the web service definition in the swagger specification under 
+### -DefinitionFile
+Specifies the path to a file on disk containing the definition of the web service resource, in JSON format.
+You can find the latest specification for the web service definition in the swagger specification file under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning.
+
+```yaml
+Type: String
+Parameter Sets: Create a new Azure ML webservice from a JSON definiton file.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NewWebServiceDefinition
+Specifies the definition of the web service resource, that contains all the properties that make up the service.
+This parameter is required and represents an instance of the **Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService** class.
+You can find the latest specification for the web service definition in the swagger specification under 
+
+.
+
+
 This parameter can come from a pipeline.
 
 ```yaml

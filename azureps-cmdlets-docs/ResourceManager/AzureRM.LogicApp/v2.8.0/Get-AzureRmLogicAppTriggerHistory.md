@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 ms.assetid: C1F6BBF9-0DB5-46FD-B8A8-9029B0AB6166
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzureRmLogicAppTriggerHistory.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzureRmLogicAppTriggerHistory.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/88b93d180d5fb3fae892bf9fd97bf81fee267678
 ---
 
 # Get-AzureRmLogicAppTriggerHistory

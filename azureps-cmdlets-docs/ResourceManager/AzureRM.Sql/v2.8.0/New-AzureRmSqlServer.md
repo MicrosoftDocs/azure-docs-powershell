@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: 7039528F-42AE-45DB-BF81-FE5003F8AEE2
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlServer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlServer.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/9335d1d97be5302e81a218670737cf6a3d7f95e1
 ---
 
 # New-AzureRmSqlServer

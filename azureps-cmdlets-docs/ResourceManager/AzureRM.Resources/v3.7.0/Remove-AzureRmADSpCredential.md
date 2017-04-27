@@ -37,14 +37,14 @@ Remove-AzureRmADSpCredential -ServicePrincipalName <String> -KeyId <Guid> [-Forc
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmADSpCredential cmdlet can be used to remove a credential key from a service principal in the case of a compromise or as part of credential key rollover expiration.
+The **Remove-AzureRmADSpCredential** cmdlet removes a credential key from a service principal in the case of a compromise or as part of credential key rollover expiration.
 The service principal is identified by supplying either the object ID or service principal name (SPN).
 
 The credential to be removed is identified by its key ID if an individual credential is to be removed or with an 'All' switch to delete all credentials associated with the service principal.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove a credential key from the service principal name by Object and Key ID
 
 
 ```
@@ -54,20 +54,20 @@ PS C:\> Remove-AzureRmADSpCredential -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5e
 This command removes a credential key from a service principal.
 In this example, the key with Id "9044423a-60a3-45ac-9ab1-09534157ebb" will be removed from the service principal.
 
-### Example 2:
+### Example 2: Remove a credential key from the specified service principal name
 
 
 ```
-PS C:\> Remove-AzureRmADSpCredential -ServicePrincipalName http://test123 -All
+PS C:\> Remove-AzureRmADSpCredential -ServicePrincipalName "http://test123" -All
 ```
 
 This command removes a credential key from a service principal.
-In this example, all credentials will be removed from the service principal associated with the service principal name "http://test123".
+In this example, all credentials will be removed from the service principal associated with the service principal name http://test123.
 
 ## PARAMETERS
 
 ### -ObjectId
-The object id of the service principal to remove the credentials from.
+Specifies the object ID of the service principal to remove the credentials from.
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -KeyId
 Specifies the credential key to be removed.
-The key Ids for a service principal can be obtained using the Get-AzureRmADSpCredential cmdlet.
+The key Ids for a service principal can be obtained using the [Get-AzureRmADSpCredential](./Get-AzureRmADSpCredential.md) cmdlet.
 
 ```yaml
 Type: Guid
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Switch to delete credential without a confirmation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -152,7 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -182,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -All
-Switch to remove all the credentials associated with the service principal.
+Indicates that this cmdlet removes all the credentials associated with the service principal.
 
 ```yaml
 Type: SwitchParameter
@@ -197,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-The name (SPN) of the service principal to remove the credentials from.
+Specifies the name of the service principal (SPN) to remove the credentials from.
 
 ```yaml
 Type: String
@@ -219,9 +220,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AzureRmADSpCredential]()
+[Get-AzureRmADSpCredential](./Get-AzureRmADSpCredential.md)
 
-[New-AzureRmADSpCredential]()
+[New-AzureRmADSpCredential](./New-AzureRmADSpCredential.md)
 
-[Get-AzureRmADServicePrincipal]()
-
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)

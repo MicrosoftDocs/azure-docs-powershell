@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 ms.assetid: 31F2AF24-488D-4CAF-A9C8-C8DAE76E031F
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmPolicyDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmPolicyDefinition.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/5dfaed965f9d38815f7656c538a1df8fe518f696
 ---
 
 # New-AzureRmPolicyDefinition

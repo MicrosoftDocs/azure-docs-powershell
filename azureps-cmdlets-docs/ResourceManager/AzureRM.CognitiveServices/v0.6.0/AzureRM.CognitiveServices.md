@@ -1,10 +1,15 @@
 ---
 Module Name: AzureRM.CognitiveServices
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+  [object Object]:
+Help Version:
+  [object Object]: null
 Locale: en-US
 ms.assetid: 8490169A-CC7B-4769-97FE-D86441A4A634
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/AzureRM.CognitiveServices.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/AzureRM.CognitiveServices.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # AzureRM.CognitiveServices Module

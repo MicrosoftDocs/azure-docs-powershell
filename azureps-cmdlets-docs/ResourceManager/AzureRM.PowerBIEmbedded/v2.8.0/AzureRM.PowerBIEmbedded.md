@@ -1,10 +1,15 @@
 ---
 Module Name: AzureRM.PowerBIEmbedded
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+  [object Object]:
+Help Version:
+  [object Object]: null
 Locale: en-US
 ms.assetid: A24A3592-B4FC-407B-AE78-11889ED28250
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/AzureRM.PowerBIEmbedded.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/AzureRM.PowerBIEmbedded.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # AzureRM.PowerBIEmbedded Module
