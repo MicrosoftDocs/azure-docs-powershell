@@ -33,7 +33,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service admin.
 
 ```yaml
 Type: Uri

@@ -26,7 +26,7 @@ The **Get-ACSBlobServiceMetric** cmdlet gets the metrics of a BLOB service.
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service admin.
 
 ```yaml
 Type: Uri
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndTimeInUtc
-{{Fill EndTimeInUtc Description}}
+
 
 ```yaml
 Type: DateTime
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the server farm.
 
 ```yaml
 Type: String
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the BLOB service.
 
 ```yaml
 Type: String
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTimeInUtc
-{{Fill StartTimeInUtc Description}}
+
 
 ```yaml
 Type: DateTime
