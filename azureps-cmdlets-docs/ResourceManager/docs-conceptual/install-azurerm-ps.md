@@ -73,6 +73,12 @@ For more information about using Azure PowerShell, see the following articles:
 
 * [Get started with Azure PowerShell](get-started-azureps.md)
 
+## Reporting issues and feedback
+
+If you encounter any bugs with the tool, file an issue in the
+[Issues](https://github.com/Azure/azure-powershell/issues) section of our GitHub repo. To provide
+feedback from the command line, use the `Send-Feedback` cmdlet.
+
 ## Frequently asked questions
 
 ### How to get PowerShellGet
