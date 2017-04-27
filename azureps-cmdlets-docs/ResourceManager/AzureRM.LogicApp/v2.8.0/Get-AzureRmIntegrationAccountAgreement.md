@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 ms.assetid: 70C96DFC-F265-4792-AE62-DD224A4EE237
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzureRmIntegrationAccountAgreement.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzureRmIntegrationAccountAgreement.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/5324c732bb445fca216d167be1094ff40268ff37
 ---
 
 # Get-AzureRmIntegrationAccountAgreement

@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementIdentityProvider.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementIdentityProvider.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/b9f96ffcc5e000919e3f5cfe59d91809e0373d34
 ---
 
 # Get-AzureRmApiManagementIdentityProvider

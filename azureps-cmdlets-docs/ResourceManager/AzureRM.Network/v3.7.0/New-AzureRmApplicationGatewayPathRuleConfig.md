@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: A1F949A9-7AEF-41C1-B757-114421B79493
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayPathRuleConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/New-AzureRmApplicationGatewayPathRuleConfig.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/898dcc79a9e3bf9563d390c9a7c04f5ea5b5a269
 ---
 
 # New-AzureRmApplicationGatewayPathRuleConfig

@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 ms.assetid: B4EC9132-8DB9-498D-8B3F-2AB51D8EA03A
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/New-AzureRmOperationalInsightsAzureActivityLogDataSource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/New-AzureRmOperationalInsightsAzureActivityLogDataSource.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/ae94f1b0a47fd9b81fd22cbd281d848bc1cede7a
 ---
 
 # New-AzureRmOperationalInsightsAzureActivityLogDataSource

@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 ms.assetid: DF71430C-F33F-409B-A550-CC7285252E91
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/New-AzureRmIntegrationAccountMap.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/New-AzureRmIntegrationAccountMap.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/5324c732bb445fca216d167be1094ff40268ff37
 ---
 
 # New-AzureRmIntegrationAccountMap

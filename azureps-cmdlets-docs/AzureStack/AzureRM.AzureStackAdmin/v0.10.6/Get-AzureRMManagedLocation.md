@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRMManagedLocation
 
 ## SYNOPSIS
-The Get-AzureRmMangedLocation cmdlet gets the azurestack resource manager location as an administrator
+Gets the details about a location managed by the Azure stack resource manager.
 
 ## SYNTAX
 
@@ -17,6 +17,7 @@ Get-AzureRMManagedLocation [-Name <String>] [-InformationAction <ActionPreferenc
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmMangedLocation** cmdlet gets the details about a location managed by the Azure stack resource manager.
 
 ## EXAMPLES
 
@@ -25,18 +26,12 @@ Get-AzureRMManagedLocation [-Name <String>] [-InformationAction <ActionPreferenc
 Get-AzureRMManagedLocation -Name "Chicago"
 ```
 
-Description
-
------------
-
-The example gets the details of the location named 'Chicago'
+This command gets the details of the location named "Chicago".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not Specified.
 
 ```yaml
 Type: ActionPreference
@@ -52,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -67,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the location
+Specifies the name of the location.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -101,6 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.Location
@@ -108,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

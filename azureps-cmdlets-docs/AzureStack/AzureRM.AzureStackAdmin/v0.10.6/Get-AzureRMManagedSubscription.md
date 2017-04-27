@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRMManagedSubscription
 
 ## SYNOPSIS
-This enables service administrator to get the tenant target subscription id
+Gets details about the target subscription of the tenant user.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AzureRMManagedSubscription [-TargetSubscriptionId <Guid>] [-InformationActio
 ```
 
 ## DESCRIPTION
-This enables service administrator to get the tenant target subscription id
+The **Get-AzureRMManagedSubscription** cmdlet gets details about the target subscription of the tenant user. This cmdlet is useful to a service administrator. You must be logged in as service administrator before issuing this command.
 
 ## EXAMPLES
 
@@ -26,19 +26,12 @@ This enables service administrator to get the tenant target subscription id
 Get-AzureRMManagedSubscription -TargetSubscriptionId "2fff214f-8589-4d25-b468-dc99320724bc"
 ```
 
-Description
-
------------
-
-The example gets the target subscription id.
-Login as service administrator before issuing this command
+This command gets the target subscription details for the tenant user identified by the ID "2fff214f-8589-4d25-b468-dc99320724bc".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not Specified.
 
 ```yaml
 Type: ActionPreference
@@ -54,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -69,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -84,12 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetSubscriptionId
-The target subscription id of the tenant user
+The target subscription ID of the tenant user.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,6 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.SubscriptionDefinition
@@ -110,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

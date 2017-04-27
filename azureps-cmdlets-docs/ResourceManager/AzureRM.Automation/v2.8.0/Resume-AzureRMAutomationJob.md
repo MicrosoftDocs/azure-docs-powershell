@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 ms.assetid: 9400E9EB-E927-44D5-8722-9706BDD92FD5
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Automation/Commands.Automation/help/Resume-AzureRMAutomationJob.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Automation/Commands.Automation/help/Resume-AzureRMAutomationJob.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Resume-AzureRmAutomationJob

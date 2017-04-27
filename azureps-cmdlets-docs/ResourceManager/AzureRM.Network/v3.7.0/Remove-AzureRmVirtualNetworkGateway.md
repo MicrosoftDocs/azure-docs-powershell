@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: A35BB728-A7EF-4ADF-B1A9-25A156434E99
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmVirtualNetworkGateway.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmVirtualNetworkGateway.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/394d84a350aee3cd69565f02a032a8bb97116681
 ---
 
 # Remove-AzureRmVirtualNetworkGateway

@@ -1,9 +1,14 @@
 ---
 Module Name: AzureRM.Sql
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+  [object Object]:
+Help Version:
+  [object Object]: null
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/AzureRM.Sql.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/AzureRM.Sql.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/c7f39003a0e9914b1fdc763e3655d3a188c3dfee
 ---
 
 # AzureRM.Sql Module

@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkWatcher.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkWatcher.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/5daa0db5baf832bfd62df56acafa79eb966df4cf
 ---
 
 # Set-AzureRmNetworkWatcher

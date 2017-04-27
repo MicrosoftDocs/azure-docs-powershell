@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: 555D58AB-1361-4BB1-ACD0-905C3C6F4F7E
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlElasticPool.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlElasticPool.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Set-AzureRmSqlElasticPool
@@ -26,7 +29,6 @@ This cmdlet can modify the minimum Database Throughput Units (DTUs) per database
 ## EXAMPLES
 
 ### Example 1: Modify properties for an elastic pool
-
 ```
 PS C:\>Set-AzureRmSqlDatabaseElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" -Dtu 1000 -DatabaseDtuMax 100 -DatabaseDtuMin 20
 ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/Server01/elasticPools/ElasticPool01
@@ -46,30 +48,6 @@ Tags              :
 
 This command modifies properties for an elastic pool named elasticpool01.
 The command sets the number of DTUs for the elastic pool to 1000 and sets the minimum and maximum DTUs.
-
-### Example 2: Modify the max storage of an elastic pool
-
-```
-PS C:\>Set-AzureRmSqlDatabaseElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool02" -StorageMB 2097152
-ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/Server01/elasticPools/ElasticPool02
-ResourceGroupName : ResourceGroup01
-ServerName        : Server01
-ElasticPoolName   : ElasticPool02
-Location          : Central US
-CreationDate      : 8/26/2015 10:00:17 PM
-State             : Ready
-Edition           : Premium
-Dtu               : 1000
-DatabaseDtuMax    : 125
-DatabaseDtuMin    : 25
-StorageMB         : 2097152
-Tags              :
-```
-
-This command modifies properties for an elastic pool named elasticpool02.
-The command sets the max storage for a Premium elastic pool to 2 TB.
-
-
 
 ## PARAMETERS
 
@@ -136,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageMB
-Specifies the storage limit, in megabytes, for the elastic pool. See [eDTU and storage limits](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool#edtu-and-storage-limits-for-elastic-pools) for possible values.
+Specifies the storage limit, in megabytes, for the elastic pool.
+For more information, see the New-AzureRmSqlElasticPool cmdlet.
 
 ```yaml
 Type: Int32
@@ -326,4 +305,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmSqlElasticPool](./New-AzureRmSqlElasticPool.md)
 
 [Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
 

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRMUsageConnection
 
 ## SYNOPSIS
-The Remove-AzureRMUsageConnection cmdlet removes the usage connection information from the usage service.
+Removes the usage connection information from the usage service.
 
 ## SYNTAX
 
@@ -17,26 +17,21 @@ Remove-AzureRMUsageConnection -Name <String> [-ResourceGroup <String>] [-Informa
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRMUsageConnection** cmdlet removes the usage connection information from the usage service.
 
 ## EXAMPLES
 
 ### Example 1:
 ```
-Remove-AzureRmUsageConnection -Name SqlRpUsageConnection -ResourceGroup System
+Remove-AzureRmUsageConnection -Name "SqlRpUsageConnection" -ResourceGroup "System"
 ```
 
-Description
-
------------
-
-The example removes the usage connection information for the specified name
+This command removes the information for the usage connection that is named "SqlRpUsageConnection" and contained in the "System" resource group.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -52,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -67,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the existing usage connection name.
+Specifies the name of the usage connection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -97,12 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Name of the resource group where the usage connection was created
+Name of the resource group where the usage connection was created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,6 +111,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -123,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

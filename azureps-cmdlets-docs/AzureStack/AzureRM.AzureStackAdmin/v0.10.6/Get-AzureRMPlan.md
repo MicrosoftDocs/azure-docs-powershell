@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRMPlan
 
 ## SYNOPSIS
-The Get-AzureRmPlan cmdlet gets the plan details
+Gets the details of a plan.
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Get-AzureRMPlan [-Name <String>] -ResourceGroup <String> [-Managed] [-Informatio
 ```
 
 ## DESCRIPTION
-The Get-AzureRmPlan cmdlet gets the plan details
+The **Get-AzureRmPlan** cmdlet gets the details of a plan. This cmdlet can be executed as a service administrator or as a tenant user.
 
 ## EXAMPLES
 
@@ -39,18 +39,12 @@ The Get-AzureRmPlan cmdlet gets the plan details
 Get-AzureRMPlan -Name "ComputePlan" -ResourceGroup "PlanGroup" -Managed
 ```
 
-Description
-
------------
-
-The example gets the plan named 'ComputePlan'
+This command gets the details of the plan named "ComputePlan" and created in the resource group "PlanGroup". This command is being executed as a service administrator.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not Specified.
 
 ```yaml
 Type: ActionPreference
@@ -66,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -81,12 +75,12 @@ Accept wildcard characters: False
 ```
 
 ### -Managed
-@{Text=}
+Indicates whether the operation is being executed as a service administrator.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Admin
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -96,12 +90,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the plan
+Specifies the name of the plan.
 
 ```yaml
 Type: String
 Parameter Sets: TenantGet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,7 +107,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Admin
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not Specified.
 
 ```yaml
 Type: String
@@ -138,12 +132,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the resource group name
+Specifies name of the resource group where the plan was created.
 
 ```yaml
 Type: String
 Parameter Sets: Admin
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -157,6 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.AzureStack.Management.Models.AdminPlanModel
@@ -164,4 +160,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

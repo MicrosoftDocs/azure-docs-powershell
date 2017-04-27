@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: 381F5B34-983C-4733-B384-35D6579B79A2
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Use-AzureRmSqlServerAuditingPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Use-AzureRmSqlServerAuditingPolicy.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/a716374f36b127ce5dad7368d0ad1021fc7e301e
 ---
 
 # Use-AzureRmSqlServerAuditingPolicy

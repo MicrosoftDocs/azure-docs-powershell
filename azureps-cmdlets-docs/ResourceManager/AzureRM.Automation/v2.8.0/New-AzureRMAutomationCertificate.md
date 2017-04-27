@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 ms.assetid: A504099E-BA96-45C9-A7A6-195E7087A0D4
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationCertificate.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # New-AzureRmAutomationCertificate

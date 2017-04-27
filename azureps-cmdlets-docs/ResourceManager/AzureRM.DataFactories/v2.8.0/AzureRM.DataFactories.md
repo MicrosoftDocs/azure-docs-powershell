@@ -1,10 +1,15 @@
 ---
 Module Name: AzureRM.DataFactories
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+  [object Object]:
+Help Version:
+  [object Object]: null
 Locale: en-US
 ms.assetid: E4167B5E-04CA-4D15-840C-2C0D445988C7
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/DataFactories/Commands.DataFactories/help/AzureRM.DataFactories.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/DataFactories/Commands.DataFactories/help/AzureRM.DataFactories.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # AzureRM.DataFactories Module

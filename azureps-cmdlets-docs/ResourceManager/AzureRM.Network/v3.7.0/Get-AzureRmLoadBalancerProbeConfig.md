@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: 278228EB-0126-4F27-A30F-51DC498C65FE
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmLoadBalancerProbeConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmLoadBalancerProbeConfig.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/898dcc79a9e3bf9563d390c9a7c04f5ea5b5a269
 ---
 
 # Get-AzureRmLoadBalancerProbeConfig

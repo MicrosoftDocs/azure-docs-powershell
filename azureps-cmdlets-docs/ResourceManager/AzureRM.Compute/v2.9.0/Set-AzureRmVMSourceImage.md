@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 91B2DE2F-442D-4428-8A6F-9C2CEC181CA7
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMSourceImage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMSourceImage.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/1e0dbd9ea7d5072fb8029e35f1a03f4023d1f52b
 ---
 
 # Set-AzureRmVMSourceImage

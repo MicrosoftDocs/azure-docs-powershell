@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: 1B138185-E836-414F-93CD-7BAE7F474E73
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabaseDataMaskingPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabaseDataMaskingPolicy.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/a716374f36b127ce5dad7368d0ad1021fc7e301e
 ---
 
 # Set-AzureRmSqlDatabaseDataMaskingPolicy

@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 ms.assetid: 513BE097-EB4A-4C49-9F7F-42A2BED09022
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppMetrics.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppMetrics.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Get-AzureRmWebAppMetrics

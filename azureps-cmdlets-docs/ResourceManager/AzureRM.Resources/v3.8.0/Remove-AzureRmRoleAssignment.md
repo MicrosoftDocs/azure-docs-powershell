@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 ms.assetid: 8C1D738C-825D-4718-AD2A-9CFEAA7DBD3B
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmRoleAssignment.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmRoleAssignment.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Remove-AzureRmRoleAssignment

@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 ms.assetid: 8FB2D9A0-BF7A-482D-B3A2-566FCA8C62A1
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys

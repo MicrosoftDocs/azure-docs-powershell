@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzureRmEventHub.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzureRmEventHub.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/ecc676e655efba8fe325ff757ca9c67e3ca655e9
 ---
 
 # Set-AzureRmEventHub

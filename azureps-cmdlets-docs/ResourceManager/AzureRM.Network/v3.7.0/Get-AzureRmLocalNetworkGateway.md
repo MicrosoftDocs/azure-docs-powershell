@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: F8756DA1-7BB9-4CD5-9D81-E11FF7A26125
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmLocalNetworkGateway.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmLocalNetworkGateway.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/394d84a350aee3cd69565f02a032a8bb97116681
 ---
 
 # Get-AzureRmLocalNetworkGateway

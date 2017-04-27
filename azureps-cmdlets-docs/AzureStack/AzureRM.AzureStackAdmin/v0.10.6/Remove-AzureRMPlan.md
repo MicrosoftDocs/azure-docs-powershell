@@ -1,14 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRMPlan
 
 ## SYNOPSIS
-The Remove-AzureRMPlan cmddlet removes the specified plan.
-The plan should not have any references to offers to get removed
+Removes the specified plan.
 
 ## SYNTAX
 
@@ -18,26 +17,21 @@ Remove-AzureRMPlan -Name <String> -ResourceGroup <String> [-InformationAction <A
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRMPlan** cmdlet removes the specified plan. For successful removal, the plan must not have any references to offers.
 
 ## EXAMPLES
 
 ### Example 1:
 ```
-Remover-AzureRMPlan -Name ComputePlan
+Remover-AzureRMPlan -Name "ComputePlan"
 ```
 
-Description
-
------------
-
-The example removes a plan named ComputePlan
+This command removes the plan named "ComputePlan".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -53,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -68,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the plan that is to be removed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -83,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -98,12 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-@{Text=}
+Specifies the resource group that contains the plan.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,6 +111,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -124,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRMManagedSubscription
 
 ## SYNOPSIS
-The cmdlet Remove-AzureRMManagedSubscription removes the specified subscription as an administrator
+Removes the specified subscription.
 
 ## SYNTAX
 
@@ -17,6 +17,7 @@ Remove-AzureRMManagedSubscription -TargetSubscriptionId <Guid> [-InformationActi
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRMManagedSubscription** cmdlet removes the specified subscription. The user must be logged in as a service administrator before issuing this cmdlet.
 
 ## EXAMPLES
 
@@ -25,19 +26,12 @@ Remove-AzureRMManagedSubscription -TargetSubscriptionId <Guid> [-InformationActi
 Remove-AzureRmManagedSubscription -TargetSubscriptionId "83a3cff6-b856-4db1-8d1b-86386ff9d515"
 ```
 
-Description
-
------------
-
-The example deletes the specific subscription 83a3cff6-b856-4db1-8d1b-86386ff9d515.
-This is executed after logging in to the azure stack environment as a service administrator
+This command deletes the subscription that has the ID of 83a3cff6-b856-4db1-8d1b-86386ff9d515. The command is executed after logging in to the azure stack environment as a service administrator.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified
-
-The following values are permitted for this object type.
+Not specified.
 
 ```yaml
 Type: ActionPreference
@@ -53,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -68,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified
+Not specified.
 
 ```yaml
 Type: String
@@ -83,12 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetSubscriptionId
-Specifies the Subscription Id that needs to be removed
+Specifies the ID of the subscription that is to be removed.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,6 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
 ### Microsoft.Azure.AzureOperationResponse
@@ -109,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

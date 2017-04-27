@@ -5,6 +5,9 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 4.0.0.0
 Locale: en-US
 ms.assetid: 9D720291-A837-43D5-8EC1-9DD7FF432B34
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/KeyVault/Commands.KeyVault/help/AzureRM.KeyVault.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/KeyVault/Commands.KeyVault/help/AzureRM.KeyVault.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # AzureRM.KeyVault Module

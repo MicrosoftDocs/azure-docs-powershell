@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzureRmIotHubValidSku.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzureRmIotHubValidSku.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/29594b4f5607f73aec031896d1d7902e78edf8cf
 ---
 
 # Get-AzureRmIotHubValidSku
