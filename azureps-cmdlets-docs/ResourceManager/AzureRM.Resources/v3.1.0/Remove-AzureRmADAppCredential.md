@@ -214,5 +214,3 @@ Accept wildcard characters: False
 
 [Get-AzureRmADApplication]()
 
-[]()
-

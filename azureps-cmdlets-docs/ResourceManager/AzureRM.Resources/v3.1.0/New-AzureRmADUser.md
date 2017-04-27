@@ -186,5 +186,4 @@ Accept wildcard characters: False
 
 [Remove-AzureRmADUser]()
 
-[]()
 

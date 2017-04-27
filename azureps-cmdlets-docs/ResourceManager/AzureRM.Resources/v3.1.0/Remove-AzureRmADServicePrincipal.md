@@ -156,5 +156,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 [Remove-AzureRmADAppCredential]()
 
-[]()
-

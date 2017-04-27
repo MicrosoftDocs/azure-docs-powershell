@@ -387,7 +387,7 @@
     "Remove-AzureRmVmssExtension": "VM Scale Sets",
     "Remove-AzureRmVmssNetworkInterfaceConfiguration": "Virtual Network",
     "Set-AzureRmVmssOsProfile": "VM Scale Sets",
-    "Set-AzureRmVmssStorageProfile": "Storage",
+    "Set-AzureRmVmssStorageProfile": "VM Scale Sets",
     "New-AzureRmVmss": "VM Scale Sets",
     "Update-AzureRmVmss": "VM Scale Sets",
     "Stop-AzureRmVmss": "VM Scale Sets",
