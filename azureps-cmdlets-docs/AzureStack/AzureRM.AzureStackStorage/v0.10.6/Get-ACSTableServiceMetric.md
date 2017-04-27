@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndTimeInUtc
-{{Fill EndTimeInUtc Description}}
+
 
 ```yaml
 Type: DateTime
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTimeInUtc
-{{Fill StartTimeInUtc Description}}
+
 
 ```yaml
 Type: DateTime
