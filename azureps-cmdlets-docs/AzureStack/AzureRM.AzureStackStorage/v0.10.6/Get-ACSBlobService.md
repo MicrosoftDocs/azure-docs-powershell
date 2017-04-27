@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSBlobService
 
 ## SYNOPSIS
-Gets the status and settings of a Blob service.
+Gets the status and settings of a BLOB service.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ The **Get-ACSBlobService** gets the status and settings of a Blob service.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get the status and settings of a BLOB service
 
 ```
 PS C:\> $ResourceGroup = "System" 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the server farm.
 
 ```yaml
 Type: String
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the BLOB service.
 
 ```yaml
 Type: String
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the ID of the subscription that contains the BLOB service.
 
 ```yaml
 Type: String
@@ -184,3 +184,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSBlobServiceMetric](./Get-ACSBlobServiceMetric.md)
+
+[Get-ACSBlobServiceMetricDefinition](./Get-ACSBlobServiceMetricDefinition.md)

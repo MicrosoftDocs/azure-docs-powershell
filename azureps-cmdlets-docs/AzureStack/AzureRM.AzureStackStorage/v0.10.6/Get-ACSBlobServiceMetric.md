@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSBlobServiceMetric
 
 ## SYNOPSIS
-Retrieve the metrics of Blob service
+Gets the metrics of a BLOB service.
 
 ## SYNTAX
 
@@ -19,16 +19,9 @@ Get-ACSBlobServiceMetric [-FarmName] <String> [-ResourceGroupName] <String> [-Ti
 ```
 
 ## DESCRIPTION
-Retrieve the metrics of Blob service
+The **Get-ACSBlobServiceMetric** cmdlet gets the metrics of a BLOB service.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
