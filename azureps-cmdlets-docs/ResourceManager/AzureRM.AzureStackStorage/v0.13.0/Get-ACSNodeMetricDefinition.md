@@ -3,8 +3,8 @@ external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version:
 schema: 2.0.0
 ms.assetid: 215717A0-5E66-4F9C-ADAE-FAA83ADF42C6
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Get-ACSNodeMetricDefinition.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Get-ACSNodeMetricDefinition.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Get-ACSNodeMetricDefinition.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Get-ACSNodeMetricDefinition.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
 ms.assetid: 5F1A4FE0-CB57-45D3-9F08-879469A61E1E
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/New-AzureRmIntegrationAccount.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/New-AzureRmIntegrationAccount.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/New-AzureRmIntegrationAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/New-AzureRmIntegrationAccount.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/5324c732bb445fca216d167be1094ff40268ff37
 ---
 

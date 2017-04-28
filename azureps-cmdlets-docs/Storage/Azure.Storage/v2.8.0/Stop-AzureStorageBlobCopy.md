@@ -3,8 +3,8 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: C274DFBD-6C93-4043-AF93-DAF7BEA1F11F
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/Storage/Commands.Storage/help/Stop-AzureStorageBlobCopy.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/Storage/Commands.Storage/help/Stop-AzureStorageBlobCopy.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Stop-AzureStorageBlobCopy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Stop-AzureStorageBlobCopy.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
 ---
 

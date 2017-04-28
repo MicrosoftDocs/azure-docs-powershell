@@ -7,8 +7,8 @@ Help Version:
   [object Object]: null
 Locale: en-US
 ms.assetid: 41DB973E-CAE3-409D-8B02-367AEF6180FA
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/1ca56bdf496ceea674015cdd3e677e1d1ac3a143
 ---
 

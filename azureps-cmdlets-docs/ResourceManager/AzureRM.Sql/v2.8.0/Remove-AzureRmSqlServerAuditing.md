@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: 692D0B64-95EB-4D36-975F-65674B3B2F8C
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlServerAuditing.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlServerAuditing.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlServerAuditing.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlServerAuditing.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/a716374f36b127ce5dad7368d0ad1021fc7e301e
 ---
 

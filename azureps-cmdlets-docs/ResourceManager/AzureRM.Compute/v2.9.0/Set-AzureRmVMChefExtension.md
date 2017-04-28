@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: CC306D8C-A5EE-4655-B686-E5A77CCE5042
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMChefExtension.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMChefExtension.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMChefExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMChefExtension.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/f01932cd5931deaf4b82d6ec7198abbc4bf55a4d
 ---
 

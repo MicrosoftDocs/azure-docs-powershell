@@ -7,8 +7,8 @@ Help Version:
   [object Object]: null
 Locale: en-US
 ms.assetid: 504EBFF2-43E4-4FB7-A394-F0650B0DA131
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Scheduler/Commands.Scheduler/help/AzureRM.Scheduler.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Scheduler/Commands.Scheduler/help/AzureRM.Scheduler.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/AzureRM.Scheduler.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/AzureRM.Scheduler.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

@@ -3,8 +3,8 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 5FA8A3F3-F52C-40BC-94C2-4CDA00C6F32F
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/Storage/Commands.Storage/help/Get-AzureStorageCORSRule.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/Storage/Commands.Storage/help/Get-AzureStorageCORSRule.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageCORSRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageCORSRule.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
 ---
 

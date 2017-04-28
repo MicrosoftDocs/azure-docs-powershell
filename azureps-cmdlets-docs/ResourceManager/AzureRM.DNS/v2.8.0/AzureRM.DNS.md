@@ -7,8 +7,8 @@ Help Version:
   [object Object]: null
 Locale: en-US
 ms.assetid: 81574D24-6FD4-4A2B-AE87-C938DEDB57DF
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Dns/Commands.Dns/help/AzureRM.DNS.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Dns/Commands.Dns/help/AzureRM.DNS.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/AzureRM.DNS.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/AzureRM.DNS.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 ms.assetid: 84C861B2-DCB3-47F0-8589-BB3172C6E1EC
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/Reset-AzureRmWebAppPublishingProfile.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/Reset-AzureRmWebAppPublishingProfile.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Reset-AzureRmWebAppPublishingProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Reset-AzureRmWebAppPublishingProfile.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/188033f88f70f578d4879e2a78bf41bbfbaeaf0c
 ---
 

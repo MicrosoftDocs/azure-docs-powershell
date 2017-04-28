@@ -4,8 +4,8 @@ Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
 Help Version: 1
 ms.assetid: 5F695690-290D-4908-ABCF-364CDC6E4F4C
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

@@ -3,8 +3,8 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 5878FAD4-A4BB-4DBF-A1F2-221FD34F0308
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/Storage/Commands.Storage/help/Set-AzureStorageServiceMetricsProperty.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/Storage/Commands.Storage/help/Set-AzureStorageServiceMetricsProperty.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageServiceMetricsProperty.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageServiceMetricsProperty.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
 ---
 

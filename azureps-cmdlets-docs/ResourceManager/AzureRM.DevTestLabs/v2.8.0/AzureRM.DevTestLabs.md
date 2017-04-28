@@ -7,8 +7,8 @@ Help Version:
   [object Object]: null
 Locale: en-US
 ms.assetid: 2A949E3A-4972-418B-B50E-79FC218076CF
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/AzureRM.DevTestLabs.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/AzureRM.DevTestLabs.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/AzureRM.DevTestLabs.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/AzureRM.DevTestLabs.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

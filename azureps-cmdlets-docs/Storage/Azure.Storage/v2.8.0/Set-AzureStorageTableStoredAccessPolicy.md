@@ -3,8 +3,8 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: FF2BFE34-4A12-49F9-9BE5-4084A36BC272
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/Storage/Commands.Storage/help/Set-AzureStorageTableStoredAccessPolicy.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/Storage/Commands.Storage/help/Set-AzureStorageTableStoredAccessPolicy.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageTableStoredAccessPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageTableStoredAccessPolicy.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
 ---
 

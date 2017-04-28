@@ -7,8 +7,8 @@ Help Version:
   [object Object]: null
 Locale: en-US
 ms.assetid: B9CE2358-7A00-434E-AAC3-21394CBD7EE2
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/AzureRM.AzureStackStorage.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/AzureRM.AzureStackStorage.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/AzureRM.AzureStackStorage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/AzureRM.AzureStackStorage.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

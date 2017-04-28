@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
 ms.assetid: D28EB28D-DBC6-48D5-AB0A-C56F56CD0104
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Media/Commands.Media/help/Set-AzureRmMediaServiceKey.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Media/Commands.Media/help/Set-AzureRmMediaServiceKey.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Set-AzureRmMediaServiceKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Set-AzureRmMediaServiceKey.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

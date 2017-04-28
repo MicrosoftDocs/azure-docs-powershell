@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help
 ms.assetid: EDB918EA-4FF3-44EF-A4CA-5BFBD14340EA
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRMAutomationRunbook.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRMAutomationRunbook.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRMAutomationRunbook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRMAutomationRunbook.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

@@ -3,8 +3,8 @@ external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version:
 schema: 2.0.0
 ms.assetid: B346EBDE-CD04-4617-8E5A-24A814B3641B
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Enable-ACSNode.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Enable-ACSNode.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Enable-ACSNode.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Enable-ACSNode.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 ms.assetid: EAFB9C98-000C-4EAC-A32D-6B0F1939AA2F
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetric.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetric.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetric.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetric.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

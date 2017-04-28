@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 ms.assetid: 91919242-59ED-4938-A3A3-23A66F85FBC1
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnOrigin.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnOrigin.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnOrigin.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnOrigin.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

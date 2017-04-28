@@ -6,8 +6,8 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/ef96857354968eb0d7f4b36c5fa0cec6b6263180
 ---
 
