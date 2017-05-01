@@ -32,10 +32,7 @@ If you miss a required template parameter, the cmdlet prompts you for the value.
 Get-AzureRmLogicAppTriggerCallbackUrl -ResourceGroupName "ResourceGroup1" -Name "LogicApp1" -TriggerName "manual"
 ```
 
-This commands gets the integration account callback URL.
-
-Value                                                                                                                                                                                                               
------                                                                                                                                                                                                               
+This commands gets the integration account callback URL.                                                                                                                                                                                                        
 https://prod-03.westus.logic.azure.com:443/workflows/c4ed9335bc864140a11f4508d19acea3/triggers/manual/run?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=\<value\>
 
 ## PARAMETERS
