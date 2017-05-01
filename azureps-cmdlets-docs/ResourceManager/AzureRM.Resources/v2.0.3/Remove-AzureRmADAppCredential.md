@@ -213,6 +213,3 @@ Accept wildcard characters: False
 [New-AzureRmADAppCredential]()
 
 [Get-AzureRmADApplication]()
-
-[]()
-
