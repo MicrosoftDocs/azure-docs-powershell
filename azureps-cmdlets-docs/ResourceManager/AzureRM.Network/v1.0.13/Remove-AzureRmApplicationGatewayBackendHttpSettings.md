@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 52FBC6B0-C531-4DBB-A17F-FD7CACBC2876
 online version: 
 schema: 2.0.0
-ms.assetid: 52FBC6B0-C531-4DBB-A17F-FD7CACBC2876
 ---
 
 # Remove-AzureRmApplicationGatewayBackendHttpSettings
@@ -33,21 +33,6 @@ The first command gets an application gateway named ApplicationGateway01 that be
 The second command removes the back-end HTTP setting named BackEndSetting02 from the application gateway stored in $AppGw.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the back-end HTTP settings that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway from which this cmdlet removes back-end HTTP settings.
@@ -97,6 +82,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the back-end HTTP settings that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

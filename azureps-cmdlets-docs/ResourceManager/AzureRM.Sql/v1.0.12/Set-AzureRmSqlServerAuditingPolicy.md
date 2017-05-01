@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: 8A40DE11-385A-4B50-8709-CCC4FD77F9C7
+online version: 
+schema: 2.0.0
 ---
 
 # Set-AzureRmSqlServerAuditingPolicy
@@ -56,21 +56,6 @@ This command does not modify any other setting.
 
 ## PARAMETERS
 
-### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EventType
 Specifies the event types to audit.
 The acceptable values for this parameter are:
@@ -95,113 +80,10 @@ If you specify All or None at the same time, the command fails.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageAccountName
-Specifies the name of the storage account for auditing the database.
-Wildcard characters are not permitted.
-If you do not specify this parameter, the cmdlet uses the storage account that was defined previously as part of the auditing policy of the database.
-If this is the first time a database auditing policy is defined and you do not specify this parameter, the command fails.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageKeyType
-Specifies which of the storage access keys to use.
-The acceptable values for this parameter are:
-
-- Primary
-- Secondary
-
-The default value is Primary.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RetentionInDays
-Specifies the number of retention days for the audit logs table.
-A value of zero (0) means that the table is not retained.
-this is the default.
-If you specify a value greater than zero, you must also specify a value for the *TableIdentifer* parameter.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TableIdentifier
-Specifies the name of the audit logs table.
-Specify this value if you specify a value greater than zero for the *RetentionInDays* parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServerName
-Specifies the name of the server that contains the database.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the database.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -243,6 +125,124 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the database.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetentionInDays
+Specifies the number of retention days for the audit logs table.
+A value of zero (0) means that the table is not retained.
+this is the default.
+If you specify a value greater than zero, you must also specify a value for the *TableIdentifer* parameter.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of the server that contains the database.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageAccountName
+Specifies the name of the storage account for auditing the database.
+Wildcard characters are not permitted.
+If you do not specify this parameter, the cmdlet uses the storage account that was defined previously as part of the auditing policy of the database.
+If this is the first time a database auditing policy is defined and you do not specify this parameter, the command fails.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageKeyType
+Specifies which of the storage access keys to use.
+The acceptable values for this parameter are:
+
+- Primary
+- Secondary
+
+The default value is Primary.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TableIdentifier
+Specifies the name of the audit logs table.
+Specify this value if you specify a value greater than zero for the *RetentionInDays* parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

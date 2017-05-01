@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 5007BAF3-B84B-44CF-9DCD-12F0F712D9BD
 online version: 
 schema: 2.0.0
-ms.assetid: 5007BAF3-B84B-44CF-9DCD-12F0F712D9BD
 ---
 
 # Get-AzureRmDataLakeStoreAccount
@@ -83,6 +83,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies the name of the account to get.
+
+```yaml
+Type: String
+Parameter Sets: Specific Account
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of the resource group that contains the Data Lake Store account to get.
 
@@ -104,21 +119,6 @@ Parameter Sets: Specific Account
 Aliases: 
 
 Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the account to get.
-
-```yaml
-Type: String
-Parameter Sets: Specific Account
-Aliases: 
-
-Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 08AA7088-8158-4848-8FBD-039130B545B2
 online version: 
 schema: 2.0.0
-ms.assetid: 08AA7088-8158-4848-8FBD-039130B545B2
 ---
 
 # Get-AzureRmSqlDatabaseGeoBackupPolicy

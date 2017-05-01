@@ -12,8 +12,7 @@ Removes a route from a route table.
 ## SYNTAX
 
 ```
-Remove-AzureRmRouteConfig -Name <String> -RouteTable <PSRouteTable> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+Remove-AzureRmRouteConfig -Name <String> -RouteTable <PSRouteTable> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +22,8 @@ The Remove-AzureRmRouteConfig cmdlet removes a route from an Azure route table.
 
 ### --------------------------  Example 1: Remove a route  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\>Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "routetable01" | Remove-AzureRmRouteConfig -Name "route02" | Set-AzureRmRouteTable
@@ -84,35 +85,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

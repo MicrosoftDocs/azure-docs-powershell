@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+ms.assetid: 4E50ABA5-D0F4-4333-9373-9EAF21E4F6E0
 online version: 
 schema: 2.0.0
-ms.assetid: 4E50ABA5-D0F4-4333-9373-9EAF21E4F6E0
 ---
 
 # Wait-AzureRmDataLakeAnalyticsJob
@@ -47,51 +47,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -JobId
-Specifies the ID of the job for which to wait.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -WaitIntervalInSeconds
-Specify the number of seconds that elapse between each check of the job state.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TimeoutInSeconds
-Specifies the number of seconds to wait before exiting the wait operation.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -128,6 +83,51 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JobId
+Specifies the ID of the job for which to wait.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -TimeoutInSeconds
+Specifies the number of seconds to wait before exiting the wait operation.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WaitIntervalInSeconds
+Specify the number of seconds that elapse between each check of the job state.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

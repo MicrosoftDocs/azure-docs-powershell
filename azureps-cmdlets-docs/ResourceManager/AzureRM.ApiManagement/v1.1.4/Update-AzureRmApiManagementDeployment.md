@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+ms.assetid: 166E3BD3-929D-4213-AEBC-411E2E8F50A2
 online version: 
 schema: 2.0.0
-ms.assetid: 166E3BD3-929D-4213-AEBC-411E2E8F50A2
 ---
 
 # Update-AzureRmApiManagementDeployment
@@ -51,148 +51,18 @@ This example gets an Api Management instance, scales it to five premium units an
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of resource group under which API Management exists.
-
-```yaml
-Type: String
-Parameter Sets: Specific API Management service
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of API Management that this cmdlet updates.
-
-```yaml
-Type: String
-Parameter Sets: Specific API Management service
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Location
-Specifies the location of the master API Management deployment region.
-
-The acceptable values for this parameter are:
-
-- North Central US
-- South Central US
-- Central US
-- West Europe
-- North Europe
-- West US
-- East US
-- East US 2
-- Japan East
-- Japan West
-- Brazil South
-- Southeast Asia
-- East Asia
-- Australia East
-- Australia Southeast
-
-```yaml
-Type: String
-Parameter Sets: Specific API Management service
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Sku
-Specifies the tier of the master Azure API Management deployment region.
-
-The acceptable values for this parameter are:
-
-- Developer
-- Standard
-- Premium
-
-```yaml
-Type: PsApiManagementSku
-Parameter Sets: Specific API Management service
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Capacity
-Specifies the SKU capacity of the master Azure API Management deployment region.
-
-```yaml
-Type: Int32
-Parameter Sets: Specific API Management service
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VirtualNetwork
-Specifies the Virtual Network configuration of the master Azure API Management deployment region.
-
-```yaml
-Type: PsApiManagementVirtualNetwork
-Parameter Sets: Specific API Management service
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -AdditionalRegions
 Specifies additional deployment regions of Azure API Management.
 
 ```yaml
 Type: System.Collections.Generic.IList`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion]
 Parameter Sets: Specific API Management service
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PassThru
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -203,12 +73,27 @@ Use this parameter if the instance already has all the required changes.
 ```yaml
 Type: PsApiManagement
 Parameter Sets: Update from PsApiManagement instance
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Capacity
+Specifies the SKU capacity of the master Azure API Management deployment region.
+
+```yaml
+Type: Int32
+Parameter Sets: Specific API Management service
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -248,6 +133,121 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+Specifies the location of the master API Management deployment region.
+
+The acceptable values for this parameter are:
+
+- North Central US
+- South Central US
+- Central US
+- West Europe
+- North Europe
+- West US
+- East US
+- East US 2
+- Japan East
+- Japan West
+- Brazil South
+- Southeast Asia
+- East Asia
+- Australia East
+- Australia Southeast
+
+```yaml
+Type: String
+Parameter Sets: Specific API Management service
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of API Management that this cmdlet updates.
+
+```yaml
+Type: String
+Parameter Sets: Specific API Management service
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PassThru
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of resource group under which API Management exists.
+
+```yaml
+Type: String
+Parameter Sets: Specific API Management service
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Sku
+Specifies the tier of the master Azure API Management deployment region.
+
+The acceptable values for this parameter are:
+
+- Developer
+- Standard
+- Premium
+
+```yaml
+Type: PsApiManagementSku
+Parameter Sets: Specific API Management service
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualNetwork
+Specifies the Virtual Network configuration of the master Azure API Management deployment region.
+
+```yaml
+Type: PsApiManagementVirtualNetwork
+Parameter Sets: Specific API Management service
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

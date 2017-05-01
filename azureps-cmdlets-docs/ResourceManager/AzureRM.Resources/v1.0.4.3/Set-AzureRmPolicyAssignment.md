@@ -14,13 +14,13 @@ schema: 2.0.0
 ### The policy assignment name parameter set. (Default)
 ```
 Set-AzureRmPolicyAssignment -Name <String> -Scope <String> [-DisplayName <String>] [-ApiVersion <String>]
- [-Pre] [<CommonParameters>]
+ [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### The policy assignment Id parameter set.
 ```
 Set-AzureRmPolicyAssignment -Id <String> [-DisplayName <String>] [-ApiVersion <String>] [-Pre]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,19 +37,33 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+### -Name
+The policy assignment name.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: The policy assignment name parameter set.
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Scope
+The policy assignment name.
+
+```yaml
+Type: String
+Parameter Sets: The policy assignment name parameter set.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -68,35 +82,19 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Id
-The fully qualified policy assignment Id, including the subscription.
-e.g.
-/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
+### -ApiVersion
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
 Type: String
-Parameter Sets: The policy assignment Id parameter set.
-Aliases: ResourceId
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-The policy assignment name.
-
-```yaml
-Type: String
-Parameter Sets: The policy assignment name parameter set.
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -115,13 +113,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Scope
-The policy assignment name.
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+The fully qualified policy assignment Id, including the subscription.
+e.g.
+/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
 
 ```yaml
 Type: String
-Parameter Sets: The policy assignment name parameter set.
-Aliases: 
+Parameter Sets: The policy assignment Id parameter set.
+Aliases: ResourceId
 
 Required: True
 Position: Named

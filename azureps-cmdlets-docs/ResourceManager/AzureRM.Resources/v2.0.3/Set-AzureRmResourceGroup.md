@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: F8BB065B-E6E9-49AE-A7AB-815068C40F23
 online version: 
 schema: 2.0.0
-ms.assetid: F8BB065B-E6E9-49AE-A7AB-815068C40F23
 ---
 
 # Set-AzureRmResourceGroup
@@ -14,13 +14,12 @@ Modifies a resource group.
 
 ### Lists the resource group based in the name. (Default)
 ```
-Set-AzureRmResourceGroup [-Name] <String> [-Tag] <Hashtable[]> [-ApiVersion <String>] [-Pre]
- [<CommonParameters>]
+Set-AzureRmResourceGroup [-Name] <String> [-Tag] <Hashtable> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
 ```
 
 ### Lists the resource group based in the Id.
 ```
-Set-AzureRmResourceGroup [-Tag] <Hashtable[]> [-Id] <String> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Set-AzureRmResourceGroup [-Tag] <Hashtable> [-Id] <String> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -119,7 +118,7 @@ To delete a tag, enter a hash table with all tags currently applied to the resou
 To delete all tags from a resource group, specify an empty hash table: `@{}`.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

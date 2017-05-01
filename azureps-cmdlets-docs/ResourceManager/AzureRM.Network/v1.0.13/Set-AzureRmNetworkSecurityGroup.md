@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: E0696C25-4A2A-4E51-8A38-C1ADFBEFBAC0
 online version: 
 schema: 2.0.0
-ms.assetid: E0696C25-4A2A-4E51-8A38-C1ADFBEFBAC0
 ---
 
 # Set-AzureRmNetworkSecurityGroup
@@ -31,21 +31,6 @@ This command gets the Azure network security group named Nsg1, and adds a networ
 The command persists the modified Azure network security group using **Set-AzureRmNetworkSecurityGroup**.
 
 ## PARAMETERS
-
-### -NetworkSecurityGroup
-A network security group object representing the goal state to which the cmdlet sets the network security group.
-
-```yaml
-Type: PSNetworkSecurityGroup
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -83,6 +68,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkSecurityGroup
+A network security group object representing the goal state to which the cmdlet sets the network security group.
+
+```yaml
+Type: PSNetworkSecurityGroup
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

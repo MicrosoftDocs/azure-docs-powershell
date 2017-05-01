@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 07F463D6-0328-4121-BDF6-8176F5DDD768
 online version: 
 schema: 2.0.0
-ms.assetid: 07F463D6-0328-4121-BDF6-8176F5DDD768
 ---
 
 # Register-AzureRmResourceProvider
@@ -21,7 +21,6 @@ Register-AzureRmResourceProvider -ProviderNamespace <String> [-ApiVersion <Strin
 The **Register-AzureRmResourceProvider** cmdlet registers an Azure resource provider.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: EA92B7F8-216F-4004-97E5-7FE83A281458
 online version: 
 schema: 2.0.0
-ms.assetid: EA92B7F8-216F-4004-97E5-7FE83A281458
 ---
 
 # Save-AzureRmVhd
@@ -15,13 +15,15 @@ Saves downloaded .vhd images locally.
 ### ResourceGroupParameterSetName
 ```
 Save-AzureRmVhd [-ResourceGroupName] <String> [-SourceUri] <Uri> [-LocalFilePath] <FileInfo>
- [[-NumberOfThreads] <Int32>] [-OverWrite] [<CommonParameters>]
+ [[-NumberOfThreads] <Int32>] [-OverWrite] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### StorageKeyParameterSetName
 ```
 Save-AzureRmVhd [-StorageKey] <String> [-SourceUri] <Uri> [-LocalFilePath] <FileInfo>
- [[-NumberOfThreads] <Int32>] [-OverWrite] [<CommonParameters>]
+ [[-NumberOfThreads] <Int32>] [-OverWrite] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,51 +69,6 @@ This command downloads a .vhd file and specifies the storage key.
 
 ## PARAMETERS
 
-### -LocalFilePath
-Specifies the local file path of the saved image.
-
-```yaml
-Type: FileInfo
-Parameter Sets: (All)
-Aliases: lf
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NumberOfThreads
-Specifies the number of download threads that this cmdlet uses during download.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: th
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverWrite
-Indicates that this cmdlet replaces the file specified by *LocalFilePath* file if it exists.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: o
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 Specifies the name of the resource group of the virtual machine.
 
@@ -121,7 +78,7 @@ Parameter Sets: ResourceGroupParameterSetName
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -136,9 +93,80 @@ Parameter Sets: (All)
 Aliases: src, Source
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LocalFilePath
+Specifies the local file path of the saved image.
+
+```yaml
+Type: FileInfo
+Parameter Sets: (All)
+Aliases: lf
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NumberOfThreads
+Specifies the number of download threads that this cmdlet uses during download.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: th
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverWrite
+Indicates that this cmdlet replaces the file specified by *LocalFilePath* file if it exists.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: o
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -152,7 +180,7 @@ Parameter Sets: StorageKeyParameterSetName
 Aliases: sk
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

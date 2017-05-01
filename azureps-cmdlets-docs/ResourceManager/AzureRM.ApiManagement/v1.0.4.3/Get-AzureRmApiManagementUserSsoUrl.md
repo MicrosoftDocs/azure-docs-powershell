@@ -12,7 +12,7 @@ Generates SSO URL for the user.
 ## SYNTAX
 
 ```
-Get-AzureRmApiManagementUserSsoUrl -Context <PsApiManagementContext> -UserId <String>
+Get-AzureRmApiManagementUserSsoUrl -Context <PsApiManagementContext> -UserId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,6 +22,10 @@ Generates SSO URL for the user.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementUserSsoUrl -Context $apimContext -UserId 0123456789
@@ -62,6 +66,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

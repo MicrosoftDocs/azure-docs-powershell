@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+ms.assetid: 521160CA-637A-454B-BA41-A9B911D0C2E7
 online version: 
 schema: 2.0.0
-ms.assetid: 521160CA-637A-454B-BA41-A9B911D0C2E7
 ---
 
 # Get-AzureRmOperationalInsightsSavedSearch
@@ -40,51 +40,6 @@ This command gets a specific saved search by its ID.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of an Azure resource group that contains a workspace.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceName
-Specifies a workspace name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Name
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SavedSearchId
-Specifies a saved search ID.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -121,6 +76,51 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of an Azure resource group that contains a workspace.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SavedSearchId
+Specifies a saved search ID.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkspaceName
+Specifies a workspace name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

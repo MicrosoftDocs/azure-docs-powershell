@@ -20,7 +20,7 @@ Set-AzureRmApiManagementAuthorizationServer -Context <PsApiManagementContext> -S
  -ClientAuthenticationMethods <PsApiManagementClientAuthenticationMethod[]> [-TokenBodyParameters <Hashtable>]
  [-SupportState <Boolean>] [-DefaultScope <String>]
  -AccessTokenSendingMethods <PsApiManagementAccessTokenSendingMethod[]> [-ResourceOwnerUsername <String>]
- [-ResourceOwnerPassword <String>] [-PassThru]
+ [-ResourceOwnerPassword <String>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,10 @@ Sets authorization server details.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Set-AzureRmApiManagementAuthrizarionServer -Context $apimContext -ServerId 0123456789 -Name 'Contoso OAuth2 server' -ClientRegistrationPageUrl 'https://contoso/signupv2' -AthorizationEndpointUrl 'https://contoso/authv2' -TokenEndpointUrl 'https://contoso/tokenv2' -ClientId clientid -ClientSecret e041ed1b660b4eadbad5a29d066e6e88 -AuthorizationRequestMethods @('Get') -GrantTypes @( 'AuthorizationCode', 'Implicit', 'ClientCredentials') -ClientAuthenticationMethods @('Basic') -TokenBodyParameters @{'par1'='val1'} -AccessTokenSendingMethods @('AuthorizationHeader')
@@ -343,6 +347,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

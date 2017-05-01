@@ -13,12 +13,13 @@ Gets a list or a particular API Operation.
 
 ### All API Operations (Default)
 ```
-Get-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <String>
+Get-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <String> [<CommonParameters>]
 ```
 
 ### Find by ID
 ```
 Get-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <String> -OperationId <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +30,10 @@ Gets a list or a particular API Operation.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementOperation -Context $apimContext -ApiId $apiId
 ```
@@ -37,6 +42,10 @@ Get all API Operations.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementOperation -Context $apimContext -ApiId $apiId -OperationId 0123456789
@@ -93,6 +102,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

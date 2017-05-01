@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+ms.assetid: 111FA5C7-C928-4BA0-B24F-A73FDCF06980
 online version: 
 schema: 2.0.0
-ms.assetid: 111FA5C7-C928-4BA0-B24F-A73FDCF06980
 ---
 
 # Get-AzureRmLogicAppTriggerHistory
@@ -107,7 +107,7 @@ Specifies the name of the logic app for which this cmdlet gets trigger history.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named

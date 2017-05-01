@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 0447A463-CF47-4EF7-8FB7-C0612499F3B0
 online version: 
 schema: 2.0.0
-ms.assetid: 0447A463-CF47-4EF7-8FB7-C0612499F3B0
 ---
 
 # Start-AzureRmVM
@@ -38,27 +38,12 @@ This command starts the virtual machine named VirtualMachine07 in ResourceGroup1
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the virtual machine to start.
+### -Id
+Specifies the Resource ID of the virtual machine.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: ResourceGroupNameParameterSetName
+Parameter Sets: IdParameterSetName
 Aliases: 
 
 Required: True
@@ -107,12 +92,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-Specifies the Resource ID of the virtual machine.
+### -Name
+Specifies the name of the virtual machine to start.
 
 ```yaml
 Type: String
-Parameter Sets: IdParameterSetName
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: ResourceGroupNameParameterSetName
 Aliases: 
 
 Required: True

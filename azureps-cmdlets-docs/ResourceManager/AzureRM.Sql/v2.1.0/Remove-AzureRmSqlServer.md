@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 24F903A5-C1CA-40E4-9889-265A9366B341
 online version: 
 schema: 2.0.0
-ms.assetid: 24F903A5-C1CA-40E4-9889-265A9366B341
 ---
 
 # Remove-AzureRmSqlServer

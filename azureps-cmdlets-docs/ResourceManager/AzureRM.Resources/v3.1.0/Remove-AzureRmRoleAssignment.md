@@ -15,12 +15,14 @@ Removes a role assignment to the specified principal who is assigned to a partic
 ```
 Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceGroupWithObjectIdParameterSet
 ```
 Remove-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -RoleDefinitionName <String>
  [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceWithObjectIdParameterSet
@@ -28,24 +30,28 @@ Remove-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -RoleD
 Remove-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -ResourceName <String>
  -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ScopeWithObjectIdParameterSet
 ```
 Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RoleIdWithScopeAndObjectIdParameterSet
 ```
 Remove-AzureRmRoleAssignment -ObjectId <Guid> [-Scope <String>] -RoleDefinitionId <Guid> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ScopeWithSignInNameParameterSet
 ```
 Remove-AzureRmRoleAssignment -SignInName <String> [-Scope <String>] -RoleDefinitionName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceWithSignInNameParameterSet
@@ -53,12 +59,14 @@ Remove-AzureRmRoleAssignment -SignInName <String> [-Scope <String>] -RoleDefinit
 Remove-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -ResourceName <String>
  -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceGroupWithSignInNameParameterSet
 ```
 Remove-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -RoleDefinitionName <String>
  [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceWithSPNParameterSet
@@ -66,19 +74,21 @@ Remove-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -R
 Remove-AzureRmRoleAssignment -ServicePrincipalName <String> -ResourceGroupName <String> -ResourceName <String>
  -ResourceType <String> [-ParentResource <String>] -RoleDefinitionName <String> [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceGroupWithSPNParameterSet
 ```
 Remove-AzureRmRoleAssignment -ServicePrincipalName <String> -ResourceGroupName <String>
  -RoleDefinitionName <String> [-PassThru] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ScopeWithSPNParameterSet
 ```
 Remove-AzureRmRoleAssignment -ServicePrincipalName <String> [-Scope <String>] -RoleDefinitionName <String>
  [-PassThru] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,6 +115,8 @@ ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Remove-AzureRmRoleAssignment -ResourceGroupName rg1 -SignInName john.doe@contoso.com -RoleDefinitionName Reader
 ```
@@ -113,6 +125,8 @@ Removes a role assignment for john.doe@contoso.com who is assigned to the Reader
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\> Remove-AzureRmRoleAssignment -ObjectId 36f81fc3-b00f-48cd-8218-3879f51ff39f -RoleDefinitionName Reader
@@ -362,6 +376,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

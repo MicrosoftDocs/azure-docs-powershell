@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+ms.assetid: E4E4CF67-FC15-4F16-9A5F-D8CB4A327631
 online version: 
 schema: 2.0.0
-ms.assetid: E4E4CF67-FC15-4F16-9A5F-D8CB4A327631
 ---
 
 # New-AzureRmCognitiveServicesAccount
@@ -30,98 +30,18 @@ The **New-AzureRmCognitiveServicesAccount** cmdlet creates a Cognitive Services 
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group to which to assign the account.
-The resource group must already exist.
+### -Force
+ps_force
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name for the account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: CognitiveServicesAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Type
-Specifies the type of account to create.psdx_paramvalues
-
-- ComputerVision
-- Emotion
-- Face
-- LUIS
-- Recommendations
-- Speech
-- TextAnalytics
-- WebLM
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: CognitiveServicesAccountType, AccountType, Kind
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkuName
-Specifies the SKU for the account.
-psdx_paramvalues
-
-- F0 (free tier)
-- S0
-- S1
-- S2
-- S3
-- S4
-
-For more information, see Cognitive Service APIshttps://www.microsoft.com/cognitive-services/en-us/apis (https://www.microsoft.com/cognitive-services/en-us/apis).
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Location
-Specifies the location in which to create the account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -164,33 +84,74 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -Location
+Specifies the location in which to create the account.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 4
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name for the account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: CognitiveServicesAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which to assign the account.
+The resource group must already exist.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkuName
+Specifies the SKU for the account.
+psdx_paramvalues
+
+- F0 (free tier)
+- S0
+- S1
+- S2
+- S3
+- S4
+
+For more information, see Cognitive Service APIshttps://www.microsoft.com/cognitive-services/en-us/apis (https://www.microsoft.com/cognitive-services/en-us/apis).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -205,6 +166,45 @@ Aliases: Tags
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+Specifies the type of account to create.psdx_paramvalues
+
+- ComputerVision
+- Emotion
+- Face
+- LUIS
+- Recommendations
+- Speech
+- TextAnalytics
+- WebLM
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: CognitiveServicesAccountType, AccountType, Kind
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

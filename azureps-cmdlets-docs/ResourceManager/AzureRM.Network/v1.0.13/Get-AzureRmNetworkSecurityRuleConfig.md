@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: B9118794-56D1-46F0-A8D2-BDAFA796AADF
 online version: 
 schema: 2.0.0
-ms.assetid: B9118794-56D1-46F0-A8D2-BDAFA796AADF
 ---
 
 # Get-AzureRmNetworkSecurityRuleConfig
@@ -28,36 +28,6 @@ The **Get-AzureRmNetworkSecurityRuleConfig** cmdlet gets a network security rule
 ```
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the network security rule configuration to get.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkSecurityGroup
-Specifies a **NetworkSecurityGroup** object that contains the network security rule configuration to get.
-
-```yaml
-Type: PSNetworkSecurityGroup
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -DefaultRules
 Indicates whether this cmdlet gets a user-created rule configuration or a default rule configuration.
@@ -110,6 +80,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the network security rule configuration to get.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkSecurityGroup
+Specifies a **NetworkSecurityGroup** object that contains the network security rule configuration to get.
+
+```yaml
+Type: PSNetworkSecurityGroup
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

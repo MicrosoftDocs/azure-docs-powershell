@@ -15,26 +15,28 @@ Adds a credential to an existing service principal.
 ```
 New-AzureRmADSpCredential -ObjectId <String> -Password <String> [-StartDate <DateTime>] [-EndDate <DateTime>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SpObjectIdWithCertValueParameterSet
 ```
 New-AzureRmADSpCredential -ObjectId <String> -CertValue <String> [-StartDate <DateTime>] [-EndDate <DateTime>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SPNWithPasswordParameterSet
 ```
 New-AzureRmADSpCredential -ServicePrincipalName <String> -Password <String> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SPNWithCertValueParameterSet
 ```
 New-AzureRmADSpCredential -ServicePrincipalName <String> -CertValue <String> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,6 +48,8 @@ The service principal is identified by supplying either the object id or service
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS E:\> New-AzureRmADSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476 -Password "P@ssw0rd!"
 ```
@@ -55,6 +59,8 @@ In this example, the supplied password value is added to the service principal u
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate 
@@ -73,6 +79,8 @@ In this example, the supplied base64 encoded public X509 certificate ("myapp.cer
 
 ### --------------------------  Example 3  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS E:\> New-AzureRmADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue
@@ -234,6 +242,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

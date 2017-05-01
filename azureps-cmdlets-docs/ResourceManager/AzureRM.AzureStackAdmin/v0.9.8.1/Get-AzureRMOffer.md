@@ -17,19 +17,21 @@ This cmdlet is applicable only to Microsoft Azure Stack Environments
 ```
 Get-AzureRMOffer [-Provider <String>] [-AdminUri <Uri>] [-Token <String>] [-ApiVersion <String>]
  [-DisableCertificateValidation] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### TenantGet
 ```
 Get-AzureRMOffer -OfferId <String> [-AdminUri <Uri>] [-Token <String>] [-ApiVersion <String>]
  [-DisableCertificateValidation] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### Admin
 ```
 Get-AzureRMOffer [-Name <String>] -ResourceGroup <String> [-SubscriptionId <Guid>] [-Managed] [-AdminUri <Uri>]
  [-Token <String>] [-ApiVersion <String>] [-DisableCertificateValidation]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,41 +47,11 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Provider
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: TenantList
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AdminUri
 URI of the Azure Resource Manager endpoint
 
 ```yaml
 Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Token
-A valid Security token for a user/principal that has access to the Subscription
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -150,12 +122,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OfferId
+### -Managed
 @{Text=}
 
 ```yaml
-Type: String
-Parameter Sets: TenantGet
+Type: SwitchParameter
+Parameter Sets: Admin
 Aliases: 
 
 Required: True
@@ -171,6 +143,36 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Admin
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OfferId
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: TenantGet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Provider
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: TenantList
 Aliases: 
 
 Required: False
@@ -210,20 +212,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Managed
-@{Text=}
+### -Token
+A valid Security token for a user/principal that has access to the Subscription
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Admin
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

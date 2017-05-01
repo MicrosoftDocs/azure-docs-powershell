@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+ms.assetid: 901415FE-61A6-4D97-AE43-502647425C22
 online version: 
 schema: 2.0.0
-ms.assetid: 901415FE-61A6-4D97-AE43-502647425C22
 ---
 
 # Set-AzureRmCognitiveServicesAccount
@@ -30,56 +30,18 @@ The **Set-AzureRmCognitiveServicesAccount** cmdlet modifies the SKU or tags of t
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group the account is assigned to.
+### -Force
+ps_force
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the account to modify.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: CognitiveServicesAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkuName
-Specifies the SKU for the account.
-psdx_paramvalues
-
-- F0 (free tier)
-- S0
-- S1
-- S2
-- S3
-- S4
-
-```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -122,33 +84,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -Name
+Specifies the name of the account to modify.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases: CognitiveServicesAccountName, AccountName
 
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Force
-ps_force
+### -ResourceGroupName
+Specifies the name of the resource group the account is assigned to.
 
 ```yaml
-Type: SwitchParameter
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkuName
+Specifies the SKU for the account.
+psdx_paramvalues
+
+- F0 (free tier)
+- S0
+- S1
+- S2
+- S3
+- S4
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -164,6 +149,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

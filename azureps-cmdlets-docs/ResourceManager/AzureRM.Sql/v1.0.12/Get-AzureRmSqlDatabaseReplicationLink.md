@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: B518AB6E-F4B8-4FD5-98AE-A1D75BDB12A7
+online version: 
+schema: 2.0.0
 ---
 
 # Get-AzureRmSqlDatabaseReplicationLink
@@ -27,10 +27,8 @@ Get-AzureRmSqlDatabaseReplicationLink [-DatabaseName] <String> -PartnerResourceG
 ```
 
 ## DESCRIPTION
-
 The **Get-AzureRmSqlDatabaseReplicationLink** cmdlet replaces the **Get-AzureSqlDatabaseCopy** cmdlet.
 It gets all geo-replication links between the specified ssSDS and a resource group or AzuressNoVersion.
-
 
 ## EXAMPLES
 
@@ -47,55 +45,10 @@ Specifies the name of the SQL Database for which to get links.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PartnerResourceGroupName
-Specifies the name of the resource group to which the partner is assigned.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServerName
-Specifies the name of the SQL Server for the database to get links for.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the Azure resource group for the database for which to get links.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -140,18 +93,63 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PartnerResourceGroupName
+Specifies the name of the resource group to which the partner is assigned.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PartnerServerName
 Specifies the name of the Azure SQL Server for the partner.
 
 ```yaml
 Type: String
 Parameter Sets: ByPartnerServerName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the Azure resource group for the database for which to get links.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of the SQL Server for the database to get links for.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -171,3 +169,4 @@ This cmdlet returns a **ReplicationLink** object.
 ## NOTES
 
 ## RELATED LINKS
+

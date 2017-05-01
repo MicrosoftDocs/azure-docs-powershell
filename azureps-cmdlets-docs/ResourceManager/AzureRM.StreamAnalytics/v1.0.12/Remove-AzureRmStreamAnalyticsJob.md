@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: D840084F-8B06-4EEA-918F-BDAFB6C60F9B
 online version: 
 schema: 2.0.0
-ms.assetid: D840084F-8B06-4EEA-918F-BDAFB6C60F9B
 ---
 
 # Remove-AzureRmStreamAnalyticsJob
@@ -31,6 +31,21 @@ This command removes the job StreamingJob.
 
 ## PARAMETERS
 
+### -Force
+If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics job without asking for confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the Azure Stream Analytics job to remove.
 
@@ -46,13 +61,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Force
-If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics job without asking for confirmation.
+### -PipelineVariable
+Not Specified
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: pv
 
 Required: False
 Position: Named
@@ -73,21 +88,6 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PipelineVariable
-Not Specified
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: pv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

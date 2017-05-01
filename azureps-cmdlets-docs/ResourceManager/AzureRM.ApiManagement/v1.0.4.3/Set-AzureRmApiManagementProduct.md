@@ -14,7 +14,7 @@ Sets Product details.
 ```
 Set-AzureRmApiManagementProduct -Context <PsApiManagementContext> -ProductId <String> [-Title <String>]
  [-Description <String>] [-LegalTerms <String>] [-SubscriptionRequired <Boolean>] [-ApprovalRequired <Boolean>]
- [-SubscriptionsLimit <Int32>] [-State <PsApiManagementProductState>] [-PassThru]
+ [-SubscriptionsLimit <Int32>] [-State <PsApiManagementProductState>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +24,10 @@ Sets Product details.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Set-AzureRmApiManagementProduct -Context $apimContext -ProductId 0123456789 -Title 'Starter' -Description 'Starter Product' -LegalTerms 'Free for all' -SubscriptionRequired $true -State 'NotPublished'
@@ -196,6 +200,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

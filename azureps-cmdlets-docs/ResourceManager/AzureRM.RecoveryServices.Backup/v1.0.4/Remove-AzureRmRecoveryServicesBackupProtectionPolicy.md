@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: 2F43F4CD-54D2-4A3D-9EB4-3C34FD02F160
 online version: 
 schema: 2.0.0
-ms.assetid: 2F43F4CD-54D2-4A3D-9EB4-3C34FD02F160
 ---
 
 # Remove-AzureRmRecoveryServicesBackupProtectionPolicy
@@ -48,21 +48,6 @@ The first command gets the Backup protection policy named NewPolicy, and then st
 The second command removes the policy object in $Pol.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the Backup protection policy to remove.
-
-```yaml
-Type: String
-Parameter Sets: PolicyName
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 ps_force
@@ -113,6 +98,21 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Backup protection policy to remove.
+
+```yaml
+Type: String
+Parameter Sets: PolicyName
+Aliases: 
+
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

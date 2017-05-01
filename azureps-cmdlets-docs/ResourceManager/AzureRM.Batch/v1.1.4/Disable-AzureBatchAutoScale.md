@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+ms.assetid: 04070FDE-1880-467A-8360-1B44FB6B1271
 online version: 
 schema: 2.0.0
-ms.assetid: 04070FDE-1880-467A-8360-1B44FB6B1271
 ---
 
 # Disable-AzureBatchAutoScale

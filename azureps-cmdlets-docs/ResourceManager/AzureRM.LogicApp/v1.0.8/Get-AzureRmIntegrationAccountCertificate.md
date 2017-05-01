@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+ms.assetid: 9FE67A35-A2BE-4D39-8421-5D018F6D7E9E
 online version: 
 schema: 2.0.0
-ms.assetid: 9FE67A35-A2BE-4D39-8421-5D018F6D7E9E
 ---
 
 # Get-AzureRmIntegrationAccountCertificate
@@ -90,7 +90,7 @@ Specifies the name of an integration account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: False
 Position: Named

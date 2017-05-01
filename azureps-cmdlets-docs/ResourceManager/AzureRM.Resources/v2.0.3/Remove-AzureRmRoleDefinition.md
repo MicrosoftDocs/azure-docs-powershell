@@ -17,12 +17,14 @@ Delete will fail if there are existing role assignments made to the custom role.
 ```
 Remove-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [-Force] [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RoleDefinitionNameParameterSet
 ```
-Remove-AzureRmRoleDefinition -Name <String> [-Scope <String>] [-Force] [-PassThru]
+Remove-AzureRmRoleDefinition [-Name] <String> [-Scope <String>] [-Force] [-PassThru]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,12 +39,24 @@ If there are existing role assignments made to the custom role to be deleted, th
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
+
+
 ```
 Get-AzureRmRoleDefinition -Name "Virtual Machine Operator" | Remove-AzureRmRoleDefinition
 ```
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
+
+
 
 ```
 Remove-AzureRmRoleDefinition -Id "52a6cc13-ff92-47a8-a39b-2a8205c3087e"
@@ -140,18 +154,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-Name of the Role definition to be deleted.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: String
-Parameter Sets: RoleDefinitionNameParameterSet
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -170,21 +185,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -Name
+Name of the Role definition to be deleted.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Type: String
+Parameter Sets: RoleDefinitionNameParameterSet
+Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

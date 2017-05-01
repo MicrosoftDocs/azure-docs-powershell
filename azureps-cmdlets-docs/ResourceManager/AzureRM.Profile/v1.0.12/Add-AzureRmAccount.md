@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+ms.assetid: 8E0C633A-F157-4525-A1A8-327FA4BDD36D
 online version: 
 schema: 2.0.0
-ms.assetid: 8E0C633A-F157-4525-A1A8-327FA4BDD36D
 ---
 
 # Add-AzureRmAccount
@@ -147,97 +147,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
-Specifies a **PSCredential** object.
-For more information about the **PSCredential** object, type `Get-Help Get-Credential`.
-
-The **PSCredential** object provides the user ID and password for organizational ID credentials, or the application ID and secret for service principal credentials.
-
-```yaml
-Type: PSCredential
-Parameter Sets: User, SubscriptionId, SubscriptionName
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSCredential
-Parameter Sets: ServicePrincipal
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnvironmentName
-Specifies the name of the environment.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServicePrincipal
-Indicates that this account authenticates by providing service principal credentials.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: ServicePrincipal, ServicePrincipalCertificate
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SubscriptionId
-Specifies the ID of the subscription.
-If you do not specify this parameter, this cmdlet uses the first subscription from the subscription list.
-
-```yaml
-Type: String
-Parameter Sets: SubscriptionId, ServicePrincipal
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SubscriptionName
-Specifies the name of the subscription.
-
-```yaml
-Type: String
-Parameter Sets: SubscriptionName, ServicePrincipal
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -AccountId
 Specifies the ID of an authenticated account that run Resource Manager cmdlets.
 
@@ -319,17 +228,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -Credential
+Specifies a **PSCredential** object.
+For more information about the **PSCredential** object, type `Get-Help Get-Credential`.
+
+The **PSCredential** object provides the user ID and password for organizational ID credentials, or the application ID and secret for service principal credentials.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Type: PSCredential
+Parameter Sets: User, SubscriptionId, SubscriptionName
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: PSCredential
+Parameter Sets: ServicePrincipal
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -348,6 +272,67 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnvironmentName
+Specifies the name of the environment.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServicePrincipal
+Indicates that this account authenticates by providing service principal credentials.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ServicePrincipal, ServicePrincipalCertificate
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubscriptionId
+Specifies the ID of the subscription.
+If you do not specify this parameter, this cmdlet uses the first subscription from the subscription list.
+
+```yaml
+Type: String
+Parameter Sets: SubscriptionId, ServicePrincipal
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SubscriptionName
+Specifies the name of the subscription.
+
+```yaml
+Type: String
+Parameter Sets: SubscriptionName, ServicePrincipal
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -378,6 +363,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -404,5 +404,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

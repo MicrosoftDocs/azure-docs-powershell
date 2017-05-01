@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: D77FF643-B482-4CA4-8ABD-8D0B851A28F1
 online version: 
 schema: 2.0.0
-ms.assetid: D77FF643-B482-4CA4-8ABD-8D0B851A28F1
 ---
 
 # Get-AzureRmSqlServerDisasterRecoveryConfigurationActivity
@@ -171,5 +171,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

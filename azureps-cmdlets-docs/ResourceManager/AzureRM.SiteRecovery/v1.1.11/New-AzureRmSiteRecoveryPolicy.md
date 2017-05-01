@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 4CCE9AA8-4EFA-4399-B814-480A09E26F77
 online version: 
 schema: 2.0.0
-ms.assetid: 4CCE9AA8-4EFA-4399-B814-480A09E26F77
 ---
 
 # New-AzureRmSiteRecoveryPolicy
@@ -96,6 +96,21 @@ Switch parameter indicating whether compression is to be Enabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: EnterpriseToEnterprise
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Encrypt
+{{Fill Encrypt Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EnterpriseToAzure
 Aliases: 
 
 Required: False
@@ -231,21 +246,6 @@ It must be no later than 24-hours from the start of the job.
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Encrypt
-{{Fill Encrypt Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: EnterpriseToAzure
 Aliases: 
 
 Required: False

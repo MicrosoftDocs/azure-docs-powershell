@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: DEB768B7-35A1-41B5-B76E-496485679C6E
 online version: 
 schema: 2.0.0
-ms.assetid: DEB768B7-35A1-41B5-B76E-496485679C6E
 ---
 
 # Set-ACSBlobService
@@ -40,6 +40,65 @@ The first command gets the ACS farm from the specified URL and stores it in the 
 The final command configures the blob service settings from the farm name.
 
 ## PARAMETERS
+
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BlobSvcContainerGcInterval
+Specifies the blob service container garbage collection interval.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlobSvcShallowGcInterval
+Specifies the blob service shallow garbage collection interval.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlobSvcStreamMapMinContainerOccupancyPercent
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FarmName
 Specifies the name of the Azure Consistent Storage (ACS) farm.
@@ -86,40 +145,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BlobSvcContainerGcInterval
-Specifies the blob service container garbage collection interval.
+### -ResourceGroupName
+Specifies the name of the resource group that this cmdlet gets the ACS blob service information from.
 
 ```yaml
-Type: Int32
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 3
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -BlobSvcShallowGcInterval
-Specifies the blob service shallow garbage collection interval.
+### -SkipCertificateValidation
+Indicates that this cmdlet skips certificate validation.
 
 ```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlobSvcStreamMapMinContainerOccupancyPercent
-
-```yaml
-Type: Int32
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -160,48 +205,17 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that this cmdlet gets the ACS blob service information from.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkipCertificateValidation
-Indicates that this cmdlet skips certificate validation.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -214,21 +228,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

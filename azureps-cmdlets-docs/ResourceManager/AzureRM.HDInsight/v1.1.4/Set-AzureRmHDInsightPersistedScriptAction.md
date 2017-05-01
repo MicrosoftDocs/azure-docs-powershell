@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: 340D56E8-9EC8-4A31-852C-5A3F4DCD0A37
 online version: 
 schema: 2.0.0
-ms.assetid: 340D56E8-9EC8-4A31-852C-5A3F4DCD0A37
 ---
 
 # Set-AzureRmHDInsightPersistedScriptAction
@@ -51,38 +51,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScriptExecutionId
-Specifies the execution ID of the script action to promote to persisted.
-This script action must have succeeded in order to be promoted.
-You can find the script action execution ID using Get-AzureRmHDInsightScriptActionHistory.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -117,6 +85,38 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScriptExecutionId
+Specifies the execution ID of the script action to promote to persisted.
+This script action must have succeeded in order to be promoted.
+You can find the script action execution ID using Get-AzureRmHDInsightScriptActionHistory.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

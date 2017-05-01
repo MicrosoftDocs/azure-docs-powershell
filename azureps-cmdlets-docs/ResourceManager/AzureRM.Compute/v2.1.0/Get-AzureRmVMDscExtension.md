@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 40E1AF6F-BC76-4A04-A946-27251A9E196B
 online version: 
 schema: 2.0.0
-ms.assetid: 40E1AF6F-BC76-4A04-A946-27251A9E196B
 ---
 
 # Get-AzureRmVMDscExtension
@@ -14,7 +14,7 @@ Gets the settings of the DSC extension on a particular virtual machine.
 
 ```
 Get-AzureRmVMDscExtension [-ResourceGroupName] <String> [-VMName] <String> [[-Name] <String>] [-Status]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +31,36 @@ This command gets the settings of extension named DSC on the virtual machine nam
 
 ## PARAMETERS
 
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VMName
+Specifies the name of a virtual machine for which this cmdlet gets the DSC extension.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the Azure Resource Manager resource that represents the extension.
 The Set-AzureRmVMDscExtension cmdlet sets this name to Microsoft.Powershell.DSC, which is the same value that is used by **Get-AzureRmVMDscExtension**.
@@ -42,22 +72,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -78,18 +93,29 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VMName
-Specifies the name of a virtual machine for which this cmdlet gets the DSC extension.
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
 
-```yaml
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: iv
 
-Required: True
-Position: 2
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

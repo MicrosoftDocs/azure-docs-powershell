@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: CCB0600E-0BDA-45BE-B8D6-783B755CCECF
 online version: 
 schema: 2.0.0
-ms.assetid: CCB0600E-0BDA-45BE-B8D6-783B755CCECF
 ---
 
 # Get-AzureRmRecoveryServicesBackupJob
@@ -70,48 +70,17 @@ This script polls the first job that is currently in progress until the job has 
 
 ## PARAMETERS
 
-### -Status
-Specifies a status of the jobs that this cmdlet gets.
-psdx_paramvalues
-
-- InProgress
-- Failed
-- Cancelled
-- Cancelling
-- Completed
-- CompletedWithWarnings
+### -BackupManagementType
+Specifies the Backup management type.
+Currently, only AzureVM is supported.
 
 ```yaml
-Type: JobStatus
+Type: BackupManagementType
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Operation
-Specifies an operation of the jobs that this cmdlet gets.
-psdx_paramvalues
-
-- Backup
-- ConfigureBackup
-- DeleteBackupData
-- Register
-- Restore
-- UnProtect
-- Unregister
-
-```yaml
-Type: JobOperation
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -130,57 +99,6 @@ Aliases:
 
 Required: False
 Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -To
-Specifies the end, as a **DateTime** object, of a time range for the jobs that this cmdlet gets.
-The default value is the current system time.
-If you specify this parameter, you must also specify the *From* parameter.
-Use UTC format for dates.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JobId
-Specifies the ID of a job that this cmdlet gets.
-The ID is the InstanceId property of an **AzureRmRecoveryServicesBackupJob** object.
-To obtain an **AzureRmRecoveryServicesBackupJob** object, use Get-AzureRmRecoveryServicesBackupJob.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BackupManagementType
-Specifies the Backup management type.
-Currently, only AzureVM is supported.
-
-```yaml
-Type: BackupManagementType
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -235,6 +153,88 @@ Aliases:
 
 Required: False
 Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JobId
+Specifies the ID of a job that this cmdlet gets.
+The ID is the InstanceId property of an **AzureRmRecoveryServicesBackupJob** object.
+To obtain an **AzureRmRecoveryServicesBackupJob** object, use Get-AzureRmRecoveryServicesBackupJob.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Operation
+Specifies an operation of the jobs that this cmdlet gets.
+psdx_paramvalues
+
+- Backup
+- ConfigureBackup
+- DeleteBackupData
+- Register
+- Restore
+- UnProtect
+- Unregister
+
+```yaml
+Type: JobOperation
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Status
+Specifies a status of the jobs that this cmdlet gets.
+psdx_paramvalues
+
+- InProgress
+- Failed
+- Cancelled
+- Cancelling
+- Completed
+- CompletedWithWarnings
+
+```yaml
+Type: JobStatus
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -To
+Specifies the end, as a **DateTime** object, of a time range for the jobs that this cmdlet gets.
+The default value is the current system time.
+If you specify this parameter, you must also specify the *From* parameter.
+Use UTC format for dates.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

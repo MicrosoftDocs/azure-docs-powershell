@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+ms.assetid: 64F54004-8E5F-4687-B4CD-2F79E720BD1A
 online version: 
 schema: 2.0.0
-ms.assetid: 64F54004-8E5F-4687-B4CD-2F79E720BD1A
 ---
 
 # Get-AzureRmAutomationDscOnboardingMetaconfig
@@ -157,5 +157,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

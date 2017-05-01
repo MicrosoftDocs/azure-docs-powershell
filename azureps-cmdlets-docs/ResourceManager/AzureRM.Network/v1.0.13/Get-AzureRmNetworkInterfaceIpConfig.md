@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 740CFC02-2118-4A68-B1A0-D8DF274D7851
 online version: 
 schema: 2.0.0
-ms.assetid: 740CFC02-2118-4A68-B1A0-D8DF274D7851
 ---
 
 # Get-AzureRmNetworkInterfaceIpConfig
@@ -28,36 +28,6 @@ The **Get-AzureRmNetworkInterfaceIPConfig** cmdlet gets a network interface IP c
 ```
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the network IP configuration that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkInterface
-Specifies a **NetworkInterface** object that contains the network IP configuration that this cmdlet gets.
-
-```yaml
-Type: PSNetworkInterface
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -95,6 +65,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the network IP configuration that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkInterface
+Specifies a **NetworkInterface** object that contains the network IP configuration that this cmdlet gets.
+
+```yaml
+Type: PSNetworkInterface
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

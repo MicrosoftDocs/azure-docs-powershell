@@ -11,7 +11,6 @@ Creates an Azure HDInsight cluster in the specified resource group for the curre
 
 ## SYNTAX
 
-### Default (Default)
 ```
 New-AzureRmHDInsightCluster [-Location] <String> [-ResourceGroupName] <String> [-ClusterName] <String>
  [-ClusterSizeInNodes] <Int32> [-HttpCredential] <PSCredential> [[-DefaultStorageAccountName] <String>]
@@ -21,45 +20,10 @@ New-AzureRmHDInsightCluster [-Location] <String> [-ResourceGroupName] <String> [
  [-Configurations <System.Collections.Generic.Dictionary`2[System.String,System.Collections.Generic.Dictionary`2[System.String,System.String]]>]
  [-ScriptActions <System.Collections.Generic.Dictionary`2[Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType,System.Collections.Generic.List`1[Microsoft.Azure.Commands.HDInsight.Models.Management.AzureHDInsightScriptAction]]>]
  [-DefaultStorageContainer <String>] [-Version <String>] [-HeadNodeSize <String>] [-WorkerNodeSize <String>]
- [-ZookeeperNodeSize <String>] [-ClusterType <String>] [-VirtualNetworkId <String>] [-SubnetName <String>]
- [-OSType <OSType>] [-ClusterTier <Tier>] [-SshCredential <PSCredential>] [-SshPublicKey <String>]
+ [-ZookeeperNodeSize <String>] [-ClusterType <HDInsightClusterType>] [-VirtualNetworkId <String>]
+ [-SubnetName <String>] [-OSType <OSType>] [-SshCredential <PSCredential>] [-SshPublicKey <String>]
  [-RdpCredential <PSCredential>] [-RdpAccessExpiry <DateTime>] [-ObjectId <Guid>]
- [-CertificatePassword <String>] [-AadTenantId <Guid>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
-### CertificateFilePath
-```
-New-AzureRmHDInsightCluster [-Location] <String> [-ResourceGroupName] <String> [-ClusterName] <String>
- [-ClusterSizeInNodes] <Int32> [-HttpCredential] <PSCredential> [[-DefaultStorageAccountName] <String>]
- [[-DefaultStorageAccountKey] <String>] [-Config <AzureHDInsightConfig>]
- [-OozieMetastore <AzureHDInsightMetastore>] [-HiveMetastore <AzureHDInsightMetastore>]
- [-AdditionalStorageAccounts <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
- [-Configurations <System.Collections.Generic.Dictionary`2[System.String,System.Collections.Generic.Dictionary`2[System.String,System.String]]>]
- [-ScriptActions <System.Collections.Generic.Dictionary`2[Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType,System.Collections.Generic.List`1[Microsoft.Azure.Commands.HDInsight.Models.Management.AzureHDInsightScriptAction]]>]
- [-DefaultStorageContainer <String>] [-Version <String>] [-HeadNodeSize <String>] [-WorkerNodeSize <String>]
- [-ZookeeperNodeSize <String>] [-ClusterType <String>] [-VirtualNetworkId <String>] [-SubnetName <String>]
- [-OSType <OSType>] [-ClusterTier <Tier>] [-SshCredential <PSCredential>] [-SshPublicKey <String>]
- [-RdpCredential <PSCredential>] [-RdpAccessExpiry <DateTime>] [-ObjectId <Guid>]
- [-CertificateFilePath <String>] [-CertificatePassword <String>] [-AadTenantId <Guid>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
-### CertificateFileContents
-```
-New-AzureRmHDInsightCluster [-Location] <String> [-ResourceGroupName] <String> [-ClusterName] <String>
- [-ClusterSizeInNodes] <Int32> [-HttpCredential] <PSCredential> [[-DefaultStorageAccountName] <String>]
- [[-DefaultStorageAccountKey] <String>] [-Config <AzureHDInsightConfig>]
- [-OozieMetastore <AzureHDInsightMetastore>] [-HiveMetastore <AzureHDInsightMetastore>]
- [-AdditionalStorageAccounts <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
- [-Configurations <System.Collections.Generic.Dictionary`2[System.String,System.Collections.Generic.Dictionary`2[System.String,System.String]]>]
- [-ScriptActions <System.Collections.Generic.Dictionary`2[Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType,System.Collections.Generic.List`1[Microsoft.Azure.Commands.HDInsight.Models.Management.AzureHDInsightScriptAction]]>]
- [-DefaultStorageContainer <String>] [-Version <String>] [-HeadNodeSize <String>] [-WorkerNodeSize <String>]
- [-ZookeeperNodeSize <String>] [-ClusterType <String>] [-VirtualNetworkId <String>] [-SubnetName <String>]
- [-OSType <OSType>] [-ClusterTier <Tier>] [-SshCredential <PSCredential>] [-SshPublicKey <String>]
- [-RdpCredential <PSCredential>] [-RdpAccessExpiry <DateTime>] [-ObjectId <Guid>]
- [-CertificateFileContents <Byte[]>] [-CertificatePassword <String>] [-AadTenantId <Guid>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-CertificateFilePath <String>] [-CertificatePassword <String>] [-AadTenantId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,6 +33,14 @@ The New-AzureHDInsightCluster creates an Azure HDInsight cluster by using the sp
 
 ### --------------------------  Example 1: Create an Azure HDInsight cluster  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
+
+
+
+
 
 ```
 PS C:\&gt; # Primary storage account info
@@ -210,22 +182,6 @@ Required: False
 Position: 6
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Config
-Specifies the cluster object to be used to create the cluster.
-This object can be created by using the New-AzureRmHDInsightClusterConfig cmdlet.
-
-```yaml
-Type: AzureHDInsightConfig
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -394,7 +350,7 @@ Specifies the type of cluster to create.
 Options are: Hadoop, HBase, Storm, Spark
 
 ```yaml
-Type: String
+Type: HDInsightClusterType
 Parameter Sets: (All)
 Aliases: 
 
@@ -441,23 +397,6 @@ Options are: Windows, Linux
 
 ```yaml
 Type: OSType
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClusterTier
-Specifies the HDInsight cluster tier.
-By default, this is Standard.
-The Premium tier can only be used with Linux clusters, and it enables the use of some new features.
-
-```yaml
-Type: Tier
 Parameter Sets: (All)
 Aliases: 
 
@@ -531,12 +470,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ObjectId
-Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
-The cluster will use this when accessing Azure Data Lake Store.
+### -Config
+Specifies the cluster object to be used to create the cluster.
+This object can be created by using the New-AzureRmHDInsightClusterConfig cmdlet.
+
+```yaml
+Type: AzureHDInsightConfig
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -AadTenantId
+Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateFilePath
+Specifies the file path to the certificate that will be used to authenticate as the Service Principal.
+The cluster will use this when accessing Azure Data Lake Store.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -563,8 +533,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AadTenantId
-Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
+### -ObjectId
+Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
@@ -578,66 +549,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CertificateFilePath
-Specifies the file path to the certificate that will be used to authenticate as the Service Principal.
-The cluster will use this when accessing Azure Data Lake Store.
-
-```yaml
-Type: String
-Parameter Sets: CertificateFilePath
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CertificateFileContents
-Specifies file contents of the certificate that will be used when accessing Azure Data Lake Store.
-
-```yaml
-Type: Byte[]
-Parameter Sets: CertificateFileContents
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -12,8 +12,7 @@ schema: 2.0.0
 
 ```
 Remove-AzureRmVpnClientRootCertificate -VpnClientRootCertificateName <String>
- -VirtualNetworkGatewayName <String> -ResourceGroupName <String> -PublicCertData <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ -VirtualNetworkGatewayName <String> -ResourceGroupName <String> -PublicCertData <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,22 +28,7 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -VpnClientRootCertificateName
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VirtualNetworkGatewayName
+### -PublicCertData
 @{Text=}
 
 ```yaml
@@ -74,7 +58,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PublicCertData
+### -VirtualNetworkGatewayName
 @{Text=}
 
 ```yaml
@@ -89,35 +73,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
+### -VpnClientRootCertificateName
 @{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: ResourceName
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

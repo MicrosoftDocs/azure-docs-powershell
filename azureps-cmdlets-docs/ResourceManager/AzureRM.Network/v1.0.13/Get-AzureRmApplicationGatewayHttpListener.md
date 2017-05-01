@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 299A9D18-36D2-49E1-ACA5-44E04471905B
 online version: 
 schema: 2.0.0
-ms.assetid: 299A9D18-36D2-49E1-ACA5-44E04471905B
 ---
 
 # Get-AzureRmApplicationGatewayHttpListener
@@ -39,21 +39,6 @@ PS C:\> $Listeners = Get-AzureRmApplicationGatewayHttpListener -ApplicationGatew
 This command gets a list of HTTP listeners.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the HTTP listener which this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway object that contains the HTTP listener.
@@ -101,6 +86,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the HTTP listener which this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+ms.assetid: 6DF0B014-03B0-47AA-9D34-9D0FCEEE2247
 online version: 
 schema: 2.0.0
-ms.assetid: 6DF0B014-03B0-47AA-9D34-9D0FCEEE2247
 ---
 
 # Remove-AzureRmApiManagementRegion
@@ -56,39 +56,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Location
-Specifies the location of the region that this cmdlet removes.
-
-Valid values are: 
-
-- North Central US
-- South Central US
-- Central US
-- West Europe
-- North Europe
-- West US
-- East US
-- East US 2
-- Japan East
-- Japan West
-- Brazil South
-- Southeast Asia
-- East Asia
-- Australia East
-- Australia Southeast
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -125,6 +92,39 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+Specifies the location of the region that this cmdlet removes.
+
+Valid values are: 
+
+- North Central US
+- South Central US
+- Central US
+- West Europe
+- North Europe
+- West US
+- East US
+- East US 2
+- Japan East
+- Japan West
+- Brazil South
+- Southeast Asia
+- East Asia
+- Australia East
+- Australia Southeast
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

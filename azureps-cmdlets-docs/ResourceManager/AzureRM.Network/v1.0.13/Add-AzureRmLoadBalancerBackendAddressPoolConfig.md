@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 62BC19A9-1A5A-4AA3-BA6D-A2FC3124C8B7
 online version: 
 schema: 2.0.0
-ms.assetid: 62BC19A9-1A5A-4AA3-BA6D-A2FC3124C8B7
 ---
 
 # Add-AzureRmLoadBalancerBackendAddressPoolConfig
@@ -30,36 +30,6 @@ PS C:\>Get-AzureRmLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "myrg" 
 This command gets the load balancer named MyLoadBalancer, adds the backend address pool named BackendAddressPool02 to MyLoadBalancer, and then uses the **Set-AzureRmLoadBalancer** cmdlet to update MyLoadBalancer.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the backend address pool configuration to add.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LoadBalancer
-Specifies a **LoadBalancer** object.
-
-```yaml
-Type: PSLoadBalancer
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -94,6 +64,36 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoadBalancer
+Specifies a **LoadBalancer** object.
+
+```yaml
+Type: PSLoadBalancer
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the backend address pool configuration to add.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

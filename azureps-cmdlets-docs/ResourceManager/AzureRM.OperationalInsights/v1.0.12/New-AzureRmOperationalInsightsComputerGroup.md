@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+ms.assetid: CB977B0E-A518-431F-8AF4-A1664BD0CCB2
 online version: 
 schema: 2.0.0
-ms.assetid: CB977B0E-A518-431F-8AF4-A1664BD0CCB2
 ---
 
 # New-AzureRmOperationalInsightsComputerGroup
@@ -31,67 +31,6 @@ The **New-AzureRmOperationalInsightsComputerGroup** cmdlet creates a computer gr
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of an Azure resource group.
-The cmdlet creates computer group in this resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceName
-Specifies the name of the workspace.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Name
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SavedSearchId
-Specifies the ID of the computer group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DisplayName
-Specifies the display name of the computer group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Category
 Specifies the category of the computer group.
 
@@ -107,8 +46,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Query
-Specifies the query of the computer group.
+### -DisplayName
+Specifies the display name of the computer group.
 
 ```yaml
 Type: String
@@ -116,22 +55,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Version
-Specifies the version.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 6
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -191,6 +115,82 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Query
+Specifies the query of the computer group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of an Azure resource group.
+The cmdlet creates computer group in this resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SavedSearchId
+Specifies the ID of the computer group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Version
+Specifies the version.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkspaceName
+Specifies the name of the workspace.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -232,5 +232,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

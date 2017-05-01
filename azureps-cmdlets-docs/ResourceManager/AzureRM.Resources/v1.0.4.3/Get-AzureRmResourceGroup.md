@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
 ---
@@ -11,14 +11,15 @@ schema: 2.0.0
 
 ## SYNTAX
 
-### Lists the resource group based in the name. (Default)
+### Lists the resource group based on the name. (Default)
 ```
-Get-AzureRmResourceGroup [-Name <String>] [-Location <String>] [<CommonParameters>]
+Get-AzureRmResourceGroup [-Name <String>] [-Location <String>] [-ApiVersion <String>] [-Pre]
+ [<CommonParameters>]
 ```
 
-### Lists the resource group based in the Id.
+### Lists the resource group based on the Id.
 ```
-Get-AzureRmResourceGroup [-Location <String>] [-Id <String>] [<CommonParameters>]
+Get-AzureRmResourceGroup [-Location <String>] [-Id <String>] [-ApiVersion <String>] [-Pre] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +41,7 @@ The resource group Id.
 
 ```yaml
 Type: String
-Parameter Sets: Lists the resource group based in the Id.
+Parameter Sets: Lists the resource group based on the Id.
 Aliases: ResourceGroupId, ResourceId
 
 Required: False
@@ -65,18 +66,44 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ApiVersion
+When set, indicates the version of the resource provider API to use. If not specified, the API version is automatically determined as the latest available.```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 {{Fill Name Description}}
 
 ```yaml
 Type: String
-Parameter Sets: Lists the resource group based in the name.
+Parameter Sets: Lists the resource group based on the name.
 Aliases: ResourceGroupName
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

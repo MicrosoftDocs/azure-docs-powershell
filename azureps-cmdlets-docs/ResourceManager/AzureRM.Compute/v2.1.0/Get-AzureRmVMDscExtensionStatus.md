@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: AD7B8290-B5D3-4ECF-8E2A-3BE4D0C38A08
 online version: 
 schema: 2.0.0
-ms.assetid: AD7B8290-B5D3-4ECF-8E2A-3BE4D0C38A08
 ---
 
 # Get-AzureRmVMDscExtensionStatus
@@ -14,7 +14,7 @@ Gets the status of the DSC extension handler for a virtual machine.
 
 ```
 Get-AzureRmVMDscExtensionStatus [-ResourceGroupName] <String> [-VMName] <String> [[-Name] <String>]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,23 +30,6 @@ When a configuration is applied this cmdlet produces output consistent with the 
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the Azure Resource Manager resource that represents the extension.
-The Set-AzureRmVMDscExtension cmdlet sets this name to Microsoft.Powershell.DSC, which is the same value that is used by **Get-AzureRmVMDscExtensionStatus**.
-Specify this parameter only if you changed the default name in the Set cmdlet or used a different resource name in a Resource Manager template.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 Specifies the name of the resource group of the virtual machine.
 
@@ -56,7 +39,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -71,9 +54,52 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Azure Resource Manager resource that represents the extension.
+The Set-AzureRmVMDscExtension cmdlet sets this name to Microsoft.Powershell.DSC, which is the same value that is used by **Get-AzureRmVMDscExtensionStatus**.
+Specify this parameter only if you changed the default name in the Set cmdlet or used a different resource name in a Resource Manager template.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

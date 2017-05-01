@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: 706F8347-FF38-4B39-A207-8B72632892F3
+online version: 
+schema: 2.0.0
 ---
 
 # Get-AzureRmSqlDatabaseUpgradeHint
@@ -49,21 +49,6 @@ This command returns upgrade hints for all databases that are not in an elastic 
 
 ## PARAMETERS
 
-### -ServerName
-Specifies the name of the server that hosts the database for which this cmdlet gets an upgrade hint.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DatabaseName
 Specifies the name of the SQL database for which this cmdlet gets an upgrade hint.
 If you do not specify a database, this cmdlet gets hints for all databases on the logical server.
@@ -71,7 +56,7 @@ If you do not specify a database, this cmdlet gets hints for all databases on th
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -86,25 +71,10 @@ Indicates whether databases in elastic database pools are excluded from the retu
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the database is assigned.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -146,6 +116,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the database is assigned.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of the server that hosts the database for which this cmdlet gets an upgrade hint.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

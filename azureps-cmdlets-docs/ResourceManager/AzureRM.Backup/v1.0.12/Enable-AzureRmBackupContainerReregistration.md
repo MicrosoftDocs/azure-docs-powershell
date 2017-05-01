@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+ms.assetid: 56FE2E70-CB6C-4365-B037-B3AB3E6F3E96
 online version: 
 schema: 2.0.0
-ms.assetid: 56FE2E70-CB6C-4365-B037-B3AB3E6F3E96
 ---
 
 # Enable-AzureRmBackupContainerReregistration

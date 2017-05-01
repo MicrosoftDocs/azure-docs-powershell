@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 10C10A29-5B9C-4799-B58A-DA2D08B9DBFA
 online version: 
 schema: 2.0.0
-ms.assetid: 10C10A29-5B9C-4799-B58A-DA2D08B9DBFA
 ---
 
 # Test-AzureRmResourceGroupDeployment
@@ -64,7 +64,6 @@ Test-AzureRmResourceGroupDeployment -ResourceGroupName <String> [-Mode <Deployme
 The **Test-AzureRmResourceGroupDeployment** cmdlet determines whether an Azure resource group deployment template and its parameter values are valid.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 

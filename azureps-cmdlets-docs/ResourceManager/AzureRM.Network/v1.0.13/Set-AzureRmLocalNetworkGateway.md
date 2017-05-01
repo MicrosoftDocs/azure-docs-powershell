@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 565FDFFF-B140-4F6A-BD0B-BFA9B63DEF09
 online version: 
 schema: 2.0.0
-ms.assetid: 565FDFFF-B140-4F6A-BD0B-BFA9B63DEF09
 ---
 
 # Set-AzureRmLocalNetworkGateway
@@ -30,19 +30,6 @@ The **Set-AzureRmLocalNetworkGateway** cmdlet modifies a local network gateway.
 ```
 
 ## PARAMETERS
-
-### -LocalNetworkGateway
-```yaml
-Type: PSLocalNetworkGateway
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -AddressPrefix
 ```yaml
@@ -73,19 +60,6 @@ Accept wildcard characters: False
 ### -BgpPeeringAddress
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PeerWeight
-```yaml
-Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -132,6 +106,32 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocalNetworkGateway
+```yaml
+Type: PSLocalNetworkGateway
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PeerWeight
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

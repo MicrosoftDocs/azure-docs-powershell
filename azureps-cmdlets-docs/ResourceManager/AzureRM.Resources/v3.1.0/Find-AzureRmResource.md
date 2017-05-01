@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 62A59279-EC42-4B51-9008-8AC41F9CB3C9
 online version: 
 schema: 2.0.0
-ms.assetid: 62A59279-EC42-4B51-9008-8AC41F9CB3C9
 ---
 
 # Find-AzureRmResource
@@ -123,7 +123,6 @@ Accept wildcard characters: False
 ```
 
 ### -TagName
-
 ```yaml
 Type: String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
@@ -137,7 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -TagValue
-
 ```yaml
 Type: String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.

@@ -15,7 +15,7 @@ Set API Operation details.
 Set-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <String> -OperationId <String>
  -Name <String> -Method <String> -UrlTemplate <String> [-Description <String>]
  [-TemplateParameters <PsApiManagementParameter[]>] [-Request <PsApiManagementRequest>]
- [-Responses <PsApiManagementResponse[]>] [-PassThru]
+ [-Responses <PsApiManagementResponse[]>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,6 +25,10 @@ Set API Operation details.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmApiManagementOperation -Context $apimContext -ApiId $apiId -OperationId $operationId -Name 'Get resource' -Method GET -UrlTemplate '/newresource' -Description 'Use this operation to get newresource'
@@ -211,6 +215,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+ms.assetid: 1832E522-BA56-487B-BC70-27AD5193A283
 online version: 
 schema: 2.0.0
-ms.assetid: 1832E522-BA56-487B-BC70-27AD5193A283
 ---
 
 # Set-AzureRmOperationalInsightsIntelligencePack
@@ -31,51 +31,6 @@ PS C:\>Set-AzureOperationalInsightsIntelligencePack -ResourceGroupName "ContosoR
 This command enables the specified Intelligence Pack.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the resource group name
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceName
-Specifies the name of the workspace.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Name
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IntelligencePackName
-Specifies the Intelligence Pack name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Enabled
 ```yaml
@@ -126,6 +81,51 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntelligencePackName
+Specifies the Intelligence Pack name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group name
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkspaceName
+Specifies the name of the workspace.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

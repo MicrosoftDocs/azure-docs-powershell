@@ -13,13 +13,13 @@ schema: 2.0.0
 ### SetByResourceId
 ```
 New-AzureRmVirtualNetworkGatewayIpConfig -Name <String> [-PrivateIpAddress <String>] [-SubnetId <String>]
- [-PublicIpAddressId <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-PublicIpAddressId <String>] [<CommonParameters>]
 ```
 
 ### SetByResource
 ```
 New-AzureRmVirtualNetworkGatewayIpConfig -Name <String> [-PrivateIpAddress <String>] [-Subnet <PSSubnet>]
- [-PublicIpAddress <PSPublicIpAddress>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-PublicIpAddress <PSPublicIpAddress>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,6 +28,10 @@ New-AzureRmVirtualNetworkGatewayIpConfig -Name <String> [-PrivateIpAddress <Stri
 
 ### --------------------------  1:  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>
@@ -95,36 +99,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Subnet
 @{Text=}
 
@@ -154,6 +128,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

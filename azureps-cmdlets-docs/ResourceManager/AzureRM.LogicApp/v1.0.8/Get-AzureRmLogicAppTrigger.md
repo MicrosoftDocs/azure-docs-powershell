@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+ms.assetid: 5A4D9CDF-7A63-444E-8A0A-ECA11C767BBB
 online version: 
 schema: 2.0.0
-ms.assetid: 5A4D9CDF-7A63-444E-8A0A-ECA11C767BBB
 ---
 
 # Get-AzureRmLogicAppTrigger
@@ -88,7 +88,7 @@ Specifies the name of the logic app from which this cmdlet gets a trigger.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named

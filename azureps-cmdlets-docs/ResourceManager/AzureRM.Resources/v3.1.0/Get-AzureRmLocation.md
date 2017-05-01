@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: F5A16912-11C5-40D3-8068-CF598DB80309
 online version: 
 schema: 2.0.0
-ms.assetid: F5A16912-11C5-40D3-8068-CF598DB80309
 ---
 
 # Get-AzureRmLocation
@@ -71,5 +71,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

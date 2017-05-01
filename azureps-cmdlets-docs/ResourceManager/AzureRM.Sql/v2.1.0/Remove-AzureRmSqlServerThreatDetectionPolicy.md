@@ -14,6 +14,7 @@ Removes the threat detection policy from a server.
 ```
 Remove-AzureRmSqlServerThreatDetectionPolicy [-PassThru] [-ServerName] <String> [-ResourceGroupName] <String>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,6 +26,8 @@ To use this cmdlet, specify the ResourceGroupName and ServerName parameters to i
 
 ### --------------------------  Example 1: Remove a threat detection policy for a database  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\> Remove-AzureRmSqlServerThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01"
@@ -141,9 +144,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
-### 
+###  
 You cannot pipe input to this cmdlet.
 
 ## OUTPUTS

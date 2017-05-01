@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: 613BAB51-8E24-4236-89BB-3618EFF642BB
 online version: 
 schema: 2.0.0
-ms.assetid: 613BAB51-8E24-4236-89BB-3618EFF642BB
 ---
 
 # Get-AzureRmMetricDefinition
@@ -128,16 +128,17 @@ The output is detailed.
 
 ## PARAMETERS
 
-### -ResourceId
-Specifies the resource ID.
+### -DetailedOutput
+Indicates that this operation included detailed output.
+If you do not specify this parameter, the output is summarized.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -158,17 +159,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DetailedOutput
-Indicates that this operation included detailed output.
-If you do not specify this parameter, the output is summarized.
+### -ResourceId
+Specifies the resource ID.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

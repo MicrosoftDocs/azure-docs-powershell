@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: 5EE6E2C7-0FA3-43CD-A509-E8DC56179792
 online version: 
 schema: 2.0.0
-ms.assetid: 5EE6E2C7-0FA3-43CD-A509-E8DC56179792
 ---
 
 # Add-AzureRmHDInsightMetastore
@@ -14,8 +14,7 @@ Adds a SQL Database to serve as a Hive or Oozie metastore to a cluster configura
 
 ```
 Add-AzureRmHDInsightMetastore [-Config] <AzureHDInsightConfig> [-MetastoreType] <AzureHDInsightMetastoreType>
- [-SqlAzureServerName] <String> [-DatabaseName] <String> [-Credential] <PSCredential>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [-SqlAzureServerName] <String> [-DatabaseName] <String> [-Credential] <PSCredential> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -154,45 +153,6 @@ Aliases:
 
 Required: True
 Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

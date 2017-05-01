@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 033EC30D-AE7C-4E68-94A8-011210C0C1D3
 online version: 
 schema: 2.0.0
-ms.assetid: 033EC30D-AE7C-4E68-94A8-011210C0C1D3
 ---
 
 # Get-AzureRmApplicationGatewaySslCertificate
@@ -43,21 +43,6 @@ This second command gets a list of SSL certificates from the application gateway
 The command then stores the results in the variable named $Certs.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of SSL certificate pool that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway object that contains the SSL certificate.
@@ -105,6 +90,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of SSL certificate pool that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

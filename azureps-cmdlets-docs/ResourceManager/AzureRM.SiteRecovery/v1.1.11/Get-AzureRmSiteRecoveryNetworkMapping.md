@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: AF3CACE3-632E-4901-8C2D-5B23C0F5C73E
 online version: 
 schema: 2.0.0
-ms.assetid: AF3CACE3-632E-4901-8C2D-5B23C0F5C73E
 ---
 
 # Get-AzureRmSiteRecoveryNetworkMapping
@@ -56,7 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryServer
-
 ```yaml
 Type: ASRServer
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure
@@ -70,7 +69,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryServer
-
 ```yaml
 Type: ASRServer
 Parameter Sets: EnterpriseToEnterprise

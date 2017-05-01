@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+ms.assetid: 2A0A1A86-76A5-4E5D-8B9C-3284D1211E65
 online version: 
 schema: 2.0.0
-ms.assetid: 2A0A1A86-76A5-4E5D-8B9C-3284D1211E65
 ---
 
 # Install-AzureRmServerManagementGatewayProfile
@@ -29,23 +29,6 @@ The file that this cmdlet installs is named profile.json.
 ```
 
 ## PARAMETERS
-
-### -InputFile
-Specifies the name of the local file that contains the gateway profile to install.
-
-The file that this cmdlet installs should have been previously saved with the Save-AzureRmServerManagementGatewayProfile cmdlet.
-
-```yaml
-Type: FileInfo
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -83,6 +66,23 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputFile
+Specifies the name of the local file that contains the gateway profile to install.
+
+The file that this cmdlet installs should have been previously saved with the Save-AzureRmServerManagementGatewayProfile cmdlet.
+
+```yaml
+Type: FileInfo
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

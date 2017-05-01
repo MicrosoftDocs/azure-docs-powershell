@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+ms.assetid: 3FDA22F3-7E30-47F2-8244-AB4E80FD0E24
 online version: 
 schema: 2.0.0
-ms.assetid: 3FDA22F3-7E30-47F2-8244-AB4E80FD0E24
 ---
 
 # Get-AzureRmDataFactorySlice
@@ -145,6 +145,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DatasetName
+Specifies the name of the dataset for which this cmdlet gets slices.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -EndDateTime
 Specifies the end of a time period as a **DateTime** object.
 This cmdlet gets slices produced before the time that this parameter specifies.
@@ -200,21 +215,6 @@ Required: True
 Position: 4
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatasetName
-Specifies the name of the dataset for which this cmdlet gets slices.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

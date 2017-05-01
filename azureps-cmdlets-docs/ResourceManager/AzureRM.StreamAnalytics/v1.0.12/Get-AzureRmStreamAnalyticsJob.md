@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: 0A0A1917-9BD0-4554-AF32-AD564ADCD604
 online version: 
 schema: 2.0.0
-ms.assetid: 0A0A1917-9BD0-4554-AF32-AD564ADCD604
 ---
 
 # Get-AzureRmStreamAnalyticsJob
@@ -51,21 +51,6 @@ This command returns information about the Stream Analytics job StreamingJob in 
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
-
-```yaml
-Type: String
-Parameter Sets: For stream analytics objects in the given resource group
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the Azure Stream Analytics job to retrieve.
 
@@ -108,6 +93,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
+
+```yaml
+Type: String
+Parameter Sets: For stream analytics objects in the given resource group
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

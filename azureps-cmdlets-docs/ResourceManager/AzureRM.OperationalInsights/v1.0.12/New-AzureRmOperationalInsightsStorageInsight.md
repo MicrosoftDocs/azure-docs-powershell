@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+ms.assetid: 9C33FB6B-4F01-482D-A723-E67CB0230EB5
 online version: 
 schema: 2.0.0
-ms.assetid: 9C33FB6B-4F01-482D-A723-E67CB0230EB5
 ---
 
 # New-AzureRmOperationalInsightsStorageInsight
@@ -70,97 +70,6 @@ The final command creates a storage insight named MyStorageInsight in the worksp
 The Storage Insight consumes data from the WADWindowsEventLogsTable table in the specified storage account resource.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of an Azure resource group that contains a workspace.
-
-```yaml
-Type: String
-Parameter Sets: ByWorkspaceName
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceName
-Specifies the name of an existing workspace.
-
-```yaml
-Type: String
-Parameter Sets: ByWorkspaceName
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Storage Insight.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageAccountResourceId
-Specifies the Azure resource of a storage account.
-This can be retrieved by executing the Get-AzureRmStorageAccount cmdlet and accessing the *Id* parameter of the result.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageAccountKey
-Specifies the access key for the storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tables
-Specifies the list of tables that provide the data.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 6
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Containers
 Specifies the list of containers that contain the data.
@@ -231,6 +140,82 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies the name of the Storage Insight.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of an Azure resource group that contains a workspace.
+
+```yaml
+Type: String
+Parameter Sets: ByWorkspaceName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageAccountKey
+Specifies the access key for the storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageAccountResourceId
+Specifies the Azure resource of a storage account.
+This can be retrieved by executing the Get-AzureRmStorageAccount cmdlet and accessing the *Id* parameter of the result.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tables
+Specifies the list of tables that provide the data.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Workspace
 Specifies the workspace for the new Storage Insight.
 
@@ -243,6 +228,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WorkspaceName
+Specifies the name of an existing workspace.
+
+```yaml
+Type: String
+Parameter Sets: ByWorkspaceName
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

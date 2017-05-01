@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 30F95EC0-0CBC-4C82-9D47-0006CB05A50A
 online version: 
 schema: 2.0.0
-ms.assetid: 30F95EC0-0CBC-4C82-9D47-0006CB05A50A
 ---
 
 # Set-AzureRmVMPlan
@@ -32,20 +32,42 @@ Before being able to deploy a Marketplace image through the command-line, progra
 
 ## PARAMETERS
 
-### -VM
-Specifies the virtual machine object for which to set a Marketplace plan.
-You can use the Get-AzureRmVM cmdlet to obtain a virtual machine object.
-You can use the New-AzureRmVMConfig cmdlet to create a virtual machine object.
+### -InformationAction
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
-Type: PSVirtualMachine
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: VMProfile
+Aliases: infa
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+Specifies an information variable.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -113,42 +135,20 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+### -VM
+Specifies the virtual machine object for which to set a Marketplace plan.
+You can use the Get-AzureRmVM cmdlet to obtain a virtual machine object.
+You can use the New-AzureRmVMConfig cmdlet to create a virtual machine object.
 
 ```yaml
-Type: ActionPreference
+Type: PSVirtualMachine
 Parameter Sets: (All)
-Aliases: infa
+Aliases: VMProfile
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+ms.assetid: EA2BAE3B-DA8E-49AD-80EA-48C1BBC1633D
 online version: 
 schema: 2.0.0
-ms.assetid: EA2BAE3B-DA8E-49AD-80EA-48C1BBC1633D
 ---
 
 # New-AzureBatchPool
@@ -63,7 +63,6 @@ The pool is configured to use small virtual machines imaged with the latest oper
 ## PARAMETERS
 
 ### -ApplicationPackageReferences
-
 ```yaml
 Type: PSApplicationPackageReference[]
 Parameter Sets: (All)

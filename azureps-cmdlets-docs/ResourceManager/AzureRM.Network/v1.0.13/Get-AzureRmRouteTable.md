@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 4D7D5E14-1F9F-4FF4-BBEC-B53A70FCBE84
 online version: 
 schema: 2.0.0
-ms.assetid: 4D7D5E14-1F9F-4FF4-BBEC-B53A70FCBE84
 ---
 
 # Get-AzureRmRouteTable
@@ -60,48 +60,7 @@ This command gets the route table named RouteTable01 in the resource group named
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the route table that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: NoExpand
-Aliases: ResourceName
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: Expand
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the route tables that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: NoExpand
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
+### -ExpandResource
 ```yaml
 Type: String
 Parameter Sets: Expand
@@ -153,7 +112,47 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExpandResource
+### -Name
+Specifies the name of the route table that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: NoExpand
+Aliases: ResourceName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: Expand
+Aliases: ResourceName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the route tables that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: NoExpand
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ```yaml
 Type: String

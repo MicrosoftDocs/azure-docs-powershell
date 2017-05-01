@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+ms.assetid: 14B48050-9B18-4E1A-8F2C-65715855399F
 online version: 
 schema: 2.0.0
-ms.assetid: 14B48050-9B18-4E1A-8F2C-65715855399F
 ---
 
 # Get-AzureRmIntegrationAccountCallbackUrl
@@ -61,7 +61,7 @@ Specifies the name of an integration account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -136,7 +136,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
-
 

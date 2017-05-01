@@ -13,8 +13,7 @@ Adds an SSL certificate to an application gateway.
 
 ```
 Add-AzureRmApplicationGatewaySslCertificate -ApplicationGateway <PSApplicationGateway> -Name <String>
- -CertificateFile <String> -Password <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ -CertificateFile <String> -Password <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +23,10 @@ The Add-AzureRmApplicationGatewaySslCertificate cmdlet adds an SSL certificate t
 
 ### --------------------------  Example 1: Add an SSL certificate to an application gateway.  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$AppGW = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -94,35 +97,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

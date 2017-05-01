@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+external help file: Microsoft.Azure.Commands.DevTestLabs.dll-help.xml
+ms.assetid: 546171CD-77CE-4752-861F-2AB5F88B13CA
 online version: 
 schema: 2.0.0
-ms.assetid: 546171CD-77CE-4752-861F-2AB5F88B13CA
 ---
 
 # Get-AzureRmDtlAllowedVMSizesPolicy
@@ -29,36 +29,6 @@ The cmdlet returns the enabled or disabled status of the policy and a list of al
 ```
 
 ## PARAMETERS
-
-### -LabName
-Specifies the name of the lab for which this cmdlet gets virtual machines size policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that the lab belongs to.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -96,6 +66,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabName
+Specifies the name of the lab for which this cmdlet gets virtual machines size policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that the lab belongs to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: 134300D2-BBC4-4435-BD95-EA6B1EB6ECE2
 online version: 
 schema: 2.0.0
-ms.assetid: 134300D2-BBC4-4435-BD95-EA6B1EB6ECE2
 ---
 
 # Get-AzureRmHDInsightScriptActionHistory
@@ -47,36 +47,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScriptExecutionId
-Specifies the execution ID of the executed script action.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -116,6 +86,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScriptExecutionId
+Specifies the execution ID of the executed script action.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -126,5 +126,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 7E6BD8E4-1C1E-451C-BA94-95202213474F
 online version: 
 schema: 2.0.0
-ms.assetid: 7E6BD8E4-1C1E-451C-BA94-95202213474F
 ---
 
 # Add-AzureRmVmssExtension
@@ -33,86 +33,6 @@ This command adds an extension to the VMMS.
 
 ## PARAMETERS
 
-### -VirtualMachineScaleSet
-Specify the VMSS object.
-You can use the New-AzureRmVmssConfig to create the object.
-
-```yaml
-Type: VirtualMachineScaleSet
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the extension that this cmdlet adds.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Publisher
-Specifies the name of the extension publisher.
-The publisher provides a name when the publisher registers an extension.
-This can use the Get-AzureRmVMImagePublisher cmdlet to get the publisher.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Type
-Specifies the extension type.
-You can use the Get-AzureRmVMExtensionImageType cmdlet to get the extension type.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TypeHandlerVersion
-Specifies the version of the extension to use for this virtual machine.
-You can use the Get-AzureRmVMExtensionImage cmdlet to get the version of the extension.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -AutoUpgradeMinorVersion
 Indicates whether the extension version should be automatically updated to a newer minor version.
 
@@ -123,38 +43,6 @@ Aliases:
 
 Required: False
 Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Setting
-Specifies the public configuration, as a string, for the extension.
-This cmdlet does not encrypt public configuration.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 6
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ProtectedSetting
-Specifies private configuration for the extension, as a string.
-This cmdlet encrypts the private configuration.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 7
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -211,6 +99,118 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the extension that this cmdlet adds.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ProtectedSetting
+Specifies private configuration for the extension, as a string.
+This cmdlet encrypts the private configuration.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Publisher
+Specifies the name of the extension publisher.
+The publisher provides a name when the publisher registers an extension.
+This can use the Get-AzureRmVMImagePublisher cmdlet to get the publisher.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Setting
+Specifies the public configuration, as a string, for the extension.
+This cmdlet does not encrypt public configuration.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Type
+Specifies the extension type.
+You can use the Get-AzureRmVMExtensionImageType cmdlet to get the extension type.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TypeHandlerVersion
+Specifies the version of the extension to use for this virtual machine.
+You can use the Get-AzureRmVMExtensionImage cmdlet to get the version of the extension.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualMachineScaleSet
+Specify the VMSS object.
+You can use the New-AzureRmVmssConfig to create the object.
+
+```yaml
+Type: VirtualMachineScaleSet
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

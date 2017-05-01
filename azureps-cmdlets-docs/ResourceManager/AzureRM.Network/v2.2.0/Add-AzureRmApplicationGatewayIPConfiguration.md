@@ -14,13 +14,13 @@ Adds an IP configuration to an application gateway.
 ### SetByResourceId
 ```
 Add-AzureRmApplicationGatewayIPConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
- [-SubnetId <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-SubnetId <String>] [<CommonParameters>]
 ```
 
 ### SetByResource
 ```
 Add-AzureRmApplicationGatewayIPConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
- [-Subnet <PSSubnet>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-Subnet <PSSubnet>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +31,10 @@ IP configurations contain the subnet in which the application gateway is deploye
 
 ### --------------------------  Example 1: Add an virtual network configuration to an application gateway  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$Vnet = Get-AzureRmVirtualNetwork -Name "Vnet01" -ResourceGroupName "ResourceGroup01"
@@ -91,36 +95,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Subnet
 Specifies a subnet.
 This is the subnet in which the application gateway is deployed.
@@ -136,6 +110,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

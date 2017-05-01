@@ -14,6 +14,7 @@ Register new user.
 ```
 New-AzureRmApiManagementUser -Context <PsApiManagementContext> [-UserId <String>] -FirstName <String>
  -LastName <String> -Email <String> -Password <String> [-State <PsApiManagementUserState>] [-Note <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +24,10 @@ Register new user.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmApiManagementUser -Context $apimContext -FirstName 'Ivan' -LastName 'Ivanov' -Email 'ivan.ivanov@contoso.com' -Password 'qwerty'
@@ -164,6 +169,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

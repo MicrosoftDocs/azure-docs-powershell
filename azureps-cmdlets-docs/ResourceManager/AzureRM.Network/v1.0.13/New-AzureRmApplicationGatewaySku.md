@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: E9DC94B8-FCD7-4D55-95E3-D008DD1A39C6
 online version: 
 schema: 2.0.0
-ms.assetid: E9DC94B8-FCD7-4D55-95E3-D008DD1A39C6
 ---
 
 # New-AzureRmApplicationGatewaySku
@@ -30,48 +30,6 @@ PS C:\>$SKU = New-AzureRmApplicationGatewaySku -Name "Standard_Small" -Tier "Sta
 This command creates a SKU named Standard_Small for an Azure application gateway and stores the result in the variable named $SKU.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the SKU.
-
-psdx_paramvalues
-
-- Standard_Small
-- Standard_Medium
-- Standard_Large
-- WAF_Medium
-- WAF_Large
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tier
-Specifies the tier of the SKU.
-psdx_paramvalues
-
-- Standard
-- WAF
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Capacity
 Specifies the number of instances of an application gateway.
@@ -121,6 +79,48 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the SKU.
+
+psdx_paramvalues
+
+- Standard_Small
+- Standard_Medium
+- Standard_Large
+- WAF_Medium
+- WAF_Large
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tier
+Specifies the tier of the SKU.
+psdx_paramvalues
+
+- Standard
+- WAF
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

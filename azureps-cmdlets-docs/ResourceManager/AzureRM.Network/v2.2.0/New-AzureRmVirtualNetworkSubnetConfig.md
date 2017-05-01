@@ -14,14 +14,13 @@ Creates a virtual network subnet configuration.
 ### SetByResource (Default)
 ```
 New-AzureRmVirtualNetworkSubnetConfig -Name <String> -AddressPrefix <String>
- [-NetworkSecurityGroup <PSNetworkSecurityGroup>] [-RouteTable <PSRouteTable>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-NetworkSecurityGroup <PSNetworkSecurityGroup>] [-RouteTable <PSRouteTable>] [<CommonParameters>]
 ```
 
 ### SetByResourceId
 ```
 New-AzureRmVirtualNetworkSubnetConfig -Name <String> -AddressPrefix <String> [-NetworkSecurityGroupId <String>]
- [-RouteTableId <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-RouteTableId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +33,10 @@ The example section of this documentation shows how this can be achieved.
 
 ### --------------------------  Example 1: Create a virtual network with two subnets and a network security group  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
@@ -111,36 +114,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NetworkSecurityGroupId
 Specifies the ID of a network security group.
 
@@ -170,6 +143,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

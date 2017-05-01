@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 96DDB194-7CF0-4F6C-9566-5CAB66367081
 online version: 
 schema: 2.0.0
-ms.assetid: 96DDB194-7CF0-4F6C-9566-5CAB66367081
 ---
 
 # Get-AzureRmSqlDatabaseReplicationLink
@@ -200,5 +200,4 @@ This cmdlet returns a **ReplicationLink** object.
 ## NOTES
 
 ## RELATED LINKS
-
 

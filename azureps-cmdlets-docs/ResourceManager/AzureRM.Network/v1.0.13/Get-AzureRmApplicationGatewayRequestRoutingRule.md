@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 61AC0CE8-179E-4175-BE9D-2DE0D35E5BC2
 online version: 
 schema: 2.0.0
-ms.assetid: 61AC0CE8-179E-4175-BE9D-2DE0D35E5BC2
 ---
 
 # Get-AzureRmApplicationGatewayRequestRoutingRule
@@ -41,21 +41,6 @@ The first command gets the Application Gateway named ApplicationGateway01 and st
 The second command gets a list of request routing rules from the Application Gateway stored in the variable named $AppGW.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the request routing rule which this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway object that contains request routing rule.
@@ -103,6 +88,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the request routing rule which this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

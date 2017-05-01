@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: 3BC9E3A9-D8E6-4CAD-8642-4BEA508A6BA1
 online version: 
 schema: 2.0.0
-ms.assetid: 3BC9E3A9-D8E6-4CAD-8642-4BEA508A6BA1
 ---
 
 # Get-AzureRmHDInsightJob
@@ -13,9 +13,8 @@ Gets the list of jobs from a cluster and lists them in reverse chronological ord
 ## SYNTAX
 
 ```
-Get-AzureRmHDInsightJob [-ClusterName] <String> [-HttpCredential] <PSCredential> [[-JobId] <String>]
- [-NumOfJobs <Int32>] [-ResourceGroupName <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmHDInsightJob [-ClusterName] <String> -HttpCredential <PSCredential> [[-JobId] <String>]
+ [[-ResourceGroupName] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,6 +45,21 @@ This command gets all recent jobs for the cluster named your-hadoop-001.
 
 ## PARAMETERS
 
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClusterName
 Specifies the name of the cluster.
 
@@ -53,21 +67,6 @@ Specifies the name of the cluster.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpCredential
-Specifies the cluster login (HTTP) credentials for the cluster.
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases: ClusterCredential
 
 Required: True
 Position: 1
@@ -85,75 +84,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NumOfJobs
-Specifies the number of jobs to retrieve.
+### -HttpCredential
+Specifies the cluster login (HTTP) credentials for the cluster.
 
 ```yaml
-Type: Int32
+Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases: ClusterCredential
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

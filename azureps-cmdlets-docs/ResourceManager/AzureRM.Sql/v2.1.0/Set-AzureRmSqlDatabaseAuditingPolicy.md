@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 303156DE-C188-4001-80E6-EDACED90F4C2
 online version: 
 schema: 2.0.0
-ms.assetid: 303156DE-C188-4001-80E6-EDACED90F4C2
 ---
 
 # Set-AzureRmSqlDatabaseAuditingPolicy
@@ -64,7 +64,6 @@ The command does not change the storage settings.
 ## PARAMETERS
 
 ### -AuditType
-
 ```yaml
 Type: AuditType
 Parameter Sets: (All)
@@ -94,7 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -AuditActionGroup
-
 ```yaml
 Type: AuditActionGroups[]
 Parameter Sets: (All)
@@ -108,7 +106,6 @@ Accept wildcard characters: False
 ```
 
 ### -AuditAction
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)

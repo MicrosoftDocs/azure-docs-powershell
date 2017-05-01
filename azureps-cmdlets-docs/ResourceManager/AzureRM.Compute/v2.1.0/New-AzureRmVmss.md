@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 57146897-CA9E-424B-984A-2B5000D351D4
 online version: 
 schema: 2.0.0
-ms.assetid: 57146897-CA9E-424B-984A-2B5000D351D4
 ---
 
 # New-AzureRmVmss
@@ -128,51 +128,6 @@ The nineteenth command uses the **New-AzureRmVmss** cmdlet to create the VMSS.
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the VMSS that this cmdlet creates.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group of the VMSS.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VirtualMachineScaleSet
-Specifies the **VirtualMachineScaleSet** object that contains the properties of the VMSS that this cmdlet creates.
-
-```yaml
-Type: VirtualMachineScaleSet
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -185,6 +140,51 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the VMSS that this cmdlet creates.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group of the VMSS.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualMachineScaleSet
+Specifies the **VirtualMachineScaleSet** object that contains the properties of the VMSS that this cmdlet creates.
+
+```yaml
+Type: VirtualMachineScaleSet
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

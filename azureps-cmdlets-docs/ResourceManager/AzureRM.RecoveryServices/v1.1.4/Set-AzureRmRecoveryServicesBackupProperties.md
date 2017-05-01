@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
+ms.assetid: FBA2DBFB-F9C1-4C19-8DE3-A9CA50EB72B3
 online version: 
 schema: 2.0.0
-ms.assetid: FBA2DBFB-F9C1-4C19-8DE3-A9CA50EB72B3
 ---
 
 # Set-AzureRmRecoveryServicesBackupProperties
@@ -34,6 +34,21 @@ The second command sets the backup storage redundancy for $Vault01 to GeoRedunda
 
 ## PARAMETERS
 
+### -BackupStorageRedundancy
+Specifies the backup storage redundancy type.
+
+```yaml
+Type: AzureRmRecoveryServicesBackupStorageRedundancyType
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Vault
 Specifies the name of the vault.
 The vault must be an **AzureRmRecoveryServicesVault** object.
@@ -47,21 +62,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -BackupStorageRedundancy
-Specifies the backup storage redundancy type.
-
-```yaml
-Type: AzureRmRecoveryServicesBackupStorageRedundancyType
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

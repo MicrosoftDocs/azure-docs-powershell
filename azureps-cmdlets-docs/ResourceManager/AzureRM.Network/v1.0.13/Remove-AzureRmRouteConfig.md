@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 5AE7BB61-1EC6-42B8-968A-FD1400EC82C2
 online version: 
 schema: 2.0.0
-ms.assetid: 5AE7BB61-1EC6-42B8-968A-FD1400EC82C2
 ---
 
 # Remove-AzureRmRouteConfig
@@ -55,36 +55,6 @@ The table no longer contains the route named Route02.
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the route that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RouteTable
-Specifies the route table that contains the route that this cmdlet deletes.
-
-```yaml
-Type: PSRouteTable
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -121,6 +91,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the route that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RouteTable
+Specifies the route table that contains the route that this cmdlet deletes.
+
+```yaml
+Type: PSRouteTable
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: 5C86545A-93DD-4B3C-96B2-FA6ED740448D
+online version: 
+schema: 2.0.0
 ---
 
 # Start-AzureRmAutomationRunbook
@@ -55,7 +55,7 @@ Specifies the name of the Automation account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -64,9 +64,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -MaxWaitSeconds
+Specifies the number of seconds this cmdlet waits for a job to finish before it abandons the job.
+The default value is 10800, or three hours.
+
+```yaml
+Type: Int32
+Parameter Sets: BySynchronousReturnJobOutput
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -80,11 +94,10 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -99,7 +112,7 @@ Specifies the name of the resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -129,23 +142,7 @@ Indicates that this cmdlet waits for job to complete, suspend, or fail, and then
 ```yaml
 Type: SwitchParameter
 Parameter Sets: BySynchronousReturnJobOutput
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaxWaitSeconds
-Specifies the number of seconds this cmdlet waits for a job to finish before it abandons the job.
-The default value is 10800, or three hours.
-
-```yaml
-Type: Int32
-Parameter Sets: BySynchronousReturnJobOutput
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -167,7 +164,6 @@ This cmdlet returns a **Job** object, unless you specify the _Wait_ parameter.
 If you do not specify _Wait_, Azure PowerShell returns a **Job** object immediately.
 If you specify _Wait_, Azure PowerShell completes the job, and then returns the result.
 The result is not a **Job** object.
-
 
 ## NOTES
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+ms.assetid: 614EEE0D-F18E-4843-BED6-6CF43DB59F75
 online version: 
 schema: 2.0.0
-ms.assetid: 614EEE0D-F18E-4843-BED6-6CF43DB59F75
 ---
 
 # Export-AzureRmAutomationRunbook
@@ -38,7 +38,7 @@ Specifies the name of the Automation account in which this cmdlet exports a runb
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -53,7 +53,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Specifies the path of a folder in which this cmdlet creates the export file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Specifies the name of the resource group for which this cmdlet exports a runbook
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -118,7 +118,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Published, Draft
 
 Required: False

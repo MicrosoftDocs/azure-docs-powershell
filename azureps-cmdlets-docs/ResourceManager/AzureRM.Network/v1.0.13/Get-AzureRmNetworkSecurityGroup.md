@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 395B7084-AB6B-4765-B55A-1260F9C9AB1B
 online version: 
 schema: 2.0.0
-ms.assetid: 395B7084-AB6B-4765-B55A-1260F9C9AB1B
 ---
 
 # Get-AzureRmNetworkSecurityGroup
@@ -36,48 +36,7 @@ The **Get-AzureRmNetworkSecurityGroup** cmdlet gets an Azure network security gr
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the network security group that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: NoExpand
-Aliases: ResourceName
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: Expand
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that the network security group belongs to.
-
-```yaml
-Type: String
-Parameter Sets: NoExpand
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
+### -ExpandResource
 ```yaml
 Type: String
 Parameter Sets: Expand
@@ -129,7 +88,47 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExpandResource
+### -Name
+Specifies the name of the network security group that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: NoExpand
+Aliases: ResourceName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: Expand
+Aliases: ResourceName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that the network security group belongs to.
+
+```yaml
+Type: String
+Parameter Sets: NoExpand
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ```yaml
 Type: String

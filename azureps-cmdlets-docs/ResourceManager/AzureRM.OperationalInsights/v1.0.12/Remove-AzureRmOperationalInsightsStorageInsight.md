@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+ms.assetid: 55476204-8793-4342-B7F9-DD881DAC9BEA
 online version: 
 schema: 2.0.0
-ms.assetid: 55476204-8793-4342-B7F9-DD881DAC9BEA
 ---
 
 # Remove-AzureRmOperationalInsightsStorageInsight
@@ -49,51 +49,6 @@ PS C:\>Remove-AzureRmOperationalInsightsStorageInsight -Workspace $Workspace -Na
 The first command uses the Get-AzureRmOperationalInsightsWorkspace cmdlet to get the workspace named MyWorkspace, and then stores it in the $Workspace variable.The second command removes the storage insight named MyStorageInsight from $Workspace without prompting you for confirmation.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of an Azure resource group.
-
-```yaml
-Type: String
-Parameter Sets: ByWorkspaceName
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceName
-Specifies the name of the workspace that contains the Storage Insight.
-
-```yaml
-Type: String
-Parameter Sets: ByWorkspaceName
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Storage Insight.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Force
 ps_force
@@ -149,6 +104,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies the name of the Storage Insight.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of an Azure resource group.
+
+```yaml
+Type: String
+Parameter Sets: ByWorkspaceName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Workspace
 Specifies the workspace that contains the Storage Insight.
 
@@ -161,6 +146,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WorkspaceName
+Specifies the name of the workspace that contains the Storage Insight.
+
+```yaml
+Type: String
+Parameter Sets: ByWorkspaceName
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

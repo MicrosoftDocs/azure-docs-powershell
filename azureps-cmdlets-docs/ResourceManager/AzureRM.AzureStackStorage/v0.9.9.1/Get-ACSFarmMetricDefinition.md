@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: 49BDA55A-0A0B-48EA-8065-1BF9DA24FC6A
 online version: 
 schema: 2.0.0
-ms.assetid: 49BDA55A-0A0B-48EA-8065-1BF9DA24FC6A
 ---
 
 # Get-ACSFarmMetricDefinition
@@ -40,6 +40,38 @@ PS C:\> Get-ACSFarmMetricDefinition -FarmName "ContosoFarm" -ResourceGroupName "
 This command returns metric definitions for the storage farm ContosoFarm.
 
 ## PARAMETERS
+
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DetailedOutput
+Indicates that complete information, including all the available metadata, is returned for each metric.
+By default, **Get-ACSFarmMetricDefinition** returns only a partial definition for each metric.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -FarmName
 Specifies the name of the storage farm for which the metric definitions are being returned.
@@ -85,58 +117,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SubscriptionId
-Specifies the Azure subscription ID.
-For example:
-
-`-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
-
-This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Token
-Specifies the authentication token for the service administrator.
-This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 Specifies the name of the resource group associated with the target storage farm.
 For example:
@@ -173,17 +153,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DetailedOutput
-Indicates that complete information, including all the available metadata, is returned for each metric.
-By default, **Get-ACSFarmMetricDefinition** returns only a partial definition for each metric.
+### -SubscriptionId
+Specifies the Azure subscription ID.
+For example:
+
+`-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
+
+This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Token
+Specifies the authentication token for the service administrator.
+This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

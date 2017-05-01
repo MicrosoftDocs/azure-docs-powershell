@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 5CFBBAC0-3AC6-4CBB-BA87-A5DA7245A627
 online version: 
 schema: 2.0.0
-ms.assetid: 5CFBBAC0-3AC6-4CBB-BA87-A5DA7245A627
 ---
 
 # New-AzureRmResourceGroup
@@ -13,7 +13,7 @@ Creates an Azure resource group.
 ## SYNTAX
 
 ```
-New-AzureRmResourceGroup -Name <String> -Location <String> [-Tag <Hashtable[]>] [-Force] [-ApiVersion <String>]
+New-AzureRmResourceGroup -Name <String> -Location <String> [-Tag <Hashtable>] [-Force] [-ApiVersion <String>]
  [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -103,7 +103,7 @@ To specify multiple tags, use commas to separate the hash tables, such as `@{Nam
 To get your predefined tags, use the Get-AzureRMTag cmdlet.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 

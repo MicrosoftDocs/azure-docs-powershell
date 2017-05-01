@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: 9ED502D1-74B0-47DB-925B-AE594E82258A
 online version: 
 schema: 2.0.0
-ms.assetid: 9ED502D1-74B0-47DB-925B-AE594E82258A
 ---
 
 # New-AzureRmHDInsightSqoopJobDefinition
@@ -14,8 +14,7 @@ Creates a Sqoop job object.
 
 ```
 New-AzureRmHDInsightSqoopJobDefinition [-Files <String[]>] [-StatusFolder <String>] [-File <String>]
- [-Command <String>] [-LibDir <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+ [-Command <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,23 +38,8 @@ This command creates a Sqoop job definition.
 
 ## PARAMETERS
 
-### -Files
-Specifies a collection of files that are associated with a Hive job.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StatusFolder
-Specifies the location of the folder that contains standard outputs and error outputs for a job.
+### -Command
+Specifies the Sqoop command.
 
 ```yaml
 Type: String
@@ -86,11 +70,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Command
-Specifies the Sqoop command.
+### -Files
+Specifies a collection of files that are associated with a Hive job.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,52 +85,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LibDir
-Specifies the library directory for the Sqoop job.
+### -StatusFolder
+Specifies the location of the folder that contains standard outputs and error outputs for a job.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
 
 Required: False
 Position: Named

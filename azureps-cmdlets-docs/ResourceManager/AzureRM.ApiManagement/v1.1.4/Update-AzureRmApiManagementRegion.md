@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+ms.assetid: BF37A79F-38A4-433E-B847-BEB564AD781C
 online version: 
 schema: 2.0.0
-ms.assetid: BF37A79F-38A4-433E-B847-BEB564AD781C
 ---
 
 # Update-AzureRmApiManagementRegion
@@ -33,66 +33,12 @@ Specifies the **PsApiManagement** instance to update an existing deployment regi
 ```yaml
 Type: PsApiManagement
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Location
-Specifies the location of the deployment region to update.
-
-Valid values are:
-
-- North Central US
-- South Central US
-- Central US
-- West Europe
-- North Europe
-- West US
-- East US
-- East US 2
-- Japan East
-- Japan West
-- Brazil South
-- Southeast Asia
-- East Asia
-- Australia East
-- Australia Southeast
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Sku
-Specifies the new tier value for the deployment region.
-
-Valid values are:
-
-- Developer
-- Standard
-- Premium
-
-```yaml
-Type: PsApiManagementSku
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -102,25 +48,9 @@ Specifies the new SKU capacity value for the deployment region.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VirtualNetwork
-Specifies a virtual network configuration for the deployment region.
-Passing $null will remove virtual network configuration for the region.
-
-```yaml
-Type: PsApiManagementVirtualNetwork
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -163,6 +93,76 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+Specifies the location of the deployment region to update.
+
+Valid values are:
+
+- North Central US
+- South Central US
+- Central US
+- West Europe
+- North Europe
+- West US
+- East US
+- East US 2
+- Japan East
+- Japan West
+- Brazil South
+- Southeast Asia
+- East Asia
+- Australia East
+- Australia Southeast
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Sku
+Specifies the new tier value for the deployment region.
+
+Valid values are:
+
+- Developer
+- Standard
+- Premium
+
+```yaml
+Type: PsApiManagementSku
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualNetwork
+Specifies a virtual network configuration for the deployment region.
+Passing $null will remove virtual network configuration for the region.
+
+```yaml
+Type: PsApiManagementVirtualNetwork
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: DCACC494-B92C-49F3-A6A7-ACB91D9DBF77
 online version: 
 schema: 2.0.0
-ms.assetid: DCACC494-B92C-49F3-A6A7-ACB91D9DBF77
 ---
 
 # Reset-AzureRmVirtualNetworkGateway
@@ -26,19 +26,6 @@ Reset-AzureRmVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGatew
 ```
 
 ## PARAMETERS
-
-### -VirtualNetworkGateway
-```yaml
-Type: PSVirtualNetworkGateway
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -76,6 +63,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VirtualNetworkGateway
+```yaml
+Type: PSVirtualNetworkGateway
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

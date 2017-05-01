@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 26B285C2-8841-48E9-8FD3-16DAC8DCD9C4
 online version: 
 schema: 2.0.0
-ms.assetid: 26B285C2-8841-48E9-8FD3-16DAC8DCD9C4
 ---
 
 # Get-AzureRmApplicationGatewayUrlPathMapConfig
@@ -30,21 +30,6 @@ PS C:\>Get-AzureRmApplicationGatewayUrlPathMapConfig -ApplicationGateway Gateway
 This command gets the URL path map configurations from the backend server located on the application gateway named Gateway.
 
 ## PARAMETERS
-
-### -Name
-Specifies the URL path map name in which this cmdlet get the path map configuration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway to which this cmdlet gets a URL path map configuration.
@@ -92,6 +77,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the URL path map name in which this cmdlet get the path map configuration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 36C71231-91CE-4FB8-977B-9B0A4BC13D4B
 online version: 
 schema: 2.0.0
-ms.assetid: 36C71231-91CE-4FB8-977B-9B0A4BC13D4B
 ---
 
 # Get-AzureRmVMUsage
@@ -13,7 +13,8 @@ Gets the virtual machine core count usage for a location.
 ## SYNTAX
 
 ```
-Get-AzureRmVMUsage [-Location] <String> [<CommonParameters>]
+Get-AzureRmVMUsage [-Location] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,9 +40,35 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

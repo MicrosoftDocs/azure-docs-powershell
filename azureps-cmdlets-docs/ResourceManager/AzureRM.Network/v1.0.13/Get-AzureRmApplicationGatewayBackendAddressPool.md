@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: E511C446-AA77-4936-AFB7-FCA354A4F79A
 online version: 
 schema: 2.0.0
-ms.assetid: E511C446-AA77-4936-AFB7-FCA354A4F79A
 ---
 
 # Get-AzureRmApplicationGatewayBackendAddressPool
@@ -40,21 +40,6 @@ The first command gets the application gateway named ApplicationGateway01 in the
 The second command gets a list of the back-end address pools associated with $AppGw, and stores the list in the $BackendPools variable.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the back-end address pool that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 The **Get-AzureRmApplicationGatewayBackendAddressPool** cmdlet gets a back-end address pool for an application gateway.
@@ -102,6 +87,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the back-end address pool that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

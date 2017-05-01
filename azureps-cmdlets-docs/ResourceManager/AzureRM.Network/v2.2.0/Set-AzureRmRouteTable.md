@@ -12,8 +12,7 @@ Sets the goal state for a route table.
 ## SYNTAX
 
 ```
-Set-AzureRmRouteTable -RouteTable <PSRouteTable> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+Set-AzureRmRouteTable -RouteTable <PSRouteTable> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +22,8 @@ The Set-AzureRmRouteTable cmdlet sets the goal state for an Azure route table.
 
 ### --------------------------  Example 1: Add a route and then set the goal state of the route table  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\>Get-AzureRmRouteTable -ResourceGroupName "ResourceGroup11" -Name "routetable01" | Add-AzureRmRouteConfig -Name "route02" -AddressPrefix 10.2.0.0/16 -NextHopType VnetLocal | Set-AzureRmRouteTable
@@ -88,35 +89,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

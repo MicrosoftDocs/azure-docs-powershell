@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 411ED5D5-5752-4118-AD86-668FD61CE502
 online version: 
 schema: 2.0.0
-ms.assetid: 411ED5D5-5752-4118-AD86-668FD61CE502
 ---
 
 # Set-AzureRmDataLakeStoreItemAcl
@@ -45,21 +45,6 @@ Aliases: AccountName
 
 Required: True
 Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Path
-Specifies the Data Lake Store path of the file or folder, starting with the root directory (/).
-
-```yaml
-Type: DataLakeStorePathInstance
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -131,6 +116,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the Data Lake Store path of the file or folder, starting with the root directory (/).
+
+```yaml
+Type: DataLakeStorePathInstance
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

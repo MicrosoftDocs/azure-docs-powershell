@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: ABCA44F1-2E09-42A8-BE52-D09458B90AA9
 online version: 
 schema: 2.0.0
-ms.assetid: ABCA44F1-2E09-42A8-BE52-D09458B90AA9
 ---
 
 # Get-AzureRmDataLakeStoreItem
@@ -46,21 +46,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Path
-Specifies the Data Lake Store path from which to get details of an item, starting with the root directory (/).
-
-```yaml
-Type: DataLakeStorePathInstance
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -97,6 +82,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the Data Lake Store path from which to get details of an item, starting with the root directory (/).
+
+```yaml
+Type: DataLakeStorePathInstance
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

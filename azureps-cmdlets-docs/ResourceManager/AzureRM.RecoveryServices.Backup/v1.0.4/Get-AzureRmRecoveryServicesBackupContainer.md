@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: DE6E6B3C-CA2C-417C-93FE-D705CF72B5F6
 online version: 
 schema: 2.0.0
-ms.assetid: DE6E6B3C-CA2C-417C-93FE-D705CF72B5F6
 ---
 
 # Get-AzureRmRecoveryServicesBackupContainer
@@ -44,6 +44,28 @@ The *BackupManagementType* parameter is only required for Windows containers.
 
 ## PARAMETERS
 
+### -BackupManagementType
+Specifies the backup management type.
+psdx_paramvalues
+
+- AzureVM
+- MARS
+- AzureSQL
+
+This parameter is used to differentiate Windows machines that are backed up using MARS agent or other backup engines.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContainerType
 Specifies the backup container type.
 psdx_paramvalues
@@ -64,15 +86,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BackupManagementType
-Specifies the backup management type.
-psdx_paramvalues
-
-- AzureVM
-- MARS
-- AzureSQL
-
-This parameter is used to differentiate Windows machines that are backed up using MARS agent or other backup engines.
+### -FriendlyName
+Specifies the friendly name of the container to get.
 
 ```yaml
 Type: String
@@ -80,7 +95,46 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+Specifies an information variable.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -130,60 +184,6 @@ Aliases:
 
 Required: False
 Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FriendlyName
-Specifies the friendly name of the container to get.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

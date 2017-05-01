@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+ms.assetid: 3D91F506-729C-4877-B776-26903CD2FA65
 online version: 
 schema: 2.0.0
-ms.assetid: 3D91F506-729C-4877-B776-26903CD2FA65
 ---
 
 # Get-AzureRmDataLakeAnalyticsDataSource
@@ -58,6 +58,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Blob
+Specifies the name of the Azure Blob Storage data source.
+
+```yaml
+Type: String
+Parameter Sets: Get a Blob storage account
+Aliases: AzureBlob
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DataLakeStore
 Specifies the name of the Data Lake Store account.
 
@@ -68,21 +83,6 @@ Aliases:
 
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the resource group name of the Data Lake Analytics account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -127,16 +127,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Blob
-Specifies the name of the Azure Blob Storage data source.
+### -ResourceGroupName
+Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
 Type: String
-Parameter Sets: Get a Blob storage account
-Aliases: AzureBlob
+Parameter Sets: (All)
+Aliases: 
 
-Required: True
-Position: 1
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

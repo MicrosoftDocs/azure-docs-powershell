@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
 ---
@@ -35,8 +35,20 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -FeatureName
-The feature name.
+### -ProviderNamespace
+The resource provider namespace.
+
+```yaml
+Type: String
+Parameter Sets: ListAvailableParameterSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ```yaml
 Type: String
@@ -65,20 +77,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProviderNamespace
-The resource provider namespace.
-
-```yaml
-Type: String
-Parameter Sets: ListAvailableParameterSet
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### -FeatureName
+The feature name.
 
 ```yaml
 Type: String

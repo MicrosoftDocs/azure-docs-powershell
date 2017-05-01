@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+ms.assetid: 324C7BDF-50CE-4904-8FDA-D33E1DF34976
 online version: 
 schema: 2.0.0
-ms.assetid: 324C7BDF-50CE-4904-8FDA-D33E1DF34976
 ---
 
 # Set-AzureRmNotificationHubsNamespaceAuthorizationRules
@@ -63,69 +63,6 @@ Instead, that information is obtained from the input file C:\Configuration\Autho
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the resource group to which the namespace is assigned.
-
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Namespace
-Specifies the namespace that contains the authorization rules that this cmdlet modifies.
-Namespaces provide a way to group and categorize notification hubs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SASRule
-Specifies the **SharedAccessAuthorizationRuleAttributes** object that contains configuration information for the authorization rules that this cmdlet modifies.
-
-```yaml
-Type: SharedAccessAuthorizationRuleAttributes
-Parameter Sets: SASRuleParameterSet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InputFile
-Specifies the path to a JSON file containing configuration information for the new rule.
-
-```yaml
-Type: String
-Parameter Sets: InputFileParameterSet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -160,6 +97,69 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputFile
+Specifies the path to a JSON file containing configuration information for the new rule.
+
+```yaml
+Type: String
+Parameter Sets: InputFileParameterSet
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namespace
+Specifies the namespace that contains the authorization rules that this cmdlet modifies.
+Namespaces provide a way to group and categorize notification hubs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the resource group to which the namespace is assigned.
+
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SASRule
+Specifies the **SharedAccessAuthorizationRuleAttributes** object that contains configuration information for the authorization rules that this cmdlet modifies.
+
+```yaml
+Type: SharedAccessAuthorizationRuleAttributes
+Parameter Sets: SASRuleParameterSet
+Aliases: 
+
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

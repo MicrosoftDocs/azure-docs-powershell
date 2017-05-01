@@ -13,7 +13,7 @@ Restores an API Management Service from the specified Azure storage blob.
 
 ```
 Restore-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-StorageContext] <AzureStorageContext>
- -SourceContainerName <String> -SourceBlobName <String> [-PassThru]
+ -SourceContainerName <String> -SourceBlobName <String> [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,6 +120,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: E35A9985-EDD1-4E7C-83C1-00F155CA0783
 online version: 
 schema: 2.0.0
-ms.assetid: E35A9985-EDD1-4E7C-83C1-00F155CA0783
 ---
 
 # Save-AzureRmVMImage
@@ -48,21 +48,6 @@ The **Output** property returns a JSON template.
 
 ## PARAMETERS
 
-### -Name
-Specifies a name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: VMName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DestinationContainerName
 Specifies the name of a container inside the "system" container that you want to hold your images.
 
@@ -85,18 +70,70 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VHDNamePrefix
-Specifies the prefix in the name of the blobs that constitute the storage profile of the VMImage.
+### -Id
+Specifies the Resource ID of the virtual machine.
 
-For example, a prefix vhdPrefix for an operating system disk results in the name vhdPrefix-osdisk.\<guid\>.vhd.
+```yaml
+Type: String
+Parameter Sets: IdParameterSetName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+Specifies an information variable.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: VirtualHardDiskNamePrefix
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: VMName
 
 Required: True
-Position: 3
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -147,55 +184,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
+### -VHDNamePrefix
+Specifies the prefix in the name of the blobs that constitute the storage profile of the VMImage.
 
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
+For example, a prefix vhdPrefix for an operating system disk results in the name vhdPrefix-osdisk.\<guid\>.vhd.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Id
-Specifies the Resource ID of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: IdParameterSetName
-Aliases: 
+Aliases: VirtualHardDiskNamePrefix
 
 Required: True
-Position: 0
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 8C4D3F64-A5EC-4E5A-8BD9-68086BAA8294
 online version: 
 schema: 2.0.0
-ms.assetid: 8C4D3F64-A5EC-4E5A-8BD9-68086BAA8294
 ---
 
 # Remove-AzureRmDataLakeStoreItemAclEntry
@@ -55,16 +55,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Path
-Specifies the Data Lake Store path of the item from which to remove an ACE, starting with the root directory (/).
+### -AceType
+Specifies the type of ACE to remove.
+psdx_paramvalues
+
+- User
+- Group
+- Mask
+- Other
 
 ```yaml
-Type: DataLakeStorePathInstance
-Parameter Sets: (All)
+Type: AceType
+Parameter Sets: Remove specific ACE
 Aliases: 
 
 Required: True
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -85,12 +91,42 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Default
+Indicates that this operation removes the default ACE from the specified ACL.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Remove specific ACE
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Force
 Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Id
+Specifies the object ID of the Azurepn_Active_Directory user, group, or service principal for which to remove an ACE.
+
+```yaml
+Type: Guid
+Parameter Sets: Remove specific ACE
 Aliases: 
 
 Required: False
@@ -139,52 +175,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AceType
-Specifies the type of ACE to remove.
-psdx_paramvalues
-
-- User
-- Group
-- Mask
-- Other
+### -Path
+Specifies the Data Lake Store path of the item from which to remove an ACE, starting with the root directory (/).
 
 ```yaml
-Type: AceType
-Parameter Sets: Remove specific ACE
+Type: DataLakeStorePathInstance
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Id
-Specifies the object ID of the Azurepn_Active_Directory user, group, or service principal for which to remove an ACE.
-
-```yaml
-Type: Guid
-Parameter Sets: Remove specific ACE
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Default
-Indicates that this operation removes the default ACE from the specified ACL.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Remove specific ACE
-Aliases: 
-
-Required: False
-Position: 4
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

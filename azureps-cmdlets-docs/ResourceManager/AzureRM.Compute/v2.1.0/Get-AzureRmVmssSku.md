@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: D35C964F-ED7D-45AF-8D34-E7C1CC741C9F
 online version: 
 schema: 2.0.0
-ms.assetid: D35C964F-ED7D-45AF-8D34-E7C1CC741C9F
 ---
 
 # Get-AzureRmVmssSku
@@ -39,9 +39,9 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -51,12 +51,12 @@ Species the name of the VMSS.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: Name
 
 Required: True
-Position: 3
+Position: 2
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: D7DB21FB-6169-4EAB-BA5E-9BB2E582549C
 online version: 
 schema: 2.0.0
-ms.assetid: D7DB21FB-6169-4EAB-BA5E-9BB2E582549C
 ---
 
 # Stop-AzureRmResourceGroupDeployment
@@ -40,7 +40,6 @@ If you omit the *Name* parameter, **Stop-AzureRmResourceGroupDeployment** search
 If the cmdlet finds more than one running deployment, the command fails.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 41F239D5-F201-495A-B68A-5A22228C9018
 online version: 
 schema: 2.0.0
-ms.assetid: 41F239D5-F201-495A-B68A-5A22228C9018
 ---
 
 # Get-AzureRmSiteRecoveryNetwork
@@ -75,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-
 ```yaml
 Type: ASRServer
 Parameter Sets: ByName, ByFriendlyName, ByServerObject
@@ -98,5 +97,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

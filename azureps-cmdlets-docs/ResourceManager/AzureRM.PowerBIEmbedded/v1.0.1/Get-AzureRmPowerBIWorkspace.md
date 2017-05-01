@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
+ms.assetid: 853AC3AD-EAA3-43A1-ACFD-CAAE6C11B1AB
 online version: 
 schema: 2.0.0
-ms.assetid: 853AC3AD-EAA3-43A1-ACFD-CAAE6C11B1AB
 ---
 
 # Get-AzureRmPowerBIWorkspace
@@ -30,36 +30,6 @@ PS C:\>Get-AzureRmPowerBIWorkspace -ResourceGroupName "ResourceGroup17" -Workspa
 This command gets the workspaces that belong to the workspace collection named WCN11 in the specified resource group.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the workspace collection belongs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceCollectionName
-Specifies the name of the workspace collection for which this cmdlet gets workspaces.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Name, ResourceName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -97,6 +67,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the workspace collection belongs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkspaceCollectionName
+Specifies the name of the workspace collection for which this cmdlet gets workspaces.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name, ResourceName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

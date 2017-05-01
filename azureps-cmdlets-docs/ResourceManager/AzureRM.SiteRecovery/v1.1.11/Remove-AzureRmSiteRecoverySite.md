@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 6424726B-3DDC-4B62-AF8E-6B24DFDBB271
 online version: 
 schema: 2.0.0
-ms.assetid: 6424726B-3DDC-4B62-AF8E-6B24DFDBB271
 ---
 
 # Remove-AzureRmSiteRecoverySite
@@ -27,6 +27,21 @@ The **Remove-AzureRmSiteRecoverySite** cmdlet deletes an Azure Site Recovery sit
 ```
 
 ## PARAMETERS
+
+### -Force
+ps_force
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Site
 Specifies the Site Recovery site object.
@@ -54,21 +69,6 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

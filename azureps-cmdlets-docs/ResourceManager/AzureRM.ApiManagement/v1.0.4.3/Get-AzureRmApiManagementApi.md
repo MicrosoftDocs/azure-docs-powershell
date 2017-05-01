@@ -13,22 +13,22 @@ Gets a list or a particular API description.
 
 ### All APIs (Default)
 ```
-Get-AzureRmApiManagementApi -Context <PsApiManagementContext>
+Get-AzureRmApiManagementApi -Context <PsApiManagementContext> [<CommonParameters>]
 ```
 
 ### Find by ID
 ```
-Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
+Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String> [<CommonParameters>]
 ```
 
 ### Find by Name
 ```
-Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -Name <String>
+Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -Name <String> [<CommonParameters>]
 ```
 
 ### Find by product ID
 ```
-Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ProductId <String>
+Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ProductId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +39,10 @@ Gets a list or a particular API description.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementApi -Context $apimContext
 ```
@@ -48,6 +52,10 @@ Get list of all APIs.
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementApi -Context $apimContext -ApiId $apiId
 ```
@@ -56,6 +64,10 @@ Get API by Id.
 
 ### --------------------------  Example 3  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementApi -Context $apimContext -Name "EchoApi"
@@ -130,6 +142,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

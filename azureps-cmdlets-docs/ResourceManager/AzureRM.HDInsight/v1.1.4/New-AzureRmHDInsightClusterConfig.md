@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: 66213503-6FA4-49BB-B932-945C4BB9BB34
 online version: 
 schema: 2.0.0
-ms.assetid: 66213503-6FA4-49BB-B932-945C4BB9BB34
 ---
 
 # New-AzureRmHDInsightClusterConfig
@@ -15,10 +15,9 @@ Creates a non-persisted cluster configuration object that describes an Azure HDI
 ```
 New-AzureRmHDInsightClusterConfig [-DefaultStorageAccountName <String>] [-DefaultStorageAccountKey <String>]
  [-OozieMetastore <AzureHDInsightMetastore>] [-HiveMetastore <AzureHDInsightMetastore>]
- [-HeadNodeSize <String>] [-WorkerNodeSize <String>] [-ZookeeperNodeSize <String>] [-ClusterType <String>]
- [-ClusterTier <Tier>] [-ObjectId <Guid>] [-CertificateFileContents <Byte[]>] [-CertificateFilePath <String>]
- [-CertificatePassword <String>] [-AadTenantId <Guid>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+ [-HeadNodeSize <String>] [-WorkerNodeSize <String>] [-ZookeeperNodeSize <String>]
+ [-ClusterType <HDInsightClusterType>] [-ObjectId <Guid>] [-CertificateFilePath <String>]
+ [-CertificatePassword <String>] [-AadTenantId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -188,7 +187,7 @@ psdx_paramvalues
 - Spark
 
 ```yaml
-Type: String
+Type: HDInsightClusterType
 Parameter Sets: (All)
 Aliases: 
 
@@ -199,49 +198,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClusterTier
-Specifies the HDInsight cluster tier.
-psdx_paramvalues
-
-- Standard
-- Premium
-
-The default value is Standard.
-The Premium tier can only be used with Linux clusters, and it enables the use of some new features.
-
-```yaml
-Type: Tier
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ObjectId
-Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
-The cluster will use this when accessing Azure Data Lake Store.
+### -AadTenantId
+Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CertificateFileContents
-Specifies file contents of the certificate that will be used when accessing Azure Data Lake Store.
-
-```yaml
-Type: Byte[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -284,52 +245,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AadTenantId
-Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
+### -ObjectId
+Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
 
 Required: False
 Position: Named

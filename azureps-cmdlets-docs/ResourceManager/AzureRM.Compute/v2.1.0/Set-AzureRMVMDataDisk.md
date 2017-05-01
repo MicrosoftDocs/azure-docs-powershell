@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: B93064E5-C04B-4F09-85A0-3CC09C9AC904
 online version: 
 schema: 2.0.0
-ms.assetid: B93064E5-C04B-4F09-85A0-3CC09C9AC904
 ---
 
 # Set-AzureRmVMDataDisk
@@ -15,13 +15,15 @@ Modifies properties of a virtual machine data disk.
 ### ChangeWithName
 ```
 Set-AzureRmVMDataDisk [-VM] <PSVirtualMachine> [-Name] <String> [[-Caching] <CachingTypes>]
- [[-DiskSizeInGB] <Int32>] [<CommonParameters>]
+ [[-DiskSizeInGB] <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ChangeWithLun
 ```
 Set-AzureRmVMDataDisk [-VM] <PSVirtualMachine> [-Lun] <Int32> [[-Caching] <CachingTypes>]
- [[-DiskSizeInGB] <Int32>] [<CommonParameters>]
+ [[-DiskSizeInGB] <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +46,37 @@ A change to the cashing mode causes the virtual machine to restart.
 
 ## PARAMETERS
 
+### -VM
+Specifies the virtual machine for which this cmdlet modifies a data disk.
+To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
+
+```yaml
+Type: PSVirtualMachine
+Parameter Sets: (All)
+Aliases: VMProfile
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the data disk that this cmdlet modifies.
+
+```yaml
+Type: String
+Parameter Sets: ChangeWithName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Caching
 Specifies the caching mode of the disk.
 The acceptable values for this parameter are:
@@ -62,7 +95,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -77,9 +110,35 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -92,40 +151,9 @@ Parameter Sets: ChangeWithLun
 Aliases: 
 
 Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the data disk that this cmdlet modifies.
-
-```yaml
-Type: String
-Parameter Sets: ChangeWithName
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VM
-Specifies the virtual machine for which this cmdlet modifies a data disk.
-To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
-
-```yaml
-Type: PSVirtualMachine
-Parameter Sets: (All)
-Aliases: VMProfile
-
-Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

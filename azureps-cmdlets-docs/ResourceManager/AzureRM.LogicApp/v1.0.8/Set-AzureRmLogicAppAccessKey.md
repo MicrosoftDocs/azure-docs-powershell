@@ -14,7 +14,7 @@ Updates the access keys of a specified Logic App.
 ```
 Set-AzureRmLogicAppAccessKey -ResourceGroupName <String> -Name <String> -AccessKeyName <String>
  [-KeyType <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +31,10 @@ If you miss a required template parameter, the cmdlet prompts you for the value.
 ### --------------------------  Example 1 : Sets the access key of a Logic App in a specified Azure resource group.  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\>Set-AzureRmLogicAppAccessKey -ResourceGroupName "ResourceGroup1" -Name "LogicApp1" -AccessKeyName "AccessKey1" -KeyType "Primary"
 ```
@@ -41,38 +45,6 @@ PrimarySecretKey   : \<value\>
 SecondarySecretKey : \<value\>
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies a name for the resource group.
-This parameter is required.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Logic App.
-This parameter is required.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AccessKeyName
 Specifies the name of the access key.
@@ -90,12 +62,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -KeyType
-Specifies the value of KeyType (Primary, Secondary & NotSpecified).
-This parameter is optional.
+### -Force
+Do not ask for confirmation.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,13 +107,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -KeyType
+Specifies the value of KeyType (Primary, Secondary & NotSpecified).
+This parameter is optional.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases: 
 
 Required: False
 Position: Named
@@ -151,13 +123,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Do not ask for confirmation.
+### -Name
+Specifies the name of the Logic App.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies a name for the resource group.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
@@ -181,6 +185,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

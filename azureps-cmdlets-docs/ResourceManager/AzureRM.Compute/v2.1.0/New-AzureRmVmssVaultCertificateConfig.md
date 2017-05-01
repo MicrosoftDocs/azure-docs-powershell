@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: D3D7381B-8EEA-45EF-BBA5-CA10216EC5DF
 online version: 
 schema: 2.0.0
-ms.assetid: D3D7381B-8EEA-45EF-BBA5-CA10216EC5DF
 ---
 
 # New-AzureRmVmssVaultCertificateConfig
@@ -42,7 +42,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -65,7 +65,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

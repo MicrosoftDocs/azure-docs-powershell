@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: 934FB798-A717-43DF-988A-2865ABCAD3AD
 online version: 
 schema: 2.0.0
-ms.assetid: 934FB798-A717-43DF-988A-2865ABCAD3AD
 ---
 
 # Get-ACSEvent
@@ -120,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-
 ```yaml
 Type: Int32[]
 Parameter Sets: EventWithFilter

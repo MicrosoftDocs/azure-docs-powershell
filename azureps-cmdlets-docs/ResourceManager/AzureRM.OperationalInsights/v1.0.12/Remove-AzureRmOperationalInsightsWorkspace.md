@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+ms.assetid: EF14677E-C171-4F15-9A4D-4F73E4BA0FA6
 online version: 
 schema: 2.0.0
-ms.assetid: EF14677E-C171-4F15-9A4D-4F73E4BA0FA6
 ---
 
 # Remove-AzureRmOperationalInsightsWorkspace
@@ -40,36 +40,6 @@ This command uses the Get-AzureRmOperationalInsightsWorkspace cmdlet to get the 
 Since the *Force* parameter is specified, the command does not prompt you before removing the workspace.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of an Azure resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the workspace.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Force
 ps_force
@@ -122,6 +92,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the workspace.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of an Azure resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

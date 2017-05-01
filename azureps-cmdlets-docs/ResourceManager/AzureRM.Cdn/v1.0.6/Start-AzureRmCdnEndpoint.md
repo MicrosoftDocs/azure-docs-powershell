@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+ms.assetid: 3E39B5D6-63E8-4653-B988-62421CC5D69F
 online version: 
 schema: 2.0.0
-ms.assetid: 3E39B5D6-63E8-4653-B988-62421CC5D69F
 ---
 
 # Start-AzureRmCdnEndpoint
@@ -36,51 +36,6 @@ The **Start-AzureRmCdnEndpoint** cmdlet starts an Azure Content Delivery Network
 
 ## PARAMETERS
 
-### -EndpointName
-Specifies the name of the endpoint that this cmdlet starts.
-
-```yaml
-Type: String
-Parameter Sets: Parameter Set for fields parameters
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProfileName
-Specifies the name of the profile to which the endpoint belongs.
-
-```yaml
-Type: String
-Parameter Sets: Parameter Set for fields parameters
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the endpoint belongs.
-
-```yaml
-Type: String
-Parameter Sets: Parameter Set for fields parameters
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CdnEndpoint
 Specifies the endpoint that this cmdlet starts.
 
@@ -93,6 +48,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -EndpointName
+Specifies the name of the endpoint that this cmdlet starts.
+
+```yaml
+Type: String
+Parameter Sets: Parameter Set for fields parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -147,6 +117,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ProfileName
+Specifies the name of the profile to which the endpoint belongs.
+
+```yaml
+Type: String
+Parameter Sets: Parameter Set for fields parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the endpoint belongs.
+
+```yaml
+Type: String
+Parameter Sets: Parameter Set for fields parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

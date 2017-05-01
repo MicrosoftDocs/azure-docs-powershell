@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 776FC591-3F3B-4C0F-B2D4-1E34ED4DC48A
 online version: 
 schema: 2.0.0
-ms.assetid: 776FC591-3F3B-4C0F-B2D4-1E34ED4DC48A
 ---
 
 # Set-AzureRmVMOSDisk
@@ -113,57 +113,6 @@ This example sets the disk encryption settings on a virtual machine operating sy
 
 ## PARAMETERS
 
-### -VM
-Specifies the local virtual machine object on which to set operating system disk properties.
-To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
-
-```yaml
-Type: PSVirtualMachine
-Parameter Sets: (All)
-Aliases: VMProfile
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the operating system disk.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: OSDiskName, DiskName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VhdUri
-Specifies the Uniform Resource Identifier (URI) of a virtual hard disk (VHD).
-
-For an image based virtual machine, this parameter specifies the VHD file to create when a platform image or user image is specified.
-This is the location from which the image binary large object (BLOB) is copied to start the virtual machine.
-
-For a disk based virtual machine boot scenario, this parameter specifies the VHD file that the virtual machine uses directly for starting up.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: OSDiskVhdUri, DiskVhdUri
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Caching
 Specifies the caching mode of the operating system disk.
 Valid values are: 
@@ -183,21 +132,6 @@ Aliases:
 
 Required: False
 Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SourceImageUri
-Specifies the URI of the VHD for user image scenarios.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: SourceImage
-
-Required: False
-Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -226,6 +160,36 @@ Aliases:
 
 Required: True
 Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DiskEncryptionKeyUrl
+Specifies the location of the disk encryption key.
+
+```yaml
+Type: String
+Parameter Sets: WindowsDiskEncryptionParameterSet, LinuxDiskEncryptionParameterSet
+Aliases: 
+
+Required: True
+Position: 7
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DiskEncryptionKeyVaultId
+Specifies the resource ID of the Key Vault containing the disk encryption key.
+
+```yaml
+Type: String
+Parameter Sets: WindowsDiskEncryptionParameterSet, LinuxDiskEncryptionParameterSet
+Aliases: 
+
+Required: True
+Position: 8
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -285,51 +249,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Windows
-Indicates that the operating system on the user image is Windows.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: WindowsParamSet, WindowsDiskEncryptionParameterSet
-Aliases: 
-
-Required: False
-Position: 6
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DiskEncryptionKeyUrl
-Specifies the location of the disk encryption key.
-
-```yaml
-Type: String
-Parameter Sets: WindowsDiskEncryptionParameterSet, LinuxDiskEncryptionParameterSet
-Aliases: 
-
-Required: True
-Position: 7
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DiskEncryptionKeyVaultId
-Specifies the resource ID of the Key Vault containing the disk encryption key.
-
-```yaml
-Type: String
-Parameter Sets: WindowsDiskEncryptionParameterSet, LinuxDiskEncryptionParameterSet
-Aliases: 
-
-Required: True
-Position: 8
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -KeyEncryptionKeyUrl
 Specifies the location of the key encryption key.
 
@@ -367,6 +286,87 @@ Specify this parameter for user image based virtual machine deployment.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: LinuxParamSet, LinuxDiskEncryptionParameterSet
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the operating system disk.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: OSDiskName, DiskName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SourceImageUri
+Specifies the URI of the VHD for user image scenarios.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: SourceImage
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VhdUri
+Specifies the Uniform Resource Identifier (URI) of a virtual hard disk (VHD).
+
+For an image based virtual machine, this parameter specifies the VHD file to create when a platform image or user image is specified.
+This is the location from which the image binary large object (BLOB) is copied to start the virtual machine.
+
+For a disk based virtual machine boot scenario, this parameter specifies the VHD file that the virtual machine uses directly for starting up.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: OSDiskVhdUri, DiskVhdUri
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VM
+Specifies the local virtual machine object on which to set operating system disk properties.
+To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
+
+```yaml
+Type: PSVirtualMachine
+Parameter Sets: (All)
+Aliases: VMProfile
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Windows
+Indicates that the operating system on the user image is Windows.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: WindowsParamSet, WindowsDiskEncryptionParameterSet
 Aliases: 
 
 Required: False

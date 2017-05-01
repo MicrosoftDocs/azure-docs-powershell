@@ -15,7 +15,7 @@ Creates new API.
 New-AzureRmApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>] -Name <String>
  [-Description <String>] -ServiceUrl <String> [-Path <String>] -Protocols <PsApiManagementSchema[]>
  [-AuthorizationServerId <String>] [-AuthorizationScope <String>] [-SubscriptionKeyHeaderName <String>]
- [-SubscriptionKeyQueryParamName <String>] [-ProductIds <String[]>]
+ [-SubscriptionKeyQueryParamName <String>] [-ProductIds <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,6 +25,10 @@ Creates new API.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmApiManagementApi -Context $apimContext -Name EchoApi -ServiceUrl 'https://contoso.com/apis/echo' -Protocols @('http', 'https')
@@ -240,6 +244,9 @@ Default value: $null
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

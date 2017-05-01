@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: D66223C9-3C63-46F8-BEE9-648E15AC6B4B
 online version: 
 schema: 2.0.0
-ms.assetid: D66223C9-3C63-46F8-BEE9-648E15AC6B4B
 ---
 
 # Remove-AzureRmNetworkSecurityRuleConfig
@@ -36,37 +36,6 @@ The second command creates a network security group using the rule in $rule1, an
 The third command removes the network security rule configuration named rdp-rule from the network security group in $nsg.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the network security rule configuration that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkSecurityGroup
-Specifies a **NetworkSecurityGroup** object.
-This object contains the network security rule configuration to remove.
-
-```yaml
-Type: PSNetworkSecurityGroup
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -104,6 +73,37 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the network security rule configuration that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkSecurityGroup
+Specifies a **NetworkSecurityGroup** object.
+This object contains the network security rule configuration to remove.
+
+```yaml
+Type: PSNetworkSecurityGroup
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

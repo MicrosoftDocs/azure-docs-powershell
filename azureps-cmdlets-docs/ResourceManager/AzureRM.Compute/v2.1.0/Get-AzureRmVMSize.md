@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 244AC316-5908-40BB-8442-36B89EF36BD1
 online version: 
 schema: 2.0.0
-ms.assetid: 244AC316-5908-40BB-8442-36B89EF36BD1
 ---
 
 # Get-AzureRmVMSize
@@ -14,17 +14,20 @@ Gets available virtual machine sizes.
 
 ### ListVirtualMachineSizeParamSet (Default)
 ```
-Get-AzureRmVMSize [-Location] <String> [<CommonParameters>]
+Get-AzureRmVMSize [-Location] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ListAvailableSizesForAvailabilitySet
 ```
-Get-AzureRmVMSize [-ResourceGroupName] <String> [-AvailabilitySetName] <String> [<CommonParameters>]
+Get-AzureRmVMSize [-ResourceGroupName] <String> [-AvailabilitySetName] <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ListAvailableSizesForVirtualMachine
 ```
-Get-AzureRmVMSize [-ResourceGroupName] <String> [-VMName] <String> [<CommonParameters>]
+Get-AzureRmVMSize [-ResourceGroupName] <String> [-VMName] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,21 +59,6 @@ You can resize this virtual machine to the sizes that this command gets.
 
 ## PARAMETERS
 
-### -AvailabilitySetName
-Specifies the name of the Availability Set for which this cmdlet gets the available virtual machine sizes.
-
-```yaml
-Type: String
-Parameter Sets: ListAvailableSizesForAvailabilitySet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Location
 Specifies the location for which this cmdlet gets the available virtual machine sizes.
 
@@ -80,9 +68,35 @@ Parameter Sets: ListVirtualMachineSizeParamSet
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -95,7 +109,7 @@ Parameter Sets: ListAvailableSizesForAvailabilitySet, ListAvailableSizesForVirtu
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -110,7 +124,22 @@ Parameter Sets: ListAvailableSizesForVirtualMachine
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AvailabilitySetName
+Specifies the name of the Availability Set for which this cmdlet gets the available virtual machine sizes.
+
+```yaml
+Type: String
+Parameter Sets: ListAvailableSizesForAvailabilitySet
+Aliases: 
+
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

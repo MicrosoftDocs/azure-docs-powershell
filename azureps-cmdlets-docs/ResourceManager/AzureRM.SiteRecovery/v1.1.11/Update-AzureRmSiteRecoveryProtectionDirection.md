@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 5B728D30-EB23-451D-B27F-B358EB57F3CE
 online version: 
 schema: 2.0.0
-ms.assetid: 5B728D30-EB23-451D-B27F-B358EB57F3CE
 ---
 
 # Update-AzureRmSiteRecoveryProtectionDirection
@@ -95,5 +95,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

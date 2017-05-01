@@ -12,7 +12,7 @@ Removes an existing deployment region from PsApiManagement instance.
 ## SYNTAX
 
 ```
-Remove-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <String>
+Remove-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -87,6 +87,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

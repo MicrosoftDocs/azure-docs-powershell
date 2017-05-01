@@ -13,14 +13,12 @@ Creates an IP configuration for an application gateway.
 
 ### SetByResourceId
 ```
-New-AzureRmApplicationGatewayIPConfiguration -Name <String> [-SubnetId <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+New-AzureRmApplicationGatewayIPConfiguration -Name <String> [-SubnetId <String>] [<CommonParameters>]
 ```
 
 ### SetByResource
 ```
-New-AzureRmApplicationGatewayIPConfiguration -Name <String> [-Subnet <PSSubnet>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+New-AzureRmApplicationGatewayIPConfiguration -Name <String> [-Subnet <PSSubnet>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +29,10 @@ The IP configuration contains the subnet in which application gateway is deploye
 
 ### --------------------------  Example 1: Create an IP configuration for an application gateway.  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$VNet = Get-AzureRmvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
@@ -73,36 +75,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Subnet
 Specifies the subnet object.
 This is the subnet in which the application gateway is deployed.
@@ -118,6 +90,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 65E28714-387C-4C04-96F5-93D7C6ACE1BE
 online version: 
 schema: 2.0.0
-ms.assetid: 65E28714-387C-4C04-96F5-93D7C6ACE1BE
 ---
 
 # Save-AzureRmResourceGroupDeploymentTemplate
@@ -203,5 +203,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

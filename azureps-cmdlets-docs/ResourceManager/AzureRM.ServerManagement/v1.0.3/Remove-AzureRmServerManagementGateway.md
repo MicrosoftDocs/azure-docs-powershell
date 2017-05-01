@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+ms.assetid: 5DDED8A3-F733-458D-888B-DC414D291B22
 online version: 
 schema: 2.0.0
-ms.assetid: 5DDED8A3-F733-458D-888B-DC414D291B22
 ---
 
 # Remove-AzureRmServerManagementGateway
@@ -36,18 +36,20 @@ The **Remove-AzureRmServerManagementGateway** cmdlet removes an Azure Server Man
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group in that the gateway belongs to.
+### -Gateway
+Specifies the gateway that this cmdlet removes.
+
+This parameter may be used instead of the *ResourceGroupName* and the *GatewayName* parameters.
 
 ```yaml
-Type: String
-Parameter Sets: ByName
+Type: Gateway
+Parameter Sets: ByObject
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -105,20 +107,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Gateway
-Specifies the gateway that this cmdlet removes.
-
-This parameter may be used instead of the *ResourceGroupName* and the *GatewayName* parameters.
+### -ResourceGroupName
+Specifies the name of the resource group in that the gateway belongs to.
 
 ```yaml
-Type: Gateway
-Parameter Sets: ByObject
+Type: String
+Parameter Sets: ByName
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 53814377-B49D-4DBC-94F1-7CA1EE7931A3
 online version: 
 schema: 2.0.0
-ms.assetid: 53814377-B49D-4DBC-94F1-7CA1EE7931A3
 ---
 
 # Get-AzureRmResourceLock
@@ -12,12 +12,6 @@ Gets a resource lock.
 
 ## SYNTAX
 
-### A lock at the subscription scope.
-```
-Get-AzureRmResourceLock [-LockName <String>] [-AtScope] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
-```
-
 ### A lock at the resource group resource scope.
 ```
 Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -ResourceType <String>
@@ -25,11 +19,16 @@ Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -
  [-InformationVariable <String>] [<CommonParameters>]
 ```
 
-### A lock at the subscription resource scope.
+### A lock at the specified scope.
 ```
-Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -ResourceType <String>
- [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -Scope <String> [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+```
+
+### A lock at the subscription scope.
+```
+Get-AzureRmResourceLock [-LockName <String>] [-AtScope] [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### A lock at the tenant resource scope.
@@ -45,10 +44,11 @@ Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceGroupName <Stri
  [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
-### A lock at the specified scope.
+### A lock at the subscription resource scope.
 ```
-Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -Scope <String> [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmResourceLock [-LockName <String>] [-AtScope] -ResourceName <String> -ResourceType <String>
+ [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### A lock, by Id.
@@ -92,7 +92,7 @@ Specifies the name of the lock that this cmdlet gets.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription scope., A lock at the resource group resource scope., A lock at the subscription resource scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the specified scope.
+Parameter Sets: A lock at the resource group resource scope., A lock at the specified scope., A lock at the subscription scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the subscription resource scope.
 Aliases: ExtensionResourceName, Name
 
 Required: False
@@ -194,7 +194,7 @@ This cmdlet gets locks for this resource.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the resource group resource scope., A lock at the subscription resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription resource scope.
 Aliases: 
 
 Required: True
@@ -210,7 +210,7 @@ This cmdlet gets locks for this resource.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the resource group resource scope., A lock at the subscription resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription resource scope.
 Aliases: 
 
 Required: True

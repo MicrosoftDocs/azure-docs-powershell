@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: E6D47CE3-E28F-4B85-838D-E8E27E31D456
 online version: 
 schema: 2.0.0
-ms.assetid: E6D47CE3-E28F-4B85-838D-E8E27E31D456
 ---
 
 # New-AzureRmExpressRouteCircuitAuthorization
@@ -40,21 +40,6 @@ For more information, see the documentation for the New-AzureRmExpressRouteCircu
 
 ## PARAMETERS
 
-### -Name
-Specifies a unique name for the new ExpressRoute circuit authorization.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -88,6 +73,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a unique name for the new ExpressRoute circuit authorization.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

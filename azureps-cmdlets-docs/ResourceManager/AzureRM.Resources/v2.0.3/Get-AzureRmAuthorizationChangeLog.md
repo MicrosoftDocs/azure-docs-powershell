@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: AzureRM.Resources-help.xml
 online version: 
 schema: 2.0.0
 ---
@@ -14,7 +14,7 @@ Maximum duration that can be queried is 15 days (going back up to past 90 days).
 ## SYNTAX
 
 ```
-Get-AzureRmAuthorizationChangeLog [[-StartTime] <DateTime>] [[-EndTime] <DateTime>]
+Get-AzureRmAuthorizationChangeLog [[-StartTime] <DateTime>] [[-EndTime] <DateTime>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,6 +99,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

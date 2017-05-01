@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 4DDBEF38-2AE4-4375-A9D6-1847AF0C43C8
 online version: 
 schema: 2.0.0
-ms.assetid: 4DDBEF38-2AE4-4375-A9D6-1847AF0C43C8
 ---
 
 # Set-AzureRmLoadBalancer
@@ -36,22 +36,6 @@ The second command uses the pipeline operator to pass the load balancer in $slb 
 The third command passes the load balancer to **Set-AzureRmLoadBalancer**, which updates the load balancer configuration and saves it.
 
 ## PARAMETERS
-
-### -LoadBalancer
-Specifies a load balancer.
-This cmdlet sets the goal state for the load balancer that this parameter specifies.
-
-```yaml
-Type: PSLoadBalancer
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -89,6 +73,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoadBalancer
+Specifies a load balancer.
+This cmdlet sets the goal state for the load balancer that this parameter specifies.
+
+```yaml
+Type: PSLoadBalancer
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

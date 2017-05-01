@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 16F37637-A91A-4257-BC70-AEE2A196F825
 online version: 
 schema: 2.0.0
-ms.assetid: 16F37637-A91A-4257-BC70-AEE2A196F825
 ---
 
 # New-AzureRmSiteRecoveryRecoveryPlan
@@ -52,7 +52,6 @@ This command adds the recovery plan named RecoveryPlan.xml to the Azure Site Rec
 ## PARAMETERS
 
 ### -Azure
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: EnterpriseToAzure, HyperVSiteToAzure
@@ -66,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverDeploymentModel
-
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToAzure, HyperVSiteToAzure
@@ -80,7 +78,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
 ```yaml
 Type: String
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
@@ -109,7 +106,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryServer
-
 ```yaml
 Type: ASRServer
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure
@@ -123,7 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySite
-
 ```yaml
 Type: ASRSite
 Parameter Sets: HyperVSiteToAzure
@@ -137,7 +132,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionEntityList
-
 ```yaml
 Type: ASRProtectionEntity[]
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
@@ -151,7 +145,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryServer
-
 ```yaml
 Type: ASRServer
 Parameter Sets: EnterpriseToEnterprise

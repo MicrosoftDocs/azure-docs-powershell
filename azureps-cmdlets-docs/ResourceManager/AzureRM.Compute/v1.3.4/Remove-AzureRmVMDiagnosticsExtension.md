@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 2B188F0A-6D6D-463E-9C16-7D93846AF6FC
 online version: 
 schema: 2.0.0
-ms.assetid: 2B188F0A-6D6D-463E-9C16-7D93846AF6FC
 ---
 
 # Remove-AzureRmVMDiagnosticsExtension
@@ -33,51 +33,6 @@ The command passes the result to the Update-AzureRmVM cmdlet by using the pipeli
 That command updates the virtual machine.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VMName
-Specifies the name of the virtual machine from which this cmdlet removes a Diagnostics extension.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Diagnostics extension that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ExtensionName
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -115,6 +70,51 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Diagnostics extension that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ExtensionName
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VMName
+Specifies the name of the virtual machine from which this cmdlet removes a Diagnostics extension.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: DC11783A-8DB6-488B-A493-132F7E91FF5D
 online version: 
 schema: 2.0.0
-ms.assetid: DC11783A-8DB6-488B-A493-132F7E91FF5D
 ---
 
 # Stop-AzureRmHDInsightJob
@@ -13,9 +13,8 @@ Stops a specified running job on a cluster.
 ## SYNTAX
 
 ```
-Stop-AzureRmHDInsightJob [-ClusterName] <String> [-JobId] <String> [-HttpCredential] <PSCredential>
- [-ResourceGroupName <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+Stop-AzureRmHDInsightJob [-ClusterName] <String> [-JobId] <String> -HttpCredential <PSCredential>
+ [[-ResourceGroupName] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,6 +37,21 @@ This command stops a job on the cluster named your-hadoop-001.
 
 ## PARAMETERS
 
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClusterName
 Specifies the name of the cluster.
 
@@ -47,7 +61,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -62,7 +76,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
@@ -77,60 +91,6 @@ Parameter Sets: (All)
 Aliases: ClusterCredential
 
 Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

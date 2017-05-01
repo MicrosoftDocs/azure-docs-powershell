@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+ms.assetid: EAE6DB41-9F9D-40C1-A5E9-212161C76EBF
 online version: 
 schema: 2.0.0
-ms.assetid: EAE6DB41-9F9D-40C1-A5E9-212161C76EBF
 ---
 
 # Remove-AzureRmBackupVault
@@ -36,6 +36,19 @@ The current cmdlet removes the vault.
 
 ## PARAMETERS
 
+### -Force
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Vault
 Specifies a Backup vault that this cmdlet removes.
 To obtain an **AzureRmBackupVault**, use the Get-AzureRmBackupVault cmdlet.
@@ -63,20 +76,6 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

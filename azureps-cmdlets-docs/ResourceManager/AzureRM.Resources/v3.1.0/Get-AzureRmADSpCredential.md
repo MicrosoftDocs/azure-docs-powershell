@@ -14,13 +14,13 @@ Retrieves a list of credentials associated with a service principal.
 ### ObjectIdParameterSet (Default)
 ```
 Get-AzureRmADSpCredential -ObjectId <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### SPNParameterSet
 ```
 Get-AzureRmADSpCredential -ServicePrincipalName <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +31,8 @@ This command will retrieve all of the credential properties (but not the credent
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS E:\> Get-AzureRmADSpCredential -ServicePrincipalName http://test12345
@@ -99,6 +101,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

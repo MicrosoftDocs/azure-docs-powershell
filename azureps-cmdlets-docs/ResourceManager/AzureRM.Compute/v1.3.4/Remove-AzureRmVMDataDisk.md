@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 4538ECE1-A0B6-4439-B931-73E11B83D72A
 online version: 
 schema: 2.0.0
-ms.assetid: 4538ECE1-A0B6-4439-B931-73E11B83D72A
 ---
 
 # Remove-AzureRmVMDataDisk
@@ -37,22 +37,6 @@ The second command removes the data disk named Disk3 from the virtual machine st
 The final command updates the state of the virtual machine stored in $VirtualMachine in ResourceGroup11.
 
 ## PARAMETERS
-
-### -VM
-Specifies the local virtual machine object from which to remove a data disk.
-To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
-
-```yaml
-Type: PSVirtualMachine
-Parameter Sets: (All)
-Aliases: VMProfile
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
 
 ### -DataDiskNames
 Specifies the names of one or more data disks that this cmdlet removes.
@@ -105,6 +89,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VM
+Specifies the local virtual machine object from which to remove a data disk.
+To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
+
+```yaml
+Type: PSVirtualMachine
+Parameter Sets: (All)
+Aliases: VMProfile
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

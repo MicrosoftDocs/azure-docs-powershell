@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-help.xml
+ms.assetid: 8CCA2582-9489-4F8D-B39A-63B17176BFD1
 online version: 
 schema: 2.0.0
-ms.assetid: 8CCA2582-9489-4F8D-B39A-63B17176BFD1
 ---
 
 # Backup-AzureRmRecoveryServicesBackupItem
@@ -42,6 +42,21 @@ The second command gets the Backup item corresponding to the container in $Named
 The last command triggers the backup job for the Backup item in $Item.
 
 ## PARAMETERS
+
+### -ExpiryDateTimeUTC
+Specifies an expiry time as a **DateTime** object.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -91,21 +106,6 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -ExpiryDateTimeUTC
-Specifies an expiry time as a **DateTime** object.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)

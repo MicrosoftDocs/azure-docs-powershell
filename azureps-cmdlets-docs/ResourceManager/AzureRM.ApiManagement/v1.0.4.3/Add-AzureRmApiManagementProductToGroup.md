@@ -14,7 +14,7 @@ In other words assigns a group to a product.
 
 ```
 Add-AzureRmApiManagementProductToGroup -Context <PsApiManagementContext> -GroupId <String> -ProductId <String>
- [-PassThru]
+ [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,6 +25,10 @@ In other words assigns a group to a product.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Add-AzureRmApiManagementProductToGroup -Context $apimContext -GroupId 0001 -ProductId 0123456789
@@ -98,6 +102,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

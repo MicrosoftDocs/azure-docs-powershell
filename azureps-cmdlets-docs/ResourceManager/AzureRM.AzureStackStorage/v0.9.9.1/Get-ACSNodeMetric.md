@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: AA864E63-880A-4A9E-98CA-5CEC79728028
 online version: 
 schema: 2.0.0
-ms.assetid: AA864E63-880A-4A9E-98CA-5CEC79728028
 ---
 
 # Get-ACSNodeMetric
@@ -39,62 +39,33 @@ This command returns metrics for the storage node ContosoNode01.
 
 ## PARAMETERS
 
-### -FarmName
-Specifies the name of the storage farm associated with the target node.
-For example:
-
-`-FarmName "ContosoFarm01"`
-
-A storage farm is a collection of storage resources that provides load balancing and redundancy.
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NodeName
-Specifies the name of the storage node whose metrics are being returned.
-For example:
-
-`-NodeName "ContosoNode01"`
-
-A node is a single storage resource within a storage farm.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StartTime
-Specifies the starting date and time for queries using a designated time interval.
-For example, if you want to return information only for the period March 1, 2016 through March 8, 2016 the *StartTime* is configured similar to this, depending on your computer's Region settings:
-
-`-StartTime "3/1/2016"`
-
-If you use the *StartTime* parameter you must also use the *EndTime* parameter, and the *StartTime* must be earlier than the *EndTime*.
-If you do not use these parameters then **Get-ACSNodeMetric** returns all the available data regardless of date.
-
-```yaml
-Type: DateTime
+Type: Uri
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 5
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DetailedOutput
+Indicates that complete information, including all the available metadata, is returned for each metric.
+By default, **Get-ACSNodeMetric** returns only partial data for each metric.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -121,25 +92,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TimeGrain
-Specifies the time interval used for summarizing the returned data.
-Allowed values are:
+### -FarmName
+Specifies the name of the storage farm associated with the target node.
+For example:
 
-- Daily
-- Hourly
-- Minutely
+`-FarmName "ContosoFarm01"`
 
-The *TimeGrain* determines the number of data points returned by your query.
-For example, if *TimeGrain* is set to Daily you get back one data point for each day.
-If *TimeGrain* is set to Hourly you get back 24 data points per day, one for each hour in the day.
+A storage farm is a collection of storage resources that provides load balancing and redundancy.
 
 ```yaml
-Type: TimeGrain
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 7
+Required: True
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -169,53 +136,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SubscriptionId
-Specifies the Azure subscription ID.
+### -NodeName
+Specifies the name of the storage node whose metrics are being returned.
 For example:
 
-`-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
+`-NodeName "ContosoNode01"`
 
-This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Token
-Specifies the authentication token for the service administrator.
-This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
+A node is a single storage resource within a storage farm.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
+Required: True
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -257,17 +192,82 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DetailedOutput
-Indicates that complete information, including all the available metadata, is returned for each metric.
-By default, **Get-ACSNodeMetric** returns only partial data for each metric.
+### -StartTime
+Specifies the starting date and time for queries using a designated time interval.
+For example, if you want to return information only for the period March 1, 2016 through March 8, 2016 the *StartTime* is configured similar to this, depending on your computer's Region settings:
+
+`-StartTime "3/1/2016"`
+
+If you use the *StartTime* parameter you must also use the *EndTime* parameter, and the *StartTime* must be earlier than the *EndTime*.
+If you do not use these parameters then **Get-ACSNodeMetric** returns all the available data regardless of date.
 
 ```yaml
-Type: SwitchParameter
+Type: DateTime
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SubscriptionId
+Specifies the Azure subscription ID.
+For example:
+
+`-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
+
+This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TimeGrain
+Specifies the time interval used for summarizing the returned data.
+Allowed values are:
+
+- Daily
+- Hourly
+- Minutely
+
+The *TimeGrain* determines the number of data points returned by your query.
+For example, if *TimeGrain* is set to Daily you get back one data point for each day.
+If *TimeGrain* is set to Hourly you get back 24 data points per day, one for each hour in the day.
+
+```yaml
+Type: TimeGrain
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Token
+Specifies the authentication token for the service administrator.
+This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

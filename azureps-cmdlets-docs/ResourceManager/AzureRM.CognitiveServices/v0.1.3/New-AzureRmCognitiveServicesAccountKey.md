@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+ms.assetid: 1E78F31C-C3CC-4970-A7DE-02433B366C69
 online version: 
 schema: 2.0.0
-ms.assetid: 1E78F31C-C3CC-4970-A7DE-02433B366C69
 ---
 
 # New-AzureRmCognitiveServicesAccountKey
@@ -30,52 +30,18 @@ The **New-AzureRmCognitiveServicesAccountKey** cmdlet regenerates an API key for
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group the account is assigned to.
+### -Force
+ps_force
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: CognitiveServicesAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyName
-Specifies the name of the key to regenerate.
-psdx_paramvalues
-
-- Key1
-- Key2
-
-```yaml
-Type: KeyName
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -118,6 +84,55 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -KeyName
+Specifies the name of the key to regenerate.
+psdx_paramvalues
+
+- Key1
+- Key2
+
+```yaml
+Type: KeyName
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: CognitiveServicesAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group the account is assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -129,21 +144,6 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+ms.assetid: EC96B443-15BF-4B19-B518-DECB18C64749
 online version: 
 schema: 2.0.0
-ms.assetid: EC96B443-15BF-4B19-B518-DECB18C64749
 ---
 
 # New-AzureRmApiManagementVirtualNetwork
@@ -33,69 +33,6 @@ PS C:\> Set-AzureRmApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup
 This example creates a virtual network and then calls the **Set-AzureRmApiManagementVirtualNetworks** cmdlet.
 
 ## PARAMETERS
-
-### -Location
-Specifies the location of the virtual network in which this cmdlet creates the instance.
-
-The acceptable values for this parameter are:
-
-- North Central US
-- South Central US
-- Central US
-- West Europe
-- North Europe
-- West US
-- East US
-- East US 2
-- Japan East
-- Japan West
-- Brazil South
-- Southeast Asia
-- East Asia
-- Australia East
-- Australia Southeast
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SubnetName
-Name of the sub network.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VnetId
-Identifier of the virtual network.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -136,6 +73,69 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Location
+Specifies the location of the virtual network in which this cmdlet creates the instance.
+
+The acceptable values for this parameter are:
+
+- North Central US
+- South Central US
+- Central US
+- West Europe
+- North Europe
+- West US
+- East US
+- East US 2
+- Japan East
+- Japan West
+- Brazil South
+- Southeast Asia
+- East Asia
+- Australia East
+- Australia Southeast
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubnetName
+Name of the sub network.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VnetId
+Identifier of the virtual network.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -146,3 +146,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: 384C17E4-F79C-443A-B450-0D0D61DC43AD
 online version: 
 schema: 2.0.0
-ms.assetid: 384C17E4-F79C-443A-B450-0D0D61DC43AD
 ---
 
 # Get-ACSNodeMetricDefinition
@@ -40,6 +40,38 @@ This command returns metric definitions for the storage node ContosoNode01.
 
 ## PARAMETERS
 
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DetailedOutput
+Indicates that complete information, including all the available metadata, is returned for each metric.
+By default, **Get-ACSNodeMetricDefinition** returns only a partial definition for each metric.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -FarmName
 Specifies the name of the storage farm associated with the target node.
 For example:
@@ -55,26 +87,6 @@ Aliases:
 
 Required: True
 Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NodeName
-Specifies the name of the storage node whose metric definitions are being returned.
-For example:
-
-`-NodeName "ContosoNode01"`
-
-A node is a single storage resource within a storage farm.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -104,53 +116,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SubscriptionId
-Specifies the Azure subscription ID.
+### -NodeName
+Specifies the name of the storage node whose metric definitions are being returned.
 For example:
 
-`-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
+`-NodeName "ContosoNode01"`
 
-If the Azure environment has already been configured by using the **Set-AzureRmEnvironment** cmdlet then you do not need to use this parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Token
-Specifies the authentication token for the service administrator.
-This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
+A node is a single storage resource within a storage farm.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
+Required: True
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -192,17 +172,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DetailedOutput
-Indicates that complete information, including all the available metadata, is returned for each metric.
-By default, **Get-ACSNodeMetricDefinition** returns only a partial definition for each metric.
+### -SubscriptionId
+Specifies the Azure subscription ID.
+For example:
+
+`-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
+
+If the Azure environment has already been configured by using the **Set-AzureRmEnvironment** cmdlet then you do not need to use this parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Token
+Specifies the authentication token for the service administrator.
+This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

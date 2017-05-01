@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: D9D0B577-9F31-4CC9-A6DB-EE6386C95D27
 online version: 
 schema: 2.0.0
-ms.assetid: D9D0B577-9F31-4CC9-A6DB-EE6386C95D27
 ---
 
 # Remove-AzureRmResourceGroupDeployment
@@ -28,7 +28,6 @@ Remove-AzureRmResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre]
 The **Remove-AzureRmResourceGroupDeployment** cmdlet removes an Azure resource group deployment and any associated operations.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 

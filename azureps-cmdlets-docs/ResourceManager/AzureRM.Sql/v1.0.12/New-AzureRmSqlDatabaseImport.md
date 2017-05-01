@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: 39EF07C6-DBF7-42D9-A15E-082FFD4F29C2
+online version: 
+schema: 2.0.0
 ---
 
 # New-AzureRmSqlDatabaseImport
@@ -48,148 +48,13 @@ This command creates an import request to import a .bacpac to a new database.
 
 ## PARAMETERS
 
-### -DatabaseName
-Specifies the name of the SQL Database.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Edition
-Specifies the edition of the new database to import to.
-
-psdx_paramvalues
-
-- Premium
-- Basic
-- Standard
-- DataWarehouse
-- Free
-
-```yaml
-Type: DatabaseEdition
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceObjectiveName
-Specifies the name of the service objective to assign to the Azure SQL Database.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatabaseMaxSizeBytes
-Specifies the maximum size for the newly imported database.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServerName
-Specifies the name of the SQL Database server.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageKeyType
-Specifies the type of access key for the storage account.
-
-The acceptable values for this parameter are:
-
-- StorageAccessKey.
-Uses the storage account key.
-- SharedAccessKey.
-Uses the Shared Access Signature (SAS) key.
-
-```yaml
-Type: StorageKeyType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageKey
-Specifies the access key for the storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageUri
-Specifies the blob URI of the .bacpac file.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AdministratorLogin
 Specifies the name of the SQL administrator.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -204,7 +69,7 @@ Specifies the password of the SQL administrator.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -231,7 +96,7 @@ This parameter is only available on SQL Database V12 servers.
 ```yaml
 Type: AuthenticationType
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -240,18 +105,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the resource group for the SQL Database server.
+### -DatabaseMaxSizeBytes
+Specifies the maximum size for the newly imported database.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DatabaseName
+Specifies the name of the SQL Database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
-Position: 0
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Edition
+Specifies the edition of the new database to import to.
+
+psdx_paramvalues
+
+- Premium
+- Basic
+- Standard
+- DataWarehouse
+- Free
+
+```yaml
+Type: DatabaseEdition
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -288,6 +191,103 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group for the SQL Database server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of the SQL Database server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServiceObjectiveName
+Specifies the name of the service objective to assign to the Azure SQL Database.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageKey
+Specifies the access key for the storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageKeyType
+Specifies the type of access key for the storage account.
+
+The acceptable values for this parameter are:
+
+- StorageAccessKey.
+Uses the storage account key.
+- SharedAccessKey.
+Uses the Shared Access Signature (SAS) key.
+
+```yaml
+Type: StorageKeyType
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageUri
+Specifies the blob URI of the .bacpac file.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

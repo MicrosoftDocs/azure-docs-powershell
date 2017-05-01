@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: E10BBD12-0078-4E95-98CB-85A1AC7B23F6
 online version: 
 schema: 2.0.0
-ms.assetid: E10BBD12-0078-4E95-98CB-85A1AC7B23F6
 ---
 
 # Remove-AzureRmStreamAnalyticsInput
@@ -30,6 +30,21 @@ PS C:\>Remove-AzureRmStreamAnalyticsInput -ResourceGroupName "StreamAnalytics-De
 This command removes the input EventStream from StreamingJob.
 
 ## PARAMETERS
+
+### -Force
+If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics input without asking for confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -JobName
 Specifies the name of the Azure Stream Analytics job to which the Azure Stream Analytics input belongs.
@@ -61,13 +76,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Force
-If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics input without asking for confirmation.
+### -PipelineVariable
+Not Specified
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: pv
 
 Required: False
 Position: Named
@@ -88,21 +103,6 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PipelineVariable
-Not Specified
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: pv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

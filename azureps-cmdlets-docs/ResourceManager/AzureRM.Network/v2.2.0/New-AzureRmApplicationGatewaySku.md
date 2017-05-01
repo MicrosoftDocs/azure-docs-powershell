@@ -12,8 +12,7 @@ Creates a SKU for an application gateway.
 ## SYNTAX
 
 ```
-New-AzureRmApplicationGatewaySku -Name <String> -Tier <String> -Capacity <Int32>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+New-AzureRmApplicationGatewaySku -Name <String> -Tier <String> -Capacity <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +22,10 @@ The New-AzureRmApplicationGatewaySku cmdlet creates a stock keeping unit (SKU) f
 
 ### --------------------------  Example 1: Create a SKU for an azure_2 application gateway  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$SKU = New-AzureRmApplicationGatewaySku -Name "Standard_Small" -Tier "Standard" -Capacity 2
@@ -77,35 +80,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

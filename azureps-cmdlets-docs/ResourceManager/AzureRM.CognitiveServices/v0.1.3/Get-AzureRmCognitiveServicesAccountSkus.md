@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+ms.assetid: 7521977A-FF14-4C04-B49D-973B412AE59E
 online version: 
 schema: 2.0.0
-ms.assetid: 7521977A-FF14-4C04-B49D-973B412AE59E
 ---
 
 # Get-AzureRmCognitiveServicesAccountSkus
@@ -33,36 +33,6 @@ Paid tiers include S0, S1, S2, and so on.
 ```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group the account is assigned to.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: CognitiveServicesAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -103,6 +73,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies the name of the account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: CognitiveServicesAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group the account is assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -113,5 +113,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

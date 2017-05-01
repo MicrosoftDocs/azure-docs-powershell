@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 45863A1C-84CF-44F7-899B-9A273B6F661B
 online version: 
 schema: 2.0.0
-ms.assetid: 45863A1C-84CF-44F7-899B-9A273B6F661B
 ---
 
 # Restart-AzureRmVmss
@@ -78,6 +78,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstanceId
+Specifies, as a string array, the ID of the instances that need restarted.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of the resource group of the VMSS.
 
@@ -103,21 +118,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstanceId
-Specifies, as a string array, the ID of the instances that need restarted.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

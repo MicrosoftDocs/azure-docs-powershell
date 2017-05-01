@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: AD84B9EE-19BA-4E0F-8B96-0B0EA374885C
 online version: 
 schema: 2.0.0
-ms.assetid: AD84B9EE-19BA-4E0F-8B96-0B0EA374885C
 ---
 
 # Find-AzureRmResource
@@ -20,18 +20,18 @@ Find-AzureRmResource [-ResourceNameContains <String>] [-ResourceType <String>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
+### Lists the resources based on the specified scope at the tenant level.
+```
+Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-ExtensionResourceType <String>]
+ [-Top <Int32>] [-ODataQuery <String>] [-ExpandProperties] [-TenantLevel] [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+```
+
 ### Get a resources using a multi-subscription query.
 ```
 Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-ExtensionResourceType <String>]
  [-Top <Int32>] [-ODataQuery <String>] [-TagName <String>] [-TagValue <String>]
  [-ResourceGroupNameContains <String>] [-ExpandProperties] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
-```
-
-### Lists the resources based on the specified scope at the tenant level.
-```
-Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-ExtensionResourceType <String>]
- [-Top <Int32>] [-ODataQuery <String>] [-ExpandProperties] [-TenantLevel] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Get a resources using a multi-subscription query., Lists the resources based on the specified scope at the tenant level.
+Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
 Aliases: 
 
 Required: True
@@ -123,7 +123,6 @@ Accept wildcard characters: False
 ```
 
 ### -TagName
-
 ```yaml
 Type: String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
@@ -137,7 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -TagValue
-
 ```yaml
 Type: String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
+ms.assetid: 8B3C0B00-093D-402E-BC92-FB25A66C767B
 online version: 
 schema: 2.0.0
-ms.assetid: 8B3C0B00-093D-402E-BC92-FB25A66C767B
 ---
 
 # Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys
@@ -31,66 +31,6 @@ PS C:\>Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys -ResourceGroupName "Res
 This command resets the primary access key for the workspace collection named WCN11 in the specified resource group.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group of the collection.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceCollectionName
-Specifies the name of the Power BI workspace collection on which this cmdlet operates.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Name, ResourceName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Key1
-Indicates that this cmdlet resets the primary access key.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Key2
-Indicates that this cmdlet resets the secondary access key.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -131,19 +71,63 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -Key1
+Indicates that this cmdlet resets the primary access key.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Key2
+Indicates that this cmdlet resets the secondary access key.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group of the collection.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkspaceCollectionName
+Specifies the name of the Power BI workspace collection on which this cmdlet operates.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name, ResourceName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -154,6 +138,22 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

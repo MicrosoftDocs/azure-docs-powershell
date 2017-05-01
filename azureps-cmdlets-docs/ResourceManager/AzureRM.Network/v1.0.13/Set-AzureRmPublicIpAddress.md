@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: DC33B2A3-15EA-4481-AB7A-37475BEBDC70
 online version: 
 schema: 2.0.0
-ms.assetid: DC33B2A3-15EA-4481-AB7A-37475BEBDC70
 ---
 
 # Set-AzureRmPublicIpAddress
@@ -28,21 +28,6 @@ The **Set-AzureRmPublicIpAddress** cmdlet sets the goal state for a public IP ad
 ```
 
 ## PARAMETERS
-
-### -PublicIpAddress
-Specifies a **PublicIpAddress** object that represents the goal state to which the public IP address should be set.
-
-```yaml
-Type: PSPublicIpAddress
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -80,6 +65,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicIpAddress
+Specifies a **PublicIpAddress** object that represents the goal state to which the public IP address should be set.
+
+```yaml
+Type: PSPublicIpAddress
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

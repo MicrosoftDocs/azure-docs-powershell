@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+external help file: Microsoft.Azure.Commands.Cdn.dll-help.xml
+ms.assetid: B694A78C-9262-422B-B3C0-73FCA0DA26B0
 online version: 
 schema: 2.0.0
-ms.assetid: B694A78C-9262-422B-B3C0-73FCA0DA26B0
 ---
 
 # Get-AzureRmCdnCustomDomain
@@ -61,36 +61,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProfileName
-Specifies the name of the Profile to which the custom domain belongs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the custom domain belongs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -124,6 +94,36 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProfileName
+Specifies the name of the Profile to which the custom domain belongs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the custom domain belongs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

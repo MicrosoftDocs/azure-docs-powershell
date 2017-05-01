@@ -13,11 +13,10 @@ Creates a virtual network.
 
 ```
 New-AzureRmVirtualNetwork -Name <String> -ResourceGroupName <String> -Location <String>
- -AddressPrefix <System.Collections.Generic.List`1[System.String]>
+ [-AddressPrefix <System.Collections.Generic.List`1[System.String]>]
  [-DnsServer <System.Collections.Generic.List`1[System.String]>]
  [-Subnet <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSSubnet]>]
- [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-Tag <Hashtable[]>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +29,10 @@ These DNS settings are then applied to all NICs/VMs in the virtual network.
 
 ### --------------------------  Example 1: Create a virtual network with two subnets  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
@@ -48,6 +51,10 @@ The New-AzureRmVirtualNetwork cmdlet then creates a virtual network using the CI
 ### --------------------------  Example 2: Create a virtual network with DNS settings  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
 $frontendSubnet = New-AzureRmVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24"
@@ -62,6 +69,10 @@ If no DNS servers are specified on a VNET and no DNS servers on the NICs, then t
 
 ### --------------------------  Example 3: Create a virtual network with a subnet referencing a network security group  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
@@ -133,7 +144,7 @@ Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -174,7 +185,7 @@ Accept wildcard characters: False
 Specifies a dictionary of tags to associate with the network interface.
 
 ```yaml
-Type: Hashtable
+Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -200,65 +211,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

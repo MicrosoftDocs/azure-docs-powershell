@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+ms.assetid: F2EFFF61-38C9-4D1E-92BD-E00C82EFBFBE
 online version: 
 schema: 2.0.0
-ms.assetid: F2EFFF61-38C9-4D1E-92BD-E00C82EFBFBE
 ---
 
 # New-AzureRmServerManagementSession
@@ -36,51 +36,6 @@ The **New-AzureRmServerManagementSession** cmdlet creates an Azure Server Manage
 ```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the resource group of the node that this cmdlet creates a session for.
-
-```yaml
-Type: String
-Parameter Sets: ByName
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NodeName
-Specifies the name of the node for which this cmdlet creates a session.
-
-```yaml
-Type: String
-Parameter Sets: ByName
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SessionName
-Specifies the name to use for the session.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Credential
 Specifies a **PSCredential** object for the connection to the Server Management Session.
@@ -155,6 +110,51 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -NodeName
+Specifies the name of the node for which this cmdlet creates a session.
+
+```yaml
+Type: String
+Parameter Sets: ByName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group of the node that this cmdlet creates a session for.
+
+```yaml
+Type: String
+Parameter Sets: ByName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SessionName
+Specifies the name to use for the session.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -165,5 +165,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 781FB7AC-8DFD-4CAB-BF23-50793CC53B8E
 online version: 
 schema: 2.0.0
-ms.assetid: 781FB7AC-8DFD-4CAB-BF23-50793CC53B8E
 ---
 
 # Remove-AzureRmVmss
@@ -79,6 +79,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstanceId
+Specifies, as a string array, the ID of the instances that need to be started.
+For instance: `-InstanceId "0", "3"`
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of the resource group that the VMSS belongs to.
 
@@ -105,22 +121,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstanceId
-Specifies, as a string array, the ID of the instances that need to be started.
-For instance: `-InstanceId "0", "3"`
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

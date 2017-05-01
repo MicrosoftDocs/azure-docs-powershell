@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 7519289E-AF0B-462F-A549-8B47F8A4535C
 online version: 
 schema: 2.0.0
-ms.assetid: 7519289E-AF0B-462F-A549-8B47F8A4535C
 ---
 
 # Remove-AzureRmApplicationGatewayRequestRoutingRule
@@ -33,21 +33,6 @@ The first command gets an application gateway and stores it in the $AppGw variab
 The second command removes the request routing rule named Rule02 from the application gateway stored in $AppGw.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the request routing rule for which this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway from which to remove a request routing rule.
@@ -97,6 +82,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the request routing rule for which this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

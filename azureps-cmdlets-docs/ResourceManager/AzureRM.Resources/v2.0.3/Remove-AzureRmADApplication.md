@@ -12,7 +12,8 @@ Deletes the azure active directory application.
 ## SYNTAX
 
 ```
-Remove-AzureRmADApplication -ApplicationObjectId <Guid> [-Force] [-WhatIf] [-Confirm]
+Remove-AzureRmADApplication -ObjectId <Guid> [-Force] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +24,12 @@ Deletes the azure active directory application.
 ### --------------------------  Delete AAD application.  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
+
+
 ```
 PS C:\> Remove-AzureRmADApplication -ApplicationObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 -Force
 ```
@@ -31,10 +38,8 @@ Deletes the azure active directory application.
 
 ## PARAMETERS
 
-### -ApplicationObjectId
-@{Text=}
-
-```yaml
+### -ObjectId
+The object id of the application to delete.```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
@@ -61,13 +66,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: cf
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
 
 Required: False
 Position: Named
@@ -91,6 +107,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

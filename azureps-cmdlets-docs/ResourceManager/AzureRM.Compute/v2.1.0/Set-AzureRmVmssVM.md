@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: B01FF9EA-9E46-47B0-8EE5-A1540321D406
 online version: 
 schema: 2.0.0
-ms.assetid: B01FF9EA-9E46-47B0-8EE5-A1540321D406
 ---
 
 # Set-AzureRmVmssVM
@@ -38,9 +38,9 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 4
+Position: 3
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -53,7 +53,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 5
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -68,9 +68,9 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -80,12 +80,12 @@ Specifies the name of the VMSS instance that this cmdlet modifies.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: Name
 
 Required: True
-Position: 3
+Position: 2
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

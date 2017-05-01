@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: CC654608-7240-46DE-9B9F-33C048C88916
 online version: 
 schema: 2.0.0
-ms.assetid: CC654608-7240-46DE-9B9F-33C048C88916
 ---
 
 # Restore-AzureRmRecoveryServicesBackupItem
@@ -58,38 +58,6 @@ The last command restores the disks to the target storage account DestAccount in
 
 ## PARAMETERS
 
-### -StorageAccountName
-Specifies the name of the target Storage account in your subscription.
-As a part of the restore process, this cmdlet stores the disks and the configuration information in this Storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageAccountResourceGroupName
-Specifies the name of the resource group that contains the target Storage account in your subscription.
-As a part of the restore process, this cmdlet stores the disks and the configuration information in this Storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -142,6 +110,38 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageAccountName
+Specifies the name of the target Storage account in your subscription.
+As a part of the restore process, this cmdlet stores the disks and the configuration information in this Storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageAccountResourceGroupName
+Specifies the name of the resource group that contains the target Storage account in your subscription.
+As a part of the restore process, this cmdlet stores the disks and the configuration information in this Storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+ms.assetid: C68984BD-7B36-4036-8364-7B6698A8BC3E
 online version: 
 schema: 2.0.0
-ms.assetid: C68984BD-7B36-4036-8364-7B6698A8BC3E
 ---
 
 # New-AzureRmRedisCache
@@ -76,30 +76,16 @@ This command creates a Redis Cache or updates the Redis Cache if it already exis
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the Redis Cache to create.
+### -EnableNonSslPort
+Indicates whether the non-SSL port is enabled.
+The default value is $False (the non-SSL port is disabled).
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group in which to create the Redis Cache.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -138,11 +124,143 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -MaxMemoryPolicy
+This parameter has been deprecated.
+Use the *RedisConfiguration* parameter to set maxmemory-policy.
+For example: 
+
+`-RedisConfiguration @{"maxmemory-policy" = "allkeys-lru"}`
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Redis Cache to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RedisConfiguration
+Specifies Redis configuration settings.
+psdx_paramvalues
+
+- rdb-backup-enabled.
+Specifies that Redis data persistence is enabled.
+Premium tier only.
+- rdb-storage-connection-string.
+Specifies the connection string to the Storage account for Redis data persistence.
+Premium tier only.
+- rdb-backup-frequency.
+Specifies the backup frequency for Redis data persistence.
+Premium tier only. 
+- maxmemory-reserved.
+Configures the memory reserved for non-cache processes.
+Standard and Premium tiers. 
+- maxmemory-policy.
+Configures the eviction policy for the cache.
+All pricing tiers. 
+- notify-keyspace-events.
+Configures keyspace notifications.
+Standard and premium tiers. 
+- hash-max-ziplist-entries.
+Configures memory optimization for small aggregate data types.
+Standard and Premium tiers. 
+- hash-max-ziplist-value.
+Configures memory optimization for small aggregate data types.
+Standard and Premium tiers. 
+- set-max-intset-entries.
+Configures memory optimization for small aggregate data types.
+Standard and Premium tiers. 
+- zset-max-ziplist-entries.
+Configures memory optimization for small aggregate data types.
+Standard and Premium tiers. 
+- zset-max-ziplist-value.
+Configures memory optimization for small aggregate data types.
+Standard and Premium tiers. 
+- databases.
+Configures the number of databases.
+This property can be configured only at cache creation.
+Standard and Premium tiers.
+
+For more information, see Manage Azure Redis Cache with Azure PowerShellhttp://go.microsoft.com/fwlink/?LinkId=800051 (http://go.microsoft.com/fwlink/?LinkId=800051).
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -RedisVersion
 This parameter is deprecated and will be removed from future releases.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group in which to create the Redis Cache.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ShardCount
+Specifies the number of shards to create on a Premium cluster cache.
+psdx_paramvalues
+
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9 
+- 10
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -212,126 +330,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MaxMemoryPolicy
-This parameter has been deprecated.
-Use the *RedisConfiguration* parameter to set maxmemory-policy.
-For example: 
+### -StaticIP
+Specifies a unique IP address in the subnet for the Redis Cache.
 
-`-RedisConfiguration @{"maxmemory-policy" = "allkeys-lru"}`
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RedisConfiguration
-Specifies Redis configuration settings.
-psdx_paramvalues
-
-- rdb-backup-enabled.
-Specifies that Redis data persistence is enabled.
-Premium tier only.
-- rdb-storage-connection-string.
-Specifies the connection string to the Storage account for Redis data persistence.
-Premium tier only.
-- rdb-backup-frequency.
-Specifies the backup frequency for Redis data persistence.
-Premium tier only. 
-- maxmemory-reserved.
-Configures the memory reserved for non-cache processes.
-Standard and Premium tiers. 
-- maxmemory-policy.
-Configures the eviction policy for the cache.
-All pricing tiers. 
-- notify-keyspace-events.
-Configures keyspace notifications.
-Standard and premium tiers. 
-- hash-max-ziplist-entries.
-Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
-- hash-max-ziplist-value.
-Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
-- set-max-intset-entries.
-Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
-- zset-max-ziplist-entries.
-Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
-- zset-max-ziplist-value.
-Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
-- databases.
-Configures the number of databases.
-This property can be configured only at cache creation.
-Standard and Premium tiers.
-
-For more information, see Manage Azure Redis Cache with Azure PowerShellhttp://go.microsoft.com/fwlink/?LinkId=800051 (http://go.microsoft.com/fwlink/?LinkId=800051).
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EnableNonSslPort
-Indicates whether the non-SSL port is enabled.
-The default value is $False (the non-SSL port is disabled).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ShardCount
-Specifies the number of shards to create on a Premium cluster cache.
-psdx_paramvalues
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9 
-- 10
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VirtualNetwork
-Specifies the resource ID of the virtual network in which to deploy the Redis Cache.
+If you do not specify a value for this parameter, this cmdlet chooses an IP address from the subnet.
 
 ```yaml
 Type: String
@@ -361,24 +363,6 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StaticIP
-Specifies a unique IP address in the subnet for the Redis Cache.
-
-If you do not specify a value for this parameter, this cmdlet chooses an IP address from the subnet.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -396,6 +380,21 @@ This parameter has been deprecated.
 
 ```yaml
 Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualNetwork
+Specifies the resource ID of the virtual network in which to deploy the Redis Cache.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 

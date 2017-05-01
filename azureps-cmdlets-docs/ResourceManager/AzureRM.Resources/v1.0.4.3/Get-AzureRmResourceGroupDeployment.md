@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 online version: 
 schema: 2.0.0
 ---
@@ -13,12 +13,13 @@ schema: 2.0.0
 
 ### The deployment name parameter set. (Default)
 ```
-Get-AzureRmResourceGroupDeployment [-ResourceGroupName] <String> [[-Name] <String>] [<CommonParameters>]
+Get-AzureRmResourceGroupDeployment [-ResourceGroupName] <String> [[-Name] <String>] [-ApiVersion <String>]
+ [-Pre] [<CommonParameters>]
 ```
 
 ### The deployment Id parameter set.
 ```
-Get-AzureRmResourceGroupDeployment -Id <String> [<CommonParameters>]
+Get-AzureRmResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,19 +36,18 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Id
-The fully qualified resource Id of the deployment.
-example: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Resources/deployments/{deploymentName}
+### -ResourceGroupName
+The name of the resource group.
 
 ```yaml
 Type: String
-Parameter Sets: The deployment Id parameter set.
-Aliases: DeploymentId, ResourceId
+Parameter Sets: The deployment name parameter set.
+Aliases: 
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -66,18 +66,45 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-The name of the resource group.
+### -ApiVersion
+When set, indicates the version of the resource provider API to use. If not specified, the API version is automatically determined as the latest available.```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+The fully qualified resource Id of the deployment.
+example: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Resources/deployments/{deploymentName}
 
 ```yaml
 Type: String
-Parameter Sets: The deployment name parameter set.
-Aliases: 
+Parameter Sets: The deployment Id parameter set.
+Aliases: DeploymentId, ResourceId
 
 Required: True
-Position: 0
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

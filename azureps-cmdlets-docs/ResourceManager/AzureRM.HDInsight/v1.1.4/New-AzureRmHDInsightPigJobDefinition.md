@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: 53C1A4D8-AE0F-422D-A069-D765E4407310
 online version: 
 schema: 2.0.0
-ms.assetid: 53C1A4D8-AE0F-422D-A069-D765E4407310
 ---
 
 # New-AzureRmHDInsightPigJobDefinition
@@ -14,8 +14,7 @@ Creates a Pig job object.
 
 ```
 New-AzureRmHDInsightPigJobDefinition [-Arguments <String[]>] [-Files <String[]>] [-StatusFolder <String>]
- [-File <String>] [-Query <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+ [-File <String>] [-Query <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -114,45 +113,6 @@ Specifies the Pig query.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
 
 Required: False
 Position: Named

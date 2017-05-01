@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+ms.assetid: 67276B0C-B5DB-4C5F-8959-F88462B72499
 online version: 
 schema: 2.0.0
-ms.assetid: 67276B0C-B5DB-4C5F-8959-F88462B72499
 ---
 
 # New-AzureRmStorageAccountKey
@@ -30,55 +30,6 @@ PS C:\>New-AzureRmStorageKey -ResourceGroupName "MyResourceGroup" -AccountName "
 This command regenerates a storage key for the specified Storage account.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the Storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Storage account for which to regenerate a storage key.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: StorageAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyName
-Specifies which key to regenerate.
-psdx_paramvalues
-
-- key1 
-- key2
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -116,6 +67,55 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyName
+Specifies which key to regenerate.
+psdx_paramvalues
+
+- key1 
+- key2
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Storage account for which to regenerate a storage key.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: StorageAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the Storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

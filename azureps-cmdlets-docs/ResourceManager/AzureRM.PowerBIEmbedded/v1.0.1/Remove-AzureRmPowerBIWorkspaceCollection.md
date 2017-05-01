@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
+ms.assetid: CBA0E2E7-48D3-4F6C-9686-F971634270E4
 online version: 
 schema: 2.0.0
-ms.assetid: CBA0E2E7-48D3-4F6C-9686-F971634270E4
 ---
 
 # Remove-AzureRmPowerBIWorkspaceCollection
@@ -31,36 +31,6 @@ PS C:\>Remove-AzureRmPowerBIWorkspaceCollection -ResourceGroupName "ResourceGrou
 This command removes the workspace collection named WCN11 in the specified resource group.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group from which this cmdlet removes a workspace collection.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceCollectionName
-Specifies the name of the Power BI workspace collection that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Name, ResourceName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -101,19 +71,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -ResourceGroupName
+Specifies the name of the resource group from which this cmdlet removes a workspace collection.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: wi
+Aliases: 
 
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkspaceCollectionName
+Specifies the name of the Power BI workspace collection that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name, ResourceName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -124,6 +108,22 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 68C13EB3-B86B-4EB2-B885-2A2AB6C7CC2F
 online version: 
 schema: 2.0.0
-ms.assetid: 68C13EB3-B86B-4EB2-B885-2A2AB6C7CC2F
 ---
 
 # Get-AzureRmVM
@@ -114,21 +114,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of a resource group.
-
-```yaml
-Type: String
-Parameter Sets: ListVirtualMachineInResourceGroupParamSet, GetVirtualMachineInResourceGroupParamSet
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the virtual machine to get.
 
@@ -139,6 +124,36 @@ Aliases: ResourceName, VMName
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NextLink
+Specifies the next link.
+
+```yaml
+Type: Uri
+Parameter Sets: ListNextLinkVirtualMachinesParamSet
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of a resource group.
+
+```yaml
+Type: String
+Parameter Sets: ListVirtualMachineInResourceGroupParamSet, GetVirtualMachineInResourceGroupParamSet
+Aliases: 
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -156,21 +171,6 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NextLink
-Specifies the next link.
-
-```yaml
-Type: Uri
-Parameter Sets: ListNextLinkVirtualMachinesParamSet
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

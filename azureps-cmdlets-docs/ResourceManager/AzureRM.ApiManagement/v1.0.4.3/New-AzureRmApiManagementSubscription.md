@@ -14,7 +14,7 @@ Creates new subscription.
 ```
 New-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-SubscriptionId <String>]
  -Name <String> -UserId <String> -ProductId <String> [-PrimaryKey <String>] [-SecondaryKey <String>]
- [-State <PsApiManagementSubscriptionState>]
+ [-State <PsApiManagementSubscriptionState>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +24,10 @@ Creates new subscription.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmApiManagementSubscription -Context $apimContext -UserId 777 -ProductId 999
@@ -166,6 +170,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

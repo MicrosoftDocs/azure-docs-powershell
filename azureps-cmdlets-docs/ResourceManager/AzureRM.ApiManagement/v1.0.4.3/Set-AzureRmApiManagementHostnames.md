@@ -15,12 +15,12 @@ Sets a custom hostname configuration for an API Management service proxy or port
 ```
 Set-AzureRmApiManagementHostnames -ResourceGroupName <String> -Name <String>
  [-PortalHostnameConfiguration <PsApiManagementHostnameConfiguration>]
- [-ProxyHostnameConfiguration <PsApiManagementHostnameConfiguration>] [-PassThru]
+ [-ProxyHostnameConfiguration <PsApiManagementHostnameConfiguration>] [-PassThru] [<CommonParameters>]
 ```
 
 ### Set from provided PsApiManagement instance
 ```
-Set-AzureRmApiManagementHostnames -ApiManagement <PsApiManagement> [-PassThru]
+Set-AzureRmApiManagementHostnames -ApiManagement <PsApiManagement> [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,6 +141,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

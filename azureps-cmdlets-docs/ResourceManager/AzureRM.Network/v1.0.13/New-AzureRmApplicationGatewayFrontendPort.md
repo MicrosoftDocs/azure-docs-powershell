@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 1526B849-8D5A-4739-B6E0-913D4314D38F
 online version: 
 schema: 2.0.0
-ms.assetid: 1526B849-8D5A-4739-B6E0-913D4314D38F
 ---
 
 # New-AzureRmApplicationGatewayFrontendPort
@@ -30,36 +30,6 @@ PS C:\>$FrontEndPort = New-AzureRmApplicationGatewayFrontendPort -Name "FrontEnd
 This command creates a front-end port named FrontEndPort01 on port 80 and stores the result in the variable named $FrontEndPort.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the front-end port that this cmdlet creates.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Port
-Specifies the port number of the front-end port.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -94,6 +64,36 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the front-end port that this cmdlet creates.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Port
+Specifies the port number of the front-end port.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

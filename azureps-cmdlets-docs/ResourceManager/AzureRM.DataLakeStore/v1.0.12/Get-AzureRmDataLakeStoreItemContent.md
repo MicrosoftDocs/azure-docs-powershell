@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: E6E37144-A773-4FF9-B2D7-701A94250E50
 online version: 
 schema: 2.0.0
-ms.assetid: E6E37144-A773-4FF9-B2D7-701A94250E50
 ---
 
 # Get-AzureRmDataLakeStoreItemContent
@@ -43,51 +43,6 @@ Aliases: AccountName
 
 Required: True
 Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Path
-Specifies the Data Lake Store path of a file, starting with the root directory (/).
-
-```yaml
-Type: DataLakeStorePathInstance
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Offset
-Specifies the number of bytes to skip in a file before getting content.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Length
-Specifies the length, in bytes, of the content to get.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -175,6 +130,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Length
+Specifies the length, in bytes, of the content to get.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Offset
+Specifies the number of bytes to skip in a file before getting content.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the Data Lake Store path of a file, starting with the root directory (/).
+
+```yaml
+Type: DataLakeStorePathInstance
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -216,5 +216,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

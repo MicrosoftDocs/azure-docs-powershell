@@ -12,8 +12,7 @@ Creates a front-end port for an application gateway.
 ## SYNTAX
 
 ```
-New-AzureRmApplicationGatewayFrontendPort -Name <String> -Port <Int32> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+New-AzureRmApplicationGatewayFrontendPort -Name <String> -Port <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +22,10 @@ The New-AzureRmApplicationGatewayFrontendPort cmdlet creates a front-end port fo
 
 ### --------------------------  Example1: Create a frontend port  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\> $FrontEndPort = New-AzureRmApplicationGatewayFrontendPort -Name "FrontEndPort01" -Port 80
@@ -62,35 +65,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

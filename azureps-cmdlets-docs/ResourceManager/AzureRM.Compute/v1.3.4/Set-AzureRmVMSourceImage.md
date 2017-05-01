@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: BBEE4727-DE53-4A1B-B280-DD69A6EBDD55
 online version: 
 schema: 2.0.0
-ms.assetid: BBEE4727-DE53-4A1B-B280-DD69A6EBDD55
 ---
 
 # Set-AzureRmVMSourceImage
@@ -41,34 +41,42 @@ The **Get-AzureRmVMImagePublisher**, **Get-AzureRmVMImageOffer**, **Get-AzureRmV
 
 ## PARAMETERS
 
-### -VM
-Specifies the local virtual machine object to configure.
+### -InformationAction
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
-Type: PSVirtualMachine
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: VMProfile
+Aliases: infa
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PublisherName
-Specifies the name of a publisher of a VMImage.
-To obtain a publisher, use the Get-AzureRmVMImagePublisher cmdlet.
+### -InformationVariable
+Specifies an information variable.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: iv
 
-Required: True
-Position: 1
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -83,6 +91,22 @@ Aliases:
 
 Required: True
 Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PublisherName
+Specifies the name of a publisher of a VMImage.
+To obtain a publisher, use the Get-AzureRmVMImagePublisher cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -120,42 +144,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+### -VM
+Specifies the local virtual machine object to configure.
 
 ```yaml
-Type: ActionPreference
+Type: PSVirtualMachine
 Parameter Sets: (All)
-Aliases: infa
+Aliases: VMProfile
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

@@ -13,17 +13,20 @@ schema: 2.0.0
 
 ### The list all policy definitions parameter set. (Default)
 ```
-Get-AzureRmPolicyDefinition [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmPolicyDefinition [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### The policy definition name parameter set.
 ```
-Get-AzureRmPolicyDefinition -Name <String> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmPolicyDefinition -Name <String> [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### The policy definition Id parameter set.
 ```
-Get-AzureRmPolicyDefinition -Id <String> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmPolicyDefinition -Id <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,20 +59,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-The fully qualified policy definition Id, including the subscription.
-e.g.
-/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
-Type: String
-Parameter Sets: The policy definition Id parameter set.
-Aliases: ResourceId
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -88,18 +115,20 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+### -Id
+The fully qualified policy definition Id, including the subscription.
+e.g.
+/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Type: String
+Parameter Sets: The policy definition Id parameter set.
+Aliases: ResourceId
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

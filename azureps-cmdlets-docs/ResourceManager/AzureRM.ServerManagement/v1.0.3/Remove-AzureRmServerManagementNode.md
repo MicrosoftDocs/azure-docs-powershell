@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+ms.assetid: 0DD93641-B6F3-4257-93E8-FCEEE16BF8F5
 online version: 
 schema: 2.0.0
-ms.assetid: 0DD93641-B6F3-4257-93E8-FCEEE16BF8F5
 ---
 
 # Remove-AzureRmServerManagementNode
@@ -35,36 +35,6 @@ The **Remove-AzureRmServerManagementNode** cmdlet removes an Azure Server Manage
 ```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group that the node belongs to.
-
-```yaml
-Type: String
-Parameter Sets: ByName
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NodeName
-Specifies the name of the node for which this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: ByName
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -119,6 +89,36 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -NodeName
+Specifies the name of the node for which this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: ByName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that the node belongs to.
+
+```yaml
+Type: String
+Parameter Sets: ByName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

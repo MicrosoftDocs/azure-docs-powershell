@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+ms.assetid: 7DA5FED4-2ACE-4E4D-8094-1904339F0ECF
 online version: 
 schema: 2.0.0
-ms.assetid: 7DA5FED4-2ACE-4E4D-8094-1904339F0ECF
 ---
 
 # New-AzureRmNotificationHubsNamespaceAuthorizationRules
@@ -65,75 +65,6 @@ However, you do not need to specify any information about the rule itself: rule 
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the resource group to which the namespace is assigned.
-
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
-
-You must use an existing resource group.
-This cmdlet cannot create a new resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Namespace
-Specifies the namespace to which the authorization rules will be assigned.
-
-Namespaces provide a way to group and categorize notification hubs.
-The new rules must be assigned to an existing namespace.
-The **New-AzureRmNotificationHubsNamespaceAuthorizationRules** cmdlet cannot create a new namespace.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SASRule
-Specifies the **SharedAccessAuthorizationRuleAttributes** object containing configuration information for the new rules.
-
-```yaml
-Type: SharedAccessAuthorizationRuleAttributes
-Parameter Sets: SASRuleParameterSet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InputFile
-Specifies the path to a JSON file containing configuration information for the new authorization rule.
-
-```yaml
-Type: String
-Parameter Sets: InputFileParameterSet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -168,6 +99,75 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputFile
+Specifies the path to a JSON file containing configuration information for the new authorization rule.
+
+```yaml
+Type: String
+Parameter Sets: InputFileParameterSet
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namespace
+Specifies the namespace to which the authorization rules will be assigned.
+
+Namespaces provide a way to group and categorize notification hubs.
+The new rules must be assigned to an existing namespace.
+The **New-AzureRmNotificationHubsNamespaceAuthorizationRules** cmdlet cannot create a new namespace.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the resource group to which the namespace is assigned.
+
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+You must use an existing resource group.
+This cmdlet cannot create a new resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SASRule
+Specifies the **SharedAccessAuthorizationRuleAttributes** object containing configuration information for the new rules.
+
+```yaml
+Type: SharedAccessAuthorizationRuleAttributes
+Parameter Sets: SASRuleParameterSet
+Aliases: 
+
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

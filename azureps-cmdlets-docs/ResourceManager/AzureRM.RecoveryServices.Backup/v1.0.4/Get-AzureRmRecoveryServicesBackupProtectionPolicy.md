@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: B9BC7D1D-4DDB-4185-BBA5-6EEFC2F4C4A7
 online version: 
 schema: 2.0.0
-ms.assetid: B9BC7D1D-4DDB-4185-BBA5-6EEFC2F4C4A7
 ---
 
 # Get-AzureRmRecoveryServicesBackupProtectionPolicy
@@ -64,6 +64,22 @@ PS C:\> $Pol= Get-AzureRmRecoveryServicesBackupProtectionPolicy -Name "DefaultPo
 This command gets the protection policy named DefaultPolicy, and then stores it in the $Pol variable.
 
 ## PARAMETERS
+
+### -BackupManagementType
+Specifies the Backup management type.
+Currently, only AzureVM is supported.
+
+```yaml
+Type: BackupManagementType
+Parameter Sets: WorkloadBackupManagementTypeParamSet
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -130,22 +146,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BackupManagementType
-Specifies the Backup management type.
-Currently, only AzureVM is supported.
-
-```yaml
-Type: BackupManagementType
-Parameter Sets: WorkloadBackupManagementTypeParamSet
-Aliases: 
-
-Required: True
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

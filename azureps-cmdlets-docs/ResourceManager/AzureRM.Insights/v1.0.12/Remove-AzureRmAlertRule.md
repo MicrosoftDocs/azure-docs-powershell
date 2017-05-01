@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: 74319657-1FCD-4A7B-B0FF-7C993F0972E1
 online version: 
 schema: 2.0.0
-ms.assetid: 74319657-1FCD-4A7B-B0FF-7C993F0972E1
 ---
 
 # Remove-AzureRmAlertRule
@@ -34,8 +34,8 @@ This command removes the alert rule named myalert-7da64548-214d-42ca-b12b-b245bb
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the name of the resource group for the alert rule.
+### -Name
+Specifies the name of the alert rule to remove.
 
 ```yaml
 Type: String
@@ -49,8 +49,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of the alert rule to remove.
+### -ResourceGroup
+Specifies the name of the resource group for the alert rule.
 
 ```yaml
 Type: String

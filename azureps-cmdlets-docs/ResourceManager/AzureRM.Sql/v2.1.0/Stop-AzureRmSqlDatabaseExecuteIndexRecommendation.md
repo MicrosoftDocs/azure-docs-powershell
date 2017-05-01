@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 533D7088-1B8B-457D-A301-59ADFECE4C19
 online version: 
 schema: 2.0.0
-ms.assetid: 533D7088-1B8B-457D-A301-59ADFECE4C19
 ---
 
 # Stop-AzureRmSqlDatabaseExecuteIndexRecommendation

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+ms.assetid: A05FA90C-3B36-4359-8C31-5DF293B4CAE1
 online version: 
 schema: 2.0.0
-ms.assetid: A05FA90C-3B36-4359-8C31-5DF293B4CAE1
 ---
 
 # Get-AzureRmCdnProfileSsoUrl
@@ -37,18 +37,18 @@ This URL lets users conntect to a supplementary portal and use additional featur
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group name to which the profile belongs.
+### -CdnProfile
+Specifies the CDN profile.
 
 ```yaml
-Type: String
-Parameter Sets: Parameter Set for fields parameters
+Type: PSProfile
+Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -91,23 +91,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CdnProfile
-Specifies the CDN profile.
+### -ProfileName
+Specifies the name of the CDN profile.
 
 ```yaml
-Type: PSProfile
-Parameter Sets: Parameter Set for object parameters
+Type: String
+Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProfileName
-Specifies the name of the CDN profile.
+### -ResourceGroupName
+Specifies the name of the resource group name to which the profile belongs.
 
 ```yaml
 Type: String

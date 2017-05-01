@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: 2623DD51-DC87-431E-97BE-EA8D69E1FFB5
 online version: 
 schema: 2.0.0
-ms.assetid: 2623DD51-DC87-431E-97BE-EA8D69E1FFB5
 ---
 
 # Get-AzureRmRecoveryServicesBackupRetentionPolicyObject
@@ -42,25 +42,6 @@ The third command gets the schedule policy object, and then stores it in the $Sc
 The last command creates a backup protection policy using the retention policy and schedule policy created with the previous commands.
 
 ## PARAMETERS
-
-### -WorkloadType
-Specifies the workload type.
-psdx_paramvalues
-
-- AzureVM 
-- AzureSQLDatabase
-
-```yaml
-Type: WorkloadType
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -BackupManagementType
 Specifies the Backup management type.
@@ -115,6 +96,25 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkloadType
+Specifies the workload type.
+psdx_paramvalues
+
+- AzureVM 
+- AzureSQLDatabase
+
+```yaml
+Type: WorkloadType
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

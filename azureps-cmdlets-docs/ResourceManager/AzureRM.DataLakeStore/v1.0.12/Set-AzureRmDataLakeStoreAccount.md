@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: EC369A1F-D3B5-4E18-A610-2C11EA487832
 online version: 
 schema: 2.0.0
-ms.assetid: EC369A1F-D3B5-4E18-A610-2C11EA487832
 ---
 
 # Set-AzureRmDataLakeStoreAccount
@@ -32,21 +32,6 @@ This command adds the specified tag to the Data Lake Store account named Contoso
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of a Data Lake Store account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DefaultGroup
 Specifies the ID of an Azurepn_Active_Directory group.
 This group is the default group for files and folders that you create.
@@ -58,37 +43,6 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tags
-Specifies tags as key-value pairs.
-You can use tags to identify a Data Lake Store account from other Azure resources.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the Data Lake Store account to modify.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -130,6 +84,52 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of a Data Lake Store account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the Data Lake Store account to modify.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+Specifies tags as key-value pairs.
+You can use tags to identify a Data Lake Store account from other Azure resources.
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

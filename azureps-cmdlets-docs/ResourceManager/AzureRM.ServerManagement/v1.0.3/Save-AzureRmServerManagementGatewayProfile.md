@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+ms.assetid: D66EB400-F7F2-447B-992D-A4E7A5CB5155
 online version: 
 schema: 2.0.0
-ms.assetid: D66EB400-F7F2-447B-992D-A4E7A5CB5155
 ---
 
 # Save-AzureRmServerManagementGatewayProfile
@@ -37,33 +37,20 @@ The **Save-AzureRmServerManagementGatewayProfile** cmdlet downloads the profile 
 
 ## PARAMETERS
 
-### -OutputFile
-Specifies the local file in which to save the profile data.
+### -Gateway
+Specifies the gateway that this cmdlet gets the profile for.
+
+May be used instead of specifying ResourceGroupName and GatewayName
 
 ```yaml
-Type: FileInfo
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that the gateway belongs to.
-
-```yaml
-Type: String
-Parameter Sets: ByName
+Type: Gateway
+Parameter Sets: ByObject
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -121,20 +108,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Gateway
-Specifies the gateway that this cmdlet gets the profile for.
-
-May be used instead of specifying ResourceGroupName and GatewayName
+### -OutputFile
+Specifies the local file in which to save the profile data.
 
 ```yaml
-Type: Gateway
-Parameter Sets: ByObject
+Type: FileInfo
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that the gateway belongs to.
+
+```yaml
+Type: String
+Parameter Sets: ByName
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: AC0941E5-CC2D-403D-A352-3FDE484D0EF5
 online version: 
 schema: 2.0.0
-ms.assetid: AC0941E5-CC2D-403D-A352-3FDE484D0EF5
 ---
 
 # Get-AzureRmSiteRecoveryProtectionContainer
@@ -81,5 +81,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

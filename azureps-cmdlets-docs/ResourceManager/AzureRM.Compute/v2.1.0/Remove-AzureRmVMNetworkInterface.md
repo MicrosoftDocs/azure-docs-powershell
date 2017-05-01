@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: DD22CD20-C191-4D72-AD44-5FD3B63F0B3E
 online version: 
 schema: 2.0.0
-ms.assetid: DD22CD20-C191-4D72-AD44-5FD3B63F0B3E
 ---
 
 # Remove-AzureRmVMNetworkInterface
@@ -14,7 +14,7 @@ Removes a network interface from a virtual machine.
 
 ```
 Remove-AzureRmVMNetworkInterface [-VM] <PSVirtualMachine> [-NetworkInterfaceIDs] <String[]>
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,21 +29,6 @@ The **Remove-AzureRmVMNetworkInterface** cmdlet removes a network interface from
 
 ## PARAMETERS
 
-### -NetworkInterfaceIDs
-Specifies an array of network interface IDs that this cmdlet removes.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: Id, NicIds
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -VM
 Specifies the virtual machine from which this cmdlet removes a network interface.
 To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
@@ -54,9 +39,50 @@ Parameter Sets: (All)
 Aliases: VMProfile
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -NetworkInterfaceIDs
+Specifies an array of network interface IDs that this cmdlet removes.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: Id, NicIds
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 9A049236-1523-452A-97BF-1269B5B5D414
 online version: 
 schema: 2.0.0
-ms.assetid: 9A049236-1523-452A-97BF-1269B5B5D414
 ---
 
 # Start-AzureRmVM
@@ -14,12 +14,14 @@ Starts an Azure virtual machine.
 
 ### ResourceGroupNameParameterSetName (Default)
 ```
-Start-AzureRmVM [-Name] <String> [-ResourceGroupName] <String> [<CommonParameters>]
+Start-AzureRmVM [-Name] <String> [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### IdParameterSetName
 ```
-Start-AzureRmVM [-Name] <String> [-Id] <String> [<CommonParameters>]
+Start-AzureRmVM [-Name] <String> [-Id] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,21 +38,6 @@ This command starts the virtual machine named VirtualMachine07 in ResourceGroup1
 
 ## PARAMETERS
 
-### -Id
-Specifies the Resource ID of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: IdParameterSetName
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the virtual machine to start.
 
@@ -60,7 +47,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -75,7 +62,48 @@ Parameter Sets: ResourceGroupNameParameterSetName
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+Specifies the Resource ID of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: IdParameterSetName
+Aliases: 
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

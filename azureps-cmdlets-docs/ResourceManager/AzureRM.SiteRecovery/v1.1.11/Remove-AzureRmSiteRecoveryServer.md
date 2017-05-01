@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 0D000EAB-C592-449E-9150-8D0E4A28BF3D
 online version: 
 schema: 2.0.0
-ms.assetid: 0D000EAB-C592-449E-9150-8D0E4A28BF3D
 ---
 
 # Remove-AzureRmSiteRecoveryServer
@@ -27,6 +27,21 @@ The **Remove-AzureRmSiteRecoveryServer** cmdlet unregisters an Azure Site Recove
 ```
 
 ## PARAMETERS
+
+### -Force
+ps_force
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Server
 Specifies the Site Recovery server object.
@@ -54,21 +69,6 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

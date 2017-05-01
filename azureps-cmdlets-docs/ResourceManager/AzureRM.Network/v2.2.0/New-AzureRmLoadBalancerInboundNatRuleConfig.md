@@ -15,15 +15,14 @@ Creates an inbound NAT rule configuration for a load balancer.
 ```
 New-AzureRmLoadBalancerInboundNatRuleConfig -Name <String> [-FrontendIpConfigurationId <String>]
  [-Protocol <String>] [-FrontendPort <Int32>] [-BackendPort <Int32>] [-IdleTimeoutInMinutes <Int32>]
- [-EnableFloatingIP] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-EnableFloatingIP] [<CommonParameters>]
 ```
 
 ### SetByResource
 ```
 New-AzureRmLoadBalancerInboundNatRuleConfig -Name <String>
  [-FrontendIpConfiguration <PSFrontendIPConfiguration>] [-Protocol <String>] [-FrontendPort <Int32>]
- [-BackendPort <Int32>] [-IdleTimeoutInMinutes <Int32>] [-EnableFloatingIP]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-BackendPort <Int32>] [-IdleTimeoutInMinutes <Int32>] [-EnableFloatingIP] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +33,10 @@ These rules control how traffic coming to the frontend IP of the load balancer i
 
 ### --------------------------  Example 1: Creating a new inbound NAT rule for a load balancer  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\> $publicip = New-AzureRmPublicIpAddress -ResourceGroupName "MyResourceGroup" -name "MyPublicIP" -location 'West US' -AllocationMethod Dynamic
@@ -174,36 +177,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -FrontendIpConfiguration
 Specifies a list of front-end IP addresses to associate with a load balancer rule configuration.
 
@@ -218,6 +191,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

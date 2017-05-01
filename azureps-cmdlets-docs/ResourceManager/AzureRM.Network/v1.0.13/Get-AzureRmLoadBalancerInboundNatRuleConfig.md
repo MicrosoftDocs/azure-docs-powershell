@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 7158758D-EDB2-49DD-A136-357C3F8FBEEB
 online version: 
 schema: 2.0.0
-ms.assetid: 7158758D-EDB2-49DD-A136-357C3F8FBEEB
 ---
 
 # Get-AzureRmLoadBalancerInboundNatRuleConfig
@@ -33,36 +33,6 @@ The first command gets the load balancer named MyLoadBalancer, and stores it in 
 The second command gets the associated NAT rule named MyInboundNatRule1 from the load balancer in $slb.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the inbound NAT rule configuration to get.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LoadBalancer
-Specifies the load balancer that is associated with the inbound NAT rule configuration to get.
-
-```yaml
-Type: PSLoadBalancer
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -95,6 +65,36 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoadBalancer
+Specifies the load balancer that is associated with the inbound NAT rule configuration to get.
+
+```yaml
+Type: PSLoadBalancer
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the inbound NAT rule configuration to get.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

@@ -15,8 +15,7 @@ Modifies a request routing rule for an application gateway.
 ```
 Set-AzureRmApplicationGatewayRequestRoutingRule -ApplicationGateway <PSApplicationGateway> -Name <String>
  -RuleType <String> [-BackendHttpSettingsId <String>] [-HttpListenerId <String>]
- [-BackendAddressPoolId <String>] [-UrlPathMapId <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-BackendAddressPoolId <String>] [-UrlPathMapId <String>] [<CommonParameters>]
 ```
 
 ### SetByResource
@@ -25,7 +24,7 @@ Set-AzureRmApplicationGatewayRequestRoutingRule -ApplicationGateway <PSApplicati
  -RuleType <String> [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
  [-HttpListener <PSApplicationGatewayHttpListener>]
  [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>] [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +34,8 @@ The Set-AzureRmApplicationGatewayRequestRoutingRule cmdlet modifies a request ro
 
 ### --------------------------  Example 1: Update a request routing rule  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -135,51 +136,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UrlPathMapId
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -BackendHttpSettings
 Specifies the application gateway backend HTTP settings.
 
@@ -239,6 +195,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -UrlPathMapId
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

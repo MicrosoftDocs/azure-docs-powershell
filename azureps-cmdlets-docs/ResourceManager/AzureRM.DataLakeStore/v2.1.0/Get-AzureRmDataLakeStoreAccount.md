@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: BC702DE1-212C-4BFF-AFD4-B70E4DB0C75F
 online version: 
 schema: 2.0.0
-ms.assetid: BC702DE1-212C-4BFF-AFD4-B70E4DB0C75F
 ---
 
 # Get-AzureRmDataLakeStoreAccount
@@ -14,20 +14,17 @@ Gets details of a Data Lake Store account.
 
 ### All In Subscription (Default)
 ```
-Get-AzureRmDataLakeStoreAccount [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
-```
-
-### Specific Account
-```
-Get-AzureRmDataLakeStoreAccount [[-ResourceGroupName] <String>] [-Name] <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmDataLakeStoreAccount [<CommonParameters>]
 ```
 
 ### All In Resource Group
 ```
-Get-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [<CommonParameters>]
+```
+
+### Specific Account
+```
+Get-AzureRmDataLakeStoreAccount [[-ResourceGroupName] <String>] [-Name] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,33 +41,6 @@ This command gets the account named ContosoADL.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group that contains the Data Lake Store account to get.
-
-```yaml
-Type: String
-Parameter Sets: Specific Account
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: All In Resource Group
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the account to get.
 
@@ -80,48 +50,36 @@ Parameter Sets: Specific Account
 Aliases: 
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
+### -ResourceGroupName
+Specifies the name of the resource group that contains the Data Lake Store account to get.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: iv
+Parameter Sets: All In Resource Group
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: Specific Account
+Aliases: 
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

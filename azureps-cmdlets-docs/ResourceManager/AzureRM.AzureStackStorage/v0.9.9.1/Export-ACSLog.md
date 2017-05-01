@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: 00D39E3D-95DA-49CB-9D4C-93DA7842A9F3
 online version: 
 schema: 2.0.0
-ms.assetid: 00D39E3D-95DA-49CB-9D4C-93DA7842A9F3
 ---
 
 # Export-ACSLog
@@ -49,54 +49,24 @@ The command identifies the farm by using the **Name** property of $Farm.
 
 ## PARAMETERS
 
-### -FarmName
-Specifies the name of the ACS farm.
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
 
 ```yaml
-Type: String
+Type: Uri
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: Named
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -StartTime
-Specifies the start of the time range, as a **DateTime** object, for the events that this cmdlet exports.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EndTime
-Specifies the end of the time range, as a **DateTime** object, for the events that this cmdlet exports.
-For more information about **DateTime** objects, see the Get-Date cmdlet.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LogPrefix
-Specifies a prefix that this cmdlet uses to filter the log information.
+### -AzureSasToken
+Specifies a Shared Access Signature (SAS) token.
 
 ```yaml
 Type: String
@@ -110,8 +80,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AzureStorageContainer
-Specifies your storage container.
+### -AzureStorageAccountKey
+Specifies the key for your storage account.
 Specify this parameter to upload the collected information directly into your storage account.
 
 ```yaml
@@ -142,8 +112,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AzureStorageAccountKey
-Specifies the key for your storage account.
+### -AzureStorageContainer
+Specifies your storage container.
 Specify this parameter to upload the collected information directly into your storage account.
 
 ```yaml
@@ -158,8 +128,55 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AzureSasToken
-Specifies a Shared Access Signature (SAS) token.
+### -Credential
+Specifies a credential that this cmdlet uses to access each node.
+To obtain a credential object, use the Get-Credential cmdlet.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndTime
+Specifies the end of the time range, as a **DateTime** object, for the events that this cmdlet exports.
+For more information about **DateTime** objects, see the Get-Date cmdlet.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FarmName
+Specifies the name of the ACS farm.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LogPrefix
+Specifies a prefix that this cmdlet uses to filter the log information.
 
 ```yaml
 Type: String
@@ -170,67 +187,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetShareFolder
-Specifies the UNC path of the folder where this cmdlet stores the collected log information.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SubscriptionId
-Specifies the subscription ID of the service administrator.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Token
-Specifies the token of the service administrator.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -264,19 +220,63 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -StartTime
+Specifies the start of the time range, as a **DateTime** object, for the events that this cmdlet exports.
 
 ```yaml
-Type: SwitchParameter
+Type: DateTime
 Parameter Sets: (All)
-Aliases: wi
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubscriptionId
+Specifies the subscription ID of the service administrator.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetShareFolder
+Specifies the UNC path of the folder where this cmdlet stores the collected log information.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Token
+Specifies the token of the service administrator.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -295,18 +295,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
-Specifies a credential that this cmdlet uses to access each node.
-To obtain a credential object, use the Get-Credential cmdlet.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: PSCredential
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: wi
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

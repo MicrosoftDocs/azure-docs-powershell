@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: AE286BD0-F77A-415F-BCF9-4EBDD6B6C7B9
 online version: 
 schema: 2.0.0
-ms.assetid: AE286BD0-F77A-415F-BCF9-4EBDD6B6C7B9
 ---
 
 # New-AzureRmRouteConfig
@@ -43,68 +43,8 @@ The second command displays the properties of the route.
 
 ## PARAMETERS
 
-### -Name
-Specifies a name for the route.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AddressPrefix
 Specifies the destination, in Classless Interdomain Routing (CIDR) format, to which the route applies.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NextHopType
-Specifies how this route forwards packets.
-psdx_paramvalues
-
-- Internet.
-The default Internet gateway provided by Azure. 
-- None.
-If you specify this value, the route does not forward packets. 
-- VirtualAppliance.
-A virtual appliance that you add to your Azure virtual network. 
-- VirtualNetworkGateway.
-An Azure server-to-server virtual private network gateway. 
-- VnetLocal.
-The local virtual network.
-If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network, select a value of VnetLocal for each subnet to forward to the other subnet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NextHopIpAddress
-Specifies the IP address of a virtual appliance that you add to your Azurevirtual network.
-This route forwards packets to that address.
-Specify this parameter only if you specify a value of VirtualAppliance for the *NextHopType* parameter.
 
 ```yaml
 Type: String
@@ -151,6 +91,66 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a name for the route.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NextHopIpAddress
+Specifies the IP address of a virtual appliance that you add to your Azurevirtual network.
+This route forwards packets to that address.
+Specify this parameter only if you specify a value of VirtualAppliance for the *NextHopType* parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NextHopType
+Specifies how this route forwards packets.
+psdx_paramvalues
+
+- Internet.
+The default Internet gateway provided by Azure. 
+- None.
+If you specify this value, the route does not forward packets. 
+- VirtualAppliance.
+A virtual appliance that you add to your Azure virtual network. 
+- VirtualNetworkGateway.
+An Azure server-to-server virtual private network gateway. 
+- VnetLocal.
+The local virtual network.
+If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network, select a value of VnetLocal for each subnet to forward to the other subnet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

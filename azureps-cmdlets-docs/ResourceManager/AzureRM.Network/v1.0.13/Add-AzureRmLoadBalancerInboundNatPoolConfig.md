@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 1EEF9CC9-9468-4B08-8656-45BD2312CF62
 online version: 
 schema: 2.0.0
-ms.assetid: 1EEF9CC9-9468-4B08-8656-45BD2312CF62
 ---
 
 # Add-AzureRmLoadBalancerInboundNatPoolConfig
@@ -38,9 +38,9 @@ PS C:\>
 
 ## PARAMETERS
 
-### -Name
+### -BackendPort
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -51,16 +51,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LoadBalancer
+### -FrontendIpConfiguration
 ```yaml
-Type: PSLoadBalancer
-Parameter Sets: (All)
+Type: PSFrontendIPConfiguration
+Parameter Sets: SetByResource
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -71,32 +71,6 @@ Parameter Sets: SetByResourceId
 Aliases: 
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Protocol
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FrontendPortRangeStart
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -116,7 +90,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BackendPort
+### -FrontendPortRangeStart
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -168,13 +142,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FrontendIpConfiguration
+### -LoadBalancer
 ```yaml
-Type: PSFrontendIPConfiguration
-Parameter Sets: SetByResource
+Type: PSLoadBalancer
+Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Protocol
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -191,5 +191,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

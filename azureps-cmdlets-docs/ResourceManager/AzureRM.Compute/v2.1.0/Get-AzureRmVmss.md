@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 879CDCBF-3B96-47B2-8288-7311D6343A15
 online version: 
 schema: 2.0.0
-ms.assetid: 879CDCBF-3B96-47B2-8288-7311D6343A15
 ---
 
 # Get-AzureRmVmss
@@ -55,7 +55,7 @@ Parameter Sets: InvokeByDynamicParametersForFriendMethod, InvokeByStaticParamete
 Aliases: 
 
 Required: True
-Position: 4
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -70,9 +70,9 @@ Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMet
 Aliases: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -82,12 +82,12 @@ Species the name of the VMSS.
 ```yaml
 Type: String
 Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
-Aliases: 
+Aliases: Name
 
 Required: False
-Position: 3
+Position: 2
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -13,17 +13,20 @@ schema: 2.0.0
 
 ### RoleDefinitionNameParameterSet
 ```
-Get-AzureRmRoleDefinition [[-Name] <String>] [-Scope <String>] [-AtScopeAndBelow] [<CommonParameters>]
+Get-AzureRmRoleDefinition [[-Name] <String>] [-Scope <String>] [-AtScopeAndBelow]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### RoleDefinitionIdParameterSet
 ```
-Get-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [<CommonParameters>]
+Get-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### RoleDefinitionCustomParameterSet
 ```
-Get-AzureRmRoleDefinition [-Scope <String>] [-Custom] [-AtScopeAndBelow] [<CommonParameters>]
+Get-AzureRmRoleDefinition [-Scope <String>] [-Custom] [-AtScopeAndBelow]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,51 +42,6 @@ PS C:\> {{ Add example code here }}
 {{ Add example description here }}
 
 ## PARAMETERS
-
-### -AtScopeAndBelow
-If specified, displays the the roles at and below scope.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: RoleDefinitionNameParameterSet, RoleDefinitionCustomParameterSet
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Custom
-If specified, only displays the custom created roles in the directory.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: RoleDefinitionCustomParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Id
-Role definition id.
-
-```yaml
-Type: Guid
-Parameter Sets: RoleDefinitionIdParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Name
 Role definition name.
@@ -114,6 +72,77 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -AtScopeAndBelow
+If specified, displays the the roles at and below scope.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RoleDefinitionNameParameterSet, RoleDefinitionCustomParameterSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+Role definition id.
+
+```yaml
+Type: Guid
+Parameter Sets: RoleDefinitionIdParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Custom
+If specified, only displays the custom created roles in the directory.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RoleDefinitionCustomParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 592C6E8E-3B96-43A9-9888-725BDAC6814D
 online version: 
 schema: 2.0.0
-ms.assetid: 592C6E8E-3B96-43A9-9888-725BDAC6814D
 ---
 
 # Get-AzureRmSqlElasticPoolDatabase

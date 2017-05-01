@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+ms.assetid: 5B830040-15AA-4D82-B60E-CAE00458010B
 online version: 
 schema: 2.0.0
-ms.assetid: 5B830040-15AA-4D82-B60E-CAE00458010B
 ---
 
 # New-AzureRmLogicApp
@@ -12,30 +12,20 @@ Creates a logic app in a resource group.
 
 ## SYNTAX
 
-### LogicAppWithDefinitionLinkParameterSet
-```
-New-AzureRmLogicApp -ResourceGroupName <String> -Name <String> -AppServicePlan <String> [-Location <String>]
- [-State <String>] [-DefinitionLinkUri <String>] [-DefinitionLinkContentVersion <String>]
- [-ParameterLinkUri <String>] [-ParameterLinkContentVersion <String>] [-Parameters <Object>]
- [-ParameterFilePath <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### LogicAppWithDefinitionParameterSet
 ```
-New-AzureRmLogicApp -ResourceGroupName <String> -Name <String> -AppServicePlan <String> [-Location <String>]
- [-State <String>] [-Definition <Object>] [-ParameterLinkUri <String>] [-ParameterLinkContentVersion <String>]
- [-Parameters <Object>] [-ParameterFilePath <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzureRmLogicApp -ResourceGroupName <String> -Name <String> -Location <String> [-State <String>]
+ [-Definition <Object>] [-IntegrationAccountId <String>] [-Parameters <Object>] [-ParameterFilePath <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### LogicAppWithDefinitionFileParameterSet
 ```
-New-AzureRmLogicApp -ResourceGroupName <String> -Name <String> -AppServicePlan <String> [-Location <String>]
- [-State <String>] [-DefinitionFilePath <String>] [-ParameterLinkUri <String>]
- [-ParameterLinkContentVersion <String>] [-Parameters <Object>] [-ParameterFilePath <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-AzureRmLogicApp -ResourceGroupName <String> -Name <String> -Location <String> [-State <String>]
+ [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
+ [-ParameterFilePath <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -190,27 +180,12 @@ Specifies the name for the logic app.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AppServicePlan
-Specifies the name of the App Service Plan. This parameter is required.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -224,7 +199,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -247,12 +222,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefinitionLinkUri
-Specifies Definition link Uri of the Logic App. If DefinitionLinkUri is provided as parameter then user must provide the "DefinitionLinkContentVersion" parameter.
+### -Definition
+Specifies the definition for your logic app as an object or a string in JavaScript Object Notataion (JSON) format.
 
 ```yaml
-Type: String
-Parameter Sets: LogicAppWithDefinitionLinkParameterSet
+Type: Object
+Parameter Sets: LogicAppWithDefinitionParameterSet
 Aliases: 
 
 Required: False
@@ -262,40 +237,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefinitionLinkContentVersion
-Specifies the content version of the Definition link Uri.
-
-```yaml
-Type: String
-Parameter Sets: LogicAppWithDefinitionLinkParameterSet
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ParameterLinkUri
-Specifies parameter link Uri of the Logic App. If ParameterLinkUri is provided as parameter then user must provide the "ParameterLinkContentVersion" parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ParameterLinkContentVersion
-Specifies the content version of the Parameter Link Uri of the Logic App.
-
-```yaml
+### -IntegrationAccountId
+Specifies the integration account ID used for the LogicApp. This parameter is optional. e.g. "/subscriptions/valid-subscription-guid/resourceGroups/valid-group-name/providers/Microsoft.Logic/integrationAccounts/valid-name-of-integration-account"```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -377,32 +320,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Definition
-Specifies the definition for your logic app as an object or a string in JavaScript Object Notataion (JSON) format.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: Object
-Parameter Sets: LogicAppWithDefinitionParameterSet
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefinitionFilePath
-Specifies the definition of a logic app as the path of a definition file in JSON format.
-
-```yaml
-Type: String
-Parameter Sets: LogicAppWithDefinitionFileParameterSet
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -422,18 +351,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -DefinitionFilePath
+Specifies the definition of a logic app as the path of a definition file in JSON format.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Type: String
+Parameter Sets: LogicAppWithDefinitionFileParameterSet
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

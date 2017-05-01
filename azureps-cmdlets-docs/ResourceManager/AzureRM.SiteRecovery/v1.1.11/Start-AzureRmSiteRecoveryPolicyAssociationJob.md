@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 86674808-E6F2-4DD7-884C-90C324D799A4
 online version: 
 schema: 2.0.0
-ms.assetid: 86674808-E6F2-4DD7-884C-90C324D799A4
 ---
 
 # Start-AzureRmSiteRecoveryPolicyAssociationJob
@@ -92,5 +92,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

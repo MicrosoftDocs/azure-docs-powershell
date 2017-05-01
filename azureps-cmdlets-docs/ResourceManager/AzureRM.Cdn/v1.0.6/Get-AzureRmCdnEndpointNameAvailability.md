@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+ms.assetid: 377606B6-127E-4C20-9590-B11E7E0F25A5
 online version: 
 schema: 2.0.0
-ms.assetid: 377606B6-127E-4C20-9590-B11E7E0F25A5
 ---
 
 # Get-AzureRmCdnEndpointNameAvailability
@@ -93,5 +93,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

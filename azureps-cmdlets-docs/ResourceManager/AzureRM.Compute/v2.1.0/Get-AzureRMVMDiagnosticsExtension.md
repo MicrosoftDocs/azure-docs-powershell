@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 19377891-7601-4AAE-9BB9-2B5E1576AD2C
 online version: 
 schema: 2.0.0
-ms.assetid: 19377891-7601-4AAE-9BB9-2B5E1576AD2C
 ---
 
 # Get-AzureRmVMDiagnosticsExtension
@@ -14,7 +14,7 @@ Gets the settings of the Diagnostics extension on a virtual machine.
 
 ```
 Get-AzureRmVMDiagnosticsExtension [-ResourceGroupName] <String> [-VMName] <String> [[-Name] <String>] [-Status]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,21 +31,6 @@ This command gets the diagnostics extension applied to the virtual machine named
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the Diagnostics extension for which this cmdlet gets settings.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ExtensionName
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 Specifies the name of the resource group of the virtual machine.
 
@@ -55,22 +40,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Status
-Indicates that this cmdlet uses the Status value.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -85,9 +55,65 @@ Parameter Sets: (All)
 Aliases: ResourceName
 
 Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Diagnostics extension for which this cmdlet gets settings.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ExtensionName
+
+Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Status
+Indicates that this cmdlet uses the Status value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

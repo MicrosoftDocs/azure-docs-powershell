@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+ms.assetid: 9D5E11BF-1D9D-4E4E-9256-8B19BBA68464
 online version: 
 schema: 2.0.0
-ms.assetid: 9D5E11BF-1D9D-4E4E-9256-8B19BBA68464
 ---
 
 # Get-AzureRmCdnEndpoint
@@ -32,36 +32,6 @@ The **Get-AzureRMCdnEndpoint** cmdlet gets an Azure Content Delivery Network (CD
 ### -EndpointName
 Specifies the name of the endpoint.
 The name of the endpoint is not the host name of the endpoint.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProfileName
-Specifies the name of the profile to which the endpoint belongs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the endpoint belongs.
 
 ```yaml
 Type: String
@@ -108,6 +78,36 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProfileName
+Specifies the name of the profile to which the endpoint belongs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the endpoint belongs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

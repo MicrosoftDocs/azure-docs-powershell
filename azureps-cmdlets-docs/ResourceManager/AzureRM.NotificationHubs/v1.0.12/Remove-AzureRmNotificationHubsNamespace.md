@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+ms.assetid: 00804385-4A9B-4E35-8A27-7B6690B51B7C
 online version: 
 schema: 2.0.0
-ms.assetid: 00804385-4A9B-4E35-8A27-7B6690B51B7C
 ---
 
 # Remove-AzureRmNotificationHubsNamespace
@@ -35,38 +35,6 @@ This command removes the namespace named ContosoNamespace.
 You must specify the resource group the namespace is assigned to.
 
 ## PARAMETERS
-
-### -ResourceGroup
-Specifies the resource group to which the namespace is assigned.
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Namespace
-Specifies the namespace that this cmdlet removes.
-Namespaces provide a way to group and categorize notification hubs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -104,6 +72,38 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namespace
+Specifies the namespace that this cmdlet removes.
+Namespaces provide a way to group and categorize notification hubs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the resource group to which the namespace is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

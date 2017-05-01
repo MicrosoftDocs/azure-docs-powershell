@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: B1291145-7F00-4675-B928-1BCDFF1962E6
 online version: 
 schema: 2.0.0
-ms.assetid: B1291145-7F00-4675-B928-1BCDFF1962E6
 ---
 
 # Remove-AzureRmAutoscaleSetting
@@ -29,8 +29,8 @@ You must specify the name of the setting and the name of the resource group to w
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the name of the resource group.
+### -Name
+Specifies the name of the Autoscale setting to remove.
 
 ```yaml
 Type: String
@@ -44,8 +44,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of the Autoscale setting to remove.
+### -ResourceGroup
+Specifies the name of the resource group.
 
 ```yaml
 Type: String

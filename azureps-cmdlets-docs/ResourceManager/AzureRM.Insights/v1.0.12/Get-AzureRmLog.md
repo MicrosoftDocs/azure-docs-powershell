@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: 42C454F9-F875-4A35-B67C-B52C2EE63ED7
 online version: 
 schema: 2.0.0
-ms.assetid: 42C454F9-F875-4A35-B67C-B52C2EE63ED7
 ---
 
 # Get-AzureRmLog
@@ -195,110 +195,11 @@ This command lists all the events associated with the specified resource provide
 
 ## PARAMETERS
 
-### -StartTime
-Specifies the start time of the query in local time.
-The default value is *EndTime* minus one hour.
-
-You can use the Get-Date cmdlet to get a **DateTime** object.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EndTime
-Specifies the end time of the query in local time.
-The default value is the current time.
-The value must be later than *StartTime*, but not by more than 15 days.
-
-You can use the Get-Date cmdlet to get a **DateTime** object.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Status
-Specifies the status.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Caller
 Specifies a caller.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DetailedOutput
-Indicates that this cmdlet displays detailed output.
-By default, output is summarized.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceProvider
-Specifies a filter by resource provider.
-
-```yaml
-Type: String
-Parameter Sets: Query on ResourceProvider
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MaxEvents
-Specifies the total number of events to fetch for the specified filter.
-The default value is 1000.
-
-```yaml
-Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -325,31 +226,36 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroup
-Specifies the name of the resource group.
+### -DetailedOutput
+Indicates that this cmdlet displays detailed output.
+By default, output is summarized.
 
 ```yaml
-Type: String
-Parameter Sets: Query on ResourceGroupProvider
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceId
-Specifies the resource ID.
+### -EndTime
+Specifies the end time of the query in local time.
+The default value is the current time.
+The value must be later than *StartTime*, but not by more than 15 days.
+
+You can use the Get-Date cmdlet to get a **DateTime** object.
 
 ```yaml
-Type: String
-Parameter Sets: Query on ResourceIdName
+Type: DateTime
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -394,6 +300,100 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MaxEvents
+Specifies the total number of events to fetch for the specified filter.
+The default value is 1000.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: Query on ResourceGroupProvider
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceId
+Specifies the resource ID.
+
+```yaml
+Type: String
+Parameter Sets: Query on ResourceIdName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceProvider
+Specifies a filter by resource provider.
+
+```yaml
+Type: String
+Parameter Sets: Query on ResourceProvider
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartTime
+Specifies the start time of the query in local time.
+The default value is *EndTime* minus one hour.
+
+You can use the Get-Date cmdlet to get a **DateTime** object.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Status
+Specifies the status.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -408,5 +408,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

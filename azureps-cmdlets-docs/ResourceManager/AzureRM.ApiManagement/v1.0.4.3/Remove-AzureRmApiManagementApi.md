@@ -13,6 +13,7 @@ Remove existing API.
 
 ```
 Remove-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String> [-Force] [-PassThru]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,6 +23,10 @@ Remove existing API.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Remove-AzureRmApiManagementApi -Context $apimContext -ApiId 0123456789
@@ -94,6 +99,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

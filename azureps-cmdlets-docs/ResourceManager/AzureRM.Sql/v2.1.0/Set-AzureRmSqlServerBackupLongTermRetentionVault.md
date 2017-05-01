@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 0841B00C-8521-4B5A-B69F-5B761549FABD
 online version: 
 schema: 2.0.0
-ms.assetid: 0841B00C-8521-4B5A-B69F-5B761549FABD
 ---
 
 # Set-AzureRmSqlServerBackupLongTermRetentionVault

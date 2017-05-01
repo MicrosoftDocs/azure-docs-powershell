@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+ms.assetid: E6A13F25-4565-4AB1-8690-A292C89C9C43
 online version: 
 schema: 2.0.0
-ms.assetid: E6A13F25-4565-4AB1-8690-A292C89C9C43
 ---
 
 # Get-AzureRmStorageAccount
@@ -51,33 +51,6 @@ PS C:\>Get-AzureRmStorageAccount
 This command gets all of the Storage accounts in the subscription.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the Storage account to get.
-
-```yaml
-Type: String
-Parameter Sets: AccountNameParameterSet
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: ResourceGroupParameterSet
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -128,6 +101,33 @@ Aliases: StorageAccountName, AccountName
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the Storage account to get.
+
+```yaml
+Type: String
+Parameter Sets: AccountNameParameterSet
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: ResourceGroupParameterSet
+Aliases: 
+
+Required: False
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

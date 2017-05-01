@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 8FD2F1B4-E680-46E8-8CFD-9C2F9F40C5C4
 online version: 
 schema: 2.0.0
-ms.assetid: 8FD2F1B4-E680-46E8-8CFD-9C2F9F40C5C4
 ---
 
 # Get-AzureRmVMImageSku
@@ -13,7 +13,8 @@ Gets VMImage SKUs.
 ## SYNTAX
 
 ```
-Get-AzureRmVMImageSku -Location <String> -PublisherName <String> -Offer <String> [<CommonParameters>]
+Get-AzureRmVMImageSku -Location <String> -PublisherName <String> -Offer <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,6 +46,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PublisherName
+Specifies the publisher of a VMImage.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Offer
 Specifies the type of VMImage offer.
 
@@ -60,18 +76,29 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PublisherName
-Specifies the publisher of a VMImage.
-
-```yaml
-Type: String
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: 
+Aliases: infa
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

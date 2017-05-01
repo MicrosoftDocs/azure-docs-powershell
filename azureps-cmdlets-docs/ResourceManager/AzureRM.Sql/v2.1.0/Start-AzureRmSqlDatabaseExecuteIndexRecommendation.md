@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 8349423E-F7FC-4100-8996-F16713959DE4
 online version: 
 schema: 2.0.0
-ms.assetid: 8349423E-F7FC-4100-8996-F16713959DE4
 ---
 
 # Start-AzureRmSqlDatabaseExecuteIndexRecommendation

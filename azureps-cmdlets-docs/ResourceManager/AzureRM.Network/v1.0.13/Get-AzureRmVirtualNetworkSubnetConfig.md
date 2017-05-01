@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 95726C67-BE5C-46BB-90CA-CD5AFDF201AD
 online version: 
 schema: 2.0.0
-ms.assetid: 95726C67-BE5C-46BB-90CA-CD5AFDF201AD
 ---
 
 # Get-AzureRmVirtualNetworkSubnetConfig
@@ -28,36 +28,6 @@ The **Get-AzureRmVirtualNetworkSubnetConfig** cmdlet gets one or more subnet con
 ```
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the subnet configuration that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VirtualNetwork
-Specifies the **VirtualNetwork** object that contains the subnet configuration that this cmdlet gets.
-
-```yaml
-Type: PSVirtualNetwork
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -95,6 +65,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the subnet configuration that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VirtualNetwork
+Specifies the **VirtualNetwork** object that contains the subnet configuration that this cmdlet gets.
+
+```yaml
+Type: PSVirtualNetwork
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

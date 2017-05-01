@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+ms.assetid: 9E7E963A-22FE-47BD-A9EB-7757C52A3624
 online version: 
 schema: 2.0.0
-ms.assetid: 9E7E963A-22FE-47BD-A9EB-7757C52A3624
 ---
 
 # New-AzureRmStorageAccount
@@ -41,88 +41,6 @@ The account has enabled Storage Service encryption.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group in which to add the Storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Storage account to create.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: StorageAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkuName
-Specifies the SKU name of the storage account that this cmdlet creates.
-psdx_paramvalues
-
-- Standard_LRS.
-Locally-redundant storage. 
-- Standard_ZRS.
-Zone-redundant storage.
-- Standard_GRS.
-Geo-redundant storage. 
-- Standard_RAGRS.
-Read access geo-redundant storage. 
-- Premium_LRS.
-Premium locally-redundant storage.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: StorageAccountType, AccountType, Type
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Kind
-Specifies the kind of Storage account that this cmdlet creates.
-psdx_paramvalues
-
-- Storage.
-General purpose storage account that supports storage of Blobs, Tables, Queues, Files and Disks.
- 
-- BlobStorage.
-Blob storage account which supports storage of Blobs only.
- 
-
-The default value is Storage.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AccessTier
 Specifies the access tier of the Storage account that this cmdlet creates.
 psdx_paramvalues Hot and Cool.
@@ -143,21 +61,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Location
-Specifies the location of the Storage account to create.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -CustomDomainName
 Specifies the name of the custom domain of the Storage account.
 The default value is Storage.
@@ -174,21 +77,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseSubDomain
-Indicates whether to enable indirect CName validation.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableEncryptionService
 Indicates whether this cmdlet enables Storage Service encryption on the Storage Service.
 Currently, only the Blob Service is supported.
@@ -200,23 +88,6 @@ Aliases:
 
 Required: False
 Position: 8
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tag
-If you specify a value of BlobStorage for the *Kind* parameter, you must specify a value for the *AccessTier* parameter.
-
-If you specify a value of Storage for this *Kind* parameter, do not specify the *AccessTier* parameter.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases: Tags
-
-Required: False
-Position: 9
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -256,6 +127,135 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Kind
+Specifies the kind of Storage account that this cmdlet creates.
+psdx_paramvalues
+
+- Storage.
+General purpose storage account that supports storage of Blobs, Tables, Queues, Files and Disks.
+ 
+- BlobStorage.
+Blob storage account which supports storage of Blobs only.
+ 
+
+The default value is Storage.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+Specifies the location of the Storage account to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Storage account to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: StorageAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group in which to add the Storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkuName
+Specifies the SKU name of the storage account that this cmdlet creates.
+psdx_paramvalues
+
+- Standard_LRS.
+Locally-redundant storage. 
+- Standard_ZRS.
+Zone-redundant storage.
+- Standard_GRS.
+Geo-redundant storage. 
+- Standard_RAGRS.
+Read access geo-redundant storage. 
+- Premium_LRS.
+Premium locally-redundant storage.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: StorageAccountType, AccountType, Type
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tag
+If you specify a value of BlobStorage for the *Kind* parameter, you must specify a value for the *AccessTier* parameter.
+
+If you specify a value of Storage for this *Kind* parameter, do not specify the *AccessTier* parameter.
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: Tags
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseSubDomain
+Indicates whether to enable indirect CName validation.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 7
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

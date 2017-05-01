@@ -29,6 +29,22 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
+### -Tag
+The tag filter for the OData query.
+The expected format is @{Name = 'tagName'} or @{Name = 'tagName'; Value = 'tagValue'}.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ApiVersion
 When set, indicates the version of the resource provider API to use.
 If not specified, the API version is automatically determined as the latest available.
@@ -57,22 +73,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tag
-The tag filter for the OData query.
-The expected format is @{Name = 'tagName'} or @{Name = 'tagName'; Value = 'tagValue'}.
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

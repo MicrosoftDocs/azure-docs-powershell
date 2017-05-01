@@ -12,8 +12,8 @@ Clears the access control list (ACL) of a file or folder in Data Lake Store.
 ## SYNTAX
 
 ```
-Remove-AzureRmDataLakeStoreItemAcl [-Account] <String> [-Path] <DataLakeStorePathInstance> [-Default] [-Force]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+Remove-AzureRmDataLakeStoreItemAcl -Account <String> [-Path] <DataLakeStorePathInstance> [-Default] [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +24,10 @@ The Remove-AzureRmDataLakeStoreItemAcl cmdlet clears the access control list (AC
 ### --------------------------  Example 1: Remove the ACL from a folder  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\> Remove-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path /
 ```
@@ -31,36 +35,6 @@ PS C:\> Remove-AzureRmDataLakeStoreItemAcl -AccountName "ContosoADL" -Path /
 This command removes the ACL for the root directory for the ContosoADL account.
 
 ## PARAMETERS
-
-### -Account
-Specifies the Data Lake Store account name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: AccountName
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Path
-Specifies the Data Lake Store path of the item, starting with the root directory (/).
-
-```yaml
-Type: DataLakeStorePathInstance
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Default
 Indicates that this operation removes the default ACL for a file or a folder.
@@ -71,7 +45,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -86,71 +60,44 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 3
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-@{Text=}
+### -Path
+Specifies the Data Lake Store path of the item, starting with the root directory (/).
 
 ```yaml
-Type: SwitchParameter
+Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: wi
+Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 2
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
+### -Account
+Specifies the Data Lake Store account name.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: AccountName
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: 506CA6A1-AAF6-4670-A015-0D6E4A88F69A
 online version: 
 schema: 2.0.0
-ms.assetid: 506CA6A1-AAF6-4670-A015-0D6E4A88F69A
 ---
 
 # New-AzureRmStreamAnalyticsOutput
@@ -45,36 +45,6 @@ This command replaces the definition for Output in the job called StreamingJob w
 
 ## PARAMETERS
 
-### -JobName
-Specifies the name of the Azure Stream Analytics job under which to create the Azure Stream Analytics output.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Azure Stream Analytics output to create.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -File
 Specifies the path to a JSON file that contains the JSON representation of the Azure Stream Analytics output to create.
 
@@ -105,8 +75,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the resource group under which to create the Azure Stream Analytics output.
+### -JobName
+Specifies the name of the Azure Stream Analytics job under which to create the Azure Stream Analytics output.
 
 ```yaml
 Type: String
@@ -114,7 +84,22 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 0
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Azure Stream Analytics output to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -132,6 +117,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group under which to create the Azure Stream Analytics output.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

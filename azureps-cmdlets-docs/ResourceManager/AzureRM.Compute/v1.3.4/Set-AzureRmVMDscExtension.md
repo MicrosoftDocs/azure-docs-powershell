@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 302D6213-FBB7-496F-919A-6E9937EA7536
 online version: 
 schema: 2.0.0
-ms.assetid: 302D6213-FBB7-496F-919A-6E9937EA7536
 ---
 
 # Set-AzureRmVMDscExtension
@@ -57,52 +57,6 @@ The Sample.ps1.zip was previously uploaded by using **Publish-AzureRmVMDscConfig
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VMName
-Specifies the name of the virtual machine where dsc_2 extension handler is installed.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Azure Resource Manager resource that represents the extension.
-The default value is Microsoft.Powershell.DSC.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ArchiveBlobName
 Specifies the name of the configuration file that was previously uploaded by the Publish-AzureRmVMDscConfiguration cmdlet.
 
@@ -118,16 +72,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ArchiveStorageAccountName
-Specifies the Azure storage account name that is used to download the ArchiveBlobName.
+### -ArchiveContainerName
+Species name of the Azure storage container where the configuration archive is located.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: StorageAccountName
+Aliases: ContainerName
 
-Required: True
-Position: 4
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -149,6 +103,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ArchiveStorageAccountName
+Specifies the Azure storage account name that is used to download the ArchiveBlobName.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: StorageAccountName
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ArchiveStorageEndpointSuffix
 Specifies the storage endpoint suffix.
 
@@ -164,33 +133,20 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ArchiveContainerName
-Species name of the Azure storage container where the configuration archive is located.
+### -AutoUpdate
+Specifies the extension handler version specified by the *Version* parameter.
+By default extension handler is not autoupdated.
+Use the *AutoUpdate* parameter to enable auto update of the extension handler to the latest version as and when it is available.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ContainerName
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigurationName
-Specifies the name of the configuration that the dsc_2 Extension invokes.
-
-```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -224,70 +180,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Version
-Specifies the version of the dsc_2 extension that Set-AzureRmVMDscExtension applies the settings to.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: HandlerVersion
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Location
-Specifies the path of the resource extension.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AutoUpdate
-Specifies the extension handler version specified by the *Version* parameter.
-By default extension handler is not autoupdated.
-Use the *AutoUpdate* parameter to enable auto update of the extension handler to the latest version as and when it is available.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WmfVersion
-Specifies the WMF version.
+### -ConfigurationName
+Specifies the name of the configuration that the dsc_2 Extension invokes.
 
 ```yaml
 Type: String
@@ -314,6 +208,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Force
+ps_force
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -356,19 +265,94 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -Location
+Specifies the path of the resource extension.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: wi
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Azure Resource Manager resource that represents the extension.
+The default value is Microsoft.Powershell.DSC.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Version
+Specifies the version of the dsc_2 extension that Set-AzureRmVMDscExtension applies the settings to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: HandlerVersion
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VMName
+Specifies the name of the virtual machine where dsc_2 extension handler is installed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WmfVersion
+Specifies the WMF version.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -379,6 +363,22 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

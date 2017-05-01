@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 2CE347D9-A5F3-4AB0-BD4C-4B3F1B666473
 online version: 
 schema: 2.0.0
-ms.assetid: 2CE347D9-A5F3-4AB0-BD4C-4B3F1B666473
 ---
 
 # Add-AzureRmDataLakeStoreItemContent
@@ -14,8 +14,7 @@ Adds content to an item in a Data Lake Store.
 
 ```
 Add-AzureRmDataLakeStoreItemContent [-Account] <String> [-Path] <DataLakeStorePathInstance> [-Value] <Object>
- [[-Encoding] <FileSystemCmdletProviderEncoding>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+ [[-Encoding] <FileSystemCmdletProviderEncoding>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,6 +41,35 @@ Aliases: AccountName
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Encoding
+Specifies the encoding for the item to create.
+The acceptable values for this parameter are:
+
+- Unknown
+- String
+- Unicode
+- Byte
+- BigEndianUnicode
+- UTF8
+- UTF7
+- Ascii
+- Default
+- Oem
+- BigEndianUTF32
+
+```yaml
+Type: FileSystemCmdletProviderEncoding
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Unknown, String, Unicode, Byte, BigEndianUnicode, UTF8, UTF7, UTF32, Ascii, Default, Oem, BigEndianUTF32
+
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -74,73 +102,6 @@ Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Encoding
-Specifies the encoding for the item to create.
-The acceptable values for this parameter are:
-
-- Unknown
-- String
-- Unicode
-- Byte
-- BigEndianUnicode
-- UTF8
-- UTF7
-- Ascii
-- Default
-- Oem
-- BigEndianUTF32
-
-```yaml
-Type: FileSystemCmdletProviderEncoding
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

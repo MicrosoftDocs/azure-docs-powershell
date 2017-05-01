@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: E01B6A99-BCAF-4B73-9A28-F6CD56389D4A
 online version: 
 schema: 2.0.0
-ms.assetid: E01B6A99-BCAF-4B73-9A28-F6CD56389D4A
 ---
 
 # Get-AzureRmNetworkInterface
@@ -59,6 +59,58 @@ This command gets all network interfaces in the resource group named ResourceGro
 
 ## PARAMETERS
 
+### -ExpandResource
+```yaml
+Type: String
+Parameter Sets: ExpandStandAloneNic, ExpandScaleSetNic
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+Specifies an information variable.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the network interface that this cmdlet gets.
 
@@ -113,61 +165,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExpandResource
-
-```yaml
-Type: String
-Parameter Sets: ExpandStandAloneNic, ExpandScaleSetNic
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VirtualMachineScaleSetName
-Specifies the name of the virtual machine scale set from which this cmdlet gets network interfaces.
+### -VirtualMachineIndex
+Specifies the virtual machine index of the virtual machine scale set from which this cmdlet gets network interfaces.
 
 ```yaml
 Type: String
@@ -193,8 +192,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VirtualMachineIndex
-Specifies the virtual machine index of the virtual machine scale set from which this cmdlet gets network interfaces.
+### -VirtualMachineScaleSetName
+Specifies the name of the virtual machine scale set from which this cmdlet gets network interfaces.
 
 ```yaml
 Type: String

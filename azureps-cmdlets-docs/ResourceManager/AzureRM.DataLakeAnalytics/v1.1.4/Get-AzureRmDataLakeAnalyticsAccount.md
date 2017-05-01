@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+ms.assetid: 3116B24A-1E05-48D0-9FD6-E9FA9CF5B22E
 online version: 
 schema: 2.0.0
-ms.assetid: 3116B24A-1E05-48D0-9FD6-E9FA9CF5B22E
 ---
 
 # Get-AzureRmDataLakeAnalyticsAccount
@@ -83,6 +83,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies the name of the Data Lake Analytics account.
+
+```yaml
+Type: String
+Parameter Sets: Specific Account
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the resource group name of the Data Lake Analytics account.
 
@@ -101,21 +116,6 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: All In Resource Group
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Data Lake Analytics account.
-
-```yaml
-Type: String
-Parameter Sets: Specific Account
 Aliases: 
 
 Required: True

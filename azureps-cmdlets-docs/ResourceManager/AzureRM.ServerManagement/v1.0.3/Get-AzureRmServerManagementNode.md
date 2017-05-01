@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+ms.assetid: 9123BD8A-E7DC-4905-9EEA-DF7654AB76BF
 online version: 
 schema: 2.0.0
-ms.assetid: 9123BD8A-E7DC-4905-9EEA-DF7654AB76BF
 ---
 
 # Get-AzureRmServerManagementNode
@@ -35,36 +35,6 @@ The **Get-AzureRmServerManagementNode** cmdlet gets one or more Azure Server Man
 ```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group in which the nodes belong to.
-
-```yaml
-Type: String
-Parameter Sets: ByNodeName
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NodeName
-Specifies the name of the node for which this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: ByNodeName
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -117,6 +87,36 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -NodeName
+Specifies the name of the node for which this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: ByNodeName
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group in which the nodes belong to.
+
+```yaml
+Type: String
+Parameter Sets: ByNodeName
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

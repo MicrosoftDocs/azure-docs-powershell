@@ -16,21 +16,22 @@ schema: 2.0.0
 Find-AzureRmResource [-ResourceNameContains <String>] [-ResourceType <String>]
  [-ExtensionResourceType <String>] [-Top <Int32>] [-ODataQuery <String>] [-TagName <String>]
  [-TagValue <String>] [-ResourceGroupNameContains <String>] [-ExpandProperties] [-ApiVersion <String>] [-Pre]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### Lists the resources based on the specified scope at the tenant level.
 ```
 Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-ExtensionResourceType <String>]
  [-Top <Int32>] [-ODataQuery <String>] [-ExpandProperties] [-TenantLevel] [-ApiVersion <String>] [-Pre]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### Get a resources using a multi-subscription query.
 ```
 Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-ExtensionResourceType <String>]
  [-Top <Int32>] [-ODataQuery <String>] [-TagName <String>] [-TagValue <String>]
- [-ResourceGroupNameContains <String>] [-ExpandProperties] [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+ [-ResourceGroupNameContains <String>] [-ExpandProperties] [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,99 +47,6 @@ PS C:\> {{ Add example code here }}
 {{ Add example description here }}
 
 ## PARAMETERS
-
-### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExpandProperties
-When specified, expands the properties of the resource.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExtensionResourceType
-The extension resource type.
-e.g.
-Microsoft.Sql/Servers/{serverName}/Databases/myDatabase.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ODataQuery
-An OData style filter which will be appended to the request in addition to any other filters.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupNameContains
-The resource group name substring.
-
-```yaml
-Type: String
-Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
-Aliases: ResourceGroupName
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -ResourceNameContains
 The resource name substring.
@@ -186,6 +94,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ExtensionResourceType
+The extension resource type.
+e.g.
+Microsoft.Sql/Servers/{serverName}/Databases/myDatabase.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -TagName
 The name of the tag to query by.
 
@@ -216,15 +141,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TenantLevel
-Indicates that this is a tenant level operation.
+### -ExpandProperties
+When specified, expands the properties of the resource.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Lists the resources based on the specified scope at the tenant level.
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -243,6 +168,108 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ODataQuery
+An OData style filter which will be appended to the request in addition to any other filters.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApiVersion
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantLevel
+Indicates that this is a tenant level operation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Lists the resources based on the specified scope at the tenant level.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupNameContains
+The resource group name substring.
+
+```yaml
+Type: String
+Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
+Aliases: ResourceGroupName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+ms.assetid: 3AF84BAF-D40E-43EB-A709-6F7CAF657846
 online version: 
 schema: 2.0.0
-ms.assetid: 3AF84BAF-D40E-43EB-A709-6F7CAF657846
 ---
 
 # New-AzureRmAutomationKey
@@ -92,5 +92,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

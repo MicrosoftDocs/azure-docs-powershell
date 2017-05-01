@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: 68C82793-B46A-454F-81A0-80CF4A46F757
 online version: 
 schema: 2.0.0
-ms.assetid: 68C82793-B46A-454F-81A0-80CF4A46F757
 ---
 
 # New-AzureRmStreamAnalyticsInput
@@ -53,36 +53,6 @@ This command replaces the definition of the existing input source called EntrySt
 
 ## PARAMETERS
 
-### -JobName
-Specifies the name of the Azure Stream Analytics job under which to create the Azure Stream Analytics input.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Azure Stream Analytics input to create.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -File
 Specifies the path to a JSON file that contains the JSON representation of the Azure Stream Analytics input to create.
 
@@ -113,8 +83,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the resource group under which to create the Azure Streaming input.
+### -JobName
+Specifies the name of the Azure Stream Analytics job under which to create the Azure Stream Analytics input.
 
 ```yaml
 Type: String
@@ -122,7 +92,22 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 0
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Azure Stream Analytics input to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -140,6 +125,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group under which to create the Azure Streaming input.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

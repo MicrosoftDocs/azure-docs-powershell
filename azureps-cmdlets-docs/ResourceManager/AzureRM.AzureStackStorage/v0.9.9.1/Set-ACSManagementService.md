@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: FD1DF701-C533-4AC5-9939-F0B79A4BBD3D
 online version: 
 schema: 2.0.0
-ms.assetid: FD1DF701-C533-4AC5-9939-F0B79A4BBD3D
 ---
 
 # Set-ACSManagementService
@@ -39,6 +39,22 @@ The final command then updates the ACS Management Service Wac full scan interval
 
 ## PARAMETERS
 
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -FarmName
 Specifies the name of the ACS farm.
 
@@ -54,26 +70,26 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WacContainerGcFullScanIntervalInSeconds
-Specifies the WAC storage container garbage collection full scan interval.
+### -ResourceGroupName
+Specifies the name of the resource group from which this cmdlet sets the ACS management service.
 
 ```yaml
-Type: Int32
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 3
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WacAccountGcFullScanIntervalInSeconds
-Specifies the WAC storage account garbage collection full scan interval.
+### -SkipCertificateValidation
+Indicates that this cmdlet skips certificate validation.
 
 ```yaml
-Type: Int32
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,48 +130,47 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
+### -WacAccountGcFullScanIntervalInSeconds
+Specifies the WAC storage account garbage collection full scan interval.
 
 ```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group from which this cmdlet sets the ACS management service.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkipCertificateValidation
-Indicates that this cmdlet skips certificate validation.
-
-```yaml
-Type: SwitchParameter
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WacContainerGcFullScanIntervalInSeconds
+Specifies the WAC storage container garbage collection full scan interval.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -168,21 +183,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

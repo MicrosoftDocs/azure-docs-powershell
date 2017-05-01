@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: DC41348E-C2E9-48F2-AC09-5BD0A55F9F1B
 online version: 
 schema: 2.0.0
-ms.assetid: DC41348E-C2E9-48F2-AC09-5BD0A55F9F1B
 ---
 
 # Remove-AzureRmVmssExtension
@@ -38,7 +38,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -53,7 +53,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False

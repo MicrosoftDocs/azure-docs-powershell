@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+ms.assetid: F5CD7C67-7838-4B58-8FAA-5A89361CCBC5
 online version: 
 schema: 2.0.0
-ms.assetid: F5CD7C67-7838-4B58-8FAA-5A89361CCBC5
 ---
 
 # Test-AzureRmDataLakeAnalyticsAccount
@@ -30,36 +30,6 @@ PS C:\>Test-AzureRmDataLakeAnalyticsAccount -Name "ContosoAdlAccount"
 This command tests whether the account named ContosoAdlAccount exists.
 
 ## PARAMETERS
-
-### -Name
-Specifies the Data Lake Analytics account name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the resource group name of the Data Lake Analytics account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -97,6 +67,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the Data Lake Analytics account name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group name of the Data Lake Analytics account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

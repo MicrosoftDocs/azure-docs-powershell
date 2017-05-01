@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+ms.assetid: A8A73CAD-0239-4802-AFC3-FA0B2CA18B66
 online version: 
 schema: 2.0.0
-ms.assetid: A8A73CAD-0239-4802-AFC3-FA0B2CA18B66
 ---
 
 # Get-AzureRmMlWebServiceKeys
@@ -62,18 +62,18 @@ This command gets the access keys for the web service instance that is defined i
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group that the web service belongs to.
+### -MlWebService
+Specifies the name of the web service for which this cmdlet gets access keys.
 
 ```yaml
-Type: String
-Parameter Sets: Get an Azure ML web service's access keys given its name and resource group.
+Type: WebService
+Parameter Sets: Get the access kesy for the given web service instance.
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -92,18 +92,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MlWebService
-Specifies the name of the web service for which this cmdlet gets access keys.
+### -ResourceGroupName
+Specifies the resource group that the web service belongs to.
 
 ```yaml
-Type: WebService
-Parameter Sets: Get the access kesy for the given web service instance.
+Type: String
+Parameter Sets: Get an Azure ML web service's access keys given its name and resource group.
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

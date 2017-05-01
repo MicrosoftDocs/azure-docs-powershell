@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+external help file: Microsoft.Azure.Commands.DataLakeStore.dll-help.xml
+ms.assetid: D9431402-84DB-46BC-BB3F-3EECE4920FCA
 online version: 
 schema: 2.0.0
-ms.assetid: D9431402-84DB-46BC-BB3F-3EECE4920FCA
 ---
 
 # Add-AzureRmDataLakeStoreItemContent
@@ -44,36 +44,6 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Path
-Specifies the Data Lake Store path of the item to modify, starting with the root directory (/).
-
-```yaml
-Type: DataLakeStorePathInstance
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Value
-Specifies the content to add to the item.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -141,6 +111,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the Data Lake Store path of the item to modify, starting with the root directory (/).
+
+```yaml
+Type: DataLakeStorePathInstance
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Value
+Specifies the content to add to the item.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

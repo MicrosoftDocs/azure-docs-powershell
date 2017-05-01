@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: C1A7D8D4-73F5-423E-A101-2B8D2CB841AB
 online version: 
 schema: 2.0.0
-ms.assetid: C1A7D8D4-73F5-423E-A101-2B8D2CB841AB
 ---
 
 # Remove-AzureRmVMDataDisk
@@ -13,7 +13,8 @@ Removes a data disk from a virtual machine.
 ## SYNTAX
 
 ```
-Remove-AzureRmVMDataDisk [-VM] <PSVirtualMachine> [-DataDiskNames] <String[]> [<CommonParameters>]
+Remove-AzureRmVMDataDisk [-VM] <PSVirtualMachine> [-DataDiskNames] <String[]>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,21 +38,6 @@ The final command updates the state of the virtual machine stored in $VirtualMac
 
 ## PARAMETERS
 
-### -DataDiskNames
-Specifies the names of one or more data disks that this cmdlet removes.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: Name
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -VM
 Specifies the local virtual machine object from which to remove a data disk.
 To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
@@ -62,9 +48,50 @@ Parameter Sets: (All)
 Aliases: VMProfile
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -DataDiskNames
+Specifies the names of one or more data disks that this cmdlet removes.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

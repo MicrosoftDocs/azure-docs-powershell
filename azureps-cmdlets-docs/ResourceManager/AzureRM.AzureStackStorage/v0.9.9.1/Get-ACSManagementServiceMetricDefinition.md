@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: A919CB5A-593B-40E0-AE73-EE308C3179C8
 online version: 
 schema: 2.0.0
-ms.assetid: A919CB5A-593B-40E0-AE73-EE308C3179C8
 ---
 
 # Get-ACSManagementServiceMetricDefinition
@@ -30,8 +30,33 @@ PS C:\>
 
 ## PARAMETERS
 
-### -FarmName
+### -AdminUri
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
 
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DetailedOutput
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FarmName
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -45,7 +70,6 @@ Accept wildcard characters: False
 ```
 
 ### -MetricNames
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -58,50 +82,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SubscriptionId
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Token
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminUri
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -115,7 +96,6 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -128,15 +108,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DetailedOutput
-
+### -SubscriptionId
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Token
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -156,5 +148,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

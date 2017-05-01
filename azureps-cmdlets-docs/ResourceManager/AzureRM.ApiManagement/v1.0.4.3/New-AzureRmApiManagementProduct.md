@@ -14,7 +14,7 @@ Creates new product.
 ```
 New-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-ProductId <String>] -Title <String>
  [-Description <String>] [-LegalTerms <String>] [-SubscriptionRequired <Boolean>] [-ApprovalRequired <Boolean>]
- [-SubscriptionsLimit <Int32>] [-State <PsApiManagementProductState>]
+ [-SubscriptionsLimit <Int32>] [-State <PsApiManagementProductState>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,6 +25,10 @@ Creates new product.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 New-AzureRmApiManagementProduct -Context $apimContext -ProductId 0123456789 -Title 'Starter' -Description 'Starter Product' -LegalTerms 'Free for all' -SubscriptionRequired $false -State 'Published'
 ```
@@ -34,6 +38,10 @@ No subscription required.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmApiManagementProduct -Context $apimContext -ProductId 9876543210 -Title Unlimited -Description 'Subscribers have completely unlimited access to the API. Administrator approval is required.' -LegalTerms 'Free for all' -ApprovalRequired $true -State Published
@@ -193,6 +201,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

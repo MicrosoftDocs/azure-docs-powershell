@@ -13,22 +13,24 @@ Gets all or specific subscriptions.
 
 ### Get all subscriptions (Default)
 ```
-Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext>
+Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [<CommonParameters>]
 ```
 
 ### Get by subsctiption ID
 ```
 Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-SubscriptionId <String>]
+ [<CommonParameters>]
 ```
 
 ### Get by user ID
 ```
-Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-UserId <String>]
+Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-UserId <String>] [<CommonParameters>]
 ```
 
 ### Get by product ID
 ```
 Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-ProductId <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +41,10 @@ Gets all or specific subscriptions.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementSubscription -Context $apimContext
 ```
@@ -47,6 +53,10 @@ Get all subscriptions.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId 0123456789
@@ -57,6 +67,10 @@ Get subscription by Id.
 ### --------------------------  Example 3  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementSubscription -Context $apimContext -UserId 777
 ```
@@ -65,6 +79,10 @@ Get all users subscriptions.
 
 ### --------------------------  Example 4  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementSubscription -Context $apimContext -ProductId 999
@@ -140,6 +158,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

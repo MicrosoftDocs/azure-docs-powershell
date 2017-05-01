@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+ms.assetid: 57FF38D5-F86E-4FA9-9CDE-DB7603308602
 online version: 
 schema: 2.0.0
-ms.assetid: 57FF38D5-F86E-4FA9-9CDE-DB7603308602
 ---
 
 # Save-AzureRmProfile
@@ -28,6 +28,19 @@ The **Save-AzureRmProfile** cmdlet saves the current authentication information 
 ```
 
 ## PARAMETERS
+
+### -Force
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Path
 Specifies the path of the file to which to save authentication information.
@@ -70,20 +83,6 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

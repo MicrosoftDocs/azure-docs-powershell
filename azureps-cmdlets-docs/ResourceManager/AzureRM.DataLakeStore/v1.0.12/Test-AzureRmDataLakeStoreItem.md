@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 4D592AE0-4FD1-4E20-91D1-7DD73718FEBB
 online version: 
 schema: 2.0.0
-ms.assetid: 4D592AE0-4FD1-4E20-91D1-7DD73718FEBB
 ---
 
 # Test-AzureRmDataLakeStoreItem
@@ -46,41 +46,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Path
-Specifies the Data Lake Store path of the item to test, starting with the root directory (/).
-
-```yaml
-Type: DataLakeStorePathInstance
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PathType
-Specifies the type of item to test.
-psdx_paramvalues
-
-- Any 
-- File 
-- Folder
-
-```yaml
-Type: PathType
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -117,6 +82,41 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the Data Lake Store path of the item to test, starting with the root directory (/).
+
+```yaml
+Type: DataLakeStorePathInstance
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PathType
+Specifies the type of item to test.
+psdx_paramvalues
+
+- Any 
+- File 
+- Folder
+
+```yaml
+Type: PathType
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

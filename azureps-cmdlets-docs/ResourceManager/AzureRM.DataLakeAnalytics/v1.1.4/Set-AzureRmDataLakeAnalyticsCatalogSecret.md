@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+ms.assetid: 4DA2FABE-1D48-44A0-B8C6-CBC2094828CD
 online version: 
 schema: 2.0.0
-ms.assetid: 4DA2FABE-1D48-44A0-B8C6-CBC2094828CD
 ---
 
 # Set-AzureRmDataLakeAnalyticsCatalogSecret
@@ -69,21 +69,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Secret
-Specifies the name and password of the secret.
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Host
 Specifies the host name of the secret.
 
@@ -94,21 +79,6 @@ Aliases:
 
 Required: True
 Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Port
-Specifies the port number of the secret.
-
-```yaml
-Type: Int32
-Parameter Sets: Specify full URI
-Aliases: 
-
-Required: True
-Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -150,6 +120,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Port
+Specifies the port number of the secret.
+
+```yaml
+Type: Int32
+Parameter Sets: Specify full URI
+Aliases: 
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Secret
+Specifies the name and password of the secret.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

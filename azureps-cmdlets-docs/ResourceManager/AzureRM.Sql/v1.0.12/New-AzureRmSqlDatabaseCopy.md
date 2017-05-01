@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: 52740669-7E10-4AB0-A4E2-03961F80BB4B
+online version: 
+schema: 2.0.0
 ---
 
 # New-AzureRmSqlDatabaseCopy
@@ -39,60 +39,15 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ## PARAMETERS
 
-### -DatabaseName
-Specifies the name of the SQL Database to copy.
+### -CopyDatabaseName
+Specifies the name of the SQL Database copy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServiceObjectiveName
-Specifies the name of the service objective to assign to the copy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ElasticPoolName
-Specifies the name of the elastic pool in which to assign the copy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tags
-Specifies the tags to associate with the Azure SQL Database copy.
-
-```yaml
-Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -105,7 +60,7 @@ Specifies the name of the Azure Resource Group in which to assign the copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -120,7 +75,7 @@ Specifies the name of the SQL Server which hosts the copy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -129,48 +84,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CopyDatabaseName
-Specifies the name of the SQL Database copy.
+### -DatabaseName
+Specifies the name of the SQL Database to copy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ElasticPoolName
+Specifies the name of the elastic pool in which to assign the copy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServerName
-Specifies the name of the  SQL Server that contains the database to copy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the  Resource Group to which this cmdlet assigns the copied database.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -205,6 +145,66 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the  Resource Group to which this cmdlet assigns the copied database.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of the  SQL Server that contains the database to copy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServiceObjectiveName
+Specifies the name of the service objective to assign to the copy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tags
+Specifies the tags to associate with the Azure SQL Database copy.
+
+```yaml
+Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

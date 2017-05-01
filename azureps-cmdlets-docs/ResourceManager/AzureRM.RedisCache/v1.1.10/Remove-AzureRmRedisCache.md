@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+ms.assetid: BFA7AC16-6CFF-4518-AB61-5A3442A33932
 online version: 
 schema: 2.0.0
-ms.assetid: BFA7AC16-6CFF-4518-AB61-5A3442A33932
 ---
 
 # Remove-AzureRmRedisCache
@@ -40,36 +40,6 @@ Because the *PassThru* parameter is not specified, the result of the operation i
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the Redis Cache to remove.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the Redis Cache to remove.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Force
 ps_force
 
@@ -85,6 +55,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies the name of the Redis Cache to remove.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PassThru
 passthru
 
@@ -97,6 +82,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the Redis Cache to remove.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: E322FCFF-77D0-4552-B252-020705AC9187
 online version: 
 schema: 2.0.0
-ms.assetid: E322FCFF-77D0-4552-B252-020705AC9187
 ---
 
 # New-AzureRmAutoscaleRule
@@ -82,29 +82,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Operator
-Specifies the operator.
-psdx_paramvalues
-
-- Equals
-- NotEquals
-- GreaterThan
-- GreaterThanOrEqual
-- LessThan
-- LessThanOrEqual
-
-```yaml
-Type: ComparisonOperationType
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -MetricStatistic
 Specifies the metric statistic.
 psdx_paramvalues
@@ -126,67 +103,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Threshold
-Specifies the threshold of the metric value.
-
-```yaml
-Type: Double
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TimeAggregationOperator
-Specifies the time aggregation operator.
+### -Operator
+Specifies the operator.
 psdx_paramvalues
 
-- Average
-- Minimum
-- Maximum
-- Last
-- Total, Count
+- Equals
+- NotEquals
+- GreaterThan
+- GreaterThanOrEqual
+- LessThan
+- LessThanOrEqual
 
 ```yaml
-Type: TimeAggregationType
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TimeGrain
-Specifies the time grain.
-
-```yaml
-Type: TimeSpan
+Type: ComparisonOperationType
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TimeWindow
-Specifies the time window.
-
-```yaml
-Type: TimeSpan
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -258,6 +191,73 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Threshold
+Specifies the threshold of the metric value.
+
+```yaml
+Type: Double
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TimeAggregationOperator
+Specifies the time aggregation operator.
+psdx_paramvalues
+
+- Average
+- Minimum
+- Maximum
+- Last
+- Total, Count
+
+```yaml
+Type: TimeAggregationType
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TimeGrain
+Specifies the time grain.
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TimeWindow
+Specifies the time window.
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

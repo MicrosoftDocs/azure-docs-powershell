@@ -12,7 +12,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Remove-AzureRmADServicePrincipal -ObjectId <String> [-Force] [-PassThru] [<CommonParameters>]
+Remove-AzureRmADServicePrincipal -ObjectId <Guid> [-PassThru] [-Force] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,8 +30,23 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Force
-{{Fill Force Description}}
+### -ObjectId
+The service principal object id.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: PrincipalId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PassThru
+{{Fill PassThru Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -44,23 +60,60 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ObjectId
-The service principal object id.
-
-```yaml
-Type: String
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: PrincipalId
+Aliases: infa
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PassThru
-{{Fill PassThru Description}}
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+@{Text=}```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{Fill Force Description}}
 
 ```yaml
 Type: SwitchParameter

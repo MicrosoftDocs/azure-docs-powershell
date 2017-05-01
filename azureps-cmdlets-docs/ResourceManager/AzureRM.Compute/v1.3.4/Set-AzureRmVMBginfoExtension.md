@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: AF603495-E205-4000-928B-CF1C59551E39
 online version: 
 schema: 2.0.0
-ms.assetid: AF603495-E205-4000-928B-CF1C59551E39
 ---
 
 # Set-AzureRmVMBginfoExtension
@@ -34,81 +34,6 @@ The command specifies the resource group and location of the virtual machine.
 The command specifies the name and version of the extension.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine to which this cmdlet adds an extension.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VMName
-Specifies the name of the virtual machine to which this cmdlet adds the BGInfo extension.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the BGInfo extension that this cmdlet adds to a virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ExtensionName
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TypeHandlerVersion
-Specifies the version of the extension that this cmdlet adds to the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: HandlerVersion, Version
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Location
-Specifies the location of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -DisableAutoUpgradeMinorVersion
 Indicates that this cmdlet prevents the Azure guest agent from automatically updating the extension to a newer minor version.
@@ -183,6 +108,81 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Location
+Specifies the location of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the BGInfo extension that this cmdlet adds to a virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ExtensionName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine to which this cmdlet adds an extension.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TypeHandlerVersion
+Specifies the version of the extension that this cmdlet adds to the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: HandlerVersion, Version
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VMName
+Specifies the name of the virtual machine to which this cmdlet adds the BGInfo extension.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -224,5 +224,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

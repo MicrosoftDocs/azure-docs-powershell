@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: C9AD7E74-EBC6-49B6-B806-E213595CE3B8
 online version: 
 schema: 2.0.0
-ms.assetid: C9AD7E74-EBC6-49B6-B806-E213595CE3B8
 ---
 
 # Get-AzureRmSqlDatabaseExpanded
@@ -159,5 +159,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

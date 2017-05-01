@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+ms.assetid: F11035A8-7E3A-4B66-AD06-874C7C4AD40C
 online version: 
 schema: 2.0.0
-ms.assetid: F11035A8-7E3A-4B66-AD06-874C7C4AD40C
 ---
 
 # Get-AzureRmStorageAccountNameAvailability
@@ -30,21 +30,6 @@ PS C:\>Get-AzureRmStorageAccountNameAvailability -Name 'ContosoStorage03'
 This command checks the availability of the name ContosoStorage03.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the Storage account that this cmdlet checks.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: StorageAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -82,6 +67,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Storage account that this cmdlet checks.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: StorageAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

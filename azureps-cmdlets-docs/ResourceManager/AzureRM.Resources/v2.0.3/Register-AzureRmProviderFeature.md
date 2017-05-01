@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 1F2F7BD8-BA9E-4AFD-91CC-6AE4AB89C895
 online version: 
 schema: 2.0.0
-ms.assetid: 1F2F7BD8-BA9E-4AFD-91CC-6AE4AB89C895
 ---
 
 # Register-AzureRmProviderFeature
@@ -13,7 +13,7 @@ Registers an Azure provider feature in your account.
 ## SYNTAX
 
 ```
-Register-AzureRmProviderFeature -FeatureName <String> -ProviderNamespace <String> [-Force] [-WhatIf] [-Confirm]
+Register-AzureRmProviderFeature -FeatureName <String> -ProviderNamespace <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -56,20 +56,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

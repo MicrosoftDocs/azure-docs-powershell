@@ -13,27 +13,32 @@ schema: 2.0.0
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADUser [-UserPrincipalName <String>] [<CommonParameters>]
+Get-AzureRmADUser [-UserPrincipalName <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADUser -SearchString <String> [<CommonParameters>]
+Get-AzureRmADUser -SearchString <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADUser -ObjectId <String> [<CommonParameters>]
+Get-AzureRmADUser -ObjectId <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### UPNParameterSet
 ```
-Get-AzureRmADUser -UserPrincipalName <String> [<CommonParameters>]
+Get-AzureRmADUser -UserPrincipalName <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### MailParameterSet
 ```
-Get-AzureRmADUser -Mail <String> [<CommonParameters>]
+Get-AzureRmADUser -Mail <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,51 +54,6 @@ PS C:\> {{ Add example code here }}
 {{ Add example description here }}
 
 ## PARAMETERS
-
-### -Mail
-The user mail.
-
-```yaml
-Type: String
-Parameter Sets: MailParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ObjectId
-The user object id.
-
-```yaml
-Type: String
-Parameter Sets: ObjectIdParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SearchString
-The user search string.
-
-```yaml
-Type: String
-Parameter Sets: SearchStringParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -UserPrincipalName
 The user UPN.
@@ -114,6 +74,77 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: UPNParameterSet
 Aliases: UPN
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SearchString
+The user search string.
+
+```yaml
+Type: String
+Parameter Sets: SearchStringParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ObjectId
+The user object id.
+
+```yaml
+Type: Guid
+Parameter Sets: ObjectIdParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Mail
+The user mail.
+
+```yaml
+Type: String
+Parameter Sets: MailParameterSet
+Aliases: 
 
 Required: True
 Position: Named

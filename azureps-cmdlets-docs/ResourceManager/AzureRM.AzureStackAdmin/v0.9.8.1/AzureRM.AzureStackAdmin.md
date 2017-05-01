@@ -12,86 +12,117 @@ Locale: en-US
 
 ## AzureRM.AzureStackAdmin Cmdlets
 ### [Add-AzureRMGalleryItem](Add-AzureRMGalleryItem.md)
-{{Manually Enter Add-AzureRMGalleryItem Description Here}}
+Adds a new Gallery Item to the Gallery Service.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Add-AzureRMResourceProviderRegistration](Add-AzureRMResourceProviderRegistration.md)
-{{Manually Enter Add-AzureRMResourceProviderRegistration Description Here}}
+Enables you to add a custom Resource Provider to Resource Manager.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Get-AzureRMGalleryItem](Get-AzureRMGalleryItem.md)
-{{Manually Enter Get-AzureRMGalleryItem Description Here}}
+fetches a Gallery Item from the Gallery Service.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Get-AzureRMManagedLocation](Get-AzureRMManagedLocation.md)
-{{Manually Enter Get-AzureRMManagedLocation Description Here}}
+Gets all the regions registered in the cloud.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Get-AzureRMManagedSubscription](Get-AzureRMManagedSubscription.md)
-{{Manually Enter Get-AzureRMManagedSubscription Description Here}}
+Gets a list of all Tenant Subscriptions in the system managed by the admin user.
 
 ### [Get-AzureRMOffer](Get-AzureRMOffer.md)
-{{Manually Enter Get-AzureRMOffer Description Here}}
+Gets the list of all Offers in the system.
+When the Offer Id or Name is mentioned, it fetches the specific Offer.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Get-AzureRMPlan](Get-AzureRMPlan.md)
-{{Manually Enter Get-AzureRMPlan Description Here}}
+Gets the list of all Plans in the system.
+When the Plan Name is mentioned, it fetches the specific Plan.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Get-AzureRMResourceProviderRegistration](Get-AzureRMResourceProviderRegistration.md)
-{{Manually Enter Get-AzureRMResourceProviderRegistration Description Here}}
+Gets all the Resource Provider registered to the cloud.
+This cmdlet is applicable only to Microsoft Azure Stack Environments.
 
 ### [Get-AzureRMTenantSubscription](Get-AzureRMTenantSubscription.md)
-{{Manually Enter Get-AzureRMTenantSubscription Description Here}}
+Gets a list of Subscriptions that a user has access to..
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Get-AzureStackToken](Get-AzureStackToken.md)
-{{Manually Enter Get-AzureStackToken Description Here}}
+Gets a token for a specified user.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [New-AzureRMManagedLocation](New-AzureRMManagedLocation.md)
-{{Manually Enter New-AzureRMManagedLocation Description Here}}
+Adds a region to the cloud.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [New-AzureRMManagedSubscription](New-AzureRMManagedSubscription.md)
-{{Manually Enter New-AzureRMManagedSubscription Description Here}}
+Adds a new Subscription for the current user.
+This is applicable only to users with access to the Subscriptions.Admin namespace.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [New-AzureRMOffer](New-AzureRMOffer.md)
-{{Manually Enter New-AzureRMOffer Description Here}}
+Creates a new Offer.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [New-AzureRMPlan](New-AzureRMPlan.md)
-{{Manually Enter New-AzureRMPlan Description Here}}
+Creates a new Plan.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [New-AzureRMTenantSubscription](New-AzureRMTenantSubscription.md)
-{{Manually Enter New-AzureRMTenantSubscription Description Here}}
+Creates a new Tenant Subscription.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Remove-AzureRMGalleryItem](Remove-AzureRMGalleryItem.md)
-{{Manually Enter Remove-AzureRMGalleryItem Description Here}}
+Removes a Gallery Item from the Gallery Service.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Remove-AzureRMManagedLocation](Remove-AzureRMManagedLocation.md)
-{{Manually Enter Remove-AzureRMManagedLocation Description Here}}
+Removes a region from the cloud.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Remove-AzureRMManagedSubscription](Remove-AzureRMManagedSubscription.md)
-{{Manually Enter Remove-AzureRMManagedSubscription Description Here}}
+Removes a Subscription from the current user.
+This is applicable only to users with access to the Subscriptions.Admin namespace
 
 ### [Remove-AzureRMOffer](Remove-AzureRMOffer.md)
-{{Manually Enter Remove-AzureRMOffer Description Here}}
+Removes an Offer.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Remove-AzureRMPlan](Remove-AzureRMPlan.md)
-{{Manually Enter Remove-AzureRMPlan Description Here}}
+Removes a Plan.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Remove-AzureRMResourceProviderRegistration](Remove-AzureRMResourceProviderRegistration.md)
-{{Manually Enter Remove-AzureRMResourceProviderRegistration Description Here}}
+Removes a custom Resource Provider from the cloud.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Remove-AzureRMTenantSubscription](Remove-AzureRMTenantSubscription.md)
-{{Manually Enter Remove-AzureRMTenantSubscription Description Here}}
+Removes a Tenant Subscription.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Set-AzureRMManagedLocation](Set-AzureRMManagedLocation.md)
-{{Manually Enter Set-AzureRMManagedLocation Description Here}}
+Updates a region in the cloud.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Set-AzureRMManagedSubscription](Set-AzureRMManagedSubscription.md)
-{{Manually Enter Set-AzureRMManagedSubscription Description Here}}
+Updates a Subscription for the current user.
+This cmdlet can be used only by users with access to the Subscriptions.Admin namespace.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Set-AzureRMOffer](Set-AzureRMOffer.md)
-{{Manually Enter Set-AzureRMOffer Description Here}}
+Updates an Offer.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Set-AzureRMPlan](Set-AzureRMPlan.md)
-{{Manually Enter Set-AzureRMPlan Description Here}}
+Updates a Plan.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Set-AzureRMResourceProviderRegistration](Set-AzureRMResourceProviderRegistration.md)
-{{Manually Enter Set-AzureRMResourceProviderRegistration Description Here}}
+Updates a Resource Provider Registration.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 
 ### [Set-AzureRMTenantSubscription](Set-AzureRMTenantSubscription.md)
-{{Manually Enter Set-AzureRMTenantSubscription Description Here}}
+Updates a tenant subscription.
+This cmdlet is applicable only to Microsoft Azure Stack Environments
 

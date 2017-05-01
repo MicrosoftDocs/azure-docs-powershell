@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+ms.assetid: E47306C4-B17E-4651-8248-EB81AD448A17
 online version: 
 schema: 2.0.0
-ms.assetid: E47306C4-B17E-4651-8248-EB81AD448A17
 ---
 
 # Set-AzureRmAutomationModule
@@ -54,7 +54,7 @@ Specifies the name of the Automation account for which this cmdlet updates a mod
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -69,7 +69,7 @@ Specifies the URL of the .zip file that contains the new version of a module tha
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Specifies the version of the module to which this cmdlet updates Automation.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Specifies the name of the module that this cmdlet imports.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -114,7 +114,7 @@ Specifies the name of a resource group for which this cmdlet updates a module.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1

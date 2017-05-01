@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: C77D4B73-E260-4EAD-9943-0DEA76222126
 online version: 
 schema: 2.0.0
-ms.assetid: C77D4B73-E260-4EAD-9943-0DEA76222126
 ---
 
 # New-AzureRmLoadBalancerRuleConfig
@@ -40,27 +40,12 @@ The **New-AzureRmLoadBalancerRuleConfig** cmdlet creates a rule configuration fo
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the load balancing rule that this cmdlet creates.
+### -BackendAddressPool
+Specifies a **BackendAddressPool** object to associate with a load balancer rule configuration.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FrontendIpConfigurationId
-Specifies the ID for a front-end IP address configuration.
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId
+Type: PSBackendAddressPool
+Parameter Sets: SetByResource
 Aliases: 
 
 Required: False
@@ -85,12 +70,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProbeId
-Specifies the ID of the probe to associate with a load balancer rule configuration.
+### -BackendPort
+Specifies the backend port for traffic that is matched by this load balancer rule configuration.
 
 ```yaml
-Type: String
-Parameter Sets: SetByResourceId
+Type: Int32
+Parameter Sets: (All)
 Aliases: 
 
 Required: False
@@ -100,13 +85,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Protocol
-Specifies the protocol that is matched by a load balancer rule configuration.
-psdx_paramvalues Tcp or Udp.
+### -EnableFloatingIP
+Indicates that this cmdlet enables a floating IP address for a rule configuration.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FrontendIpConfiguration
+Specifies a list of front-end IP addresses to associate with a load balancer rule configuration.
+
+```yaml
+Type: PSFrontendIPConfiguration
+Parameter Sets: SetByResource
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FrontendIpConfigurationId
+Specifies the ID for a front-end IP address configuration.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: SetByResourceId
 Aliases: 
 
 Required: False
@@ -131,61 +145,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BackendPort
-Specifies the backend port for traffic that is matched by this load balancer rule configuration.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -IdleTimeoutInMinutes
 Specifies the length of time, in minutes, that the state of conversations is maintained in a load balancer.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LoadDistribution
-Specifies a load distribution.
-psdx_paramvalues
-
-- Default
-- SourceIP
-- SourceIPProtocol
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableFloatingIP
-Indicates that this cmdlet enables a floating IP address for a rule configuration.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -235,12 +199,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FrontendIpConfiguration
-Specifies a list of front-end IP addresses to associate with a load balancer rule configuration.
+### -LoadDistribution
+Specifies a load distribution.
+psdx_paramvalues
+
+- Default
+- SourceIP
+- SourceIPProtocol
 
 ```yaml
-Type: PSFrontendIPConfiguration
-Parameter Sets: SetByResource
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
 Required: False
@@ -250,15 +219,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BackendAddressPool
-Specifies a **BackendAddressPool** object to associate with a load balancer rule configuration.
+### -Name
+Specifies the name of the load balancing rule that this cmdlet creates.
 
 ```yaml
-Type: PSBackendAddressPool
-Parameter Sets: SetByResource
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -271,6 +240,37 @@ Specifies a probe to associate with a load balancer rule configuration.
 ```yaml
 Type: PSProbe
 Parameter Sets: SetByResource
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProbeId
+Specifies the ID of the probe to associate with a load balancer rule configuration.
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Protocol
+Specifies the protocol that is matched by a load balancer rule configuration.
+psdx_paramvalues Tcp or Udp.
+
+```yaml
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
 Required: False

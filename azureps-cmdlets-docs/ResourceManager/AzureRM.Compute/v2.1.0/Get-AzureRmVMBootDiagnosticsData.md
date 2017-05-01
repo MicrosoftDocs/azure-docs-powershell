@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 6F97C577-432E-4CDF-B2DB-CFF07BF0AD84
 online version: 
 schema: 2.0.0
-ms.assetid: 6F97C577-432E-4CDF-B2DB-CFF07BF0AD84
 ---
 
 # Get-AzureRmVMBootDiagnosticsData
@@ -15,13 +15,15 @@ Gets boot diagnostics data for a virtual machine.
 ### WindowsParamSet (Default)
 ```
 Get-AzureRmVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Windows]
- [-LocalPath] <String> [<CommonParameters>]
+ [-LocalPath] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### LinuxParamSet
 ```
 Get-AzureRmVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Linux]
- [[-LocalPath] <String>] [<CommonParameters>]
+ [[-LocalPath] <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,43 +42,16 @@ The command stores the data in specified local path.
 
 ## PARAMETERS
 
-### -Linux
-Indicates that the virtual machine runs the Linux operating system.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: LinuxParamSet
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalPath
-Specifies the local path for the boot diagnostics data.
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: String
-Parameter Sets: WindowsParamSet
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: LinuxParamSet
-Aliases: 
-
-Required: False
-Position: 4
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -89,21 +64,6 @@ Specifies the name of the virtual machine for which this cmdlet gets diagnostics
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName, VMName
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
 
 Required: True
 Position: 1
@@ -121,7 +81,75 @@ Parameter Sets: WindowsParamSet
 Aliases: 
 
 Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocalPath
+Specifies the local path for the boot diagnostics data.
+
+```yaml
+Type: String
+Parameter Sets: WindowsParamSet
+Aliases: 
+
+Required: True
 Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: LinuxParamSet
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Linux
+Indicates that the virtual machine runs the Linux operating system.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: LinuxParamSet
+Aliases: 
+
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

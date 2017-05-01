@@ -13,7 +13,7 @@ Creates a route for a route table.
 
 ```
 New-AzureRmRouteConfig -Name <String> [-AddressPrefix <String>] -NextHopType <String>
- [-NextHopIpAddress <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-NextHopIpAddress <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +23,10 @@ The New-AzureRmRouteConfig cmdlet creates a route for an Azure route table.
 
 ### --------------------------  Example 1: Create a route  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$Route = New-AzureRmRouteConfig -Name "route07" -AddressPrefix 10.1.0.0/16 -NextHopType VnetLocal
@@ -110,35 +114,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

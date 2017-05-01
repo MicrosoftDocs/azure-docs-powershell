@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: CA32A23B-631A-4C8C-A045-719E7FEEF2CC
 online version: 
 schema: 2.0.0
-ms.assetid: CA32A23B-631A-4C8C-A045-719E7FEEF2CC
 ---
 
 # Get-AzureRmAvailabilitySet
@@ -38,36 +38,6 @@ PS C:\>Get-AzureRmAvailabilitySet -ResourceGroupName "ResourceGroup11"
 This command gets all the availability sets in the resource group named ResourceGroup11.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of a resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of an availability set that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName, AvailabilitySetName
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -105,6 +75,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of an availability set that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceName, AvailabilitySetName
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of a resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

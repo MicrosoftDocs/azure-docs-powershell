@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: C33E4C50-E0CA-4F0E-A8BE-E7BA474D09C4
 online version: 
 schema: 2.0.0
-ms.assetid: C33E4C50-E0CA-4F0E-A8BE-E7BA474D09C4
 ---
 
 # Remove-AzureRmStreamAnalyticsOutput
@@ -30,6 +30,21 @@ PS C:\>Remove-AzureRmStreamAnalyticsOutput -ResourceGroupName "StreamAnalytics-D
 This command removes the output Output in the job StreamingJob.
 
 ## PARAMETERS
+
+### -Force
+If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics output without asking for confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -JobName
 Specifies the name of the Azure Stream Analytics job to which the Azure Stream Analytics output belongs.
@@ -61,13 +76,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Force
-If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics output without asking for confirmation.
+### -PipelineVariable
+Not Specified
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: pv
 
 Required: False
 Position: Named
@@ -88,21 +103,6 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PipelineVariable
-Not Specified
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: pv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

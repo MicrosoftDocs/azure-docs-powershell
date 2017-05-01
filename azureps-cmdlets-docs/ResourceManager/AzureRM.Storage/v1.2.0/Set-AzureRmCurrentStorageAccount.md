@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+ms.assetid: E1AF915B-D5C9-4A24-9F7C-1A127F7D4903
 online version: 
 schema: 2.0.0
-ms.assetid: E1AF915B-D5C9-4A24-9F7C-1A127F7D4903
 ---
 
 # Set-AzureRmCurrentStorageAccount
@@ -39,33 +39,19 @@ This command sets the default storage account for the specified subscription.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group that contains the Storage account to modify.
+### -Context
+Specifies an **AzureStorageContext** object for the current Storage account.
+To obtain a storage context object, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: String
-Parameter Sets: UsingResourceGroupAndNameParameterSet
+Type: AzureStorageContext
+Parameter Sets: UsingStorageContext
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Storage account that this cmdlet modifies.
-
-```yaml
-Type: String
-Parameter Sets: UsingResourceGroupAndNameParameterSet
-Aliases: StorageAccountName, AccountName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -108,19 +94,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Context
-Specifies an **AzureStorageContext** object for the current Storage account.
-To obtain a storage context object, use the New-AzureStorageContext cmdlet.
+### -Name
+Specifies the name of the Storage account that this cmdlet modifies.
 
 ```yaml
-Type: AzureStorageContext
-Parameter Sets: UsingStorageContext
+Type: String
+Parameter Sets: UsingResourceGroupAndNameParameterSet
+Aliases: StorageAccountName, AccountName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group that contains the Storage account to modify.
+
+```yaml
+Type: String
+Parameter Sets: UsingResourceGroupAndNameParameterSet
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

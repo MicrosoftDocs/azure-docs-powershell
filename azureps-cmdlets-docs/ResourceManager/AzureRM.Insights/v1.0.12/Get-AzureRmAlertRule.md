@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: FD0B7DB9-41BC-4DB5-A583-BBF76DEE93A7
 online version: 
 schema: 2.0.0
-ms.assetid: FD0B7DB9-41BC-4DB5-A583-BBF76DEE93A7
 ---
 
 # Get-AzureRmAlertRule
@@ -58,21 +58,6 @@ The *DetailedOutput* parameter is specified, so the output is detailed.
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DetailedOutput
 Displays full details in the output.
 
@@ -94,6 +79,21 @@ Specifies the name of the alert rule to get.
 ```yaml
 Type: String
 Parameter Sets: Parameters for Get-AzureRmAlertRule cmdlet using name
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
 Required: True

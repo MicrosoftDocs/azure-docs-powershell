@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: AAFAAED5-32CA-470E-BF38-00B06DA56BA3
 online version: 
 schema: 2.0.0
-ms.assetid: AAFAAED5-32CA-470E-BF38-00B06DA56BA3
 ---
 
 # Disable-AzureRmVMDiskEncryption
@@ -47,85 +47,16 @@ This command disables encryption for volumes of type data for the virtual machin
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group name of the virtual machine.
+### -DisableAutoUpgradeMinorVersion
+Indicates that this cmdlet disables auto-upgrade of the minor version of the extension.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VMName
-Specifies the name of the virtual machine that this cmdlet disables encryption on.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VolumeType
-Specifies the type of virtual machine volumes to perform the encryption operation.
-For Windows virtual machines, valid values are: 
-
-- All
-- OS
-- Data.
-If you do not specify a value for this parameter, the default value is All.
-Disable encryption is not currently supported for Linux.
-
-```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifes the name of the Azure Resource Manager (ARM) resource that represents the extension.
-If this parameter is not specified, this cmdlet defaults to "AzureDiskEncryption for Windows VMs".
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ExtensionName
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TypeHandlerVersion
-Specifies the version of the encryption extension.
-If you do not specify a value for this parameter, the latest version of the extension is used.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: HandlerVersion, Version
-
-Required: False
-Position: 4
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -143,21 +74,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableAutoUpgradeMinorVersion
-Indicates that this cmdlet disables auto-upgrade of the minor version of the extension.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -200,19 +116,87 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -Name
+Specifes the name of the Azure Resource Manager (ARM) resource that represents the extension.
+If this parameter is not specified, this cmdlet defaults to "AzureDiskEncryption for Windows VMs".
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: wi
+Aliases: ExtensionName
 
 Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group name of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TypeHandlerVersion
+Specifies the version of the encryption extension.
+If you do not specify a value for this parameter, the latest version of the extension is used.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: HandlerVersion, Version
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VMName
+Specifies the name of the virtual machine that this cmdlet disables encryption on.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VolumeType
+Specifies the type of virtual machine volumes to perform the encryption operation.
+For Windows virtual machines, valid values are: 
+
+- All
+- OS
+- Data.
+If you do not specify a value for this parameter, the default value is All.
+Disable encryption is not currently supported for Linux.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -223,6 +207,22 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

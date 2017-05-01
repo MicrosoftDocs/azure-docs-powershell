@@ -13,22 +13,25 @@ Gets all or specific groups.
 
 ### Get all groups (Default)
 ```
-Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>]
+Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [<CommonParameters>]
 ```
 
 ### Get by group ID
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-GroupId <String>] [-Name <String>]
+ [<CommonParameters>]
 ```
 
 ### Find groups by user
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [-UserId <String>]
+ [<CommonParameters>]
 ```
 
 ### Find groups by product
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [-ProductId <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +42,10 @@ Gets all or specific groups.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementGroup -Context $apimContext
 ```
@@ -47,6 +54,10 @@ Get all groups.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementGroup -Context $apimContext -GroupId 0123456789
@@ -57,6 +68,10 @@ Get group by identifier.
 ### --------------------------  Example 3  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementGroup -Context $apimContext -Name 'Custom group'
 ```
@@ -65,6 +80,10 @@ Get group by name.
 
 ### --------------------------  Example 4  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementGroup -Context $apimContext -UserId 0123456789
@@ -157,6 +176,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

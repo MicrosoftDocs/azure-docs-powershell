@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 2C024192-28D0-4E29-8A92-0344DCAFC023
 online version: 
 schema: 2.0.0
-ms.assetid: 2C024192-28D0-4E29-8A92-0344DCAFC023
 ---
 
 # Import-AzureRmDataLakeStoreItem
@@ -48,16 +48,17 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Path
-Specifies the local path of the file or folder to upload.
+### -ConcurrentFileCount
+Specify the maximum number of files to upload in parallel for a folder upload.
+The default value is five (5).
 
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 1
+Required: False
+Position: 7
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -78,8 +79,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Recurse
-Indicates that this operation should upload all items in all subfolders.
+### -Force
+Indicates that this operation can overwrite the destination file if it already exists.
 
 ```yaml
 Type: SwitchParameter
@@ -87,22 +88,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Resume
-Indicates that this operation should resume a previously canceled or failed upload.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
+Position: 8
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -118,53 +104,6 @@ Aliases:
 
 Required: False
 Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PerFileThreadCount
-Specifies the maximum number of threads to use per file.
-The default value is ten (10).
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 6
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConcurrentFileCount
-Specify the maximum number of files to upload in parallel for a folder upload.
-The default value is five (5).
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Indicates that this operation can overwrite the destination file if it already exists.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 8
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -206,6 +145,67 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the local path of the file or folder to upload.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PerFileThreadCount
+Specifies the maximum number of threads to use per file.
+The default value is ten (10).
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Recurse
+Indicates that this operation should upload all items in all subfolders.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Resume
+Indicates that this operation should resume a previously canceled or failed upload.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

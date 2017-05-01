@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: BA35E8A8-B0BB-476F-B6FF-2405B3EDA898
 online version: 
 schema: 2.0.0
-ms.assetid: BA35E8A8-B0BB-476F-B6FF-2405B3EDA898
 ---
 
 # Start-AzureRmStreamAnalyticsJob
@@ -85,21 +85,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -PipelineVariable
 Not Specified
 
@@ -112,6 +97,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the Azure Stream Analytics job belongs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

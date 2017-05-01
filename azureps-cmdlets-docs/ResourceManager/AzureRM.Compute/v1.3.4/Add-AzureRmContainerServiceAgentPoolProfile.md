@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: A358089D-B045-4A4C-AE82-3827CFDC53F4
 online version: 
 schema: 2.0.0
-ms.assetid: A358089D-B045-4A4C-AE82-3827CFDC53F4
 ---
 
 # Add-AzureRmContainerServiceAgentPoolProfile
@@ -48,22 +48,6 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of the agent pool profile.
-This value must be unique in the context of the subscription and resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Count
 Specifies the number of agents that host containers.
 psdx_paramvalues integers from 1 to 100.
@@ -76,21 +60,6 @@ Aliases:
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VmSize
-Specifies the size of the virtual machines for the agents.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -147,6 +116,37 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the agent pool profile.
+This value must be unique in the context of the subscription and resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VmSize
+Specifies the size of the virtual machines for the agents.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

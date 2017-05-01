@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+ms.assetid: FA80822A-2D9B-47BD-AD29-C25AF4379B38
 online version: 
 schema: 2.0.0
-ms.assetid: FA80822A-2D9B-47BD-AD29-C25AF4379B38
 ---
 
 # Get-AzureRmNotificationHubListKeys
@@ -41,55 +41,6 @@ This command gets the primary and secondary connection strings for the authoriza
 The command must include the hub namespace and resource group.
 
 ## PARAMETERS
-
-### -ResourceGroup
-Specifies the resource group to which the notification hub is assigned.
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Namespace
-Specifies the namespace to which the notification hub is assigned.
-
-Namespaces provide a way to group and categorize notification hubs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NotificationHub
-Specifies the notification hub that this cmdlet assigns an authorization rule to.
-Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AuthorizationRule
 Specifies the name of a Shared Access Signature (SAS) authentication rule.
@@ -143,6 +94,55 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namespace
+Specifies the namespace to which the notification hub is assigned.
+
+Namespaces provide a way to group and categorize notification hubs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NotificationHub
+Specifies the notification hub that this cmdlet assigns an authorization rule to.
+Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the resource group to which the notification hub is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

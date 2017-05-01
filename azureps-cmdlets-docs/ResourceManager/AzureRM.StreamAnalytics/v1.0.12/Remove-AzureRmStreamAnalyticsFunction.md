@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: F1D06C5E-9F33-4114-8D1A-679EE090E87E
 online version: 
 schema: 2.0.0
-ms.assetid: F1D06C5E-9F33-4114-8D1A-679EE090E87E
 ---
 
 # Remove-AzureRmStreamAnalyticsFunction
@@ -30,6 +30,21 @@ PS C:\>Remove-AzureRmStreamAnalyticsFunction -ResourceGroupName "StreamAnalytics
 This command removes the function named ScoreTweet from the job named StreamJob22.
 
 ## PARAMETERS
+
+### -Force
+If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics function without asking for confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -JobName
 Specifies the name of the Stream Analytics job to which a function belongs.
@@ -59,21 +74,6 @@ Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-If this parameter is specified, the cmdlet will delete the specified Azure Stream Analytics function without asking for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

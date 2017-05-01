@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: ADF55C44-A29D-4B60-B49D-7205E8D19CA1
 online version: 
 schema: 2.0.0
-ms.assetid: ADF55C44-A29D-4B60-B49D-7205E8D19CA1
 ---
 
 # Get-ACSShareMetricDefinition
@@ -42,6 +42,38 @@ This share is associated with the storage farm ContosoFarm.
 
 ## PARAMETERS
 
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DetailedOutput
+Indicates that complete information, including all the available metadata, is returned for each metric.
+By default, **Get-ACSShareMetricDefinition** returns only a partial definition for each metric.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -FarmName
 Specifies the name of the storage farm associated with the target share.
 For example:
@@ -49,24 +81,6 @@ For example:
 `-FarmName "ContosoFarm01"`
 
 A storage farm is a collection of storage resources that provides load balancing and redundancy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ShareName
-Specifies the name of the Server Message Block (SMB) storage share.
-For example:
-
-`-ShareName "ContosoStorageShare"`
 
 ```yaml
 Type: String
@@ -104,6 +118,60 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ResourceGroupName
+Specifies the name of the resource group associated with the target storage share.
+For example:
+
+`-ResourceGroupName "ContosoResourceGroup"`
+
+Resource groups categorize items to help simplify inventory management and overall Azure administration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ShareName
+Specifies the name of the Server Message Block (SMB) storage share.
+For example:
+
+`-ShareName "ContosoStorageShare"`
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkipCertificateValidation
+Indicates that the command proceeds without validating the Secure Sockets Layer (SSL) certificate.
+By default, storage service commands require certification validation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SubscriptionId
 Specifies the Azure subscription ID.
 For example:
@@ -135,74 +203,6 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group associated with the target storage share.
-For example:
-
-`-ResourceGroupName "ContosoResourceGroup"`
-
-Resource groups categorize items to help simplify inventory management and overall Azure administration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkipCertificateValidation
-Indicates that the command proceeds without validating the Secure Sockets Layer (SSL) certificate.
-By default, storage service commands require certification validation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DetailedOutput
-Indicates that complete information, including all the available metadata, is returned for each metric.
-By default, **Get-ACSShareMetricDefinition** returns only a partial definition for each metric.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

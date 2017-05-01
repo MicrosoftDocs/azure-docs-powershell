@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: B01797E1-B058-4E14-BD85-DA2348ABB2D6
 online version: 
 schema: 2.0.0
-ms.assetid: B01797E1-B058-4E14-BD85-DA2348ABB2D6
 ---
 
 # Remove-AzureRmVmssNetworkInterfaceConfiguration
@@ -33,36 +33,6 @@ The first command gets a VMSS by using the Get-AzureRmVmss cmdlet, and then stor
 The second command removes the network interface configuration named ContosoVmssInterface02 from the set in $VMSS.
 
 ## PARAMETERS
-
-### -VirtualMachineScaleSet
-Specifies the VMSS object.
-
-```yaml
-Type: VirtualMachineScaleSet
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the network interface configuration that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -100,6 +70,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the network interface configuration that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualMachineScaleSet
+Specifies the VMSS object.
+
+```yaml
+Type: VirtualMachineScaleSet
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

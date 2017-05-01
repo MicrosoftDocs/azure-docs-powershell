@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: F94D9B8B-2154-4889-BC82-2EDC84945044
 online version: 
 schema: 2.0.0
-ms.assetid: F94D9B8B-2154-4889-BC82-2EDC84945044
 ---
 
 # Unregister-AzureRmResourceProvider
@@ -13,7 +13,7 @@ Unregisters a resource provider.
 ## SYNTAX
 
 ```
-Unregister-AzureRmResourceProvider -ProviderNamespace <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf]
+Unregister-AzureRmResourceProvider -ProviderNamespace <String> [-ApiVersion <String>] [-Pre] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -41,20 +41,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: 4DA71FCA-502C-4CAD-93FB-5AFC26B26DF2
+online version: 
+schema: 2.0.0
 ---
 
 # Get-AzureRmSqlDatabaseRestorePoints
@@ -19,7 +19,6 @@ Get-AzureRmSqlDatabaseRestorePoints [-ServerName] <String> [-DatabaseName] <Stri
 ```
 
 ## DESCRIPTION
-
 The **Get-AzureRmSqlDatabaseRestorePoints** cmdlet retrieves the distinct restore points that an Azure SQL Data Warehouse can be restored from.
 For an Azure SQL Database, the restore window is continuous.
 
@@ -43,23 +42,7 @@ EarliestRestoreDate      : 8/12/2015 12:00:00 AM
 
 This command returns all available restore points for the Azure SQL Database named Database01.
 
-
 ## PARAMETERS
-
-### -ServerName
-Specifies the name of the AzureSQL Server that hosts the database.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -DatabaseName
 Specifies the name of the SQL Database.
@@ -67,25 +50,10 @@ Specifies the name of the SQL Database.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the SQL Database is assigned.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -127,6 +95,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the SQL Database is assigned.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of the AzureSQL Server that hosts the database.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

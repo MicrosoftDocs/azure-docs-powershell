@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: FC1A9B7F-9BA3-4AE2-A800-1C36C5317678
 online version: 
 schema: 2.0.0
-ms.assetid: FC1A9B7F-9BA3-4AE2-A800-1C36C5317678
 ---
 
 # Set-AzureRmSqlServerAuditingPolicy

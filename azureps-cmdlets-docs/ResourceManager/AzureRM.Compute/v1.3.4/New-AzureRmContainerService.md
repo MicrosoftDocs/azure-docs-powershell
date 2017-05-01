@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: F8BE4014-FFD0-4F3E-A7EA-25197A4B85B0
 online version: 
 schema: 2.0.0
-ms.assetid: F8BE4014-FFD0-4F3E-A7EA-25197A4B85B0
 ---
 
 # New-AzureRmContainerService
@@ -41,6 +41,22 @@ The final command creates a container service for the container stored in $Conta
 The service is named csResourceGroup17.
 
 ## PARAMETERS
+
+### -ContainerService
+Specifies a container service object that contains the properties for the new service.
+To obtain a **ContainerService** object, use the New-AzureRmContainerServiceConfig cmdlet.
+
+```yaml
+Type: ContainerService
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -81,21 +97,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the resource group in which this cmdlet deploys the container service.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the container service that this cmdlet creates.
 
@@ -111,19 +112,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContainerService
-Specifies a container service object that contains the properties for the new service.
-To obtain a **ContainerService** object, use the New-AzureRmContainerServiceConfig cmdlet.
+### -ResourceGroupName
+Specifies the resource group in which this cmdlet deploys the container service.
 
 ```yaml
-Type: ContainerService
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 1
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
