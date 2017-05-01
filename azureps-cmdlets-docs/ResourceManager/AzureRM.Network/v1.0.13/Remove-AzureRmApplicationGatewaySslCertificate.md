@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 90D64854-60CA-458D-8685-828F78C48686
 online version: 
 schema: 2.0.0
-ms.assetid: 90D64854-60CA-458D-8685-828F78C48686
 ---
 
 # Remove-AzureRmApplicationGatewaySslCertificate
@@ -33,21 +33,6 @@ The first command gets the application gateway named ApplicationGateway01 and st
 The second command removes the SSL certificate named Cert02 from the application gateway stored in the $AppGW variable.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of an SSL certificate that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway from which this cmdlet removes an SSL certificate.
@@ -97,6 +82,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of an SSL certificate that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

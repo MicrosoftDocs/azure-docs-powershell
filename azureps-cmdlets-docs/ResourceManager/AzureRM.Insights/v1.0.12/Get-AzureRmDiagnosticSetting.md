@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: FAC35FBB-FA37-4CBE-8CDF-61C91CA7A39E
 online version: 
 schema: 2.0.0
-ms.assetid: FAC35FBB-FA37-4CBE-8CDF-61C91CA7A39E
 ---
 
 # Get-AzureRmDiagnosticSetting
@@ -40,21 +40,6 @@ This command gets the categories and time grains that are logged for an azure_ke
 
 ## PARAMETERS
 
-### -ResourceId
-Specifies the ID of the resource.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -91,6 +76,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceId
+Specifies the ID of the resource.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

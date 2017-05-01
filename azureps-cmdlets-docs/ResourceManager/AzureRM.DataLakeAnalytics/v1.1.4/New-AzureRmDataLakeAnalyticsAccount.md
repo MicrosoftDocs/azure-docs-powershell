@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+ms.assetid: 2106EAC5-21A6-435E-9B4A-3D6ADFC0A4EA
 online version: 
 schema: 2.0.0
-ms.assetid: 2106EAC5-21A6-435E-9B4A-3D6ADFC0A4EA
 ---
 
 # New-AzureRmDataLakeAnalyticsAccount
@@ -32,53 +32,6 @@ This command creates a Data Lake Analytics account named ContosoAdlAccount that 
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group name of the Data Lake Analytics account.
-To create a resource group, use the New-AzureRmResourceGroup cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the Data Lake Analytics account name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Location
-Specifies the location at which to create the Data Lake Analytics account.
-Only East US 2 is supported at this time.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DefaultDataLakeStore
 Specifies the name of the Data Lake Store account to set as the default data source.
 
@@ -89,21 +42,6 @@ Aliases:
 
 Required: True
 Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tags
-Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -145,6 +83,68 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+Specifies the location at which to create the Data Lake Analytics account.
+Only East US 2 is supported at this time.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the Data Lake Analytics account name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group name of the Data Lake Analytics account.
+To create a resource group, use the New-AzureRmResourceGroup cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+ms.assetid: 506D8C77-9CC1-46CD-8A62-3ABD3FC3698F
 online version: 
 schema: 2.0.0
-ms.assetid: 506D8C77-9CC1-46CD-8A62-3ABD3FC3698F
 ---
 
 # Save-AzureRmDataFactoryLog

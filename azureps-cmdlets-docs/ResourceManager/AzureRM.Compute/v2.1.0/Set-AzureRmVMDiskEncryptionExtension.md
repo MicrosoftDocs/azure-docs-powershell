@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: CF10062F-03C0-4832-931A-097DCC468D7E
 online version: 
 schema: 2.0.0
-ms.assetid: CF10062F-03C0-4832-931A-097DCC468D7E
 ---
 
 # Set-AzureRmVMDiskEncryptionExtension
@@ -18,7 +18,8 @@ Set-AzureRmVMDiskEncryptionExtension [-ResourceGroupName] <String> [-VMName] <St
  [-AadClientSecret] <String> [-DiskEncryptionKeyVaultUrl] <String> [-DiskEncryptionKeyVaultId] <String>
  [[-KeyEncryptionKeyUrl] <String>] [[-KeyEncryptionKeyVaultId] <String>] [[-KeyEncryptionAlgorithm] <String>]
  [[-VolumeType] <String>] [[-SequenceVersion] <String>] [[-TypeHandlerVersion] <String>] [[-Name] <String>]
- [[-Passphrase] <String>] [-Force] [-DisableAutoUpgradeMinorVersion] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Passphrase] <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### AAD Client Cert Parameters
@@ -27,7 +28,8 @@ Set-AzureRmVMDiskEncryptionExtension [-ResourceGroupName] <String> [-VMName] <St
  [-AadClientCertThumbprint] <String> [-DiskEncryptionKeyVaultUrl] <String> [-DiskEncryptionKeyVaultId] <String>
  [[-KeyEncryptionKeyUrl] <String>] [[-KeyEncryptionKeyVaultId] <String>] [[-KeyEncryptionAlgorithm] <String>]
  [[-VolumeType] <String>] [[-SequenceVersion] <String>] [[-TypeHandlerVersion] <String>] [[-Name] <String>]
- [[-Passphrase] <String>] [-Force] [-DisableAutoUpgradeMinorVersion] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Passphrase] <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -170,20 +172,31 @@ This example enables encryption using Azure AD client ID, client cert thumbprint
 
 ## PARAMETERS
 
-### -AadClientCertThumbprint
-Specifies the thumbprint of the AzureActive Directory (Azure AD) application client certificate that has permissions to write secrets to **KeyVault**.
-As a prerequisite, the Azure AD client certificate must be previously deployed to the virtual machine's local computer `my` certificate store.
-The Add-AzureRmVMSecret cmdlet can be used to deploy a certificate to a virtual machine in Azure.
-For more details, see the **Add-AzureRmVMSecret** cmdlet help.
-The certificate must be previously deployed to the virtual machine local computer my certificate store.
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: String
-Parameter Sets: AAD Client Cert Parameters
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 4
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VMName
+Specifies the name of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceName
+
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -198,7 +211,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -213,37 +226,7 @@ Parameter Sets: AAD Client Secret Parameters
 Aliases: 
 
 Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DisableAutoUpgradeMinorVersion
-Indicates that this cmdlet disables auto-upgrade of the minor version of the extension.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 15
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DiskEncryptionKeyVaultId
-Specifies the resource ID of the **KeyVault** to which the virtual machine encryption keys should be uploaded.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 6
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -258,7 +241,151 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DiskEncryptionKeyVaultId
+Specifies the resource ID of the **KeyVault** to which the virtual machine encryption keys should be uploaded.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -KeyEncryptionKeyUrl
+Specifies the URL of the key encryption key that is used to wrap and unwrap the virtual machine encryption key.
+This must be the full versioned URL.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -KeyEncryptionKeyVaultId
+Specifies the resource ID of the **KeyVault** that contains key encryption key that is used to wrap and unwrap the virtual machine encryption key.
+This must be a full versioned URL.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -KeyEncryptionAlgorithm
+Specifies the algorithm that is used to wrap and unwrap the key encryption key of the virtual machine.
+The default value is RSA-OAEP.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VolumeType
+Specifies the type of virtual machine volumes to perform the encryption operation.
+Allowed values for virtual machines that run the Windows operating system are as follows: All, OS, and Data.
+The allowed values for Linux virtual machines are as follows: Data only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SequenceVersion
+Specifies the sequence number of the encryption operations for a virtual machine.
+This is unique per each encryption operation performed on the same virtual machine.
+The Get-AzureRmVMExtension cmdlet can be used to retrieve the previous sequence number that was used.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 10
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TypeHandlerVersion
+Specifies the version of the encryption extension.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: HandlerVersion, Version
+
+Required: False
+Position: 11
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Azure Resource Manager resource that represents the extension.
+The default value is AzureDiskEncryption for virtual machines that run the Windows operating system or AzureDiskEncryptionForLinux for Linux virtual machines.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ExtensionName
+
+Required: False
+Position: 12
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Passphrase
+Specifies the passphrase used for encrypting Linux virtual machines only.
+This parameter is not used for virtual machines that run the Windows operating system.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 13
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -279,195 +406,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -KeyEncryptionAlgorithm
-Specifies the algorithm that is used to wrap and unwrap the key encryption key of the virtual machine.
-The default value is RSA-OAEP.
-
-```yaml
-Type: String
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: 
-Accepted values: RSA-OAEP, RSA1_5
-
-Required: False
-Position: 9
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyEncryptionKeyUrl
-Specifies the URL of the key encryption key that is used to wrap and unwrap the virtual machine encryption key.
-This must be the full versioned URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyEncryptionKeyVaultId
-Specifies the resource ID of the **KeyVault** that contains key encryption key that is used to wrap and unwrap the virtual machine encryption key.
-This must be a full versioned URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 8
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Azure Resource Manager resource that represents the extension.
-The default value is AzureDiskEncryption for virtual machines that run the Windows operating system or AzureDiskEncryptionForLinux for Linux virtual machines.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ExtensionName
-
-Required: False
-Position: 13
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Passphrase
-Specifies the passphrase used for encrypting Linux virtual machines only.
-This parameter is not used for virtual machines that run the Windows operating system.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 14
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SequenceVersion
-Specifies the sequence number of the encryption operations for a virtual machine.
-This is unique per each encryption operation performed on the same virtual machine.
-The Get-AzureRmVMExtension cmdlet can be used to retrieve the previous sequence number that was used.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 11
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TypeHandlerVersion
-Specifies the version of the encryption extension.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: HandlerVersion, Version
-
-Required: False
-Position: 12
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VMName
-Specifies the name of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VolumeType
-Specifies the type of virtual machine volumes to perform the encryption operation.
-Allowed values for virtual machines that run the Windows operating system are as follows: All, OS, and Data.
-The allowed values for Linux virtual machines are as follows: Data only.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Accepted values: OS, Data, All
-
-Required: False
-Position: 10
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Aliases: infa
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
+### -InformationVariable
+@{Text=}```yaml
+Type: String
 Parameter Sets: (All)
-Aliases: wi
+Aliases: iv
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AadClientCertThumbprint
+Specifies the thumbprint of the AzureActive Directory (Azure AD) application client certificate that has permissions to write secrets to **KeyVault**.
+As a prerequisite, the Azure AD client certificate must be previously deployed to the virtual machine's local computer `my` certificate store.
+The Add-AzureRmVMSecret cmdlet can be used to deploy a certificate to a virtual machine in Azure.
+For more details, see the **Add-AzureRmVMSecret** cmdlet help.
+The certificate must be previously deployed to the virtual machine local computer my certificate store.
+
+```yaml
+Type: String
+Parameter Sets: AAD Client Cert Parameters
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 91FDBECA-D66F-4243-8E08-4E6D04CADBDF
 online version: 
 schema: 2.0.0
-ms.assetid: 91FDBECA-D66F-4243-8E08-4E6D04CADBDF
 ---
 
 # New-AzureRmLoadBalancerBackendAddressPoolConfig
@@ -30,21 +30,6 @@ PS C:\>New-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool
 This command creates a backend address pool configuration named BackendAddressPool02 for a load balancer.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the address pool configuration to create.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -79,6 +64,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the address pool configuration to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

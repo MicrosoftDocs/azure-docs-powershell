@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 5D452788-B1D9-43B5-BFEA-6E1FB645EB0A
 online version: 
 schema: 2.0.0
-ms.assetid: 5D452788-B1D9-43B5-BFEA-6E1FB645EB0A
 ---
 
 # Publish-AzureRmVMDscConfiguration
@@ -71,16 +71,34 @@ This command adds configuration named Sample.ps1, configuration data SampleData.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group that contains the storage account.
+### -AdditionalPath
+Specifies the path of a file or a directory to include in the configuration archive.
+It gets downloaded to the virtual machine together with the configuration.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ConfigurationDataPath
+Specifies the path of a .psd1 file that specifies the data for the configuration.
+This is added to the configuration archive and then passed to the configuration function.
+It gets overwritten by the configuration data path provided through the Set-AzureRmVMDscExtension cmdlet
 
 ```yaml
 Type: String
-Parameter Sets: UploadArchive
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 2
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -117,36 +135,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -StorageAccountName
-Specifies the Azure storage account name that is used to upload the configuration script to the container specified by the *ContainerName* parameter.
-
-```yaml
-Type: String
-Parameter Sets: UploadArchive
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageEndpointSuffix
-Specifies the suffix for the storage end point.
-
-```yaml
-Type: String
-Parameter Sets: UploadArchive
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Force
 ps_force
 
@@ -159,54 +147,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipDependencyDetection
-Indicates that this cmdlet excludes DSC resource dependencies from the configuration archive.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConfigurationDataPath
-Specifies the path of a .psd1 file that specifies the data for the configuration.
-This is added to the configuration archive and then passed to the configuration function.
-It gets overwritten by the configuration data path provided through the Set-AzureRmVMDscExtension cmdlet
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdditionalPath
-Specifies the path of a file or a directory to include in the configuration archive.
-It gets downloaded to the virtual machine together with the configuration.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -249,19 +189,79 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -OutputArchivePath
+Specifies the path of a local .zip file to write the configuration archive to.
+When this parameter is used, the configuration script is not uploaded to Azure blob storage.
+
+```yaml
+Type: String
+Parameter Sets: CreateArchive
+Aliases: ConfigurationArchivePath
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the storage account.
+
+```yaml
+Type: String
+Parameter Sets: UploadArchive
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkipDependencyDetection
+Indicates that this cmdlet excludes DSC resource dependencies from the configuration archive.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageAccountName
+Specifies the Azure storage account name that is used to upload the configuration script to the container specified by the *ContainerName* parameter.
+
+```yaml
+Type: String
+Parameter Sets: UploadArchive
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageEndpointSuffix
+Specifies the suffix for the storage end point.
+
+```yaml
+Type: String
+Parameter Sets: UploadArchive
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -280,19 +280,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutputArchivePath
-Specifies the path of a local .zip file to write the configuration archive to.
-When this parameter is used, the configuration script is not uploaded to Azure blob storage.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: String
-Parameter Sets: CreateArchive
-Aliases: ConfigurationArchivePath
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

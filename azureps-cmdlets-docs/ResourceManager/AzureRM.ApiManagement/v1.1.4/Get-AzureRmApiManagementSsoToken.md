@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+ms.assetid: 1B064272-B5E4-4E95-9B8B-43F2B8C27F94
 online version: 
 schema: 2.0.0
-ms.assetid: 1B064272-B5E4-4E95-9B8B-43F2B8C27F94
 ---
 
 # Get-AzureRmApiManagementSsoToken
@@ -30,36 +30,6 @@ PS C:\> Get-AzureRmApiManagementSsoToken -ResourceGroupName "Contoso" -Name "Con
 This command gets the SSO token of an API Management service.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of resource group under which API Management exists.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the API Management instance.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -97,6 +67,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the API Management instance.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of resource group under which API Management exists.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

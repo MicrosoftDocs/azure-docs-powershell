@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 80F4571A-6DBC-42B7-9C98-6F6F8EECAAE7
 online version: 
 schema: 2.0.0
-ms.assetid: 80F4571A-6DBC-42B7-9C98-6F6F8EECAAE7
 ---
 
 # Set-AzureRmVmss
@@ -71,6 +71,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Reimage
+Indicates that the cmdlet reimages the VMSS.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of the resource group of the VMSS.
 
@@ -96,21 +111,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Reimage
-Indicates that the cmdlet reimages the VMSS.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

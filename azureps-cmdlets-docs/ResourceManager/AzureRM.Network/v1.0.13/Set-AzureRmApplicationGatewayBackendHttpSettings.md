@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 3CAD9D6F-6CF8-41DC-B760-D15719E52165
 online version: 
 schema: 2.0.0
-ms.assetid: 3CAD9D6F-6CF8-41DC-B760-D15719E52165
 ---
 
 # Set-AzureRmApplicationGatewayBackendHttpSettings
@@ -52,53 +52,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of the back-end HTTP settings object.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Port
-Specifies the port to use for each server in the back-end server pool.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Protocol
-Specifies the protocol to use for communication between the application gateway and back-end servers.
-psdx_paramvalues Http and Https.
-This parameter is case-sensitive.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CookieBasedAffinity
 Specifies whether cookie-based affinity should be enabled or disabled for the backend server pool.
 psdx_paramvalues Disabled or Enabled.
@@ -109,51 +62,6 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestTimeout
-Specifies a request time-out value.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProbeId
-Specifies the ID of the probe to associate with the back-end HTTP settings.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Probe
-Specifies a probe to associate with the back-end HTTP settings.
-
-```yaml
-Type: PSApplicationGatewayProbe
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -191,6 +99,98 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the back-end HTTP settings object.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Port
+Specifies the port to use for each server in the back-end server pool.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Probe
+Specifies a probe to associate with the back-end HTTP settings.
+
+```yaml
+Type: PSApplicationGatewayProbe
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProbeId
+Specifies the ID of the probe to associate with the back-end HTTP settings.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Protocol
+Specifies the protocol to use for communication between the application gateway and back-end servers.
+psdx_paramvalues Http and Https.
+This parameter is case-sensitive.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestTimeout
+Specifies a request time-out value.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+ms.assetid: 7693A9E2-6522-4EDF-BE3C-BF8BA33A3747
 online version: 
 schema: 2.0.0
-ms.assetid: 7693A9E2-6522-4EDF-BE3C-BF8BA33A3747
 ---
 
 # Set-AzureRmCdnOrigin
@@ -28,6 +28,21 @@ The **Set-AzureRmCdnOrigin** cmdlet updates an Azure Content Delivery Network (C
 ```
 
 ## PARAMETERS
+
+### -CdnOrigin
+Specifies the origin server that this cmdlet updates.
+
+```yaml
+Type: PSOrigin
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -65,21 +80,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CdnOrigin
-Specifies the origin server that this cmdlet updates.
-
-```yaml
-Type: PSOrigin
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

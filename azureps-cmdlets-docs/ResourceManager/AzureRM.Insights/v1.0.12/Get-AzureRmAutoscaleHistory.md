@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: 9FDE1F41-0298-460C-9817-07DDDF9DBFDE
 online version: 
 schema: 2.0.0
-ms.assetid: 9FDE1F41-0298-460C-9817-07DDDF9DBFDE
 ---
 
 # Get-AzureRmAutoscaleHistory
@@ -171,6 +171,53 @@ This command gets all Autoscale-related events associated with a particular reso
 
 ## PARAMETERS
 
+### -Caller
+Specifies a caller.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DetailedOutput
+Indicates that this operation included detailed output.
+If you do not specify this parameter, the output is summarized.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EndTime
+Specifies the end time of the query in local time.
+The default is the current time.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceId
 Specifies the resource ID to which the autoscale setting is associated.
 
@@ -203,22 +250,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -EndTime
-Specifies the end time of the query in local time.
-The default is the current time.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Status
 Specifies a filter by status.
 This parameter is optional.
@@ -227,37 +258,6 @@ no filter)
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Caller
-Specifies a caller.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DetailedOutput
-Indicates that this operation included detailed output.
-If you do not specify this parameter, the output is summarized.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 5B17A003-5FB3-4070-85D0-270AC535739F
 online version: 
 schema: 2.0.0
-ms.assetid: 5B17A003-5FB3-4070-85D0-270AC535739F
 ---
 
 # Stop-AzureRmResourceGroupDeployment
@@ -14,13 +14,13 @@ Cancels a resource group deployment.
 
 ### The deployment name parameter set. (Default)
 ```
-Stop-AzureRmResourceGroupDeployment [-ResourceGroupName] <String> [-Name] <String> [-Force]
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
+Stop-AzureRmResourceGroupDeployment [-ResourceGroupName] <String> [-Name] <String> [-ApiVersion <String>]
+ [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### The deployment Id parameter set.
 ```
-Stop-AzureRmResourceGroupDeployment -Id <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+Stop-AzureRmResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -80,21 +80,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Suppresses the confirmation prompt. By default, Stop-AzureRmResourceGroupDeployment prompts you before stopping a deployment.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

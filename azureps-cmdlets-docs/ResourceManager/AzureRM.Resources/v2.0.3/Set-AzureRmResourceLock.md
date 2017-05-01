@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 9E8D7778-0F55-44B6-B1D8-9483E93F9652
 online version: 
 schema: 2.0.0
-ms.assetid: 9E8D7778-0F55-44B6-B1D8-9483E93F9652
 ---
 
 # Set-AzureRmResourceLock
@@ -12,18 +12,10 @@ Modifies a resource lock.
 
 ## SYNTAX
 
-### A lock at the subscription resource scope. (Default)
+### A lock at the specified scope. (Default)
 ```
 Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -ResourceName <String> -ResourceType <String> [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### A lock at the resource group scope.
-```
-Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -ResourceGroupName <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ -Scope <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,18 +35,26 @@ Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <S
  [<CommonParameters>]
 ```
 
+### A lock at the resource group scope.
+```
+Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
+ -ResourceGroupName <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### A lock at the subscription resource scope.
+```
+Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
+ -ResourceName <String> -ResourceType <String> [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### A lock at the subscription scope.
 ```
 Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
  [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### A lock at the specified scope.
-```
-Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -Scope <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### A lock, by Id.
@@ -129,7 +129,7 @@ Specifies the name of the lock that this cmdlet modifies.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group scope., A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription scope., A lock at the specified scope.
+Parameter Sets: A lock at the specified scope., A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the subscription resource scope., A lock at the subscription scope.
 Aliases: ExtensionResourceName, Name
 
 Required: True
@@ -147,7 +147,7 @@ Server`/`Database
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription resource scope.
 Aliases: 
 
 Required: True
@@ -162,7 +162,7 @@ Specifies the resource type for which the lock applies.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
+Parameter Sets: A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription resource scope.
 Aliases: 
 
 Required: True
@@ -300,7 +300,7 @@ Specifies the name of the resource group for which the lock applies.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the resource group scope., A lock at the resource group resource scope.
+Parameter Sets: A lock at the resource group resource scope., A lock at the resource group scope.
 Aliases: 
 
 Required: True

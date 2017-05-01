@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+ms.assetid: 971FC0F6-B086-473F-B32D-473BA0E8BA24
 online version: 
 schema: 2.0.0
-ms.assetid: 971FC0F6-B086-473F-B32D-473BA0E8BA24
 ---
 
 # New-AzureRmMlWebService
@@ -69,16 +69,31 @@ You can obtain a web service object instance to customize before publishing as a
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group that this web service belongs to.
-Enter the name an existing resource group that was provisioned ahead of this web service resource.
+### -DefinitionFile
+Specifies the path to a file on disk containing the definition of the web service resource, in JSON format.
+You can find the latest specification for the web service definition in the swagger specification file under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearninghttps://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning(https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning).
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Create a new Azure ML webservice from a JSON definiton file.
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+ps_force
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -121,22 +136,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefinitionFile
-Specifies the path to a file on disk containing the definition of the web service resource, in JSON format.
-You can find the latest specification for the web service definition in the swagger specification file under https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearninghttps://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning(https://github.com/Azure/azure-rest-api-specs/tree/master/arm-machinelearning).
-
-```yaml
-Type: String
-Parameter Sets: Create a new Azure ML webservice from a JSON definiton file.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NewWebServiceDefinition
 Specifies the definition of the web service resource, that contains all the properties that make up the service.
 This parameter is required and represents an instance of the **Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService** class.
@@ -155,15 +154,16 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Force
-ps_force
+### -ResourceGroupName
+Specifies the resource group that this web service belongs to.
+Enter the name an existing resource group that was provisioned ahead of this web service resource.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

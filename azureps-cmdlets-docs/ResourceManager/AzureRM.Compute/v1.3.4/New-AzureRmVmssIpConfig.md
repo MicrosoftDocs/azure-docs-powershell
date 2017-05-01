@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: CA90AFD7-6DE6-497A-8EA2-DDC6B2F8FA1D
 online version: 
 schema: 2.0.0
-ms.assetid: CA90AFD7-6DE6-497A-8EA2-DDC6B2F8FA1D
 ---
 
 # New-AzureRmVmssIpConfig
@@ -46,51 +46,6 @@ The command specifies values for the *LoadBalancerInboundNatPoolsId* and *LoadBa
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the IP configuration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Id
-Specifies an ID.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SubnetId
-Specifies the subnet ID in which the configuration creates  the VMSS network interface.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ApplicationGatewayBackendAddressPoolsId
 Specifies an array of references to backend address pools of load balancers.
 A scale set can reference backend address pools of one public and one internal load balancer.
@@ -108,35 +63,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -LoadBalancerBackendAddressPoolsId
-Specifies an array of references to incoming network address translation (NAT) pools of the load balancers.
-A scale set can reference incoming NAT pools of one public and one internal load balancer.
-Multiple scale sets cannot use the same load balancer.
+### -Id
+Specifies an ID.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LoadBalancerInboundNatPoolsId
-Specifies an array of references to incoming NAT pools of the load balancers.
-A scale set can reference incoming NAT pools of one public and one internal load balancer.
-Multiple scale sets cannot use the same load balancer.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 5
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -178,6 +114,70 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoadBalancerBackendAddressPoolsId
+Specifies an array of references to incoming network address translation (NAT) pools of the load balancers.
+A scale set can reference incoming NAT pools of one public and one internal load balancer.
+Multiple scale sets cannot use the same load balancer.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LoadBalancerInboundNatPoolsId
+Specifies an array of references to incoming NAT pools of the load balancers.
+A scale set can reference incoming NAT pools of one public and one internal load balancer.
+Multiple scale sets cannot use the same load balancer.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the IP configuration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SubnetId
+Specifies the subnet ID in which the configuration creates  the VMSS network interface.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

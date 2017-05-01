@@ -13,14 +13,13 @@ Gets a virtual network in a resource group.
 
 ### NoExpand
 ```
-Get-AzureRmVirtualNetwork [-Name <String>] [-ResourceGroupName <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Get-AzureRmVirtualNetwork [-Name <String>] [-ResourceGroupName <String>] [<CommonParameters>]
 ```
 
 ### Expand
 ```
 Get-AzureRmVirtualNetwork -Name <String> -ResourceGroupName <String> -ExpandResource <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +29,10 @@ The Get-AzureRmVirtualNetwork cmdlet gets one or more virtual networks in a reso
 
 ### --------------------------  Example 1: Get a virtual network  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup
@@ -128,36 +131,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExpandResource
 @{Text=}
 
@@ -172,6 +145,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

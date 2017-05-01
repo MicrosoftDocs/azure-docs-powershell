@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: 64577815-5A33-4832-B34C-4FB6BED0F5C1
 online version: 
 schema: 2.0.0
-ms.assetid: 64577815-5A33-4832-B34C-4FB6BED0F5C1
 ---
 
 # Get-ACSEventQuery
@@ -36,33 +36,19 @@ This command gets an ACS query object and stores the result in the variable name
 
 ## PARAMETERS
 
-### -FarmName
-Specifies the name of the ACS farm.
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
 
 ```yaml
-Type: String
+Type: Uri
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 4
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StartTime
-Specifies the start time of a time range.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 5
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -81,6 +67,77 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EventId
+```yaml
+Type: Int32[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 10
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FarmName
+Specifies the name of the ACS farm.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NodeName
+Specifies the name of the node.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProviderGuid
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that this cmdlet gets the ACS event query object from.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceUri
 Specifies the path, as a URI, to the resource file.
 
@@ -96,29 +153,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProviderGuid
+### -SkipCertificateValidation
+Indicates that this cmdlet skips certificate validation.
 
 ```yaml
-Type: Guid
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 9
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EventId
+### -StartTime
+Specifies the start time of a time range.
 
 ```yaml
-Type: Int32[]
+Type: DateTime
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 10
+Required: True
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -151,67 +210,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that this cmdlet gets the ACS event query object from.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkipCertificateValidation
-Indicates that this cmdlet skips certificate validation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NodeName
-Specifies the name of the node.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

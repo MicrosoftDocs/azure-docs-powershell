@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 2BEF0FBE-8FBA-4017-ACEB-5883E84D0DA1
 online version: 
 schema: 2.0.0
-ms.assetid: 2BEF0FBE-8FBA-4017-ACEB-5883E84D0DA1
 ---
 
 # Export-AzureRmDataLakeStoreItem
@@ -48,16 +48,17 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Path
-Specifies the path of the item to download from the Data Lake Store, starting from the root directory (/).
+### -ConcurrentFileCount
+Specifies the maximum number of files to download in parallel for a folder download.
+The default value is five (5).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 1
+Required: False
+Position: 6
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -73,69 +74,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Recurse
-Indicates that a folder download is recursive.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Resume
-Indicates that the file or files being copied are a continuation of a previous download.
-The download attempts to resume from the last file that was not fully downloaded.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PerFileThreadCount
-Specifies the maximum number of threads to use per file.
-The default value is ten (10).
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConcurrentFileCount
-Specifies the maximum number of files to download in parallel for a folder download.
-The default value is five (5).
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 6
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -192,6 +130,68 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the path of the item to download from the Data Lake Store, starting from the root directory (/).
+
+```yaml
+Type: DataLakeStorePathInstance
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PerFileThreadCount
+Specifies the maximum number of threads to use per file.
+The default value is ten (10).
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Recurse
+Indicates that a folder download is recursive.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Resume
+Indicates that the file or files being copied are a continuation of a previous download.
+The download attempts to resume from the last file that was not fully downloaded.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

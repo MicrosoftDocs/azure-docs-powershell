@@ -4,36 +4,28 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
-ms.assetid: E41EDE67-E5B9-4FE3-A36B-D55E9E1F23F3
 ---
 
 # AzureRM.PowerBIEmbedded Module
 ## Description
-This topic displays help topics for the Azure Power BI Embedded Cmdlets. 
+This topic displays help topics for the Azure Power BI Embedded Cmdlets.
 
 ## AzureRM.PowerBIEmbedded Cmdlets
-### [Get-AzureRmPowerBIWorkspaceCollectionAccessKeys](./Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
-Gets the current access keys associated with a Power BI workspace collection.
-
-
-### [Get-AzureRmPowerBIWorkspaceCollection](./Get-AzureRmPowerBIWorkspaceCollection.md)
-Gets Power BI workspace collections.
-
-
-### [Get-AzureRmPowerBIWorkspace](./Get-AzureRmPowerBIWorkspace.md)
+### [Get-AzureRmPowerBIWorkspace](Get-AzureRmPowerBIWorkspace.md)
 Gets the workspaces in a Power BI workspace collection.
 
+### [Get-AzureRmPowerBIWorkspaceCollection](Get-AzureRmPowerBIWorkspaceCollection.md)
+Gets Power BI workspace collections.
 
-### [New-AzureRmPowerBIWorkspaceCollection](./New-AzureRmPowerBIWorkspaceCollection.md)
+### [Get-AzureRmPowerBIWorkspaceCollectionAccessKeys](Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
+Gets the current access keys associated with a Power BI workspace collection.
+
+### [New-AzureRmPowerBIWorkspaceCollection](New-AzureRmPowerBIWorkspaceCollection.md)
 Creates a Power BI workspace collection.
 
-
-### [Remove-AzureRmPowerBIWorkspaceCollection](./Remove-AzureRmPowerBIWorkspaceCollection.md)
+### [Remove-AzureRmPowerBIWorkspaceCollection](Remove-AzureRmPowerBIWorkspaceCollection.md)
 Removes a Power BI workspace collection.
 
-
-### [Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys](./Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
+### [Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys](Reset-AzureRmPowerBIWorkspaceCollectionAccessKeys.md)
 Resets the specified access key.
-
-
 

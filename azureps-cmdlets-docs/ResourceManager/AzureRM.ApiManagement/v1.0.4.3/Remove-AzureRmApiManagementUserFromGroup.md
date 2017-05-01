@@ -13,7 +13,7 @@ Removes existing user from existing group.
 
 ```
 Remove-AzureRmApiManagementUserFromGroup -Context <PsApiManagementContext> -GroupId <String> -UserId <String>
- [-PassThru]
+ [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +23,10 @@ Removes existing user from existing group.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Remove-AzureRmApiManagementUserFromGroup -Context $apimContext -GroupId 0001 -UserId 0123456789
@@ -96,6 +100,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

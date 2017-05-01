@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+ms.assetid: BEA384E0-C930-442C-A7F9-0FDCE87E7871
 online version: 
 schema: 2.0.0
-ms.assetid: BEA384E0-C930-442C-A7F9-0FDCE87E7871
 ---
 
 # Set-AzureRmStorageAccount
@@ -50,66 +50,6 @@ The command also sets the Access Tier type to be cool.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group in which to modify the Storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Storage account to create.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: StorageAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkuName
-Specifies the SKU name of the storage account.
-psdx_paramvalues
-
-- Standard_LRS.
-Locally-redundant storage. 
-- Standard_ZRS.
-Zone-redundant storage.
-- Standard_GRS.
-Geo-redundant storage. 
-- Standard_RAGRS.
-Read access geo-redundant storage. 
-- Premium_LRS.
-Premium locally-redundant storage.
-
-You cannot change Standard_ZRS and Premium_LRS types to other account types.
-You cannot change other account types to Standard_ZRS or Premium_LRS.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: StorageAccountType, AccountType, Type
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -AccessTier
 Specifies the access tier of the Storage account that this cmdlet modifies.
 psdx_paramvalues Hot and Cool.
@@ -145,16 +85,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseSubDomain
-Indicates whether to enable indirect CName validation.
+### -DisableEncryptionService
+Indicates whether this cmdlet disables Storage Service encryption on the Storage Service.
+Currently, only the Blob Service is supported.
 
 ```yaml
-Type: Boolean
+Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 5
+Position: 7
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -173,39 +114,6 @@ Required: False
 Position: 6
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableEncryptionService
-Indicates whether this cmdlet disables Storage Service encryption on the Storage Service.
-Currently, only the Blob Service is supported.
-
-```yaml
-Type: EncryptionSupportServiceEnum
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tag
-If you specify a value of BlobStorage for the *Kind* parameter of the New-AzureRmStorageAccount cmdlet, you must specify a value for the *AccessTier* parameter.
-
-If you specify a value of Storage for this *Kind* parameter, do not specify the *AccessTier* parameter.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases: Tags
-
-Required: False
-Position: 8
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -243,6 +151,98 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Storage account to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: StorageAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group in which to modify the Storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkuName
+Specifies the SKU name of the storage account.
+psdx_paramvalues
+
+- Standard_LRS.
+Locally-redundant storage. 
+- Standard_ZRS.
+Zone-redundant storage.
+- Standard_GRS.
+Geo-redundant storage. 
+- Standard_RAGRS.
+Read access geo-redundant storage. 
+- Premium_LRS.
+Premium locally-redundant storage.
+
+You cannot change Standard_ZRS and Premium_LRS types to other account types.
+You cannot change other account types to Standard_ZRS or Premium_LRS.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: StorageAccountType, AccountType, Type
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tag
+If you specify a value of BlobStorage for the *Kind* parameter of the New-AzureRmStorageAccount cmdlet, you must specify a value for the *AccessTier* parameter.
+
+If you specify a value of Storage for this *Kind* parameter, do not specify the *AccessTier* parameter.
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: Tags
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UseSubDomain
+Indicates whether to enable indirect CName validation.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

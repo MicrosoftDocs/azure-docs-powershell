@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 6FBFEC1D-5397-4D60-BDE3-B7B16A1E84FA
 online version: 
 schema: 2.0.0
-ms.assetid: 6FBFEC1D-5397-4D60-BDE3-B7B16A1E84FA
 ---
 
 # New-AzureRmVmssConfig
@@ -13,9 +13,10 @@ Creates a VMSS configuration object.
 ## SYNTAX
 
 ```
-New-AzureRmVmssConfig [[-OverProvision] <Boolean>] [[-Location] <String>] [[-Tag] <Hashtable>]
- [[-SkuName] <String>] [[-SkuTier] <String>] [[-SkuCapacity] <Int64>] [[-UpgradePolicyMode] <UpgradeMode>]
- [[-OsProfile] <VirtualMachineScaleSetOSProfile>] [[-StorageProfile] <VirtualMachineScaleSetStorageProfile>]
+New-AzureRmVmssConfig [[-ProvisioningState] <String>] [[-OverProvision] <Boolean>] [[-Location] <String>]
+ [[-Tag] <Hashtable>] [[-SkuName] <String>] [[-SkuTier] <String>] [[-SkuCapacity] <Int64>]
+ [[-UpgradePolicyMode] <UpgradeMode>] [[-OsProfile] <VirtualMachineScaleSetOSProfile>]
+ [[-StorageProfile] <VirtualMachineScaleSetStorageProfile>]
  [[-NetworkInterfaceConfiguration] <VirtualMachineScaleSetNetworkConfiguration[]>]
  [[-Extension] <VirtualMachineScaleSetExtension[]>] [<CommonParameters>]
 ```
@@ -130,6 +131,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ProvisioningState
+{{Fill ProvisioningState Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SkuCapacity
 Specifies the number of instances in the VMSS.
 
@@ -223,6 +239,7 @@ The acceptable values for this parameter are:
 Type: UpgradeMode
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Automatic, Manual
 
 Required: False
 Position: 7

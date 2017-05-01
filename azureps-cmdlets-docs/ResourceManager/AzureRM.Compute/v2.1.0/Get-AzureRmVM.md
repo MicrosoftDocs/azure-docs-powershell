@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 3A4888E7-DF4E-47EF-95EC-C86929DD9B34
 online version: 
 schema: 2.0.0
-ms.assetid: 3A4888E7-DF4E-47EF-95EC-C86929DD9B34
 ---
 
 # Get-AzureRmVM
@@ -14,22 +14,25 @@ Gets the properties of a virtual machine.
 
 ### ListAllVirtualMachinesParamSet (Default)
 ```
-Get-AzureRmVM [<CommonParameters>]
-```
-
-### GetVirtualMachineInResourceGroupParamSet
-```
-Get-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Status] [<CommonParameters>]
+Get-AzureRmVM [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ListVirtualMachineInResourceGroupParamSet
 ```
-Get-AzureRmVM [-ResourceGroupName] <String> [<CommonParameters>]
+Get-AzureRmVM [-ResourceGroupName] <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
+```
+
+### GetVirtualMachineInResourceGroupParamSet
+```
+Get-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Status] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ListNextLinkVirtualMachinesParamSet
 ```
-Get-AzureRmVM [-NextLink] <Uri> [<CommonParameters>]
+Get-AzureRmVM [-NextLink] <Uri> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,33 +75,29 @@ This command gets all the virtual machines in your subscription.
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the virtual machine to get.
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
 
-```yaml
-Type: String
-Parameter Sets: GetVirtualMachineInResourceGroupParamSet
-Aliases: ResourceName, VMName
-
-Required: True
-Position: 2
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NextLink
-Specifies the next link.
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
 
-```yaml
-Type: Uri
-Parameter Sets: ListNextLinkVirtualMachinesParamSet
-Aliases: 
-
-Required: True
-Position: 2
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -107,8 +106,23 @@ Specifies the name of a resource group.
 
 ```yaml
 Type: String
-Parameter Sets: GetVirtualMachineInResourceGroupParamSet, ListVirtualMachineInResourceGroupParamSet
+Parameter Sets: ListVirtualMachineInResourceGroupParamSet, GetVirtualMachineInResourceGroupParamSet
 Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the virtual machine to get.
+
+```yaml
+Type: String
+Parameter Sets: GetVirtualMachineInResourceGroupParamSet
+Aliases: ResourceName, VMName
 
 Required: True
 Position: 1
@@ -126,9 +140,24 @@ Parameter Sets: GetVirtualMachineInResourceGroupParamSet
 Aliases: 
 
 Required: False
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NextLink
+Specifies the next link.
+
+```yaml
+Type: Uri
+Parameter Sets: ListNextLinkVirtualMachinesParamSet
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

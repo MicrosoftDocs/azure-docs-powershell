@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: C87936DB-AB93-4CA8-99CD-B27AB3AE5DF7
 online version: 
 schema: 2.0.0
-ms.assetid: C87936DB-AB93-4CA8-99CD-B27AB3AE5DF7
 ---
 
 # Remove-AzureRmSqlDatabaseDataMaskingRule

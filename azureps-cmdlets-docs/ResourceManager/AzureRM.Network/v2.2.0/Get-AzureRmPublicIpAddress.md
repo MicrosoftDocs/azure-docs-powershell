@@ -11,16 +11,15 @@ Gets a public IP address.
 
 ## SYNTAX
 
+### NoExpand
+```
+Get-AzureRmPublicIpAddress [-Name <String>] [-ResourceGroupName <String>] [<CommonParameters>]
+```
+
 ### Expand
 ```
 Get-AzureRmPublicIpAddress -Name <String> -ResourceGroupName <String> -ExpandResource <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
-### NoExpand
-```
-Get-AzureRmPublicIpAddress [-Name <String>] [-ResourceGroupName <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +29,10 @@ The Get-AzureRmPublicIPAddress cmdlet gets one or more public IP addresses in a 
 
 ### --------------------------  1: Get a public IP resource  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 $publicIp = Get-AzureRmPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName
@@ -62,10 +65,10 @@ Specifies the name of the public IP address to get.
 
 ```yaml
 Type: String
-Parameter Sets: Expand
+Parameter Sets: NoExpand
 Aliases: ResourceName
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -74,10 +77,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: NoExpand
+Parameter Sets: Expand
 Aliases: ResourceName
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -89,18 +92,6 @@ Specifies the name of the resource group that contains the public IP address to 
 
 ```yaml
 Type: String
-Parameter Sets: Expand
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
 Parameter Sets: NoExpand
 Aliases: 
 
@@ -111,33 +102,15 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: iv
+Parameter Sets: Expand
+Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -155,6 +128,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

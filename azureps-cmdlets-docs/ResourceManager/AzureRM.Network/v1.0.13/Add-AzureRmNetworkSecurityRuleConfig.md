@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 7A84ECF6-ADB5-40F1-AA16-D1826EF05543
 online version: 
 schema: 2.0.0
-ms.assetid: 7A84ECF6-ADB5-40F1-AA16-D1826EF05543
 ---
 
 # Add-AzureRmNetworkSecurityRuleConfig
@@ -32,117 +32,24 @@ The **Add-AzureRmNetworkSecurityRuleConfig** cmdlet adds a network security rule
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of a network security rule configuration.
+### -Access
+Specifies whether network traffic is allowed or denied.
+psdx_paramvalues Allow and Deny.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkSecurityGroup
-Specifies a **NetworkSecurityGroup** object.
-This cmdlet adds a network security rule configuration to the object that this parameter specifies.
-
-```yaml
-Type: PSNetworkSecurityGroup
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ### -Description
 Specifies a description of a network security rule configuration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Protocol
-Specifies the network protocol that a rule configuration applies to.
-psdx_paramvalues
-
-- Tcp
-- Udp
-- Wildcard character (*) to match both
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourcePortRange
-Specifies a source port or range.
-This value is expressed as an integer, as a range between 0 and 65535, or as a wildcard character (*) to match any source port.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DestinationPortRange
-Specifies a destination port or range.
-psdx_paramvalues
-
-- An integer
-- A range of integers between 0 and 65535
-- A wildcard character (*) to match any port
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceAddressPrefix
-Specifies a source address prefix.
-psdx_paramvalues
-
-- A CIDR
-- A source IP range
-- A wildcard character (*) to match any IP address.
-
-You can also use tags such as VirtualNetwork, AzureLoadBalancer and Internet.
 
 ```yaml
 Type: String
@@ -178,31 +85,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Access
-Specifies whether network traffic is allowed or denied.
-psdx_paramvalues Allow and Deny.
+### -DestinationPortRange
+Specifies a destination port or range.
+psdx_paramvalues
+
+- An integer
+- A range of integers between 0 and 65535
+- A wildcard character (*) to match any port
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Priority
-Specifies the priority of a rule configuration.
-psdx_paramvalues An integer between 100 and 4096.
-
-The priority number must be unique for each rule in the collection.
-The lower the priority number, the higher the priority of the rule.
-
-```yaml
-Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -260,6 +152,114 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of a network security rule configuration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkSecurityGroup
+Specifies a **NetworkSecurityGroup** object.
+This cmdlet adds a network security rule configuration to the object that this parameter specifies.
+
+```yaml
+Type: PSNetworkSecurityGroup
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Priority
+Specifies the priority of a rule configuration.
+psdx_paramvalues An integer between 100 and 4096.
+
+The priority number must be unique for each rule in the collection.
+The lower the priority number, the higher the priority of the rule.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Protocol
+Specifies the network protocol that a rule configuration applies to.
+psdx_paramvalues
+
+- Tcp
+- Udp
+- Wildcard character (*) to match both
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceAddressPrefix
+Specifies a source address prefix.
+psdx_paramvalues
+
+- A CIDR
+- A source IP range
+- A wildcard character (*) to match any IP address.
+
+You can also use tags such as VirtualNetwork, AzureLoadBalancer and Internet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourcePortRange
+Specifies a source port or range.
+This value is expressed as an integer, as a range between 0 and 65535, or as a wildcard character (*) to match any source port.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

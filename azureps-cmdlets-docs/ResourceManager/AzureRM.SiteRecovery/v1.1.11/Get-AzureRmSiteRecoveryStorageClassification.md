@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: D6C84C18-A8CF-4EF4-B46A-9E5DB90FF6E0
 online version: 
 schema: 2.0.0
-ms.assetid: D6C84C18-A8CF-4EF4-B46A-9E5DB90FF6E0
 ---
 
 # Get-AzureRmSiteRecoveryStorageClassification
@@ -75,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-
 ```yaml
 Type: ASRServer
 Parameter Sets: ByObject
@@ -98,5 +97,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

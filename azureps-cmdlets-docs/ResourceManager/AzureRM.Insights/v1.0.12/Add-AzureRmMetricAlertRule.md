@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: 05024625-5AF1-44BF-9CAD-21ED0854FF25
 online version: 
 schema: 2.0.0
-ms.assetid: 05024625-5AF1-44BF-9CAD-21ED0854FF25
 ---
 
 # Add-AzureRmMetricAlertRule
@@ -60,112 +60,15 @@ This command creates a metric alert rule for a website.
 
 ## PARAMETERS
 
-### -WindowSize
-Specifies the time window size for the rule to compute its data.
+### -Actions
+Specifies a comma-separated list of actions.
 
 ```yaml
-Type: TimeSpan
+Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Insights.Models.RuleAction]
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Operator
-Specifies the relational operator for the condition of the rule.
-psdx_paramvalues
-
-- GreaterThan
-- GreaterThanOrEqual
--  LessThan
-- LessThanOrEqual
-
-```yaml
-Type: ConditionOperator
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Threshold
-Specifies the threshold of the rule.
-
-```yaml
-Type: Double
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TargetResourceId
-Specifies the ID of the resource the rule is monitoring.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MetricName
-Specifies the name of the metric the rule is monitoring.
-Specify this parameter only for metric-based rules.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TimeAggregationOperator
-Specifies the aggregation operator to apply to the time window when the rule is being evaluated.
-
-```yaml
-Type: TimeAggregationOperator
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Location
-Specifies the location where the rule is defined.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -203,8 +106,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroup
-Specifies the name of the resource group for the rule.
+### -Location
+Specifies the location where the rule is defined.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MetricName
+Specifies the name of the metric the rule is monitoring.
+Specify this parameter only for metric-based rules.
 
 ```yaml
 Type: String
@@ -233,15 +152,96 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Actions
-Specifies a comma-separated list of actions.
+### -Operator
+Specifies the relational operator for the condition of the rule.
+psdx_paramvalues
+
+- GreaterThan
+- GreaterThanOrEqual
+-  LessThan
+- LessThanOrEqual
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Insights.Models.RuleAction]
+Type: ConditionOperator
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the name of the resource group for the rule.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetResourceId
+Specifies the ID of the resource the rule is monitoring.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Threshold
+Specifies the threshold of the rule.
+
+```yaml
+Type: Double
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TimeAggregationOperator
+Specifies the aggregation operator to apply to the time window when the rule is being evaluated.
+
+```yaml
+Type: TimeAggregationOperator
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WindowSize
+Specifies the time window size for the rule to compute its data.
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

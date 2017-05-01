@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+external help file: Microsoft.Azure.Commands.MachineLearning.dll-help.xml
+ms.assetid: 608CF981-4F55-47E4-BC6E-3E04607E6D41
 online version: 
 schema: 2.0.0
-ms.assetid: 608CF981-4F55-47E4-BC6E-3E04607E6D41
 ---
 
 # Export-AzureRmMlWebService
@@ -45,18 +45,18 @@ This command exports a web service definition to a file named C:\mlservice.json.
 
 ## PARAMETERS
 
-### -WebService
-Specifies the web service definition object to be exported.
+### -Force
+ps_force
 
 ```yaml
-Type: WebService
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -90,6 +90,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WebService
+Specifies the web service definition object to be exported.
+
+```yaml
+Type: WebService
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -101,21 +116,6 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

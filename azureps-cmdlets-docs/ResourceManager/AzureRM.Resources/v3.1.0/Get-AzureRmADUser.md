@@ -14,29 +14,31 @@ Filters active directory users.
 ### EmptyParameterSet (Default)
 ```
 Get-AzureRmADUser [-UserPrincipalName <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
 Get-AzureRmADUser -SearchString <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
 Get-AzureRmADUser -ObjectId <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### UPNParameterSet
 ```
 Get-AzureRmADUser -UserPrincipalName <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### MailParameterSet
 ```
 Get-AzureRmADUser -Mail <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +49,8 @@ Filters active directory users.
 ### --------------------------  Filters users using UPN  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Get-AzureRmADUser -UPN foo@domain.com
 ```
@@ -56,6 +60,8 @@ Gets user with foo@domain.com
 ### --------------------------  Filters users using Search String  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Get-AzureRmADUser -SearchString Joe
 ```
@@ -64,6 +70,8 @@ Filters all ad users that has Joe in the display name.
 
 ### --------------------------  List AD users  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\> Get-AzureRmADUser
@@ -174,6 +182,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

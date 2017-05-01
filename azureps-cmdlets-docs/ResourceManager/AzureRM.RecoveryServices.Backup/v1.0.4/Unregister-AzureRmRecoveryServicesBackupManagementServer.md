@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: 51B14107-4F6B-4570-AC50-4C9465832B68
 online version: 
 schema: 2.0.0
-ms.assetid: 51B14107-4F6B-4570-AC50-4C9465832B68
 ---
 
 # Unregister-AzureRmRecoveryServicesBackupManagementServer
@@ -39,6 +39,22 @@ The second command unregisters the SCDPM server from the vault.
 
 ## PARAMETERS
 
+### -AzureRmBackupManagementServer
+Specifies an SCDPM server object to unregister.
+To obtain an **BackupManagementServer** object, use the Get-AzureRmRecoveryServicesBackupManagementServer cmdlet.
+
+```yaml
+Type: BackupEngineBase
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -73,22 +89,6 @@ Aliases: iv
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureRmBackupManagementServer
-Specifies an SCDPM server object to unregister.
-To obtain an **BackupManagementServer** object, use the Get-AzureRmRecoveryServicesBackupManagementServer cmdlet.
-
-```yaml
-Type: BackupEngineBase
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

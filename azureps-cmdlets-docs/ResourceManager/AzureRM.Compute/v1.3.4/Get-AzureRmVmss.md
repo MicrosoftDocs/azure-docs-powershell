@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: E633B1C7-B87E-4390-A1EE-9D73C767F242
 online version: 
 schema: 2.0.0
-ms.assetid: E633B1C7-B87E-4390-A1EE-9D73C767F242
 ---
 
 # Get-AzureRmVmss
@@ -87,6 +87,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstanceView
+Indicates that this cmdlet gets only the instance view of the virtual machine.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: InvokeByDynamicParametersForFriendMethod, InvokeByStaticParametersForFriendMethod
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of the Resource Group of the VMSS.
 
@@ -112,21 +127,6 @@ Aliases:
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstanceView
-Indicates that this cmdlet gets only the instance view of the virtual machine.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: InvokeByDynamicParametersForFriendMethod, InvokeByStaticParametersForFriendMethod
-Aliases: 
-
-Required: True
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

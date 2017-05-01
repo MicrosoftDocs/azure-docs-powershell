@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+ms.assetid: D5202B22-4DD3-446B-9208-7F04ECE3C398
 online version: 
 schema: 2.0.0
-ms.assetid: D5202B22-4DD3-446B-9208-7F04ECE3C398
 ---
 
 # Add-AzureRmEnvironment
@@ -82,6 +82,36 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix
+Specifies the Azure Data Lake Analytics catalog and job endpoint suffix.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AzureDataLakeStoreFileSystemEndpointSuffix
+Specifies the Azure Data Lake Store files system endpoint suffix.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -AzureKeyVaultDnsSuffix
 Specifies the domain name suffix for Azure Key Vault services.
 
@@ -137,6 +167,19 @@ Aliases: Gallery, GalleryUrl
 
 Required: False
 Position: 8
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GraphAudience
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: GraphEndpointResourceId, GraphResourceId
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -278,36 +321,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix
-Specifies the Azure Data Lake Analytics catalog and job endpoint suffix.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AzureDataLakeStoreFileSystemEndpointSuffix
-Specifies the Azure Data Lake Store files system endpoint suffix.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -320,20 +333,6 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GraphAudience
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: GraphEndpointResourceId, GraphResourceId
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+ms.assetid: B1E6378B-AFF9-4215-A950-FE491A6DC8D6
 online version: 
 schema: 2.0.0
-ms.assetid: B1E6378B-AFF9-4215-A950-FE491A6DC8D6
 ---
 
 # Export-AzureRmRedisCache
@@ -30,51 +30,6 @@ PS C:\>Export-AzureRmRedisCache -ResourceGroupName "ResourceGroup13" -Name "Redi
 This command exports data from an Azure Redis Cache instance into the container that is specified by the SAS URL.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of a cache.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the cache.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Prefix
-Specifies a prefix to use for blob names.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Container
 Specifies the SAS URL of container where this cmdlet exports data.
@@ -107,6 +62,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies the name of a cache.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PassThru
 Indicates that this cmdlet returns a Boolean that indicates whether the operation succeeds.
 By default, this cmdlet does not generate any output.
@@ -120,6 +90,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Prefix
+Specifies a prefix to use for blob names.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that contains the cache.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

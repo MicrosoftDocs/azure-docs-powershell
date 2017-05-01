@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 31FCCEB2-86E2-436F-A9CF-832944F35522
 online version: 
 schema: 2.0.0
-ms.assetid: 31FCCEB2-86E2-436F-A9CF-832944F35522
 ---
 
 # Add-AzureRmApplicationGatewayBackendAddressPool
@@ -68,23 +68,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of the back-end server pool that this cmdlet adds.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BackendIPAddresses
-Specifies a list of back-end IP addresses which this cmdlet adds as a back-end server pool.
+### -BackendFqdns
+Specifies a list of backend FQDNs which this cmdlet adds as a back-end server pool.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -98,8 +83,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BackendFqdns
-Specifies a list of backend FQDNs which this cmdlet adds as a back-end server pool.
+### -BackendIPAddresses
+Specifies a list of back-end IP addresses which this cmdlet adds as a back-end server pool.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -146,6 +131,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the back-end server pool that this cmdlet adds.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

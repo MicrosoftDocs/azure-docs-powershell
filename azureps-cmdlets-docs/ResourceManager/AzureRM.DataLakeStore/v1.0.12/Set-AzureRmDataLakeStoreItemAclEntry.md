@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: B6C8A446-F83A-43B9-ACAC-9B185E6DB962
 online version: 
 schema: 2.0.0
-ms.assetid: B6C8A446-F83A-43B9-ACAC-9B185E6DB962
 ---
 
 # Set-AzureRmDataLakeStoreItemAclEntry
@@ -56,16 +56,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Path
-Specifies the Data Lake Store path of the item for which to modify an ACE, starting with the root directory (/).
+### -AceType
+Specifies the type of ACE to modify.
+psdx_paramvalues
+
+- User 
+- Group 
+- Mask 
+- Other
 
 ```yaml
-Type: DataLakeStorePathInstance
-Parameter Sets: (All)
+Type: AceType
+Parameter Sets: Set specific ACE
 Aliases: 
 
 Required: True
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -86,12 +92,42 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Default
+Indicates that this operation modifies the default ACE from the specified ACL.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Set specific ACE
+Aliases: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Force
 Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Id
+Specifies the object ID of the Azurepn_Active_Directory user, group, or service principal for which to modify an ACE.
+
+```yaml
+Type: Guid
+Parameter Sets: Set specific ACE
 Aliases: 
 
 Required: False
@@ -140,37 +176,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AceType
-Specifies the type of ACE to modify.
-psdx_paramvalues
-
-- User 
-- Group 
-- Mask 
-- Other
+### -Path
+Specifies the Data Lake Store path of the item for which to modify an ACE, starting with the root directory (/).
 
 ```yaml
-Type: AceType
-Parameter Sets: Set specific ACE
+Type: DataLakeStorePathInstance
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Id
-Specifies the object ID of the Azurepn_Active_Directory user, group, or service principal for which to modify an ACE.
-
-```yaml
-Type: Guid
-Parameter Sets: Set specific ACE
-Aliases: 
-
-Required: False
-Position: 3
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -195,21 +210,6 @@ Parameter Sets: Set specific ACE
 Aliases: 
 
 Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Default
-Indicates that this operation modifies the default ACE from the specified ACL.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set specific ACE
-Aliases: 
-
-Required: False
 Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 01F42DD8-8C48-4952-B62E-7EEC4061B90A
 online version: 
 schema: 2.0.0
-ms.assetid: 01F42DD8-8C48-4952-B62E-7EEC4061B90A
 ---
 
 # Invoke-AzureRmResourceAction
@@ -343,5 +343,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

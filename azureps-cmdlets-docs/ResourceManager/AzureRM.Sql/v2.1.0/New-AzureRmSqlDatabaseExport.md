@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: FD2424E6-263C-4446-8AF5-115FA25F5408
 online version: 
 schema: 2.0.0
-ms.assetid: FD2424E6-263C-4446-8AF5-115FA25F5408
 ---
 
 # New-AzureRmSqlDatabaseExport

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+ms.assetid: 07B0C67A-6EFA-48EB-B795-8EAA4FC83646
 online version: 
 schema: 2.0.0
-ms.assetid: 07B0C67A-6EFA-48EB-B795-8EAA4FC83646
 ---
 
 # New-AzureRmStreamAnalyticsJob
@@ -45,21 +45,6 @@ This command replaces the job definition for StreamingJob without confirmation.
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the Azure Stream Analytics job to create.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -File
 Specifies the path to a JSON file that contains the JSON representation of the Azure Stream Analytics job to create.
 
@@ -90,16 +75,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the resource group to which the Azure Stream Analytics job should belong.
+### -Name
+Specifies the name of the Azure Stream Analytics job to create.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 0
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -117,6 +102,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the Azure Stream Analytics job should belong.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

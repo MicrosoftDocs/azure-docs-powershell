@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: D83F7342-AA85-4AE1-A190-72BDDF6F61A2
 online version: 
 schema: 2.0.0
-ms.assetid: D83F7342-AA85-4AE1-A190-72BDDF6F61A2
 ---
 
 # Get-AzureRmVmssVM
@@ -105,36 +105,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the Resource Group of the VMSS.
-
-```yaml
-Type: String
-Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VMScaleSetName
-Species the name of the VMSS.
-
-```yaml
-Type: String
-Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstanceId
 Specifies the instance ID for which to get the model view.
 
@@ -160,6 +130,36 @@ Aliases:
 
 Required: True
 Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the Resource Group of the VMSS.
+
+```yaml
+Type: String
+Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VMScaleSetName
+Species the name of the VMSS.
+
+```yaml
+Type: String
+Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
+Aliases: 
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

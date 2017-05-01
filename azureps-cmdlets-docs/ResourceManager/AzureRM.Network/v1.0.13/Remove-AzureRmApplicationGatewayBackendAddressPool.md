@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 4D71F65D-E50D-4151-80A1-9C0F494E1EBA
 online version: 
 schema: 2.0.0
-ms.assetid: 4D71F65D-E50D-4151-80A1-9C0F494E1EBA
 ---
 
 # Remove-AzureRmApplicationGatewayBackendAddressPool
@@ -33,21 +33,6 @@ The first command gets the application gateway named ApplicationGateway01 belong
 The second command removes the back-end address pool named BackEndPool02 from the application gateway.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the back-end address pool that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway from which this cmdlet removes a back-end address pool.
@@ -97,6 +82,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the back-end address pool that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

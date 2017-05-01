@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+ms.assetid: B3B67164-7ADF-4FE3-87AB-51DCD46ED084
 online version: 
 schema: 2.0.0
-ms.assetid: B3B67164-7ADF-4FE3-87AB-51DCD46ED084
 ---
 
 # Backup-AzureRmApiManagement
@@ -32,101 +32,6 @@ PS C:\> Backup-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "C
 This command backs up an API Management service to a Storage blob.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the of resource group under which the API Management deployment exists.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the API Management deployment that this cmdlet backs up.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageContext
-Specifies a storage connection context.
-
-```yaml
-Type: AzureStorageContext
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TargetContainerName
-Specifies the name of the container of the blob for the backup.
-If the container does not exist, this cmdlet creates it.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetBlobName
-Specifies the name of the blob for the backup.
-If the blob does not exist, this cmdlet creates it.
-This cmdlet generates a default value based on the following pattern: 
-
-{Name}-{yyyy-MM-dd-HH-mm}.apimbackup
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Indicates that this cmdlet returns the backed up **PsApiManagement** object, if the operation succeeds.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -161,6 +66,101 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the API Management deployment that this cmdlet backs up.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PassThru
+Indicates that this cmdlet returns the backed up **PsApiManagement** object, if the operation succeeds.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the of resource group under which the API Management deployment exists.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageContext
+Specifies a storage connection context.
+
+```yaml
+Type: AzureStorageContext
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetBlobName
+Specifies the name of the blob for the backup.
+If the blob does not exist, this cmdlet creates it.
+This cmdlet generates a default value based on the following pattern: 
+
+{Name}-{yyyy-MM-dd-HH-mm}.apimbackup
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetContainerName
+Specifies the name of the container of the blob for the backup.
+If the container does not exist, this cmdlet creates it.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

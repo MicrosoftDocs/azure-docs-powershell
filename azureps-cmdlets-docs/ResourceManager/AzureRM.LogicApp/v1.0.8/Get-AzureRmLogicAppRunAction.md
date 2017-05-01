@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+ms.assetid: 65E2DA44-5281-4FF4-8D21-498EC762536E
 online version: 
 schema: 2.0.0
-ms.assetid: 65E2DA44-5281-4FF4-8D21-498EC762536E
 ---
 
 # Get-AzureRmLogicAppRunAction
@@ -87,7 +87,7 @@ Specifies the name of a logic app for which this cmdlet gets an action.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named

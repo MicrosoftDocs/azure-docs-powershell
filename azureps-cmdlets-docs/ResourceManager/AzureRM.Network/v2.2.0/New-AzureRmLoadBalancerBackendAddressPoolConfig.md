@@ -12,8 +12,7 @@ Creates a backend address pool configuration for a load balancer.
 ## SYNTAX
 
 ```
-New-AzureRmLoadBalancerBackendAddressPoolConfig -Name <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+New-AzureRmLoadBalancerBackendAddressPoolConfig -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +23,10 @@ This pool contains network interfaces (NICs) for the virtual machines to be able
 
 ### --------------------------  Example 1 Creating a new backend address pool configuration for a load balancer  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\> New-AzureRmLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02"
@@ -55,35 +58,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

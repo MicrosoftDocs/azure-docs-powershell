@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 04EDBE47-8D49-4949-A18E-095FC38143F1
 online version: 
 schema: 2.0.0
-ms.assetid: 04EDBE47-8D49-4949-A18E-095FC38143F1
 ---
 
 # Remove-AzureRmExpressRouteCircuitAuthorization
@@ -42,21 +42,6 @@ The second command marks the circuit authorization ContosoCircuitAuthorization f
 The third command uses the Set-AzureRmExpressRouteCircuit cmdlet to confirm the removal of the ExpressRoute circuit stored in the $Circuit variable.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the circuit authorization that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ExpressRouteCircuit
 Specifies the ExpressRouteCircuit object that this cmdlet removes.
@@ -104,6 +89,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the circuit authorization that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

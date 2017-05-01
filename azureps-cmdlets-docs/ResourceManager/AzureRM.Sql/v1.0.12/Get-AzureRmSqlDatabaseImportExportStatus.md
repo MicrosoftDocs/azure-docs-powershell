@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: 3D74E98C-15CB-4720-BD58-1227B501DD1C
+online version: 
+schema: 2.0.0
 ---
 
 # Get-AzureRmSqlDatabaseImportExportStatus
@@ -38,21 +38,6 @@ Status              : InProgress
 This command gets the status of an import or export request for a database at the specified URL.
 
 ## PARAMETERS
-
-### -OperationStatusLink
-Specifies the status link that is returned from the [New-AzureRmSqlDatabaseExport](./New-AzureRmSqlDatabaseExport.md) or [New-AzureRmSqlDatabaseImport](./New-AzureRmSqlDatabaseImport.md) cmdlets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -90,6 +75,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OperationStatusLink
+Specifies the status link that is returned from the [New-AzureRmSqlDatabaseExport](./New-AzureRmSqlDatabaseExport.md) or [New-AzureRmSqlDatabaseImport](./New-AzureRmSqlDatabaseImport.md) cmdlets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+ms.assetid: D1D461AB-138F-42F2-8FAF-E651A8310B08
 online version: 
 schema: 2.0.0
-ms.assetid: D1D461AB-138F-42F2-8FAF-E651A8310B08
 ---
 
 # Start-AzureRmAutomationDscCompilationJob
@@ -42,7 +42,7 @@ Specifies the name of the Automation account that contains the DSC configuration
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -57,7 +57,7 @@ Specifies a dictionary of configuration data for DSC configuration.
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ Specifies a dictionary of parameters that this cmdlet uses to compile the DSC co
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Specifies the name of a resource group in which this cmdlet compiles a configura
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1

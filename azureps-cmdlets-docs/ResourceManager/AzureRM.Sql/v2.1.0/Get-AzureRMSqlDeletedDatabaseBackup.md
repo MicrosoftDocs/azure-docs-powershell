@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: 00045E85-C8EB-44E8-8C2C-38F7EAA61DD3
 online version: 
 schema: 2.0.0
-ms.assetid: 00045E85-C8EB-44E8-8C2C-38F7EAA61DD3
 ---
 
 # Get-AzureRmSqlDeletedDatabaseBackup

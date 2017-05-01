@@ -13,12 +13,16 @@ schema: 2.0.0
 
 ### RoleDefinitionIdParameterSet (Default)
 ```
-Remove-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [-Force] [-PassThru] [<CommonParameters>]
+Remove-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [-Force] [-PassThru]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RoleDefinitionNameParameterSet
 ```
-Remove-AzureRmRoleDefinition [-Name] <String> [-Scope <String>] [-Force] [-PassThru] [<CommonParameters>]
+Remove-AzureRmRoleDefinition [-Name] <String> [-Scope <String>] [-Force] [-PassThru]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,21 +39,6 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Force
-{{Fill Force Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Id
 Role definition id
 
@@ -65,20 +54,33 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Role definition name.
-For e.g.
-Reader, Contributor, Virtual Machine Contributor.
+### -Scope
+Scope of the existing role definition.
 
 ```yaml
 Type: String
-Parameter Sets: RoleDefinitionNameParameterSet
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Force
+{{Fill Force Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -97,16 +99,70 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Scope
-Scope of the existing role definition.
-
-```yaml
-Type: String
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: 
+Aliases: infa
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+@{Text=}```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Role definition name.
+For e.g.
+Reader, Contributor, Virtual Machine Contributor.
+
+```yaml
+Type: String
+Parameter Sets: RoleDefinitionNameParameterSet
+Aliases: 
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

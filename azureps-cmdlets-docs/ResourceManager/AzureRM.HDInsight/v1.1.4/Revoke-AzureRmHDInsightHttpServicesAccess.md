@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: C81AACA3-6EFA-4AEC-90FF-4CCEF4C07ECE
 online version: 
 schema: 2.0.0
-ms.assetid: C81AACA3-6EFA-4AEC-90FF-4CCEF4C07ECE
 ---
 
 # Revoke-AzureRmHDInsightHttpServicesAccess
@@ -13,8 +13,8 @@ Disables HTTP access to the cluster.
 ## SYNTAX
 
 ```
-Revoke-AzureRmHDInsightHttpServicesAccess [-ClusterName] <String> [-ResourceGroupName <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+Revoke-AzureRmHDInsightHttpServicesAccess [-ClusterName] <String> [[-ResourceGroupName] <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,21 +32,6 @@ This command revokes HTTP access to the cluster named your-hadoop_001.
 
 ## PARAMETERS
 
-### -ClusterName
-Specifies the name of the cluster.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 Specifies the name of the resource group.
 
@@ -56,46 +41,22 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
+### -ClusterName
+Specifies the name of the cluster.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

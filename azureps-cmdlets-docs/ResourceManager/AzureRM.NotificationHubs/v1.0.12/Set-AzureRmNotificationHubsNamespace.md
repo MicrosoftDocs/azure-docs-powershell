@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+ms.assetid: 1656AC01-094B-49A9-8E41-20866B6BDD3C
 online version: 
 schema: 2.0.0
-ms.assetid: 1656AC01-094B-49A9-8E41-20866B6BDD3C
 ---
 
 # Set-AzureRmNotificationHubsNamespace
@@ -51,56 +51,6 @@ This command enables the namespace named ContosoPartners located in the West US 
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the resource group to which the namespace is assigned.
-
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Namespace
-Specifies the namespace that this cmdlet modifies.
-
-Namespaces provide a way to group and categorize notification hubs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -State
-Specifies the current state of the namespace.
-psdx_paramvalues Active and Disabled.
-
-```yaml
-Type: NamespaceState
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Critical
 Indicates whether the namespace is a critical namespace.
 Critical namespaces cannot be deleted.
@@ -113,33 +63,6 @@ Aliases:
 
 Required: False
 Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tags
-Specifies name-value pairs that can be used to categorize and organize Azure items.
-Tags function similar to keywords, and operate across a deployment.
-For example, if you search for all items with the tag Department:IT the search will return all the Azure items that have that tag, regardless of such things as item type, location, or resource group.
-
-An individual tag consists of two parts: the *Name* and (optionally) the *Value*.
-For example, in Department:IT, the tag name is Department and the tag value is IT.
-To add a tag, use hash table syntax similar to this, which creates the tag CalendarYear:2016:
-
--Tags @{Name="CalendarYear";Value="2016"}
-
-To add multiple tags in the same command, separate the individual tags by using commas:
-
--Tag @{Name="CalendarYear";Value="2016"}, @{Name="FiscalYear";Value="2017"}
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -199,6 +122,83 @@ Aliases:
 
 Required: True
 Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Namespace
+Specifies the namespace that this cmdlet modifies.
+
+Namespaces provide a way to group and categorize notification hubs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the resource group to which the namespace is assigned.
+
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -State
+Specifies the current state of the namespace.
+psdx_paramvalues Active and Disabled.
+
+```yaml
+Type: NamespaceState
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+Specifies name-value pairs that can be used to categorize and organize Azure items.
+Tags function similar to keywords, and operate across a deployment.
+For example, if you search for all items with the tag Department:IT the search will return all the Azure items that have that tag, regardless of such things as item type, location, or resource group.
+
+An individual tag consists of two parts: the *Name* and (optionally) the *Value*.
+For example, in Department:IT, the tag name is Department and the tag value is IT.
+To add a tag, use hash table syntax similar to this, which creates the tag CalendarYear:2016:
+
+-Tags @{Name="CalendarYear";Value="2016"}
+
+To add multiple tags in the same command, separate the individual tags by using commas:
+
+-Tag @{Name="CalendarYear";Value="2016"}, @{Name="FiscalYear";Value="2017"}
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

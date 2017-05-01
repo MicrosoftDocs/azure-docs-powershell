@@ -13,19 +13,21 @@ schema: 2.0.0
 
 ### The list all policy assignments parameter set. (Default)
 ```
-Get-AzureRmPolicyAssignment [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmPolicyAssignment [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### The policy assignment name parameter set.
 ```
 Get-AzureRmPolicyAssignment [-Name <String>] -Scope <String> [-PolicyDefinitionId <String>]
- [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+ [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### The policy assignment Id parameter set.
 ```
 Get-AzureRmPolicyAssignment -Id <String> [-PolicyDefinitionId <String>] [-ApiVersion <String>] [-Pre]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,20 +60,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-The fully qualified policy assignment Id, including the subscription.
-e.g.
-/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
-Type: String
-Parameter Sets: The policy assignment Id parameter set.
-Aliases: ResourceId
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -84,6 +110,21 @@ Parameter Sets: The policy assignment name parameter set.
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Scope
+The policy assignment name.
+
+```yaml
+Type: String
+Parameter Sets: The policy assignment name parameter set.
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -107,28 +148,15 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Scope
-The policy assignment name.
+### -Id
+The fully qualified policy assignment Id, including the subscription.
+e.g.
+/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
 
 ```yaml
 Type: String
-Parameter Sets: The policy assignment name parameter set.
-Aliases: 
+Parameter Sets: The policy assignment Id parameter set.
+Aliases: ResourceId
 
 Required: True
 Position: Named

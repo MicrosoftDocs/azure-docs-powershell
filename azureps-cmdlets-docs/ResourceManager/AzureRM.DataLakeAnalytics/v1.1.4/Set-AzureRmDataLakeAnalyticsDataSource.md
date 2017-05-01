@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+ms.assetid: 759B453F-D7A5-4757-B5C6-EABD65452EC4
 online version: 
 schema: 2.0.0
-ms.assetid: 759B453F-D7A5-4757-B5C6-EABD65452EC4
 ---
 
 # Set-AzureRmDataLakeAnalyticsDataSource
@@ -40,6 +40,21 @@ This command changes the access key stored for an Azure Blob Storage data source
 
 ## PARAMETERS
 
+### -AccessKey
+Specifies the new access key of the Azure Blob Storage data source.
+
+```yaml
+Type: String
+Parameter Sets: Set a Blob storage account
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Account
 Specifies the Data Lake Analytics account name.
 
@@ -50,6 +65,21 @@ Aliases: AccountName
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Blob
+Specifies the name of the Azure Blob Storage data source.
+
+```yaml
+Type: String
+Parameter Sets: Set a Blob storage account
+Aliases: AzureBlob
+
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -80,21 +110,6 @@ Aliases:
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the resource group name of the Data Lake Analytics account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -139,31 +154,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Blob
-Specifies the name of the Azure Blob Storage data source.
+### -ResourceGroupName
+Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
 Type: String
-Parameter Sets: Set a Blob storage account
-Aliases: AzureBlob
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AccessKey
-Specifies the new access key of the Azure Blob Storage data source.
-
-```yaml
-Type: String
-Parameter Sets: Set a Blob storage account
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 2
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

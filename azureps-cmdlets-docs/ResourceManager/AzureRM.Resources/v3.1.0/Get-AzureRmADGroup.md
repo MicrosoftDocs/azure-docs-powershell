@@ -14,17 +14,19 @@ Filters active directory groups.
 ### EmptyParameterSet (Default)
 ```
 Get-AzureRmADGroup [-ObjectId <Guid>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
 Get-AzureRmADGroup -SearchString <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
 Get-AzureRmADGroup -ObjectId <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +37,8 @@ Filters active directory groups.
 ### --------------------------  Filters groups using object id  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Get-AzureRmADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
 ```
@@ -44,6 +48,8 @@ Gets group with 85F89C90-780E-4AA6-9F4F-6F268D322EEE id
 ### --------------------------  Filters groups using Search String  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Get-AzureRmADGroup -SearchString Joe
 ```
@@ -52,6 +58,8 @@ Filters all ad groups that has Joe in the display name.
 
 ### --------------------------  List AD groups  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\> Get-AzureRmADGroup
@@ -132,6 +140,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

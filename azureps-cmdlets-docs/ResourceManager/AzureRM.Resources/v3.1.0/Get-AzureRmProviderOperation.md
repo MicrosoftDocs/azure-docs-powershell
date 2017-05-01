@@ -13,7 +13,7 @@ Gets the operations for an Azure resource provider that are securable using Azur
 
 ```
 Get-AzureRmProviderOperation [-OperationSearchString] <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,8 @@ Use Get-AzureRmProviderOperation Microsoft.Compute/* to get all operations of Mi
 ### --------------------------  Get all actions for all providers  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Get-AzureRmProviderOperation *
 ```
@@ -37,12 +39,16 @@ PS C:\> Get-AzureRmProviderOperation *
 ### --------------------------  Get actions for a particular resource provider  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Get-AzureRmProviderOperation Microsoft.Insights/*
 ```
 
 ### --------------------------  Get all actions that can be performed on virtual machines  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\> Get-AzureRmProviderOperation */virtualMachines/*
@@ -94,6 +100,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

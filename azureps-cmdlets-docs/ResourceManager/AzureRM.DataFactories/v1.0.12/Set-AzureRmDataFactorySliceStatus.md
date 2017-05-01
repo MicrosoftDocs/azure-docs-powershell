@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+ms.assetid: 1B6814DF-8670-48CD-B8B2-55EAB5201D56
 online version: 
 schema: 2.0.0
-ms.assetid: 1B6814DF-8670-48CD-B8B2-55EAB5201D56
 ---
 
 # Set-AzureRmDataFactorySliceStatus
@@ -70,6 +70,21 @@ Aliases:
 
 Required: True
 Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DatasetName
+Specifies the name of the dataset for which this cmdlet modifies slices.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -157,21 +172,6 @@ Required: True
 Position: 6
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatasetName
-Specifies the name of the dataset for which this cmdlet modifies slices.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

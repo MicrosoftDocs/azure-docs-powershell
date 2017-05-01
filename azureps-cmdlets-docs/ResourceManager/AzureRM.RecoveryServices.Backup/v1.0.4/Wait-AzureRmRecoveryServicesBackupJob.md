@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: FD26D1CD-C9F8-4CA3-8ACD-94D3986D2328
 online version: 
 schema: 2.0.0
-ms.assetid: FD26D1CD-C9F8-4CA3-8ACD-94D3986D2328
 ---
 
 # Wait-AzureRmRecoveryServicesBackupJob
@@ -50,38 +50,6 @@ This script polls the first job that is currently in progress until the job has 
 
 ## PARAMETERS
 
-### -Job
-Specifies the job to wait for.
-To obtain a **BackupJob** object, use the Get-AzureRmRecoveryServicesBackupJob cmdlet.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Timeout
-Specifies the maximum time, in seconds, that this cmdlet waits for the job to finish.
-It is recommended to specify a time-out value.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -116,6 +84,38 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Job
+Specifies the job to wait for.
+To obtain a **BackupJob** object, use the Get-AzureRmRecoveryServicesBackupJob cmdlet.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Timeout
+Specifies the maximum time, in seconds, that this cmdlet waits for the job to finish.
+It is recommended to specify a time-out value.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

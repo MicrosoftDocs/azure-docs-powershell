@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 67B3E938-C1A7-4017-A144-300085423EAE
 online version: 
 schema: 2.0.0
-ms.assetid: 67B3E938-C1A7-4017-A144-300085423EAE
 ---
 
 # Get-AzureRmApplicationGatewayIPConfiguration
@@ -40,21 +40,6 @@ PS C:\> $GatewaySubnets = Get-AzureRmApplicationGatewayIPConfiguration -Applicat
 The first command gets an application gateway and stores it in the $AppGw variable.The second command gets a list of all IP configurations.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the IP configuration which this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway object that contains IP configuration.
@@ -102,6 +87,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the IP configuration which this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

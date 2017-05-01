@@ -14,15 +14,13 @@ Adds a front-end IP configuration to an application gateway.
 ### SetByResourceId
 ```
 Add-AzureRmApplicationGatewayFrontendIPConfig -ApplicationGateway <PSApplicationGateway> -Name <String>
- [-PrivateIPAddress <String>] [-SubnetId <String>] [-PublicIPAddressId <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-PrivateIPAddress <String>] [-SubnetId <String>] [-PublicIPAddressId <String>] [<CommonParameters>]
 ```
 
 ### SetByResource
 ```
 Add-AzureRmApplicationGatewayFrontendIPConfig -ApplicationGateway <PSApplicationGateway> -Name <String>
- [-PrivateIPAddress <String>] [-Subnet <PSSubnet>] [-PublicIPAddress <PSPublicIpAddress>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-PrivateIPAddress <String>] [-Subnet <PSSubnet>] [-PublicIPAddress <PSPublicIpAddress>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +37,10 @@ Add the public IP address and private IP address as separate front-end IPs.
 ### --------------------------  Example 1: Add a public IP as the frontend IP address  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\> $PublicIp = New-AzureRmPublicIpAddress -ResourceGroupName "ResourceGroup01" -Name "PublicIp01" -location "West US" -AllocationMethod Dynamic
 PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -49,6 +51,10 @@ The first command creates a public IP address object and stores it in the $Publi
 
 ### --------------------------  Example 2: Add a static private IP as the frontend IP address  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$VNet = Get-AzureRmvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
@@ -63,6 +69,10 @@ The fourth command adds a front-end IP configuration named FrontendIP02 using $S
 
 ### --------------------------  Example 3: Add a dynamic private IP as the frontend IP address  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$VNet = Get-AzureRmvirtualNetwork -Name "VNet01" -ResourceGroupName "ResourceGroup01"
@@ -123,6 +133,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Subnet
+Specifies the subnet which this cmdlet adds as front-end IP configuration.
+If you specify this parameter, it implies that the application gateway supports a private IP based-configuration.
+If the PrivateIPAddress parameter is specified, it should belong to this subnet.
+If PrivateIPAddress is not specified, one of the IP addresses from this subnet is dynamically picked up as the front-end IP address of the application gateway.
+
+```yaml
+Type: PSSubnet
+Parameter Sets: SetByResource
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicIPAddress
+Specifies the public IP address which this cmdlet adds as a front-end IP address for the application gateway.
+
+```yaml
+Type: PSPublicIpAddress
+Parameter Sets: SetByResource
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SubnetId
 Specifies the subnet ID which this cmdlet adds as the front-end IP configuration.
 Passing subnet implies private IP.
@@ -156,68 +199,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Subnet
-Specifies the subnet which this cmdlet adds as front-end IP configuration.
-If you specify this parameter, it implies that the application gateway supports a private IP based-configuration.
-If the PrivateIPAddress parameter is specified, it should belong to this subnet.
-If PrivateIPAddress is not specified, one of the IP addresses from this subnet is dynamically picked up as the front-end IP address of the application gateway.
-
-```yaml
-Type: PSSubnet
-Parameter Sets: SetByResource
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicIPAddress
-Specifies the public IP address which this cmdlet adds as a front-end IP address for the application gateway.
-
-```yaml
-Type: PSPublicIpAddress
-Parameter Sets: SetByResource
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

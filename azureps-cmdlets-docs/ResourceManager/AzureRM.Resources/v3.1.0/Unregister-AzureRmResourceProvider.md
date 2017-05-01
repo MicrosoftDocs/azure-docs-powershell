@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: B373AC40-6BED-44A7-80B7-AB3A8FE9B8A3
 online version: 
 schema: 2.0.0
-ms.assetid: B373AC40-6BED-44A7-80B7-AB3A8FE9B8A3
 ---
 
 # Unregister-AzureRmResourceProvider
@@ -21,7 +21,6 @@ Unregister-AzureRmResourceProvider -ProviderNamespace <String> [-ApiVersion <Str
 The **Unregister-AzureRmResourceProvider** cmdlet unregisters an Azure resource provider.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 

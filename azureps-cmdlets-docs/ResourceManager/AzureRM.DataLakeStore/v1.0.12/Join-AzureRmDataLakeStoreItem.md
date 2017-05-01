@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 4C073799-6ACD-43A1-B2E5-BAA708165047
 online version: 
 schema: 2.0.0
-ms.assetid: 4C073799-6ACD-43A1-B2E5-BAA708165047
 ---
 
 # Join-AzureRmDataLakeStoreItem
@@ -42,21 +42,6 @@ Aliases: AccountName
 
 Required: True
 Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Paths
-Specifies an array of Data Lake Store paths of the files to combine, starting with the root directory (/).
-
-```yaml
-Type: DataLakeStorePathInstance[]
-Parameter Sets: (All)
-Aliases: Path
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -128,6 +113,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Paths
+Specifies an array of Data Lake Store paths of the files to combine, starting with the root directory (/).
+
+```yaml
+Type: DataLakeStorePathInstance[]
+Parameter Sets: (All)
+Aliases: Path
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

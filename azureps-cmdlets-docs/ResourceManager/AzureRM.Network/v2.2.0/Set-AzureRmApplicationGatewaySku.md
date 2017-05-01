@@ -13,7 +13,7 @@ Modifies the SKU of an application gateway.
 
 ```
 Set-AzureRmApplicationGatewaySku -ApplicationGateway <PSApplicationGateway> -Name <String> -Tier <String>
- -Capacity <Int32> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ -Capacity <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,6 +23,8 @@ The Set-AzureRmApplicationGatewaySku cmdlet modifies the stock keeping unit (SKU
 
 ### --------------------------  Example 1: Update the application gateway SKU  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -93,35 +95,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

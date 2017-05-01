@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: E2E11D7C-F290-488E-A3F4-6C9D0CFE8CBE
 online version: 
 schema: 2.0.0
-ms.assetid: E2E11D7C-F290-488E-A3F4-6C9D0CFE8CBE
 ---
 
 # Get-AzureRmVMExtensionImageType
@@ -13,7 +13,8 @@ Gets the type of an Azure extension.
 ## SYNTAX
 
 ```
-Get-AzureRmVMExtensionImageType -Location <String> -PublisherName <String> [<CommonParameters>]
+Get-AzureRmVMExtensionImageType -Location <String> -PublisherName <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,6 +61,32 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

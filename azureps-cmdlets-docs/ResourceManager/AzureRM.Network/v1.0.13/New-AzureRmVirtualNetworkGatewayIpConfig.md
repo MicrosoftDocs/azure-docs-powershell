@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 92209989-EBA1-4079-81C4-34EB09CD9A3E
 online version: 
 schema: 2.0.0
-ms.assetid: 92209989-EBA1-4079-81C4-34EB09CD9A3E
 ---
 
 # New-AzureRmVirtualNetworkGatewayIpConfig
@@ -35,62 +35,6 @@ New-AzureRmVirtualNetworkGatewayIpConfig -Name <String> [-PrivateIpAddress <Stri
 ```
 
 ## PARAMETERS
-
-### -Name
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrivateIpAddress
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SubnetId
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicIpAddressId
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -131,8 +75,59 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Subnet
+### -Name
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivateIpAddress
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicIpAddress
+```yaml
+Type: PSPublicIpAddress
+Parameter Sets: SetByResource
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicIpAddressId
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Subnet
 ```yaml
 Type: PSSubnet
 Parameter Sets: SetByResource
@@ -145,11 +140,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PublicIpAddress
-
+### -SubnetId
 ```yaml
-Type: PSPublicIpAddress
-Parameter Sets: SetByResource
+Type: String
+Parameter Sets: SetByResourceId
 Aliases: 
 
 Required: False
@@ -169,5 +163,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

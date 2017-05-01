@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 0A968F2E-AFA6-4431-B518-A6AAF9744B29
 online version: 
 schema: 2.0.0
-ms.assetid: 0A968F2E-AFA6-4431-B518-A6AAF9744B29
 ---
 
 # Start-AzureRmVmss
@@ -78,6 +78,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstanceId
+Specifies, as a string array, the ID or IDs of the instances that cmdlet starts.
+For instance: `-InstanceId "0", "3"`
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of the resource group of the VMSS.
 
@@ -103,22 +119,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstanceId
-Specifies, as a string array, the ID or IDs of the instances that cmdlet starts.
-For instance: `-InstanceId "0", "3"`
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

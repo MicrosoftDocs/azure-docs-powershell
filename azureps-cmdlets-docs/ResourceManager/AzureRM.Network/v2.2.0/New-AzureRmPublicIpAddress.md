@@ -13,9 +13,8 @@ Creates a public IP address.
 
 ```
 New-AzureRmPublicIpAddress [-Name <String>] -ResourceGroupName <String> [-Location <String>]
- -AllocationMethod <String> [-IpAddressVersion <String>] [-DomainNameLabel <String>] [-ReverseFqdn <String>]
- [-IdleTimeoutInMinutes <Int32>] [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ -AllocationMethod <String> [-DomainNameLabel <String>] [-ReverseFqdn <String>] [-IdleTimeoutInMinutes <Int32>]
+ [-Tag <Hashtable[]>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,6 +24,10 @@ The New-AzureRmPublicIpAddress cmdlet creates a public IP address.
 
 ### --------------------------  1: Create a new public IP address.  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 $publicIp = New-AzureRmPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName `
@@ -38,6 +41,10 @@ If it is specified as 'Dynamic', a public IP address gets allocated only when yo
 
 ### --------------------------  2: Create a public IP address with a reverse FQDN  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 $publicIp = New-AzureRmPublicIpAddress -Name $publicIpName -ResourceGroupName $rgName `
@@ -113,21 +120,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -IpAddressVersion
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DomainNameLabel
 Specifies the relative DNS name for a public IP address.
 A DNS record is created for $DomainNameLabel.$location.cloudapp.azure.com pointing to the public IP address of this resource, if the FQDN is available.
@@ -185,7 +177,7 @@ Accept wildcard characters: False
 Specifies a dictionary of tags to associate with a public IP address.
 
 ```yaml
-Type: Hashtable
+Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -211,65 +203,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

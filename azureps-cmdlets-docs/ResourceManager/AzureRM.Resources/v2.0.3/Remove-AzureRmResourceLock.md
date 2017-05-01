@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 4669FDC5-6F1D-4465-8E5B-7EE62855CF24
 online version: 
 schema: 2.0.0
-ms.assetid: 4669FDC5-6F1D-4465-8E5B-7EE62855CF24
 ---
 
 # Remove-AzureRmResourceLock
@@ -19,18 +19,18 @@ Remove-AzureRmResourceLock [-Force] -LockId <String> [-ApiVersion <String>] [-Pr
  [<CommonParameters>]
 ```
 
+### A lock at the subscription scope.
+```
+Remove-AzureRmResourceLock -LockName <String> [-Force] [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### A lock at the subscription resource scope.
 ```
 Remove-AzureRmResourceLock -LockName <String> [-Force] -ResourceName <String> -ResourceType <String>
  [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### A lock at the tenant resource scope.
-```
-Remove-AzureRmResourceLock -LockName <String> [-Force] -ResourceName <String> -ResourceType <String>
- [-TenantLevel] [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### A lock at the resource group scope.
@@ -54,11 +54,11 @@ Remove-AzureRmResourceLock -LockName <String> [-Force] -Scope <String> [-ApiVers
  [<CommonParameters>]
 ```
 
-### A lock at the subscription scope.
+### A lock at the tenant resource scope.
 ```
-Remove-AzureRmResourceLock -LockName <String> [-Force] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmResourceLock -LockName <String> [-Force] -ResourceName <String> -ResourceType <String>
+ [-TenantLevel] [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +83,7 @@ Server`/`Database
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the tenant resource scope., A lock at the resource group resource scope.
+Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
 Aliases: 
 
 Required: True
@@ -98,7 +98,7 @@ Specifies the resource type of the resource for which the lock applies.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the tenant resource scope., A lock at the resource group resource scope.
+Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
 Aliases: 
 
 Required: True
@@ -274,7 +274,7 @@ Specifies the name of the lock that this cmdlet removes.
 
 ```yaml
 Type: String
-Parameter Sets: A lock at the subscription resource scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the resource group resource scope., A lock at the specified scope., A lock at the subscription scope.
+Parameter Sets: A lock at the subscription scope., A lock at the subscription resource scope., A lock at the resource group scope., A lock at the resource group resource scope., A lock at the specified scope., A lock at the tenant resource scope.
 Aliases: ExtensionResourceName, Name
 
 Required: True

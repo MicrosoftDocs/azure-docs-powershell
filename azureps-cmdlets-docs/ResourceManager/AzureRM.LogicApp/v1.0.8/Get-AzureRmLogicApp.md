@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+ms.assetid: E56CB6EC-1965-46CC-9ED9-FE130E7EBB83
 online version: 
 schema: 2.0.0
-ms.assetid: E56CB6EC-1965-46CC-9ED9-FE130E7EBB83
 ---
 
 # Get-AzureRmLogicApp
@@ -13,8 +13,8 @@ Gets a logic app from a resource group.
 ## SYNTAX
 
 ```
-Get-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-Version <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,9 +77,22 @@ Specifies the name of the logic app that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Version
+Specifies the version of the Logic App. This parameter is optional.```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

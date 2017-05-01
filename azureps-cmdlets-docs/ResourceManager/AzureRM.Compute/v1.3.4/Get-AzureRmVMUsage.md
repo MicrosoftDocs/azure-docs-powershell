@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 3018FDB7-786D-418D-A517-D8665EAF8D85
 online version: 
 schema: 2.0.0
-ms.assetid: 3018FDB7-786D-418D-A517-D8665EAF8D85
 ---
 
 # Get-AzureRmVMUsage
@@ -30,21 +30,6 @@ PS C:\>Get-AzureRmVMUsage -Location "Central US"
 This command gets the virtual machine core count usage for the location Central US.
 
 ## PARAMETERS
-
-### -Location
-Specifies the location for which this cmdlet gets virtual machine core count usage.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -82,6 +67,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+Specifies the location for which this cmdlet gets virtual machine core count usage.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -14,9 +14,7 @@ Creates back-end HTTP settings for an application gateway.
 ```
 New-AzureRmApplicationGatewayBackendHttpSettings -Name <String> -Port <Int32> -Protocol <String>
  -CookieBasedAffinity <String> [-RequestTimeout <UInt32>] [-ProbeId <String>]
- [-Probe <PSApplicationGatewayProbe>]
- [-AuthenticationCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-Probe <PSApplicationGatewayProbe>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,6 +25,10 @@ Back-end HTTP settings are applied to all back-end servers in a pool.
 
 ### --------------------------  Example 1: Create backend HTTP settings  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\> $Setting = New-AzureRmApplicationGatewayBackendHttpSettings -Name "Setting01" -Port 80 -Protocol Http -CookieBasedAffinity Disabled
@@ -97,11 +99,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RequestTimeout
+### -Probe
 @{Text=}
 
 ```yaml
-Type: UInt32
+Type: PSApplicationGatewayProbe
 Parameter Sets: (All)
 Aliases: 
 
@@ -127,11 +129,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Probe
+### -RequestTimeout
 @{Text=}
 
 ```yaml
-Type: PSApplicationGatewayProbe
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,50 +144,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuthenticationCertificates
-@{Text=}
-
-```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

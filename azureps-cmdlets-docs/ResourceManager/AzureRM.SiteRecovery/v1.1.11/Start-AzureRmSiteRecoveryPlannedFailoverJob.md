@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 55AB322C-9E09-4B28-B2D2-7876B70B3560
 online version: 
 schema: 2.0.0
-ms.assetid: 55AB322C-9E09-4B28-B2D2-7876B70B3560
 ---
 
 # Start-AzureRmSiteRecoveryPlannedFailoverJob
@@ -38,6 +38,54 @@ You can check whether the job succeeds by using the Get-AzureRmSiteRecoveryJob c
 ```
 
 ## PARAMETERS
+
+### -CreateVmIfNotFound
+psdx_paramvalues
+
+- Yes
+- No
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataEncryptionPrimaryCertFile
+Specifies the primary certificate file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataEncryptionSecondaryCertFile
+Specifies the secondary certificate file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Direction
 Specifies the direction of the failover.
@@ -102,54 +150,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -CreateVmIfNotFound
-psdx_paramvalues
-
-- Yes
-- No
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DataEncryptionPrimaryCertFile
-Specifies the primary certificate file.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DataEncryptionSecondaryCertFile
-Specifies the secondary certificate file.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RecoveryPlan
 Specifies a recovery plan object.
 
@@ -166,7 +166,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-
 ```yaml
 Type: ASRServer
 Parameter Sets: (All)
@@ -189,5 +188,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

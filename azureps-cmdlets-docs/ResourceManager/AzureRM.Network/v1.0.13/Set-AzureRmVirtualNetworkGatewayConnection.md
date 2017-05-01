@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 3A01709E-5C77-4EA0-9750-35A67581F400
 online version: 
 schema: 2.0.0
-ms.assetid: 3A01709E-5C77-4EA0-9750-35A67581F400
 ---
 
 # Set-AzureRmVirtualNetworkGatewayConnection
@@ -29,21 +29,6 @@ The **Set-AzureRmVirtualNetworkGatewayConnection** cmdlet configures a virtual n
 ```
 
 ## PARAMETERS
-
-### -VirtualNetworkGatewayConnection
-Specifies the PSVirtualNetworkGatewayConnection object that this cmdlet uses to modify the virtual network gateway connection.
-
-```yaml
-Type: PSVirtualNetworkGatewayConnection
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -Force
 ps_force
@@ -96,6 +81,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VirtualNetworkGatewayConnection
+Specifies the PSVirtualNetworkGatewayConnection object that this cmdlet uses to modify the virtual network gateway connection.
+
+```yaml
+Type: PSVirtualNetworkGatewayConnection
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

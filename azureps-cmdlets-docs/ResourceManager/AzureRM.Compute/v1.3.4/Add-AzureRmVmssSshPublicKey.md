@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 69E2B40E-CFBC-4CF7-BF39-4CFE09B99F25
 online version: 
 schema: 2.0.0
-ms.assetid: 69E2B40E-CFBC-4CF7-BF39-4CFE09B99F25
 ---
 
 # Add-AzureRmVmssSshPublicKey
@@ -35,53 +35,6 @@ The first command uses the **New-AzureRmVmssConfig** cmdlet to create a VMSS con
 The second command adds an SSH key with the specified key data and stores the key at the specified path on the virtual machine.
 
 ## PARAMETERS
-
-### -VirtualMachineScaleSet
-Specifies the VMSS object.
-You can use the New-AzureRmVmssConfig cmdlet to create the object.
-
-```yaml
-Type: VirtualMachineScaleSet
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Path
-Specifies the full path of a file, on the virtual machine, where this cmdlet stores the SSH public key.
-If the file already exists, this cmdlet appends the key to the file.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyData
-Specifies a SSH RSA public key data.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -119,6 +72,53 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyData
+Specifies a SSH RSA public key data.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the full path of a file, on the virtual machine, where this cmdlet stores the SSH public key.
+If the file already exists, this cmdlet appends the key to the file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualMachineScaleSet
+Specifies the VMSS object.
+You can use the New-AzureRmVmssConfig cmdlet to create the object.
+
+```yaml
+Type: VirtualMachineScaleSet
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

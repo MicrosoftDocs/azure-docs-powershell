@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+ms.assetid: 36C11DD3-5843-49D2-8BAA-9F5AA737D345
 online version: 
 schema: 2.0.0
-ms.assetid: 36C11DD3-5843-49D2-8BAA-9F5AA737D345
 ---
 
 # New-AzureRmAutomationSchedule
@@ -91,7 +91,7 @@ Specifies the name of an Automation account for which this cmdlet creates a sche
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -107,162 +107,9 @@ If you do not specify this parameter, and you do not specify the *OneTime* param
 ```yaml
 Type: Byte
 Parameter Sets: ByDaily
-Aliases:
+Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-Specifies a description for the schedule.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ExpiryTime
-Specifies the expiry time of a schedule as a **DateTimeOffest** object.
-You can specify a string that can be converted to a valid **DateTimeOffset**.
-
-```yaml
-Type: DateTimeOffset
-Parameter Sets: ByDaily, ByWeekly, ByMonthlyDaysOfMonth, ByMonthlyDayOfWeek, ByHourly
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HourInterval
-Specifies an interval, in hours, for the schedule.
-
-```yaml
-Type: Byte
-Parameter Sets: ByHourly
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies a name for the schedule.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -OneTime
-Specifies that the cmdlet creates a one-time schedule.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: ByOneTime
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of a resource group for which this cmdlet creates a schedule.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StartTime
-Specifies the start time of a schedule as a **DateTimeOffset** object.
-You can specify a string that can be converted to a valid **DateTimeOffset**.
-. If the *TimeZone* parameter is specified, the offset will be ignored and the time zone specified is used.
-
-```yaml
-Type: DateTimeOffset
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WeekInterval
-Specifies an interval, in weeks, for the schedule.
-
-```yaml
-Type: Byte
-Parameter Sets: ByWeekly
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MonthInterval
-Specifies an interval, in Months, for the schedule.
-
-```yaml
-Type: Byte
-Parameter Sets: ByMonthlyDaysOfMonth, ByMonthlyDayOfWeek
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DaysOfWeek
-Specifies a list of days of the week for the weekly schedule.
-
-```yaml
-Type: DayOfWeek[]
-Parameter Sets: ByWeekly
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -275,7 +122,7 @@ Specifies a list of days of the week for the weekly schedule.
 ```yaml
 Type: DayOfWeek
 Parameter Sets: ByMonthlyDayOfWeek
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -302,12 +149,165 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DayOfWeekOccurrence
 Parameter Sets: ByMonthlyDayOfWeek
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DaysOfMonth
+Specifies a list of days of the month for the monthly schedule.
+
+```yaml
+Type: DaysOfMonth[]
+Parameter Sets: ByMonthlyDaysOfMonth
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DaysOfWeek
+Specifies a list of days of the week for the weekly schedule.
+
+```yaml
+Type: DayOfWeek[]
+Parameter Sets: ByWeekly
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Specifies a description for the schedule.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExpiryTime
+Specifies the expiry time of a schedule as a **DateTimeOffest** object.
+You can specify a string that can be converted to a valid **DateTimeOffset**.
+
+```yaml
+Type: DateTimeOffset
+Parameter Sets: ByDaily, ByWeekly, ByMonthlyDaysOfMonth, ByMonthlyDayOfWeek, ByHourly
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HourInterval
+Specifies an interval, in hours, for the schedule.
+
+```yaml
+Type: Byte
+Parameter Sets: ByHourly
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MonthInterval
+Specifies an interval, in Months, for the schedule.
+
+```yaml
+Type: Byte
+Parameter Sets: ByMonthlyDaysOfMonth, ByMonthlyDayOfWeek
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a name for the schedule.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OneTime
+Specifies that the cmdlet creates a one-time schedule.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ByOneTime
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of a resource group for which this cmdlet creates a schedule.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartTime
+Specifies the start time of a schedule as a **DateTimeOffset** object.
+You can specify a string that can be converted to a valid **DateTimeOffset**.
+. If the *TimeZone* parameter is specified, the offset will be ignored and the time zone specified is used.
+
+```yaml
+Type: DateTimeOffset
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -318,7 +318,7 @@ This string can be the IANA ID or the Windows Time Zone ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -327,15 +327,15 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DaysOfMonth
-Specifies a list of days of the month for the monthly schedule.
+### -WeekInterval
+Specifies an interval, in weeks, for the schedule.
 
 ```yaml
-Type: DaysOfMonth[]
-Parameter Sets: ByMonthlyDaysOfMonth
-Aliases:
+Type: Byte
+Parameter Sets: ByWeekly
+Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

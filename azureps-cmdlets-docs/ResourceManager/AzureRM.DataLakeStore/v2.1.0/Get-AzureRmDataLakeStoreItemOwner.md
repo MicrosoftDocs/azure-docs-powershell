@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: 3CA5CDFE-E3FF-4610-8921-CC403B343823
 online version: 
 schema: 2.0.0
-ms.assetid: 3CA5CDFE-E3FF-4610-8921-CC403B343823
 ---
 
 # Get-AzureRmDataLakeStoreItemOwner
@@ -13,8 +13,8 @@ Gets the owner of a file or folder in Data Lake Store.
 ## SYNTAX
 
 ```
-Get-AzureRmDataLakeStoreItemOwner [-Account] <String> [-Path] <DataLakeStorePathInstance> [-Type] <Owner>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmDataLakeStoreItemOwner -Account <String> [-Path] <DataLakeStorePathInstance> [-Type] <Owner>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,21 +31,6 @@ This command gets the user owner for the root directory of the ContosoADL accoun
 
 ## PARAMETERS
 
-### -Account
-Specifies the name of the Data Lake Store account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: AccountName
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Path
 Specifies the Data Lake Store path of an item, starting with the root directory (/).
 
@@ -55,7 +40,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -69,50 +54,27 @@ The acceptable values for this parameter are: User and Group.
 Type: Owner
 Parameter Sets: (All)
 Aliases: 
+Accepted values: User, Group
 
 Required: True
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
+### -Account
+Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: AccountName
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

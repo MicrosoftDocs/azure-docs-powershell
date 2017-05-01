@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: BBD17ED6-E352-4F6B-BEE2-40A9C666773E
 online version: 
 schema: 2.0.0
-ms.assetid: BBD17ED6-E352-4F6B-BEE2-40A9C666773E
 ---
 
 # Get-ACSRoleInstanceMetric
@@ -39,6 +39,59 @@ This command returns metrics for the TableMaster role associated with the storag
 
 ## PARAMETERS
 
+### -AdminUri
+Specifies the location of the Resource Manager endpoint.
+If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DetailedOutput
+Indicates that complete information, including all the available metadata, is returned for each metric.
+By default, **Get-ACSRoleInstanceMetric** returns only partial data for each metric.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EndTime
+Specifies the end date and time for queries using a designated time interval.
+For example, if you want to return information only for the period March 1, 2016 through March 8, 2016 the *EndTime* is configured similar to this, depending on your computer's Region settings:
+
+`-EndTime "3/8/2016"`
+
+If you use the *EndTime* parameter you must also use the *StartTime* parameter, and the *EndTime* must be later than the *StartTime*.
+If you do not use these parameters then **Get-ACSRoleInstanceMetric** returns all the available data regardless of date.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -FarmName
 Specifies the name of the storage farm associated with the target role instance.
 For example:
@@ -54,6 +107,74 @@ Aliases:
 
 Required: True
 Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InstanceId
+Specifies the role instance to be returned.
+The InstanceId is required because it is possible for more than one VM to hold the same role: your deployment might have multiple table servers or multiple blob frontend servers.
+
+For example:
+
+`-InstanceId "TM_01"`
+
+You can return InstanceIDs for all your storage server roles by using the Get-ACSRoleInstance cmdlet:
+
+``Get-ACSRoleInstance
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MetricNames
+Specifies the names of the metrics to be returned.
+For example:
+
+`-MetricNames "TotalRequests"`
+
+To specify multiple metrics, separate the metric names by using commas:
+
+`-MetricNames "TotalRequests", "PercentSuccess"`
+
+If this parameter is not included information is returned for all the available metrics.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group associated with the target storage role instance.
+For example:
+
+`-ResourceGroupName "ContosoResourceGroup"`
+
+Resource groups categorize items to help simplify inventory management and overall Azure administration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -89,27 +210,19 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InstanceId
-Specifies the role instance to be returned.
-The InstanceId is required because it is possible for more than one VM to hold the same role: your deployment might have multiple table servers or multiple blob frontend servers.
-
-For example:
-
-`-InstanceId "TM_01"`
-
-You can return InstanceIDs for all your storage server roles by using the Get-ACSRoleInstance cmdlet:
-
-``Get-ACSRoleInstance
+### -SkipCertificateValidation
+Indicates that the command proceeds without validating the Secure Sockets Layer (SSL) certificate.
+By default, storage service commands require certification validation.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 6
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -134,22 +247,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -EndTime
-Specifies the end date and time for queries using a designated time interval.
-For example, if you want to return information only for the period March 1, 2016 through March 8, 2016 the *EndTime* is configured similar to this, depending on your computer's Region settings:
+### -SubscriptionId
+Specifies the Azure subscription ID.
+For example:
 
-`-EndTime "3/8/2016"`
+`-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
 
-If you use the *EndTime* parameter you must also use the *StartTime* parameter, and the *EndTime* must be later than the *StartTime*.
-If you do not use these parameters then **Get-ACSRoleInstanceMetric** returns all the available data regardless of date.
+If the Azure environment has already been configured by using the **Set-AzureRmEnvironment** cmdlet then you do not need to use this parameter.
 
 ```yaml
-Type: DateTime
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 6
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -179,50 +291,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MetricNames
-Specifies the names of the metrics to be returned.
-For example:
-
-`-MetricNames "TotalRequests"`
-
-To specify multiple metrics, separate the metric names by using commas:
-
-`-MetricNames "TotalRequests", "PercentSuccess"`
-
-If this parameter is not included information is returned for all the available metrics.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SubscriptionId
-Specifies the Azure subscription ID.
-For example:
-
-`-SubscriptionID "81c87063-04a3-4abf-8e4c-736569bc1f60"`
-
-If the Azure environment has already been configured by using the **Set-AzureRmEnvironment** cmdlet then you do not need to use this parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Token
 Specifies the authentication token for the service administrator.
 This parameter is not required if you have configured your environment by using the **Set-AzureRmEnvironment** cmdlet.
@@ -234,74 +302,6 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminUri
-Specifies the location of the Resource Manager endpoint.
-If you configured your environment by using the Set-AzureRMEnvironment cmdlet, you do not have to specify this parameter.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group associated with the target storage role instance.
-For example:
-
-`-ResourceGroupName "ContosoResourceGroup"`
-
-Resource groups categorize items to help simplify inventory management and overall Azure administration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkipCertificateValidation
-Indicates that the command proceeds without validating the Secure Sockets Layer (SSL) certificate.
-By default, storage service commands require certification validation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DetailedOutput
-Indicates that complete information, including all the available metadata, is returned for each metric.
-By default, **Get-ACSRoleInstanceMetric** returns only partial data for each metric.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

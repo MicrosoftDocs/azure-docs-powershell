@@ -11,12 +11,11 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Set-AzureRmExpressRouteCircuitPeeringConfig -Name <String> -ExpressRouteCircuit <PSExpressRouteCircuit>
- -PeeringType <String> -PeerASN <Int32> -PrimaryPeerAddressPrefix <String> -SecondaryPeerAddressPrefix <String>
- -VlanId <Int32> [-SharedKey <String>]
+Set-AzureRmExpressRouteCircuitPeeringConfig -Name <String> -Circuit <PSExpressRouteCircuit>
+ -PeeringType <String> [-PeerASN <Int32>] -PrimaryPeerAddressPrefix <String>
+ -SecondaryPeerAddressPrefix <String> -VlanId <Int32> [-SharedKey <String>]
  [-MicrosoftConfigAdvertisedPublicPrefixes <System.Collections.Generic.List`1[System.String]>]
- [-MicrosoftConfigCustomerAsn <Int32>] [-MicrosoftConfigRoutingRegistryName <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-MicrosoftConfigCustomerAsn <Int32>] [-MicrosoftConfigRoutingRegistryName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,10 +46,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExpressRouteCircuit
-@{Text=}
-
-```yaml
+### -Circuit
+@{Text=}```yaml
 Type: PSExpressRouteCircuit
 Parameter Sets: (All)
 Aliases: 
@@ -85,7 +82,7 @@ Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -197,35 +194,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

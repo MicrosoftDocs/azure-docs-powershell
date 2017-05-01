@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+ms.assetid: 35F33DDA-691E-4D12-A585-D9525DD0B721
 online version: 
 schema: 2.0.0
-ms.assetid: 35F33DDA-691E-4D12-A585-D9525DD0B721
 ---
 
 # Get-AzureRmCognitiveServicesAccountKey
@@ -33,37 +33,6 @@ Use New-AzureRmCognitiveServicesAccountKey to regenerate a key.
 ```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group the account is assigned to.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the account.
-This cmdlet gets the keys for this account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: CognitiveServicesAccountName, AccountName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -101,6 +70,37 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the account.
+This cmdlet gets the keys for this account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: CognitiveServicesAccountName, AccountName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group the account is assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

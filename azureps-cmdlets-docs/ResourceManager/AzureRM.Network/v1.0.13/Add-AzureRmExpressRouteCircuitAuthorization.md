@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: E4B093A3-E235-44E9-98A9-15069E5A7B37
 online version: 
 schema: 2.0.0
-ms.assetid: E4B093A3-E235-44E9-98A9-15069E5A7B37
 ---
 
 # Add-AzureRmExpressRouteCircuitAuthorization
@@ -45,21 +45,6 @@ This command adds the authorization but does not activate that authorization.
 Activating an authorization requires the **Set-AzureRmExpressRouteCircuit** shown in the final command in the example.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the circuit authorization to be added.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ExpressRouteCircuit
 Specifies the ExpressRoute circuit that this cmdlet adds the authorization to.
@@ -109,6 +94,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the circuit authorization to be added.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

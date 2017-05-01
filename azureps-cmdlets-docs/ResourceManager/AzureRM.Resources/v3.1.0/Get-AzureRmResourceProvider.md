@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 57404D9B-5393-4B42-A1FC-CAA4D2E4D4FF
 online version: 
 schema: 2.0.0
-ms.assetid: 57404D9B-5393-4B42-A1FC-CAA4D2E4D4FF
 ---
 
 # Get-AzureRmResourceProvider
@@ -28,7 +28,6 @@ Get-AzureRmResourceProvider -ProviderNamespace <String> [-Location <String>] [-A
 The **Get-AzureRmResourceProvider** cmdlet gets an Azure resource provider.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 

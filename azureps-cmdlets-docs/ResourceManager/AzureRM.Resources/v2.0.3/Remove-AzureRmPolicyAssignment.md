@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 41C95DFF-B8EF-4837-9DB2-5A3A74E61B3F
 online version: 
 schema: 2.0.0
-ms.assetid: 41C95DFF-B8EF-4837-9DB2-5A3A74E61B3F
 ---
 
 # Remove-AzureRmPolicyAssignment
@@ -14,14 +14,14 @@ Removes a policy assignment.
 
 ### The policy assignment name parameter set. (Default)
 ```
-Remove-AzureRmPolicyAssignment -Name <String> -Scope <String> [-Force] [-ApiVersion <String>] [-Pre]
+Remove-AzureRmPolicyAssignment -Name <String> -Scope <String> [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### The policy assignment Id parameter set.
 ```
-Remove-AzureRmPolicyAssignment -Id <String> [-Force] [-ApiVersion <String>] [-Pre]
+Remove-AzureRmPolicyAssignment -Id <String> [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -86,21 +86,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Do not ask for confirmation
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

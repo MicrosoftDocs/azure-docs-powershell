@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 7289F5C8-B2A2-40B3-93DD-9536C5CFB367
 online version: 
 schema: 2.0.0
-ms.assetid: 7289F5C8-B2A2-40B3-93DD-9536C5CFB367
 ---
 
 # Get-AzureRmVMExtensionImage
@@ -14,7 +14,8 @@ Gets all versions for an Azure extension.
 
 ```
 Get-AzureRmVMExtensionImage -Location <String> -PublisherName <String> -Type <String>
- [-FilterExpression <String>] [-Version <String>] [<CommonParameters>]
+ [-FilterExpression <String>] [-Version <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,21 +31,6 @@ PS C:\>Get-AzureRmVMExtensionImage -Location "Central US" -PublisherName "Fabrik
 This command gets all the versions of the extension image for the specified location, publisher, and type.
 
 ## PARAMETERS
-
-### -FilterExpression
-Specifies a filter expression.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Location
 Specifies the location of an extension.
@@ -93,6 +79,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FilterExpression
+Specifies a filter expression.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Version
 Specifies the version of the extension that this cmdlet gets.
 
@@ -105,6 +106,32 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

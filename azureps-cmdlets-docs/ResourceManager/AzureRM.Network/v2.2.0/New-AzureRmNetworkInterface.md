@@ -11,49 +11,26 @@ Creates a new network interface.
 
 ## SYNTAX
 
-### SetByIpConfigurationResource (Default)
-```
-New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location <String>
- -IpConfiguration <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterfaceIPConfiguration]>
- [-DnsServer <System.Collections.Generic.List`1[System.String]>] [-InternalDnsNameLabel <String>]
- [-EnableIPForwarding] [-EnableAcceleratedNetworking] [-Tag <Hashtable>] [-Force]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
-### SetByIpConfigurationResourceId
-```
-New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location <String>
- -IpConfiguration <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterfaceIPConfiguration]>
- [-NetworkSecurityGroupId <String>] [-NetworkSecurityGroup <PSNetworkSecurityGroup>]
- [-DnsServer <System.Collections.Generic.List`1[System.String]>] [-InternalDnsNameLabel <String>]
- [-EnableIPForwarding] [-EnableAcceleratedNetworking] [-Tag <Hashtable>] [-Force]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
-```
-
 ### SetByResourceId
 ```
-New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location <String> -SubnetId <String>
- [-PublicIpAddressId <String>] [-NetworkSecurityGroupId <String>]
+New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location <String>
+ [-PrivateIpAddress <String>] -SubnetId <String> [-PublicIpAddressId <String>]
+ [-NetworkSecurityGroupId <String>]
  [-LoadBalancerBackendAddressPoolId <System.Collections.Generic.List`1[System.String]>]
  [-LoadBalancerInboundNatRuleId <System.Collections.Generic.List`1[System.String]>]
- [-ApplicationGatewayBackendAddressPoolId <System.Collections.Generic.List`1[System.String]>]
- [-PrivateIpAddress <String>] [-IpConfigurationName <String>]
- [-DnsServer <System.Collections.Generic.List`1[System.String]>] [-InternalDnsNameLabel <String>]
- [-EnableIPForwarding] [-EnableAcceleratedNetworking] [-Tag <Hashtable>] [-Force]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-IpConfigurationName <String>] [-DnsServer <System.Collections.Generic.List`1[System.String]>]
+ [-InternalDnsNameLabel <String>] [-EnableIPForwarding] [-Tag <Hashtable[]>] [-Force] [<CommonParameters>]
 ```
 
 ### SetByResource
 ```
-New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location <String> -Subnet <PSSubnet>
- [-PublicIpAddress <PSPublicIpAddress>] [-NetworkSecurityGroup <PSNetworkSecurityGroup>]
+New-AzureRmNetworkInterface -Name <String> -ResourceGroupName <String> -Location <String>
+ [-PrivateIpAddress <String>] -Subnet <PSSubnet> [-PublicIpAddress <PSPublicIpAddress>]
+ [-NetworkSecurityGroup <PSNetworkSecurityGroup>]
  [-LoadBalancerBackendAddressPool <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool]>]
  [-LoadBalancerInboundNatRule <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSInboundNatRule]>]
- [-ApplicationGatewayBackendAddressPool <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool]>]
- [-PrivateIpAddress <String>] [-IpConfigurationName <String>]
- [-DnsServer <System.Collections.Generic.List`1[System.String]>] [-InternalDnsNameLabel <String>]
- [-EnableIPForwarding] [-EnableAcceleratedNetworking] [-Tag <Hashtable>] [-Force]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-IpConfigurationName <String>] [-DnsServer <System.Collections.Generic.List`1[System.String]>]
+ [-InternalDnsNameLabel <String>] [-EnableIPForwarding] [-Tag <Hashtable[]>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,6 +40,10 @@ The New-AzureRmNetworkInterface cmdlet creates a new network interface.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmNetworkInterface -Name NetworkInterface1 -ResouceGroupName ResourceGroup1 -Location centralus -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup1/providers/Microsoft.Network/virtualNetworks/VirtualNetwork1/subnets/Subnet1" -IpConfigurationName IPConfiguration1 -DnsServer "8.8.8.8", "8.8.4.4"
@@ -74,6 +55,10 @@ The IPConfiguration child resource will be created automatically using the name 
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 $ipconfig = New-AzureRmNetworkInterfaceIpConfig -Name IPConfig1 -PrivateIpAddressVersion IPv4 -PrivateIpAddress "10.0.1.10" -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup1/providers/Microsoft.Network/virtualNetworks/VirtualNetwork1/subnets/Subnet1"
@@ -130,15 +115,106 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -IpConfiguration
-Specifies the IP configuration to use for the new network interface.
+### -PrivateIpAddress
+Specifies a static IPv4 IP address to assign to this network interface.
+This parameter is optional.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterfaceIPConfiguration]
-Parameter Sets: SetByIpConfigurationResource, SetByIpConfigurationResourceId
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SubnetId
+Specifies the ID of the subnet for which to create a network interface.
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PublicIpAddressId
+Specifies the ID of a PublicIPAddress object to assign to a network interface.
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkSecurityGroupId
+Specifies the ID of a network security group to associate with the network interface.
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LoadBalancerBackendAddressPoolId
+Specifies the ID of a BackendAddressPool object.
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LoadBalancerInboundNatRuleId
+Specifies the ID of an inbound NAT rule configuration for a load balancer.
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IpConfigurationName
+Specifies the name of an IP configuration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -195,7 +271,7 @@ Accept wildcard characters: False
 Specifies a dictionary of tags to associate with a network interface.
 
 ```yaml
-Type: Hashtable
+Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -221,202 +297,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkSecurityGroupId
-Specifies the ID of a network security group to associate with the network interface.
-
-```yaml
-Type: String
-Parameter Sets: SetByIpConfigurationResourceId, SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NetworkSecurityGroup
-Specifies the network security group to associate with the network interface.
-
-```yaml
-Type: PSNetworkSecurityGroup
-Parameter Sets: SetByIpConfigurationResourceId, SetByResource
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SubnetId
-Specifies the ID of the subnet for which to create a network interface.
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PublicIpAddressId
-Specifies the ID of a PublicIPAddress object to assign to a network interface.
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LoadBalancerBackendAddressPoolId
-Specifies the ID of a BackendAddressPool object.
-
-```yaml
-Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LoadBalancerInboundNatRuleId
-Specifies the ID of an inbound NAT rule configuration for a load balancer.
-
-```yaml
-Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ApplicationGatewayBackendAddressPoolId
-Specifies the ID of a ApplicationGatewayBackendAddressPool object.
-
-```yaml
-Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PrivateIpAddress
-Specifies a static IPv4 IP address to assign to this network interface.
-This parameter is optional.
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId, SetByResource
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IpConfigurationName
-Specifies the name of an IP configuration.
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId, SetByResource
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Subnet
 Specifies a Subnet object.
 This cmdlet creates a network interface for the subnet that this parameter specifies.
@@ -438,6 +318,21 @@ Specifies a PublicIPAddress object to assign to a network interface.
 
 ```yaml
 Type: PSPublicIpAddress
+Parameter Sets: SetByResource
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkSecurityGroup
+Specifies the network security group to associate with the network interface.
+
+```yaml
+Type: PSNetworkSecurityGroup
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -478,35 +373,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ApplicationGatewayBackendAddressPool
-Specifies an ApplicationGatewayBackendAddressPool object.
-
-```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool]
-Parameter Sets: SetByResource
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EnableAcceleratedNetworking
-EnableAcceleratedNetworking
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

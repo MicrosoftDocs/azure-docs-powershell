@@ -11,30 +11,16 @@ Adds a front-end IP configuration to a load balancer.
 
 ## SYNTAX
 
-### SetByResourceSubnet
+### SetByResourceId
 ```
 Add-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
- [-PrivateIpAddress <String>] -Subnet <PSSubnet> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-PrivateIpAddress <String>] [-SubnetId <String>] [-PublicIpAddressId <String>] [<CommonParameters>]
 ```
 
-### SetByResourceIdSubnet
+### SetByResource
 ```
 Add-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
- [-PrivateIpAddress <String>] -SubnetId <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
-```
-
-### SetByResourceIdPublicIpAddress
-```
-Add-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
- -PublicIpAddressId <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
-```
-
-### SetByResourcePublicIpAddress
-```
-Add-AzureRmLoadBalancerFrontendIpConfig -Name <String> -LoadBalancer <PSLoadBalancer>
- -PublicIpAddress <PSPublicIpAddress> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-PrivateIpAddress <String>] [-Subnet <PSSubnet>] [-PublicIpAddress <PSPublicIpAddress>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,6 +31,10 @@ This frontend IP configuration contains public IP addresses for incoming network
 
 ### --------------------------  Example 1 Add a frontend IP configuration with a dynamic IP address  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$Subnet = Get-AzureRmVirtualNetwork -Name "myVnet" -ResourceGroupName "myRg" | Get-AzureRmVirtualNetworkSubnetConfig -Name "mysubnet"
@@ -90,6 +80,10 @@ InboundNatPools          : \[\]
 ### --------------------------  Example 2 Add a frontend IP configuration with a static IP address  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\>$Subnet = Get-AzureRmVirtualNetwork -Name "myVnet" -ResourceGroupName "myRg" | Get-AzureRmVirtualNetworkSubnetConfig -Name "mysubnet"
 PS C:\> Get-AzureRmLoadBalancer -Name "myLB" -ResourceGroupName "NrpTest" | Add-AzureRmLoadBalancerFrontendIpConfig -Name "frontendName" -Subnet $Subnet -PrivateIpAddress "10.0.1.6" | Set-AzureRmLoadBalancer
@@ -133,6 +127,10 @@ InboundNatPools          : \[\]
 
 ### --------------------------  Example 3 Add a frontend IP configuration with a public IP address  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$PublicIp = Get-AzureRmPublicIpAddress -ResourceGroupName "myRG" -Name "myPub"
@@ -179,7 +177,37 @@ Specifies the PublicIpAddress object to associate with a front-end IP configurat
 
 ```yaml
 Type: String
-Parameter Sets: SetByResourceSubnet, SetByResourceIdSubnet
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubnetId
+Specifies the ID of the subnet in which to add a front-end IP configuration.
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicIpAddressId
+Specifies the ID of the PublicIpAddress object to associate with a front-end IP configuration.
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
 Aliases: 
 
 Required: False
@@ -194,70 +222,10 @@ Specifies the Subnet object in which to add a front-end IP configuration.
 
 ```yaml
 Type: PSSubnet
-Parameter Sets: SetByResourceSubnet
+Parameter Sets: SetByResource
 Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SubnetId
-Specifies the ID of the subnet in which to add a front-end IP configuration.
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceIdSubnet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicIpAddressId
-Specifies the ID of the PublicIpAddress object to associate with a front-end IP configuration.
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceIdPublicIpAddress
-Aliases: 
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -269,15 +237,18 @@ Specifies the PublicIpAddress object to associate with a front-end IP configurat
 
 ```yaml
 Type: PSPublicIpAddress
-Parameter Sets: SetByResourcePublicIpAddress
+Parameter Sets: SetByResource
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: 71357C7C-C3F4-44ED-8DCA-954025179A67
 online version: 
 schema: 2.0.0
-ms.assetid: 71357C7C-C3F4-44ED-8DCA-954025179A67
 ---
 
 # Unregister-AzureRmRecoveryServicesBackupContainer
@@ -38,6 +38,22 @@ The second command unregisters the specified Windows Server from the Azure Backu
 
 ## PARAMETERS
 
+### -Container
+Specifies a Backup container object to unregister.
+To obtain a **BackupContainer** object, use the Get-AzureRmRecoveryServicesBackupContainer cmdlet.
+
+```yaml
+Type: ContainerBase
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -72,22 +88,6 @@ Aliases: iv
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Container
-Specifies a Backup container object to unregister.
-To obtain a **BackupContainer** object, use the Get-AzureRmRecoveryServicesBackupContainer cmdlet.
-
-```yaml
-Type: ContainerBase
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

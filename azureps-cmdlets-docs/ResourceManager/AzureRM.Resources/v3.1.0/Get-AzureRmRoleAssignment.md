@@ -16,7 +16,7 @@ Use respective parameters to list assignments to a specific user, or to list ass
 ### EmptyParameterSet (Default)
 ```
 Get-AzureRmRoleAssignment [-RoleDefinitionName <String>] [-IncludeClassicAdministrators]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ResourceWithObjectIdParameterSet
@@ -24,36 +24,41 @@ Get-AzureRmRoleAssignment [-RoleDefinitionName <String>] [-IncludeClassicAdminis
 Get-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> -ResourceName <String>
  -ResourceType <String> [-ParentResource <String>] [-RoleDefinitionName <String>]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### RoleIdWithScopeAndObjectIdParameterSet
 ```
 Get-AzureRmRoleAssignment [-ObjectId <Guid>] -RoleDefinitionId <Guid> [-Scope <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
 Get-AzureRmRoleAssignment -ObjectId <Guid> [-RoleDefinitionName <String>] [-ExpandPrincipalGroups]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ResourceGroupWithObjectIdParameterSet
 ```
 Get-AzureRmRoleAssignment -ObjectId <Guid> -ResourceGroupName <String> [-RoleDefinitionName <String>]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ScopeWithObjectIdParameterSet
 ```
 Get-AzureRmRoleAssignment -ObjectId <Guid> [-RoleDefinitionName <String>] -Scope <String>
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ResourceGroupWithSignInNameParameterSet
 ```
 Get-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> [-RoleDefinitionName <String>]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ResourceWithSignInNameParameterSet
@@ -61,31 +66,35 @@ Get-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> [-Rol
 Get-AzureRmRoleAssignment -SignInName <String> -ResourceGroupName <String> -ResourceName <String>
  -ResourceType <String> [-ParentResource <String>] [-RoleDefinitionName <String>]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ScopeWithSignInNameParameterSet
 ```
 Get-AzureRmRoleAssignment -SignInName <String> [-RoleDefinitionName <String>] -Scope <String>
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### SignInNameParameterSet
 ```
 Get-AzureRmRoleAssignment -SignInName <String> [-RoleDefinitionName <String>] [-ExpandPrincipalGroups]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ResourceGroupWithSPNParameterSet
 ```
 Get-AzureRmRoleAssignment -ServicePrincipalName <String> -ResourceGroupName <String>
  [-RoleDefinitionName <String>] [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ScopeWithSPNParameterSet
 ```
 Get-AzureRmRoleAssignment -ServicePrincipalName <String> [-RoleDefinitionName <String>] -Scope <String>
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ResourceWithSPNParameterSet
@@ -93,31 +102,34 @@ Get-AzureRmRoleAssignment -ServicePrincipalName <String> [-RoleDefinitionName <S
 Get-AzureRmRoleAssignment -ServicePrincipalName <String> -ResourceGroupName <String> -ResourceName <String>
  -ResourceType <String> [-ParentResource <String>] [-RoleDefinitionName <String>]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### SPNParameterSet
 ```
 Get-AzureRmRoleAssignment -ServicePrincipalName <String> [-RoleDefinitionName <String>]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ResourceParameterSet
 ```
 Get-AzureRmRoleAssignment -ResourceGroupName <String> -ResourceName <String> -ResourceType <String>
  [-ParentResource <String>] [-RoleDefinitionName <String>] [-IncludeClassicAdministrators]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ResourceGroupParameterSet
 ```
 Get-AzureRmRoleAssignment -ResourceGroupName <String> [-RoleDefinitionName <String>]
  [-IncludeClassicAdministrators] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ScopeParameterSet
 ```
 Get-AzureRmRoleAssignment [-RoleDefinitionName <String>] -Scope <String> [-IncludeClassicAdministrators]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -156,6 +168,8 @@ Use the IncludeClassicAdministrators switch to also display the subscription adm
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Get-AzureRmRoleAssignment
 ```
@@ -164,6 +178,8 @@ List all role assignments in the subscription
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\> Get-AzureRmRoleAssignment -ResourceGroupName testRG -SignInName john.doe@contoso.com -ExpandPrincipalGroups
@@ -174,6 +190,8 @@ Gets all role assignments made to user john.doe@contoso.com, and the groups of w
 ### --------------------------  Example 3  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> Get-AzureRmRoleAssignment -ServicePrincipalName "http://testapp1.com"
 ```
@@ -182,6 +200,8 @@ Gets all role assignments of the specified service principal
 
 ### --------------------------  Example 4  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\> Get-AzureRmRoleAssignment -Scope "/subscriptions/96231a05-34ce-4eb4-aa6a-70759cbb5e83/resourcegroups/rg1/providers/Microsoft.Web/sites/site1"
@@ -443,6 +463,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

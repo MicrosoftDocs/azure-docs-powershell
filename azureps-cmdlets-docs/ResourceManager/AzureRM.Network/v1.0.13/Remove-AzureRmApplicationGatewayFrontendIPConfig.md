@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: C9975C73-AA56-4BE4-8DE0-2F63597AB52E
 online version: 
 schema: 2.0.0
-ms.assetid: C9975C73-AA56-4BE4-8DE0-2F63597AB52E
 ---
 
 # Remove-AzureRmApplicationGatewayFrontendIPConfig
@@ -33,21 +33,6 @@ The first command gets an application gateway named ApplicationGateway01 and sto
 The second command removes the front-end IP configuration named FrontEndIP02 from the application gateway stored in $AppGw.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of a front-end IP configuration to remove.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies an application gateway from which to remove a front-end IP configuration.
@@ -97,6 +82,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of a front-end IP configuration to remove.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

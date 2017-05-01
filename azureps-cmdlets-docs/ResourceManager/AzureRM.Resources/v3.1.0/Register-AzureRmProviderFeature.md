@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 1F16EFCA-BABA-4C8C-B8D3-B6B219F1E3BA
 online version: 
 schema: 2.0.0
-ms.assetid: 1F16EFCA-BABA-4C8C-B8D3-B6B219F1E3BA
 ---
 
 # Register-AzureRmProviderFeature
@@ -21,7 +21,6 @@ Register-AzureRmProviderFeature -FeatureName <String> -ProviderNamespace <String
 The **Register-AzureRmProviderFeature** cmdlet registers an Azure provider feature in your account.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 

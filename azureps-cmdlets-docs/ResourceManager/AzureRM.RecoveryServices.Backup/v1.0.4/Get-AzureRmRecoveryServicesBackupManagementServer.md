@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: 05354755-B450-467F-A8AC-64DBD5834F38
 online version: 
 schema: 2.0.0
-ms.assetid: 05354755-B450-467F-A8AC-64DBD5834F38
 ---
 
 # Get-AzureRmRecoveryServicesBackupManagementServer
@@ -35,21 +35,6 @@ PS C:\>Get-AzureRmRecoveryServicesBackupManagementServer
 This command gets all Backup management servers registered with the vault.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the Backup management server to get.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -85,6 +70,21 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Backup management server to get.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

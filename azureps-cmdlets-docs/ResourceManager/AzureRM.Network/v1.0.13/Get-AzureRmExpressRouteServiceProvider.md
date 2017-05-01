@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 70C0D7ED-2FDF-4650-8E33-E9DB4F355129
 online version: 
 schema: 2.0.0
-ms.assetid: 70C0D7ED-2FDF-4650-8E33-E9DB4F355129
 ---
 
 # Get-AzureRmExpressRouteServiceProvider
@@ -76,5 +76,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

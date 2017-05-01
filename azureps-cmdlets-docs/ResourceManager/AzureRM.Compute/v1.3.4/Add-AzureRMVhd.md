@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 2C84CE79-E1E4-4558-A3B6-FC133760B1B9
 online version: 
 schema: 2.0.0
-ms.assetid: 2C84CE79-E1E4-4558-A3B6-FC133760B1B9
 ---
 
 # Add-AzureRmVhd
@@ -59,67 +59,6 @@ This command adds a .vhd file to a storage account and specifies the SAS URI.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Destination
-Specifies the URI of a blob in Blob Storage.
-The parameter supports SAS URI, although patching scenarios destination cannot be an SAS URI.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: dst
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LocalFilePath
-Specifies the path of the local .vhd file.
-
-```yaml
-Type: FileInfo
-Parameter Sets: (All)
-Aliases: lf
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NumberOfUploaderThreads
-Specifies the number of uploader threads to be used when uploading the .vhd file.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: th
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -BaseImageUriToPatch
 Specifies the URI to a base image blob in Azure Blob Storage.
 An SAS can be specified as the value for this parameter.
@@ -136,16 +75,17 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -OverWrite
-Indicates that this cmdlet overwrites an existing blob in the specified destination URI, if one exists.
+### -Destination
+Specifies the URI of a blob in Blob Storage.
+The parameter supports SAS URI, although patching scenarios destination cannot be an SAS URI.
 
 ```yaml
-Type: SwitchParameter
+Type: Uri
 Parameter Sets: (All)
-Aliases: o
+Aliases: dst
 
-Required: False
-Position: 5
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -187,6 +127,66 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocalFilePath
+Specifies the path of the local .vhd file.
+
+```yaml
+Type: FileInfo
+Parameter Sets: (All)
+Aliases: lf
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NumberOfUploaderThreads
+Specifies the number of uploader threads to be used when uploading the .vhd file.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: th
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OverWrite
+Indicates that this cmdlet overwrites an existing blob in the specified destination URI, if one exists.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: o
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

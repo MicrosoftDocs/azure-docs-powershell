@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: E3180B3A-D660-4ED1-8D27-1090D1CD14DE
 online version: 
 schema: 2.0.0
-ms.assetid: E3180B3A-D660-4ED1-8D27-1090D1CD14DE
 ---
 
 # Get-AzureRmExpressRouteCircuitPeeringConfig
@@ -26,19 +26,6 @@ PS C:\>
 ```
 
 ## PARAMETERS
-
-### -Name
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ExpressRouteCircuit
 ```yaml
@@ -92,6 +79,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -102,5 +102,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: D4E8CAE7-DE3B-4AD0-9238-FBDA7363D3A4
 online version: 
 schema: 2.0.0
-ms.assetid: D4E8CAE7-DE3B-4AD0-9238-FBDA7363D3A4
 ---
 
 # New-AzureRmLoadBalancerInboundNatPoolConfig
@@ -37,13 +37,26 @@ New-AzureRmLoadBalancerInboundNatPoolConfig -Name <String>
 
 ## PARAMETERS
 
-### -Name
+### -BackendPort
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FrontendIpConfiguration
+```yaml
+Type: PSFrontendIPConfiguration
+Parameter Sets: SetByResource
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -63,32 +76,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Protocol
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FrontendPortRangeStart
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -FrontendPortRangeEnd
 ```yaml
 Type: Int32
@@ -102,7 +89,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BackendPort
+### -FrontendPortRangeStart
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -154,13 +141,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FrontendIpConfiguration
+### -Name
 ```yaml
-Type: PSFrontendIPConfiguration
-Parameter Sets: SetByResource
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Protocol
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -177,5 +177,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

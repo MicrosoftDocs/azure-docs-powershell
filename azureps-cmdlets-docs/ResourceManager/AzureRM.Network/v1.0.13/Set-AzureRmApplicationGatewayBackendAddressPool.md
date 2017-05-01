@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 2531DEAE-9412-40A2-9BF1-1A93E16EDC50
 online version: 
 schema: 2.0.0
-ms.assetid: 2531DEAE-9412-40A2-9BF1-1A93E16EDC50
 ---
 
 # Set-AzureRmApplicationGatewayBackendAddressPool
@@ -78,23 +78,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of the back-end address pool.
-This back-end address pool must exist in the application gateway.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BackendIPAddresses
+### -BackendFqdns
+Specifies a list of back-end IP addresses to use as a back-end server pool.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -108,9 +93,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BackendFqdns
-Specifies a list of back-end IP addresses to use as a back-end server pool.
-
+### -BackendIPAddresses
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
@@ -156,6 +139,22 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the back-end address pool.
+This back-end address pool must exist in the application gateway.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

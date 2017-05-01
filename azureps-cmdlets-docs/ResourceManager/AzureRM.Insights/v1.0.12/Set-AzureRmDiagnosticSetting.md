@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: 67810F79-AD11-491E-9D70-F3F3DA2E79D1
 online version: 
 schema: 2.0.0
-ms.assetid: 67810F79-AD11-491E-9D70-F3F3DA2E79D1
 ---
 
 # Set-AzureRmDiagnosticSetting
@@ -75,52 +75,6 @@ All other time grains and categories are unchanged.
 
 ## PARAMETERS
 
-### -ResourceId
-Specifies the ID of the resource.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageAccountId
-Specifies the ID of the Storage account in which to save the data.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Enabled
-Indicates whether to enable diagnostics.
-Specify $True to enable diagnostics, or $False to disable diagnostics.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Categories
 Specifies the list of log categories to enable or disable, according to the value of *Enabled*.
 If you do not specify a category, this command operates on all categories.
@@ -137,46 +91,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Timegrains
-Specifies the time grains to enable or disable for metrics, according to the value of *Enabled*.
-If you do not specify a time grain, this command operates on all available time grains.
-
-```yaml
-Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RetentionEnabled
-Indicates whether retention of diagnostic information is enabled.
+### -Enabled
+Indicates whether to enable diagnostics.
+Specify $True to enable diagnostics, or $False to disable diagnostics.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RetentionInDays
-Specifies the retention policy, in days.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -219,6 +143,82 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceId
+Specifies the ID of the resource.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetentionEnabled
+Indicates whether retention of diagnostic information is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetentionInDays
+Specifies the retention policy, in days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageAccountId
+Specifies the ID of the Storage account in which to save the data.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Timegrains
+Specifies the time grains to enable or disable for metrics, according to the value of *Enabled*.
+If you do not specify a time grain, this command operates on all available time grains.
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

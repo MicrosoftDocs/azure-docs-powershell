@@ -13,23 +13,25 @@ Removes policy from specified scope.
 
 ### Tenant level (Default)
 ```
-Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-PassThru] [-Force]
+Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-PassThru] [-Force] [<CommonParameters>]
 ```
 
 ### Product level
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ProductId <String> [-PassThru] [-Force]
+ [<CommonParameters>]
 ```
 
 ### API level
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> [-PassThru] [-Force]
+ [<CommonParameters>]
 ```
 
 ### Operation level
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> -OperationId <String>
- [-PassThru] [-Force]
+ [-PassThru] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,6 +42,10 @@ Removes policy from specified scope.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Remove-AzureRmApiManagementPolicy -Context $apimContext
 ```
@@ -48,6 +54,10 @@ Remove tenant level policy.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Remove-AzureRmApiManagementPolicy -Context $apimContext -ProductId 0123456789
@@ -58,6 +68,10 @@ Remove product-scope policy.
 ### --------------------------  Example 3  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Remove-AzureRmApiManagementPolicy -Context $apimContext -ApiId 9876543210
 ```
@@ -66,6 +80,10 @@ Remove API-scope policy.
 
 ### --------------------------  Example 4  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Remove-AzureRmApiManagementPolicy -Context $apimContext -ApiId 9876543210 -OperationId 777
@@ -175,6 +193,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+ms.assetid: D1764265-CE4D-43BE-96C6-26AE7A3292AC
 online version: 
 schema: 2.0.0
-ms.assetid: D1764265-CE4D-43BE-96C6-26AE7A3292AC
 ---
 
 # New-AzureRmDnsRecordSet
@@ -205,6 +205,23 @@ The *Confirm* parameter with a value of $False suppresses the confirmation promp
 
 ## PARAMETERS
 
+### -DnsRecords
+Specifies the array of DNS records to include in the record set.
+You can use the New-AzureRmDnsRecordConfig cmdlet to create DNS record objects.
+See the examples for more information.
+
+```yaml
+Type: DnsRecordBase[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Force
 This parameter is deprecated for this cmdlet.
 It will be removed in a future release.
@@ -220,6 +237,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Metadata
+Specifies an array of metadata to associate with the RecordSet.
+Metadata is specified using name-value pairs that are represented as hash tables, for example @(@{"Name"="dept"; "Value"="shopping"}, @{"Name"="env"; "Value"="production"}).
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -300,22 +333,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Metadata
-Specifies an array of metadata to associate with the RecordSet.
-Metadata is specified using name-value pairs that are represented as hash tables, for example @(@{"Name"="dept"; "Value"="shopping"}, @{"Name"="env"; "Value"="production"}).
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Ttl
 Specifies the Time to Live (TTL) for the DNS RecordSet.
 
@@ -377,23 +394,6 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DnsRecords
-Specifies the array of DNS records to include in the record set.
-You can use the New-AzureRmDnsRecordConfig cmdlet to create DNS record objects.
-See the examples for more information.
-
-```yaml
-Type: DnsRecordBase[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

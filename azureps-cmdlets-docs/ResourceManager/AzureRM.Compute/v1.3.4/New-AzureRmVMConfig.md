@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 6952E344-00DA-4316-8A1B-7F45A39B5706
 online version: 
 schema: 2.0.0
-ms.assetid: 6952E344-00DA-4316-8A1B-7F45A39B5706
 ---
 
 # New-AzureRmVMConfig
@@ -36,36 +36,6 @@ The command assigns a name and size to the virtual machine.
 The virtual machine belongs to the availability set stored in $AvailabilitySet.
 
 ## PARAMETERS
-
-### -VMName
-Specifies a name for the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName, Name
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VMSize
-Specifies the size for the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AvailabilitySetId
 Specifies the ID of an availability set.
@@ -120,6 +90,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VMName
+Specifies a name for the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceName, Name
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VMSize
+Specifies the size for the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

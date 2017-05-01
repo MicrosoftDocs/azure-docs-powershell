@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: 4A86B8BE-4857-4484-B81C-451270308F5D
 online version: 
 schema: 2.0.0
-ms.assetid: 4A86B8BE-4857-4484-B81C-451270308F5D
 ---
 
 # Add-AzureRmLogProfile
@@ -30,56 +30,11 @@ The **Add-AzureRmLogProfile** cmdlet creates a log profile.
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the profile.
+### -Categories
+Specifies the list of categories.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageAccountId
-Specifies the ID of the Storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServiceBusRuleId
-Specifies the ID of the Service Bus rule.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RetentionInDays
-Specifies the retention policy, in days.
-
-```yaml
-Type: Int32
+Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,15 +60,60 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Categories
-Specifies the list of categories.
+### -Name
+Specifies the name of the profile.
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.String]
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetentionInDays
+Specifies the retention policy, in days.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServiceBusRuleId
+Specifies the ID of the Service Bus rule.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageAccountId
+Specifies the ID of the Storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

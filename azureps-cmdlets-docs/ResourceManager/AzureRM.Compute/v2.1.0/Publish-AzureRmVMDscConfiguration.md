@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: FF6FA970-797D-4021-AD68-E58F983B5D73
 online version: 
 schema: 2.0.0
-ms.assetid: FF6FA970-797D-4021-AD68-E58F983B5D73
 ---
 
 # Publish-AzureRmVMDscConfiguration
@@ -16,14 +16,16 @@ Uploads a DSC script to Azure blob storage.
 ```
 Publish-AzureRmVMDscConfiguration [-ResourceGroupName] <String> [-ConfigurationPath] <String>
  [[-ContainerName] <String>] [-StorageAccountName] <String> [-StorageEndpointSuffix <String>] [-Force]
- [-SkipDependencyDetection] [-ConfigurationDataPath <String>] [-AdditionalPath <String[]>] [-WhatIf] [-Confirm]
+ [-SkipDependencyDetection] [-ConfigurationDataPath <String>] [-AdditionalPath <String[]>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### CreateArchive
 ```
 Publish-AzureRmVMDscConfiguration [-ConfigurationPath] <String> [[-OutputArchivePath] <String>] [-Force]
- [-SkipDependencyDetection] [-ConfigurationDataPath <String>] [-AdditionalPath <String[]>] [-WhatIf] [-Confirm]
+ [-SkipDependencyDetection] [-ConfigurationDataPath <String>] [-AdditionalPath <String[]>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -69,34 +71,16 @@ This command adds configuration named Sample.ps1, configuration data SampleData.
 
 ## PARAMETERS
 
-### -AdditionalPath
-Specifies the path of a file or a directory to include in the configuration archive.
-It gets downloaded to the virtual machine together with the configuration.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigurationDataPath
-Specifies the path of a .psd1 file that specifies the data for the configuration.
-This is added to the configuration archive and then passed to the configuration function.
-It gets overwritten by the configuration data path provided through the Set-AzureRmVMDscExtension cmdlet
+### -ResourceGroupName
+Specifies the name of the resource group that contains the storage account.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: UploadArchive
 Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -112,7 +96,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -127,70 +111,9 @@ Parameter Sets: UploadArchive
 Aliases: 
 
 Required: False
-Position: 5
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OutputArchivePath
-Specifies the path of a local .zip file to write the configuration archive to.
-When this parameter is used, the configuration script is not uploaded to Azure blob storage.
-
-```yaml
-Type: String
-Parameter Sets: CreateArchive
-Aliases: ConfigurationArchivePath
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the storage account.
-
-```yaml
-Type: String
-Parameter Sets: UploadArchive
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SkipDependencyDetection
-Indicates that this cmdlet excludes DSC resource dependencies from the configuration archive.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -203,7 +126,7 @@ Parameter Sets: UploadArchive
 Aliases: 
 
 Required: True
-Position: 4
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -224,17 +147,91 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -Force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipDependencyDetection
+Indicates that this cmdlet excludes DSC resource dependencies from the configuration archive.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConfigurationDataPath
+Specifies the path of a .psd1 file that specifies the data for the configuration.
+This is added to the configuration archive and then passed to the configuration function.
+It gets overwritten by the configuration data path provided through the Set-AzureRmVMDscExtension cmdlet
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdditionalPath
+Specifies the path of a file or a directory to include in the configuration archive.
+It gets downloaded to the virtual machine together with the configuration.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -252,6 +249,37 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutputArchivePath
+Specifies the path of a local .zip file to write the configuration archive to.
+When this parameter is used, the configuration script is not uploaded to Azure blob storage.
+
+```yaml
+Type: String
+Parameter Sets: CreateArchive
+Aliases: ConfigurationArchivePath
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

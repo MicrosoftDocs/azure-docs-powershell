@@ -14,7 +14,7 @@ Sets user details.
 ```
 Set-AzureRmApiManagementUser -Context <PsApiManagementContext> -UserId <String> [-FirstName <String>]
  [-LastName <String>] [-Email <String>] [-Password <String>] [-State <PsApiManagementUserState>]
- [-Note <String>] [-PassThru]
+ [-Note <String>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +24,10 @@ Sets user details.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Set-AzureRmApiManagementUser -Context $apimContext -UserId 0123456789 -Email 'ivanov.ivan@contoso.com' -Password 'asdfgh' -State 'Blocked'
@@ -179,6 +183,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

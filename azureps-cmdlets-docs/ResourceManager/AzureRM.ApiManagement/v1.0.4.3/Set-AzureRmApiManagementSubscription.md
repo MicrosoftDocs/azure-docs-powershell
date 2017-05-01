@@ -14,7 +14,7 @@ Sets existing subscription details.
 ```
 Set-AzureRmApiManagementSubscription -Context <PsApiManagementContext> -SubscriptionId <String>
  [-Name <String>] [-PrimaryKey <String>] [-SecondaryKey <String>] [-State <PsApiManagementSubscriptionState>]
- [-ExpiresOn <DateTime>] [-StateComment <String>] [-PassThru]
+ [-ExpiresOn <DateTime>] [-StateComment <String>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +24,10 @@ Sets existing subscription details.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Set-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId 0123456789 -PrimaryKey '80450f7d0b6d481382113073f67822c1' -SencondaryKey '97d6112c3a8f48d5bf0266b7a09a761c' -State 'Active'
@@ -182,6 +186,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

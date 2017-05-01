@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+ms.assetid: 2A68889B-3A39-43E4-8942-282CB1177DC9
 online version: 
 schema: 2.0.0
-ms.assetid: 2A68889B-3A39-43E4-8942-282CB1177DC9
 ---
 
 # Remove-AzureRmDataLakeAnalyticsDataSource
@@ -55,6 +55,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Blob
+Specifies the name of the AzureBlob Storage account to remove.
+
+```yaml
+Type: String
+Parameter Sets: Remove a Blob storage account
+Aliases: AzureBlob
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DataLakeStore
 Specifies the name of the AzureData Lake Store account to remove.
 
@@ -82,36 +97,6 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-passthru
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the resource group name of the Data Lake Analytics account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -154,16 +139,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Blob
-Specifies the name of the AzureBlob Storage account to remove.
+### -PassThru
+passthru
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
 Type: String
-Parameter Sets: Remove a Blob storage account
-Aliases: AzureBlob
+Parameter Sets: (All)
+Aliases: 
 
-Required: True
-Position: 1
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

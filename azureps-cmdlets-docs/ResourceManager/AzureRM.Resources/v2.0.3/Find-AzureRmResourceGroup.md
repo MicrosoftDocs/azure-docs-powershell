@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 7827EDC2-87D5-4885-B853-CB48B5847A16
 online version: 
 schema: 2.0.0
-ms.assetid: 7827EDC2-87D5-4885-B853-CB48B5847A16
 ---
 
 # Find-AzureRmResourceGroup
@@ -104,5 +104,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

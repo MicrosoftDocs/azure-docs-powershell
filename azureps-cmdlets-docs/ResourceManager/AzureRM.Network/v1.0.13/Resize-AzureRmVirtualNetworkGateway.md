@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: C4EE63CF-EE74-4957-8E95-9CD8C874F6C5
 online version: 
 schema: 2.0.0
-ms.assetid: C4EE63CF-EE74-4957-8E95-9CD8C874F6C5
 ---
 
 # Resize-AzureRmVirtualNetworkGateway
@@ -41,22 +41,6 @@ The first command creates an object reference to ContosoVirtualGateway; this obj
 The second command then uses the **Resize-AzureRmVirtualNetworkGateway** cmdlet to set the *GatewaySku* property to Basic.
 
 ## PARAMETERS
-
-### -VirtualNetworkGateway
-Specifies an object reference to the virtual network gateway to be resized.
-You can create this object reference by using the Get-AzureRmVirtualNetworkGateway and specifying the name of the gateway.
-
-```yaml
-Type: PSVirtualNetworkGateway
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -GatewaySku
 Specifies the new type of gateway SKU.
@@ -114,6 +98,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VirtualNetworkGateway
+Specifies an object reference to the virtual network gateway to be resized.
+You can create this object reference by using the Get-AzureRmVirtualNetworkGateway and specifying the name of the gateway.
+
+```yaml
+Type: PSVirtualNetworkGateway
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

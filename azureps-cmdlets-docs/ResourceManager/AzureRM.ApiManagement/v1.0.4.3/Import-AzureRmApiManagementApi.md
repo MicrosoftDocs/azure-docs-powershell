@@ -15,12 +15,14 @@ Imports API from file or URL in one of the supported formats.
 ```
 Import-AzureRmApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>]
  -SpecificationFormat <PsApiManagementApiFormat> -SpecificationPath <String> [-Path <String>]
+ [<CommonParameters>]
 ```
 
 ### From URL
 ```
 Import-AzureRmApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>]
  -SpecificationFormat <PsApiManagementApiFormat> -SpecificationUrl <String> [-Path <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +33,10 @@ Imports API from file or URL in one of the supported formats (Wadl, Swagger).
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Import-AzureRmApiManagementApi -Context $apimContext -SpecificationFormat 'Wadl' -SpecificationPath 'C:\contoso\specifications\echoapi.wadl' -Path 'apis'
 ```
@@ -40,6 +46,10 @@ Import API from WADL file.
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Import-AzureRmApiManagementApi -Context $apimContext -SpecificationFormat 'Swagger' -SpecificationPath 'C:\contoso\specifications\echoapi.swagger' -Path 'apis'
 ```
@@ -48,6 +58,10 @@ Import API from Swagger file.
 
 ### --------------------------  Example 3  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Import-AzureRmApiManagementApi -Context $apimContext -SpecificationFormat 'Wadl' -SpecificationUrl 'http://contoso.com/specifications/wadl/echoapi' -Path 'apis'
@@ -157,6 +171,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

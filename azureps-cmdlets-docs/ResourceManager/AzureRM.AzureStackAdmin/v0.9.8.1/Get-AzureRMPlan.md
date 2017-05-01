@@ -16,20 +16,21 @@ This cmdlet is applicable only to Microsoft Azure Stack Environments
 ### TenantList (Default)
 ```
 Get-AzureRMPlan [-AdminUri <Uri>] [-Token <String>] [-ApiVersion <String>] [-DisableCertificateValidation]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### TenantGet
 ```
 Get-AzureRMPlan -Name <String> [-AdminUri <Uri>] [-Token <String>] [-ApiVersion <String>]
  [-DisableCertificateValidation] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### Admin
 ```
 Get-AzureRMPlan [-Name <String>] -ResourceGroup <String> [-SubscriptionId <Guid>] [-Managed] [-AdminUri <Uri>]
  [-Token <String>] [-ApiVersion <String>] [-DisableCertificateValidation]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,21 +51,6 @@ URI of the Azure Resource Manager endpoint
 
 ```yaml
 Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Token
-A valid Security token for a user/principal that has access to the Subscription
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,6 +121,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Managed
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Admin
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 @{Text=}
 
@@ -192,20 +193,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Managed
-@{Text=}
+### -Token
+A valid Security token for a user/principal that has access to the Subscription
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Admin
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

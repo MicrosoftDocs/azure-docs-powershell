@@ -13,27 +13,32 @@ schema: 2.0.0
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADApplication [<CommonParameters>]
+Get-AzureRmADApplication [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ApplicationObjectIdParameterSet
 ```
-Get-AzureRmADApplication -ApplicationObjectId <String> [<CommonParameters>]
+Get-AzureRmADApplication -ObjectId <Guid> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ApplicationIdParameterSet
 ```
-Get-AzureRmADApplication -ApplicationId <Guid> [<CommonParameters>]
+Get-AzureRmADApplication -ApplicationId <Guid> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ApplicationDisplayNameParameterSet
 ```
-Get-AzureRmADApplication -DisplayNameStartWith <String> [<CommonParameters>]
+Get-AzureRmADApplication -DisplayNameStartWith <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ApplicationIdentifierUriParameterSet
 ```
-Get-AzureRmADApplication -IdentifierUri <String> [<CommonParameters>]
+Get-AzureRmADApplication -IdentifierUri <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,12 +55,36 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -ApplicationId
-The application id.
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
 
-```yaml
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ObjectId
+The object id of the application to fetch.```yaml
 Type: Guid
-Parameter Sets: ApplicationIdParameterSet
+Parameter Sets: ApplicationObjectIdParameterSet
 Aliases: 
 
 Required: True
@@ -65,12 +94,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ApplicationObjectId
-The application object id.
+### -ApplicationId
+The application id.
 
 ```yaml
-Type: String
-Parameter Sets: ApplicationObjectIdParameterSet
+Type: Guid
+Parameter Sets: ApplicationIdParameterSet
 Aliases: 
 
 Required: True

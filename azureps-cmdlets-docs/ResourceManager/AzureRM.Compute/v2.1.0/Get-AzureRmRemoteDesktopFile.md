@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 4A99F290-5398-48F8-AFAF-212FFB21B37E
 online version: 
 schema: 2.0.0
-ms.assetid: 4A99F290-5398-48F8-AFAF-212FFB21B37E
 ---
 
 # Get-AzureRmRemoteDesktopFile
@@ -12,16 +12,16 @@ Gets an .rdp file.
 
 ## SYNTAX
 
-### Launch
-```
-Get-AzureRmRemoteDesktopFile [-ResourceGroupName] <String> [-Name] <String> [[-LocalPath] <String>] [-Launch]
- [<CommonParameters>]
-```
-
 ### Download
 ```
 Get-AzureRmRemoteDesktopFile [-ResourceGroupName] <String> [-Name] <String> [-LocalPath] <String>
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+```
+
+### Launch
+```
+Get-AzureRmRemoteDesktopFile [-ResourceGroupName] <String> [-Name] <String> [[-LocalPath] <String>] [-Launch]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,43 +39,16 @@ The command stores the result in the file named D:\RemoteDesktopFile07.rdp.
 
 ## PARAMETERS
 
-### -Launch
-Indicates that this cmdlet launches Remote Desktop after it gets the .rdp file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Launch
-Aliases: 
-
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalPath
-Specifies the local full path where this cmdlet stores the .rdp file.
+### -ResourceGroupName
+Specifies the name of a resource group.
 
 ```yaml
 Type: String
-Parameter Sets: Launch
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: Download
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -90,24 +63,77 @@ Parameter Sets: (All)
 Aliases: ResourceName, VMName
 
 Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LocalPath
+Specifies the local full path where this cmdlet stores the .rdp file.
+
+```yaml
+Type: String
+Parameter Sets: Download
+Aliases: 
+
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of a resource group.
-
 ```yaml
 Type: String
+Parameter Sets: Launch
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
 Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Launch
+Indicates that this cmdlet launches Remote Desktop after it gets the .rdp file.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Launch
 Aliases: 
 
 Required: True
-Position: 1
+Position: 3
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -121,5 +147,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

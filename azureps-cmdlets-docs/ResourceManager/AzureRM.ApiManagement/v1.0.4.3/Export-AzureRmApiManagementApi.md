@@ -14,13 +14,13 @@ Export API to file in one of the supported formats.
 ### Export to pipeline (Default)
 ```
 Export-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
- -SpecificationFormat <PsApiManagementApiFormat>
+ -SpecificationFormat <PsApiManagementApiFormat> [<CommonParameters>]
 ```
 
 ### Export to File
 ```
 Export-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
- -SpecificationFormat <PsApiManagementApiFormat> -SaveAs <String> [-Force] [-PassThru]
+ -SpecificationFormat <PsApiManagementApiFormat> -SaveAs <String> [-Force] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,10 @@ Export API to file in one of the supported formats.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Export-AzureRmApiManagementApi -Context $apimContext -ApiId 0123456789 -SpecificationFormat 'Wadl' -SaveAs 'C:\contoso\specifications\0123456789.wadl'
@@ -134,6 +138,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

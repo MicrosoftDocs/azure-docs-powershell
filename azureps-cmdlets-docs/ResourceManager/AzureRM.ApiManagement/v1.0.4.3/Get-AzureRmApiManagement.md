@@ -13,17 +13,17 @@ Gets a list or a particular API Management Service description.
 
 ### All In Subscription (Default)
 ```
-Get-AzureRmApiManagement
+Get-AzureRmApiManagement [<CommonParameters>]
 ```
 
 ### All In Resource Group
 ```
-Get-AzureRmApiManagement -ResourceGroupName <String>
+Get-AzureRmApiManagement -ResourceGroupName <String> [<CommonParameters>]
 ```
 
 ### Specific API Management Service
 ```
-Get-AzureRmApiManagement -ResourceGroupName <String> -Name <String>
+Get-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,6 +76,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

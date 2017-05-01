@@ -13,17 +13,17 @@ Gets a list or a particular Product.
 
 ### Get all producst (Default)
 ```
-Get-AzureRmApiManagementProduct -Context <PsApiManagementContext>
+Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [<CommonParameters>]
 ```
 
 ### Get by Id
 ```
-Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> -ProductId <String>
+Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> -ProductId <String> [<CommonParameters>]
 ```
 
 ### Get by Title
 ```
-Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-Title <String>]
+Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-Title <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +34,10 @@ Gets a list or a particular Product.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementProduct -Context $apimContext
 ```
@@ -42,6 +46,10 @@ Get all Products.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementProduct -Context $apimContext -ProductId 0123456789
@@ -99,6 +107,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

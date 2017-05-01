@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+ms.assetid: F5F98D01-86C1-4BDC-A72F-D9C8EFAA6414
 online version: 
 schema: 2.0.0
-ms.assetid: F5F98D01-86C1-4BDC-A72F-D9C8EFAA6414
 ---
 
 # Unregister-AzureRmBackupContainer

@@ -15,7 +15,7 @@ Creates a new azure active directory application.
 ```
 New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
  [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationWithPasswordPlainParameterSet
@@ -23,7 +23,7 @@ New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-Home
 New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
  [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -Password <String> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationWithKeyCredentialParameterSet
@@ -31,6 +31,7 @@ New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-Home
 New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
  [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -KeyCredentials <PSADKeyCredential[]>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ApplicationWithPasswordCredentialParameterSet
@@ -38,6 +39,7 @@ New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-Home
 New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
  [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -PasswordCredentials <PSADPasswordCredential[]>
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ApplicationWithKeyPlainParameterSet
@@ -45,7 +47,7 @@ New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-Home
 New-AzureRmADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage <String>]
  [-ReplyUrls <String[]>] [-AvailableToOtherTenants <Boolean>] -CertValue <String> [-StartDate <DateTime>]
  [-EndDate <DateTime>] [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +58,8 @@ Creates a new azure active directory application.
 ### --------------------------  Create new AAD application.  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http://NewApplication"
 ```
@@ -64,6 +68,8 @@ Creates a new azure active directory application without any credentials.
 
 ### --------------------------  Create new AAD application with password.  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\> New-AzureRmADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http:
@@ -303,6 +309,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

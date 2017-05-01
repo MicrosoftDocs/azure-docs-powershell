@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 8A7872D0-52FD-4787-8B05-B64414CC45F1
 online version: 
 schema: 2.0.0
-ms.assetid: 8A7872D0-52FD-4787-8B05-B64414CC45F1
 ---
 
 # Get-AzureRmApplicationGatewayProbeConfig
@@ -30,21 +30,6 @@ PS C:\>Get-AzureRmApplicationGatewayProbeConfig -ApplicationGateway Gateway -Nam
 This command gets the health probe named Probe02 from the application gateway named Gateway.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the probe.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway to which this cmdlet gets a probe configuration.
@@ -92,6 +77,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the probe.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: 41E98978-3CFF-42C6-AA7C-1A35D609D92A
 online version: 
 schema: 2.0.0
-ms.assetid: 41E98978-3CFF-42C6-AA7C-1A35D609D92A
 ---
 
 # Register-AzureRmResourceProvider
@@ -13,8 +13,8 @@ Registers a resource provider.
 ## SYNTAX
 
 ```
-Register-AzureRmResourceProvider -ProviderNamespace <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Register-AzureRmResourceProvider -ProviderNamespace <String> [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,20 +41,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

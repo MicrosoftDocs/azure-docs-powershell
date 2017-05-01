@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: FF902401-AC84-447E-AAD9-D8C50D08B1F1
 online version: 
 schema: 2.0.0
-ms.assetid: FF902401-AC84-447E-AAD9-D8C50D08B1F1
 ---
 
 # Get-AzureRmSqlElasticPoolDatabase
@@ -33,21 +33,6 @@ This command gets all databases in an elastic pool named ElasticPool01.
 
 ## PARAMETERS
 
-### -ElasticPoolName
-Specifies the name of an elastic pool.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DatabaseName
 Specifies the name of the SQL Database that this cmdlet gets.
 
@@ -63,8 +48,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ServerName
-Specifies the name of a server that contains an elastic pool.
+### -ElasticPoolName
+Specifies the name of an elastic pool.
 
 ```yaml
 Type: String
@@ -72,22 +57,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of a resource group to which the elastic pool is assigned.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -129,6 +99,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of a resource group to which the elastic pool is assigned.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of a server that contains an elastic pool.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

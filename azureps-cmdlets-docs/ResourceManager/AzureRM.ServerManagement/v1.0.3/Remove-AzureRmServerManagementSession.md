@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+ms.assetid: 0685B321-0FE4-4760-9446-17656F9DB600
 online version: 
 schema: 2.0.0
-ms.assetid: 0685B321-0FE4-4760-9446-17656F9DB600
 ---
 
 # Remove-AzureRmServerManagementSession
@@ -36,63 +36,6 @@ The **Remove-AzureRmServerManagementSession** cmdlet removes an Azure Server Man
 ```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group that the session belongs to.
-
-```yaml
-Type: String
-Parameter Sets: ByName
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NodeName
-Specifies the name of the node on which this cmdlet removes the session.
-
-```yaml
-Type: String
-Parameter Sets: ByName
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SessionName
-Specifies the name of the session that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: ByName
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: ByObject
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -133,6 +76,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NodeName
+Specifies the name of the node on which this cmdlet removes the session.
+
+```yaml
+Type: String
+Parameter Sets: ByName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that the session belongs to.
+
+```yaml
+Type: String
+Parameter Sets: ByName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Session
 Specifies the session that this cmdlet removes.
 
@@ -147,6 +120,33 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -SessionName
+Specifies the name of the session that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: ByName
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: ByObject
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 0CF8A423-C7B7-4BFF-9352-3E20718DC3C5
 online version: 
 schema: 2.0.0
-ms.assetid: 0CF8A423-C7B7-4BFF-9352-3E20718DC3C5
 ---
 
 # Remove-AzureRmVmssNetworkInterfaceConfiguration
@@ -43,7 +43,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -58,7 +58,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False

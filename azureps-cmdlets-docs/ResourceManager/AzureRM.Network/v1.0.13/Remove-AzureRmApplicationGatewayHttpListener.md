@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 29388C55-57C8-478C-819B-21E128C949B5
 online version: 
 schema: 2.0.0
-ms.assetid: 29388C55-57C8-478C-819B-21E128C949B5
 ---
 
 # Remove-AzureRmApplicationGatewayHttpListener
@@ -33,21 +33,6 @@ The first command gets an application gateway and stores it in the $AppGw variab
 The second command removes the HTTP listener named Listener02 from the application gateway stored in $AppGw.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the HTTP listener that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway from which to remove an HTTP listener.
@@ -97,6 +82,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the HTTP listener that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

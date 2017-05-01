@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: 4353EA8D-8EC1-4049-BE92-50EAE9CC73ED
 online version: 
 schema: 2.0.0
-ms.assetid: 4353EA8D-8EC1-4049-BE92-50EAE9CC73ED
 ---
 
 # Get-AzureRmRecoveryServicesBackupJobDetails
@@ -85,22 +85,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -JobId
-Specifies the ID of a Backup job.
-The ID is the InstanceId property of a **BackupJob** object.
-
-```yaml
-Type: String
-Parameter Sets: IdFilterSet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Job
 Specifies the job to get.
 To obtain a **BackupJob** object, use the Get-AzureRmRecoveryServicesBackupJob cmdlet.
@@ -112,6 +96,22 @@ Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JobId
+Specifies the ID of a Backup job.
+The ID is the InstanceId property of a **BackupJob** object.
+
+```yaml
+Type: String
+Parameter Sets: IdFilterSet
+Aliases: 
+
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

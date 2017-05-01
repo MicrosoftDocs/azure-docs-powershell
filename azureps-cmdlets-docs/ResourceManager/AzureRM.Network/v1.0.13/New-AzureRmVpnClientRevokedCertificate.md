@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 3F210B47-D93A-47E6-927B-AA45FCD6F92D
 online version: 
 schema: 2.0.0
-ms.assetid: 3F210B47-D93A-47E6-927B-AA45FCD6F92D
 ---
 
 # New-AzureRmVpnClientRevokedCertificate
@@ -43,42 +43,6 @@ This variable can then be used by the **New-AzureRmVirtualNetworkGateway** cmdle
 
 ## PARAMETERS
 
-### -Name
-Specifies a unique name for the new client-revocation certificate.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Thumbprint
-Specifies the unique identifier of the certificate being added.
-
-You can return thumbprint information for your certificates by using a pn_PowerShell command similar to this:
-
-`Get-ChildItem -Path Cert:\LocalMachine\Root`
-
-The preceding command returns information for all the Local Computer certificates found in the Root certificate store.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -112,6 +76,42 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a unique name for the new client-revocation certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Thumbprint
+Specifies the unique identifier of the certificate being added.
+
+You can return thumbprint information for your certificates by using a pn_PowerShell command similar to this:
+
+`Get-ChildItem -Path Cert:\LocalMachine\Root`
+
+The preceding command returns information for all the Local Computer certificates found in the Root certificate store.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+ms.assetid: BFC55A8F-C0EE-4FA3-A39E-45AEF4A582EE
 online version: 
 schema: 2.0.0
-ms.assetid: BFC55A8F-C0EE-4FA3-A39E-45AEF4A582EE
 ---
 
 # Get-AzureRmHDInsightCluster
@@ -13,8 +13,7 @@ Gets and lists all of the Azure HDInsight clusters associated with the current s
 ## SYNTAX
 
 ```
-Get-AzureRmHDInsightCluster [[-ResourceGroupName] <String>] [[-ClusterName] <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmHDInsightCluster [[-ResourceGroupName] <String>] [[-ClusterName] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,45 +56,6 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

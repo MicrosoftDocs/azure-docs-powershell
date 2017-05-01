@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+ms.assetid: AA0EA073-59B6-4441-B866-C7505D4ABD05
 online version: 
 schema: 2.0.0
-ms.assetid: AA0EA073-59B6-4441-B866-C7505D4ABD05
 ---
 
 # Set-AzureRmDnsZone
@@ -108,6 +108,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Tag
+Specifies an array of tags to associate with the DNS zone.
+Tags are name-value pairs that are represented as hashtables, for instance, @(@{"Name"="dept"; "Value"="shopping"}, @{"Name"="env"; "Value"="production"})
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: Fields
+Aliases: Tags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Zone
 Specifies the DNS zone to update.
 
@@ -122,22 +138,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Tag
-Specifies an array of tags to associate with the DNS zone.
-Tags are name-value pairs that are represented as hashtables, for instance, @(@{"Name"="dept"; "Value"="shopping"}, @{"Name"="env"; "Value"="production"})
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: Fields
-Aliases: Tags
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -11,11 +11,22 @@ Updates a back-end address pool for an application gateway.
 
 ## SYNTAX
 
+### SetByResourceId
 ```
 Set-AzureRmApplicationGatewayBackendAddressPool -ApplicationGateway <PSApplicationGateway> -Name <String>
- [-BackendIPAddresses <System.Collections.Generic.List`1[System.String]>]
- [-BackendFqdns <System.Collections.Generic.List`1[System.String]>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-BackendIPConfigurationIds <System.Collections.Generic.List`1[System.String]>] [<CommonParameters>]
+```
+
+### SetByIP
+```
+Set-AzureRmApplicationGatewayBackendAddressPool -ApplicationGateway <PSApplicationGateway> -Name <String>
+ [-BackendIPAddresses <System.Collections.Generic.List`1[System.String]>] [<CommonParameters>]
+```
+
+### SetByFqdn
+```
+Set-AzureRmApplicationGatewayBackendAddressPool -ApplicationGateway <PSApplicationGateway> -Name <String>
+ [-BackendFqdns <System.Collections.Generic.List`1[System.String]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,6 +37,8 @@ Back-end addresses can be specified as IP addresses, fully-qualified domain name
 
 ### --------------------------  Example 1: Setting a backend address pool by using FQDNs  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -38,6 +51,8 @@ The first command gets the application gateway named ApplicationGateway01 in the
 ### --------------------------  Example 2: Setting a backend address pool by using backend server IP addresses  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $AppGw = Set-AzureRmApplicationGatewayBackendAddressPool -ApplicationGateway $ AppGw
@@ -48,6 +63,8 @@ The second command gets the application gateway named ApplicationGateway01 in th
 
 ### --------------------------  Example 3: Setting a backend address pool by using the ID of the backend server's IP address  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS C:\>$Nic01 = Get-AzureRmNetworkInterface -Name "Nic01" -ResourceGroupName "ResourceGroup01"
@@ -94,12 +111,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BackendIPConfigurationIds
+Specifies a list of back-end IP configuration IDs to use for the back-end server pool.```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BackendIPAddresses
 Specifies a list of back-end IP addresses to use as a back-end server pool.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: (All)
+Parameter Sets: SetByIP
 Aliases: 
 
 Required: False
@@ -114,7 +144,7 @@ Specifies a list of back-end FQDNs to use as a back-end server pool.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: (All)
+Parameter Sets: SetByFqdn
 Aliases: 
 
 Required: False
@@ -124,65 +154,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

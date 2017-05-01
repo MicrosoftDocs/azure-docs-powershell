@@ -13,7 +13,7 @@ Updates existing deployment region in PsApiManagement instance.
 
 ```
 Update-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> -Sku <PsApiManagementSku>
- -Capacity <Int32> [-VirtualNetwork <PsApiManagementVirtualNetwork>]
+ -Capacity <Int32> [-VirtualNetwork <PsApiManagementVirtualNetwork>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -131,6 +131,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 05928D39-F461-4009-9AD7-D14FC00D1F9B
 online version: 
 schema: 2.0.0
-ms.assetid: 05928D39-F461-4009-9AD7-D14FC00D1F9B
 ---
 
 # Remove-AzureRmVirtualNetworkSubnetConfig
@@ -28,36 +28,6 @@ The **Remove-AzureRmVirtualNetworkSubnetConfig** cmdlet removes a subnet from an
 ```
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the subnet configuration to remove.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VirtualNetwork
-Specifies the **VirtualNetwork** object that contains the subnet configuration to remove.
-
-```yaml
-Type: PSVirtualNetwork
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -95,6 +65,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the subnet configuration to remove.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VirtualNetwork
+Specifies the **VirtualNetwork** object that contains the subnet configuration to remove.
+
+```yaml
+Type: PSVirtualNetwork
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

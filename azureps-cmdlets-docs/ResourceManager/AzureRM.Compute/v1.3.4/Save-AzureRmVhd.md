@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 805D14A1-4A19-41AC-8EDB-B3AE46F4BDC7
 online version: 
 schema: 2.0.0
-ms.assetid: 805D14A1-4A19-41AC-8EDB-B3AE46F4BDC7
 ---
 
 # Save-AzureRmVhd
@@ -69,33 +69,42 @@ This command downloads a .vhd file and specifies the storage key.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
+### -InformationAction
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
-Type: String
-Parameter Sets: ResourceGroupParameterSetName
-Aliases: 
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SourceUri
-Specifies the Uniform Resource Identifier (URI) of the blob in `Azure`.
+### -InformationVariable
+Specifies an information variable.
 
 ```yaml
-Type: Uri
+Type: String
 Parameter Sets: (All)
-Aliases: src, Source
+Aliases: iv
 
-Required: True
-Position: 1
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -144,42 +153,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: iv
+Parameter Sets: ResourceGroupParameterSetName
+Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SourceUri
+Specifies the Uniform Resource Identifier (URI) of the blob in `Azure`.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: src, Source
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

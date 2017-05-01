@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: E4C39C1D-185E-4397-82C7-C78E1106ED2B
 online version: 
 schema: 2.0.0
-ms.assetid: E4C39C1D-185E-4397-82C7-C78E1106ED2B
 ---
 
 # Get-AzureRmSiteRecoveryStorageClassificationMapping

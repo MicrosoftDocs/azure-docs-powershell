@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 03391538-1744-4396-AE35-23EE0E44ECEB
 online version: 
 schema: 2.0.0
-ms.assetid: 03391538-1744-4396-AE35-23EE0E44ECEB
 ---
 
 # Add-AzureRmVhd
@@ -14,7 +14,8 @@ Uploads a virtual hard disk from an on-premises virtual machine to a blob in a c
 
 ```
 Add-AzureRmVhd [[-ResourceGroupName] <String>] [-Destination] <Uri> [-LocalFilePath] <FileInfo>
- [[-NumberOfUploaderThreads] <Int32>] [[-BaseImageUriToPatch] <Uri>] [-OverWrite] [<CommonParameters>]
+ [[-NumberOfUploaderThreads] <Int32>] [[-BaseImageUriToPatch] <Uri>] [-OverWrite]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,17 +59,16 @@ This command adds a .vhd file to a storage account and specifies the SAS URI.
 
 ## PARAMETERS
 
-### -BaseImageUriToPatch
-Specifies the URI to a base image blob in Azure Blob Storage.
-An SAS can be specified as the value for this parameter.
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: Uri
+Type: String
 Parameter Sets: (All)
-Aliases: bs
+Aliases: 
 
 Required: False
-Position: 5
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -84,7 +84,7 @@ Parameter Sets: (All)
 Aliases: dst
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -99,7 +99,7 @@ Parameter Sets: (All)
 Aliases: lf
 
 Required: True
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -112,6 +112,22 @@ Specifies the number of uploader threads to be used when uploading the .vhd file
 Type: Int32
 Parameter Sets: (All)
 Aliases: th
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BaseImageUriToPatch
+Specifies the URI to a base image blob in Azure Blob Storage.
+An SAS can be specified as the value for this parameter.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: bs
 
 Required: False
 Position: 4
@@ -129,24 +145,35 @@ Parameter Sets: (All)
 Aliases: o
 
 Required: False
-Position: 6
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: 
+Aliases: infa
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

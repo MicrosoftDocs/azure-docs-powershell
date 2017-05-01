@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: B6CAED0F-00EA-4A44-8C45-E90B15AE8776
 online version: 
 schema: 2.0.0
-ms.assetid: B6CAED0F-00EA-4A44-8C45-E90B15AE8776
 ---
 
 # Invoke-AzureRmResourceAction
@@ -43,7 +43,6 @@ The **Invoke-AzureRmResourceAction** cmdlet invokes an action on a specified Azu
 To get a list of supported actions, use the Azure Resource Explorer tool.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 
@@ -339,5 +338,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

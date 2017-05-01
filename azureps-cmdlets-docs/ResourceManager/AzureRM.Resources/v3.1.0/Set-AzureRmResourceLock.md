@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: A20B95D0-54EB-49B2-A8F1-281D3A115879
 online version: 
 schema: 2.0.0
-ms.assetid: A20B95D0-54EB-49B2-A8F1-281D3A115879
 ---
 
 # Set-AzureRmResourceLock

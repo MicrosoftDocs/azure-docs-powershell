@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: A8D81054-E35D-4758-9A29-47088139ED1B
 online version: 
 schema: 2.0.0
-ms.assetid: A8D81054-E35D-4758-9A29-47088139ED1B
 ---
 
 # New-AzureRmResourceGroupDeployment
@@ -19,13 +19,6 @@ New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> 
  [-Confirm] [<CommonParameters>]
 ```
 
-### Deployment via template uri and template parameters object
-```
-New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
- [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterObject <Hashtable> -TemplateUri <String>
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### Deployment via template file and template parameters object
 ```
 New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
@@ -33,10 +26,10 @@ New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> 
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### Deployment via template uri and template parameters file
+### Deployment via template uri and template parameters object
 ```
 New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
- [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterFile <String> -TemplateUri <String>
+ [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterObject <Hashtable> -TemplateUri <String>
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -47,10 +40,10 @@ New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> 
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### Deployment via template uri and template parameters uri
+### Deployment via template uri and template parameters file
 ```
 New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
- [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterUri <String> -TemplateUri <String>
+ [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterFile <String> -TemplateUri <String>
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -58,6 +51,13 @@ New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> 
 ```
 New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
  [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterUri <String> -TemplateFile <String>
+ [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Deployment via template uri and template parameters uri
+```
+New-AzureRmResourceGroupDeployment [-Name <String>] -ResourceGroupName <String> [-Mode <DeploymentMode>]
+ [-DeploymentDebugLogLevel <String>] [-Force] -TemplateParameterUri <String> -TemplateUri <String>
  [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -141,7 +141,7 @@ Template parameters are dynamically added to the command when you specify a temp
 
 ```yaml
 Type: Hashtable
-Parameter Sets: Deployment via template uri and template parameters object, Deployment via template file and template parameters object
+Parameter Sets: Deployment via template file and template parameters object, Deployment via template uri and template parameters object
 Aliases: 
 
 Required: True
@@ -192,7 +192,7 @@ To use the dynamic parameters, type a minus sign (-) to indicate a parameter nam
 
 ```yaml
 Type: String
-Parameter Sets: Deployment via template uri and template parameters file, Deployment via template file and template parameters file
+Parameter Sets: Deployment via template file and template parameters file, Deployment via template uri and template parameters file
 Aliases: 
 
 Required: True
@@ -308,7 +308,7 @@ Specifies the URI of a template parameters file.
 
 ```yaml
 Type: String
-Parameter Sets: Deployment via template uri and template parameters uri, Deployment via template file template parameters uri
+Parameter Sets: Deployment via template file template parameters uri, Deployment via template uri and template parameters uri
 Aliases: 
 
 Required: True

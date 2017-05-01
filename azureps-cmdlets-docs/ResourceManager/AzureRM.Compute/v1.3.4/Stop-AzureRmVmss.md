@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 7BB6DF38-91AC-4B65-A6CE-05C0618089CB
 online version: 
 schema: 2.0.0
-ms.assetid: 7BB6DF38-91AC-4B65-A6CE-05C0618089CB
 ---
 
 # Stop-AzureRmVmss
@@ -92,36 +92,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the name of the resource group of the VMSS.
-
-```yaml
-Type: String
-Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VMScaleSetName
-Specifies the name of the VMSS for which this cmdlet stops the virtual machines.
-
-```yaml
-Type: String
-Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstanceId
 Specifies, as a string array, the ID or IDs of the virtual machine instances that this cmdlet stops.
 For instance: `-InstanceId "0", "3"`.
@@ -138,6 +108,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResourceGroupName
+Specifies the name of the resource group of the VMSS.
+
+```yaml
+Type: String
+Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -StayProvisioned
 Indicates that this cmdlet deallocates all the virtual machines within the VMSS so that the user is not charged for the stopped virtual machines.
 
@@ -148,6 +133,21 @@ Aliases:
 
 Required: True
 Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VMScaleSetName
+Specifies the name of the VMSS for which this cmdlet stops the virtual machines.
+
+```yaml
+Type: String
+Parameter Sets: InvokeByDynamicParameters, InvokeByDynamicParametersForFriendMethod
+Aliases: 
+
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

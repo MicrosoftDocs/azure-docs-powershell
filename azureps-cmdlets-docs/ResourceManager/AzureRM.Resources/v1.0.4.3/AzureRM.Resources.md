@@ -32,6 +32,11 @@ Locale: en-US
 ### [Get-AzureRmADUser](Get-AzureRmADUser.md)
 {{Fill in the Synopsis}}
 
+### [Get-AzureRmAuthorizationChangeLog](Get-AzureRmAuthorizationChangeLog.md)
+Gets access change history for the selected subscription for the specified time range i.e.
+role assignments that were added or removed, including classic administrators (co-administrators and service administrators).
+Maximum duration that can be queried is 15 days (going back up to past 90 days).
+
 ### [Get-AzureRmPolicyAssignment](Get-AzureRmPolicyAssignment.md)
 {{Fill in the Synopsis}}
 

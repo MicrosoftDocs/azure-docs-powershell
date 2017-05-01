@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+ms.assetid: E32E8797-80BF-4F3C-BE03-04CFDA5B2782
 online version: 
 schema: 2.0.0
-ms.assetid: E32E8797-80BF-4F3C-BE03-04CFDA5B2782
 ---
 
 # Update-AzureRmMlWebService
@@ -70,42 +70,12 @@ The second command calls the **Update-AzureRmMlWebService** cmdlet to apply thos
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group that the web service belongs to.
+### -Assets
+Specifies the set of assets that make up the web service.
+Assets include, but are not limited to, modules and datasets.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the web service resource that this cmdlet updates.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Title
-Specifies the update value for the title of the web service.
-The value of the parameter is visible in the service's Swagger API schema.
-
-```yaml
-Type: String
+Type: Hashtable
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -122,6 +92,51 @@ This parameter is visible in the service's Swagger API schema.
 
 ```yaml
 Type: String
+Parameter Sets: Update specific properties of the .
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Diagnostics
+Specifies the settings controlling the diagnostics traces collection for the web service.
+
+```yaml
+Type: DiagnosticsConfiguration
+Parameter Sets: Update specific properties of the .
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+ps_force
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Input
+Specifies the definition for input of the web service, provided as a Swagger schema construct.
+
+```yaml
+Type: ServiceInputOutputSpecification
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -162,76 +177,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StorageAccountKey
-Specifies the access key for the storage account associated with the web service.
+### -Name
+Specifies the name of the web service resource that this cmdlet updates.
 
 ```yaml
 Type: String
-Parameter Sets: Update specific properties of the .
+Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Diagnostics
-Specifies the settings controlling the diagnostics traces collection for the web service.
-
-```yaml
-Type: DiagnosticsConfiguration
-Parameter Sets: Update specific properties of the .
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RealtimeConfiguration
-Specifies the **RealtimeConfiguration** object for the web service's realtime endpoint.
-
-```yaml
-Type: RealtimeConfiguration
-Parameter Sets: Update specific properties of the .
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Assets
-Specifies the set of assets that make up the web service.
-Assets include, but are not limited to, modules and datasets.
-
-```yaml
-Type: Hashtable
-Parameter Sets: Update specific properties of the .
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Input
-Specifies the definition for input of the web service, provided as a Swagger schema construct.
-
-```yaml
-Type: ServiceInputOutputSpecification
-Parameter Sets: Update specific properties of the .
-Aliases: 
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -243,21 +197,6 @@ Specifies the definition for the output of the web service, provided as a Swagge
 
 ```yaml
 Type: ServiceInputOutputSpecification
-Parameter Sets: Update specific properties of the .
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Parameters
-Specifies, as a hashtable, the set of global parameters values defined for the web service, given as a global parameter name -\> default value collection.
-
-```yaml
-Type: Hashtable
 Parameter Sets: Update specific properties of the .
 Aliases: 
 
@@ -283,15 +222,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-ps_force
+### -Parameters
+Specifies, as a hashtable, the set of global parameters values defined for the web service, given as a global parameter name -\> default value collection.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: Hashtable
+Parameter Sets: Update specific properties of the .
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RealtimeConfiguration
+Specifies the **RealtimeConfiguration** object for the web service's realtime endpoint.
+
+```yaml
+Type: RealtimeConfiguration
+Parameter Sets: Update specific properties of the .
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group that the web service belongs to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -312,6 +281,37 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageAccountKey
+Specifies the access key for the storage account associated with the web service.
+
+```yaml
+Type: String
+Parameter Sets: Update specific properties of the .
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+Specifies the update value for the title of the web service.
+The value of the parameter is visible in the service's Swagger API schema.
+
+```yaml
+Type: String
+Parameter Sets: Update specific properties of the .
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

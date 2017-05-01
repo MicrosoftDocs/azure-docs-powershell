@@ -15,7 +15,7 @@ Creates a request routing rule for an application gateway.
 ```
 New-AzureRmApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String>
  [-BackendHttpSettingsId <String>] [-HttpListenerId <String>] [-BackendAddressPoolId <String>]
- [-UrlPathMapId <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-UrlPathMapId <String>] [<CommonParameters>]
 ```
 
 ### SetByResource
@@ -24,7 +24,7 @@ New-AzureRmApplicationGatewayRequestRoutingRule -Name <String> -RuleType <String
  [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
  [-HttpListener <PSApplicationGatewayHttpListener>]
  [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>] [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +34,10 @@ The Add-AzureRmApplicationGatewayRequestRoutingRule cmdlet creates a request rou
 
 ### --------------------------  Example 1: Create a request routing rule for an application gateway  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$Rule = New-AzureRmApplicationGatewayRequestRoutingRule -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
@@ -118,51 +122,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UrlPathMapId
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: SetByResourceId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -BackendHttpSettings
 Specifies the back-end HTTP settings (as object) for the request routing rule to create.
 
@@ -222,6 +181,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -UrlPathMapId
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

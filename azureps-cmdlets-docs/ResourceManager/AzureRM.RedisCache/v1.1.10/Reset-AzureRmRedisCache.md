@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+ms.assetid: F48C3D73-2FB0-4A2E-AF50-7FBF30F64CFE
 online version: 
 schema: 2.0.0
-ms.assetid: F48C3D73-2FB0-4A2E-AF50-7FBF30F64CFE
 ---
 
 # Reset-AzureRmRedisCache
@@ -31,8 +31,59 @@ This command restarts both nodes for the cache named RedisCache06.
 
 ## PARAMETERS
 
+### -Force
+ps_force
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of a cache.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PassThru
+Indicates that this cmdlet returns a Boolean that indicates whether the operation succeeds.
+By default, this cmdlet does not generate any output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RebootType
+Specifies which node or nodes to restart.
+psdx_paramvalues
+
+- PrimaryNode 
+- SecondaryNode 
+- AllNodes
 
 ```yaml
 Type: String
@@ -61,26 +112,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RebootType
-Specifies which node or nodes to restart.
-psdx_paramvalues
-
-- PrimaryNode 
-- SecondaryNode 
-- AllNodes
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ShardId
 Specifies the ID of the shard that this cmdlet restarts for a premium cache with clustering enabled.
 
@@ -93,37 +124,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Indicates that this cmdlet returns a Boolean that indicates whether the operation succeeds.
-By default, this cmdlet does not generate any output.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

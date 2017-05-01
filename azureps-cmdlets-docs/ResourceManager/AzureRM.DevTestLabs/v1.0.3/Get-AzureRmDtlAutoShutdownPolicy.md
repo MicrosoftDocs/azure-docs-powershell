@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+ms.assetid: 91E9385C-E861-4BA7-9BC9-66CEF5385CEC
 online version: 
 schema: 2.0.0
-ms.assetid: 91E9385C-E861-4BA7-9BC9-66CEF5385CEC
 ---
 
 # Get-AzureRmDtlAutoShutdownPolicy
@@ -29,36 +29,6 @@ The cmdlet returns whether the status of the policy is enabled, and the time of 
 ```
 
 ## PARAMETERS
-
-### -LabName
-Specifies the name of the lab for which this cmdlet gets the auto shutdown policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that the lab belongs to.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -96,6 +66,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabName
+Specifies the name of the lab for which this cmdlet gets the auto shutdown policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that the lab belongs to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

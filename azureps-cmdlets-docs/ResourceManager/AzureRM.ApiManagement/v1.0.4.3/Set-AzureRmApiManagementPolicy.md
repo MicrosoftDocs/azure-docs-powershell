@@ -14,25 +14,25 @@ Set specified scope policy.
 ### Tenant level (Default)
 ```
 Set-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [-Policy <String>]
- [-PolicyFilePath <String>] [-PassThru]
+ [-PolicyFilePath <String>] [-PassThru] [<CommonParameters>]
 ```
 
 ### Product level
 ```
 Set-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] -ProductId <String>
- [-Policy <String>] [-PolicyFilePath <String>] [-PassThru]
+ [-Policy <String>] [-PolicyFilePath <String>] [-PassThru] [<CommonParameters>]
 ```
 
 ### API level
 ```
 Set-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] -ApiId <String>
- [-Policy <String>] [-PolicyFilePath <String>] [-PassThru]
+ [-Policy <String>] [-PolicyFilePath <String>] [-PassThru] [<CommonParameters>]
 ```
 
 ### Operation level
 ```
 Set-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] -ApiId <String>
- -OperationId <String> [-Policy <String>] [-PolicyFilePath <String>] [-PassThru]
+ -OperationId <String> [-Policy <String>] [-PolicyFilePath <String>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +43,10 @@ Set specified scope policy.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Set-AzureRmApiManagementPolicy -Context $apimContext -PolicyFilePath 'C:\contoso\policies\tenantpolicy.xml'
 ```
@@ -51,6 +55,10 @@ Set tenant level policy from file named tenantpolicy.xml.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Set-AzureRmApiManagementPolicy -Context $apimContext -ProductId 0123456789 -Policy $policystring
@@ -61,6 +69,10 @@ Set product-scope policy.
 ### --------------------------  Example 3  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementPolicy -Context $apimContext -ApiId 9876543210 -Policy $policystring
 ```
@@ -69,6 +81,10 @@ Set API-scope policy.
 
 ### --------------------------  Example 4  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Set-AzureRmApiManagementPolicy -Context $apimContext -ApiId 9876543210 -OperationId 777 -Policy $policystring
@@ -210,6 +226,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

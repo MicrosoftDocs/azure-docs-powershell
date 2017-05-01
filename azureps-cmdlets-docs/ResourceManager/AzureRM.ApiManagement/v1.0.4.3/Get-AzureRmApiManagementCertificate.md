@@ -13,12 +13,13 @@ Gets all or specific certificates.
 
 ### Get all certificates (Default)
 ```
-Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext>
+Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> [<CommonParameters>]
 ```
 
 ### Get certificate by ID
 ```
 Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -CertificateId <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +30,10 @@ Gets all or specific certificates.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 Get-AzureRmApiManagementCertificate -Context $apimContext
 ```
@@ -37,6 +42,10 @@ Get all certificates.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 Get-AzureRmApiManagementCertificate -Context $apimContext -CertificateId 0123456789
@@ -78,6 +87,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

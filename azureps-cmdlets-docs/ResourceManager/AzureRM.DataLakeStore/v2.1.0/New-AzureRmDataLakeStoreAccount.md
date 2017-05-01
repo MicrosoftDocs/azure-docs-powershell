@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+ms.assetid: F223365D-8F3B-4DAB-8D2E-D23405322613
 online version: 
 schema: 2.0.0
-ms.assetid: F223365D-8F3B-4DAB-8D2E-D23405322613
 ---
 
 # New-AzureRmDataLakeStoreAccount
@@ -14,8 +14,7 @@ Creates a new Data Lake Store account.
 
 ```
 New-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [[-DefaultGroup] <String>] [[-Tags] <Hashtable>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+ [[-DefaultGroup] <String>] [[-Tags] <Hashtable[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,31 +31,16 @@ This command creates a Data Lake Store account named ContosoADL for the East US 
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group that contains the account.
+### -DefaultGroup
+Specifies the object ID of the AzureActive Directory group to use as the default group owner for new files and folders.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the account to create.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -72,6 +56,22 @@ The acceptable values for this parameter are:
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: North Central US, South Central US, Central US, West Europe, North Europe, West US, East US, East US 2, Japan East, Japan West, Brazil South, Southeast Asia, East Asia, Australia East, Australia Southeast
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the account to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: True
 Position: 2
@@ -80,16 +80,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultGroup
-Specifies the object ID of the AzureActive Directory group to use as the default group owner for new files and folders.
+### -ResourceGroupName
+Specifies the name of the resource group that contains the account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 3
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -100,53 +100,14 @@ Specifies tags as key-value pairs.
 You can use tags to identify a Data Lake Store account from other Azure resources.
 
 ```yaml
-Type: Hashtable
+Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

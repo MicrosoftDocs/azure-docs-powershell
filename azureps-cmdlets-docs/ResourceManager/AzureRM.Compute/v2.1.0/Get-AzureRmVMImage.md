@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 42B3C327-0812-43EF-89CB-6F80BA457209
 online version: 
 schema: 2.0.0
-ms.assetid: 42B3C327-0812-43EF-89CB-6F80BA457209
 ---
 
 # Get-AzureRmVMImage
@@ -12,16 +12,17 @@ Gets all the versions of a VMImage.
 
 ## SYNTAX
 
-### GetVMImageDetail
-```
-Get-AzureRmVMImage -Location <String> -PublisherName <String> -Offer <String> -Skus <String> -Version <String>
- [<CommonParameters>]
-```
-
 ### ListVMImage
 ```
 Get-AzureRmVMImage -Location <String> -PublisherName <String> -Offer <String> -Skus <String>
- [-FilterExpression <String>] [<CommonParameters>]
+ [-FilterExpression <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
+```
+
+### GetVMImageDetail
+```
+Get-AzureRmVMImage -Location <String> -PublisherName <String> -Offer <String> -Skus <String> -Version <String>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,39 +39,8 @@ This command gets all the versions of VMImage that match the specified values.
 
 ## PARAMETERS
 
-### -FilterExpression
-Specifies a filter expression.
-
-```yaml
-Type: String
-Parameter Sets: ListVMImage
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Location
 Specifies the location of a VMImage.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Offer
-Specifies the type of VMImage offer.
-To obtain an image offer, use the Get-AzureRmVMImageOffer cmdlet.
 
 ```yaml
 Type: String
@@ -100,6 +70,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Offer
+Specifies the type of VMImage offer.
+To obtain an image offer, use the Get-AzureRmVMImageOffer cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Skus
 Specifies a VMImage SKU.
 To obtain an SKU, use the Get-AzureRmVMImageSku cmdlet.
@@ -113,6 +99,47 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FilterExpression
+Specifies a filter expression.
+
+```yaml
+Type: String
+Parameter Sets: ListVMImage
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

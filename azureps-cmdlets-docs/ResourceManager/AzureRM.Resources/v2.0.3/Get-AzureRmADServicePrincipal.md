@@ -13,22 +13,26 @@ Filters active directory service principals.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>]
+Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADServicePrincipal -SearchString <String>
+Get-AzureRmADServicePrincipal -SearchString <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADServicePrincipal -ObjectId <Guid>
+Get-AzureRmADServicePrincipal -ObjectId <Guid> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### SPNParameterSet
 ```
-Get-AzureRmADServicePrincipal -ServicePrincipalName <String>
+Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +43,12 @@ Filters active directory service principals.
 ### --------------------------  Filters service principals using SPN  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
+
+
 ```
 PS C:\> Get-AzureRmADServicePrincipal -SPN 36f81fc3-b00f-48cd-8218-3879f51ff39f
 ```
@@ -48,6 +58,12 @@ Gets service principals with 36f81fc3-b00f-48cd-8218-3879f51ff39f SPN
 ### --------------------------  Filters service principals using Search String  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
+
+
 ```
 PS C:\> Get-AzureRmADServicePrincipal -SearchString Web
 ```
@@ -56,6 +72,12 @@ Filters all ad service principals that has Web in the display name.
 
 ### --------------------------  List AD service principals  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
+
+
 
 ```
 PS C:\> Get-AzureRmADServicePrincipal
@@ -92,6 +114,32 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SearchString
 The service principal display name
 
@@ -121,6 +169,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

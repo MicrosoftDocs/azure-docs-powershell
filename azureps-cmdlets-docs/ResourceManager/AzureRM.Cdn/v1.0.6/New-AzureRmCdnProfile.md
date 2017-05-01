@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+ms.assetid: 64B16EF7-7572-4D48-A290-074B6EA330AA
 online version: 
 schema: 2.0.0
-ms.assetid: 64B16EF7-7572-4D48-A290-074B6EA330AA
 ---
 
 # New-AzureRmCdnProfile
@@ -29,51 +29,6 @@ The **New-AzureRmCdnProfile** cmdlet creates an Azure Content Delivery Network (
 ```
 
 ## PARAMETERS
-
-### -Location
-Specifies the resource location of the profile.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Sku
-Specifies the SKU of the profile.
-
-```yaml
-Type: PSSkuName
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the profile belongs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -114,11 +69,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Location
+Specifies the resource location of the profile.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProfileName
 Specifies the name of the profile.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the profile belongs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Sku
+Specifies the SKU of the profile.
+
+```yaml
+Type: PSSkuName
 Parameter Sets: (All)
 Aliases: 
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: D0D71E14-17B9-49DD-B8D2-B8A5CCAB770B
 online version: 
 schema: 2.0.0
-ms.assetid: D0D71E14-17B9-49DD-B8D2-B8A5CCAB770B
 ---
 
 # Remove-AzureRmApplicationGatewayFrontendPort
@@ -33,21 +33,6 @@ The first command gets an application gateway named ApplicationGateway01 that be
 The second command removes the port named FrontEndPort02 from the application gateway.
 
 ## PARAMETERS
-
-### -Name
-Specifies name of the frontend port to remove.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies the application gateway from which to remove a front-end port.
@@ -97,6 +82,21 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies name of the frontend port to remove.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+ms.assetid: D407A0B9-BB75-4771-AFB6-787342986B54
 online version: 
 schema: 2.0.0
-ms.assetid: D407A0B9-BB75-4771-AFB6-787342986B54
 ---
 
 # Remove-AzureRmMlWebService
@@ -56,36 +56,6 @@ This command removes the Azure Machine Learning web service named WebService001 
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group that the web service belongs to.
-
-```yaml
-Type: String
-Parameter Sets: Remove an Azure ML web service resouce by name and resource group.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the web service resource that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: Remove an Azure ML web service resouce by name and resource group.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 ps_force
 
@@ -114,6 +84,36 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the web service resource that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: Remove an Azure ML web service resouce by name and resource group.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group that the web service belongs to.
+
+```yaml
+Type: String
+Parameter Sets: Remove an Azure ML web service resouce by name and resource group.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: AB00FB90-BE23-4147-A108-7E9DF001E06A
 online version: 
 schema: 2.0.0
-ms.assetid: AB00FB90-BE23-4147-A108-7E9DF001E06A
 ---
 
 # New-AzureRmVmssIpConfig
@@ -14,8 +14,8 @@ Creates an IP configuration for a network interface of a VMSS.
 
 ```
 New-AzureRmVmssIpConfig [[-Name] <String>] [[-Id] <String>] [[-SubnetId] <String>]
- [[-ApplicationGatewayBackendAddressPoolsId] <String[]>] [[-LoadBalancerBackendAddressPoolsId] <String[]>]
- [[-LoadBalancerInboundNatPoolsId] <String[]>] [<CommonParameters>]
+ [[-LoadBalancerBackendAddressPoolsId] <String[]>] [[-LoadBalancerInboundNatPoolsId] <String[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,23 +45,6 @@ The command specifies values for the *LoadBalancerInboundNatPoolsId* and *LoadBa
 
 ## PARAMETERS
 
-### -ApplicationGatewayBackendAddressPoolsId
-Specifies an array of references to backend address pools of load balancers.
-A scale set can reference backend address pools of one public and one internal load balancer.
-Multiple scale sets cannot use the same load balancer.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Id
 Specifies an ID.
 
@@ -71,7 +54,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -88,7 +71,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 5
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -105,7 +88,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 6
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -120,7 +103,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -135,7 +118,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

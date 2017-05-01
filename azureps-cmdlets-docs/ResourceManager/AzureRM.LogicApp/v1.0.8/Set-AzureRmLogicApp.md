@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+ms.assetid: 30F3B9FA-6FC4-4856-B6D4-255377148A24
 online version: 
 schema: 2.0.0
-ms.assetid: 30F3B9FA-6FC4-4856-B6D4-255377148A24
 ---
 
 # Set-AzureRmLogicApp
@@ -12,12 +12,20 @@ Modifies a logic app in a resource group.
 
 ## SYNTAX
 
+### Consumption (Default)
+```
+Set-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-UseConsumptionModel] [-State <String>]
+ [-Definition <Object>] [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
+ [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### HostingPlan
 ```
 Set-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-AppServicePlan <String>] [-State <String>]
- [-DefinitionLinkUri <String>] [-DefinitionLinkContentVersion <String>] [-Definition <Object>]
- [-DefinitionFilePath <String>] [-ParameterLinkUri <String>] [-ParameterLinkContentVersion <String>]
- [-Parameters <Object>] [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Definition <Object>] [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
+ [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,7 +94,7 @@ Specifies the name of a logic app.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceName
 
 Required: True
 Position: Named
@@ -95,54 +103,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppServicePlan
-Specifies the name of a plan.
-
-```yaml
-Type: String
-Parameter Sets: (All)
+### -UseConsumptionModel
+Specifies the usage of consumption based model for LogicApp billing.```yaml
+Type: SwitchParameter
+Parameter Sets: Consumption
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -State
 Specifies the state of the logic app.
 psdx_paramvalues Enabled and Disabled.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefinitionLinkUri
-Specifies Definition link Uri of the Logic App. If DefinitionLinkUri is provided as parameter then user must provide the "DefinitionLinkContentVersion" parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefinitionLinkContentVersion
-Specifies the content version of the Definition link Uri.
 
 ```yaml
 Type: String
@@ -186,25 +162,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ParameterLinkUri
-Specifies parameter link Uri of the Logic App. If ParameterLinkUri is provided as parameter then user must provide the "ParameterLinkContentVersion" parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ParameterLinkContentVersion
-Specifies the content version of the Parameter Link Uri of the Logic App.
-
-```yaml
+### -IntegrationAccountId
+Specifies the integration account ID used for the LogicApp. This parameter is optional. e.g. "/subscriptions/valid-subscription-guid/resourceGroups/valid-group-name/providers/Microsoft.Logic/integrationAccounts/valid-name-of-integration-account"```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -237,6 +196,21 @@ Specifies the path of a JSON formatted parameter file.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+ps_force
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -286,6 +260,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -301,34 +291,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-ps_force
+### -AppServicePlan
+Specifies the name of a plan.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: HostingPlan
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

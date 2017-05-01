@@ -14,14 +14,14 @@ schema: 2.0.0
 ### The resource Id. (Default)
 ```
 Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceId <String> [-ODataQuery <String>] [-Force]
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Tag <Hashtable>] [-Zones <String[]>] [-UsePatchSemantics] -ResourceId <String> [-ODataQuery <String>]
+ [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Resource that resides at the subscription level.
 ```
 Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
+ [-Tag <Hashtable>] [-Zones <String[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
  [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>]
  [-ResourceGroupName <String>] [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -29,7 +29,7 @@ Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>
 ### Resource that resides at the tenant level.
 ```
 Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
+ [-Tag <Hashtable>] [-Zones <String[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
  [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>] [-TenantLevel]
  [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -56,6 +56,68 @@ If not specified, the API version is automatically determined as the latest avai
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tag
+A hash table which represents resource tags.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: Tags
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+The resource group name.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level.
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceType
+The resource type.
+e.g.
+Microsoft.Sql/Servers/Databases.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -188,21 +250,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-The resource group name.
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level.
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ResourceId
 The fully qualified resource Id, including the subscription.
 e.g.
@@ -237,23 +284,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceType
-The resource type.
-e.g.
-Microsoft.Sql/Servers/Databases.
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Sku
 A hash table which represents sku properties.
 
@@ -261,21 +291,6 @@ A hash table which represents sku properties.
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: SkuObject
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tag
-A hash table which represents resource tags.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases: Tags
 
 Required: False
 Position: Named
@@ -314,21 +329,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -342,6 +342,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Zones
+The zones.```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

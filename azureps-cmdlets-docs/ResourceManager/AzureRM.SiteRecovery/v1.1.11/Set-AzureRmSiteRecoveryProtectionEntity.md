@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: EEE53ABF-120C-49A4-83FD-ABFFE70F42E0
 online version: 
 schema: 2.0.0
-ms.assetid: EEE53ABF-120C-49A4-83FD-ABFFE70F42E0
 ---
 
 # Set-AzureRmSiteRecoveryProtectionEntity
@@ -49,21 +49,6 @@ The **Set-AzureRmSiteRecoveryProtectionEntity** cmdlet enables or disables prote
 ```
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 ps_force
@@ -189,6 +174,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

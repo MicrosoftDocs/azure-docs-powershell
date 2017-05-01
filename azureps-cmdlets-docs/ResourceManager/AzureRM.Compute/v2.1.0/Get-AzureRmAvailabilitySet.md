@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 75B0ED43-28FC-4A3E-9EBE-F8A664185448
 online version: 
 schema: 2.0.0
-ms.assetid: 75B0ED43-28FC-4A3E-9EBE-F8A664185448
 ---
 
 # Get-AzureRmAvailabilitySet
@@ -13,7 +13,8 @@ Gets Azure availability sets in a resource group.
 ## SYNTAX
 
 ```
-Get-AzureRmAvailabilitySet [-ResourceGroupName] <String> [[-Name] <String>] [<CommonParameters>]
+Get-AzureRmAvailabilitySet [-ResourceGroupName] <String> [[-Name] <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,21 +39,6 @@ This command gets all the availability sets in the resource group named Resource
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of an availability set that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName, AvailabilitySetName
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 Specifies the name of a resource group.
 
@@ -62,9 +48,50 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of an availability set that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceName, AvailabilitySetName
+
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

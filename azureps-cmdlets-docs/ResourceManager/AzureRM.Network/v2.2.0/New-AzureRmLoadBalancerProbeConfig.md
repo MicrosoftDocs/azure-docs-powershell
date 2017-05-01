@@ -13,8 +13,7 @@ Creates a probe configuration for a load balancer.
 
 ```
 New-AzureRmLoadBalancerProbeConfig -Name <String> [-RequestPath <String>] [-Protocol <String>] -Port <Int32>
- -IntervalInSeconds <Int32> -ProbeCount <Int32> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ -IntervalInSeconds <Int32> -ProbeCount <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,6 +25,10 @@ Probes enable automatic removal of those virtual machines that fail the health c
 
 ### --------------------------  Example 1  Creating a new probe  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmLoadBalancerProbeConfig -Name MyProbe -Protocol http -Port 80 -IntervalInSeconds 15 -ProbeCount 15
@@ -139,35 +142,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

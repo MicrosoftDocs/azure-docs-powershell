@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+ms.assetid: 58D12EA6-2949-4184-A91F-4D613EF84878
 online version: 
 schema: 2.0.0
-ms.assetid: 58D12EA6-2949-4184-A91F-4D613EF84878
 ---
 
 # Remove-AzureRmCdnProfile
@@ -36,21 +36,6 @@ The **Remove-AzureRmCdnProfile** cmdlet removes a Azure Content Delivery Network
 ```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the profile belongs.
-
-```yaml
-Type: String
-Parameter Sets: Parameter Set for fields parameters
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CdnProfile
 Specifies the profile that this cmdlet removes.
@@ -106,8 +91,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PassThru
+passthru
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ProfileName
 Specifies the name of the profile that this cmdlet removes.
+
+```yaml
+Type: String
+Parameter Sets: Parameter Set for fields parameters
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the profile belongs.
 
 ```yaml
 Type: String
@@ -133,21 +148,6 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-passthru
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

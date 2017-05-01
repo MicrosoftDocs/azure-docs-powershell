@@ -13,7 +13,7 @@ Gets the access keys of a specified Logic App.
 
 ```
 Get-AzureRmLogicAppAccessKey -ResourceGroupName <String> -Name <String> [-AccessKeyName <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,10 @@ If you miss a required template parameter, the cmdlet prompts you for the value.
 ### --------------------------  Example 1 : Get the access key of a Logic App from specified Azure resource group.  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\>Get-AzureRmLogicAppAccessKey -ResourceGroupName "ResourceGroup1" -Name "LogicApp1" -AccessKeyName "default"
 ```
@@ -42,6 +46,10 @@ SecondarySecretKey : \<value\>
 ### --------------------------  Example 2 : Gets all the access keys of a Logic App from specified Azure resource group.  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\>Get-AzureRmLogicAppAccessKey -ResourceGroupName "ResourceGroup1" -Name "LogicApp1"
 ```
@@ -52,38 +60,6 @@ PrimarySecretKey   : \<value\>
 SecondarySecretKey : \<value\>
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies a name for the resource group.
-This parameter is required.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the Logic App.
-This parameter is required.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AccessKeyName
 Specifies the name of the access key.
@@ -130,6 +106,41 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Name
+Specifies the name of the Logic App.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies a name for the resource group.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -14,13 +14,13 @@ Creates new certificate.
 ### Load from file (Default)
 ```
 New-AzureRmApiManagementCertificate -Context <PsApiManagementContext> [-CertificateId <String>]
- -PfxFilePath <String> -PfxPassword <String>
+ -PfxFilePath <String> -PfxPassword <String> [<CommonParameters>]
 ```
 
 ### Raw
 ```
 New-AzureRmApiManagementCertificate -Context <PsApiManagementContext> [-CertificateId <String>]
- -PfxBytes <Byte[]> -PfxPassword <String>
+ -PfxBytes <Byte[]> -PfxPassword <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,10 @@ Creates new certificate.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 New-AzureRmApiManagementCertificate -Context $apimContext -PfxFilePath 'C:\contoso\certificates\apimanagement.pfx' -PfxPassword 1111
@@ -119,6 +123,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

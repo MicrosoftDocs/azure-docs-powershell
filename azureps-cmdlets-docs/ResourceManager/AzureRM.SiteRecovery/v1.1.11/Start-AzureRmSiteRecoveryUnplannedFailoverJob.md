@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: B02F3C77-3043-48D8-94CB-693BA671F3E0
 online version: 
 schema: 2.0.0
-ms.assetid: B02F3C77-3043-48D8-94CB-693BA671F3E0
 ---
 
 # Start-AzureRmSiteRecoveryUnplannedFailoverJob
@@ -38,6 +38,36 @@ You can check whether the job succeeds by using the Get-AzureRmSiteRecoveryJob c
 ```
 
 ## PARAMETERS
+
+### -DataEncryptionPrimaryCertFile
+Specifies the primary certificate file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataEncryptionSecondaryCertFile
+Specifies the secondary certificate file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Direction
 Specifies the direction of the failover.
@@ -85,36 +115,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -DataEncryptionPrimaryCertFile
-Specifies the primary certificate file.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DataEncryptionSecondaryCertFile
-Specifies the secondary certificate file.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

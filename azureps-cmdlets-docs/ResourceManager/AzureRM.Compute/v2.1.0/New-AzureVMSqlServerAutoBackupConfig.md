@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 9FF773A5-5700-423D-8F28-C9EDE9C69BD2
 online version: 
 schema: 2.0.0
-ms.assetid: 9FF773A5-5700-423D-8F28-C9EDE9C69BD2
 ---
 
 # New-AzureVMSqlServerAutoBackupConfig
@@ -16,14 +16,16 @@ Creates a configuration object for SQL Server automatic backup.
 ```
 New-AzureVMSqlServerAutoBackupConfig [-ResourceGroupName] <String> [-Enable] [[-RetentionPeriodInDays] <Int32>]
  [-EnableEncryption] [[-CertificatePassword] <SecureString>] [[-StorageUri] <Uri>]
- [[-StorageKey] <SecureString>] [<CommonParameters>]
+ [[-StorageKey] <SecureString>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### StorageContextSqlServerAutoBackup
 ```
 New-AzureVMSqlServerAutoBackupConfig [-ResourceGroupName] <String> [-Enable] [[-RetentionPeriodInDays] <Int32>]
  [-EnableEncryption] [[-CertificatePassword] <SecureString>] [[-StorageContext] <AzureStorageContext>]
- [[-StorageUri] <Uri>] [[-StorageKey] <SecureString>] [<CommonParameters>]
+ [[-StorageUri] <Uri>] [[-StorageKey] <SecureString>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,18 +77,18 @@ To create a secure string, use the ConvertTo-SecureString cmdlet.
 
 ## PARAMETERS
 
-### -CertificatePassword
-Specifies a password to encrypt the certificate that is used to perform SQL Server encrypted backups.
+### -ResourceGroupName
+Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: SecureString
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 5
+Required: True
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -97,6 +99,21 @@ This updates your Managed Backup settings to follow this schedule.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetentionPeriodInDays
+Specifies the number of days to retain a backup.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,54 +133,37 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RetentionPeriodInDays
-Specifies the number of days to retain a backup.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -StorageContext
-Specifies the storage account that will be used to store backups.
-To obtain an **AzureStorageContext** object, use the New-AzureStorageContext cmdlet.
-The default is the storage account that is associated with the SQL Server virtual machine.
+### -CertificatePassword
+Specifies a password to encrypt the certificate that is used to perform SQL Server encrypted backups.
 
 ```yaml
-Type: AzureStorageContext
-Parameter Sets: StorageContextSqlServerAutoBackup
+Type: SecureString
+Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 6
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageUri
+Specifies the Uniform Resource Identifier (URI) of the blob storage account.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -178,18 +178,46 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 6
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -StorageUri
-Specifies the Uniform Resource Identifier (URI) of the blob storage account.
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageContext
+Specifies the storage account that will be used to store backups.
+To obtain an **AzureStorageContext** object, use the New-AzureStorageContext cmdlet.
+The default is the storage account that is associated with the SQL Server virtual machine.
 
 ```yaml
-Type: Uri
-Parameter Sets: (All)
+Type: AzureStorageContext
+Parameter Sets: StorageContextSqlServerAutoBackup
 Aliases: 
 
 Required: False

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 9BDDD324-108F-45ED-8D83-9D1A70FF35EF
 online version: 
 schema: 2.0.0
-ms.assetid: 9BDDD324-108F-45ED-8D83-9D1A70FF35EF
 ---
 
 # Update-AzureRmVmssInstance
@@ -71,6 +71,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstanceId
+Specifies, as a string array, the ID or IDs of the instance to upgrade.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of the resource group of the VMSS.
 
@@ -96,21 +111,6 @@ Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InstanceId
-Specifies, as a string array, the ID or IDs of the instance to upgrade.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

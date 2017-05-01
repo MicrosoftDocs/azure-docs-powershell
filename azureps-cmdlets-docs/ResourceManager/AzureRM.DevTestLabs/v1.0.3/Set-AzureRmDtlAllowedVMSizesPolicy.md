@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+ms.assetid: 6B0466C4-A412-4D74-92FD-C4C0391F4F38
 online version: 
 schema: 2.0.0
-ms.assetid: 6B0466C4-A412-4D74-92FD-C4C0391F4F38
 ---
 
 # Set-AzureRmDtlAllowedVMSizesPolicy
@@ -39,16 +39,16 @@ The cmdlet uses the specified resource group and name of the lab to set the poli
 
 ## PARAMETERS
 
-### -VmSizes
-Specifies, as a string array, the list of virtual machine sizes allowed in the lab.
+### -Disable
+Indicates that this cmdlet disables the policy.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: Disable
 Aliases: 
 
-Required: False
-Position: 4
+Required: True
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -66,36 +66,6 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LabName
-Specifies the name of the lab for which this cmdlet sets the virtual machine sizes policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that the lab belongs to.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -138,16 +108,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Disable
-Indicates that this cmdlet disables the policy.
+### -LabName
+Specifies the name of the lab for which this cmdlet sets the virtual machine sizes policy.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Disable
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that the lab belongs to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VmSizes
+Specifies, as a string array, the list of virtual machine sizes allowed in the lab.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

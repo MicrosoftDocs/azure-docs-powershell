@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 493CA8CB-36EC-4276-AA4E-58F7CAE7111F
 online version: 
 schema: 2.0.0
-ms.assetid: 493CA8CB-36EC-4276-AA4E-58F7CAE7111F
 ---
 
 # Update-AzureRmContainerService
@@ -40,6 +40,21 @@ The command passes the result to the current cmdlet.
 The current cmdlet updates the container service to reflect the changes that were made in this command.
 
 ## PARAMETERS
+
+### -ContainerService
+Specifies a local **ContainerService** object that contains changes.
+
+```yaml
+Type: ContainerService
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -80,21 +95,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Specifies the resource group of the container service that this cmdlet updates.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the container service that this cmdlet updates.
 
@@ -110,18 +110,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContainerService
-Specifies a local **ContainerService** object that contains changes.
+### -ResourceGroupName
+Specifies the resource group of the container service that this cmdlet updates.
 
 ```yaml
-Type: ContainerService
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 1
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

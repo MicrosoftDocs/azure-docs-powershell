@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+ms.assetid: 4FD10799-81EF-4861-847C-C83B8032469C
 online version: 
 schema: 2.0.0
-ms.assetid: 4FD10799-81EF-4861-847C-C83B8032469C
 ---
 
 # New-AzureRmAutoscaleNotification
@@ -37,21 +37,6 @@ PS C:\>New-AzureRmAutoscaleNotification -SendEmailToSubscriptionAdministrator
 This command creates an Autosacale email notification for the subscription administrator.
 
 ## PARAMETERS
-
-### -Webhooks
-Specifies a comma-separated list of Autoscale webhooks.
-
-```yaml
-Type: WebhookNotification[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -CustomEmails
 Specifies a comma-separated list of email addresses.
@@ -93,6 +78,21 @@ Aliases:
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Webhooks
+Specifies a comma-separated list of Autoscale webhooks.
+
+```yaml
+Type: WebhookNotification[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

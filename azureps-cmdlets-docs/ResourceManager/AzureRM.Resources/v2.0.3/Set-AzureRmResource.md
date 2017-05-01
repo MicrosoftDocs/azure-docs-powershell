@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: E0A12315-4DD8-46CE-B8E1-CFD9495BB3D5
 online version: 
 schema: 2.0.0
-ms.assetid: E0A12315-4DD8-46CE-B8E1-CFD9495BB3D5
 ---
 
 # Set-AzureRmResource
@@ -15,14 +15,14 @@ Modifies a resource.
 ### The resource Id. (Default)
 ```
 Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceId <String> [-ODataQuery <String>] [-Force]
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Tag <Hashtable>] [-Zones <String[]>] [-UsePatchSemantics] -ResourceId <String> [-ODataQuery <String>]
+ [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Resource that resides at the subscription level.
 ```
 Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
+ [-Tag <Hashtable>] [-Zones <String[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
  [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>]
  [-ResourceGroupName <String>] [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -30,7 +30,7 @@ Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>
 ### Resource that resides at the tenant level.
 ```
 Set-AzureRmResource [-Kind <String>] [-Properties <PSObject>] [-Plan <Hashtable>] [-Sku <Hashtable>]
- [-Tag <Hashtable[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
+ [-Tag <Hashtable>] [-Zones <String[]>] [-UsePatchSemantics] -ResourceName <String> -ResourceType <String>
  [-ExtensionResourceName <String>] [-ExtensionResourceType <String>] [-ODataQuery <String>] [-TenantLevel]
  [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies resource tags as an array of hash tables.
 
 ```yaml
-Type: Hashtable[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -355,6 +355,19 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Zones
+The zones.```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

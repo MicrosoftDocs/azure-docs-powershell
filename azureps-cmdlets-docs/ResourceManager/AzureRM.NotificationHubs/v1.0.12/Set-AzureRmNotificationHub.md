@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+ms.assetid: 37195609-DBBA-4B50-B9B6-C24CE584BAB2
 online version: 
 schema: 2.0.0
-ms.assetid: 37195609-DBBA-4B50-B9B6-C24CE584BAB2
 ---
 
 # Set-AzureRmNotificationHub
@@ -56,68 +56,6 @@ Instead, that information is contained in the input file C:\Configuration\Hubs.j
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the resource group to which the notification hub is assigned.
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Namespace
-Specifies the namespace to which the notification hub is assigned.
-Namespaces provide a way to group and categorize notification hubs.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InputFile
-Specifies the path to a JSON file that contains configuration information for the notification hub.
-
-```yaml
-Type: String
-Parameter Sets: InputFileParameterSet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NotificationHubObj
-Specifies the **NotificationHubAttributes** object that contains configuration information for the hub that this cmdlet modifies.
-
-```yaml
-Type: NotificationHubAttributes
-Parameter Sets: NotificationHubParameterSet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -154,6 +92,68 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputFile
+Specifies the path to a JSON file that contains configuration information for the notification hub.
+
+```yaml
+Type: String
+Parameter Sets: InputFileParameterSet
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namespace
+Specifies the namespace to which the notification hub is assigned.
+Namespaces provide a way to group and categorize notification hubs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NotificationHubObj
+Specifies the **NotificationHubAttributes** object that contains configuration information for the hub that this cmdlet modifies.
+
+```yaml
+Type: NotificationHubAttributes
+Parameter Sets: NotificationHubParameterSet
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the resource group to which the notification hub is assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

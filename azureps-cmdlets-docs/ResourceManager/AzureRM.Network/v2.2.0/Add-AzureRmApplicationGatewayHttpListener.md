@@ -15,8 +15,7 @@ Adds an HTTP listener to an application gateway.
 ```
 Add-AzureRmApplicationGatewayHttpListener -ApplicationGateway <PSApplicationGateway> -Name <String>
  [-FrontendIPConfigurationId <String>] [-FrontendPortId <String>] [-SslCertificateId <String>]
- [-HostName <String>] [-RequireServerNameIndication <String>] -Protocol <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-HostName <String>] [-RequireServerNameIndication <String>] -Protocol <String> [<CommonParameters>]
 ```
 
 ### SetByResource
@@ -24,8 +23,7 @@ Add-AzureRmApplicationGatewayHttpListener -ApplicationGateway <PSApplicationGate
 Add-AzureRmApplicationGatewayHttpListener -ApplicationGateway <PSApplicationGateway> -Name <String>
  [-FrontendIPConfiguration <PSApplicationGatewayFrontendIPConfiguration>]
  [-FrontendPort <PSApplicationGatewayFrontendPort>] [-SslCertificate <PSApplicationGatewaySslCertificate>]
- [-HostName <String>] [-RequireServerNameIndication <String>] -Protocol <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-HostName <String>] [-RequireServerNameIndication <String>] -Protocol <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,6 +34,10 @@ The Add-AzureRmApplicationGatewayHttpListener cmdlet adds a HTTP listener to an 
 ### --------------------------  Example 1: Add a HTTP listener  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 PS C:\> $Appgw = Add-AzureRmApplicationGatewayHttpListener -ApplicationGateway $AppGw -Name "listener01" -Protocol "Http" -FrontendIpConfiguration $FIP01 -FrontendPort $FP01
@@ -45,6 +47,10 @@ The first command gets the application gateway and stores it in the $AppGw varia
 
 ### --------------------------  Example 2: Add a HTTPS listener with SSL  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -132,36 +138,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HostName
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequireServerNameIndication
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Protocol
 Specifies the protocol of the HTTP listener.
 Both HTTP and HTTPS are supported.
@@ -172,36 +148,6 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -253,6 +199,39 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -HostName
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireServerNameIndication
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

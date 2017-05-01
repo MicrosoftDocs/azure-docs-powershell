@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 145B4CAE-0F82-4FE8-AF2F-B88DF8F78A7F
 online version: 
 schema: 2.0.0
-ms.assetid: 145B4CAE-0F82-4FE8-AF2F-B88DF8F78A7F
 ---
 
 # Set-AzureRmVMOperatingSystem
@@ -16,20 +16,23 @@ Sets operating system properties for a virtual machine.
 ```
 Set-AzureRmVMOperatingSystem [-VM] <PSVirtualMachine> [-Windows] [-ComputerName] <String>
  [-Credential] <PSCredential> [[-CustomData] <String>] [-ProvisionVMAgent] [-EnableAutoUpdate]
- [[-TimeZone] <String>] [-WinRMHttp] [<CommonParameters>]
+ [[-TimeZone] <String>] [-WinRMHttp] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### WindowsWinRmHttps
 ```
 Set-AzureRmVMOperatingSystem [-VM] <PSVirtualMachine> [-Windows] [-ComputerName] <String>
  [-Credential] <PSCredential> [[-CustomData] <String>] [-ProvisionVMAgent] [-EnableAutoUpdate]
- [[-TimeZone] <String>] [-WinRMHttp] [-WinRMHttps] [-WinRMCertificateUrl] <Uri> [<CommonParameters>]
+ [[-TimeZone] <String>] [-WinRMHttp] [-WinRMHttps] [-WinRMCertificateUrl] <Uri>
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### Linux
 ```
 Set-AzureRmVMOperatingSystem [-VM] <PSVirtualMachine> [-Linux] [-ComputerName] <String>
- [-Credential] <PSCredential> [[-CustomData] <String>] [-DisablePasswordAuthentication] [<CommonParameters>]
+ [-Credential] <PSCredential> [[-CustomData] <String>] [-DisablePasswordAuthentication]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,6 +76,38 @@ The command uses variables assigned in previous commands for some parameters.
 
 ## PARAMETERS
 
+### -VM
+Specifies the local virtual machine object on which to set operating system properties.
+To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
+Create a virtual machine object by using the New-AzureRmVMConfig cmdlet.
+
+```yaml
+Type: PSVirtualMachine
+Parameter Sets: (All)
+Aliases: VMProfile
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Windows
+Indicates that the type of operating system is Windows.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Windows, WindowsWinRmHttps
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ComputerName
 Specifies the name of the computer.
 
@@ -82,7 +117,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -99,7 +134,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 4
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -116,52 +151,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DisablePasswordAuthentication
-Indicates that this cmdlet disables password authentication.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Linux
-Aliases: 
-
-Required: False
-Position: 6
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EnableAutoUpdate
-Indicates that this cmdlet enables auto update.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Windows, WindowsWinRmHttps
-Aliases: 
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Linux
-Indicates that the type of operating system is Linux.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Linux
-Aliases: 
-
-Required: True
-Position: 2
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -169,6 +159,21 @@ Accept wildcard characters: False
 
 ### -ProvisionVMAgent
 Indicates that the settings require that the virtual machine agent be installed on the virtual machine.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Windows, WindowsWinRmHttps
+Aliases: 
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableAutoUpdate
+Indicates that this cmdlet enables auto update.
 
 ```yaml
 Type: SwitchParameter
@@ -191,39 +196,37 @@ Parameter Sets: Windows, WindowsWinRmHttps
 Aliases: 
 
 Required: False
-Position: 8
+Position: 7
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VM
-Specifies the local virtual machine object on which to set operating system properties.
-To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
-Create a virtual machine object by using the New-AzureRmVMConfig cmdlet.
-
-```yaml
-Type: PSVirtualMachine
-Parameter Sets: (All)
-Aliases: VMProfile
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Windows
-Indicates that the type of operating system is Windows.
+### -WinRMHttp
+Indicates that this operating system uses HTTP WinRM.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
 Aliases: 
 
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WinRMHttps
+Indicates that this operating system uses HTTPS WinRM.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: WindowsWinRmHttps
+Aliases: 
+
 Required: True
-Position: 2
+Position: 9
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -239,37 +242,63 @@ Parameter Sets: WindowsWinRmHttps
 Aliases: 
 
 Required: True
-Position: 11
+Position: 10
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WinRMHttp
-Indicates that this operating system uses HTTP WinRM.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Windows, WindowsWinRmHttps
-Aliases: 
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
 
 Required: False
-Position: 9
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WinRMHttps
-Indicates that this operating system uses HTTPS WinRM.
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Linux
+Indicates that the type of operating system is Linux.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: WindowsWinRmHttps
+Parameter Sets: Linux
 Aliases: 
 
 Required: True
-Position: 10
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DisablePasswordAuthentication
+Indicates that this cmdlet disables password authentication.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Linux
+Aliases: 
+
+Required: False
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

@@ -14,30 +14,31 @@ Lists existing azure active directory applications.
 ### EmptyParameterSet (Default)
 ```
 Get-AzureRmADApplication [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ### ApplicationObjectIdParameterSet
 ```
 Get-AzureRmADApplication -ObjectId <Guid> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ApplicationIdParameterSet
 ```
 Get-AzureRmADApplication -ApplicationId <Guid> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ApplicationDisplayNameParameterSet
 ```
 Get-AzureRmADApplication -DisplayNameStartWith <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### ApplicationIdentifierUriParameterSet
 ```
 Get-AzureRmADApplication -IdentifierUri <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,6 +51,8 @@ If no parameter is provided, it fetches all applications under the tenant.
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 PS E:\> Get-AzureRmADApplication
 ```
@@ -58,6 +61,8 @@ Lists all the applications under a tenant.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
@@ -156,6 +161,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

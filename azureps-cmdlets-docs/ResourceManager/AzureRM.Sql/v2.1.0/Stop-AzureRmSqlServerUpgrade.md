@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: B884C7F1-1D24-4FDA-8B6F-57B5D597CECD
 online version: 
 schema: 2.0.0
-ms.assetid: B884C7F1-1D24-4FDA-8B6F-57B5D597CECD
 ---
 
 # Stop-AzureRmSqlServerUpgrade

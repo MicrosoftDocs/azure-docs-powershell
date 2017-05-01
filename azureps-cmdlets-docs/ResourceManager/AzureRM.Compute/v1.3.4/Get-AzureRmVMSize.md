@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: BB359FEA-F61B-420F-ABED-9AAE37FB2EEA
 online version: 
 schema: 2.0.0
-ms.assetid: BB359FEA-F61B-420F-ABED-9AAE37FB2EEA
 ---
 
 # Get-AzureRmVMSize
@@ -59,16 +59,16 @@ You can resize this virtual machine to the sizes that this command gets.
 
 ## PARAMETERS
 
-### -Location
-Specifies the location for which this cmdlet gets the available virtual machine sizes.
+### -AvailabilitySetName
+Specifies the name of the Availability Set for which this cmdlet gets the available virtual machine sizes.
 
 ```yaml
 Type: String
-Parameter Sets: ListVirtualMachineSizeParamSet
+Parameter Sets: ListAvailableSizesForAvailabilitySet
 Aliases: 
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -113,6 +113,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Location
+Specifies the location for which this cmdlet gets the available virtual machine sizes.
+
+```yaml
+Type: String
+Parameter Sets: ListVirtualMachineSizeParamSet
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of the resource group of the virtual machine.
 
@@ -123,21 +138,6 @@ Aliases:
 
 Required: True
 Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AvailabilitySetName
-Specifies the name of the Availability Set for which this cmdlet gets the available virtual machine sizes.
-
-```yaml
-Type: String
-Parameter Sets: ListAvailableSizesForAvailabilitySet
-Aliases: 
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

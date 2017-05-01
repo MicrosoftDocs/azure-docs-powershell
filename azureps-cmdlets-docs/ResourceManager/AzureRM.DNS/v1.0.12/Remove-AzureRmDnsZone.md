@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+ms.assetid: E00896E4-38EC-40A4-AD6A-694BC1A9FE2C
 online version: 
 schema: 2.0.0
-ms.assetid: E00896E4-38EC-40A4-AD6A-694BC1A9FE2C
 ---
 
 # Remove-AzureRmDnsZone

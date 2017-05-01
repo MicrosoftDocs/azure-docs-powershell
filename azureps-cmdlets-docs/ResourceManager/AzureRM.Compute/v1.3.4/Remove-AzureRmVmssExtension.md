@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: A55A15FC-AB17-416C-845D-0EE31700C7FF
 online version: 
 schema: 2.0.0
-ms.assetid: A55A15FC-AB17-416C-845D-0EE31700C7FF
 ---
 
 # Remove-AzureRmVmssExtension
@@ -28,36 +28,6 @@ The **Remove-AzureRmVmssExtension** cmdlet removes an extension from the Virtual
 ```
 
 ## PARAMETERS
-
-### -VirtualMachineScaleSet
-Specifies the VMSS from which to remove the extension from.
-
-```yaml
-Type: VirtualMachineScaleSet
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the extension that this cmdlet removes from the VMSS.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -95,6 +65,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the extension that this cmdlet removes from the VMSS.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualMachineScaleSet
+Specifies the VMSS from which to remove the extension from.
+
+```yaml
+Type: VirtualMachineScaleSet
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

@@ -13,12 +13,14 @@ schema: 2.0.0
 
 ### InputFileParameterSet
 ```
-Set-AzureRmRoleDefinition -InputFile <String> [<CommonParameters>]
+Set-AzureRmRoleDefinition -InputFile <String> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### RoleDefinitionParameterSet
 ```
-Set-AzureRmRoleDefinition -Role <PSRoleDefinition> [<CommonParameters>]
+Set-AzureRmRoleDefinition -Role <PSRoleDefinition> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +46,32 @@ Parameter Sets: InputFileParameterSet
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

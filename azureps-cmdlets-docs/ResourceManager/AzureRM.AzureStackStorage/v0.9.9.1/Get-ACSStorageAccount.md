@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
+ms.assetid: F1574E90-D24F-48EF-B388-35EF5475DA63
 online version: 
 schema: 2.0.0
-ms.assetid: F1574E90-D24F-48EF-B388-35EF5475DA63
 ---
 
 # Get-ACSStorageAccount
@@ -50,106 +50,16 @@ This example gets a list of tenant storage accounts whose versioned storage acco
 
 ## PARAMETERS
 
-### -FarmName
-Specifies the name of the ACS farm.
+### -AccountId
+Specifies the account ID of a tenant storage account.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: Int64
+Parameter Sets: GetSingleAccount
 Aliases: 
 
 Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TenantSubscriptionId
-Specifies the tenant Subscription ID.
-
-```yaml
-Type: String
-Parameter Sets: ListMultipleAccounts
-Aliases: 
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PartialAccountName
-Specifies the partial string of the tenant storage account.
-
-```yaml
-Type: String
-Parameter Sets: ListMultipleAccounts
-Aliases: 
-
-Required: False
-Position: 6
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageAccountStatus
-Specifies the status of the tenant storage account.
-
-```yaml
-Type: Int32
-Parameter Sets: ListMultipleAccounts
-Aliases: 
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Detail
-Indicates that this cmdlet lists details about the Azure Consistent Storage (ACS) storage account.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 9
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SubscriptionId
-Specifies the service administrator subscription ID.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Token
-Specifies the service administrator token.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
+Position: 8
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -168,6 +78,51 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Detail
+Indicates that this cmdlet lists details about the Azure Consistent Storage (ACS) storage account.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FarmName
+Specifies the name of the ACS farm.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PartialAccountName
+Specifies the partial string of the tenant storage account.
+
+```yaml
+Type: String
+Parameter Sets: ListMultipleAccounts
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -201,16 +156,61 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AccountId
-Specifies the account ID of a tenant storage account.
+### -StorageAccountStatus
+Specifies the status of the tenant storage account.
 
 ```yaml
-Type: Int64
-Parameter Sets: GetSingleAccount
+Type: Int32
+Parameter Sets: ListMultipleAccounts
 Aliases: 
 
-Required: True
-Position: 8
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubscriptionId
+Specifies the service administrator subscription ID.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TenantSubscriptionId
+Specifies the tenant Subscription ID.
+
+```yaml
+Type: String
+Parameter Sets: ListMultipleAccounts
+Aliases: 
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Token
+Specifies the service administrator token.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

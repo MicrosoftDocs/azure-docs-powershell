@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+ms.assetid: 30956A48-EAE8-41C4-A309-7CCAE10611D0
 online version: 
 schema: 2.0.0
-ms.assetid: 30956A48-EAE8-41C4-A309-7CCAE10611D0
 ---
 
 # Get-AzureRmCognitiveServicesAccount
@@ -37,33 +37,6 @@ If you do not specify the *ResoureGroupName* parameter, this cmdlet gets all Cog
 ```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group the Cognitive Services account is assigned to.
-
-```yaml
-Type: String
-Parameter Sets: AccountNameParameterSet
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: ResourceGroupParameterSet
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
@@ -114,6 +87,33 @@ Aliases: CognitiveServicesAccountName, AccountName
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group the Cognitive Services account is assigned to.
+
+```yaml
+Type: String
+Parameter Sets: AccountNameParameterSet
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: ResourceGroupParameterSet
+Aliases: 
+
+Required: False
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

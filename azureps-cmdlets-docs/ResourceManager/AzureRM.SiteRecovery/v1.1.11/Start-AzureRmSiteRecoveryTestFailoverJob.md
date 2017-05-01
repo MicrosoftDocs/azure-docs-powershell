@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 8C2F1B76-4516-478F-AC85-007914CA83B4
 online version: 
 schema: 2.0.0
-ms.assetid: 8C2F1B76-4516-478F-AC85-007914CA83B4
 ---
 
 # Start-AzureRmSiteRecoveryTestFailoverJob
@@ -92,6 +92,36 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DataEncryptionPrimaryCertFile
+Specifies the primary certificate file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataEncryptionSecondaryCertFile
+Specifies the secondary certificate file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Direction
 Specifies the failover direction.
 psdx_paramvalues
@@ -126,6 +156,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -RecoveryPlan
+Specifies a recovery plan object.
+
+```yaml
+Type: ASRRecoveryPlan
+Parameter Sets: ByRPObjectWithVMNetwork, ByRPObject, ByRPObjectWithAzureVMNetworkId
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -VMNetwork
 Specifies the Site Recovery virtual machine network.
 
@@ -144,51 +189,6 @@ Accept wildcard characters: False
 ```yaml
 Type: ASRNetwork
 Parameter Sets: ByPEObjectWithVMNetwork
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -DataEncryptionPrimaryCertFile
-Specifies the primary certificate file.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DataEncryptionSecondaryCertFile
-Specifies the secondary certificate file.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecoveryPlan
-Specifies a recovery plan object.
-
-```yaml
-Type: ASRRecoveryPlan
-Parameter Sets: ByRPObjectWithVMNetwork, ByRPObject, ByRPObjectWithAzureVMNetworkId
 Aliases: 
 
 Required: True

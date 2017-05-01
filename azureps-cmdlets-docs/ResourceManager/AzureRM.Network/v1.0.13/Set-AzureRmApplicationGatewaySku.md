@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 44B0D09C-76FA-4B28-81E7-B826F92792E3
 online version: 
 schema: 2.0.0
-ms.assetid: 44B0D09C-76FA-4B28-81E7-B826F92792E3
 ---
 
 # Set-AzureRmApplicationGatewaySku
@@ -46,47 +46,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the application gateway.
-psdx_paramvalues
-
-- Standard_Small
-- Standard_Medium
-- Standard_Large
-- WAF_Medium
-- WAF_Large
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tier
-Specifies the tier of the application gateway.
-psdx_paramvalues
-
-- Standard
-- WAF
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -138,6 +97,47 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the application gateway.
+psdx_paramvalues
+
+- Standard_Small
+- Standard_Medium
+- Standard_Large
+- WAF_Medium
+- WAF_Large
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tier
+Specifies the tier of the application gateway.
+psdx_paramvalues
+
+- Standard
+- WAF
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

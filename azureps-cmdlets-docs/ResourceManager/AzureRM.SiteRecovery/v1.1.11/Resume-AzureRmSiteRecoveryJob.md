@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+ms.assetid: 78EE6295-991F-44F6-B1C7-ED0A8B8A15FE
 online version: 
 schema: 2.0.0
-ms.assetid: 78EE6295-991F-44F6-B1C7-ED0A8B8A15FE
 ---
 
 # Resume-AzureRmSiteRecoveryJob
@@ -34,6 +34,21 @@ The **Resume-AzureRmSiteRecoveryJob** cmdlet resumes a suspended Azure Site Reco
 
 ## PARAMETERS
 
+### -Comments
+Specifies the comments for the job log.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Job
 Specifies the Site Recovery job object.
 
@@ -58,21 +73,6 @@ Parameter Sets: ByName
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Comments
-Specifies the comments for the job log.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

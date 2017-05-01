@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: D194CEAB-47E7-46F0-8AF3-68F8E514E6C6
+online version: 
+schema: 2.0.0
 ---
 
 # Set-AzureRmSqlDatabaseSecondary
@@ -42,13 +42,28 @@ In the latter case, the secondary database is synchronized with the primary befo
 
 ## PARAMETERS
 
+### -AllowDataLoss
+Indicates that this failover operation permits data loss.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ByFailoverParams
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DatabaseName
 Specifies the name of the Azure SQL Database Secondary.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -57,48 +72,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PartnerResourceGroupName
-Specifies the name of the resource group to which the partner Azure SQL Database is assigned.
+### -Failover
+Indicates that this operation is a failover.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
+Type: SwitchParameter
+Parameter Sets: ByFailoverParams
+Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServerName
-Specifies the name of the SQL Server that hosts the Azure SQL Database Secondary.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group to which the Azure SQL Database Secondary is assigned.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -141,33 +126,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Failover
-Indicates that this operation is a failover.
+### -PartnerResourceGroupName
+Specifies the name of the resource group to which the partner Azure SQL Database is assigned.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: ByFailoverParams
-Aliases:
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AllowDataLoss
-Indicates that this failover operation permits data loss.
+### -ResourceGroupName
+Specifies the name of the resource group to which the Azure SQL Database Secondary is assigned.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: ByFailoverParams
-Aliases:
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerName
+Specifies the name of the SQL Server that hosts the Azure SQL Database Secondary.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

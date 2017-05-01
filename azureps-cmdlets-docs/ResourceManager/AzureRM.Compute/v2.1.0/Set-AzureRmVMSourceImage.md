@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: 88FD612C-CEB2-4C59-81BA-600D23B80676
 online version: 
 schema: 2.0.0
-ms.assetid: 88FD612C-CEB2-4C59-81BA-600D23B80676
 ---
 
 # Set-AzureRmVMSourceImage
@@ -14,7 +14,8 @@ Specifies the platform image for a virtual machine.
 
 ```
 Set-AzureRmVMSourceImage [-VM] <PSVirtualMachine> [-PublisherName] <String> [-Offer] <String> [-Skus] <String>
- [-Version] <String> [<CommonParameters>]
+ [-Version] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,9 +41,24 @@ The **Get-AzureRmVMImagePublisher**, **Get-AzureRmVMImageOffer**, **Get-AzureRmV
 
 ## PARAMETERS
 
-### -Offer
-Specifies the type of VMImage offer.
-To obtain an image offer, use the Get-AzureRmVMImageOffer cmdlet.
+### -VM
+Specifies the local virtual machine object to configure.
+
+```yaml
+Type: PSVirtualMachine
+Parameter Sets: (All)
+Aliases: VMProfile
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -PublisherName
+Specifies the name of a publisher of a VMImage.
+To obtain a publisher, use the Get-AzureRmVMImagePublisher cmdlet.
 
 ```yaml
 Type: String
@@ -50,15 +66,15 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PublisherName
-Specifies the name of a publisher of a VMImage.
-To obtain a publisher, use the Get-AzureRmVMImagePublisher cmdlet.
+### -Offer
+Specifies the type of VMImage offer.
+To obtain an image offer, use the Get-AzureRmVMImageOffer cmdlet.
 
 ```yaml
 Type: String
@@ -82,7 +98,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 4
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -98,24 +114,35 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 5
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VM
-Specifies the local virtual machine object to configure.
-
-```yaml
-Type: PSVirtualMachine
+### -InformationAction
+@{Text=}```yaml
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: VMProfile
+Aliases: infa
 
-Required: True
-Position: 1
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

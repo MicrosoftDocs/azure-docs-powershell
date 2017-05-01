@@ -12,8 +12,7 @@ Gets an application gateway.
 ## SYNTAX
 
 ```
-Get-AzureRmApplicationGateway [-Name <String>] [-ResourceGroupName <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Get-AzureRmApplicationGateway [-Name <String>] [-ResourceGroupName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +23,10 @@ The Get-AzureRmApplicationGateway cmdlet gets an application gateway.
 ### --------------------------  Example 1: Get a specified application gateway  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
 ```
@@ -33,6 +36,10 @@ This command gets the application gateway named ApplicationGateway01 that belong
 ### --------------------------  Example 2: Get a list of application gateways in a resource group  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
+
+
 ```
 PS C:\> $AppGwList = Get-AzureRmApplicationGateway -ResourceGroupName "ResourceGroup01"
 ```
@@ -41,6 +48,10 @@ This command gets a list of all the application gateways in the resource group n
 
 ### --------------------------  Example 3: Get a list of application gateways in a subscription  --------------------------
 @{paragraph=PS C:\\\>}
+
+
+
+
 
 ```
 PS C:\> $AppGwList = Get-AzureRmApplicationGateway
@@ -80,35 +91,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

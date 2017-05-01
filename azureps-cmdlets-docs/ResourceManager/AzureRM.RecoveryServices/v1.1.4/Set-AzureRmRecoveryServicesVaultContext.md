@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
+ms.assetid: E2A10A0E-3875-4194-99CC-81B5542B04FE
 online version: 
 schema: 2.0.0
-ms.assetid: E2A10A0E-3875-4194-99CC-81B5542B04FE
 ---
 
 # Set-AzureRmRecoveryServicesVaultContext
@@ -54,5 +54,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
 

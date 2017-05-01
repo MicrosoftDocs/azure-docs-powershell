@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+ms.assetid: 807E8C40-E28F-4CED-9753-D9A849DFBA08
 online version: 
 schema: 2.0.0
-ms.assetid: 807E8C40-E28F-4CED-9753-D9A849DFBA08
 ---
 
 # Reset-AzureRmServerManagementGatewayProfile
@@ -38,18 +38,20 @@ You will need to use the Save-AzureRmServerManagementGatewayProfile cmdlet to do
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group that the gateway belongs to.
+### -Gateway
+Specifies the gateway for which the cmdlet resets the profile for.
+
+May be specified instead of ResourceGoupName and GatewayName
 
 ```yaml
-Type: String
-Parameter Sets: ByName
+Type: Gateway
+Parameter Sets: ByObject
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -107,20 +109,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Gateway
-Specifies the gateway for which the cmdlet resets the profile for.
-
-May be specified instead of ResourceGoupName and GatewayName
+### -ResourceGroupName
+Specifies the name of the resource group that the gateway belongs to.
 
 ```yaml
-Type: Gateway
-Parameter Sets: ByObject
+Type: String
+Parameter Sets: ByName
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

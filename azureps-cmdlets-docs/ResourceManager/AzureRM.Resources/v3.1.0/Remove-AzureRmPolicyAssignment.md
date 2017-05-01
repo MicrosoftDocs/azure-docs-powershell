@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: EE0B6B0F-884D-4018-8D77-78573849CDFE
 online version: 
 schema: 2.0.0
-ms.assetid: EE0B6B0F-884D-4018-8D77-78573849CDFE
 ---
 
 # Remove-AzureRmPolicyAssignment

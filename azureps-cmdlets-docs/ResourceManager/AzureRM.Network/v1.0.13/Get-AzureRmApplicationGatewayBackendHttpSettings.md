@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: F28E07B6-4607-491E-8BB3-CEF4A1247A61
 online version: 
 schema: 2.0.0
-ms.assetid: F28E07B6-4607-491E-8BB3-CEF4A1247A61
 ---
 
 # Get-AzureRmApplicationGatewayBackendHttpSettings
@@ -39,21 +39,6 @@ PS C:\> $SettingsList  = Get-AzureRmApplicationGatewayBackendHttpSettings -Appli
 The first command gets the application gateway named ApplicationGateway01 in the resource group named ResourceGroup01, and stores it in the $AppGw variable.The second command gets the collection of HTTP settings for $AppGw and stores the settings in the $SettingsList variable.
 
 ## PARAMETERS
-
-### -Name
-Specifies the name of the backend HTTP settings that this cmdlet gets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ApplicationGateway
 Specifies an application gateway object that contains back-end HTTP settings.
@@ -101,6 +86,21 @@ Specifies an information variable.
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the backend HTTP settings that this cmdlet gets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

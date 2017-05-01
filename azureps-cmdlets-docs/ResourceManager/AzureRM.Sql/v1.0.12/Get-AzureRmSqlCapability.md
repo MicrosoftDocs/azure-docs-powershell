@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version:
-schema: 2.0.0
 ms.assetid: 43FD17DE-3A90-49CE-89C5-5F1A66545FC9
+online version: 
+schema: 2.0.0
 ---
 
 # Get-AzureRmSqlCapability
@@ -64,34 +64,18 @@ This command gets default capabilities for SQL Databases for the specified servi
 
 ## PARAMETERS
 
-### -LocationName
-Specifies the name of the Location for which this cmdlet gets capabilities.
-For more information, see [Azure Regions](http://azure.microsoft.com/en-us/regions/) (http://azure.microsoft.com/en-us/regions/).
+### -Defaults
+Indicates that this cmdlet gets only defaults.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServerVersionName
-Specifies the name of the server version for which this cmdlet gets capabilities.
-
-```yaml
-Type: String
-Parameter Sets: FilterResults
-Aliases:
+Type: SwitchParameter
+Parameter Sets: DefaultResults
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -101,22 +85,7 @@ Specifies the name of the database edition for which this cmdlet gets capabiliti
 ```yaml
 Type: String
 Parameter Sets: FilterResults
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServiceObjectiveName
-Specifies the name of the service objective for which this cmdlet gets capabilities.
-
-```yaml
-Type: String
-Parameter Sets: FilterResults
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -164,18 +133,49 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Defaults
-Indicates that this cmdlet gets only defaults.
+### -LocationName
+Specifies the name of the Location for which this cmdlet gets capabilities.
+For more information, see [Azure Regions](http://azure.microsoft.com/en-us/regions/) (http://azure.microsoft.com/en-us/regions/).
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: DefaultResults
-Aliases:
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerVersionName
+Specifies the name of the server version for which this cmdlet gets capabilities.
+
+```yaml
+Type: String
+Parameter Sets: FilterResults
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServiceObjectiveName
+Specifies the name of the service objective for which this cmdlet gets capabilities.
+
+```yaml
+Type: String
+Parameter Sets: FilterResults
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

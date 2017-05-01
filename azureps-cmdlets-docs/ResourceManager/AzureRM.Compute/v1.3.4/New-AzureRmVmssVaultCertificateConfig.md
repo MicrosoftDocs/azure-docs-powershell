@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: A052C39E-360C-4576-94C8-7EAD4D78CBEC
 online version: 
 schema: 2.0.0
-ms.assetid: A052C39E-360C-4576-94C8-7EAD4D78CBEC
 ---
 
 # New-AzureRmVmssVaultCertificateConfig
@@ -32,6 +32,22 @@ This command creates a Key Vault certificate configuration that uses the certifi
 
 ## PARAMETERS
 
+### -CertificateStore
+Specifies the certificate store on the virtual machines in the scale set where the certificate is added.
+This is only valid for Windows Virtual Machine Scale Sets.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -CertificateUrl
 Specifies the URI of a certificate stored in the Key Vault.
 
@@ -50,22 +66,6 @@ Aliases:
 
 Required: False
 Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -CertificateStore
-Specifies the certificate store on the virtual machines in the scale set where the certificate is added.
-This is only valid for Windows Virtual Machine Scale Sets.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

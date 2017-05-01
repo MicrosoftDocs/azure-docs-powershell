@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+ms.assetid: A394CFEF-2A76-425A-8E8F-43E3DB789720
 online version: 
 schema: 2.0.0
-ms.assetid: A394CFEF-2A76-425A-8E8F-43E3DB789720
 ---
 
 # Set-AzureRmDtlVMsPerUserPolicy
@@ -39,16 +39,16 @@ The cmdlet uses the specified resource group and name of the lab to set the poli
 
 ## PARAMETERS
 
-### -MaxVMs
-Specifies the maximum number of virtual machines that can be created in the lab.
+### -Disable
+Indicates that this cmdlet disables the policy for the lab.
 
 ```yaml
-Type: Int32
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: Disable
 Aliases: 
 
-Required: False
-Position: 4
+Required: True
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -66,36 +66,6 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LabName
-Specifies the name of the lab for which this cmdlet sets the virtual machines per user policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that the lab belongs to.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -138,18 +108,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Disable
-Indicates that this cmdlet disables the policy for the lab.
+### -LabName
+Specifies the name of the lab for which this cmdlet sets the virtual machines per user policy.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Disable
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaxVMs
+Specifies the maximum number of virtual machines that can be created in the lab.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group that the lab belongs to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

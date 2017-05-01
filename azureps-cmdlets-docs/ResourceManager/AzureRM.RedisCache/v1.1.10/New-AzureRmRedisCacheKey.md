@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+ms.assetid: CA58DAF4-8769-4872-8868-1919B175D98F
 online version: 
 schema: 2.0.0
-ms.assetid: CA58DAF4-8769-4872-8868-1919B175D98F
 ---
 
 # New-AzureRmRedisCacheKey
@@ -45,6 +45,37 @@ This command regenerates the secondary key of a Redis Cache.
 
 ## PARAMETERS
 
+### -Force
+ps_force
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyType
+Specifies whether to regenerate the primary or secondary access key.
+Valid values are: Primary, Secondary.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the Redis Cache.
 
@@ -72,37 +103,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyType
-Specifies whether to regenerate the primary or secondary access key.
-Valid values are: Primary, Secondary.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

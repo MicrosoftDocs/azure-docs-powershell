@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+ms.assetid: A6C5D286-1DAC-484E-B2CE-E9409EDB8D0F
 online version: 
 schema: 2.0.0
-ms.assetid: A6C5D286-1DAC-484E-B2CE-E9409EDB8D0F
 ---
 
 # New-AzureRmSqlServerCommunicationLink

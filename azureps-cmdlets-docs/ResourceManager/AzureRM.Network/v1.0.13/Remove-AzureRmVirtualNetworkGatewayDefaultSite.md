@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: 35D7FAB2-CDFF-477E-A2E0-E422194EAD6F
 online version: 
 schema: 2.0.0
-ms.assetid: 35D7FAB2-CDFF-477E-A2E0-E422194EAD6F
 ---
 
 # Remove-AzureRmVirtualNetworkGatewayDefaultSite
@@ -41,22 +41,6 @@ The second command then uses **Remove-AzureRmVirtualNetworkGatewayDefaultSite** 
 
 ## PARAMETERS
 
-### -VirtualNetworkGateway
-Specifies an object reference to the virtual network gateway containing the default site to be removed.
-You can create an object reference to a virtual network gateway by using the Get-AzureRmVirtualNetworkGateway and specifying the name of the gateway.
-
-```yaml
-Type: PSVirtualNetworkGateway
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -93,6 +77,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VirtualNetworkGateway
+Specifies an object reference to the virtual network gateway containing the default site to be removed.
+You can create an object reference to a virtual network gateway by using the Get-AzureRmVirtualNetworkGateway and specifying the name of the gateway.
+
+```yaml
+Type: PSVirtualNetworkGateway
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

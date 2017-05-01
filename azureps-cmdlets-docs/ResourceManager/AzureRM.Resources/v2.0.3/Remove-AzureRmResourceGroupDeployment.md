@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+ms.assetid: D06217F8-48CC-4F15-BA7C-20C3489C7F64
 online version: 
 schema: 2.0.0
-ms.assetid: D06217F8-48CC-4F15-BA7C-20C3489C7F64
 ---
 
 # Remove-AzureRmResourceGroupDeployment
@@ -14,13 +14,13 @@ Removes a resource group deployment and any associated operations.
 
 ### The deployment name parameter set. (Default)
 ```
-Remove-AzureRmResourceGroupDeployment -ResourceGroupName <String> -Name <String> [-Force]
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmResourceGroupDeployment -ResourceGroupName <String> -Name <String> [-ApiVersion <String>] [-Pre]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### The deployment Id parameter set.
 ```
-Remove-AzureRmResourceGroupDeployment -Id <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
+Remove-AzureRmResourceGroupDeployment -Id <String> [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -63,21 +63,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Force
-Do not ask for confirmation
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

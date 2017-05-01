@@ -14,15 +14,13 @@ Modifies the in-memory representation of a subnet in a virtual network.
 ### SetByResource (Default)
 ```
 Set-AzureRmVirtualNetworkSubnetConfig -Name <String> -VirtualNetwork <PSVirtualNetwork> -AddressPrefix <String>
- [-NetworkSecurityGroup <PSNetworkSecurityGroup>] [-RouteTable <PSRouteTable>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [-NetworkSecurityGroup <PSNetworkSecurityGroup>] [-RouteTable <PSRouteTable>] [<CommonParameters>]
 ```
 
 ### SetByResourceId
 ```
 Set-AzureRmVirtualNetworkSubnetConfig -Name <String> -VirtualNetwork <PSVirtualNetwork> -AddressPrefix <String>
- [-NetworkSecurityGroupId <String>] [-RouteTableId <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+ [-NetworkSecurityGroupId <String>] [-RouteTableId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,6 +30,8 @@ The Set-AzureRmVirtualNetworkSubnetConfig cmdlet modifies the in-memory represen
 
 ### --------------------------  Example 1: Modify the address prefix of a subnet  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
@@ -48,6 +48,8 @@ Set-AzureRmVirtualNetwork is then called to modify the virtual network in Azure.
 
 ### --------------------------  Example 2: Add a network security group to a subnet  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
@@ -66,6 +68,8 @@ The Set-AzureRmVirtualNetwork cmdlet is then called to write the modified state 
 
 ### --------------------------  Example 2: Add a network security group to a subnet  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 New-AzureRmResourceGroup -Name TestResourceGroup -Location centralus
@@ -159,36 +163,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NetworkSecurityGroupId
 Specifies the ID of a network security group.
 
@@ -218,6 +192,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

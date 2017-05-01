@@ -13,6 +13,7 @@ Removes an API Management service.
 
 ```
 Remove-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-PassThru] [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,6 +89,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

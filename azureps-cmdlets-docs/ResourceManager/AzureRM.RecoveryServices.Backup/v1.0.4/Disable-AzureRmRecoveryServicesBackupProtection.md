@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+ms.assetid: 3644725E-B6BC-4E16-846E-4AA9F3B18D28
 online version: 
 schema: 2.0.0
-ms.assetid: 3644725E-B6BC-4E16-846E-4AA9F3B18D28
 ---
 
 # Disable-AzureRmRecoveryServicesBackupProtection
@@ -41,22 +41,6 @@ The second command gets the Backup item corresponding to the first container ite
 The last command disables Backup protection for the item in $PI\[0\], but retains the data.
 
 ## PARAMETERS
-
-### -RemoveRecoveryPoints
-Indicates that this cmdlet deletes existing recovery points.
-To delete stored recovery points later, run this cmdlet again and specify this parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 ps_force
@@ -125,6 +109,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -RemoveRecoveryPoints
+Indicates that this cmdlet deletes existing recovery points.
+To delete stored recovery points later, run this cmdlet again and specify this parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+ms.assetid: ABC26AB8-D8A7-42B9-8540-E8DA91D8092B
 online version: 
 schema: 2.0.0
-ms.assetid: ABC26AB8-D8A7-42B9-8540-E8DA91D8092B
 ---
 
 # Set-AzureRmNetworkInterface
@@ -44,21 +44,6 @@ The fifth command uses the information stored in the $Nic variable to set the ne
 
 ## PARAMETERS
 
-### -NetworkInterface
-Specifies a **NetworkInterface** object that represents the goal state for a network interface.
-
-```yaml
-Type: PSNetworkInterface
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -InformationAction
 Specifies how this cmdlet responds to an information event.
 
@@ -95,6 +80,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkInterface
+Specifies a **NetworkInterface** object that represents the goal state for a network interface.
+
+```yaml
+Type: PSNetworkInterface
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

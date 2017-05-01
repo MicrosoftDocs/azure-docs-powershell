@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+ms.assetid: BE03B82D-16B8-407F-B774-62A872E99F3D
 online version: 
 schema: 2.0.0
-ms.assetid: BE03B82D-16B8-407F-B774-62A872E99F3D
 ---
 
 # Add-AzureRmVMNetworkInterface
@@ -58,23 +58,6 @@ The final command updates the state of the virtual machine stored in $VirtualMac
 
 ## PARAMETERS
 
-### -VM
-Specifies a local virtual machine object to which to add a network interface.
-To create a virtual machine, use the New-AzureRmVMConfig cmdlet.
-To obtain an existing virtual machine, use the Get-AzureRmVM cmdlet.
-
-```yaml
-Type: PSVirtualMachine
-Parameter Sets: (All)
-Aliases: VMProfile
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -Id
 Specifies the ID of a network interface to add to a virtual machine.
 You can use the Get-AzureRmNetworkInterface cmdlet to obtain a network interface.
@@ -86,21 +69,6 @@ Aliases: NicId, NetworkInterfaceId
 
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Primary
-Indicates that this cmdlet adds the network interface as the primary interface.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GetNicFromNicId
-Aliases: 
-
-Required: False
-Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -157,6 +125,38 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Primary
+Indicates that this cmdlet adds the network interface as the primary interface.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GetNicFromNicId
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VM
+Specifies a local virtual machine object to which to add a network interface.
+To create a virtual machine, use the New-AzureRmVMConfig cmdlet.
+To obtain an existing virtual machine, use the Get-AzureRmVM cmdlet.
+
+```yaml
+Type: PSVirtualMachine
+Parameter Sets: (All)
+Aliases: VMProfile
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
