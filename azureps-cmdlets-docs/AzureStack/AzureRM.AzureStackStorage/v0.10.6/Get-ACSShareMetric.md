@@ -34,7 +34,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service admin.
 
 ```yaml
 Type: Uri
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetricNames
-
+Specifies a string array of metric names that this cmdlet gets.
 
 ```yaml
 Type: String[]
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String

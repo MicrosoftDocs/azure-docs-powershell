@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSQuota
 
 ## SYNOPSIS
-Get the Storage quota resource
+Get the storage quota resource.
 
 ## SYNTAX
 
@@ -18,28 +18,23 @@ Get-ACSQuota [-Location] <String> [[-Name] <String>] [[-SubscriptionId] <String>
 ```
 
 ## DESCRIPTION
-The Get-ACSQuota cmdlet fetches the Storage Quota resource created by the admins.
+The **Get-ACSQuota** cmdlet gets the storage quota resource.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Get all quota resources
 ```
-$ResourceGroup = "System"
-$Location = "Redmond"
-// Get quota resource named 'BasicStorage_Quota'
-Get-ACSQuota  -Location $Location -SkipCertificateValidation -Name "BasicStorage_Quota" | fl *
-// Get all quota resources
-Get-ACSQuota -Location $Location | fl *
+
+PS C:\> $Location = "Redmond"
+PS C:\> Get-ACSQuota -Location $Location | fl *
 ```
+
+This command gets all quota resources that is at the geolocation of Redmond.
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service admin.
 
 ```yaml
 Type: Uri
@@ -93,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-
+Specifies the geolocation of the storage quota resource.
 
 ```yaml
 Type: String
@@ -108,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of the storage quota resource that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -123,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -179,3 +174,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-ACSQuota](./New-ACSQuota.md)
+
+[Remove-ACSQuota](./Remove-ACSQuota.md)
