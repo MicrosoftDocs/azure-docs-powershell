@@ -38,8 +38,9 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 If you do not have PowerShellGet installed, see the [How to get PowerShellGet](#how-to-get-powershellget)
 section of this article.
 
-> [!NOTE] > Using PowerShellGet requires an Execution Policy that allows you to run scripts. For
-> more information about PowerShell's Execution Policy, see
+> [!NOTE]
+> Using PowerShellGet requires an Execution Policy that allows you to run scripts. For more
+> information about PowerShell's Execution Policy, see
 > [About Execution Policies](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).
 
 ## Step 2: Install Azure PowerShell
@@ -52,13 +53,28 @@ following command from an elevated PowerShell session:
 Install-Module AzureRM
 ```
 
+By default, the PowerShell gallery is not configured as a Trusted repository for PowerShellGet. If
+this is the first time you have used the PSGallery, you will see the following prompt:
+
+```
+Untrusted repository
+
+You are installing the modules from an untrusted repository. If you trust this repository, change
+its InstallationPolicy value by running the Set-PSRepository cmdlet.
+
+Are you sure you want to install the modules from 'PSGallery'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+```
+
+Answer 'Yes' to continue with the installation.
+
 > [!NOTE]
-> If you have a version older than 2.8.5.201 of NuGet, you will be prompted to download and install
+> If you have a version older than 2.8.5.201 of NuGet, you are prompted to download and install
 the latest version of NuGet.
 
 The AzureRM module is a rollup module for the Azure Resource Manager cmdlets. When you install the
-AzureRM module, any Azure Resource Manager module that has not previously been installed will be
-downloaded and installed from the PowerShell Gallery.
+AzureRM module, any Azure PowerShell module not previously installed is downloaded and from the
+PowerShell Gallery.
 
 Once the module is installed, you need to load the module into your PowerShell session. Modules are
 loaded using the `Import-Module` cmdlet, as follows:
@@ -92,7 +108,9 @@ feedback from the command line, use the `Send-Feedback` cmdlet.
 <a id="helpmechoose"></a>
 ### Checking the version of Azure PowerShell
 
-Although we encourage you to upgrade to the latest version as early as possible, several versions of Azure PowerShell are support.  To determine the version of Azure PowerShell you have installed, run `Get-Module AzureRM` from your command line.
+Although we encourage you to upgrade to the latest version as early as possible, several versions
+of Azure PowerShell are support. To determine the version of Azure PowerShell you have installed,
+run `Get-Module AzureRM` from your command line.
 
 ```powershell
 Get-Module AzureRM -list | Select-Object Name,Version,Path
@@ -101,10 +119,10 @@ Get-Module AzureRM -list | Select-Object Name,Version,Path
 
 ### Updating to a new version of Azure PowerShell
 
-PowerShellGet has the ability to update an installed module when a new version has been released to
-the PowerShell Gallery. Using the `Update-Module` cmdlet, you can download and install the latest
-version. The new version will be installed side-by-side with any other versions that
-have been installed. The `Update-Module` cmdlet does not remove previous versions.
+PowerShellGet can update an installed module when a new version has been released to the PowerShell
+Gallery. The `Update-Module` cmdlet downloads and installs the latest version. The new version is
+installed side by side with any other versions that are installed. The `Update-Module` cmdlet does
+not remove previous versions.
 
 If you want to reinstall the current version, you must use the `-Force` parameter. For example:
 
@@ -113,14 +131,13 @@ Update-Module -Name AzureRM -Force
 ```
 
 > [!NOTE]
-> If you have deployments that use the classic deployment model that cannot be converted you can
-install the Service Management version of Azure PowerShell. For more information, see
-[Install the Azure PowerShell Service Management module](overview?view=azuresmps-3.7.0).
-The Azure and AzureRM modules share common dependencies. So if you use both modules you should
-update both.
+> If you have deployments that use the classic deployment model you can install the Service
+Management version of Azure PowerShell. For more information, see [Install the Azure PowerShell
+Service Management module](overview?view=azuresmps-3.7.0). The Azure and AzureRM modules share
+common dependencies. So if you use both modules you should update both.
 
 
-### Installing module versions side-by-side
+### Installing module versions side by side
 
 The PowerShellGet method of installation is the only method that supports the installation of
 multiple versions. For example, you may have scripts written using a previous version of Azure
@@ -141,10 +158,9 @@ Import-Module AzureRM -RequiredVersion 1.2.9
 
 > [!NOTE]
 > Version 2.1.0 and version 1.2.6 are the first module versions designed to be installed and used
-side-by-side. When loading an earlier version of the Azure PowerShell modules using a
-command like the one above, incompatible versions of the **AzureRM.Profile** module will be loaded,
-resulting in the cmdlets asking you to log in whenever you execute a cmdlet, even after you have
-logged in.
+side by side. When loading an earlier version of the Azure PowerShell, incompatible versions of the
+**AzureRM.Profile** module are loaded. This results in the cmdlets prompting you to log in whenever
+you execute a cmdlet.
 
 ### Other installation methods
 
