@@ -1653,6 +1653,7 @@
     "Wait-AzureRmDataLakeAnalyticsJob": "Data Lake Analytics",
     "Wait-AzureRmHDInsightJob": "HD Insights",
     "Wait-AzureRmRecoveryServicesBackupJob": "Backup",
-	"Save-​Azure​Rm​Profile": "Profile",
-	"Select-​Azure​Rm​Profile": "Profile"
+    "Save-AzureRmProfile": "Profile",
+    "Select-AzureRmProfile": "Profile"
+	
 }
