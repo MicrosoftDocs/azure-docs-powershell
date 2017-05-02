@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-ACSQuota
 
 ## SYNOPSIS
-Updates an existing Storage quota resource
+Updates an existing ACS storage quota resource.
 
 ## SYNTAX
 
@@ -19,21 +19,22 @@ Set-ACSQuota [-Location] <String> [-Name] <String> -NumberOfStorageAccounts <Int
 ```
 
 ## DESCRIPTION
-Service admin can use Set-ACSQuota cmdlet to update an existing Storage Quota resource.
+The **Set-ACSQuota** cmdlet updates an existing Azure Consistent Storage (ACS) storage quota resource.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
+### Example 1: Update an existing quota resource
 
 ```
 $ResourceGroup = "System"
-$Location = "Redmond"
+
 // Get an existing quota resource named 'BasicStorage_Quota' and Update its NumberOfStorageAccounts property
-Get-ACSQuota -Location $Location | Set-ACSQuota -Location $location -NumberOfStorageAccounts 40
+Get-ACSQuota -Location "Redmond" | Set-ACSQuota -Location "Redmond" -NumberOfStorageAccounts 40
 ```
+The first command stores the value named System in the variable named $ResourceGroup.
+
+The second command uses the **Get-ACSQuota** cmdlet to get the ACS storage quota resource in the geolocation named Redmond. 
+The command then pipes the result to the **Set-ACSQuota** which modifies the existing quota resource.
 
 ## PARAMETERS
 
@@ -107,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the location of the quota resource.
+Specifies the geolocation of the quota resource.
 
 ```yaml
 Type: String
@@ -122,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the quota resource.
+Specifies the name of the quota resource that this cmdlet modifies.
 If not specified all quota resources are returned for a given Location.
 
 ```yaml
@@ -198,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -213,7 +214,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -237,3 +239,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSQuota](./Get-ACSQuota.md)
+
+[Remove-ACSQuota](./Remove-ACSQuota.md)
