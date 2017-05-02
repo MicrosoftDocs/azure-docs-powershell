@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 134300D2-BBC4-4435-BD95-EA6B1EB6ECE2
 online version: 
 schema: 2.0.0
 ---
@@ -19,16 +18,18 @@ Get-AzureRmHDInsightScriptActionHistory [-ClusterName] <String> [[-ScriptExecuti
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmHDInsightScriptActionHistory** cmdlet gets the script action history for an Azure HDInsight cluster and lists it in reverse chronological order, or gets details of a previously executed script action.
+The Get-AzureRmHDInsightScriptActionHistory cmdlet gets the script action history for an Azure HDInsight cluster and lists it in reverse chronological order, or gets details of a previously executed script action.
 
 ## EXAMPLES
 
-### Example 1: Get the history of script actions executions for a cluster
-```
-PS C:\>Get-AzureRmHDInsightScriptActionHistory -ClusterName "your-hadoop-001"
-```
+### --------------------------  Example 1: Get the history of script actions executions for a cluster  --------------------------
+@{paragraph=PS C:\\\>}
 
-This command gets the history of script actions for the cluster your-hadoop-001.
+
+
+```
+PS C:\> Get-AzureRmHDInsightScriptActionHistory -ClusterName "your-hadoop-001"
+```
 
 ## PARAMETERS
 
@@ -48,16 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -72,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -102,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptExecutionId
-Specifies the execution ID of the executed script action.
+Specifies the execution id of the executed script action.
 
 ```yaml
 Type: Int64
@@ -124,6 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
 

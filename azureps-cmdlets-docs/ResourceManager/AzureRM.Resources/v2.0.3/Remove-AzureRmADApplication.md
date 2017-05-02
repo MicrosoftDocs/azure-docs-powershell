@@ -12,8 +12,7 @@ Deletes the azure active directory application.
 ## SYNTAX
 
 ```
-Remove-AzureRmADApplication -ObjectId <Guid> [-Force] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmADApplication -ApplicationObjectId <Guid> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,10 +25,6 @@ Deletes the azure active directory application.
 
 
 
-
-
-
-
 ```
 PS C:\> Remove-AzureRmADApplication -ApplicationObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 -Force
 ```
@@ -38,8 +33,10 @@ Deletes the azure active directory application.
 
 ## PARAMETERS
 
-### -ObjectId
-The object id of the application to delete.```yaml
+### -ApplicationObjectId
+@{Text=}
+
+```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
@@ -66,24 +63,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: iv
+Aliases: cf
 
 Required: False
 Position: Named
@@ -100,21 +86,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

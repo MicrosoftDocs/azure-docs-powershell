@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 9F795656-24D7-44BD-8F92-37C80EFA6941
 online version: 
 schema: 2.0.0
 ---
@@ -13,27 +12,32 @@ Waits for the completion or failure of a specified job.
 ## SYNTAX
 
 ```
-Wait-AzureRmHDInsightJob [-ClusterName] <String> [-JobId] <String> -HttpCredential <PSCredential>
- [[-ResourceGroupName] <String>] [<CommonParameters>]
+Wait-AzureRmHDInsightJob [-ClusterName] <String> [-JobId] <String> [-HttpCredential] <PSCredential>
+ [-ResourceGroupName <String>] [-TimeoutInSeconds <Int32>] [-WaitIntervalInSeconds <Int32>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Wait-AzureRmHDInsightJob** cmdlet awaits the completion or failure of an Azure HDInsight job.
+The Wait-AzureRmHDInsightJob cmdlet awaits the completion or failure of an Azure HDInsight job.
 
 ## EXAMPLES
 
-### Example 1: Wait for the completion or failure of a job
+### --------------------------  Example 1: Wait for the completion or failure of a job  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\># Cluster info
-PS C:\> $clusterResourceGroupName = "Group"
-PS C:\> $clusterName = "your-hadoop-001"
-PS C:\> $clusterCreds = Get-Credential
+PS C:\&gt; # Cluster info
+        $clusterResourceGroupName = "Group"
+        $clusterName = "your-hadoop-001"
+        $clusterCreds = Get-Credential
 
-# Hive job details
-PS C:\> $statusFolder = "tempStatusFolder/"
-PS C:\> $query = "SHOW TABLES"
+        # Hive job details
+        $statusFolder = "tempStatusFolder/"
+        $query = "SHOW TABLES"
 
-PS C:\> New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
+        New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
             -Query $query `
         | Start-AzureRmHDInsightJob -ResourceGroupName $clusterResourceGroupName `
             -ClusterName $clusterName `
@@ -43,24 +47,7 @@ PS C:\> New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
             -ClusterCredential $clusterCreds
 ```
 
-This command waits for the completion or failure of a job.
-
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClusterName
 Specifies the name of the cluster.
@@ -71,7 +58,52 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpCredential
+Specifies the cluster login (HTTP) credentials for the cluster.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases: ClusterCredential
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -86,21 +118,51 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -HttpCredential
-Specifies the cluster login (HTTP) credentials for the cluster.
+### -ResourceGroupName
+Specifies the name of the resource group.
 
 ```yaml
-Type: PSCredential
+Type: String
 Parameter Sets: (All)
-Aliases: ClusterCredential
+Aliases: 
 
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutInSeconds
+The total time to wait for job completion, in seconds.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WaitIntervalInSeconds
+The time to wait between job status checks, in seconds.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -115,13 +177,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
 
-[Get-AzureRmHDInsightJob](./Get-AzureRmHDInsightJob.md)
-
-[Start-AzureRmHDInsightJob](./Start-AzureRmHDInsightJob.md)
-
-[Stop-AzureRmHDInsightJob](./Stop-AzureRmHDInsightJob.md)
-
+[Get-AzureRmHDInsightJob]()
 

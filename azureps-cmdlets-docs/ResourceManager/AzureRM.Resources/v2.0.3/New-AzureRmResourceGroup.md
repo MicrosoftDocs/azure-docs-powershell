@@ -1,59 +1,118 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 5CFBBAC0-3AC6-4CBB-BA87-A5DA7245A627
-online version: 
+online version: http://go.microsoft.com/fwlink/?LinkID=393048
 schema: 2.0.0
 ---
 
 # New-AzureRmResourceGroup
 
 ## SYNOPSIS
-Creates an Azure resource group.
+Creates an Azure resource group
 
 ## SYNTAX
 
 ```
-New-AzureRmResourceGroup -Name <String> -Location <String> [-Tag <Hashtable>] [-Force] [-ApiVersion <String>]
+New-AzureRmResourceGroup -Name <String> -Location <String> [-Tag <Hashtable[]>] [-Force] [-ApiVersion <String>]
  [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-AzureRmResourceGroup** cmdlet creates an Azure resource group.
+The New-AzureRmResourceGroup cmdlet creates an Azure resource group and returns an object that represents the resource group.
 
-You can create a resource group by using just a name and location, and then use the New-AzureRmResource cmdlet to create resources to add to the resource group.
-
-To add a deployment to an existing resource group, use the New-AzureRmResourceGroupDeployment cmdlet.
-To add a resource to an existing resource group, use the **New-AzureRmResource** cmdlet.
-An Azure resource is a user-managed Azure entity, such as a database server, database, or website.
-An Azure resource group is a collection of Azure resources that are deployed as a unit.
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Create an empty resource group
+### --------------------------  Example 1: Create an empty resource group  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>New-AzureRmResourceGroup -Name "RG01" -Location "South Central US"
+PS C:\>New-AzureRmResourceGroup -Name RG1 -Location "South Central US"
+          ResourceGroupName : RG1
+          Location          : southcentralus
+          ProvisioningState : Succeeded
+          Resources
 ```
 
 This command creates a resource group that has no resources.
-You can use the **New-AzureRmResource** or **New-AzureRmResourceGroupDeployment** cmdlets to add resources and deployments to this resource group.
+You can use the New-AzureRmResource or New-AzureRmResourceGroupDeployment cmdlets to add resources and deployments to this resource group.
 
-### Example 2: Create a resource group with tags
+### --------------------------  Example 2: Create a resource group with tags  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>New-AzureRmResourceGroup -Name "RG01" -Location "South Central US" -Tag @{Name="Empty"}, @{Name="Department";Value="Marketing"}
+PS C:\>New-AzureRmResourceGroup -Name RG1 -Location "South Central US" -Tag @{Name="Empty"}, @{Name="Department";Value="Marketing"}
 ```
 
-This command creates an empty resource group.
+This command creates a new empty resource group.
 This command is the same as the command in Example 1, except that it assigns tags to the resource group.
-The first tag, named Empty, can be used to identify resource groups that have no resources.
-The second tag is named Department and has a value of Marketing.
-You can use a tag such as this one to categorize resource groups for administration or budgeting.
+The first tag, named "Empty," could be used to identify resource groups that have no resources.
+The second tag is named "Department" and has a value of "Marketing".
+You can use a tag like this one to categorize resource groups for administration or budgeting.
 
 ## PARAMETERS
 
+### -ApiVersion
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the confirmation prompt and overwrites an existing resource group with the same name.
+By default, New-AzureRmResourceGroup prompts for confirmation before replacing an existing resource group.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+Specifies the location of the resource group.
+This parameter is required.
+Enter an Azure data center location, such as "West US" or "Southeast Asia".You can place a resource group in any location.
+The resource group does not have to be in the same location your Azure subscription or the same location as its resources.
+Resource groups can contain resources from different locations.
+To determine which location support each resource type, use the Get-AzureRmResourceProvider with the ProviderNamespace parameter cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies a name for the resource group.
-The resource name must be unique in the subscription.
-If a resource group that has that name already exists, the command prompts you for confirmation before replacing the existing resource group.
+This parameter is required.
+The resource name must be unique in the subscription.You can use -Name or its alias, -ResourceGroupName.If a resource group with that name already exists, the command prompts you for confirmation before replacing the existing resource group.
+To suppress the confirmation prompt, use the Force parameter.
 
 ```yaml
 Type: String
@@ -67,43 +126,33 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Location
-Specifies the location of the resource group.
-Specify an Azure data center location, such as West US or Southeast Asia.
-You can place a resource group in any location.
-The resource group does not have to be in the same location your Azure subscription or in the same location as its resources.
-
-To determine which location supports each resource type, use the Get-AzureRmResourceProvider cmdlet with the *ProviderNamespace* parameter.
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Tag
-Specifies a hash table of tags.
-To add or change a tag, you must replace the collection of tags for the resource group.
-
-A tag is a name-value pair that you can create and apply to resources and resource groups.
-After you assign tags to resources and groups, you can use the *Tag* parameter of Get-AzureRmResource and Get-AzureRmResourceGroup to search for resources and groups by tag name or by name and value.
-You can use tags to categorize your resources, such as by department or cost center, or to track notes or comments about the resources.
-
-Each tag must have a Name key.
+Applies the specified tags to the new resource group.
+Enter new tags or predefined tags that you created by using the New-AzureRmTag cmdlet.A "tag" is a name-value pair that you can apply to resources and resource groups.
+Use tags to categorize your resources, such as by department or cost center, or to track notes or comments about the resources.
+After you assign tags to resources, you can use the Tag parameters of Find-AzureRmResource and Find-AzureRmResourceGroup to search for resources and groups by tag name or name and value.Every tag must have a Name key.
 It can also have an optional Value key with one value.
-To specify a tag, use a hash table, such as `@{Name="FY2015"}` or `@{Name="Department";Value="IT"}`.
-To specify multiple tags, use commas to separate the hash tables, such as `@{Name="FY2015"}, @{Name="Department";Value="IT"}`.
-
-To get your predefined tags, use the Get-AzureRMTag cmdlet.
+To specify a new tag, use a hash table, such as @{Name="FY2015"} or @{Name="Department";Value="IT"}.
+To specify multiple tags, use commas to separate the hash tables, such as  -Tag @{Name="FY2015"}, @{Name="Department";Value="IT"}.
+To get your predefined tags, use the Get-AzureRmTag cmdlet.
 
 ```yaml
-Type: Hashtable
+Type: Hashtable[]
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -114,37 +163,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApiVersion
-Specifies the API version that is supported by the resource Provider.
-You can specify a different version than the default version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -152,21 +170,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 
 Required: False
 Position: Named
@@ -186,7 +189,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -205,17 +208,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-AzureRmResourceProvider](./Get-AzureRmResourceProvider.md)
-
-[Get-AzureRmResourceGroup](./Get-AzureRmResourceGroup.md)
-
-[New-AzureRmResource](./New-AzureRmResource.md)
-
-[New-AzureRmResourceGroupDeployment](./New-AzureRmResourceGroupDeployment.md)
-
-[Remove-AzureRmResourceGroup](./Remove-AzureRmResourceGroup.md)
-
-[Set-AzureRmResourceGroup](./Set-AzureRmResourceGroup.md)
-
 

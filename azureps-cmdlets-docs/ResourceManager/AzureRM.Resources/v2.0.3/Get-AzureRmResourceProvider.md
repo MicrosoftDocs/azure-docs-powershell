@@ -1,14 +1,12 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: FD23E93B-063A-4DA5-9E86-2C57C092E98B
-online version: 
+online version: http://go.microsoft.com/fwlink/?LinkID=393044
 schema: 2.0.0
 ---
 
 # Get-AzureRmResourceProvider
 
 ## SYNOPSIS
-Gets a resource provider.
 
 ## SYNTAX
 
@@ -25,50 +23,59 @@ Get-AzureRmResourceProvider -ProviderNamespace <String> [-Location <String>] [-A
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmResourceProvider** cmdlet gets an Azure resource provider.
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### 1:
-```
+### --------------------------  Example 1: Get all registered resource providers --------------------------
+@{paragraph=PS C:\\\>}
+
+
 
 ```
+PS C:\>Get-AzureRmResourceProvider
+```
+
+This command gets all the registered resource providers.
+
+### --------------------------  Example 2: Get all resource providers, including those not registered --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\>Get-AzureRmResourceProvider -ListAvailable
+```
+
+This command gets all the resource providers, including those registered and unregistered.
+
+### --------------------------  Example 3: Get details about a particular resource provider --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\>Get-AzureRmResourceProvider -ProviderNamespace Microsoft.Web
+```
+
+This command gets details about a particular resource provider, including the resource types and locations available for the resource provider.
+
+### --------------------------  Example 4: Get all registered resource providers filtered by a location --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\>Get-AzureRmResourceProvider -Location westus
+```
+
+This command gets all the registered resource providers under a location.
 
 ## PARAMETERS
 
-### -ListAvailable
-Indicates that this operation gets all available resource providers.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: ListAvailable
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProviderNamespace
-Specifies the namespace of the resource provider.
-
-```yaml
-Type: String
-Parameter Sets: IndividualProvider
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ApiVersion
-Specifies the API version that is supported by the resource Provider.
-You can specify a different version than the default version.
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
 Type: String
@@ -82,8 +89,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ListAvailable
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ListAvailable
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
-Specifies the location of the resource provider.
+The location to look for provider namespace.
 
 ```yaml
 Type: String
@@ -98,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
 Type: SwitchParameter
@@ -112,6 +134,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProviderNamespace
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: IndividualProvider
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -122,9 +159,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Register-AzureRmResourceProvider](./Register-AzureRmResourceProvider.md)
-
-[Unregister-AzureRmResourceProvider](./Unregister-AzureRmResourceProvider.md)
-
 

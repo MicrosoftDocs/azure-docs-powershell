@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 1168E58B-035E-45FF-A566-B1331D85582E
 online version: 
 schema: 2.0.0
 ---
@@ -15,24 +14,28 @@ Creates a MapReduce job object.
 ```
 New-AzureRmHDInsightMapReduceJobDefinition [-Arguments <String[]>] [-Files <String[]>] [-StatusFolder <String>]
  -ClassName <String> [-Defines <Hashtable>] -JarFile <String> [-JobName <String>] [-LibJars <String[]>]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-AzureRmHDInsightMapReduceJobDefinition** cmdlet defines a new MapReduce job for use with an Azure HDInsight cluster.
+The New-AzureRmHDInsightMapReduceJobDefinition cmdlet defines a new MapReduce job for use with an Azure HDInsight cluster.
 
 ## EXAMPLES
 
-### Example 1: Create a MapReduce job definition
-```
-PS C:\># Cluster info
-PS C:\>$clusterName = "your-hadoop-001"
-PS C:\>$clusterCreds = Get-Credential
+### --------------------------  Example 1: Create a MapReduce job definition  --------------------------
+@{paragraph=PS C:\\\>}
 
-PS C:\>New-AzureRmHDInsightMapReduceJobDefinition -StatusFolder $statusFolder `
+
+
+```
+PS C:\&gt; # Cluster info
+        $clusterName = "your-hadoop-001"
+        $clusterCreds = Get-Credential
+
+        New-AzureRmHDInsightMapReduceJobDefinition -StatusFolder $statusFolder `
             -ClassName $className `
             -JarFile $jarFilePath `
-        | Start-AzureRmHDInsightJob `
+        | Start-AzureRmHDInsightJob 
             -ClusterName $clusterName `
             -ClusterCredential $clusterCreds
 ```
@@ -47,36 +50,6 @@ The arguments are passed as command-line arguments to each task.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Files
-Specifies a collection of files that are associated with a Hive job.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StatusFolder
-Specifies the location of the folder that contains standard outputs and error outputs for a job.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -117,8 +90,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Files
+Specifies a collection of files that are associated with a Hive job.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -JarFile
-Specifies the JAR file to use for the job.
+Specifies the JAR file to use for the jobDetails.
 
 ```yaml
 Type: String
@@ -162,6 +180,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StatusFolder
+Specifies the location of the folder that contains standard outputs and error outputs for a job.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -170,9 +203,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
 
-[Start-AzureRmHDInsightJob](./Start-AzureRmHDInsightJob.md)
-
+[Start-AzureRmHDInsightJob]()
 

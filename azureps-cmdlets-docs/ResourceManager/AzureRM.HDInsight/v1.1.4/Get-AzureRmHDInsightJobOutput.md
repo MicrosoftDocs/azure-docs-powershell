@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 8ACEF132-C795-405B-8A1C-90D35E744272
 online version: 
 schema: 2.0.0
 ---
@@ -12,64 +11,45 @@ Gets the log output for a job from the storage account associated with a specifi
 
 ## SYNTAX
 
-### Display
 ```
-Get-AzureRmHDInsightJobOutput [-ClusterName] <String> [-JobId] <String> [-DefaultContainer] <String>
- [-DefaultStorageAccountName] <String> [-DefaultStorageAccountKey] <String> -HttpCredential <PSCredential>
- [[-ResourceGroupName] <String>] [-DisplayOutputType <JobDisplayOutputType>] [<CommonParameters>]
-```
-
-### Download
-```
-Get-AzureRmHDInsightJobOutput [-ClusterName] <String> [-JobId] <String> [-DefaultContainer] <String>
- [-DefaultStorageAccountName] <String> [-DefaultStorageAccountKey] <String> -HttpCredential <PSCredential>
- [[-ResourceGroupName] <String>] -DownloadOutputType <JobDownloadOutputType> -Folder <String>
- [<CommonParameters>]
+Get-AzureRmHDInsightJobOutput [-ClusterName] <String> [-JobId] <String> [[-DefaultContainer] <String>]
+ [[-DefaultStorageAccountName] <String>] [[-DefaultStorageAccountKey] <String>]
+ [-HttpCredential] <PSCredential> [-ResourceGroupName <String>] [-DisplayOutputType <JobDisplayOutputType>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmHDInsightJobOutput** cmdlet gets the log output for a job from the Storage account associated with an Azure HDInsight cluster.
+The Get-AzureRmHDInsightJobOutput cmdlet gets the log output for a job from the storage account associated with an Azure HDInsight cluster.
 
 ## EXAMPLES
 
-### Example 1: Get the log output for a job
+### --------------------------  Example 1: Get the log output for a job  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\># Cluster info
-PS C:\> $clusterName = "your-hadoop-001"
-PS C:\> $clusterCreds = Get-Credential
+PS C:\> # Cluster info
+        $clusterName = "your-hadoop-001"
+        $clusterCreds = Get-Credential
 
-# Hive job details
-PS C:\> $statusFolder = "<status folder>"
-PS C:\> $query = "<query here>"
+        # Hive job details
+        $statusFolder = "<status folder>"
+        $query = "<query here>"
 
-PS C:\> New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
+        New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
             -Query $query `
-        | Start-AzureRmHDInsightJob `
+        | Start-AzureRmHDInsightJob 
             -ClusterName $clusterName `
             -ClusterCredential $clusterCreds `
-        | Get-AzureRmHDInsightJobOutput `
+        | Get-AzureRmHDInsightJobOutput 
             -ClusterName $clusterName `
             -ClusterCredential $clusterCreds
 ```
 
-This command gets the log output from the cluster named your-hadoop-001.
+This command gets the log output from the cluster named 'your-hadoop-001'.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClusterName
 Specifies the name of the cluster.
@@ -80,22 +60,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JobId
-Specifies the job ID of the job whose output will be fetched.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -109,38 +74,38 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultStorageAccountName
-Specifies the default Storage account name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 4
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountKey
-Specifies the default Storage account key.
+Specifies the default storage account key.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 5
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultStorageAccountName
+Specifies the default storage account name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -148,43 +113,14 @@ Accept wildcard characters: False
 
 ### -DisplayOutputType
 Specifies the job output type being requested.
-psdx_paramvalues
-
-- StandardOutput
-- StandardError
+Options are: StandardOutput, StandardError, TaskSummary
 
 ```yaml
 Type: JobDisplayOutputType
-Parameter Sets: Display
+Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DownloadOutputType
-The type of output to download.```yaml
-Type: JobDownloadOutputType
-Parameter Sets: Download
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Folder
-The folder to save the output to.```yaml
-Type: String
-Parameter Sets: Download
-Aliases: 
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -200,6 +136,66 @@ Parameter Sets: (All)
 Aliases: ClusterCredential
 
 Required: True
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JobId
+Specifies the job ID of the job whose output will be fetched.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -214,11 +210,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
-
-[New-AzureRmHDInsightHiveJobDefinition](./New-AzureRmHDInsightHiveJobDefinition.md)
-
-[Start-AzureRmHDInsightJob](./Start-AzureRmHDInsightJob.md)
-
 

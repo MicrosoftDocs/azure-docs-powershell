@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
-ms.assetid: 30F3B9FA-6FC4-4856-B6D4-255377148A24
 online version: 
 schema: 2.0.0
 ---
@@ -8,132 +7,85 @@ schema: 2.0.0
 # Set-AzureRmLogicApp
 
 ## SYNOPSIS
-Modifies a logic app in a resource group.
+Updates a new Logic App in an azure resource group.
 
 ## SYNTAX
 
-### Consumption (Default)
-```
-Set-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-UseConsumptionModel] [-State <String>]
- [-Definition <Object>] [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
- [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### HostingPlan
 ```
 Set-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-AppServicePlan <String>] [-State <String>]
- [-Definition <Object>] [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
- [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefinitionLinkUri <String>] [-DefinitionLinkContentVersion <String>] [-Definition <Object>]
+ [-DefinitionFilePath <String>] [-ParameterLinkUri <String>] [-ParameterLinkContentVersion <String>]
+ [-Parameters <Object>] [-ParameterFilePath <String>] [-Force] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmLogicApp** cmdlet modifies a logic app by using the Logic Apps feature.
-A logic app is a collection of actions or triggers defined in Logic App definition.
-This cmdlet returns a **Workflow** object.
+This is the Description section
 
-You can modify a logic app by specifying a name, location, Logic App definition, resource group, and plan.
-A Logic App definition and parameters are formatted in JavaScript Object Notation (JSON).
-You can use a logic app as a template for definition and parameters.
-
-This module supports dynamic parameters.
-To use a dynamic parameter, type it in the command.
-To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
-If you omit a required template parameter, the cmdlet prompts you for the value.
+The Set-AzureRmLogicApp cmdlet updates an Azure Logic App and returns an object that represents the Workflow.
+Use this cmdlet to update a Logic App.
+You can update a Logic App with a name, Logic App definition, resource group name, App Service Plan name.
+However, typically, you use a Logic App template for definition and parameters which is JSON-based model.
+To update a Logic App, you can specify definition as DefinitionFilePath or DefinitionLinkUri parameters or as a Definition object(string).
+To specify values for the Logic App template parameters, use a JSON-formatted parameter file (-ParameterFilePath) or a HashTable of parameter names and values (-Parameters) or ParametersLinkUri parameters.
+To use the dynamic parameters, just type them in the command, or type a hyphen sign(-) to indicate a parameter name and then press the TAB key repeatedly to cycle through the available parameters.
+If you miss a required template parameter, the cmdlet prompts you for the value.
 Template parameter file values that you specify at the command line take precedence over template parameter values in a template parameter object.
 
 ## EXAMPLES
 
-### Example 1: Modify a logic app
+### --------------------------  Example 1 : Updates a Logic App  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Set-AzureRmLogicApp -ResourceGroupName "ResourceGroup11" -Name "LogicApp17" -State "Enabled" -AppServicePlan "ServicePlan01" -DefinitionFilePath "d:\workflows\Definition17.json" -ParameterFilePath "d:\workflows\Parameters17.json"
+PS C:\>Set-AzureRmLogicApp -ResourceGroupName "ResourceGroup1" -Name "LogicApp1" -State "Enabled" -AppServicePlan "ServicePlan1" -DefinitionFilePath "d:\workflows\Definition.json" -ParameterFilePath "d:\workflows\Parameters.json"
+```
+
+This command updates a Logic App
+
 Id                           : /subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourceGroups/LogicAppCmdletTest/providers/Microsoft.Logic/workflows/LogicApp1
-Name                         : LogicApp17
+Name                         : LogicApp1
 Type                         : Microsoft.Logic/workflows
 Location                     : westus
 ChangedTime                  : 1/13/2016 2:41:39 PM
 CreatedTime                  : 1/13/2016 2:41:39 PM
-AccessEndpoint               : https://westus.logic.azure.com:443/subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourcegroups/ResourceGroup11/providers/Microsoft.Logic/workflows/LogicApp17
+AccessEndpoint               : https://\<baseurl\>/subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourcegroups/ResourceGroup1/providers/Microsoft.Logic/workflows/LogicApp1
 State                        : Enabled
 DefinitionLinkUri            : 
 DefinitionLinkContentVersion : 
-Definition                   : {$schema, contentVersion, parameters, triggers...} 
+Definition                   : {$schema, contentVersion, parameters, triggers...}
 ParametersLinkUri            : 
 ParametersLinkContentVersion : 
-Parameters                   : {[destinationUri, Microsoft.Azure.Management.Logic.Models.WorkflowParameter]} 
+Parameters                   : {\[destinationUri, Microsoft.Azure.Management.Logic.Models.WorkflowParameter\]}
 SkuName                      : Standard
-PlanName                     : ServicePlan01
+PlanName                     : ServicePlan1
 PlanType                     : Microsoft.Web/ServerFarms
-PlanId                       : /subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourceGroups/ResourceGroup11/providers/Microsoft.Web/serverfarms/ServicePlan17
+PlanId                       : /subscriptions/57b7034d-72d4-433d-ace2-a7460aed6a99/resourceGroups/ResourceGroup1/providers/Microsoft.Web/serverfarms/ServicePlan1
 Version                      : 08587489107859952120
-```
-
-This command modifies a logic app.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of a resource group.
+### -AppServicePlan
+Specifies the name of the App Service Plan.
+This parameter is required.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of a logic app.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseConsumptionModel
-Specifies the usage of consumption based model for LogicApp billing.```yaml
-Type: SwitchParameter
-Parameter Sets: Consumption
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -State
-Specifies the state of the logic app.
-psdx_paramvalues Enabled and Disabled.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Definition
-Specifies the definition of a logic app as an object or a string in JavaScript Object Notation (JSON) format.
+Definition of the Logic App.
+Expected type object or JSON-formatted string.
 
 ```yaml
 Type: Object
@@ -148,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefinitionFilePath
-Specifies the definition of a logic app as the path of a definition file in JSON format.
+Path of a JSON-formatted definition file.
 
 ```yaml
 Type: String
@@ -162,8 +114,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IntegrationAccountId
-Specifies the integration account ID used for the LogicApp. This parameter is optional. e.g. "/subscriptions/valid-subscription-guid/resourceGroups/valid-group-name/providers/Microsoft.Logic/integrationAccounts/valid-name-of-integration-account"```yaml
+### -DefinitionLinkContentVersion
+Specifies the content version of the Definition link Uri.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -175,24 +129,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Parameters
-Specifies a parameters collection object for the Logic App.
-Specify a hash table, Dictionary\<string\>, or Dictionary\<string, WorkflowParameter\>.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ParameterFilePath
-Specifies the path of a JSON formatted parameter file.
+### -DefinitionLinkUri
+Specifies Definition link Uri of the Logic App.
+If DefinitionLinkUri is provided as parameter then user must provide the "DefinitionLinkContentVersion" parameter.
 
 ```yaml
 Type: String
@@ -207,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+Do not ask for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -222,16 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -246,12 +176,138 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Logic App.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParameterFilePath
+Path of a JSON-formatted parameter file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParameterLinkContentVersion
+Specifies the content version of the Parameter Link Uri of the Logic App.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParameterLinkUri
+Specifies parameter link Uri of the Logic App.
+If ParameterLinkUri is provided as parameter then user must provide the "ParameterLinkContentVersion" parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Parameters
+Parameters collection object of the Logic App.
+Expected Type HashTable or Dictionary\<string,\> or Dictionary\<string, WorkflowParameter\>.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies a name for the resource group.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -State
+Specifies a state of the Logic App.
+Expected values e.g.
+Enabled, Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -271,38 +327,8 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AppServicePlan
-Specifies the name of a plan.
-
-```yaml
-Type: String
-Parameter Sets: HostingPlan
-Aliases: 
-
-Required: False
-Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -319,12 +345,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmLogicApp](./Get-AzureRmLogicApp.md)
+[New-AzureRmLogicApp]()
 
-[New-AzureRmLogicApp](./New-AzureRmLogicApp.md)
+[Get-AzureRmLogicApp]()
 
-[Remove-AzureRmLogicApp](./Remove-AzureRmLogicApp.md)
-
-[Start-AzureRmLogicApp](./Start-AzureRmLogicApp.md)
-
+[Remove-AzureRmLogicApp]()
 

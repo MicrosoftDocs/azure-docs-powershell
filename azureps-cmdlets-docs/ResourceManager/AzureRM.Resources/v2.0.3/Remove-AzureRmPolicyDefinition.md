@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: A5D5B971-75F4-40D1-B3BD-51817E96BD30
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,7 @@ schema: 2.0.0
 # Remove-AzureRmPolicyDefinition
 
 ## SYNOPSIS
-Removes a policy definition.
+Removes the policy definition
 
 ## SYNTAX
 
@@ -27,37 +26,74 @@ Remove-AzureRmPolicyDefinition -Id <String> [-Force] [-ApiVersion <String>] [-Pr
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmPolicyDefinition** cmdlet removes a policy definition.
+Removes the policy definition
+
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Remove the policy definition by name
-```
-PS C:\>Remove-AzureRmPolicyDefinition -Name "VMPolicyDefinition"
-```
+### --------------------------  Remove the policy definition by name  --------------------------
+@{paragraph=PS C:\\\>}
 
-This command removes the specified policy definition.
 
-### Example 2: Remove policy definition by resource ID
+
 ```
-PS C:\>$PolicyDefinition = Get-AzureRmPolicyDefinition -Name "VMPolicyDefinition" 
-PS C:\> Remove-AzureRmPolicyDefinition -Id $PolicyDefinition.ResourceId -Force
+Remove-AzureRmPolicyDefinition -Name 'myPolicyDefinition'
 ```
 
-The first command gets a policy definition named VMPolicyDefinition by using the Get-AzureRmPolicyDefinition cmdlet.
-The command stores it in the $PolicyDefinition variable.
+Removes the specified policy definition
 
-The second command removes the policy definition identified by the **ResourceId** property of $PolicyDefinition.
+### --------------------------  Remove policy definition by Id  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+$policyDefinition = Get-AzureRmPolicyDefinition -Name myPolicyDefinition
+Remove-AzureRmPolicyDefinition -Id $policyDefinition.ResourceId -Force
+```
+
+Removes the policy definition identified by its resource Id
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the policy definition that this cmdlet removes.
+### -ApiVersion
+@{Text=}
 
 ```yaml
 Type: String
-Parameter Sets: The policy definition name parameter set.
+Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Do not ask for confirmation
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+The fully qualified resource Id for the policy definition
+
+```yaml
+Type: String
+Parameter Sets: The policy definition Id parameter set.
+Aliases: ResourceId
 
 Required: True
 Position: Named
@@ -66,63 +102,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -137,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -151,18 +132,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-Specifies the fully qualified resource ID for the policy definition that this cmdlet removes.
+### -Name
+The policy definition name
 
 ```yaml
 Type: String
-Parameter Sets: The policy definition Id parameter set.
-Aliases: ResourceId
+Parameter Sets: The policy definition name parameter set.
+Aliases: 
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -176,7 +172,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -192,7 +188,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -207,11 +203,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-AzureRmPolicyDefinition](./Get-AzureRmPolicyDefinition.md)
-
-[New-AzureRmPolicyDefinition](./New-AzureRmPolicyDefinition.md)
-
-[Set-AzureRmPolicyDefinition](./Set-AzureRmPolicyDefinition.md)
-
 

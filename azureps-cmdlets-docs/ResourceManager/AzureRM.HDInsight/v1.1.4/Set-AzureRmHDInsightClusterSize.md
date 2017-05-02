@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 16F6A7AE-1C34-4453-9DA1-B900F0EB8EBF
 online version: 
 schema: 2.0.0
 ---
@@ -14,37 +13,25 @@ Sets the number of Worker nodes in a specified cluster.
 
 ```
 Set-AzureRmHDInsightClusterSize [-ClusterName] <String> [-TargetInstanceCount] <Int32>
- [[-ResourceGroupName] <String>] [<CommonParameters>]
+ [-ResourceGroupName <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmHDInsightClusterSize** cmdlet sets the number of Worker nodes in a specified Azure HDInsight cluster.
+The Set-AzureRmHDInsightClusterSize cmdlet sets the number of Worker nodes in a specified Azure HDInsight cluster.
 
 ## EXAMPLES
 
-### Example 1: Set the size of a specified cluster
-```
-PS C:\>Set-AzureRmHDInsightClusterSize -ClusterName "your-hadoop-001" -TargetInstanceCount 6
-```
+### --------------------------  Example 1: Set the size of a specified cluster  --------------------------
+@{paragraph=PS C:\\\>}
 
-This command sets the size of the cluster named your-hadoop-001.
+
+
+```
+PS C:\&gt;Set-AzureRmHDInsightClusterSize -ClusterName "your-hadoop-001" -TargetInstanceCount 6
+```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClusterName
 Specifies the name of the cluster.
@@ -55,7 +42,52 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -70,7 +102,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 3
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -84,6 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
 

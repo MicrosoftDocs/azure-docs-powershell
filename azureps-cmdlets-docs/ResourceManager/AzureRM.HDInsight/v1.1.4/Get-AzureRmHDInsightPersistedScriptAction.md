@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 692AD3AD-8C5A-4747-869D-2BDDDCC3AAAD
 online version: 
 schema: 2.0.0
 ---
@@ -19,16 +18,18 @@ Get-AzureRmHDInsightPersistedScriptAction [-ClusterName] <String> [[-Name] <Stri
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmHDInsightPersistedScriptAction** cmdlet gets the persisted script actions for an Azure HDInsight cluster and lists them in chronological order, or gets details for a specified persisted script action.
+The Get-AzureRmHDInsightPersistedScriptAction parameter gets the persisted script actions for an Azure HDInsight cluster and lists them in chronological order, or gets details for a specified persisted script action.
 
 ## EXAMPLES
 
-### Example 1: Get the persisted script actions on a cluster
-```
-PS C:\>Get-AzureRmHDInsightPersistedScriptAction -ClusterName "your-hadoop-001"
-```
+### --------------------------  Example 1: Get the persisted script actions on a cluster  --------------------------
+@{paragraph=PS C:\\\>}
 
-This command gets persisted script actions on the cluster named your-hadoop-001.
+
+
+```
+PS C:\> Get-AzureRmHDInsightPersistedScriptAction -ClusterName "your-hadoop-001"
+```
 
 ## PARAMETERS
 
@@ -48,16 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -72,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -124,11 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
-
-[Remove-AzureRmHDInsightPersistedScriptAction](./Remove-AzureRmHDInsightPersistedScriptAction.md)
-
-[Set-AzureRmHDInsightPersistedScriptAction](./Set-AzureRmHDInsightPersistedScriptAction.md)
-
 

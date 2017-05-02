@@ -32,20 +32,12 @@ Use Get-AzureRmProviderOperation Microsoft.Compute/* to get all operations of Mi
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmProviderOperation *
 ```
 
 ### --------------------------  Get actions for a particular resource provider  --------------------------
 @{paragraph=PS C:\\\>}
-
-
-
-
 
 
 
@@ -58,30 +50,11 @@ PS C:\> Get-AzureRmProviderOperation Microsoft.Insights/*
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmProviderOperation */virtualMachines/*
 ```
 
 ## PARAMETERS
-
-### -OperationSearchString
-The operation search string (with possible wildcard (*) characters)
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 @{Text=}
@@ -110,6 +83,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OperationSearchString
+The operation search string (with possible wildcard (*) characters)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

@@ -1,21 +1,28 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 9E8D7778-0F55-44B6-B1D8-9483E93F9652
-online version: 
+online version: http://go.microsoft.com/fwlink/?LinkId=404152
 schema: 2.0.0
 ---
 
 # Set-AzureRmResourceLock
 
 ## SYNOPSIS
-Modifies a resource lock.
+Updates an existing resource lock.
 
 ## SYNTAX
 
-### A lock at the specified scope. (Default)
+### A lock at the subscription resource scope. (Default)
 ```
 Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -Scope <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ -ResourceName <String> -ResourceType <String> [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### A lock at the resource group scope.
+```
+Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
+ -ResourceGroupName <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
  [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,26 +42,18 @@ Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <S
  [<CommonParameters>]
 ```
 
-### A lock at the resource group scope.
-```
-Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -ResourceGroupName <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### A lock at the subscription resource scope.
-```
-Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
- -ResourceName <String> -ResourceType <String> [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
 ### A lock at the subscription scope.
 ```
 Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
  [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### A lock at the specified scope.
+```
+Set-AzureRmResourceLock -LockName <String> -LockLevel <LockLevel> [-LockNotes <String>] [-Force]
+ -Scope <String> [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### A lock, by Id.
@@ -65,131 +64,43 @@ Set-AzureRmResourceLock -LockLevel <LockLevel> [-LockNotes <String>] [-Force] -L
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmResourceLock** cmdlet modifies a resource lock.
+Updates an existing resource lock.
+
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Update notes for a lock
+### --------------------------  SetResourceLock1  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Set-AzureRmResourceLock -LockLevel CanNotDelete -LockNotes "Updated note" -LockName "ContosoSiteLock" -ResourceName "ContosoSite" -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11"
+Set-AzureRmResourceLock -LockName test -ResourceName myResource -ResourceType microsoft.web/sites -ResourceGroupName myResourceGroup -LockLevel CanNotDelete -LockNotes "Updated note"
 ```
 
-This command updates the note for a lock named ContosoSiteLock.
+Updates existing resource lock
 
 ## PARAMETERS
 
-### -LockLevel
-Specifies the level for the lock.
-Currently, the only valid value is CanNotDelete.
-
-```yaml
-Type: LockLevel
-Parameter Sets: (All)
-Aliases: Level
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LockNotes
-Specifies the notes for the lock.
+### -ApiVersion
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: Notes
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LockName
-Specifies the name of the lock that this cmdlet modifies.
-
-```yaml
-Type: String
-Parameter Sets: A lock at the specified scope., A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the resource group scope., A lock at the subscription resource scope., A lock at the subscription scope.
-Aliases: ExtensionResourceName, Name
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceName
-Specifies the name of the resource for which the lock applies.
-For instance, to specify a database, use the following format: 
-
-Server`/`Database
-
-```yaml
-Type: String
-Parameter Sets: A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription resource scope.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceType
-Specifies the resource type for which the lock applies.
-
-```yaml
-Type: String
-Parameter Sets: A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription resource scope.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+Do not ask for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -204,16 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -228,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -242,91 +144,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Scope
-Specifies the scope to which the lock applies.
-For instance, to specify a database, use the following format: 
-
-`/subscriptions/`subscription ID`/resourceGroups/`resource group name`/providers/Microsoft.Sql/servers/`server name`/databases/`database name
-
-To specify a resource group, use the following format: 
-
-`/subscriptions/`subscription ID`/resourceGroups/`resource group name
-
-```yaml
-Type: String
-Parameter Sets: A lock at the specified scope.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group for which the lock applies.
-
-```yaml
-Type: String
-Parameter Sets: A lock at the resource group resource scope., A lock at the resource group scope.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TenantLevel
-Indicates that this cmdlet operates at the tenant level.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: A lock at the tenant resource scope.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LockId
-Specifies the ID of the lock that this cmdlet modifies.
+The Id of the lock.
 
 ```yaml
 Type: String
@@ -340,6 +159,177 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -LockLevel
+The level of the lock.
+
+```yaml
+Type: LockLevel
+Parameter Sets: (All)
+Aliases: Level
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LockName
+The name of the lock.
+
+```yaml
+Type: String
+Parameter Sets: A lock at the subscription resource scope., A lock at the resource group scope., A lock at the resource group resource scope., A lock at the tenant resource scope., A lock at the subscription scope., A lock at the specified scope.
+Aliases: ExtensionResourceName, Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LockNotes
+The notes of the lock.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Notes
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+The resource group name.
+
+```yaml
+Type: String
+Parameter Sets: A lock at the resource group scope., A lock at the resource group resource scope.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceName
+The resource name.
+e.g.
+to specify a database MyServer/MyDatabase.
+
+```yaml
+Type: String
+Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceType
+The resource type.
+e.g.
+Microsoft.Sql/Servers/Databases.
+
+```yaml
+Type: String
+Parameter Sets: A lock at the subscription resource scope., A lock at the resource group resource scope., A lock at the tenant resource scope.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Scope
+The scope.
+e.g.
+to specify a database '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaserName}', to specify a resoruce group: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'
+
+```yaml
+Type: String
+Parameter Sets: A lock at the specified scope.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TenantLevel
+Indicates that this is a tenant level operation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: A lock at the tenant resource scope.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -348,13 +338,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
-
-[Get-AzureRmResourceLock](./Get-AzureRmResourceLock.md)
-
-[New-AzureRmResourceLock](./New-AzureRmResourceLock.md)
-
-[Remove-AzureRmResourceLock](./Remove-AzureRmResourceLock.md)
-
 

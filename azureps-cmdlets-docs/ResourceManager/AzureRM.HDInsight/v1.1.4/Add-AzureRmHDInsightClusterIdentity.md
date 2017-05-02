@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-help.xml
-ms.assetid: C7C845DD-6353-49D7-8FC0-8C2F9EA2227D
 online version: 
 schema: 2.0.0
 ---
@@ -27,54 +26,61 @@ Add-AzureRmHDInsightClusterIdentity [-Config] <AzureHDInsightConfig> [-ObjectId]
 ```
 
 ## DESCRIPTION
-The **Add-AzureRmHDInsightClusterIdentity** cmdlet adds a cluster identity to the Azure HDInsight configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
+The Add-AzureRmHDInsightClusterIdentity cmdlet adds a cluster identity to the Azure HDInsight configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Add Cluster Identity info to the cluster configuration object
+### --------------------------  Example 1: Add Cluster Identity info to the cluster configuration object  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\># Primary storage account info
-PS C:\> $storageAccountResourceGroupName = "Group"
-PS C:\> $storageAccountName = "yourstorageacct001"
-PS C:\> $storageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value 
-PS C:\> $storageContainer = "container001"
+PS C:\> # Primary storage account info
+        $storageAccountResourceGroupName = "Group"
+        $storageAccountName = "yourstorageacct001"
+        $storageAccountKey = Get-AzureStorageAccountKey `
+            -ResourceGroupName $storageAccountResourceGroupName `
+            -Name $storageAccountName | %{ $_.Key1 }
+        $storageContainer = "container001"
 
-# Cluster configuration info
-PS C:\> $location = "East US 2"
-PS C:\> $clusterResourceGroupName = "Group"
-PS C:\> $clusterName = "your-hadoop-001"
-PS C:\> $clusterCreds = Get-Credential
+        # Cluster configuration info
+        $location = "East US 2"
+        $clusterResourceGroupName = "Group"
+        $clusterName = "your-hadoop-001"
+        $clusterCreds = Get-Credential
 
-# If the cluster's resource group doesn't exist yet, run:
-#   New-AzureRmResourceGroup -Name $clusterResourceGroupName -Location $location
+        # If the cluster's resource group doesn't exist yet, run:
+        #   New-AzureRmResourceGroup -Name $clusterResourceGroupName -Location $location
 
-# Cluster Identity values
-PS C:\> $tenantId = (Get-AzureRmContext).Tenant.TenantId
-PS C:\> $objectId = "<Azure AD Service Principal Object ID>"
-PS C:\> $certificateFilePath = "<Path to Azure AD Service Principal Certificate>"
-PS C:\> $certificatePassword = "<Password for Azure AD Service Principal Certificate>"
+        # Cluster Identity values
+        $tenantId = (Get-AzureRmContext).Tenant.TenantId
+        $objectId = "<Azure AD Service Principal Object ID>"
+        $certificateFilePath = "<Path to Azure AD Service Principal Certificate>"
+        $certificatePassword = "<Password for Azure AD Service Principal Certificate>"
+        $CertificateFileContents = "<File contents of Azure AD Service Principal Certificate>"
 
-# Create the cluster
-PS C:\> New-AzureRmHDInsightClusterConfig `
-            | Add-AzureRmHDInsightClusterIdentity `
-                -AadTenantId $tenantId `
-                -ObjectId $objectId `
-                -CertificateFilePath $certificateFilePath `
-                -CertificatePassword $certificatePassword `
-            | New-AzureRmHDInsightCluster `
-                -ClusterType Hadoop `
-                -OSType Windows `
-                -ClusterSizeInNodes 4 `
-                -ResourceGroupName $clusterResourceGroupName `
-                -ClusterName $clusterName `
-                -HttpCredential $clusterCreds `
-                -Location $location `
-                -DefaultStorageAccountName "$storageAccountName.blob.core.windows.net" `
+        # Create the cluster, pass either $certificateFilePath or $CertificateFileContents
+        New-AzureRmHDInsightClusterConfig `
+        | Add-AzureRmHDInsightClusterIdentity `
+        -AadTenantId $tenantId `
+        -ObjectId $objectId `
+        -CertificateFilePath $certificateFilePath `
+        -CertificatePassword $certificatePassword `
+        | New-AzureRmHDInsightCluster `
+        -ClusterType Hadoop `
+        -OSType Windows `
+        -ClusterSizeInNodes 4 `
+        -ResourceGroupName $clusterResourceGroupName `
+        -ClusterName $clusterName `
+        -HttpCredential $clusterCreds `
+        -Location $location `
+        -DefaultStorageAccountName "$storageAccountName.blob.core.windows.net" `
                 -DefaultStorageAccountKey $storageAccountKey `
                 -DefaultStorageContainer $storageAccountContainer
 ```
 
-This command adds Cluster Identity info to the cluster named your-hadoop-001, allowing the cluster to access Azure Data Lake Store.
+This command adds Cluster Identity info to the cluster named 'your-hadoop-001', allowing the cluster to access Azure Data Lake Store.
 
 ## PARAMETERS
 
@@ -157,16 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -181,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -219,9 +216,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
-
-[New-AzureRmHDInsightClusterConfig](./New-AzureRmHDInsightClusterConfig.md)
-
 

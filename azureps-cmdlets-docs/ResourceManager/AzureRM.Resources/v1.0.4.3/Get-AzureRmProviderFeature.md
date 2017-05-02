@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 online version: 
 schema: 2.0.0
 ---
@@ -7,7 +7,6 @@ schema: 2.0.0
 # Get-AzureRmProviderFeature
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -22,7 +21,6 @@ Get-AzureRmProviderFeature -ProviderNamespace <String> -FeatureName <String> [<C
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
 
 ## EXAMPLES
 
@@ -35,20 +33,8 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -ProviderNamespace
-The resource provider namespace.
-
-```yaml
-Type: String
-Parameter Sets: ListAvailableParameterSet
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### -FeatureName
+@{Text=}
 
 ```yaml
 Type: String
@@ -63,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListAvailable
-When set, lists all available features including those not registered with the current subscription.
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -77,8 +63,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FeatureName
-The feature name.
+### -ProviderNamespace
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: ListAvailableParameterSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ```yaml
 Type: String
@@ -97,11 +95,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
-
 ## OUTPUTS
-
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Resources.Models.ProviderFeatures.PSProviderFeature, Microsoft.Azure.Commands.Resources, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ## NOTES
 

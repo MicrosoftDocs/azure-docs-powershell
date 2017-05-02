@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 53EE4295-DC3E-4A9D-9610-493D0D208E68
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,6 @@ schema: 2.0.0
 # Get-AzureRmLocation
 
 ## SYNOPSIS
-Gets all locations and the supported resource providers for each location.
 
 ## SYNTAX
 
@@ -17,22 +15,28 @@ Get-AzureRmLocation [-ApiVersion <String>] [-Pre] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmLocation** cmdlet gets all locations and the supported resource providers for each location.
+Get all locations and the supported resource providers.
+
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Get all locations and the supported resource providers
+### --------------------------  Example 1: Get all locations and the supported resource providers --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
 PS C:\>Get-AzureRmLocation
 ```
 
-This command gets all locations and the supported resource providers for each location.
+This command gets all locations and the supported resource providers.
 
 ## PARAMETERS
 
 ### -ApiVersion
-Specifies the API version that is supported by the resource Provider.
-You can specify a different version than the default version.
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
 Type: String
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
 Type: SwitchParameter

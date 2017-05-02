@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: C81AACA3-6EFA-4AEC-90FF-4CCEF4C07ECE
 online version: 
 schema: 2.0.0
 ---
@@ -13,39 +12,26 @@ Disables HTTP access to the cluster.
 ## SYNTAX
 
 ```
-Revoke-AzureRmHDInsightHttpServicesAccess [-ClusterName] <String> [[-ResourceGroupName] <String>]
- [<CommonParameters>]
+Revoke-AzureRmHDInsightHttpServicesAccess [-ClusterName] <String> [-ResourceGroupName <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Revoke-AzureRmHDInsightHttpServicesAccess** cmdlet disables HTTP access to an Azure HDInsight cluster for ODBC, Ambari, Oozie and webHCatalog web services.
+The Revoke-AzureRmHDInsightHttpServicesAccess cmdlet disables HTTP access to an Azure HDInsight cluster for ODBC, Ambari, Oozie and webHCatalog web services.
 
 ## EXAMPLES
 
-### Example 1: Disable HTTP access to a cluster
+### --------------------------  Example 1: Disable HTTP access to a cluster  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Revoke-AzureRmHDInsightHttpServicesAccess `
+PS C:\&gt;Revoke-AzureRmHDInsightHttpServicesAccess `
        -ClusterName "your-hadoop_001"
 ```
 
-This command revokes HTTP access to the cluster named your-hadoop_001.
-
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClusterName
 Specifies the name of the cluster.
@@ -56,7 +42,52 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -70,9 +101,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
-
-[Grant-AzureRmHDInsightHttpServicesAccess](./Grant-AzureRmHDInsightHttpServicesAccess.md)
-
 

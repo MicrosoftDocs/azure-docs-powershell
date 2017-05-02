@@ -13,32 +13,27 @@ Filters active directory users.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADUser [-UserPrincipalName <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADUser [-UserPrincipalName <String>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADUser -SearchString <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADUser -SearchString <String> [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADUser -ObjectId <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+Get-AzureRmADUser -ObjectId <Guid> [<CommonParameters>]
 ```
 
 ### UPNParameterSet
 ```
-Get-AzureRmADUser -UserPrincipalName <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADUser -UserPrincipalName <String> [<CommonParameters>]
 ```
 
 ### MailParameterSet
 ```
-Get-AzureRmADUser -Mail <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+Get-AzureRmADUser -Mail <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,10 +43,6 @@ Filters active directory users.
 
 ### --------------------------  Filters users using UPN  --------------------------
 @{paragraph=PS C:\\\>}
-
-
-
-
 
 
 
@@ -66,10 +57,6 @@ Gets user with foo@domain.com
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmADUser -SearchString Joe
 ```
@@ -81,10 +68,6 @@ Filters all ad users that has Joe in the display name.
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmADUser
 ```
@@ -93,65 +76,12 @@ Gets all AD users
 
 ## PARAMETERS
 
-### -UserPrincipalName
-UPN of the user.
+### -Mail
+@{Text=}
 
 ```yaml
 Type: String
-Parameter Sets: EmptyParameterSet
-Aliases: UPN
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: UPNParameterSet
-Aliases: UPN
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchString
-The user display name
-
-```yaml
-Type: String
-Parameter Sets: SearchStringParameterSet
+Parameter Sets: MailParameterSet
 Aliases: 
 
 Required: True
@@ -176,13 +106,40 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Mail
-@{Text=}
+### -SearchString
+The user display name
 
 ```yaml
 Type: String
-Parameter Sets: MailParameterSet
+Parameter Sets: SearchStringParameterSet
 Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserPrincipalName
+UPN of the user.
+
+```yaml
+Type: String
+Parameter Sets: EmptyParameterSet
+Aliases: UPN
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: UPNParameterSet
+Aliases: UPN
 
 Required: True
 Position: Named

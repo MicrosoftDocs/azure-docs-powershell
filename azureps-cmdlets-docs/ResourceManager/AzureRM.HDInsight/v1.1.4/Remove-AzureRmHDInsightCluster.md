@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: DDCD42E5-19B2-4027-B11C-99ADDF7B6D85
 online version: 
 schema: 2.0.0
 ---
@@ -13,40 +12,28 @@ Removes the specified HDInsight cluster from the current subscription.
 ## SYNTAX
 
 ```
-Remove-AzureRmHDInsightCluster [-ClusterName] <String> [[-ResourceGroupName] <String>] [<CommonParameters>]
+Remove-AzureRmHDInsightCluster [-ClusterName] <String> [-ResourceGroupName <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmHDInsightCluster** cmdlet removes the specified HDInsight service cluster from a subscription.
+The Remove-AzureRmHDInsightCluster cmdlet removes the specified HDInsight service cluster from a subscription.
 This operation also deletes any data stored in the Hadoop Distributed File System (HDFS) on the cluster.
 Data stored in the associated Azure Storage account is not deleted.
 Data stored in external metastores is not deleted.
 
 ## EXAMPLES
 
-### Example 1: Delete an Azure HDInsight cluster
-```
-PS C:\>Remove-AzureRmHDInsightCluster -ClusterName "your-hadoop-001"
-```
+### --------------------------  Example 1: Delete an Azure HDInsight cluster.  --------------------------
+@{paragraph=PS C:\\\>}
 
-This command removes the cluster named your-hadoop-001.
+
+
+```
+PS C:\&gt;Remove-AzureRmHDInsightCluster -ClusterName "your-hadoop-001"
+```
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClusterName
 Specifies the name of the cluster.
@@ -57,7 +44,52 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -71,11 +103,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
-
-[Get-AzureRmHDInsightCluster](./Get-AzureRmHDInsightCluster.md)
-
-[Use-AzureRmHDInsightCluster](./Use-AzureRmHDInsightCluster.md)
-
 

@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
-ms.assetid: 29842B0B-DA1D-4144-AF27-15B1DE75974F
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmIntegrationAccount
 
 ## SYNOPSIS
-Gets integration accounts.
+Gets the specified integration account from the Azure resource group.
 
 ## SYNTAX
 
@@ -18,101 +17,77 @@ Get-AzureRmIntegrationAccount [-ResourceGroupName <String>] [-Name <String>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmIntegrationAccount** cmdlet gets integration accounts from a resource group. 
-Specify an integration account name and resource group name.
+This is the Description section
 
-This module supports dynamic parameters.
-To use a dynamic parameter, type it in the command.
-To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
-If you omit a required template parameter, the cmdlet prompts you for the value.
+The Get-AzureRmIntegrationAccount cmdlet retrieves integration account from the Azure resource group and returns an object that represents the integration account.
+Use this cmdlet to get the integration account from specified resource group.
+You can get the integration account by specifying the integration account name and resource group name.
+To use the dynamic parameters, just type them in the command, or type a hyphen sign (-) to indicate a parameter name and then press the TAB key repeatedly to cycle through the available parameters.
+If you miss a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1: Get an integration account by name
+### --------------------------  Example 1 : Get the integration account by name.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Get-AzureRmIntegrationAccount -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31"
-Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31
-Name        : IntegrationAccount31
+Get-AzureRmIntegrationAccount -ResourceGroupName "Resourcegroup1" -Name "IntegrationAccount1"
+```
+
+This command gets the integration account from a specified resource group.
+
+Id          : /subscriptions/\<SubscriptionId\>/resourceGroups/\<ResourceGroup1\>/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount1
+Name        : IntegrationAccount1
 Type        : Microsoft.Logic/integrationAccounts
 Location    : brazilsouth
-Sku         : 
+Sku         :
 CreatedTime : 3/26/2016 4:26:07 PM
 ChangedTime : 3/26/2016 4:26:07 PM
+
+### --------------------------  Example 2 : Get the integration account by resource group name.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+Get-AzureRmIntegrationAccount -ResourceGroupName "Resourcegroup1"
 ```
 
-This command gets an integration account named IntegrationAccount31 from the specified resource group.
+This command gets the integration account(s) from a specified resource group.
 
-### Example 2: Get integration accounts in a resource group
-```
-PS C:\>Get-AzureRmIntegrationAccount -ResourceGroupName "ResourceGroup11"
-Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup1/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31
-Name        : IntegrationAccount31
+Id          : /subscriptions/\<SubscriptionId\>/resourceGroups/\<ResourceGroup1\>/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount1
+Name        : IntegrationAccount1
 Type        : Microsoft.Logic/integrationAccounts
 Location    : brazilsouth
-Sku         : 
+Sku         :
 CreatedTime : 3/26/2016 4:26:07 PM
 ChangedTime : 3/26/2016 4:26:07 PM
+
+### --------------------------  Example 3 : Get the integration accounts by subscription.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+Get-AzureRmIntegrationAccount
 ```
 
-This command gets integration accounts from a resource group named ResourceGroup11.
+This command gets all the integration account(s) in the subscription.
 
-### Example 3: Get all integration accounts
-```
-PS C:\>Get-AzureRmIntegrationAccount
-Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31
-Name        : IntegrationAccount31
+Id          : /subscriptions/\<SubscriptionId\>/resourceGroups/\<ResourceGroup1\>/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount1
+Name        : IntegrationAccount1
 Type        : Microsoft.Logic/integrationAccounts
 Location    : brazilsouth
-Sku         : 
+Sku         :
 CreatedTime : 3/26/2016 4:26:07 PM
 ChangedTime : 3/26/2016 4:26:07 PM
-```
-
-This command gets all the integration accounts in your Azure subscription.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of a resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of an integration account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -127,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -138,6 +113,38 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a name for the integration account.
+This parameter is optional.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies a name for the resource group.
+This parameter is optional.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -154,12 +161,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmIntegrationAccountCallbackUrl](./Get-AzureRmIntegrationAccountCallbackUrl.md)
+[Remove-AzureRmIntegrationAccount]()
 
-[New-AzureRmIntegrationAccount](./New-AzureRmIntegrationAccount.md)
+[New-AzureRmIntegrationAccount]()
 
-[Remove-AzureRmIntegrationAccount](./Remove-AzureRmIntegrationAccount.md)
+[Get-AzureRmIntegrationAccountCallbackUrl]()
 
-[Set-AzureRmIntegrationAccount](./Set-AzureRmIntegrationAccount.md)
-
+[Set-AzureRmIntegrationAccount]()
 

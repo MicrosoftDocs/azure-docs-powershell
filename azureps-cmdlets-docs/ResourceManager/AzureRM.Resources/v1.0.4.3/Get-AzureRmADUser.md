@@ -7,56 +7,124 @@ schema: 2.0.0
 # Get-AzureRmADUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Filters active directory users.
 
 ## SYNTAX
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADUser [-UserPrincipalName <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADUser [-UserPrincipalName <String>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADUser -SearchString <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADUser -SearchString <String> [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADUser -ObjectId <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+Get-AzureRmADUser -ObjectId <String> [<CommonParameters>]
 ```
 
 ### UPNParameterSet
 ```
-Get-AzureRmADUser -UserPrincipalName <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADUser -UserPrincipalName <String> [<CommonParameters>]
 ```
 
 ### MailParameterSet
 ```
-Get-AzureRmADUser -Mail <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+Get-AzureRmADUser -Mail <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This is the Description section
+
+Filters active directory users.
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Filters users using UPN  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmADUser -UPN foo@domain.com
 ```
 
-{{ Add example description here }}
+Gets user with foo@domain.com
+
+### --------------------------  Filters users using Search String  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\> Get-AzureRmADUser -SearchString Joe
+```
+
+Filters all ad users that has Joe in the display name.
+
+### --------------------------  List AD users  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\> Get-AzureRmADUser
+```
+
+Gets all AD users
 
 ## PARAMETERS
 
+### -Mail
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: MailParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ObjectId
+Object id of the user.
+
+```yaml
+Type: String
+Parameter Sets: ObjectIdParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SearchString
+The user display name
+
+```yaml
+Type: String
+Parameter Sets: SearchStringParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -UserPrincipalName
-The user UPN.
+UPN of the user.
 
 ```yaml
 Type: String
@@ -82,89 +150,20 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchString
-The user search string.
-
-```yaml
-Type: String
-Parameter Sets: SearchStringParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ObjectId
-The user object id.
-
-```yaml
-Type: Guid
-Parameter Sets: ObjectIdParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Mail
-The user mail.
-
-```yaml
-Type: String
-Parameter Sets: MailParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.String
-
 ## OUTPUTS
-
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Resources.Models.ActiveDirectory.PSADUser, Microsoft.Azure.Commands.Resources, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzureRmADGroup]()
+
+[Get-AzureRmADServicePrincipal]()
+
+[Get-AzureRmADGroupMember]()
 

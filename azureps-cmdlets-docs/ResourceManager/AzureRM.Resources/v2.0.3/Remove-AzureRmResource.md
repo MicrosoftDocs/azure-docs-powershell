@@ -1,14 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: C43C456B-B18F-41C2-A68C-B818E5A738D1
-online version: 
+online version: http://go.microsoft.com/fwlink/?LinkID=393460
 schema: 2.0.0
 ---
 
 # Remove-AzureRmResource
 
 ## SYNOPSIS
-Removes a resource.
+Deletes a resource
 
 ## SYNTAX
 
@@ -33,25 +32,46 @@ Remove-AzureRmResource -ResourceName <String> -ResourceType <String> [-Extension
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmResource** cmdlet removes an Azure resource.
+The Remove-AzureRmResource cmdlet deletes a resource from your subscription.
+It does not delete the resource group of the resource.
+By default, Remove-AzureRmResource prompts you for confirmation.
+To suppress the prompt, use the Force parameter.
+
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Remove a website resource
+### --------------------------  Example 1: Remove a resource  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Remove-AzureRmResource -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup11/providers/Microsoft.Web/sites/ContosoSite" -Force
+PS C:\>Remove-AzureRmResource -Name ContosoWeb -ResourceGroupName ContosoRG01 -ResourceType Microsoft.web/sites -ApiVersion 2014-04-01 ConfirmAre you sure you want to remove resource ' ContosoWeb'[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
 ```
 
-This command removes the website resource named ContosoSite.
-The example uses a placeholder value for the subscription ID.
-The command specifies the *Force* parameter.
-Therefore, it does not prompt you for confirmation.
+This command removes the ContosoWeb web site from the ContosoRG01 resource group.
+
+### --------------------------  Example 2: Pipe a resource to RemoveAzureResource  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\>Get-AzureRmResource -Name contosodb01 -ResourceGroupName ContosoRG01 -ResourceType "Microsoft.Sql/servers/databases" -ParentResource "Microsoft.Sql/servers/contososvr01" -ApiVersion 2.0 | Remove-AzureRmResource -Passthru ConfirmAre you sure you want to remove resource 'contosodb01'[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+True
+```
+
+This command uses the Get-AzureRmResource cmdlet to get the ContosoDB01 database.
+The command pipes the database to the Remove-AzureRmResource cmdlet to remove it.
+The command uses the Passthru parameter, which causes the cmdlet to return a Boolean value that represents the success or failure of the operation.
+In this case, it returns True.
 
 ## PARAMETERS
 
 ### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
+Specifies the API version that is supported by the resource provider.
+This parameter is required.
 
 ```yaml
 Type: String
@@ -65,8 +85,73 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExtensionResourceName
+The extension resource name.
+e.g.
+to specify a database MyServer/MyDatabase.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExtensionResourceType
+The extension resource type.
+e.g.
+Microsoft.Sql/Servers/Databases.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Force
-ps_force
+Suppresses the confirmation prompt.
+By default, Remove-AzureRmResource prompts for confirmation before deleting a resource.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ODataQuery
+An OData style filter which will be appended to the request in addition to any other filters.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
 Type: SwitchParameter
@@ -81,7 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group from which this cmdlet removes a resource.
+Specifies the name of resource group of the resource.
+This parameter is required.
 
 ```yaml
 Type: String
@@ -95,11 +181,45 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceType
-Specifies the type of the resource that this cmdlet removes.
-For instance, for a database, the resource type is as follows: 
+### -ResourceId
+The fully qualified resource Id, including the subscription.
+e.g.
+/subscriptions/{subscriptionId}/providers/Microsoft.Sql/servers/myServer/databases/myDatabase
 
-`Microsoft.Sql/Servers/Databases`
+```yaml
+Type: String
+Parameter Sets: The resource Id.
+Aliases: Id
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceName
+The resource name.
+e.g.
+to specify a database MyServer/MyDatabase.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceType
+Specifies the resource type.
+Enter a provider qualified name, such as "Microsoft.Web/sites".
+This parameter is required.
+Wildcards are not permitted.
 
 ```yaml
 Type: String
@@ -113,18 +233,17 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -TenantLevel
+Indicates that this is a tenant level operation.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Parameter Sets: Resource that resides at the tenant level.
+Aliases: 
 
-Required: False
+Required: True
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -144,121 +263,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExtensionResourceName
-Specifies the name of an extension resource of the resource that this cmdlet removes.
-For instance, to specify a database, use the following format: 
-
-server name`/`database name
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ExtensionResourceType
-Specifies the resource type for an extension resource.
-Specifies the extension resource type for the resource.
-For instance: 
-
-`Microsoft.Sql/Servers/Databases`
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ODataQuery
-Specifies an Open Data Protocol (OData) style filter.
-This cmdlet appends this value to the request in addition to any other filters.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceId
-Specifies the fully qualified resource ID of the resource that this cmdlet removes.
-The ID includes the subscription, as in the following example: 
-
-`/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
-
-```yaml
-Type: String
-Parameter Sets: The resource Id.
-Aliases: Id
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceName
-Specifies the name of the resource that this cmdlet removes.
-For instance, to specify a database, use the following format: 
-
-`ContosoServer/ContosoDatabase`
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
-Aliases: Name
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TenantLevel
-Indicates that this cmdlet operates at the tenant level.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Resource that resides at the tenant level.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -268,20 +284,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
+### None or Boolean
+
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
-
-[Find-AzureRmResource](./Find-AzureRmResource.md)
-
-[Get-AzureRmResource](./Get-AzureRmResource.md)
-
-[Move-AzureRmResource](./Move-AzureRmResource.md)
-
-[New-AzureRmResource](./New-AzureRmResource.md)
-
-[Set-AzureRmResource](./Set-AzureRmResource.md)
-
 

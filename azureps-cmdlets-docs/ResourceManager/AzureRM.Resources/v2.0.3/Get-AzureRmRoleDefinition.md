@@ -13,7 +13,7 @@ Lists all Azure RBAC roles that are available for assignment.
 
 ### RoleDefinitionNameParameterSet
 ```
-Get-AzureRmRoleDefinition [[-Name] <String>] [-Scope <String>] [-AtScopeAndBelow]
+Get-AzureRmRoleDefinition [-Name <String>] [-Scope <String>] [-AtScopeAndBelow]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
@@ -40,10 +40,6 @@ To inspect individual operations that a role grants access to, review the Action
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmRoleDefinition -Name Reader
 ```
@@ -55,10 +51,6 @@ Get the Reader role definition
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmRoleDefinition
 ```
@@ -66,38 +58,6 @@ PS C:\> Get-AzureRmRoleDefinition
 Lists all RBAC role definitions
 
 ## PARAMETERS
-
-### -Name
-Role definition name.
-For e.g.
-Reader, Contributor, Virtual Machine Contributor.
-
-```yaml
-Type: String
-Parameter Sets: RoleDefinitionNameParameterSet
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Scope
-Role definition scope.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
 
 ### -AtScopeAndBelow
 If specified, displays all role definitions.
@@ -108,6 +68,36 @@ Parameter Sets: RoleDefinitionNameParameterSet, RoleDefinitionCustomParameterSet
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Custom
+If specified, only displays the custom created roles in the directory.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RoleDefinitionCustomParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Id
+Role definition Id.
+
+```yaml
+Type: Guid
+Parameter Sets: RoleDefinitionIdParameterSet
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -144,33 +134,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-Role definition Id.
+### -Name
+Role definition name.
+For e.g.
+Reader, Contributor, Virtual Machine Contributor.
 
 ```yaml
-Type: Guid
-Parameter Sets: RoleDefinitionIdParameterSet
+Type: String
+Parameter Sets: RoleDefinitionNameParameterSet
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Custom
-If specified, only displays the custom created roles in the directory.
+### -Scope
+Role definition scope.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: RoleDefinitionCustomParameterSet
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

@@ -32,8 +32,6 @@ If you miss a required template parameter, the cmdlet prompts you for the value.
 
 
 
-
-
 ```
 PS C:\>Get-AzureRmLogicAppAccessKey -ResourceGroupName "ResourceGroup1" -Name "LogicApp1" -AccessKeyName "default"
 ```
@@ -45,8 +43,6 @@ SecondarySecretKey : \<value\>
 
 ### --------------------------  Example 2 : Gets all the access keys of a Logic App from specified Azure resource group.  --------------------------
 @{paragraph=PS C:\\\>}
-
-
 
 
 

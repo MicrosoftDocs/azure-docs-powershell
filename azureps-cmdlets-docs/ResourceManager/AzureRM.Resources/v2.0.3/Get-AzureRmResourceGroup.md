@@ -1,14 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 6282A378-C6F0-4A8E-BF68-DD5F68412205
-online version: 
+online version: http://go.microsoft.com/fwlink/?LinkID=393047
 schema: 2.0.0
 ---
 
 # Get-AzureRmResourceGroup
 
 ## SYNOPSIS
-Gets resource groups.
+Gets Azure resource groups
 
 ## SYNTAX
 
@@ -24,33 +23,100 @@ Get-AzureRmResourceGroup [-Location <String>] [-Id <String>] [-ApiVersion <Strin
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmResourceGroup** cmdlet gets Azure resource groups in the current subscription.
-You can get all resource groups, or specify a resource group by name or by other properties.
-By default, this cmdlet gets all resource groups in the current subscription.
+The Get-AzureRmResourceGroup cmdlet gets the Azure resource groups in your subscription.
+You can use the Name parameter to select resource groups by name.
+The default is all resource groups.
+An Azure resource is a user-managed Azure entity, such as a database server, database, or web site.
+An Azure resource group is a collection of Azure resources that are deployed as a unit.
 
-For more information about Azure resources and Azure resource groups, see the New-AzureRmResourceGroup cmdlet.
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Get a resource group by name
+### --------------------------  Example 1: Get all resource groups and their details  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Get-AzureRmResourceGroup -Name "EngineerBlog"
+PS C:\>Get-AzureRmResourceGroup 
+          ResourceGroupName : Api-Default-West-US
+          Location          : westus
+          ProvisioningState : Succeeded
+          Tags              :
+          ResourceId        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/Api-Default-West-US
+
+          ResourceGroupName : AzureResourceGroup3
+          Location          : centralus
+          ProvisioningState : Succeeded
+          Tags              :
+          ResourceId        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/AzureResourceGroup3
 ```
 
-This command gets the Azure resource group in your subscription named EngineerBlog.
+This command gets all resource groups in the subscription.
 
-### Example 2: Get all tags of a resource group
+### --------------------------  Example 2: Get resource group by name  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>(Get-AzureRmResourceGroup -Name "ContosoRG").Tags
+PS C:\>Get-AzureRmResourceGroup -Name AzureResourceGroup3
+          ResourceGroupName : AzureResourceGroup3
+          Location          : centralus
+          ProvisioningState : Succeeded
+          Tags              :
+          ResourceId        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/AzureResourceGroup3
 ```
 
-This command gets the resource group named ContosoRG, and displays the tags associated with that group.
+This command gets the Azure resource group in your subscription which has the name AzureResourceGroup3.
+
+### --------------------------  Example 3: Get all tags of a resource group  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\>Get-AzureRmResourceGroup -Name ContosoRG
+
+PS C:\>(Get-AzureRmResourceGroup -Name ContosoRG).Tags
+
+Tags: 
+
+      Name        Value
+      ====        ======
+      Department  IT
+      Status      Approved
+      FY2016
+```
+
+These commands get all tags of the ContosoRG  resource group. 
+The first command gets the resource group by name with all of its properties.
+The second command, which uses the Tags property of the output object, gets only the tags.
 
 ## PARAMETERS
 
+### -ApiVersion
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Id
-Specifies the ID of the resource group to get.
-Wildcard characters are not permitted.
+Specifies the id of the resource group.
+Wildcards are not permitted.
+This parameter is optional.
+The default is all resource groups in the subscription
 
 ```yaml
 Type: String
@@ -65,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the location of the resource group to get.
+Specifies the location of the resource group.
 
 ```yaml
 Type: String
@@ -79,25 +145,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ApiVersion
-Specifies the API version that is supported by the resource Provider.
-You can specify a different version than the default version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
-Specifies the name of the resource group to get.
-Wildcard characters are not permitted.
+{{Fill Name Description}}
 
 ```yaml
 Type: String
@@ -112,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
 Type: SwitchParameter
@@ -131,22 +180,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String
-You can pipe input to the cmdlet by property name, but not by value.
+### None
 
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.ResourceManagement.PSResourceGroup
-This cmdlet returns resource groups.
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
 
-[New-AzureRmResourceGroup](./New-AzureRmResourceGroup.md)
+[New-AzureRmResourceGroup]()
 
-[Remove-AzureRmResourceGroup](./Remove-AzureRmResourceGroup.md)
-
-[Set-AzureRmResourceGroup](./Set-AzureRmResourceGroup.md)
-
+[Remove-AzureRmResourceGroup]()
 

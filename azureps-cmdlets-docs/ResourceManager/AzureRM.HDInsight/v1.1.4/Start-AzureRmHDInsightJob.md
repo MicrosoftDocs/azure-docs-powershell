@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 81B76BCF-FD4F-47E8-9E6B-6B849FB633E1
 online version: 
 schema: 2.0.0
 ---
@@ -14,50 +13,38 @@ Starts a defined Azure HDInsight job on a specified cluster.
 
 ```
 Start-AzureRmHDInsightJob [-ClusterName] <String> [-JobDefinition] <AzureHDInsightJobDefinition>
- -HttpCredential <PSCredential> [[-ResourceGroupName] <String>] [<CommonParameters>]
+ [-HttpCredential] <PSCredential> [-ResourceGroupName <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Start-AzureRMHDInsightJob** cmdlet starts a defined Azure HDInsight job on a specified cluster.
+The Start-AzureRMHDInsightJob cmdlet starts a defined Azure HDInsight job on a specified cluster.
 This can be a MapReduce job, a Streaming MapReduce job, a Hive job, or a Pig job.
 
 ## EXAMPLES
 
-### Example 1: Start a job on the specified cluster
+### --------------------------  Example 1: Start a job on the specified cluster  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\># Cluster info
-PS C:\> $clusterName = "your-hadoop-001"
-PS C:\> $clusterCreds = Get-Credential
+PS C:\&gt; # Cluster info
+        $clusterName = "your-hadoop-001"
+        $clusterCreds = Get-Credential
 
-# Hive job details
-PS C:\> $statusFolder = "tempStatusFolder/"
-PS C:\> $query = "SHOW TABLES"
+        # Hive job details
+        $statusFolder = "tempStatusFolder/"
+        $query = "SHOW TABLES"
 
-PS C:\> New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
+        New-AzureRMHDInsightHiveJobDefinition -StatusFolder $statusFolder `
             -Query $query `
-        | Start-AzureRmHDInsightJob `
+        | Start-AzureRMHDInsightJob 
             -ClusterName $clusterName `
             -ClusterCredential $clusterCreds
 ```
 
-This command starts a job on the cluster named your-hadoop-001.
-
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClusterName
 Specifies the name of the cluster.
@@ -68,7 +55,52 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpCredential
+Specifies the cluster login (HTTP) credentials for the cluster.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases: ClusterCredential
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -83,21 +115,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -HttpCredential
-Specifies the cluster login (HTTP) credentials for the cluster.
+### -ResourceGroupName
+Specifies the name of the resource group.
 
 ```yaml
-Type: PSCredential
+Type: String
 Parameter Sets: (All)
-Aliases: ClusterCredential
+Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -112,15 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
-
-[Get-AzureRmHDInsightJob](./Get-AzureRmHDInsightJob.md)
-
-[New-AzureRmHDInsightHiveJobDefinition](./New-AzureRmHDInsightHiveJobDefinition.md)
-
-[Stop-AzureRmHDInsightJob](./Stop-AzureRmHDInsightJob.md)
-
-[Wait-AzureRmHDInsightJob](./Wait-AzureRmHDInsightJob.md)
-
 

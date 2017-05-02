@@ -13,26 +13,22 @@ Filters active directory service principals.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADServicePrincipal -SearchString <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal -SearchString <String> [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADServicePrincipal -ObjectId <Guid> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal -ObjectId <Guid> [<CommonParameters>]
 ```
 
 ### SPNParameterSet
 ```
-Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,10 +38,6 @@ Filters active directory service principals.
 
 ### --------------------------  Filters service principals using SPN  --------------------------
 @{paragraph=PS C:\\\>}
-
-
-
-
 
 
 
@@ -60,10 +52,6 @@ Gets service principals with 36f81fc3-b00f-48cd-8218-3879f51ff39f SPN
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmADServicePrincipal -SearchString Web
 ```
@@ -75,10 +63,6 @@ Filters all ad service principals that has Web in the display name.
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmADServicePrincipal
 ```
@@ -86,6 +70,36 @@ PS C:\> Get-AzureRmADServicePrincipal
 Gets all AD service principals
 
 ## PARAMETERS
+
+### -ObjectId
+Object id of the service principal.
+
+```yaml
+Type: Guid
+Parameter Sets: ObjectIdParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SearchString
+The service principal display name
+
+```yaml
+Type: String
+Parameter Sets: SearchStringParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -ServicePrincipalName
 SPN of the service.
@@ -106,62 +120,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SPNParameterSet
 Aliases: SPN
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchString
-The service principal display name
-
-```yaml
-Type: String
-Parameter Sets: SearchStringParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ObjectId
-Object id of the service principal.
-
-```yaml
-Type: Guid
-Parameter Sets: ObjectIdParameterSet
-Aliases: 
 
 Required: True
 Position: Named

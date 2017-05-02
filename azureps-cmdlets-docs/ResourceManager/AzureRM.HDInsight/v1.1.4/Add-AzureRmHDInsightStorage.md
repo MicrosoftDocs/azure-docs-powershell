@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: E517F86F-6837-422A-A873-315BC766777C
 online version: 
 schema: 2.0.0
 ---
@@ -14,42 +13,47 @@ Adds an Azure Storage key to a cluster configuration object.
 
 ```
 Add-AzureRmHDInsightStorage [-Config] <AzureHDInsightConfig> [-StorageAccountName] <String>
- [-StorageAccountKey] <String> [<CommonParameters>]
+ [-StorageAccountKey] <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-AzureRmHDInsightStorage** cmdlet adds an Azure Storage account entry to the Azure HDInsight configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
+The Add-AzureRmHDInsightStorage cmdlet adds an Azure Storage account entry to the Azure HDInsight configuration object created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Add an Azure storage key to the cluster configuration object
+### --------------------------  Example 1: Add an Azure storage key to the cluster configuration object.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\># Primary storage account info
-PS C:\> $storageAccountResourceGroupName = "Group"
-PS C:\> $storageAccountName = "yourstorageacct001"
-PS C:\> $storageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value
+PS C:\> # Primary storage account info
+        $storageAccountResourceGroupName = "Group"
+        $storageAccountName = "yourstorageacct001"
+        $storageAccountKey = Get-AzureStorageAccountKey `
+            -ResourceGroupName $storageAccountResourceGroupName `
+            -Name $storageAccountName | %{ $_.Key1 }
+        $storageContainer = "container001"
 
+        # Cluster configuration info
+        $location = "East US 2"
+        $clusterResourceGroupName = "Group"
+        $clusterName = "your-hadoop-001"
+        $clusterCreds = Get-Credential
 
-PS C:\> $storageContainer = "container001"
+        # If the cluster's resource group doesn't exist yet, run:
+        #   New-AzureRmResourceGroup -Name $clusterResourceGroupName -Location $location
 
-# Cluster configuration info
-PS C:\> $location = "East US 2"
-PS C:\> $clusterResourceGroupName = "Group"
-PS C:\> $clusterName = "your-hadoop-001"
-PS C:\> $clusterCreds = Get-Credential
-
-# If the cluster's resource group doesn't exist yet, run:
-#   New-AzureRmResourceGroup -Name $clusterResourceGroupName -Location $location
-
-# Second storage account info
-PS C:\> $secondStorageAccountResourceGroupName = "Group"
-PS C:\> $secondStorageAccountName = "yourstorageacct002"
-PS C:\> $secondStorageAccountKey = Get-AzureRmStorageAccountKey `
-PS C:\> -ResourceGroupName $secondStorageAccountResourceGroupName `
+        # Second storage account info
+        $secondStorageAccountResourceGroupName = "Group"
+        $secondStorageAccountName = "yourstorageacct002"
+        $secondStorageAccountKey = Get-AzureStorageAccountKey `
+            -ResourceGroupName $secondStorageAccountResourceGroupName `
             -Name $secondStorageAccountName | %{ $_.Key1 }
 
-# Create the cluster
-PS C:\> New-AzureRmHDInsightClusterConfig `
+        # Create the cluster
+        New-AzureRmHDInsightClusterConfig `
             | Add-AzureRmHDInsightStorage `
                 -StorageAccountName "$secondStorageAccountName.blob.core.contoso.net" `
                 -StorageAccountKey $key2 `
@@ -66,13 +70,13 @@ PS C:\> New-AzureRmHDInsightClusterConfig `
                 -DefaultStorageContainer $storageContainer
 ```
 
-This command adds an blob storage account entry to the HDInsight configuration named your-hadoop-001.
+This command adds an blob storage account entry to the HDInsight configuration named 'your-hadoop-001'.
 
 ## PARAMETERS
 
 ### -Config
 Specifies the HDInsight cluster configuration object that this cmdlet modifies.
-This object is created by the **New-AzureRmHDInsightClusterConfig** cmdlet.
+This object is created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ```yaml
 Type: AzureHDInsightConfig
@@ -86,16 +90,31 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -StorageAccountName
-Specifies the storage account name for the storage account to be added to the cluster.
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: iv
 
-Required: True
-Position: 1
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -116,6 +135,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StorageAccountName
+Specifies the storage account name for the storage account to be added to the cluster.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -124,9 +158,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
-
-[New-AzureRmHDInsightClusterConfig](./New-AzureRmHDInsightClusterConfig.md)
-
 

@@ -1,5 +1,5 @@
 ---
-external help file: AzureRM.Resources-help.xml
+external help file: 
 online version: 
 schema: 2.0.0
 ---
@@ -68,22 +68,6 @@ admin@contoso.com       Revoked                 Contributor             Group1  
 
 ## PARAMETERS
 
-### -StartTime
-Start time of the query.
-Optional.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -EndTime
 End time of the query.
 Optional
@@ -95,6 +79,22 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartTime
+Start time of the query.
+Optional.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
