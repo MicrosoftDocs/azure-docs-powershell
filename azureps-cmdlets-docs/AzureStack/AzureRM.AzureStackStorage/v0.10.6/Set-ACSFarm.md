@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-ACSFarm
 
 ## SYNOPSIS
-Change the setting of service configuration on ACS Farm
+Changes the settings of the service configuration on an ACS Farm.
 
 ## SYNTAX
 
@@ -39,22 +39,27 @@ Set-ACSFarm [-ResourceGroupName] <String> [-FarmName] <String> [-SettingsPolling
 ```
 
 ## DESCRIPTION
-Change the setting of service configuration on ACS Farm
+The **Set-ACSFarm** cmdlet changes the settings of the service configuration on an Azure Consistent Storage (ACS) Farm.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
+### Example 1: Modify the settings of an existing farm
 
 ```
-$resourceGroup = 'System' 
+$ResourceGroup = "System"
 
-$farm = Get-ACSFarm -ResourceGroupName $resourceGroup
+$Farm = Get-ACSFarm -ResourceGroupName $ResourceGroup
 
-Set-ACSFarm -ResourceGroupName $resourceGroup -FarmName $farm.Name -SettingPollingIntervalInSeconds 45
+Set-ACSFarm -ResourceGroupName $ResourceGroup -FarmName $Farm.Name -SettingPollingIntervalInSeconds 45
 ```
+
+The first command stores the value named System in the variable named $ResourceGroup.
+
+The second command uses the [Get-ACSFarm](,/Get-ACSFarm,md) cmdlet to get the farm that is contained in the resource group specified in the $ResourceGroup variable. 
+The command stores the result in the variable named $Farm.
+
+The third command uses the **Set-ACSFarm** cmdlet to modify the Farm stored in the $Farm variable.
+
 
 ## PARAMETERS
 
@@ -239,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm that this cmdlet modifies.
 
 ```yaml
 Type: String
@@ -593,7 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -805,7 +810,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -820,7 +825,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -848,3 +854,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-ACSFarm](./Add-ACSFarm.md)
+
+[Get-ACSFarm](./Get-ACSFarm.md)

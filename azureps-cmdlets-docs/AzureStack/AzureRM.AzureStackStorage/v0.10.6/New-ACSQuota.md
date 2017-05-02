@@ -27,12 +27,13 @@ The **New-ACSQuota** cmdlet creates a storage quota resource.
 
 ```
 PS C:\> $ResourceGroup = "System"
-PS C:\> $Location = "Redmond"
 
-PS C:\> New-ACSQuota -Location $location -QuotaName "BasicStorage_Quota" -NumberOfStorageAccounts 20  -CapacityInGB 500
+PS C:\> New-ACSQuota -Location "Redmond" -QuotaName "BasicStorage_Quota" -NumberOfStorageAccounts 20  -CapacityInGB 500
 ```
 
-This command creates a quota resource named BasicStorage_Quota.
+The first command stores the value named System in the variable named $ResourceGroup.
+
+The second command command creates a quota resource named BasicStorage_Quota from the geolocation named Redmond.
 
 ## PARAMETERS
 
