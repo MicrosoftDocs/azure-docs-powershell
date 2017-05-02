@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRMManagedSubscription
 
 ## SYNOPSIS
-Creates a subscription as an administrator for the specified tenant user.
+Creates a subscription as an administrator for a tenant user.
 
 ## SYNTAX
 
@@ -18,16 +18,16 @@ New-AzureRMManagedSubscription -Owner <String> -OfferId <String> [-DisplayName <
 ```
 
 ## DESCRIPTION
-The **New-AzureRmManagedSubscriiption** cmdlet creates a subscription as an administrator for the specified tenant user.
+The **New-AzureRmManagedSubscriiption** cmdlet creates a subscription as an administrator for a tenant user.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Create a subscription for the specified tenant user
 ```
 New-AzureRmManagedSubscription -Owner "tenanuser@contoso.com" -OfferId $OfferId -DisplayName "Displayname"
 ```
 
-This command creates a subscription for the tenant user "tenanuser@contoso.com".
+This example creates a subscription for the tenant user "tenanuser@contoso.com".
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

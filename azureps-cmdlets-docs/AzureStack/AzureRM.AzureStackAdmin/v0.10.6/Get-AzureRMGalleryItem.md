@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRMGalleryItem
 
 ## SYNOPSIS
-Gets the gallery item.
+Gets a gallery item.
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Get-AzureRMGalleryItem [-Name <String>] [-InformationAction <ActionPreference>] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmGalleryItem** cmdlet gets the gallery item.
+The **Get-AzureRmGalleryItem** cmdlet gets a gallery item.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get the gallery item having the specified name
 ```
-Get-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0" -ApiVersion "2015-04-01"
+Get-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0"
 ```
 
-This command gets the gallery item named 'Microsoft.SqlDatabase.0.1.0'.
+This example gets the gallery item named "Microsoft.SqlDatabase.0.1.0".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

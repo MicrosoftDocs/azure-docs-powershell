@@ -22,19 +22,21 @@ The **Set-AzureRmOffer** cmdlet updates an existing offer.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Change a property of an existing offer
 ```
-$offerUpdated = Get-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "OfferGroup" -Managed
-$offerUpdated.DisplayName ="New Compute Offer"
-Set-AzureRMOffer -Offer $offerUpdated -ResourceGroup "OfferGroup"
+$offerToUpdate = Get-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "OfferGroup" -Managed
+$offerToUpdate.DisplayName = "New Compute Offer"
+Set-AzureRMOffer -Offer $offerToUpdate -ResourceGroup "OfferGroup"
 ```
 
-This example gets and updates the offer named "ComputeOffer" that belongs to the "OfferGroup" resource group.
+This example modifies the **DisplayName** property of the offer named "ComputeOffer" in the "OfferGroup" resource group.
+The first statement gets the offer and stores the object in the $offerToUpdate variable.
+After the **DisplayName** property of the offer is changed, the updated object is passed in the **Offer** parameter of the **Set-AzureRMOffer** cmdlet.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -50,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -80,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String
