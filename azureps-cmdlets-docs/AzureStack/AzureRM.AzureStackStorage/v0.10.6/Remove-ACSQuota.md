@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-ACSQuota
 
 ## SYNOPSIS
-Removes the Storage quota resource
+Removes the Storage quota resource.
 
 ## SYNTAX
 
@@ -18,14 +18,11 @@ Remove-ACSQuota [-Location] <String> [-Name] <String> [[-SubscriptionId] <String
 ```
 
 ## DESCRIPTION
-The Remove-ACSQuota cmdlet removes the Storage Quota resource created by the admins.
+The **Remove-ACSQuota** cmdlet removes the Storage Quota resource.
 
 ## EXAMPLES
 
 ### Example 1:
-@{paragraph=PS C:\\\>}
-
-
 
 ```
 $ResourceGroup = "System"

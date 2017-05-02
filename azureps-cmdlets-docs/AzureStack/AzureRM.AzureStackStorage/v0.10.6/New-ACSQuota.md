@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-ACSQuota
 
 ## SYNOPSIS
-Create a new storage quota resource
+Creates a storage quota resource.
 
 ## SYNTAX
 
@@ -19,21 +19,20 @@ New-ACSQuota [-Location] <String> [-Name] <String> -NumberOfStorageAccounts <Int
 ```
 
 ## DESCRIPTION
-Service admin can use New-ACSQuota cmdlet to create a new Storage Quota resource
+The **New-ACSQuota** cmdlet creates a storage quota resource.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
+### Example 1: Create a quota resource
 
 ```
-$ResourceGroup = "System"
-$Location = "Redmond"
-// Create a new quota resource named 'BasicStorage_Quota'
-New-ACSQuota -Location $location -QuotaName "BasicStorage_Quota" -NumberOfStorageAccounts 20  -CapacityInGB 500
+PS C:\> $ResourceGroup = "System"
+PS C:\> $Location = "Redmond"
+
+PS C:\> New-ACSQuota -Location $location -QuotaName "BasicStorage_Quota" -NumberOfStorageAccounts 20  -CapacityInGB 500
 ```
+
+This command creates a quota resource named BasicStorage_Quota.
 
 ## PARAMETERS
 
@@ -107,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-
+Specifies the geolocation of the quota resource.
 
 ```yaml
 Type: String
@@ -122,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the quota resource
+Specifies the name of the quota resource that this cmdlet creates.
 
 ```yaml
 Type: String
@@ -197,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -212,7 +211,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -238,3 +238,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSQuota](./Get-ACSQuota.md)
