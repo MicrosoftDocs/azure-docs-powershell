@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSShare
 
 ## SYNOPSIS
-Get list of SMB shares used in the Azure Consistent Storage system.
+Get a list of SMB shares used in the Azure Consistent Storage system.
 
 ## SYNTAX
 
@@ -18,27 +18,24 @@ Get-ACSShare [-ResourceGroupName] <String> -FarmName <String> [-ShareName <Strin
 ```
 
 ## DESCRIPTION
-Get list of SMB shares used in the Azure Consistent Storage system.
+The **Get-ACSShare** cmdlet gets a list of Server Message Block (SMB) shares used in the Azure Consistent Storage (ACS) system.
 
 ## EXAMPLES
 
 ### Example 1:
-@{paragraph=PS C:\\\>}
-
-
 
 ```
-$resourceGroup = 'System' 
+PS C:\> $ResourceGroup = "System" 
 
-$farm = Get-ACSFarm -ResourceGroupName $resourceGroup
+PS C:\> $Farm = Get-ACSFarm -ResourceGroupName $ResourceGroup
 
-Get-ACSShare -ResourceGroupName $resourceGroup -FarmName $farm.Name -ShareName 'YourShareName'
+PS C:\> Get-ACSShare -ResourceGroupName $ResourceGroup -FarmName $Farm.Name -ShareName "Share002"
 ```
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service admin.
 
 ```yaml
 Type: Uri
@@ -137,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -152,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
