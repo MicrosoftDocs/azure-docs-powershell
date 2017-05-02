@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSContainer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the ACS container.
 
 ## SYNTAX
 
@@ -18,16 +18,9 @@ Get-ACSContainer [-ResourceGroupName] <String> [-FarmName] <String> [-ShareName]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-ACSContainer** cmdlet gets the Azure Consistent Storage (ACS) container.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -47,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -Count
-{{Fill Count Description}}
+
 
 ```yaml
 Type: UInt32
@@ -62,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-{{Fill FarmName Description}}
+Specifies the name of the server farm.
 
 ```yaml
 Type: String
@@ -77,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Intent
-{{Fill Intent Description}}
+
 
 ```yaml
 Type: ContainerGetIntent
@@ -93,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the resource group that holds the ACS container.
 
 ```yaml
 Type: String
@@ -108,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShareName
-{{Fill ShareName Description}}
+Specifies the name of the used in the Azure Consistent Storage system.
 
 ```yaml
 Type: String
@@ -123,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-{{Fill SkipCertificateValidation Description}}
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-{{Fill SubscriptionId Description}}
+Specifies the subscription ID. 
 
 ```yaml
 Type: String
@@ -153,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Token
-{{Fill Token Description}}
+
 
 ```yaml
 Type: String
@@ -182,3 +175,5 @@ System.Uri
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSContainerMigrationStatus](./Get-ACSContainerMigrationStatus.md)

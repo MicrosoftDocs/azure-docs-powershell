@@ -41,7 +41,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-
+Indicates that the cmdlet gets detailed output.
 
 ```yaml
 Type: SwitchParameter
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetricNames
-
+Specifies a string array of metric names that this cmdlet gets.
 
 ```yaml
 Type: String[]
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID of the ACS service. 
 
 ```yaml
 Type: String
@@ -245,3 +245,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSBlobServiceMetricDefinition](./Get-ACSBlobServiceMetricDefinition.md)

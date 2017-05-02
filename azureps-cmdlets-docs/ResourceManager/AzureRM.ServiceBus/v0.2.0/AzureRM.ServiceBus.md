@@ -4,8 +4,8 @@ Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
 Download Help Link: None_Azure
 Help Version: 4.0.0.0
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/AzureRM.ServiceBus.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/AzureRM.ServiceBus.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/AzureRM.ServiceBus.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/AzureRM.ServiceBus.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/2868c1296e3b2ee982039c2c9af4a4e12fb28c06
 ---
 

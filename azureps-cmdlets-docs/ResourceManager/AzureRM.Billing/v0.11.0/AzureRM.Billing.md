@@ -6,8 +6,8 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Billing/Commands.Billing/help/AzureRM.Billing.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Billing/Commands.Billing/help/AzureRM.Billing.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/AzureRM.Billing.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/AzureRM.Billing.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/9c92f0b478aeb988dd13a82904b8dee1e9104a0f
 ---
 

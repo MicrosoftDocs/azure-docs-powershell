@@ -3,8 +3,8 @@ external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version:
 schema: 2.0.0
 ms.assetid: 363D9311-EA3D-409F-ADD0-75FB49597EB4
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Set-ACSFarm.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Set-ACSFarm.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Set-ACSFarm.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Set-ACSFarm.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

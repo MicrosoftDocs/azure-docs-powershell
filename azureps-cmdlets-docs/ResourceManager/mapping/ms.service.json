@@ -41,7 +41,7 @@
    "AzureRM.Storage":"storage",
    "AzureRM.StreamAnalytics":"stream-analytics",
    "AzureRM.Tags":"azure-resource-manager",
-   "AzureRM.TrafficManager":"tyraffic-manager",
+   "AzureRM.TrafficManager":"traffic-manager",
    "AzureRM.UsageAggregates":"subscription",
    "AzureRM.Websites":"Websites"
 }

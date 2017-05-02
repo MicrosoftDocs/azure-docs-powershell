@@ -19,7 +19,7 @@ Add-ACSFarm [-ResourceGroupName] <String> [-FarmName] <String> [-SettingAccessSt
 ```
 
 ## DESCRIPTION
-The **Add-ACSFarm** cmdlet registers a provisioned Access Control Server (ASS) farm.
+The **Add-ACSFarm** cmdlet registers a provisioned Azure Consistent Storage (ACS) farm.
 Service Admin uses the cmdlet to registered that farm to Service Resource Provider (SRP).
 
 ## EXAMPLES

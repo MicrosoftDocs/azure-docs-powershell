@@ -2,8 +2,8 @@
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Add-AzureRmSqlDatabaseToFailoverGroup.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/Sql/Commands.Sql/help/Add-AzureRmSqlDatabaseToFailoverGroup.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Add-AzureRmSqlDatabaseToFailoverGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Add-AzureRmSqlDatabaseToFailoverGroup.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/1844a179dcdc378afe538856e5f5140acffa4760
 ---
 
@@ -32,16 +32,19 @@ PS C:\> Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGr
 
 ### Example 2
 
-Using Pipe Line to pipe in the database objects 
-```
-PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName rg2 | Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGroupName myRg -ServerName mysvr
 
 ```
+PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName rg2 | Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGroupName myRg -ServerName mysvr
+```
+Using Pipe Line to pipe in the database objects 
+
+
 
 ## PARAMETERS
 
 ### -Databases
-The Azure SQL Databases to be added to the secondary server.```yaml
+The Azure SQL Databases to be added to the secondary server.
+```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel]
 Parameter Sets: (All)
 Aliases: 
@@ -96,8 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tags to associate with the Azure Sql Elastic Pool
-```yaml
+The tags to associate with the Azure Sql Elastic Pool```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tag

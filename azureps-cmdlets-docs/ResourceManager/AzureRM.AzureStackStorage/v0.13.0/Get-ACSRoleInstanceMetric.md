@@ -3,8 +3,8 @@ external help file: Microsoft.AzureStack.Commands.StorageAdmin.dll-Help.xml
 online version:
 schema: 2.0.0
 ms.assetid: 75604E88-5F30-4993-BBCD-D61AC87F6D3E
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Get-ACSRoleInstanceMetric.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Get-ACSRoleInstanceMetric.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Get-ACSRoleInstanceMetric.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureStackStorage/Commands.AzureStackStorage/help/Get-ACSRoleInstanceMetric.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 

@@ -3,8 +3,8 @@ Module Name: AzureRM.MachineLearning
 Module Guid: bb030259-49f9-46ef-806f-2a3f5a2e018e
 Help Version: 1.0.0.0
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/v3.8.0-April2017/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
 gitcommit: https://github.com/Azure/azure-powershell/blob/1dfaf7477509cb7498e91a15ba4cd0d1c631645a
 ---
 

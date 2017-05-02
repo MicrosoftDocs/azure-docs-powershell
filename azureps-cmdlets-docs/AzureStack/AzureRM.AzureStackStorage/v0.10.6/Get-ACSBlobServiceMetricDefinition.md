@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSBlobServiceMetricDefinition
 
 ## SYNOPSIS
-Retrieve the metric definitions of Blob service
+Gets the metric definitions of the BLOB service.
 
 ## SYNTAX
 
@@ -19,16 +19,9 @@ Get-ACSBlobServiceMetricDefinition [-FarmName] <String> [-ResourceGroupName] <St
 ```
 
 ## DESCRIPTION
-Retrieve the metric definitions of Blob service
+The **Get-ACSBlobServiceMetricDefinition** cmdlet gets the metric definitions of the BLOB service.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -48,7 +41,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-
+Indicates that the cmdlet gets detailed output.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the server farm.
 
 ```yaml
 Type: String
@@ -117,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetricNames
-
+Specifies a string array of metric names that this cmdlet gets definitions.
 
 ```yaml
 Type: String[]
@@ -132,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the BLOB service definition.
 
 ```yaml
 Type: String
@@ -147,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -162,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID. 
 
 ```yaml
 Type: String
@@ -207,3 +200,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSBlobServiceMetric](./Get-ACSBlobServiceMetric.md)
