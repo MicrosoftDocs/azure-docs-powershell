@@ -34,17 +34,18 @@ The **Get-AzureRmPlan** cmdlet gets the details of a plan. This cmdlet can be ex
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Run the cmdlet as a service administrator to get the details of the specified plan
 ```
 Get-AzureRMPlan -Name "ComputePlan" -ResourceGroup "PlanGroup" -Managed
 ```
 
-This command gets the details of the plan named "ComputePlan" and created in the resource group "PlanGroup". This command is being executed as a service administrator.
+This example gets the details of the plan named "ComputePlan" and created in the resource group "PlanGroup".
+The presence of the **Managed** parameter runs the cmdlet as a service administrator.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -60,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -117,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

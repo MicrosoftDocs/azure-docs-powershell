@@ -21,19 +21,21 @@ The **Set-AzureRMTenantSubscription** cmdlet updates the current logged-in user'
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1: Change a property of the current logged-in user's tenant subscription
 ```
-$subscriptionUpdated = Get-AzureRmTenantSubscription
-$subscriptionUpdated.OfferId = "Abc123"
-Set-AzureRMTenantSubscription -Subscription $subscriptionUpdated
+$subscriptionToUpdate = Get-AzureRmTenantSubscription
+$subscriptionToUpdate.OfferId = "Abc123"
+Set-AzureRMTenantSubscription -Subscription $subscriptionToUpdate
 ```
 
-This example modifies the **OfferId** property of a **SubscriptionDefinition** object and then passes the object in the **Subscription** parameter of the ** Set-AzureRMTenantSubscription** cmdlet.
+This example modifies the **OfferId** property of the current logged-in user's tenant subscription.
+The first statement gets the subscription and stores the object in the $subscriptionToUpdate variable.
+After the **OfferId** property is changed, the updated object is passed in the **Subscription** parameter of the **Set-AzureRMTenantSubscription** cmdlet.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -49,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -64,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

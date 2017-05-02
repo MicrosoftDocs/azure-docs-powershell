@@ -21,17 +21,17 @@ The **Get-AzureRmTenantSubscription** cmdlet gets the subscriptions associated w
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get the subscriptions associated with the current user
 ```
 Get-AzureRmTenantSubscription
 ```
 
-This command lists the user's subscriptions after the user logged in with the **Add-AzureRmAccount** cmdlet.
+This example lists the user's subscriptions after the user logged in with the **Add-AzureRmAccount** cmdlet.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

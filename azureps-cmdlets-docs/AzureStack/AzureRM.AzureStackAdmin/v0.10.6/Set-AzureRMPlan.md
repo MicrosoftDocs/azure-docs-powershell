@@ -21,18 +21,21 @@ The **Set-AzureRMPlan** cmdlet updates the existing plan with the given modified
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Change a property of an existing plan
 ```
-$planUpdated = Get-AzureRMPlan -Name "ComputePlan" -ResourceGroup "PlanGroup" -Managed
-Set-AzureRMPlan -Plan $planUpdated -ResourceGroup "PlanGroup"
+$planToUpdate = Get-AzureRMPlan -Name "ComputePlan" -ResourceGroup "PlanGroup" -Managed
+$planToUpdate.DisplayName = "Plan A"
+Set-AzureRMPlan -Plan $planToUpdate -ResourceGroup "PlanGroup"
 ```
 
-This example gets a plan, modifies the plan object, and then updates the plan.
+This example modifies the **DisplayName** property of the plan named "ComputePlan" in the "PlanGroup" resource group.
+The first statement gets the plan and stores the object in the $planToUpdate variable.
+After the **DisplayName** property of the plan is changed, the updated object is passed in the **Plan** parameter of the **Set-AzureRMPlan** cmdlet.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -48,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

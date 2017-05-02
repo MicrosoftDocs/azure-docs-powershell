@@ -21,17 +21,18 @@ The **Remove-AzureRMManagedSubscription** cmdlet removes the specified subscript
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove the specified Azure resource manager subscription
 ```
 Remove-AzureRmManagedSubscription -TargetSubscriptionId "83a3cff6-b856-4db1-8d1b-86386ff9d515"
 ```
 
-This command deletes the subscription that has the ID of 83a3cff6-b856-4db1-8d1b-86386ff9d515. The command is executed after logging in to the azure stack environment as a service administrator.
+This example deletes the subscription that has the ID of 83a3cff6-b856-4db1-8d1b-86386ff9d515.
+The **Remove-AzureRMManagedSubscription** cmdlet is executed after the user logs in to the azure stack environment as a service administrator.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -62,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

@@ -21,17 +21,17 @@ The **Remove-AzureRMPlan** cmdlet removes the specified plan. For successful rem
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove a plan
 ```
 Remover-AzureRMPlan -Name "ComputePlan"
 ```
 
-This command removes the plan named "ComputePlan".
+This example removes the plan named "ComputePlan".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String
