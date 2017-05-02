@@ -21,17 +21,17 @@ The **Remove-AzureRMUsageConnection** cmdlet removes the usage connection inform
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove the specified usage connection information
 ```
 Remove-AzureRmUsageConnection -Name "SqlRpUsageConnection" -ResourceGroup "System"
 ```
 
-This command removes the information for the usage connection that is named "SqlRpUsageConnection" and contained in the "System" resource group.
+This example removes the information for the usage connection that is named "SqlRpUsageConnection" and contained in the "System" resource group.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

@@ -23,12 +23,12 @@ The **New-AzureRmOffer** cmdlet creates an offer comprising the specified base p
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Create an offer
 ```
 New-AzureRMOffer -Name "ComputePlan" -DisplayName "ComputePlan" -State Private -BasePlanIds $BasePlanIds -ArmLocation "local" -ResourceGroup "OfferGroup"
 ```
 
-This command creates an offer with the base plans specified by $BasePlanIds.
+This example creates an offer with the base plans specified by $BasePlanIds.
 
 ## PARAMETERS
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String
@@ -170,9 +170,9 @@ Accept wildcard characters: False
 
 ### -State
 Specifies the state of the offer plan. The acceptable values for this parameter are:
-  - Private
-  - Public
-  - Decommissioned
+- Private
+- Public
+- Decommissioned
 
 ```yaml
 Type: AccessibilityState

@@ -21,17 +21,17 @@ The **Remove-AzureRmManagedLocation** cmdlet removes the specified managed locat
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove a managed location 
 ```
 Remove-AzureRmManagedLocation -Name "Chicago"
 ```
 
-This command removes the location named "Chicago".
+This example removes the Azure resource manager managed location named "Chicago".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

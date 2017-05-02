@@ -24,7 +24,7 @@ The **Add-AzureRMUsageConnection** cmdlet adds usage connection details for a re
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Add usage connection details for the resource provider in the specified resource group
 ```
 $usageConnectionId = "sqlrpusageconnection"
 $location = "local"
@@ -41,9 +41,8 @@ $usageReportingTable = "sqlrpusagetable"
 $errorReportingQueue = "sqlrpusageerrorqueue"
 $errorReportingTable = "sqlrpusageerrortable"
 
-# Create Storage Account If Other than DevStorage
+# Create storage account if other than DevStorage
 $storageConnectionString = "UseDevelopmentStorage=true"
-
 
 $usageConnectionParams = @{
 Name = $usageConnectionId
@@ -56,18 +55,17 @@ UsageReportingQueue = $usageReportingQueue
 UsageReportingTable = $usageReportingTable
 ErrorReportingQueue = $errorReportingQueue
 ErrorReportingTable = $errorReportingTable
-ApiVersion = "2015-06-01-preview"
 }
 
 Add-AzureRmUsageConnection @usageConnectionParams
 ```
 
-This example registers the usage connection information of a resource provider to usage service.
+This example creates a resource group named "UsageConnectionRG" and adds usage connection details for the resource provider in this resource group.
 
 ## PARAMETERS
 
 ### -ArmLocation
-Specifies the location of the resource manager instance in the Azure Stack installation.
+Specifies the location of the resource manager in the Azure Stack.
 
 ```yaml
 Type: String
@@ -112,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -128,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -158,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

@@ -21,19 +21,21 @@ The **Set-AzureRMManagedLocation** cmdlet modifies an existing managed location.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Change a property of an existing managed location
 ```
-$locationUpdated = Get-AzureRMManagedLocation -Name "Chicago"
-$locationUpdated.Longitude = 80.5
-Set-AzureRMManagedLocation -Location $locationUpdated
+$locationToUpdate = Get-AzureRMManagedLocation -Name "Chicago"
+$locationToUpdate.Longitude = 80.5
+Set-AzureRMManagedLocation -Location $locationToUpdate
 ```
 
-This example modifies the **Longitude** property of a **Location** object and then passes the object in the **Location** parameter of the ** Set-AzureRMManagedLocation** cmdlet.
+This example modifies the **Longitude** property of the managed location named "Chicago".
+The first statement gets the managed location named "Chicago" and stores the object in the $locationToUpdate variable.
+After the **Longitude** property is changed, the updated object is passed in the **Location** parameter of the **Set-AzureRMManagedLocation** cmdlet.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -49,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

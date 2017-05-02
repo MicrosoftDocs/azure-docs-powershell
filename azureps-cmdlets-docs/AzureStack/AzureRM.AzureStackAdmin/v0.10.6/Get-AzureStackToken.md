@@ -30,21 +30,24 @@ The **Get-AzureStackToken** cmdlet gets a token that is used to make calls to th
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get an access token for a specified user
 ```
-$endpoints = Invoke-RestMethod -Method Get -Uri "$($ArmEndpoint.TrimEnd('/'))/metadata/endpoints?api-version=2015-01-01" -Verbose
-$aadAuthorityEndpoint = $endpoints.authentication.loginEndpoint
-$aadResource = $endpoints.authentication.audiences\[0\]
+$Endpoints = Invoke-RestMethod -Method Get -Uri "$($ArmEndpoint.TrimEnd('/'))/metadata/endpoints?api-version=2015-01-01" -Verbose
+$AAdAuthorityEndpoint = $Endpoints.authentication.loginEndpoint
+$AAdResource = $Endpoints.authentication.audiences\[0\]
 
-Get-AzureStackToken -Authority $aadAuthorityEndpoint -AadTenantId $AadTenantId -Resource $aadResource -Credential (Get-Credential) -Verbose
+Get-AzureStackToken -Authority $AAdAuthorityEndpoint -AadTenantId $AadTenantId -Resource $AAdResource -Credential (Get-Credential) -Verbose
 ```
 
-This example gets the access token for the specified user.
+The first command gets the login endpoints and stores the result in the variable named $Endpoints.
+The second command gets the authentication information and stores the result in the variable named $AAdAuthorityEndpoint.
+The third command gets the users from the $Endpoints variable and stores the result in the variable named $AAdResource.
+The forth command gets the access token for the specified user.
 
 ## PARAMETERS
 
 ### -AadTenantId
-Specifies the Azure active directory (AAD) tenant Id of the user belonging to the AAD tenant group.
+Specifies the Azure active directory (AAD) tenant ID of the user belonging to the AAD tenant group.
 
 ```yaml
 Type: String
@@ -104,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -120,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -135,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String
@@ -150,7 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-Specifies the resource for authentication. To obtain this value, access the Azure resource manager (ARM) metadata endpoint https://\<ArmUri\>/metadata/endpoints?api-version=2015-01-01 and read the value of **audiences**.
+Specifies the resource for authentication.
+To obtain this value, access the Azure resource manager (ARM) metadata endpoint `https://<ArmUri>/metadata/endpoints?api-version=2015-01-01` and read the value of **audiences**.
 
 ```yaml
 Type: String

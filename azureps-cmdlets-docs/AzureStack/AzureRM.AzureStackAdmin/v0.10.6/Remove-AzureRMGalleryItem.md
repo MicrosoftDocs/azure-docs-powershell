@@ -21,17 +21,17 @@ The **Remove-AzureRMGalleryItem** cmdlet removes the specified gallery item.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove a gallery item
 ```
 Remove-AzureRMGalleryItem -Name "Microsoft.SqlDatabase.0.1.0"
 ```
 
-This command removes the gallery item named "Microsoft.SqlDatabase.0.1.0".
+This example removes the gallery item named "Microsoft.SqlDatabase.0.1.0".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

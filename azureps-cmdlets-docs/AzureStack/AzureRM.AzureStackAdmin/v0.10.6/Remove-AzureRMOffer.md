@@ -21,17 +21,17 @@ The **Remove-AzureRmOffer** cmdlet removes the specified offer.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove an offer
 ```
 Remove-AzureRMOffer -Name "ComputeOffer" -ResourceGroup "ComputeOfferGroup"
 ```
 
-This command removes the offer named "ComputeOffer" that is contained in the resource group "ComputeOfferGroup".
+This example removes the offer named "ComputeOffer" that is contained in the resource group "ComputeOfferGroup".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String
