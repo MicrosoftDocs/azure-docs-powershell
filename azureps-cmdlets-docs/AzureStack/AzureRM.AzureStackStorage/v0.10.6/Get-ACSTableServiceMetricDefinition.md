@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSTableServiceMetricDefinition
 
 ## SYNOPSIS
-Retrieve the metric definitions of Table service
+Gets the metric definitions of a Table service.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-ACSTableServiceMetricDefinition [-FarmName] <String> [-ResourceGroupName] <S
 ```
 
 ## DESCRIPTION
-Retrieve the metric definitions of Table service
+The **Get-ACSTableServiceMetricDefinition** cmdlet gets the metric definitions of a Table service.
 
 ## EXAMPLES
 
@@ -41,7 +41,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-
+Indicates the cmdlet gets the detailed information from the Table service metric definitions.
 
 ```yaml
 Type: SwitchParameter
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the Azure Consistent Storage (ACS) farm for which this cmdlet gets the table service metric definitions.
 
 ```yaml
 Type: String
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -200,3 +200,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSTableService](./Get-ACSTableService.md)
+
+[Get-ACSTableServiceMetric](./Get-ACSTableServiceMetric.md)

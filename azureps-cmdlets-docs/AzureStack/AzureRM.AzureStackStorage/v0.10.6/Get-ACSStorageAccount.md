@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSStorageAccount
 
 ## SYNOPSIS
-Retrieve a list of the tenant storage accounts based on the tenant subscription ID, account name (or part of the account name) , account status or based on a account ID.
+Gets a list of the tenant storage accounts based on the tenant subscription ID, account name, account status, or an account ID.
 
 ## SYNTAX
 
@@ -27,27 +27,30 @@ Get-ACSStorageAccount [-ResourceGroupName] <String> [-FarmName] <String> [-Accou
 ```
 
 ## DESCRIPTION
-Retrieve a list of the tenant storage accounts based on the tenant subscription ID, account name (or part of the account name) , account status or based on a account ID.
+The **Get-ACSStorageAccount** cmdlet gets a list of the tenant storage accounts based on the tenant subscription ID, account name (or part of the account name) ,account status, account ID.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Get a list of tenant storage account
 ```
-$resourceGroup = 'System' 
+$ResourceGroup = "System" 
 
-$farm = Get-ACSFarm -ResourceGroupName $resourceGroup
+$Farm = Get-ACSFarm -ResourceGroupName $ResourceGroup
 
-Get-ACSStorageAccount -ResourceGroupName $resourceGroup -FarmName $farm.Name -PartialAccountName 'YourStorageAccountName'
+Get-ACSStorageAccount -ResourceGroupName $ResourceGroup -FarmName $Farm.Name -PartialAccountName "Account002"
 ```
+
+The first command stores the value named System in the variable named $ResourceGroup.
+
+The second command uses the [Get-ACSFarm](,/Get-ACSFarm,md) cmdlet to get the farm that is contained in the resource group specified in the $ResourceGroup variable. 
+The command stores the result in the variable named $Farm.
+
+The third command uses the **Get-ACSStorageAccount** cmdlet to get the storage account named Account002.
 
 ## PARAMETERS
 
 ### -AccountId
-
+Specifies the Account ID that the cmdlet uses to get the storage account.
 
 ```yaml
 Type: String
@@ -92,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm that this cmdlet gets the storage account from.
 
 ```yaml
 Type: String
@@ -146,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartialAccountName
-
+Specifies a partial account name that the cmdlet uses to search for storage accounts.
 
 ```yaml
 Type: String
@@ -161,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the resource group 
 
 ```yaml
 Type: String
@@ -191,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountStatus
-
+Specifies the status of the storage account that this cmdlet gets.
 
 ```yaml
 Type: Int32
@@ -221,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantSubscriptionId
-
+Specifies the tenant subscription ID that this cmdlet uses to get the storage account.
 
 ```yaml
 Type: String
@@ -264,3 +267,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Sync-ACSStorageAccount](./Sync-ACSStorageAccount.md)

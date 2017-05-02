@@ -66,7 +66,7 @@ Gets the metrics of a share.
 Gets the metric definitions of share.
 
 ### [Get-ACSSharesForMigration](Get-ACSSharesForMigration.md)
-{{Fill in the Synopsis}}
+Gets a list of SMB shares that are to be migrated.
 
 ### [Get-ACSStorageAccount](Get-ACSStorageAccount.md)
 Gets a list of the tenant storage accounts based on the tenant subscription ID, account name (or part of the account name) , account status or based on a account ID.

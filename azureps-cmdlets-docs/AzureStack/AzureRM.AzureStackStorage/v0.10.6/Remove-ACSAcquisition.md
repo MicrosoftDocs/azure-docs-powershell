@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-ACSAcquisition
 
 ## SYNOPSIS
-Remove an acquisition
+Removes an ACS Acquisition.
 
 ## SYNTAX
 
@@ -19,21 +19,14 @@ Remove-ACSAcquisition [-ResourceGroupName] <String> [-FarmName] <String> [-Acqui
 ```
 
 ## DESCRIPTION
-Remove an acquisition by acquisition ID
+The **Remove-ACSAcquisition** cmdlet removes an Azure Consistent Storage (ACS) Acquisition by acquisition ID.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AcquisitionId
-
+Specifies the Acquisition ID that this cmdlet removes the Acquisition from.
 
 ```yaml
 Type: String
@@ -63,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm.
 
 ```yaml
 Type: String
@@ -117,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group name that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -177,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -192,7 +185,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

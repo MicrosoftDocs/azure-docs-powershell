@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSShareMetric
 
 ## SYNOPSIS
-Retrieve the metrics of a share
+Gets the metrics of an ACS share.
 
 ## SYNTAX
 
@@ -20,16 +20,9 @@ Get-ACSShareMetric [-FarmName] <String> [-ShareName] <String> [-ResourceGroupNam
 ```
 
 ## DESCRIPTION
-Retrieve the metrics of a share
+The **Get-ACSShareMetric** cmdlet gets the metrics of an Azure Consistent Storage (ACS) share.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -49,7 +42,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-
+Indicates the cmdlet gets the detailed metric information from the ACS Share.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm that this cmdlet gets share metrics.
 
 ```yaml
 Type: String
@@ -148,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -163,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShareName
-
+Specifies the name of the ACS share that this cmdlet gets share metrics from.
 
 ```yaml
 Type: String
@@ -268,3 +261,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSShare](./Get-ACSShare.md)
+
+[Get-ACSShareMetricDefinition](./Get-ACSShareMetricDefinition.md)
