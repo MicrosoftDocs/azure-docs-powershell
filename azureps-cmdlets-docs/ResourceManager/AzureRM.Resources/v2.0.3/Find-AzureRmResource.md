@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: AD84B9EE-19BA-4E0F-8B96-0B0EA374885C
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,7 @@ schema: 2.0.0
 # Find-AzureRmResource
 
 ## SYNOPSIS
-Searches for resources based on specified parameters.
+Searches for resources using the specified parameters.
 
 ## SYNTAX
 
@@ -20,13 +19,6 @@ Find-AzureRmResource [-ResourceNameContains <String>] [-ResourceType <String>]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
-### Lists the resources based on the specified scope at the tenant level.
-```
-Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-ExtensionResourceType <String>]
- [-Top <Int32>] [-ODataQuery <String>] [-ExpandProperties] [-TenantLevel] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
-```
-
 ### Get a resources using a multi-subscription query.
 ```
 Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-ExtensionResourceType <String>]
@@ -35,30 +27,171 @@ Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-E
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
+### Lists the resources based on the specified scope at the tenant level.
+```
+Find-AzureRmResource [-ResourceNameContains <String>] -ResourceType <String> [-ExtensionResourceType <String>]
+ [-Top <Int32>] [-ODataQuery <String>] [-ExpandProperties] [-TenantLevel] [-ApiVersion <String>] [-Pre]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-The **Find-AzureRmResource** cmdlet searches for resources based on specified parameters.
+Searches for resources using the specified parameters.
+
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Search for resources by type and resource group name
+### --------------------------  FindByType  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Find-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceGroupNameContains "ResourceGroup"
+Find-AzureRmResource -ResourceType microsoft.web/sites -ResourceGroupNameContains resourceGroup
 ```
 
-This command searches for resources of the type microsoft.web/sites under resource groups that have names that match the string ResourceGroup.
+Finds resources of type microsoft.web/sites under resource groups that match the string 'resourceGroup'
 
-### Example 2: Search for resources by type and resource name
+### --------------------------  FindByType2  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Find-AzureRmResource -ResourceType "microsoft.web/sites" -ResourceNameContains "test"
+Find-AzureRmResource -ResourceType microsoft.web/sites -ResourceNameContains test
 ```
 
-This command searches for resources of the type microsoft.web/sites that have a resource name that matches the string test.
+Finds all resources of type microsoft.web/sites whose resource name contains 'test'
 
 ## PARAMETERS
 
+### -ApiVersion
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpandProperties
+When specified, expands the properties of the resource.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExtensionResourceType
+The extension resource type.
+e.g.
+Microsoft.Sql/Servers/Databases.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ODataQuery
+An OData style filter which will be appended to the request in addition to any other filters.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupNameContains
+The resource group name substring.
+
+```yaml
+Type: String
+Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
+Aliases: ResourceGroupName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceNameContains
-Specifies a partial name of a resource.
-The cmdlet searches for resources which contain this value as a substring.
+The resource name substring.
+e.g.
+if the resource name is 'testResource', you can specify 'test'.
 
 ```yaml
 Type: String
@@ -73,12 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-Specifies the type of a resource.
-For instance, for a database, the resource type is as follows: 
-
-`Microsoft.Sql/Servers/Databases`
-
-This cmdlet searches for resources of the specified type.
+The resource type.
+e.g.
+Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
@@ -94,7 +224,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
+Parameter Sets: Get a resources using a multi-subscription query., Lists the resources based on the specified scope at the tenant level.
 Aliases: 
 
 Required: True
@@ -104,25 +234,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ExtensionResourceType
-Specifies the extension resource type for the resources for which this cmdlet searches.
-For instance: 
-
-`Microsoft.Sql/Servers/Databases`
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -TagName
+The name of the tag to query by.
+
 ```yaml
 Type: String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
@@ -136,6 +250,8 @@ Accept wildcard characters: False
 ```
 
 ### -TagValue
+The value of the tag to query by.
+
 ```yaml
 Type: String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
@@ -148,124 +264,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExpandProperties
-Indicates that this cmdlet expands the properties of the resource.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Top
-Specifies the number of resources to retrieve.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ODataQuery
-Specifies an Open Data Protocol (OData) style filter.
-This cmdlet appends this value to the request in addition to any other filters.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -TenantLevel
-Indicates that this cmdlet operates at the tenant level.
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -279,20 +279,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupNameContains
-Specifies a partial name of a resource group.
-This cmdlet matches resource groups of which this value is a substring.
-The cmdlet searches for resources in those resource groups.
+### -Top
+The number of resources to retrieve.
 
 ```yaml
-Type: String
-Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
-Aliases: ResourceGroupName
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -304,17 +302,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
-
-[Get-AzureRmResource](./Get-AzureRmResource.md)
-
-[Move-AzureRmResource](./Move-AzureRmResource.md)
-
-[New-AzureRmResource](./New-AzureRmResource.md)
-
-[Remove-AzureRmResource](./Remove-AzureRmResource.md)
-
-[Set-AzureRmResource](./Set-AzureRmResource.md)
-
 

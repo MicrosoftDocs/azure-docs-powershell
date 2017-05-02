@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-online version: 
+online version: http://go.microsoft.com/fwlink/?LinkID=393044
 schema: 2.0.0
 ---
 
 # Get-AzureRmResourceGroupDeploymentOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the resource group deployment operation
 
 ## SYNTAX
 
@@ -18,18 +18,38 @@ Get-AzureRmResourceGroupDeploymentOperation -DeploymentName <String> [-Subscript
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Gets the resource group deployment operation
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Get1  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\> {{ Add example code here }}
+Get-AzureRmResourceGroupDeploymentOperation -DeploymentName test -ResourceGroupName test
 ```
 
-{{ Add example description here }}
+Gets deployment operation with name "test" under resource group "test"
 
 ## PARAMETERS
+
+### -ApiVersion
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DeploymentName
 The deployment name.
@@ -46,44 +66,28 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SubscriptionId
-The subscription to use.
+### -InformationAction
+@{Text=}
 
 ```yaml
-Type: Guid
+Type: ActionPreference
 Parameter Sets: (All)
-Aliases: 
+Aliases: infa
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-The resource group name.
+### -InformationVariable
+@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
+Aliases: iv
 
 Required: False
 Position: Named
@@ -107,29 +111,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
+### -ResourceGroupName
+The resource group name.
 
-Required: False
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationVariable
-@{Text=}```yaml
-Type: String
+### -SubscriptionId
+The subscription to use.
+
+```yaml
+Type: Guid
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -138,14 +146,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
-System.Nullable`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-
 ## OUTPUTS
 
-### System.Management.Automation.PSObject
-
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
 

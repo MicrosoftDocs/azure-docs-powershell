@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 84F0E54B-294C-4FAD-A7D1-FC1B352B1337
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,6 @@ schema: 2.0.0
 # Get-AzureRmProviderFeature
 
 ## SYNOPSIS
-Gets information about Azure provider features.
 
 ## SYNTAX
 
@@ -23,40 +21,21 @@ Get-AzureRmProviderFeature -ProviderNamespace <String> -FeatureName <String> [<C
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmProviderFeature** cmdlet gets the feature name, provider name, and registration status for Azure provider features.
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Get all available features
+### Example 1
 ```
-PS C:\>Get-AzureRmProviderFeature -ListAvailable
-```
-
-This command gets all available features.
-
-### Example 2: Get information about a specific feature
-```
-PS C:\>Get-AzureRmProviderFeature -FeatureName "AllowPreReleaseRegions" -ProviderNamespace "Microsoft.Compute"
+PS C:\> {{ Add example code here }}
 ```
 
-This command gets information for the feature named AllowPreReleaseRegions for the specified provider.
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -ProviderNamespace
-Specifies the namespace for which this cmdlet gets provider features.
-
-```yaml
-Type: String
-Parameter Sets: ListAvailableParameterSet
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### -FeatureName
+@{Text=}
 
 ```yaml
 Type: String
@@ -71,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListAvailable
-Indicates that this cmdlet gets all features.
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -85,8 +64,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FeatureName
-Specifies the name of the feature to get.
+### -ProviderNamespace
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: ListAvailableParameterSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ```yaml
 Type: String
@@ -110,7 +101,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Register-AzureRmProviderFeature](./Register-AzureRmProviderFeature.md)
-
 

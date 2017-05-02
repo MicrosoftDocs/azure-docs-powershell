@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 01F42DD8-8C48-4952-B62E-7EEC4061B90A
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,7 @@ schema: 2.0.0
 # Invoke-AzureRmResourceAction
 
 ## SYNOPSIS
-Invokes an action on a resource.
+Invokes the specified action on a resource
 
 ## SYNTAX
 
@@ -38,121 +37,30 @@ Invoke-AzureRmResourceAction [-Parameters <Hashtable>] -Action <String> -Resourc
 ```
 
 ## DESCRIPTION
-The **Invoke-AzureRmResourceAction** cmdlet invokes an action on a specified Azure resource.
+Invokes the specified action on a resource.
+This command is an equivalent of a POST operation on a resource.
+To get a list of suported actions you can do something like Get-AzureRmProviderOperation -OperationSearchString * | where{$_.Operation -like "*action"} | FT Operation.
+You can also use the Azure Resource Explorer tool to discover these actions and the schema of the -Parameters property
 
-To get a list of supported actions, use the Azure Resource Explorer tool.
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### 1:
-```
+### --------------------------  Invoke list action on website config resource  --------------------------
+@{paragraph=PS C:\\\>}
+
+
 
 ```
+Invoke-AzureRmResourceAction -ResourceGroupName myGroup -ResourceType Microsoft.Web/sites/config/list -ResourceName mySite/appsettings -Action list -ApiVersion 2015-08-01 -Force
+```
+
+Invokes the list action on website config
 
 ## PARAMETERS
 
-### -Parameters
-Specifies parameters, as a hash table, for the action that this cmdlet invokes.
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: Object
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-ps_force
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Action
-Specifies the name of the action to invoke.
+The name of the action to invoke.
 
 ```yaml
 Type: String
@@ -166,65 +74,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceId
-Specifies the fully qualified resource ID of the resource on which this cmdlet invokes an action.
-The ID includes the subscription, as in the following example: 
-
-`/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+### -ApiVersion
+The api version to use while invoking the action on the resource.
 
 ```yaml
 Type: String
-Parameter Sets: The resource Id.
-Aliases: Id
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceName
-Specifies the name of the resource of the resource on which this cmdlet invokes an action.
-For instance, to specify a database, use the following format: 
-
-`ContosoServer/ContosoDatabase`
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
-Aliases: Name
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceType
-Specifies the type of the resource.
-For instance, for a database, the resource type is as follows: 
-
-`Microsoft.Sql/Servers/Databases`
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-Specifies the name of an extension resource for the resource on which this cmdlet invokes an action.
-For instance, to specify a database, use the following format: 
-
-server name`/`database name
+The extension resource name.
+e.g.
+to specify a database MyServer/MyDatabase.
 
 ```yaml
 Type: String
@@ -239,10 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
-Specifies the type of the extension resource.
-For instance: 
-
-`Microsoft.Sql/Servers/Databases`
+The extension resource type.
+e.g.
+Microsoft.Sql/Servers/Databases.
 
 ```yaml
 Type: String
@@ -256,9 +123,53 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Force
+Do not ask for confirmation
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ODataQuery
-Specifies an Open Data Protocol (OData) style filter.
-This cmdlet appends this value to the request in addition to any other filters.
+An OData style filter which will be appended to the request in addition to any other filters.
 
 ```yaml
 Type: String
@@ -272,8 +183,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Parameters
+A hashtable that reperesents the resource properties.
+Example- $ParametersObject=@{targetResourceGroup = "(string)", resources = ("string")}
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: Object
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
-Specifies the name of a resource group in which this cmdlet invokes an action.
+The resource group name.
 
 ```yaml
 Type: String
@@ -287,8 +229,59 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ResourceId
+The fully qualified resource Id, including the subscription.
+e.g.
+/subscriptions/{subscriptionId}/providers/Microsoft.Sql/servers/myServer/databases/myDatabase
+
+```yaml
+Type: String
+Parameter Sets: The resource Id.
+Aliases: Id
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceName
+The resource name.
+e.g.
+to specify a database MyServer/MyDatabase.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceType
+The resource type.
+e.g.
+Microsoft.Sql/Servers/Databases.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -TenantLevel
-Indicates that this cmdlet operates at the tenant level.
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -312,7 +305,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -328,7 +321,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

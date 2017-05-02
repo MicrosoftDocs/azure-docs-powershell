@@ -13,20 +13,17 @@ Filters active directory groups.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADGroup [-ObjectId <Guid>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+Get-AzureRmADGroup [-ObjectId <Guid>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADGroup -SearchString <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADGroup -SearchString <String> [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADGroup -ObjectId <Guid> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+Get-AzureRmADGroup -ObjectId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,10 +33,6 @@ Filters active directory groups.
 
 ### --------------------------  Filters groups using object id  --------------------------
 @{paragraph=PS C:\\\>}
-
-
-
-
 
 
 
@@ -54,10 +47,6 @@ Gets group with 85F89C90-780E-4AA6-9F4F-6F268D322EEE id
 
 
 
-
-
-
-
 ```
 PS C:\> Get-AzureRmADGroup -SearchString Joe
 ```
@@ -66,10 +55,6 @@ Filters all ad groups that has Joe in the display name.
 
 ### --------------------------  List AD groups  --------------------------
 @{paragraph=PS C:\\\>}
-
-
-
-
 
 
 
@@ -105,32 +90,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: F0E73B8F-312F-443E-93EA-CB18E9395F32
 online version: 
 schema: 2.0.0
 ---
@@ -15,27 +14,31 @@ Creates a Hive job object.
 ```
 New-AzureRmHDInsightHiveJobDefinition [-Arguments <String[]>] [-Files <String[]>] [-StatusFolder <String>]
  [-Defines <Hashtable>] [-File <String>] [-JobName <String>] [-Query <String>] [-RunAsFileJob]
- [<CommonParameters>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-AzureRmHDInsightHiveJobDefinition** cmdlet defines a Hive job object for use with an Azure HDInsight cluster.
+The New-AzureRmHDInsightHiveJobDefinition cmdlet defines a Hive job object for use with an Azure HDInsight cluster.
 
 ## EXAMPLES
 
-### Example 1: Create a Hive job definition
+### --------------------------  Example 1: Create a Hive job definition  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\># Cluster info
-PS C:\>$clusterName = "your-hadoop-001"
-PS C:\>$clusterCreds = Get-Credential
+PS C:\&gt; # Cluster info
+        $clusterName = "your-hadoop-001"
+        $clusterCreds = Get-Credential
 
-# Hive job details
-PS C:\>$statusFolder = "<status folder>"        
-PS C:\>$query = "SHOW TABLES"
+        # Hive job details
+        $statusFolder = "&lt;status folder&gt;"        
+        $query = "SHOW TABLES"
 
-PS C:\>New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
+        New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
             -Query $query `
-        | Start-AzureRmHDInsightJob `
+        | Start-AzureRmHDInsightJob 
             -ClusterName $clusterName `
             -ClusterCredential $clusterCreds
 ```
@@ -50,36 +53,6 @@ The arguments are passed as command-line arguments to each task.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Files
-Specifies a collection of files that are associated with a Hive job.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StatusFolder
-Specifies the location of the folder that contains standard outputs and error outputs for a job.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,14 +79,58 @@ Accept wildcard characters: False
 ```
 
 ### -File
-Specifies the path to a file that contains the query to run.
-The file must be available on the storage account associated with the cluster.
-You can use this parameter instead of the *Query* parameter.
+Specifies the path to a file that contains a query to run.
+You can use this parameter instead of the Query parameter.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Files
+Specifies a collection of files that are associated with a Hive job.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
 
 Required: False
 Position: Named
@@ -170,6 +187,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StatusFolder
+Specifies the location of the folder that contains standard outputs and error outputs for a job.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -178,9 +210,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
 
-[Start-AzureRmHDInsightJob](./Start-AzureRmHDInsightJob.md)
-
+[Start-AzureRmHDInsightJob]()
 

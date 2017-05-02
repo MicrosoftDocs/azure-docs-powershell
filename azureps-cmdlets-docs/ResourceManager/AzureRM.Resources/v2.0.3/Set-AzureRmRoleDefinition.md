@@ -55,10 +55,6 @@ Following is a sample updated role definition json for Set-AzureRmRoleDefinition
 
 
 
-
-
-
-
 ```
 PS C:\> $roleDef = Get-AzureRmRoleDefinition "Contoso On-Call"
           PS C:\> $roleDef.Actions.Add("Microsoft.ClassicCompute/virtualmachines/start/action")
@@ -73,32 +69,11 @@ PS C:\> $roleDef = Get-AzureRmRoleDefinition "Contoso On-Call"
 
 
 
-
-
-
-
 ```
 PS C:\> Set-AzureRmRoleDefinition -InputFile C:\Temp\roleDefinition.json
 ```
 
 ## PARAMETERS
-
-### -InputFile
-File name containing a single json role definition to be updated.
-Only include the properties that are to be updated in the JSON.
-Id property is Required.
-
-```yaml
-Type: String
-Parameter Sets: InputFileParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 @{Text=}
@@ -124,6 +99,23 @@ Parameter Sets: (All)
 Aliases: iv
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputFile
+File name containing a single json role definition to be updated.
+Only include the properties that are to be updated in the JSON.
+Id property is Required.
+
+```yaml
+Type: String
+Parameter Sets: InputFileParameterSet
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

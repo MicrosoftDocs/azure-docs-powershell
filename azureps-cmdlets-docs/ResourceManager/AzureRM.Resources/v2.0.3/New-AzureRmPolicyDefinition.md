@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 2A9745DF-A1BD-48ED-A811-CF3C8A093E3F
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmPolicyDefinition
 
 ## SYNOPSIS
-Creates a policy definition.
+Creates a new policy definition
 
 ## SYNTAX
 
@@ -19,36 +18,60 @@ New-AzureRmPolicyDefinition -Name <String> [-DisplayName <String>] [-Description
 ```
 
 ## DESCRIPTION
-The **New-AzureRmPolicyDefinition** cmdlet creates a policy definition that includes a policy rule in JavaScript Object Notation (JSON) format.
+Creates a new policy definition
+
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Create a policy definition by using a policy file
+### --------------------------  Create a new policy definition using policy file  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>New-AzureRmPolicyDefinition -Name "VMPolicyDefinition" -Policy C:\VMPolicy.json
+New-AzureRmPolicyDefinition -Name testDefinition -Policy C:\SamplePolicy.json
 ```
 
-This command creates a policy definition named VMPolicyDefinition that contains the policy rule specified in C:\VMPolicy.json.
+This will create a new policy definition 'testDefinition' with policy rule specified in C:\SamplePolicy.json file
 
-### Example 2: Create a policy definition inline
+### --------------------------  Create a new policy definition inline  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>New-AzureRmPolicyDefinition -Name "VMPolicyDefinition" -DisplayName "Virtual Machine policy definition" -Policy "{""if"":{""source"":""action"",""equals"":""Microsoft.Compute/virtualMachines/write""},""then"":{""effect"":""deny""}}"
+New-AzureRmPolicyDefinition -Name testDefinition -DisplayName "Test policy" -Policy "{""if"":{""source"":""action"",""equals"":""Microsoft.Compute/virtualMachines/write""},""then"":{""effect"":""deny""}}"
 ```
 
-This command creates a policy definition named VMPolicyDefinition.
-The command specifies the policy as a string in valid JSON format.
+Creates a new policy definition 'testDefinition' with the specified policy
 
 ## PARAMETERS
 
-### -Name
-Specifies a name for the policy definition.
+### -ApiVersion
+@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The description for policy definition
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -56,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Specifies a display name for the policy definition.
+The display name for policy definition
 
 ```yaml
 Type: String
@@ -67,82 +90,11 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Description
-Specifies a description for the policy definition.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Policy
-Specifies a policy rule for the policy definition.
-You can specify the path of a .json file or a string that contains the policy in JSON format.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -157,12 +109,58 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+The name for policy definition
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Policy
+The policy rule.
+This can either be a path to a file name containing the policy rule, or the policy rule json as string
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
@@ -181,11 +179,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-AzureRmPolicyDefinition](./Get-AzureRmPolicyDefinition.md)
-
-[Remove-AzureRmPolicyDefinition](./Remove-AzureRmPolicyDefinition.md)
-
-[Set-AzureRmPolicyDefinition](./Set-AzureRmPolicyDefinition.md)
-
 

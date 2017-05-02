@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
-ms.assetid: 14B48050-9B18-4E1A-8F2C-65715855399F
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmIntegrationAccountCallbackUrl
 
 ## SYNOPSIS
-Gets an integration account callback URL.
+Gets the specified integration account callback URL from the Azure resource group.
 
 ## SYNTAX
 
@@ -18,84 +17,34 @@ Get-AzureRmIntegrationAccountCallbackUrl -ResourceGroupName <String> -Name <Stri
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmIntegrationAccountCallbackUrl** cmdlet gets an integration account callback URL from a resource group.
-This cmdlet returns a **CallbackUrl** object that represents the integration account callback URL.
-Specify the integration account name and resource group name.
+This is the Description section
 
-This module supports dynamic parameters.
-To use a dynamic parameter, type it in the command.
-To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
-If you omit a required template parameter, the cmdlet prompts you for the value.
+The Get-AzureRmIntegrationAccountCallbackUrl cmdlet retrieves integration account callback URL from the Azure resource group and returns an object that represents the integration account Callback Url.
+Use this cmdlet to get the integration account callback URL from specified resource group.
+You can get the integration account callback URL by specifying the integration account name and resource group name.
+To use the dynamic parameters, just type them in the command, or type a hyphen sign (-) to indicate a parameter name and then press the TAB key repeatedly to cycle through the available parameters.
+If you miss a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1: Get an integration account callback URL
+### --------------------------  Example 1 : Get the integration account callback URL.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Get-AzureRmIntegrationAccountCallbackUrl -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -NotAfter "03/25/2016 18:23:22"
-CallBackUrl : https://<baseurl>/integrationAccounts/8811f0155a364b5e9618ba28f7180601?api-version=2015-08-01-preview&se=2016-03
-              -25T18%3A23%3A22.0000000Z&sp=%2F%2Fread&sv=1.0&sig=<value>
+Get-AzureRmIntegrationAccountCallbackUrl -ResourceGroupName "ResourceGroup1"-Name "IntegrationAccount1" -NotAfter "03/25/2016 18:23:22"
 ```
 
-This command gets an integration account callback URL.
+This commands gets the integration account callback URL.
+
+CallBackUrl : https://\<baseurl\>/integrationAccounts/8811f0155a364b5e9618ba28f7180601?api-version=2015-08-01-preview&se=2016-03
+              -25T18%3A23%3A22.0000000Z&sp=%2F%2Fread&sv=1.0&sig=\<value\>
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of a resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of an integration account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NotAfter
-Specifies the expiry date for the callback URL.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -110,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -121,6 +70,54 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a name for the integration account.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NotAfter
+Specifies the expiry date for the callback URL.
+This parameter is required.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies a name for the resource group.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

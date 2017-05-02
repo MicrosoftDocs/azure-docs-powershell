@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 1F2F7BD8-BA9E-4AFD-91CC-6AE4AB89C895
 online version: 
 schema: 2.0.0
 ---
@@ -8,29 +7,30 @@ schema: 2.0.0
 # Register-AzureRmProviderFeature
 
 ## SYNOPSIS
-Registers an Azure provider feature in your account.
 
 ## SYNTAX
 
 ```
-Register-AzureRmProviderFeature -FeatureName <String> -ProviderNamespace <String> [-WhatIf] [-Confirm]
+Register-AzureRmProviderFeature -FeatureName <String> -ProviderNamespace <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Register-AzureRmProviderFeature** cmdlet registers an Azure provider feature in your account.
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### 1:
+### Example 1
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -FeatureName
-Specifies the name of the feature that this cmdlet registers.
+@{Text=}
 
 ```yaml
 Type: String
@@ -44,8 +44,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Force
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProviderNamespace
-Specifies a namespace for which this cmdlet registers a provider feature.
+@{Text=}
 
 ```yaml
 Type: String
@@ -69,7 +84,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -85,7 +100,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -98,9 +113,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
-
-[Get-AzureRmProviderFeature](./Get-AzureRmProviderFeature.md)
-
 

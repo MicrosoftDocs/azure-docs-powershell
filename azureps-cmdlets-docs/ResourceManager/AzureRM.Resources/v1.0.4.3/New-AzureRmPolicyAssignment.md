@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmPolicyAssignment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new policy assignment
 
 ## SYNTAX
 
@@ -18,51 +18,42 @@ New-AzureRmPolicyAssignment -Name <String> -Scope <String> [-DisplayName <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a new policy assignment
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Policy assignment at resource group level  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\> {{ Add example code here }}
+$resourceGroup = Get-AzureRmResourceGroup -Name myRG
+          $policy = Get-AzureRmPolicyDefinition -Name myExisitingVmPolicy
+          New-AzureRmPolicyAssignment -Name VmPolicyAssignment -PolicyDefinition $policy -Scope $resourceGroup.ResourceId
 ```
 
-{{ Add example description here }}
+Puts a policy assignment at the specified resource group level
 
 ## PARAMETERS
 
-### -Name
-The policy assignment name.
+### -ApiVersion
+@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Scope
-The scope for policy assignment.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The description for policy assignment.
+The display name for the policy assignment
 
 ```yaml
 Type: String
@@ -76,8 +67,53 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+The policy assignment name
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PolicyDefinition
-The pollicy definition object.
+The policy definition object, containing the policy rule
 
 ```yaml
 Type: PSObject
@@ -91,24 +127,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Pre
-When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -122,29 +142,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
+### -Scope
+The scope at which to assign the policy assignment.
+For example: /subscriptions/{subId}/resourcegroups/{rgName}
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -153,12 +163,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
-System.Management.Automation.PSObject
-
 ## OUTPUTS
-
-### System.Management.Automation.PSObject
 
 ## NOTES
 

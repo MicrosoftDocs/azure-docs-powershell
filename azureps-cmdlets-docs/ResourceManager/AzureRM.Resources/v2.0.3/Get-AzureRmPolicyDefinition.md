@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: EFE9F766-CF6F-4793-B4EE-589D9659D393
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmPolicyDefinition
 
 ## SYNOPSIS
-Gets policy definitions.
+Gets a list of all the policy definitions or a specific policy definition identified by Name
 
 ## SYNTAX
 
@@ -31,29 +30,36 @@ Get-AzureRmPolicyDefinition -Id <String> [-ApiVersion <String>] [-Pre] [-Informa
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmPolicyDefinition** cmdlet gets all the policy definitions or a specific policy definition identified by name or ID.
+Gets a list of all the policy definitions or a specific policy definition identified by Name
+
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Get all policy definition
+### --------------------------  Get all policy definition  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Get-AzureRmPolicyDefinition
+Get-AzureRmPolicyDefinition
 ```
 
-This command gets all the policy definitions.
+Gets all the policy definitions
 
-### Example 2: Get policy definition by name
-```
-PS C:\>Get-AzureRmPolicyDefinition -Name "VMPolicyDefinition"
-```
+### --------------------------  Get policy definition by name  --------------------------
+@{paragraph=PS C:\\\>}
 
-This command gets the policy definition named VMPolicyDefinition.
+
+
+```
+Get-AzureRmPolicyDefinition -Name myPolicy
+```
 
 ## PARAMETERS
 
 ### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
+@{Text=}
 
 ```yaml
 Type: String
@@ -67,32 +73,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+### -Id
+The fully qualified resource Id of the policy definition
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Type: String
+Parameter Sets: The policy definition Id parameter set.
+Aliases: ResourceId
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -107,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -122,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the policy definition that this cmdlet gets.
+The policy definition name
 
 ```yaml
 Type: String
@@ -136,18 +133,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Id
-Specifies the fully qualified resource ID for the policy definition that this cmdlet gets.
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
-Type: String
-Parameter Sets: The policy definition Id parameter set.
-Aliases: ResourceId
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -161,11 +158,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[New-AzureRmPolicyDefinition](./New-AzureRmPolicyDefinition.md)
-
-[Remove-AzureRmPolicyDefinition](./Remove-AzureRmPolicyDefinition.md)
-
-[Set-AzureRmPolicyDefinition](./Set-AzureRmPolicyDefinition.md)
-
 

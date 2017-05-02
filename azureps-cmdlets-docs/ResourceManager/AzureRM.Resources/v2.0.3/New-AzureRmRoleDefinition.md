@@ -86,10 +86,6 @@ Following is a sample json role definition that can be provided as input
 
 
 
-
-
-
-
 ```
 PS C:\> $role = Get-AzureRmRoleDefinition -Name "Virtual Machine Contributor"
           PS C:\> $role.Id = $null
@@ -118,30 +114,11 @@ PS C:\> $role = Get-AzureRmRoleDefinition -Name "Virtual Machine Contributor"
 
 
 
-
-
-
-
 ```
 PS C:\> New-AzureRmRoleDefinition -InputFile C:\Temp\roleDefinition.json
 ```
 
 ## PARAMETERS
-
-### -InputFile
-File name containing a single json role definition.
-
-```yaml
-Type: String
-Parameter Sets: InputFileParameterSet
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InformationAction
 @{Text=}
@@ -168,6 +145,21 @@ Aliases: iv
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputFile
+File name containing a single json role definition.
+
+```yaml
+Type: String
+Parameter Sets: InputFileParameterSet
+Aliases: 
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

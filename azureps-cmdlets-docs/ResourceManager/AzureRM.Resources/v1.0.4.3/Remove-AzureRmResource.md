@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-online version: 
+online version: http://go.microsoft.com/fwlink/?LinkID=393460
 schema: 2.0.0
 ---
 
 # Remove-AzureRmResource
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes a resource
 
 ## SYNTAX
 
@@ -32,105 +32,51 @@ Remove-AzureRmResource -ResourceName <String> -ResourceType <String> [-Extension
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This is the Description section
+
+The Remove-AzureRmResource cmdlet deletes a resource from your subscription.
+It does not delete the resource group of the resource.
+By default, Remove-AzureRmResource prompts you for confirmation.
+To suppress the prompt, use the Force parameter.
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Example 1: Remove a resource  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Remove-AzureRmResource -Name ContosoWeb -ResourceGroupName ContosoRG01 -ResourceType Microsoft.web/sites -ApiVersion 2014-04-01 ConfirmAre you sure you want to remove resource ' ContosoWeb'[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
 ```
 
-{{ Add example description here }}
+This command removes the ContosoWeb web site from the ContosoRG01 resource group.
+
+### --------------------------  Example 2: Pipe a resource to RemoveAzureResource  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\>Get-AzureRmResource -Name contosodb01 -ResourceGroupName ContosoRG01 -ResourceType "Microsoft.Sql/servers/databases" -ParentResource "Microsoft.Sql/servers/contososvr01" -ApiVersion 2.0 | Remove-AzureRmResource -Passthru ConfirmAre you sure you want to remove resource 'contosodb01'[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+True
+```
+
+This command uses the Get-AzureRmResource cmdlet to get the ContosoDB01 database.
+The command pipes the database to the Remove-AzureRmResource cmdlet to remove it.
+The command uses the Passthru parameter, which causes the cmdlet to return a Boolean value that represents the success or failure of the operation.
+In this case, it returns True.
 
 ## PARAMETERS
 
 ### -ApiVersion
-When set, indicates the version of the resource provider API to use.
-If not specified, the API version is automatically determined as the latest available.
+Specifies the API version that is supported by the resource provider.
+This parameter is required.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Do not ask for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-The resource group name.
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level.
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceType
-The resource type.
-e.g.
-Microsoft.Sql/Servers/Databases.
-
-```yaml
-Type: String
-Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -173,6 +119,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Force
+Suppresses the confirmation prompt.
+By default, Remove-AzureRmResource prompts for confirmation before deleting a resource.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ODataQuery
 An OData style filter which will be appended to the request in addition to any other filters.
 
@@ -200,6 +162,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of resource group of the resource.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level.
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -237,6 +215,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ResourceType
+Specifies the resource type.
+Enter a provider qualified name, such as "Microsoft.Web/sites".
+This parameter is required.
+Wildcards are not permitted.
+
+```yaml
+Type: String
+Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -TenantLevel
 Indicates that this is a tenant level operation.
 
@@ -252,18 +248,50 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.String
+### None
 
 ## OUTPUTS
 
-### System.Boolean
+### None or Boolean
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
 

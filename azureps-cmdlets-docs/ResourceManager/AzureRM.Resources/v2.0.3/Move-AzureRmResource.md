@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: E7D50CA3-1316-4F9F-BAEC-FED95AA24322
 online version: 
 schema: 2.0.0
 ---
@@ -8,37 +7,46 @@ schema: 2.0.0
 # Move-AzureRmResource
 
 ## SYNOPSIS
-Moves a resource to a different resource group or subscription.
 
 ## SYNTAX
 
 ```
 Move-AzureRmResource -DestinationResourceGroupName <String> [-DestinationSubscriptionId <Guid>]
- -ResourceId <String[]> [-Force] [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -ResourceId <String[]> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Move-AzureRmResource** cmdlet moves existing resources to a different resource group.
-That resource group can be in a different subscription.
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Move a resource to a resource group
+### Example 1
 ```
-PS C:\>$Resource = Get-AzureRmResource -ResourceType "Microsoft.ClassicCompute/storageAccounts" -ResourceName "ContosoStorageAccount"
-PS C:\> Move-AzureRmResource -ResourceId $Resource.ResourceId -DestinationResourceGroupName "ResourceGroup14"
+PS C:\> {{ Add example code here }}
 ```
 
-The first command gets a resource named ContosoStorageAccount by using the Get-AzureRmResource cmdlet, and then stores that resource in the $Resource variable.
-
-The second command moves that resource into the resource group named ResourceGroup14.
-The command identifies the resource to move by using the **ResourceId** property of $Resource.
+{{ Add example description here }}
 
 ## PARAMETERS
 
+### -ApiVersion
+When set, indicates the version of the resource provider API to use.
+If not specified, the API version is automatically determined as the latest available.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DestinationResourceGroupName
-Specifies the name of the resource group into which this cmdlet moves resources.
+@{Text=}
 
 ```yaml
 Type: String
@@ -53,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationSubscriptionId
-Specifies the ID of the subscription into which this cmdlet moves resources .
+@{Text=}
 
 ```yaml
 Type: Guid
@@ -68,7 +76,22 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-ps_force
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies an array of IDs of the resources that this cmdlet moves.
+@{Text=}
 
 ```yaml
 Type: String[]
@@ -97,55 +120,13 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+### -Confirm
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
+Aliases: cf
 
 Required: False
 Position: Named
@@ -155,8 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -165,22 +145,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -195,15 +160,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Find-AzureRmResource](./Find-AzureRmResource.md)
-
-[Get-AzureRmResource](./Get-AzureRmResource.md)
-
-[New-AzureRmResource](./New-AzureRmResource.md)
-
-[Remove-AzureRmResource](./Remove-AzureRmResource.md)
-
-[Set-AzureRmResource](./Set-AzureRmResource.md)
-
 

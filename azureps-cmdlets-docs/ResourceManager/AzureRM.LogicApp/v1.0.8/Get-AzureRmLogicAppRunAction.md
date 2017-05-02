@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
-ms.assetid: 65E2DA44-5281-4FF4-8D21-498EC762536E
 online version: 
 schema: 2.0.0
 ---
@@ -8,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmLogicAppRunAction
 
 ## SYNOPSIS
-Gets an action from a logic app run.
+Gets the specified action from the Logic App run.
 
 ## SYNTAX
 
@@ -19,37 +18,27 @@ Get-AzureRmLogicAppRunAction -ResourceGroupName <String> -Name <String> -RunName
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmLogicAppRunAction** cmdlet gets an action from a logic app run.
-This cmdlet returns a **WorkflowRunAction** objects.
-Specify the logic app, resource group, and run.
+This is the Description section
 
-This module supports dynamic parameters.
-To use a dynamic parameter, type it in the command.
-To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
-If you omit a required template parameter, the cmdlet prompts you for the value.
+The Get-AzureRmLogicAppActionRun cmdlet retrieves action from a specified Logic App run and returns an object that represents the WorkflowRunAction.
+Use this cmdlet to get action(s) from the Logic App run in the specified resource group.
+You can get a Logic App's run action by specifying the Logic App name, resource group name, run name and action name.
+To use the dynamic parameters, just type them in the command, or type a hyphen sign (-) to indicate a parameter name and then press the TAB key repeatedly to cycle through the available parameters.
+If you miss a required template parameter, the cmdlet prompts you for the value.
 
 ## EXAMPLES
 
-### Example 1: Get an action from a Logic App run
+### --------------------------  Example 1 : Get an action from a Logic App run from a specified Azure resource group.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Get-AzureRmLogicAppActionRun -ResourceGroupName "ResourceGroup11" -Name "LogicApp05" -RunName "LogicAppRun56" -ActionName "LogicAppAction01"
-Code        : NotFound
-EndTime     : 1/13/2016 2:42:56 PM
-Error       : 
-InputsLink  : Microsoft.Azure.Management.Logic.Models.ContentLink
-Name        : LogicAppAction01
-OutputsLink : Microsoft.Azure.Management.Logic.Models.ContentLink
-StartTime   : 1/13/2016 2:42:55 PM
-Status      : Failed
-TrackingId  : 
-Type        :
+PS C:\>Get-AzureRmLogicAppActionRun -ResourceGroupName "Resourcegroup1" -Name "LogicApp1" -RunName "LogicAppRun1" -ActionName "LogicAppAction1"
 ```
 
-This command gets a specific Logic App action from the logic app named LogicApp05 for the run named LogicAppRun56.
+This command gets a Logic App action from the specified Logic App run in an Azure resource group.
 
-### Example 2: Get all the actions from a Logic App run
-```
-PS C:\>Get-AzureRmLogicAppActionRun -ResourceGroupName "ResourceGroup11" -Name "LogicApp05" -RunName "LogicAppRun56"
 Code        : NotFound
 EndTime     : 1/13/2016 2:42:56 PM
 Error       : 
@@ -60,61 +49,34 @@ StartTime   : 1/13/2016 2:42:55 PM
 Status      : Failed
 TrackingId  : 
 Type        :
+
+### --------------------------  Example 2 : Get all the actions from a Logic App run from a specified Azure resource group.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\>Get-AzureRmLogicAppActionRun -ResourceGroupName "Resourcegroup1" -Name "LogicApp1" -RunName "LogicAppRun1"
 ```
 
-This command gets all Logic App actions from a run named LogicAppRun56 of a logic app named LogicApp05.
+This command gets all the actions from a Logic App run in a specified Azure resource group.
+
+Code        : NotFound
+EndTime     : 1/13/2016 2:42:56 PM
+Error       : 
+InputsLink  : Microsoft.Azure.Management.Logic.Models.ContentLink
+Name        : LogicAppAction1
+OutputsLink : Microsoft.Azure.Management.Logic.Models.ContentLink
+StartTime   : 1/13/2016 2:42:55 PM
+Status      : Failed
+TrackingId  : 
+Type        :
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of a resource group in which this cmdlet gets an action.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of a logic app for which this cmdlet gets an action.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RunName
-Specifies the name of a run of a logic app.
-This cmdlet gets an action for the run that this parameter specifies.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ActionName
-Specifies the name of an action in a logic app run.
-This cmdlet gets the action that this parameter specifies.
+Specifies the name of the action in the Logic App run.
+This parameter is optional.
 
 ```yaml
 Type: String
@@ -129,16 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -153,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -164,6 +117,54 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Logic App.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies a name for the resource group.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RunName
+Specifies the name of the Logic App run.
+This parameter is required.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -180,8 +181,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmLogicAppRunHistory](./Get-AzureRmLogicAppRunHistory.md)
+[Get-AzureRmLogicAppRunHistory]()
 
-[Stop-AzureRmLogicAppRun](./Stop-AzureRmLogicAppRun.md)
+[Start-AzureRmLogicAppRun]()
 
+[Stop-AzureRmLogicAppRun]()
 

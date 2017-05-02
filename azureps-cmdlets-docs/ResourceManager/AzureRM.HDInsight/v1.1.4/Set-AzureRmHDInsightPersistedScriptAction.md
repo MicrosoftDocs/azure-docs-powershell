@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 340D56E8-9EC8-4A31-852C-5A3F4DCD0A37
 online version: 
 schema: 2.0.0
 ---
@@ -19,20 +18,22 @@ Set-AzureRmHDInsightPersistedScriptAction [-ClusterName] <String> [-ScriptExecut
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmHDInsightPersistedScriptAction** cmdlet sets a previously executed script action to be a persisted script action.
+Sets a previously executed script action to be a persisted script action.
 The specified script action must have previously succeeded.
 The script action will run each time the Azure HDInsight cluster is scaled up.
 
 ## EXAMPLES
 
-### Example 1: Set a previously successful script action to be persisted, or run on cluster scale up
+### --------------------------  Example 1: Set a previously successful script action to be persisted, or run on cluster scale up.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\>Set-AzureRmHDInsightPersistedScriptAction `
+PS C:\> Set-AzureRmHDInsightPersistedScriptAction `
             -ClusterName "your-hadoop-001" `
             -ScriptExecutionId "<id>"
 ```
-
-This command sets a previously successful script action to be a persisted script action.
 
 ## PARAMETERS
 
@@ -52,16 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -76,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -106,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptExecutionId
-Specifies the execution ID of the script action to promote to persisted.
+Specifies the execution id of the script action to promote to persisted.
 This script action must have succeeded in order to be promoted.
 You can find the script action execution ID using Get-AzureRmHDInsightScriptActionHistory.
 
@@ -130,11 +122,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
-
-[Get-AzureRmHDInsightPersistedScriptAction](./Get-AzureRmHDInsightPersistedScriptAction.md)
-
-[Remove-AzureRmHDInsightPersistedScriptAction](./Remove-AzureRmHDInsightPersistedScriptAction.md)
-
 

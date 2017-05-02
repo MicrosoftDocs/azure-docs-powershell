@@ -7,50 +7,104 @@ schema: 2.0.0
 # Get-AzureRmADServicePrincipal
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Filters active directory service principals.
 
 ## SYNTAX
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADServicePrincipal -SearchString <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal -SearchString <String> [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADServicePrincipal -ObjectId <Guid> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal -ObjectId <String> [<CommonParameters>]
 ```
 
 ### SPNParameterSet
 ```
-Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This is the Description section
+
+Filters active directory service principals.
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Filters service principals using SPN  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmADServicePrincipal -SPN 36f81fc3-b00f-48cd-8218-3879f51ff39f
 ```
 
-{{ Add example description here }}
+Gets service principals with 36f81fc3-b00f-48cd-8218-3879f51ff39f SPN
+
+### --------------------------  Filters service principals using Search String  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\> Get-AzureRmADServicePrincipal -SearchString Web
+```
+
+Filters all ad service principals that has Web in the display name.
+
+### --------------------------  List AD service principals  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
+```
+PS C:\> Get-AzureRmADServicePrincipal
+```
+
+Gets all AD service principals
 
 ## PARAMETERS
 
+### -ObjectId
+Object id of the service principal.
+
+```yaml
+Type: String
+Parameter Sets: ObjectIdParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SearchString
+The service principal display name
+
+```yaml
+Type: String
+Parameter Sets: SearchStringParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ServicePrincipalName
-The user SPN.
+SPN of the service.
 
 ```yaml
 Type: String
@@ -76,74 +130,20 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchString
-The service principal search string.
-
-```yaml
-Type: String
-Parameter Sets: SearchStringParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ObjectId
-The service principal object id.
-
-```yaml
-Type: Guid
-Parameter Sets: ObjectIdParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.String
-
 ## OUTPUTS
-
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Resources.Models.ActiveDirectory.PSADServicePrincipal, Microsoft.Azure.Commands.Resources, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzureRmADGroup]()
+
+[Get-AzureRmADUser]()
+
+[Get-AzureRmADGroupMember]()
 

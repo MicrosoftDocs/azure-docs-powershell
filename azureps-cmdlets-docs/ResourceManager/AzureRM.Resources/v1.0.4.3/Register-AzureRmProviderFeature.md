@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 online version: 
 schema: 2.0.0
 ---
@@ -7,17 +7,14 @@ schema: 2.0.0
 # Register-AzureRmProviderFeature
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
 
 ## SYNTAX
 
 ```
-Register-AzureRmProviderFeature -FeatureName <String> -ProviderNamespace <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Register-AzureRmProviderFeature -FeatureName <String> -ProviderNamespace <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
 
 ## EXAMPLES
 
@@ -31,7 +28,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -FeatureName
-The feature name.
+@{Text=}
 
 ```yaml
 Type: String
@@ -42,11 +39,26 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Force
+@{Text=}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -ProviderNamespace
-The resource provider namespace.
+@{Text=}
 
 ```yaml
 Type: String
@@ -57,36 +69,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -95,13 +77,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
-
 ## OUTPUTS
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Resources.Models.ProviderFeatures.PSProviderFeature, Microsoft.Azure.Commands.Resources, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
-
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
 

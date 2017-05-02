@@ -33,8 +33,6 @@ If you miss a required template parameter, the cmdlet prompts you for the value.
 
 
 
-
-
 ```
 PS C:\>Set-AzureRmLogicAppAccessKey -ResourceGroupName "ResourceGroup1" -Name "LogicApp1" -AccessKeyName "AccessKey1" -KeyType "Primary"
 ```

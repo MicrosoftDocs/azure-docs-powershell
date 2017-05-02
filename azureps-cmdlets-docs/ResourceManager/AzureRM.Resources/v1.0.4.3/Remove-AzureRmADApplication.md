@@ -7,32 +7,39 @@ schema: 2.0.0
 # Remove-AzureRmADApplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes the azure active directory application.
 
 ## SYNTAX
 
 ```
-Remove-AzureRmADApplication -ObjectId <Guid> [-Force] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmADApplication -ApplicationObjectId <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This is the Description section
+
+Deletes the azure active directory application.
 
 ## EXAMPLES
 
-### Example 1
+### --------------------------  Delete AAD application.  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmADApplication -ApplicationObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 -Force
 ```
 
-{{ Add example description here }}
+Deletes the azure active directory application.
 
 ## PARAMETERS
 
-### -ObjectId
-The object id of the application to delete.```yaml
-Type: Guid
+### -ApplicationObjectId
+@{Text=}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -44,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+@{Text=}
 
 ```yaml
 Type: SwitchParameter
@@ -58,70 +65,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-@{Text=}```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-@{Text=}```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.String
-
 ## OUTPUTS
 
-### System.Object
-
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
 
 ## RELATED LINKS
+
+[New-AzureRmADApplication]()
 

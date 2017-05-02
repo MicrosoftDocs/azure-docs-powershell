@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 3BC9E3A9-D8E6-4CAD-8642-4BEA508A6BA1
 online version: 
 schema: 2.0.0
 ---
@@ -13,27 +12,32 @@ Gets the list of jobs from a cluster and lists them in reverse chronological ord
 ## SYNTAX
 
 ```
-Get-AzureRmHDInsightJob [-ClusterName] <String> -HttpCredential <PSCredential> [[-JobId] <String>]
- [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmHDInsightJob [-ClusterName] <String> [-HttpCredential] <PSCredential> [[-JobId] <String>]
+ [-NumOfJobs <Int32>] [-ResourceGroupName <String>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmHDInsightJob** cmdlet gets recent jobs for a specified Azure HDInsight cluster in reverse chronological order, with the most recent job at the top of the list.
-Get a specific job by providing the *JobId* parameter.
+The Get-AzureRmHDInsightJob cmdlet gets recent jobs for a specified Azure HDInsight cluster in reverse chronological order, with the most recent job at the top of the list.
+Get a specific job by providing the JobId parameter.
 
 ## EXAMPLES
 
-### Example 1: Get recent jobs for a specified Azure HDInsight cluster
+### --------------------------  Example 1: Get recent jobs for a specified Azure HDInsight cluster  --------------------------
+@{paragraph=PS C:\\\>}
+
+
+
 ```
-PS C:\># Cluster info
-PS C:\> $clusterName = "your-hadoop-001"
-PS C:\> $clusterCreds = Get-Credential
+PS C:\&gt;# Cluster info
+        $clusterName = "your-hadoop-001"
+        $clusterCreds = Get-Credential
 
-# Hive job details
-PS C:\> $statusFolder = "tempStatusFolder/"
-PS C:\> $query = "SHOW TABLES"
+        # Hive job details
+        $statusFolder = "tempStatusFolder/"
+        $query = "SHOW TABLES"
 
-PS C:\> New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
+        New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
             -Query $query `
         | Start-AzureRmHDInsightJob -ClusterName $clusterName `
             -ClusterCredential $clusterCreds `
@@ -41,24 +45,9 @@ PS C:\> New-AzureRmHDInsightHiveJobDefinition -StatusFolder $statusFolder `
             -ClusterCredential $clusterCreds
 ```
 
-This command gets all recent jobs for the cluster named your-hadoop-001.
+This command gets all recent jobs for the cluster named 'your-hadoop-001'.
 
 ## PARAMETERS
-
-### -ResourceGroupName
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClusterName
 Specifies the name of the cluster.
@@ -69,22 +58,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JobId
-Specifies the job ID of the job to get.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -99,6 +73,81 @@ Parameter Sets: (All)
 Aliases: ClusterCredential
 
 Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+@{Text=}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JobId
+Specifies the job ID of the jobDetails to stop.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NumOfJobs
+Specifies the number of jobs to retrieve.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -113,15 +162,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight, hd, insight
 
 ## RELATED LINKS
 
-[New-AzureRmHDInsightHiveJobDefinition](./New-AzureRmHDInsightHiveJobDefinition.md)
+[Start-AzureRmHDInsightJob]()
 
-[Start-AzureRmHDInsightJob](./Start-AzureRmHDInsightJob.md)
+[Stop-AzureRmHDInsightJob]()
 
-[Stop-AzureRmHDInsightJob](./Stop-AzureRmHDInsightJob.md)
-
-[Wait-AzureRmHDInsightJob](./Wait-AzureRmHDInsightJob.md)
-
+[Wait-AzureRmHDInsightJob]()
 

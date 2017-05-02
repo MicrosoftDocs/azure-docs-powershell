@@ -949,5 +949,6 @@
     "Use-AzureRmSqlDatabaseServerAuditingPolicy": "SQL",
     "Use-AzureRmSqlServerAuditingPolicy": "SQL",
     "Wait-AzureRmDataLakeAnalyticsJob": "Data Lake Analytics",
-    "Wait-AzureRmHDInsightJob": "HD Insights"
+    "Wait-AzureRmHDInsightJob": "HD Insights",
+    "Get-AzureRmAuthorizationChangeLog": "Profile"
 }

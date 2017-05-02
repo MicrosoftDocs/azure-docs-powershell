@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-ms.assetid: 41C95DFF-B8EF-4837-9DB2-5A3A74E61B3F
 online version: 
 schema: 2.0.0
 ---
@@ -8,90 +7,60 @@ schema: 2.0.0
 # Remove-AzureRmPolicyAssignment
 
 ## SYNOPSIS
-Removes a policy assignment.
+Removes the specified policy assignment
 
 ## SYNTAX
 
 ### The policy assignment name parameter set. (Default)
 ```
-Remove-AzureRmPolicyAssignment -Name <String> -Scope <String> [-ApiVersion <String>] [-Pre]
+Remove-AzureRmPolicyAssignment -Name <String> -Scope <String> [-Force] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### The policy assignment Id parameter set.
 ```
-Remove-AzureRmPolicyAssignment -Id <String> [-ApiVersion <String>] [-Pre]
+Remove-AzureRmPolicyAssignment -Id <String> [-Force] [-ApiVersion <String>] [-Pre]
  [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmPolicyAssignment** cmdlet removes the specified policy assignment.
+Removes the specified policy assignment
+
+If you find an issue with this cmdlet, please create an issue on https://github.com/Azure/azure-powershell/issues, with a lable "ResourceManager".
 
 ## EXAMPLES
 
-### Example 1: Remove policy assignment by name and scope
-```
-PS C:\>$ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11"
-PS C:\> Remove-AzureRmPolicyAssignment -Name "PolicyAssignment07" -Scope $ResourceGroup.ResourceId -Force
-```
+### --------------------------  Remove policy assignment by name and scope  --------------------------
+@{paragraph=PS C:\\\>}
 
-The first command gets a resource group named ResourceGroup11 by using the Get-AzureRMResourceGroup cmdlet.
-The command stores that object in the $ResourceGroup variable.
 
-The second command removes the policy assignment named PolicyAssignment07 that was assigned at a resource group level.
-The **ResourceId** property of $ResourceGroup identifies the resource group.
 
-### Example 2: Remove policy assignment by ID
 ```
-PS C:\>$ResourceGroup = Get-AzureRmResourceGroup -Name "ResourceGroup11" 
-PS C:\> $PolicyAssignment = Get-AzureRmPolicyAssignment -Name "PolicyAssignment07" -Scope $ResourceGroup.ResourceId
-PS C:\> Remove-AzureRmPolicyAssignment -Id $PolicyAssignment.ResourceId -Force
+$rg = Get-AzureRmResourceGroup -Name testGroup
+Remove-AzureRmPolicyAssignment -Name myPolicyAssignment -Scope $rg.ResourceId -Force
 ```
 
-The first command gets a resource group named ResourceGroup11, and then stores that object in the $ResourceGroup variable.
+Removes the policy assignment 'myPolicyAssignment' assigned at the specified resource group level scope
 
-The second command gets the policy assignment at a resource group level, and then stores it in the $PolicyAssignment variable.
-The **ResourceId** property of $ResourceGroup identifies the resource group.
+### --------------------------  Remove policy assignment by Id  --------------------------
+@{paragraph=PS C:\\\>}
 
-The final command removes the policy assignment that the **ResourceId** property of $PolicyAssignment identifies.
+
+
+```
+$rg = Get-AzureRmResourceGroup -Name testGroup
+$policyAssignment = Get-AzureRmPolicyAssignment -Name 'myAssignment' -Scope $rg.ResourceId
+Remove-AzureRmPolicyAssignment -Id $policyAssignment.ResourceId -Force
+```
+
+Removes the policy assignment identified by the Id
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the policy assignment that this cmdlet removes.
-
-```yaml
-Type: String
-Parameter Sets: The policy assignment name parameter set.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Scope
-Specifies the scope at which the policy is applied.
-
-```yaml
-Type: String
-Parameter Sets: The policy assignment name parameter set.
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
+@{Text=}
 
 ```yaml
 Type: String
@@ -105,8 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+### -Force
+Do not ask for confirmation
 
 ```yaml
 Type: SwitchParameter
@@ -120,17 +89,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Id
+The fully qualified resource Id for the policy assignment
+
+```yaml
+Type: String
+Parameter Sets: The policy assignment Id parameter set.
+Aliases: ResourceId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+@{Text=}
 
 ```yaml
 Type: ActionPreference
@@ -145,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Specifies an information variable.
+@{Text=}
 
 ```yaml
 Type: String
@@ -159,13 +134,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-Specifies the fully qualified resource ID for the policy assignment that this cmdlet removes.
+### -Name
+The policy assignment name
 
 ```yaml
 Type: String
-Parameter Sets: The policy assignment Id parameter set.
-Aliases: ResourceId
+Parameter Sets: The policy assignment name parameter set.
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Pre
+When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Scope
+The scope at which the policy assignment is applied
+
+```yaml
+Type: String
+Parameter Sets: The policy assignment name parameter set.
+Aliases: 
 
 Required: True
 Position: Named
@@ -184,7 +189,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -200,7 +205,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -215,11 +220,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-AzureRmPolicyAssignment](./Get-AzureRmPolicyAssignment.md)
-
-[New-AzureRmPolicyAssignment](./New-AzureRmPolicyAssignment.md)
-
-[Set-AzureRmPolicyAssignment](./Set-AzureRmPolicyAssignment.md)
-
 
