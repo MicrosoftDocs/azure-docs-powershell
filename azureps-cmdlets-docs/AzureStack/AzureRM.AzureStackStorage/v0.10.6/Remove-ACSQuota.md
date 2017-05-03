@@ -37,7 +37,7 @@ The second command removes the quota resource named BasicStorage_Quota from the 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

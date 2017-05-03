@@ -42,7 +42,7 @@ The third command then uses **Get-ACSBlobService** to get the Blob service from 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

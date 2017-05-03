@@ -34,7 +34,7 @@ This command gets all quota resources that is at the geolocation of Redmond.
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

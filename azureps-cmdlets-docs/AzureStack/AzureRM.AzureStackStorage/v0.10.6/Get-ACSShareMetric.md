@@ -27,7 +27,7 @@ The **Get-ACSShareMetric** cmdlet gets the metrics of an Azure Consistent Storag
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

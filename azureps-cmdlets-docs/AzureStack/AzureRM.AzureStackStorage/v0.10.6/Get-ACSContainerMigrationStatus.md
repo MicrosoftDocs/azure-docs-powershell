@@ -25,7 +25,7 @@ The **Get-ACSContainerMigrationStatus** cmdlet gets the Azure Consistent Storage
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -146,3 +146,7 @@ System.Uri
 ## RELATED LINKS
 
 [Get-ACSContainer](./Get-ACSContainer.md)
+
+[Start-ACSContainerMigration](./Start-ACSContainerMigration.md)
+
+[Stop-ACSContainerMigration](./Stop-ACSContainerMigration.md)

@@ -25,7 +25,7 @@ The **Get-ACSContainer** cmdlet gets the Azure Consistent Storage (ACS) containe
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

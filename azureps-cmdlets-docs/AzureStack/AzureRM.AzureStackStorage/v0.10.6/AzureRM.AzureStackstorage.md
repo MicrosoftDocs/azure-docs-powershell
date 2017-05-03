@@ -33,7 +33,7 @@ Gets the metric definitions of Blob service.
 Gets the ACS container.
 
 ### [Get-ACSContainerMigrationStatus](Get-ACSContainerMigrationStatus.md)
-{{Fill in the Synopsis}}
+Gets the ACS container migration status.
 
 ### [Get-ACSFarm](Get-ACSFarm.md)
 Gets the Azure-consistent Storage Farm and its properties and settings.
@@ -96,13 +96,13 @@ Changes the setting of service configuration on ACS Farm.
 Updates an existing Storage quota resource.
 
 ### [Start-ACSContainerMigration](Start-ACSContainerMigration.md)
-{{Fill in the Synopsis}}
+Starts the ACS container migration.
 
 ### [Stop-ACSContainerMigration](Stop-ACSContainerMigration.md)
-{{Fill in the Synopsis}}
+Stops the ACS container migration.
 
 ### [Sync-ACSStorageAccount](Sync-ACSStorageAccount.md)
 Synchronizes the account status of the tenant storage accounts from backend to frontend cache.
 
 ### [Undo-ACSStorageAccountDeletion](Undo-ACSStorageAccountDeletion.md)
-Undo a tenant storage account.
+Undeletes a tenant storage account.

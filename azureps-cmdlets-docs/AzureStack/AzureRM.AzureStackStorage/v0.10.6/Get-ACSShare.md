@@ -42,7 +42,7 @@ The third command uses the **Get-ACSShare** cmdlet to get the SMB shares in the 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
