@@ -26,7 +26,7 @@ The **Get-ACSShareMetricDefinition** cmdlet gets the metric definitions of share
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

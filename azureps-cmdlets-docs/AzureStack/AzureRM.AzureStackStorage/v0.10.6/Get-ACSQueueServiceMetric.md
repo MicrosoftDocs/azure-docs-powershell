@@ -26,7 +26,7 @@ The **Get-ACSQueueServiceMetric** cmdlet gets the metrics of Queue service.
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

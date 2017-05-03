@@ -32,7 +32,7 @@ This command gets the ACS farm that in contained in the resource group named RG0
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

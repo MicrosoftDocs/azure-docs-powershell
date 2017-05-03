@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

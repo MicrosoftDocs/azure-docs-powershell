@@ -38,7 +38,7 @@ The second command command creates a quota resource named BasicStorage_Quota fro
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
