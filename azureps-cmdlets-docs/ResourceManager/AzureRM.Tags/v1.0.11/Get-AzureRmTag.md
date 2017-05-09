@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmTag
 
 ## SYNOPSIS
-Gets predefined Azure tags.
+Gets predefined Azure tags in your subscription.
 
 ## SYNTAX
 
@@ -16,19 +16,19 @@ Get-AzureRmTag [[-Name] <String>] [-Detailed] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AzureRmTag cmdlet gets predefined Azure tags in your subscription.
+The **Get-AzureRmTag cmdlet** gets predefined Azure tags in your subscription.
 This cmdlet returns basic information about the tags or detailed information about tags and their values.
-All output objects include a Count property that represents the number of resources and resource groups to which the tags and values have been applied.
+All output objects include a **Count** property that represents the number of resources and resource groups to which the tags and values have been applied.
 
-The Azure Tags module that Get-AzureRMTag is a part of can help you manage predefined Azure tags.
+The Azure Tags module that **Get-AzureRMTag** is a part of can help you manage predefined Azure tags.
 An Azure tag is a name-value pair that you can use to categorize your Azure resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
 
 You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
 If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.
 
-To create a predefined tag, use the New-AzureRMTag cmdlet.
-To apply a predefined tag to a resource group, use the Tag parameter of the New-AzureRMTag cmdlet.
-To search resource groups for a specific tag name or name and value, use the Tag parameter of the Get-AzureRMResourceGroup cmdlet.
+To create a predefined tag, use the **New-AzureRMTag** cmdlet.
+To apply a predefined tag to a resource group, use the **Tag** parameter of the **New-AzureRMTag** cmdlet.
+To search resource groups for a specific tag name or name and value, use the **Tag** parameter of the **Get-AzureRMResourceGroup** cmdlet.
 
 ## EXAMPLES
 
@@ -44,8 +44,8 @@ FY2015        2
 CostCenter   20
 ```
 
-This command gets all predefined tags in the subscription.
-The Count property shows how many times the tag has been applied to resources and resource groups in the subscription.
+This example gets all predefined tags in the subscription.
+The **Count** property shows how many times the tag has been applied to resources and resource groups in the subscription.
 
 ### Example 2: Get a tag by name
 ```
@@ -53,7 +53,7 @@ PS C:\>Get-AzureRmTag -Name "Department"
 
 Name:   Department
 Count:  5
-Values: 
+Values:
 
         Name        Count
         ==========  =====
@@ -62,8 +62,8 @@ Values:
         IT            3
 ```
 
-This command gets detailed information about the Department tag and its values.
-The Count property shows how many times the tag and each of its values has been applied to resources and resource groups in the subscription.
+This example gets detailed information about the "Department" tag and its values.
+The **Count** property shows how many times the tag and each of its values has been applied to resources and resource groups in the subscription.
 
 ### Example 3: Get values of all tags
 ```
@@ -71,7 +71,7 @@ PS C:\>Get-AzureRmTag -Detailed
 
 Name:   Department
 Count:  5
-Values: 
+Values:
 
         Name        Count
         ==========  =====
@@ -86,7 +86,7 @@ Count:  2
 
 Name:   CostCenter
 Count:  20
-Values: 
+Values:
 
         Name        Count
         ==========  =====
@@ -96,18 +96,18 @@ Values:
         0003          5
 ```
 
-This command uses the Detailed parameter to get detailed information about all predefined tags in the subscription.
-Using the Detailed parameter is the equivalent of using the Name parameter for every tag.
+This example uses the **Detailed** parameter to get detailed information about all predefined tags in the subscription.
+Using the **Detailed** parameter is the equivalent of using the **Name** parameter for every tag.
 
 ## PARAMETERS
 
 ### -Detailed
-Indicates that this operation adds information about tag values to the output.
+Indicates that detailed information about tag values is to be included in the output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,13 +118,13 @@ Accept wildcard characters: False
 
 ### -Name
 Specifies the name of the tag to get.
-By default, Get-AzureRmTag gets basic information about all predefined tags in the subscription.
-When you specify the Name parameter, the Detailed parameter has no effect.
+By default, **Get-AzureRmTag** gets basic information about all predefined tags in the subscription.
+When you specify the **Name** parameter, the **Detailed** parameter has no effect.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -148,7 +148,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRMTag]()
+[New-AzureRMTag](./New-AzureRmTag.md)
 
-[Remove-AzureRMTag]()
-
+[Remove-AzureRMTag](./Remove-AzureRmTag.md)

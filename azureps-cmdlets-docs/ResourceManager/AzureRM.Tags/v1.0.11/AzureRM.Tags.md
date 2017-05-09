@@ -8,15 +8,14 @@ Locale: en-US
 
 # AzureRM.Tags Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Tag cmdlets.
 
 ## AzureRM.Tags Cmdlets
 ### [Get-AzureRmTag](Get-AzureRmTag.md)
-Gets predefined Azure tags.
+Gets predefined Azure tags in your subscription.
 
 ### [New-AzureRmTag](New-AzureRmTag.md)
 Creates a predefined Azure tag or adds values to an existing tag.
 
 ### [Remove-AzureRmTag](Remove-AzureRmTag.md)
 Deletes predefined Azure tags or values.
-
