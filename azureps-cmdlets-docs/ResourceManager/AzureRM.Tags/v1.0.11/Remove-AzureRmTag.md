@@ -17,13 +17,13 @@ Remove-AzureRmTag [-Name] <String> [[-Value] <String[]>] [-Force] [-PassThru] [-
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmTag cmdlet deletes predefined Azure tags and values from your subscription.
-To delete particular values from a predefined tag, use the Value parameter.
-By default, Remove-AzureRmTag deletes the specified tag and all of its values.You cannot delete a tag or value that is currently applied to a resource or resource group.
+The **Remove-AzureRmTag** cmdlet deletes predefined Azure tags or values from your subscription.
+To delete particular values from a predefined tag, use the **Value** parameter.
+By default, **Remove-AzureRmTag** deletes the specified tag and all of its values. You cannot delete a tag or value that is currently applied to a resource or resource group.
 
-Before using Remove-AzureRmTag, use the Tag parameter of the Set-AzureRMResourceGroup cmdlet to delete the tag or values from the resource or resource group.
+Before using **Remove-AzureRmTag**, use the **Tag** parameter of the **Set-AzureRMResourceGroup** cmdlet to delete the tag or values from the resource or resource group.
 
-The Azure Tags module that Remove-AzureRmTag is part of can help you manage your predefined Azure tags.
+The Azure Tags module that **Remove-AzureRmTag** is part of can help you manage your predefined Azure tags.
 An Azure tag is a name-value pair that you can use to categorize your Azure resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
 
 You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
@@ -36,7 +36,7 @@ If the subscription includes any predefined tags, you cannot apply undefined tag
 PS C:\>Remove-AzureRmTag -Name "Department"
 ```
 
-This command deletes the predefined tag named Department and all of its resources.
+This example deletes the predefined tag named "Department" and all of its resources.
 If the tag has been applied to any resources or resource groups, the command fails.
 
 ### Example 2: Delete a value from a predefined tag
@@ -44,16 +44,14 @@ If the tag has been applied to any resources or resource groups, the command fai
 PS C:\>Remove-AzureRmTag -Name "Department" -Value "HumanResources" -PassThru
 Name:   Department
 Count:  14
-Values: 
-
+Values:
         Name        Count
         =========   =====
-
         Finance        2
         IT            12
 ```
 
-This command deletes the HumanResources value from the predefined Department tag.
+This example deletes the "HumanResources" value from the predefined tag named "Department".
 It does not delete the tag.
 If the value has been applied to any resources or resource groups, the command fails.
 
@@ -65,7 +63,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,13 +74,13 @@ Accept wildcard characters: False
 
 ### -Name
 Specifies the name of the tag to be deleted.
-By default, Remove-AzureRmTag removes the specified tag and all of its values.
-To delete selected values, but not delete the tag, use the Value parameter.
+By default, **Remove-AzureRmTag** removes the specified tag and all of its values.
+To delete selected values, but not delete the tag, use the **Value** parameter.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -97,7 +95,7 @@ Returns an object that represents the deleted tag or the resulting tag with dele
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,12 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-Deletes the specified values from the predefined tag, but does not delete the tag.
+Specifies the values to be deleted from the predefined tag. The tag is not deleted.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -167,7 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRMTag]()
+[Get-AzureRMTag](./Get-AzureRmTag.md)
 
-[New-AzureRMTag]()
-
+[New-AzureRMTag](./New-AzureRmTag.md)
