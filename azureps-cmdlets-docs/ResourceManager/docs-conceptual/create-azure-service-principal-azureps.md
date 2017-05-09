@@ -73,6 +73,7 @@ ReplyUrls               : {}
 The `New-AzureRmADServicePrincipal` cmdlet is used to create the service principal.
 
 ```powershell
+Add-Type -Assembly System.Web
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $password
 ```
