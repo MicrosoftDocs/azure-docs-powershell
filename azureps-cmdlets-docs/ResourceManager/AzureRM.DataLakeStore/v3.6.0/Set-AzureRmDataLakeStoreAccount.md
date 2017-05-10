@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzureRmDataLakeStoreAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzureRmDataLakeStoreAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/acaa012bbc3d2249dc7ee2c45b30f62c620d7998
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmDataLakeStoreAccount
@@ -37,10 +37,13 @@ This command adds the specified tag to the Data Lake Store account named Contoso
 ## PARAMETERS
 
 ### -AllowAzureIpState
-Optionally allow/block Azure originating IPs through the firewall.```yaml
+Optionally allow/block Azure originating IPs through the firewall.
+
+```yaml
 Type: FirewallAllowAzureIpsState
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Enabled, Disabled
 
 Required: False
 Position: Named
@@ -66,10 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallState
-Optionally enable or disable existing firewall rules.```yaml
+Optionally enable or disable existing firewall rules.
+
+```yaml
 Type: FirewallState
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Enabled, Disabled
 
 Required: False
 Position: 4
@@ -125,10 +131,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The desired commitment tier for this account to use.```yaml
+The desired commitment tier for this account to use.
+
+```yaml
 Type: TierType
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Consumption, Commitment1TB, Commitment10TB, Commitment100TB, Commitment500TB, Commitment1PB, Commitment5PB
 
 Required: False
 Position: Named
@@ -138,7 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedIdProviderState
-Optionally enable or disable the existing trusted ID providers.```yaml
+Optionally enable or disable the existing trusted ID providers.
+
+```yaml
 Type: TrustedIdProviderState
 Parameter Sets: (All)
 Aliases: 

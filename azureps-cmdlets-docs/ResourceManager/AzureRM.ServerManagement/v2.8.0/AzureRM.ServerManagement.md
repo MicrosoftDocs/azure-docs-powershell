@@ -6,10 +6,9 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-ms.assetid: 6E941B4F-6D9B-43BE-BC2A-D87F1D7AABAC
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/AzureRM.ServerManagement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/AzureRM.ServerManagement.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # AzureRM.ServerManagement Module

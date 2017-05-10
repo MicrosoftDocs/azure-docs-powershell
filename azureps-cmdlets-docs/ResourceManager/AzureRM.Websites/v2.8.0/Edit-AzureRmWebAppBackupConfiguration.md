@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Edit-AzureRmWebAppBackupConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Edit-AzureRmWebAppBackupConfiguration.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/b52f0d63e7962572172f1e746220a2dacede9a2b
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Edit-AzureRmWebAppBackupConfiguration
@@ -35,6 +35,21 @@ The **Edit-AzureRmWebAppBackupConfiguration** cmdlet edits the current configura
 ## EXAMPLES
 
 ## PARAMETERS
+
+### -Databases
+Databases of type DatabaseBackupSetting[]
+
+```yaml
+Type: DatabaseBackupSetting[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -FrequencyInterval
 Frequency Interval
@@ -66,36 +81,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RetentionPeriodInDays
-Retention Period In Days
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 6
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StartTime
-StartTime in UTC
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -KeepAtLeastOneBackup
 Keep At Least One Backup Option
 
@@ -106,21 +91,6 @@ Aliases:
 
 Required: False
 Position: 9
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Resource Group Name
-
-```yaml
-Type: String
-Parameter Sets: FromResourceName
-Aliases: 
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -141,6 +111,36 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ResourceGroupName
+Resource Group Name
+
+```yaml
+Type: String
+Parameter Sets: FromResourceName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetentionPeriodInDays
+Retention Period In Days
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Slot
 WebApp Slot Name
 
@@ -156,6 +156,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -StartTime
+StartTime in UTC
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -StorageAccountUrl
 Storage Account Url
 
@@ -166,21 +181,6 @@ Aliases:
 
 Required: True
 Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Databases
-Databases of type DatabaseBackupSetting[]
-
-```yaml
-Type: DatabaseBackupSetting[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 8
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

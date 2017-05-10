@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryFabric.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmSiteRecoveryFabric
@@ -37,12 +37,12 @@ The **Get-AzureRmSiteRecoveryFabric** cmdlet gets the properties of a specified 
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the Azure Site Recovery Fabric.
+### -FriendlyName
+Specifies the friendly name of the Azure Site Recovery Fabric.
 
 ```yaml
 Type: String
-Parameter Sets: ByName
+Parameter Sets: ByFriendlyName
 Aliases: 
 
 Required: True
@@ -52,12 +52,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FriendlyName
-Specifies the friendly name of the Azure Site Recovery Fabric.
+### -Name
+Specifies the name of the Azure Site Recovery Fabric.
 
 ```yaml
 Type: String
-Parameter Sets: ByFriendlyName
+Parameter Sets: ByName
 Aliases: 
 
 Required: True

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageShare.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureStorageShare
@@ -18,15 +18,13 @@ Gets a list of file shares.
 ### MatchingPrefix (Default)
 ```
 Get-AzureStorageShare [[-Prefix] <String>] [-Context <AzureStorageContext>] [-ServerTimeoutPerRequest <Int32>]
- [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-PipelineVariable <String>] [<CommonParameters>]
+ [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
 ```
 
 ### Specific
 ```
 Get-AzureStorageShare [-Name] <String> [-Context <AzureStorageContext>] [-ServerTimeoutPerRequest <Int32>]
- [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-PipelineVariable <String>] [<CommonParameters>]
+ [-ClientTimeoutPerRequest <Int32>] [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,53 +57,6 @@ The first command uses the **New-AzureStorageContext** cmdlet to create a contex
 The second command gets the file shares for the context object stored in $Context.
 
 ## PARAMETERS
-
-### -Prefix
-Specifies the prefix for file shares.
-This cmdlet gets file shares that match the prefix that this parameter specifies, or no file shares if no file shares match the specified prefix.
-
-```yaml
-Type: String
-Parameter Sets: MatchingPrefix
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Context
-Specifies an Azure Storage context.
-To obtain a context, use the [New-AzureStorageContext](./New-AzureStorageContext.md) cmdlet.
-
-```yaml
-Type: AzureStorageContext
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -ServerTimeoutPerRequest
-Specifies the length of the time-out period for the server part of a request.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClientTimeoutPerRequest
 Specifies the client-side time-out interval, in seconds, for one service request.
@@ -143,42 +94,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+### -Context
+Specifies an Azure Storage context.
+To obtain a context, use the [New-AzureStorageContext](./New-AzureStorageContext.md) cmdlet.
 
 ```yaml
-Type: ActionPreference
+Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: infa
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -198,13 +126,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PipelineVariable
-Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
+### -Prefix
+Specifies the prefix for file shares.
+This cmdlet gets file shares that match the prefix that this parameter specifies, or no file shares if no file shares match the specified prefix.
 
 ```yaml
 Type: String
+Parameter Sets: MatchingPrefix
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServerTimeoutPerRequest
+Specifies the length of the time-out period for the server part of a request.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
-Aliases: pv
+Aliases: 
 
 Required: False
 Position: Named

@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Update-AzureRmMlWebService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Update-AzureRmMlWebService.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/bdd7e3ac15f60206476c802f0aaeae9dfbf4d8bd
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Update-AzureRmMlWebService
@@ -20,13 +20,13 @@ Update-AzureRmMlWebService -ResourceGroupName <String> -Name <String> [-Title <S
  [-IsReadOnly] [-Keys <WebServiceKeys>] [-StorageAccountKey <String>] [-Diagnostics <DiagnosticsConfiguration>]
  [-RealtimeConfiguration <RealtimeConfiguration>] [-Assets <Hashtable>]
  [-Input <ServiceInputOutputSpecification>] [-Output <ServiceInputOutputSpecification>]
- [-Parameters <Hashtable>] [-Package <GraphPackage>] [-Force] [-WhatIf] [-Confirm]
+ [-Parameters <Hashtable>] [-Package <GraphPackage>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Create a new Azure ML webservice from a WebService instance definition.
 ```
 Update-AzureRmMlWebService -ResourceGroupName <String> -Name <String> -ServiceUpdates <WebService> [-Force]
- [-WhatIf] [-Confirm]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +39,8 @@ Pass only the properties that you want modified.
 ### --------------------------  Example 1: Selective update arguments  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 Update-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -Description "new update to description" -Keys @{Primary='changed primary key'} -Diagnostics @{Level='All'}
 ```
@@ -47,6 +49,8 @@ Here, we change the description, primary access key and enable the diagnostics c
 
 ### --------------------------  Example 2: Update based on a web service instance  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 $updates = @{ Properties = @{ Title="New Title"; RealtimeConfiguration = @{ MaxConcurrentCalls=25 }}}
@@ -63,7 +67,7 @@ The set of assets (e.g. modules, datasets) that make up the web service.
 
 ```yaml
 Type: Hashtable
-Parameter Sets: Update specific properties of the web service.
+Parameter Sets: Update specific properties of the .
 Aliases: 
 
 Required: False
@@ -79,7 +83,7 @@ This is visible in the service's Swagger API schema.
 
 ```yaml
 Type: String
-Parameter Sets: Update specific properties of the web service.
+Parameter Sets: Update specific properties of the .
 Aliases: 
 
 Required: False
@@ -94,7 +98,7 @@ The settings that control the diagnostics traces collection for the web service.
 
 ```yaml
 Type: DiagnosticsConfiguration
-Parameter Sets: Update specific properties of the web service.
+Parameter Sets: Update specific properties of the .
 Aliases: 
 
 Required: False
@@ -333,6 +337,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageQueue.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageQueue.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureStorageQueue
@@ -17,15 +17,12 @@ Lists storage queues.
 
 ### QueueName (Default)
 ```
-Get-AzureStorageQueue [[-Name] <String>] [-Context <AzureStorageContext>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
- [<CommonParameters>]
+Get-AzureStorageQueue [[-Name] <String>] [-Context <AzureStorageContext>] [<CommonParameters>]
 ```
 
 ### QueuePrefix
 ```
-Get-AzureStorageQueue -Prefix <String> [-Context <AzureStorageContext>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-PipelineVariable <String>] [<CommonParameters>]
+Get-AzureStorageQueue -Prefix <String> [-Context <AzureStorageContext>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +53,22 @@ This example uses the *Prefix* parameter to get a list of storage queues whose n
 
 ## PARAMETERS
 
+### -Context
+Specifies the Azure storage context.
+You can create it by using the **New-AzureStorageContext** cmdlet.
+
+```yaml
+Type: AzureStorageContext
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies a name.
 If no name is specified, the cmdlet gets a list of all the queues.
@@ -73,61 +86,6 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Context
-Specifies the Azure storage context.
-You can create it by using the **New-AzureStorageContext** cmdlet.
-
-```yaml
-Type: AzureStorageContext
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Prefix
 Specifies a prefix used in the name of the queues you want to get.
 
@@ -137,21 +95,6 @@ Parameter Sets: QueuePrefix
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PipelineVariable
-Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: pv
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

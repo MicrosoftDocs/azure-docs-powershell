@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzureRmRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzureRmRedisCache.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmRedisCache
@@ -20,14 +20,14 @@ Gets a Redis Cache.
 Get-AzureRmRedisCache [<CommonParameters>]
 ```
 
-### Specific Redis Cache
-```
-Get-AzureRmRedisCache -ResourceGroupName <String> -Name <String> [<CommonParameters>]
-```
-
 ### All In Resource Group
 ```
 Get-AzureRmRedisCache -ResourceGroupName <String> [<CommonParameters>]
+```
+
+### Specific Redis Cache
+```
+Get-AzureRmRedisCache -ResourceGroupName <String> -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -181,7 +181,7 @@ If you specify only the *ResourceGroupName* parameter, this operation gets every
 
 ```yaml
 Type: String
-Parameter Sets: Specific Redis Cache, All In Resource Group
+Parameter Sets: All In Resource Group, Specific Redis Cache
 Aliases: 
 
 Required: True

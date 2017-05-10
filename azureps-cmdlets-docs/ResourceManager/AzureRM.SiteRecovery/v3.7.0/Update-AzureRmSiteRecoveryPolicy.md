@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Update-AzureRmSiteRecoveryPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Update-AzureRmSiteRecoveryPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Update-AzureRmSiteRecoveryPolicy
@@ -28,6 +28,61 @@ Update-AzureRmSiteRecoveryPolicy -Policy <ASRPolicy> [-ReplicationMethod <String
 
 ## PARAMETERS
 
+### -ApplicationConsistentSnapshotFrequencyInHours
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Authentication
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Certificate, Kerberos
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Compression
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Enable, Disable
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Encryption
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Enable, Disable
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Policy
 ```yaml
 Type: ASRPolicy
@@ -41,7 +96,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ReplicationFrequencyInSeconds
+### -RecoveryAzureStorageAccountId
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -67,37 +122,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApplicationConsistentSnapshotFrequencyInHours
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplicationStartTime
-```yaml
-Type: TimeSpan
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecoveryAzureStorageAccountId
+### -ReplicaDeletion
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Required, NotRequired
 
 Required: False
 Position: Named
@@ -106,11 +136,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Encryption
+### -ReplicationFrequencyInSeconds
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: 30, 300, 900
 
 Required: False
 Position: Named
@@ -124,19 +155,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Compression
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
+Accepted values: Online, Offline
 
 Required: False
 Position: Named
@@ -158,22 +177,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Authentication
+### -ReplicationStartTime
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplicaDeletion
-```yaml
-Type: String
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
 

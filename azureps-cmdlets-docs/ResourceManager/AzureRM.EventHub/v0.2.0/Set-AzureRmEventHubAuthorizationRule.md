@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzureRmEventHubAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzureRmEventHubAuthorizationRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ecc676e655efba8fe325ff757ca9c67e3ca655e9
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmEventHubAuthorizationRule
@@ -16,8 +16,8 @@ Updates the specified authorization rule on an Event Hub.
 
 ```
 Set-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-NamespaceName] <String>
- [-EventHubName] <String> -AuthRuleObj <SharedAccessAuthorizationRuleAttributes>
- -AuthorizationRuleName <String> [-Rights <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EventHubName] <String> [-AuthRuleObj] <SharedAccessAuthorizationRuleAttributes>
+ [-AuthorizationRuleName] <String> [-Rights <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,17 +34,32 @@ Updates the authorization rule `MyAuthRuleName` to grant **Manage** rights to th
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -AuthorizationRuleName
+Authorization rule name.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases: 
 
-Required: False
-Position: Named
-Default value: False
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthRuleObj
+Event Hubs authorization rule object.
+
+```yaml
+Type: SharedAccessAuthorizationRuleAttributes
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -94,52 +109,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuthorizationRuleName
-Authorization rule name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AuthRuleObj
-Event Hubs authorization rule object.
-
-```yaml
-Type: SharedAccessAuthorizationRuleAttributes
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Rights
 Required if 'AuthruleObj' not specified.
 Rights; for example,
@@ -154,6 +123,37 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

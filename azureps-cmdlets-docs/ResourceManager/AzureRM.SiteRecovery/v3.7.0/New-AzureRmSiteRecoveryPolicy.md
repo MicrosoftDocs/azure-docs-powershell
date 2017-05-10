@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmSiteRecoveryPolicy
@@ -39,76 +39,6 @@ The replication policy is used to specify replication settings such as the repli
 
 ## PARAMETERS
 
-### -Name
-Specifies a friendly name which identifies the Site Recovery replication policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplicationProvider
-Specifies the replication provider.
-Valid values are:
-
-- HyperVReplica2012R2
-- HyperVReplica2012
-- HyperVReplicaAzure
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplicationFrequencyInSeconds
-Specifies the replication frequency interval in seconds.
-Valid values are:
-
-- 30
-- 300
-- 900
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecoveryPoints
-Specifies the number of hours to retain recovery points.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ApplicationConsistentSnapshotFrequencyInHours
 Specifies the frequency of the application consistent snapshot in hours.
 
@@ -124,16 +54,63 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReplicationStartTime
-Specifies the replication start time.
-It must be no later than 24-hours from the start of the job.
+### -Authentication
+Specifies the type of authentication used.
+Valid values are:
+
+- Certificate
+-  Kerberos
 
 ```yaml
-Type: TimeSpan
+Type: String
+Parameter Sets: EnterpriseToEnterprise
+Aliases: 
+Accepted values: Certificate, Kerberos
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Compression
+```yaml
+Type: String
+Parameter Sets: EnterpriseToEnterprise
+Aliases: 
+Accepted values: Enable, Disable
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Encryption
+```yaml
+Type: String
+Parameter Sets: EnterpriseToAzure
+Aliases: 
+Accepted values: Enable, Disable
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a friendly name which identifies the Site Recovery replication policy.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -155,13 +132,50 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Encryption
+### -RecoveryPoints
+Specifies the number of hours to retain recovery points.
+
 ```yaml
-Type: String
-Parameter Sets: EnterpriseToAzure
+Type: Int32
+Parameter Sets: (All)
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplicaDeletion
+```yaml
+Type: String
+Parameter Sets: EnterpriseToEnterprise
+Aliases: 
+Accepted values: Required, NotRequired
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplicationFrequencyInSeconds
+Specifies the replication frequency interval in seconds.
+Valid values are:
+
+- 30
+- 300
+- 900
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: 30, 300, 900
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -179,19 +193,7 @@ Valid values are:
 Type: String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Compression
-```yaml
-Type: String
-Parameter Sets: EnterpriseToEnterprise
-Aliases: 
+Accepted values: Online, Offline
 
 Required: False
 Position: Named
@@ -215,29 +217,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Authentication
-Specifies the type of authentication used.
+### -ReplicationProvider
+Specifies the replication provider.
 Valid values are:
 
-- Certificate
--  Kerberos
+- HyperVReplica2012R2
+- HyperVReplica2012
+- HyperVReplicaAzure
 
 ```yaml
 Type: String
-Parameter Sets: EnterpriseToEnterprise
+Parameter Sets: (All)
 Aliases: 
+Accepted values: HyperVReplica2012R2, HyperVReplica2012, HyperVReplicaAzure
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReplicaDeletion
+### -ReplicationStartTime
+Specifies the replication start time.
+It must be no later than 24-hours from the start of the job.
+
 ```yaml
-Type: String
-Parameter Sets: EnterpriseToEnterprise
+Type: TimeSpan
+Parameter Sets: (All)
 Aliases: 
 
 Required: False

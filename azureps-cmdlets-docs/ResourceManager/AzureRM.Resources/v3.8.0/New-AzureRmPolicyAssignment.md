@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmPolicyAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmPolicyAssignment.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/5dfaed965f9d38815f7656c538a1df8fe518f696
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmPolicyAssignment
@@ -15,7 +15,7 @@ Creates a policy assignment.
 
 ## SYNTAX
 
-### Policy assignment without parameters
+### Policy assignment without parameters (Default)
 ```
 New-AzureRmPolicyAssignment -Name <String> -Scope <String> [-DisplayName <String>] -PolicyDefinition <PSObject>
  [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
@@ -60,69 +60,6 @@ The **ResourceId** property of $ResourceGroup identifies the resource group.
 
 ## PARAMETERS
 
-### -Name
-Specifies a name for the policy assignment.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Scope
-Specifies the scope at which to assign the policy.
-For instance, to assign a policy to a resource group, specify the following:
-
-`/subscriptions/`subscription ID`/resourcegroups/`resource group name
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DisplayName
-Specifies a display name for the policy assignment.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PolicyDefinition
-Specifies a policy, as a **PSObject** object that contains the policy rule.
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ApiVersion
 Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
@@ -139,18 +76,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+### -DisplayName
+Specifies a display name for the policy assignment.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -193,6 +130,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies a name for the policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PolicyDefinition
+Specifies a policy, as a **PSObject** object that contains the policy rule.
+
+```yaml
+Type: PSObject
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PolicyParameter
 The policy parameter file path or policy parameter string.
 
@@ -214,6 +181,39 @@ The policy parameter object.
 ```yaml
 Type: Hashtable
 Parameter Sets: Policy assignment with parameters via policy parameter object
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Pre
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Scope
+Specifies the scope at which to assign the policy.
+For instance, to assign a policy to a resource group, specify the following:
+
+`/subscriptions/`subscription ID`/resourcegroups/`resource group name
+
+```yaml
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
 Required: True

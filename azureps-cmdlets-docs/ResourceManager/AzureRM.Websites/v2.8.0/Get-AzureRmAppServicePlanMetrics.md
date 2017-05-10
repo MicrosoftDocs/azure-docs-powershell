@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmAppServicePlanMetrics.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmAppServicePlanMetrics.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/188033f88f70f578d4879e2a78bf41bbfbaeaf0c
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmAppServicePlanMetrics
@@ -41,33 +41,18 @@ This command gets CPU percentage of the App Service Plan
 
 ## PARAMETERS
 
-### -Metrics
-Metrics
+### -AppServicePlan
+App Service Plan Object
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
+Type: ServerFarmWithRichSku
+Parameter Sets: S2
 Aliases: 
 
 Required: True
-Position: 2
+Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StartTime
-Start Time in UTC
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -93,6 +78,7 @@ Granularity
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: PT1M, PT1H, P1D
 
 Required: True
 Position: 5
@@ -116,16 +102,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-Resource Group Name
+### -Metrics
+Metrics
 
 ```yaml
-Type: String
-Parameter Sets: S1
+Type: String[]
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 0
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -146,18 +132,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppServicePlan
-App Service Plan Object
+### -ResourceGroupName
+Resource Group Name
 
 ```yaml
-Type: ServerFarmWithRichSku
-Parameter Sets: S2
+Type: String
+Parameter Sets: S1
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartTime
+Start Time in UTC
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

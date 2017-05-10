@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlWebServiceKeys.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlWebServiceKeys.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/a983bd79be16ac069f3705874f6399ee1c7adefa
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmMlWebServiceKeys
@@ -16,12 +16,12 @@ Retrieves the web service's keys.
 
 ### Get an Azure ML web service's access keys given its name and resource group.
 ```
-Get-AzureRmMlWebServiceKeys -ResourceGroupName <String> -Name <String>
+Get-AzureRmMlWebServiceKeys -ResourceGroupName <String> -Name <String> [<CommonParameters>]
 ```
 
 ### Get the access kesy for the given web service instance.
 ```
-Get-AzureRmMlWebServiceKeys -MlWebService <WebService>
+Get-AzureRmMlWebServiceKeys -MlWebService <WebService> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,12 +32,16 @@ Gets the access keys for the Azure Machine Learning web service's runtime APIs.
 ### --------------------------  Example 1 - Get the keys for a web service specified by resource group and name  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 Get-AzureRmMlWebServiceKeys -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
 ```
 
 ### --------------------------  Example 2 - Get keys for web service instance  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 Get-AzureRmMlWebServiceKeys -MlWebService $mlService
@@ -91,6 +95,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

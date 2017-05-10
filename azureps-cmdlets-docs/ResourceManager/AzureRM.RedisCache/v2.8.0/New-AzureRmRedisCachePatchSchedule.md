@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzureRmRedisCachePatchSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzureRmRedisCachePatchSchedule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmRedisCachePatchSchedule
@@ -35,6 +35,22 @@ The Entries parameter takes as its value a command that uses **New-AzureRmRedisC
 
 ## PARAMETERS
 
+### -Entries
+Specifies an array of schedules that this cmdlet sets on a cache. 
+To obtain a **PSScheduleEntry** object, use the New-AzureRmRedisCacheScheduleEntry cmdlet.
+
+```yaml
+Type: PSScheduleEntry[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the cache.
 
@@ -55,22 +71,6 @@ Specifies the name of the resource group which contains the cache.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Entries
-Specifies an array of schedules that this cmdlet sets on a cache. 
-To obtain a **PSScheduleEntry** object, use the New-AzureRmRedisCacheScheduleEntry cmdlet.
-
-```yaml
-Type: PSScheduleEntry[]
 Parameter Sets: (All)
 Aliases: 
 

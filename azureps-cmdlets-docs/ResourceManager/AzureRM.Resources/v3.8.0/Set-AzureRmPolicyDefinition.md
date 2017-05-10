@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Set-AzureRmPolicyDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Set-AzureRmPolicyDefinition.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmPolicyDefinition
@@ -47,15 +47,31 @@ The second command updates the description of the policy definition identified b
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the policy definition that this cmdlet modifies.
+### -ApiVersion
+Specifies the version of the resource provider API to use.
+If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
 Type: String
-Parameter Sets: The policy definition name parameter set.
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Specifies a new description for the policy definition.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -77,65 +93,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Description
-Specifies a new description for the policy definition.
+### -Id
+Specifies the fully qualified resource ID for the policy definition that this cmdlet modifies.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: The policy definition Id parameter set.
+Aliases: ResourceId
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Policy
-Specifies new policy rule for the policy definition.
-You can specify the path of a .json file or a string that contains the policy in JavaScript Object Notation (JSON) format.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ApiVersion
-Specifies the version of the resource provider API to use.
-If you do not specify a version, this cmdlet uses the latest available version.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -178,18 +147,49 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-Specifies the fully qualified resource ID for the policy definition that this cmdlet modifies.
+### -Name
+Specifies the name of the policy definition that this cmdlet modifies.
 
 ```yaml
 Type: String
-Parameter Sets: The policy definition Id parameter set.
-Aliases: ResourceId
+Parameter Sets: The policy definition name parameter set.
+Aliases: 
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Policy
+Specifies new policy rule for the policy definition.
+You can specify the path of a .json file or a string that contains the policy in JavaScript Object Notation (JSON) format.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Pre
+Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

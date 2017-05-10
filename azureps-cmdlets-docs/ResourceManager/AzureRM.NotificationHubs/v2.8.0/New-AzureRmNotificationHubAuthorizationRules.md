@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHubAuthorizationRules.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHubAuthorizationRules.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmNotificationHubAuthorizationRules
@@ -49,18 +49,18 @@ Note that all the configuration information for the rule, including the rule nam
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the resource group that the notification hub is assigned to.
+### -InputFile
+Specifies the input file for the authorization rule that this cmdlet creates.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: InputFileParameterSet
 Aliases: 
 
 Required: True
-Position: 0
+Position: 3
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -99,27 +99,27 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ResourceGroup
+Specifies the resource group that the notification hub is assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SASRule
 Specifies the **SharedAccessAuthorizationRuleAttributes** object containing configuration information for the new rules.
 
 ```yaml
 Type: SharedAccessAuthorizationRuleAttributes
 Parameter Sets: SASRuleParameterSet
-Aliases: 
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InputFile
-Specifies the input file for the authorization rule that this cmdlet creates.
-
-```yaml
-Type: String
-Parameter Sets: InputFileParameterSet
 Aliases: 
 
 Required: True

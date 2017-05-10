@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzureRmAppServicePlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzureRmAppServicePlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/2f2c6db5775e9b332fee46194718654f94fe2767
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmAppServicePlan
@@ -41,6 +41,21 @@ This command removes the Azure App Service plan named ContosoASP that belongs to
 
 ## PARAMETERS
 
+### -AppServicePlan
+App Service Plan Object
+
+```yaml
+Type: ServerFarmWithRichSku
+Parameter Sets: S2
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Force
 Forcefully Remove Option
 
@@ -51,21 +66,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Resource Group Name
-
-```yaml
-Type: String
-Parameter Sets: S1
-Aliases: 
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -86,18 +86,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppServicePlan
-App Service Plan Object
+### -ResourceGroupName
+Resource Group Name
 
 ```yaml
-Type: ServerFarmWithRichSku
-Parameter Sets: S2
+Type: String
+Parameter Sets: S1
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

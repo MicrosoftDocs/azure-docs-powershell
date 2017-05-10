@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Start-AzureRmSiteRecoveryTestFailoverJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Start-AzureRmSiteRecoveryTestFailoverJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Start-AzureRmSiteRecoveryTestFailoverJob
@@ -55,13 +55,6 @@ Start-AzureRmSiteRecoveryTestFailoverJob -ProtectionEntity <ASRProtectionEntity>
  [-DataEncryptionSecondaryCertFile <String>] [<CommonParameters>]
 ```
 
-### ByRPIObjectWithAzureVMNetworkId
-```
-Start-AzureRmSiteRecoveryTestFailoverJob -ReplicationProtectedItem <ASRReplicationProtectedItem>
- -Direction <String> -AzureVMNetworkId <String> [-DataEncryptionPrimaryCertFile <String>]
- [-DataEncryptionSecondaryCertFile <String>] [<CommonParameters>]
-```
-
 ### ByRPIObject
 ```
 Start-AzureRmSiteRecoveryTestFailoverJob -ReplicationProtectedItem <ASRReplicationProtectedItem>
@@ -76,6 +69,13 @@ Start-AzureRmSiteRecoveryTestFailoverJob -ReplicationProtectedItem <ASRReplicati
  [-DataEncryptionSecondaryCertFile <String>] [<CommonParameters>]
 ```
 
+### ByRPIObjectWithAzureVMNetworkId
+```
+Start-AzureRmSiteRecoveryTestFailoverJob -ReplicationProtectedItem <ASRReplicationProtectedItem>
+ -Direction <String> -AzureVMNetworkId <String> [-DataEncryptionPrimaryCertFile <String>]
+ [-DataEncryptionSecondaryCertFile <String>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 The **Start-AzureRmSiteRecoveryTestFailoverJob** cmdlet starts test failover of an Azure Site Recovery protection entity or recovery plan.
 You can check whether the job succeeded by using the Get-AzureRmSiteRecoveryJob cmdlet.
@@ -84,31 +84,12 @@ You can check whether the job succeeded by using the Get-AzureRmSiteRecoveryJob 
 
 ## PARAMETERS
 
-### -ProtectionEntity
-Specifies the Site Recovery protection entity object.
-
-```yaml
-Type: ASRProtectionEntity
-Parameter Sets: ByPEObject, ByPEObjectWithVMNetwork, ByPEObjectWithAzureVMNetworkId
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Direction
-Specifies the failover direction.
-The acceptable values for this parameter are:
-
-- PrimaryToRecovery
-- RecoveryToPrimary
+### -AzureVMNetworkId
+Specifies the Azure virtual network ID.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ByRPObjectWithAzureVMNetworkId, ByPEObjectWithAzureVMNetworkId, ByRPIObjectWithAzureVMNetworkId
 Aliases: 
 
 Required: True
@@ -148,12 +129,60 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Direction
+Specifies the failover direction.
+The acceptable values for this parameter are:
+
+- PrimaryToRecovery
+- RecoveryToPrimary
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: PrimaryToRecovery, RecoveryToPrimary
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProtectionEntity
+Specifies the Site Recovery protection entity object.
+
+```yaml
+Type: ASRProtectionEntity
+Parameter Sets: ByPEObject, ByPEObjectWithVMNetwork, ByPEObjectWithAzureVMNetworkId
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -RecoveryPlan
 Specifies a recovery plan object.
 
 ```yaml
 Type: ASRRecoveryPlan
 Parameter Sets: ByRPObject, ByRPObjectWithVMNetwork, ByRPObjectWithAzureVMNetworkId
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -ReplicationProtectedItem
+```yaml
+Type: ASRReplicationProtectedItem
+Parameter Sets: ByRPIObject, ByRPIObjectWithVMNetwork, ByRPIObjectWithAzureVMNetworkId
 Aliases: 
 
 Required: True
@@ -175,34 +204,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureVMNetworkId
-Specifies the Azure virtual network ID.
-
-```yaml
-Type: String
-Parameter Sets: ByRPObjectWithAzureVMNetworkId, ByPEObjectWithAzureVMNetworkId, ByRPIObjectWithAzureVMNetworkId
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplicationProtectedItem
-```yaml
-Type: ASRReplicationProtectedItem
-Parameter Sets: ByRPIObjectWithAzureVMNetworkId, ByRPIObject, ByRPIObjectWithVMNetwork
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

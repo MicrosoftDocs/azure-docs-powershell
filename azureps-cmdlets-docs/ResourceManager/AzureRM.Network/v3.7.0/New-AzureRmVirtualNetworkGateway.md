@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVirtualNetworkGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVirtualNetworkGateway.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/394d84a350aee3cd69565f02a032a8bb97116681
+gitcommit: https://github.com/Azure/azure-powershell/blob/39673ed92d863c7fba7fbbdb0d919d03c552b71b
 ---
 
 # New-AzureRmVirtualNetworkGateway
@@ -23,8 +23,7 @@ New-AzureRmVirtualNetworkGateway -Name <String> -ResourceGroupName <String> -Loc
  [-VpnClientAddressPool <System.Collections.Generic.List`1[System.String]>]
  [-VpnClientRootCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate]>]
  [-VpnClientRevokedCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate]>]
- [-Asn <UInt32>] [-PeerWeight <Int32>] [-Tag <Hashtable>] [-Force] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Asn <UInt32>] [-PeerWeight <Int32>] [-Tag <Hashtable>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,6 +41,7 @@ You can also choose to include other features like BGP and Active-Active.
 ```
 New-AzureRmVirtualNetworkGateway -Name myGW -ResourceGroupName myRG -Location "West US" -IpConfigurations $gwIpConfig  -GatewayType "Vpn" -VpnType "RouteBased" -GatewaySku "Standard"
 ```
+
 Creates the Virtual Network Gateway in Azure with the name "myGW" within the resource group "myRG" in the location "West US" with the previously created IP configurations saved in the variable "gwIpConfig," the gateway type of "Vpn," the vpn type "RouteBased," and the sku "Standard."
 
 ## PARAMETERS
@@ -120,6 +120,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Basic, Standard, HighPerformance, UltraPerformance
 
 Required: False
 Position: Named
@@ -133,50 +134,12 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Vpn, ExpressRoute
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -302,6 +265,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: PolicyBased, RouteBased
 
 Required: False
 Position: Named

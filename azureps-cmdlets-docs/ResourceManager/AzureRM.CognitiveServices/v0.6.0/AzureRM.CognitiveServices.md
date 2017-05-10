@@ -6,10 +6,9 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-ms.assetid: 8490169A-CC7B-4769-97FE-D86441A4A634
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/AzureRM.CognitiveServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/AzureRM.CognitiveServices.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # AzureRM.CognitiveServices Module

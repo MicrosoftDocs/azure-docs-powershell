@@ -6,10 +6,9 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-ms.assetid: 07AB209D-A780-4EFC-A9E7-8D035F27C7EE
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/AzureRM.Resources.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/AzureRM.Resources.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # AzureRM.Resources Module
@@ -82,6 +81,8 @@ Gets a resource provider.
 
 ### [Get-AzureRmRoleAssignment](Get-AzureRmRoleAssignment.md)
 Lists Azure RBAC role assignments at the specified scope.
+By default it lists all role assignments in the selected Azure subscription.
+Use respective parameters to list assignments to a specific user, or to list assignments on a specific resource group or resource.
 
 ### [Get-AzureRmRoleDefinition](Get-AzureRmRoleDefinition.md)
 Lists all Azure RBAC roles that are available for assignment.
@@ -130,6 +131,10 @@ Assigns the specified RBAC role to the specified principal, at the specified sco
 
 ### [New-AzureRmRoleDefinition](New-AzureRmRoleDefinition.md)
 Creates a custom role in Azure RBAC.
+Provide either a JSON role definition file or a PSRoleDefinition object as input.
+First, use the Get-AzureRmRoleDefinition command to generate a baseline role definition object.
+Then, modify its properties as required.
+Finally, use this command to create a custom role using role definition.
 
 ### [Register-AzureRmProviderFeature](Register-AzureRmProviderFeature.md)
 Registers an Azure provider feature in your account.
@@ -175,6 +180,8 @@ Removes a role assignment to the specified principal who is assigned to a partic
 
 ### [Remove-AzureRmRoleDefinition](Remove-AzureRmRoleDefinition.md)
 Deletes a custom role in Azure RBAC.
+The role to be deleted is specified using the Id property of the role.
+Delete will fail if there are existing role assignments made to the custom role.
 
 ### [Save-AzureRmResourceGroupDeploymentTemplate](Save-AzureRmResourceGroupDeploymentTemplate.md)
 Saves a resource group deployment template to a file.
@@ -205,6 +212,10 @@ Modifies a resource lock.
 
 ### [Set-AzureRmRoleDefinition](Set-AzureRmRoleDefinition.md)
 Modifies a custom role in Azure RBAC.
+Provide the modified role definition either as a JSON file or as a PSRoleDefinition.
+First, use the Get-AzureRmRoleDefinition command to retrieve the custom role that you wish to modify.
+Then, modify the properties that you wish to change.
+Finally, save the role definition using this command.
 
 ### [Stop-AzureRmResourceGroupDeployment](Stop-AzureRmResourceGroupDeployment.md)
 Cancels a resource group deployment.

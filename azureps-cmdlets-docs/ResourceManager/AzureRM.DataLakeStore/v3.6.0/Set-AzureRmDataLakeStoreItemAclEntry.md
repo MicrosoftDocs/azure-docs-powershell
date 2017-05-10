@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzureRmDataLakeStoreItemAclEntry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzureRmDataLakeStoreItemAclEntry.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/5043733fc7fcc1e94bbf50b5acab59c521107170
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmDataLakeStoreItemAclEntry
@@ -70,6 +70,7 @@ The acceptable values for this parameter are:
 Type: AceType
 Parameter Sets: Set specific ACE
 Aliases: 
+Accepted values: User, Group, Mask, Other
 
 Required: True
 Position: 2

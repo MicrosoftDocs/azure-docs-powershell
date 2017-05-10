@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Set-AzureRmAppServicePlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Set-AzureRmAppServicePlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/0e1a3c2bbee2f195a4410897fd3f8da11c847bbd
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmAppServicePlan
@@ -18,7 +18,8 @@ Sets an Azure App Service plan.
 ### S1
 ```
 Set-AzureRmAppServicePlan [[-AdminSiteName] <String>] [[-Tier] <String>] [[-NumberofWorkers] <Int32>]
- [[-WorkerSize] <String>] [[-PerSiteScaling] <Boolean>][-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+ [[-WorkerSize] <String>] [-PerSiteScaling <Boolean>] [-ResourceGroupName] <String> [-Name] <String>
+ [<CommonParameters>]
 ```
 
 ### S2
@@ -56,16 +57,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tier
-Tier
+### -AppServicePlan
+App Service Plan Object
+
+```yaml
+Type: ServerFarmWithRichSku
+Parameter Sets: S2
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+App Service Plan Name
 
 ```yaml
 Type: String
 Parameter Sets: S1
 Aliases: 
 
-Required: False
-Position: 3
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -86,21 +102,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkerSize
-Worker Size
-
-```yaml
-Type: String
-Parameter Sets: S1
-Aliases: 
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PerSiteScaling
 Per Site Scaling Boolean
 
@@ -110,7 +111,7 @@ Parameter Sets: S1
 Aliases: 
 
 Required: False
-Position: 6
+Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -131,33 +132,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-App Service Plan Name
+### -Tier
+Tier
 
 ```yaml
 Type: String
 Parameter Sets: S1
 Aliases: 
+Accepted values: Free, Shared, Basic, Standard, Premium
 
-Required: True
-Position: 1
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppServicePlan
-App Service Plan Object
+### -WorkerSize
+Worker Size
 
 ```yaml
-Type: ServerFarmWithRichSku
-Parameter Sets: S2
+Type: String
+Parameter Sets: S1
 Aliases: 
+Accepted values: Small, Medium, Large, ExtraLarge
 
-Required: True
-Position: 0
+Required: False
+Position: 5
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

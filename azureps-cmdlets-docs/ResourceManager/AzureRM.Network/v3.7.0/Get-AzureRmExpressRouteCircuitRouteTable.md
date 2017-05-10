@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmExpressRouteCircuitRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmExpressRouteCircuitRouteTable.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/394d84a350aee3cd69565f02a032a8bb97116681
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmExpressRouteCircuitRouteTable
@@ -17,8 +17,7 @@ Gets a route table from an ExpressRoute circuit.
 
 ```
 Get-AzureRmExpressRouteCircuitRouteTable -ResourceGroupName <String> -ExpressRouteCircuitName <String>
- [-PeeringType <String>] -DevicePath <DevicePathEnum> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+ [-PeeringType <String>] -DevicePath <DevicePathEnum> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +42,7 @@ The acceptable values for this parameter are: `Primary` or `Secondary`
 Type: DevicePathEnum
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Primary, Secondary
 
 Required: True
 Position: Named
@@ -66,45 +66,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PeeringType
 The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and
 `MicrosoftPeering`
@@ -113,6 +74,7 @@ The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePubli
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: AzurePrivatePeering, AzurePublicPeering, MicrosoftPeering
 
 Required: False
 Position: Named

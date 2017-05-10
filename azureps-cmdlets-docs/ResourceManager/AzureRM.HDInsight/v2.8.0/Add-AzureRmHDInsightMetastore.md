@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightMetastore.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightMetastore.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Add-AzureRmHDInsightMetastore
@@ -17,8 +17,7 @@ Adds a SQL Database to serve as a Hive or Oozie metastore to a cluster configura
 
 ```
 Add-AzureRmHDInsightMetastore [-Config] <AzureHDInsightConfig> [-MetastoreType] <AzureHDInsightMetastoreType>
- [-SqlAzureServerName] <String> [-DatabaseName] <String> [-Credential] <PSCredential>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [-SqlAzureServerName] <String> [-DatabaseName] <String> [-Credential] <PSCredential> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,32 +100,16 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -MetastoreType
-Specifies the type of metastore.
-Possible values are HiveMetastore or OozieMetastore.
+### -Credential
+Specifies the credentials to use for the AzureSQL Server database.
 
 ```yaml
-Type: AzureHDInsightMetastoreType
+Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SqlAzureServerName
-Specifies the AzureSQL Server instance to use for this metastore.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -147,55 +130,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
-Specifies the credentials to use for the AzureSQL Server database.
+### -MetastoreType
+Specifies the type of metastore.
+Possible values are HiveMetastore or OozieMetastore.
 
 ```yaml
-Type: PSCredential
+Type: AzureHDInsightMetastoreType
 Parameter Sets: (All)
 Aliases: 
+Accepted values: HiveMetastore, OozieMetastore
 
 Required: True
-Position: 4
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
+### -SqlAzureServerName
+Specifies the AzureSQL Server instance to use for this metastore.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

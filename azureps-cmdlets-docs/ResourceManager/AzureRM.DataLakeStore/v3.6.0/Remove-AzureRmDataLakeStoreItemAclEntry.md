@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreItemAclEntry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreItemAclEntry.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/999b10c08071465894341393a111fbacd14d9ada
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmDataLakeStoreItemAclEntry
@@ -69,6 +69,7 @@ The acceptable values for this parameter are:
 Type: AceType
 Parameter Sets: Remove specific ACE
 Aliases: 
+Accepted values: User, Group, Mask, Other
 
 Required: True
 Position: 2

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreItemContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreItemContent.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/2894f4056d8e6586e53af17c699787a02e742ae4
+gitcommit: https://github.com/Azure/azure-powershell/blob/0a4c4b40d46a2a84d0e4729010117a70b4d8468a
 ---
 
 # Get-AzureRmDataLakeStoreItemContent
@@ -90,6 +90,7 @@ The acceptable values for this parameter are:
 Type: FileSystemCmdletProviderEncoding
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Unknown, String, Unicode, Byte, BigEndianUnicode, UTF8, UTF7, UTF32, Ascii, Default, Oem, BigEndianUTF32
 
 Required: False
 Position: 4

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/New-AzureRmDataLakeAnalyticsAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/New-AzureRmDataLakeAnalyticsAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4a0d929c6a247b7097a266e46de1022599a5c764
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmDataLakeAnalyticsAccount
@@ -67,7 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDegreeOfParallelism
-The optional maximum supported degree of parallelism for this account. If none is specified, defaults to 30```yaml
+The optional maximum supported degree of parallelism for this account. If none is specified, defaults to 30
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
@@ -80,7 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxJobCount
-The optional maximum supported jobs running under the account at the same time. If none is specified, defaults to 3```yaml
+The optional maximum supported jobs running under the account at the same time. If none is specified, defaults to 3
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
@@ -108,7 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -QueryStoreRetention
-The optional number of days that job metadata is retained. If none specified, the default is 30 days.```yaml
+The optional number of days that job metadata is retained. If none specified, the default is 30 days.
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
@@ -152,10 +158,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The desired commitment tier for this account to use.```yaml
+The desired commitment tier for this account to use.
+
+```yaml
 Type: TierType
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Consumption, Commitment100AUHours, Commitment500AUHours, Commitment1000AUHours, Commitment5000AUHours, Commitment10000AUHours, Commitment50000AUHours, Commitment100000AUHours, Commitment500000AUHours
 
 Required: False
 Position: Named

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzureRmDnsRecordSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzureRmDnsRecordSet.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmDnsRecordSet
@@ -65,7 +65,7 @@ PS C:\> Remove-AzureRmDnsRecordSet -RecordSet $RecordSet -Confirm:$False -Overwr
 # because the record set is specified by name rather than by object, the
 # Overwrite parameter is not applicable.
 
-PS C:\> Remove-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" -Confirm:$False 
+PS C:\> Remove-AzureRmDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" -Confirm:$False
 ```
 
 The first command gets the specified record set.
@@ -84,7 +84,7 @@ To control whether this cmdlet prompts you for confirmation, use the *Confirm* p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Alternatively, the record set can be specified using a **RecordSet** object, pas
 ```yaml
 Type: String
 Parameter Sets: Fields, Mixed
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -119,7 +119,7 @@ This can be suppressed using the *Overwrite* parameter, which deletes the record
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Object
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ passthru
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Alternatively, the record set can be specified using the *Name* and *Zone* param
 ```yaml
 Type: DnsRecordSet
 Parameter Sets: Object
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -180,7 +180,7 @@ You cannot manually delete SOA records.
 ```yaml
 Type: RecordType
 Parameter Sets: Fields, Mixed
-Aliases:
+Aliases: 
 Accepted values: A, AAAA, CNAME, MX, NS, PTR, SOA, SRV, TXT
 
 Required: True
@@ -199,7 +199,7 @@ Alternatively, you can specify the record set using either the *RecordSet* param
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -217,7 +217,7 @@ Alternatively, you can specify the record set using either the *RecordSet* param
 ```yaml
 Type: DnsZone
 Parameter Sets: Mixed
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -235,7 +235,7 @@ Alternatively, the record set can be specified using either the *RecordSet* para
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

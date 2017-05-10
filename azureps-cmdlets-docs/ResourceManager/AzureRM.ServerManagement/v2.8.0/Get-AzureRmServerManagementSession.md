@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/Get-AzureRmServerManagementSession.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/Get-AzureRmServerManagementSession.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmServerManagementSession
@@ -18,19 +18,17 @@ Gets a Server Management session.
 ### ByNodeName
 ```
 Get-AzureRmServerManagementSession [-ResourceGroupName] <String> [-NodeName] <String> [-SessionName] <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### BySession
 ```
-Get-AzureRmServerManagementSession [[-SessionName] <String>] [-Session] <Session>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmServerManagementSession [[-SessionName] <String>] [-Session] <Session> [<CommonParameters>]
 ```
 
 ### ByNode
 ```
-Get-AzureRmServerManagementSession [-Node] <Node> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmServerManagementSession [-Node] <Node> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +42,37 @@ The **Get-AzureRmServerManagementSession** cmdlet gets a single Azure Server Man
 ```
 
 ## PARAMETERS
+
+### -Node
+Specifies an existing **Node** object that is used to get the *ResourceGroupName* and the *NodeName* parameters.
+You must also specify a value for the *SessionName* parameter.
+
+```yaml
+Type: Node
+Parameter Sets: ByNode
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -NodeName
+Specifies the name of the node where the session is located.
+
+```yaml
+Type: String
+Parameter Sets: ByNodeName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -ResourceGroupName
 Specifies the name of the resource group for which this cmdlet gets the retrieve the session.
@@ -60,18 +89,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NodeName
-Specifies the name of the node where the session is located.
+### -Session
+Specifies an existing **Session** object that is used to get the *ResourceGroupName*, the *NodeName*, and the *SessionName* parameters.
 
 ```yaml
-Type: String
-Parameter Sets: ByNodeName
+Type: Session
+Parameter Sets: BySession
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -99,76 +128,6 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Session
-Specifies an existing **Session** object that is used to get the *ResourceGroupName*, the *NodeName*, and the *SessionName* parameters.
-
-```yaml
-Type: Session
-Parameter Sets: BySession
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Node
-Specifies an existing **Node** object that is used to get the *ResourceGroupName* and the *NodeName* parameters.
-You must also specify a value for the *SessionName* parameter.
-
-```yaml
-Type: Node
-Parameter Sets: ByNode
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

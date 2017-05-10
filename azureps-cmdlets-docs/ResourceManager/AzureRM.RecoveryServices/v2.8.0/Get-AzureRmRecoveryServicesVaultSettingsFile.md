@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzureRmRecoveryServicesVaultSettingsFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzureRmRecoveryServicesVaultSettingsFile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmRecoveryServicesVaultSettingsFile
@@ -53,44 +53,12 @@ The last command gets the vault credentials file for $Vault01 using the credenti
 
 ## PARAMETERS
 
-### -Vault
-Specifies the Azure Site Recovery vault object.
+### -Backup
+Indicates the vault credentials file is applicable to Azure Backup.
 
 ```yaml
-Type: ARSVault
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -SiteIdentifier
-Specifies the site identifier.
-Use this parameter if you are downloading the vault credentials for a Hyper-V site.
-
-```yaml
-Type: String
-Parameter Sets: ForSite
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SiteFriendlyName
-Specifies the site friendly name.
-Use this parameter if you are downloading the vault credentials for a Hyper-V site.
-
-```yaml
-Type: String
-Parameter Sets: ForSite
+Type: SwitchParameter
+Parameter Sets: ForBackupVaultType
 Aliases: 
 
 Required: True
@@ -116,6 +84,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteFriendlyName
+Specifies the site friendly name.
+Use this parameter if you are downloading the vault credentials for a Hyper-V site.
+
+```yaml
+Type: String
+Parameter Sets: ForSite
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteIdentifier
+Specifies the site identifier.
+Use this parameter if you are downloading the vault credentials for a Hyper-V site.
+
+```yaml
+Type: String
+Parameter Sets: ForSite
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteRecovery
 Indicates the vault credentials file is applicable to Azure Site Recovery.
 
@@ -131,18 +131,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Backup
-Indicates the vault credentials file is applicable to Azure Backup.
+### -Vault
+Specifies the Azure Site Recovery vault object.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: ForBackupVaultType
+Type: ARSVault
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

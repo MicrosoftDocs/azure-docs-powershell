@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageServiceMetricsProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageServiceMetricsProperty.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureStorageServiceMetricsProperty
@@ -17,8 +17,7 @@ Gets metrics properties for the Azure Storage service.
 
 ```
 Get-AzureStorageServiceMetricsProperty [-ServiceType] <StorageServiceType> [-MetricsType] <ServiceMetricsType>
- [-Context <AzureStorageContext>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-PipelineVariable <String>] [<CommonParameters>]
+ [-Context <AzureStorageContext>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,47 +33,6 @@ C:\PS>Get-AzureStorageServiceMetricsProperty -ServiceType Blob -MetricsType Hour
 This command gets metrics properties for blob storage for the Hour metrics type.
 
 ## PARAMETERS
-
-### -ServiceType
-Specifies the storage service type.
-This cmdlet gets the metrics properties for the type that this parameter specifies.
-The acceptable values for this parameter are:
-
-- Blob 
-- Table
-- Queue
-- File 
-
-The value of File is not currently supported.
-
-```yaml
-Type: StorageServiceType
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MetricsType
-Specifies a metrics type.
-This cmdlet gets the Azure Storage service metrics properties for the metrics type that this parameter specifies.
-The acceptable values for this parameter are: Hour and Minute.
-
-```yaml
-Type: ServiceMetricsType
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Context
 Specifies an Azure storage context.
@@ -92,55 +50,44 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
+### -MetricsType
+Specifies a metrics type.
+This cmdlet gets the Azure Storage service metrics properties for the metrics type that this parameter specifies.
+The acceptable values for this parameter are: Hour and Minute.
 
+```yaml
+Type: ServiceMetricsType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Hour, Minute
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceType
+Specifies the storage service type.
+This cmdlet gets the metrics properties for the type that this parameter specifies.
 The acceptable values for this parameter are:
 
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+- Blob 
+- Table
+- Queue
+- File 
+
+The value of File is not currently supported.
 
 ```yaml
-Type: ActionPreference
+Type: StorageServiceType
 Parameter Sets: (All)
-Aliases: infa
+Aliases: 
+Accepted values: Blob, Table, Queue, File
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PipelineVariable
-Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: pv
-
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

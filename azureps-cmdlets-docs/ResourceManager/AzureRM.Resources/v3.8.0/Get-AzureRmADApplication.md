@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADApplication.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/39673ed92d863c7fba7fbbdb0d919d03c552b71b
 ---
 
 # Get-AzureRmADApplication
@@ -17,31 +17,27 @@ Lists existing azure active directory applications.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADApplication [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+Get-AzureRmADApplication [<CommonParameters>]
 ```
 
 ### ApplicationObjectIdParameterSet
 ```
-Get-AzureRmADApplication -ObjectId <Guid> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+Get-AzureRmADApplication -ObjectId <Guid> [<CommonParameters>]
 ```
 
 ### ApplicationIdParameterSet
 ```
-Get-AzureRmADApplication -ApplicationId <Guid> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+Get-AzureRmADApplication -ApplicationId <Guid> [<CommonParameters>]
 ```
 
 ### ApplicationDisplayNameParameterSet
 ```
-Get-AzureRmADApplication -DisplayNameStartWith <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+Get-AzureRmADApplication -DisplayNameStartWith <String> [<CommonParameters>]
 ```
 
 ### ApplicationIdentifierUriParameterSet
 ```
-Get-AzureRmADApplication -IdentifierUri <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>]
+Get-AzureRmADApplication -IdentifierUri <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,8 +48,6 @@ If no parameter is provided, it fetches all applications under the tenant.
 ## EXAMPLES
 
 ### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
-
 ```
 PS E:\> Get-AzureRmADApplication
 ```
@@ -61,8 +55,6 @@ PS E:\> Get-AzureRmADApplication
 Lists all the applications under a tenant.
 
 ### --------------------------  Example 2  --------------------------
-@{paragraph=PS C:\\\>}
-
 ```
 PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
 ```
@@ -70,60 +62,6 @@ PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
 Gets the application with identifier uri as "http://mySecretApp1".
 
 ## PARAMETERS
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ObjectId
-The object id of the application to fetch.
-
-```yaml
-Type: Guid
-Parameter Sets: ApplicationObjectIdParameterSet
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -ApplicationId
 The application id of the application to fetch.
@@ -169,6 +107,24 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### -ObjectId
+The object id of the application to fetch.
+
+```yaml
+Type: Guid
+Parameter Sets: ApplicationObjectIdParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

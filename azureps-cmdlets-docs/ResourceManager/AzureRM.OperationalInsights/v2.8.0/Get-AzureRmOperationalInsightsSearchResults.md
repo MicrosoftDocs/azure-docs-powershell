@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzureRmOperationalInsightsSearchResults.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzureRmOperationalInsightsSearchResults.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ae94f1b0a47fd9b81fd22cbd281d848bc1cede7a
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmOperationalInsightsSearchResults
@@ -18,8 +18,7 @@ Returns search results based on the specified parameters.
 ```
 Get-AzureRmOperationalInsightsSearchResults [-ResourceGroupName] <String> [-WorkspaceName] <String>
  [[-Top] <Int64>] [[-PreHighlight] <String>] [[-PostHighlight] <String>] [[-Query] <String>]
- [[-Start] <DateTime>] [[-End] <DateTime>] [[-Id] <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+ [[-Start] <DateTime>] [[-End] <DateTime>] [[-Id] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,107 +81,6 @@ This script starts a search and waits until it completes before displaying the r
 
 ## PARAMETERS
 
-### -ResourceGroupName
-The name of the resource group that contains the workspace.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkspaceName
-Specifies a workspace name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Name
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Top
-The maximum number of results to be returned, limited to 5000.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: 10
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreHighlight
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PostHighlight
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Query
-The search query that will be executed.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Start
-Start of the queried time range.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 6
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -End
 End of the queried time range.
 
@@ -213,42 +111,104 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
+### -PostHighlight
 ```yaml
-Type: ActionPreference
+Type: String
 Parameter Sets: (All)
-Aliases: infa
+Aliases: 
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationVariable
-Specifies an information variable.
+### -PreHighlight
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Query
+The search query that will be executed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
 
 Required: False
-Position: Named
+Position: 5
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+The name of the resource group that contains the workspace.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Start
+Start of the queried time range.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Top
+The maximum number of results to be returned, limited to 5000.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 2
+Default value: 10
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkspaceName
+Specifies a workspace name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAutoscaleProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAutoscaleProfile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmAutoscaleProfile
@@ -124,8 +124,8 @@ The second command creates a profile without a schedule or a fixed date, and the
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the profile to create.
+### -DefaultCapacity
+Specifies the default capacity.
 
 ```yaml
 Type: String
@@ -139,12 +139,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultCapacity
-Specifies the default capacity.
+### -EndTimeWindow
+Specifies the end of the time window.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: DateTime
+Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
 Aliases: 
 
 Required: True
@@ -184,56 +184,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -StartTimeWindow
-Specifies the start of the time window.
-
-```yaml
-Type: DateTime
-Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EndTimeWindow
-Specifies the end of the time window.
-
-```yaml
-Type: DateTime
-Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TimeWindowTimeZone
-Specifies the time zone of the time window.
+### -Name
+Specifies the name of the profile to create.
 
 ```yaml
 Type: String
-Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Rules
-Specifies the list of rules to add to the profile.
-
-```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Insights.Models.ScaleRule]
 Parameter Sets: (All)
 Aliases: 
 
@@ -262,6 +217,22 @@ Not all of these values are supported.
 ```yaml
 Type: RecurrenceFrequency
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
+Aliases: 
+Accepted values: None, Second, Minute, Hour, Day, Week, Month, Year
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Rules
+Specifies the list of rules to add to the profile.
+
+```yaml
+Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Insights.Models.ScaleRule]
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
@@ -322,6 +293,36 @@ Specifies the time zone of the schedule.
 ```yaml
 Type: String
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartTimeWindow
+Specifies the start of the time window.
+
+```yaml
+Type: DateTime
+Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TimeWindowTimeZone
+Specifies the time zone of the time window.
+
+```yaml
+Type: String
+Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using fix date scheduling
 Aliases: 
 
 Required: True

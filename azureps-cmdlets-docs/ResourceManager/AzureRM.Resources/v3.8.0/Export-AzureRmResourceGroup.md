@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Export-AzureRmResourceGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Export-AzureRmResourceGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Export-AzureRmResourceGroup
@@ -40,23 +40,9 @@ This command captures the resource group named TestGroup as a template, and save
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the resource group to export.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ResourceGroup
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Path
-Specifies the output path of the template file.
+### -ApiVersion
+Specifies the version of the resource provider API to use.
+If not specified, the latest API version is used.
 
 ```yaml
 Type: String
@@ -66,12 +52,12 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IncludeParameterDefaultValue
-Indicates that this operation exports the template parameter with the default value.
+### -Force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -100,24 +86,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApiVersion
-Specifies the version of the resource provider API to use.
-If not specified, the latest API version is used.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Pre
-Indicates that this cmdlet use pre-release API versions when automatically determining which API version to use.
+### -IncludeParameterDefaultValue
+Indicates that this operation exports the template parameter with the default value.
 
 ```yaml
 Type: SwitchParameter
@@ -170,6 +140,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Path
+Specifies the output path of the template file.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Pre
+Indicates that this cmdlet use pre-release API versions when automatically determining which API version to use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to export.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ResourceGroup
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -181,21 +196,6 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Get-AzureRmDnsRecordSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Get-AzureRmDnsRecordSet.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmDnsRecordSet
@@ -119,6 +119,7 @@ This cmdlet then returns all record sets in the zone (of all names and types).
 Type: RecordType
 Parameter Sets: (All)
 Aliases: 
+Accepted values: A, AAAA, CNAME, MX, NS, PTR, SOA, SRV, TXT
 
 Required: False
 Position: Named

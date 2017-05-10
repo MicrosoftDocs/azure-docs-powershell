@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Get-AzureRmHDInsightJobOutput.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Get-AzureRmHDInsightJobOutput.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmHDInsightJobOutput
@@ -19,7 +19,7 @@ Gets the log output for a job from the storage account associated with a specifi
 Get-AzureRmHDInsightJobOutput [-ClusterName] <String> [-JobId] <String> [[-DefaultContainer] <String>]
  [[-DefaultStorageAccountName] <String>] [[-DefaultStorageAccountKey] <String>]
  [-HttpCredential] <PSCredential> [-ResourceGroupName <String>] [-DisplayOutputType <JobDisplayOutputType>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,21 +66,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -JobId
-Specifies the job ID of the job whose output will be fetched.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultContainer
 Specifies the default container name.
 
@@ -91,21 +76,6 @@ Aliases:
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultStorageAccountName
-Specifies the default Storage account name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -126,23 +96,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HttpCredential
-Specifies the cluster login (HTTP) credentials for the cluster.
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases: ClusterCredential
-
-Required: True
-Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group.
+### -DefaultStorageAccountName
+Specifies the default Storage account name.
 
 ```yaml
 Type: String
@@ -150,7 +105,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -167,6 +122,7 @@ The acceptable values for this parameter are:
 Type: JobDisplayOutputType
 Parameter Sets: (All)
 Aliases: 
+Accepted values: StandardOutput, StandardError
 
 Required: False
 Position: Named
@@ -175,37 +131,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+### -HttpCredential
+Specifies the cluster login (HTTP) credentials for the cluster.
 
 ```yaml
-Type: ActionPreference
+Type: PSCredential
 Parameter Sets: (All)
-Aliases: infa
+Aliases: ClusterCredential
 
-Required: False
-Position: Named
+Required: True
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationVariable
-Specifies an information variable.
+### -JobId
+Specifies the job ID of the job whose output will be fetched.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

@@ -4,10 +4,9 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: ./Azure.Storage.md
 Help Version:
 Locale: en-US
-ms.assetid: 6487B14D-5ADD-400E-9989-BA8DDB2D9D49
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
+gitcommit: https://github.com/Azure/azure-powershell/blob/89262bc4144696c69376c3fb654c881de55b6450
 ---
 
 # Azure.Storage Module
@@ -67,10 +66,10 @@ Lists the storage tables.
 Gets the stored access policy or policies for an Azure storage table.
 
 ### [New-AzureStorageAccountSASToken](New-AzureStorageAccountSASToken.md)
-Creates an SAS token.
+Creates an account-level SAS token.
 
 ### [New-AzureStorageBlobSASToken](New-AzureStorageBlobSASToken.md)
-Generates an SAS token for an Azure storage blob.
+Generates a SAS token for an Azure storage blob.
 
 ### [New-AzureStorageContainer](New-AzureStorageContainer.md)
 Creates an Azure storage container.
@@ -188,6 +187,9 @@ Sets the stored access policy for an Azure storage table.
 
 ### [Start-AzureStorageBlobCopy](Start-AzureStorageBlobCopy.md)
 Starts to copy a blob.
+
+### [Start-AzureStorageBlobIncrementalCopy](Start-AzureStorageBlobIncrementalCopy.md)
+Start an Incremental copy operation from a Page blob snapshot to the specified destination Page blob.
 
 ### [Start-AzureStorageFileCopy](Start-AzureStorageFileCopy.md)
 Starts to copy a source file.

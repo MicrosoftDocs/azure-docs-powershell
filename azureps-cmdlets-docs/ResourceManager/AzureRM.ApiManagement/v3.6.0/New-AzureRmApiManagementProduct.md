@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-ms.assetid: B36B35C7-6865-49F2-8429-EAFC69B7961C
+ms.assetid: E94B88AA-B8B0-49F0-AD36-6707E17B40AD
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementProduct.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementProduct.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmApiManagementProduct
@@ -18,8 +18,7 @@ Creates an API Management product.
 ```
 New-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-ProductId <String>] -Title <String>
  [-Description <String>] [-LegalTerms <String>] [-SubscriptionRequired <Boolean>] [-ApprovalRequired <Boolean>]
- [-SubscriptionsLimit <Int32>] [-State <PsApiManagementProductState>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+ [-SubscriptionsLimit <Int32>] [-State <PsApiManagementProductState>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,27 +46,12 @@ The subscription duration is set to one year.
 
 ## PARAMETERS
 
-### -Context
-Specifies an instance of a **PsApiManagementContext** object.
+### -ApprovalRequired
+Indicates whether the subscription to the product requires approval or not.
+By default, this parameter is **$False**.
 
 ```yaml
-Type: PsApiManagementContext
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ProductId
-Specifies the identifier of new product.
-If you do not specify this parameter, a new product is generated.
-
-```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -78,11 +62,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Title
-Specifies the product title.
+### -Context
+Specifies an instance of a **PsApiManagementContext** object.
 
 ```yaml
-Type: String
+Type: PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -123,12 +107,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SubscriptionRequired
-Indicates whether the product requires a subscription.
-The default value is **$True**.
+### -ProductId
+Specifies the identifier of new product.
+If you do not specify this parameter, a new product is generated.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,9 +123,31 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ApprovalRequired
-Indicates whether the subscription to the product requires approval or not.
-By default, this parameter is **$False**.
+### -State
+Specifies the product state.
+psdx_paramvalues
+
+- NotPublished
+- Published 
+
+The default value is NotPublished.
+
+```yaml
+Type: PsApiManagementProductState
+Parameter Sets: (All)
+Aliases: 
+Accepted values: NotPublished, Published
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SubscriptionRequired
+Indicates whether the product requires a subscription.
+The default value is **$True**.
 
 ```yaml
 Type: Boolean
@@ -171,63 +177,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -State
-Specifies the product state.
-The acceptable values for this parameter are:
-
-- NotPublished
-- Published 
-
-The default value is NotPublished.
-
-```yaml
-Type: PsApiManagementProductState
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
+### -Title
+Specifies the product title.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHub.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmNotificationHub
@@ -53,22 +53,18 @@ You do not need to specify a name or any other configuration information for the
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the resource group to which the notification hub will be assigned.
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
-
-You must use an existing resource group.
-The **New-AzureRmNotificationHub** cmdlet cannot create a new resource group.
+### -InputFile
+Specifies the path to a JSON file containing configuration values for the new notification hub.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: InputFileParameterSet
 Aliases: 
 
 Required: True
-Position: 0
+Position: 2
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -91,21 +87,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InputFile
-Specifies the path to a JSON file containing configuration values for the new notification hub.
-
-```yaml
-Type: String
-Parameter Sets: InputFileParameterSet
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NotificationHubObj
 Specifies the **NotificationHubAttributes** object that contains configuration information for the new hub.
 
@@ -118,6 +99,25 @@ Required: True
 Position: 2
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the resource group to which the notification hub will be assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+
+You must use an existing resource group.
+The **New-AzureRmNotificationHub** cmdlet cannot create a new resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/Set-AzureRmSchedulerServiceBusTopicJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/Set-AzureRmSchedulerServiceBusTopicJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmSchedulerServiceBusTopicJob
@@ -20,9 +20,8 @@ Set-AzureRmSchedulerServiceBusTopicJob -ResourceGroupName <String> -JobCollectio
  -JobName <String> -ServiceBusTopicPath <String> -ServiceBusNamespace <String>
  -ServiceBusTransportType <String> -ServiceBusMessage <String> -ServiceBusSasKeyName <String>
  -ServiceBusSasKeyValue <String> [-StartTime <DateTime>] [-Interval <Int32>] [-Frequency <String>]
- [-EndTime <DateTime>] [-ExecutionCount <Int32>] [-JobState <String>] [-ErrorActionType <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-EndTime <DateTime>] [-ExecutionCount <Int32>] [-JobState <String>] [-ErrorActionType <String>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,18 +42,96 @@ If you omit a required parameter, the cmdlet prompts you for the value.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group to which the job belongs.
+### -EndTime
+Specifies an end time, as a **DateTime** object, for the job.
+To obtain a **DateTime** object, use the Get-Date cmdlet.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ErrorActionType
+Specifies an error action setting for the job.
+The acceptable values for this parameter are:
+
+- Http 
+- Https 
+- StorageQueue 
+- ServiceBusQueue 
+- ServiceBusTopic
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Http, Https, StorageQueue, ServiceBusQueue, ServiceBusTopic
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExecutionCount
+Specifies how many times the job runs.
+By default, a job recurs indefinitely.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Frequency
+Specifies a maximum frequency for the job.
+The acceptable values for this parameter are:
+
+- Minute 
+- Hour 
+- Day 
+- Week 
+- Month
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Minute, Hour, Day, Week, Month
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Interval
+Specifies an interval of recurrence for the job.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -88,8 +165,43 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ServiceBusTopicPath
-Specifies a service bus topic path.
+### -JobState
+Specifies the state of the job.
+The acceptable values for this parameter are:
+
+- Enabled 
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Enabled, Disabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group to which the job belongs.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServiceBusMessage
+Specifies a service bus topic message.
 
 ```yaml
 Type: String
@@ -105,40 +217,6 @@ Accept wildcard characters: False
 
 ### -ServiceBusNamespace
 Specifies a service bus namespace.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceBusTransportType
-Specifies a service bus transport type.
-The acceptable values for this parameter are:
-
-- NetMessaging
-- AMQP
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceBusMessage
-Specifies a service bus topic message.
 
 ```yaml
 Type: String
@@ -182,6 +260,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ServiceBusTopicPath
+Specifies a service bus topic path.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceBusTransportType
+Specifies a service bus transport type.
+The acceptable values for this parameter are:
+
+- NetMessaging
+- AMQP
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: NetMessaging, AMQP
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -StartTime
 Specifies the start time, as a **DateTime** object, for the job.
 
@@ -197,151 +310,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Interval
-Specifies an interval of recurrence for the job.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: Int32
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Frequency
-Specifies a maximum frequency for the job.
-The acceptable values for this parameter are:
-
-- Minute 
-- Hour 
-- Day 
-- Week 
-- Month
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EndTime
-Specifies an end time, as a **DateTime** object, for the job.
-To obtain a **DateTime** object, use the Get-Date cmdlet.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExecutionCount
-Specifies how many times the job runs.
-By default, a job recurs indefinitely.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JobState
-Specifies the state of the job.
-The acceptable values for this parameter are:
-
-- Enabled 
-- Disabled
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ErrorActionType
-Specifies an error action setting for the job.
-The acceptable values for this parameter are:
-
-- Http 
-- Https 
-- StorageQueue 
-- ServiceBusQueue 
-- ServiceBusTopic
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -354,21 +333,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

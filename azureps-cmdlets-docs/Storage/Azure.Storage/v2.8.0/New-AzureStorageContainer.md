@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContainer.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureStorageContainer
@@ -18,8 +18,7 @@ Creates an Azure storage container.
 ```
 New-AzureStorageContainer [-Name] <String> [[-Permission] <BlobContainerPublicAccessType>]
  [-Context <AzureStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
- [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-PipelineVariable <String>] [<CommonParameters>]
+ [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,80 +42,6 @@ This example creates multiple storage containers.
 It uses the **Split** method of the .NET **String** class and then passes the names on the pipeline.
 
 ## PARAMETERS
-
-### -Name
-Specifies a name for the new container.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: N, Container
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Permission
-Specifies the level of public access to this container.
-By default, the container and any blobs in it can be accessed only by the owner of the storage account.
-To grant anonymous users read permissions to a container and its blobs, you can set the container permissions to enable public access.
-Anonymous users can read blobs in a publicly available container without authenticating the request.
-The acceptable values for this parameter are:
-
-- Container.
-Provides full read access to a container and its blobs.
-Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account. 
-- Blob.
-Provides read access to blob data throughout a container through anonymous request, but does not provide access to container data.
-Clients cannot enumerate blobs in the container by using anonymous request. 
-- Off.
-Which restricts access to only the storage account owner.
-
-```yaml
-Type: BlobContainerPublicAccessType
-Parameter Sets: (All)
-Aliases: PublicAccess
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Context
-Specifies a context for the new container.
-
-```yaml
-Type: AzureStorageContext
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -ServerTimeoutPerRequest
-Specifies the service side time-out interval, in seconds, for a request.
-If the specified interval elapses before the service processes the request, the storage service returns an error.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ClientTimeoutPerRequest
 Specifies the client-side time-out interval, in seconds, for one service request.
@@ -154,52 +79,73 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
+### -Context
+Specifies a context for the new container.
 
+```yaml
+Type: AzureStorageContext
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies a name for the new container.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: N, Container
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Permission
+Specifies the level of public access to this container.
+By default, the container and any blobs in it can be accessed only by the owner of the storage account.
+To grant anonymous users read permissions to a container and its blobs, you can set the container permissions to enable public access.
+Anonymous users can read blobs in a publicly available container without authenticating the request.
 The acceptable values for this parameter are:
 
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+- Container.
+Provides full read access to a container and its blobs.
+Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account. 
+- Blob.
+Provides read access to blob data throughout a container through anonymous request, but does not provide access to container data.
+Clients cannot enumerate blobs in the container by using anonymous request. 
+- Off.
+Which restricts access to only the storage account owner.
 
 ```yaml
-Type: ActionPreference
+Type: BlobContainerPublicAccessType
 Parameter Sets: (All)
-Aliases: infa
+Aliases: PublicAccess
+Accepted values: Off, Container, Blob
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationVariable
-Specifies an information variable.
+### -ServerTimeoutPerRequest
+Specifies the service side time-out interval, in seconds, for a request.
+If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PipelineVariable
-Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: pv
+Aliases: 
 
 Required: False
 Position: Named

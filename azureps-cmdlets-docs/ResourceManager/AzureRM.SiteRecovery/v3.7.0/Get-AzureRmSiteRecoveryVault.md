@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryVault.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmSiteRecoveryVault
@@ -26,8 +26,8 @@ The **Get-AzureRmSiteRecoveryVault** cmdlet gets a list of Azure Site Recovery v
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the name of the Azure resource group from which to get the recovery services object.
+### -Name
+Specifies the name of the vault.
 
 ```yaml
 Type: String
@@ -41,8 +41,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of the vault.
+### -ResourceGroupName
+Specifies the name of the Azure resource group from which to get the recovery services object.
 
 ```yaml
 Type: String

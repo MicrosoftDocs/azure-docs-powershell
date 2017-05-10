@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryRecoveryPoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryRecoveryPoint.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmSiteRecoveryRecoveryPoint
@@ -34,21 +34,6 @@ The **Get-AzureRmSiteRecoveryRecoveryPoint** cmdlet gets the list of available r
 
 ## PARAMETERS
 
-### -ReplicationProtectedItem
-Specifies the Azure Site Recovery Replication Protected Item object.
-
-```yaml
-Type: ASRReplicationProtectedItem
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the recovery point this cmdlet gets.
 
@@ -61,6 +46,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplicationProtectedItem
+Specifies the Azure Site Recovery Replication Protected Item object.
+
+```yaml
+Type: ASRReplicationProtectedItem
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

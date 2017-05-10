@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzureRmApiManagementIdentityProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzureRmApiManagementIdentityProvider.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/b9f96ffcc5e000919e3f5cfe59d91809e0373d34
+gitcommit: https://github.com/Azure/azure-powershell/blob/eb2b5c5505d48a33661e70ccdab72360e6ff0798
 ---
 
 # Set-AzureRmApiManagementIdentityProvider
@@ -17,8 +17,7 @@ Updates the Configuration of an existing Identity Provider.
 ```
 Set-AzureRmApiManagementIdentityProvider -Context <PsApiManagementContext>
  -Type <PsApiManagementIdentityProviderType> [-ClientId <String>] [-ClientSecret <String>]
- [-AllowedTenants <String[]>] [-PassThru] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-AllowedTenants <String[]>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -98,46 +97,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PassThru
 Indicates that this cmdlet returns the  **PsApiManagementIdentityProvider** that this cmdlet modifies.
 
@@ -162,6 +121,7 @@ This parameter is required.
 Type: PsApiManagementIdentityProviderType
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Facebook, Google, Microsoft, Twitter, Aad
 
 Required: True
 Position: Named
@@ -200,6 +160,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
@@ -209,3 +172,9 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzureRmApiManagementIdentityProvider](./New-AzureRmApiManagementIdentityProvider.md)
+
+[Get-AzureRmApiManagementIdentityProvider](./Get-AzureRmApiManagementIdentityProvider.md)
+
+[Remove-AzureRmApiManagementIdentityProvider](./Remove-AzureRmApiManagementIdentityProvider.md)

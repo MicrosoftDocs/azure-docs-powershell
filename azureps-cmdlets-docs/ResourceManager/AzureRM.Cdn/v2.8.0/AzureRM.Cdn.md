@@ -6,10 +6,9 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-ms.assetid: 67C91A2B-729C-469F-9CB9-FADFA38305DE
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/AzureRM.Cdn.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/AzureRM.Cdn.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # AzureRM.Cdn Module
@@ -20,11 +19,17 @@ The topics in this section document the Azure PowerShell cmdlets for Azure Conte
 ### [Get-AzureRmCdnCustomDomain](Get-AzureRmCdnCustomDomain.md)
 Gets a CDN custom domain.
 
+### [Get-AzureRmCdnEdgeNodes](Get-AzureRmCdnEdgeNodes.md)
+{{Fill in the Synopsis}}
+
 ### [Get-AzureRmCdnEndpoint](Get-AzureRmCdnEndpoint.md)
 Gets a CDN endpoint.
 
 ### [Get-AzureRmCdnEndpointNameAvailability](Get-AzureRmCdnEndpointNameAvailability.md)
 Gets availability status of the CDN endpoint.
+
+### [Get-AzureRmCdnEndpointResourceUsage](Get-AzureRmCdnEndpointResourceUsage.md)
+{{Fill in the Synopsis}}
 
 ### [Get-AzureRmCdnOrigin](Get-AzureRmCdnOrigin.md)
 Gets a CDN origin server.
@@ -32,8 +37,14 @@ Gets a CDN origin server.
 ### [Get-AzureRmCdnProfile](Get-AzureRmCdnProfile.md)
 Gets a CDN profile.
 
+### [Get-AzureRmCdnProfileResourceUsage](Get-AzureRmCdnProfileResourceUsage.md)
+{{Fill in the Synopsis}}
+
 ### [Get-AzureRmCdnProfileSsoUrl](Get-AzureRmCdnProfileSsoUrl.md)
 Gets the single sign-on URL of a CDN profile.
+
+### [Get-AzureRmCdnSubscriptionResourceUsage](Get-AzureRmCdnSubscriptionResourceUsage.md)
+{{Fill in the Synopsis}}
 
 ### [New-AzureRmCdnCustomDomain](New-AzureRmCdnCustomDomain.md)
 Creates a custom domain for a CDN endpoint.

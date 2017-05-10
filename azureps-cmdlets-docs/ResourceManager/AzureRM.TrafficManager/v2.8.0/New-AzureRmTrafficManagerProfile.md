@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/New-AzureRmTrafficManagerProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/New-AzureRmTrafficManagerProfile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmTrafficManagerProfile
@@ -111,6 +111,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProfileStatus
+Specifies the status of the profile.
+Valid values are: Enabled and Disabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Enabled, Disabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RelativeDnsName
 Specifies the relative DNS name that this Traffic Manager profile provides.
 Traffic Manager combines this value and the DNS domain name that Azure Traffic Manager uses to form the fully qualified domain name (FQDN) of the profile.
@@ -137,6 +154,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tag
+Specifies tags as an array of hash tables.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: Tags
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -174,37 +206,6 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProfileStatus
-Specifies the status of the profile.
-Valid values are: Enabled and Disabled.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tag
-Specifies tags as an array of hash tables.
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: Tags
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

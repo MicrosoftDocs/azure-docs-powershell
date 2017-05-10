@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingInvoice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingInvoice.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/9c92f0b478aeb988dd13a82904b8dee1e9104a0f
+gitcommit: https://github.com/Azure/azure-powershell/blob/dbbac5b71c9946c33dcc700ce2b7eaae8cbad761
 ---
 
 # Get-AzureRmBillingInvoice
@@ -26,7 +26,7 @@ Get-AzureRmBillingInvoice [-Latest] [<CommonParameters>]
 
 ### Single
 ```
-Get-AzureRmBillingInvoice -Name <String> [<CommonParameters>]
+Get-AzureRmBillingInvoice -Name <System.Collections.Generic.List`1[System.String]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +65,9 @@ Get most recent 10 invoices of the subscription and include the download Url in 
 ## PARAMETERS
 
 ### -GenerateDownloadUrl
-Generate the download url of the invoices.```yaml
+Generate the download url of the invoices.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: List
 Aliases: 
@@ -78,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -Latest
-Get the latest invoice.```yaml
+Get the latest invoice.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: Latest
 Aliases: 
@@ -106,8 +110,10 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a specific invoice to get or the most recent if not specified.```yaml
-Type: String
+Name of a specific invoice to get or the most recent if not specified.
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: Single
 Aliases: 
 

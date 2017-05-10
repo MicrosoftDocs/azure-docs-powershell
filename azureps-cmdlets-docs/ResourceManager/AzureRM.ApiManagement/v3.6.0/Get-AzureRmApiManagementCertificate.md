@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-ms.assetid: A82605F3-8D00-481E-BD9D-E46259BBD666
+ms.assetid: 6F7C6611-5C56-4F1D-AB98-CDD92D88821C
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmApiManagementCertificate
@@ -17,15 +17,13 @@ Gets API Management certificates.
 
 ### Get all certificates (Default)
 ```
-Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Get certificate by ID
 ```
-Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -CertificateId <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -CertificateId <String> [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,21 +47,6 @@ This command gets the API Management certificate with the specified ID.
 
 ## PARAMETERS
 
-### -Context
-Specifies a **PsApiManagementContext** object.
-
-```yaml
-Type: PsApiManagementContext
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -CertificateId
 Specifies the ID of the certificate to get.
 
@@ -79,41 +62,32 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+### -Context
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: ActionPreference
+Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: infa
+Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationVariable
-Specifies an information variable.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: iv
+Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -126,21 +100,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHubsNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHubsNamespace.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmNotificationHubsNamespace
@@ -17,7 +17,7 @@ Creates a notification hub namespace.
 
 ```
 New-AzureRmNotificationHubsNamespace [-ResourceGroup] <String> [-Namespace] <String> [-Location] <String>
- [[-Tags] <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Tags] <Hashtable>] [[-SkuTier] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,9 +54,9 @@ This ensures that the namespace will be displayed any time you filter for items 
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the resource group to which the namespace will be assigned.
-Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and administration.
+### -Location
+Specifies the display name of the datacenter that will host the Namespace.
+Although you can set this parameter to any valid location, for optimal performance you might want to use a datacenter located near the majority of your users.
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 0
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -86,9 +86,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Location
-Specifies the display name of the datacenter that will host the Namespace.
-Although you can set this parameter to any valid location, for optimal performance you might want to use a datacenter located near the majority of your users.
+### -ResourceGroup
+Specifies the resource group to which the namespace will be assigned.
+Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and administration.
 
 ```yaml
 Type: String
@@ -96,7 +96,20 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkuTier
+Sku tier of the namespace```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlDatabaseExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlDatabaseExport.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmSqlDatabaseExport
@@ -18,8 +18,7 @@ Exports an Azure SQL Database as a .bacpac file to a storage account.
 ```
 New-AzureRmSqlDatabaseExport [-DatabaseName] <String> [-ServerName] <String> -StorageKeyType <StorageKeyType>
  -StorageKey <String> -StorageUri <Uri> -AdministratorLogin <String> -AdministratorLoginPassword <SecureString>
- [-AuthenticationType <AuthenticationType>] [-ResourceGroupName] <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
+ [-AuthenticationType <AuthenticationType>] [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -52,88 +51,6 @@ ErrorMessage               :
 This command creates an export request for the specified database.
 
 ## PARAMETERS
-
-### -DatabaseName
-Specifies the name of the SQL Database.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServerName
-Specifies the name of the SQL Database server.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageKeyType
-Specifies the type of access key for the storage account.
-
-The acceptable values for this parameter are:
-
-- StorageAccessKey.
-This value uses a storage account key. 
-- SharedAccessKey.
-This value uses a Shared Access Signature (SAS) key.
-
-```yaml
-Type: StorageKeyType
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageKey
-Specifies the access key for the storage account.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageUri
-Specifies the blob link, as a URL, to the .bacpac file.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -AdministratorLogin
 Specifies the name of the SQL administrator.
@@ -184,11 +101,27 @@ This parameter is only available on SQL Database V12 servers.
 Type: AuthenticationType
 Parameter Sets: (All)
 Aliases: 
+Accepted values: None, Sql, AdPassword
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DatabaseName
+Specifies the name of the SQL Database.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -207,39 +140,68 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+### -ServerName
+Specifies the name of the SQL Database server.
 
 ```yaml
-Type: ActionPreference
+Type: String
 Parameter Sets: (All)
-Aliases: infa
+Aliases: 
 
-Required: False
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageKey
+Specifies the access key for the storage account.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationVariable
-Specifies an information variable.
+### -StorageKeyType
+Specifies the type of access key for the storage account.
+
+The acceptable values for this parameter are:
+
+- StorageAccessKey.
+This value uses a storage account key. 
+- SharedAccessKey.
+This value uses a Shared Access Signature (SAS) key.
 
 ```yaml
-Type: String
+Type: StorageKeyType
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
+Accepted values: StorageAccessKey, SharedAccessKey
 
-Required: False
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageUri
+Specifies the blob link, as a URL, to the .bacpac file.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

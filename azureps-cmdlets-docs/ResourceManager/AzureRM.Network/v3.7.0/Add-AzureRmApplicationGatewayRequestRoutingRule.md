@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmApplicationGatewayRequestRoutingRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmApplicationGatewayRequestRoutingRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/898dcc79a9e3bf9563d390c9a7c04f5ea5b5a269
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Add-AzureRmApplicationGatewayRequestRoutingRule
@@ -19,8 +19,7 @@ Adds a request routing rule to an application gateway.
 ```
 Add-AzureRmApplicationGatewayRequestRoutingRule -ApplicationGateway <PSApplicationGateway> -Name <String>
  -RuleType <String> [-BackendHttpSettingsId <String>] [-HttpListenerId <String>]
- [-BackendAddressPoolId <String>] [-UrlPathMapId <String>] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+ [-BackendAddressPoolId <String>] [-UrlPathMapId <String>] [<CommonParameters>]
 ```
 
 ### SetByResource
@@ -29,7 +28,7 @@ Add-AzureRmApplicationGatewayRequestRoutingRule -ApplicationGateway <PSApplicati
  -RuleType <String> [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
  [-HttpListener <PSApplicationGatewayHttpListener>]
  [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>] [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -153,45 +152,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of request routing rule this cmdlet adds.
 
@@ -214,6 +174,7 @@ Specifies the type of request routing rule.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Basic, PathBasedRouting
 
 Required: True
 Position: Named

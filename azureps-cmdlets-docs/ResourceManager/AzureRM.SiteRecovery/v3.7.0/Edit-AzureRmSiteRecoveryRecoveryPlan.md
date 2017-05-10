@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Edit-AzureRmSiteRecoveryRecoveryPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Edit-AzureRmSiteRecoveryRecoveryPlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Edit-AzureRmSiteRecoveryRecoveryPlan
@@ -26,10 +26,10 @@ Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -RemoveGrou
  [<CommonParameters>]
 ```
 
-### AddReplicationProtectedItems
+### AddProtectedEntities
 ```
 Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -Group <ASRRecoveryPlanGroup>
- -AddProtectedItems <ASRReplicationProtectedItem[]> [<CommonParameters>]
+ -AddProtectedEntities <ASRProtectionEntity[]> [<CommonParameters>]
 ```
 
 ### RemoveProtectedEntities
@@ -38,10 +38,10 @@ Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -Group <ASR
  -RemoveProtectedEntities <ASRProtectionEntity[]> [<CommonParameters>]
 ```
 
-### AddProtectedEntities
+### AddReplicationProtectedItems
 ```
 Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -Group <ASRRecoveryPlanGroup>
- -AddProtectedEntities <ASRProtectionEntity[]> [<CommonParameters>]
+ -AddProtectedItems <ASRReplicationProtectedItem[]> [<CommonParameters>]
 ```
 
 ### RemoveReplicationProtectedItems
@@ -57,57 +57,12 @@ The **Edit-AzureRmSiteRecoveryRecoveryPlan** cmdlet edits an Azure Site Recovery
 
 ## PARAMETERS
 
-### -RecoveryPlan
-Specifies a recovery plan.
+### -AddProtectedEntities
+Specifies an array of protected entities to add.
 
 ```yaml
-Type: ASRRecoveryPlan
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -AppendGroup
-Indicates that this operation appends the group to the recovery plan object.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AppendGroup
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveGroup
-Removes the specified Site Recovery recovery plan group.
-
-```yaml
-Type: ASRRecoveryPlanGroup
-Parameter Sets: RemoveGroup
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Group
-Specifies a Site Recovery plan group.
-
-```yaml
-Type: ASRRecoveryPlanGroup
-Parameter Sets: AddReplicationProtectedItems, RemoveProtectedEntities, AddProtectedEntities, RemoveReplicationProtectedItems
+Type: ASRProtectionEntity[]
+Parameter Sets: AddProtectedEntities
 Aliases: 
 
 Required: True
@@ -130,12 +85,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddProtectedEntities
-Specifies an array of protected entities to add.
+### -AppendGroup
+Indicates that this operation appends the group to the recovery plan object.
 
 ```yaml
-Type: ASRProtectionEntity[]
-Parameter Sets: AddProtectedEntities
+Type: SwitchParameter
+Parameter Sets: AppendGroup
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies a Site Recovery plan group.
+
+```yaml
+Type: ASRRecoveryPlanGroup
+Parameter Sets: AddProtectedEntities, RemoveProtectedEntities, AddReplicationProtectedItems, RemoveReplicationProtectedItems
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecoveryPlan
+Specifies a recovery plan.
+
+```yaml
+Type: ASRRecoveryPlan
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -RemoveGroup
+Removes the specified Site Recovery recovery plan group.
+
+```yaml
+Type: ASRRecoveryPlanGroup
+Parameter Sets: RemoveGroup
 Aliases: 
 
 Required: True
