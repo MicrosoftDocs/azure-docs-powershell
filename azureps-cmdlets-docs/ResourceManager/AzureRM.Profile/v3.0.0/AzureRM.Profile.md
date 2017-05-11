@@ -1,14 +1,9 @@
 ---
 Module Name: AzureRM.Profile
 Module Guid: 342714fc-4009-4863-8afb-a9067e3db04b
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Download Help Link: {{Please enter FwLink manually}}
+Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ed7e02c40bc7b387c6e412cb79fe234ba6da2e04
 ---
 
 # AzureRM.Profile Module

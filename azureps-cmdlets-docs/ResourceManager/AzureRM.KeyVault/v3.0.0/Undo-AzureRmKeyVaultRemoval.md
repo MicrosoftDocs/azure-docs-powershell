@@ -2,9 +2,6 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 online version: https://msdn.microsoft.com/en-us/library/dn868052.aspx
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Undo-AzureRmKeyVaultRemoval.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Undo-AzureRmKeyVaultRemoval.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/be40276d6b3a7d9b15aaf7cb0002f29bdc9e3569
 ---
 
 # Undo-AzureRmKeyVaultRemoval

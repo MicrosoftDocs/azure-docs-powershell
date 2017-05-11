@@ -1,11 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 ms.assetid: A3DA1205-B8FB-4B4C-9C40-AD303D038EDF
-online version:
+online version: 
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzureRmStorageAccount.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzureRmStorageAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1f5738a85717bfa40fdcdc12937eb8e1fd992dd5
 ---
 
 # New-AzureRmStorageAccount

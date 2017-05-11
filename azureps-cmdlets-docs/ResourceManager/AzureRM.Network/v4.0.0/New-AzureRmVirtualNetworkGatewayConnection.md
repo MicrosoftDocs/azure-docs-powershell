@@ -1,11 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: 0F141A92-4994-45B3-AE94-09865BC691C4
-online version:
+online version: 
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVirtualNetworkGatewayConnection.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVirtualNetworkGatewayConnection.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/d43829df8c5fb87369d5276d437cfdd0834dcebd
 ---
 
 # New-AzureRmVirtualNetworkGatewayConnection

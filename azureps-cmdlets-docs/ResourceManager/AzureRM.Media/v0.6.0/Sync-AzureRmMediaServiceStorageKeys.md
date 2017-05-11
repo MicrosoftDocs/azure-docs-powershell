@@ -1,11 +1,8 @@
 ---
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
 ms.assetid: F395E192-80FA-421D-A389-8C5C0C2267E4
-online version:
+online version: 
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Sync-AzureRmMediaServiceStorageKeys.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Sync-AzureRmMediaServiceStorageKeys.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Sync-AzureRmMediaServiceStorageKeys

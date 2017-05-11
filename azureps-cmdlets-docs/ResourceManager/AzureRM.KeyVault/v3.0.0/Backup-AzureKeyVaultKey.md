@@ -3,9 +3,6 @@ external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 ms.assetid: A82392AA-B12B-443E-8704-7CF5A9F8ED58
 online version: http://go.microsoft.com/fwlink/?LinkId=690296
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Backup-AzureKeyVaultKey.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Backup-AzureKeyVaultKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/d0f66e5470993b1636c163da2f6f83c0692ce6b7
 ---
 
 # Backup-AzureKeyVaultKey
