@@ -4,13 +4,21 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricClientCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricClientCertificate.md
+<<<<<<< HEAD
 gitcommit: https://github.com/Azure/azure-powershell/blob/68c7c4760351d141341278ae635b16ec8c502b9b
+=======
+gitcommit: https://github.com/Azure/azure-powershell/blob/928c918a88f76273c14645e599fb59baea0cb3d6
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ---
 
 # Remove-AzureRmServiceFabricClientCertificate
 
 ## SYNOPSIS
+<<<<<<< HEAD
 Remove a client certificate(s) or certificate subject(s) name(s) from being used for client authenticaton to the cluster.
+=======
+Remove a client certificate(s) or certificate subject(s) name(s) from being used for client authentication to the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## SYNTAX
 
@@ -40,7 +48,11 @@ Remove-AzureRmServiceFabricClientCertificate [-ResourceGroupName] <String> [-Nam
 ```
 
 ## DESCRIPTION
+<<<<<<< HEAD
 Use **Remove-AzureRmServiceFabricClientCertificate** to remove a client certificate(s) or certificate subject(s) name(s) from being used for client authenticaton to the cluster.
+=======
+Use **Remove-AzureRmServiceFabricClientCertificate** to remove a client certificate(s) or certificate subject(s) name(s) from being used for client authentication to the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## EXAMPLES
 
@@ -49,12 +61,20 @@ Use **Remove-AzureRmServiceFabricClientCertificate** to remove a client certific
 PS c:> Remove-AzureRmServiceFabricClientCertificate -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -Thumbprint 5F3660C715EBBDA31DB1FFDCF508302348DE8E7A
 ```
 
+<<<<<<< HEAD
 This command will remove client certificate with thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A' from the cluster
+=======
+This command will remove client certificate with thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A' from the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## PARAMETERS
 
 ### -AdminClientThumbprint
+<<<<<<< HEAD
 Specify client certificate thumbprint which only has admin permission
+=======
+Specify client certificate thumbprint that only has admin permission.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String[]
@@ -69,7 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -ClientCertificateCommonName
+<<<<<<< HEAD
 Specify client common name , issuer thumbprint and authentication type
+=======
+Specify client common name, issuer thumbprint, and authentication type.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: PSClientCertificateCommonName[]
@@ -84,7 +108,11 @@ Accept wildcard characters: False
 ```
 
 ### -CommonName
+<<<<<<< HEAD
 Specify client certificate common name
+=======
+Specify client certificate common name.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -98,6 +126,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+<<<<<<< HEAD
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -115,6 +144,10 @@ Accept wildcard characters: False
 
 ### -IssuerThumbprint
 Specify client certificate issuer thumbprint
+=======
+### -IssuerThumbprint
+Specify client certificate issuer thumbprint.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -129,7 +162,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+<<<<<<< HEAD
 Specify the name of the cluster
+=======
+Specify the name of the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -144,7 +181,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReadonlyClientThumbprint
+<<<<<<< HEAD
 Specify client certificate thumbprint which only has read only permission
+=======
+Specify client certificate thumbprint that has read only permission.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String[]
@@ -174,7 +215,11 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
+<<<<<<< HEAD
 Specify client certificate thumbprint
+=======
+Specify client certificate thumbprint.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -188,6 +233,24 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+<<<<<<< HEAD
+=======
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
@@ -210,6 +273,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Collections.Hashtable
 System.String
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 System.Boolean
 
 ## OUTPUTS

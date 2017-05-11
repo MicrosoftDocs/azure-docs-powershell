@@ -4,13 +4,21 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Get-AzureRmServiceFabricCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Get-AzureRmServiceFabricCluster.md
+<<<<<<< HEAD
 gitcommit: https://github.com/Azure/azure-powershell/blob/68c7c4760351d141341278ae635b16ec8c502b9b
+=======
+gitcommit: https://github.com/Azure/azure-powershell/blob/18f30b6ac812908643ec13e91c827df3fc1840a3
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ---
 
 # Get-AzureRmServiceFabricCluster
 
 ## SYNOPSIS
+<<<<<<< HEAD
 Get the cluster resource details
+=======
+Get the cluster resource details.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## SYNTAX
 
@@ -19,7 +27,11 @@ Get-AzureRmServiceFabricCluster [[-ResourceGroupName] <String>] [[-Name] <String
 ```
 
 ## DESCRIPTION
+<<<<<<< HEAD
 The **Add-AzureRmServiceFabricCluster** will get the cluster resource details
+=======
+The **Add-AzureRmServiceFabricCluster** will get the cluster resource details.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## EXAMPLES
 
@@ -28,12 +40,20 @@ The **Add-AzureRmServiceFabricCluster** will get the cluster resource details
 PS C:\> Get-AzureRmServiceFabricCluster -ResourceGroupName 'Group1' -ClusterName 'Contoso01SFCluster'
 ```
 
+<<<<<<< HEAD
 This command will get the cluster resource details for cluster 'myCluster'
+=======
+This command will get the cluster resource details for cluster 'myCluster'.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## PARAMETERS
 
 ### -Name
+<<<<<<< HEAD
 Specify the name of the cluster
+=======
+Specify the name of the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String

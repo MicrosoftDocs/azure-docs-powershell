@@ -4,13 +4,21 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricNode.md
+<<<<<<< HEAD
 gitcommit: https://github.com/Azure/azure-powershell/blob/4eb68d2f613c8601986551f21e3e04f476afb8f8
+=======
+gitcommit: https://github.com/Azure/azure-powershell/blob/928c918a88f76273c14645e599fb59baea0cb3d6
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ---
 
 # Remove-AzureRmServiceFabricNode
 
 ## SYNOPSIS
+<<<<<<< HEAD
 Remove nodes from the specific node type from a cluster
+=======
+Remove nodes from the specific node type from a cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## SYNTAX
 
@@ -29,6 +37,7 @@ Use **Remove-AzureRmServiceFabricNode** to remove nodes from a specific node typ
 PS c:> Remove-AzureRmServiceFabricNode -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -NodeTypeName 'nt1' -NumberOfNodesToRemove 2
 ```
 
+<<<<<<< HEAD
 This command will remove 2 nodes from the nodetype 'nt1''
 
 ## PARAMETERS
@@ -50,6 +59,14 @@ Accept wildcard characters: False
 
 ### -Name
 Specify the name of the cluster
+=======
+This command will remove 2 nodes from the NodeType 'nt1'.
+
+## PARAMETERS
+
+### -Name
+Specify the name of the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -64,7 +81,11 @@ Accept wildcard characters: False
 ```
 
 ### -NodeType
+<<<<<<< HEAD
 Node type name
+=======
+Node type name.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -79,7 +100,11 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfNodesToRemove
+<<<<<<< HEAD
 Number of nodes to remove
+=======
+Number of nodes to remove.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: Int32
@@ -108,6 +133,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+<<<<<<< HEAD
+=======
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
@@ -138,4 +181,8 @@ System.String
 ## NOTES
 
 ## RELATED LINKS
+<<<<<<< HEAD
 [Add-AzureRmServiceFabricNode](./Add-AzureRmServiceFabricNode.md) 
+=======
+[Add-AzureRmServiceFabricNode](./Add-AzureRmServiceFabricNode.md) 
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e

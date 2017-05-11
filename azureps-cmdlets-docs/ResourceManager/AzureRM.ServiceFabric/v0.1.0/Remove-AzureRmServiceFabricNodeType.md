@@ -4,13 +4,21 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricNodeType.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricNodeType.md
+<<<<<<< HEAD
 gitcommit: https://github.com/Azure/azure-powershell/blob/6a6b1be589a238fe5cd4281091be070fc7514cf1
+=======
+gitcommit: https://github.com/Azure/azure-powershell/blob/928c918a88f76273c14645e599fb59baea0cb3d6
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ---
 
 # Remove-AzureRmServiceFabricNodeType
 
 ## SYNOPSIS
+<<<<<<< HEAD
 Remove a complete node type from a cluster
+=======
+Remove a complete node type from a cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## SYNTAX
 
@@ -20,8 +28,12 @@ Remove-AzureRmServiceFabricNodeType [-ResourceGroupName] <String> [-Name] <Strin
 ```
 
 ## DESCRIPTION
+<<<<<<< HEAD
 The **Remove-AzureRmServiceFabricNodeType** to remove all nodes from a specific node type and the node type from a cluster.
 This command cannot be used to delete the primary node type
+=======
+Use the **Remove-AzureRmServiceFabricNodeType** to remove all nodes from a specific node type and the node type from a cluster. This command cannot be used to delete the primary node type.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## EXAMPLES
 
@@ -30,6 +42,7 @@ This command cannot be used to delete the primary node type
 PS c:> Remove-AzureRmServiceFabricNodeType -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -NodeTypeName 'nt1'
 ```
 
+<<<<<<< HEAD
 This command will remove nodetype 'nt1' from the cluster
 
 ## PARAMETERS
@@ -51,6 +64,14 @@ Accept wildcard characters: False
 
 ### -Name
 Specify the name of the cluster
+=======
+This command will remove NodeType 'nt1' from the cluster.
+
+## PARAMETERS
+
+### -Name
+Specify the name of the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -65,7 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -NodeType
+<<<<<<< HEAD
 The node type name```yaml
+=======
+The node type name.
+
+```yaml
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -92,6 +119,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+<<<<<<< HEAD
+=======
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 

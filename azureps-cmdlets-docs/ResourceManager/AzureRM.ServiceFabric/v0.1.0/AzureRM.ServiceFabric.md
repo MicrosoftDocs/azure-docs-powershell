@@ -8,16 +8,28 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/AzureRM.ServiceFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/AzureRM.ServiceFabric.md
+<<<<<<< HEAD
 gitcommit: https://github.com/Azure/azure-powershell/blob/5d5311bad38bc57d0768a327dcbfba8bfc400794
+=======
+gitcommit: https://github.com/Azure/azure-powershell/blob/31afd32f413c3c88a30ab5322da0446efc925bf5
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ---
 
 # AzureRM.ServiceFabric Module
 ## Description
+<<<<<<< HEAD
 Azure Service Fabric Module that you can use to automate the end-2-end operations like creating a secure cluster, rolling over cluster certificates, adding or removed nodes from the cluster etc. the complete list of all operations are listed below.
 
 ## AzureRM.ServiceFabric Cmdlets
 ### [Add-AzureRmServiceFabricApplicationCertificate](Add-AzureRmServiceFabricApplicationCertificate.md)
 Add a certificate which will be used as application certificate
+=======
+Azure Service Fabric Module that you can use to automate the end-2-end operations like creating a secure cluster, rolling over cluster certificates, adding or removed nodes from the cluster, etc. The complete list of all operations are listed below.
+
+## AzureRM.ServiceFabric Cmdlets
+### [Add-AzureRmServiceFabricApplicationCertificate](Add-AzureRmServiceFabricApplicationCertificate.md)
+Add a certificate that will be used as application certificate
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ### [Add-AzureRmServiceFabricClientCertificate](Add-AzureRmServiceFabricClientCertificate.md)
 Add common name or thumbprint to the cluster settings for client authentication
@@ -62,4 +74,8 @@ Change the ServiceFabric upgrade type of a cluster
 Change the durability tier of a cluster
 
 ### [Update-AzureRmServiceFabricReliability](Update-AzureRmServiceFabricReliability.md)
+<<<<<<< HEAD
 Change the reliability tier of a cluster
+=======
+Change the reliability tier of a cluster
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e

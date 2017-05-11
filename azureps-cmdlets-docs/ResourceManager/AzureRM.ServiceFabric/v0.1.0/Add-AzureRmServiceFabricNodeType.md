@@ -4,13 +4,21 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricNodeType.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricNodeType.md
+<<<<<<< HEAD
 gitcommit: https://github.com/Azure/azure-powershell/blob/68c7c4760351d141341278ae635b16ec8c502b9b
+=======
+gitcommit: https://github.com/Azure/azure-powershell/blob/928c918a88f76273c14645e599fb59baea0cb3d6
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ---
 
 # Add-AzureRmServiceFabricNodeType
 
 ## SYNOPSIS
+<<<<<<< HEAD
 Add a new node type to the existing cluster
+=======
+Add a new node type to the existing cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## SYNTAX
 
@@ -21,7 +29,11 @@ Add-AzureRmServiceFabricNodeType [-ResourceGroupName] <String> [-Name] <String> 
 ```
 
 ## DESCRIPTION
+<<<<<<< HEAD
 Add a new node type to a existing cluster 
+=======
+Add a new node type to a existing cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## EXAMPLES
 
@@ -50,6 +62,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+<<<<<<< HEAD
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -67,6 +80,10 @@ Accept wildcard characters: False
 
 ### -Name
 Specify the name of the cluster
+=======
+### -Name
+Specify the name of the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -81,7 +98,11 @@ Accept wildcard characters: False
 ```
 
 ### -NodeType
+<<<<<<< HEAD
 The node type name
+=======
+The node type name.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -111,7 +132,11 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
+<<<<<<< HEAD
 Tier
+=======
+Tier.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -126,7 +151,11 @@ Accept wildcard characters: False
 ```
 
 ### -VmPassword
+<<<<<<< HEAD
 The password of login to the Vm
+=======
+The password of login to the Vm.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: SecureString
@@ -141,7 +170,13 @@ Accept wildcard characters: False
 ```
 
 ### -VmSku
+<<<<<<< HEAD
 The sku name```yaml
+=======
+The sku name.
+
+```yaml
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -154,7 +189,11 @@ Accept wildcard characters: False
 ```
 
 ### -VmUserName
+<<<<<<< HEAD
 The user name for login to Vm
+=======
+The user name for login to Vm.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -168,6 +207,24 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+<<<<<<< HEAD
+=======
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 

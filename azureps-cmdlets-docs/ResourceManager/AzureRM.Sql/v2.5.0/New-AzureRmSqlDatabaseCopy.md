@@ -262,6 +262,6 @@ This cmdlet returns a **Database** object that represents the copied database.
 
 [New-AzureRmSqlDatabaseSecondary](./New-AzureRmSqlDatabaseSecondary.md)
 
-[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
 
 

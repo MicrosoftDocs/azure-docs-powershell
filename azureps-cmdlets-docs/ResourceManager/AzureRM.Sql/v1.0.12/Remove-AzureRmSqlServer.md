@@ -171,4 +171,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzureRmSqlServer](./Set-AzureRmSqlServer.md)
 
-[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
