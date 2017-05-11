@@ -1211,7 +1211,6 @@
     "Suspend-AzureRmAutomationJob": "Automation",
     "Suspend-AzureRmDataFactoryPipeline": "Data Factories",
     "Suspend-AzureRmSqlDatabase": "SQL",
-    "Swap-AzureRmWebAppSlot": "App Service",
     "Test-AdlAnalyticsAccount": "Data Lake Analytics",
     "Test-AdlCatalogItem": "Data Lake Analytics",
     "Test-AdlStore": "Data Lake Store",
