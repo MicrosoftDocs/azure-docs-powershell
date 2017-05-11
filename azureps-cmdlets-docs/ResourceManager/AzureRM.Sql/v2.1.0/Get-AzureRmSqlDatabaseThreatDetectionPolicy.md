@@ -179,6 +179,6 @@ This cmdlet returns a **Model.DatabaseThreatDetectionPolicyModel** object.
 
 [Set-AzureRmSqlDatabaseThreatDetectionPolicy]()
 
-[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
 
 

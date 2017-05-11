@@ -165,6 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzureRmSqlServerFirewallRule](./Remove-AzureRmSqlServerFirewallRule.md)
 
-[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
 
 

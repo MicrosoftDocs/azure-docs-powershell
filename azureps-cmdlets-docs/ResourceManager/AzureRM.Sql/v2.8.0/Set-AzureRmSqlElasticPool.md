@@ -304,6 +304,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzureRmSqlElasticPool](./New-AzureRmSqlElasticPool.md)
 
-[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
 
 
