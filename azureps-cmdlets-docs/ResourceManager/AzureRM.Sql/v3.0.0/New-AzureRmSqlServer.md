@@ -189,6 +189,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzureRmSqlServerFirewallRule](./New-AzureRmSqlServerFirewallRule.md)
 
-
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

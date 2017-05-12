@@ -182,7 +182,7 @@ This cmdlet returns a **ReplicationLink**.
 
 ## RELATED LINKS
 
-
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 [New-AzureRmSqlDatabaseSecondary](./New-AzureRmSqlDatabaseSecondary.md)
 

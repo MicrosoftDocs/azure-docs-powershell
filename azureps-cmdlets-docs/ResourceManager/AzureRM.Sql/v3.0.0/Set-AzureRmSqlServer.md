@@ -180,6 +180,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-
+[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
 
 

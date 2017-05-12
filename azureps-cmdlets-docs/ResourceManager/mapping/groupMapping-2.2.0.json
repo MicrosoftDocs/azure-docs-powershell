@@ -1328,7 +1328,6 @@
     "Suspend-AzureRmAutomationJob": "Automation",
     "Suspend-AzureRmDataFactoryPipeline": "Data Factories",
     "Suspend-AzureRmSqlDatabase": "SQL",
-    "Swap-AzureRmWebAppSlot": "App Service",
     "Sync-AzureRmMediaServiceStorageKeys": "Media Services",
     "Test-AdlAnalyticsAccount": "Data Lake Analytics",
     "Test-AdlCatalogItem": "Data Lake Analytics",

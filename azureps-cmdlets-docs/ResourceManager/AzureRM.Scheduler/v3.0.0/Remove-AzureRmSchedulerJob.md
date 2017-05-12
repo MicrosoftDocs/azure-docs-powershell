@@ -1,129 +1,92 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
+ms.assetid: 774699A8-8916-4F2A-973E-97E5E487D42E
 online version: 
 schema: 2.0.0
-ms.assetid: 1813E35C-7494-4945-8F8E-D0464A6E3CC0
 ---
 
-# Swap-AzureRmWebAppSlot
+# Remove-AzureRmSchedulerJob
 
 ## SYNOPSIS
+Removes a Scheduler job.
 
 ## SYNTAX
 
-### S1
 ```
-Swap-AzureRmWebAppSlot [-SourceSlotName] <String> [[-DestinationSlotName] <String>]
- [[-SwapWithPreviewAction] <SwapWithPreviewAction>] [[-PreserveVnet] <Boolean>] [-ResourceGroupName] <String>
- [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### S2
-```
-Swap-AzureRmWebAppSlot [-SourceSlotName] <String> [[-DestinationSlotName] <String>]
- [[-SwapWithPreviewAction] <SwapWithPreviewAction>] [[-PreserveVnet] <Boolean>] [-WebApp] <Site> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-AzureRmSchedulerJob -ResourceGroupName <String> -JobCollectionName <String> -JobName <String>
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRmSchedulerJob** cmdlet removes an Azure Scheduler job.
 
 ## EXAMPLES
 
 ### 1:
 ```
-PS C:\>
+
 ```
 
 ## PARAMETERS
 
-### -SourceSlotName
+### -JobCollectionName
+Specifies the name of a job collection that contains the job to remove.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Name, ResourceName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -JobName
+Specifies the name of a job to remove.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 0
+Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DestinationSlotName
+### -PassThru
+Indicates that this cmdlet returns a value of Success on success.
+By default, this cmdlet does not generate any output.
+
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SwapWithPreviewAction
-```yaml
-Type: SwapWithPreviewAction
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreserveVnet
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 3
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+Specifies the resource group of the job to remove.
+
 ```yaml
 Type: String
-Parameter Sets: S1
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-```yaml
-Type: String
-Parameter Sets: S1
-Aliases: 
-
-Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WebApp
-```yaml
-Type: Site
-Parameter Sets: S2
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -168,5 +131,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzureRmSchedulerJob](./Get-AzureRmSchedulerJob.md)
 
 
