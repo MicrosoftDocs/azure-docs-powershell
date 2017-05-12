@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 ms.assetid: D3E8A6A6-C6C5-46B0-914B-75088A6F6011
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreItemAcl.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreItemAcl.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/999b10c08071465894341393a111fbacd14d9ada
 ---
 
 # Remove-AzureRmDataLakeStoreItemAcl

@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
 ms.assetid: D4C465CE-1B8A-4CFC-BAA8-21CC66B7D6D6
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementHostnameConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementHostnameConfiguration.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmApiManagementHostnameConfiguration

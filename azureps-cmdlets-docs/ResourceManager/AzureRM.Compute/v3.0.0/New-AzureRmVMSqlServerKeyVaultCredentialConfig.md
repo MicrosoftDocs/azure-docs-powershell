@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: B30C2BDD-6DA9-47B5-88FE-3AD43E15A072
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/New-AzureRmVMSqlServerKeyVaultCredentialConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/New-AzureRmVMSqlServerKeyVaultCredentialConfig.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/5279ba8d27d0979cd4325276449d8115a57c3c98
 ---
 
 # New-AzureVMSqlServerKeyVaultCredentialConfig

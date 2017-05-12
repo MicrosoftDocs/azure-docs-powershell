@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
 ms.assetid: C635D723-0F03-4EF8-9435-24DBE0859899
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzureRmRecoveryServicesBackupProperties.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Set-AzureRmRecoveryServicesBackupProperties.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/0b4ecb51495cc4a808ac05ad5254511b7140362b
 ---
 
 # Set-AzureRmRecoveryServicesBackupProperties

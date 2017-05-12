@@ -1,6 +1,9 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Swap-AzureRmWebAppSlot.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Swap-AzureRmWebAppSlot.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/39673ed92d863c7fba7fbbdb0d919d03c552b71b
 ---
 
 # Stop-AzureRmWebAppSlot

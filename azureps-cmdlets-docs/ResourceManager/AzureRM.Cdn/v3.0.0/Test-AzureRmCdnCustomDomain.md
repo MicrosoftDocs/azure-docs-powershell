@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 ms.assetid: 8C4E824F-FB4A-4DE7-8FD9-3FDA3848F25C
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Test-AzureRmCdnCustomDomain.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Test-AzureRmCdnCustomDomain.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Test-AzureRmCdnCustomDomain

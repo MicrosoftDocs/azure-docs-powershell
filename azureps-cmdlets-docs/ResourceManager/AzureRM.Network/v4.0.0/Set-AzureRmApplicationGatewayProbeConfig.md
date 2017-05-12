@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
 ms.assetid: 02FC4035-27DF-4D4C-A65A-8417F9AE5A64
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmApplicationGatewayProbeConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmApplicationGatewayProbeConfig.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/0a4c4b40d46a2a84d0e4729010117a70b4d8468a
 ---
 
 # Set-AzureRmApplicationGatewayProbeConfig

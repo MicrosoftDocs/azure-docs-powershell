@@ -3,6 +3,9 @@ external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 ms.assetid: 3BD243C7-A40E-4061-93FF-DDE7DECAD0A7
 online version: http://go.microsoft.com/fwlink/?LinkId=822861
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzureKeyVaultCertificateAttribute.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzureKeyVaultCertificateAttribute.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureKeyVaultCertificateAttribute

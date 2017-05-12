@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
 ms.assetid: 0B52890D-102F-4C3C-9EF9-017F6ECA3E26
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Test-AzureRmDataLakeAnalyticsAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Test-AzureRmDataLakeAnalyticsAccount.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/945e7b9cce0fa0730b0544770ab84bd991a9fbe1
 ---
 
 # Test-AzureRmDataLakeAnalyticsAccount

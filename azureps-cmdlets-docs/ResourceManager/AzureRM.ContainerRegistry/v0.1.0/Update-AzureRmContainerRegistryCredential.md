@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Update-AzureRmContainerRegistryCredential.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Update-AzureRmContainerRegistryCredential.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/41f4a7b63c9651a305b985d28fcd40e60968957c
 ---
 
 # Update-AzureRmContainerRegistryCredential

@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Test-AzureRmNetworkWatcherConnectivity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Test-AzureRmNetworkWatcherConnectivity.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/f96ba75f5a3614fe2c89eda6c3ef2489621a12d4
 ---
 
 # Test-AzureRmNetworkWatcherConnectivity

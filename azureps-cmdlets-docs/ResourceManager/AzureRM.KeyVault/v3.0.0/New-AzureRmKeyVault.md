@@ -3,6 +3,9 @@ external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 ms.assetid: 4C40DAC9-5C0B-4AFD-9BDB-D407E0B9F701
 online version: http://go.microsoft.com/fwlink/?LinkId=690160
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/New-AzureRmKeyVault.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/New-AzureRmKeyVault.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/be40276d6b3a7d9b15aaf7cb0002f29bdc9e3569
 ---
 
 # New-AzureRmKeyVault

@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: 009899E5-83BF-4A3F-877E-70C16D5CD1AC
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlElasticPool.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlElasticPool.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/355e05e3075c4bd2bfca8a734a07598e710e14f7
 ---
 
 # New-AzureRmSqlElasticPool

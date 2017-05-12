@@ -1,9 +1,12 @@
 ---
 Module Name: AzureRM.Compute
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: 
+Download Help Link:
 Help Version: 3.5.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/AzureRM.Compute.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/AzureRM.Compute.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/5279ba8d27d0979cd4325276449d8115a57c3c98
 ---
 
 # AzureRM.Compute Module

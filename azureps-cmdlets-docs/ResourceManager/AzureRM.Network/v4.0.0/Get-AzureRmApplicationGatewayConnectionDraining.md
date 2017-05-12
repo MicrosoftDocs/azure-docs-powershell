@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmApplicationGatewayConnectionDraining.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmApplicationGatewayConnectionDraining.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/f10cfd91359ad0087928c4401a306eefa013565f
 ---
 
 # Get-AzureRmApplicationGatewayConnectionDraining

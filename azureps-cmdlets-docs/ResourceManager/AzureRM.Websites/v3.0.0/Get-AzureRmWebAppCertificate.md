@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
 ms.assetid: 2D83D38F-3A5C-40DB-BE8B-D52E5CAFCF6E
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppCertificate.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/b6503ebd24f7bd5ce97202c332ef1533f499a833
 ---
 
 # Get-AzureRmWebAppCertificate

@@ -1,7 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabaseFailoverGroup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabaseFailoverGroup.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/cdbba9dfc8d6d05a7611dff9bf51acb70cd79289
 ---
 
 # Set-AzureRmSqlDatabaseFailoverGroup

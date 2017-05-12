@@ -3,6 +3,9 @@ external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 ms.assetid: C4E7ACDF-22FB-4D49-93B3-69E787B7E0CD
 online version: http://go.microsoft.com/fwlink/?LinkId=690301
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Restore-AzureKeyVaultKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Restore-AzureKeyVaultKey.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Restore-AzureKeyVaultKey

@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 ms.assetid: 2B82F5BA-ABC6-4B37-B641-353CFE814290
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlServerThreatDetectionPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlServerThreatDetectionPolicy.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/e090a00c7166fb9d012b676ab9fb0428f5ffd097
 ---
 
 # Set-AzureRmSqlServerThreatDetectionPolicy

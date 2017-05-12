@@ -1,8 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
 ms.assetid: 25E3F297-1D91-4102-B4D3-1E7195A5D33D
-online version: 
+online version:
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Add-AzureRmTrafficManagerEndpointConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Add-AzureRmTrafficManagerEndpointConfig.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/39673ed92d863c7fba7fbbdb0d919d03c552b71b
 ---
 
 # Add-AzureRmTrafficManagerEndpointConfig
