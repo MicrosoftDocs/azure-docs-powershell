@@ -22,17 +22,17 @@ The **Get-AzureRmResourceProviderRegistration** cmdlet gets the registration det
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get the details of the specified resource provider registration
 ```
 $registration = Get-AzureRMResourceProviderRegistration -Name "Microsoft.Sql.Admin" -ResourceGroup "System"
 ```
 
-This command gets the registration details for the "Microsoft.Sql.Admin" resource provider that was registered under the "System" resource group.
+This example gets the details of the registration named "Microsoft.Sql.Admin" that was registered under the "System" resource group.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the resource provider.
+Specifies the name of the resource provider registration.
 
 ```yaml
 Type: String
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

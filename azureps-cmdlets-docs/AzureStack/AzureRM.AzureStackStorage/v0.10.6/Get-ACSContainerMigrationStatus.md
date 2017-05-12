@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSContainerMigrationStatus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the ACS container migration status.
 
 ## SYNTAX
 
@@ -18,21 +18,14 @@ Get-ACSContainerMigrationStatus [-ResourceGroupName] <String> [-FarmName] <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-ACSContainerMigrationStatus** cmdlet gets the Azure Consistent Storage (ACS) container migration status.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -47,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the server farm.
 
 ```yaml
 Type: String
@@ -62,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-{{Fill JobId Description}}
+Specifies the ACS container migration status Job ID.
 
 ```yaml
 Type: String
@@ -77,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS container.
 
 ```yaml
 Type: String
@@ -92,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -152,3 +145,8 @@ System.Uri
 
 ## RELATED LINKS
 
+[Get-ACSContainer](./Get-ACSContainer.md)
+
+[Start-ACSContainerMigration](./Start-ACSContainerMigration.md)
+
+[Stop-ACSContainerMigration](./Stop-ACSContainerMigration.md)

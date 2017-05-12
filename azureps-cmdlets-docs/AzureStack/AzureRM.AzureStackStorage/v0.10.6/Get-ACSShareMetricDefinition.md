@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSShareMetricDefinition
 
 ## SYNOPSIS
-Retrieve the metric definitions of share
+Gets the metric definitions of share.
 
 ## SYNTAX
 
@@ -19,21 +19,14 @@ Get-ACSShareMetricDefinition -FarmName <String> -ShareName <String> [-ResourceGr
 ```
 
 ## DESCRIPTION
-Retrieve the metric definitions of share
+The **Get-ACSShareMetricDefinition** cmdlet gets the metric definitions of share.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -48,7 +41,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-
+Indicates the cmdlet gets the detailed metric definitions from the ACS Share.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm for which this cmdlet gets metric definitions.
 
 ```yaml
 Type: String
@@ -117,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetricNames
-
+Specifies a string array of metric names in which this cmdlet gets definitions from.
 
 ```yaml
 Type: String[]
@@ -132,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -147,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShareName
-
+Specifies the name of the ACS share that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -162,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -177,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -222,3 +215,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSShare](./Get-ACSShare.md)
+
+[Get-ACSShareMetric](./Get-ACSShareMetric.md)

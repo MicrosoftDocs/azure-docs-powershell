@@ -21,17 +21,17 @@ The **Get-AzureRmMangedLocation** cmdlet gets the details about a location manag
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Get details about the location having the specified name
 ```
 Get-AzureRMManagedLocation -Name "Chicago"
 ```
 
-This command gets the details of the location named "Chicago".
+This example gets the details of the location named "Chicago".
 
 ## PARAMETERS
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

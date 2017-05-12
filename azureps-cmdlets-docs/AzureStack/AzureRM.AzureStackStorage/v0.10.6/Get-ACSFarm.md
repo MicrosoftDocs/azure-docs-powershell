@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSFarm
 
 ## SYNOPSIS
-Retrieve the Azure-consistent Storage Farm and its properties and settings.
+Gets the ACS Farm and its properties and settings.
 
 ## SYNTAX
 
@@ -18,25 +18,21 @@ Get-ACSFarm [-ResourceGroupName] <String> [[-FarmName] <String>] [[-Subscription
 ```
 
 ## DESCRIPTION
-Retrieve the Azure-consistent Storage Farm and its properties and settings.
+The **Get-ACSFarm** cmdlet gets the Azure Consistent Storage (ACS) Farm and its properties and settings.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Get an ACS Farm
 ```
-$resourceGroup = 'System' 
-
-Get-ACSFarm -ResourceGroupName $resourceGroup
+Get-ACSFarm -ResourceGroupName "RG001"
 ```
+
+This command gets the ACS farm that in contained in the resource group named RG001.
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -51,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm that this cmdlet gets.
 
 ```yaml
 Type: String
@@ -105,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -120,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -135,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -176,3 +172,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-ACSFarm](./Add-ACSFarm.md)
+
+[Set-ACSFarm](./Set-ACSFarm.md)

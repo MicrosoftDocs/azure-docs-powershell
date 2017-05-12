@@ -18,16 +18,16 @@ New-AzureRMManagedLocation -Name <String> -DisplayName <String> -Latitude <Doubl
 ```
 
 ## DESCRIPTION
-The **New-AzureRmManagedLocation** cmdlet creates a new location managed by the Azure stack Resource Manager. The resource providers can be deployed in the new location.
+The **New-AzureRmManagedLocation** cmdlet creates a new location managed by the Azure stack resource manager. The resource providers can be deployed in the new location.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Create a managed location
 ```
 New-AzureRMManagedLocation -Name "LocationName" -DisplayName "LocationName" -Latitude 80.5 -Longitude -45.5
 ```
 
-This command creates a new location named "LocationName".
+This example creates a new location named "LocationName" with latitude of 80.5 degrees and longitude of -45.5 degrees.
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

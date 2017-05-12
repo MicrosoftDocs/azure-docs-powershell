@@ -7,7 +7,7 @@ schema: 2.0.0
 # Start-ACSContainerMigration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Starts the ACS container migration.
 
 ## SYNTAX
 
@@ -18,21 +18,14 @@ Start-ACSContainerMigration [-ResourceGroupName] <String> [-FarmName] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Start-ACSContainerMigration** cmdlet starts the Azure Consistent Storage (ACS) container migration.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -47,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerToMigrate
-{{Fill ContainerToMigrate Description}}
+Specifies the ACS container that this cmdlet migrates.
 
 ```yaml
 Type: Container
@@ -62,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationShareUncPath
-{{Fill DestinationShareUncPath Description}}
+
 
 ```yaml
 Type: String
@@ -77,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm.
 
 ```yaml
 Type: String
@@ -92,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -107,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -168,3 +161,4 @@ System.Uri
 
 ## RELATED LINKS
 
+[Stop-ACSContainerMigration](./Stop-ACSContainerMigration.md)

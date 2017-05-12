@@ -26,7 +26,7 @@ The **Get-ACSBlobServiceMetricDefinition** cmdlet gets the metric definitions of
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri

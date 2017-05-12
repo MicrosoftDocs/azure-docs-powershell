@@ -34,34 +34,34 @@ The **Add-AzureRMResourceProviderRegistration** cmdlet adds a resource provider 
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Register the resource provider manifest for the specified namespace
 ```
-    # Make sure to provide the resource types json of the resource provider being registered
-    $adminResourceTypesFile="$PSScriptRoot\AdminResourceTypes.json"
-    $adminNamespace="Microsoft.Sql.Admin"
-    $adminJson = Get-Content $adminResourceTypesFile -Raw | ConvertFrom-Json
-    $adminJson | % { $_.endpoints\[0\].endpointUri="https://${VmName}:30010" }
-    $adminJsonStr = $adminJson | ConvertTo-Json -Depth 4
+# Make sure to provide the resource types json of the resource provider being registered
+$adminResourceTypesFile="$PSScriptRoot\AdminResourceTypes.json"
+$adminNamespace="Microsoft.Sql.Admin"
+$adminJson = Get-Content $adminResourceTypesFile -Raw | ConvertFrom-Json
+$adminJson | % { $_.endpoints\[0\].endpointUri="https://${VmName}:30010" }
+$adminJsonStr = $adminJson | ConvertTo-Json -Depth 4
 
-    $location = "local"
-    Add-AzureRMResourceProviderRegistration -Name $adminNamespace \`
-    -Namespace $adminNamespace \`
-    -ResourceGroup System \`
-    -ArmLocation $location \`
-    -ProviderLocation $location \`
-    -DisplayName $adminNamespace \`
-    -ExtensionName "SqlAdminExtension" \`
-    -ExtensionUri "https://${VmName}:13002"  \`
-    -ResourceManagerType Admin  \`
-    -ResourceTypes $adminJsonStr
+$location = "local"
+Add-AzureRMResourceProviderRegistration -Name $adminNamespace \`
+-Namespace $adminNamespace \`
+-ResourceGroup System \`
+-ArmLocation $location \`
+-ProviderLocation $location \`
+-DisplayName $adminNamespace \`
+-ExtensionName "SqlAdminExtension" \`
+-ExtensionUri "https://${VmName}:13002"  \`
+-ResourceManagerType Admin  \`
+-ResourceTypes $adminJsonStr
 ```
 
-This example registers the resource provider manifest for a namespace.
+This example registers the resource provider manifest for the "Microsoft.Sql.Admin" namespace, which is specified in the $adminNamespace variable.
 
 ## PARAMETERS
 
 ### -ArmLocation
-{{Fill ArmLocation Description}}
+Specifies the location of the resource manager in the Azure stack.
 
 ```yaml
 Type: String
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-Not Specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not Specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not Specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

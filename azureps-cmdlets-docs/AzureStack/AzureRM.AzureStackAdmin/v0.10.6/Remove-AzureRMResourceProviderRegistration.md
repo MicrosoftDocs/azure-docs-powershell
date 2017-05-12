@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-AzureRMResourceProviderRegistration
 
 ## SYNOPSIS
-Removes the resource provider manifest.
+Removes a resource provider manifest.
 
 ## SYNTAX
 
@@ -18,21 +18,21 @@ Remove-AzureRMResourceProviderRegistration -Name <String> -ResourceGroup <String
 ```
 
 ## DESCRIPTION
-The **Remove-ResourceProviderRegistration** cmdlet removes the resource provider manifest.
+The **Remove-ResourceProviderRegistration** cmdlet removes a resource provider manifest.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove the specified resource provider manifest
 ```
 Remove-ResourceProviderRegistration -Name "Microsoft.Sql.Admin" -ResourceGroup "system"
 ```
 
-This command removes the resource provider manifest named "Microsoft.Sql.Admin" that is in the "system" resource group.
+This example removes the resource provider manifest named "Microsoft.Sql.Admin" that is in the "system" resource group.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String

@@ -1596,7 +1596,6 @@
     "Suspend-AzureRmAutomationJob": "Automation",
     "Suspend-AzureRmDataFactoryPipeline": "Data Factories",
     "Suspend-AzureRmSqlDatabase": "SQL",
-    "Swap-AzureRmWebAppSlot": "App Service",
     "Switch-AzureRmSqlDatabaseFailoverGroup": "SQL",
     "Switch-AzureRmWebAppSlot": "App Service",
     "Sync-AzureRmMediaServiceStorageKeys": "Media Services",
@@ -1653,6 +1652,7 @@
     "Wait-AzureRmDataLakeAnalyticsJob": "Data Lake Analytics",
     "Wait-AzureRmHDInsightJob": "HD Insights",
     "Wait-AzureRmRecoveryServicesBackupJob": "Backup",
-	"Save-​Azure​Rm​Profile": "Profile",
-	"Select-​Azure​Rm​Profile": "Profile"
+    "Save-AzureRmProfile": "Profile",
+    "Select-AzureRmProfile": "Profile"
+	
 }

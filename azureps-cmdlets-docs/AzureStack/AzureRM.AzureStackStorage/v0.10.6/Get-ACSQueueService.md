@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSQueueService
 
 ## SYNOPSIS
-Retrieve status and settings of Queue service
+Gets the status and settings of a queue service.
 
 ## SYNTAX
 
@@ -18,27 +18,31 @@ Get-ACSQueueService [-ResourceGroupName] <String> [-FarmName] <String> [[-Subscr
 ```
 
 ## DESCRIPTION
-Retrieve the status and settings of Queue service
+The **Get-ACSQueueService** cmdlet gets the status and settings of an Azure Consistent Storage (ACS) queue service.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
+### Example 1: Get the status and settings of an ACS queue service
 
 ```
-$resourceGroup = 'System' 
+PS C:\> $ResourceGroup = "System" 
 
-$farm = Get-ACSFarm -ResourceGroupName $resourceGroup
+PS C:\> $Farm = Get-ACSFarm -ResourceGroupName $ResourceGroup
 
-Get-ACSQueueService -ResourceGroupName $resourceGroup -FarmName $farm.Name | fl
+PS C:\> Get-ACSQueueService -ResourceGroupName $ResourceGroup -FarmName $Farm.Name | fl
 ```
+
+The first command sets the variable named $ResourceGroup to the value of System.
+
+The second command gets the ACS farm that is located in the resource group stored in the $ResourceGroup variable and stores the result in the variable named $Farm.
+
+The third command gets the settings and status of the ACS queue service located in the ACS farm stored in the $Farm variable.
+
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -53,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm that the cmdlet gets the queue service from.
 
 ```yaml
 Type: String
@@ -107,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS queue service.
 
 ```yaml
 Type: String
@@ -122,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -137,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -180,3 +184,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSQueueServiceMetric](./Get-ACSBlobServiceMetric.md)
+
+[Get-ACSQueueServiceMetricDefinition](./Get-ACSBlobServiceMetricDefinition.md)

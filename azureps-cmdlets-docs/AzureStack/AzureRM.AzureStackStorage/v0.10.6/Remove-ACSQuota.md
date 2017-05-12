@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-ACSQuota
 
 ## SYNOPSIS
-Removes the Storage quota resource
+Removes the Storage quota resource.
 
 ## SYNTAX
 
@@ -18,26 +18,26 @@ Remove-ACSQuota [-Location] <String> [-Name] <String> [[-SubscriptionId] <String
 ```
 
 ## DESCRIPTION
-The Remove-ACSQuota cmdlet removes the Storage Quota resource created by the admins.
+The **Remove-ACSQuota** cmdlet removes the Storage Quota resource.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
+### Example 1: Remove the specified storage quota resource
 
 ```
-$ResourceGroup = "System"
-$Location = "Redmond"
-// Remove quota resource named 'BasicStorage_Quota'
-Remove-ACSQuota -Location $Location -Name "BasicStorage_Quota"
+PS C:\> $ResourceGroup = "System"
+
+PS C:\> Remove-ACSQuota -Location "Redmond" -Name "BasicStorage_Quota"
 ```
+
+The first command stores the value named System in the variable named $ResourceGroup.
+
+The second command removes the quota resource named BasicStorage_Quota from the geolocation named Redmond.
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-
+Specifies the geolocation of the ACS quota resource that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
+Specifies the name of the ACS quota resource that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -181,7 +181,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -207,3 +208,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSQuota](./Get-ACSQuota.md)
+
+[Set-ACSQuota](./Set-ACSQuota.md)

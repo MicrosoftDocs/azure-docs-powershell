@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSTableService
 
 ## SYNOPSIS
-Get status and settings of Table service.
+Gets the status and settings of a Table service.
 
 ## SYNTAX
 
@@ -18,27 +18,31 @@ Get-ACSTableService [-ResourceGroupName] <String> [-FarmName] <String> [[-Subscr
 ```
 
 ## DESCRIPTION
-Get status and settings of Table service.
+The **Get-ACSTableService** cmdlet gets the status and settings of a Table service.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
+### Example 1: Get the settings of a Table service
 
 ```
-$resourceGroup = 'System' 
+$ResourceGroup = "System"
 
-$farm = Get-ACSFarm -ResourceGroupName $resourceGroup
+$Farm = Get-ACSFarm -ResourceGroupName $ResourceGroup
 
-Get-ACSTableService -ResourceGroupName $resourceGroup -FarmName $farm.Name
+Get-ACSTableService -ResourceGroupName $ResourceGroup -FarmName $Farm.Name
 ```
+
+The first command stores the value named System in the variable named $ResourceGroup.
+
+The second command uses the [Get-ACSFarm](,/Get-ACSFarm,md) cmdlet to get the farm that is contained in the resource group specified in the $ResourceGroup variable. 
+The command stores the result in the variable named $Farm.
+
+The third command uses the **Get-ACSTableService** cmdlet to get the Table service that is contained in the farm specified in the $Farm variable.
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -53,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the ACS farm that this cmdlet gets the table service from.
 
 ```yaml
 Type: String
@@ -107,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS table service.
 
 ```yaml
 Type: String
@@ -122,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -137,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -180,3 +184,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSTableServiceMetric](./Get-ACSTableServiceMetric.md)
+
+[Get-ACSTableServiceMetricDefinition](./Get-ACSTableServiceMetricDefinition.md)

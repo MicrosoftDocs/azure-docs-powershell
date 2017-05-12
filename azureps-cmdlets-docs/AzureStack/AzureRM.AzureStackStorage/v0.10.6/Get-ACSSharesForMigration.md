@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSSharesForMigration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a list of SMB shares that are to be migrated.
 
 ## SYNTAX
 
@@ -18,21 +18,14 @@ Get-ACSSharesForMigration [-ResourceGroupName] <String> [-FarmName] <String> [-S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-ACSSharesForMigration** cmdlet gets a list of Server Message Block (SMB) shares that are to be migrated.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AdminUri
-Specifies the link, as a URI, to the service admin.
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -47,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the Azure Consistent Storage (ACS) farm that this cmdlet gets SMB shares from.
 
 ```yaml
 Type: String
@@ -62,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -77,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceShareName
-{{Fill SourceShareName Description}}
+Specifies the name of the source share.
 
 ```yaml
 Type: String
@@ -107,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String

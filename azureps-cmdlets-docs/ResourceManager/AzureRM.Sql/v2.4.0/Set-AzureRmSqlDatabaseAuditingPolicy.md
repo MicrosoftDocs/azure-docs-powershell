@@ -357,6 +357,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzureRmSqlDatabaseAuditing](./Remove-AzureRmSqlDatabaseAuditing.md)
 
-[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
 
 

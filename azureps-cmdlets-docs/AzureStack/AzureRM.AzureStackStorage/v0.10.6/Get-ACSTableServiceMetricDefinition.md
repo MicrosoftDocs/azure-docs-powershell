@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-ACSTableServiceMetricDefinition
 
 ## SYNOPSIS
-Retrieve the metric definitions of Table service
+Gets the metric definitions of a Table service.
 
 ## SYNTAX
 
@@ -19,21 +19,14 @@ Get-ACSTableServiceMetricDefinition [-FarmName] <String> [-ResourceGroupName] <S
 ```
 
 ## DESCRIPTION
-Retrieve the metric definitions of Table service
+The **Get-ACSTableServiceMetricDefinition** cmdlet gets the metric definitions of a Table service.
 
 ## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -48,7 +41,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-
+Indicates the cmdlet gets the detailed information from the Table service metric definitions.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -FarmName
-
+Specifies the name of the Azure Consistent Storage (ACS) farm for which this cmdlet gets the table service metric definitions.
 
 ```yaml
 Type: String
@@ -117,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetricNames
-
+Specifies a string array of metric names in which this cmdlet gets definitions from.
 
 ```yaml
 Type: String[]
@@ -132,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -147,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -162,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -207,3 +200,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ACSTableService](./Get-ACSTableService.md)
+
+[Get-ACSTableServiceMetric](./Get-ACSTableServiceMetric.md)

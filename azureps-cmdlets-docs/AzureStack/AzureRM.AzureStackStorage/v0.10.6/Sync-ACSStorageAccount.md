@@ -20,25 +20,23 @@ Sync-ACSStorageAccount [-ResourceGroupName] <String> [-TenantAccountName] <Strin
 ```
 
 ## DESCRIPTION
-After undelete a storage account, service admin need to synchronize the account status change back to the frontend cache in order to make sure the frontend could serve the request for that undeleted storage account.
+The **Sync-ACSStorageAccount** cmdlet Synchronize the account status of the tenant storage accounts from backend to frontend cache.
+After you undelete a storage account, the service administrator needs to synchronize the account status change back to the frontend cache in order to make sure the frontend could serve the request for that undeleted storage account.
 
 ## EXAMPLES
 
-### Example 1:
-@{paragraph=PS C:\\\>}
-
-
+### Example 1: Synchronize the account status of the specified tenant storage account
 
 ```
-$resourceGroup = 'System' 
-
-Sync-ACSStorageAccount -AccountName first -TenantSubscriptionId <TenantSubscriptionId> -ResourceLocation 'local' -ResourceGroupName $resourceGroup
+PS C:\> Sync-ACSStorageAccount -AccountName "PattyFuller" -TenantSubscriptionId <TenantSubscriptionId> -ResourceLocation "local" -ResourceGroupName "RG005"
 ```
+
+This command synchronizes the tenant storage account for the account named PattyFuller that is contained in the resource group named RG005.
 
 ## PARAMETERS
 
 ### -AdminUri
-
+Specifies the link, as a URI, to the service administrator.
 
 ```yaml
 Type: Uri
@@ -92,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-
+Specifies the geolocation for the storage account that this cmdlet synchronizes.
 
 ```yaml
 Type: String
@@ -107,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceAdminApiVersion
-API version of Resource.Admin
+Specifies the API version of Resource.Admin.
 
 ```yaml
 Type: String
@@ -122,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-
+Specifies the name of the resource group that contains the ACS farm.
 
 ```yaml
 Type: String
@@ -137,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateValidation
-
+Indicates that the cmdlet does not validate the certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -152,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountApiVersion
-
+Specifies the API version of the storage account that this cmdlet synchronizes.
 
 ```yaml
 Type: String
@@ -167,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-
+Specifies the subscription ID.
 
 ```yaml
 Type: String
@@ -182,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantAccountName
-
+Specifies the name of the tenant account.
 
 ```yaml
 Type: String
@@ -197,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantResourceGroup
-
+Specifies the name of the tenant resource group.
 
 ```yaml
 Type: String
@@ -283,3 +281,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Clear-ACSStorageAccount](./Clear-ACSStorageAccount.md)
+
+[Get-ACSStorageAccount](./Get-ACSStorageAccount.md)

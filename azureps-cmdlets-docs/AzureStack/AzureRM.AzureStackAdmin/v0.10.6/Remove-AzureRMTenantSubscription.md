@@ -21,17 +21,17 @@ The **Remove-AzureRMTenantSubscription** cmdlet removes the current logged-in us
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1: Remove the tenant subscription of the current logged-in user
 ```
 Remove-AzureRMTenantSubscription -TargetSubscriptionId $TenantSubscriptionId
 ```
 
-This command removes the tenant subscription that is specified by the ID that is stored in the $TenantSubscriptionId variable.
+This example removes the logged-in user's tenant subscription that is specified by the ID that is stored in the $TenantSubscriptionId variable.
 
 ## PARAMETERS
 
 ### -InformationAction
-Not specified.
+Specifies how this cmdlet responds to an information event.
 
 ```yaml
 Type: ActionPreference
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-Not specified.
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineVariable
-Not specified.
+Specifies a variable that stores the value of the current pipeline element.
 
 ```yaml
 Type: String
