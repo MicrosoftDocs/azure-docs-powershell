@@ -22,10 +22,10 @@ Send-Feedback [<CommonParameters>]
 The Send-Feedback cmdlet sends feedback to the Azure PowerShell team.
 
 ## EXAMPLES
-### Example 1:
+
 ```
 PS C:\> Send-Feedback
-```
+
 With zero (0) being the least and ten (10) being the most, how likely are you to recommend Azure PowerShell to a friend or colleague?
 
 10
@@ -41,7 +41,7 @@ Response.
 Please enter your email if you are interested in providing follow up information:
 
 your@email.com
-
+```
 
 ## PARAMETERS
 
