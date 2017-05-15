@@ -1,7 +1,7 @@
 {
     
    "azuresmps-4.0.0": {
-        "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
             "Azure": {
                 "_displayName": "Azure",
                 "_version": "4.0.0"
