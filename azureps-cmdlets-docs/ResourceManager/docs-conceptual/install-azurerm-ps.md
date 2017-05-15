@@ -9,7 +9,7 @@ ms.product: azure
 ms.service: azure-resource-manager
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
+ms.date: 05/15/2017
 ---
 
 # Install and configure Azure PowerShell
@@ -53,8 +53,8 @@ following command from an elevated PowerShell session:
 Install-Module AzureRM
 ```
 
-By default, the PowerShell gallery is not configured as a Trusted repository for PowerShellGet. If
-this is the first time you have used the PSGallery, you will see the following prompt:
+By default, the PowerShell gallery is not configured as a Trusted repository for PowerShellGet. The
+first time you use the PSGallery you see the following prompt:
 
 ```
 Untrusted repository
