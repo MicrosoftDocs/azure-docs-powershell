@@ -123,7 +123,7 @@
     "Get-AzureRmContext": "Profile",
     "Get-AzureRmEnvironment": "Profile",
     "Get-AzureRmSubscription": "Subscriptions",
-    "Get-AzureRmTenant": "Profile"
+    "Get-AzureRmTenant": "Profile",
     "Get-AzureRole": "Roles",
     "Get-AzureRoleSize": "Roles",
     "Get-AzureRouteTable": "Route",
@@ -280,7 +280,6 @@
     "New-AzureApplicationGateway": "Application Gateway",
     "New-AzureAutomationAccount": "Automation",
     "New-AzureAutomationCertificate": "Automation",
-    "New-AzureAutomationConnection": "Networking",
     "New-AzureAutomationConnection": "Automation",
     "New-AzureAutomationCredential": "Automation",
     "New-AzureAutomationModule": "Automation",
@@ -727,5 +726,5 @@
     "Update-AzureVMImage": "VM Images",
     "Update-AzureWebsiteRepository": "Azure",
     "Use-AzureHDInsightCluster": "HD Insights",
-    "Wait-AzureHDInsightJob": "HD Insights",
+    "Wait-AzureHDInsightJob": "HD Insights"
 }
