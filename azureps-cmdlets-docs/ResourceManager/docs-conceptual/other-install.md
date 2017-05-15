@@ -9,7 +9,7 @@ ms.product: azure
 ms.service: azure-resource-manager
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
+ms.date: 05/15/2017
 ---
 
 # Other installation methods
@@ -26,13 +26,13 @@ Download the [Azure PowerShell WebPI package](http://aka.ms/webpi-azps) and star
 
 > [!NOTE]
 > If you have previously installed Azure modules from the PowerShell Gallery, the installer
-> will automatically remove them. This simplifies your environment by ensuring that only one version
+> automatically removes them. This simplifies your environment by ensuring that only one version
 > of Azure PowerShell is installed. However, there are scenarios where you may need multiple
 > versions installed at the same time.
 >
-> PowerShell Gallery modules installs modules in
-> `$env:ProgramFiles\WindowsPowerShell\Modules`. In contrast, the WebPI installer will
-> install the Azure modules in `$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\`.
+> PowerShell Gallery modules install modules in
+> `$env:ProgramFiles\WindowsPowerShell\Modules`. In contrast, the WebPI installer
+> installs the Azure modules in `$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\`.
 >
 > If an error occurs during install, you can manually remove the Azure* folders in your
 > `$env:ProgramFiles\WindowsPowerShell\Modules` folder, and try the installation again.
@@ -66,8 +66,8 @@ At line:1 char:1
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
 
-This can be corrected by restarting the machine or importing the module using the fully-qualified
-path. For example:
+This error can be corrected by restarting the machine or importing the module using the fully
+qualified path. For example:
 
 ```powershell
 Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.psd1"
@@ -77,6 +77,6 @@ Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.ps
 
 Azure PowerShell can be installed using the MSI file available from
 [GitHub](https://github.com/Azure/azure-powershell/releases/latest). If you have installed previous
-versions of Azure modules the installer will automatically remove them. The MSI package installs
-modules in `$env:ProgramFiles\WindowsPowerShell\Modules` but does not create version specific
+versions of Azure modules, the installer automatically removes them. The MSI package installs
+modules in `$env:ProgramFiles\WindowsPowerShell\Modules` but does not create version-specific
 folders.
