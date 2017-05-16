@@ -127,6 +127,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Start-AzureRmSqlServerUpgrade](./Start-AzureRmSqlServerUpgrade.md)
 
-[Azure SQL Database Cmdlets](./AzureRM.Sql.md)
+
 
 
