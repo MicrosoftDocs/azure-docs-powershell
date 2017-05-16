@@ -726,5 +726,8 @@
     "Update-AzureVMImage": "VM Images",
     "Update-AzureWebsiteRepository": "Azure",
     "Use-AzureHDInsightCluster": "HD Insights",
-    "Wait-AzureHDInsightJob": "HD Insights"
+    "Wait-AzureHDInsightJob": "HD Insights",
+    "Save-AzureRmContext": "profile",
+    "Select-AzureRmprofile": "Profile",
+    "Send-feedback": "Profile"
 }
