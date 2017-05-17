@@ -9,13 +9,12 @@ ms.product: azure
 ms.service: azure-resource-manager
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/15/2017
+ms.date: 05/17/2017
 ---
 
 # Install and configure Azure PowerShell
 
-Installing Azure PowerShell from the [PowerShell Gallery](https://www.powershellgallery.com/) is
-the preferred method of installation.
+Installing Azure PowerShell from the PowerShell Gallery is the preferred method of installation.
 
 ## Step 1: Install PowerShellGet
 
@@ -66,7 +65,7 @@ Are you sure you want to install the modules from 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
 ```
 
-Answer 'Yes' to continue with the installation.
+Answer 'Yes' or 'Yes to All' to continue with the installation.
 
 > [!NOTE]
 > If you have a version older than 2.8.5.201 of NuGet, you are prompted to download and install
@@ -76,8 +75,14 @@ The AzureRM module is a rollup module for the Azure Resource Manager cmdlets. Wh
 AzureRM module, any Azure PowerShell module not previously installed is downloaded and from the
 PowerShell Gallery.
 
-Once the module is installed, you need to load the module into your PowerShell session. Modules are
-loaded using the `Import-Module` cmdlet, as follows:
+If you have a previous version of Azure PowerShell installed you may receive an error. To resolve
+this issue, see the [Updating to a new version of Azure PowerShell](#update-azps) section of this
+article.
+
+## Step 3: Load the AzureRM module
+Once the module is installed, you need to load the module into your PowerShell session. You should
+do this in a normal (non-elevated) PowerShell session. Modules are loaded using the `Import-Module`
+cmdlet, as follows:
 
 ```powershell
 Import-Module AzureRM
@@ -116,26 +121,41 @@ run `Get-Module AzureRM` from your command line.
 Get-Module AzureRM -list | Select-Object Name,Version,Path
 ```
 
+### Support for classic deployment methods
 
-### Updating to a new version of Azure PowerShell
-
-PowerShellGet can update an installed module when a new version has been released to the PowerShell
-Gallery. The `Update-Module` cmdlet downloads and installs the latest version. The new version is
-installed side by side with any other versions that are installed. The `Update-Module` cmdlet does
-not remove previous versions.
-
-If you want to reinstall the current version, you must use the `-Force` parameter. For example:
-
-```powershell
-Update-Module -Name AzureRM -Force
-```
-
-> [!NOTE]
-> If you have deployments that use the classic deployment model you can install the Service
+If you have deployments that use the classic deployment model you can install the Service
 Management version of Azure PowerShell. For more information, see [Install the Azure PowerShell
 Service Management module](overview?view=azuresmps-3.7.0). The Azure and AzureRM modules share
-common dependencies. So if you use both modules you should update both.
+common dependencies. If you use both the Azure and AzureRM modules, you should install the same
+version of each package.
 
+### <a id="update-azps"></a>Updating to a new version of Azure PowerShell
+
+If you have a previous version of Azure PowerShell installed that includes the Service Management
+module, you may receive the following error:
+
+```
+PackageManagement\Install-Package : A command with name 'Get-AzureStorageContainerAcl' is already
+available on this system. This module 'Azure.Storage' may override the existing commands. If you
+still want to install this module 'Azure.Storage', use -AllowClobber parameter.
+
+At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm1:1772 char:21
++ ...          $null = PackageManagement\Install-Package @PSBoundParameters
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (Microsoft.Power....InstallPackage:InstallPackage) [Install-Package], Exception
+    + FullyQualifiedErrorId : CommandAlreadyAvailable,Validate-ModuleCommandAlreadyAvailable,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage
+```
+
+As the error message states, you need to use the -AllowClobber parameter to install the module. Use
+the following command:
+
+```powershell
+# Install the Azure Resource Manager modules from the PowerShell Gallery
+Install-Module AzureRM -AllowClobber
+```
+
+For more information, see the help topic for
+[Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module).
 
 ### Installing module versions side by side
 
