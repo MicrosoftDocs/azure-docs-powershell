@@ -6,10 +6,9 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-ms.assetid: 81574D24-6FD4-4A2B-AE87-C938DEDB57DF
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/AzureRM.DNS.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/AzureRM.DNS.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # AzureRM.DNS Module
@@ -36,7 +35,7 @@ Creates a DNS record set.
 Creates a new DNS zone.
 
 ### [Remove-AzureRmDnsRecordConfig](Remove-AzureRmDnsRecordConfig.md)
-Removes a DNS record from a local record set.
+Removes a DNS record from a local record set object.
 
 ### [Remove-AzureRmDnsRecordSet](Remove-AzureRmDnsRecordSet.md)
 Deletes a record set.
@@ -49,3 +48,4 @@ Updates a DNS record set.
 
 ### [Set-AzureRmDnsZone](Set-AzureRmDnsZone.md)
 Updates the properties of a DNS zone.
+

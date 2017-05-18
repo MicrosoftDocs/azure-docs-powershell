@@ -6,10 +6,9 @@ Download Help Link:
 Help Version:
   [object Object]: null
 Locale: en-US
-ms.assetid: 899E85FD-2163-4088-B806-CCF165B8FAF7
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/AzureRM.SiteRecovery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/AzureRM.SiteRecovery.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # AzureRM.SiteRecovery Module
@@ -189,7 +188,7 @@ Starts the unplanned failover for a Site Recovery protection entity or recovery 
 Stops a Site Recovery job.
 
 ### [Update-AzureRmSiteRecoveryPolicy](Update-AzureRmSiteRecoveryPolicy.md)
-
+{{Manually Enter Update-AzureRmSiteRecoveryPolicy Description Here}}
 
 ### [Update-AzureRmSiteRecoveryProtectionDirection](Update-AzureRmSiteRecoveryProtectionDirection.md)
 Updates the source and target server for the protection of a Site Recovery object.

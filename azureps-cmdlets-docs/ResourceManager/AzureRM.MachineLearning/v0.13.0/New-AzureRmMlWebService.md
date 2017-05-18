@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/New-AzureRmMlWebService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/New-AzureRmMlWebService.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/bdd7e3ac15f60206476c802f0aaeae9dfbf4d8bd
+gitcommit: https://github.com/Azure/azure-powershell/blob/c5a769e862ae125fd6424a8325774670efa4f075
 ---
 
 # New-AzureRmMlWebService
@@ -17,13 +17,13 @@ Creates a new web service.
 ### Create a new Azure ML webservice from a JSON definiton file.
 ```
 New-AzureRmMlWebService -ResourceGroupName <String> -Location <String> -Name <String> -DefinitionFile <String>
- [-Force] [-WhatIf] [-Confirm]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Create a new Azure ML webservice from a WebService instance definition.
 ```
 New-AzureRmMlWebService -ResourceGroupName <String> -Location <String> -Name <String>
- -NewWebServiceDefinition <WebService> [-Force] [-WhatIf] [-Confirm]
+ -NewWebServiceDefinition <WebService> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +35,8 @@ If a web service with the same name exists in the resource group, the call acts 
 ### --------------------------  Example 1: Create a new service from a Json file based definition  --------------------------
 @{paragraph=PS C:\\\>}
 
+
+
 ```
 New-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -Location "South Central US" -DefinitionFile "C:\mlservice.json"
 ```
@@ -43,6 +45,8 @@ Creates a new Azure Machine Learning web service named "mywebservicename" in the
 
 ### --------------------------  Example 2: Create a new service from an object instance  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 New-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -Location "South Central US" -NewWebServiceDefinition $serviceDefinitionObject
@@ -122,7 +126,7 @@ Accept wildcard characters: False
 ### -NewWebServiceDefinition
 The definition for the new web service, containing all the properties that make up the service.
 This parameter is required and represents an instance of the Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService class.
-You can find the latest specification for the web service definition in the swagger spec under https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2016-05-01-preview/swagger/webservices.json.
+You can find the latest specification for the web service definition in the swagger spec under https://github.com/Azure/azure-rest-api-specs/blob/master/arm-machinelearning/2017-01-01/swagger/webservices.json.
 
 ```yaml
 Type: WebService
@@ -186,6 +190,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

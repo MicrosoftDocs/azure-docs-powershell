@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Set-AzureRmCurrentStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Set-AzureRmCurrentStorageAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmCurrentStorageAccount
@@ -17,14 +17,12 @@ Modifies the current Storage account of the specified subscription.
 
 ### UsingResourceGroupAndNameParameterSet (Default)
 ```
-Set-AzureRmCurrentStorageAccount -ResourceGroupName <String> -Name <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+Set-AzureRmCurrentStorageAccount -ResourceGroupName <String> -Name <String> [<CommonParameters>]
 ```
 
 ### UsingStorageContext
 ```
-Set-AzureRmCurrentStorageAccount -Context <AzureStorageContext> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Set-AzureRmCurrentStorageAccount -Context <AzureStorageContext> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,18 +40,19 @@ This command sets the default storage account for the specified subscription.
 
 ## PARAMETERS
 
-### -ResourceGroupName
-Specifies the resource group that contains the Storage account to modify.
+### -Context
+Specifies an **AzureStorageContext** object for the current Storage account.
+To obtain a storage context object, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: String
-Parameter Sets: UsingResourceGroupAndNameParameterSet
+Type: AzureStorageContext
+Parameter Sets: UsingStorageContext
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -72,58 +71,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
+### -ResourceGroupName
+Specifies the resource group that contains the Storage account to modify.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Context
-Specifies an **AzureStorageContext** object for the current Storage account.
-To obtain a storage context object, use the New-AzureStorageContext cmdlet.
-
-```yaml
-Type: AzureStorageContext
-Parameter Sets: UsingStorageContext
+Parameter Sets: UsingResourceGroupAndNameParameterSet
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

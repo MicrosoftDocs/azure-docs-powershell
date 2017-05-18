@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmAlertRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmAlertRule
@@ -61,21 +61,6 @@ The *DetailedOutput* parameter is specified, so the output is detailed.
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DetailedOutput
 Displays full details in the output.
 
@@ -97,6 +82,21 @@ Specifies the name of the alert rule to get.
 ```yaml
 Type: String
 Parameter Sets: Parameters for Get-AzureRmAlertRule cmdlet using name
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+Specifies the name of the resource group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
 Aliases: 
 
 Required: True

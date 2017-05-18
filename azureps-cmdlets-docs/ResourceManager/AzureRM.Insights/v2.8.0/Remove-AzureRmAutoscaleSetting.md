@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Remove-AzureRmAutoscaleSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Remove-AzureRmAutoscaleSetting.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmAutoscaleSetting
@@ -32,8 +32,8 @@ You must specify the name of the setting and the name of the resource group to w
 
 ## PARAMETERS
 
-### -ResourceGroup
-Specifies the name of the resource group.
+### -Name
+Specifies the name of the Autoscale setting to remove.
 
 ```yaml
 Type: String
@@ -47,8 +47,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of the Autoscale setting to remove.
+### -ResourceGroup
+Specifies the name of the resource group.
 
 ```yaml
 Type: String

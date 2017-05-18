@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xm
+external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 ms.assetid: 817BF177-519F-47BA-86CF-4591FB402E2Dl
 online version: http://go.microsoft.com/fwlink/?LinkId=690299
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzureKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzureKeyVaultKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/be40276d6b3a7d9b15aaf7cb0002f29bdc9e3569
 ---
 
 # Remove-AzureKeyVaultKey
@@ -16,12 +16,13 @@ Deletes a key in a key vault.
 ## SYNTAX
 
 ```
-Remove-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> [-Force] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> [-Force] [-PassThru] [-InRemovedState] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Remove-AzureKeyVaultKey cmdlet deletes a key in a key vault.
+If the key was accidentally deleted the key can be recovered using Undo-AzureKeyVaultKeyRemoval by a user with special 'recover' permissions.
 This cmdlet has a value of high for the **ConfirmImpact** property.
 
 ## EXAMPLES
@@ -41,7 +42,15 @@ PS C:\>Remove-AzureKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Force -C
 This command removes the key named ITSoftware from the key vault named Contoso.
 The command specifies the *Force* and *Confirm* parameters, and, therefore, the cmdlet does not prompt you for confirmation.
 
-### Example 3: Remove keys by using the pipeline operator
+### Example 3: Purge a deleted key from the key vault permanently
+```
+PS C:\>Remove-AzureKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -InRemovedState
+```
+
+This command removes the key named ITSoftware from the key vault named Contoso permanently.
+This flag requires the user to have special 'purge' persmissions on the key vault.
+
+### Example 4: Remove keys by using the pipeline operator
 ```
 PS C:\>Get-AzureKeyVaultKey -VaultName 'Contoso' | Where-Object {$_.Attributes.Enabled -eq $False} | Remove-AzureKeyVaultKey
 ```
@@ -67,6 +76,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InRemovedState
+Remove the previously deleted key permanently.```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the key to remove.
 This cmdlet constructs the fully qualified domain name (FQDN) of a key based on the name that this parameter specifies, the name of the key vault, and your current environment.
@@ -77,7 +99,7 @@ Parameter Sets: (All)
 Aliases: KeyName
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -109,7 +131,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -156,7 +178,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.KeyVault.Models.KeyBundle
+### Microsoft.Azure.Commands.KeyVault.Models.DeletedKeyBundle
 This cmdlet returns a value only if you specify the *PassThru* parameter.
 
 ## NOTES
@@ -168,4 +190,6 @@ This cmdlet returns a value only if you specify the *PassThru* parameter.
 [Get-AzureKeyVaultKey](./Get-AzureKeyVaultKey.md)
 
 [Set-AzureKeyVaultKeyAttribute](./Set-AzureKeyVaultKeyAttribute.md)
+
+[Undo-AzureKeyVaultKeyRemoval](./Undo-AzureKeyVaultKeyRemoval.md)
 

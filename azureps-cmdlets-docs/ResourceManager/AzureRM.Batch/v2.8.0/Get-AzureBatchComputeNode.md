@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchComputeNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchComputeNode.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureBatchComputeNode
@@ -17,13 +17,13 @@ Gets Batch compute nodes from a pool.
 
 ### ODataFilter (Default)
 ```
-Get-AzureBatchComputeNode -PoolId <String> [-Filter <String>] [-MaxCount <Int32>] [-Select <String>]
+Get-AzureBatchComputeNode [-PoolId] <String> [-Filter <String>] [-MaxCount <Int32>] [-Select <String>]
  -BatchContext <BatchAccountContext> [<CommonParameters>]
 ```
 
 ### Id
 ```
-Get-AzureBatchComputeNode -PoolId <String> [[-Id] <String>] [-Select <String>]
+Get-AzureBatchComputeNode [-PoolId] <String> [[-Id] <String>] [-Select <String>]
  -BatchContext <BatchAccountContext> [<CommonParameters>]
 ```
 
@@ -238,7 +238,7 @@ Parameter Sets: ODataFilter, Id
 Aliases: 
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

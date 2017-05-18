@@ -4,39 +4,39 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlDatabaseFailoverGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlDatabaseFailoverGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/c7f39003a0e9914b1fdc763e3655d3a188c3dfee
+gitcommit: https://github.com/Azure/azure-powershell/blob/6271d6cb55184b73b34a02f4cfc1b3d65bdadc25
 ---
 
 # Remove-AzureRmSqlDatabaseFailoverGroup
 
 ## SYNOPSIS
-The Cmdlet that removes the Azure SQL Failover Group
+Removes an Azure SQL Database Failover Group.
 
 ## SYNTAX
 
 ```
-Remove-AzureRmSqlDatabaseFailoverGroup [-FailoverGroupName] <String> [-PartnerResourceGroupName <String>]
- -PartnerServerName <String> [-Force] [-ServerName] <String> [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmSqlDatabaseFailoverGroup [-ServerName] <String> [-FailoverGroupName] <String> [-Force]
+ [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This command deletes all secondary databases included the FG and removes the FG object with the specified name from each participating server. The primary databases will become regular read-write databases. The listener endpoint will be unregistered from DNS.  
+This command removes the Failover Group with the specified name, leaving all databases and replication relationships intact. The listener endpoint will be unregistered from DNS.
 
+The Failover Group's primary server should be used to execute the command.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> PS C:\> Remove-AzureRmSqlDatabaseFailoverGroup -PrimaryResourceGroupName "myFG" -ServerName "myserver" –FailoverGroupName "myFG"  
-
+PS C:\> Remove-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName primaryserver -FailoverGroupName fg
 ```
 
+Remove a Failover Group.
 
 ## PARAMETERS
 
 ### -FailoverGroupName
-The name of the Azure SQL Failover Group to remove.
+The name of the Azure SQL Database Failover Group to remove.
 
 ```yaml
 Type: String
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Skip confirmation message for performing the action
+Skip confirmation message for performing the action.
 
 ```yaml
 Type: SwitchParameter
@@ -60,37 +60,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PartnerResourceGroupName
-The partner resource group name for Azure SQL Database Failover Group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PartnerServerName
-The partner server name for Azure SQL Database Failover Group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -111,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Failover Group is in.
+The name of the primary Azure SQL Database Server of the Failover Group.
 
 ```yaml
 Type: String
@@ -135,7 +105,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -151,7 +121,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -171,3 +141,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmSqlDatabaseFailoverGroup](./New-AzureRmSqlDatabaseFailoverGroup.md)
+
+[Set-AzureRmSqlDatabaseFailoverGroup](./Set-AzureRmSqlDatabaseFailoverGroup.md)
+
+[Get-AzureRmSqlDatabaseFailoverGroup](./Get-AzureRmSqlDatabaseFailoverGroup.md)
+
+[Add-AzureRmSqlDatabaseToFailoverGroup](./Add-AzureRmSqlDatabaseToFailoverGroup.md)
+
+[Remove-AzureRmSqlDatabaseFromFailoverGroup](./Remove-AzureRmSqlDatabaseFromFailoverGroup.md)
+
+[Switch-AzureRmSqlDatabaseFailoverGroup](./Switch-AzureRmSqlDatabaseFailoverGroup.md)

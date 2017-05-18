@@ -5,7 +5,7 @@ online version: http://go.microsoft.com/fwlink/?LinkId=690163
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzureRmKeyVaultAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzureRmKeyVaultAccessPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/be40276d6b3a7d9b15aaf7cb0002f29bdc9e3569
 ---
 
 # Set-AzureRmKeyVaultAccessPolicy
@@ -68,8 +68,8 @@ Note that although specifying the resource group is optional for this cmdlet, yo
 
 ### Example 1: Grant permissions to a user for a key vault Key Vault and modify the permissionskey vault
 ```
-PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys create,import,delete,list -PermissionsToSecrets 'Set,Delete'
-PS C:\> Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToSecrets 'Set,Delete,Get' -PassThru
+PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys create,import,delete,list -PermissionsToSecrets 'set,delete'
+PS C:\> Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToSecrets 'set,delete,get' -PassThru
 PS C:\> Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys @() -PassThru
 ```
 
@@ -256,6 +256,20 @@ Accept wildcard characters: False
 
 ### -PermissionsToCertificates
 Specifies an array of certificate permissions to grant to a user or service principal.
+The acceptable values for this parameter are:
+
+- Get
+- List
+- Delete
+- Create
+- Import
+- Update
+- Managecontacts
+- Getissuers
+- Listissuers
+- Setissuers
+- Deleteissuers
+- Manageissuers
 
 ```yaml
 Type: String[]
@@ -288,7 +302,8 @@ The acceptable values for this parameter are:
 - Delete
 - Backup
 - Restore
-- All
+- Recover
+- Purge
 
 ```yaml
 Type: String[]
@@ -311,7 +326,10 @@ The acceptable values for this parameter are:
 - List
 - Set
 - Delete
-- All
+- Backup
+- Restore
+- Recover
+- Purge
 
 ```yaml
 Type: String[]
@@ -335,7 +353,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -384,7 +402,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

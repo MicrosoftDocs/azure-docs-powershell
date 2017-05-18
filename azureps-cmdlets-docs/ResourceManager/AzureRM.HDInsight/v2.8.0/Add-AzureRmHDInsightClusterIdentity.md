@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightClusterIdentity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightClusterIdentity.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Add-AzureRmHDInsightClusterIdentity
@@ -18,15 +18,14 @@ Adds a cluster identity to a cluster configuration object.
 ### CertificateFilePath (Default)
 ```
 Add-AzureRmHDInsightClusterIdentity [-Config] <AzureHDInsightConfig> [-ObjectId] <Guid>
- [-CertificateFilePath] <String> [-CertificatePassword] <String> [[-AadTenantId] <Guid>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [-CertificateFilePath] <String> [-CertificatePassword] <String> [[-AadTenantId] <Guid>] [<CommonParameters>]
 ```
 
 ### CertificateFileContents
 ```
 Add-AzureRmHDInsightClusterIdentity [-Config] <AzureHDInsightConfig> [-ObjectId] <Guid>
  [-CertificateFileContents] <Byte[]> [-CertificatePassword] <String> [[-AadTenantId] <Guid>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,35 +80,33 @@ This command adds Cluster Identity info to the cluster named your-hadoop-001, al
 
 ## PARAMETERS
 
-### -Config
-Specifies the HDInsight cluster configuration object that this cmdlet modifies.
-This object is created by the New-AzureRmHDInsightClusterConfig cmdlet.
-
-```yaml
-Type: AzureHDInsightConfig
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -ObjectId
-Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
-The cluster will use this when accessing Azure Data Lake Store.
+### -AadTenantId
+Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 1
+Required: False
+Position: 4
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateFileContents
+Specifies file contents of the certificate that will be used when accessing Azure Data Lake Store.
+
+```yaml
+Type: Byte[]
+Parameter Sets: CertificateFileContents
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -145,72 +142,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AadTenantId
-Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
+### -Config
+Specifies the HDInsight cluster configuration object that this cmdlet modifies.
+This object is created by the New-AzureRmHDInsightClusterConfig cmdlet.
+
+```yaml
+Type: AzureHDInsightConfig
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -ObjectId
+Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
+The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CertificateFileContents
-Specifies file contents of the certificate that will be used when accessing Azure Data Lake Store.
-
-```yaml
-Type: Byte[]
-Parameter Sets: CertificateFileContents
-Aliases: 
-
 Required: True
-Position: 2
+Position: 1
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

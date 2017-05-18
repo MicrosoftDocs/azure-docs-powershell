@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Remove-AzureRmMlCommitmentPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Remove-AzureRmMlCommitmentPlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/bdd7e3ac15f60206476c802f0aaeae9dfbf4d8bd
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmMlCommitmentPlan
@@ -16,12 +16,14 @@ Deletes a commitment plan.
 
 ### Remove an Azure ML commitment plan specified by name and resource group.
 ```
-Remove-AzureRmMlCommitmentPlan -ResourceGroupName <String> -Name <String> [-Force] [-Confirm]
+Remove-AzureRmMlCommitmentPlan -ResourceGroupName <String> -Name <String> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Remove an Azure ML commitment plan specified as an object.
 ```
-Remove-AzureRmMlCommitmentPlan -MlCommitmentPlan <CommitmentPlan> [-Force] [-Confirm]
+Remove-AzureRmMlCommitmentPlan -MlCommitmentPlan <CommitmentPlan> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +33,8 @@ Deletes an Azure Machine Learning commitment plan. Note that commitment plans wh
 
 ### --------------------------  Example 1: Delete a commitment plan  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 ```
 Remove-AzureRmMlCommitmentPlan -ResourceGroupName "MyResourceGroup" -Name "MyCommitmentPlanName"
@@ -112,6 +116,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

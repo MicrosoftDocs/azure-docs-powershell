@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/New-AzureRmDnsRecordConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/New-AzureRmDnsRecordConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmDnsRecordConfig
@@ -186,7 +186,7 @@ Specifies the domain name for a canonical name (CNAME) record.
 ```yaml
 Type: String
 Parameter Sets: CName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -201,7 +201,7 @@ Specifies the mail exchange server name for a mail exchange (MX) record.
 ```yaml
 Type: String
 Parameter Sets: Mx
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -216,7 +216,7 @@ Specifies an IPv4 address for an A record.
 ```yaml
 Type: String
 Parameter Sets: A
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -231,7 +231,7 @@ Specifies an IPv6 address for an AAAA record.
 ```yaml
 Type: String
 Parameter Sets: Aaaa
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -246,7 +246,7 @@ Specifies the name server name for a name server (NS) record.
 ```yaml
 Type: String
 Parameter Sets: Ns
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -261,7 +261,7 @@ Specifies the port for a service (SRV) record.
 ```yaml
 Type: UInt16
 Parameter Sets: Srv
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -276,7 +276,7 @@ Specifies the preference for an MX record.
 ```yaml
 Type: UInt16
 Parameter Sets: Mx
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -291,7 +291,7 @@ Specifies the priority for an SRV record.
 ```yaml
 Type: UInt16
 Parameter Sets: Srv
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -306,7 +306,7 @@ Specifies the target domain name of a pointer resource (PTR) record.
 ```yaml
 Type: String
 Parameter Sets: Ptr
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -321,7 +321,7 @@ Specifies the target for an SRV record.
 ```yaml
 Type: String
 Parameter Sets: Srv
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -336,7 +336,7 @@ Specifies the value for a TXT record.
 ```yaml
 Type: String
 Parameter Sets: Txt
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -351,7 +351,7 @@ Specifies the weight for an SRV record.
 ```yaml
 Type: UInt16
 Parameter Sets: Srv
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

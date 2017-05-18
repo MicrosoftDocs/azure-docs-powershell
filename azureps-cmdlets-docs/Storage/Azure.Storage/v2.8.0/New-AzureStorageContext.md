@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContext.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
+gitcommit: https://github.com/Azure/azure-powershell/blob/89262bc4144696c69376c3fb654c881de55b6450
 ---
 
 # New-AzureStorageContext
@@ -18,55 +18,47 @@ Creates an Azure Storage context.
 ### AccountNameAndKey (Default)
 ```
 New-AzureStorageContext [-StorageAccountName] <String> [-StorageAccountKey] <String> [-Protocol <String>]
- [-Endpoint <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-PipelineVariable <String>] [<CommonParameters>]
-```
-
-### SasToken
-```
-New-AzureStorageContext [-StorageAccountName] <String> -SasToken <String> [-Protocol <String>]
- [-Endpoint <String>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-PipelineVariable <String>] [<CommonParameters>]
-```
-
-### SasTokenWithAzureEnvironment
-```
-New-AzureStorageContext [-StorageAccountName] <String> -SasToken <String> -Environment <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
- [<CommonParameters>]
+ [-Endpoint <String>] [<CommonParameters>]
 ```
 
 ### AccountNameAndKeyEnvironment
 ```
 New-AzureStorageContext [-StorageAccountName] <String> [-StorageAccountKey] <String> [-Protocol <String>]
- -Environment <String> [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-PipelineVariable <String>] [<CommonParameters>]
+ -Environment <String> [<CommonParameters>]
 ```
 
 ### AnonymousAccount
 ```
 New-AzureStorageContext [-StorageAccountName] <String> [-Anonymous] [-Protocol <String>] [-Endpoint <String>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
  [<CommonParameters>]
 ```
 
 ### AnonymousAccountEnvironment
 ```
 New-AzureStorageContext [-StorageAccountName] <String> [-Anonymous] [-Protocol <String>] -Environment <String>
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-PipelineVariable <String>]
+ [<CommonParameters>]
+```
+
+### SasToken
+```
+New-AzureStorageContext [-StorageAccountName] <String> -SasToken <String> [-Protocol <String>]
+ [-Endpoint <String>] [<CommonParameters>]
+```
+
+### SasTokenWithAzureEnvironment
+```
+New-AzureStorageContext [-StorageAccountName] <String> -SasToken <String> -Environment <String>
  [<CommonParameters>]
 ```
 
 ### ConnectionString
 ```
-New-AzureStorageContext -ConnectionString <String> [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [-PipelineVariable <String>] [<CommonParameters>]
+New-AzureStorageContext -ConnectionString <String> [<CommonParameters>]
 ```
 
 ### LocalDevelopment
 ```
-New-AzureStorageContext [-Local] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [-PipelineVariable <String>] [<CommonParameters>]
+New-AzureStorageContext [-Local] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -157,157 +149,6 @@ The final command lists all the blobs associated with the container named Contos
 
 ## PARAMETERS
 
-### -StorageAccountName
-Specifies an Azure Storage account name.
-This cmdlet creates a context for the account that this parameter specifies.
-
-```yaml
-Type: String
-Parameter Sets: AccountNameAndKey, SasToken, SasTokenWithAzureEnvironment, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StorageAccountKey
-Specifies an Azure Storage account key.
-This cmdlet creates a context for the key that this parameter specifies.
-
-```yaml
-Type: String
-Parameter Sets: AccountNameAndKey, AccountNameAndKeyEnvironment
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Protocol
-Specifies the protocol permitted for a request made with the account SAS.
-The acceptable values for this parameter are:
-
-- HttpsOnly
-- HttpsOrHttp
-
-The default value is HttpsOrHttp.
-
-```yaml
-Type: String
-Parameter Sets: AccountNameAndKey, SasToken, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Endpoint
-Specifies the endpoint for the Azure Storage context.
-
-```yaml
-Type: String
-Parameter Sets: AccountNameAndKey, SasToken, AnonymousAccount
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SasToken
-Specifies a Shared Access Signature (SAS) token for the context.
-
-```yaml
-Type: String
-Parameter Sets: SasToken, SasTokenWithAzureEnvironment
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Environment
-Specifies the Azure environment.
-The acceptable values for this parameter are: AzureCloud and AzureChinaCloud.
-For more information, type `Get-Help Get-AzureEnvironment`.
-
-```yaml
-Type: String
-Parameter Sets: SasTokenWithAzureEnvironment
-Aliases: Name, EnvironmentName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: AccountNameAndKeyEnvironment, AnonymousAccountEnvironment
-Aliases: Name, EnvironmentName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Anonymous
 Indicates that this cmdlet creates an Azure Storage context for anonymous logon.
 
@@ -338,6 +179,50 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Endpoint
+Specifies the endpoint for the Azure Storage context.
+
+```yaml
+Type: String
+Parameter Sets: AccountNameAndKey, AnonymousAccount, SasToken
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Environment
+Specifies the Azure environment.
+The acceptable values for this parameter are: AzureCloud and AzureChinaCloud.
+For more information, type `Get-Help Get-AzureEnvironment`.
+
+```yaml
+Type: String
+Parameter Sets: AccountNameAndKeyEnvironment, AnonymousAccountEnvironment
+Aliases: Name, EnvironmentName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: SasTokenWithAzureEnvironment
+Aliases: Name, EnvironmentName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Local
 Indicates that this cmdlet creates a context by using the local development storage account.
 
@@ -353,16 +238,64 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PipelineVariable
-Stores the value of the current pipeline element as a variable, for any named command as it flows through the pipeline.
+### -Protocol
+Transfer Protocol (https/http).
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: pv
+Parameter Sets: AccountNameAndKey, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment, SasToken
+Aliases: 
+Accepted values: Http, Https
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SasToken
+Specifies a Shared Access Signature (SAS) token for the context.
+
+```yaml
+Type: String
+Parameter Sets: SasToken, SasTokenWithAzureEnvironment
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageAccountKey
+Specifies an Azure Storage account key.
+This cmdlet creates a context for the key that this parameter specifies.
+
+```yaml
+Type: String
+Parameter Sets: AccountNameAndKey, AccountNameAndKeyEnvironment
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageAccountName
+Specifies an Azure Storage account name.
+This cmdlet creates a context for the account that this parameter specifies.
+
+```yaml
+Type: String
+Parameter Sets: AccountNameAndKey, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment, SasToken, SasTokenWithAzureEnvironment
+Aliases: 
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

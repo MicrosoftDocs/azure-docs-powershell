@@ -4,13 +4,21 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricSetting.md
+<<<<<<< HEAD
+gitcommit: https://github.com/Azure/azure-powershell/blob/5d5311bad38bc57d0768a327dcbfba8bfc400794
+=======
 gitcommit: https://github.com/Azure/azure-powershell/blob/928c918a88f76273c14645e599fb59baea0cb3d6
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ---
 
 # Remove-AzureRmServiceFabricSetting
 
 ## SYNOPSIS
+<<<<<<< HEAD
+Remove one or multiple ServiceFabric setting from the cluster
+=======
 Remove one or multiple Service Fabric setting from the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## SYNTAX
 
@@ -27,7 +35,11 @@ Remove-AzureRmServiceFabricSetting [-ResourceGroupName] <String> [-Name] <String
 ```
 
 ## DESCRIPTION
+<<<<<<< HEAD
+Use **Remove-AzureRmServiceFabricSetting** to remove Service Fabric settings from the cluster
+=======
 Use **Remove-AzureRmServiceFabricSetting** to remove Service Fabric settings from the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## EXAMPLES
 
@@ -36,6 +48,29 @@ Use **Remove-AzureRmServiceFabricSetting** to remove Service Fabric settings fro
 PS c:> Remove-AzureRmServiceFabricSetting -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -Section 'EseStore' -Parameter 'MaxCursors'
 ```
 
+<<<<<<< HEAD
+This command will remove settings 'MaxCursors' under 'EseStore' section
+
+## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specify the name of the cluster
+=======
 This command will remove settings 'MaxCursors' under 'EseStore' section.
 
 ## PARAMETERS
@@ -43,6 +78,7 @@ This command will remove settings 'MaxCursors' under 'EseStore' section.
 ### -Name
 Specify the name of the cluster.
 
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -56,7 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -Parameter
+<<<<<<< HEAD
+Parameter
+=======
 Parameter.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -86,7 +126,11 @@ Accept wildcard characters: False
 ```
 
 ### -Section
+<<<<<<< HEAD
+Section
+=======
 Section.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -101,7 +145,11 @@ Accept wildcard characters: False
 ```
 
 ### -SettingsSectionDescription
+<<<<<<< HEAD
+Client authentication type
+=======
 Client authentication type.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: PSSettingsSectionDescription[]
@@ -115,6 +163,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+<<<<<<< HEAD
+=======
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -130,6 +180,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 

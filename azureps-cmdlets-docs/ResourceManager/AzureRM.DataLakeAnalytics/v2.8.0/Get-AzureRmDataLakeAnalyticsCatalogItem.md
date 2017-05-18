@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsCatalogItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsCatalogItem.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/356005f4f360233863d0ece15d6eb60baf3ee671
+gitcommit: https://github.com/Azure/azure-powershell/blob/64a9dec4b4f019c1460d9e7f11d3d1637996e690
 ---
 
 # Get-AzureRmDataLakeAnalyticsCatalogItem
@@ -78,6 +78,7 @@ The acceptable values for this parameter are:
 Type: CatalogItemType
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Database, Schema, Assembly, Table, TablePartition, TableValuedFunction, TableStatistics, ExternalDataSource, View, Procedure, Secret, Credential, Types, Package
 
 Required: True
 Position: 1

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryVM.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmSiteRecoveryVM
@@ -38,6 +38,36 @@ The **Get-AzureRmSiteRecoveryVM** cmdlet gets information about virtual machines
 
 ## PARAMETERS
 
+### -FriendlyName
+Specifies the friendly name of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: ByObjectWithFriendlyName
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the virtual machine.
+
+```yaml
+Type: String
+Parameter Sets: ByObjectWithName
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProtectionContainer
 Specifies the Site Recovery protection container object.
 
@@ -62,36 +92,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: ByObjectWithName
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FriendlyName
-Specifies the friendly name of the virtual machine.
-
-```yaml
-Type: String
-Parameter Sets: ByObjectWithFriendlyName
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

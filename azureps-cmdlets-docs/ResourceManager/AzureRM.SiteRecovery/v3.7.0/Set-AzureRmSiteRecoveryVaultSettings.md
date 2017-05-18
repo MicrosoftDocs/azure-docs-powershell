@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryVaultSettings.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryVaultSettings.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmSiteRecoveryVaultSettings
@@ -33,12 +33,12 @@ This does not apply to recovery services vaults.
 
 ## PARAMETERS
 
-### -ASRVault
-Specifies an **ASRVault** object.
+### -ARSVault
+Specifies an **ARSVault** object.
 
 ```yaml
-Type: ASRVault
-Parameter Sets: AzureSiteRecoveryVault
+Type: ARSVault
+Parameter Sets: AzureRecoveryServicesVault
 Aliases: 
 
 Required: True
@@ -48,12 +48,12 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ARSVault
-Specifies an **ARSVault** object.
+### -ASRVault
+Specifies an **ASRVault** object.
 
 ```yaml
-Type: ARSVault
-Parameter Sets: AzureRecoveryServicesVault
+Type: ASRVault
+Parameter Sets: AzureSiteRecoveryVault
 Aliases: 
 
 Required: True

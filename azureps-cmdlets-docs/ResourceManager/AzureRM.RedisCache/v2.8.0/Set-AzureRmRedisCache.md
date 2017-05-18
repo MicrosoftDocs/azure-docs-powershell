@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Set-AzureRmRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Set-AzureRmRedisCache.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmRedisCache
@@ -52,85 +52,12 @@ This command updates the maxmemory-policy for the Redis Cache named MyCache.
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the Redis Cache to update.
+### -EnableNonSslPort
+Indicates whether the non-SSL port is enabled.
+The default value is $False (the non-SSL port is disabled).
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group that contains the Redis Cache.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Size
-Specifies the size of the Redis Cache.
-Valid values are: 
-
-- P1
-- P2
-- P3
-- P4
-- C0
-- C1
-- C2
-- C3
-- C4
-- C5
-- C6
-- 250MB
-- 1GB
-- 2.5GB
-- 6GB
-- 13GB
-- 26GB
-- 53GB
-
-The default value is 1GB or C1.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Sku
-Specifies the SKU of the Redis Cache to create.
-Valid values are: 
-
-- Basic
-- Standard
-- Premium
-
-The default value is Standard.
-
-```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -154,6 +81,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Redis Cache to update.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -216,16 +158,15 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -EnableNonSslPort
-Indicates whether the non-SSL port is enabled.
-The default value is $False (the non-SSL port is disabled).
+### -ResourceGroupName
+Specifies the name of the resource group that contains the Redis Cache.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -239,6 +180,67 @@ Specifies the number of shards to create on a Premium cluster cache.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Size
+Specifies the size of the Redis Cache.
+Valid values are: 
+
+- P1
+- P2
+- P3
+- P4
+- C0
+- C1
+- C2
+- C3
+- C4
+- C5
+- C6
+- 250MB
+- 1GB
+- 2.5GB
+- 6GB
+- 13GB
+- 26GB
+- 53GB
+
+The default value is 1GB or C1.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: P1, P2, P3, P4, C0, C1, C2, C3, C4, C5, C6, 250MB, 1GB, 2.5GB, 6GB, 13GB, 26GB, 53GB
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Sku
+Specifies the SKU of the Redis Cache to create.
+Valid values are: 
+
+- Basic
+- Standard
+- Premium
+
+The default value is Standard.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Basic, Standard, Premium
 
 Required: False
 Position: Named

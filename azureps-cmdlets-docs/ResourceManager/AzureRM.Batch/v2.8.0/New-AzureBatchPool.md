@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchPool.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureBatchPool
@@ -40,6 +40,18 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
  [<CommonParameters>]
 ```
 
+### CloudServiceAndAutoScale
+```
+New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
+ [-AutoScaleEvaluationInterval <TimeSpan>] [-AutoScaleFormula <String>] [-MaxTasksPerComputeNode <Int32>]
+ [-TaskSchedulingPolicy <PSTaskSchedulingPolicy>] [-Metadata <IDictionary>]
+ [-InterComputeNodeCommunicationEnabled] [-StartTask <PSStartTask>]
+ [-CertificateReferences <PSCertificateReference[]>]
+ [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
+ [-CloudServiceConfiguration <PSCloudServiceConfiguration>] [-NetworkConfiguration <PSNetworkConfiguration>]
+ -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### VirtualMachineAndAutoScale
 ```
 New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
@@ -51,18 +63,6 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
  [-VirtualMachineConfiguration <PSVirtualMachineConfiguration>]
  [-NetworkConfiguration <PSNetworkConfiguration>] -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
  [<CommonParameters>]
-```
-
-### CloudServiceAndAutoScale
-```
-New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <String>]
- [-AutoScaleEvaluationInterval <TimeSpan>] [-AutoScaleFormula <String>] [-MaxTasksPerComputeNode <Int32>]
- [-TaskSchedulingPolicy <PSTaskSchedulingPolicy>] [-Metadata <IDictionary>]
- [-InterComputeNodeCommunicationEnabled] [-StartTask <PSStartTask>]
- [-CertificateReferences <PSCertificateReference[]>]
- [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
- [-CloudServiceConfiguration <PSCloudServiceConfiguration>] [-NetworkConfiguration <PSNetworkConfiguration>]
- -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,7 +108,7 @@ The default value is 15 minutes, and the minimum value is 5 minutes.
 
 ```yaml
 Type: TimeSpan
-Parameter Sets: VirtualMachineAndAutoScale, CloudServiceAndAutoScale
+Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
 Aliases: 
 
 Required: False
@@ -123,7 +123,7 @@ Specifies the formula for automatically scaling the pool.
 
 ```yaml
 Type: String
-Parameter Sets: VirtualMachineAndAutoScale, CloudServiceAndAutoScale
+Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
 Aliases: 
 
 Required: False

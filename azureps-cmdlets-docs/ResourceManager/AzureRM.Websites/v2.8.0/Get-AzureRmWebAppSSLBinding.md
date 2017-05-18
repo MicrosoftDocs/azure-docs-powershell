@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSSLBinding.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSSLBinding.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/b6503ebd24f7bd5ce97202c332ef1533f499a833
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmWebAppSSLBinding
@@ -86,23 +86,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WebAppName
-Specifies the name of the Web App that this cmdlet gets SSL bindings from.
-
-You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same command.
-
-```yaml
-Type: String
-Parameter Sets: S1
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Slot
 Specifies a Web App deployment slot.
 To get a deployment slot, use the Get-AzureRMWebAppSlot cmdlet.
@@ -132,6 +115,23 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WebAppName
+Specifies the name of the Web App that this cmdlet gets SSL bindings from.
+
+You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same command.
+
+```yaml
+Type: String
+Parameter Sets: S1
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

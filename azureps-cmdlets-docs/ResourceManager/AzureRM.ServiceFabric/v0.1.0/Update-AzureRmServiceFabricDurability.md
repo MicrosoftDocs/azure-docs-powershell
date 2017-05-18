@@ -4,13 +4,21 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Update-AzureRmServiceFabricDurability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Update-AzureRmServiceFabricDurability.md
+<<<<<<< HEAD
+gitcommit: https://github.com/Azure/azure-powershell/blob/68c7c4760351d141341278ae635b16ec8c502b9b
+=======
 gitcommit: https://github.com/Azure/azure-powershell/blob/928c918a88f76273c14645e599fb59baea0cb3d6
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ---
 
 # Update-AzureRmServiceFabricDurability
 
 ## SYNOPSIS
+<<<<<<< HEAD
+Update the durability tier or VmSku of a nodetype in the cluster.
+=======
 Update the durability tier or VmSku of a node type in the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## SYNTAX
 
@@ -20,7 +28,11 @@ Update-AzureRmServiceFabricDurability [-ResourceGroupName] <String> [-Name] <Str
 ```
 
 ## DESCRIPTION
+<<<<<<< HEAD
+Use **Update-AzureRmServiceFabricDurability** to update durability or SKU of the cluter 
+=======
 Use **Update-AzureRmServiceFabricDurability** to update durability or SKU of the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ## EXAMPLES
 
@@ -29,12 +41,36 @@ Use **Update-AzureRmServiceFabricDurability** to update durability or SKU of the
 PS c:> Update-AzureRmServiceFabricDurability -ResourceGroupName 'Group1' -Name 'Contoso01SFCluster' -DurabilityLevel Silver -NodeType nt1
 ```
 
+<<<<<<< HEAD
+This command changes durability tier of the nodetype 'nt1' to silver.
+
+## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DurabilityLevel
+Specify durability Level
+=======
 This command changes durability tier of the NodeType 'nt1' to silver.
 
 ## PARAMETERS
 
 ### -DurabilityLevel
 Specify durability level.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: DurabilityLevel
@@ -50,7 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+<<<<<<< HEAD
+Specify the name of the cluster
+=======
 Specify the name of the cluster.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -65,7 +105,11 @@ Accept wildcard characters: False
 ```
 
 ### -NodeType
+<<<<<<< HEAD
+Specify Service Fabric node type name
+=======
 Specify Service Fabric node type name.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -95,7 +139,11 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
+<<<<<<< HEAD
+Specify the SKU of the node type
+=======
 Specify the SKU of the node type.
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 
 ```yaml
 Type: String
@@ -109,6 +157,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+<<<<<<< HEAD
+=======
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -124,6 +174,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+>>>>>>> 5ea771e45c43745a1a9149d7b45047392135567e
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 

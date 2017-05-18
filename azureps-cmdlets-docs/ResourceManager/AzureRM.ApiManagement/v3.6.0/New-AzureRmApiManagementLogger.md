@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-ms.assetid: 543C3937-C226-44C4-8054-D59A5DFB1949
+ms.assetid: 17D53F56-6E3B-491E-8776-5EBE109FBE3C
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementLogger.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementLogger.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmApiManagementLogger
@@ -17,8 +17,7 @@ Creates an API Management Logger.
 
 ```
 New-AzureRmApiManagementLogger -Context <PsApiManagementContext> [-LoggerId <String>] -Name <String>
- -ConnectionString <String> [-Description <String>] [-IsBuffered <Boolean>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ -ConnectionString <String> [-Description <String>] [-IsBuffered <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,11 +34,15 @@ This command creates a logger named ContosoSdkEventHub by using the specified co
 
 ## PARAMETERS
 
-### -Context
-Specifies a **PsApiManagementContext** object.
+### -ConnectionString
+Specifies an Azure Event Hubs connection string that starts with the following: 
+
+`Endpoint=endpoint and key from Azure classic portal`
+
+The Key with Send Rights in the connection string must be configured.
 
 ```yaml
-Type: PsApiManagementContext
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
@@ -50,16 +53,15 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -LoggerId
-Specifies an ID for the logger.
-If you do not specify an ID, this cmdlet generates one.
+### -Context
+Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: String
+Type: PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -98,66 +100,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-Specifies an information variable.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the entity name of an event hub from Azure classic portal.
+### -LoggerId
+Specifies an ID for the logger.
+If you do not specify an ID, this cmdlet generates one.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ConnectionString
-Specifies an Azure Event Hubs connection string that starts with the following: 
-
-`Endpoint=endpoint and key from Azure classic portal`
-
-The Key with Send Rights in the connection string must be configured.
+### -Name
+Specifies the entity name of an event hub from Azure classic portal.
 
 ```yaml
 Type: String

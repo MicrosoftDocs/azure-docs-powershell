@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageCORSRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageCORSRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/37c1f44233c1a50f51447ccc2624dc13c8816464
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureStorageCORSRule
@@ -18,8 +18,7 @@ Sets the CORS rules for a type of Storage service.
 ```
 Set-AzureStorageCORSRule [-ServiceType] <StorageServiceType> -CorsRules <PSCorsRule[]> [-PassThru]
  [-Context <AzureStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
- [-ConcurrentTaskCount <Int32>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+ [-ConcurrentTaskCount <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,90 +68,6 @@ The revised rules overwrite the current CORS rules.
 
 ## PARAMETERS
 
-### -ServiceType
-Specifies the Azure Storage service type for which this cmdlet assigns rules.
-The acceptable values for this parameter are:
-
-- Blob 
-- Table 
-- Queue 
-- File
-
-```yaml
-Type: StorageServiceType
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CorsRules
-Specifies an array of CORS rules.
-You can retrieve the existing rules using the Get-AzureStorageCORSRule cmdlet.
-
-```yaml
-Type: PSCorsRule[]
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Indicates that this cmdlet returns a Boolean that reflects the success of the operation.
-By default, this cmdlet does not return a value.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Context
-Specifies an Azure Storage context.
-To obtain a context, use the New-AzureStorageContext cmdlet.
-
-```yaml
-Type: AzureStorageContext
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -ServerTimeoutPerRequest
-Specifies the length of the time-out period for the server part of a request.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ClientTimeoutPerRequest
 Specifies the client-side time-out interval, in seconds, for one service request.
 If the previous call fails in the specified interval, this cmdlet retries the request.
@@ -189,22 +104,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+### -Context
+Specifies an Azure Storage context.
+To obtain a context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: ActionPreference
+Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: infa
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -CorsRules
+Specifies an array of CORS rules.
+You can retrieve the existing rules using the Get-AzureStorageCORSRule cmdlet.
+
+```yaml
+Type: PSCorsRule[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Indicates that this cmdlet returns a Boolean that reflects the success of the operation.
+By default, this cmdlet does not return a value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
@@ -213,16 +152,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationVariable
-Specifies an information variable.
+### -ServerTimeoutPerRequest
+Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
-Type: String
+Type: Int32
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceType
+Specifies the Azure Storage service type for which this cmdlet assigns rules.
+The acceptable values for this parameter are:
+
+- Blob 
+- Table 
+- Queue 
+- File
+
+```yaml
+Type: StorageServiceType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Blob, Table, Queue, File
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

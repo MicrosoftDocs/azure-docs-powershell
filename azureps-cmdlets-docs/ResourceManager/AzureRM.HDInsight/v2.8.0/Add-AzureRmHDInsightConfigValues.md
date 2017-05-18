@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightConfigValues.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightConfigValues.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/899286151390e6f19872762c66ccbf945563ead8
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Add-AzureRmHDInsightConfigValues
@@ -19,8 +19,7 @@ Adds a Hadoop configuration value customization and/or a Hive shared library cus
 Add-AzureRmHDInsightConfigValues [-Config] <AzureHDInsightConfig> [-Core <Hashtable>] [-HiveSite <Hashtable>]
  [-HiveEnv <Hashtable>] [-OozieSite <Hashtable>] [-OozieEnv <Hashtable>] [-WebHCat <Hashtable>]
  [-HBaseSite <Hashtable>] [-HBaseEnv <Hashtable>] [-Storm <Hashtable>] [-Yarn <Hashtable>]
- [-MapRed <Hashtable>] [-Tez <Hashtable>] [-Hdfs <Hashtable>] [-RServer <Hashtable>]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [-MapRed <Hashtable>] [-Tez <Hashtable>] [-Hdfs <Hashtable>] [-RServer <Hashtable>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,68 +102,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HiveSite
-Specifies the Hive Site configurations of this HDInsight cluster.
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HiveEnv
-Specifies the Hive Env configurations of this HDInsight cluster.
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OozieSite
-Specifies the Oozie Site configurations of this HDInsight cluster.
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OozieEnv
-Specifies the Oozie Env configurations of this HDInsight cluster.
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WebHCat
-Specifies the WebHCat Site configurations of this HDInsight cluster.
+### -HBaseEnv
+Specifies the HBase Env configurations of this HDInsight cluster.
 
 ```yaml
 Type: Hashtable
@@ -193,8 +132,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HBaseEnv
-Specifies the HBase Env configurations of this HDInsight cluster.
+### -Hdfs
+Specifies the HDFS configurations of this HDInsight cluster.
 
 ```yaml
 Type: Hashtable
@@ -208,8 +147,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Storm
-Specifies the Storm Site configurations of this HDInsight cluster.
+### -HiveEnv
+Specifies the Hive Env configurations of this HDInsight cluster.
 
 ```yaml
 Type: Hashtable
@@ -223,8 +162,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Yarn
-Specifies the YARN Site configurations of this HDInsight cluster.
+### -HiveSite
+Specifies the Hive Site configurations of this HDInsight cluster.
 
 ```yaml
 Type: Hashtable
@@ -253,8 +192,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tez
-Specifies the Tez Site configurations of this HDInsight cluster.
+### -OozieEnv
+Specifies the Oozie Env configurations of this HDInsight cluster.
 
 ```yaml
 Type: Hashtable
@@ -268,8 +207,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Hdfs
-Specifies the HDFS configurations of this HDInsight cluster.
+### -OozieSite
+Specifies the Oozie Site configurations of this HDInsight cluster.
 
 ```yaml
 Type: Hashtable
@@ -296,22 +235,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-Specifies how this cmdlet responds to an information event.
-
-The acceptable values for this parameter are:
-
-- Continue
-- Ignore
-- Inquire
-- SilentlyContinue
-- Stop
-- Suspend
+### -Storm
+Specifies the Storm Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: ActionPreference
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: infa
+Aliases: 
 
 Required: False
 Position: Named
@@ -320,13 +250,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationVariable
-Specifies an information variable.
+### -Tez
+Specifies the Tez Site configurations of this HDInsight cluster.
 
 ```yaml
-Type: String
+Type: Hashtable
 Parameter Sets: (All)
-Aliases: iv
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WebHCat
+Specifies the WebHCat Site configurations of this HDInsight cluster.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Yarn
+Specifies the YARN Site configurations of this HDInsight cluster.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named

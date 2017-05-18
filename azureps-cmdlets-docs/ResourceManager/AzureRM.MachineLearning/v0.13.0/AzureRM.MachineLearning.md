@@ -1,11 +1,12 @@
 ---
 Module Name: AzureRM.MachineLearning
 Module Guid: bb030259-49f9-46ef-806f-2a3f5a2e018e
+Download Help Link:
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1dfaf7477509cb7498e91a15ba4cd0d1c631645a
+gitcommit: https://github.com/Azure/azure-powershell/blob/c5a769e862ae125fd6424a8325774670efa4f075
 ---
 
 # AzureRM.MachineLearning Module
@@ -41,7 +42,11 @@ Moves a commitment association from one commitment plan to another.
 Creates a new commitment plan.
 
 ### [New-AzureRmMlWebService](New-AzureRmMlWebService.md)
-Exports the web service definition object as a JSON formatted string.
+
+Creates a new Azure Machine Learning web service.
+
+### [Add-AzureRmMlWebServiceRegionalProperty](Add-AzureRmMlWebServiceRegionalProperty.md)
+Creates regional web service properties.
 
 ### [Remove-AzureRmMlCommitmentPlan](Remove-AzureRmMlCommitmentPlan.md)
 Deletes a commitment plan.

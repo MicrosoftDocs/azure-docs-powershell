@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzureRmRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzureRmRedisCache.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
+gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmRedisCache
@@ -79,30 +79,16 @@ This command creates a Redis Cache or updates the Redis Cache if it already exis
 
 ## PARAMETERS
 
-### -Name
-Specifies the name of the Redis Cache to create.
+### -EnableNonSslPort
+Indicates whether the non-SSL port is enabled.
+The default value is $False (the non-SSL port is disabled).
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the name of the resource group in which to create the Redis Cache.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -141,80 +127,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RedisVersion
-This parameter is deprecated and will be removed from future releases.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Size
-Specifies the size of the Redis Cache.
-Valid values are: 
-
-- P1
-- P2
-- P3
-- P4
-- C0
-- C1
-- C2
-- C3
-- C4
-- C5
-- C6
-- 250MB
-- 1GB
-- 2.5GB
-- 6GB
-- 13GB
-- 26GB
-- 53GB
-
-The default value is 1GB or C1.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Sku
-Specifies the SKU of the Redis Cache to create.
-Valid values are: 
-
-- Basic
-- Standard
-- Premium
-
-The default value is Standard.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -MaxMemoryPolicy
 This parameter has been deprecated.
 Use the *RedisConfiguration* parameter to set maxmemory-policy.
@@ -228,6 +140,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the Redis Cache to create.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -290,16 +217,30 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -EnableNonSslPort
-Indicates whether the non-SSL port is enabled.
-The default value is $False (the non-SSL port is disabled).
+### -RedisVersion
+This parameter is deprecated and will be removed from future releases.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group in which to create the Redis Cache.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -333,8 +274,71 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VirtualNetwork
-Specifies the resource ID of the virtual network in which to deploy the Redis Cache.
+### -Size
+Specifies the size of the Redis Cache.
+Valid values are: 
+
+- P1
+- P2
+- P3
+- P4
+- C0
+- C1
+- C2
+- C3
+- C4
+- C5
+- C6
+- 250MB
+- 1GB
+- 2.5GB
+- 6GB
+- 13GB
+- 26GB
+- 53GB
+
+The default value is 1GB or C1.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: P1, P2, P3, P4, C0, C1, C2, C3, C4, C5, C6, 250MB, 1GB, 2.5GB, 6GB, 13GB, 26GB, 53GB
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Sku
+Specifies the SKU of the Redis Cache to create.
+Valid values are: 
+
+- Basic
+- Standard
+- Premium
+
+The default value is Standard.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Basic, Standard, Premium
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StaticIP
+Specifies a unique IP address in the subnet for the Redis Cache.
+
+If you do not specify a value for this parameter, this cmdlet chooses an IP address from the subnet.
 
 ```yaml
 Type: String
@@ -376,13 +380,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -StaticIP
-Specifies a unique IP address in the subnet for the Redis Cache.
-
-If you do not specify a value for this parameter, this cmdlet chooses an IP address from the subnet.
+### -TenantSettings
+This parameter has been deprecated.
 
 ```yaml
-Type: String
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -393,11 +395,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TenantSettings
-This parameter has been deprecated.
+### -VirtualNetwork
+Specifies the resource ID of the virtual network in which to deploy the Redis Cache.
 
 ```yaml
-Type: Hashtable
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
