@@ -64,7 +64,7 @@ If no value or set to MaxValue, the file will never expire.
 ```yaml
 Type: DateTimeOffset
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -79,7 +79,7 @@ Specifies the Data Lake Store path of the file item for which to set or remove e
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -134,5 +134,4 @@ Alias: Set-AdlStoreItemExpiry
 
 ## RELATED LINKS
 
-[Get-AzureRmDataLakeStoreItem]()
-
+[Get-AzureRmDataLakeStoreItem](./Get-AzureRmDataLakeStoreItem.md)

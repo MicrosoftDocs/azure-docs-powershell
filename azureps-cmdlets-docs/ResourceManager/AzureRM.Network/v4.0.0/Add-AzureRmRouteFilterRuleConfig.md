@@ -48,7 +48,7 @@ Specifies the access of the route filter rule, Valid values are Deny or Allow.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Allow, Deny
 
 Required: True
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 The list of community value that route filter will filter on```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Do not ask for confirmation if you want to overrite a resource```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ Specifies a name of the route filter rule to add to the route filter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ Specifies the route filter to which this cmdlet adds a route filter rule.
 ```yaml
 Type: PSRouteFilter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ Valid values are: Community
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Community
 
 Required: True
@@ -173,15 +173,14 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 
 ## RELATED LINKS
 
-[Get-AzureRmRouteFilterRuleConfig]()
+[Get-AzureRmRouteFilterRuleConfig](./Get-AzureRmRouteFilterRuleConfig.md)
 
-[Get-AzureRmRouteFilter]()
+[Get-AzureRmRouteFilter](./Get-AzureRmRouteFilter.md)
 
-[New-AzureRmRouteFilterRuleConfigConfig]()
+[New-AzureRmRouteFilterRuleConfigConfig](./New-AzureRmRouteFilterRuleConfigConfig.md)
 
-[Remove-AzureRmRouteFilterRuleConfigConfig]()
+[Remove-AzureRmRouteFilterRuleConfigConfig](./Remove-AzureRmRouteFilterRuleConfigConfig.md)
 
-[Set-AzureRmRouteFilterRuleConfigConfig]()
+[Set-AzureRmRouteFilterRuleConfigConfig](./Set-AzureRmRouteFilterRuleConfigConfig.md)
 
-[Set-AzureRmRouteFilter]()
-
+[Set-AzureRmRouteFilter](./Set-AzureRmRouteFilter.md)

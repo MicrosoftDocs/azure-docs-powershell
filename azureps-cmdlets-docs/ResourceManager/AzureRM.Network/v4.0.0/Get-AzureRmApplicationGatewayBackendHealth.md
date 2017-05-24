@@ -61,7 +61,7 @@ This command gets the backend health (with expanded resources) of application ga
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Specifies the name of the resource group that contains the application gateway.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,5 +116,4 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 
 ## RELATED LINKS
 
-[Get-AzureRmApplicationGateway]()
-
+[Get-AzureRmApplicationGateway](./Get-AzureRmApplicationGateway.md)
