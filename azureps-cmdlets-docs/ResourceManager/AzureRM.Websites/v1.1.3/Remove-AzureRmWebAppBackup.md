@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmWebAppBackup
 
 ## SYNOPSIS
+Removes the specified backup of a web app.
 
 ## SYNTAX
 
@@ -22,25 +23,26 @@ Remove-AzureRmWebAppBackup [-BackupId] <String> [-WebApp] <Site> [<CommonParamet
 ```
 
 ## DESCRIPTION
+The **Remove-AzureRmWebAppBackup** cmdlet removes the specified backup of a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove the specified backup
 ```
-PS C:\> {{ Add example code here }}
+Remove-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -BackupId "12345"
 ```
 
-{{ Add example description here }}
+This example removes the "12345" backup of the web app named "WebAppStandard" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
 ### -BackupId
-@{Text=}
+Specifies the ID of the backup to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -50,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -65,12 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -80,12 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
+Specifies the name of the slot to which the web app is deployed.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -95,12 +97,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: FromWebApp
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -120,3 +122,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebAppBackup](./Get-AzureRmWebAppBackup.md)
+
+[Get-AzureRmWebAppBackupList](./Get-AzureRmWebAppBackupList.md)
+
+[Get-AzureRmWebAppBackupConfiguration](./Get-AzureRmWebAppBackupConfiguration.md)

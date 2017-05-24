@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -23,31 +23,27 @@ Remove-AzureRmWebApp [-Force] [-WebApp] <Site> [-WhatIf] [-Confirm] [<CommonPara
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmWebApp cmdlet removes an Azure web app in a specified resource group.
-The operation removes all slots and metrics by default.
+The **Remove-AzureRmWebApp** cmdlet removes a web app that was built using the Web Apps feature of the Azure App Service.
+The cmdlet removes all slots and metrics by default.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Remove a web app  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Remove a web app that is in the specified resource group
 ```
-PS C:\>Remove-AzureRmWebApp -Name "MySite" -ResourceGroupName "Default-Web-WestUS"
+Remove-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
-This command removes the Azure web app named MySite in the resource group named Default-Web-WestUS.
+This example removes the web app named "ContosoSite" in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+Indicates whether to forcefully remove the web app.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -62,7 +58,7 @@ Specifies the name of the web app to remove.
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -77,7 +73,7 @@ Specifies the name of the resource group that contains the web app.
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -87,12 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -102,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Indicates whether to prompt the user for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -117,8 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Indicates whether to show what would happen if the cmdlet runs without actually running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -143,13 +138,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRMWebApp]()
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
 
-[New-AzureRMWebApp]()
+[New-AzureRmWebApp](./New-AzureRmWebApp.md)
 
-[Restart-AzureRMWebApp]()
+[Restart-AzureRmWebApp](./Restart-AzureRmWebApp.md)
 
-[Start-AzureRMWebApp]()
+[Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
 
-[Stop-AzureRMWebApp]()
-
+[Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)

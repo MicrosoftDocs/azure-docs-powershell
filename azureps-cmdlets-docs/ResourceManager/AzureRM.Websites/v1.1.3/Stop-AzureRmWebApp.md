@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -22,20 +22,16 @@ Stop-AzureRmWebApp [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Stop-AzureRmWebApp cmdlet stops an Azure web app.
+The **Stop-AzureRmWebApp** cmdlet stops a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Stop a web app  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Stop the specified web app
 ```
-PS C:\>Stop-AzureRmWebApp -Name "MyWebApp" -ResourceGroupName "Default-Web-WestUS"
+Stop-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
 ```
 
-This command stops the web app named MyWebApp in the resource group named Default-Web-WestUS.
+This example stops the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
@@ -45,7 +41,7 @@ Specifies the name of the web app to stop.
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -55,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the web app.
+Specifies the name of the resource group that contains the web app to stop.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -70,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a **WebApp** object that contains details about the web app to stop.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -95,13 +91,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRMWebApp]()
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
 
-[New-AzureRMWebApp]()
+[New-AzureRmWebApp](./New-AzureRmWebApp.md)
 
-[Remove-AzureRMWebApp]()
+[Remove-AzureRmWebApp](./Remove-AzureRmWebApp.md)
 
-[Restart-AzureRMWebApp]()
+[Restart-AzureRmWebApp](./Restart-AzureRmWebApp.md)
 
-[Start-AzureRMWebApp]()
-
+[Start-AzureRmWebApp](./Start-AzureRmWebApp.md)

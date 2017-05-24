@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmWebAppSlotMetrics
 
 ## SYNOPSIS
+Gets the web app metrics for the specified slot.
 
 ## SYNTAX
 
@@ -24,25 +25,17 @@ Get-AzureRmWebAppSlotMetrics [-Metrics] <String[]> [-StartTime] <DateTime> [[-En
 ```
 
 ## DESCRIPTION
-
-## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
+The **Get-AzureRmWebAppSlotMetrics** cmdlet gets the web app metrics for the specified slot.
 
 ## PARAMETERS
 
 ### -EndTime
-@{Text=}
+Specifies the ending time (in UTC) for the metric.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -52,12 +45,12 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-@{Text=}
+Specifies the granularity of the metric.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 6
@@ -67,12 +60,12 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceDetails
-@{Text=}
+Indicates whether to get the metric details of all web app instances deployed in the slot.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -82,12 +75,12 @@ Accept wildcard characters: False
 ```
 
 ### -Metrics
-@{Text=}
+Specifies the metrics to be retrieved.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -97,12 +90,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -112,12 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -127,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
+Specifies the name of the slot to which the web app is deployed.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -142,12 +135,12 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-@{Text=}
+Specifies the starting time (in UTC) for the metric.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -157,12 +150,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -182,3 +175,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRMAppServicePlanMetrics](./Get-AzureRmAppServicePlanMetrics.md)
+
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
+[Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
