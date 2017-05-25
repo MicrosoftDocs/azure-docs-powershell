@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -SpecificationFormat
 Specifies the API format.
-psdx_paramvalues Wadl and Swagger.
+The acceptable values for this parameter are: Wadl and Swagger.
 
 ```yaml
 Type: PsApiManagementApiFormat
@@ -188,5 +188,3 @@ This cmdlet returns the exported API content as a string.
 [Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
 
 [Set-AzureRmApiManagementApi](./Set-AzureRmApiManagementApi.md)
-
-
