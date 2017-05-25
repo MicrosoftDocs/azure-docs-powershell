@@ -1,4 +1,21 @@
 {
+    
+   "azuresmps-4.0.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
+            "Azure": {
+                "_displayName": "Azure",
+                "_version": "4.0.0"
+            },
+            "AzureRM.Profile": {
+                "_displayName": "AzureRM.Profile",
+                "_version": "3.0.0"
+            },
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "3.0.0"
+            }
+        }
+    },
     "azuresmps-3.7.0": {
         "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
             "Azure.Storage": {

@@ -120,7 +120,7 @@ File name containing a single json role definition.
 ```yaml
 Type: String
 Parameter Sets: InputFileParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -135,7 +135,7 @@ Role definition object.
 ```yaml
 Type: PSRoleDefinition
 Parameter Sets: RoleDefinitionParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -156,11 +156,10 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[Get-AzureRmProviderOperation]()
+[Get-AzureRmProviderOperation](./Get-AzureRmProviderOperation.md)
 
-[Get-AzureRmRoleDefinition]()
+[Get-AzureRmRoleDefinition](./Get-AzureRmRoleDefinition.md)
 
-[Set-AzureRmRoleDefinition]()
+[Set-AzureRmRoleDefinition](./Set-AzureRmRoleDefinition.md)
 
-[Remove-AzureRmRoleDefinition]()
-
+[Remove-AzureRmRoleDefinition](./Remove-AzureRmRoleDefinition.md)

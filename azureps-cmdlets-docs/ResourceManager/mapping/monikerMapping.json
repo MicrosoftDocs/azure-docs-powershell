@@ -749,14 +749,6 @@
                 "_displayName": "AzureRM.Dns",
                 "_version": "1.0.12"
             },
-            "AzureRM.AzureStackAdmin": {
-                "_displayName": "AzureRM.AzureStackAdmin",
-                "_version": "0.9.8.1"
-            },
-            "AzureRM.AzureStackStorage": {
-                "_displayName": "AzureRM.AzureStackStorage",
-                "_version": "0.9.9.1"
-            },
             "AzureRM.Network": {
                 "_displayName": "AzureRM.Network",
                 "_version": "1.0.13"

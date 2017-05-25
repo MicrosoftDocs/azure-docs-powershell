@@ -77,7 +77,7 @@ Id property is Required.
 ```yaml
 Type: String
 Parameter Sets: InputFileParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -92,7 +92,7 @@ Role definition object to be updated
 ```yaml
 Type: PSRoleDefinition
 Parameter Sets: RoleDefinitionParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,11 +113,10 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 ## RELATED LINKS
 
-[Get-AzureRmProviderOperation]()
+[Get-AzureRmProviderOperation](./Get-AzureRmProviderOperation.md)
 
-[Get-AzureRmRoleDefinition]()
+[Get-AzureRmRoleDefinition](./Get-AzureRmRoleDefinition.md)
 
-[New-AzureRmRoleDefinition]()
+[New-AzureRmRoleDefinition](./New-AzureRmRoleDefinition.md)
 
-[Remove-AzureRmRoleDefinition]()
-
+[Remove-AzureRmRoleDefinition](./New-AzureRmRoleDefinition.md)
