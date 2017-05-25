@@ -59,9 +59,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmADUser]()
+[Get-AzureRmADUser](./Get-AzureRmADUser.md)
 
-[Get-AzureRmADServicePrincipal]()
+[Get-AzureRmADServicePrincipal](./Get-AzureRmADServicePrincipal.md)
 
-[Get-AzureRmADGroupMemberMember]()
+[Get-AzureRmADGroupMemberMember](./Get-AzureRmADGroupMemberMember.md)
 
