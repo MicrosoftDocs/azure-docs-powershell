@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Edit-AzureRmWebAppBackupConfiguration
 
 ## SYNOPSIS
+Edits the current backup configuration for a web app.
 
 ## SYNTAX
 
@@ -26,25 +27,17 @@ Edit-AzureRmWebAppBackupConfiguration [-FrequencyInterval] <Int32> [-FrequencyUn
 ```
 
 ## DESCRIPTION
-
-## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
+The **Edit-AzureRmWebAppBackupConfiguration** cmdlet edits the current backup configuration for a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## PARAMETERS
 
 ### -Databases
-@{Text=}
+Specifies the databases that are backed up.
 
 ```yaml
 Type: DatabaseBackupSetting[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -54,12 +47,12 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyInterval
-@{Text=}
+Specifies the interval between backups. For example, for weekly backup, the value of this parameter must be 7 and the value of the **FrequencyUnit** parameter must be "Day".
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -69,12 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyUnit
-@{Text=}
+Specifies the unit of time in which the interval between backups is measured. For example, for weekly backup, the value of this parameter must be "Day" and the value of the **FrequencyInterval** parameter must be 7.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -84,12 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -KeepAtLeastOneBackup
-@{Text=}
+Specifies whether the retention policy must keep at least one backup in the storage account.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -99,12 +92,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -114,12 +107,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -129,12 +122,12 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPeriodInDays
-@{Text=}
+Specifies the number of days that the backup is to be retained. The backup is deleted after the retention period is exceeded.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 6
@@ -144,12 +137,12 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
+Specifies the name of the slot to which the web app is deployed.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -159,12 +152,12 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-@{Text=}
+Specifies the date that the backup schedule must be applied.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -174,12 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-@{Text=}
+Specifies the URL of the storage account that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -189,12 +182,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: FromWebApp
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -208,9 +201,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-AzureRmWebAppBackupConfiguration](./Get-AzureRmWebAppBackupConfiguration.md)

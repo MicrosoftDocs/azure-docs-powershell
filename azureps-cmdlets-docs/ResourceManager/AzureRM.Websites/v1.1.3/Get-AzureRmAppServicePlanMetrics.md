@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmAppServicePlanMetrics
 
 ## SYNOPSIS
+Gets the metrics for an Azure App Service plan.
 
 ## SYNTAX
 
@@ -23,25 +24,26 @@ Get-AzureRmAppServicePlanMetrics [-Metrics] <String[]> [-StartTime] <DateTime> [
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmAppServicePlanMetrics** cmdlet gets the metrics for an Azure App Service plan.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the CPU percentage metric for an App Service plan
 ```
-PS C:\> {{ Add example code here }}
+Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["CPU Percentage"]
 ```
 
-{{ Add example description here }}
+This example gets the CPU percentage per minute (PT1M - poll time 1 minute) between the times 2016-11-30T22:00:00Z and 2016-11-30T22:30:00Z.
 
 ## PARAMETERS
 
 ### -AppServicePlan
-@{Text=}
+Specifies an object that contains details about the App Service plan.
 
 ```yaml
 Type: ServerFarmWithRichSku
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -51,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-@{Text=}
+Specifies the ending time (in UTC) for the metric.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -66,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-@{Text=}
+Specifies the granularity of the metric.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -81,12 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceDetails
-@{Text=}
+Indicates whether to get the metric details of App Service plan instances.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -96,12 +98,12 @@ Accept wildcard characters: False
 ```
 
 ### -Metrics
-@{Text=}
+Specifies the metrics to be retrieved.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -111,12 +113,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the App Service plan for which to retrieve metrics.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -126,12 +128,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+Specifies the resource group that contains the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -141,12 +143,12 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-@{Text=}
+Specifies the starting time (in UTC) for the metric.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -160,9 +162,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-AzureRmAppServicePlan](./New-AzureRmAppServicePlan.md)
+
+[Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
+
+[Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)
+
+[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)

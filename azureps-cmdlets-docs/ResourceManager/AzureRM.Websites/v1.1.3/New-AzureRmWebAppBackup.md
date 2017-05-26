@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmWebAppBackup
 
 ## SYNOPSIS
+Creates a backup of a web app.
 
 ## SYNTAX
 
@@ -23,25 +24,26 @@ New-AzureRmWebAppBackup [[-BackupName] <String>] [-WebApp] <Site> [-StorageAccou
 ```
 
 ## DESCRIPTION
+The **New-AzureRmWebAppBackup** cmdlet creates a backup of a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a backup of the specified web app
 ```
-PS C:\> {{ Add example code here }}
+New-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net"
 ```
 
-{{ Add example description here }}
+This example creates a backup of the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
 ### -BackupName
-@{Text=}
+Specifies a name for the backup that is created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -51,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -Databases
-@{Text=}
+Specifies the databases that are backed up.
 
 ```yaml
 Type: DatabaseBackupSetting[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -81,12 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -96,12 +98,12 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
+Specifies the name of the slot to which the web app is deployed.
 
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -111,12 +113,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountUrl
-@{Text=}
+Specifies the URL of the storage account in which to store the backup.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -126,12 +128,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a WebApp object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: FromWebApp
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -151,3 +153,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebAppBackup](./Get-AzureRmWebAppBackup.md)
+
+[Get-AzureRmWebAppBackupConfiguration](./Get-AzureRmWebAppBackupConfiguration.md)

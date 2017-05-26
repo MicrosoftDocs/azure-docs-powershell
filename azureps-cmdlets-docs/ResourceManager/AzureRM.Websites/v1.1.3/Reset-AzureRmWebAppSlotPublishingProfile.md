@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Reset-AzureRmWebAppSlotPublishingProfile
 
 ## SYNOPSIS
+Resets the publishing profile for the specified web app slot.
 
 ## SYNTAX
 
@@ -22,25 +23,26 @@ Reset-AzureRmWebAppSlotPublishingProfile [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+The **Reset-AzureRmWebAppSlotPublishingProfile** cmdlet resets the publishing profile for the specified web app slot.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Reset the publishing profile for a slot
 ```
-PS C:\> {{ Add example code here }}
+Reset-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "slot001"
 ```
 
-{{ Add example description here }}
+This example resets the publishing profile for the slot named "slot001" that is associated with the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
 ### -Name
-@{Text=}
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -50,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -65,12 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
+Specifies the name of the slot.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -80,12 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -105,3 +107,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebAppSlot](./Get-AzureRmWebAppSlot.md)
+
+[Get-AzureRmWebAppSlotPublishingProfile](./GGet-AzureRmWebAppSlotPublishingProfile.md)
+
+[Get-AzureRmWebAppPublishingProfile](./Get-AzureRmWebAppPublishingProfile.md)

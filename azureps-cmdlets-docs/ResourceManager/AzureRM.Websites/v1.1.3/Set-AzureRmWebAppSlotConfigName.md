@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmWebAppSlotConfigName
 
 ## SYNOPSIS
-Set Web App Slot Config names
+Designates the configuration settings that apply to a web app slot.
 
 ## SYNTAX
 
@@ -25,26 +25,27 @@ Set-AzureRmWebAppSlotConfigName [[-AppSettingNames] <String[]>] [[-ConnectionStr
 ```
 
 ## DESCRIPTION
-The cmdlet marks App Settings and Connection Strings as slot settings
+The **Set-AzureRmWebAppSlotConfigName** cmdlet designates the configuration settings that apply to a web app slot.
+The configuration settings include application settings and connection strings.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove all application settings and connection strings from the slot settings
 ```
-PS C:\> {{ Add example code here }}
+Set-AzureRmWebAppSlotConfigName -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -RemoveAllAppSettingNames -RemoveAllConnectionStringNames
 ```
 
-{{ Add example description here }}
+This example removes all application settings and connection strings for the slot associated with the web app named "ContosoWebApp".
 
 ## PARAMETERS
 
 ### -AppSettingNames
-@{Text=}
+Specifies the names of the application settings to designate as slot settings.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -54,12 +55,12 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStringNames
-@{Text=}
+Specifies the names of the connection strings to designate as slot settings.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -69,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -84,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAllAppSettingNames
-@{Text=}
+Indicates whether to remove all application settings from the slot settings.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -99,12 +100,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAllConnectionStringNames
-@{Text=}
+Indicates whether to remove all connection strings from the slot settings.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -114,12 +115,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -129,12 +130,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -154,3 +155,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
+
+[Get-AzureRmWebAppSlotConfigName](./Get-AzureRmWebAppSlotConfigName.md)

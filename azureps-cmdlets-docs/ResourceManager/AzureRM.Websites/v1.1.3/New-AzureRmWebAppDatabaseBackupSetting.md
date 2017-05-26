@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmWebAppDatabaseBackupSetting
 
 ## SYNOPSIS
+Creates a new database backup setting for a web app.
 
 ## SYNTAX
 
@@ -16,25 +17,26 @@ New-AzureRmWebAppDatabaseBackupSetting [-Name] <String> [-DatabaseType] <String>
 ```
 
 ## DESCRIPTION
+The **New-AzureRmWebAppDatabaseBackupSetting** cmdlet creates a new database backup setting for a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a backup setting for the specified web app
 ```
-PS C:\> {{ Add example code here }}
+New-AzureRmWebAppDatabaseBackupSetting -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -ConnectionString "MyConnectionString" -DatabaseType "SqlAzure"
 ```
 
-{{ Add example description here }}
+This example creates a database backup setting (connection string) of type SqlAzure for the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
 ### -ConnectionString
-@{Text=}
+Specifies the connection string to the database that is being backed up.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -44,12 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStringName
-@{Text=}
+Specifies the name of the connection string.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -59,12 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-@{Text=}
+Specifies the type of the database to be backed up. The valid values are: SqlAzure, MySql, LocalMySql, and PostgreSql.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -74,12 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-@{Text=}
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -98,4 +100,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
