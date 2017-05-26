@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmAppServicePlan
 
 ## SYNOPSIS
-Gets an App Service plan.
+Gets the Azure App Service plan.
 
 ## SYNTAX
 
@@ -22,30 +22,26 @@ Get-AzureRmAppServicePlan [-Location] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AzureRmAppServicePlan cmdlet gets an Azure App Service plan in the specified resource group.
+The **Get-AzureRmAppServicePlan** cmdlet gets the Azure App Service plan.
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Get an App Service plan  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Get the app service plan in the specified resource group
 ```
-PS C:\>Get-AzureRmAppServicePlan -Name "MyServicePlan" -ResourceGroupName "Default-Web-WestUS"
+Get-AzureRmAppServicePlan -Name "MyServicePlan" -ResourceGroupName "Default-Web-WestUS"
 ```
 
-This command gets the App Service plan named MyServicePlan in the resource group named Default-Web-WestUS.
+This example gets the App Service plan named "MyServicePlan" in the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
 ### -Location
-@{Text=}
+Specifies the location of the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -60,7 +56,7 @@ Specifies the name of the App Service plan to get.
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -70,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group that contains the App Service plan to get.
+Specifies the name of the resource group that contains the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -89,15 +85,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-AzureRMAppServicePlan]()
+[New-AzureRmAppServicePlan](./New-AzureRmAppServicePlan.md)
 
-[Remove-AzureRMAppServicePlan]()
+[Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
 
-[Set-AzureRMAppServicePlan]()
+[Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)
 
+[Get-AzureRmAppServicePlanMetrics](./Get-AzureRmAppServicePlanMetrics.md)

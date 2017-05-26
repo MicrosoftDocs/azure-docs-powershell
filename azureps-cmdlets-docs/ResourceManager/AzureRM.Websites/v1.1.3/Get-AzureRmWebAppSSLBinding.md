@@ -1,12 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmWebAppSSLBinding
 
 ## SYNOPSIS
+Gets a secure sockets layer (SSL) binding for a web app.
 
 ## SYNTAX
 
@@ -22,25 +23,28 @@ Get-AzureRmWebAppSSLBinding [[-Name] <String>] [-WebApp] <Site> [<CommonParamete
 ```
 
 ## DESCRIPTION
+The **Get-AzureRmWebAppSSLBinding** cmdlet gets a secure sockets layer (SSL) binding for a web app that was built using the Web Apps feature of the Azure App Service.
+SSL bindings are used to associate a web app with an uploaded certificate.
+A web app can be bound to multiple certificates.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get SSL bindings for a web app
 ```
-PS C:\> {{ Add example code here }}
+Get-AzureRmWebAppSSLBinding -ResourceGroupName "Contoso" -WebAppName "ContosoWebApp"
 ```
 
-{{ Add example description here }}
+This example retrieves the SSL bindings for the web app named "ContosoWebApp" in the "Contoso" resource group.
 
 ## PARAMETERS
 
 ### -Name
-@{Text=}
+Specifies the name of the SSL binding.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -50,12 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-@{Text=}
+Specifies the name of the resource group to which the certificate is assigned.
+You cannot use the **ResourceGroupName** parameter and the **WebApp** parameter in the same command.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -65,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-@{Text=}
+Specifies the name of the slot to which the web app is deployed.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -80,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-@{Text=}
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -95,12 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -WebAppName
-@{Text=}
+Specifies the name of the web app for which this cmdlet gets SSL bindings.
+You cannot use the **WebAppName** parameter and the **WebApp** parameter in the same command.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -120,3 +126,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmWebAppSSLBinding](./New-AzureRmWebAppSSLBinding.md)
+
+[Remove-AzureRmWebAppSSLBinding](./Remove-AzureRmWebAppSSLBinding.md)
+
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
