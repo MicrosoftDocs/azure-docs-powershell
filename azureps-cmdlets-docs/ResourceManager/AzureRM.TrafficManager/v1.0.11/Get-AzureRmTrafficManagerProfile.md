@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -16,17 +16,17 @@ Get-AzureRmTrafficManagerProfile [-Name <String>] [-ResourceGroupName <String>] 
 ```
 
 ## DESCRIPTION
-The Get-AzureRmTrafficManagerProfile cmdlet gets a Traffic Manager profile from Azure Traffic Manager, and returns an object that represents that profile.
-You can modify the local object, and then apply changes to the profile by using the Set-AzureRmTrafficManagerProfile cmdlet.
+The **Get-AzureRmTrafficManagerProfile** cmdlet gets an Azure Traffic Manager profile and returns an object that represents that profile.
+You can modify the local object and then apply changes to the profile by using the **Set-AzureRmTrafficManagerProfile** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Get a profile
 ```
-PS C:\>Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-This command gets the profile named ContosoProfile in ResourceGroup11.
+This example gets the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
 ## PARAMETERS
 
@@ -36,7 +36,7 @@ Specifies the name of the Traffic Manager profile to get.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -51,7 +51,7 @@ Specifies the name of a resource group that contains the Traffic Manager profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,17 +68,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.Network.TrafficManagerProfile
-This cmdlet returns a TrafficManagerProfile object.
-You can modify this object, and then apply changes to Traffic Manager by using Set-AzureRmTrafficManagerProfile.
+This cmdlet returns a **TrafficManagerProfile** object.
+You can modify this object, and then apply changes to Traffic Manager by using **Set-AzureRmTrafficManagerProfile**.
 
 ## NOTES
 Keywords: azure, azurerm, arm, resource, management, manager, traffic, trafficmanager
 
 ## RELATED LINKS
 
-[New-AzureRmTrafficManagerProfile]()
+[Disable-AzureRmTrafficManagerProfile](./Disable-AzureRmTrafficManagerProfile.md)
 
-[Remove-AzureRmTrafficManagerProfile]()
+[Enable-AzureRmTrafficManagerProfile](./Enable-AzureRmTrafficManagerProfile.md)
 
-[Set-AzureRmTrafficManagerProfile]()
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
 
+[Remove-AzureRmTrafficManagerProfile](./Remove-AzureRmTrafficManagerProfile.md)
+
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Disable-AzureRmTrafficManagerProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables an Azure Traffic Manager profile.
 
 ## SYNTAX
 
@@ -24,26 +24,36 @@ Disable-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Disable-AzureRmTrafficManagerProfile** cmdlet disables an Azure Traffic Manager profile.
+You can use the pipeline operator to pass a **TrafficManagerProfile** object to this cmdlet or you can pass a **TrafficManagerProfile** object in the **TrafficManagerProfile** parameter.
+Alternatively, you can specify the profile by using the **Name** and **ResourceGroupName** parameters.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Disable a profile specified by name
 ```
-PS C:\> {{ Add example code here }}
+Disable-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-{{ Add example description here }}
+This example disables the profile named "ContosoProfile" in the "ResourceGroup11" resource group.
+The command prompts you for confirmation.
+
+### Example 2: Disable a profile by using the pipeline
+```
+Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Disable-AzureRmTrafficManagerProfile -Force
+```
+
+This example gets the specified profile and then passes that profile to the **Disable-AzureRmTrafficManagerProfile** cmdlet by using the pipeline operator.
 
 ## PARAMETERS
 
 ### -Force
-Do not ask for confirmation.
+Indicates whether to forcefully disable the profile.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -53,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the profile.
+Specifies the name of the profile to be disabled.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -68,12 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the profile belongs.
+Specifies the name of the resource group that contains the profile.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -83,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfile
-The profile.
+Specifies a **TrafficManagerProfile** object that contains details about the profile to be disabled.
 
 ```yaml
 Type: TrafficManagerProfile
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Indicates whether to prompt the user for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -113,8 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Indicates whether to show what would happen if the cmdlet runs without actually running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -143,3 +152,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Enable-AzureRmTrafficManagerProfile](./Enable-AzureRmTrafficManagerProfile.md)
+
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
+
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
+
+[Remove-AzureRmTrafficManagerProfile](./Remove-AzureRmTrafficManagerProfile.md)
+
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)

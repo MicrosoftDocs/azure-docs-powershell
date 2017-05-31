@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmTrafficManagerEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an endpoint in an Azure Traffic Manager profile.
 
 ## SYNTAX
 
@@ -18,26 +18,42 @@ New-AzureRmTrafficManagerEndpoint -Name <String> -ProfileName <String> -Resource
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmTrafficManagerEndpoint** cmdlet creates an endpoint in an Azure Traffic Manager profile.
+
+This cmdlet commits each new endpoint to the Traffic Manager service.
+To add multiple endpoints to a local Traffic Manager profile object and commit changes in a single operation, use the **Add-AzureRmTrafficManagerEndpointConfig** cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an external endpoint for a profile
 ```
-PS C:\> {{ Add example code here }}
+New-AzureRmTrafficManagerEndpoint -EndpointStatus Enabled -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "ExternalEndpoints" -EndpointLocation "North Europe" -Priority 1 -Target "www.contoso.com" -Weight 10
 ```
 
-{{ Add example description here }}
+This example creates an external endpoint named "contoso" in the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
+
+### Example 2: Create an Azure endpoint for a profile
+```
+New-AzureRmTrafficManagerEndpoint -EndpointStatus Enabled -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "AzureEndpoints" -Priority 1 -TargetResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Default-Web-CentralUS/providers/Microsoft.Web/sites/contoso-web-app" -Weight 10
+```
+
+This example creates an Azure endpoint named "contoso" in the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
+The Azure endpoint points to the web app whose Azure Resource Manager ID is given by the URI path specified in the **TargetResourceId** parameter.
+The command does not specify the **EndpointLocation** parameter because the web app resource supplies the location.
 
 ## PARAMETERS
 
 ### -EndpointLocation
-The location of the endpoint.
+Specifies the location of the external endpoint.
+You must include this parameter for an endpoint of the type "ExternalEndpoints" in a profile that has the *Performance* load-balancing method.
+
+You can get a list of possible values for this parameter by using the **List Locations** operation.
+For information about the **List Locations** operation, see [List Locations](http://msdn.microsoft.com/library/gg441293.aspx).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -47,12 +63,17 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointStatus
-The status of the endpoint.
+Specifies the status of the endpoint.
+If the status is "Enabled", the endpoint is probed for endpoint health and is included in the traffic-routing method.
+Valid values are:
+
+- Enabled
+- Disabled
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enabled, Disabled
 
 Required: True
@@ -63,13 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -MinChildEndpoints
-The minimum number of endpoints that must be available in the child profile in order for the Nested Endpoint in the parent profile to be considered available.
-Only applicable to endpoint of type 'NestedEndpoints'.
+The minimum number of endpoints that must be available in the child profile in order for the nested endpoint in the parent profile to be considered available.
+This parameter is applicable only to endpoints of type "NestedEndpoints".
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,12 +100,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the endpoint.
+Specifies the name of the endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -94,12 +115,18 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The priority of the endpoint.
+Specifies the priority that Traffic Manager assigns to the endpoint.
+Include this parameter only if the Traffic Manager profile is configured for priority traffic-routing.
+Valid values are integers from 1 through 1000.
+Lower values represent higher priority.
+
+If you specify a priority, you must specify priorities on all endpoints, and no two endpoints can share the same priority value.
+If you do not specify priorities, Traffic Manager assigns default priority values to the endpoints, starting with one (1), in the order the profile lists the endpoints.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,12 +136,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the profile that contains the endpoint.
+The name of the profile in which the endpoint is created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,12 +151,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the profile belongs.
+The name of the resource group in which the endpoint is created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,12 +166,13 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-The target of the endpoint.
+Specifies the fully qualified domain name system (DNS) name of the endpoint.
+Traffic Manager returns this value in DNS responses when it directs traffic to this endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,12 +182,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-The resource id of the endpoint.
+Specifies the resource ID of the endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,12 +197,17 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of the endpoint.
+Specifies the type of endpoint that this cmdlet adds to the Azure Traffic Manager profile.
+Valid values are:
+
+- AzureEndpoints
+- ExternalEndpoints
+- NestedEndpoints
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AzureEndpoints, ExternalEndpoints, NestedEndpoints
 
 Required: True
@@ -185,12 +218,15 @@ Accept wildcard characters: False
 ```
 
 ### -Weight
-The weight of the endpoint.
+Specifies the weight that Traffic Manager assigns to the endpoint.
+Valid values are integers from 1 through 1000.
+The default value is one (1).
+Include this parameter only if the Traffic Manager profile has a *Weighted* traffic-routing method.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,3 +250,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Disable-AzureRmTrafficManagerEndpoint](./Disable-AzureRmTrafficManagerEndpoint.md)
+
+[Enable-AzureRmTrafficManagerEndpoint](./Enable-AzureRmTrafficManagerEndpoint.md)
+
+[Get-AzureRmTrafficManagerEndpoint](./Get-AzureRmTrafficManagerEndpoint.md)
+
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
+
+[Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)
