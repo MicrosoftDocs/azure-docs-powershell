@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmStorageAccount
 
 ## SYNOPSIS
-Update the Storage Account properties
+Updates the properties of a storage account.
 
 ## SYNTAX
 
@@ -20,55 +20,50 @@ Set-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [[-SkuN
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to update the Storage Account properties.
+The **Set-AzureRmStorageAccount** cmdlet updates the properties of a storage account.
 
 ## EXAMPLES
 
-### --------------------------  Set Storage SkuName  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Set the storage account type
 ```
-PS C:\> # Set account type
-              Set-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" - SkuName "Standard_RAGRS"
+Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" - SkuName "Standard_RAGRS"
 ```
 
-### --------------------------  Set Custom Domain  --------------------------
-@{paragraph=PS C:\\\>}
+This example sets the storage account type to "Standard_RAGRS" for the storage account named "MyStorageAccount".
 
-
-
+### Example 2: Set a custom domain for a storage account
 ```
-PS C:\> #Set custom domain
-          Set-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -CustomDomainName "www.domainname.com" -UseSubDomain $true
+Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" -CustomDomainName "www.contoso.com" -UseSubDomain $True
 ```
 
-### --------------------------  Enable Storage Service Encryption and set Access Tier to cool  --------------------------
-@{paragraph=PS C:\\\>}
+This example sets a custom domain "www.contoso.com" for the storage account named "MyStorageAccount".
 
-
-
+### Example 3: Enable encryption on Blob storage and File storage
 ```
-PS C:\> #Enable Storage Service Encryption and set Access Tier to cool
-          Set-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mycoolstorageaccount" -EnableEncryptionService blob -AccessTier "cool"
+Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" -EnableEncryptionService "Blob,File"
 ```
+
+This example enables storage encryption on Blob storage and File storage for the storage account named "MyStorageAccount".
 
 ## PARAMETERS
 
 ### -AccessTier
-Access Tier for Blob Storage Accounts.
+Specifies the access tier of the storage account.
 Changing the access tier may result in additional charges.
-See (http://go.microsoft.com/fwlink/?LinkId=786482) to learn more.
-Setting this will fail if Storage Account Kind is equal to Storage.
-Valid values are:
-• Hot
-• Cool
+For more information, see [Azure Blob Storage: Hot and cool storage tiers](http://go.microsoft.com/fwlink/?LinkId=786482).
+
+If you specified a value of "BlobStorage" for the **Kind** parameter of the **New-AzureRmStorageAccount** cmdlet when you created the storage account, you must specify a value for the **AccessTier** parameter in the **Set-AzureRmStorageAccount** cmdlet.
+If you specified a value of "Storage" for the **Kind**  parameter of the **New-AzureRmStorageAccount** cmdlet when you created the storage account, do not include the **AccessTier** parameter in the **Set-AzureRmStorageAccount** cmdlet.
+
+The valid values for this parameter are:
+
+- Hot
+- Cool
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -78,12 +73,12 @@ Accept wildcard characters: False
 ```
 
 ### -CustomDomainName
-The name of the custom domain.
+Specifies the name of the custom domain of the storage account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -93,13 +88,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEncryptionService
-This will disable Storage Service Encryption on the specified Azure Storage Service.
-Only the Azure Blob Service is currently supported.
+Specifies the Azure Storage on which to disable encryption.
+Encryption is supported only on the Azure Blob storage.
 
 ```yaml
 Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -109,13 +104,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryptionService
-This will enable Storage Service Encryption on the specified Azure Storage Service.
-Only the Azure Blob Service is currently supported.
+Specifies the Azure Storage on which to enable encryption.
+Encryption is supported only on the Azure Blob storage.
 
 ```yaml
 Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -125,7 +120,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -140,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -155,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Storage Account
+Specifies the name of the storage account to update.
 
 ```yaml
 Type: String
@@ -170,12 +174,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Resource Group
+Specifies the name of the resource group that contains the storage account to update.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -185,15 +189,17 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-Specifies the account SkuName of the storage account.
-The available options are:
-• Standard_LRS (Locally-redundant storage)
-• Standard_ZRS (Zone-redundant storage)
-• Standard_GRS (Geo-redundant storage)
-• Standard_RAGRS (Read access geo-redundant storage)
-• Premium_LRS (Premium Locally-redundant storage)
-          
-Note that Standard_ZRS, Premium_LRS accounts cannot be changed to other account types, and other account types cannot be changed to Standard_ZRS, Premium_LRS.
+Specifies the SKU (stock-keeping unit) name of the storage account. The SKU name indicates the account type.
+
+The acceptable values for this parameter are:
+
+- Standard_LRS -- locally redundant storage
+- Standard_ZRS -- zone-redundant storage
+- Standard_GRS -- geo-redundant storage
+- Standard_RAGRS -- read access geo-redundant storage
+- Premium_LRS -- premium locally redundant storage
+
+A storage account that is either "Standard_ZRS" or "Premium_LRS" cannot be changed to any other account type; likewise, other account types cannot be changed to either "Standard_ZRS" or "Premium_LRS".
 
 ```yaml
 Type: String
@@ -208,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Tags to set on the storage account.
+Specifies the tags to set on the storage account.
 
 ```yaml
 Type: Hashtable[]
@@ -223,12 +229,12 @@ Accept wildcard characters: False
 ```
 
 ### -UseSubDomain
-Indicates whether or not indirect CName validation is enabled.
+Indicates whether to enable indirect validation of the *CName* (canonical name).
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -242,10 +248,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
+### None
+
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, storage, container, account
 
 ## RELATED LINKS
 
+[Get-AzureRmStorageAccount](./Get-AzureRmStorageAccount.md)
+
+[New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
+
+[Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)

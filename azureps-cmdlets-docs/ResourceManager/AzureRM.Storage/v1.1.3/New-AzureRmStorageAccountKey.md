@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmStorageAccountKey
 
 ## SYNOPSIS
-Regenerates a storage key for an Azure Storage Account.
+Regenerates a storage key for an Azure storage Account.
 
 ## SYNTAX
 
@@ -17,24 +17,30 @@ New-AzureRmStorageAccountKey [-ResourceGroupName] <String> [-Name] <String> [-Ke
 ```
 
 ## DESCRIPTION
-Regenerates a storage key for an Azure Storage Account.
+The **New-AzureRmStorageAccountKey** cmdlet regenerates a storage key for an Azure storage account.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Regenerate a storage key
 ```
-#Regenerate a key
-New-AzureRmStorageKey -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -keyName "key1"
+New-AzureRmStorageKey -ResourceGroupName "myresourcegroup" -Name "mystorageaccount" -keyName "key1"
 ```
+
+This example regenerates the "key1" storage key for the storage account named "mystorageaccount".
 
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -49,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -65,14 +71,14 @@ Accept wildcard characters: False
 
 ### -KeyName
 Specifies which key to regenerate.
-Supported value set:
-- "key1"
-- "key2"
+The valid values for this parameter are:
+- key1
+- key2
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -82,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Storage Account
+Specifies the name of the storage account for which to regenerate a storage key.
 
 ```yaml
 Type: String
@@ -97,12 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Resource Group the storage account is in
+Specifies the name of the resource group that contains the storage account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -116,10 +122,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
+### None
+
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, storage, container, account
 
 ## RELATED LINKS
 
+[Get-AzureRmStorageAccountKey](./Get-AzureRmStorageAccountKey.md)
