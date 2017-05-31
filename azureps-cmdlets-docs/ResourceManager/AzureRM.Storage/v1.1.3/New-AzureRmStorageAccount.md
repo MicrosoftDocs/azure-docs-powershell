@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmStorageAccount
 
 ## SYNOPSIS
-Allows you to create a new Storage Account using the ARM deployment model
+Creates an Azure storage account.
 
 ## SYNTAX
 
@@ -19,42 +19,40 @@ New-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-SkuNa
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a new Storage Account using the ARM deployment model.
+The **New-AzureRmStorageAccount** cmdlet creates an Azure storage account.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Create a storage account
 ```
-New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Location "US West" -SkuName "Standard_GRS" -Kind "Storage"
+New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -Name "mystorageaccount" -Location "US West" -SkuName "Standard_GRS" -Kind "Storage"
 ```
 
-### --------------------------  Example 2  --------------------------
-@{paragraph=PS C:\\\>}
+This example creates a storage account named "mystorageaccount" in the "myresourcegroup" resource group.
 
-
-
+### Example 2: Create a Blob storage account with encryption enabled
 ```
-New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -AccountName "mycoolstorageaccount" -Location "US West" -SkuName "Standard_GRS" -EnableEncryptionService blob -Kind "BlobStorage" -AccessTier "hot"
+New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -Name "mycoolstorageaccount" -Location "US West" -SkuName "Standard_GRS" -EnableEncryptionService blob -Kind "BlobStorage" -AccessTier "hot"
 ```
+
+This example creates a Blob storage account named "mycoolstorageaccount" with encryption enabled.
 
 ## PARAMETERS
 
 ### -AccessTier
-Access Tier for Blob Storage Accounts.
-This is mandatory when Storage Account Kind is equal to BlobStorage.
-Setting this will fail if Storage Account Kind is equal to Storage.
-Valid values are:
-• Hot
-• Cool
+Specifies the access tier of the storage account that this cmdlet creates.
+If you specify a value of "BlobStorage" for the **Kind** parameter, you must specify a value for the **AccessTier** parameter.
+If you specify a value of "Storage" for the **Kind**  parameter, do not include the **AccessTier** parameter.
+
+The valid values for this parameter are:
+
+- Hot
+- Cool
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -64,12 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomDomainName
-The name of the custom domain.
+Specifies the name of the custom domain of the storage account.
+The default value is "Storage".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -79,13 +78,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryptionService
-This will enable Storage Service Encryption on the specified Azure Storage Service.
-Only the Azure Blob Service is currently supported.
+Specifies the Azure Storage on which to enable encryption.
+Encryption is supported only on the Azure Blob storage.
 
 ```yaml
 Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -95,7 +94,16 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -110,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -125,16 +133,18 @@ Accept wildcard characters: False
 ```
 
 ### -Kind
-Kind of Storage Account.
-Valid values are:
-• Storage (General-purpose storage account which supports storing Blobs, Tables, Queues, Files and Disks)
-• BlobStorage (Blob storage account which supports storing Blobs only)
-Default is Storage.
+Specifies the type of Azure Storage to be used by the storage account that this cmdlet creates.
+
+The acceptable values for this parameter are:
+- Storage -- General-purpose storage, which supports storing blobs, tables, queues, files, and disks
+- BlobStorage -- Blob storage, which supports storing only blobs
+
+The default value is "Storage".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -144,12 +154,12 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location of the Storage Account
+Specifies the location of the storage account to create.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -159,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the Storage Account
+Specifies the name of the storage account to create.
 
 ```yaml
 Type: String
@@ -174,12 +184,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Resource Group
+Specifies the name of the resource group in which to create the storage account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -189,13 +199,15 @@ Accept wildcard characters: False
 ```
 
 ### -SkuName
-SkuName of Storage Account.
-Valid values are 
-• Standard_LRS (Locally-redundant storage)
-• Standard_ZRS (Zone-redundant storage)
-• Standard_GRS (Geo-redundant storage)
-• Standard_RAGRS (Read access geo-redundant storage)
-• Premium_LRS (Premium Locally-redundant storage)
+Specifies the SKU (stock-keeping unit) name of the storage account that this cmdlet creates. The SKU name indicates the account type.
+
+The acceptable values for this parameter are:
+
+- Standard_LRS -- locally redundant storage
+- Standard_ZRS -- zone-redundant storage
+- Standard_GRS -- geo-redundant storage
+- Standard_RAGRS -- read access geo-redundant storage
+- Premium_LRS -- premium locally redundant storage
 
 ```yaml
 Type: String
@@ -210,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Tags to set on the storage account.
+Specifies the tags to set on the storage account.
 
 ```yaml
 Type: Hashtable[]
@@ -225,12 +237,12 @@ Accept wildcard characters: False
 ```
 
 ### -UseSubDomain
-Indicates whether or not indirect CName validation is enabled.
+Indicates whether to enable indirect validation of the *CName* (canonical name).
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -244,10 +256,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
+### None
+
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, storage, container, account
 
 ## RELATED LINKS
 
+[Get-AzureRmStorageAccount](./Get-AzureRmStorageAccount.md)
+
+[Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
+
+[Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)

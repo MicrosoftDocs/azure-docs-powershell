@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmStorageAccount
 
 ## SYNOPSIS
-Remove Storage Account from Azure
+Removes a storage account from Azure.
 
 ## SYNTAX
 
@@ -17,23 +17,30 @@ Remove-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-Remove Storage Account from Azure
+The **Remove-AzureRmStorageAccount** cmdlet removes a storage account from Azure.
 
 ## EXAMPLES
 
-### --------------------------  Remove Storage Account  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
+### Example 1: Remove a storage account
 ```
-PS C:\> Remove-AzureRmStorageAccount -ResourceGroupName "rg1" -AccountName "mystorageaccount"
+Remove-AzureRmStorageAccount -ResourceGroupName "RG01" -Name "mystorageaccount"
 ```
+
+This example removes the storage account named "mystorageaccount" in the "RG01" resource group.
 
 ## PARAMETERS
 
 ### -InformationAction
-@{Text=}
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
 
 ```yaml
 Type: ActionPreference
@@ -48,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}
+Specifies a variable that is used for storing an informational message.
 
 ```yaml
 Type: String
@@ -63,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the VM
+Specifies the name of the storage account to remove.
 
 ```yaml
 Type: String
@@ -78,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of the Resource Group
+Specifies the name of the resource group that contains the storage account to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -97,10 +104,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
+### None
+
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, storage, container, account
 
 ## RELATED LINKS
 
+[Get-AzureRmStorageAccount](./Get-AzureRmStorageAccount.md)
+
+[New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
+
+[Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
