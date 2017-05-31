@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -18,34 +18,32 @@ New-AzureRmTrafficManagerProfile -Name <String> -ResourceGroupName <String> [-Pr
 ```
 
 ## DESCRIPTION
-The New-AzureRmTrafficManagerProfile cmdlet creates an Azure Traffic Manager profile.
-Specify a name and required settings.
-This cmdlet returns a local object that represents the new profile.
+The **New-AzureRmTrafficManagerProfile** cmdlet creates an Azure Traffic Manager profile.
 
 This cmdlet does not configure Traffic Manager endpoints.
-Update the local profile object by using the Add-AzureRmTrafficManagerEndpointConfig cmdlet.
-Then upload changes to Traffic Manager by using the Set-AzureRmTrafficManagerProfile cmdlet.
+Update the local profile object by using the **Add-AzureRmTrafficManagerEndpointConfig** cmdlet and then upload changes to Traffic Manager by using the **Set-AzureRmTrafficManagerProfile** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Create a profile
 ```
-PS C:\>New-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" -ProfileStatus Enabled -TrafficRoutingMethod Performance -RelativeDnsName "contosoapp" -TTL 30 -MonitorProtocol HTTP -MonitorPort 80 -MonitorPath "/default.aspx"
+New-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" -ProfileStatus "Enabled" -TrafficRoutingMethod "Performance" -RelativeDnsName "contosoapp" -TTL 30 -MonitorProtocol "HTTP" -MonitorPort 80 -MonitorPath "/default.aspx"
 ```
 
-This command creates an Azure Traffic Manager profile named ContosoProfile in resource group ResourceGroup11.
-The DNS FQDN is contosoapp.trafficmanager.net.
+This example creates an Azure Traffic Manager profile named "ContosoProfile" in resource group "ResourceGroup11".
+The domain name system (DNS) fully qualified domain name (FQDN) is "contosoapp.trafficmanager.net".
 
 ## PARAMETERS
 
 ### -MonitorPath
-Specifies the path used to monitor endpoint health.
+Specifies the path that is used to monitor endpoint health.
 Specify a value relative to the endpoint domain name.
+This value must begin with a forward slash (/).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -61,7 +59,7 @@ Valid values are integers from 1 through 65535.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -72,15 +70,15 @@ Accept wildcard characters: False
 
 ### -MonitorProtocol
 Specifies the protocol to use to monitor endpoint health.
-Valid values are: 
+Valid values are:
 
--- HTTP
--- HTTPS
+- HTTP
+- HTTPS
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: HTTP, HTTPS
 
 Required: True
@@ -96,7 +94,7 @@ Specifies a name for the Traffic Manager profile that this cmdlet creates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -106,12 +104,16 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileStatus
-The status of the profile.
+Specifies the status of the profile.
+Valid values are:
+
+- Enabled
+- Disabled.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +129,7 @@ Traffic Manager combines this value and the DNS domain name that Azure Traffic M
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,13 +139,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.
-This cmdlet creates a Traffic Manager profile in the group that this parameter specifies.
+Specifies the name of a resource group in which to create the Traffic Manager profile.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -153,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-A hash table which represents resource tags.
+Specifies a hash table containing the resource tags.
 
 ```yaml
 Type: Hashtable[]
@@ -168,18 +169,18 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficRoutingMethod
-Specifies the traffic routing method.
+Specifies the traffic-routing method.
 This method determines which endpoint Traffic Manager returns in response to incoming DNS queries.
-Valid values are: 
+Valid values are:
 
--- Performance
--- Weighted
--- Priority
+- Performance
+- Weighted
+- Priority
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Performance, Weighted, Priority
 
 Required: True
@@ -190,12 +191,12 @@ Accept wildcard characters: False
 ```
 
 ### -Ttl
-Specifies a Time to Live (TTL) value.
+Specifies a time-to-Live (TTL) value.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -212,18 +213,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.Network.TrafficManagerProfile
-This cmdlet returns a new TrafficManagerProfile object.
+This cmdlet returns a new **TrafficManagerProfile** object.
 
 ## NOTES
 Keywords: azure, azurerm, arm, resource, management, manager, traffic, trafficmanager
 
 ## RELATED LINKS
 
-[Get-AzureRmTrafficManagerProfile]()
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
 
-[Remove-AzureRmTrafficManagerProfile]()
+[Remove-AzureRmTrafficManagerProfile](./Remove-AzureRmTrafficManagerProfile.md)
 
-[Set-AzureRmTrafficManagerProfile]()
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
 
-[Add-AzureRmTrafficManagerEndpointConfig]()
-
+[Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -23,26 +23,29 @@ Get-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndpoin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmTrafficManagerEndpoint** cmdlet gets an endpoint for an Azure Traffic Manager profile.
+
+You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the **TrafficManagerEndpoint** parameter.
+Alternatively, you can specify the endpoint by using the **Name** and **Type** parameters together with the **ProfileName** and **ResourceGroupName** parameters.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get an endpoint
 ```
-PS C:\> {{ Add example code here }}
+Get-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "AzureEndpoints"
 ```
 
-{{ Add example description here }}
+This example gets the Azure endpoint named "contoso" from the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
 ## PARAMETERS
 
 ### -Name
-The name of the endpoint.
+Specifies the name of the endpoint to get.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -52,12 +55,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the profile.
+Specifies the name of a Traffic Manager profile from which this cmdlet gets the endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -67,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the profile belongs.
+Specifies the name of the resource group that contains the endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerEndpoint
-The endpoint.
+Specifies a **TrafficManagerEndpoint** object that contains details about the endpoint to get.
 
 ```yaml
 Type: TrafficManagerEndpoint
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,12 +100,16 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of the endpoint.
+Specifies the type of the endpoint. Valid values are:
+
+- AzureEndpoints
+- ExternalEndpoints
+- NestedEndpoints
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 Accepted values: AzureEndpoints, ExternalEndpoints, NestedEndpoints
 
 Required: True
@@ -127,3 +134,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Disable-AzureRmTrafficManagerEndpoint](./Disable-AzureRmTrafficManagerEndpoint.md)
+
+[Enable-AzureRmTrafficManagerEndpoint](./Enable-AzureRmTrafficManagerEndpoint.md)
+
+[New-AzureRmTrafficManagerEndpoint](./New-AzureRmTrafficManagerEndpoint.md)
+
+[Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)
+
+[Set-AzureRmTrafficManagerEndpoint](./Set-AzureRmTrafficManagerEndpoint.md)

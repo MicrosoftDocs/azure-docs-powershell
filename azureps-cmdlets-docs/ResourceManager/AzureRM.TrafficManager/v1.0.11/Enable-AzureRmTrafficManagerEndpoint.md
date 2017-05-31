@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Enable-AzureRmTrafficManagerEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables an endpoint in an Azure Traffic Manager profile.
 
 ## SYNTAX
 
@@ -23,26 +23,35 @@ Enable-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndp
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Enable-AzureRmTrafficManagerEndpoint** cmdlet enables an endpoint in an Azure Traffic Manager profile.
+
+You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the **TrafficManagerEndpoint** parameter.
+Alternatively, you can specify the endpoint by using the **Name** and **Type** parameters together with the **ProfileName** and **ResourceGroupName** parameters.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Enable an endpoint from a profile
 ```
-PS C:\> {{ Add example code here }}
+Enable-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type ExternalEndpoints
 ```
 
-{{ Add example description here }}
+This example enables the external endpoint named "contoso" in the profile named "ContosoProfile" in resource group "ResourceGroup11".
+
+### Example 2: Enable an endpoint by using the pipeline
+```
+Get-AzureRmTrafficManagerEndpoint -Name "contoso" -Type ExternalEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Enable-AzureRmTrafficManagerEndpoint
+```
+This example gets the specified endpoint and then passes that endpoint to the **Enable-AzureRmTrafficManagerEndpoint** cmdlet by using the pipeline operator.
 
 ## PARAMETERS
 
 ### -Name
-The name of the endpoint.
+Specifies the name of the endpoint to be enabled.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -52,12 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the endpoint.
+Specifies the name of a Traffic Manager profile in which this cmdlet enables the endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -67,12 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the profile belongs.
+Specifies the name of the resource group that contains the endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,12 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerEndpoint
-The endpoint.
+Specifies a **TrafficManagerEndpoint** object that contains details about the endpoint to be enabled.
 
 ```yaml
 Type: TrafficManagerEndpoint
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,12 +106,16 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of the endpoint.
+Specifies the type of the endpoint. Valid values are:
+
+- AzureEndpoints
+- ExternalEndpoints
+- NestedEndpoints
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 Accepted values: AzureEndpoints, ExternalEndpoints, NestedEndpoints
 
 Required: True
@@ -127,3 +140,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Disable-AzureRmTrafficManagerEndpoint](./Disable-AzureRmTrafficManagerEndpoint.md)
+
+[Get-AzureRmTrafficManagerEndpoint](./Get-AzureRmTrafficManagerEndpoint.md)
+
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
+
+[New-AzureRmTrafficManagerEndpoint](./New-AzureRmTrafficManagerEndpoint.md)
+
+[Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)

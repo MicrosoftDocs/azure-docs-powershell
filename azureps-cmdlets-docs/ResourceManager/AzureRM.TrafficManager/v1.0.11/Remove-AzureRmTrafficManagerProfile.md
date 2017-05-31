@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -24,7 +24,8 @@ Remove-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfil
 ```
 
 ## DESCRIPTION
-The Remove-AzureRmTrafficManagerProfile cmdlet deletes an Azure Traffic Manager profile.
+The **Remove-AzureRmTrafficManagerProfile** cmdlet deletes an Azure Traffic Manager profile.
+
 You can specify a profile to delete by name, or you can specify a profile object.
 You can delete a profile object from Traffic Manager by using the pipeline or as a parameter value.
 
@@ -32,28 +33,27 @@ You can delete a profile object from Traffic Manager by using the pipeline or as
 
 ### Example 1: Delete a profile specified by name
 ```
-PS C:\>Remove-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+Remove-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-This command deletes the profile named ContosoProfile in ResourceGroup11.
+This example deletes the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
 ### Example 2: Delete a profile by using the pipeline
 ```
-PS C:\>Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Remove-AzureRmTrafficManagerProfile
+Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Remove-AzureRmTrafficManagerProfile
 ```
 
-This command gets the profile named ContosoProfile in ResourceGroup11, and then passes that profile to the current cmdlet by using the pipeline operator.
-The current command deletes that profile.
+This example gets the profile named "ContosoProfile" in the resource group named "ResourceGroup11" and then passes that profile to the **Remove-AzureRmTrafficManagerProfile** cmdlet by using the pipeline operator.
 
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+Indicates whether to forcefully delete the profile.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,7 +68,7 @@ Specifies the name of the Traffic Manager profile that this cmdlet deletes.
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,13 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.
-This cmdlet deletes a Traffic Manager profile in the group that this parameter specifies.
+Specifies the name of a resource group that contains the Traffic Manager profile to delete.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -94,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfile
-Specifies a TrafficManagerProfile object to delete.
+Specifies a **TrafficManagerProfile** object that contains details about the profile to delete.
 
 ```yaml
 Type: TrafficManagerProfile
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Indicates whether to prompt the user for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -124,8 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Indicates whether to show what would happen if the cmdlet runs without actually running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +143,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.Network.TrafficManagerProfile
-You can pipe a TrafficManagerProfile object to this cmdlet.
+You can pipe a **TrafficManagerProfile** object to this cmdlet.
 
 ## OUTPUTS
 
@@ -157,9 +155,12 @@ Keywords: azure, azurerm, arm, resource, management, manager, traffic, trafficma
 
 ## RELATED LINKS
 
-[Get-AzureRmTrafficManagerProfile]()
+[Disable-AzureRmTrafficManagerProfile](./Disable-AzureRmTrafficManagerProfile.md)
 
-[New-AzureRmTrafficManagerProfile]()
+[Enable-AzureRmTrafficManagerProfile](./Enable-AzureRmTrafficManagerProfile.md)
 
-[Set-AzureRmTrafficManagerProfile]()
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
 
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
+
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)

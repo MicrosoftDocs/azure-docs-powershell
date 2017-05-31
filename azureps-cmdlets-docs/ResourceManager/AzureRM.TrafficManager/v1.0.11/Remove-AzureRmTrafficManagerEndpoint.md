@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmTrafficManagerEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an endpoint from Azure Traffic Manager.
 
 ## SYNTAX
 
@@ -24,26 +24,32 @@ Remove-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndp
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmTrafficManagerEndpoint** removes an endpoint from Azure Traffic Manager.
+
+This cmdlet commits each change to the Traffic Manager service.
+To remove multiple endpoints from a local Traffic Manager profile object and commit changes in a single operation, use the **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet.
+
+You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the **TrafficManagerEndpoint** parameter.
+Alternatively, you can specify the endpoint by using the **Name** and **Type** parameters together with the **ProfileName** and **ResourceGroupName** parameters.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an Azure endpoint from a profile
 ```
-PS C:\> {{ Add example code here }}
+Remove-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type AzureEndpoints
 ```
 
-{{ Add example description here }}
+This example removes the Azure endpoint named "contoso" from the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
 ## PARAMETERS
 
 ### -Force
-Do not ask for confirmation.
+Indicates whether to forcefully remove the endpoint.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -53,12 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the endpoint.
+Specifies the name of the endpoint to remove.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -68,12 +74,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileName
-The name of the profile.
+Specifies the name of a Traffic Manager profile from which this cmdlet removes the endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -83,12 +89,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group to which the profile belongs.
+Specifies the name of the resource group that contains the profile.
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,12 +104,12 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerEndpoint
-The endpoint.
+Specifies a **TrafficManagerEndpoint** object that contains details about the endpoint to remove.
 
 ```yaml
 Type: TrafficManagerEndpoint
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,12 +119,18 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of the endpoint.
+Specifies the type of endpoint that this cmdlet removes from the Traffic Manager profile.
+Valid values are:
+
+- AzureEndpoints
+- ExternalEndpoints
+- NestedEndpoints
+
 
 ```yaml
 Type: String
 Parameter Sets: Fields
-Aliases: 
+Aliases:
 Accepted values: AzureEndpoints, ExternalEndpoints, NestedEndpoints
 
 Required: True
@@ -129,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Indicates whether to prompt the user for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -144,8 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Indicates whether to show what would happen if the cmdlet runs without actually running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -174,3 +185,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmTrafficManagerEndpoint](./Get-AzureRmTrafficManagerEndpoint.md)
+
+[Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
+
+[New-AzureRmTrafficManagerEndpoint](./New-AzureRmTrafficManagerEndpoint.md)
+
+[Remove-AzureRmTrafficManagerEndpointConfig](./Remove-AzureRmTrafficManagerEndpointConfig.md)
+
+[Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
