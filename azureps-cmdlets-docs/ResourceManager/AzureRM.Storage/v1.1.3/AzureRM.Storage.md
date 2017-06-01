@@ -8,33 +8,32 @@ Locale: en-US
 
 # AzureRM.Storage Module
 ## Description
-{{Manually Enter Description Here}}
+This module contains cmdlets that manage Azure storage accounts.
 
 ## AzureRM.Storage Cmdlets
 ### [Get-AzureRmStorageAccount](Get-AzureRmStorageAccount.md)
-Get the properties of a Storage Account
+Gets a storage account.
 
 ### [Get-AzureRmStorageAccountKey](Get-AzureRmStorageAccountKey.md)
-Get the access keys for an Azure Storage Account
+Gets the access keys for an Azure storage account.
 
 ### [Get-AzureRmStorageAccountNameAvailability](Get-AzureRmStorageAccountNameAvailability.md)
-Check the availability of a storage account name.
+Checks the availability of a name for an Azure storage account.
 
 ### [Get-AzureRmStorageUsage](Get-AzureRmStorageUsage.md)
-Get the storage resource usage of current subscription.
+Gets the storage resource usage for the current subscription.
 
 ### [New-AzureRmStorageAccount](New-AzureRmStorageAccount.md)
-Allows you to create a new Storage Account using the ARM deployment model
+Creates an Azure storage account.
 
 ### [New-AzureRmStorageAccountKey](New-AzureRmStorageAccountKey.md)
-Regenerates a storage key for an Azure Storage Account.
+Regenerates a storage key for an Azure storage Account.
 
 ### [Remove-AzureRmStorageAccount](Remove-AzureRmStorageAccount.md)
-Remove Storage Account from Azure
+Removes a storage account from Azure.
 
 ### [Set-AzureRmCurrentStorageAccount](Set-AzureRmCurrentStorageAccount.md)
-Set the Current Azure Storage Account.
+Sets the specified storage account as the current storage account.
 
 ### [Set-AzureRmStorageAccount](Set-AzureRmStorageAccount.md)
-Update the Storage Account properties
-
+Updates the properties of a storage account.

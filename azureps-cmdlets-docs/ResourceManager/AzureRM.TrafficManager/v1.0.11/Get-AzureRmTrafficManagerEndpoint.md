@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AzureRmTrafficManagerEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets an endpoint for an Azure Traffic Manager profile.
 
 ## SYNTAX
 
