@@ -8,7 +8,7 @@ Locale: en-US
 
 # AzureRM.Tags Module
 ## Description
-This topic displays help topics for the Azure Tag cmdlets.
+This module contains cmdlets that manage Azure tags in Azure Resource Manager.
 
 ## AzureRM.Tags Cmdlets
 ### [Get-AzureRmTag](Get-AzureRmTag.md)

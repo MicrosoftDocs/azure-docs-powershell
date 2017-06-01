@@ -8,38 +8,38 @@ Locale: en-US
 
 # AzureRM.TrafficManager Module
 ## Description
-{{Manually Enter Description Here}}
+This module contains cmdlets that configure Azure Traffic Manager.
 
 ## AzureRM.TrafficManager Cmdlets
 ### [Add-AzureRmTrafficManagerEndpointConfig](Add-AzureRmTrafficManagerEndpointConfig.md)
-Adds an endpoint to an Azure Traffic Manager profile.
+Adds an endpoint to a local Azure Traffic Manager profile.
 
 ### [Disable-AzureRmTrafficManagerEndpoint](Disable-AzureRmTrafficManagerEndpoint.md)
-{{Fill in the Synopsis}}
+Disables an endpoint in an Azure Traffic Manager profile.
 
 ### [Disable-AzureRmTrafficManagerProfile](Disable-AzureRmTrafficManagerProfile.md)
-{{Fill in the Synopsis}}
+Disables an Azure Traffic Manager profile.
 
 ### [Enable-AzureRmTrafficManagerEndpoint](Enable-AzureRmTrafficManagerEndpoint.md)
-{{Fill in the Synopsis}}
+Enables an endpoint in an Azure Traffic Manager profile.
 
 ### [Enable-AzureRmTrafficManagerProfile](Enable-AzureRmTrafficManagerProfile.md)
-{{Fill in the Synopsis}}
+Enables an Azure Traffic Manager profile.
 
 ### [Get-AzureRmTrafficManagerEndpoint](Get-AzureRmTrafficManagerEndpoint.md)
-{{Fill in the Synopsis}}
+Gets an endpoint for an Azure Traffic Manager profile.
 
 ### [Get-AzureRmTrafficManagerProfile](Get-AzureRmTrafficManagerProfile.md)
 Gets an Azure Traffic Manager profile.
 
 ### [New-AzureRmTrafficManagerEndpoint](New-AzureRmTrafficManagerEndpoint.md)
-{{Fill in the Synopsis}}
+Creates an endpoint in an Azure Traffic Manager profile.
 
 ### [New-AzureRmTrafficManagerProfile](New-AzureRmTrafficManagerProfile.md)
 Creates an Azure Traffic Manager profile.
 
 ### [Remove-AzureRmTrafficManagerEndpoint](Remove-AzureRmTrafficManagerEndpoint.md)
-{{Fill in the Synopsis}}
+Removes an endpoint from Azure Traffic Manager.
 
 ### [Remove-AzureRmTrafficManagerEndpointConfig](Remove-AzureRmTrafficManagerEndpointConfig.md)
 Removes an endpoint from an Azure Traffic Manager profile.
@@ -48,8 +48,7 @@ Removes an endpoint from an Azure Traffic Manager profile.
 Deletes an Azure Traffic Manager profile.
 
 ### [Set-AzureRmTrafficManagerEndpoint](Set-AzureRmTrafficManagerEndpoint.md)
-{{Fill in the Synopsis}}
+Updates an endpoint in Azure Traffic Manager.
 
 ### [Set-AzureRmTrafficManagerProfile](Set-AzureRmTrafficManagerProfile.md)
 Updates an Azure Traffic Manager profile.
-

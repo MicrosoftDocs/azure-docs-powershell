@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-AzureRmWebAppSSLBinding
 
 ## SYNOPSIS
-Creates a secure socket layer (SSL) certificate binding for a web app
+Creates a secure socket layer (SSL) certificate binding for a web app.
 
 ## SYNTAX
 
