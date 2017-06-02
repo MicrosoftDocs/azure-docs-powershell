@@ -46,7 +46,7 @@ PS C:\> $Policy = Get-AzureRmPolicyDefinition -Name "VirtualMachinePolicy"
 PS C:\> New-AzureRmPolicyAssignment -Name "VirtualMachinePolicyAssignment" -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId
 ```
 
-The first command gets a resource group named ResourceGroup11 by using the [Get-AzureRmResourceGroup](,/Get-AzureRmResourceGroup.md) cmdlet.
+The first command gets a resource group named ResourceGroup11 by using the [Get-AzureRmResourceGroup](./Get-AzureRmResourceGroup.md) cmdlet.
 The command stores that object in the $ResourceGroup variable.
 
 The second command gets the policy definition named VirtualMachinePolicy by using the [Get-AzureRmPolicyDefinition](./Get-AzureRmRoleDefinition.md) cmdlet.
