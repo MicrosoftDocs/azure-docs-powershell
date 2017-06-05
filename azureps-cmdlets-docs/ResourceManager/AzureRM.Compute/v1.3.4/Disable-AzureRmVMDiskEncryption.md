@@ -8,7 +8,7 @@ schema: 2.0.0
 # Disable-AzureRmVMDiskEncryption
 
 ## SYNOPSIS
-Disables encryption on an IaaS virtual machine.
+Disables encryption on an IaaS Windows virtual machine.
 
 ## SYNTAX
 
@@ -20,11 +20,10 @@ Disable-AzureRmVMDiskEncryption [-ResourceGroupName] <String> [-VMName] <String>
 ```
 
 ## DESCRIPTION
-The **Disable-AzureRmVMDiskEncryption** cmdlet disables encryption on an infrastructure as a service (IaaS) virtual machine.
-This cmdlet is only supported on Windows virtual machines and not Linux virtual machines.
-This cmdlet installs an extension on the virtual machine to disable encryption.
-If the *Name* parameter is not specified, an extension with the default name "AzureDiskEncryption for Windows VMs" is created.
-Caution: This cmdlet reboots the virtual machine.
+The **Disable-AzureRmVMDiskEncryption** cmdlet disables encryption on an infrastructure as a service (IaaS) Windows virtual machine.
+This cmdlet is only supported for Windows virtual machines.  Running this cmdlet against a Linux virtual machine with an encrypted OS drive will not succeed and will render the Linux virtual machine inaccessible. 
+
+This cmdlet installs an extension on the virtual machine to disable encryption.  If the *Name* parameter is not specified, the default extension will be used.  *Caution: This cmdlet reboots the virtual machine.*
 
 ## EXAMPLES
 
