@@ -30,10 +30,10 @@ The **Get-AzureRmWebAppPublishingProfile** cmdlet gets the publishing profile of
 
 ### Example 1: Get the publishing profile in "Ftp" format
 ```
-Get-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Format "Ftp" -OutputFile "C:\Users\contoso\outputfile"
+PS C:\> Get-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Format "Ftp" -OutputFile "C:\Users\contoso\outputfile"
 ```
 
-This example gets the publishing profile in "Ftp" format for a web app named "ContosoWebApp" in the "Default-Web-WestUS" resource group.
+This command gets the publishing profile in "Ftp" format for a web app named "ContosoWebApp" in the "Default-Web-WestUS" resource group.
 The profile is stored in "C:\Users\contoso\outputfile".
 
 ## PARAMETERS

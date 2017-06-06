@@ -26,25 +26,25 @@ Disable-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEnd
 ## DESCRIPTION
 The **Disable-AzureRmTrafficManagerEndpoint** cmdlet disables an endpoint in an Azure Traffic Manager profile.
 
-You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the **TrafficManagerEndpoint** parameter.
-Alternatively, you can specify the endpoint by using the **Name** and **Type** parameters together with the **ProfileName** and **ResourceGroupName** parameters.
+You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the *TrafficManagerEndpoint* parameter.
+Alternatively, you can specify the endpoint by using the *Name* and *Type* parameters together with the *ProfileName* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
 ### Example 1: Disable an endpoint by name
 ```
-Disable-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type ExternalEndpoints
+PS C:\> Disable-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type ExternalEndpoints
 ```
 
-This example disables the external endpoint named "contoso" in the profile named "ContosoProfile" in resource group "ResourceGroup11".
+This command disables the external endpoint named "contoso" in the profile named "ContosoProfile" in resource group "ResourceGroup11".
 The command prompts you for confirmation.
 
 ### Example 2: Disable an endpoint by using the pipeline
 ```
-Get-AzureRmTrafficManagerEndpoint -Name "contoso" -Type ExternalEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Disable-AzureRmTrafficManagerEndpoint -Force
+PS C:\> Get-AzureRmTrafficManagerEndpoint -Name "contoso" -Type ExternalEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Disable-AzureRmTrafficManagerEndpoint -Force
 ```
 
-This example gets the specified endpoint and then passes that endpoint to the **Disable-AzureRmTrafficManagerEndpoint** cmdlet by using the pipeline operator.
+This command gets the specified endpoint and then passes that endpoint to the **Disable-AzureRmTrafficManagerEndpoint** cmdlet by using the pipeline operator.
 
 ## PARAMETERS
 

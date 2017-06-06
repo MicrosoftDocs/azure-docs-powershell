@@ -29,10 +29,10 @@ The **Get-AzureRmWebAppBackupConfiguration** cmdlet gets the current backup conf
 
 ### Example 1: Get the current backup configuration for a web app in the specified resource group
 ```
-Get-AzureRmWebAppBackupConfiguration -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard"
+PS C:\> Get-AzureRmWebAppBackupConfiguration -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard"
 ```
 
-This example gets the backup configuration for the web app named "WebAppStandard" that belongs to the "Default-Web-WestUS" resource group.
+This command gets the backup configuration for the web app named "WebAppStandard" that belongs to the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
@@ -111,6 +111,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmWebAppBackup](./New-AzureRmWebAppBackup.md)
-
 [Edit-AzureRmWebAppBackupConfiguration](./Edit-AzureRmWebAppBackupConfiguration.md)
+
+[New-AzureRmWebAppBackup](./New-AzureRmWebAppBackup.md)

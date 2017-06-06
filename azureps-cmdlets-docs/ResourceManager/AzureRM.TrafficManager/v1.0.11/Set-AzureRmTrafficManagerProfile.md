@@ -22,16 +22,14 @@ The **Set-AzureRmTrafficManagerProfile** cmdlet updates an Azure Traffic Manager
 
 ### Example 1: Update the status of a profile
 ```
-$TrafficManagerProfile = Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
-$TrafficManagerProfile.ProfileStatus = Disabled
-Set-AzureRmTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
+PS C:\> $MyTrafficManagerProfile = Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> $MyTrafficManagerProfile.ProfileStatus = Disabled
+PS C:\> Set-AzureRmTrafficManagerProfile -TrafficManagerProfile $MyTrafficManagerProfile
 ```
 
-This example updates the status of a profile named "ContosoProfile" in the resource group named "ResourceGroup11".
-
-The **Get-AzureRmTrafficManagerProfile** cmdlet gets the profile named "ContosoProfile", which is stored locally in the $TrafficManagerProfile variable.
+The **Get-AzureRmTrafficManagerProfile** cmdlet gets the profile named "ContosoProfile" and the returned object is stored locally in the *$MyTrafficManagerProfile* variable.
 The status of the profile is changed in the local profile object.
-The updated object is passed in the **TrafficManagerProfile** parameter of the **Set-AzureRmTrafficManagerProfile** cmdlet to update the profile in Traffic Manager to match the local profile object.
+The updated object is passed in the *TrafficManagerProfile* parameter of the **Set-AzureRmTrafficManagerProfile** cmdlet to update the profile in Traffic Manager to match the local profile object.
 
 ## PARAMETERS
 

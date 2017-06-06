@@ -29,10 +29,10 @@ If the web app is already in a stopped state, use the **Start-AzureRMWebApp** cm
 
 ### Example 1: Restart a web app
 ```
-Restart-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
+PS C:\> Restart-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
-This example stops the web app named "ContosoSite" that belongs to the resource group named "Default-Web-WestUS" and then restarts it.
+This command stops the web app named "ContosoSite" that belongs to the resource group named "Default-Web-WestUS" and then restarts it.
 
 ## PARAMETERS
 

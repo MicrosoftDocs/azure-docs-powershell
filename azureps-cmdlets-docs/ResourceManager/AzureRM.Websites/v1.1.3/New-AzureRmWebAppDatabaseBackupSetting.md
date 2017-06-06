@@ -23,10 +23,10 @@ The **New-AzureRmWebAppDatabaseBackupSetting** cmdlet creates a new database bac
 
 ### Example 1: Create a backup setting for the specified web app
 ```
-New-AzureRmWebAppDatabaseBackupSetting -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -ConnectionString "MyConnectionString" -DatabaseType "SqlAzure"
+PS C:\> New-AzureRmWebAppDatabaseBackupSetting -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -ConnectionString "MyConnectionString" -DatabaseType "SqlAzure"
 ```
 
-This example creates a database backup setting (connection string) of type SqlAzure for the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
+This command creates a database backup setting (connection string) of type SqlAzure for the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
@@ -100,3 +100,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzureRmWebAppBackup](./Get-AzureRmWebAppBackup.md)
+
+[New-AzureRmWebAppBackup](./New-AzureRmWebAppBackup.md)

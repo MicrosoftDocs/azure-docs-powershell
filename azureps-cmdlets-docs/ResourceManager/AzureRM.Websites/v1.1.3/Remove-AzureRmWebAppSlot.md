@@ -29,10 +29,10 @@ The **Remove-AzureRmWebAppSlot** cmdlet removes a slot for a web app that was bu
 
 ### Example 1: Remove a web app slot
 ```
-Remove-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite" -Slot "Slot001"
+PS C:\> Remove-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite" -Slot "Slot001"
 ```
 
-This example removes the slot named "Slot001" associated with the web app "ContosoSite" that is in the "Default-Web-WestUS" resource group.
+This command removes the slot named "Slot001" associated with the web app "ContosoSite" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
@@ -152,6 +152,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
 [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
 
 [New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
@@ -163,5 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
 
 [Stop-AzureRMWebAppSlot](./Stop-AzureRMWebAppSlot.md)
-
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)

@@ -25,23 +25,23 @@ Enable-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndp
 ## DESCRIPTION
 The **Enable-AzureRmTrafficManagerEndpoint** cmdlet enables an endpoint in an Azure Traffic Manager profile.
 
-You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the **TrafficManagerEndpoint** parameter.
-Alternatively, you can specify the endpoint by using the **Name** and **Type** parameters together with the **ProfileName** and **ResourceGroupName** parameters.
+You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the *TrafficManagerEndpoint* parameter.
+Alternatively, you can specify the endpoint by using the *Name* and *Type* parameters together with the *ProfileName* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
 ### Example 1: Enable an endpoint from a profile
 ```
-Enable-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type ExternalEndpoints
+PS C:\> Enable-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type ExternalEndpoints
 ```
 
-This example enables the external endpoint named "contoso" in the profile named "ContosoProfile" in resource group "ResourceGroup11".
+This command enables the external endpoint named "contoso" in the profile named "ContosoProfile" in resource group "ResourceGroup11".
 
 ### Example 2: Enable an endpoint by using the pipeline
 ```
-Get-AzureRmTrafficManagerEndpoint -Name "contoso" -Type ExternalEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Enable-AzureRmTrafficManagerEndpoint
+PS C:\> Get-AzureRmTrafficManagerEndpoint -Name "contoso" -Type ExternalEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Enable-AzureRmTrafficManagerEndpoint
 ```
-This example gets the specified endpoint and then passes that endpoint to the **Enable-AzureRmTrafficManagerEndpoint** cmdlet by using the pipeline operator.
+This command gets the specified endpoint and then passes that endpoint to the **Enable-AzureRmTrafficManagerEndpoint** cmdlet by using the pipeline operator.
 
 ## PARAMETERS
 

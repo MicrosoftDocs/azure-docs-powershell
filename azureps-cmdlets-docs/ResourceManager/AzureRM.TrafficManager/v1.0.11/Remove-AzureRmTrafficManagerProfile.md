@@ -33,17 +33,17 @@ You can delete a profile object from Traffic Manager by using the pipeline or as
 
 ### Example 1: Delete a profile specified by name
 ```
-Remove-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> Remove-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-This example deletes the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
+This command deletes the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
 ### Example 2: Delete a profile by using the pipeline
 ```
-Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Remove-AzureRmTrafficManagerProfile
+PS C:\> Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Remove-AzureRmTrafficManagerProfile
 ```
 
-This example gets the profile named "ContosoProfile" in the resource group named "ResourceGroup11" and then passes that profile to the **Remove-AzureRmTrafficManagerProfile** cmdlet by using the pipeline operator.
+This command gets the profile named "ContosoProfile" in the resource group named "ResourceGroup11" and then passes that profile to the **Remove-AzureRmTrafficManagerProfile** cmdlet by using the pipeline operator.
 
 ## PARAMETERS
 

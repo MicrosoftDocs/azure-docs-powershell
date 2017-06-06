@@ -29,10 +29,10 @@ The **Reset-AzureRmWebAppSlotPublishingProfile** cmdlet resets the publishing pr
 
 ### Example 1: Reset the publishing profile for a slot
 ```
-Reset-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "slot001"
+PS C:\> Reset-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "slot001"
 ```
 
-This example resets the publishing profile for the slot named "slot001" that is associated with the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
+This command resets the publishing profile for the slot named "slot001" that is associated with the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
@@ -107,8 +107,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebAppPublishingProfile](./Get-AzureRmWebAppPublishingProfile.md)
+
 [Get-AzureRmWebAppSlot](./Get-AzureRmWebAppSlot.md)
 
 [Get-AzureRmWebAppSlotPublishingProfile](./GGet-AzureRmWebAppSlotPublishingProfile.md)
-
-[Get-AzureRmWebAppPublishingProfile](./Get-AzureRmWebAppPublishingProfile.md)

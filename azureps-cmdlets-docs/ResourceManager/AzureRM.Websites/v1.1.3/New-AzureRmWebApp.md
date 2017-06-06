@@ -28,17 +28,17 @@ New-AzureRmWebApp [-ResourceGroupName] <String> [-Name] <String> [-Location] <St
 ```
 
 ## DESCRIPTION
-The **New-AzureRmWebApp** creates a web app that is built using the Web Apps feature of the Azure App Service.
+The **New-AzureRmWebApp** cmdlet creates a web app that is built using the Web Apps feature of the Azure App Service.
 The web app is created in the specified resource group and is assigned to the specified App Service plan and data center.
 
 ## EXAMPLES
 
 ### Example 1: Create a web app in the specified resource group
 ```
-New-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "MyFirstSite" -Location "West US" -AppServicePlan "MyAppServicePlan"
+PS C:\> New-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "MyFirstSite" -Location "West US" -AppServicePlan "MyAppServicePlan"
 ```
 
-This example creates a web app named "MyFirstSite" in the "Default-Web-WestUS" resource group and assigns the web app to the App Service plan named "MyAppServicePlan".
+This command creates a web app named "MyFirstSite" in the "Default-Web-WestUS" resource group and assigns the web app to the App Service plan named "MyAppServicePlan".
 
 ## PARAMETERS
 

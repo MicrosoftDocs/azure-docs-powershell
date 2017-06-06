@@ -57,19 +57,19 @@ If you upload a new certificate, keep in mind the following requirements for an 
 
 ### Example 1: Bind a certificate to a web app
 ```
-New-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" -Name "www.contoso.com" -CertificatePassword "p@ssw0rd"
+PS C:\> New-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" -Name "www.contoso.com" -CertificatePassword "p@ssw0rd"
 ```
 
-This example binds an existing Azure certificate with the thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" to the web app named "ContosoWebApp".
+This command binds an existing Azure certificate with the thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" to the web app named "ContosoWebApp".
 
 ### Example 2: Upload a certificate and bind it to a Web App
 ```
-New-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" -Name "www.contoso.com" -CertificatePassword "p@ssw0rd" -CertificateFilePath "C:\Certificates\ContosoWebSite.pfx"
+PS C:\> New-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" -Name "www.contoso.com" -CertificatePassword "p@ssw0rd" -CertificateFilePath "C:\Certificates\ContosoWebSite.pfx"
 ```
 
-This example also binds an existing Azure certificate with the thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" to the web app named "ContosoWebApp".
+This command also binds an existing Azure certificate with the thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" to the web app named "ContosoWebApp".
 However, in this case, the certificate has not yet been uploaded to Azure.
-The local copy of the certificate, specified by the **CertificateFilePath** parameter, will be uploaded to Azure and then the new SSL bindings will be created.
+The local copy of the certificate, specified by the *CertificateFilePath* parameter, will be uploaded to Azure and then the new SSL bindings will be created.
 
 ## PARAMETERS
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 Specifies the name of the resource group to which the certificate is assigned.
-You cannot use the **ResourceGroupName** parameter and the **WebApp** parameter in the same command.
+You cannot use the *ResourceGroupName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
 Type: String
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ### -WebAppName
 Specifies the name of the web app for which this cmdlet creates an SSL binding.
-You cannot use the **WebAppName** parameter and the **WebApp** parameter in the same command.
+You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
 Type: String
@@ -225,10 +225,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmWebAppSSLBinding](./Get-AzureRmWebAppSSLBinding.md)
-
-[Remove-AzureRmWebAppSSLBinding](./Remove-AzureRmWebAppSSLBinding.md)
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
 
 [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
 
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+[Get-AzureRmWebAppSSLBinding](./Get-AzureRmWebAppSSLBinding.md)
+
+[Remove-AzureRmWebAppSSLBinding](./Remove-AzureRmWebAppSSLBinding.md)

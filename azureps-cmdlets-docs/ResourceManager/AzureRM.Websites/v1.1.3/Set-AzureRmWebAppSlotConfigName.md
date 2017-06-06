@@ -32,10 +32,10 @@ The configuration settings include application settings and connection strings.
 
 ### Example 1: Remove all application settings and connection strings from the slot settings
 ```
-Set-AzureRmWebAppSlotConfigName -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -RemoveAllAppSettingNames -RemoveAllConnectionStringNames
+PS C:\> Set-AzureRmWebAppSlotConfigName -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -RemoveAllAppSettingNames -RemoveAllConnectionStringNames
 ```
 
-This example removes all application settings and connection strings for the slot associated with the web app named "ContosoWebApp".
+This command removes all application settings and connection strings for the slot associated with the web app named "ContosoWebApp".
 
 ## PARAMETERS
 
@@ -155,6 +155,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
-
 [Get-AzureRmWebAppSlotConfigName](./Get-AzureRmWebAppSlotConfigName.md)
+
+[New-AzureRmWebAppSlot](./New-AzureRmWebAppSlot.md)

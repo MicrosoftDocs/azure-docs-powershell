@@ -28,10 +28,10 @@ The **Stop-AzureRmWebAppSlot** cmdlet stops a web app slot.
 
 ### Example 1: Stop the specified web app slot
 ```
-Stop-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001"
+PS C:\> Stop-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001"
 ```
 
-This example stops the slot named "Slot001" pertaining to the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
+This command stops the slot named "Slot001" pertaining to the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
@@ -106,16 +106,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
+[Get-AzureRmWebAppSlot](./Get-AzureRmWebAppSlot.md)
 
-[New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
+[New-AzureRmWebAppSlot](./New-AzureRmWebAppSlot.md)
 
-[Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
+[Restart-AzureRmWebAppSlot](./Restart-AzureRmWebAppSlot.md)
 
-[Restart-AzureRMWebAppSlot](./Restart-AzureRMWebAppSlot.md)
-
-[Set-AzureRMWebAppSlot](./Set-AzureRMWebAppSlot.md)
-
-[Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
-
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+[Start-AzureRmWebAppSlot](./Start-AzureRmWebAppSlot.md)

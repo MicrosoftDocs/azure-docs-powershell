@@ -24,22 +24,22 @@ Remove-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndp
 ```
 
 ## DESCRIPTION
-The **Remove-AzureRmTrafficManagerEndpoint** removes an endpoint from Azure Traffic Manager.
+The **Remove-AzureRmTrafficManagerEndpoint** cmdlet removes an endpoint from Azure Traffic Manager.
 
 This cmdlet commits each change to the Traffic Manager service.
 To remove multiple endpoints from a local Traffic Manager profile object and commit changes in a single operation, use the **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet.
 
-You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the **TrafficManagerEndpoint** parameter.
-Alternatively, you can specify the endpoint by using the **Name** and **Type** parameters together with the **ProfileName** and **ResourceGroupName** parameters.
+You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the *TrafficManagerEndpoint* parameter.
+Alternatively, you can specify the endpoint by using the *Name* and *Type* parameters together with the *ProfileName* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
 ### Example 1: Remove an Azure endpoint from a profile
 ```
-Remove-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type AzureEndpoints
+PS C:\> Remove-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type AzureEndpoints
 ```
 
-This example removes the Azure endpoint named "contoso" from the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
+This command removes the Azure endpoint named "contoso" from the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
 ## PARAMETERS
 

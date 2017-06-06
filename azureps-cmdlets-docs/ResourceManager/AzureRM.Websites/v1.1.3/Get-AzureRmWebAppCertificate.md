@@ -23,10 +23,10 @@ If you know the certificate thumbprint, you can also use this cmdlet to get info
 
 ### Example 1: Get a specific web app certificate
 ```
-Get-AzureRmWebAppCertificate -ResourceGroupName "Contoso" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3"
+PS C:\> Get-AzureRmWebAppCertificate -ResourceGroupName "Contoso" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3"
 ```
 
-This example gets the certificate with the thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" associated with the "Contoso" resource group.
+This command gets the certificate with the thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3" associated with the "Contoso" resource group.
 
 ## PARAMETERS
 

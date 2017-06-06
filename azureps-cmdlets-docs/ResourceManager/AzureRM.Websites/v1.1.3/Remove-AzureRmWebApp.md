@@ -30,10 +30,10 @@ The cmdlet removes all slots and metrics by default.
 
 ### Example 1: Remove a web app that is in the specified resource group
 ```
-Remove-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
+PS C:\> Remove-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
-This example removes the web app named "ContosoSite" in the "Default-Web-WestUS" resource group.
+This command removes the web app named "ContosoSite" in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 

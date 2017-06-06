@@ -32,10 +32,10 @@ The **New-AzureRmAppServicePlan** cmdlet creates an Azure App Service plan in th
 
 ### Example 1: Create an App Service plan
 ```
-PS C:\>New-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "MyServicePlan" -Location "West US" -Tier "Basic" -NumberofWorkers 2 -WorkerSize "Small"
+PS C:\> New-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "MyServicePlan" -Location "West US" -Tier "Basic" -NumberofWorkers 2 -WorkerSize "Small"
 ```
 
-This example creates an App Service plan named "MyServicePlan" in the geographical location "West US" with a basic tier.
+This command creates an App Service plan named "MyServicePlan" in the geographical location "West US" with a basic tier.
 
 ## PARAMETERS
 

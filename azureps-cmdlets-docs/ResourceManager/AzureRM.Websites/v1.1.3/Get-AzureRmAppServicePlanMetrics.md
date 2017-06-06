@@ -30,10 +30,10 @@ The **Get-AzureRmAppServicePlanMetrics** cmdlet gets the metrics for an Azure Ap
 
 ### Example 1: Get the CPU percentage metric for an App Service plan
 ```
-Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["CPU Percentage"]
+PS C:\> Get-AzureRmAppServicePlanMetrics -ResourceGroupName "Default-Web-WestUS" -Name "ContosoAppServPlan" -StartTime 2016-11-30T22:00:00Z -EndTime 2016-11-30T22:30:00Z -Granularity PT1M -Metrics ["CPU Percentage"]
 ```
 
-This example gets the CPU percentage per minute (PT1M - poll time 1 minute) between the times 2016-11-30T22:00:00Z and 2016-11-30T22:30:00Z.
+This command gets the CPU percentage per minute (PT1M - poll time 1 minute) between the times 2016-11-30T22:00:00Z and 2016-11-30T22:30:00Z.
 
 ## PARAMETERS
 
@@ -172,10 +172,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
+
 [New-AzureRmAppServicePlan](./New-AzureRmAppServicePlan.md)
 
 [Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
 
 [Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)
-
-[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)

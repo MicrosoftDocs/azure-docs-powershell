@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyInterval
-Specifies the interval between backups. For example, for weekly backup, the value of this parameter must be 7 and the value of the **FrequencyUnit** parameter must be "Day".
+Specifies the interval between backups. For example, for weekly backup, the value of this parameter must be 7 and the value of the *FrequencyUnit* parameter must be "Day".
 
 ```yaml
 Type: Int32
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyUnit
-Specifies the unit of time in which the interval between backups is measured. For example, for weekly backup, the value of this parameter must be "Day" and the value of the **FrequencyInterval** parameter must be 7.
+Specifies the unit of time in which the interval between backups is measured. For example, for weekly backup, the value of this parameter must be "Day" and the value of the *FrequencyInterval* parameter must be 7.
 
 ```yaml
 Type: String

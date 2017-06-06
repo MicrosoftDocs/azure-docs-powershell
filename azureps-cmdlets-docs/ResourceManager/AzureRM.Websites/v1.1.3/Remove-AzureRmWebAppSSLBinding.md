@@ -32,28 +32,27 @@ An SSL binding associates a web app with a certificate.
 
 ### Example 1: Remove an SSL binding for a web app and remove the certificate
 ```
-Remove-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com"
+PS C:\> Remove-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com"
 ```
 
-This example removes the SSL binding for the web app named "ContosoWebApp".
-Because the **DeleteCertificate** parameter is not included, the certificate is deleted if it no longer has any SSL bindings.
+This command removes the SSL binding for the web app named "ContosoWebApp".
+Because the *DeleteCertificate* parameter is not included, the certificate is deleted if it no longer has any SSL bindings.
 
 ### Example 2: Remove an SSL binding without removing the certificate
 ```
-Remove-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com" -DeleteCertificate $False
+PS C:\> Remove-AzureRmWebAppSSLBinding -ResourceGroupName "ContosoResourceGroup" -WebAppName "ContosoWebApp" -Name "www.contoso.com" -DeleteCertificate $False
 ```
 
-This example is similar to Example 1, but the certificate is not be deleted.
+This command is similar to Example 1, but the certificate is not be deleted.
 
 ### Example 3: Use an object reference to remove an SSL binding
 ```
-$myWebApp = Get-AzureRmWebApp -Name "ContosoWebApp"
-Remove-AzureRmWebAppSSLBinding -WebApp $WebApp -Name "www.contoso.com"
+PS C:\> $MyWebApp = Get-AzureRmWebApp -Name "ContosoWebApp"
+PS C:\> Remove-AzureRmWebAppSSLBinding -WebApp $MyWebApp -Name "www.contoso.com"
 ```
 
-This example uses an object to specify the web app for which you want to remove the SSL binding.
-The **Get-AzureRmWebApp** cmdlet gets the web app named "ContosoWebApp" and stores the **WebApp** object in the **$myWebApp** variable.
-The object is passed in the **WebApp** parameter of the **Remove-AzureRmWebAppSSLBinding** cmdlet to specify the web app that will have the binding removed.
+The **Get-AzureRmWebApp** cmdlet gets the web app named "ContosoWebApp" and stores the **WebApp** object in the *$MyWebApp* variable.
+Then the object is passed in the *WebApp* parameter of the **Remove-AzureRmWebAppSSLBinding** cmdlet to specify the web app that will have the binding removed.
 
 ## PARAMETERS
 
@@ -105,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of the resource group to which the certificate is assigned. You cannot use the **ResourceGroupName** parameter and the **WebApp** parameter in the same command.
+Specifies the name of the resource group to which the certificate is assigned. You cannot use the *ResourceGroupName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
 Type: String
@@ -150,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebAppName
-Specifies the name of the web app for which this cmdlet removes an SSL binding. You cannot use the **WebAppName** parameter and the **WebApp** parameter in the same command.
+Specifies the name of the web app for which this cmdlet removes an SSL binding. You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
 Type: String
@@ -205,10 +204,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRmWebAppSSLBinding](./Get-AzureRmWebAppSSLBinding.md)
-
-[New-AzureRmWebAppSSLBinding](./New-AzureRmWebAppSSLBinding.md)
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
 
 [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
 
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+[Get-AzureRmWebAppSSLBinding](./Get-AzureRmWebAppSSLBinding.md)
+
+[New-AzureRmWebAppSSLBinding](./New-AzureRmWebAppSSLBinding.md)

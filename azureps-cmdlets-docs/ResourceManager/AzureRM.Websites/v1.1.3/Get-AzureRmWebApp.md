@@ -33,10 +33,10 @@ The **Get-AzureRmWebApp** cmdlet gets a web app that was built using the Web App
 
 ### Example 1: Get a web app for the specified slot in the specified resource group
 ```
-Get-AzureRmWebApp -Name "MyWebApp" -ResourceGroupName "Default-Web-WestUS" -SlotName "dev"
+PS C:\> Get-AzureRmWebApp -Name "MyWebApp" -ResourceGroupName "Default-Web-WestUS" -SlotName "dev"
 ```
 
-This example gets a web app named "MyWebApp" for the slot named "dev" in the resource group named "Default-Web-WestUS".
+This command gets a web app named "MyWebApp" for the slot named "dev" in the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 

@@ -28,10 +28,10 @@ The **Get-AzureRmAppServicePlan** cmdlet gets the Azure App Service plan.
 
 ### Example 1: Get the app service plan in the specified resource group
 ```
-Get-AzureRmAppServicePlan -Name "MyServicePlan" -ResourceGroupName "Default-Web-WestUS"
+PS C:\> Get-AzureRmAppServicePlan -Name "MyServicePlan" -ResourceGroupName "Default-Web-WestUS"
 ```
 
-This example gets the App Service plan named "MyServicePlan" in the resource group named "Default-Web-WestUS".
+This command gets the App Service plan named "MyServicePlan" in the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
@@ -95,10 +95,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmAppServicePlanMetrics](./Get-AzureRmAppServicePlanMetrics.md)
+
 [New-AzureRmAppServicePlan](./New-AzureRmAppServicePlan.md)
 
 [Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
 
 [Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)
-
-[Get-AzureRmAppServicePlanMetrics](./Get-AzureRmAppServicePlanMetrics.md)

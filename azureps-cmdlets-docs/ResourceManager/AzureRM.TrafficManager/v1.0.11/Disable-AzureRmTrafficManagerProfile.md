@@ -25,25 +25,25 @@ Disable-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfi
 
 ## DESCRIPTION
 The **Disable-AzureRmTrafficManagerProfile** cmdlet disables an Azure Traffic Manager profile.
-You can use the pipeline operator to pass a **TrafficManagerProfile** object to this cmdlet or you can pass a **TrafficManagerProfile** object in the **TrafficManagerProfile** parameter.
-Alternatively, you can specify the profile by using the **Name** and **ResourceGroupName** parameters.
+You can use the pipeline operator to pass a **TrafficManagerProfile** object to this cmdlet or you can pass a **TrafficManagerProfile** object in the *TrafficManagerProfile* parameter.
+Alternatively, you can specify the profile by using the *Name* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
 ### Example 1: Disable a profile specified by name
 ```
-Disable-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> Disable-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-This example disables the profile named "ContosoProfile" in the "ResourceGroup11" resource group.
+This command disables the profile named "ContosoProfile" in the "ResourceGroup11" resource group.
 The command prompts you for confirmation.
 
 ### Example 2: Disable a profile by using the pipeline
 ```
-Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Disable-AzureRmTrafficManagerProfile -Force
+PS C:\> Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Disable-AzureRmTrafficManagerProfile -Force
 ```
 
-This example gets the specified profile and then passes that profile to the **Disable-AzureRmTrafficManagerProfile** cmdlet by using the pipeline operator.
+This command gets the specified profile and then passes that profile to the **Disable-AzureRmTrafficManagerProfile** cmdlet by using the pipeline operator.
 
 ## PARAMETERS
 
