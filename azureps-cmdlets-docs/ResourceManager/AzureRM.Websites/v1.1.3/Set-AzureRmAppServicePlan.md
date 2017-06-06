@@ -29,10 +29,10 @@ The **Set-AzureRmAppServicePlan** cmdlet modifes an Azure App Service plan.
 
 ### Example 1: Modify the scaling of an App Service plan
 ```
-Set-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -NumberofWorkers 15
+PS C:\> Set-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -NumberofWorkers 15
 ```
 
-This example modifies the number of workers allowed for the App Service plan named "ContosoASP" that belongs to the resource group named "Default-Web-WestUS".
+This command modifies the number of workers allowed for the App Service plan named "ContosoASP" that belongs to the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 

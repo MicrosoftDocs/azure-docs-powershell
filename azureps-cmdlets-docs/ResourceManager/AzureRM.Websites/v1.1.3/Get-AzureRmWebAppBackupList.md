@@ -29,10 +29,10 @@ The **Get-AzureRmWebAppBackupList** cmdlet gets a list of the backups of a web a
 
 ### Example 1: Get a list of the backups of a web app in the specified resource group
 ```
-Get-AzureRmWebAppBackupList -ResourceGroupName "Contoso" -Name "WebAppStandard"
+PS C:\> Get-AzureRmWebAppBackupList -ResourceGroupName "Contoso" -Name "WebAppStandard"
 ```
 
-This example gets a list of the backups of a web app named "WebAppStandard" in the "Contoso" resource group.
+This command gets a list of the backups of a web app named "WebAppStandard" in the "Contoso" resource group.
 
 ## PARAMETERS
 
@@ -111,8 +111,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmWebAppBackup](./New-AzureRmWebAppBackup.md)
-
 [Get-AzureRmWebAppBackup](./Get-AzureRmWebAppBackup.md)
 
 [Get-AzureRmWebAppBackupConfiguration](./Get-AzureRmWebAppBackupConfiguration.md)
+
+[New-AzureRmWebAppBackup](./New-AzureRmWebAppBackup.md)

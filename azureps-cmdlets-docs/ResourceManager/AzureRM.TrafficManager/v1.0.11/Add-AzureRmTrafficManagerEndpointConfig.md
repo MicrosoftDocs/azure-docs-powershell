@@ -28,14 +28,12 @@ Commit your changes to the profile for Traffic Manager by using the **Set-AzureR
 
 ### Example 1: Add the specified endpoint to a profile
 ```
-$TrafficManagerProfile = Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
-Add-AzureRmTrafficManagerEndpointConfig -EndpointName "contoso" -EndpointStatus Enabled -Target "www.contoso.com" -TrafficManagerProfile $TrafficManagerProfile -Type ExternalEndpoints -EndpointLocation "North Europe" -Priority 1 -Weight 10
-Set-AzureRmTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
+PS C:\> $TrafficManagerProfile = Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> Add-AzureRmTrafficManagerEndpointConfig -EndpointName "contoso" -EndpointStatus Enabled -Target "www.contoso.com" -TrafficManagerProfile $TrafficManagerProfile -Type ExternalEndpoints -EndpointLocation "North Europe" -Priority 1 -Weight 10
+PS C:\> Set-AzureRmTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
 ```
 
-This example adds the endpoint named "contoso" to the profile named "ContosoProfile".
-The first statement gets the Azure Traffic Manager profile named "ContosoProfile" and stores the profile locally in the *$TrafficManagerProfile* variable.
-
+The first command gets the Azure Traffic Manager profile named "ContosoProfile" and stores the profile locally in the *$TrafficManagerProfile* variable.
 The **Add-AzureRmTrafficManagerEndpointConfig** command adds the endpoint to the profile stored in *$TrafficManagerProfile*.
 This command changes only the local object.
 The **Set-AzureRmTrafficManagerProfile** command updates the Traffic Manager profile named "ContosoProfile" to match the local object in *$TrafficManagerProfile*.
@@ -44,7 +42,7 @@ The **Set-AzureRmTrafficManagerProfile** command updates the Traffic Manager pro
 
 ### -EndpointLocation
 Specifies the location of the external endpoint.
-You must include this parameter for an endpoint of the type "ExternalEndpoints" in a profile that has the *Performance* load-balancing method.
+You must include this parameter for an endpoint of the type "ExternalEndpoints" in a profile that has the **Performance** load-balancing method.
 
 You can get a list of possible values for this parameter by using the **List Locations** operation.
 For information about the **List Locations** operation, see [List Locations](http://msdn.microsoft.com/library/gg441293.aspx).
@@ -239,6 +237,8 @@ Keywords: azure, azurerm, arm, resource, management, manager, traffic, trafficma
 ## RELATED LINKS
 
 [Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
+
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
 
 [New-AzureRmTrafficManagerEndpoint](./New-AzureRmTrafficManagerEndpoint.md)
 

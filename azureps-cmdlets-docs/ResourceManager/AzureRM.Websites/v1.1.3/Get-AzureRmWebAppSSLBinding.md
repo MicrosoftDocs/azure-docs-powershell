@@ -31,10 +31,10 @@ A web app can be bound to multiple certificates.
 
 ### Example 1: Get SSL bindings for a web app
 ```
-Get-AzureRmWebAppSSLBinding -ResourceGroupName "Contoso" -WebAppName "ContosoWebApp"
+PS C:\> Get-AzureRmWebAppSSLBinding -ResourceGroupName "Contoso" -WebAppName "ContosoWebApp"
 ```
 
-This example retrieves the SSL bindings for the web app named "ContosoWebApp" in the "Contoso" resource group.
+This command retrieves the SSL bindings for the web app named "ContosoWebApp" in the "Contoso" resource group.
 
 ## PARAMETERS
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 Specifies the name of the resource group to which the certificate is assigned.
-You cannot use the **ResourceGroupName** parameter and the **WebApp** parameter in the same command.
+You cannot use the *ResourceGroupName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
 Type: String
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -WebAppName
 Specifies the name of the web app for which this cmdlet gets SSL bindings.
-You cannot use the **WebAppName** parameter and the **WebApp** parameter in the same command.
+You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
 Type: String
@@ -126,8 +126,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
 [New-AzureRmWebAppSSLBinding](./New-AzureRmWebAppSSLBinding.md)
 
 [Remove-AzureRmWebAppSSLBinding](./Remove-AzureRmWebAppSSLBinding.md)
-
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)

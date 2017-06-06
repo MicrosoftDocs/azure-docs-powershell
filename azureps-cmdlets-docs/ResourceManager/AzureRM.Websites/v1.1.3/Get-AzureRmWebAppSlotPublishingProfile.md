@@ -30,10 +30,10 @@ The **Get-AzureRmWebAppSlotPublishingProfile** cmdlet gets the publishing profil
 
 ### Example 1: Get the publishing profile in "Ftp" format for the specified slot
 ```
-Get-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "slot001" -Format "Ftp" -OutputFile "C:\Users\contoso\outputfile"
+PS C:\> Get-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "slot001" -Format "Ftp" -OutputFile "C:\Users\contoso\outputfile"
 ```
 
-This example gets the publishing profile in "Ftp" format for slot named "slot001" pertaining to the web app named "ContosoWebApp" in the "Default-Web-WestUS" resource group.
+This command gets the publishing profile in "Ftp" format for slot named "slot001" pertaining to the web app named "ContosoWebApp" in the "Default-Web-WestUS" resource group.
 The profile is stored in "C:\Users\contoso\outputfile".
 
 ## PARAMETERS
@@ -140,8 +140,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Reset-AzureRMWebAppSlotPublishingProfile](./Reset-AzureRmWebAppSlotPublishingProfile.md)
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
 
 [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
 
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+[Reset-AzureRMWebAppSlotPublishingProfile](./Reset-AzureRmWebAppSlotPublishingProfile.md)

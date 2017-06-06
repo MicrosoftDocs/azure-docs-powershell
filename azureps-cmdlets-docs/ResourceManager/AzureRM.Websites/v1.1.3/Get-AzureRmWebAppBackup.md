@@ -29,10 +29,10 @@ The **Get-AzureRmWebAppBackup** cmdlet gets the specified backup of a web app th
 
 ### Example 1: Get a backup of a web app that belongs to the specified resource group
 ```
-Get-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -BackupId "12345"
+PS C:\> Get-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -BackupId "12345"
 ```
 
-This example gets the backup with ID "12345" of the web app named "WebAppStandard" that belongs to the "Default-Web-WestUS" resource group.
+This command gets the backup with ID "12345" of the web app named "WebAppStandard" that belongs to the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
@@ -126,6 +126,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzureRmWebAppBackup](./New-AzureRmWebAppBackup.md)
-
 [Get-AzureRmWebAppBackupConfiguration](./Get-AzureRmWebAppBackupConfiguration.md)
+
+[New-AzureRmWebAppBackup](./New-AzureRmWebAppBackup.md)

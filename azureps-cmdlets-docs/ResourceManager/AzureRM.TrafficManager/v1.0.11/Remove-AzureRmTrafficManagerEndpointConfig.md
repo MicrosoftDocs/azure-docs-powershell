@@ -21,32 +21,28 @@ The **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet removes an endpoint fr
 
 This cmdlet operates on the local profile object.
 Commit your changes to the profile for Traffic Manager by using the **Set-AzureRmTrafficManagerProfile** cmdlet.
-You can get a profile object by using the **New-AzureRmTrafficManagerProfile** or **Get-AzureRmTrafficManagerProfile** cmdlets.
+You can get a profile object by using the **New-AzureRmTrafficManagerProfile** cmdlet or the **Get-AzureRmTrafficManagerProfile** cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Remove an endpoint from a profile
+### Example 1: Remove an endpoint from the specified profile
 ```
-$TrafficManagerProfile = Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
-Remove-AzureRmTrafficManagerEndpointConfig -EndpointName "contoso" -TrafficManagerProfile $TrafficManagerProfile
-Set-AzureRmTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
-```
-
-This example removes the endpoint named "ContosoProfile" in the resource group named "ResourceGroup11".
-
-The first statement gets an Azure Traffic Manager profile by using the Get-AzureRmTrafficManagerProfile cmdlet.
-The cmdlet returns a profile object that is stored in the $TrafficManagerProfile variable.
-The profile object is then passed in the **TrafficManagerProfile** parameter of the **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet, which changes only this local profile object.
-
-The **Set-AzureRmTrafficManagerProfile** cmdlet updates the Traffic Manager profile named "ContosoProfile" to match the local value in $TrafficManagerProfile.
-
-### Example 2: Remove a endpoint by using the pipeline
-```
-Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Remove-AzureRmTrafficManagerEndpointConfig -EndpointName "contoso" | Set-AzureRmTrafficManagerProfile
+PS C:\> $TrafficManagerProfile = Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> Remove-AzureRmTrafficManagerEndpointConfig -EndpointName "contoso" -TrafficManagerProfile $TrafficManagerProfile
+PS C:\> Set-AzureRmTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
 ```
 
-This example gets the specified profile and then passes the profile to the **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet by using the pipeline operator.
-The updated local profile, which is output by the **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet, is finally passed to the **Set-AzureRmTrafficManagerProfile** by using the pipeline operator..
+The first command gets the profile named "ContosoProfile" in the resource group named "ResourceGroup11" and stores the profile object in the *$TrafficManagerProfile* variable.
+The profile object is then passed in the *TrafficManagerProfile* parameter of the **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet, which changes only the local profile object.
+The **Set-AzureRmTrafficManagerProfile** cmdlet updates the Traffic Manager profile named "ContosoProfile" to match the local value in *$TrafficManagerProfile*.
+
+### Example 2: Remove an endpoint by using the pipeline
+```
+PS C:\> Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Remove-AzureRmTrafficManagerEndpointConfig -EndpointName "contoso" | Set-AzureRmTrafficManagerProfile
+```
+
+This command gets the specified profile and then passes the profile to the **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet by using the pipeline operator.
+The updated local profile, which is output by the **Remove-AzureRmTrafficManagerEndpointConfig** cmdlet, is finally passed to **Set-AzureRmTrafficManagerProfile** by using the pipeline operator.
 
 ## PARAMETERS
 
@@ -102,6 +98,8 @@ Keywords: azure, azurerm, arm, resource, management, manager, traffic, trafficma
 [Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)
 
 [Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
+
+[New-AzureRmTrafficManagerProfile](./New-AzureRmTrafficManagerProfile.md)
 
 [Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)
 

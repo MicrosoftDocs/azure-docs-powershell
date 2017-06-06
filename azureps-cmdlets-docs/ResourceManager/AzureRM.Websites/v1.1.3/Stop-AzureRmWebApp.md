@@ -28,10 +28,10 @@ The **Stop-AzureRmWebApp** cmdlet stops a web app that was built using the Web A
 
 ### Example 1: Stop the specified web app
 ```
-Stop-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
+PS C:\> Stop-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
 ```
 
-This example stops the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
+This command stops the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 

@@ -27,25 +27,25 @@ To add multiple endpoints to a local Traffic Manager profile object and commit c
 
 ### Example 1: Create an external endpoint for a profile
 ```
-New-AzureRmTrafficManagerEndpoint -EndpointStatus Enabled -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "ExternalEndpoints" -EndpointLocation "North Europe" -Priority 1 -Target "www.contoso.com" -Weight 10
+PS C:\> New-AzureRmTrafficManagerEndpoint -EndpointStatus Enabled -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "ExternalEndpoints" -EndpointLocation "North Europe" -Priority 1 -Target "www.contoso.com" -Weight 10
 ```
 
-This example creates an external endpoint named "contoso" in the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
+This command creates an external endpoint named "contoso" in the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
-### Example 2: Create an Azure endpoint for a profile
+### Example 2: Create an Azure endpoint for the specified profile
 ```
-New-AzureRmTrafficManagerEndpoint -EndpointStatus Enabled -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "AzureEndpoints" -Priority 1 -TargetResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Default-Web-CentralUS/providers/Microsoft.Web/sites/contoso-web-app" -Weight 10
+PS C:\> New-AzureRmTrafficManagerEndpoint -EndpointStatus Enabled -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "AzureEndpoints" -Priority 1 -TargetResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Default-Web-CentralUS/providers/Microsoft.Web/sites/contoso-web-app" -Weight 10
 ```
 
-This example creates an Azure endpoint named "contoso" in the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
-The Azure endpoint points to the web app whose Azure Resource Manager ID is given by the URI path specified in the **TargetResourceId** parameter.
-The command does not specify the **EndpointLocation** parameter because the web app resource supplies the location.
+This command creates an Azure endpoint named "contoso" in the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
+The Azure endpoint points to the web app whose Azure Resource Manager ID is given by the URI path specified in the *TargetResourceId* parameter.
+The command does not specify the *EndpointLocation* parameter because the web app resource supplies the location.
 
 ## PARAMETERS
 
 ### -EndpointLocation
 Specifies the location of the external endpoint.
-You must include this parameter for an endpoint of the type "ExternalEndpoints" in a profile that has the *Performance* load-balancing method.
+You must include this parameter for an endpoint of the type "ExternalEndpoints" in a profile that has the **Performance** load-balancing method.
 
 You can get a list of possible values for this parameter by using the **List Locations** operation.
 For information about the **List Locations** operation, see [List Locations](http://msdn.microsoft.com/library/gg441293.aspx).
@@ -249,6 +249,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)
 
 [Disable-AzureRmTrafficManagerEndpoint](./Disable-AzureRmTrafficManagerEndpoint.md)
 

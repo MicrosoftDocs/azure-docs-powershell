@@ -29,10 +29,10 @@ The configuration settings include application settings and connection strings.
 
 ### Example 1: Get configuration settings for a slot
 ```
-Get-AzureRmWebAppSlotConfigName -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
+PS C:\> Get-AzureRmWebAppSlotConfigName -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
-This example gets configuration settings for a slot pertaining to the web app named "ContosoSite" in the "Default-Web-WestUS" resource group.
+This command gets configuration settings for a slot pertaining to the web app named "ContosoSite" in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 

@@ -39,7 +39,7 @@ The **Set-AzureRmWebApp** cmdlet modifies a web app that is built using the Web 
 PS C:\> Set-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -HttpLoggingEnabled $true
 ```
 
-This example sets a property to enable HTTP logging for a web app named "ContosoWebApp" in the "Default-Web-WestUS" resource group.
+This command sets a property to enable HTTP logging for a web app named "ContosoWebApp" in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 

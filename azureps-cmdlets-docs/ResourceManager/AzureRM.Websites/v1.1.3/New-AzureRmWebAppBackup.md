@@ -30,10 +30,10 @@ The **New-AzureRmWebAppBackup** cmdlet creates a backup of a web app that was bu
 
 ### Example 1: Create a backup of the specified web app
 ```
-New-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net"
+PS C:\> New-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net"
 ```
 
-This example creates a backup of the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
+This command creates a backup of the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 

@@ -25,10 +25,10 @@ The **New-AzureRmWebAppSlot** cmdlet creates a slot for a web app that was built
 
 ### Example 1: Create a slot for the specified web app
 ```
-New-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite" -Location "West US" -AppServicePlan "ContosoServicePlan" -Slot "Slot001"
+PS C:\> New-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite" -Location "West US" -AppServicePlan "ContosoServicePlan" -Slot "Slot001"
 ```
 
-This example creates a slot named "Slot001" for a web app named "ContosoSite". The existing App Service plan named "ContosoServicePlan" is used.
+This command creates a slot named "Slot001" for a web app named "ContosoSite". The existing App Service plan named "ContosoServicePlan" is used.
 
 ## PARAMETERS
 
@@ -193,6 +193,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
+
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
 [Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
 
 [Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
@@ -204,7 +208,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
 
 [Stop-AzureRMWebAppSlot](./Stop-AzureRMWebAppSlot.md)
-
-[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
-
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)

@@ -25,17 +25,17 @@ Get-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndpoin
 ## DESCRIPTION
 The **Get-AzureRmTrafficManagerEndpoint** cmdlet gets an endpoint for an Azure Traffic Manager profile.
 
-You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the **TrafficManagerEndpoint** parameter.
-Alternatively, you can specify the endpoint by using the **Name** and **Type** parameters together with the **ProfileName** and **ResourceGroupName** parameters.
+You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet or you can pass a **TrafficManagerEndpoint** object in the *TrafficManagerEndpoint* parameter.
+Alternatively, you can specify the endpoint by using the *Name* and *Type* parameters together with the *ProfileName* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
 ### Example 1: Get an endpoint
 ```
-Get-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "AzureEndpoints"
+PS C:\> Get-AzureRmTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" -Type "AzureEndpoints"
 ```
 
-This example gets the Azure endpoint named "contoso" from the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
+This command gets the Azure endpoint named "contoso" from the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
 ## PARAMETERS
 
@@ -137,6 +137,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-AzureRmTrafficManagerEndpoint](./Disable-AzureRmTrafficManagerEndpoint.md)
 
 [Enable-AzureRmTrafficManagerEndpoint](./Enable-AzureRmTrafficManagerEndpoint.md)
+
+[Get-AzureRmTrafficManagerEndpoint](./Get-AzureRmTrafficManagerEndpoint.md)
 
 [New-AzureRmTrafficManagerEndpoint](./New-AzureRmTrafficManagerEndpoint.md)
 

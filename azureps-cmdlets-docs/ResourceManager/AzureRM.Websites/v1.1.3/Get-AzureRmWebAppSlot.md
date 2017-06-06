@@ -28,10 +28,10 @@ The **Get-AzureRmWebAppSlot** cmdlet gets information about the slot of a web ap
 
 ### Example 1: Get information about the specified slot
 ```
-Get-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -Slot "Slot001"
+PS C:\> Get-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -Slot "Slot001"
 ```
 
-This example gets the slot named "Slot001" of the web app named "WebAppStandard" that belongs to the "Default-Web-WestUS" resource group.
+This command gets the slot named "Slot001" of the web app named "WebAppStandard" that belongs to the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
@@ -106,6 +106,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
 [New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
 
 [Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
@@ -117,5 +119,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
 
 [Stop-AzureRMWebAppSlot](./Stop-AzureRMWebAppSlot.md)
-
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)

@@ -22,16 +22,16 @@ Start-AzureRmWebAppSlot [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Start-AzureRmWebAppSlot** starts a web app slot.
+The **Start-AzureRmWebAppSlot** cmdlet starts a web app slot.
 
 ## EXAMPLES
 
 ### Example 1: Start a web app slot
 ```
-Start-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001"
+PS C:\> Start-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001"
 ```
 
-This example starts the web app slot named "Slot001" pertaining to the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
+This command starts the web app slot named "Slot001" pertaining to the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
@@ -106,16 +106,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
+[Get-AzureRmWebAppSlot](./Get-AzureRmWebAppSlot.md)
 
-[New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
+[New-AzureRmWebAppSlot](./New-AzureRmWebAppSlot.md)
 
-[Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
+[Restart-AzureRmWebAppSlot](./Restart-AzureRmWebAppSlot.md)
 
-[Restart-AzureRMWebAppSlot](./Restart-AzureRMWebAppSlot.md)
-
-[Set-AzureRMWebAppSlot](./Set-AzureRMWebAppSlot.md)
-
-[Stop-AzureRMWebAppSlot](./Stop-AzureRMWebAppSlot.md)
-
-[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+[Stop-AzureRmWebAppSlot](./Stop-AzureRmWebAppSlot.md)

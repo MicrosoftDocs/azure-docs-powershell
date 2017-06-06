@@ -24,24 +24,24 @@ Enable-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfil
 ## DESCRIPTION
 The **Enable-AzureRmTrafficManagerProfile** cmdlet enables an Azure Traffic Manager profile.
 
-You can use the pipeline operator to pass a **TrafficManagerProfile** object to this cmdlet or you can pass a **TrafficManagerProfile** object in the **TrafficManagerProfile** parameter.
-Alternatively, you can specify the profile by using the **Name** and **ResourceGroupName** parameters.
+You can use the pipeline operator to pass a **TrafficManagerProfile** object to this cmdlet or you can pass a **TrafficManagerProfile** object in the *TrafficManagerProfile* parameter.
+Alternatively, you can specify the profile by using the *Name* and *ResourceGroupName* parameters.
 
 ## EXAMPLES
 
 ### Example 1: Enable a profile specified by name
 ```
-Enable-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> Enable-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-This example enables the profile named "ContosoProfile" in the "ResourceGroup11" resource group.
+This command enables the profile named "ContosoProfile" in the "ResourceGroup11" resource group.
 
 ### Example 2: Enable a profile by using the pipeline
 ```
-Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Enable-AzureRmTrafficManagerProfile
+PS C:\> Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Enable-AzureRmTrafficManagerProfile
 ```
 
-This example gets the specified profile and then passes that profile to the **Enable-AzureRmTrafficManagerProfile** cmdlet by using the pipeline operator.
+This command gets the specified profile and then passes that profile to the **Enable-AzureRmTrafficManagerProfile** cmdlet by using the pipeline operator.
 
 ## PARAMETERS
 

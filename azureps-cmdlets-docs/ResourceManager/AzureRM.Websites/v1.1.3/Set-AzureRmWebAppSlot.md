@@ -41,10 +41,10 @@ The **Set-AzureRmWebAppSlot** cmdlet modifies a slot for web app that is built u
 
 ### Example 1: Modify a slot for the specified web app
 ```
-Set-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001" -HttpLoggingEnabled $true
+PS C:\> Set-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001" -HttpLoggingEnabled $true
 ```
 
-This example sets a property to enable HTTP logging for a slot named "Slot001" pertaining to the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
+This command sets a property to enable HTTP logging for a slot named "Slot001" pertaining to the web app named "ContosoWebApp" that is in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
@@ -330,16 +330,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRMWebAppSlot](./Get-AzureRMWebAppSlot.md)
-
-[New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
-
-[Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
-
-[Restart-AzureRMWebAppSlot](./Restart-AzureRMWebAppSlot.md)
-
-[Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
-
-[Stop-AzureRMWebAppSlot](./Stop-AzureRMWebAppSlot.md)
-
 [Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
+
+[Get-AzureRmWebAppSlot](./Get-AzureRmWebAppSlot.md)
+
+[New-AzureRmWebAppSlot](./New-AzureRMWebAppSlot.md)
+
+[Remove-AzureRmWebAppSlot](./New-AzureRmWebAppSlot.md)
+
+[Restart-AzureRmWebAppSlot](./Restart-AzureRmWebAppSlot.md)
+
+[Start-AzureRmWebAppSlot](./Start-AzureRmWebAppSlot.md)
+
+[Stop-AzureRmWebAppSlot](./Stop-AzureRmWebAppSlot.md)

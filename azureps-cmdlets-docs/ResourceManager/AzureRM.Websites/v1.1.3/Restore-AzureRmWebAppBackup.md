@@ -31,10 +31,10 @@ The **Restore-AzureRmWebAppBackup** cmdlet restores a backup of a web app that w
 
 ### Example 1: Restore a backup of the specified web app
 ```
-Restore-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net" -BlobName "myBlob"
+PS C:\> Restore-AzureRmWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net" -BlobName "myBlob"
 ```
 
-Restores a backup of the web app named "ContosoWebApp" using the data from "myBlob" located in the storage account specified by the **StorageAccountUrl** parameter.
+This command restores a backup of the web app named "ContosoWebApp" using the data from "myBlob" located in the storage account specified by the *StorageAccountUrl* parameter.
 
 ## PARAMETERS
 

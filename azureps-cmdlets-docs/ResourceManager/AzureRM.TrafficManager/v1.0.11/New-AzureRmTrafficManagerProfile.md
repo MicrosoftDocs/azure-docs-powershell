@@ -27,10 +27,10 @@ Update the local profile object by using the **Add-AzureRmTrafficManagerEndpoint
 
 ### Example 1: Create a profile
 ```
-New-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" -ProfileStatus "Enabled" -TrafficRoutingMethod "Performance" -RelativeDnsName "contosoapp" -TTL 30 -MonitorProtocol "HTTP" -MonitorPort 80 -MonitorPath "/default.aspx"
+PS C:\> New-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" -ProfileStatus "Enabled" -TrafficRoutingMethod "Performance" -RelativeDnsName "contosoapp" -TTL 30 -MonitorProtocol "HTTP" -MonitorPort 80 -MonitorPath "/default.aspx"
 ```
 
-This example creates an Azure Traffic Manager profile named "ContosoProfile" in resource group "ResourceGroup11".
+This command creates an Azure Traffic Manager profile named "ContosoProfile" in resource group "ResourceGroup11".
 The domain name system (DNS) fully qualified domain name (FQDN) is "contosoapp.trafficmanager.net".
 
 ## PARAMETERS
@@ -220,10 +220,10 @@ Keywords: azure, azurerm, arm, resource, management, manager, traffic, trafficma
 
 ## RELATED LINKS
 
+[Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)
+
 [Get-AzureRmTrafficManagerProfile](./Get-AzureRmTrafficManagerProfile.md)
 
 [Remove-AzureRmTrafficManagerProfile](./Remove-AzureRmTrafficManagerProfile.md)
 
 [Set-AzureRmTrafficManagerProfile](./Set-AzureRmTrafficManagerProfile.md)
-
-[Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)

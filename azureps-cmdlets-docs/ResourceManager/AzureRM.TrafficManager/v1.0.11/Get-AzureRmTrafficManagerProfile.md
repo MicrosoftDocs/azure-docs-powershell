@@ -23,10 +23,10 @@ You can modify the local object and then apply changes to the profile by using t
 
 ### Example 1: Get a profile
 ```
-Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> Get-AzureRmTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 ```
 
-This example gets the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
+This command gets the profile named "ContosoProfile" in the resource group named "ResourceGroup11".
 
 ## PARAMETERS
 

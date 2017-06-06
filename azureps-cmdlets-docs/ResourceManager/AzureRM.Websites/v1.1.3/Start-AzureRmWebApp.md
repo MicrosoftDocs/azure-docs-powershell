@@ -28,10 +28,10 @@ The **Start-AzureRmWebApp** cmdlet starts a web app that was built using the Web
 
 ### Example 1: Start a web app
 ```
-Start-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
+PS C:\> Start-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp"
 ```
 
-This example starts the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
+This command starts the web app named "ContosoWebApp" that belongs to the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 

@@ -16,22 +16,20 @@ Set-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint <TrafficManagerEndpoin
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmTrafficManagerEndpoint** updates an endpoint in Azure Traffic Manager.
+The **Set-AzureRmTrafficManagerEndpoint** cmdlet updates an endpoint in Azure Traffic Manager.
 
 ## EXAMPLES
 
 ### Example 1: Update the weight of an endpoint
 ```
-$TrafficManagerEndpoint = Get-AzureRmTrafficManagerEndpoint -Name "endpoint1" -Type AzureEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11"
-$TrafficManagerEndpoint.Weight = 20
-Set-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint $TrafficManagerEndpoint
+PS C:\> $MyTrafficManagerEndpoint = Get-AzureRmTrafficManagerEndpoint -Name "endpoint1" -Type AzureEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+PS C:\> $MyTrafficManagerEndpoint.Weight = 20
+PS C:\> Set-AzureRmTrafficManagerEndpoint -TrafficManagerEndpoint $MyTrafficManagerEndpoint
 ```
 
-This example updates the weight of the endpoint named "endpoint1" in the resource group named "ResourceGroup11".
-
-The **Get-AzureRmTrafficManagerEndpoint** cmdlet gets the endpoint named "endpoint1", which is stored locally in the $TrafficManagerEndpoint variable.
+The **Get-AzureRmTrafficManagerEndpoint** cmdlet gets the endpoint named "endpoint1" and the returned object is stored locally in the *$MyTrafficManagerEndpoint* variable.
 The weight is changed in the local endpoint object.
-The updated object is passed in the **TrafficManagerEndpoint** parameter of the **Set-AzureRmTrafficManagerEndpoint** cmdlet to update the endpoint in Traffic Manager to match the local endpoint object.
+The updated object is passed in the *TrafficManagerEndpoint* parameter of the **Set-AzureRmTrafficManagerEndpoint** cmdlet to update the endpoint in Traffic Manager to match the local endpoint object.
 
 ## PARAMETERS
 
@@ -70,6 +68,6 @@ This cmdlet returns a **TrafficManagerEndpoint** object.
 
 [Add-AzureRmTrafficManagerEndpointConfig](./Add-AzureRmTrafficManagerEndpointConfig.md)
 
-[Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)
-
 [Get-AzureRmTrafficManagerEndpoint](./Get-AzureRmTrafficManagerEndpoint.md)
+
+[Remove-AzureRmTrafficManagerEndpoint](./Remove-AzureRmTrafficManagerEndpoint.md)
