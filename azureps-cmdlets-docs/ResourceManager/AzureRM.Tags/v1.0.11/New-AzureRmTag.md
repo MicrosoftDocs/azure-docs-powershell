@@ -23,14 +23,11 @@ To add a value to an existing predefined tag, specify the name of the existing t
 
 This cmdlet returns an object that represents the new or modified tag with its values and the number of resources to which it has been applied.
 
-The Azure Tags module that **New-AzureRmTag** is part of can help you manage predefined Azure tags.
-An Azure tag is a name-value pair that you can use to categorize your Azure resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
-
 You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
 If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.
 
-To apply a predefined tag to a resource or resource group, use the **Tag** parameter of the **New-AzureRMTag** cmdlet.
-To search for resource groups with a specified tag name or name and value, use the **Tag** parameter of the **Get-AzureRMResourceGroup** cmdlet.
+To apply a predefined tag to a resource or resource group, use the *Tag* parameter of the **New-AzureRMTag** cmdlet.
+To search for resource groups with a specified tag name or name and value, use the *Tag* parameter of the **Get-AzureRmResourceGroup** cmdlet.
 
 Every tag has a name.
 The values are optional.
@@ -42,7 +39,7 @@ When you apply the "Department" tag to a resource, you apply only one predefined
 
 ### Example 1: Create a predefined tag
 ```
-PS C:\>New-AzureRmTag -Name "FY2015"
+PS C:\> New-AzureRmTag -Name "FY2015"
 Name:   Department
 Count:  0
 Values:
@@ -51,14 +48,14 @@ Values:
         Finance     0
 ```
 
-This example creates a predefined tag named "FY2015".
+This command creates a predefined tag named "FY2015".
 This tag has no values.
-You can apply a tag with no values to a resource or resource group, or use **New-AzureRmTag** to add values to the tag.
+You can apply a tag with no values to a resource or resource group, or use the **New-AzureRmTag** cmdlet to add values to the tag.
 You can also specify a value when you apply the tag to the resource or resource group.
 
 ### Example 2: Create a predefined tag with a value
 ```
-PS C:\>New-AzureRmTag -Name "Department" -Value "Finance"
+PS C:\> New-AzureRmTag -Name "Department" -Value "Finance"
 Name:   Department
 Count:  0
 Values:
@@ -67,11 +64,11 @@ Values:
         Finance     0
 ```
 
-This example creates a predefined tag named "Department" with a value of "Finance".
+This command creates a predefined tag named "Department" with a value of "Finance".
 
 ### Example 3: Add a value to a predefined tag
 ```
-PS C:\>New-AzureRmTag -Name "Department" -Value "Finance"
+PS C:\> New-AzureRmTag -Name "Department" -Value "Finance"
 Name:   Department
 Count:  0
 Values:
@@ -79,7 +76,7 @@ Values:
         =========   =====
         Finance     0
 
-PS C:\>New-AzureRmTag -Name "Department" -Value "IT"
+PS C:\> New-AzureRmTag -Name "Department" -Value "IT"
 Name:   Department
 Count:  0
 Values:
@@ -89,12 +86,12 @@ Values:
         IT          0
 ```
 
-This example creates a predefined tag named "Department" with two values.
-If the tag name exists, **New-AzureRmTag** adds the value to the existing tag instead of creating a new one.
+The first command creates a predefined tag named "Department" with the value "Finance".
+The second command adds a value to the tag named "Department". Because the tag name exists, **New-AzureRmTag** adds the value "IT" to the existing tag instead of creating a new tag.
 
-### Example 4: Use a predefined tag
+### Example 4: Create a predefined tag with a value and apply it to a resource group
 ```
-PS C:\>New-AzureRmTag -Name "CostCenter" -Value "0001"
+PS C:\> New-AzureRmTag -Name "CostCenter" -Value "0001"
 Name:   CostCenter
 Count:  0
 Values:
@@ -102,7 +99,7 @@ Values:
         =========   =====
         0001        0
 
-PS C:\>Set-AzureRmResourceGroup -Name "EngineerBlog" -Tag @{Name="CostCenter";Value="0001"}
+PS C:\> Set-AzureRmResourceGroup -Name "EngineerBlog" -Tag @{Name="CostCenter";Value="0001"}
 Name:      EngineerBlog
 Location:  East US
 Resources:
@@ -116,7 +113,7 @@ Tags:
     ==========   =====
     CostCenter   0001
 
-PS C:\>Get-AzureRmTag -Name "CostCenter"
+PS C:\> Get-AzureRmTag -Name "CostCenter"
 Name:   CostCenter
 Count:  1
 Values:
@@ -124,7 +121,7 @@ Values:
         =========   =====
         0001        1
 
-PS C:\>Get-AzureRmResourceGroup -Tag @{Name="CostCenter"}
+PS C:\> Get-AzureRmResourceGroup -Tag @{Name="CostCenter"}
 Name:      EngineerBlog
 Location:  East US
 Resources:
@@ -139,7 +136,9 @@ Tags:
     CostCenter   0001
 ```
 
-This example creates a tag named "CostCenter" and then uses that tag.
+The first command creates a tag named "CostCenter".
+The **Set-AzureRmResourceGroup** cmdlet applies the tag to the resource group named "EngineerBlog".
+The subsequent commands get the updated tag and resource group information.
 
 ## PARAMETERS
 
@@ -194,6 +193,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRMTag](./Get-AzureRmTag.md)
+[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup)
 
-[Remove-AzureRMTag](./Remove-AzureRmTag.md)
+[Get-AzureRmTag](./Get-AzureRmTag.md)
+
+[Remove-AzureRmTag](./Remove-AzureRmTag.md)
+
+[Set-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/set-azurermresourcegroup)

@@ -25,24 +25,24 @@ The **New-AzureRmStorageAccount** cmdlet creates an Azure storage account.
 
 ### Example 1: Create a storage account
 ```
-New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -Name "mystorageaccount" -Location "US West" -SkuName "Standard_GRS" -Kind "Storage"
+PS C:\> New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -Name "mystorageaccount" -Location "US West" -SkuName "Standard_GRS" -Kind "Storage"
 ```
 
-This example creates a storage account named "mystorageaccount" in the "myresourcegroup" resource group.
+This command creates a storage account named "mystorageaccount" in the "myresourcegroup" resource group.
 
 ### Example 2: Create a Blob storage account with encryption enabled
 ```
-New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -Name "mycoolstorageaccount" -Location "US West" -SkuName "Standard_GRS" -EnableEncryptionService blob -Kind "BlobStorage" -AccessTier "hot"
+PS C:\> New-AzureRmStorageAccount -ResourceGroupName "myresourcegroup" -Name "mycoolstorageaccount" -Location "US West" -SkuName "Standard_GRS" -EnableEncryptionService blob -Kind "BlobStorage" -AccessTier "hot"
 ```
 
-This example creates a Blob storage account named "mycoolstorageaccount" with encryption enabled.
+This command creates a Blob storage account named "mycoolstorageaccount" with encryption enabled.
 
 ## PARAMETERS
 
 ### -AccessTier
 Specifies the access tier of the storage account that this cmdlet creates.
-If you specify a value of "BlobStorage" for the **Kind** parameter, you must specify a value for the **AccessTier** parameter.
-If you specify a value of "Storage" for the **Kind**  parameter, do not include the **AccessTier** parameter.
+If you specify a value of "BlobStorage" for the *Kind* parameter, you must specify a value for the *AccessTier* parameter.
+If you specify a value of "Storage" for the *Kind*  parameter, do not include the *AccessTier* parameter.
 
 The valid values for this parameter are:
 

@@ -8,7 +8,9 @@ Locale: en-US
 
 # AzureRM.Tags Module
 ## Description
-This module contains cmdlets that manage Azure tags in Azure Resource Manager.
+This module contains cmdlets that manage predefined Azure tags in Azure Resource Manager.
+
+An Azure tag is a name-value pair that is used to categorize your Azure resources and resource groups. For example, you can categorize by department or cost center.
 
 ## AzureRM.Tags Cmdlets
 ### [Get-AzureRmTag](Get-AzureRmTag.md)

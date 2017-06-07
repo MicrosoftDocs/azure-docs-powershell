@@ -26,24 +26,24 @@ The **Set-AzureRmStorageAccount** cmdlet updates the properties of a storage acc
 
 ### Example 1: Set the storage account type
 ```
-Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" - SkuName "Standard_RAGRS"
+PS C:\> Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" - SkuName "Standard_RAGRS"
 ```
 
-This example sets the storage account type to "Standard_RAGRS" for the storage account named "MyStorageAccount".
+This command sets the storage account type to "Standard_RAGRS" for the storage account named "MyStorageAccount".
 
 ### Example 2: Set a custom domain for a storage account
 ```
-Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" -CustomDomainName "www.contoso.com" -UseSubDomain $True
+PS C:\> Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" -CustomDomainName "www.contoso.com" -UseSubDomain $True
 ```
 
-This example sets a custom domain "www.contoso.com" for the storage account named "MyStorageAccount".
+This command sets a custom domain "www.contoso.com" for the storage account named "MyStorageAccount".
 
 ### Example 3: Enable encryption on Blob storage and File storage
 ```
-Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" -EnableEncryptionService "Blob,File"
+PS C:\> Set-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -Name "MyStorageAccount" -EnableEncryptionService "Blob,File"
 ```
 
-This example enables storage encryption on Blob storage and File storage for the storage account named "MyStorageAccount".
+This command enables storage encryption on Blob storage and File storage for the storage account named "MyStorageAccount".
 
 ## PARAMETERS
 
@@ -52,8 +52,8 @@ Specifies the access tier of the storage account.
 Changing the access tier may result in additional charges.
 For more information, see [Azure Blob Storage: Hot and cool storage tiers](http://go.microsoft.com/fwlink/?LinkId=786482).
 
-If you specified a value of "BlobStorage" for the **Kind** parameter of the **New-AzureRmStorageAccount** cmdlet when you created the storage account, you must specify a value for the **AccessTier** parameter in the **Set-AzureRmStorageAccount** cmdlet.
-If you specified a value of "Storage" for the **Kind**  parameter of the **New-AzureRmStorageAccount** cmdlet when you created the storage account, do not include the **AccessTier** parameter in the **Set-AzureRmStorageAccount** cmdlet.
+If you specified a value of "BlobStorage" for the *Kind* parameter of the **New-AzureRmStorageAccount** cmdlet when you created the storage account, you must specify a value for the *AccessTier* parameter in the **Set-AzureRmStorageAccount** cmdlet.
+If you specified a value of "Storage" for the *Kind*  parameter of the **New-AzureRmStorageAccount** cmdlet when you created the storage account, do not include the *AccessTier* parameter in the **Set-AzureRmStorageAccount** cmdlet.
 
 The valid values for this parameter are:
 

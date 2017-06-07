@@ -23,10 +23,10 @@ The **New-AzureRmStorageAccountKey** cmdlet regenerates a storage key for an Azu
 
 ### Example 1: Regenerate a storage key
 ```
-New-AzureRmStorageKey -ResourceGroupName "myresourcegroup" -Name "mystorageaccount" -keyName "key1"
+PS C:\> New-AzureRmStorageKey -ResourceGroupName "myresourcegroup" -Name "mystorageaccount" -keyName "key1"
 ```
 
-This example regenerates the "key1" storage key for the storage account named "mystorageaccount".
+This command regenerates the "key1" storage key for the storage account named "mystorageaccount".
 
 ## PARAMETERS
 

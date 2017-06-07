@@ -23,17 +23,17 @@ The **Get-AzureRmStorageAccountKey** cmdlet gets the access keys for an Azure st
 
 ### Example 1: Get all access keys for a storage account
 ```
-Get-AzureRmStorageAccountKey -ResourceGroupName "RG01" -Name "MyStorageAccount"
+PS C:\> Get-AzureRmStorageAccountKey -ResourceGroupName "RG01" -Name "MyStorageAccount"
 ```
 
-This example gets all access keys for the storage account named "MyStorageAccount" in the "RG01" resource group.
+This command gets all access keys for the storage account named "MyStorageAccount" in the "RG01" resource group.
 
 ### Example 2: Get a specific access key for a storage account
 ```
-(Get-AzureRmStorageAccountKey -ResourceGroupName "RG01" -Name "MyStorageAccount").Key1
+PS C:\> (Get-AzureRmStorageAccountKey -ResourceGroupName "RG01" -Name "MyStorageAccount").Key1
 ```
 
-This example gets a specific access key for the storage account named "MyStorageAccount" in the "RG01" resource group.
+This command gets a specific access key for the storage account named "MyStorageAccount" in the "RG01" resource group.
 
 ## PARAMETERS
 
