@@ -1,4 +1,4 @@
-#[Azure PowerShell](overview.md)
+# [Azure PowerShell](overview.md)
 ## [Install](install-azurerm-ps.md)
 ## [Get started](get-started-azureps.md)
 ## [Log in](authenticate-azureps.md)
