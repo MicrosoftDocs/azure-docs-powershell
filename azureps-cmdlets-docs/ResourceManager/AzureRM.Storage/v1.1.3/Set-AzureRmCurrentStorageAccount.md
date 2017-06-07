@@ -31,10 +31,10 @@ The current storage account is the storage account that is used by default when 
 
 ### Example 1: Set the current storage account
 ```
-Set-AzureRmCurrentStorageAccount -ResourceGroupName "RG01" -Name "MyStorageAccount"
+PS C:\> Set-AzureRmCurrentStorageAccount -ResourceGroupName "RG01" -Name "MyStorageAccount"
 ```
 
-This example sets the storage account named "MyStorageAccount" in the "RG01" resource group as the default storage account.
+This command sets the storage account named "MyStorageAccount" in the "RG01" resource group as the default storage account.
 
 ## PARAMETERS
 
@@ -138,5 +138,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-AzureStorageContext](https://docs.microsoft.com/powershell/module/azure.storage/new-azurestoragecontext)
 
 [Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)

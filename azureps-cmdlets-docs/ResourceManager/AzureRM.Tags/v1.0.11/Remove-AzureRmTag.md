@@ -18,13 +18,10 @@ Remove-AzureRmTag [-Name] <String> [[-Value] <String[]>] [-Force] [-PassThru] [-
 
 ## DESCRIPTION
 The **Remove-AzureRmTag** cmdlet deletes predefined Azure tags or values from your subscription.
-To delete particular values from a predefined tag, use the **Value** parameter.
+To delete particular values from a predefined tag, use the *Value* parameter.
 By default, **Remove-AzureRmTag** deletes the specified tag and all of its values. You cannot delete a tag or value that is currently applied to a resource or resource group.
 
-Before using **Remove-AzureRmTag**, use the **Tag** parameter of the **Set-AzureRMResourceGroup** cmdlet to delete the tag or values from the resource or resource group.
-
-The Azure Tags module that **Remove-AzureRmTag** is part of can help you manage your predefined Azure tags.
-An Azure tag is a name-value pair that you can use to categorize your Azure resources and resource groups, such as by department or cost center, or to track notes or comments about the resources and groups.
+Before using **Remove-AzureRmTag**, use the *Tag* parameter of the **Set-AzureRmResourceGroup** cmdlet to delete the tag or values from the resource or resource group.
 
 You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
 If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.
@@ -33,15 +30,15 @@ If the subscription includes any predefined tags, you cannot apply undefined tag
 
 ### Example 1: Delete a predefined tag
 ```
-PS C:\>Remove-AzureRmTag -Name "Department"
+PS C:\> Remove-AzureRmTag -Name "Department"
 ```
 
-This example deletes the predefined tag named "Department" and all of its resources.
+This command deletes the predefined tag named "Department" and all of its resources.
 If the tag has been applied to any resources or resource groups, the command fails.
 
 ### Example 2: Delete a value from a predefined tag
 ```
-PS C:\>Remove-AzureRmTag -Name "Department" -Value "HumanResources" -PassThru
+PS C:\> Remove-AzureRmTag -Name "Department" -Value "HumanResources" -PassThru
 Name:   Department
 Count:  14
 Values:
@@ -51,7 +48,7 @@ Values:
         IT            12
 ```
 
-This example deletes the "HumanResources" value from the predefined tag named "Department".
+This command deletes the "HumanResources" value from the predefined tag named "Department".
 It does not delete the tag.
 If the value has been applied to any resources or resource groups, the command fails.
 
@@ -75,7 +72,7 @@ Accept wildcard characters: False
 ### -Name
 Specifies the name of the tag to be deleted.
 By default, **Remove-AzureRmTag** removes the specified tag and all of its values.
-To delete selected values, but not delete the tag, use the **Value** parameter.
+To delete selected values, but not delete the tag, use the *Value* parameter.
 
 ```yaml
 Type: String
@@ -168,3 +165,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRMTag](./Get-AzureRmTag.md)
 
 [New-AzureRMTag](./New-AzureRmTag.md)
+
+[Set-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/set-azurermresourcegroup)

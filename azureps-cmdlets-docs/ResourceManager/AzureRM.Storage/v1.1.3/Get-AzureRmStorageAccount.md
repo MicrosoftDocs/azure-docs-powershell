@@ -30,24 +30,24 @@ The **Get-AzureRmStorageAccount** cmdlet gets a specified storage account or all
 
 ### Example 1: Get a specified storage account
 ```
-Get-AzureRmStorageAccount -ResourceGroupName "rg1" -AccountName "mystorageaccount"
+PS C:\> Get-AzureRmStorageAccount -ResourceGroupName "rg1" -AccountName "mystorageaccount"
 ```
 
-This example gets the storage account named "mystorageaccount" in the "rg1" resource group.
+This command gets the storage account named "mystorageaccount" in the "rg1" resource group.
 
 ### Example 2: Get all storage accounts in a resource group
 ```
-Get-AzureRmStorageAccount -ResourceGroupName "rg1"
+PS C:\> Get-AzureRmStorageAccount -ResourceGroupName "rg1"
 ```
 
-This example gets all storage accounts in the "rg1" resource group.
+This command gets all storage accounts in the "rg1" resource group.
 
 ### Example 3: Get all storage accounts in the subscription
 ```
-Get-AzureRmStorageAccount
+PS C:\> Get-AzureRmStorageAccount
 ```
 
-This example gets all storage accounts in the subscription.
+This command gets all storage accounts in the subscription.
 
 ## PARAMETERS
 

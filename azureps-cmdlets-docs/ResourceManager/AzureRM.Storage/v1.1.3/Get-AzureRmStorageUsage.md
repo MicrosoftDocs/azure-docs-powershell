@@ -23,10 +23,10 @@ The **Get-AzureRmStorageUsage** cmdlet gets the storage resource usage for the c
 
 ### Example 1: Get the storage resource usage
 ```
-Get-AzureRmStorageUsage
+PS C:\> Get-AzureRmStorageUsage -InformationAction Ignore
 ```
 
-This example gets the storage resource usage of the current subscription.
+This command gets the storage resource usage of the current subscription, ignoring an information event.
 
 ## PARAMETERS
 
