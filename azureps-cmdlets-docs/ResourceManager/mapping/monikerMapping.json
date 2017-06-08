@@ -1,10 +1,11 @@
 {
     "azurermps-4.0.0": {
-        "serviceMap": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-4.0.0.json",
-        "packageRoot": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager",
+        "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-4.0.0.json",
+        "packageRoot": "azureps-cmdlets-docs/ResourceManager",
         "modules": {
             "docs-conceptual": {
-                "_version": "4.0.0"
+                "_version": "4.0.0",
+                "_type": "conceptual"
             },
             "AzureRM.Backup": {
                 "_displayName": "AzureRM.Backup",
@@ -201,10 +202,11 @@
         }
     },
     "azurermps-3.8.0": {
-        "serviceMap": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-3.8.0.json",
-        "packageRoot": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager",
+        "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-3.8.0.json",
+        "packageRoot": "azureps-cmdlets-docs/ResourceManager",
         "modules": {
             "docs-conceptual": {
+                "_type": "conceptual",
                 "_version": "3.8.0"
             },
             "AzureRM.Backup": {
@@ -386,10 +388,12 @@
         }
     },
     "azurermps-3.7.0": {
-        "serviceMap": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-3.7.0.json",
-        "packageRoot": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager",
+        "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-3.7.0.json",
+        "packageRoot": "azureps-cmdlets-docs/ResourceManager",
         "modules": {
-            "docs-conceptual": {},
+            "docs-conceptual": {
+                "_type": "conceptual"
+            },
             "AzureRM.Backup": {
                 "_displayName": "AzureRM.Backup",
                 "_version": "v2.7.0"
@@ -565,10 +569,11 @@
         }
     },
     "azurermps-2.2.0": {
-        "serviceMap": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-2.2.0.json",
-        "packageRoot": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager",
+        "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-2.2.0.json",
+        "packageRoot": "azureps-cmdlets-docs/ResourceManager",
         "modules": {
             "docs-conceptual": {
+                "_type": "conceptual",
                 "_version": "2.2.0"
             },
             "AzureRM.Backup": {
@@ -726,10 +731,11 @@
         }
     },
     "azurermps-1.7.0": {
-        "serviceMap": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-1.7.0.json",
-        "packageRoot": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager",
+        "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-1.7.0.json",
+        "packageRoot": "azureps-cmdlets-docs/ResourceManager",
         "modules": {
             "docs-conceptual": {
+                "_type": "conceptual",
                 "_version": "1.7.0"
             },
             "AzureRM.Backup": {
@@ -879,10 +885,11 @@
         }
     },
     "azurermps-1.2.9": {
-        "serviceMap": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-1.2.9.json",
-        "packageRoot": "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager",
+        "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-1.2.9.json",
+        "packageRoot": "azureps-cmdlets-docs/ResourceManager",
         "modules": {
             "docs-conceptual": {
+                "_type": "conceptual",
                 "_version": "1.2.9"
             },
             "AzureRM.Automation": {

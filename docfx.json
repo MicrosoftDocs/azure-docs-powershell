@@ -81,7 +81,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "azurermps/3.7.0/docs-conceptual",
+        "src": "azurermps-3.7.0/docs-conceptual",
         "version": "azurermps-3.7.0",
         "dest": "azure"
       },
@@ -102,7 +102,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "azurermps/3.8.0/docs-conceptual",
+        "src": "azurermps-3.8.0/docs-conceptual",
         "version": "azurermps-3.8.0",
         "dest": "azure"
       },
@@ -123,7 +123,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "azurermps/4.0.0/docs-conceptual",
+        "src": "azurermps-4.0.0/docs-conceptual",
         "version": "azurermps-4.0.0",
         "dest": "azure"
       },
@@ -144,7 +144,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "azuresmps/3.7.0/docs-conceptual",
+        "src": "azuresmps-3.7.0/docs-conceptual",
         "version": "azuresmps-3.7.0",
         "dest": "azure"
       },
@@ -165,7 +165,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "azuresmps/4.0.0/docs-conceptual",
+        "src": "azuresmps-4.0.0/docs-conceptual",
         "version": "azuresmps-4.0.0",
         "dest": "azure"
       },
@@ -186,7 +186,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "azurestackps/1.2.9/docs-conceptual",
+        "src": "azurestackps-1.2.9/docs-conceptual",
         "version": "azurestackps-1.2.9",
         "dest": "azure"
       },
@@ -216,7 +216,6 @@
           "ServiceFabric/**/*.yml",
           "Storage/**/*.md",
           "Storage/**/*.yml",
-          "azureps-cmdlets-docs/**/*.md",
           "azure ad cmdlets/**/*.md",
           "module/**/*.md"
         ]
@@ -336,8 +335,9 @@
       "searchScope": [
         "Azure"
       ],
-      "breadcrumb_path": "/powershell/bread/toc.json",
+      "breadcrumb_path": "/powershell-with-plugin/bread/toc.json",
       "ms.devlang": "powershell"
-    }
+    },
+    "dest": "powershell-with-plugin"
   }
 }

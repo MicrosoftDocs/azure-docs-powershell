@@ -54,9 +54,9 @@
     }
   ],
   "monikerPath": [
-    "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager/mapping/monikerMapping.json",
-    "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement/mapping/monikerMapping.json",
-    "azure-docs-powershell/azureps-cmdlets-docs/AzureStack/mapping/monikerMapping.json"
+    "azureps-cmdlets-docs/ResourceManager/mapping/monikerMapping.json",
+    "azureps-cmdlets-docs/ServiceManagement/mapping/monikerMapping.json",
+    "azureps-cmdlets-docs/AzureStack/mapping/monikerMapping.json"
   ],
   "need_generate_pdf_url_template": false,
   "dest": "_site"
