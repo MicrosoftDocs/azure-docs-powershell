@@ -192,8 +192,7 @@
       },
       {
         "files": [
-          "*.md",
-          "*.yml",
+          "index.md",
           "AADRM/**/*.md",
           "AADRM/**/*.yml",
           "AzureInformationProtection/**/*.md",
