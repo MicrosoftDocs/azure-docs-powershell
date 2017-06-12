@@ -129,7 +129,14 @@
       },
       {
         "files": [
-          "**/*.yml",
+          "toc.yml"
+        ],
+        "src": "azuresmps-3.7.0",
+        "version": "azuresmps-3.7.0",
+        "dest": "module/servicemanagement"
+      },
+      {
+        "files": [
           "**/*.md"
         ],
         "src": "azuresmps-3.7.0",
@@ -146,11 +153,18 @@
         ],
         "src": "azuresmps-3.7.0/docs-conceptual",
         "version": "azuresmps-3.7.0",
-        "dest": "azure"
+        "dest": "azure/servicemanagement"
       },
       {
         "files": [
-          "**/*.yml",
+          "toc.yml"
+        ],
+        "src": "azuresmps-4.0.0",
+        "version": "azuresmps-4.0.0",
+        "dest": "module/servicemanagement"
+      },
+      {
+        "files": [
           "**/*.md"
         ],
         "src": "azuresmps-4.0.0",
@@ -167,11 +181,18 @@
         ],
         "src": "azuresmps-4.0.0/docs-conceptual",
         "version": "azuresmps-4.0.0",
-        "dest": "azure"
+        "dest": "azure/servicemanagement"
       },
       {
         "files": [
-          "**/*.yml",
+          "toc.yml"
+        ],
+        "src": "azurestackps-1.2.9",
+        "version": "azurestackps-1.2.9",
+        "dest": "module/azure-stack"
+      },
+      {
+        "files": [
           "**/*.md"
         ],
         "src": "azurestackps-1.2.9",
@@ -188,7 +209,7 @@
         ],
         "src": "azurestackps-1.2.9/docs-conceptual",
         "version": "azurestackps-1.2.9",
-        "dest": "azure"
+        "dest": "azure/azure-stack"
       },
       {
         "files": [

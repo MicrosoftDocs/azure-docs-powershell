@@ -106,21 +106,21 @@
     {
       "TopLevelTOC": "azuresmps-3.7.0/toc.yml",
       "ConceptualTOC": "azuresmps-3.7.0/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell-with-plugin/module/toc.json?view=azuresmps-3.7.0",
-      "ConceptualTOCUrl": "/powershell-with-plugin/azure/toc.json?view=azuresmps-3.7.0"
+      "ReferenceTOCUrl": "/powershell-with-plugin/module/servicemanagement/toc.json?view=azuresmps-3.7.0",
+      "ConceptualTOCUrl": "/powershell-with-plugin/azure/servicemanagement/toc.json?view=azuresmps-3.7.0"
     },
     {
       "TopLevelTOC": "azuresmps-4.0.0/toc.yml",
       "ConceptualTOC": "azuresmps-4.0.0/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell-with-plugin/module/toc.json?view=azuresmps-4.0.0",
-      "ConceptualTOCUrl": "/powershell-with-plugin/azure/toc.json?view=azuresmps-4.0.0"
+      "ReferenceTOCUrl": "/powershell-with-plugin/module/servicemanagement/toc.json?view=azuresmps-4.0.0",
+      "ConceptualTOCUrl": "/powershell-with-plugin/azure/servicemanagement/toc.json?view=azuresmps-4.0.0"
     },
     {
       "TopLevelTOC": "azurestackps-1.2.9/toc.yml",
       "ConceptualTOC": "azurestackps-1.2.9/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell-with-plugin/module/toc.json?view=azurestackps-1.2.9",
-      "ConceptualTOCUrl": "/powershell-with-plugin/azure/toc.json?view=azurestackps-1.2.9"
-    },
+      "ReferenceTOCUrl": "/powershell-with-plugin/module/azure-stack/toc.json?view=azurestackps-1.2.9",
+      "ConceptualTOCUrl": "/powershell-with-plugin/azure/azure-stack/toc.json?view=azurestackps-1.2.9"
+    }
   ],
   "need_generate_pdf_url_template": false,
   "dest": "_site"
