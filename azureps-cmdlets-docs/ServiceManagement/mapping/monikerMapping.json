@@ -4,8 +4,7 @@
         "packageRoot": "azureps-cmdlets-docs/ServiceManagement",
         "modules": {
             "docs-conceptual": {
-                "_type": "conceptual",
-                "_displayName": "conceptual"
+                "_type": "conceptual"
             },
             "Azure": {
                 "_displayName": "Azure",
@@ -25,7 +24,9 @@
         "serviceMap": "azureps-cmdlets-docs/ServiceManagement/mapping/groupMapping-3.7.0.json",
         "packageRoot": "azureps-cmdlets-docs/ServiceManagement",
         "modules": {
-            "docs-conceptual": {},
+            "docs-conceptual": {
+                "_type": "conceptual"
+            },
             "Azure.Storage": {
                 "_displayName": "Azure.Storage",
                 "_version": "v2.7.0"
