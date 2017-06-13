@@ -5,7 +5,7 @@ services: azure
 author: sdwheeler
 ms.author: sewhee
 manager: carmonm
-ms.service: azure-resource-manager
+ms.service: azure-powershell
 ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual

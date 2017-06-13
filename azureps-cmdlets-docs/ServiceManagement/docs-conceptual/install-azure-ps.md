@@ -4,11 +4,10 @@ description: How to install and configure Azure PowerShell for first time use.
 services: azure
 author: sdwheeler
 manager: carmonm
-ms.assetid: DF332CD7-E3E5-4CC1-8C01-380B2065193C
 ms.product: azure
-ms.service: powershell
+ms.service: azure-powershell
 ms.devlang: powershell
-ms.topic: reference
+ms.topic: conceptual
 ms.date: 03/06/2017
 ---
 
