@@ -6,7 +6,7 @@ author: sdwheeler
 ms.author: sewhee
 manager: carmonm
 ms.product: azure
-ms.service: azure-resource-manager
+ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 03/30/2017
@@ -31,7 +31,8 @@ The first step is to make sure you have the latest version of the Azure PowerShe
 
 Sign on interactively:
 
-1. Type `Login-AzureRmAccount`.  You will get dialog box asking for your Azure credentials.
+1. Type `Login-AzureRmAccount`.  You will get dialog box asking for your Azure credentials. Option '-EnvironmentName' can let you login in Azure China or Azure Germany.
+   e.g. Login-AzureRmAccount -EnvironmentName AzureChinaCloud
 
 2. Type the email address and password associated with your account. Azure authenticates and saves
    the credential information, and then closes the window.

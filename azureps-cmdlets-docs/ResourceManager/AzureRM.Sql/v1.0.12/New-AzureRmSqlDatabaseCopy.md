@@ -22,7 +22,7 @@ New-AzureRmSqlDatabaseCopy [-DatabaseName] <String> [-ServiceObjectiveName <Stri
 
 ## DESCRIPTION
 The **New-AzureRmSqlDatabaseCopy** cmdlet creates a copy of an ssSDS that uses the snapshot of the data at the current time.
-Use this cmdlet instead of the [Start-AzureSqlDatabaseCopy](./Start-AzureSqlDatabaseCopy.md) cmdlet to create a one-time database copy.
+Use this cmdlet instead of the Start-AzureRmSqlDatabaseCopy cmdlet to create a one-time database copy.
 
 This cmdlet returns the **Database** object of the copy.
 

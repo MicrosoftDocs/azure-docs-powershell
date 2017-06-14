@@ -42,7 +42,7 @@ Get-ACSStorageAccount -ResourceGroupName $ResourceGroup -FarmName $Farm.Name -Pa
 
 The first command stores the value named System in the variable named $ResourceGroup.
 
-The second command uses the [Get-ACSFarm](,/Get-ACSFarm,md) cmdlet to get the farm that is contained in the resource group specified in the $ResourceGroup variable. 
+The second command uses the [Get-ACSFarm](./Get-ACSFarm.md) cmdlet to get the farm that is contained in the resource group specified in the $ResourceGroup variable. 
 The command stores the result in the variable named $Farm.
 
 The third command uses the **Get-ACSStorageAccount** cmdlet to get the storage account named Account002.
