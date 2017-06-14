@@ -1,15 +1,18 @@
 {
     "azurestackps-1.2.9": {
-        "azure-docs-powershell/azureps-cmdlets-docs/AzureStack": {
+        "packageRoot": "azureps-cmdlets-docs/AzureStack",
+        "modules": {
+            "docs-conceptual": {
+                "_type": "conceptual"
+            },
             "AzureRM.AzureStackAdmin": {
                 "_displayName": "AzureRM.AzureStackAdmin",
-                "_version": "0.10.6"
+                "_version": "v0.10.6"
             },
             "AzureRM.AzureStackStorage": {
                 "_displayName": "AzureRM.AzureStackStorage",
-                "_version": "0.10.6"
+                "_version": "v0.10.6"
             }
-            
         }
     }
 }

@@ -1,0 +1,19 @@
+[{
+    "toc_title": "Azure",
+    "href": "/azure/",
+    "homepage": "/azure/",
+    "level": 1,
+    "children": [
+    {
+        "toc_title": "Azure PowerShell",
+        "href": "/powershell/azure/",
+        "homepage": "/powershell/azure/overview",
+        "level": 2
+    },
+    {
+        "toc_title": "Azure PowerShell",
+        "href": "/powershell/module/",
+        "homepage": "/powershell/azure/overview",
+        "level": 2
+    }]
+}]

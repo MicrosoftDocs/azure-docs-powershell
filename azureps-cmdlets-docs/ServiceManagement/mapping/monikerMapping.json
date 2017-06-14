@@ -1,36 +1,44 @@
 {
-    
-   "azuresmps-4.0.0": {
-        "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
+    "azuresmps-4.0.0": {
+        "serviceMap": "azureps-cmdlets-docs/ServiceManagement/mapping/groupMapping-4.0.0.json",
+        "packageRoot": "azureps-cmdlets-docs/ServiceManagement",
+        "modules": {
+            "docs-conceptual": {
+                "_type": "conceptual"
+            },
             "Azure": {
                 "_displayName": "Azure",
-                "_version": "4.0.0"
+                "_version": "v4.0.0"
             },
             "AzureRM.Profile": {
                 "_displayName": "AzureRM.Profile",
-                "_version": "3.0.0"
+                "_version": "v3.0.0"
             },
             "Azure.Storage": {
                 "_displayName": "Azure.Storage",
-                "_version": "3.0.0"
+                "_version": "v3.0.0"
             }
         }
     },
     "azuresmps-3.7.0": {
-        "azure-docs-powershell/azureps-cmdlets-docs/ServiceManagement": {
+        "serviceMap": "azureps-cmdlets-docs/ServiceManagement/mapping/groupMapping-3.7.0.json",
+        "packageRoot": "azureps-cmdlets-docs/ServiceManagement",
+        "modules": {
+            "docs-conceptual": {
+                "_type": "conceptual"
+            },
             "Azure.Storage": {
                 "_displayName": "Azure.Storage",
-                "_version": "2.7.0"
+                "_version": "v2.7.0"
             },
             "Azure": {
                 "_displayName": "Azure",
-                "_version": "3.7.0"
+                "_version": "v3.7.0"
             },
             "AzureRM.Profile": {
                 "_displayName": "AzureRM.Profile",
-                "_version": "2.7.0"
+                "_version": "v2.7.0"
             }
         }
     }
-      
 }
