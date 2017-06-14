@@ -87,12 +87,6 @@
       "ConceptualTOCUrl": "/powershell/azure/toc.json?view=azurermps-2.2.0"
     },
     {
-      "TopLevelTOC": "azurermps-3.7.0/toc.yml",
-      "ConceptualTOC": "azurermps-3.7.0/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell/module/toc.json?view=azurermps-3.7.0",
-      "ConceptualTOCUrl": "/powershell/azure/toc.json?view=azurermps-3.7.0"
-    },
-    {
       "TopLevelTOC": "azurermps-3.8.0/toc.yml",
       "ConceptualTOC": "azurermps-3.8.0/docs-conceptual/toc.yml",
       "ReferenceTOCUrl": "/powershell/module/toc.json?view=azurermps-3.8.0",
