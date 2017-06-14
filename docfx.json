@@ -213,7 +213,6 @@
       },
       {
         "files": [
-          "index.md",
           "AADRM/**/*.md",
           "AADRM/**/*.yml",
           "AzureInformationProtection/**/*.md",
@@ -236,8 +235,7 @@
           "ServiceFabric/**/*.yml",
           "Storage/**/*.md",
           "Storage/**/*.yml",
-          "azure ad cmdlets/**/*.md",
-          "module/**/*.md"
+          "azure ad cmdlets/**/*.md"
         ]
       }
     ],
@@ -358,6 +356,6 @@
       "breadcrumb_path": "/powershell-with-plugin/bread/toc.json",
       "ms.devlang": "powershell"
     },
-    "dest": "powershell-with-plugin"
+    "dest": "azureps"
   }
 }
