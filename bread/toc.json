@@ -6,18 +6,6 @@
     "children": [
     {
         "toc_title": "Azure PowerShell",
-        "href": "/powershell/azure/",
-        "homepage": "/powershell/azure/overview",
-        "level": 2
-    },
-    {
-        "toc_title": "Azure PowerShell",
-        "href": "/powershell/module/",
-        "homepage": "/powershell/azure/overview",
-        "level": 2
-    },
-    {
-        "toc_title": "Azure PowerShell",
         "href": "/powershell/azure/aip/",
         "homepage": "/powershell/azure/aip/overview",
         "level": 2
@@ -38,6 +26,18 @@
         "toc_title": "Azure PowerShell",
         "href": "/powershell/azure/service-fabric/",
         "homepage": "/powershell/azure/service-fabric/overview",
+        "level": 2
+    },
+    {
+        "toc_title": "Azure PowerShell",
+        "href": "/powershell/azure/",
+        "homepage": "/powershell/azure/overview",
+        "level": 2
+    },
+    {
+        "toc_title": "Azure PowerShell",
+        "href": "/powershell/module/",
+        "homepage": "/powershell/module/",
         "level": 2
     }]
 }]
