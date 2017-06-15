@@ -237,6 +237,14 @@
           "Storage/**/*.yml",
           "azure ad cmdlets/**/*.md"
         ]
+      },
+      {
+        "files": [
+          "overview.md"
+        ],
+        "src": "azureipps",
+        "version": "azureipps",
+        "dest": "azure"
       }
     ],
     "resource": [
@@ -277,6 +285,9 @@
       },
       "azurestackps-1.2.9": {
         "dest": "azurestackps-1.2.9"
+      },
+      "azureipps": {
+        "dest": "azureipps"
       }
     },
     "filemetadata": {
