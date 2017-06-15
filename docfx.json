@@ -240,10 +240,50 @@
       },
       {
         "files": [
-          "overview.md"
+          "*.md"
         ],
         "src": "azureipps",
         "version": "azureipps",
+        "dest": "azure"
+      },
+      {
+        "files": [
+          "*.md"
+        ],
+        "src": "azureservicefabricps",
+        "version": "azureservicefabricps",
+        "dest": "azure"
+      },
+      {
+        "files": [
+          "*.md"
+        ],
+        "src": "azureadps-1.0",
+        "version": "azureadps-1.0",
+        "dest": "azure"
+      },
+      {
+        "files": [
+          "*.md"
+        ],
+        "src": "azureadps-2.0",
+        "version": "azureadps-2.0",
+        "dest": "azure"
+      },
+      {
+        "files": [
+          "*.md"
+        ],
+        "src": "azureadps-2.0-preview",
+        "version": "azureadps-2.0-preview",
+        "dest": "azure"
+      },
+      {
+        "files": [
+          "*.md"
+        ],
+        "src": "azureelasticdbjobsps-0.8.33",
+        "version": "azureelasticdbjobsps-0.8.33",
         "dest": "azure"
       }
     ],
@@ -288,6 +328,21 @@
       },
       "azureipps": {
         "dest": "azureipps"
+      },
+      "azureservicefabricps": {
+        "dest": "azureservicefabricps"
+      },
+      "azureadps-1.0": {
+        "dest": "azureadps-1.0"
+      },
+      "azureadps-2.0": {
+        "dest": "azureadps-2.0"
+      },
+      "azureadps-2.0-preview": {
+        "dest": "azureadps-2.0-preview"
+      },
+      "azureelasticdbjobsps-0.8.33": {
+        "dest": "azureelasticdbjobsps-0.8.33"
       }
     },
     "filemetadata": {
