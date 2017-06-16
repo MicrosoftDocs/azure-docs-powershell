@@ -1,7 +1,7 @@
 {
     "redirections": [
     {
-      "source_path": "azureipps/overview.md",
+      "source_path": "azureipps/azure/overview.md",
       "redirect_url": "/powershell/azure/aip/overview?view=azureipps",
       "redirect_document_id": false
     },
