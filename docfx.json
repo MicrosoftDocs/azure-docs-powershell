@@ -247,35 +247,35 @@
       },
       {
         "files": [
-          "*.md"
+          "**/*.md"
         ],
         "src": "azureservicefabricps",
         "version": "azureservicefabricps"
       },
       {
         "files": [
-          "*.md"
+          "**/*.md"
         ],
         "src": "azureadps-1.0",
         "version": "azureadps-1.0"
       },
       {
         "files": [
-          "*.md"
+          "**/*.md"
         ],
         "src": "azureadps-2.0",
         "version": "azureadps-2.0"
       },
       {
         "files": [
-          "*.md"
+          "**/*.md"
         ],
         "src": "azureadps-2.0-preview",
         "version": "azureadps-2.0-preview"
       },
       {
         "files": [
-          "*.md"
+          "**/*.md"
         ],
         "src": "azureelasticdbjobsps-0.8.33",
         "version": "azureelasticdbjobsps-0.8.33"
