@@ -1,37 +1,37 @@
 {
     "redirections": [
     {
-      "source_path": "azureps-cmdlets-docs/index.md", 
+      "source_path": "azureipps/overview.md",
+      "redirect_url": "/powershell/azure/aip/overview?view=azureipps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "resourcemanager/index.md",
       "redirect_url": "/powershell/azure/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "resourcemanager/index.md", 
-      "redirect_url": "/powershell/azure/overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "servicemanagement/index.md", 
+      "source_path": "servicemanagement/index.md",
       "redirect_url": "/powershell/azure/overview?view=azuresmps-3.7.0",
       "redirect_document_id": false
     },
     {
-      "source_path": "storage/index.md", 
+      "source_path": "storage/index.md",
       "redirect_url": "/powershell/module/azure.storage",
       "redirect_document_id": false
     },
     {
-      "source_path": "azure ad cmdlets/index.md", 
+      "source_path": "azure ad cmdlets/index.md",
       "redirect_url": "/powershell/azure/overview?view=azureadps-2.0",
       "redirect_document_id": false
     },
     {
-      "source_path": "azuread/index.md", 
+      "source_path": "azuread/index.md",
       "redirect_url": "/powershell/azure/install-adv2?view=azureadps-2.0",
       "redirect_document_id": false
     },
     {
-      "source_path": "msonline/index.md", 
+      "source_path": "msonline/index.md",
       "redirect_url": "/powershell/azure/install-msonlinev1?view=azureadps-2.0",
       "redirect_document_id": false
     },
