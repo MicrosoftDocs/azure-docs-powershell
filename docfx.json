@@ -240,7 +240,7 @@
       },
       {
         "files": [
-          "*.md"
+          "**/*.md"
         ],
         "src": "azureipps",
         "version": "azureipps"
