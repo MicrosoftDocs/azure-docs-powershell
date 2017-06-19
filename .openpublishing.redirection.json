@@ -11,6 +11,296 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "azureadps-2.0-preview/azure/overview.md",
+      "redirect_url": "/powershell/azure/active-directory/overview?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/overview.md",
+      "redirect_url": "/powershell/azure/active-directory/overview?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0/azure/overview.md",
+      "redirect_url": "/powershell/azure/active-directory/overview?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Cannot-find-object.md",
+      "redirect_url": "/powershell/azure/active-directory/Cannot-find-object?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Cannot-find-object.md",
+      "redirect_url": "/powershell/azure/active-directory/Cannot-find-object?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+	{
+     "source_path": "azureadps-2.0/azure/Cannot-find-object.md",
+      "redirect_url": "/powershell/azure/active-directory/Cannot-find-object?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/Enable-licenses-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/Enable-licenses-sample?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Enable-licenses-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/Enable-licenses?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Enable-licenses-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/Enable-licenses-sample?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/Find-module-version.md",
+      "redirect_url": "/powershell/azure/active-directory/Find-module-version?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Find-module-version.md",
+      "redirect_url": "/powershell/azure/active-directory/Find-module-version?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Find-module-version.md",
+      "redirect_url": "/powershell/azure/active-directory/Find-module-version?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/Importing-data.md",
+      "redirect_url": "/powershell/azure/active-directory/Importing-data?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Importing-data.md",
+      "redirect_url": "/powershell/azure/active-directory/Importing-data?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Importing-data.md",
+      "redirect_url": "/powershell/azure/active-directory/Importing-data?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/Install-previous-version.md",
+      "redirect_url": "/powershell/azure/active-directory/Install-previous-version?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Install-previous-version.md",
+      "redirect_url": "/powershell/azure/active-directory/Install-previous-version?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Install-previous-version.md",
+      "redirect_url": "/powershell/azure/active-directory/Install-previous-version?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/List-service-principal-application-roles.md",
+      "redirect_url": "/powershell/azure/active-directory/List-service-principal-application-roles?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/List-service-principal-application-roles.md",
+      "redirect_url": "/powershell/azure/active-directory/List-service-principal-application-roles?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/List-service-principal-application-roles.md",
+      "redirect_url": "/powershell/azure/active-directory/List-service-principal-application-roles?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/PowerShell-logfile.md",
+      "redirect_url": "/powershell/azure/active-directory/PowerShell-logfile?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/PowerShell-logfile.md",
+      "redirect_url": "/powershell/azure/active-directory/PowerShell-logfile?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/PowerShell-logfile.md",
+      "redirect_url": "/powershell/azure/active-directory/PowerShell-logfile?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/Recovering-deleted-data.md",
+      "redirect_url": "/powershell/azure/active-directory/Recovering-deleted-data?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Recovering-deleted-data.md",
+      "redirect_url": "/powershell/azure/active-directory/Recovering-deleted-data?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Recovering-deleted-data.md",
+      "redirect_url": "/powershell/azure/active-directory/Recovering-deleted-data?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/TOC.md",
+      "redirect_url": "/powershell/azure/active-directory/TOC?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/TOC.md",
+      "redirect_url": "/powershell/azure/active-directory/TOC?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/TOC.md",
+      "redirect_url": "/powershell/azure/active-directory/TOC?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/Using-Extension-attributes-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/Using-Extension-attributes-sample?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Using-Extension-attributes-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/Using-Extension-attributes-sample?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Using-Extension-attributes-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/Using-Extension-attributes-sample?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/Working-with-Administrative-Units.md",
+      "redirect_url": "/powershell/azure/active-directory/Working-with-Administrative-Units-sample?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Working-with-Administrative-Units.md",
+      "redirect_url": "/powershell/azure/active-directory/Working-with-Administrative-Units?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Working-with-Administrative-Units.md",
+      "redirect_url": "/powershell/azure/active-directory/Working-with-Administrative-Units?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/Working-with-Licenses.md",
+      "redirect_url": "/powershell/azure/active-directory/Working-with-Licenses?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/Working-with-Licenses.md",
+      "redirect_url": "/powershell/azure/active-directory/Working-with-Licenses?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/Working-with-Licenses.md",
+      "redirect_url": "/powershell/azure/active-directory/Working-with-Licenses?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/account-not-in-system-error.md",
+      "redirect_url": "/powershell/azure/active-directory/account-not-in-system-error?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/account-not-in-system-error.md",
+      "redirect_url": "/powershell/azure/active-directory/account-not-in-system-error?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/account-not-in-system-error.md",
+      "redirect_url": "/powershell/azure/active-directory/account-not-in-system-error?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/install-adv2.md",
+      "redirect_url": "/powershell/azure/active-directory/install-adv2?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/install-adv2.md",
+      "redirect_url": "/powershell/azure/active-directory/install-adv2?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/install-adv2.md",
+      "redirect_url": "/powershell/azure/active-directory/install-adv2?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/install-msonlinev1.md",
+      "redirect_url": "/powershell/azure/active-directory/install-msonlinev1?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/install-msonlinev1.md",
+      "redirect_url": "/powershell/azure/active-directory/install-msonlinev1?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/install-msonlinev1.md",
+      "redirect_url": "/powershell/azure/active-directory/install-msonlinev1?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/new-user-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/new-user-sample?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/new-user-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/new-user-sample?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/new-user-sample.md",
+      "redirect_url": "/powershell/azure/active-directory/new-user-sample?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+     "source_path": "azureadps-2.0/azure/signing-in-service-principal.md",
+      "redirect_url": "/powershell/azure/active-directory/signing-in-service-principal?view=azureadps-2.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-2.0-preview/azure/signing-in-service-principal.md",
+      "redirect_url": "/powershell/azure/active-directory/signing-in-service-principal?view=azureadps-2.0-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureadps-1.0/azure/signing-in-service-principal.md",
+      "redirect_url": "/powershell/azure/active-directory/signing-in-service-principal?view=azureadps-1.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureservicefabricps/azure/overview.md",
+      "redirect_url": "/powershell/azure/service-fabric/overview?view=azureservicefabricps-1.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azurestackps/azure/overview.md",
+      "redirect_url": "/powershell/azure/azure-stack/overview?view=azurestackps-1.2.9",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azureelasticdbjobsps/azure/overview.md",
+      "redirect_url": "/powershell/azure/elasticdgjobs/overview?view=azureelasticdbjobsps-0.8.33",
+      "redirect_document_id": false
+    },
+{
+      "source_path": "azuresmps/azure/overview.md",
+      "redirect_url": "/powershell/azure/servicemanagement/overview?view=azuresmps-4.0.0",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "resourcemanager/index.md",
       "redirect_url": "/powershell/azure/overview",
       "redirect_document_id": false
