@@ -141,21 +141,6 @@
       "redirect_document_id": false
     },
     {
-     "source_path": "azureadps-2.0/azure/TOC.md",
-      "redirect_url": "/powershell/azure/active-directory/TOC?view=azureadps-2.0",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "azureadps-2.0-preview/azure/TOC.md",
-      "redirect_url": "/powershell/azure/active-directory/TOC?view=azureadps-2.0-preview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "azureadps-1.0/azure/TOC.md",
-      "redirect_url": "/powershell/azure/active-directory/TOC?view=azureadps-1.0",
-      "redirect_document_id": false
-    },
-    {
      "source_path": "azureadps-2.0/azure/Using-Extension-attributes-sample.md",
       "redirect_url": "/powershell/azure/active-directory/Using-Extension-attributes-sample?view=azureadps-2.0",
       "redirect_document_id": false
