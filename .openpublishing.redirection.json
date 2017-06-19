@@ -16,11 +16,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "azureadps-1.0/azure/overview.md",
-      "redirect_url": "/powershell/azure/active-directory/overview?view=azureadps-1.0",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "azureadps-2.0/azure/overview.md",
       "redirect_url": "/powershell/azure/active-directory/overview?view=azureadps-2.0",
       "redirect_document_id": false
