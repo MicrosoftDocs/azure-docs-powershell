@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets all Azure API Management certificates or a specific certificate.
 
 ## SYNTAX
 
@@ -23,28 +23,33 @@ Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -Certifica
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementCertificate** cmdlet gets all Azure API Management certificates or a specific certificate.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all certificates
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext
 ```
 
-{{ Add example description here }}
+This command gets all API Management certificates.
+
+### Example 2: Get a specific certificate by its ID
+```
+PS C:\> Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext -CertificateId "0123456789"
+```
+
+This command gets the API Management certificate identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -CertificateId
-Identifier of the certificate.
-If specified will find certificate by the identifier.
-This parameter is required.
+Specifies the ID of the certificate to get.
 
 ```yaml
 Type: String
 Parameter Sets: Get certificate by ID
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -54,13 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,13 +79,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
 
 ## OUTPUTS
 
-### System.Collections.Generic.IList`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCertificate, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Collections.Generic.IList
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCertificate
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementCertificate](./New-AzureRmApiManagementCertificate.md)
+
+[Remove-AzureRmApiManagementCertificate](./Remove-AzureRmApiManagementCertificate.md)
+
+[Set-AzureRmApiManagementCertificate](./Set-AzureRmApiManagementCertificate.md)

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Add-AzureRmApiManagementUserToGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a user to a group.
 
 ## SYNTAX
 
@@ -17,27 +17,26 @@ Add-AzureRmApiManagementUserToGroup -Context <PsApiManagementContext> -GroupId <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzureRmApiManagementUserToGroup** cmdlet adds a user to a group.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Add a user to a group
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Add-AzureRmApiManagementUserToGroup -Context $apimContext -GroupId "0001" -UserId "0123456789"
 ```
 
-{{ Add example description here }}
+This command adds the user identified by the ID "0123456789" to the group identified by the ID "0001".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,13 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
-This parameter is required.
+Specifies the ID of the group to which the user is being added.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,14 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Specifies whether to return an object representing the user that is added.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,13 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
-This parameter is required.
+Specifies the ID of a user to be added to a group.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,8 +97,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 
@@ -112,3 +106,6 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementUser](./Get-AzureRmApiManagementUser.md)
+
+[Remove-AzureRmApiManagementUserFromGroup](./Remove-AzureRmApiManagementUserFromGroup.md)

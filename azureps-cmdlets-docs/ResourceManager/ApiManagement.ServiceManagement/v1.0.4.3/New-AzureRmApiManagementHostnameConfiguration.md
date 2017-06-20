@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagementHostnameConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an instance of **PsApiManagementHostnameConfiguration**.
 
 ## SYNTAX
 
@@ -17,27 +17,28 @@ New-AzureRmApiManagementHostnameConfiguration -CertificateThumbprint <String> -H
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagementHostnameConfiguration** cmdlet is a helper command that creates an instance of **PsApiManagementHostnameConfiguration**.
+This command is used with the **Set-AzureRmApiManagementHostnames** cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create and initialize an instance of PsApiManagementHostnameConfiguration
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmApiManagementHostnameConfiguration -Hostname "portal.contoso.com" -CertificateThumbprint "33CC47C6FCA848DC9B14A6F071C1EF7C"
 ```
 
-{{ Add example description here }}
+This command creates and initializes an instance of **PsApiManagementHostnameConfiguration** for the custom hostname "portal.contoso.com".
 
 ## PARAMETERS
 
 ### -CertificateThumbprint
-Certificagte thumbprint.
-The certificate must be first imported with Import-ApiManagementCertificate command.
+Specifies the certificate thumbprint.
+Use the **Import-AzureRmApiManagementHostnameCertificate** cmdlet to import a certificate.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,12 +48,12 @@ Accept wildcard characters: False
 ```
 
 ### -Hostname
-Custom hostaname.
+Specifies the custom hostname for which this cmdlet creates the **PsApiManagementHostnameConfiguration** instance.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,3 +77,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Import-AzureRmApiManagementHostnameCertificate](./Import-AzureRmApiManagementHostnameCertificate.md)
+
+[Set-AzureRmApiManagementHostnames](./Set-AzureRmApiManagementHostnames.md)

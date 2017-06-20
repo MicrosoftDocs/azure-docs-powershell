@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmApiManagementOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an API operation.
 
 ## SYNTAX
 
@@ -19,27 +19,26 @@ Set-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmApiManagementOperation** cmdlet modifies an API operation.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Change some properties of the operation
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmApiManagementOperation -Context $APImContext -ApiId $APIID -OperationId "Operation001" -Name "Get Resource" -Method "GET" -UrlTemplate "/newresource" -Description "Use this operation to get newresource"
 ```
 
-{{ Add example description here }}
+This command changes the display name, method, URL template, and description of the operation identified by the ID "Operation001" for the specified API.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of API.
-This parameter is required.
+Specifies the ID of the API.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -49,13 +48,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -65,13 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Description of new operation.
-This parameter is optional.
+Specifies the new description of the operation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,13 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -Method
-HTTP method of new operation.
-This parameter is required.
+Specifies the new HTTP method of the operation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,13 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Display name of new operation.
-This parameter is required.
+Specifies the new display name of the operation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,13 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-Identifier of existing operation.
-This parameter is required.
+Specifies the ID of the operation to be modified.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,12 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOperation type representing the modified operation.
+Specifies whether to return an object representing the operation that is modified.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,13 +139,12 @@ Accept wildcard characters: False
 ```
 
 ### -Request
-Operation request details.
-This parameter is optional.
+Specifies the new details of the API operation request.
 
 ```yaml
 Type: PsApiManagementRequest
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,13 +154,12 @@ Accept wildcard characters: False
 ```
 
 ### -Responses
-Array of possible operation responses.
-This parameter is optional.
+Specifies a new array of possible API operation responses.
 
 ```yaml
 Type: PsApiManagementResponse[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,15 +169,13 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateParameters
-Array or parameters defined in UrlTemplate.
-This parameter is optional.
-If not specified default value will be generated based on the UrlTemplate.
-Use the parameter to give more details on parameters like description, type, possible values.
+Specifies a new array of parameters defined in the *UrlTemplate* parameter.
+If not specified, default values will be generated based on the contents of the *UrlTemplate* parameter.
 
 ```yaml
 Type: PsApiManagementParameter[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,14 +185,13 @@ Accept wildcard characters: False
 ```
 
 ### -UrlTemplate
-URL template.
-Example: customers/{cid}/orders/{oid}/?date={date}.
-This parameter is required.
+Specifies the new URL template.
+For example: customers/{cid}/orders/{oid}/?date={date}.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -216,11 +206,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementParameter[]
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementRequest
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementResponse[]
-System.Management.Automation.SwitchParameter
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementParameter[]
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementRequest
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementResponse[]
 
 ## OUTPUTS
 
@@ -230,3 +219,8 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementOperation](./Get-AzureRmApiManagementOperation.md)
+
+[New-AzureRmApiManagementOperation](./New-AzureRmApiManagementOperation.md)
+
+[Remove-AzureRmApiManagementOperation](./Remove-AzureRmApiManagementOperation.md)

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagementApi
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure API Management API.
 
 ## SYNTAX
 
@@ -19,28 +19,27 @@ New-AzureRmApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagementApi** cmdlet creates an Azure API Management API.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an API
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmApiManagementApi -Context $ApiMgmtContext -Name "EchoApi" -ServiceUrl "https://contoso.com/apis/echo" -Protocols @("http", "https") -Path "testapi"
 ```
 
-{{ Add example description here }}
+This command creates an API named "EchoApi" with the specified URL.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier for new API.
-This parameter is optional.
-If not specified the identifier will be generated.
+Specifies an ID of the API to create.
+If you do not specify an ID, the cmdlet generates an ID.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -50,14 +49,13 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationScope
-OAuth operations scope.
-This parameter is optional.
-Default value is $null.
+Specifies the OAuth operations scope.
+The default value is $Null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -67,15 +65,14 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationServerId
-OAuth authorization server identifier.
-This parameter is optional.
-Default value is $null.
-Must be specified if AuthorizationScope specified.
+Specifies the ID of the OAuth authorization server.
+The default value is $Null.
+This parameter must be included if the *AuthorizationScope* parameter is included.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,13 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,13 +97,12 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Web API description.
-This parameter is optional.
+Specifies a description of the API to display on the developer and admin portals.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,14 +112,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Web API name.
-Public name of the API as it would appear on the developer and admin portals.
-This parameter is required.
+Specifies the public name of the API, as it would appear on the developer and admin portals.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,17 +127,14 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Web API Path.
-Last part of the API's public URL.
-This URL will be used by API consumers for sending requests to the web service.
-Must be 1 to 400 characters long.
-This parameter is optional.
-Default value is $null.
+Specifies the web API path, which is the last part of the API's public URL.
+This URL is used by API consumers to send requests to the web service, and must be 1 to 400 characters long.
+The default value is $Null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,13 +144,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProductIds
-Array of products IDs to add the new API to.
-This parameter is optional.
+Specifies an array of IDs of products to which to add the new API.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,15 +159,15 @@ Accept wildcard characters: False
 ```
 
 ### -Protocols
-Web API protocols (http, https).
-Protocols over which API is made available.
-This parameter is required.
-Default value is $null.
+Specifies an array of web API protocols.
+Valid values are http and https.
+These are the web protocols over which the API is made available.
+The default value is $Null.
 
 ```yaml
 Type: PsApiManagementSchema[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 
 Required: True
@@ -189,15 +178,14 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUrl
-A URL of the web service exposing the API.
-This URL will be used by Azure API Management only, and will not be made public.
-Must be 1 to 2000 characters long.
-This parameter is required.
+Specifies the URL of the web service that exposes the API.
+This URL is used only by Azure API Management, and is not made public.
+The URL must be 1 to 2000 characters long.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -207,14 +195,13 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionKeyHeaderName
-Subscription key header name.
-This parameter is optional.
-Default value is $null.
+Specifies the name of the subscription key header.
+The default value is $Null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,14 +211,13 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionKeyQueryParamName
-Subscription key query string parameter name.
-This parameter is optional.
-Default value is $null.
+Specifies the name of the subscription key query string parameter.
+The default value is $Null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,9 +232,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema[]
-System.String[]
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema[]
+### System.String[]
 
 ## OUTPUTS
 
@@ -258,3 +244,12 @@ System.String[]
 
 ## RELATED LINKS
 
+[Export-AzureRmApiManagementApi](./Export-AzureRmApiManagementApi.md)
+
+[Get-AzureRmApiManagementApi](./Get-AzureRmApiManagementApi.md)
+
+[Import-AzureRmApiManagementApi](./Import-AzureRmApiManagementApi.md)
+
+[Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
+
+[Set-AzureRmApiManagementApi](./Set-AzureRmApiManagementApi.md)

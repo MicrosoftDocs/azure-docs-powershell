@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmApiManagementVirtualNetworks
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets virtual network configuration for an API Management service.
 
 ## SYNTAX
 
@@ -17,26 +17,26 @@ Set-AzureRmApiManagementVirtualNetworks -ResourceGroupName <String> -Name <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmApiManagementVirtualNetworks** cmdlet sets virtual network configuration for an API Management service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set virtual networks for an API Management service
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzureRmApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetworks $VirtualNetworks
 ```
 
-{{ Add example description here }}
+This command sets virtual networks for the API Management service named "ContosoApi" in the resource group "ContosoGroup".
 
 ## PARAMETERS
 
 ### -Name
-Name of API Management.
+Specifies the name of the API Management service for which to set the virtual network configuration.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -46,12 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Sends updated PsApiManagement to pipeline if operation succeeds.
+Specifies whether to return an updated **PsApiManagement** object to the pipeline.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,12 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of the resource group under which the API Management service exists.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,14 +76,14 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworks
-Virtual networks configuration.
-Default value is $null.
-Passing $null will remove virtual network configuration.
+Specifies an array of virtual network configurations.
+Passing $null in this parameter will remove the virtual network configurations.
+The default value is $null.
 
 ```yaml
 Type: PsApiManagementVirtualNetwork[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,3 +107,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementVirtualNetwork](./New-AzureRmApiManagementVirtualNetwork.md)

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an Azure API Management certificate.
 
 ## SYNTAX
 
@@ -17,27 +17,27 @@ Remove-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -Certif
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmApiManagementCertificate** cmdlet removes an Azure API Management certificate.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a certificate without confirmation
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmApiManagementCertificate -Context $ApiMgmtContext -CertificateId "0123456789" -Force
 ```
 
-{{ Add example description here }}
+This command removes the API Management certificate identified by the ID "0123456789".
+Because the *Force* parameter is specified, no confirmation is required.
 
 ## PARAMETERS
 
 ### -CertificateId
-Identifier of existing certificate.
-This parameter is required.
+Specifies the ID of the certificate to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,13 +47,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,14 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces delete operation (prevents confirmation dialog).
-This parameter is optional.
-Default value is false.
+Indicates whether to run this command without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,14 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Specifies whether to return an object representing the item removed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,8 +97,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Management.Automation.SwitchParameter
+### System.String
 
 ## OUTPUTS
 
@@ -113,3 +107,8 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementCertificate](./Get-AzureRmApiManagementCertificate.md)
+
+[New-AzureRmApiManagementCertificate](./New-AzureRmApiManagementCertificate.md)
+
+[Set-AzureRmApiManagementCertificate](./Set-AzureRmApiManagementCertificate.md)

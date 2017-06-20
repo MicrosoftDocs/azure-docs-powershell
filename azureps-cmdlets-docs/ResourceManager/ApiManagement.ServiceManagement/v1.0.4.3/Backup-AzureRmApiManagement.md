@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Backup-AzureRmApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Backs up an instance of the Azure API Management service.
 
 ## SYNTAX
 
@@ -17,26 +17,27 @@ Backup-AzureRmApiManagement -ResourceGroupName <String> -Name <String> -StorageC
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Backup-AzureRmApiManagement** cmdlet backs up an instance of the Azure API Management service.
+This cmdlet stores the backup as an Azure Storage blob.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Back up an instance of the Azure API Management service
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Backup-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -StorageContext $StorageContext -TargetContainerName "ContosoBackups" -TargetBlobName "ContosoBackup.apimbackup"
 ```
 
-{{ Add example description here }}
+This command backs up the API Management service deployment named "ContosoApi" and stores the backup in a Storage blob named "ContosoBackup.apimbackup".
 
 ## PARAMETERS
 
 ### -Name
-Name of API Management.
+Specifies the name of the API Management deployment to be backed up.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -46,12 +47,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Sends backed up PsApiManagement to pipeline if operation succeeds.
+Specifies whether to return an object representing the API Management service deployment that is backed up.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of the of resource group under which the API Management deployment exists.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,12 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-The storage connection context.
+Specifies the storage connection context.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,13 +93,16 @@ Accept wildcard characters: False
 ```
 
 ### -TargetBlobName
-Name of target Azure Storage blob.
-If the blob does not exist it will be created.
+Specifies the name of the blob in which to store the backup.
+If the blob does not exist, this cmdlet creates it.
+This cmdlet generates a default name based on the following pattern:
+
+{Name}-{yyyy-MM-dd-HH-mm}.apimbackup
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,13 +112,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetContainerName
-Name of target Azure Storage container.
-If container does not exist it will be created.
+Specifies the name of the container of the blob.
+If the container does not exist, this cmdlet creates it.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -127,8 +132,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
-Microsoft.WindowsAzure.Commands.Common.Storage.AzureStorageContext
+### Microsoft.WindowsAzure.Commands.Common.Storage.AzureStorageContext
 
 ## OUTPUTS
 
@@ -138,3 +142,10 @@ Microsoft.WindowsAzure.Commands.Common.Storage.AzureStorageContext
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagement](./Get-AzureRmApiManagement.md)
+
+[New-AzureRmApiManagement](./New-AzureRmApiManagement.md)
+
+[Remove-AzureRmApiManagement](./Remove-AzureRmApiManagement.md)
+
+[Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
