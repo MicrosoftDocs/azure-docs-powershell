@@ -21,6 +21,36 @@
       "redirect_document_id": false
     },
     {
+          "source_path": "powershell/azure/active-directory",
+          "redirect_url": "/powershell/azure/active-directory/overview?view=azureadps-2.0",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "powershell/azure/elasticdbjobs",
+          "redirect_url": "/powershell/azure/elasticdgjobs/overview?view=azureelasticdbjobsps-0.8.33",
+          "redirect_document_id": false
+        },
+    {
+          "source_path": "/powershell/azure/servicemanagement",
+          "redirect_url": "/powershell/azure/overview?view=azurermps-4.1.0&viewFallbackFrom=azuresmps-4.0.0",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "en-us/powershell/azure/azure-stack",
+          "redirect_url": "/powershell/azure/azure-stack/overview?view=azurestackps-1.2.9",
+          "redirect_document_id": false
+        },
+        {
+          "source_path": "powershell/azure/service-fabric",
+          "redirect_url": "/powershell/azure/service-fabric/overview?view=azureservicefabricps",
+          "redirect_document_id": false
+        },
+    {
+          "source_path": "/powershell/azure/aip",
+          "redirect_url": "/powershell/azure/aip/overview?view=azureipps",
+          "redirect_document_id": false
+        },
+    {
       "source_path": "azureadps-2.0-preview/azure/Cannot-find-object.md",
       "redirect_url": "/powershell/azure/active-directory/Cannot-find-object?view=azureadps-2.0-preview",
       "redirect_document_id": false
