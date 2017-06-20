@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementUserSsoUrl
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Generates a single sign-on (SSO) URL for a user.
 
 ## SYNTAX
 
@@ -16,27 +16,26 @@ Get-AzureRmApiManagementUserSsoUrl -Context <PsApiManagementContext> -UserId <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementUserSsoUrl** cmdlet generates a single sign-on (SSO) URL for a user.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Generate an SSO URL for a user
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementUserSsoUrl -Context $apimContext -UserId "0123456789"
 ```
 
-{{ Add example description here }}
+This command generates an SSO URL for the user identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -46,13 +45,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
-This parameter is required.
+Specifies the ID of a user for whom to generate the SSO URL.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -67,7 +65,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
 
 ## OUTPUTS
 
@@ -77,3 +74,4 @@ System.String
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementUser](./Get-AzureRmApiManagementUser.md)

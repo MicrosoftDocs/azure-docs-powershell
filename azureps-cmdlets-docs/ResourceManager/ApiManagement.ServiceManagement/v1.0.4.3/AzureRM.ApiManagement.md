@@ -8,186 +8,185 @@ Locale: en-US
 
 # AzureRM.ApiManagement Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for cmdlets used to manage Azure APIs.
 
 ## AzureRM.ApiManagement Cmdlets
 ### [Add-AzureRmApiManagementApiToProduct](Add-AzureRmApiManagementApiToProduct.md)
-{{Fill in the Synopsis}}
+Adds an API to a product.
 
 ### [Add-AzureRmApiManagementProductToGroup](Add-AzureRmApiManagementProductToGroup.md)
-{{Fill in the Synopsis}}
+Adds a product to an existing group.
 
 ### [Add-AzureRmApiManagementRegion](Add-AzureRmApiManagementRegion.md)
-{{Fill in the Synopsis}}
+Adds a new deployment region to a **PsApiManagement** object.
 
 ### [Add-AzureRmApiManagementUserToGroup](Add-AzureRmApiManagementUserToGroup.md)
-{{Fill in the Synopsis}}
+Adds a user to a group.
 
 ### [Backup-AzureRmApiManagement](Backup-AzureRmApiManagement.md)
-{{Fill in the Synopsis}}
+Backs up an instance of the Azure API Management service.
 
 ### [Export-AzureRmApiManagementApi](Export-AzureRmApiManagementApi.md)
-{{Fill in the Synopsis}}
+Exports an API to a file in one of the supported formats.
 
 ### [Get-AzureRmApiManagement](Get-AzureRmApiManagement.md)
-{{Fill in the Synopsis}}
+Gets one or more Azure API Management services.
 
 ### [Get-AzureRmApiManagementApi](Get-AzureRmApiManagementApi.md)
-{{Fill in the Synopsis}}
+Gets one or more APIs.
 
 ### [Get-AzureRmApiManagementAuthorizationServer](Get-AzureRmApiManagementAuthorizationServer.md)
-{{Fill in the Synopsis}}
+Gets all Azure API Management authorization servers or a specific authorization server.
 
 ### [Get-AzureRmApiManagementCertificate](Get-AzureRmApiManagementCertificate.md)
-{{Fill in the Synopsis}}
+Gets all Azure API Management certificates or a specific certificate.
 
 ### [Get-AzureRmApiManagementGroup](Get-AzureRmApiManagementGroup.md)
-{{Fill in the Synopsis}}
+Gets all API management groups or a specific API management group.
 
 ### [Get-AzureRmApiManagementOperation](Get-AzureRmApiManagementOperation.md)
-{{Fill in the Synopsis}}
+Gets a list of API operations or a specific API operation.
 
 ### [Get-AzureRmApiManagementPolicy](Get-AzureRmApiManagementPolicy.md)
-{{Fill in the Synopsis}}
+Gets the specified API Management policy.
 
 ### [Get-AzureRmApiManagementProduct](Get-AzureRmApiManagementProduct.md)
-{{Fill in the Synopsis}}
+Gets a list of API Management products or a specific API Management product.
 
 ### [Get-AzureRmApiManagementSsoToken](Get-AzureRmApiManagementSsoToken.md)
-{{Fill in the Synopsis}}
+Gets a link (URL) containing a single sign-on (SSO) token for an API Management service.
 
 ### [Get-AzureRmApiManagementSubscription](Get-AzureRmApiManagementSubscription.md)
-{{Fill in the Synopsis}}
+Gets one or more subscriptions.
 
 ### [Get-AzureRmApiManagementUser](Get-AzureRmApiManagementUser.md)
-{{Fill in the Synopsis}}
+Gets one or more users.
 
 ### [Get-AzureRmApiManagementUserSsoUrl](Get-AzureRmApiManagementUserSsoUrl.md)
-{{Fill in the Synopsis}}
+Generates a single sign-on (SSO) URL for a user.
 
 ### [Import-AzureRmApiManagementApi](Import-AzureRmApiManagementApi.md)
-{{Fill in the Synopsis}}
+Imports an API from a file or a URL.
 
 ### [Import-AzureRmApiManagementHostnameCertificate](Import-AzureRmApiManagementHostnameCertificate.md)
-{{Fill in the Synopsis}}
+Imports a certificate in PFX format for an API Management service.
 
 ### [New-AzureRmApiManagement](New-AzureRmApiManagement.md)
-{{Fill in the Synopsis}}
+Creates an API Management deployment.
 
 ### [New-AzureRmApiManagementApi](New-AzureRmApiManagementApi.md)
-{{Fill in the Synopsis}}
+Creates an Azure API Management API.
 
 ### [New-AzureRmApiManagementAuthorizationServer](New-AzureRmApiManagementAuthorizationServer.md)
-{{Fill in the Synopsis}}
+Creates an Azure API Management authorization server.
 
 ### [New-AzureRmApiManagementCertificate](New-AzureRmApiManagementCertificate.md)
-{{Fill in the Synopsis}}
+Creates an Azure API Management certificate.
 
 ### [New-AzureRmApiManagementContext](New-AzureRmApiManagementContext.md)
-{{Fill in the Synopsis}}
+Creates an instance of **PsAzureApiManagementContext**.
 
 ### [New-AzureRmApiManagementGroup](New-AzureRmApiManagementGroup.md)
-{{Fill in the Synopsis}}
+Creates an API management group.
 
 ### [New-AzureRmApiManagementHostnameConfiguration](New-AzureRmApiManagementHostnameConfiguration.md)
-{{Fill in the Synopsis}}
+Creates an instance of **PsApiManagementHostnameConfiguration**.
 
 ### [New-AzureRmApiManagementOperation](New-AzureRmApiManagementOperation.md)
-{{Fill in the Synopsis}}
+Creates an API operation.
 
 ### [New-AzureRmApiManagementProduct](New-AzureRmApiManagementProduct.md)
-{{Fill in the Synopsis}}
+Creates an API Management product.
 
 ### [New-AzureRmApiManagementSubscription](New-AzureRmApiManagementSubscription.md)
-{{Fill in the Synopsis}}
+Creates a subscription to a product.
 
 ### [New-AzureRmApiManagementUser](New-AzureRmApiManagementUser.md)
-{{Fill in the Synopsis}}
+Registers a new user.
 
 ### [New-AzureRmApiManagementVirtualNetwork](New-AzureRmApiManagementVirtualNetwork.md)
-{{Fill in the Synopsis}}
+Creates an instance of **PsApiManagementVirtualNetwork**.
 
 ### [Remove-AzureRmApiManagement](Remove-AzureRmApiManagement.md)
-{{Fill in the Synopsis}}
+Removes a deployment of the Azure API Management service.
 
 ### [Remove-AzureRmApiManagementApi](Remove-AzureRmApiManagementApi.md)
-{{Fill in the Synopsis}}
+Removes an API.
 
 ### [Remove-AzureRmApiManagementApiFromProduct](Remove-AzureRmApiManagementApiFromProduct.md)
-{{Fill in the Synopsis}}
+Removes an API from a product
 
 ### [Remove-AzureRmApiManagementAuthorizationServer](Remove-AzureRmApiManagementAuthorizationServer.md)
-{{Fill in the Synopsis}}
+Removes an Azure API Management authorization server.
 
 ### [Remove-AzureRmApiManagementCertificate](Remove-AzureRmApiManagementCertificate.md)
-{{Fill in the Synopsis}}
+Removes an Azure API Management certificate.
 
 ### [Remove-AzureRmApiManagementGroup](Remove-AzureRmApiManagementGroup.md)
-{{Fill in the Synopsis}}
+Removes an API management group.
 
 ### [Remove-AzureRmApiManagementOperation](Remove-AzureRmApiManagementOperation.md)
-{{Fill in the Synopsis}}
+Removes an API operation.
 
 ### [Remove-AzureRmApiManagementPolicy](Remove-AzureRmApiManagementPolicy.md)
-{{Fill in the Synopsis}}
+Removes the API Management policy for the specified scope.
 
 ### [Remove-AzureRmApiManagementProduct](Remove-AzureRmApiManagementProduct.md)
-{{Fill in the Synopsis}}
+Removes an API Management product.
 
 ### [Remove-AzureRmApiManagementProductFromGroup](Remove-AzureRmApiManagementProductFromGroup.md)
-{{Fill in the Synopsis}}
+Removes a product from a group.
 
 ### [Remove-AzureRmApiManagementRegion](Remove-AzureRmApiManagementRegion.md)
-{{Fill in the Synopsis}}
+Removes a deployment region from a **PsApiManagement** object.
 
 ### [Remove-AzureRmApiManagementSubscription](Remove-AzureRmApiManagementSubscription.md)
-{{Fill in the Synopsis}}
+Deletes a subscription.
 
 ### [Remove-AzureRmApiManagementUser](Remove-AzureRmApiManagementUser.md)
-{{Fill in the Synopsis}}
+Deletes a user.
 
 ### [Remove-AzureRmApiManagementUserFromGroup](Remove-AzureRmApiManagementUserFromGroup.md)
-{{Fill in the Synopsis}}
+Removes a user from a group.
 
 ### [Restore-AzureRmApiManagement](Restore-AzureRmApiManagement.md)
-{{Fill in the Synopsis}}
+Restores an API Management service.
 
 ### [Set-AzureRmApiManagementApi](Set-AzureRmApiManagementApi.md)
-{{Fill in the Synopsis}}
+Modifies an API.
 
 ### [Set-AzureRmApiManagementAuthorizationServer](Set-AzureRmApiManagementAuthorizationServer.md)
-{{Fill in the Synopsis}}
+Modifies properties of an Azure API Management authorization server.
 
 ### [Set-AzureRmApiManagementCertificate](Set-AzureRmApiManagementCertificate.md)
-{{Fill in the Synopsis}}
+Modifies an Azure API Management certificate.
 
 ### [Set-AzureRmApiManagementGroup](Set-AzureRmApiManagementGroup.md)
-{{Fill in the Synopsis}}
+Modifies an API management group.
 
 ### [Set-AzureRmApiManagementHostnames](Set-AzureRmApiManagementHostnames.md)
-{{Fill in the Synopsis}}
+Applies a custom hostname configuration for an API Management service proxy or portal.
 
 ### [Set-AzureRmApiManagementOperation](Set-AzureRmApiManagementOperation.md)
-{{Fill in the Synopsis}}
+Modifies an API operation.
 
 ### [Set-AzureRmApiManagementPolicy](Set-AzureRmApiManagementPolicy.md)
-{{Fill in the Synopsis}}
+Modifies the specified policy for API Management.
 
 ### [Set-AzureRmApiManagementProduct](Set-AzureRmApiManagementProduct.md)
-{{Fill in the Synopsis}}
+Modifies the API Management product details.
 
 ### [Set-AzureRmApiManagementSubscription](Set-AzureRmApiManagementSubscription.md)
-{{Fill in the Synopsis}}
+Modifies subscription details.
 
 ### [Set-AzureRmApiManagementUser](Set-AzureRmApiManagementUser.md)
-{{Fill in the Synopsis}}
+Modifies details about the user.
 
 ### [Set-AzureRmApiManagementVirtualNetworks](Set-AzureRmApiManagementVirtualNetworks.md)
-{{Fill in the Synopsis}}
+Sets virtual network configuration for an API Management service.
 
 ### [Update-AzureRmApiManagementDeployment](Update-AzureRmApiManagementDeployment.md)
-{{Fill in the Synopsis}}
+Updates a deployment of the API Management service.
 
 ### [Update-AzureRmApiManagementRegion](Update-AzureRmApiManagementRegion.md)
-{{Fill in the Synopsis}}
-
+Updates an existing deployment region in a **PsApiManagement** object.

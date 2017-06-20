@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets one or more users.
 
 ## SYNTAX
 
@@ -28,27 +28,54 @@ Get-AzureRmApiManagementUser -Context <PsApiManagementContext> [-FirstName <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementUser** cmdlet gets a specific user, or all users, if no user is specified.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all users
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementUser -Context $apimContext
 ```
 
-{{ Add example description here }}
+This command gets all users.
+
+### Example 2: Get a specific user by ID
+```
+PS C:\> Get-AzureRmApiManagementUser -Context $apimContext -UserId "0123456789"
+```
+
+This command gets the user identified by the ID "0123456789".
+
+### Example 3: Get users by last name
+```
+PS C:\> Get-AzureRmApiManagementUser -Context $apimContext -LastName "Fuller"
+```
+
+This command gets all users that have the last name "Fuller".
+
+### Example 4: Get a specific user by email address
+```
+PS C:\> Get-AzureRmApiManagementUser -Context $apimContext -Email "user@contoso.com"
+```
+
+This command gets the user that has the email address "user@contoso.com".
+
+### Example 5: Get all users within a group
+```
+PS C:\> Get-AzureRmApiManagementUser -Context $apimContext -GroupId "0001"
+```
+
+This command gets all users within the group identified by the ID "0001".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,14 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -Email
-User email.
-If specified will try to find user by email.
-This parameter is optional.
+Specifies the email address of the user to get.
 
 ```yaml
 Type: String
 Parameter Sets: Find users
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,14 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-User first name.
-If specified will try to find users by the first name.
-This parameter is optional.
+Specifies the first name of the users to get.
+If this parameter is included, the cmdlet gets all users that have the specified first name.
 
 ```yaml
 Type: String
 Parameter Sets: Find users
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,14 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
-If specified will try to find all users within the group.
-This parameter is optional.
+Specifies the ID of a group.
+If this parameter is included, the cmdlet gets all users within the group.
 
 ```yaml
 Type: String
 Parameter Sets: Find users
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,14 +132,13 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-User last name.
-If specified will try to find users by the last name.
-This parameter is optional.
+Specifies the last name of the users to get.
+If this parameter is included, the cmdlet gets all users that have the specified last name.
 
 ```yaml
 Type: String
 Parameter Sets: Find users
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,14 +148,13 @@ Accept wildcard characters: False
 ```
 
 ### -State
-User state.
-If specified will try to find all users in the state.
-This parameter is optional.
+Specifies the state of the users.
+If this parameter is included, the cmdlet gets all users in the specified state.
 
 ```yaml
 Type: PsApiManagementUserState
 Parameter Sets: Find users
-Aliases: 
+Aliases:
 Accepted values: Active, Blocked
 
 Required: False
@@ -144,14 +165,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of a user.
-If specified will try to find user by the identifier.
-This parameter is optional.
+Specifies the ID of the user to get.
 
 ```yaml
 Type: String
 Parameter Sets: Get user by ID
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,14 +185,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
 
 ## OUTPUTS
 
-### System.Collections.Generic.IList`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUser, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Collections.Generic.IList
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementUser](./New-AzureRmApiManagementUser.md)
+
+[Remove-AzureRmApiManagementUser](./Remove-AzureRmApiManagementUser.md)
+
+[Set-AzureRmApiManagementUser](./Set-AzureRmApiManagementUser.md)

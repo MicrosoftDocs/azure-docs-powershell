@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmApiManagementAuthorizationServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an Azure API Management authorization server.
 
 ## SYNTAX
 
@@ -17,27 +17,26 @@ Remove-AzureRmApiManagementAuthorizationServer -Context <PsApiManagementContext>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmApiManagementAuthorizationServer** cmdlet removes an Azure API Management authorization server.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an authorization server
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmApiManagementApiFromProduct -Context $ApiMgmtContext -ServerId "0123456789"
 ```
 
-{{ Add example description here }}
+This command removes the authorization server identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,14 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces delete operation (prevents confirmation dialog).
-This parameter is optional.
-Default value is false.
+Indicates whether to run this command without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -64,14 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Specifies whether to return an object representing the item removed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,13 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
-Identifier of existing authorization server.
-This parameter is required.
+Specifies the ID of the authorization server to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,8 +96,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Management.Automation.SwitchParameter
+### System.String
 
 ## OUTPUTS
 
@@ -113,3 +106,8 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementAuthorizationServer](./Get-AzureRmApiManagementAuthorizationServer.md)
+
+[New-AzureRmApiManagementAuthorizationServer](./New-AzureRmApiManagementAuthorizationServer.md)
+
+[Set-AzureRmApiManagementAuthorizationServer](./Set-AzureRmApiManagementAuthorizationServer.md)

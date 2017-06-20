@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagementAuthorizationServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure API Management authorization server.
 
 ## SYNTAX
 
@@ -24,27 +24,30 @@ New-AzureRmApiManagementAuthorizationServer -Context <PsApiManagementContext> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagementAuthorizationServer** cmdlet creates an Azure API Management authorization server.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an authorization server
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmApiManagementAuthrizarionServer -Context $ApiMgmtContext -Name "Contoso OAuth2 server" -ClientRegistrationPageUrl "https://contoso/signup" -AuthorizationEndpointUrl "https://contoso/auth" -TokenEndpointUrl "https://contoso/token" -ClientId "clientid" -ClientSecret "e041ed1b660b4eadbad5a29d066e6e88" -AuthorizationRequestMethods @('Get', 'Post') -GrantTypes @( 'AuthorizationCode', 'Implicit', 'ResourceOwnerPassword', 'ClientCredentials') -ClientAuthenticationMethods @('Basic') -TokenBodyParameters @{'par1'='val1'; 'par2'='val2'} -AccessTokenSendingMethods @('AuthorizationHeader', 'Query') -ResourceOwnerUsername "ivan" -ResourceOwnerPassword "qwerty"
 ```
 
-{{ Add example description here }}
+This command creates an authorization server named "Contoso OAuth2 server".
 
 ## PARAMETERS
 
 ### -AccessTokenSendingMethods
-Supported methods of sending access token (AuthorizationHeader, Query).
-This parameter is required.
+Specifies an array of the supported methods of sending an access token.
+
+Valid values are:
+- AuthorizationHeader
+- Query
 
 ```yaml
 Type: PsApiManagementAccessTokenSendingMethod[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AuthorizationHeader, Query
 
 Required: True
@@ -55,13 +58,12 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationEndpointUrl
-Authorization endpoint is used to authenticate resource owners and obtain authorization grants.
-This parameter is required.
+Specifies the authorization endpoint that is used to authenticate resource owners and obtain authorization grants.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -71,14 +73,18 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationRequestMethods
-Supported authorization request methods (GET, POST).
-This parameter is optional.
-Default value is GET.
+Specifies an array of the supported methods used for an authorization request.
+
+Valid values are:
+- GET
+- POST
+
+The default value is GET.
 
 ```yaml
 Type: PsApiManagementAuthorizationRequestMethod[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Get, Post
 
 Required: False
@@ -89,13 +95,16 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAuthenticationMethods
-Supported client authentication methods (Basic, Body).
-This parameter is required.
+Speicifies an array of the supported client authentication methods.
+
+Valid values are:
+- Basic
+- Body
 
 ```yaml
 Type: PsApiManagementClientAuthenticationMethod[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Basic, Body
 
 Required: True
@@ -106,13 +115,12 @@ Accept wildcard characters: False
 ```
 
 ### -ClientId
-Client ID of developer console which is the client application.
-This parameter is required.
+Specifies the client ID of the developer console that is the client application.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -122,13 +130,12 @@ Accept wildcard characters: False
 ```
 
 ### -ClientRegistrationPageUrl
-Client registration endpoint is used for registering clients with the authorization server and obtaining client credentials.
-This parameter is required.
+Specifies the client registration endpoint that is used for registering clients with the authorization server and obtaining client credentials.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -138,13 +145,12 @@ Accept wildcard characters: False
 ```
 
 ### -ClientSecret
-Client secret of developer console which is the client application.
-This parameter is optional.
+Specifies the client secret of the developer console that is the client application.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,13 +160,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -170,13 +175,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultScope
-Authorization server default scope.
-This parameter is optional.
+Specifies the default scope for the authorization server.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,13 +190,12 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Description of new authorization server.
-This parameter is optional.
+Specifies a description for the authorization server.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,13 +205,18 @@ Accept wildcard characters: False
 ```
 
 ### -GrantTypes
-Supported grant types (AuthorizationCode, Implicit, ResourceOwnerPassword, ClientCredentials).
-This parameter is required.
+Specifies an array of the supported grant types.
+
+Valid values are:
+- AuthorizationCode
+- Implicit
+- ResourceOwnerPassword
+- ClientCredentials
 
 ```yaml
 Type: PsApiManagementGrantType[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AuthorizationCode, Implicit, ResourceOwnerPassword, ClientCredentials
 
 Required: True
@@ -219,13 +227,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of new authorization server.
-This parameter is required.
+Specifies the name of the authorization server to create.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -235,13 +242,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceOwnerPassword
-Resource owner password.
-This parameter is required if 'ResourceOwnerPassword' is present in -GrantTypes.
+Specifies the password of the resource owner.
+This parameter is required if ResourceOwnerPassword is specified by the *GrantTypes* parameter.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,13 +258,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceOwnerUsername
-Resource owner user name.
-This parameter is required if 'ResourceOwnerPassword' is present in -GrantTypes.
+Specifies the user name of the resource owner.
+This parameter is required if ResourceOwnerPassword is specified by the *GrantTypes* parameter.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -267,13 +274,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
-Identifier of existing authorization server.
-This parameter is optional.
+Specifies the ID of the authorization server to create.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -283,13 +289,12 @@ Accept wildcard characters: False
 ```
 
 ### -SupportState
-Whether to support state parameter.
-This parameter is optional.
+Indicates whether to support the **State** property.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,13 +304,12 @@ Accept wildcard characters: False
 ```
 
 ### -TokenBodyParameters
-Additional body parameters using application/x-www-form-urlencoded format.
-This parameter is optional.
+Specifies additional body parameters using the **application/x-www-form-urlencoded** format.
 
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,13 +319,12 @@ Accept wildcard characters: False
 ```
 
 ### -TokenEndpointUrl
-Token endpoint is used by clients to obtain access tokens in exchange for presenting authorization grants or refresh tokens.
-This parameter is required.
+Specifies the token endpoint URL that is used by clients to obtain access tokens in exchange for presenting authorization grants or refresh tokens.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -336,13 +339,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAuthorizationRequestMethod[]
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGrantType[]
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementClientAuthenticationMethod[]
-System.Collections.Hashtable
-System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAccessTokenSendingMethod[]
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAuthorizationRequestMethod[]
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGrantType[]
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementClientAuthenticationMethod[]
+### System.Collections.Hashtable
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAccessTokenSendingMethod[]
 
 ## OUTPUTS
 
@@ -352,3 +354,8 @@ Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementA
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementAuthorizationServer](./Get-AzureRmApiManagementAuthorizationServer.md)
+
+[Remove-AzureRmApiManagementAuthorizationServer](./Remove-AzureRmApiManagementAuthorizationServer.md)
+
+[Set-AzureRmApiManagementAuthorizationServer](./Set-AzureRmApiManagementAuthorizationServer.md)

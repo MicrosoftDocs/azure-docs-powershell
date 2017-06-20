@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagementSubscription
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a subscription to a product.
 
 ## SYNTAX
 
@@ -18,27 +18,26 @@ New-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-Subscri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagementSubscription** cmdlet creates a subscription to a product.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Subscribe a user to a product
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmApiManagementSubscription -Context $apimContext -UserId "777" -ProductId "999"
 ```
 
-{{ Add example description here }}
+This command subscribes an existing user to the product identified by the ID "999".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -48,13 +47,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Subscription name.
-This parameter is required.
+Specifies the name of the subscription.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -64,15 +62,14 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryKey
-Subscription primary key.
-This parameter is optional.
-If not specified will be generated automatically.
-Must be 1 to 300 characters long.
+Specifies the primary key of the subscription.
+If the primary key is not specified, it is generated automatically.
+The value must be 1 to 300 characters long.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,13 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing product to subscribe to.
-This parameter is required.
+Specifies the ID of the product to which to subscribe.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,15 +94,14 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryKey
-Subscription secondary key.
-This parameter is optional.
-If not specified will be generated automatically.
-Must be 1 to 300 characters long.
+Specifies the secondary key of the subscription.
+If the secondary key is not specified, it is generated automatically.
+The value must be 1 to 300 characters long.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,14 +111,13 @@ Accept wildcard characters: False
 ```
 
 ### -State
-Subscription state.
-This parameter is optional.
-Default value is $null.
+Specifies the state of the subscription.
+The default value is **$Null**.
 
 ```yaml
 Type: PsApiManagementSubscriptionState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Suspended, Active, Expired, Submitted, Rejected, Cancelled
 
 Required: False
@@ -134,14 +128,13 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Identifier of new subscription.
-This parameter is optional.
-If not specified will be generated.
+Specifies the ID of the new subscription.
+If the ID is not specified, it is generated automatically.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,13 +144,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user - the subscriber.
-This parameter is required.
+Specifies the ID of the user who is subscribing to the product.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -172,8 +164,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.String
 
 ## OUTPUTS
 
@@ -183,3 +174,8 @@ System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Mode
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementSubscription](./Get-AzureRmApiManagementSubscription.md)
+
+[Remove-AzureRmApiManagementSubscription](./Remove-AzureRmApiManagementSubscription.md)
+
+[Set-AzureRmApiManagementSubscription](./Set-AzureRmApiManagementSubscription.md)

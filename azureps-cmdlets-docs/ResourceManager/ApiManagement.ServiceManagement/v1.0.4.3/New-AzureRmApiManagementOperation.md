@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagementOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an API operation.
 
 ## SYNTAX
 
@@ -19,27 +19,26 @@ New-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagementOperation** cmdlet creates an API operation.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an API management operation
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmApiManagementOperation -Context $APImContext -ApiId $APIid -OperationId "Operation001" -Name "Operation" -Method "GET" -UrlTemplate "/resource" -Description "Use this operation to get resource"
 ```
 
-{{ Add example description here }}
+This command creates an API management operation that has the specified ID, display name, method, URL template, and description.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of API.
-This parameter is required.
+Specifies the ID of the API for which to create the operation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -49,13 +48,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -65,13 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Description of new operation.
-This parameter is optional.
+Specifies the description of the new API operation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,13 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -Method
-HTTP method of new operation.
-This parameter is required.
+Specifies the HTTP method of the new API operation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,13 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Display name of new operation.
-This parameter is required.
+Specifies the display name of the new API operation.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,14 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-Identifier of new operation.
-This parameter is optional.
-If not specified will be generated.
+Specifies an ID for the API operation.
+If the ID is not specified, it will be generated.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,13 +124,12 @@ Accept wildcard characters: False
 ```
 
 ### -Request
-Operation request details.
-This parameter is optional.
+Specifies the details of the API operation request.
 
 ```yaml
 Type: PsApiManagementRequest
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,13 +139,12 @@ Accept wildcard characters: False
 ```
 
 ### -Responses
-Array of possible operation responses.
-This parameter is optional.
+Specifies an array of possible API operation responses.
 
 ```yaml
 Type: PsApiManagementResponse[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,15 +154,13 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateParameters
-Array or parameters defined in UrlTemplate.
-This parameter is optional.
-If not specified default value will be generated based on the UrlTemplate.
-Use the parameter to give more details on parameters like description, type, possible values.
+Specifies an array of parameters defined in the *UrlTemplate* parameter.
+If not specified, default values will be generated based on the contents of the *UrlTemplate* parameter.
 
 ```yaml
 Type: PsApiManagementParameter[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,14 +170,13 @@ Accept wildcard characters: False
 ```
 
 ### -UrlTemplate
-URL template.
-Example: customers/{cid}/orders/{oid}/?date={date}.
-This parameter is required.
+Specifies the URL template.
+For example: customers/{cid}/orders/{oid}/?date={date}.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -202,10 +191,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementParameter[]
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementRequest
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementResponse[]
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementParameter[]
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementRequest
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementResponse[]
 
 ## OUTPUTS
 
@@ -215,3 +204,8 @@ Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementR
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementOperation](./Get-AzureRmApiManagementOperation.md)
+
+[Remove-AzureRmApiManagementOperation](./Remove-AzureRmApiManagementOperation.md)
+
+[Set-AzureRmApiManagementOperation](./Set-AzureRmApiManagementOperation.md)

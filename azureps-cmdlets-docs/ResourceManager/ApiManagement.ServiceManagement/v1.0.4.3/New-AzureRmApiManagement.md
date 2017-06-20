@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an API Management deployment.
 
 ## SYNTAX
 
@@ -18,26 +18,36 @@ New-AzureRmApiManagement -ResourceGroupName <String> -Name <String> -Location <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagement** cmdlet creates an API Management deployment.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a Developer tier API Management service
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com"
 ```
 
-{{ Add example description here }}
+This command creates a Developer tier API Management service.
+The command specifies the organization and the administrator address.
+The command does not specify the *Sku* parameter.
+Therefore, the cmdlet uses the default value of Developer.
+
+### Example 2: Create a Standard tier service that has three units
+```
+PS C:\>New-AzureRmApiManagement -ResourceGroupName "ContosoGroup02 -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com" -Sku Standard -Capacity 3
+```
+
+This command creates a Standard tier API Management service that has three units.
 
 ## PARAMETERS
 
 ### -AdminEmail
-The originating e-mail address for all e-mail notifications sent from the API Management system.
+Specifies the originating email address for all notifications that the API Management system sends.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,13 +57,13 @@ Accept wildcard characters: False
 ```
 
 ### -Capacity
-Sku capacity of the Azure API Management service.
-Default value is 1.
+Specifies the SKU capacity of the Azure API Management service.
+The default is 1.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,12 +73,30 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location where want to create API Management.
+Specifies the location in which this cmdlet creates an API Management deployment.
+
+Valid values are:
+
+- North Central US
+- South Central US
+- Central US
+- West Europe
+- North Europe
+- West US
+- East US
+- East US 2
+- Japan East
+- Japan West
+- Brazil South
+- Southeast Asia
+- East Asia
+- Australia East
+- Australia Southeast
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: North Central US, South Central US, Central US, West Europe, North Europe, West US, East US, East US 2, Japan East, Japan West, Brazil South, Southeast Asia, East Asia, Australia East, Australia Southeast
 
 Required: True
@@ -79,12 +107,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of API Management.
+Specifies a name for the API Management deployment.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -94,12 +122,12 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The name of the organization for use in the developer portal in e-mail notifications.
+Specifies the name of the organization for use in the developer portal in email notifications.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,12 +137,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which you want to create API Management.
+Specifies the name of the resource group under which the API Management deployment is to be created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,14 +152,19 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-The tier of the Azure API Management service.
-Valid values are Developer, Standard and Premium .
-Default value is Developer
+Specifies the tier of the API Management service.
+Valid values are:
+
+- Developer
+- Standard
+- Premium
+
+The default is Developer.
 
 ```yaml
 Type: PsApiManagementSku
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Developer, Standard, Premium
 
 Required: False
@@ -142,12 +175,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Tags dictionary.
+Specifies a dictionary of tags.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,9 +195,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku, Microsoft.Azure.Commands.ApiManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
-System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+### System.Collections.Generic.Dictionary
 
 ## OUTPUTS
 
@@ -174,3 +205,10 @@ System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.
 
 ## RELATED LINKS
 
+[Backup-AzureRmApiManagement](./Backup-AzureRmApiManagement.md)
+
+[Get-AzureRmApiManagement](./Get-AzureRmApiManagement.md)
+
+[Remove-AzureRmApiManagement](./Remove-AzureRmApiManagement.md)
+
+[Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)

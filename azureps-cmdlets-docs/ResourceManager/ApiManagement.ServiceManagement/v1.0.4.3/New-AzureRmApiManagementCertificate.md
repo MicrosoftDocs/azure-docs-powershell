@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagementCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure API Management certificate.
 
 ## SYNTAX
 
@@ -24,28 +24,27 @@ New-AzureRmApiManagementCertificate -Context <PsApiManagementContext> [-Certific
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagementCertificate** cmdlet creates an Azure API Management certificate.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create and upload a certificate
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmApiManagementCertificate -Context $ApiMgmtContext -PfxFilePath "C:\contoso\certificates\apimanagement.pfx" -PfxPassword "1111"
 ```
 
-{{ Add example description here }}
+This command creates an API Management certificate and uploads it.
 
 ## PARAMETERS
 
 ### -CertificateId
-Identifier of new certificate.
-This parameter is optional.
-If not specified will be generated.
+Specifies the ID of the certificate to create.
+If this parameter is not present, an ID is generated.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -55,13 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -71,13 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -PfxBytes
-Bytes of the certificate file in .pfx format to be created/uploaded.
-This parameter is required if -PfxFilePath not specified.
+Specifies the certificate as an array of bytes in PFX format.
+This parameter is required if the *PfxFilePath* parameter is not present.
 
 ```yaml
 Type: Byte[]
 Parameter Sets: Raw
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -87,13 +85,13 @@ Accept wildcard characters: False
 ```
 
 ### -PfxFilePath
-Path to the certificate file in .pfx format to be created/uploaded.
-This parameter is required if -PfxBytes not specified.
+Specifies the path to the PFX file containing the certificate to be created and uploaded.
+This parameter is required if the *PfxBytes* parameter is not present.
 
 ```yaml
 Type: String
 Parameter Sets: Load from file
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -103,13 +101,12 @@ Accept wildcard characters: False
 ```
 
 ### -PfxPassword
-Password for the certificate.
-This parameter is required.
+Specifies the password for the certificate.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,8 +121,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Byte[]
+### System.String
+### System.Byte[]
 
 ## OUTPUTS
 
@@ -135,3 +132,8 @@ System.Byte[]
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementCertificate](./Get-AzureRmApiManagementCertificate.md)
+
+[Remove-AzureRmApiManagementCertificate](./Remove-AzureRmApiManagementCertificate.md)
+
+[Set-AzureRmApiManagementCertificate](./Set-AzureRmApiManagementCertificate.md)

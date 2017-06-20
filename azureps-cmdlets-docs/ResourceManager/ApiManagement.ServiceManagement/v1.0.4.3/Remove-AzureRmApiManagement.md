@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a deployment of the Azure API Management service.
 
 ## SYNTAX
 
@@ -17,26 +17,26 @@ Remove-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-PassThr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmApiManagement** cmdlet removes a deployment of the Azure API Management service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a deployment of API Management service
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi"
 ```
 
-{{ Add example description here }}
+This command removes the API Management deployment named "ContosoApi".
 
 ## PARAMETERS
 
 ### -Force
-Do not confirm on the removal of the API Management service.
+Indicates whether to run this command without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -46,12 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of API Management service.
+Specifies the name of the API Management deployment to be removed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -61,12 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Specifies whether to return an object representing the item removed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,12 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management service exists.
+Specifies the name of the of resource group under which the API Management deployment exists.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,3 +105,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Backup-AzureRmApiManagement](./Backup-AzureRmApiManagement.md)
+
+[Get-AzureRmApiManagement](./Get-AzureRmApiManagement.md)
+
+[New-AzureRmApiManagement](./New-AzureRmApiManagement.md)
+
+[Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
