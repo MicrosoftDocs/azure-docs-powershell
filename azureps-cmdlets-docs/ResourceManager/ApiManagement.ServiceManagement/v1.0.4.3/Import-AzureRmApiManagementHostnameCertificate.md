@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Import-AzureRmApiManagementHostnameCertificate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Imports a certificate in PFX format for an API Management service.
 
 ## SYNTAX
 
@@ -18,26 +18,27 @@ Import-AzureRmApiManagementHostnameCertificate -ResourceGroupName <String> -Name
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Import-AzureRmApiManagementHostnameCertificate** cmdlet imports a certificate in PFX format for an API Management service.
+The certificate is used for configuration of custom hostnames.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Import a proxy hostname certificate
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Import-AzureRmApiManagementHostnameCertificate -Name "ContosoApi" -ResourceGroupName "Contoso" -HostnameType "Proxy" -PfxPath "C:\proxycert.pfx" -PfxPassword "CertSecret"
 ```
 
-{{ Add example description here }}
+This command imports a proxy hostname certificate for the API Management deployment named "ContosoApi".
 
 ## PARAMETERS
 
 ### -HostnameType
-Host name type to upload certificate for.
+Specifies the hostname type for the certificate.
 
 ```yaml
 Type: PsApiManagementHostnameType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Proxy, Portal
 
 Required: True
@@ -48,12 +49,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of API Management.
+Specifies the name of the API Management deployment for which the certificate is being imported.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,12 +64,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Sends imported PsApiManagementHostnameCertificate to pipeline if operation succeeds.
+Specifies whether to send a **PsApiManagementHostnameCertificate** object to the pipeline if this operation succeeds.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,12 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -PfxPassword
-Password for the .pfx certificate file.
+Specifies the password for the .pfx certificate file from which to import the certificate.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -PfxPath
-Path to a .pfx certificate file.
+Specifies the path of a .pfx certificate file from which to import the certificate.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,12 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of the of resource group under which the API Management deployment exists.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +129,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameType
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameType
 
 ## OUTPUTS
 
@@ -138,3 +139,6 @@ Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameType
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementHostnameConfiguration](./New-AzureRmApiManagementHostnameConfiguration.md)
+
+[Set-AzureRmApiManagementHostnames](./Set-AzureRmApiManagementHostnames.md)

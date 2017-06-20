@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Add-AzureRmApiManagementApiToProduct
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an API to a product.
 
 ## SYNTAX
 
@@ -17,27 +17,26 @@ Add-AzureRmApiManagementApiToProduct -Context <PsApiManagementContext> -ProductI
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-AzureRmApiManagementApiToProduct** cmdlet adds an API to a product.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Add an API to the specified product
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Add-AzureRmApiManagementApiToProduct -Context $ApiMgmtContext -ProductId "0123456789" -ApiId "0001"
 ```
 
-{{ Add example description here }}
+This command adds the specified API to the product identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of existing APIs to be added to the product.
-This parameter is required.
+Specifies the ID of an API to be added to a product.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,13 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,14 +61,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Specifies whether to return an object representing the API that is added.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,13 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing Product to add API to.
-This parameter is required.
+Specifies the ID of the product to which the API is being added.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,14 +97,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 
-### System.Boolean
+### None or an object representing the API that was added.
+When you use the *PassThru* parameter, this cmdlet returns an object that represents the added API.
+Otherwise, this cmdlet does not generate any output.
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Remove-AzureRmApiManagementApiFromProduct](./Remove-AzureRmApiManagementApiFromProduct.md)

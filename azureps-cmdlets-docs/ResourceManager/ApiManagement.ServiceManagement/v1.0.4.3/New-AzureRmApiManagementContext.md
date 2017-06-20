@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagementContext
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an instance of **PsAzureApiManagementContext**.
 
 ## SYNTAX
 
@@ -16,26 +16,28 @@ New-AzureRmApiManagementContext -ResourceGroupName <String> -ServiceName <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagementContext** cmdlet creates an instance of **PsAzureApiManagementContext**.
+The context is used for all of the API Management service cmdlets.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a PsApiManagementContext instance
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> $ApiMgmtContext = New-AzureRmApiManagementContext -ResourceGroupName "ContosoResources" -ServiceName "Contoso"
 ```
 
-{{ Add example description here }}
+This command creates an instance of **PsApiManagementContext** for the deployed API Management service named "Contoso" in the "ContosoResources" resource group.
+The returned **PsApiManagementContext** object is stored in the $ApiMgmtContext variable for later use in API Management service cmdlets.
 
 ## PARAMETERS
 
 ### -ResourceGroupName
-Name of resource group under which an API Management service is deployed.
+Specifies the name of the resource group under which an API Management service is deployed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -45,12 +47,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Name of deployed API Management service.
+Specifies the name of the deployed API Management service.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -74,3 +76,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[AzureRM.ApiManagement](./AzureRM.ApiManagement.md)

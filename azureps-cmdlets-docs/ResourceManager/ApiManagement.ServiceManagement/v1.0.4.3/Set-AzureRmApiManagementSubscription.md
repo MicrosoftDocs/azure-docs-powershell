@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmApiManagementSubscription
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies subscription details.
 
 ## SYNTAX
 
@@ -18,27 +18,26 @@ Set-AzureRmApiManagementSubscription -Context <PsApiManagementContext> -Subscrip
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmApiManagementSubscription** cmdlet modifies subscription details.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Change the state, primary key, and secondary key of a subscription
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789" -PrimaryKey "80450f7d0b6d481382113073f67822c1" -SencondaryKey "97d6112c3a8f48d5bf0266b7a09a761c" -State Active
 ```
 
-{{ Add example description here }}
+This command changes the state, primary key, and secondary key of the subscription identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -48,14 +47,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiresOn
-Subscription expiration date.
-This parameter is optional.
-Default value is $null.
+Specifies a subscription expiration date.
+The default value of this parameter is $Null.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -65,13 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Subscription name.
-This parameter is optional.
+Specifies the name of the subscription.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,12 +78,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscripition type representing the modified subscription.
+Specifies whether to return an object representing the modified subscription.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,15 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryKey
-Subscription primary key.
-This parameter is optional.
-If not specified will be generated automatically.
-Must be 1 to 300 characters long.
+Specifies the primary key of the subscription.
+The value must be 1 to 300 characters long.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,15 +110,13 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryKey
-Subscription secondary key.
-This parameter is optional.
-If not specified will be generated automatically.
-Must be 1 to 300 characters long.
+Specifies the secondary key of the subscription.
+The value must be 1 to 300 characters long.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,14 +126,13 @@ Accept wildcard characters: False
 ```
 
 ### -State
-Subscription state.
-This parameter is optional.
-Default value is $null.
+Specifies the state of the subscription.
+The default value is $Null.
 
 ```yaml
 Type: PsApiManagementSubscriptionState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Suspended, Active, Expired, Submitted, Rejected, Cancelled
 
 Required: False
@@ -150,14 +143,13 @@ Accept wildcard characters: False
 ```
 
 ### -StateComment
-Subscription state comment.
-This parameter is optional.
-Default value is $null.
+Specifies a comment about the state of the subscription.
+The default value of this parameter is $Null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,13 +159,12 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Identifier of existing subscription.
-This parameter is required.
+Specifies the ID of the subscription to modify.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,10 +179,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Nullable`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
-System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-System.Management.Automation.SwitchParameter
+### System.String
 
 ## OUTPUTS
 
@@ -201,3 +189,8 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementSubscription](./Get-AzureRmApiManagementSubscription.md)
+
+[New-AzureRmApiManagementSubscription](./New-AzureRmApiManagementSubscription.md)
+
+[Remove-AzureRmApiManagementSubscription](./Remove-AzureRmApiManagementSubscription.md)

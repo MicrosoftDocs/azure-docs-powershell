@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Restore-AzureRmApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Restores an API Management service.
 
 ## SYNTAX
 
@@ -17,26 +17,26 @@ Restore-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-Storag
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Restore-AzureRmApiManagement** cmdlet restores an API Management service from the specified backup residing in Azure Blob storage.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Restore an API Management service
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Restore-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Name "RestoredContosoApi" -StorageContext $StorageContext -SourceContainerName "ContosoBackups" -SourceBlobName "ContosoBackup.apimbackup"
 ```
 
-{{ Add example description here }}
+This command restores the API Management service named "RestoredContosoApi" from the backup named "ContosoBackup.apimbackup".
 
 ## PARAMETERS
 
 ### -Name
-Name of API Management.
+Specifies the name of the API Management instance that will be restored from the backup.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -46,12 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Sends restored PsApiManagement to pipeline if operation succeeds.
+Specifies whether to return an object representing the restored item.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,12 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of resource group under which the API Management service exists.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,12 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -SourceBlobName
-Name of Azure Storage backup source blob.
+Specifies the name of the backup residing in Azure Blob storage.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,12 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -SourceContainerName
-Name of Azure Storage backup source container.
+Specifies the name of the container of the backup.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -106,12 +106,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-The storage connection context.
+Specifies the context of the storage connection.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -135,3 +135,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Backup-AzureRmApiManagement](./Backup-AzureRmApiManagement.md)
+
+[Get-AzureRmApiManagement](./Get-AzureRmApiManagement.md)
+
+[New-AzureRmApiManagement](./New-AzureRmApiManagement.md)
+
+[Remove-AzureRmApiManagement](./Remove-AzureRmApiManagement.md)

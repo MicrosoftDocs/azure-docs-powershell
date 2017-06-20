@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementSubscription
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets one or more subscriptions.
 
 ## SYNTAX
 
@@ -34,27 +34,47 @@ Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-Product
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementSubscription** cmdlet gets a specified subscription, or all subscriptions, if no subscription is specified.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all subscriptions
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementSubscription -Context $apimContext
 ```
 
-{{ Add example description here }}
+This command gets all subscriptions.
+
+### Example 2: Get a specific subscription
+```
+PS C:\> Get-AzureRmApiManagementSubscription -Context $apimContext -SubscriptionId "0123456789"
+```
+
+This command gets the subscription that is identified by the ID "0123456789".
+
+### Example 3: Get all subscriptions for a user
+```
+PS C:\> Get-AzureRmApiManagementSubscription -Context $apimContext -UserId "777"
+```
+
+This command gets all of a user's subscriptions.
+
+### Example 4: Get all subscriptions to a product
+```
+PS C:\> Get-AzureRmApiManagementSubscription -Context $apimContext -ProductId "999"
+```
+
+This command gets all subscriptions to the product identified by the ID "999".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -64,14 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Product identifier.
-If specified will try to find all subscriptions by the product identifier.
-This parameter is optional.
+Specifies the ID of a product.
+If this parameter is included, the cmdlet gets all subscriptions to the product.
 
 ```yaml
 Type: String
 Parameter Sets: Get by product ID
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,14 +100,13 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Subscription identifier.
-If specified will try to find subscription by the identifier.
-This parameter is optional.
+Specifies the ID of a subscription to get.
+If this parameter is included, the cmdlet gets the subscription that has the specified ID.
 
 ```yaml
 Type: String
 Parameter Sets: Get by subsctiption ID
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,14 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-User identifier.
-If specified will try to find all subscriptions by the user identifier.
-This parameter is optional.
+Specifies the ID of a user.
+If this parameter is included, the cmdlet gets all subscriptions for the user.
 
 ```yaml
 Type: String
 Parameter Sets: Get by user ID
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,13 +137,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
 
 ## OUTPUTS
 
-### System.Collections.Generic.IList`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscription, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Collections.Generic.IList
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementSubscription](./New-AzureRmApiManagementSubscription.md)
+
+[Remove-AzureRmApiManagementSubscription](./Remove-AzureRmApiManagementSubscription.md)
+
+[Set-AzureRmApiManagementSubscription](./Set-AzureRmApiManagementSubscription.md)

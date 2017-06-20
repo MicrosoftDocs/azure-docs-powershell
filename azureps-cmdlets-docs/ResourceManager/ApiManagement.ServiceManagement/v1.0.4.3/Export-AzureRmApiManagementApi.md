@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Export-AzureRmApiManagementApi
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Exports an API to a file in one of the supported formats.
 
 ## SYNTAX
 
@@ -24,27 +24,26 @@ Export-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Export-AzureRmApiManagementApi** cmdlet exports an API to a file in one of the supported formats.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Export an API in WADL format
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Export-AzureRmApiManagementApi -Context $ApiMgmtContext -ApiId "0123456789" -SpecificationFormat "Wadl" -SaveAs "C:\contoso\specifications\0123456789.wadl"
 ```
 
-{{ Add example description here }}
+This command exports the API identified by the ID "0123456789" to a Web Application Description Language (WADL) file.
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of exporting API.
-This parameter is required.
+Specifies the ID of an API to be exported.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -54,13 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -70,13 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If specified will override the file if it exists.
-This parameter is optional.
+Indicates whether to forcefully overwrite the file, if it already exists.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Export to File
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,13 +83,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true/false if api exported successfully/failed.
-This parameter is optional.
+Specifies whether to return an object representing the API that is exported.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Export to File
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,13 +99,12 @@ Accept wildcard characters: False
 ```
 
 ### -SaveAs
-File path where to save the exporting specification to.
-This parameter is required.
+Specifies the path and name of the file to which to export the API.
 
 ```yaml
 Type: String
 Parameter Sets: Export to File
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -118,13 +114,12 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificationFormat
-Specification format (Wadl or Swagger).
-This parameter is required.
+Specifies the format of the file.
 
 ```yaml
 Type: PsApiManagementApiFormat
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Wadl, Swagger
 
 Required: True
@@ -140,9 +135,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiFormat
-System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 
@@ -152,3 +144,12 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementApi](./Get-AzureRmApiManagementApi.md)
+
+[Import-AzureRmApiManagementApi](./Import-AzureRmApiManagementApi.md)
+
+[New-AzureRmApiManagementApi](./New-AzureRmApiManagementApi.md)
+
+[Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)
+
+[Set-AzureRmApiManagementApi](./Set-AzureRmApiManagementApi.md)

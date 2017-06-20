@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementAuthorizationServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets all Azure API Management authorization servers or a specific authorization server.
 
 ## SYNTAX
 
@@ -17,27 +17,33 @@ Get-AzureRmApiManagementAuthorizationServer -Context <PsApiManagementContext> [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementAuthorizationServer** cmdlet gets all Azure API Management authorization servers or a specific authorization server.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all authorization servers
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementAuthrizarionServer -Context $ApiMgmtContext
 ```
 
-{{ Add example description here }}
+This command gets all API Management authorization servers.
+
+### Example 2: Get a specific authorization server
+```
+PS C:\> Get-AzureRmApiManagementCertificate -Context $ApiMgmtContext -ServerId "0123456789"
+```
+
+This command gets the authorization server identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,14 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerId
-Identifier of the authorization server.
-If specified will find authorization server by the identifier.
-This parameter is optional.
+Specifies the ID of the authorization server to get.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,13 +73,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
 
 ## OUTPUTS
 
-### System.Collections.Generic.IList`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOAuth2AuthrozationServer, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Collections.Generic.IList
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementAuthorizationServer](./New-AzureRmApiManagementAuthorizationServer.md)
+
+[Remove-AzureRmApiManagementAuthorizationServer](./Remove-AzureRmApiManagementAuthorizationServer.md)
+
+[Set-AzureRmApiManagementAuthorizationServer](./Set-AzureRmApiManagementAuthorizationServer.md)

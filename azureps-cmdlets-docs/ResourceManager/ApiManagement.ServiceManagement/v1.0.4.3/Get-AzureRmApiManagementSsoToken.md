@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementSsoToken
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a link (URL) containing a single sign-on (SSO) token for an API Management service.
 
 ## SYNTAX
 
@@ -16,26 +16,26 @@ Get-AzureRmApiManagementSsoToken -ResourceGroupName <String> -Name <String> [<Co
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementSsoToken** cmdlet gets a link (URL) containing a single sign-on (SSO) token to a deployed management portal of an API Management service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the SSO token for an API Management service
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementSsoToken -ResourceGroupName "Contoso" -Name "ContosoApi"
 ```
 
-{{ Add example description here }}
+This command gets the SSO token for an API Management service named "ContosoApi".
 
 ## PARAMETERS
 
 ### -Name
-Name of API Management.
+Specifies the name of the API Management instance.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -45,12 +45,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of the resource group under which API Management exists.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -74,3 +74,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagement](./Get-AzureRmApiManagement.md)

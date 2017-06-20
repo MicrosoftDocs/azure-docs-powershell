@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementProduct
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a list of API Management products or a specific API Management product.
 
 ## SYNTAX
 
@@ -27,27 +27,33 @@ Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-Title <Strin
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementProduct** cmdlet gets a list of API Management products or a specific API Management product.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all API Management products
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementProduct -Context $APImContext
 ```
 
-{{ Add example description here }}
+This command gets all API Management products.
+
+### Example 2: Get an API Management product by ID
+```
+PS C:\> Get-AzureRmApiManagementProduct -Context $APImContext -ProductId "0123456789"
+```
+
+This command gets the API Management product identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,13 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of Product to search for.
-This parameter is optional.
+Specifies the ID of the product to get.
 
 ```yaml
 Type: String
 Parameter Sets: Get by Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,14 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-Title of the Product to look for.
-If specified will try to get the Product by title.
-This parameter is optional.
+Specifies the title of the product to get.
 
 ```yaml
 Type: String
 Parameter Sets: Get by Title
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,13 +98,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
 
 ## OUTPUTS
 
-### System.Collections.Generic.IList`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementProduct, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Collections.Generic.IList
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementProduct](./New-AzureRmApiManagementProduct.md)
+
+[Remove-AzureRmApiManagementProduct](./Remove-AzureRmApiManagementProduct.md)
+
+[Set-AzureRmApiManagementProduct](./Set-AzureRmApiManagementProduct.md)

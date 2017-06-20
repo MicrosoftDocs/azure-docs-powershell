@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmApiManagementVirtualNetwork
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an instance of **PsApiManagementVirtualNetwork**.
 
 ## SYNTAX
 
@@ -17,26 +17,30 @@ New-AzureRmApiManagementVirtualNetwork -Location <String> -SubnetName <String> -
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmApiManagementVirtualNetwork** cmdlet creates an instance of **PsApiManagementVirtualNetwork**.
+This cmdlet is a helper command that is used with the **Set-AzureRmApiManagementVirtualNetworks** cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a virtual network
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> $VirtualNetworks = @()
+PS C:\> $VirtualNetworks += New-AzureRmApiManagementVirtualNetwork -Location "East US" -SubtenName "ContosoNet" -VnetId "089D3F4D-B986-4DFD-9259-9112BA7A1F03"
+PS C:\> Set-AzureRmApiManagementVirtualNetworks -ResourceGroupName "ContosoGroup" -Name "ContosoApi" -VirtualNetworks $VirtualNetworks
 ```
 
-{{ Add example description here }}
+This example creates a virtual network with a sub network named "ContosoNet"
+and then calls the **Set-AzureRmApiManagementVirtualNetworks** cmdlet to set the virtual network configuration for an API Management service.
 
 ## PARAMETERS
 
 ### -Location
-Location of the virtual network.
+Specifies the location of the virtual network in which this cmdlet creates the instance.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: North Central US, South Central US, Central US, West Europe, North Europe, West US, East US, East US 2, Japan East, Japan West, Brazil South, Southeast Asia, East Asia, Australia East, Australia Southeast
 
 Required: True
@@ -47,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetName
-Name of the sub network.
+Specifies the name of the sub network.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -62,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -VnetId
-Identifier of the virtual network.
+Specifies an ID for the virtual network.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,3 +95,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-AzureRmApiManagementVirtualNetworks](./Set-AzureRmApiManagementVirtualNetworks.md)

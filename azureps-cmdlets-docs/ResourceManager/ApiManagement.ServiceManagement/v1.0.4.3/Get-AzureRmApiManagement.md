@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets one or more Azure API Management services.
 
 ## SYNTAX
 
@@ -27,26 +27,33 @@ Get-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagement** cmdlet gets a specific Azure API Management service or a list of all Azure API Management services that are within a subscription or that are under the specified resource group.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all API Management services
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagement
 ```
 
-{{ Add example description here }}
+This command gets all API Management services within a subscription.
+
+### Example 2: Get a specific API Management service
+```
+PS C:\> Get-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
+```
+
+This command gets the API Management service named "ContosoApi" in the resource group "ContosoGroup".
 
 ## PARAMETERS
 
 ### -Name
-Name of API Management service.
+Specifies the name of the API Management service to get.
 
 ```yaml
 Type: String
 Parameter Sets: Specific API Management Service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -56,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which want to create API Management service.
+Specifies the name of the resource group under which this cmdlet gets the API Management service.
 
 ```yaml
 Type: String
 Parameter Sets: All In Resource Group, Specific API Management Service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,9 +86,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement, Microsoft.Azure.Commands.ApiManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Collections.Generic.List
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Backup-AzureRmApiManagement](./Backup-AzureRmApiManagement.md)
+
+[New-AzureRmApiManagement](./New-AzureRmApiManagement.md)
+
+[Remove-AzureRmApiManagement](./Remove-AzureRmApiManagement.md)
+
+[Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)

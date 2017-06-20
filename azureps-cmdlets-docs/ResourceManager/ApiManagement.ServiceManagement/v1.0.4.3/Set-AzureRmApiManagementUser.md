@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmApiManagementUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies details about the user.
 
 ## SYNTAX
 
@@ -18,27 +18,26 @@ Set-AzureRmApiManagementUser -Context <PsApiManagementContext> -UserId <String> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmApiManagementUser** cmdlet modifies details about the user.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Change a user's password, email address, and state
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzureRmApiManagementUser -Context $apimContext -UserId "0123456789" -Email "patti.fuller@contoso.com" -Password "asdfgh" -State "Blocked"
 ```
 
-{{ Add example description here }}
+This command sets a new user password, email address, and state for the user identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -48,13 +47,12 @@ Accept wildcard characters: False
 ```
 
 ### -Email
-User email.
-This parameter is optional.
+Specifies the email address of the user.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -64,14 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-User first name.
-This parameter is optional.
-Must be 1 to 100 characters long.
+Specifies the first name of the user.
+The value of this parameter must be 1 to 100 characters long.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,14 +78,13 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-User last name.
-This parameter is optional.
-Must be 1 to 100 characters long.
+Specifies the last name of the user.
+The value of this parameter must be 1 to 100 characters long.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,14 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Note
-Note on the user.
-This parameter is optional.
-Default value is $null.
+Specifies a note about the user.
+The default value of this parameter is $null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,12 +110,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUser type representing the modified user.
+Specifies whether to return an object representing the modified user.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,13 +126,12 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-User password.
-This parameter is optional.
+Specifies the user password.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,14 +141,13 @@ Accept wildcard characters: False
 ```
 
 ### -State
-User state.
-This parameter is optional.
-Default value is Active.
+Specifies the state of the user.
+The default value is Active.
 
 ```yaml
 Type: PsApiManagementUserState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Active, Blocked
 
 Required: False
@@ -164,13 +158,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
-This parameter is required.
+Specifies the ID of the user for which details are modified.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,9 +178,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState
-System.Management.Automation.SwitchParameter
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState
 
 ## OUTPUTS
 
@@ -197,3 +189,8 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementUser](./Get-AzureRmApiManagementUser.md)
+
+[New-AzureRmApiManagementUser](./New-AzureRmApiManagementUser.md)
+
+[Remove-AzureRmApiManagementUser](./Remove-AzureRmApiManagementUser.md)
