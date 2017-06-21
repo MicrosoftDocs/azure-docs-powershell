@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmApiManagementGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an API management group.
 
 ## SYNTAX
 
@@ -17,27 +17,26 @@ Remove-AzureRmApiManagementGroup -Context <PsApiManagementContext> -GroupId <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmApiManagementGroup** cmdlet removes an API management group.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an API management group without confirmation
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmApiManagementGroup -Context $APImContext -GroupId "Group0001" -Force
 ```
 
-{{ Add example description here }}
+This command removes the management group identified by the ID "Group0001" and does not prompt the user for confirmation.
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,14 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces delete operation (prevents confirmation dialog).
-This parameter is optional.
-Default value is false.
+Indicates whether to run this command without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -64,13 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
-This parameter is required.
+Specifies the ID of the management group to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -80,14 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Specifies whether to return an object representing the item removed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,8 +96,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Management.Automation.SwitchParameter
+### System.String
 
 ## OUTPUTS
 
@@ -113,3 +106,8 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementGroup](./Get-AzureRmApiManagementGroup.md)
+
+[New-AzureRmApiManagementGroup](./New-AzureRmApiManagementGroup.md)
+
+[Set-AzureRmApiManagementGroup](./Set-AzureRmApiManagementGroup.md)

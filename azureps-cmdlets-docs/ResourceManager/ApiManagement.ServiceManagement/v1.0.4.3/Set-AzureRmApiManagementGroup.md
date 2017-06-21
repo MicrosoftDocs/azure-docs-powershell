@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmApiManagementGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an API management group.
 
 ## SYNTAX
 
@@ -17,27 +17,26 @@ Set-AzureRmApiManagementGroup -Context <PsApiManagementContext> -GroupId <String
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmApiManagementGroup** cmdlet modifies an API management group.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Modify a management group
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzureRmApiManagementGroup -Context $APImContext -Description "Updated Management Group" -Name "Group0001"
 ```
 
-{{ Add example description here }}
+This command modifies the management group named "Group0001".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,13 +46,12 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Group description.
-This parameter is optional.
+Specifies the description of the management group.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,13 +61,12 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
-This parameter is required.
+Specifies the ID of the management group to modify.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,13 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Group name.
-This parameter is optional.
+Specifies the name of the management group to modify.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,12 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGroup type  representing the modified group.
+Specifies whether to return an object representing the modified item.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,8 +111,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Management.Automation.SwitchParameter
+### System.String
 
 ## OUTPUTS
 
@@ -126,3 +121,8 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagementGroup](./Get-AzureRmApiManagementGroup.md)
+
+[New-AzureRmApiManagementGroup](./New-AzureRmApiManagementGroup.md)
+
+[Remove-AzureRmApiManagementGroup](./Remove-AzureRmApiManagementGroup.md)

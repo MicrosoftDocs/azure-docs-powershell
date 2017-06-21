@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmApiManagementProductFromGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a product from a group.
 
 ## SYNTAX
 
@@ -17,27 +17,27 @@ Remove-AzureRmApiManagementProductFromGroup -Context <PsApiManagementContext> -G
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmApiManagementProductFromGroup** cmdlet removes a product from a group.
+This cmdlet removes the product's group assignment; it does not remove the group.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a product from a group
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmApiManagementProductFromGroup -Context $apimContext -GroupId "0001" -ProductId "0123456789"
 ```
 
-{{ Add example description here }}
+This command removes the product identified by the ID "0123456789" from the group identified by the ID "0001".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,13 +47,12 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of existing group.
-This parameter is required.
+Specifies the ID of the group from which to remove the product.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,14 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified will write true in case operation succeeds.
-This parameter is optional.
-Default value is false.
+Specifies whether to return an object representing the item removed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,13 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing product.
-This parameter is required.
+Specifies the ID of the product to remove from the group.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,8 +97,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-System.Management.Automation.SwitchParameter
+### System.String
 
 ## OUTPUTS
 
@@ -112,3 +107,6 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Add-AzureRmApiManagementProductToGroup](./Add-AzureRmApiManagementProductToGroup.md)
+
+[Remove-AzureRmApiManagementProduct](./Remove-AzureRmApiManagementProduct.md)

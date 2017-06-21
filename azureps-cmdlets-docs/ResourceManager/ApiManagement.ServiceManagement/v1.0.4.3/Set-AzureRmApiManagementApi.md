@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmApiManagementApi
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an API.
 
 ## SYNTAX
 
@@ -19,27 +19,26 @@ Set-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String> -N
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmApiManagementApi** cmdlet modifies an API.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Modify an API
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzureRmApiManagementApi -Context $ApiMgmtContext -ApiId "0123456789" -Name "EchoApi" -ServiceUrl "https://contoso.com/apis/echo" -Protocols @('https')
 ```
 
-{{ Add example description here }}
+This command modifies the API identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of existing API.
-This parameter is required.
+Specifies the ID of the API to modify.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -49,14 +48,13 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationScope
-OAuth operations scope.
-This parameter is optional.
-Default value is $null.
+Specifies the OAuth operations scope.
+The default value is **$Null**.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,15 +64,14 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationServerId
-OAuth authorization server identifier.
-This parameter is optional.
-Default value is $null.
-Must be specified if AuthorizationScope specified.
+Specifies the ID of the OAuth authorization server.
+The default value is **$Null**.
+This parameter must be included if the *AuthorizationScope* parameter is included.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,13 +81,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -100,13 +96,12 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Web API description.
-This parameter is optional.
+Specifies the description of the API, as it would appear on the developer and administration portals.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,14 +111,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Web API name.
-Public name of the API as it would appear on the developer and admin portals.
-This parameter is required.
+Specifies the public name of the API, as it would appear on the developer and administration portals.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,12 +126,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi type representing the set API.
+Specifies whether to return an object representing the modified item.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,17 +141,14 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Web API Path.
-Last part of the API's public URL.
-This URL will be used by API consumers for sending requests to the web service.
-Must be 1 to 400 characters long.
-This parameter is optional.
-Default value is $null.
+Specifies the web API path, which is the last part of the API's public URL.
+This URL is used by API consumers to send requests to the web service and must be 1 to 400 characters long.
+The default value is **$Null**.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,15 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -Protocols
-Web API protocols (http, https).
-Protocols over which API is made available.
-This parameter is required.
-Default value is $null.
+Specifies an array of web API protocols.
+These are the web protocols over which the API is made available.
+The valid values are http and https.
+The default value is **$Null**.
 
 ```yaml
 Type: PsApiManagementSchema[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 
 Required: True
@@ -187,15 +177,14 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUrl
-A URL of the web service exposing the API.
-This URL will be used by Azure API Management only, and will not be made public.
-Must be 1 to 2000 characters long.
-This parameter is required.
+Specifies the URL of the web service that exposes the API.
+This URL is used only by Azure API Management and is not made public.
+The URL must be 1 to 2000 characters long.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -205,14 +194,13 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionKeyHeaderName
-Subscription key header name.
-This parameter is optional.
-Default value is $null.
+Specifies the name of the subscription key header.
+The default value is **$Null**.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,14 +210,13 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionKeyQueryParamName
-Subscription key query string parameter name.
-This parameter is optional.
-Default value is $null.
+Specifies the name of the subscription key query string parameter.
+The default value is **$Null**.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,9 +231,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
-Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema[]
-System.Management.Automation.SwitchParameter
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema[]
 
 ## OUTPUTS
 
@@ -256,3 +242,12 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Export-AzureRmApiManagementApi](./Export-AzureRmApiManagementApi.md)
+
+[Get-AzureRmApiManagementApi](./Get-AzureRmApiManagementApi.md)
+
+[Import-AzureRmApiManagementApi](./Import-AzureRmApiManagementApi.md)
+
+[New-AzureRmApiManagementApi](./New-AzureRmApiManagementApi.md)
+
+[Remove-AzureRmApiManagementApi](./Remove-AzureRmApiManagementApi.md)

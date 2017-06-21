@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Update-AzureRmApiManagementRegion
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates an existing deployment region in a **PsApiManagement** object.
 
 ## SYNTAX
 
@@ -17,26 +17,29 @@ Update-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzureRmApiManagementRegion** cmdlet updates an existing instance of type **PsApiManagementRegion** in a collection of **AdditionalRegions** objects in the **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement** object.
+
+This cmdlet does not deploy anything by itself, but updates the **PsApiManagement** object in memory.
+To update a deployment of the API Management, pass the modified **PsApiManagement** object to the **Update-AzureRmApiManagementDeployment** cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Update a deployment region and update the deployment
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi" | Update-AzureRmApiManagementRegion -Location "East US" -Sku "Premium" -Capacity 2 | Update-AzureRmApiManagementDeployments
 ```
 
-{{ Add example description here }}
+This command gets a **PsApiManagement** object, updates the region named "East US" to have two premium SKU units, and then updates the deployment.
 
 ## PARAMETERS
 
 ### -ApiManagement
-PsApiManagement instance to update deployment region in.
+Specifies the **PsApiManagement** object in which to update an existing deployment region.
 
 ```yaml
 Type: PsApiManagement
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -46,12 +49,12 @@ Accept wildcard characters: False
 ```
 
 ### -Capacity
-New Sku capacity value for the deployment region.
+Specifies the new SKU capacity for the deployment region.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -61,12 +64,29 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location of the deployment region to update.
+Specifies the location of the deployment region to update.
+
+The valid values are:
+- North Central US
+- South Central US
+- Central US
+- West Europe
+- North Europe
+- West US
+- East US
+- East US 2
+- Japan East
+- Japan West
+- Brazil South
+- Southeast Asia
+- East Asia
+- Australia East
+- Australia Southeast
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: North Central US, South Central US, Central US, West Europe, North Europe, West US, East US, East US 2, Japan East, Japan West, Brazil South, Southeast Asia, East Asia, Australia East, Australia Southeast
 
 Required: True
@@ -77,13 +97,17 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-New tier value for the deployment region.
-Valid values are Developer, Standard and Premium.
+Specifies the new tier value for the deployment region.
+
+The valid values are:
+- Developer
+- Standard
+- Premium
 
 ```yaml
 Type: PsApiManagementSku
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Developer, Standard, Premium
 
 Required: True
@@ -94,14 +118,14 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-Virtual network configuration for the deployemnt region.
-Default value is $null.
-Passing $null will remove virtual network configuration for the region.
+Specifies a virtual network configuration for the deployment region.
+Passing $null in this parameter will remove the virtual network configuration for the region.
+The default value is $null.
 
 ```yaml
 Type: PsApiManagementVirtualNetwork
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,10 +140,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
-System.String
-Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
-System.Int32
-Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 
 ## OUTPUTS
 
@@ -129,3 +152,8 @@ Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 
 ## RELATED LINKS
 
+[Add-AzureRmApiManagementRegion](./Add-AzureRmApiManagementRegion.md)
+
+[Remove-AzureRmApiManagementRegion](./Remove-AzureRmApiManagementRegion.md)
+
+[Update-AzureRmApiManagementDeployment](./Update-AzureRmApiManagementDeployment.md)

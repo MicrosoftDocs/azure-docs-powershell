@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Update-AzureRmApiManagementDeployment
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Updates a deployment of the API Management service.
 
 ## SYNTAX
 
@@ -25,26 +25,39 @@ Update-AzureRmApiManagementDeployment -ApiManagement <PsApiManagement> [-PassThr
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Update-AzureRmApiManagementDeployment** cmdlet updates a deployment of the API Management service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Change the capacity of a deployment
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Update-AzureRmApiManagementDeployment -ResourceGroupName "Contoso" -Name "ContosoApi" -Sku "Standard" -Capacity 3
 ```
 
-{{ Add example description here }}
+This command updates the deployment of API Management to a three unit capacity standard.
+
+### Example 2: Change the scale and regions of a deployment
+```
+PS C:\> $ApiManagement = Get-AzureRmApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi"
+PS C:\> $ApiManagement.Sku = "Premium"
+PS C:\> $ApiManagement.Capacity = 5
+PS C:\> $ApiManagement.AddRegion("Central US", "Premium", 3)
+PS C:\> Update-AzureRmApiManagementDeployment -ApiManagement $ApiManagement
+```
+
+The first statement gets a **PsApiManagement** object, which specifies the current deployment, and stores the object in the $ApiManagement variable.
+The deployment is scaled to five premium units and an additional three units are added to the premium region.
+The modified **PsApiManagement** object is then passed to the **Update-AzureRmApiManagementDeployment** cmdlet to update the deployment.
 
 ## PARAMETERS
 
 ### -AdditionalRegions
-Additional deployment regions of Azure API Management.
+Specifies additional deployment regions of Azure API Management.
 
 ```yaml
 Type: System.Collections.Generic.IList`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion]
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -54,12 +67,13 @@ Accept wildcard characters: False
 ```
 
 ### -ApiManagement
-PsApiManagement instance to get deployment configuration from.
+Specifies a **PsApiManagement** object that contains the updated deployment.
+Use this parameter if the object already has all the required changes.
 
 ```yaml
 Type: PsApiManagement
 Parameter Sets: Update from PsApiManagement instance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -69,12 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -Capacity
-Sku capacity of master Azure API Management deployment region.
+Specifies the SKU capacity of the master Azure API Management deployment region.
 
 ```yaml
 Type: Int32
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,12 +98,29 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location of master API Management deployment region.
+Specifies the location of the master API Management deployment region.
+
+The acceptable values for this parameter are:
+- North Central US
+- South Central US
+- Central US
+- West Europe
+- North Europe
+- West US
+- East US
+- East US 2
+- Japan East
+- Japan West
+- Brazil South
+- Southeast Asia
+- East Asia
+- Australia East
+- Australia Southeast
 
 ```yaml
 Type: String
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 Accepted values: North Central US, South Central US, Central US, West Europe, North Europe, West US, East US, East US 2, Japan East, Japan West, Brazil South, Southeast Asia, East Asia, Australia East, Australia Southeast
 
 Required: True
@@ -100,12 +131,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of API Management.
+Specifies the name of the API Management deployment to update.
 
 ```yaml
 Type: String
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,12 +146,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Sends updated PsApiManagement to pipeline if operation succeeds.
+Specifies whether to return the updated **PsApiManagement** object to the pipeline.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,12 +162,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of resource group under which the API Management deployment exists.
 
 ```yaml
 Type: String
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -145,13 +177,17 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-The tier of master Azure API Management deployment region.
-Valid values are Developer, Standard and Premium.
+Specifies the tier of the master Azure API Management deployment region.
+
+The acceptable values for this parameter are:
+- Developer
+- Standard
+- Premium
 
 ```yaml
 Type: PsApiManagementSku
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 Accepted values: Developer, Standard, Premium
 
 Required: True
@@ -162,12 +198,12 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-Virtual Network Configuration of master Azure API Management deployment region.
+Specifies the virtual network configuration of the master Azure API Management deployment region.
 
 ```yaml
 Type: PsApiManagementVirtualNetwork
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,11 +218,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
-System.String
-Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
-System.Int32
-Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
-System.Collections.Generic.IList`1[[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion, Microsoft.Azure.Commands.ApiManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 
 ## OUTPUTS
 
@@ -196,3 +230,4 @@ System.Collections.Generic.IList`1[[Microsoft.Azure.Commands.ApiManagement.Model
 
 ## RELATED LINKS
 
+[Get-AzureRmApiManagement](./Get-AzureRmApiManagement.md)

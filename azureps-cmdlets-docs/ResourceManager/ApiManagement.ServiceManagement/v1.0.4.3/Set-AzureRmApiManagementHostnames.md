@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmApiManagementHostnames
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Applies a custom hostname configuration for an API Management service proxy or portal.
 
 ## SYNTAX
 
@@ -24,26 +24,26 @@ Set-AzureRmApiManagementHostnames -ApiManagement <PsApiManagement> [-PassThru] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmApiManagementHostnames** cmdlet applies a custom hostname configuration for an API Management service proxy or portal.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set the custom hostname configuration for a proxy and portal
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Set-AzureRmApiManagementHostnames -Name ContosoApi -ResourceGroupName Contoso -PortalHostnameConfiguration $portalHostnameConf -ProxyHostnameConfiguration $proxyHostnameConf
 ```
 
-{{ Add example description here }}
+This command sets the custom hostname configuration for proxy and portal.
 
 ## PARAMETERS
 
 ### -ApiManagement
-PsApiManagement instance to get PortalHostnameConfiguration and ProxyHostnameConfiguration from.
+Specifies the **PsApiManagement** object from which this cmdlet obtains the values for the *PortalHostnameConfiguration* and *ProxyHostnameConfiguration* parameters.
 
 ```yaml
 Type: PsApiManagement
 Parameter Sets: Set from provided PsApiManagement instance
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -53,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of API Management.
+Specifies the name of the API Management instance.
 
 ```yaml
 Type: String
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -68,12 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Sends updated PsApiManagement to pipeline if operation succeeds.
+Indicates whether to return an updated **PsApiManagement** object to the pipeline.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,14 +83,13 @@ Accept wildcard characters: False
 ```
 
 ### -PortalHostnameConfiguration
-Custom portal hostname configuration.
-Default value is $null.
-Passing $null will set the default hostname.
+Specifies the custom portal hostname configuration.
+If this parameter is **$Null**, the default hostname is used.
 
 ```yaml
 Type: PsApiManagementHostnameConfiguration
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,14 +99,13 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyHostnameConfiguration
-Custom proxy hostname configuration.
-Default value is $null.
-Passing $null will set the default hostname.
+Specifies the custom proxy hostname configuration.
+If this parameter is **$Null**, the default hostname is used.
 
 ```yaml
 Type: PsApiManagementHostnameConfiguration
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,12 +115,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Name of resource group under which API Management exists.
+Specifies the name of the resource group under which the API Management instance exists.
 
 ```yaml
 Type: String
 Parameter Sets: Specific API Management service
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,8 +135,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
-System.String
-Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameConfiguration
+### System.String
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameConfiguration
 
 ## OUTPUTS
 
@@ -148,3 +146,6 @@ Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameConfigurati
 
 ## RELATED LINKS
 
+[Import-AzureRmApiManagementHostnameCertificate](./Import-AzureRmApiManagementHostnameCertificate.md)
+
+[New-AzureRmApiManagementHostnameConfiguration](./New-AzureRmApiManagementHostnameConfiguration.md)

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets all API management groups or a specific API management group.
 
 ## SYNTAX
 
@@ -35,27 +35,47 @@ Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementGroup** cmdlet gets all API management groups or a specific API management group.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all groups
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementGroup -Context $APImContext
 ```
 
-{{ Add example description here }}
+This command gets all groups.
+
+### Example 2: Get a specific group by ID
+```
+PS C:\> Get-AzureRmApiManagementGroup -Context $APImContext -GroupId "0123456789"
+```
+
+This command gets  the group identified by the ID "0123456789".
+
+### Example 3: Get a specific group by name
+```
+PS C:\> Get-AzureRmApiManagementGroup -Context $APImContext -Name "Group0002"
+```
+
+This command gets the group named "Group0002".
+
+### Example 4: Get all user groups
+```
+PS C:\> Get-AzureRmApiManagementGroup -Context $APImContext -UserId "0123456789"
+```
+
+This command gets all groups for the user identified by the ID "0123456789".
 
 ## PARAMETERS
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -65,14 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -GroupId
-Identifier of a group.
-If specified will try to find group by the identifier.
-This parameter is optional.
+Specifies the ID of the group to get.
 
 ```yaml
 Type: String
 Parameter Sets: Get by group ID
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,14 +100,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Group name.
-If specified will try to find group by the name.
-This parameter is optional.
+Specifies the name of the group to get.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,14 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-Identifier of existing product.
-If specified will return all groups the product assigned to.
-This parameter is optional.
+Specifies the ID of a product.
+If this parameter is included, the cmdlet will return all groups to which the product is assigned.
 
 ```yaml
 Type: String
 Parameter Sets: Find groups by product
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,14 +131,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-Identifier of existing user.
-If specified will return all groups the user belongs to.
-This parameter is optional.
+Specifies the name of a user.
+If this parameter is included, the cmdlet will return all groups to which the user belongs.
 
 ```yaml
 Type: String
 Parameter Sets: Find groups by user
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,13 +152,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
 
 ## OUTPUTS
 
+### System.Collections.Generic.IList
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGroup
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementGroup](./New-AzureRmApiManagementGroup.md)
+
+[Remove-AzureRmApiManagementGroup](./Remove-AzureRmApiManagementGroup.md)
+
+[Set-AzureRmApiManagementGroup](./Set-AzureRmApiManagementGroup.md)

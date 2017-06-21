@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmApiManagementOperation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a list of API operations or a specific API operation.
 
 ## SYNTAX
 
@@ -23,27 +23,33 @@ Get-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmApiManagementOperation** gets a list of API operations or a specific API operation.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all API operations
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmApiManagementOperation -Context $APImContext -ApiId $APIid
 ```
 
-{{ Add example description here }}
+This command gets all API operations for the API identified by the ID specified in the $APIid variable.
+
+### Example 2: Get an API operation by operation ID
+```
+PS C:\> Get-AzureRmApiManagementOperation -Context $APImContext -ApiId $APIid -OperationId "Operation003"
+```
+
+This command gets the API operation identified by the ID "Operation003".
 
 ## PARAMETERS
 
 ### -ApiId
-Identifier of API Operation belongs to.
-This parameter is required.
+Specifies the ID of the API.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -53,13 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Instance of PsApiManagementContext.
-This parameter is required.
+Specifies an **PsApiManagementContext** object that contains details about the context of the Azure API Management service.
 
 ```yaml
 Type: PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -69,13 +74,12 @@ Accept wildcard characters: False
 ```
 
 ### -OperationId
-Identifier operation to look for.
-This parameter is optional.
+Specifies the ID of the operation to get.
 
 ```yaml
 Type: String
 Parameter Sets: Find by ID
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -90,13 +94,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-System.String
 
 ## OUTPUTS
 
-### System.Collections.Generic.IList`1[[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOperation, Microsoft.Azure.Commands.ApiManagement.ServiceManagement, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### System.Collections.Generic.IList
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-AzureRmApiManagementOperation](./New-AzureRmApiManagementOperation.md)
+
+[Remove-AzureRmApiManagementOperation](./Remove-AzureRmApiManagementOperation.md)
+
+[Set-AzureRmApiManagementOperation](./Set-AzureRmApiManagementOperation.md)
