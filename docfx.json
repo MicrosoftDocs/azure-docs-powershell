@@ -341,14 +341,26 @@
     },
     "filemetadata": {
       "ms.author": {
-        "azurermps/**/*.md": "PowerShellhelpub",
-        "azuresmps/**/*.md": "PowerShellhelpub",
-        "azurestackps/**/*.md": "sngun"
+        "azurermps-1.2.9/**/*.md": "PowerShellhelpub",
+        "azurermps-1.7.0/**/*.md": "PowerShellhelpub",
+        "azurermps-2.2.0/**/*.md": "PowerShellhelpub",
+        "azurermps-3.7.0/**/*.md": "PowerShellhelpub",
+        "azurermps-3.8.0/**/*.md": "PowerShellhelpub",
+        "azurermps-4.1.0/**/*.md": "PowerShellhelpub",
+        "azuresmps-3.7.0/**/*.md": "PowerShellhelpub",
+        "azuresmps-4.0.0/**/*.md": "PowerShellhelpub",
+        "azurestackps-1.2.9/**/*.md": "sngun"
       },
       "author": {
-        "azurermps/**/*.md": "PowerShellhelpub",
-        "azuresmps/**/*.md": "PowerShellhelpub",
-        "azurestackps/**/*.md": "SnehaGunda"
+        "azurermps-1.2.9/**/*.md": "PowerShellhelpub",
+        "azurermps-1.7.0/**/*.md": "PowerShellhelpub",
+        "azurermps-2.2.0/**/*.md": "PowerShellhelpub",
+        "azurermps-3.7.0/**/*.md": "PowerShellhelpub",
+        "azurermps-3.8.0/**/*.md": "PowerShellhelpub",
+        "azurermps-4.1.0/**/*.md": "PowerShellhelpub",
+        "azuresmps-3.7.0/**/*.md": "PowerShellhelpub",
+        "azuresmps-4.0.0/**/*.md": "PowerShellhelpub",
+        "azurestackps-1.2.9/**/*.md": "SnehaGunda"
       },
       "ms.manager": {
         "azurermps/**/*.md": "carmonm",
