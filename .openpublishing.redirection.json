@@ -1,17 +1,17 @@
 {
   "redirections": [
     {
-      "source_path": "azureipps/azure/index.md",
+      "source_path": "azureipps/azure/aip/index.md",
       "redirect_url": "/powershell/azure/aip/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "azureadps-2.0/azure/index.md",
+      "source_path": "azureadps-2.0/azure/active-directory/index.md",
       "redirect_url": "/powershell/azure/active-directory/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "azureelasticdbjobsps-0.8.33/azure/index.md",
+      "source_path": "azureelasticdbjobsps-0.8.33/azure/elasticdbjobs/index.md",
       "redirect_url": "/powershell/azure/elasticdbjobs/overview",
       "redirect_document_id": false
     },
@@ -26,7 +26,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "azureservicefabricps/azure/index.md",
+      "source_path": "azureservicefabricps/azure/service-fabric/index.md",
       "redirect_url": "/powershell/azure/service-fabric/overview",
       "redirect_document_id": false
     },
