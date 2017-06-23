@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmStorageAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a storage account.
 
 ## SYNTAX
 
@@ -16,21 +16,35 @@ Get-AzureRmStorageAccount [[-ResourceGroupName] <String>] [[-Name] <String>] [<C
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmStorageAccount** cmdlet gets a specified storage account or all storage accounts within a resource group or the subscription.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a specified storage account
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmStorageAccount -ResourceGroupName "rg1" -Name "mystorageaccount"
 ```
 
-{{ Add example description here }}
+This command gets the storage account named "mystorageaccount" in the "rg1" resource group.
+
+### Example 2: Get all storage accounts in a resource group
+```
+PS C:\> Get-AzureRmStorageAccount -ResourceGroupName "rg1"
+```
+
+This command gets all storage accounts in the "rg1" resource group.
+
+### Example 3: Get all storage accounts in the subscription
+```
+PS C:\> Get-AzureRmStorageAccount
+```
+
+This command gets all storage accounts in the subscription.
 
 ## PARAMETERS
 
 ### -Name
-Storage Account StorageAccountName.
+Specifies the name of the storage account to get.
 
 ```yaml
 Type: String
@@ -45,12 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group StorageAccountName.
+Specifies the name of the resource group that contains the storage account to get.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -74,3 +88,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
+
+[Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
+
+[Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)

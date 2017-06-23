@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmCurrentStorageAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the specified storage account as the current storage account.
 
 ## SYNTAX
 
@@ -22,26 +22,29 @@ Set-AzureRmCurrentStorageAccount -Context <AzureStorageContext> [<CommonParamete
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmCurrentStorageAccount** cmdlet sets the specified storage account as the current storage account.
+The current storage account is the storage account that is used by default when you access Azure Storage without specifying a storage account name.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Set the current storage account
 ```
-PS C:\> {{ Add example code here }}
+Set-AzureRmCurrentStorageAccount -ResourceGroupName "RG01" -StorageAccountName "MyStorageAccount"
 ```
 
-{{ Add example description here }}
+This command sets the storage account named "MyStorageAccount" in the "RG01" resource group as the default storage account.
 
 ## PARAMETERS
 
 ### -Context
-{{Fill Context Description}}
+Specifies an **AzureStorageContext** object for the current storage account.
+The **AzureStorageContext** object includes authentication information and environment information.
+Use the **New-AzureStorageContext** cmdlet to create this object.
 
 ```yaml
 Type: AzureStorageContext
 Parameter Sets: UsingStorageContext
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -51,12 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-{{Fill ResourceGroupName Description}}
+Specifies the name of the resource group that contains the storage account.
 
 ```yaml
 Type: String
 Parameter Sets: UsingResourceGroupAndNameParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -66,12 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-{{Fill StorageAccountName Description}}
+Specifies the name of the storage account to be used as the current (default) storage account.
 
 ```yaml
 Type: String
 Parameter Sets: UsingResourceGroupAndNameParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -86,7 +89,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.WindowsAzure.Commands.Common.Storage.AzureStorageContext
-System.String
+### System.String
 
 ## OUTPUTS
 
@@ -96,3 +99,6 @@ System.String
 
 ## RELATED LINKS
 
+[New-AzureStorageContext](https://docs.microsoft.com/powershell/module/azure.storage/new-azurestoragecontext)
+
+[Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
