@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmTag
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Deletes predefined Azure tags or values.
 
 ## SYNTAX
 
@@ -16,27 +16,50 @@ Remove-AzureRmTag [-Name] <String> [[-Value] <String[]>] [-Force] [-PassThru] [<
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmTag** cmdlet deletes predefined Azure tags or values from your subscription.
+To delete particular values from a predefined tag, use the *Value* parameter.
+By default, **Remove-AzureRmTag** deletes the specified tag and all of its values. You cannot delete a tag or value that is currently applied to a resource or resource group.
+
+Before using **Remove-AzureRmTag**, use the *Tag* parameter of the **Set-AzureRmResourceGroup** cmdlet to delete the tag or values from the resource or resource group.
+
+You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
+If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Delete a predefined tag
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmTag -Name "Department"
 ```
 
-{{ Add example description here }}
+This command deletes the predefined tag named "Department" and all of its resources.
+If the tag has been applied to any resources or resource groups, the command fails.
+
+### Example 2: Delete a value from a predefined tag
+```
+PS C:\> Remove-AzureRmTag -Name "Department" -Value "HumanResources" -PassThru
+Name:   Department
+Count:  14
+Values:
+        Name        Count
+        =========   =====
+        Finance        2
+        IT            12
+```
+
+This command deletes the "HumanResources" value from the predefined tag named "Department".
+It does not delete the tag.
+If the value has been applied to any resources or resource groups, the command fails.
 
 ## PARAMETERS
 
 ### -Force
-If not specified, will prompt for confirmation.
-If specified, won't prompt.
+Indicates whether to force the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -46,12 +69,14 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the tag to remove.
+Specifies the name of the tag to be deleted.
+By default, **Remove-AzureRmTag** removes the specified tag and all of its values.
+To delete selected values, but not delete the tag, use the *Value* parameter.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -61,12 +86,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Return object if specified.
+Indicates whether to return an object that represents the deleted tag or the resulting tag with deleted value.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,14 +101,12 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-Value of the tag to remove.
-If not specified, remove the entire tag.
-If specified, only remove the tag value.
+Specifies the values to be deleted from the predefined tag. The tag is not deleted.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -98,8 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-System.String[]
-System.Management.Automation.SwitchParameter
+### System.String[]
 
 ## OUTPUTS
 
@@ -109,3 +131,8 @@ System.Management.Automation.SwitchParameter
 
 ## RELATED LINKS
 
+[Get-AzureRMTag](./Get-AzureRmTag.md)
+
+[New-AzureRMTag](./New-AzureRmTag.md)
+
+[Set-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/set-azurermresourcegroup)

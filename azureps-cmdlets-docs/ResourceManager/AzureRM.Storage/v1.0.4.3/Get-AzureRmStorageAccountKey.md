@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmStorageAccountKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the access keys for an Azure Storage account.
 
 ## SYNTAX
 
@@ -16,21 +16,28 @@ Get-AzureRmStorageAccountKey [-ResourceGroupName] <String> [-Name] <String> [<Co
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmStorageAccountKey** cmdlet gets the access keys for an Azure storage account.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all access keys for a storage account
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmStorageAccountKey -ResourceGroupName "RG01" -Name "MyStorageAccount"
 ```
 
-{{ Add example description here }}
+This command gets all access keys for the storage account named "MyStorageAccount" in the "RG01" resource group.
+
+### Example 2: Get a specific access key for a storage account
+```
+PS C:\> (Get-AzureRmStorageAccountKey -ResourceGroupName "RG01" -Name "MyStorageAccount").Key1
+```
+
+This command gets a specific access key for the storage account named "MyStorageAccount" in the "RG01" resource group.
 
 ## PARAMETERS
 
 ### -Name
-Storage Account StorageAccountName.
+Specifies the name of the storage account for which this cmdlet gets keys.
 
 ```yaml
 Type: String
@@ -45,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group StorageAccountName.
+Specifies the name of the resource group that contains the storage account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -74,3 +81,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmStorageAccountKey](./New-AzureRmStorageAccountKey.md)
