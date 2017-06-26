@@ -338,28 +338,36 @@
         },
         "filemetadata": {
             "ms.author": {
-                "Storage/**/*.md": "markcowl",
-                "ServiceManagement/**/*.md": "markcowl",
-                "ResourceManager/**/*.md": "markcowl",
-                "AzureStack/**/*.md": "sngun"
+                "azurermps-1.2.9/**/*.md": "markcowl",
+                "azurermps-1.7.0/**/*.md": "markcowl",
+                "azurermps-2.2.0/**/*.md": "markcowl",
+                "azurermps-3.7.0/**/*.md": "markcowl",
+                "azurermps-3.8.0/**/*.md": "markcowl",
+                "azurermps-4.1.0/**/*.md": "markcowl",
+                "azuresmps-3.7.0/**/*.md": "markcowl",
+                "azuresmps-4.0.0/**/*.md": "markcowl",
+                "azurestackps-1.2.9/**/*.md": "sngun"
             },
             "author": {
-                "Storage/**/*.md": "azuresdkci",
-                "ServiceManagement/**/*.md": "azuresdkci",
-                "ResourceManager/**/*.md": "azuresdkci",
-                "AzureStack/**/*.md": "SnehaGunda"
+                "azurermps-1.2.9/**/*.md": "azuresdkci",
+                "azurermps-1.7.0/**/*.md": "azuresdkci",
+                "azurermps-2.2.0/**/*.md": "azuresdkci",
+                "azurermps-3.7.0/**/*.md": "azuresdkci",
+                "azurermps-3.8.0/**/*.md": "azuresdkci",
+                "azurermps-4.1.0/**/*.md": "azuresdkci",
+                "azuresmps-3.7.0/**/*.md": "azuresdkci",
+                "azuresmps-4.0.0/**/*.md": "azuresdkci",
+                "azurestackps-1.2.9/**/*.md": "SnehaGunda"
             },
             "ms.manager": {
-                "Storage/**/*.md": "carmonm",
-                "ServiceManagement/**/*.md": "carmonm",
-                "ResourceManager/**/*.md": "carmonm",
-                "AzureStack/**/*.md": "byronr"
+                "azurermps/**/*.md": "carmonm",
+                "azuresmps/**/*.md": "carmonm",
+                "azurestackps/**/*.md": "byronr"
             },
             "ms.service": {
-                "Storage/**/*.md": "azure-powershell",
-                "ServiceManagement/**/*.md": "azure-asm",
-                "ResourceManager/**/*.md": "azure-powershell",
-                "AzureStack/**/*.md": "azure-stack"
+                "azurestackps/**/*.md": "azure-stack",
+                "azuresmps/**/*.md": "azure-asm",
+                "azurermps/**/*.md": "azure-powershell"
             }
         },
         "globalMetadata": {
