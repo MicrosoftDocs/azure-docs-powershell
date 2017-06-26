@@ -338,36 +338,24 @@
         },
         "filemetadata": {
             "ms.author": {
-                "azurermps-1.2.9/**/*.md": "markcowl",
-                "azurermps-1.7.0/**/*.md": "markcowl",
-                "azurermps-2.2.0/**/*.md": "markcowl",
-                "azurermps-3.7.0/**/*.md": "markcowl",
-                "azurermps-3.8.0/**/*.md": "markcowl",
-                "azurermps-4.1.0/**/*.md": "markcowl",
-                "azuresmps-3.7.0/**/*.md": "markcowl",
-                "azuresmps-4.0.0/**/*.md": "markcowl",
-                "azurestackps-1.2.9/**/*.md": "sngun"
+                "azurermps-*/**/*.md": "markcowl",
+                "azuresmps-*/**/*.md": "markcowl",
+                "azurestackps-*/**/*.md": "sngun"
             },
             "author": {
-                "azurermps-1.2.9/**/*.md": "azuresdkci",
-                "azurermps-1.7.0/**/*.md": "azuresdkci",
-                "azurermps-2.2.0/**/*.md": "azuresdkci",
-                "azurermps-3.7.0/**/*.md": "azuresdkci",
-                "azurermps-3.8.0/**/*.md": "azuresdkci",
-                "azurermps-4.1.0/**/*.md": "azuresdkci",
-                "azuresmps-3.7.0/**/*.md": "azuresdkci",
-                "azuresmps-4.0.0/**/*.md": "azuresdkci",
-                "azurestackps-1.2.9/**/*.md": "SnehaGunda"
+                "azurermps-*/**/*.md": "azuresdkci",
+                "azuresmps-*/**/*.md": "azuresdkci",
+                "azurestackps-*/**/*.md": "SnehaGunda"
             },
             "ms.manager": {
-                "azurermps/**/*.md": "carmonm",
-                "azuresmps/**/*.md": "carmonm",
-                "azurestackps/**/*.md": "byronr"
+                "azurermps-*/**/*.md": "carmonm",
+                "azuresmps-*/**/*.md": "carmonm",
+                "azurestackps-*/**/*.md": "byronr"
             },
             "ms.service": {
                 "azurestackps/**/*.md": "azure-stack",
-                "azuresmps/**/*.md": "azure-asm",
-                "azurermps/**/*.md": "azure-powershell"
+                "azuresmps-*/**/*.md": "azure-asm",
+                "azurermps-*/**/*.md": "azure-powershell"
             }
         },
         "globalMetadata": {
