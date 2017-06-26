@@ -353,7 +353,7 @@
                 "azurestackps-*/**/*.md": "byronr"
             },
             "ms.service": {
-                "azurestackps/**/*.md": "azure-stack",
+                "azurestackps-*/**/*.md": "azure-stack",
                 "azuresmps-*/**/*.md": "azure-asm",
                 "azurermps-*/**/*.md": "azure-powershell"
             }
