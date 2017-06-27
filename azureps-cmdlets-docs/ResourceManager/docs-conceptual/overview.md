@@ -24,15 +24,15 @@ release, see the [release notes](release-notes-azureps.md).
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
-* [Linux Virtual Machines](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
-* [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
-* [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
-* [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json)
+* [Linux Virtual Machines](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json)
+* [Windows Virtual Machines](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
+* [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
+* [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
 > [!NOTE]
 > If you have deployments that use the classic deployment model that cannot be converted, you can
 install the Service Management version of Azure PowerShell. For more information, see
-[Install the Azure PowerShell Service Management module](https://docs.microsoft.com/en-us/powershell/azure/install-azure-ps?view=azuresmps-3.7.0).
+[Install the Azure PowerShell Service Management module](https://docs.microsoft.com/en-us/powershell/azure/servicemanagement/install-azure-ps).
 
 ### Need help with PowerShell?
 
