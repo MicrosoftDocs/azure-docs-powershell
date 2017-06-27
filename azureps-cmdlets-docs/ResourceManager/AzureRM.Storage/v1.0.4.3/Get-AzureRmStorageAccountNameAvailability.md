@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmStorageAccountNameAvailability
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Checks whether a name is valid and available to use for an Azure storage account.
 
 ## SYNTAX
 
@@ -16,21 +16,21 @@ Get-AzureRmStorageAccountNameAvailability [-Name] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmStorageAccountNameAvailability** cmdlet checks whether a name is valid and available to use for an Azure storage account.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Check the availability of a storage account name
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmStorageAccountNameAvailability -Name "ContosoStorage03"
 ```
 
-{{ Add example description here }}
+This command checks the availability of the name "ContosoStorage03" for an Azure storage account.
 
 ## PARAMETERS
 
 ### -Name
-Storage Account Name.
+Specifies the name that this cmdlet checks.
 
 ```yaml
 Type: String
@@ -59,3 +59,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Azure Storage Manager Cmdlets](./AzureRM.Storage.md)

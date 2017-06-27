@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmStorageAccount
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a storage account from Azure.
 
 ## SYNTAX
 
@@ -16,21 +16,21 @@ Remove-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [<Co
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmStorageAccount** cmdlet removes a storage account from Azure.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a storage account
 ```
-PS C:\> {{ Add example code here }}
+Remove-AzureRmStorageAccount -ResourceGroupName "RG01" -Name "mystorageaccount"
 ```
 
-{{ Add example description here }}
+This command removes the storage account named "mystorageaccount" in the "RG01" resource group.
 
 ## PARAMETERS
 
 ### -Name
-Storage Account StorageAccountName.
+Specifies the name of the storage account to remove.
 
 ```yaml
 Type: String
@@ -45,12 +45,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resource Group StorageAccountName.
+Specifies the name of the resource group that contains the storage account to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -74,3 +74,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmStorageAccount](./Get-AzureRmStorageAccount.md)
+
+[New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
+
+[Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)

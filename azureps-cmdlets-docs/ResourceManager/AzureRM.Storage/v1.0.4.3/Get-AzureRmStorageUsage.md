@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmStorageUsage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the storage resource usage for the current subscription.
 
 ## SYNTAX
 
@@ -16,16 +16,16 @@ Get-AzureRmStorageUsage [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmStorageUsage** cmdlet gets the storage resource usage for the current subscription.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the storage resource usage
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmStorageUsage -InformationAction Ignore
 ```
 
-{{ Add example description here }}
+This command gets the storage resource usage of the current subscription, ignoring an information event.
 
 ## PARAMETERS
 
@@ -44,3 +44,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Azure Storage Manager Cmdlets](./AzureRM.Storage.md)

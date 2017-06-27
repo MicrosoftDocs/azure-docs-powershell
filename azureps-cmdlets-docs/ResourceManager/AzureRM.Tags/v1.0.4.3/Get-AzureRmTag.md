@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmTag
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets predefined Azure tags in your subscription.
 
 ## SYNTAX
 
@@ -16,26 +16,95 @@ Get-AzureRmTag [[-Name] <String>] [-Detailed] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmTag cmdlet** cmdlet gets predefined Azure tags in your subscription.
+This cmdlet returns basic information about the tags or detailed information about tags and their values.
+All output objects include a **Count** property that represents the number of resources and resource groups to which the tags and values have been applied.
+
+You can define and apply tags in a single step, but predefined tags let you establish standard, consistent, predictable names and values for the tags in your subscription.
+If the subscription includes any predefined tags, you cannot apply undefined tags or values to any resource or resource group in the subscription.
+
+To create a predefined tag, use the **New-AzureRmTag** cmdlet.
+To apply a predefined tag to a resource group, use the *Tag* parameter of the **New-AzureRmTag** cmdlet.
+To search resource groups for a specific tag name or name and value, use the *Tag* parameter of the **Get-AzureRmResourceGroup** cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all predefined tags
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmTag
+
+Name      Count
+========  =====
+
+Department    5
+FY2015        2
+CostCenter   20
 ```
 
-{{ Add example description here }}
+This command gets all predefined tags in the subscription.
+The **Count** property shows how many times the tag has been applied to resources and resource groups in the subscription.
+
+### Example 2: Get a tag by name
+```
+PS C:\> Get-AzureRmTag -Name "Department"
+
+Name:   Department
+Count:  5
+Values:
+
+        Name        Count
+        ==========  =====
+
+        Finance       2
+        IT            3
+```
+
+This command gets detailed information about the "Department" tag and its values.
+The **Count** property shows how many times the tag and each of its values has been applied to resources and resource groups in the subscription.
+
+### Example 3: Get values of all tags
+```
+PS C:\> Get-AzureRmTag -Detailed
+
+Name:   Department
+Count:  5
+Values:
+
+        Name        Count
+        ==========  =====
+
+        Finance       2
+        IT            3
+
+
+Name:   FY2015
+Count:  2
+
+
+Name:   CostCenter
+Count:  20
+Values:
+
+        Name        Count
+        ==========  =====
+
+        0001          5
+        0002         10
+        0003          5
+```
+
+This command uses the *Detailed* parameter to get detailed information about all predefined tags in the subscription.
+Using the *Detailed* parameter is the equivalent of using the *Name* parameter for every tag.
 
 ## PARAMETERS
 
 ### -Detailed
-Whether should get the tag values information as well.
+Indicates whether detailed information about tag values is to be included in the output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -45,13 +114,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the tag.
-If not specified, return all the tags of the subscription.
+Specifies the name of the tag to get.
+By default, the **Get-AzureRmTag** cmdlet gets basic information about all predefined tags in the subscription.
+When you specify the *Name* parameter, the *Detailed* parameter has no effect.
+If this parameter is not specified, all tags of the subscription are returned.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -66,13 +137,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 
-### System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Tags.Model.PSTag, Microsoft.Azure.Commands.Tags, Version=1.0.4.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
+### Microsoft.Azure.Commands.Tags.Model.PSTag
+### Microsoft.Azure.Commands.Tags
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup)
+
+[New-AzureRMTag](./New-AzureRmTag.md)
+
+[Remove-AzureRMTag](./Remove-AzureRmTag.md)
