@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmAppServicePlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an Azure App Service plan.
 
 ## SYNTAX
 
@@ -22,26 +22,26 @@ Remove-AzureRmAppServicePlan [-Force] [-AppServicePlan] <ServerFarmWithRichSku> 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmAppServicePlan** cmdlet removes an Azure App Service plan.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove an App Service plan
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "MyAppServicePlan"
 ```
 
-{{ Add example description here }}
+This command removes the Azure App Service plan named "MyAppServicePlan" in the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The app service plan object
+Specifies an object that contains details about the App Service plan.
 
 ```yaml
 Type: ServerFarmWithRichSku
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -51,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation.
+Indicates whether to forcefully remove the App Service plan without confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the app service plan.
+Specifies the name of the App Service plan to remove.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -81,12 +81,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that contains the App Service plan to remove.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -110,3 +110,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
+
+[New-AzureRmAppServicePlan](./New-AzureRmAppServicePlan.md)
+
+[Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)

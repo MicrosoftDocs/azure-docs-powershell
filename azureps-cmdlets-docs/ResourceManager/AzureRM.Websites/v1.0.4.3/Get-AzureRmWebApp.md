@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmWebApp
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## SYNTAX
 
@@ -27,27 +27,26 @@ Get-AzureRmWebApp [-Location] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmWebApp** cmdlet gets a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get a web app for the specified slot in the specified resource group
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmWebApp -Name "MyWebApp" -ResourceGroupName "Default-Web-WestUS" -SlotName "dev"
 ```
 
-{{ Add example description here }}
+This command gets a web app named "MyWebApp" for the slot named "dev" in the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The app service plan.
-Gets all web apps in specified service plan
+Specifies an object that contains details about the Azure App Service plan.
 
 ```yaml
 Type: ServerFarmWithRichSku
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -57,13 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The name of the web app location.
-Gets all web apps at location
+Specifies the location of the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S3
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -73,12 +71,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+Specifies the name of the web app to get.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -88,12 +86,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -117,3 +115,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureRmWebApp](./New-AzureRmWebApp.md)
+
+[Remove-AzureRmWebApp](./Remove-AzureRmWebApp.md)
+
+[Restart-AzureRmWebApp](./Restart-AzureRmWebApp.md)
+
+[Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
+
+[Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)

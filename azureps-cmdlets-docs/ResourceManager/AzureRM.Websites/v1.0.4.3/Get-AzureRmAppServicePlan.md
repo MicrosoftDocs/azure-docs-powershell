@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmAppServicePlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the Azure App Service plan.
 
 ## SYNTAX
 
@@ -22,26 +22,26 @@ Get-AzureRmAppServicePlan [-Location] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmAppServicePlan** cmdlet gets the Azure App Service plan.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the app service plan in the specified resource group
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmAppServicePlan -Name "MyServicePlan" -ResourceGroupName "Default-Web-WestUS"
 ```
 
-{{ Add example description here }}
+This command gets the App Service plan named "MyServicePlan" in the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
 ### -Location
-The location of the app service plan.
+Specifies the location of the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -51,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the app service plan.
+Specifies the name of the App Service plan to get.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -66,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that contains the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -90,9 +90,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Azure.Management.WebSites.Models.ServerFarmWithRichSku
-Microsoft.Azure.Management.WebSites.Models.ServerFarmCollection
+### Microsoft.Azure.Management.WebSites.Models.ServerFarmCollection
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-AzureRmAppServicePlanMetrics](./Get-AzureRmAppServicePlanMetrics.md)
+
+[New-AzureRmAppServicePlan](./New-AzureRmAppServicePlan.md)
+
+[Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
+
+[Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)

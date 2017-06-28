@@ -8,93 +8,92 @@ Locale: en-US
 
 # AzureRM.Websites Module
 ## Description
-{{Manually Enter Description Here}}
+This module contains cmdlets that manage Web Apps and App Service Plans in Azure Resource Manager.
 
 ## AzureRM.Websites Cmdlets
 ### [Get-AzureRmAppServicePlan](Get-AzureRmAppServicePlan.md)
-{{Fill in the Synopsis}}
+Gets the Azure App Service plan.
 
 ### [Get-AzureRmAppServicePlanMetrics](Get-AzureRmAppServicePlanMetrics.md)
-{{Fill in the Synopsis}}
+Gets the metrics for an Azure App Service plan.
 
 ### [Get-AzureRmWebApp](Get-AzureRmWebApp.md)
-{{Fill in the Synopsis}}
+Gets a web app that was built using the Web Apps feature of the Azure App Service.
 
 ### [Get-AzureRmWebAppCertificate](Get-AzureRmWebAppCertificate.md)
-{{Fill in the Synopsis}}
+Gets web app certificates.
 
 ### [Get-AzureRmWebAppMetrics](Get-AzureRmWebAppMetrics.md)
-{{Fill in the Synopsis}}
+Gets metrics for a web app.
 
 ### [Get-AzureRmWebAppPublishingProfile](Get-AzureRmWebAppPublishingProfile.md)
-{{Fill in the Synopsis}}
+Gets the publishing profile of a web app.
 
 ### [Get-AzureRmWebAppSlot](Get-AzureRmWebAppSlot.md)
-{{Fill in the Synopsis}}
+Gets information about the slot of a web app.
 
 ### [Get-AzureRmWebAppSlotMetrics](Get-AzureRmWebAppSlotMetrics.md)
-{{Fill in the Synopsis}}
+Gets the web app metrics for the specified slot.
 
 ### [Get-AzureRmWebAppSlotPublishingProfile](Get-AzureRmWebAppSlotPublishingProfile.md)
-{{Fill in the Synopsis}}
+Gets the publishing profile for the specified slot.
 
 ### [Get-AzureRmWebAppSSLBinding](Get-AzureRmWebAppSSLBinding.md)
-{{Fill in the Synopsis}}
+Gets a secure sockets layer (SSL) binding for a web app.
 
 ### [New-AzureRmAppServicePlan](New-AzureRmAppServicePlan.md)
-{{Fill in the Synopsis}}
+Creates an Azure App Service plan.
 
 ### [New-AzureRmWebApp](New-AzureRmWebApp.md)
-{{Fill in the Synopsis}}
+Creates a web app that is built using the Web Apps feature of the Azure App Service.
 
 ### [New-AzureRmWebAppSlot](New-AzureRmWebAppSlot.md)
-{{Fill in the Synopsis}}
+Creates a slot for a web app.
 
 ### [New-AzureRmWebAppSSLBinding](New-AzureRmWebAppSSLBinding.md)
-{{Fill in the Synopsis}}
+Creates a secure socket layer (SSL) certificate binding for a web app.
 
 ### [Remove-AzureRmAppServicePlan](Remove-AzureRmAppServicePlan.md)
-{{Fill in the Synopsis}}
+Removes an Azure App Service plan.
 
 ### [Remove-AzureRmWebApp](Remove-AzureRmWebApp.md)
-{{Fill in the Synopsis}}
+Removes a web app.
 
 ### [Remove-AzureRmWebAppSlot](Remove-AzureRmWebAppSlot.md)
-{{Fill in the Synopsis}}
+Removes a web app slot.
 
 ### [Remove-AzureRmWebAppSSLBinding](Remove-AzureRmWebAppSSLBinding.md)
-{{Fill in the Synopsis}}
+Removes a secure socket layer (SSL) binding for a web app.
 
 ### [Reset-AzureRmWebAppPublishingProfile](Reset-AzureRmWebAppPublishingProfile.md)
-{{Fill in the Synopsis}}
+Resets the publishing profile for the specified web app.
 
 ### [Reset-AzureRmWebAppSlotPublishingProfile](Reset-AzureRmWebAppSlotPublishingProfile.md)
-{{Fill in the Synopsis}}
+Resets the publishing profile for the specified web app slot.
 
 ### [Restart-AzureRmWebApp](Restart-AzureRmWebApp.md)
-{{Fill in the Synopsis}}
+Stops and then restarts a web app.
 
 ### [Restart-AzureRmWebAppSlot](Restart-AzureRmWebAppSlot.md)
-{{Fill in the Synopsis}}
+Stops and then restarts a web app slot.
 
 ### [Set-AzureRmAppServicePlan](Set-AzureRmAppServicePlan.md)
-{{Fill in the Synopsis}}
+Modifies an Azure App Service plan.
 
 ### [Set-AzureRmWebApp](Set-AzureRmWebApp.md)
-{{Fill in the Synopsis}}
+Modifies a web app.
 
 ### [Set-AzureRmWebAppSlot](Set-AzureRmWebAppSlot.md)
-{{Fill in the Synopsis}}
+Modifies a web app slot.
 
 ### [Start-AzureRmWebApp](Start-AzureRmWebApp.md)
-{{Fill in the Synopsis}}
+Starts a web app.
 
 ### [Start-AzureRmWebAppSlot](Start-AzureRmWebAppSlot.md)
-{{Fill in the Synopsis}}
+Starts a web app slot.
 
 ### [Stop-AzureRmWebApp](Stop-AzureRmWebApp.md)
-{{Fill in the Synopsis}}
+Stops a web app.
 
 ### [Stop-AzureRmWebAppSlot](Stop-AzureRmWebAppSlot.md)
-{{Fill in the Synopsis}}
-
+Stops a web app slot.
