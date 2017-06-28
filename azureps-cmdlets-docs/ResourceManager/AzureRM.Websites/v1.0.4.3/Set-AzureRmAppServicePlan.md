@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Set-AzureRmAppServicePlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies an Azure App Service plan.
 
 ## SYNTAX
 
@@ -23,26 +23,26 @@ Set-AzureRmAppServicePlan [-AppServicePlan] <ServerFarmWithRichSku> [<CommonPara
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Set-AzureRmAppServicePlan** cmdlet modifes an Azure App Service plan.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Modify the scaling of an App Service plan
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -NumberofWorkers 15
 ```
 
-{{ Add example description here }}
+This command modifies the number of workers allowed for the App Service plan named "ContosoASP" that belongs to the resource group named "Default-Web-WestUS".
 
 ## PARAMETERS
 
 ### -AdminSiteName
-The name of the admin web app
+Specifies the name of the administration site for the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -52,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-The app service plan object
+Specifies an object that contains updated details about the App Service plan.
 
 ```yaml
 Type: ServerFarmWithRichSku
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -67,12 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the app service plan.
+Specifies the name of the App Service plan to modify.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -82,12 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -NumberofWorkers
-Number of Workers to be allocated.
+Specifies the number of workers to allow in the App Service plan.
 
 ```yaml
 Type: Int32
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -97,12 +97,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that contains the App Service plan to modify.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -112,13 +112,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The App Service plan tier.
-Allowed values are \[Free|Shared|Basic|Standard|Premium\]
+Specifies the pricing tier. The valid values are: Free, Shared, Basic, Standard, and Premium.
+The default is Free.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 Accepted values: Free, Shared, Basic, Standard, Premium
 
 Required: False
@@ -129,13 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerSize
-Size of workers to be allocated.
-Allowed values are \[Small|Medium|Large|ExtraLarge\]
+Specifies the size of the worker pool.
+Valid values are: Small, Medium, and Large.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 Accepted values: Small, Medium, Large, ExtraLarge
 
 Required: False
@@ -160,3 +160,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRMAppServicePlan](./Get-AzureRMAppServicePlan.md)
+
+[New-AzureRMAppServicePlan](./New-AzureRMAppServicePlan.md)
+
+[Remove-AzureRMAppServicePlan](./Remove-AzureRMAppServicePlan.md)
