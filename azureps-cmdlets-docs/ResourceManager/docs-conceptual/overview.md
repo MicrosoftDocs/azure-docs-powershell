@@ -32,7 +32,7 @@ The following samples can help you learn how to perform common scenarios with Az
 > [!NOTE]
 > If you have deployments that use the classic deployment model that cannot be converted, you can
 install the Service Management version of Azure PowerShell. For more information, see
-[Install the Azure PowerShell Service Management module](https://docs.microsoft.com/en-us/powershell/azure/servicemanagement/install-azure-ps).
+[Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
 
 ### Need help with PowerShell?
 
@@ -45,7 +45,7 @@ You can also watch this video:
 
 ## Other Azure PowerShell modules
 
-* [Azure Active Directory](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0#applications)
-* [Azure Information Protection](https://docs.microsoft.com/en-us/powershell/azure/overview?view=azureipps)
-* [Azure Service Fabric](https://docs.microsoft.com/en-us/powershell/azure/overview?view=azureservicefabricps)
-* [Azure ElasticDB](https://docs.microsoft.com/en-us/powershell/azure/overview?view=azureelasticdbjobsps-0.8.33)
+* [Azure Active Directory](/powershell/azure/active-directory/)
+* [Azure Information Protection](/powershell/azure/aip/)
+* [Azure Service Fabric](/powershell/azure/oservice-fabric/)
+* [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
