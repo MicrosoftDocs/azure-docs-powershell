@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmWebAppPublishingProfile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the publishing profile of a web app.
 
 ## SYNTAX
 
@@ -24,28 +24,28 @@ Get-AzureRmWebAppPublishingProfile [-OutputFile] <String> [[-Format] <String>] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmWebAppPublishingProfile** cmdlet gets the publishing profile of a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the publishing profile in "Ftp" format
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmWebAppSlotPublishingProfile -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Format "Ftp" -OutputFile "C:\Users\contoso\outputfile"
 ```
 
-{{ Add example description here }}
+This command gets the publishing profile in "Ftp" format for a web app named "ContosoWebApp" in the "Default-Web-WestUS" resource group.
+The profile is stored in "C:\Users\contoso\outputfile".
 
 ## PARAMETERS
 
 ### -Format
-The format of the profile.
-Allowed values are \[WebDeploy|FileZilla3|Ftp\].
-Default value is WebDeploy
+Specifies the output format for the publishing profile.
+Valid values are "FileZilla3", "WebDeploy", and "Ftp".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: WebDeploy, FileZilla3, Ftp
 
 Required: False
@@ -56,12 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+Specifies the name of the web app for which to get the publishing profile.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -71,12 +71,12 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFile
-The file the publishing profile will we saved as
+Specifies the name of the file in which to output the publishing profile.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -86,12 +86,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -101,12 +101,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -121,7 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-Microsoft.Azure.Management.WebSites.Models.Site
+### Microsoft.Azure.Management.WebSites.Models.Site
 
 ## OUTPUTS
 
@@ -131,3 +131,6 @@ Microsoft.Azure.Management.WebSites.Models.Site
 
 ## RELATED LINKS
 
+[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
+
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)

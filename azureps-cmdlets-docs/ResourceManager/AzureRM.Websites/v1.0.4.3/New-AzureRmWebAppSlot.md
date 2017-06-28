@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmWebAppSlot
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a slot for a web app.
 
 ## SYNTAX
 
@@ -19,26 +19,26 @@ New-AzureRmWebAppSlot [-ResourceGroupName] <String> [-Name] <String> [[-Slot] <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmWebAppSlot** cmdlet creates a slot for a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a slot for the specified web app
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite" -Location "West US" -AppServicePlan "ContosoServicePlan" -Slot "Slot001"
 ```
 
-{{ Add example description here }}
+This command creates a slot named "Slot001" for a web app named "ContosoSite". The existing App Service plan named "ContosoServicePlan" is used.
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The name of the app service plan eg: Default1.
+Specifies the App Service plan to which the web app is assigned.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -48,12 +48,12 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettingsOverrides
-Overrides all application settings in new web app
+Specifies a list of web app settings to be overridden.
 
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -63,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-Name of application service environment
+Specifies the name of the App Service environment.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -78,12 +78,12 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-Resource group of Application Service environment
+Specifies the name of the resource group for the App Service environment.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -93,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreCustomHostNames
-Ignore custom hostnames on source web app
+Indicates whether to ignore custom host names.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -108,12 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSourceControl
-Ignore source control on source web app
+Indicates whether to ignore source control of the web app.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -123,12 +123,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -138,12 +138,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -153,12 +153,12 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The name of the web app slot.
+Specifies the name of the slot.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -168,12 +168,12 @@ Accept wildcard characters: False
 ```
 
 ### -SourceWebApp
-The source web app to clone
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -188,7 +188,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-Microsoft.Azure.Management.WebSites.Models.Site
+### Microsoft.Azure.Management.WebSites.Models.Site
 
 ## OUTPUTS
 
@@ -198,3 +198,18 @@ Microsoft.Azure.Management.WebSites.Models.Site
 
 ## RELATED LINKS
 
+[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
+
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
+[Get-AzureRmWebAppSlot](./Get-AzureRmWebAppSlot.md)
+
+[Remove-AzureRmWebAppSlot](./Remove-AzureRmWebAppSlot.md)
+
+[Restart-AzureRmWebAppSlot](./Restart-AzureRmWebAppSlot.md)
+
+[Set-AzureRmWebAppSlot](./Set-AzureRmWebAppSlot.md)
+
+[Start-AzureRmWebAppSlot](./Start-AzureRmWebAppSlot.md)
+
+[Stop-AzureRmWebAppSlot](./Stop-AzureRmWebAppSlot.md)

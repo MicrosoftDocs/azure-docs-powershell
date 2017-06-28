@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Get-AzureRmWebAppSlot
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about the slot of a web app.
 
 ## SYNTAX
 
@@ -22,26 +22,26 @@ Get-AzureRmWebAppSlot [[-Slot] <String>] [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-AzureRmWebAppSlot** cmdlet gets information about the slot of a web app that was built using the Web Apps feature of the Azure App Service.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get information about the specified slot
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-AzureRmWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "WebAppStandard" -Slot "Slot001"
 ```
 
-{{ Add example description here }}
+This command gets the slot named "Slot001" of the web app named "WebAppStandard" that belongs to the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
 ### -Name
-The name of the web app.
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -51,12 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -66,12 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The name of the web app slot.
+Specifies the name of the slot.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -81,12 +81,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -101,7 +101,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-Microsoft.Azure.Management.WebSites.Models.Site
+### Microsoft.Azure.Management.WebSites.Models.Site
 
 ## OUTPUTS
 
@@ -111,3 +111,16 @@ Microsoft.Azure.Management.WebSites.Models.Site
 
 ## RELATED LINKS
 
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
+[New-AzureRMWebAppSlot](./New-AzureRMWebAppSlot.md)
+
+[Remove-AzureRMWebAppSlot](./Remove-AzureRMWebAppSlot.md)
+
+[Restart-AzureRMWebAppSlot](./Restart-AzureRMWebAppSlot.md)
+
+[Set-AzureRMWebAppSlot](./Set-AzureRMWebAppSlot.md)
+
+[Start-AzureRMWebAppSlot](./Start-AzureRMWebAppSlot.md)
+
+[Stop-AzureRMWebAppSlot](./Stop-AzureRMWebAppSlot.md)
