@@ -119,7 +119,7 @@ Get-Module AzureRM -list | Select-Object Name,Version,Path
 
 If you have deployments that use the classic deployment model you can install the Service
 Management version of Azure PowerShell. For more information, see [Install the Azure PowerShell
-Service Management module](overview?view=azuresmps-3.7.0). The Azure and AzureRM modules share
+Service Management module](/powershell/azure/servicemanagement/install-azure-ps). The Azure and AzureRM modules share
 common dependencies. If you use both the Azure and AzureRM modules, you should install the same
 version of each package.
 
