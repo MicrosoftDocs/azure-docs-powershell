@@ -45,7 +45,7 @@ You can also watch this video:
 
 ## Other Azure PowerShell modules
 
-* [Azure Active Directory](https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0#applications)
-* [Azure Information Protection](https://docs.microsoft.com/en-us/powershell/azure/overview?view=azureipps)
-* [Azure Service Fabric](https://docs.microsoft.com/en-us/powershell/azure/overview?view=azureservicefabricps)
-* [Azure ElasticDB](https://docs.microsoft.com/en-us/powershell/azure/overview?view=azureelasticdbjobsps-0.8.33)
+* [Azure Active Directory](https://docs.microsoft.com/en-us/powershell/module/azuread/)
+* [Azure Information Protection](https://docs.microsoft.com/en-us/powershell/azure/aip)
+* [Azure Service Fabric](https://docs.microsoft.com/en-us/powershell/azure/service-fabric)
+* [Azure ElasticDB](https://docs.microsoft.com/en-us/powershell/azure/elasticdbjobs)
