@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmWebApp
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a web app that is built using the Web Apps feature of the Azure App Service.
 
 ## SYNTAX
 
@@ -28,26 +28,27 @@ New-AzureRmWebApp [-ResourceGroupName] <String> [-Name] <String> [-Location] <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmWebApp** cmdlet creates a web app that is built using the Web Apps feature of the Azure App Service.
+The web app is created in the specified resource group and is assigned to the specified App Service plan and data center.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a web app in the specified resource group
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "MyFirstSite" -Location "West US" -AppServicePlan "MyAppServicePlan"
 ```
 
-{{ Add example description here }}
+This command creates a web app named "MyFirstSite" in the "Default-Web-WestUS" resource group and assigns the web app to the App Service plan named "MyAppServicePlan".
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The name of the app service plan eg: Default1.
+Specifies the App Service plan to which the web app is assigned.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -57,12 +58,12 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettingsOverrides
-Overrides all application settings in new web app
+Specifies a list of web app settings to be overridden.
 
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -72,12 +73,12 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-Application Service environment Name
+Specifies the name of the App Service environment.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -87,12 +88,12 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-Resource group of Application Service environment
+Specifies the name of the resource group for the App Service environment.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -102,12 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreCustomHostNames
-Ignore custom hostnames on source web app
+Indicates whether to ignore custom host names.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -117,12 +118,12 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSourceControl
-Ignore source control on source web app
+Indicates whether to ignore source control of the web app.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -132,12 +133,12 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSourceWebAppSlots
-Clones slots associated with source web app
+Indicates whether to include the deployment slots of the web app.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -147,12 +148,12 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The Location of the web app eg: West US.
+Specifies the geographical location of the data center for the web app.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -162,12 +163,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+Specifies the name of the web app.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -177,12 +178,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that will contain the web app.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -192,12 +193,12 @@ Accept wildcard characters: False
 ```
 
 ### -SourceWebApp
-The source web app to clone
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -207,12 +208,12 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfileId
-Resource Id of existing traffic manager profile
+Specifies the resource ID of the traffic manager profile.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -222,12 +223,12 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerProfileName
-Name of new traffic manager profile
+Specifies the name of the traffic manager profile.
 
 ```yaml
 Type: String
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -251,3 +252,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
+[Remove-AzureRmWebApp](./Remove-AzureRmWebApp.md)
+
+[Restart-AzureRmWebApp](./Restart-AzureRmWebApp.md)
+
+[Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
+
+[Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)

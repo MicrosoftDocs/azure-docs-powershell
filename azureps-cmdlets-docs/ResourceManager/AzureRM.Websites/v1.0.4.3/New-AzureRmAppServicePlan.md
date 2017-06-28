@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # New-AzureRmAppServicePlan
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates an Azure App Service plan.
 
 ## SYNTAX
 
@@ -26,26 +26,26 @@ New-AzureRmAppServicePlan [-Location] <String> [[-Tier] <String>] [[-NumberofWor
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-AzureRmAppServicePlan** cmdlet creates an Azure App Service plan in the specified geographical location with the specified tier, worker size, and number of workers.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create an App Service plan
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-AzureRmAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "MyServicePlan" -Location "West US" -Tier "Basic" -NumberofWorkers 2 -WorkerSize "Small"
 ```
 
-{{ Add example description here }}
+This command creates an App Service plan named "MyServicePlan" in the geographical location "West US" with a basic tier.
 
 ## PARAMETERS
 
 ### -AppServicePlan
-The app service plan object
+Specifies an object that contains details about the App Service plan.
 
 ```yaml
 Type: ServerFarmWithRichSku
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -55,12 +55,12 @@ Accept wildcard characters: False
 ```
 
 ### -AseName
-Name of application service environment
+Specifies the name of the App Service environment.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -70,12 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -AseResourceGroupName
-Name of the application service environment resource group
+Specifies the name of the resource group for the App Service environment.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -85,12 +85,12 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location of the app service plan.
+Specifies the geographical location of the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -100,12 +100,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the app service plan.
+Specifies the name of the App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -115,12 +115,12 @@ Accept wildcard characters: False
 ```
 
 ### -NumberofWorkers
-Number of Workers to be allocated.
+Specifies the number of workers to allow in the App Service plan.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -130,12 +130,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that will contain the new App Service plan.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -145,13 +145,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The App Service plan tier.
-Allowed values are \[Free|Shared|Basic|Standard|Premium\]
+Specifies the pricing tier. The valid values are: Free, Shared, Basic, Standard, and Premium.
+The default is Free.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Free, Shared, Basic, Standard, Premium
 
 Required: False
@@ -162,13 +162,13 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerSize
-Size of workers to be allocated.
-Allowed values are \[Small|Medium|Large|ExtraLarge\]
+Specifies the size of the worker pool.
+Valid values are: Small, Medium, and Large.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Small, Medium, Large, ExtraLarge
 
 Required: False
@@ -193,3 +193,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AzureRmAppServicePlan](./Get-AzureRmAppServicePlan.md)
+
+[Remove-AzureRmAppServicePlan](./Remove-AzureRmAppServicePlan.md)
+
+[Set-AzureRmAppServicePlan](./Set-AzureRmAppServicePlan.md)

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
 # Remove-AzureRmWebApp
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a web app.
 
 ## SYNTAX
 
@@ -22,26 +22,27 @@ Remove-AzureRmWebApp [-Force] [-WebApp] <Site> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Remove-AzureRmWebApp** cmdlet removes a web app that was built using the Web Apps feature of the Azure App Service.
+The cmdlet removes all slots and metrics by default.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Remove a web app that is in the specified resource group
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-AzureRmWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoSite"
 ```
 
-{{ Add example description here }}
+This command removes the web app named "ContosoSite" in the "Default-Web-WestUS" resource group.
 
 ## PARAMETERS
 
 ### -Force
-Do not ask for confirmation.
+Indicates whether to forcefully remove the web app without confirmation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -51,12 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the web app.
+Specifies the name of the web app to remove.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -66,12 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
+Specifies the name of the resource group that contains the web app.
 
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -81,12 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -WebApp
-The web app object
+Specifies a **WebApp** object that contains details about the web app.
 
 ```yaml
 Type: Site
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -101,7 +102,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-Microsoft.Azure.Management.WebSites.Models.Site
+### Microsoft.Azure.Management.WebSites.Models.Site
 
 ## OUTPUTS
 
@@ -111,3 +112,12 @@ Microsoft.Azure.Management.WebSites.Models.Site
 
 ## RELATED LINKS
 
+[Get-AzureRmWebApp](./Get-AzureRmWebApp.md)
+
+[New-AzureRmWebApp](./New-AzureRmWebApp.md)
+
+[Restart-AzureRmWebApp](./Restart-AzureRmWebApp.md)
+
+[Start-AzureRmWebApp](./Start-AzureRmWebApp.md)
+
+[Stop-AzureRmWebApp](./Stop-AzureRmWebApp.md)
