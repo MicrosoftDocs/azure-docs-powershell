@@ -19,6 +19,7 @@ Get-AzsStorageFarmMetricDefinition [-MetricNames <String[]>] [-DetailedOutput] [
 The **Get-AzsStorageFarmMetricDefinition** cmdlet gets the properties of the storage metric definitions exposed at the region level.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Get-AzsStorageFarmMetricDefinition -DetailedOutput | Format-Table -Wrap 

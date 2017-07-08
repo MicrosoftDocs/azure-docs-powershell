@@ -26,6 +26,7 @@ Get-AzsStorageAccount -AccountId <String> [-Detail] [-SkipCertificateValidation]
 The **Get-AzsStorageAccount** cmdlet gets a list of all storage accounts and their properties in a region.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Get-AzsStorageAccount -TenantSubscriptionId 0a2d6a84-d4d3-4b48-9c93-5ce0113cf115 

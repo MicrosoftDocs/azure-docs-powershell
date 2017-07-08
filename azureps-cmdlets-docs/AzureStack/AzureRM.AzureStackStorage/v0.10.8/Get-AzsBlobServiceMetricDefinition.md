@@ -19,6 +19,7 @@ Get-AzsBlobServiceMetricDefinition [-MetricNames <String[]>] [-DetailedOutput] [
 The **Get-AzsBlobServiceMetricDefinition** cmdlet gets the metric definition properties exposed by the Blob servic.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Get-AzsBlobServiceMetricDefinition -DetailedOutput | Format-Table -Wrap 

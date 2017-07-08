@@ -20,6 +20,7 @@ Get-AzsStorageShareMetricDefinition -ShareName <String> [-MetricNames <String[]>
 The **Get-AzsStorageShareMetricDefinition** cmdlet gets the properties of the metric definitions exposed at the share level.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $shares = Get-AzsStorageShare

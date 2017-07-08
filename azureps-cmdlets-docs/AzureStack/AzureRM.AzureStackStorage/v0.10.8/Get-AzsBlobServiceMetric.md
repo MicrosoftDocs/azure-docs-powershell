@@ -20,7 +20,7 @@ Get-AzsBlobServiceMetric [-TimeGrain <TimeGrain>] [-StartTimeInUtc <DateTime>] [
 The **Get-AzsBlobServiceMetric** cmdlet gets the metrics for the Blob service.
 
 ## EXAMPLES
-
+### Example 1
 ```
 $Metrics = Get-AzsBlobServiceMetricDefinition 
 

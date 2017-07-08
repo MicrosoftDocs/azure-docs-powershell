@@ -19,6 +19,7 @@ Start-AzsReclaimStorageCapacity [-SkipCertificateValidation] [-WhatIf] [-Confirm
 The **Start-AzsReclaimStorageCapacity** cmdlet forces garbage collection of all deleted storage accounts, regardless of the retention period setting. 
 
 ## EXAMPLES
+### Example 1
 
 ```
 $jobid = Start-AzsReclaimStorageCapacity 

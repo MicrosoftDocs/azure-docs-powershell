@@ -19,6 +19,7 @@ Get-AzsTableServiceMetricDefinition [-MetricNames <String[]>] [-DetailedOutput] 
 The **Get-AzsTableServiceMetricDefinition** cmdlet gets the the properties of the metric definitions exposed by the Table service.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Get-AzsTableServiceMetricDefinition -DetailedOutput | Format-Table -Wrap 

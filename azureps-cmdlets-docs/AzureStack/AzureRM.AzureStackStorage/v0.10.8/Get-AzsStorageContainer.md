@@ -20,6 +20,7 @@ Get-AzsStorageContainer -ShareName <String> [-Intent <ContainerGetIntent>] [-Cou
 The **Get-AzsStorageContainer** cmdlet Gets a list of containers in a share that the system considers as best candidates for migration.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $shares = Get-AzsStorageShare

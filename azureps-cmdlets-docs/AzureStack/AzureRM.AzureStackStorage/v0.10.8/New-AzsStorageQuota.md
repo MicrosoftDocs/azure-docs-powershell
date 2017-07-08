@@ -20,6 +20,7 @@ New-AzsStorageQuota -Location <String> -Name <String> -NumberOfStorageAccounts <
 The **New-AzsStorageQuota** cmdlet creates a Storage quota resource in the specified location.
 
 ## EXAMPLES
+### Example 1
 
 ```
 New-ACSQuota -Location "Redmond" -Name "BasicStorage_Quota" -NumberOfStorageAccounts 20  -CapacityInGB 500 

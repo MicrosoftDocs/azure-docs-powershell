@@ -20,6 +20,7 @@ Get-AzsTableServiceMetric [-TimeGrain <TimeGrain>] [-StartTimeInUtc <DateTime>] 
 The **Get-AzsTableServiceMetric** cmdlet gets the metrics for the Table service.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $Metrics = Get-AzsTableServiceMetricDefinition

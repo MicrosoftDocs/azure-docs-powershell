@@ -20,6 +20,7 @@ Get-AzsStorageFarmMetric [-TimeGrain <TimeGrain>] [-StartTimeInUtc <DateTime>] [
 The **Get-AzsStorageFarmMetric** cmdlet gets the metrics for a specified storage farm.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $Metrics = Get-AzsStorageFarmMetricDefinition

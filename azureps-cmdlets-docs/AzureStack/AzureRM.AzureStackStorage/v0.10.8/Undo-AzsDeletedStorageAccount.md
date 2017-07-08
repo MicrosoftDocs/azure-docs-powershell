@@ -21,6 +21,7 @@ Undo-AzsDeletedStorageAccount -AccountId <String> [-NewAccountName <String>]
 The **Undo-AzsDeletedStorageAccount** cmdlet tries to recover a deleted storage account. The cloud administrator can use this cmdlet to recover a storage account deleted by a user.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $DeletedStorageAccounts = Get-AzsStorageAccount -StorageAccountStatus Deleted 

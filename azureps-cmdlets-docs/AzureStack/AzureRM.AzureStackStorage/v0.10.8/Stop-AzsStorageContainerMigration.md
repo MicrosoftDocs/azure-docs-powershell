@@ -19,6 +19,7 @@ Stop-AzsStorageContainerMigration -JobId <String> [-SkipCertificateValidation]
 The **Stop-AzsStorageContainerMigration** cmdlet tries to stop the container migration operation specified by the given job ID. This cmdlet is available for Azure Stack multi-node instances only.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $jobId = Start-AzsStorageContainerMigration -ContainerToMigrate $containers[1] -DestinationShareUncPath $DestinationShare.UncPath 

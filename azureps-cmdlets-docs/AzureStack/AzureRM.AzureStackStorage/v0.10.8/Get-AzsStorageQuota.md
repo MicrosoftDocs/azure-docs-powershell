@@ -19,6 +19,7 @@ Get-AzsStorageQuota -Location <String> [-Name <String>] [-SkipCertificateValidat
 The **Get-AzsStorageQuota** cmdlet gets a list of all Storage quota resources in the specified location.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Get-AzsStorageQuota -Location local 

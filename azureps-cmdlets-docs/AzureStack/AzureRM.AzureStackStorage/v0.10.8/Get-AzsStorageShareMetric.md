@@ -20,6 +20,7 @@ Get-AzsStorageShareMetric -ShareName <String> [-TimeGrain <TimeGrain>] [-StartTi
 Gets the metrics of a specified share.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $shares = Get-AzsStorageShare

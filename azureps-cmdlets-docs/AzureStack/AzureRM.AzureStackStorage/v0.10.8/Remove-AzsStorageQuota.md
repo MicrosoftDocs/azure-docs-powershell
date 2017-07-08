@@ -19,6 +19,7 @@ Remove-AzsStorageQuota -Location <String> -Name <String> [-SkipCertificateValida
 The **Remove-AzsStorageQuota** cmdlet deletes the given Storage quota resource from the specified location.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Remove-AzsStorageQuota -Location local -Name "BasicStorage_Quota" 

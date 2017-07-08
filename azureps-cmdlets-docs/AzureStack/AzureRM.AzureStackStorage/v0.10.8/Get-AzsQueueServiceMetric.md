@@ -20,6 +20,7 @@ Get-AzsQueueServiceMetric [-TimeGrain <TimeGrain>] [-StartTimeInUtc <DateTime>] 
 The **Get-AzsQueueServiceMetric** cmdlet gets the metrics for the Queue service.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $Metrics = Get-AzsQueueServiceMetricDefinition

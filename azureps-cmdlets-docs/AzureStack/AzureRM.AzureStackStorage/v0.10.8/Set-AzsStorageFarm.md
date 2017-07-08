@@ -39,6 +39,7 @@ Set-AzsStorageFarm [-SettingsPollingIntervalInSecond <Int32>] [-HostStyleHttpPor
 The **Set-AzsStorageFarm** cmdlet modifies the Storage settings and service configurations for the region or farm.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Set-AzsStorageFarm -RetentionPeriodForDeletedStorageAccountsInDays 15 

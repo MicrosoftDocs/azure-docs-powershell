@@ -19,6 +19,7 @@ Get-AzsQueueServiceMetricDefinition [-MetricNames <String[]>] [-DetailedOutput] 
 The **Get-AzsQueueServiceMetricDefinition** cmdlet gets the metric definitions of the Queue service.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Get-AzsQueueServiceMetricDefinition -DetailedOutput | Format-Table -Wrap 

@@ -20,6 +20,7 @@ Get-AzsStorageAcquisition [-TenantSubscriptionId <String>] [-StorageAccountName 
 The **Get-AzsStorageAcquisition** gets or lists page blob acquisitions.
 
 ## EXAMPLES
+### Example 1
 
 ```
 Get-AzsStorageAcquisition -StorageAccountName "teststorage"  

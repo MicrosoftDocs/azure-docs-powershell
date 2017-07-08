@@ -20,6 +20,7 @@ Set-AzsStorageQuota -Location <String> -Name <String> -NumberOfStorageAccounts <
 The **Set-AzsStorageQuota** cmdlet modifies the quota values of the given Storage quota resource.
 
 ## EXAMPLES
+### Example 1
 
 ```
 $quota = Get-AzsStorageQuota -Name "local/Default Quota" -Location local 

@@ -19,6 +19,7 @@ Get-AzsReclaimStorageCapacityStatus -JobId <String> [-SkipCertificateValidation]
 The **Get-AzsReclaimStorageCapacityStatus** cmdlet gets the status of the reclaimed storage capacity. 
 
 ## EXAMPLES
+### Example 1
 
 ```
 $jobId = Start-AzsReclaimStorageCapacity
