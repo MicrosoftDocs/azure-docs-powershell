@@ -117,6 +117,12 @@
       "ConceptualTOC": "azurestackps-1.2.9/docs-conceptual/toc.yml",
       "ReferenceTOCUrl": "/powershell/module/azure-stack/toc.json?view=azurestackps-1.2.9",
       "ConceptualTOCUrl": "/powershell/azure/azure-stack/toc.json?view=azurestackps-1.2.9"
+    },
+    {
+      "TopLevelTOC": "azurestackps-1.2.10/toc.yml",
+      "ConceptualTOC": "azurestackps-1.2.10/docs-conceptual/toc.yml",
+      "ReferenceTOCUrl": "/powershell/module/azure-stack/toc.json?view=azurestackps-1.2.10",
+      "ConceptualTOCUrl": "/powershell/azure/azure-stack/toc.json?view=azurestackps-1.2.10"
     }
   ],
   "need_generate_pdf_url_template": false,
