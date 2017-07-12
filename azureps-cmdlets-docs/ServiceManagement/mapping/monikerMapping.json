@@ -1,43 +1,65 @@
 {
-    "azuresmps-4.0.0": {
-        "serviceMap": "azureps-cmdlets-docs/ServiceManagement/mapping/groupMapping-4.0.0.json",
-        "packageRoot": "azureps-cmdlets-docs/ServiceManagement",
-        "modules": {
-            "docs-conceptual": {
-                "_type": "conceptual"
-            },
+    "azuresmps-4.2.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager": {
             "Azure": {
                 "_displayName": "Azure",
-                "_version": "v4.0.0"
+                "_version": "4.2.0"
             },
             "AzureRM.Profile": {
                 "_displayName": "AzureRM.Profile",
-                "_version": "v3.0.0"
+                "_version": "3.2.0"
             },
             "Azure.Storage": {
                 "_displayName": "Azure.Storage",
-                "_version": "v3.0.0"
+                "_version": "3.2.0"
             }
         }
     },
-    "azuresmps-3.7.0": {
-        "serviceMap": "azureps-cmdlets-docs/ServiceManagement/mapping/groupMapping-3.7.0.json",
-        "packageRoot": "azureps-cmdlets-docs/ServiceManagement",
-        "modules": {
-            "docs-conceptual": {
-                "_type": "conceptual"
-            },
-            "Azure.Storage": {
-                "_displayName": "Azure.Storage",
-                "_version": "v2.7.0"
-            },
+    "azuresmps-3.8.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager": {
             "Azure": {
                 "_displayName": "Azure",
-                "_version": "v3.7.0"
+                "_version": "3.8.0"
             },
             "AzureRM.Profile": {
                 "_displayName": "AzureRM.Profile",
-                "_version": "v2.7.0"
+                "_version": "2.8.0"
+            },
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "2.8.0"
+            }
+        }
+    },
+    "azuresmps-2.1.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager": {
+            "Azure": {
+                "_displayName": "Azure",
+                "_version": "2.1.0"
+            },
+            "AzureRM.Profile": {
+                "_displayName": "AzureRM.Profile",
+                "_version": "2.1.0"
+            },
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "2.1.0"
+            }
+        }
+    },
+    "azuresmps-1.7.0": {
+        "azure-docs-powershell/azureps-cmdlets-docs/ResourceManager": {
+            "Azure": {
+                "_displayName": "Azure",
+                "_version": "1.6.1"
+            },
+            "AzureRM.Profile": {
+                "_displayName": "AzureRM.Profile",
+                "_version": "1.0.12"
+            },
+            "Azure.Storage": {
+                "_displayName": "Azure.Storage",
+                "_version": "1.1.6"
             }
         }
     }
