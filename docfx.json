@@ -110,8 +110,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-4.1.0",
-                "version": "azurermps-4.1.0",
+                "src": "azurermps-4.2.0",
+                "version": "azurermps-4.2.0",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -122,8 +122,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-4.1.0/docs-conceptual",
-                "version": "azurermps-4.1.0",
+                "src": "azurermps-4.2.0/docs-conceptual",
+                "version": "azurermps-4.2.0",
                 "dest": "azure"
             },
             {
@@ -306,8 +306,8 @@
             "azurermps-3.8.0": {
                 "dest": "azurermps-3.8.0"
             },
-            "azurermps-4.1.0": {
-                "dest": "azurermps-4.1.0"
+            "azurermps-4.2.0": {
+                "dest": "azurermps-4.2.0"
             },
             "azuresmps-3.7.0": {
                 "dest": "azuresmps-3.7.0"
