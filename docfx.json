@@ -68,6 +68,27 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
+                "src": "azurermps-3.7.0",
+                "version": "azurermps-3.7.0",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "azurermps-3.7.0/docs-conceptual",
+                "version": "azurermps-3.7.0",
+                "dest": "azure"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
                 "src": "azurermps-3.8.0",
                 "version": "azurermps-3.8.0",
                 "exclude": [
@@ -161,6 +182,7 @@
                 "version": "azuresmps-4.0.0",
                 "dest": "azure/servicemanagement"
             },
+
             {
                 "files": [
                     "toc.yml"
@@ -187,34 +209,6 @@
                 ],
                 "src": "azurestackps-1.2.10/docs-conceptual",
                 "version": "azurestackps-1.2.10",
-                "dest": "azure/azure-stack"
-            },
-            {
-                "files": [
-                    "toc.yml"
-                ],
-                "src": "azurestackps-1.2.9",
-                "version": "azurestackps-1.2.9",
-                "dest": "module/azure-stack"
-            },
-            {
-                "files": [
-                    "**/*.md"
-                ],
-                "src": "azurestackps-1.2.9",
-                "version": "azurestackps-1.2.9",
-                "exclude": [
-                    "docs-conceptual/**"
-                ],
-                "dest": "module"
-            },
-            {
-                "files": [
-                    "**/*.yml",
-                    "**/*.md"
-                ],
-                "src": "azurestackps-1.2.9/docs-conceptual",
-                "version": "azurestackps-1.2.9",
                 "dest": "azure/azure-stack"
             },
             {
