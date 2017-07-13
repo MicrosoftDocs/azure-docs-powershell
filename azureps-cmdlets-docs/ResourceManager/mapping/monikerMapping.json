@@ -14,6 +14,10 @@
             "AzureRM.RecoveryServices.Backup": {
                 "_displayName": "AzureRM.RecoveryServices.Backup",
                 "_version": "v3.2.0"
+              },
+              "AzureRM.RecoveryServices.SiteRecovery": {
+                  "_displayName": "AzureRM.RecoveryServices",
+                  "_version": "v0.1.0"
             },
             "AzureRM.RedisCache": {
                 "_displayName": "AzureRM.RedisCache",
@@ -186,7 +190,7 @@
             "AzureRM.AnalysisServices": {
                 "_displayName": "AzureRM.AnalysisServices",
                 "_version": "v0.4.1"
-            },
+          },
             "AzureRM.KeyVault": {
                 "_displayName": "AzureRM.KeyVault",
                 "_version": "v3.2.0"
