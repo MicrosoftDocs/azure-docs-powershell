@@ -181,8 +181,35 @@
                 "src": "azuresmps-4.0.0/docs-conceptual",
                 "version": "azuresmps-4.0.0",
                 "dest": "azure/servicemanagement"
+            },   
+            {
+                "files": [
+                    "toc.yml"
+                ],
+                "src": "azurestackps-1.2.10",
+                "version": "azurestackps-1.2.10",
+                "dest": "module/azure-stack"
             },
-            
+            {
+                "files": [
+                    "**/*.md"
+                ],
+                "src": "azurestackps-1.2.10",
+                "version": "azurestackps-1.2.10",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "azurestackps-1.2.10/docs-conceptual",
+                "version": "azurestackps-1.2.10",
+                "dest": "azure/azure-stack"
+            },
             {
                 "files": [
                     "toc.yml"
