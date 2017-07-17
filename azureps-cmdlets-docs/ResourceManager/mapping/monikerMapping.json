@@ -115,10 +115,6 @@
                 "_displayName": "AzureRM.DataLakeStore",
                 "_version": "v4.2.0"
             },
-            "Azure.AnalysisServices": {
-                "_displayName": "Azure.AnalysisServices",
-                "_version": "v0.4.1"
-            },
             "AzureRM.Sql": {
                 "_displayName": "AzureRM.Sql",
                 "_version": "v3.2.0"
