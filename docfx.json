@@ -110,8 +110,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-4.1.0",
-                "version": "azurermps-4.1.0",
+                "src": "azurermps-4.2.0",
+                "version": "azurermps-4.2.0",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -122,8 +122,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-4.1.0/docs-conceptual",
-                "version": "azurermps-4.1.0",
+                "src": "azurermps-4.2.0/docs-conceptual",
+                "version": "azurermps-4.2.0",
                 "dest": "azure"
             },
             {
@@ -181,6 +181,34 @@
                 "src": "azuresmps-4.0.0/docs-conceptual",
                 "version": "azuresmps-4.0.0",
                 "dest": "azure/servicemanagement"
+            },
+            {
+                "files": [
+                    "toc.yml"
+                ],
+                "src": "azurestackps-1.2.10",
+                "version": "azurestackps-1.2.10",
+                "dest": "module/azure-stack"
+            },
+            {
+                "files": [
+                    "**/*.md"
+                ],
+                "src": "azurestackps-1.2.10",
+                "version": "azurestackps-1.2.10",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "azurestackps-1.2.10/docs-conceptual",
+                "version": "azurestackps-1.2.10",
+                "dest": "azure/azure-stack"
             },
             {
                 "files": [
@@ -305,8 +333,8 @@
             "azurermps-3.8.0": {
                 "dest": "azurermps-3.8.0"
             },
-            "azurermps-4.1.0": {
-                "dest": "azurermps-4.1.0"
+            "azurermps-4.2.0": {
+                "dest": "azurermps-4.2.0"
             },
             "azuresmps-3.7.0": {
                 "dest": "azuresmps-3.7.0"
@@ -316,6 +344,9 @@
             },
             "azurestackps-1.2.9": {
                 "dest": "azurestackps-1.2.9"
+            },
+            "azurestackps-1.2.10": {
+                "dest": "azurestackps-1.2.10"
             },
             "azureipps": {
                 "dest": "azureipps"

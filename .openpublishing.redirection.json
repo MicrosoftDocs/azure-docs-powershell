@@ -26,6 +26,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "azurestackps-1.2.10/docs-conceptual/index.md",
+      "redirect_url": "/powershell/azure/azure-stack/overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "azureservicefabricps/azure/service-fabric/index.md",
       "redirect_url": "/powershell/azure/service-fabric/overview",
       "redirect_document_id": false
