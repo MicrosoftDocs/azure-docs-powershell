@@ -9,7 +9,7 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 05/15/2017
+ms.date: 07/26/2017
 ---
 
 # Overview of Azure PowerShell
@@ -48,5 +48,5 @@ You can also watch this video:
 
 * [Azure Active Directory](/powershell/azure/active-directory/)
 * [Azure Information Protection](/powershell/azure/aip/)
-* [Azure Service Fabric](/powershell/azure/oservice-fabric/)
+* [Azure Service Fabric](/powershell/azure/service-fabric/)
 * [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
