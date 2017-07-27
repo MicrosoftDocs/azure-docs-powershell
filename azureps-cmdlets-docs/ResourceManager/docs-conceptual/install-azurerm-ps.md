@@ -114,7 +114,7 @@ feedback from the command line, use the `Send-Feedback` cmdlet.
 ### Checking the version of Azure PowerShell
 
 Although we encourage you to upgrade to the latest version as early as possible, several versions
-of Azure PowerShell are support. To determine the version of Azure PowerShell you have installed,
+of Azure PowerShell are supported. To determine the version of Azure PowerShell you have installed,
 run `Get-Module AzureRM` from your command line.
 
 ```powershell
