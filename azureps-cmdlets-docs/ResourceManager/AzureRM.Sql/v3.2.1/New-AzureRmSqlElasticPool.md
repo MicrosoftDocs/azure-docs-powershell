@@ -24,6 +24,8 @@ New-AzureRmSqlElasticPool -ElasticPoolName <String> [-Edition <DatabaseEdition>]
 ## DESCRIPTION
 The **New-AzureRmSqlElasticPool** cmdlet creates an elastic database pool for an Azure SQL Database.
 
+Several parameters (*-Dtu, -DatabaseDtuMin, and -DatabaseDtuMax*) require the value being set is from the list of valid values for that parameter. For example, -DatabaseDtuMax for a Standard 100 eDTU pool can only be set to 10, 20, 50, or 100.  For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+
 ## EXAMPLES
 
 ### Example 1: Create an elastic pool
@@ -51,7 +53,10 @@ The command specifies DTU property values for the pool and the databases in the 
 ## PARAMETERS
 
 ### -DatabaseDtuMax
-Specifies the maximum number of Database Throughput Units (DTUs) that any single database in the pool can consume.
+Specifies the maximum number of Database Throughput Units (DTUs) that any single database in the pool can consume. 
+
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)
+
 The default values for the different editions are as follows: 
 
 - Basic.
@@ -75,6 +80,9 @@ Accept wildcard characters: False
 
 ### -DatabaseDtuMin
 Specifies the minimum number of DTUs that the elastic pool guarantees to all the databases in the pool.
+
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+
 The default value is zero (0).
 
 ```yaml
@@ -91,6 +99,9 @@ Accept wildcard characters: False
 
 ### -Dtu
 Specifies the total number of shared DTUs for the elastic pool.
+
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+
 The default values for the different editions are as follows: 
 
 - Basic.
@@ -116,9 +127,13 @@ Accept wildcard characters: False
 Specifies the edition of the Azure SQL Database used for the elastic pool.
 The acceptable values for this parameter are:
 
-- Premium 
 - Basic 
 - Standard
+- Premium
+- DataWarehouse
+- Stretch
+- Free
+- PremiumRS 
 
 ```yaml
 Type: DatabaseEdition
