@@ -35,7 +35,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 ```
 
 If you do not have PowerShellGet installed, see the
-[How to get PowerShellGet](install-azurerm-ps.md#how-to-get-powershellget).
+[How to get PowerShellGet](#how-to-get-powershellget).
 
 ## Step 2: Install Azure PowerShell
 
@@ -88,3 +88,22 @@ For sample scripts that can help you automate some of the common tasks in Azure,
 
 For general information about installing, learning, using, and customizing Windows PowerShell, see
 [Scripting with Windows PowerShell](http://go.microsoft.com/fwlink/p/?linkid=320210).
+
+### How to get PowerShellGet
+
+|OS Version|Install instructions|
+|---|---|
+|I have Windows 10 or Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
+|I want to upgrade to PowerShell 5|[Install the latest version of WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
+|I am running on a version of Windows with PowerShell 3 or PowerShell 4|[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)|
+
+<a id="helpmechoose"></a>
+### Checking the version of Azure PowerShell
+
+Although we encourage you to upgrade to the latest version as early as possible, several versions
+of Azure PowerShell are support. To determine the version of Azure PowerShell you have installed,
+run `Get-Module AzureRM` from your command line.
+
+```powershell
+Get-Module AzureRM -list | Select-Object Name,Version,Path
+```
