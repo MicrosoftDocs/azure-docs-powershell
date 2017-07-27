@@ -25,7 +25,7 @@ Set-AzureRmSqlElasticPool [-ElasticPoolName] <String> [-Edition <DatabaseEdition
 The **Set-AzureRmSqlElasticPool** cmdlet modifies properties for an elastic database pool in an Azure SQL Database.
 This cmdlet can modify the minimum Database Throughput Units (DTUs) per database in addition to the maximum DTUs per database, the number of DTUs for the pool, and the storage limit for the pool.
 
-Several parameters (*-Dtu, -DatabaseDtuMin, and -DatabaseDtuMax*) require the value being set is from the list of valid values for that parameter. For example, -DatabaseDtuMax for a Standard 100 eDTU pool can only be set to 10, 20, 50, or 100.  For details about which values are valid, see the table for your specific size pool in [Resource limits for elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool#what-are-the-resource-limits-for-elastic-pools).
+Several parameters (*-Dtu, -DatabaseDtuMin, and -DatabaseDtuMax*) require the value being set is from the list of valid values for that parameter. For example, -DatabaseDtuMax for a Standard 100 eDTU pool can only be set to 10, 20, 50, or 100.  For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
 
 
 ## EXAMPLES
@@ -77,7 +77,7 @@ The command sets the max storage for an elastic pool to 2 TB.
 ### -DatabaseDtuMax
 Specifies the maximum number of DTUs that any single database in the pool can consume.
 
-For details about which values are valid, see the table for your specific size pool in [Resource limits for elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool#what-are-the-resource-limits-for-elastic-pools).
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
 
 The default values for different editions are as follows: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ### -DatabaseDtuMin
 Specifies the minimum number of DTUs that the elastic pool guarantees to all the databases in the pool.
 
-For details about which values are valid, see the table for your specific size pool in [Resource limits for elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool#what-are-the-resource-limits-for-elastic-pools).
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
 
 The default value is zero (0).
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ### -Dtu
 Specifies the total number of shared DTUs for the elastic pool.
 
-For details about which values are valid, see the table for your specific size pool in [Resource limits for elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool#what-are-the-resource-limits-for-elastic-pools).
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
 
 The default values for different editions are as follows: 
 
