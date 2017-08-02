@@ -97,7 +97,6 @@ This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Networ
 
 ## NOTES
 
-###
 You cannot resize from Basic/Standard/HighPerformance SKUs to the new VpnGw1/VpnGw2/VpnGw3 SKUs. See https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways#gwsku for instructions.
 
 ## RELATED LINKS
