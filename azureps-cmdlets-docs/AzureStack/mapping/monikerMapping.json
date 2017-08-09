@@ -1,6 +1,8 @@
 {
     "azurestackps-1.2.9": {
         "packageRoot": "azureps-cmdlets-docs/AzureStack",
+        "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
+        "referenceTocUrl": "/powershell/module/azure-stack/toc.json",
         "modules": {
             "docs-conceptual": {
                 "_type": "conceptual"
@@ -17,6 +19,8 @@
     },
     "azurestackps-1.2.10": {
         "packageRoot": "azureps-cmdlets-docs/AzureStack",
+        "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
+        "referenceTocUrl": "/powershell/module/azure-stack/toc.json",
         "modules": {
             "docs-conceptual": {
                 "_type": "conceptual",
