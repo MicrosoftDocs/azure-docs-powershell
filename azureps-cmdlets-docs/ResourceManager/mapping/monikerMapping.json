@@ -2,6 +2,8 @@
     "azurermps-4.2.0": {
         "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-4.2.0.json",
         "packageRoot": "azureps-cmdlets-docs/ResourceManager",
+        "conceptualTocUrl": "/powershell/azure/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "docs-conceptual": {
                 "_type": "conceptual",
@@ -115,10 +117,12 @@
                 "_displayName": "AzureRM.DataLakeStore",
                 "_version": "v4.2.0"
             },
+
             "Azure.AnalysisServices": { 
                 "_displayName": "Azure.AnalysisServices",           
                 "_version": "v0.4.1"
             }, 
+          
             "AzureRM.Sql": {
                 "_displayName": "AzureRM.Sql",
                 "_version": "v3.2.0"
@@ -208,6 +212,8 @@
     "azurermps-3.8.0": {
         "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-3.8.0.json",
         "packageRoot": "azureps-cmdlets-docs/ResourceManager",
+        "conceptualTocUrl": "/powershell/azure/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "docs-conceptual": {
                 "_type": "conceptual",
@@ -394,6 +400,8 @@
     "azurermps-2.2.0": {
         "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-2.2.0.json",
         "packageRoot": "azureps-cmdlets-docs/ResourceManager",
+        "conceptualTocUrl": "/powershell/azure/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "docs-conceptual": {
                 "_type": "conceptual",
@@ -556,6 +564,8 @@
     "azurermps-1.7.0": {
         "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-1.7.0.json",
         "packageRoot": "azureps-cmdlets-docs/ResourceManager",
+        "conceptualTocUrl": "/powershell/azure/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "docs-conceptual": {
                 "_type": "conceptual",
@@ -718,6 +728,8 @@
     "azurermps-1.2.9": {
         "serviceMap": "azureps-cmdlets-docs/ResourceManager/mapping/groupMapping-1.2.9.json",
         "packageRoot": "azureps-cmdlets-docs/ResourceManager",
+        "conceptualTocUrl": "/powershell/azure/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "docs-conceptual": {
                 "_type": "conceptual",
