@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoInflate
-Indicates whether AutoInflate is enabled
+The EnableAutoInflate parameter indicates whether AutoInflate is enabled.
 
 ```yaml
 Type: SwitchParameter
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumThroughputUnits
-Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units.
+Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units.
 
 ```yaml
 Type: Int32
