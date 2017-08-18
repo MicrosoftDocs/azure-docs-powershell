@@ -19,6 +19,8 @@ This module contains commands for performing operations on a given Azure Analysi
 ### [Add-AzureAnalysisServicesAccount](Add-AzureAnalysisServicesAccount.md)
 Adds an authenticated account to use for Azure Analysis Services server cmdlet requests.
 
+### [Export-AzureAnalysisServicesInstanceLog](Export-AzureAnalysisServicesInstanceLog.md)
+Exports a log from an instance of Analysis Services server in the currently logged in Environment as specified in Add-AzureAnalysisServicesAccount command
+
 ### [Restart-AzureAnalysisServicesInstance](Restart-AzureAnalysisServicesInstance.md)
 Restarts a specified Azure Analysis Services server.
-
