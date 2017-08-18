@@ -55,7 +55,7 @@ Event Hubs namespace geo-location.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -70,7 +70,7 @@ Resource group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -85,7 +85,7 @@ The Event Hub throughput units.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Namespace Sku name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Basic, Standard, Premium
 
 Required: False
@@ -116,7 +116,7 @@ Specifies the state (disabled or enabled) of the namespace.
 ```yaml
 Type: NamespaceState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, Creating, Created, Activating, Enabling, Active, Disabling, Disabled, SoftDeleting, SoftDeleted, Removing, Removed, Failed
 
 Required: False
@@ -132,7 +132,7 @@ Hashtables that represent resource tags.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,13 +172,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-#### -EnableAutoInflate
+### -EnableAutoInflate
 Indicates whether AutoInflate is enabled
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NamespaceParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -193,7 +193,7 @@ Upper limit of throughput units when AutoInflate is enabled, vaule should be wit
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,4 +229,3 @@ System.Nullable\`1\[\[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, 
 ## NOTES
 
 ## RELATED LINKS
-
