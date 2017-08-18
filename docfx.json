@@ -369,13 +369,13 @@
         },
         "filemetadata": {
             "ms.author": {
-                "azurermps-*/**/*.md": "markcowl",
-                "azuresmps-*/**/*.md": "markcowl",
+                "azurermps-*/**/*.md": "sewhee",
+                "azuresmps-*/**/*.md": "sewhee",
                 "azurestackps-*/**/*.md": "sngun"
             },
             "author": {
-                "azurermps-*/**/*.md": "azuresdkci",
-                "azuresmps-*/**/*.md": "azuresdkci",
+                "azurermps-*/**/*.md": "sdwheeler",
+                "azuresmps-*/**/*.md": "sdwheeler",
                 "azurestackps-*/**/*.md": "SnehaGunda"
             },
             "ms.manager": {
