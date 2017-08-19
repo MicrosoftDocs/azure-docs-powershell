@@ -787,10 +787,6 @@
                 "_displayName": "AzureRM.RecoveryServices",
                 "_version": "v1.0.5.3"
             },
-            "AzureResourceManager": {
-                "_displayName": "AzureResourceManager",
-                "_version": "v0.0"
-            },
             "AzureRM.Network": {
                 "_displayName": "AzureRM.Network",
                 "_version": "v1.0.4.3"
