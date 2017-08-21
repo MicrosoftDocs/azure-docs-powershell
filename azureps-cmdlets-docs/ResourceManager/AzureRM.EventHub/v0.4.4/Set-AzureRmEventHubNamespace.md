@@ -55,7 +55,8 @@ Event Hubs namespace geo-location.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+
+Aliases: 
 
 Required: True
 Position: 2
@@ -70,7 +71,8 @@ Resource group name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+
+Aliases: 
 
 Required: True
 Position: 0
@@ -85,6 +87,7 @@ The Event Hub throughput units.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
+
 Aliases:
 
 Required: False
@@ -100,7 +103,9 @@ Namespace Sku name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+
+Aliases: 
+
 Accepted values: Basic, Standard, Premium
 
 Required: False
@@ -116,7 +121,8 @@ Specifies the state (disabled or enabled) of the namespace.
 ```yaml
 Type: NamespaceState
 Parameter Sets: (All)
-Aliases:
+
+Aliases: 
 Accepted values: Unknown, Creating, Created, Activating, Enabling, Active, Disabling, Disabled, SoftDeleting, SoftDeleted, Removing, Removed, Failed
 
 Required: False
@@ -132,7 +138,8 @@ Hashtables that represent resource tags.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+
+Aliases: 
 
 Required: False
 Position: Named
@@ -163,7 +170,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 
 Required: False
 Position: Named
@@ -172,13 +179,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
 ### -EnableAutoInflate
 The EnableAutoInflate parameter indicates whether AutoInflate is enabled.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NamespaceParameterSet
-Aliases:
+
+Aliases: 
 
 Required: False
 Position: 6
@@ -188,12 +197,13 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumThroughputUnits
-Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units.
+Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+
+Aliases: 
 
 Required: False
 Position: Named
