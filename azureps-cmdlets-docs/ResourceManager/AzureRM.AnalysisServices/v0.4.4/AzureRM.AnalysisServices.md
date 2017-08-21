@@ -14,6 +14,7 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616
 This topic displays help topics for the Azure AnalysisServices cmdlets.
 
 ## AzureRM.AnalysisServices Cmdlets
+
 ### [Get-AzureRmAnalysisServicesServer](Get-AzureRmAnalysisServicesServer.md)
 Gets the details of an Analysis Services server.
 
@@ -34,4 +35,3 @@ Suspends an instance of Analysis Services server
 
 ### [Test-AzureRmAnalysisServicesServer](Test-AzureRmAnalysisServicesServer.md)
 Tests the existence of an instance of Analysis Services server
-
