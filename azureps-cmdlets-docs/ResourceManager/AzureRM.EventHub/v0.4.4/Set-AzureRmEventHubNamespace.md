@@ -121,7 +121,6 @@ Specifies the state (disabled or enabled) of the namespace.
 ```yaml
 Type: NamespaceState
 Parameter Sets: (All)
-
 Aliases: 
 Accepted values: Unknown, Creating, Created, Activating, Enabling, Active, Disabling, Disabled, SoftDeleting, SoftDeleted, Removing, Removed, Failed
 
@@ -181,7 +180,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-#### -EnableAutoInflate
+### -EnableAutoInflate
 Indicates whether AutoInflate is enabled
 
 
