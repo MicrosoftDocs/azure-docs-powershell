@@ -88,7 +88,7 @@ The Event Hub throughput units.
 Type: Int32
 Parameter Sets: (All)
 
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -121,7 +121,6 @@ Specifies the state (disabled or enabled) of the namespace.
 ```yaml
 Type: NamespaceState
 Parameter Sets: (All)
-
 Aliases: 
 Accepted values: Unknown, Creating, Created, Activating, Enabling, Active, Disabling, Disabled, SoftDeleting, SoftDeleted, Removing, Removed, Failed
 
@@ -170,7 +169,9 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+
+Aliases: wi
+
 
 Required: False
 Position: Named
@@ -179,9 +180,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -EnableAutoInflate
-The EnableAutoInflate parameter indicates whether AutoInflate is enabled.
+Indicates whether AutoInflate is enabled
+
 
 ```yaml
 Type: SwitchParameter
@@ -239,3 +240,4 @@ System.Nullable\`1\[\[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, 
 ## NOTES
 
 ## RELATED LINKS
+
