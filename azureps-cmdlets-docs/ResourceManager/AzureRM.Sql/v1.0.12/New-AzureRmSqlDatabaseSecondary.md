@@ -22,8 +22,7 @@ New-AzureRmSqlDatabaseSecondary [-DatabaseName] <String> [-SecondaryServiceObjec
 ```
 
 ## DESCRIPTION
-The **New-AzureRmSqlDatabaseSecondary** cmdlet replaces the [Start-AzureSqlDatabaseCopy](./Start-AzureSqlDatabaseCopy.md) cmdlet when used for setting up geo-replication for a database.
-It returns the geo-replication link object from the primary to the secondary database.
+The **New-AzureRmSqlDatabaseSecondary** cmdlet replaces the depracted Start-AzureSqlDatabaseCopy cmdlet when used for setting up geo-replication for a database. It returns the geo-replication link object from the primary to the secondary database.
 
 ## EXAMPLES
 
