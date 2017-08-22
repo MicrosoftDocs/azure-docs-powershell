@@ -19,8 +19,8 @@ Azure PowerShell provides a set of cmdlets that use the
 your Azure resources.
 
 Review the [Install](install-azurerm-ps.md) article to get Azure PowerShell up and running on your
-system. Then read the [Get Started](get-started-azureps.md) article to begin using it. For information about the latest
-release, see the [release notes](release-notes-azureps.md).
+system. Then read the [Get Started](get-started-azureps.md) article to begin using it. For
+information about the latest release, see the [release notes](release-notes-azureps.md).
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
@@ -29,17 +29,16 @@ The following samples can help you learn how to perform common scenarios with Az
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-
 > [!NOTE] > If you have deployments that use the classic deployment model that cannot be converted,
 > you can install the Service Management version of Azure PowerShell. For more information, see
 > [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
 
-
 ### Need help with PowerShell?
 
-If you are unfamiliar with PowerShell, you may find an introduction to PowerShell helpful. To get
-started with PowerShell, see
-[Scripting with PowerShell](https://technet.microsoft.com/library/bb978526.aspx).
+If you are unfamiliar with PowerShell, you may find an introduction to PowerShell helpful.
+
+* [Installing PowerShell](/powershell/scripting/installing-windows-powershell)
+* [Scripting with PowerShell](/powershell/scripting/scripting-with-windows-powershell)
 
 You can also watch this video:
 [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).

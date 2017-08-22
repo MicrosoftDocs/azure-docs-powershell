@@ -342,13 +342,13 @@
         },
         "filemetadata": {
             "ms.author": {
-                "azurermps-*/**/*.md": "sewhee",
-                "azuresmps-*/**/*.md": "sewhee",
+                "azurermps-*/**/*.md": "aaroney",
+                "azuresmps-*/**/*.md": "aaroney",
                 "azurestackps-*/**/*.md": "sngun"
             },
             "author": {
-                "azurermps-*/**/*.md": "sdwheeler",
-                "azuresmps-*/**/*.md": "sdwheeler",
+                "azurermps-*/**/*.md": "twitchax",
+                "azuresmps-*/**/*.md": "twitchax",
                 "azurestackps-*/**/*.md": "SnehaGunda"
             },
             "ms.manager": {
