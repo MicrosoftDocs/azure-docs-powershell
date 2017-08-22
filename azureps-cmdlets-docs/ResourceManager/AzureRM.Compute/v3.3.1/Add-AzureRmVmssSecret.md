@@ -26,6 +26,7 @@ The secret must be stored in an Azure Key Vault.
 For more information relating to Key Vault, see [What is Azure Key Vault?](https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/) (https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/).
 For more information about the cmdlets, see [Azure Key Vault Cmdlets](https://docs.microsoft.com/en-us/powershell/module/AzureRM.KeyVault/?view=azurermps-4.3.1) (https://msdn.microsoft.com/library/azure/dn868052.aspx) in the Microsoft Developer Network library or the [Set-AzureKeyVaultSecret](https://docs.microsoft.com/en-us/powershell/module/AzureRM.KeyVault/Set-AzureKeyVaultSecret?view=azurermps-4.3.1) cmdlet.
 
+
 ## EXAMPLES
 
 ### Example 1: Add a secret to the VMSS
