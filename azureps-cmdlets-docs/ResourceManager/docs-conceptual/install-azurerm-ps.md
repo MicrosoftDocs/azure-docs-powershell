@@ -69,7 +69,7 @@ Answer 'Yes' or 'Yes to All' to continue with the installation.
 
 > [!NOTE]
 > If you have a version older than 2.8.5.201 of NuGet, you are prompted to download and install
-the latest version of NuGet.
+> the latest version of NuGet.
 
 The AzureRM module is a rollup module for the Azure Resource Manager cmdlets. When you install the
 AzureRM module, any Azure PowerShell module not previously installed is downloaded and from the
