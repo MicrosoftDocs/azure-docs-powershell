@@ -26,6 +26,10 @@
                 "_type": "conceptual",
                  "_version": "1.2.10"
             },
+            "AzureRM.AzureStackAdmin": {
+                "_displayName": "AzureRM.AzureStackAdmin",
+                "_version": "v0.10.9"
+            },
             "AzureRM.AzureStackStorage": {
                 "_displayName": "AzureRM.AzureStackStorage",
                 "_version": "v0.10.8"
