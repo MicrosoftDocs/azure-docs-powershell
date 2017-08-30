@@ -14,18 +14,12 @@ This topic displays help topics for cmdlets used by the Azure Stack operator.
 
 ### [Add-AzsGalleryItem](Add-AzsGalleryItem.md)
 This cmdlet adds the gallery item package.
-The gallery item URI needs to be a http or https URI accessible to the gallery service. 
-Typically, the .azpkg file is uploaded to a publicly accessible blob container and its URI is provided as the GallelryItemUri parameter.
 
 ### [Add-AzsResourceProviderManifest](Add-AzsResourceProviderManifest.md)
 This cmdlet adds a resource provider manifest file to the Resource Manager.
-The manifest file is needed to register any new resource provider.
 
 ### [Add-AzsUsageConnection](Add-AzsUsageConnection.md)
 This cmdlet adds an usage connection details for a resource provider.
-The cmdlet gets the storage account information where the resource provider is storing the usage records.
-This information is given to the usage service through this cmdlet. 
-Usage Service will retrieve the usage records periodically from the storage account information provided
 
 ### [Get-AzsGalleryItem](Get-AzsGalleryItem.md)
 This cmdlet gets details of an existing gallery item.
@@ -34,10 +28,10 @@ This cmdlet gets details of an existing gallery item.
 This cmdlet gets the Resource Manager location.
 
 ### [Get-AzsManagedOffer](Get-AzsManagedOffer.md)
-This cmdlet lists the private and public offers created by an administrator. 
+This cmdlet lists the private and public offers created by an administrator.
 
 ### [Get-AzsOffer](Get-AzsOffer.md)
-This cmdlet gets the list of public offers available for a user to subscribe. 
+This cmdlet gets the list of public offers available for a user to subscribe.
 
 ### [Get-AzsPlan](Get-AzsPlan.md)
 This cmdlet gets the plan details.
@@ -53,15 +47,13 @@ This cmdlet gets the subscriptions associated with the current logged in user.
 This cmdlet enables service administrator to get the tenant target subscription id
 
 ### [Get-AzsUsageConnection](Get-AzsUsageConnection.md)
-This cmdlet gets the specified usage connection information. 
+This cmdlet gets the specified usage connection information.
 
 ### [Get-AzureStackToken](Get-AzureStackToken.md)
 This cmdlet gets a token to be used to make calls to Azurestack Resource Manager.
-The cmdlet will be deprecated in a future release.
 
 ### [New-AzsLocation](New-AzsLocation.md)
 This cmdlet creates a new location that is managed by the Resource Manager.
-After creating a location, the resource providers are deployed to this location.
 
 ### [New-AzsOffer](New-AzsOffer.md)
 This cmdlet creates an offer composing of the specified base plans and add-on plans.
@@ -86,14 +78,12 @@ This cmdlet removes the specified offer.
 
 ### [Remove-AzsPlan](Remove-AzsPlan.md)
 This cmdlet removes the specified plan.
-The plan should not have any references to offers to get removed.
 
 ### [Remove-AzsResourceProviderManifest](Remove-AzsResourceProviderManifest.md)
 This cmdlet removes the resource provider manifest.
 
 ### [Remove-AzsSubscription](Remove-AzsSubscription.md)
 This cmdlet removes the current logged in user's specified subscription.
-There should not be any resources under the subscription to be removed.
 
 ### [Remove-AzsTenantSubscription](Remove-AzsTenantSubscription.md)
 This cmdlet is used by administrators to remove a user subscription.
@@ -118,4 +108,3 @@ This cmdlet modifies the current logged-in user's tenant subscription.
 
 ### [Set-AzsTenantSubscription](Set-AzsTenantSubscription.md)
 This cmdlet reassigns the currently logged user's subscription details.
-
