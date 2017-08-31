@@ -2,6 +2,7 @@
 ## [Install](install-azurerm-ps.md)
 ### [Other installation methods](other-install.md)
 ## [Get started](get-started-azureps.md)
+## [Cloud shell](https://docs.microsoft.com/azure/cloud-shell/overview)
 ## [Log in](authenticate-azureps.md)
 ### [Create a service principal](create-azure-service-principal-azureps.md)
 ## [Queries](queries-azureps.md)

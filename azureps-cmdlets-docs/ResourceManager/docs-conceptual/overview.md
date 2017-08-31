@@ -9,18 +9,20 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 07/26/2017
+ms.date: 08/31/2017
 ---
 
 # Overview of Azure PowerShell
 
-Azure PowerShell provides a set of cmdlets that use the
-[Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) model for managing
-your Azure resources.
+Azure PowerShell provides a set of cmdlets that use the [Azure Resource
+Manager](/azure/azure-resource-manager/resource-group-overview) model for managing your Azure
+resources. You can use it in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or
+you can install it on your local machine and use it in any PowerShell session.
 
-Review the [Install](install-azurerm-ps.md) article to get Azure PowerShell up and running on your
-system. Then read the [Get Started](get-started-azureps.md) article to begin using it. For
-information about the latest release, see the [release notes](release-notes-azureps.md).
+Use the [Cloud Shell](/azure/cloud-shell/overview) to run the Azure PowerShell in your browser, or
+[install](install-azurerm-ps.md) it on own computer. Then read the [Get Started](get-started-azureps.md)
+article to begin using it. For information about the latest release, see the
+[release notes](release-notes-azureps.md).
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
@@ -32,6 +34,7 @@ The following samples can help you learn how to perform common scenarios with Az
 > [!NOTE] > If you have deployments that use the classic deployment model that cannot be converted,
 > you can install the Service Management version of Azure PowerShell. For more information, see
 > [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
+
 
 ### Need help with PowerShell?
 
