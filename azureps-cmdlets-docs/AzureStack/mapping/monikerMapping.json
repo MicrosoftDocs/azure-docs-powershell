@@ -1,22 +1,4 @@
 {
-    "azurestackps-1.2.9": {
-        "packageRoot": "azureps-cmdlets-docs/AzureStack",
-        "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
-        "referenceTocUrl": "/powershell/module/azure-stack/toc.json",
-        "modules": {
-            "docs-conceptual": {
-                "_type": "conceptual"
-            },
-            "AzureRM.AzureStackAdmin": {
-                "_displayName": "AzureRM.AzureStackAdmin",
-                "_version": "v0.10.6"
-            },
-            "AzureRM.AzureStackStorage": {
-                "_displayName": "AzureRM.AzureStackStorage",
-                "_version": "v0.10.6"
-            }
-        }
-    },
     "azurestackps-1.2.10": {
         "packageRoot": "azureps-cmdlets-docs/AzureStack",
         "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
@@ -25,6 +7,10 @@
             "docs-conceptual": {
                 "_type": "conceptual",
                  "_version": "1.2.10"
+            },
+            "AzureRM.AzureStackAdmin": {
+                "_displayName": "AzureRM.AzureStackAdmin",
+                "_version": "v0.10.9"
             },
             "AzureRM.AzureStackStorage": {
                 "_displayName": "AzureRM.AzureStackStorage",
