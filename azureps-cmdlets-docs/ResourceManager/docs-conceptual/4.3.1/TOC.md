@@ -1,7 +1,7 @@
 # [Azure PowerShell](../overview.md)
 
 ## [Install](../install-azurerm-ps.md)
-### [Install on macOS and Linux](../install-azureps-maclinux.md)
+### [Install on macOS and Linux](../install-azurermps-maclinux.md)
 ### [Other installation methods](../other-install.md)
 
 ## [Get started](../get-started-azureps.md)
