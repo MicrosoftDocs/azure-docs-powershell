@@ -9,43 +9,17 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/15/2017
+ms.date: 09/06/2017
 ---
 
 # Other installation methods
 
 Azure PowerShell has multiple installation methods. Using PowerShellGet with the PowerShell Gallery
-is the preferred method. Azure PowerShell can be installed using the Web Platform Installer (WebPI)
-or by using the MSI file available from
-[GitHub](https://github.com/Azure/azure-powershell/releases/latest).
+is the preferred method. Azure PowerShell can be installed on Windows using the Web Platform
+Installer (WebPI) or by using the MSI file available from GitHub. Azure PowerShell can also be
+installed in a Docker container.
 
-## Docker
-
-We maintain a Docker image preconfigured with Azure PowerShell.
-
-Run the container with `docker run`.
-
-```powershell
-docker run azuresdk/azure-powershell
-```
-
-In addition, we maintain a subset of cmdlets as a PowerShell Core container.
-
-For Mac/Linux, use the `latest` image.
-
-```bash
-docker run azuresdk/azure-powershell-core:latest
-```
-
-For Windows, use the `nanoserver` image.
-
-```powershell
-docker run azuresdk/azure-powershell-core:nanoserver
-```
-
-Azure PowerShell is installed on the image via `Install-Module` from the [PowerShell Gallery](https://www.powershellgallery.com/).
-
-## Install using the Web Platform Installer
+## Install on Windows using the Web Platform Installer
 
 Installing the latest Azure PowerShell from WebPI is the same as it was for previous versions.
 Download the [Azure PowerShell WebPI package](http://aka.ms/webpi-azps) and start the install.
@@ -99,10 +73,37 @@ qualified path. For example:
 Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.psd1"
 ```
 
-## Install using the MSI Package
+## Install on Windows using the MSI Package
 
 Azure PowerShell can be installed using the MSI file available from
 [GitHub](https://github.com/Azure/azure-powershell/releases/latest). If you have installed previous
 versions of Azure modules, the installer automatically removes them. The MSI package installs
 modules in `$env:ProgramFiles\WindowsPowerShell\Modules` but does not create version-specific
 folders.
+
+## Install in a Docker container
+
+We maintain a Docker image preconfigured with Azure PowerShell.
+
+Run the container with `docker run`.
+
+```powershell
+docker run azuresdk/azure-powershell
+```
+
+In addition, we maintain a subset of cmdlets as a PowerShell Core container.
+
+For Mac/Linux, use the `latest` image.
+
+```bash
+docker run azuresdk/azure-powershell-core:latest
+```
+
+For Windows, use the `nanoserver` image.
+
+```powershell
+docker run azuresdk/azure-powershell-core:nanoserver
+```
+
+Azure PowerShell is installed on the image via `Install-Module` from the
+[PowerShell Gallery](https://www.powershellgallery.com/).
