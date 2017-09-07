@@ -16,9 +16,12 @@
 ## [Subscriptions](../manage-subscriptions-azureps.md)
 
 ## Deploy
-### [Deploy using Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy)
-### [Export Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-export-template-powershell)
-### [Deploy private Resource Manager template with SAS token](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-powershell-sas-token)
+### [Deploy using Resource Manager templates](/azure/azure-resource-manager/resource-group-template-deploy)
+### [Export Resource Manager templates](/azure/azure-resource-manager/resource-manager-export-template-powershell)
+### [Deploy private Resource Manager template with SAS token](/azure/azure-resource-manager/resource-manager-powershell-sas-token)
+
+## Concepts
+### [Using experimental modules](../using-experimental-modules.md)
 
 ## [Release notes](release-notes-azureps.md)
 
