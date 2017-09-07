@@ -14,6 +14,10 @@ ms.date: 05/17/2017
 
 # Install and configure Azure PowerShell
 
+This article explains the steps to install the Azure PowerShell modules in a Windows environment.
+If you want to use Azure PowerShell on macOS or Linux, see the following article:
+[Install and configure Azure PowerShell on macOS and Linux](install-azureps-maclinux.md).
+
 Installing Azure PowerShell from the PowerShell Gallery is the preferred method of installation.
 
 ## Step 1: Install PowerShellGet
