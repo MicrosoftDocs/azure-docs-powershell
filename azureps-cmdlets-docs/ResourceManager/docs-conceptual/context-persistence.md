@@ -4,8 +4,8 @@
 Profile cmdlets are changing to support persistence of credentials between branches. Changes to
 cmdlets are described below.
 
-The main behavior changesareis that context information and credetnaisl will be automatically saved
-to disk when the user opts in to autosave, and that users will be able touse powershell jobs
+The main behavior changes are that context information and credentials will be automatically saved
+to disk when the user enables autosave, and that users will be able to use PowerShell jobs
 without having to perform separate authentication within the job.
 
 ## New environment Variable
