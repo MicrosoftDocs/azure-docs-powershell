@@ -1,6 +1,7 @@
 {
     "build": {
-        "content": [{
+        "content": [
+            {
                 "files": [
                     "**/*.yml",
                     "**/*.md"
@@ -182,7 +183,6 @@
                 "version": "azuresmps-4.0.0",
                 "dest": "azure/servicemanagement"
             },
-
             {
                 "files": [
                     "toc.yml"
@@ -281,15 +281,18 @@
                 "version": "azureelasticdbjobsps-0.8.33"
             }
         ],
-        "resource": [{
-            "files": [
-                "bread/toc.json"
-            ],
-            "exclude": [
-                "**/obj/**",
-                "**/includes/**"
-            ]
-        }],
+        "resource": [
+            {
+                "files": [
+                    "bread/toc.json",
+                    "media/**"
+                ],
+                "exclude": [
+                    "**/obj/**",
+                    "**/includes/**"
+                ]
+            }
+        ],
         "versions": {
             "azurermps-1.2.9": {
                 "dest": "azurermps-1.2.9"

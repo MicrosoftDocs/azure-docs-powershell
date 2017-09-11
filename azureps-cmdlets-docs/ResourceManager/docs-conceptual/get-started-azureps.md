@@ -25,11 +25,11 @@ The simplest way to get started is to [launch Cloud Shell](/azure/cloud-shell/qu
 
 1. Launch Cloud Shell from the top navigation of the Azure portal.
 
-   ![Shell icon](media/get-started-azureps/shell-icon.png)
+   ![Shell icon](~/media/get-started-azureps/shell-icon.png)
 
 2. Choose the subscription you want to use and create a storage account.
 
-   ![Create a storage account](media/get-started-azureps/storage-prompt.png)
+   ![Create a storage account](~/media/get-started-azureps/storage-prompt.png)
 
 You can also install Azure PowerShell and use it locally in a PowerShell session.
 
