@@ -9,7 +9,7 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/17/2017
+ms.date: 08/31/2017
 ---
 
 # Install and configure Azure PowerShell
@@ -32,7 +32,7 @@ Get-Module PowerShellGet -list | Select-Object Name,Version,Path
 
 You should see something similar to the following output:
 
-```
+```Output
 Name          Version Path
 ----          ------- ----
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
@@ -44,7 +44,7 @@ section of this article.
 > [!NOTE]
 > Using PowerShellGet requires an Execution Policy that allows you to run scripts. For more
 > information about PowerShell's Execution Policy, see
-> [About Execution Policies](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).
+> [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 ## Step 2: Install Azure PowerShell
 
@@ -59,7 +59,7 @@ Install-Module AzureRM
 By default, the PowerShell gallery is not configured as a Trusted repository for PowerShellGet. The
 first time you use the PSGallery you see the following prompt:
 
-```
+```Output
 Untrusted repository
 
 You are installing the modules from an untrusted repository. If you trust this repository, change
@@ -138,7 +138,7 @@ version of each package.
 If you have a previous version of Azure PowerShell installed that includes the Service Management
 module, you may receive the following error:
 
-```
+```Output
 PackageManagement\Install-Package : A command with name 'Get-AzureStorageContainerAcl' is already
 available on this system. This module 'Azure.Storage' may override the existing commands. If you
 still want to install this module 'Azure.Storage', use -AllowClobber parameter.

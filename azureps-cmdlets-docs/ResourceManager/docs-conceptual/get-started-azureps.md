@@ -9,13 +9,29 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 03/30/2017
+ms.date: 08/31/2017
 ---
 # Getting started with Azure PowerShell
 
 Azure PowerShell is designed for managing and administering Azure resources from the command line,
-and for building automation scripts that work against the Azure Resource Manager. This article
-helps get you started using it, and teaches you the core concepts behind it.
+and for building automation scripts that work against the Azure Resource Manager. You can use it in
+your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or you can install it on your
+local machine and use it in any PowerShell session. This article helps get you started using it,
+and teaches you the core concepts behind it.
+
+## Connect
+
+The simplest way to get started is to [launch Cloud Shell](/azure/cloud-shell/quickstart).
+
+1. Launch Cloud Shell from the top navigation of the Azure portal.
+
+   ![Shell icon](~/media/get-started-azureps/shell-icon.png)
+
+2. Choose the subscription you want to use and create a storage account.
+
+   ![Create a storage account](~/media/get-started-azureps/storage-prompt.png)
+
+You can also install Azure PowerShell and use it locally in a PowerShell session.
 
 ## Install Azure PowerShell
 
@@ -23,6 +39,7 @@ The first step is to make sure you have the latest version of the Azure PowerShe
 information about the latest release, see the [release notes](./release-notes-azureps.md).
 
 1. [Install Azure PowerShell](install-azurerm-ps.md).
+
 2. To verify the installation was successful, run `Get-Module AzureRM` from your
    command line.
 
