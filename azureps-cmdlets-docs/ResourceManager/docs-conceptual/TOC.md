@@ -5,8 +5,11 @@
 ### [Other installation methods](other-install.md)
 
 ## [Get started](get-started-azureps.md)
+
 ## [Cloud shell](https://docs.microsoft.com/azure/cloud-shell/overview)
+
 ## [Log in](authenticate-azureps.md)
+### [Using persistent credentials](context-persistence.md)
 ### [Create a service principal](create-azure-service-principal-azureps.md)
 
 ## [Queries](queries-azureps.md)
@@ -20,6 +23,7 @@
 
 ## Concepts
 ### [Using experimental modules](using-experimental-modules.md)
+
 ## [Release notes](release-notes-azureps.md)
 
 # Sample Scripts

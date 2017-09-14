@@ -1,24 +1,38 @@
+---
+title: Support for credential reuse across PowerShell sessions in Azure PowerShell
+description: The article explains new features in Azure PowerShell that allow you to reuse credentials across multiple PowerShell sessions.
+services: azure
+author: sdwheeler
+ms.author: sewhee
+manager: carmonm
+ms.product: azure
+ms.service: azure-powershell
+ms.devlang: powershell
+ms.topic: conceptual
+ms.date: 08/31/2017
+---
+# Support for credential reuse across PowerShell sessions in Azure PowerShell
 
-# Description
-
-Profile cmdlets are changing to support persistence of credentials between branches. Changes to
-cmdlets are described below.
-
-The main behavior changes are that context information and credentials will be automatically saved
-to disk when the user enables autosave, and that users will be able to use PowerShell jobs
-without having to perform separate authentication within the job.
+With the September 2017 release of Azure PowerShell, the Azure PowerShell Profile cmdlets changed
+to support persistence of credentials between sessions. Context information and credentials are
+automatically saved to disk when the user enables Autosave. This saved context allows users to use
+PowerShell jobs without having to perform separate authentication steps within the job.
 
 ## New environment Variable
 
-Controls whether the context is automatically saved to the default location. Default is 'false'
+The `Azure_Profile_Autosave` environment variable controls whether the context is automatically
+saved to the default location. Default is 'false'.
 
-```
+```powershell
 $env:Azure_Profile_Autosave="true" | "false"
 ```
 
+Autosave can be managed using the new `Enable-AzureRmContextAutosave` and
+`Disable-AzureRmContextAutosave` cmdlets.
+
 ## Changes to Add-AzureRmAccount
 
-Allow scoping the login, so it can affect only the process or the current user
+Allow scoping the login, so it can affect only the process or the current user.
 
 ```powershell
 Add-AzureRmAccount
