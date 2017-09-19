@@ -10,7 +10,7 @@
 
 ## [Log in](../authenticate-azureps.md)
 ### [Create a service principal](../create-azure-service-principal-azureps.md)
-### [Using persistent credentials](context-persistence.md)
+### [Using persistent credentials](../context-persistence.md)
 
 ## [Queries](../queries-azureps.md)
 ## [Formatting](../formatting-output.md)
