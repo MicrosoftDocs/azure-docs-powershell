@@ -119,3 +119,24 @@ automatically add an "azure" remote to an existing git repository.
 - Output Format - Azure PowerShell currently returns `PSObject`s and there is little console
   output. Azure PowerShell may need to display some information to the user regarding the "smart
   defaults" used.
+
+## Try using the experiments
+
+### Install
+
+```powershell
+Install-Module AzureRM.Compute.Experiments
+```
+
+### Create a VM
+
+```powershell
+$job = New-AzVm -Name MyVm -AsJob
+Receive-Job $job
+```
+
+### Send Us Feedback
+
+```powershell
+Send-Feedback
+```
