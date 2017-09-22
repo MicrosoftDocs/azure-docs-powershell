@@ -188,11 +188,21 @@ Changes to existing profile cmdlets
   to the process or current user.
 
 <!-- Hyperlinks -->
+<!-- New cmdlets
 [enable]: /powershell/module/azurerm.profile/Enable-AzureRmContextAutosave
 [disable]: /powershell/module/azurerm.profile/Disable-AzureRmContextAutosave
 [select]: /powershell/module/azurerm.profile/Select-AzureRmContext
 [remove-cred]: /powershell/module/azurerm.profile/Remove-AzureRmAccount
 [remove-context]: /powershell/module/azurerm.profile/Remove-AzureRmContext
 [rename]: /powershell/module/azurerm.profile/Rename-AzureRmContext
+-->
+[enable]: /powershell/module/azurerm.profile
+[disable]: /powershell/module/azurerm.profile
+[select]: /powershell/module/azurerm.profile
+[remove-cred]: /powershell/module/azurerm.profile
+[remove-context]: /powershell/module/azurerm.profile
+[rename]: /powershell/module/azurerm.profile
+<!-- Updated cmdlets -->
 [login]: /powershell/module/azurerm.profile/Add-AzureRmAccount
+[import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
