@@ -85,13 +85,12 @@ This command gets all the deleted key vaults in your current subscription.
 PS C:\>Get-AzureRMKeyVault -VaultName 'Contoso03Vault'  -Location 'eastus2' -InRemovedState
 ```
 
-This command gets the deleted key vault information named Contoso03Vault in your current
-subscription and in eastus2 region.
+This command gets the deleted key vault information named Contoso03Vault in the East US 2 Azure region for your current subscription.
 
 ## PARAMETERS
 
 ### -InRemovedState
-Specifies whether to show the previously deleted vaults in the output.
+Specifies whether to show the previously deleted key vaults in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The location of the deleted vault.
+The location of the deleted key vault.
 
 ```yaml
 Type: String
