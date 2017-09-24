@@ -9,13 +9,33 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 03/30/2017
+ms.date: 08/31/2017
 ---
 # Getting started with Azure PowerShell
 
 Azure PowerShell is designed for managing and administering Azure resources from the command line,
-and for building automation scripts that work against the Azure Resource Manager. This article
-helps get you started using it, and teaches you the core concepts behind it.
+and for building automation scripts that work against the Azure Resource Manager. You can use it in
+your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or you can install it on your
+local machine and use it in any PowerShell session. This article helps get you started using it,
+and teaches you the core concepts behind it.
+
+## Connect
+
+The simplest way to get started is to [launch Cloud Shell](/azure/cloud-shell/quickstart).
+
+1. Launch Cloud Shell from the top navigation of the Azure portal.
+
+   ![Shell icon](~/media/get-started-azureps/shell-icon.png)
+
+2. Choose the subscription you want to use and create a storage account.
+
+   ![Create a storage account](~/media/get-started-azureps/storage-prompt.png)
+
+Once your storage has been created, the Cloud Shell will open a PowerShell session in the browser.
+
+![Cloud Shell for PowerShell](~/media/get-started-azureps/cloud-powershell.png)
+
+You can also install Azure PowerShell and use it locally in a PowerShell session.
 
 ## Install Azure PowerShell
 
@@ -23,6 +43,7 @@ The first step is to make sure you have the latest version of the Azure PowerShe
 information about the latest release, see the [release notes](./release-notes-azureps.md).
 
 1. [Install Azure PowerShell](install-azurerm-ps.md).
+
 2. To verify the installation was successful, run `Get-Module AzureRM` from your
    command line.
 
@@ -56,7 +77,7 @@ type the following command:
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
-```
+```Output
 ResourceGroupName : myResourceGroup
 Location          : westeurope
 ProvisioningState : Succeeded
@@ -134,7 +155,7 @@ New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfi
 
 The `New-AzureRmVM` command outputs results once the VM has been fully created and is ready to be used.
 
-```
+```Output
 RequestId IsSuccessStatusCode StatusCode ReasonPhrase
 --------- ------------------- ---------- ------------
                          True         OK OK
@@ -147,7 +168,7 @@ of the VM. The following command displays the public IP address created in the p
 $publicIp | Select-Object Name,IpAddress
 ```
 
-```
+```Output
 Name                  IpAddress
 ----                  ---------
 mypublicdns1400512543 xx.xx.xx.xx
@@ -156,12 +177,11 @@ mypublicdns1400512543 xx.xx.xx.xx
 If you are on a Windows-based system, you can do this from the command line using the mstsc
 command:
 
-```
+```powershell
 mstsc /v:xx.xxx.xx.xxx
 ```
 
 Supply the same username/password combination you used when creating the VM to log in.
-
 
 ## Create a Linux Virtual Machine
 
@@ -240,7 +260,7 @@ address of the VM you created:
 ssh xx.xxx.xxx.xxx
 ```
 
-```
+```Output
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-65-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com/
@@ -268,7 +288,7 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 
-my-login@MyLinuxVM:~$
+my-login@MyLinuxVM:../../..$
 ```
 
 ## Creating other resources in Azure
@@ -321,7 +341,7 @@ Get-AzureRmResource |
     Select-Object Name,Location,ResourceType
 ```
 
-```
+```Output
 Name                                                  Location   ResourceType
 ----                                                  --------   ------------
 myLinuxVM_OsDisk_1_36ca038791f642ba91270879088c249a   westeurope Microsoft.Compute/disks
@@ -352,7 +372,7 @@ Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 
 You will be prompted to confirm that you want to remove the resource.
 
-```
+```Output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -366,7 +386,7 @@ tutorial. This removes the resource group and all of the resources in it.
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 
-```
+```Output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -390,5 +410,5 @@ To learn more about ways to use the Azure PowerShell, check out our most common 
 * Read the Release notes about migrating from an older release:
   [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
 * Get help from the community:
-  + [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
