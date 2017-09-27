@@ -22,14 +22,9 @@ New-AzureRmKeyVault [-VaultName] <String> [-ResourceGroupName] <String> [-Locati
 ```
 
 ## DESCRIPTION
-The **New-AzureRmKeyVault** cmdlet creates a key vault in the specified resource group. This cmdlet
-also grants permissions to the currently logged on user to add, remove, or list keys and secrets in
-the key vault.
+The **New-AzureRmKeyVault** cmdlet creates a key vault in the specified resource group. This cmdlet also grants permissions to the currently logged on user to add, remove, or list keys and secrets in the key vault.
 
-Note: If you see the error **The subscription is not registered to use namespace
-'Microsoft.KeyVault'** when you try to create your new key vault, run
-**Register-AzureRmResourceProvider -ProviderNamespace "Microsoft.KeyVault"** and then rerun your
-**New-AzureRmKeyVault** command. For more information, see Register-AzureRmResourceProvider.
+Note: If you see the error **The subscription is not registered to use namespace 'Microsoft.KeyVault'** when you try to create your new key vault, run **Register-AzureRmResourceProvider -ProviderNamespace "Microsoft.KeyVault"** and then rerun your **New-AzureRmKeyVault** command. For more information, see [Register-AzureRmResourceProvider](https://docs.microsoft.com/powershell/module/azurerm.resources/register-azurermresourceprovider).
 
 ## EXAMPLES
 
@@ -68,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSoftDelete
-If specified, 'soft delete' functionality is enabled for this key vault.
+If specified, the soft-delete functionality is enabled for this key vault. For more information about this functionality, see [Azure Key Vault soft-delete overview](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete).
 
 ```yaml
 Type: SwitchParameter
@@ -83,8 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDeployment
-Enables the Microsoft.Compute resource provider to retrieve secrets from this key vault when this
-key vault is referenced in resource creation, for example when creating a virtual machine.
+Enables the Microsoft.Compute resource provider to retrieve secrets from this key vault when this key vault is referenced in resource creation, such as when a virtual machine is created.
 
 ```yaml
 Type: SwitchParameter
@@ -129,9 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the Azure region in which to create the key vault. Use the command Get-AzureLocation
-(https://msdn.microsoft.com/ library/azure/mt589064.aspx) to see your choices. For more
-information, type `Get-Help Get-AzureLocation`.
+Specifies the Azure region in which to create the key vault. Use the command [Get-AzureLocation](https://docs.microsoft.com/powershell/module/Azure/Get-AzureLocation) to see your choices.
 
 ```yaml
 Type: String
@@ -161,8 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Specifies the SKU of the key vault instance. For information about which features are available for
-each SKU, see the Azure Key Vault Pricing website (http://go.microsoft.com/fwlink/?linkid=512521).
+Specifies the SKU of the key vault instance. For information about which features are available for each SKU, see the [Azure Key Vault Pricing website](https://go.microsoft.com/fwlink/?linkid=512521).
 
 ```yaml
 Type: SkuName
@@ -195,9 +186,9 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Specifies the name of the key vault to create. The name can be any combination of letters, digits,
-or hyphens. The name must start and end with a letter or digit. The name must be universally
-unique.
+Specifies the name of the key vault to create. The name can be any combination of letters, digits, or hyphens. The name must start and end with a letter or digit. 
+
+The name must be universally unique.
 
 ```yaml
 Type: String
@@ -212,8 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

@@ -36,8 +36,7 @@ Get-AzureKeyVaultKey [-VaultName] <String> [[-Name] <String>] [-InRemovedState] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureKeyVaultKey** cmdlet gets Azure Key Vault keys.
-This cmdlet gets a specific **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** or a list of all **KeyBundle** objects in a key vault or by version.
+The **Get-AzureKeyVaultKey** cmdlet gets Azure Key Vault keys. This cmdlet gets a specific **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** or a list of all **KeyBundle** objects in a key vault or by version.
 
 ## EXAMPLES
 
@@ -60,30 +59,30 @@ This command gets the current version of the key named ITPfx in the key vault na
 PS C:\>Get-AzureKeyVaultKey -VaultName 'Contoso' -KeyName 'ITPfx' -IncludeVersions
 ```
 
-This command gets all versions the key named ITPfx in the key vaultnamed Contoso.
+This command gets all versions the key named ITPfx in the key vault named Contoso.
 
 ### Example 4: Get a specific version of a key
 ```
 PS C:\>$Key = Get-AzureKeyVaultKey -VaultName 'Contoso' -KeyName 'ITPfx' -Version '5A12A276385949DB8B5F82AFEE85CAED'
 ```
 
-This command gets a specific version of the key named ITPfx in the key vault named Contoso.
-After running this command, you can inspect various properties of the key by navigating the $Key object.
+This command gets a specific version of the key named ITPfx in the key vault named Contoso. After running this command, you can inspect various properties of the key by navigating the $Key object.
 
-### Example 5: Get all the keys that have been deleted but not purged for this key vault.
+### Example 5: Get all the keys that have been deleted but not purged for this key vault
 ```
 PS C:\>Get-AzureKeyVaultKey -VaultName 'Contoso' -InRemovedState
 ```
 
 This command gets all the keys that have been previously deleted, but not purged, in the key vault named Contoso.
 
-### Example 6: Gets the key ITPfx that has been deleted but not purged for this key vault.
+### Example 6: Gets a key that has been deleted but not purged for this key vault
 ```
 PS C:\>Get-AzureKeyVaultKey -VaultName 'Contoso' -KeyName 'ITPfx' -InRemovedState
 ```
 
 This command gets the key ITPfx that has been previously deleted, but not purged, in the key vault named Contoso.
-This command will return metadata such as the deletion date, and the scheduled purging date of this deleted key.
+
+This command returns metadata such as the deletion date, and the scheduled purging date of this deleted key.
 
 ## PARAMETERS
 
@@ -105,7 +104,8 @@ Accept wildcard characters: False
 ### -IncludeVersions
 Indicates that this cmdlet gets all versions of a key.
 The current version of a key is the first one on the list.
-If you specify this parameter you must also specify the *Name* and *VaultName* parameters.
+
+If you specify this parameter, you must also specify the *Name* and *VaultName* parameters.
 
 If you do not specify the *IncludeVersions* parameter, this cmdlet gets the current version of the key with the specified *Name*.
 
@@ -150,6 +150,7 @@ Accept wildcard characters: False
 
 ### -VaultName
 Specifies the name of the key vault from which this cmdlet gets keys.
+
 This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name that this parameter specifies and your selected environment.
 
 ```yaml
@@ -166,6 +167,7 @@ Accept wildcard characters: False
 
 ### -Version
 Specifies the key version.
+
 This cmdlet constructs the FQDN of a key based on the key vault name, your currently selected environment, the key name, and the key version.
 
 ```yaml
