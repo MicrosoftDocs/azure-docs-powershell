@@ -18,7 +18,7 @@
                 "_version": "v3.4.0"
               },
               "AzureRM.RecoveryServices.SiteRecovery": {
-                  "_displayName": "AzureRM.RecoveryServices",
+                  "_displayName": "AzureRM.RecoveryServices.SiteRecovery",
                   "_version": "v0.1.5"
             },
             "AzureRM.RedisCache": {

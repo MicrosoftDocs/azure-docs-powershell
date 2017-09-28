@@ -20,14 +20,12 @@ Restore-AzureKeyVaultKey [-VaultName] <String> [-InputFile] <String> [-WhatIf] [
 ```
 
 ## DESCRIPTION
-The **Restore-AzureKeyVaultKey** cmdlet creates a key in the specified key vault.
-This key is a replica of the backed-up key in the input file and has the same name as the original key.
-If the key vault already has a key by the same name, this cmdlet fails instead of overwriting the original key.
-If the backup contains multiple versions of a key, all versions are restored.
+The **Restore-AzureKeyVaultKey** cmdlet creates a key in the specified key vault. This key is a replica of the backed-up key in the input file and has the same name as the original key.
 
-The key vault that you restore the key into can be different from the key vault that you backed up the key from.
-However, the key vault must use the same subscription and be in an Azure region in the same geography (for example, North America).
-See the Microsoft Azure Trust Center (https://azure.microsoft.com/support/trust-center/) for the mapping of Azure regions to geographies.
+
+If the key vault already has a key by the same name, this cmdlet fails instead of overwriting the original key. If the backup contains multiple versions of a key, all versions are restored.
+
+The key vault that you restore the key into can be different from the key vault that you backed up the key from. However, the key vault must use the same subscription and be in an Azure region in the same geography (for example, North America). See the [Microsoft Azure Trust Center] (https://azure.microsoft.com/support/trust-center/) for the mapping of Azure regions to geographies.
 
 ## EXAMPLES
 
@@ -86,8 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

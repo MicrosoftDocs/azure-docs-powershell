@@ -55,8 +55,7 @@ Set-AzureRmKeyVaultAccessPolicy [-VaultName] <String> [[-ResourceGroupName] <Str
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmKeyVaultAccessPolicy** cmdlet grants or modifies existing permissions for a user, application, or security group to perform the specified operations with a key vault.
-It does not modify the permissions that other users, applications, or security groups have on the key vault.
+The **Set-AzureRmKeyVaultAccessPolicy** cmdlet grants or modifies existing permissions for a user, application, or security group to perform the specified operations with a key vault. It does not modify the permissions that other users, applications, or security groups have on the key vault.
 
 If you are setting permissions for a security group, this operation affects only users in that security group.
 
@@ -64,7 +63,7 @@ The following directories must all be the same Azure directory:
 - The default directory of the Azure subscription in which the key vault resides.
 - The Azure directory that contains the user or application group that you are granting permissions to.
 
-Examples of scenarios when these conditions are not met and this cmdlet will not work are: 
+Examples of scenarios when these conditions are not met and this cmdlet will not work: 
 
 - Authorizing a user from a different organization to manage your key vault.
 Each organization has its own directory. 
@@ -76,7 +75,7 @@ Note that although specifying the resource group is optional for this cmdlet, yo
 
 ## EXAMPLES
 
-### Example 1: Grant permissions to a user for a key vault Key Vault and modify the permissionskey vault
+### Example 1: Grant permissions to a user for a key vault and modify the permissions
 ```
 PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys create,import,delete,list -PermissionsToSecrets 'set,delete'
 PS C:\> Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToSecrets set,delete,get -PassThru
@@ -85,23 +84,19 @@ PS C:\> Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincip
 
 The first command grants permissions for a user in your Azure Active Directory, PattiFuller@contoso.com, to perform operations on keys and secrets with a key vault named Contoso03Vault.
 
-The second command modifies the permissions that were granted to PattiFuller@contoso.com in the first command, to now allow getting secrets in addition to setting and deleting them.
-The permissions to key operations remain unchanged after this command.
-The *PassThru* parameter results in the updated object being returned by the cmdlet.
+The second command modifies the permissions that were granted to PattiFuller@contoso.com in the first command, to now allow getting secrets in addition to setting and deleting them. The permissions to key operations remain unchanged after this command. The *PassThru* parameter results in the updated object being returned by the cmdlet.
 
-The final command further modifies the existing permissions for PattiFuller@contoso.com to remove all permissions to key operations.
-The permissions to secret operations remain unchanged after this command.
-The *PassThru* parameter results in the updated object being returned by the cmdlet.
+The final command further modifies the existing permissions for PattiFuller@contoso.com to remove all permissions to key operations. The permissions to secret operations remain unchanged after this command. The *PassThru* parameter results in the updated object being returned by the cmdlet.
 
 ### Example 2: Grant permissions for an application service principal to read and write secrets
 ```
 PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com' -PermissionsToSecrets Get,Set
 ```
 
-This command grants permissions for an application for a key vault named Contoso03Vault.
-The *ServicePrincipalName* parameter specifies the application.
-The application must be registered in your Azure Active Directory.
+This command grants permissions for an application for a key vault named Contoso03Vault. The *ServicePrincipalName* parameter specifies the application. The application must be registered in your Azure Active Directory.
+
 The value of the *ServicePrincipalName* parameter must be either the service principal name of the application or the application ID GUID.
+
 This example specifies the service principal name http://payroll.contoso.com, and the command grants the application permissions to read and write secrets.
 
 ### Example 3: Grant permissions for an application using its object ID
@@ -109,8 +104,9 @@ This example specifies the service principal name http://payroll.contoso.com, an
 PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectId 34595082-9346-41b6-8d6b-295a2808b8db -PermissionsToSecrets Get,Set
 ```
 
-This command grants the application permissions to read and write secrets.
-This example specifies the application using the object ID of the service principal of the application.
+This command grants the application permissions to read and write secrets. 
+
+This example specifies the application by using the object ID of the service principal of the application.
 
 ### Example 4: Grant permissions for a user principal name
 ```
@@ -119,12 +115,12 @@ PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipa
 
 This command grants get, list, and set permissions for the specified user principal name for access to secrets.
 
-### Example 5: Enable secrets to be retrieved from a key vault vault by the Microsoft.Compute resource providerkey vault
+### Example 5: Enable secrets to be retrieved from a key vault by using the Microsoft.Compute resource provider
 ```
 PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
 ```
 
-This command grants the permissions for secrets to be retrieved from the Contoso03Vault key vault by the Microsoft.Compute resource provider.
+This command grants the permissions for secrets to be retrieved from the Contoso03Vault key vault by using the Microsoft.Compute resource provider.
 
 ### Example 6: Grant permissions to a security group
 ```
@@ -140,20 +136,22 @@ group3                                                        da07a6be-2c1e-4e42
 The first command uses the Get-AzureRmADGroup cmdlet to get all Active Directory groups.
 From the output, you see 3 groups returned, named **group1**, **group2**, and **group3**.
 Multiple groups can have the same name but always have a unique ObjectId.
+
 When more than one group that has the same name is returned, use the ObjectId in the output to identify the one you want to use.
 
 You then use the output of this command with Set-AzureRmKeyVaultAccessPolicy to grant permissions to group2 for your key vault, named **myownvault**.
 This example enumerates the groups named 'group2' inline in the same command line.
-There may be multiple groups in the returned list that are named 'group2'.
-This example picks the first one, indicated by index \[0\] in the returned list.
+
+There may be multiple groups in the returned list that are named 'group2'. This example picks the first one, indicated by index \[0\] in the returned list.
 
 ### Example 7: Grant Azure Information Protection access to the customer-managed tenant key (BYOK)
 ```
-PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso04Vault' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+PS C:\>Set-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso04Vault' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 ```
 
 This command authorizes Azure Information Protection to use a customer-managed key (the bring your own key, or "BYOK" scenario) as the Azure Information Protection tenant key.
-When you run this command, specify your own vault name but you must specify the *ServicePrincipalName* parameter with the GUID **00000012-0000-0000-c000-000000000000** and specify all the permissions in the example.
+
+When you run this command, specify your own key vault name but you must specify the *ServicePrincipalName* parameter with the GUID **00000012-0000-0000-c000-000000000000** and specify the permissions in the example.
 
 ## PARAMETERS
 
@@ -174,6 +172,7 @@ Accept wildcard characters: False
 
 ### -BypassObjectIdValidation
 Enables you to specify an object ID without validating that the object exists in Azure Active Directory.
+
 Use this parameter only if you want to grant access to your key vault to an object ID that refers to a delegated security group from another Azure tenant.
 
 ```yaml
@@ -204,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDeployment
-Enables the Microsoft.Compute resource provider to retrieve secrets from this key vault when this key vault is referenced in resource creation, for example when creating a virtual machine.
+Enables the Microsoft.Compute resource provider to retrieve secrets from this key vault when this key vault is referenced in resource creation, such as when you create a virtual machine.
 
 ```yaml
 Type: SwitchParameter
@@ -265,6 +264,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Returns an object representing the item with which you are working.
+
 By default, this cmdlet does not generate any output.
 
 ```yaml
@@ -281,7 +281,8 @@ Accept wildcard characters: False
 
 ### -PermissionsToCertificates
 Specifies an array of certificate permissions to grant to a user or service principal.
-The acceptable values for this parameter are:
+
+The acceptable values for this parameter:
 
 - Get
 - List
@@ -311,7 +312,8 @@ Accept wildcard characters: False
 
 ### -PermissionsToKeys
 Specifies an array of key operation permissions to grant to a user or service principal.
-The acceptable values for this parameter are:
+
+The acceptable values for this parameter:
 
 - Decrypt
 - Encrypt
@@ -345,7 +347,8 @@ Accept wildcard characters: False
 
 ### -PermissionsToSecrets
 Specifies an array of secret operation permissions to grant to a user or service principal.
-The acceptable values for this parameter are:
+
+The acceptable values for this parameter:
 
 - Get
 - List
@@ -402,7 +405,9 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalName
 Specifies the service principal name of the application to which to grant permissions.
-Specify the application ID, also known as client ID, registered for the application in AzureActive Directory.
+
+Specify the application ID, also known as client ID, registered for the application in Azure Active Directory.
+
 The application with the service principal name that this parameter specifies must be registered in the Azure directory that contains your current subscription.
 
 ```yaml
@@ -419,6 +424,7 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 Specifies the user principal name of the user to whom to grant permissions.
+
 This user principal name must exist in the directory associated with the current subscription.
 
 ```yaml
@@ -435,6 +441,7 @@ Accept wildcard characters: False
 
 ### -EmailAddress
 Specifies the user email address of the user to whom to grant permissions.
+
 This email address must exist in the directory associated with the current subscription and be unique.
 
 ```yaml
@@ -450,6 +457,7 @@ Accept wildcard characters: False
 
 ### -VaultName
 Specifies the name of a key vault.
+
 This cmdlet modifies the access policy for the key vault that this parameter specifies.
 
 ```yaml
@@ -465,8 +473,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
