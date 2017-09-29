@@ -33,17 +33,14 @@ Note: If you see the error **The subscription is not registered to use namespace
 PS C:\>New-AzureRmKeyVault -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -Location 'East US'
 ```
 
-This command creates a key vault named Contoso03Vault, in the Azure region East US. The command
-adds the key vault to the resource group named Group14. Because the command does not specify a
-value for the *SKU* parameter, it creates a Standard key vault.
+This command creates a key vault named Contoso03Vault, in the Azure region East US. The command adds the key vault to the resource group named Group14. Because the command does not specify a value for the *SKU* parameter, it creates a Standard key vault.
 
 ### Example 2: Create a Premium key vault
 ```
 PS C:\>New-AzureRmKeyVault -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -Location 'East US' -Sku 'Premium'
 ```
 
-This command creates a key vault, just like the previous example. However, it specifies a value of
-Premium for the *SKU* parameter to create a Premium key vault.
+This command creates a key vault, just like the previous example. However, it specifies a value of Premium for the *SKU* parameter to create a Premium key vault.
 
 ## PARAMETERS
 
@@ -63,7 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSoftDelete
-If specified, the soft-delete functionality is enabled for this key vault. For more information about this functionality, see [Azure Key Vault soft-delete overview](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete).
+Specifies that the soft-delete functionality is enabled for this key vault. When soft-delete is enabled, for a grace period, you can recover this key vault and its contents after it is deleted.
+
+For more information about this functionality, see [Azure Key Vault soft-delete overview](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete). For how-to instructions, see [How to use Key Vault soft-delete with PowerShell](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell).
 
 ```yaml
 Type: SwitchParameter
