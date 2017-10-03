@@ -54,6 +54,14 @@ ensure your automation scripts are even more secure.
     CurrentStorageAccount :
     ```
 
+### Log in using an Azure VM Managed Service Identity
+
+Managed Service Identity (MSI) is a preview feature of Azure Active Directory. You can use an MSI
+service principal for sign-in, and acquire an app-only access token to access other resources.
+
+For more information about MSI, see
+[How to use an Azure VM Managed Service Identity (MSI) for sign-in and token acquisition](/azure/active-directory/msi-how-to-get-access-token-using-msi).
+
 ## Log in to another Cloud
 
 Azure cloud services provide different environments that adhere to the data-handling regulations of
