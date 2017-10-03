@@ -6,7 +6,7 @@
 
 ## [Get started](../get-started-azureps.md)
 
-## [Cloud shell](https://docs.microsoft.com/azure/cloud-shell/overview)
+## [Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview)
 
 ## [Log in](../authenticate-azureps.md)
 ### [Create a service principal](../create-azure-service-principal-azureps.md)
