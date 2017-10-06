@@ -53,7 +53,7 @@ following command from an elevated PowerShell session:
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM
+Install-Module AzureRM -AllowClobber
 ```
 
 By default, the PowerShell gallery is not configured as a Trusted repository for PowerShellGet. The
