@@ -40,8 +40,20 @@ PowerShell modules and use the same cmdlet and parameter names.
 ## How to install an experimental module
 
 Experimental modules are published to the PowerShell Gallery just like the existing Azure
-PowerShell modules. To install the experimental module, use the following commands from an elevated
-PowerShell session:
+PowerShell modules. To see a list of experimental modules, run the following command:
+
+```powershell
+Find-Module AzureRM.*.Experiments
+```
+
+```Output
+Version    Name                                Repository           Description
+-------    ----                                ----------           -----------
+1.0.0      AzureRM.Websites.Experiments        PSGallery            Create and deploy web applications using Azure Ap...
+1.0.25     AzureRM.Compute.Experiments         PSGallery            Azure Compute experiments for VM creation
+```
+
+To install the experimental module, use the following commands from an elevated PowerShell session:
 
 ```powershell
 Install-Module AzureRM.Compute.Experiments
@@ -135,8 +147,14 @@ $job = New-AzVm -Name MyVm -AsJob
 Receive-Job $job
 ```
 
-### Send Us Feedback
+### Send us feedback
 
 ```powershell
 Send-Feedback
+```
+
+### Uninstall the experimental modules
+
+```powershell
+Uninstall-Module AzureRM.Compute.Experiments
 ```
