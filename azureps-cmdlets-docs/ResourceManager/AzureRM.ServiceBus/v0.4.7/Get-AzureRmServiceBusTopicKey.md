@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Get-AzureRmServiceBusTopicKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Get-AzureRmServiceBusTopicKey.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/e66fe8b33ca829c1a5e79a1afb9209bd63ce094b
 ---
 
 # Get-AzureRmServiceBusTopicKey

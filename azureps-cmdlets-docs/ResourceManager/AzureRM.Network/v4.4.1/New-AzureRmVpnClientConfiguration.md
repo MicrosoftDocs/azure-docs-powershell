@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVpnClientConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVpnClientConfiguration.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/1f7c269a845c48b1e670947108f91f9aa77dd885
 ---
 
 # New-AzureRmVpnClientConfiguration

@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmPolicySetDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmPolicySetDefinition.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/336ee1c6cf46a1ce4d8f4e86aa5b233cd9b8e808
 ---
 
 # Remove-AzureRmPolicySetDefinition

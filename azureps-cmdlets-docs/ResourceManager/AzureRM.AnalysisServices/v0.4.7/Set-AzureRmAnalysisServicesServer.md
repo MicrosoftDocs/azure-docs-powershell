@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Set-AzureRmAnalysisServicesServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Set-AzureRmAnalysisServicesServer.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/1797d130302c40ff1dc207f15d1db7e88ae56817
 ---
 
 # Set-AzureRmAnalysisServicesServer

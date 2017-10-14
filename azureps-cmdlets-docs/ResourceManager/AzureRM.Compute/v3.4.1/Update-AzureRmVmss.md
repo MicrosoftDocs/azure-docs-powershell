@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Update-AzureRmVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Update-AzureRmVmss.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Update-AzureRmVmss
@@ -118,36 +119,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
-
-[Get-AzureRmVmss](./Get-AzureRmVmss.md)
-
-[New-AzureRmVmss](./New-AzureRmVmss.md)
-
-[Remove-AzureRmVmss](./Remove-AzureRmVmss.md)
-
-[Restart-AzureRmVmss](./Restart-AzureRmVmss.md)
-
-[Set-AzureRmVmss](./Set-AzureRmVmss.md)
-
-[Start-AzureRmVmss](./Start-AzureRmVmss.md)
-
-[Stop-AzureRmVmss](./Stop-AzureRmVmss.md)
-
-
-nkID=113216).
-
-## INPUTS
-
-### VirtualMachineScaleSet
-Parameter 'VirtualMachineScaleSet' accepts value of type 'VirtualMachineScaleSet' from the pipeline
-
-## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
 
 ## NOTES
 

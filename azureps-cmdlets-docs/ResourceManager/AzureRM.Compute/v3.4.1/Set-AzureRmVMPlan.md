@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMPlan.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVMPlan
@@ -115,28 +116,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
-
-[Get-AzureRmVM](./Get-AzureRmVM.md)
-
-[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
-
-[Get-AzureRmVMImageSku](./Get-AzureRmVMImageSku.md)
-
-[New-AzureRmVMConfig](./New-AzureRmVMConfig.md)
--WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### PSVirtualMachine
-Parameter 'VM' accepts value of type 'PSVirtualMachine' from the pipeline
-
-## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 
 ## NOTES
 

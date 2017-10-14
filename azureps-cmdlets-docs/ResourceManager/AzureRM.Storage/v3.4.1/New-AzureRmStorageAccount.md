@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/New-AzureRmStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/New-AzureRmStorageAccount.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # New-AzureRmStorageAccount
@@ -316,50 +317,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
 
 
-alue2"}
-
-```yaml
-Type: Hashtable
-Parameter Sets: (All)
-Aliases: Tags
-
-Required: False
-Position: 9
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseSubDomain
-Indicates whether to enable indirect CName validation.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-### Microsoft.Azure.Management.Storage.Models.StorageAccount
-
-## NOTES
-
-## RELATED LINKS
-
-[Get-AzureRmStorageAccount](./Get-AzureRmStorageAccount.md)
-
-[Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
-
-[Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)

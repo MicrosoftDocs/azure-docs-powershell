@@ -3,8 +3,9 @@ external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: AFF75E0B-CB88-45ED-9067-7F43E2BA485C
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmContainerService.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmContainerService.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmContainerService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmContainerService.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Get-AzureRmContainerService
@@ -69,25 +70,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
-
-[New-AzureRmContainerService](./New-AzureRmContainerService.md)
-
-[Remove-AzureRmContainerService](./Remove-AzureRmContainerService.md)
-
-[Update-AzureRmContainerService](./Update-AzureRmContainerService.md)
-
-
-ningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService
 
 ## NOTES
 

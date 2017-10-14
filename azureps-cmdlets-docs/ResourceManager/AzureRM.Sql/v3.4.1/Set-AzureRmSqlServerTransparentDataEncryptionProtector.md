@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlServerTransparentDataEncryptionProtector.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlServerTransparentDataEncryptionProtector.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/8ddcfa9d7ca91f3ab0583ffeb27b50ab45c5ef69
 ---
 
 # Set-AzureRmSqlServerTransparentDataEncryptionProtector

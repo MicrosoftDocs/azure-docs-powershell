@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Add-AzureRmVMNetworkInterface.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Add-AzureRmVMNetworkInterface.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Add-AzureRmVMNetworkInterface
@@ -128,29 +129,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
-
-[New-AzureRmVMConfig](./New-AzureRmVMConfig.md)
-
-[Get-AzureRmVM](./Get-AzureRmVM.md)
-
-[Get-AzureRmAvailabilitySet](./Get-AzureRmAvailabilitySet.md)
-rmationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterface]
-Parameter 'NetworkInterface' accepts value of type 'System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterface]' from the pipeline
-
-### PSVirtualMachine
-Parameter 'VM' accepts value of type 'PSVirtualMachine' from the pipeline
-
-## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 
 ## NOTES
 

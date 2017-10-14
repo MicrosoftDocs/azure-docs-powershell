@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Add-AzureRmSqlDatabaseToFailoverGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Add-AzureRmSqlDatabaseToFailoverGroup.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/d0252b58ee183fa2c6d6c0b19de68a56936969a1
 ---
 
 # Add-AzureRmSqlDatabaseToFailoverGroup

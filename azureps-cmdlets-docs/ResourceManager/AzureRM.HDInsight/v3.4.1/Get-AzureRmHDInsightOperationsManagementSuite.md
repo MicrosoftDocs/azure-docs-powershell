@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Get-AzureRmHDInsightOperationsManagementSuite.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Get-AzureRmHDInsightOperationsManagementSuite.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/b95d506b3542bc8ffe073ecaded405c7cf3e1a43
 ---
 
 # Get-AzureRmHDInsightOperationsManagementSuite

@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlSyncAgent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlSyncAgent.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/2da71b0f76eb0b6f690d78c7b6b3dca3f589c367
 ---
 
 # Remove-AzureRmSqlSyncAgent

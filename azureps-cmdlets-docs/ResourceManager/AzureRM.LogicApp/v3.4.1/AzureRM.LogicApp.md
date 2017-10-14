@@ -8,6 +8,7 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/cd001c47fbd5ea13cfe247a65ed49b2dcacacbfe
 ---
 
 # AzureRM.LogicApp Module

@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridSubscription.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/4efd0aa50bcd6f6c11433dca98f6f42e824aee56
 ---
 
 # Get-AzureRmEventGridSubscription

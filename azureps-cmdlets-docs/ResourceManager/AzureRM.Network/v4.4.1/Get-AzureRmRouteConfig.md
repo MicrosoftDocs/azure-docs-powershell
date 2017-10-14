@@ -6,6 +6,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmRouteConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmRouteConfig.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/e9bf0a7152083c64c2b859770b915626c63de392
 ---
 
 # Get-AzureRmRouteConfig

@@ -6,6 +6,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmPolicyAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmPolicyAssignment.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/6cfb14ea9fe2234fe0827521681866fed75acd0e
 ---
 
 # Get-AzureRmPolicyAssignment

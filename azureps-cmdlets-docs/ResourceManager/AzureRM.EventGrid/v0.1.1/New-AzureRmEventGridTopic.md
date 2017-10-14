@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/New-AzureRmEventGridTopic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/New-AzureRmEventGridTopic.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/f4edf8f50e7636abfcc9e352dc59da84d9a89571
 ---
 
 # New-AzureRmEventGridTopic

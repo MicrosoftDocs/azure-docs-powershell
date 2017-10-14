@@ -6,6 +6,7 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Consumption/Commands.Consumption/help/AzureRM.Consumption.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Consumption/Commands.Consumption/help/AzureRM.Consumption.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/dbbac5b71c9946c33dcc700ce2b7eaae8cbad761
 ---
 
 # AzureRM.Consumption Module

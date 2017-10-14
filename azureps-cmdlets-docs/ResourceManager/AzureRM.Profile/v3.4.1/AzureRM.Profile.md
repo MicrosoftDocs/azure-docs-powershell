@@ -8,6 +8,7 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/cfc6a96078270da5caa8b1924dd150a6ccdaa584
 ---
 
 # AzureRM.Profile Module

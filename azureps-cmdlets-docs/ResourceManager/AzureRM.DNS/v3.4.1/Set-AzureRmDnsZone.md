@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Set-AzureRmDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Set-AzureRmDnsZone.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/f02935a2fd454cd4f423df7ea14d97ea97ce82a3
 ---
 
 # Set-AzureRmDnsZone

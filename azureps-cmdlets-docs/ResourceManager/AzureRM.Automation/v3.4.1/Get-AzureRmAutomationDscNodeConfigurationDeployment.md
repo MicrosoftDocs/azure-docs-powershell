@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNodeConfigurationDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNodeConfigurationDeployment.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/f1c9319e37a8912a147bb71acae6f9e96f3fce7e
 ---
 
 # Get-AzureRmAutomationDscNodeConfigurationDeployment

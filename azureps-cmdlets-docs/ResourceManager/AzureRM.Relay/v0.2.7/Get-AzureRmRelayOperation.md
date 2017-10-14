@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/Get-AzureRmRelayOperation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/Get-AzureRmRelayOperation.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/a021621ee8f4e38eef8224fac6c40f4a804aab0a
 ---
 
 # Get-AzureRmRelayOperation

@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Add-AzureRmMetricAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Add-AzureRmMetricAlertRule.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/09d4f74295b303464ee509d85370b874dbe6f8c8
 ---
 
 # Add-AzureRmMetricAlertRule

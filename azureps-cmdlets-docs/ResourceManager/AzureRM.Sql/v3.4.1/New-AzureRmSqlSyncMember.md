@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlSyncMember.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlSyncMember.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/a203f7add45b0393cdb38ee87ff317692fcefb7f
 ---
 
 # New-AzureRmSqlSyncMember

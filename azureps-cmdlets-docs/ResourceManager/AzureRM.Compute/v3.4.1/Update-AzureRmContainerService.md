@@ -3,8 +3,9 @@ external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 43D01A97-75B9-46CE-B007-26FE6A97C31C
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Update-AzureRmContainerService.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Update-AzureRmContainerService.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Update-AzureRmContainerService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Update-AzureRmContainerService.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Update-AzureRmContainerService
@@ -125,27 +126,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
-
-[Add-AzureRmContainerServiceAgentPoolProfile](./Add-AzureRmContainerServiceAgentPoolProfile.md)
-
-[Get-AzureRmContainerService](./Get-AzureRmContainerService.md)
-
-[New-AzureRmContainerService](./New-AzureRmContainerService.md)
-
-[Remove-AzureRmContainerService](./Remove-AzureRmContainerService.md)
-
-[Remove-AzureRmContainerServiceAgentPoolProfile](./Remove-AzureRmContainerServiceAgentPoolProfile.md)
-
-
- type 'ContainerService' from the pipeline
-
-## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService
 
 ## NOTES
 

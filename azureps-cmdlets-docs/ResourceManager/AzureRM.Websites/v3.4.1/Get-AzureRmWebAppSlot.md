@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSlot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSlot.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/903e8e27aa61f5598dcbb645e9a0e205bbda2433
 ---
 
 # Get-AzureRmWebAppSlot

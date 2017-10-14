@@ -8,6 +8,7 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/AzureRM.DataFactories.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/AzureRM.DataFactories.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/b436019fa2b1305e1fb70f2d8739dd7b4bcd3423
 ---
 
 # AzureRM.DataFactories Module

@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlServerAuditing.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlServerAuditing.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/00a10aaaa2ca8c367f2fb8f6bc5d506cfd382d5f
 ---
 
 # Set-AzureRmSqlServerAuditing

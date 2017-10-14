@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Import-AzureRmContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Import-AzureRmContext.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/cfc6a96078270da5caa8b1924dd150a6ccdaa584
 ---
 
 # Import-AzureRmContext

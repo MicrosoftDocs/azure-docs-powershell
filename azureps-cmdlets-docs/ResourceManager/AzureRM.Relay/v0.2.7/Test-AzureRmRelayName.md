@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/Test-AzureRmRelayName.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/Test-AzureRmRelayName.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/0851fcda59aeb3e0ffeb9ad2b5ca8b5c1aae4d55
 ---
 
 # Test-AzureRmRelayName

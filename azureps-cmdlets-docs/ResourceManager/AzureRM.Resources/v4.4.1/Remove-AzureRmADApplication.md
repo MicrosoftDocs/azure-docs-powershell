@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmADApplication.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/928b010f993c0b8148a305b24dcd72d1b9141705
 ---
 
 # Remove-AzureRmADApplication

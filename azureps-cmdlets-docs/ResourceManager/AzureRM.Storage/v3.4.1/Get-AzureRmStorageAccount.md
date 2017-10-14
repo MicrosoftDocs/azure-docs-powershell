@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Get-AzureRmStorageAccount
@@ -108,11 +109,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
 
 [Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
-
-[Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
-
-
-count.md)
 
 [Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
 

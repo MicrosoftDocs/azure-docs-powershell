@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlElasticPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlElasticPool.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/0fb4ae7004666df27c49428cd85190fb4413f533
 ---
 
 # Set-AzureRmSqlElasticPool

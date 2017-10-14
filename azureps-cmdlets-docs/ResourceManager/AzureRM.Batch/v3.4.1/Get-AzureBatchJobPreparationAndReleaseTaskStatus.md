@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchJobPreparationAndReleaseTaskStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchJobPreparationAndReleaseTaskStatus.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/9d36b3fc507d36b49b1ec3ae7cb43bbccbfe5381
 ---
 
 # Get-AzureBatchJobPreparationAndReleaseTaskStatus

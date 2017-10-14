@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmManagedApplicationDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmManagedApplicationDefinition.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/3f1afe58e625c04bb95051c6a5a4629d00822a6e
 ---
 
 # Get-AzureRmManagedApplicationDefinition

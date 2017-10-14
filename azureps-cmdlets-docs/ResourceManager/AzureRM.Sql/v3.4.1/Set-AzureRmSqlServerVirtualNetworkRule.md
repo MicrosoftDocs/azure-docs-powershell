@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlServerVirtualNetworkRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlServerVirtualNetworkRule.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/82511d9105edd4959fd9e3d71bbb8827dd368d49
 ---
 
 # Set-AzureRmSqlServerVirtualNetworkRule

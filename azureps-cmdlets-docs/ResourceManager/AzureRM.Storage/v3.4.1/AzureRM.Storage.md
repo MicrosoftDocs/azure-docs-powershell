@@ -8,6 +8,7 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/AzureRM.Storage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/AzureRM.Storage.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # AzureRM.Storage Module
@@ -41,19 +42,4 @@ Modifies the current Storage account of the specified subscription.
 
 ### [Set-AzureRmStorageAccount](Set-AzureRmStorageAccount.md)
 Modifies a Storage account.
-
-t](Remove-AzureRmStorageAccount.md)
-Removes a Storage account from Azure.
-
-### [Remove-AzureRmStorageAccountNetworkRule](Remove-AzureRmStorageAccountNetworkRule.md)
-Remove IpRules or VirtualNetworkRules from the NetWorkRule property of a Storage Account
-
-### [Set-AzureRmCurrentStorageAccount](Set-AzureRmCurrentStorageAccount.md)
-Modifies the current Storage account of the specified subscription.
-
-### [Set-AzureRmStorageAccount](Set-AzureRmStorageAccount.md)
-Modifies a Storage account.
-
-### [Update-AzureRmStorageAccountNetworkRuleSet](Update-AzureRmStorageAccountNetworkRuleSet.md)
-Update the NetworkRule property of a Storage Account
 

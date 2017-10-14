@@ -6,6 +6,7 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/AzureRM.DataLakeStore.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/AzureRM.DataLakeStore.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/74d1993f5821ffc647440ae963b08fdef3485a5d
 ---
 
 # AzureRM.DataLakeStore Module

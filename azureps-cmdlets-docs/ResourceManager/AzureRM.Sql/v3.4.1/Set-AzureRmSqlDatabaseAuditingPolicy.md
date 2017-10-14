@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabaseAuditingPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabaseAuditingPolicy.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/cdd83271bf9b849028d976cdf74d785426fcc429
 ---
 
 # Set-AzureRmSqlDatabaseAuditingPolicy

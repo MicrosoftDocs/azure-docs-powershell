@@ -4,6 +4,7 @@ online version: https://msdn.microsoft.com/en-us/library/dn868052.aspx
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureKeyVaultManagedStorageSasDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureKeyVaultManagedStorageSasDefinition.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/4d5786e0b0dfcc4386fd0f627ecbc75ac46bbdad
 ---
 
 # Get-AzureKeyVaultManagedStorageSasDefinition

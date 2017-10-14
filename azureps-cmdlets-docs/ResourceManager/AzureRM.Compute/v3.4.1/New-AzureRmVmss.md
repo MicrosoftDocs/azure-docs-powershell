@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/New-AzureRmVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/New-AzureRmVmss.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # New-AzureRmVmss
@@ -211,31 +212,6 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-## OUTPUTS
-
-### This cmdlet does not generate any output.
-
-## NOTES
-
-## RELATED LINKS
-
-[Get-AzureRmVmss](./Get-AzureRmVmss.md)
-
-[Remove-AzureRmVmss](./Remove-AzureRmVmss.md)
-
-[Restart-AzureRmVmss](./Restart-AzureRmVmss.md)
-
-[Set-AzureRmVmss](./Set-AzureRmVmss.md)
-
-[Start-AzureRmVmss](./Start-AzureRmVmss.md)
-
-[Stop-AzureRmVmss](./Stop-AzureRmVmss.md)
-
-[Update-AzureRmVmss](./Update-AzureRmVmss.md)
-
-
-Parameter 'VirtualMachineScaleSet' accepts value of type 'VirtualMachineScaleSet' from the pipeline
 
 ## OUTPUTS
 

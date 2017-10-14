@@ -2,8 +2,9 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Update-AzureRmDisk.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Update-AzureRmDisk.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Update-AzureRmDisk.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Update-AzureRmDisk.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Update-AzureRmDisk
@@ -167,22 +168,6 @@ Microsoft.Azure.Management.Compute.Models.Disk
 ## OUTPUTS
 
 ### System.Object
-
-## NOTES
-
-## RELATED LINKS
-
-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### System.String
-Microsoft.Azure.Commands.Compute.Automation.Models.PSDiskUpdate
-Microsoft.Azure.Commands.Compute.Automation.Models.PSDisk
-
-## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Automation.Models.PSDisk
 
 ## NOTES
 

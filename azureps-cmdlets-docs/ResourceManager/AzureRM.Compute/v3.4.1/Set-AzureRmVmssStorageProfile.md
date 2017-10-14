@@ -3,8 +3,9 @@ external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 230DAE05-C197-451F-A24C-F4A2DAE4AD04
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVmssStorageProfile.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVmssStorageProfile.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVmssStorageProfile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVmssStorageProfile.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVmssStorageProfile
@@ -314,30 +315,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet does not generate any output.
 
 ## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
-
-[Get-AzureRmVMImageOffer](./Get-AzureRmVMImageOffer.md)
-
-[Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
-
-[Get-AzureRmVMImageSku](./Get-AzureRmVMImageSku.md)
-
-[New-AzureRmVmssConfig](./New-AzureRmVmssConfig.md)
-
-
-://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-###  
-This cmdlet does not generate any output.
-
-## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
 
 ## NOTES
 

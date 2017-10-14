@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmRoleAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmRoleAssignment.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/bc5546e7abbb39630866d0d541c1859ab0a2bfca
 ---
 
 # Remove-AzureRmRoleAssignment

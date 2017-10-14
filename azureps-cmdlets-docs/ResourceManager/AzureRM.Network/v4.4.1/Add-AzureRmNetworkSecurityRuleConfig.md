@@ -6,6 +6,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmNetworkSecurityRuleConfig.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/196fd47a74392722db23f03601e42555fda2d899
 ---
 
 # Add-AzureRmNetworkSecurityRuleConfig

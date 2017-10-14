@@ -6,6 +6,7 @@ Help Version: 3.5.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/AzureRM.Compute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/AzureRM.Compute.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # AzureRM.Compute Module
@@ -447,45 +448,6 @@ Stops an Azure virtual machine.
 
 ### [Stop-AzureRmVmss](Stop-AzureRmVmss.md)
 Stops the VMSS or a set of virtual machines within the VMSS.
-
-### [Test-AzureRmVMAEMExtension](Test-AzureRmVMAEMExtension.md)
-Checks the configuration of the AEM extension.
-
-### [Update-AzureRmAvailabilitySet](Update-AzureRmAvailabilitySet.md)
-Updates an availability set.
-
-### [Update-AzureRmContainerService](Update-AzureRmContainerService.md)
-Updates the state of a container service.
-
-### [Update-AzureRmDisk](Update-AzureRmDisk.md)
-Updates a disk.
-
-### [Update-AzureRmImage](Update-AzureRmImage.md)
-Updates an image.
-
-### [Update-AzureRmSnapshot](Update-AzureRmSnapshot.md)
-Updates a snapshot.
-
-### [Update-AzureRmVM](Update-AzureRmVM.md)
-Updates the state of an Azure virtual machine.
-
-### [Update-AzureRmVmss](Update-AzureRmVmss.md)
-Updates the state of a VMSS.
-
-### [Update-AzureRmVmssInstance](Update-AzureRmVmssInstance.md)
-Starts a manual upgrade of the VMSS instance.
-
-OSUpgrade](Start-AzureRmVmssRollingOSUpgrade.md)
-Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.
-
-### [Stop-AzureRmVM](Stop-AzureRmVM.md)
-Stops an Azure virtual machine.
-
-### [Stop-AzureRmVmss](Stop-AzureRmVmss.md)
-Stops the VMSS or a set of virtual machines within the VMSS.
-
-### [Stop-AzureRmVmssRollingUpgrade](Stop-AzureRmVmssRollingUpgrade.md)
-Cancels the current virtual machine scale set rolling upgrade.
 
 ### [Test-AzureRmVMAEMExtension](Test-AzureRmVMAEMExtension.md)
 Checks the configuration of the AEM extension.

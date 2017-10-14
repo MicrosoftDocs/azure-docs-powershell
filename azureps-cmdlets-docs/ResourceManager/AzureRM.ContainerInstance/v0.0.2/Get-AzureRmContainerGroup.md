@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Get-AzureRmContainerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Get-AzureRmContainerGroup.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/c0a38fa2cc379b7e7c8e1057f23d1f188d4daf1f
 ---
 
 # Get-AzureRmContainerGroup

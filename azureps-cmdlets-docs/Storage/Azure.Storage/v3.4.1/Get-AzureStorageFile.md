@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageFile.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/d0286b97f861c0922de0b6fb193dc798ae5eeed2
 ---
 
 # Get-AzureStorageFile

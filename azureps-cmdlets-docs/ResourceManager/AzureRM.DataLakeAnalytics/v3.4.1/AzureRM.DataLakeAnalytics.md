@@ -6,6 +6,7 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/AzureRM.DataLakeAnalytics.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/AzureRM.DataLakeAnalytics.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/cdc12c1d33cb9f4791cabc7d135f4eb377660b42
 ---
 
 # AzureRM.DataLakeAnalytics Module

@@ -6,6 +6,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightCluster.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/4095d44106ac1726fc68a6954a75432569a5ab3d
 ---
 
 # New-AzureRmHDInsightCluster

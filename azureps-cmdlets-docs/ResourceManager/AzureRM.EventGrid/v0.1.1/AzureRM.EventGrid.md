@@ -6,6 +6,7 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/AzureRM.EventGrid.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/AzureRM.EventGrid.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/4adbb8ec83ca5c97c15fb7e66787f80c7fbedafb
 ---
 
 # AzureRM.EventGrid Module

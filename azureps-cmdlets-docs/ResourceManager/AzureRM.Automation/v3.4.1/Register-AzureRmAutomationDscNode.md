@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Register-AzureRmAutomationDscNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Register-AzureRmAutomationDscNode.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/6719e905d8a905b9451b31f14e1775fb8fb2f234
 ---
 
 # Register-AzureRmAutomationDscNode

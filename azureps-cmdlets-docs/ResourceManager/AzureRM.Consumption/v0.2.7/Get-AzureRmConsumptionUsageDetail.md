@@ -4,6 +4,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Consumption/Commands.Consumption/help/Get-AzureRmConsumptionUsageDetail.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Consumption/Commands.Consumption/help/Get-AzureRmConsumptionUsageDetail.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/dbbac5b71c9946c33dcc700ce2b7eaae8cbad761
 ---
 
 # Get-AzureRmConsumptionUsageDetail

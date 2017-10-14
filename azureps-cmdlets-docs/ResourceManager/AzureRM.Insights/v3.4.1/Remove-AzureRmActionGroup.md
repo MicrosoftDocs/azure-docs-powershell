@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Remove-AzureRmActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Remove-AzureRmActionGroup.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/d3845f66589640e7d313bb472db3efc6a34d210e
 ---
 
 # Remove-AzureRmActionGroup

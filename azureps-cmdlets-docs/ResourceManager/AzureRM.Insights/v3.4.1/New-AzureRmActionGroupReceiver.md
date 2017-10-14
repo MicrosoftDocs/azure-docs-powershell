@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroupReceiver.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroupReceiver.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/485b63f896b2a7a3d30b44a6b06825104b75a60b
 ---
 
 # New-AzureRmActionGroupReceiver

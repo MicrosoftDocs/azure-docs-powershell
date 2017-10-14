@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmApplicationSecurityGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmApplicationSecurityGroup.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/a25c903f9b7a79009b1a89b220d7bb3a7c379946
 ---
 
 # Remove-AzureRmApplicationSecurityGroup
