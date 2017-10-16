@@ -111,8 +111,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-4.4.0",
-                "version": "azurermps-4.4.0",
+                "src": "azurermps-4.4.1",
+                "version": "azurermps-4.4.1",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -123,8 +123,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-4.4.0/docs-conceptual",
-                "version": "azurermps-4.4.0",
+                "src": "azurermps-4.4.1/docs-conceptual",
+                "version": "azurermps-4.4.1",
                 "dest": "azure"
             },
             {
@@ -286,7 +286,7 @@
                 "files": [
                     "media/**"
                 ],
-                "version": "azurermps-4.4.0"
+                "version": "azurermps-4.4.1"
             },
             {
                 "files": [
@@ -310,8 +310,8 @@
             "azurermps-3.8.0": {
                 "dest": "azurermps-3.8.0"
             },
-            "azurermps-4.4.0": {
-                "dest": "azurermps-4.4.0"
+            "azurermps-4.4.1": {
+                "dest": "azurermps-4.4.1"
             },
             "azuresmps-3.7.0": {
                 "dest": "azuresmps-3.7.0"
