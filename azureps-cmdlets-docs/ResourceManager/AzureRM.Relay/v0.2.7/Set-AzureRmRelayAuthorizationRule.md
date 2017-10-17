@@ -10,7 +10,7 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/9764f6e5b1286093b4050f
 # Set-AzureRmRelayAuthorizationRule
 
 ## SYNOPSIS
-Updates the specified authorization rule description for the given Relay entities (Namespace/WcfRelay/HybridConnection).
+The **Set-AzureRmRelayAuthorizationRule** Updates the specified authorization rule description for the given Relay entities (Namespace/WcfRelay/HybridConnection).
 
 ## SYNTAX
 
@@ -109,7 +109,7 @@ HybridConnection Name.
 ```yaml
 Type: String
 Parameter Sets: HybridConnectionAuthorizationRuleSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -124,7 +124,7 @@ AuthorizationRule Name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -139,7 +139,7 @@ Namespace Name.
 ```yaml
 Type: String
 Parameter Sets: NamespaceAuthorizationRuleSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: WcfRelayAuthorizationRuleSet, HybridConnectionAuthorizationRuleSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -166,7 +166,7 @@ Resource Group Name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -176,13 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Rights, e.g. 
+Rights, e.g.
 @("Listen","Send","Manage")
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -197,7 +197,7 @@ WcfRelay Name.
 ```yaml
 Type: String
 Parameter Sets: WcfRelayAuthorizationRuleSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -227,23 +227,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### -ResourceGroupName
- System.String 
+ System.String
 
 ### -Namespace
- System.String 
- 
+ System.String
+
 ### -WcfRelay
- System.String 
+ System.String
 
 ### -HybridConnection
- System.String 
- 
+ System.String
+
 ### -Name
  System.String
 
 ### -InputObject
  Microsoft.Azure.Commands.Relay.Models.AuthorizationRuleAttributes
- 
+
 ### -Rights
  System.String []
 
@@ -273,4 +273,3 @@ Id     : /subscriptions/854d368f-1828-428f-8f3c-f2affa9b2f7d/resourceGroups/Defa
 ## NOTES
 
 ## RELATED LINKS
-
