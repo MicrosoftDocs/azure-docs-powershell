@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 89C931AE-DA81-47A7-80E4-159C36497DA0
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNodeConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNodeConfiguration.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmAutomationDscNodeConfiguration
@@ -18,19 +18,20 @@ Gets metadata for DSC node configurations in Automation.
 ### ByAll (Default)
 ```
 Get-AzureRmAutomationDscNodeConfiguration [-RollupStatus <String>] [-ResourceGroupName] <String>
- [-AutomationAccountName] <String> [<CommonParameters>]
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByNodeConfigurationName
 ```
 Get-AzureRmAutomationDscNodeConfiguration -Name <String> [-ResourceGroupName] <String>
- [-AutomationAccountName] <String> [<CommonParameters>]
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByConfigurationName
 ```
 Get-AzureRmAutomationDscNodeConfiguration -ConfigurationName <String> [-RollupStatus <String>]
- [-ResourceGroupName] <String> [-AutomationAccountName] <String> [<CommonParameters>]
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +67,7 @@ This command gets metadata for a DSC node configuration with the name ContosoCon
 Specifies the name of an Automation account that contains the DSC node configurations for which this cmdlet gets metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +82,7 @@ Accept wildcard characters: False
 Specifies the name of DSC configuration for which this cmdlet gets node configuration metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByConfigurationName
 Aliases: 
 
@@ -96,7 +97,7 @@ Accept wildcard characters: False
 Specifies the name of the DSC node configuration for which this cmdlet gets metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNodeConfigurationName
 Aliases: NodeConfigurationName
 
@@ -112,7 +113,7 @@ Specifies the name of a resource group.
 This cmdlet gets metadata for DSC node configurations in the resource group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,10 +132,23 @@ Valid values are:
 - Good
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAll, ByConfigurationName
 Aliases: 
 Accepted values: Good, Bad
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+Module Name: AzureRM.MachineLearning
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Remove-AzureRmMlCommitmentPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Remove-AzureRmMlCommitmentPlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmMlCommitmentPlan
@@ -16,14 +16,14 @@ Deletes a commitment plan.
 
 ### Remove an Azure ML commitment plan specified by name and resource group.
 ```
-Remove-AzureRmMlCommitmentPlan -ResourceGroupName <String> -Name <String> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmMlCommitmentPlan -ResourceGroupName <String> -Name <String> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Remove an Azure ML commitment plan specified as an object.
 ```
-Remove-AzureRmMlCommitmentPlan -MlCommitmentPlan <CommitmentPlan> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmMlCommitmentPlan -MlCommitmentPlan <CommitmentPlan> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,6 +33,8 @@ Deletes an Azure Machine Learning commitment plan. Note that commitment plans wh
 
 ### --------------------------  Example 1: Delete a commitment plan  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -46,7 +48,7 @@ Remove-AzureRmMlCommitmentPlan -ResourceGroupName "MyResourceGroup" -Name "MyCom
 Do not ask for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +63,7 @@ Accept wildcard characters: False
 The machine learning web service object.
 
 ```yaml
-Type: CommitmentPlan
+Type: Microsoft.Azure.Management.MachineLearning.CommitmentPlans.Models.CommitmentPlan
 Parameter Sets: Remove an Azure ML commitment plan specified as an object.
 Aliases: 
 
@@ -76,7 +78,7 @@ Accept wildcard characters: False
 The name of the Azure ML commitment plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Remove an Azure ML commitment plan specified by name and resource group.
 Aliases: 
 
@@ -91,7 +93,7 @@ Accept wildcard characters: False
 The name of the resource group for the Azure ML commitment plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Remove an Azure ML commitment plan specified by name and resource group.
 Aliases: 
 
@@ -106,7 +108,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -121,9 +123,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

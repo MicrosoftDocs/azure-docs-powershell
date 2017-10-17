@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 846F781C-73A3-4BBE-ABD9-897371109FBE
 online version: http://go.microsoft.com/fwlink/?LinkId=690295
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzureKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzureKeyVaultKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Add-AzureKeyVaultKey
@@ -18,15 +18,16 @@ Creates a key in a key vault or imports a key into a key vault.
 ### Create (Default)
 ```
 Add-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> -Destination <String> [-Disable]
- [-KeyOps <String[]>] [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-KeyOps <String[]>] [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Import
 ```
 Add-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> -KeyFilePath <String>
  [-KeyFilePassword <SecureString>] [-Destination <String>] [-Disable] [-KeyOps <String[]>]
- [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Expires <DateTime>] [-NotBefore <DateTime>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -148,7 +149,7 @@ stored in $tags.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -178,10 +179,10 @@ software-protected key.
 extension, it imports the key as a software-protected key.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Create
-Aliases:
-Accepted values: HSM, Software
+Aliases: 
+Accepted values: HSM, Software, HSM, Software
 
 Required: True
 Position: Named
@@ -191,10 +192,10 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Import
-Aliases:
-Accepted values: HSM, Software
+Aliases: 
+Accepted values: HSM, Software, HSM, Software
 
 Required: False
 Position: Named
@@ -208,9 +209,9 @@ Indicates that the key you are adding is set to an initial state of disabled. An
 the key will fail. Use this parameter if you are preloading keys that you intend to enable later.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -226,9 +227,9 @@ parameter uses Coordinated Universal Time (UTC). To obtain a **DateTime** object
 parameter, the key does not expire.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -244,9 +245,9 @@ Specifies a password for the imported file as a **SecureString** object. To obta
 name extension.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: Import
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -268,9 +269,9 @@ override this default, set the *Destination* parameter to HSM so that the key is
 When you specify this parameter, the *Destination* parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Import
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -296,9 +297,9 @@ the [JSON Web Key (JWK) specification](http://go.microsoft.com/fwlink/?LinkID=61
 - Restore
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -314,7 +315,7 @@ vault, and your current environment. The name must be a string of 1 through 63 c
 that contains only 0-9, a-z, A-Z, and - (the dash symbol).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: KeyName
 
@@ -331,9 +332,9 @@ uses UTC. To obtain a **DateTime** object, use the **Get-Date** cmdlet. If you d
 parameter, the key can be used immediately.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -348,7 +349,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -364,9 +365,9 @@ Specifies the name of the key vault to which this cmdlet adds the key. This cmdl
 FQDN of a key vault based on the name that this parameter specifies and your current environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -380,9 +381,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

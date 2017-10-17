@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module Name: AzureRM.EventHub
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubAuthorizationRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/28baa4a53a4efceb1197c032a8db08e199f0858d
 ---
 
 # Get-AzureRmEventHubAuthorizationRule
@@ -17,12 +17,13 @@ Gets the details of an authorization rule, or gets a list of authorization rules
 ### NamespaceAuthorizationRuleSet (Default)
 ```
 Get-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> -Namespace <String> [-Name <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### EventhubAuthorizationRuleSet
 ```
-Get-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-Namespace <String>] -Eventhub <String>
- [-Name <String>]
+Get-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> -Namespace <String> -Eventhub <String>
+ [-Name <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +53,7 @@ Gets a list of all authorization rules in the Event Hub \`MyEventHubName\`, whic
 Resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 Eventhub Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventhubAuthorizationRuleSet
 Aliases: EventHubName
 
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 AuthorizationRule Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AuthorizationRuleName
 
@@ -97,8 +98,8 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
-Parameter Sets: NamespaceAuthorizationRuleSet
+Type: System.String
+Parameter Sets: (All)
 Aliases: NamespaceName
 
 Required: True
@@ -108,17 +109,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: String
-Parameter Sets: EventhubAuthorizationRuleSet
-Aliases: NamespaceName
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

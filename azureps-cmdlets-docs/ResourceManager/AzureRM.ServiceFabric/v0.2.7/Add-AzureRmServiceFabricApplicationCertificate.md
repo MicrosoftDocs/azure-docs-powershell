@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+Module Name: AzureRM.ServiceFabric
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricApplicationCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricApplicationCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/b59ab30cc7553989a7f5abf07d2880d6c1e7b21c
 ---
 
 # Add-AzureRmServiceFabricApplicationCertificate
@@ -17,22 +17,24 @@ Add a new certificate to the Virtual Machine Scale Set(s) that make up the clust
 ### ByExistingKeyVault
 ```
 Add-AzureRmServiceFabricApplicationCertificate [-ResourceGroupName] <String> [-Name] <String>
- -SecretIdentifier <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -SecretIdentifier <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByNewPfxAndVaultName
 ```
 Add-AzureRmServiceFabricApplicationCertificate [-ResourceGroupName] <String> [-Name] <String>
  [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>] [-CertificateOutputFolder <String>]
- [-CertificatePassword <SecureString>] -CertificateSubjectName <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-CertificatePassword <SecureString>] -CertificateSubjectName <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByExistingPfxAndVaultName
 ```
 Add-AzureRmServiceFabricApplicationCertificate [-ResourceGroupName] <String> [-Name] <String>
  [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>] -CertificateFile <String>
- [-CertificatePassword <SecureString>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CertificatePassword <SecureString>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,7 +65,7 @@ This command will create a self-signed certificate in the Azure key vault with t
 The existing certificate file path.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByExistingPfxAndVaultName
 Aliases: Source
 
@@ -78,7 +80,7 @@ Accept wildcard characters: False
 The folder path of the new certificate to be created.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNewPfxAndVaultName
 Aliases: Destination
 
@@ -93,7 +95,7 @@ Accept wildcard characters: False
 The password of the pfx file.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
 Aliases: CertPassword
 
@@ -108,7 +110,7 @@ Accept wildcard characters: False
 The Dns name of the certificate to be created.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNewPfxAndVaultName
 Aliases: Subject
 
@@ -119,12 +121,11 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-
 ### -KeyVaultName
 Azure key vault name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
 Aliases: 
 
@@ -139,7 +140,7 @@ Accept wildcard characters: False
 Azure key vault resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
 Aliases: 
 
@@ -154,7 +155,7 @@ Accept wildcard characters: False
 Specify the name of the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ClusterName
 
@@ -169,7 +170,7 @@ Accept wildcard characters: False
 Specify the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -184,7 +185,7 @@ Accept wildcard characters: False
 The existing Azure key vault secret uri.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByExistingKeyVault
 Aliases: 
 
@@ -199,7 +200,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -214,9 +215,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

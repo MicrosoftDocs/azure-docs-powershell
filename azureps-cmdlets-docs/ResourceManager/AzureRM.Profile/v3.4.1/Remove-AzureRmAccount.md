@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+Module Name: AzureRM.profile
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Remove-AzureRmAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Remove-AzureRmAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/cfc6a96078270da5caa8b1924dd150a6ccdaa584
 ---
 
 # Remove-AzureRmAccount
@@ -78,7 +78,7 @@ Logs out the 'user1@contoso.org' user - all credentials and all contexts associa
 ServicePrincipal id (globally unique id)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipal
 Aliases: SPN, ServicePrincipal
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 Context
 
 ```yaml
-Type: PSAzureContext
+Type: Microsoft.Azure.Commands.Profile.Models.PSAzureContext
 Parameter Sets: ContextObject
 Aliases: 
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 Name of the context to log out of
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContextName
 Aliases: 
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 The credentials, tenant and subscription used for communication with azure
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 The account object to remove
 
 ```yaml
-Type: PSAzureRmAccount
+Type: Microsoft.Azure.Commands.Profile.Models.PSAzureRmAccount
 Parameter Sets: AccountObject
 Aliases: 
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user.
 
 ```yaml
-Type: ContextModificationScope
+Type: Microsoft.Azure.Commands.Profile.Common.ContextModificationScope
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Process, CurrentUser
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Tenant id (globally unique id)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipal
 Aliases: 
 
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 User name of the form 'user@contoso.org'
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UserId
 Aliases: Id, UserId
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -215,7 +215,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not executed.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

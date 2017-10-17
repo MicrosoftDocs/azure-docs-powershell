@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: EAFB9C98-000C-4EAC-A32D-6B0F1939AA2F
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetric.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmMetric
@@ -15,9 +15,17 @@ Gets the metric values of a resource.
 
 ## SYNTAX
 
+### Parameters for Get-AzureRmMetric cmdlet in the default mode
 ```
-Get-AzureRmMetric [-ResourceId] <String> [-TimeGrain] <TimeSpan> [-StartTime <DateTime>] [-EndTime <DateTime>]
- [-MetricNames <String[]>] [-DetailedOutput] [<CommonParameters>]
+Get-AzureRmMetric [-ResourceId] <String> [-MetricNames <String[]>] [-DetailedOutput]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### Parameters for Get-AzureRmMetric cmdlet in the full param set mode
+```
+Get-AzureRmMetric [-ResourceId] <String> [[-TimeGrain] <TimeSpan>] [-AggregationType <AggregationType>]
+ [-StartTime <DateTime>] [-EndTime <DateTime>] -MetricNames <String[]> [-DetailedOutput]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -160,7 +168,7 @@ Indicates that this cmdlet displays detailed output.
 By default, output is summarized.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -176,8 +184,8 @@ Specifies the end time of the query in local time.
 The default is the current time.
 
 ```yaml
-Type: DateTime
-Parameter Sets: (All)
+Type: System.DateTime
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
 Required: False
@@ -191,11 +199,23 @@ Accept wildcard characters: False
 Specifies an array of names of metrics.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
+Type: System.String[]
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the default mode
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String[]
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -206,7 +226,7 @@ Accept wildcard characters: False
 Specifies the resource ID of the metric.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -222,8 +242,8 @@ Specifies the start time of the query in local time.
 The default is the current local time minus one hour.
 
 ```yaml
-Type: DateTime
-Parameter Sets: (All)
+Type: System.DateTime
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
 Required: False
@@ -237,14 +257,40 @@ Accept wildcard characters: False
 Specifies the time grain of the metric as a **TimeSpan** object in the format hh:mm:ss.
 
 ```yaml
-Type: TimeSpan
-Parameter Sets: (All)
+Type: System.TimeSpan
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
 
-Required: True
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AggregationType
+The aggregation type of the query```yaml
+Type: System.Nullable`1[Microsoft.Azure.Management.Monitor.Models.AggregationType]
+Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

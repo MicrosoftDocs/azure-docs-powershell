@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 ms.assetid: BB6AF5A9-49BD-4A76-9F3F-44B62D2AB842
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/New-AzureRmDataLakeAnalyticsCatalogCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/New-AzureRmDataLakeAnalyticsCatalogCredential.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/77387eae7990078846e57edfa04b85a146d76de0
 ---
 
 # New-AzureRmDataLakeAnalyticsCatalogCredential
@@ -18,14 +18,15 @@ Creates a new Azure Data Lake Analytics catalog credential.
 ### Specify host name and port (Default)
 ```
 New-AzureRmDataLakeAnalyticsCatalogCredential [-Account] <String> [-DatabaseName] <String>
- [-CredentialName] <String> [-Credential] <PSCredential> [-Uri] <Uri> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CredentialName] <String> [-Credential] <PSCredential> [-Uri] <Uri>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Specify full URI
 ```
 New-AzureRmDataLakeAnalyticsCatalogCredential [-Account] <String> [-DatabaseName] <String>
- [-CredentialName] <String> [-Credential] <PSCredential> [-DatabaseHost] <String> [-Port] <Int32> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CredentialName] <String> [-Credential] <PSCredential> [-DatabaseHost] <String> [-Port] <Int32>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +62,7 @@ This command creates the specified credential for the specified account, databas
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -76,7 +77,7 @@ Accept wildcard characters: False
 Specifies the user name and corresponding password of the credential.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,7 +92,7 @@ Accept wildcard characters: False
 Specifies the name and password of the credential.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,7 +107,7 @@ Accept wildcard characters: False
 Specifies the host name of the external data source the credential can connect to in the format mydatabase.contoso.com.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specify full URI
 Aliases: 
 
@@ -121,7 +122,7 @@ Accept wildcard characters: False
 Specifies the name of the database in the Data Lake Analytics acocunt that the credential will be stored in.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,7 +137,7 @@ Accept wildcard characters: False
 Specifies the port number used to connect to the specified DatabaseHost using this credential.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Specify full URI
 Aliases: 
 
@@ -151,7 +152,7 @@ Accept wildcard characters: False
 Specifies the full Uniform Resource Identifier (URI) of the external data source this credential can connect to.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: Specify host name and port
 Aliases: 
 
@@ -166,7 +167,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -179,9 +180,22 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

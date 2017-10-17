@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkSecurityRuleConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/a25c903f9b7a79009b1a89b220d7bb3a7c379946
 ---
 
 # Set-AzureRmNetworkSecurityRuleConfig
@@ -68,7 +67,7 @@ Specifies whether network traffic is allowed or denied.
 The acceptable values for this parameter are: Allow and Deny.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Allow, Deny
@@ -84,7 +83,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -100,7 +99,7 @@ Specifies a description for a rule configuration.
 The maximum size is 140 characters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -188,7 +187,7 @@ Specifies whether a rule is evaluated for incoming or outgoing traffic.
 The acceptable values for this parameter are: Inbound and Outbound.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Inbound, Outbound
@@ -204,7 +203,7 @@ Accept wildcard characters: False
 Specifies the name of the network security rule configuration that this cmdlet sets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -219,7 +218,7 @@ Accept wildcard characters: False
 Specifies the **NetworkSecurityGroup** object that contains the network security rule configuration to set.
 
 ```yaml
-Type: PSNetworkSecurityGroup
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup
 Parameter Sets: (All)
 Aliases: 
 
@@ -238,7 +237,7 @@ The priority number must be unique for each rule in the collection.
 The lower the priority number, the higher the priority of the rule.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -258,7 +257,7 @@ The acceptable values for this parameter are:
 - A wildcard character (*) to match both
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Tcp, Udp, *

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: B7A675D3-EF79-4EE2-9330-D4C690739006
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMSize.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMSize.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Get-AzureRmVMSize
@@ -17,17 +17,19 @@ Gets available virtual machine sizes.
 
 ### ListVirtualMachineSizeParamSet (Default)
 ```
-Get-AzureRmVMSize [-Location] <String> [<CommonParameters>]
+Get-AzureRmVMSize [-Location] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ListAvailableSizesForAvailabilitySet
 ```
-Get-AzureRmVMSize [-ResourceGroupName] <String> [-AvailabilitySetName] <String> [<CommonParameters>]
+Get-AzureRmVMSize [-ResourceGroupName] <String> [-AvailabilitySetName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ListAvailableSizesForVirtualMachine
 ```
-Get-AzureRmVMSize [-ResourceGroupName] <String> [-VMName] <String> [<CommonParameters>]
+Get-AzureRmVMSize [-ResourceGroupName] <String> [-VMName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,7 +65,7 @@ You can resize this virtual machine to the sizes that this command gets.
 Specifies the name of the Availability Set for which this cmdlet gets the available virtual machine sizes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListAvailableSizesForAvailabilitySet
 Aliases: 
 
@@ -74,11 +76,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
 Specifies the location for which this cmdlet gets the available virtual machine sizes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListVirtualMachineSizeParamSet
 Aliases: 
 
@@ -93,7 +108,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListAvailableSizesForAvailabilitySet, ListAvailableSizesForVirtualMachine
 Aliases: 
 
@@ -108,7 +123,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine that this cmdlet gets the available virtual machine sizes for resizing.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListAvailableSizesForVirtualMachine
 Aliases: 
 

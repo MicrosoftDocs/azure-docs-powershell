@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 939320CB-2595-4150-AFDD-500CEA78559C
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVM.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVM
@@ -17,22 +17,26 @@ Marks a virtual machine as generalized.
 
 ### GeneralizeResourceGroupNameParameterSetName (Default)
 ```
-Set-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Generalized] [<CommonParameters>]
+Set-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Generalized]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RedeployResourceGroupNameParameterSetName
 ```
-Set-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Redeploy] [<CommonParameters>]
+Set-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Redeploy]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### GeneralizeIdParameterSetName
 ```
-Set-AzureRmVM [-Id] <String> [-Name] <String> [-Generalized] [<CommonParameters>]
+Set-AzureRmVM [-Id] <String> [-Name] <String> [-Generalized] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### RedeployIdParameterSetName
 ```
-Set-AzureRmVM [-Id] <String> [-Name] <String> [-Redeploy] [<CommonParameters>]
+Set-AzureRmVM [-Id] <String> [-Name] <String> [-Redeploy] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,11 +54,24 @@ This command marks the virtual machine named VirtualMachine07 as generalized.
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Generalized
 Indicates that this cmdlet marks a virtual machine as generalized.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: GeneralizeResourceGroupNameParameterSetName, GeneralizeIdParameterSetName
 Aliases: 
 
@@ -69,7 +86,7 @@ Accept wildcard characters: False
 Specifies the Resource ID of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GeneralizeIdParameterSetName, RedeployIdParameterSetName
 Aliases: 
 
@@ -84,7 +101,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine on which this cmdlet operates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +118,7 @@ Indicates that this cmdlet manually redeploys the virtual machine to a different
 If you redeploy a virtual machine, it restarts, which results in the loss of ephemeral drive data.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: RedeployResourceGroupNameParameterSetName, RedeployIdParameterSetName
 Aliases: 
 
@@ -116,7 +133,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GeneralizeResourceGroupNameParameterSetName, RedeployResourceGroupNameParameterSetName
 Aliases: 
 

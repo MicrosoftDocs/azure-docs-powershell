@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 2BE34AE1-06FA-4F66-8FDB-CED22C2E0978
 online version: http://go.microsoft.com/fwlink/?LinkId=690297
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureKeyVaultKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # Get-AzureKeyVaultKey
@@ -17,22 +17,25 @@ Gets Key Vault keys.
 
 ### ByVaultName (Default)
 ```
-Get-AzureKeyVaultKey [-VaultName] <String> [<CommonParameters>]
+Get-AzureKeyVaultKey [-VaultName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByKeyName
 ```
-Get-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> [[-Version] <String>] [<CommonParameters>]
+Get-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> [[-Version] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByKeyVersions
 ```
-Get-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> [-IncludeVersions] [<CommonParameters>]
+Get-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> [-IncludeVersions]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByDeletedKey
 ```
-Get-AzureKeyVaultKey [-VaultName] <String> [[-Name] <String>] [-InRemovedState] [<CommonParameters>]
+Get-AzureKeyVaultKey [-VaultName] <String> [[-Name] <String>] [-InRemovedState]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,7 +98,7 @@ If you specify this parameter you must also specify the *Name* and *VaultName* p
 If you do not specify the *IncludeVersions* parameter, this cmdlet gets the current version of the key with the specified *Name*.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByKeyVersions
 Aliases: 
 
@@ -108,7 +111,7 @@ Accept wildcard characters: False
 
 ### -InRemovedState
 Specifies whether to show the previously deleted keys in the output.```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByDeletedKey
 Aliases: 
 
@@ -123,7 +126,7 @@ Accept wildcard characters: False
 Specifies the name of the key bundle to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByKeyName, ByKeyVersions
 Aliases: KeyName
 
@@ -135,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByDeletedKey
 Aliases: KeyName
 
@@ -151,7 +154,7 @@ Specifies the name of the key vault from which this cmdlet gets keys.
 This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name that this parameter specifies and your selected environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +170,7 @@ Specifies the key version.
 This cmdlet constructs the FQDN of a key based on the key vault name, your currently selected environment, the key name, and the key version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByKeyName
 Aliases: KeyVersion
 
@@ -175,6 +178,19 @@ Required: False
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

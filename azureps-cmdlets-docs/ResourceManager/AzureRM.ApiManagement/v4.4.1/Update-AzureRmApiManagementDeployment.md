@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 56604912-53A0-496D-9BDC-472BCE45A6A2
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Update-AzureRmApiManagementDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Update-AzureRmApiManagementDeployment.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Update-AzureRmApiManagementDeployment
@@ -21,12 +21,13 @@ Update-AzureRmApiManagementDeployment -ResourceGroupName <String> -Name <String>
  -Sku <PsApiManagementSku> -Capacity <Int32> [-VirtualNetwork <PsApiManagementVirtualNetwork>]
  [-VpnType <PsApiManagementVpnType>]
  [-AdditionalRegions <System.Collections.Generic.IList`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion]>]
- [-PassThru] [<CommonParameters>]
+ [-PassThru] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Update from PsApiManagement instance
 ```
-Update-AzureRmApiManagementDeployment -ApiManagement <PsApiManagement> [-PassThru] [<CommonParameters>]
+Update-AzureRmApiManagementDeployment -ApiManagement <PsApiManagement> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,7 +91,7 @@ Specifies the **PsApiManagement** instance to get deployment configuration from.
 Use this parameter if the instance already has all the required changes.
 
 ```yaml
-Type: PsApiManagement
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 Parameter Sets: Update from PsApiManagement instance
 Aliases: 
 
@@ -105,7 +106,7 @@ Accept wildcard characters: False
 Specifies the SKU capacity of the master Azure API Management deployment region.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Specific API Management service
 Aliases: 
 
@@ -138,7 +139,7 @@ The acceptable values for this parameter are:
 - Australia Southeast
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific API Management service
 Aliases: 
 
@@ -153,7 +154,7 @@ Accept wildcard characters: False
 Specifies the name of API Management that this cmdlet updates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific API Management service
 Aliases: 
 
@@ -169,7 +170,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -184,7 +185,7 @@ Accept wildcard characters: False
 Specifies the name of resource group under which API Management exists.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific API Management service
 Aliases: 
 
@@ -205,7 +206,7 @@ The acceptable values for this parameter are:
 - Premium
 
 ```yaml
-Type: PsApiManagementSku
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
 Parameter Sets: Specific API Management service
 Aliases: 
 Accepted values: Developer, Standard, Premium
@@ -221,7 +222,7 @@ Accept wildcard characters: False
 Specifies the Virtual Network configuration of the master Azure API Management deployment region.
 
 ```yaml
-Type: PsApiManagementVirtualNetwork
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 Parameter Sets: Specific API Management service
 Aliases: 
 
@@ -245,7 +246,7 @@ The API Management deployment has an external facing virtual address.
 The API Management deployment has an intranet facing virtual address.
 
 ```yaml
-Type: PsApiManagementVpnType
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVpnType
 Parameter Sets: Specific API Management service
 Aliases: 
 Accepted values: None, External, Internal
@@ -257,13 +258,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### PsApiManagement
-
 Parameter 'ApiManagement' accepts value of type 'PsApiManagement' from the pipeline
 
 ## OUTPUTS

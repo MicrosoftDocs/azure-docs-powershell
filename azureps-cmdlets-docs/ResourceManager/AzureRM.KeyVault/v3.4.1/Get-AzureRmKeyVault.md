@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: A7C287C4-E9FD-407A-91BD-EFA17C33FC8B
 online version: http://go.microsoft.com/fwlink/?LinkID=690161
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureRmKeyVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureRmKeyVault.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # Get-AzureRmKeyVault
@@ -17,27 +17,30 @@ Gets key vaults.
 
 ### GetVaultByName
 ```
-Get-AzureRmKeyVault [-VaultName] <String> [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmKeyVault [-VaultName] <String> [[-ResourceGroupName] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByDeletedVault
 ```
-Get-AzureRmKeyVault [-VaultName] <String> [-Location] <String> [-InRemovedState] [<CommonParameters>]
+Get-AzureRmKeyVault [-VaultName] <String> [-Location] <String> [-InRemovedState]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ListVaultsByResourceGroup
 ```
-Get-AzureRmKeyVault [-ResourceGroupName] <String> [<CommonParameters>]
+Get-AzureRmKeyVault [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ListAllDeletedVaultsInSubscription
 ```
-Get-AzureRmKeyVault [-InRemovedState] [<CommonParameters>]
+Get-AzureRmKeyVault [-InRemovedState] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ListAllVaultsInSubscription
 ```
-Get-AzureRmKeyVault [-Tag <Hashtable>] [<CommonParameters>]
+Get-AzureRmKeyVault [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,7 +97,7 @@ subscription and in eastus2 region.
 Specifies whether to show the previously deleted vaults in the output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByDeletedVault, ListAllDeletedVaultsInSubscription
 Aliases: 
 
@@ -109,7 +112,7 @@ Accept wildcard characters: False
 The location of the deleted vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByDeletedVault
 Aliases: 
 
@@ -124,7 +127,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group associated with the key vault or key vaults being queried.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetVaultByName
 Aliases: 
 
@@ -136,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListVaultsByResourceGroup
 Aliases: 
 
@@ -153,7 +156,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: ListAllVaultsInSubscription
 Aliases: 
 
@@ -168,7 +171,7 @@ Accept wildcard characters: False
 Specifies the name of the key vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetVaultByName, ByDeletedVault
 Aliases: Name
 
@@ -176,6 +179,19 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

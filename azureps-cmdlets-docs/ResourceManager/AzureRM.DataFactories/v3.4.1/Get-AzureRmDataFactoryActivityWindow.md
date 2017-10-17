@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module Name: AzureRM.DataFactories
 ms.assetid: F8C67F7B-64C5-45E4-A0BF-32212BEBE885
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Get-AzureRmDataFactoryActivityWindow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Get-AzureRmDataFactoryActivityWindow.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmDataFactoryActivityWindow
@@ -20,7 +20,8 @@ Gets information about activity windows associated with a data factory.
 Get-AzureRmDataFactoryActivityWindow [-DataFactoryName] <String> [[-DatasetName] <String>]
  [[-PipelineName] <String>] [[-ActivityName] <String>] [-WindowState <String>] [-WindowSubstate <String>]
  [-Filter <String>] [-OrderBy <String>] [-WindowStart <DateTime>] [-WindowEnd <DateTime>]
- [-RunStart <DateTime>] [-RunEnd <DateTime>] [-Top <Int32>] [-ResourceGroupName] <String> [<CommonParameters>]
+ [-RunStart <DateTime>] [-RunEnd <DateTime>] [-Top <Int32>] [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByFactoryObject
@@ -28,7 +29,8 @@ Get-AzureRmDataFactoryActivityWindow [-DataFactoryName] <String> [[-DatasetName]
 Get-AzureRmDataFactoryActivityWindow [-DataFactory] <PSDataFactory> [[-DatasetName] <String>]
  [[-PipelineName] <String>] [[-ActivityName] <String>] [-WindowState <String>] [-WindowSubstate <String>]
  [-Filter <String>] [-OrderBy <String>] [-WindowStart <DateTime>] [-WindowEnd <DateTime>]
- [-RunStart <DateTime>] [-RunEnd <DateTime>] [-Top <Int32>] [<CommonParameters>]
+ [-RunStart <DateTime>] [-RunEnd <DateTime>] [-Top <Int32>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,7 +107,7 @@ Specifies the name of the activity.
 This cmdlet gets activity windows for the activity that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,7 +123,7 @@ Specifies a **PSDataFactory** object returned by a cmdlet.
 This cmdlet gets activity windows that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory
 Parameter Sets: ByFactoryObject
 Aliases: 
 
@@ -137,7 +139,7 @@ Specifies the name of the data factory.
 This cmdlet gets activity windows that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -153,7 +155,7 @@ Specifies the name of the dataset.
 This cmdlet gets activity windows that belong to the dataset that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -170,7 +172,7 @@ For information about the grammar, see OData Expression Syntax for Azure Searchh
 The activity windows list is filtered by the search string that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -190,7 +192,7 @@ By default, the order is ascending order (ASC).
 Specify DESC if you want to order the list in descending order.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -206,7 +208,7 @@ Specifies the name of the pipeline.
 This cmdlet gets activity windows that belong to the pipeline that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -222,7 +224,7 @@ Specifies the name of the resource group.
 This cmdlet gets activity windows that belong to the resource group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -238,7 +240,7 @@ Specifies the end time of the activity window run.
 This cmdlet gets activity windows whose run times fall between *RunStart* and *RunEnd* times.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -254,7 +256,7 @@ Specifies the start time of the activity window run.
 This cmdlet gets activity windows whose run times fall between *RunStart* and *RunEnd* times.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -269,7 +271,7 @@ Accept wildcard characters: False
 Specifies the maximum number of activity windows that this cmdlet returns.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -285,7 +287,7 @@ Specifies the end time of activity window.
 This cmdlet gets activity windows whose times fall between *WindowStart* and *WindowEnd* times.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -301,7 +303,7 @@ Specifies the start time of activity window.
 This cmdlet gets activity windows whose times fall between *WindowStart* and *WindowEnd* times.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -326,7 +328,7 @@ The acceptable values for this parameter are:
 This cmdlet gets activity windows that are in the state that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -348,7 +350,7 @@ The acceptable values for this parameter are:
 This cmdlet gets activity windows that are in the substate that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -356,6 +358,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

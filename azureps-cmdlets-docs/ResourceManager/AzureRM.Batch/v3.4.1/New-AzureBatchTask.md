@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 2B4BFDDA-9721-42E6-84E1-A209CB782954
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchTask.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchTask.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # New-AzureBatchTask
@@ -22,19 +22,19 @@ New-AzureBatchTask -JobId <String> -Id <String> [-DisplayName <String>] [-Comman
  [-AffinityInformation <PSAffinityInformation>] [-Constraints <PSTaskConstraints>]
  [-MultiInstanceSettings <PSMultiInstanceSettings>] [-DependsOn <TaskDependencies>]
  [-ApplicationPackageReferences <PSApplicationPackageReference[]>] [-ExitConditions <PSExitConditions>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### JobId_Bulk
 ```
 New-AzureBatchTask -JobId <String> [-Tasks <PSCloudTask[]>] -BatchContext <BatchAccountContext>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### JobObject_Bulk
 ```
 New-AzureBatchTask [-Job <PSCloudJob>] [-Tasks <PSCloudTask[]>] -BatchContext <BatchAccountContext>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### JobObject_Single
@@ -44,7 +44,7 @@ New-AzureBatchTask [-Job <PSCloudJob>] -Id <String> [-DisplayName <String>] [-Co
  [-AffinityInformation <PSAffinityInformation>] [-Constraints <PSTaskConstraints>]
  [-MultiInstanceSettings <PSMultiInstanceSettings>] [-DependsOn <TaskDependencies>]
  [-ApplicationPackageReferences <PSApplicationPackageReference[]>] [-ExitConditions <PSExitConditions>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -112,7 +112,7 @@ The final command adds the tasks stored in $Task01 and $Task02 under the job tha
 Specifies a locality hint that the Batch service uses to select a node on which to run the task.
 
 ```yaml
-Type: PSAffinityInformation
+Type: Microsoft.Azure.Commands.Batch.Models.PSAffinityInformation
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ApplicationPackageReferences
 ```yaml
-Type: PSApplicationPackageReference[]
+Type: Microsoft.Azure.Commands.Batch.Models.PSApplicationPackageReference[]
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -141,7 +141,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Specifies the command line for the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 Specifies the execution constraints that apply to this task.
 
 ```yaml
-Type: PSTaskConstraints
+Type: Microsoft.Azure.Commands.Batch.Models.PSTaskConstraints
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -187,7 +187,7 @@ Specifies that the task depends on other tasks.
 The task will not be scheduled until all depended-on tasks have completed successfully.
 
 ```yaml
-Type: TaskDependencies
+Type: Microsoft.Azure.Batch.TaskDependencies
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 Specifies the display name of the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -219,7 +219,7 @@ The key is the environment setting name.
 The value is the environment setting.
 
 ```yaml
-Type: IDictionary
+Type: System.Collections.IDictionary
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 
 ### -ExitConditions
 ```yaml
-Type: PSExitConditions
+Type: Microsoft.Azure.Commands.Batch.Models.PSExitConditions
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 Specifies the ID of the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -263,7 +263,7 @@ Specifies the job under which this cmdlet creates the task.
 To obtain a **PSCloudJob** object, use the Get-AzureBatchJob cmdlet.
 
 ```yaml
-Type: PSCloudJob
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudJob
 Parameter Sets: JobObject_Bulk, JobObject_Single
 Aliases: 
 
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 Specifies the ID of the job under which this cmdlet creates the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: JobId_Single, JobId_Bulk
 Aliases: 
 
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 Specifies information about how to run a multi-instance task.
 
 ```yaml
-Type: PSMultiInstanceSettings
+Type: Microsoft.Azure.Commands.Batch.Models.PSMultiInstanceSettings
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -310,7 +310,7 @@ The key is the resource file path.
 The value is the resource file blob source.
 
 ```yaml
-Type: IDictionary
+Type: System.Collections.IDictionary
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 Indicates that the task process runs with administrator privileges.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases: 
 
@@ -341,9 +341,22 @@ Specifies the collection of tasks to be added.
 Each task must have a unique ID.
 
 ```yaml
-Type: PSCloudTask[]
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudTask[]
 Parameter Sets: JobId_Bulk, JobObject_Bulk
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -358,11 +371,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSCloudJob
-
 Parameter 'Job' accepts value of type 'PSCloudJob' from the pipeline
 
 ## OUTPUTS

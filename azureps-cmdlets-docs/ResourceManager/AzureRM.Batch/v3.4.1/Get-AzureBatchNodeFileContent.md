@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: C9E2D9EC-3B6A-492D-B183-9856185548CD
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchNodeFileContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchNodeFileContent.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureBatchNodeFileContent
@@ -18,39 +18,43 @@ Gets a Batch node file.
 ### Task_Id_Path
 ```
 Get-AzureBatchNodeFileContent -JobId <String> -TaskId <String> [-Name] <String> -DestinationPath <String>
- [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Task_Id_Stream
 ```
 Get-AzureBatchNodeFileContent -JobId <String> -TaskId <String> [-Name] <String> -DestinationStream <Stream>
- [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ComputeNode_Id_Path
 ```
 Get-AzureBatchNodeFileContent [-PoolId] <String> [-ComputeNodeId] <String> [-Name] <String>
  -DestinationPath <String> [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ComputeNode_Id_Stream
 ```
 Get-AzureBatchNodeFileContent [-PoolId] <String> [-ComputeNodeId] <String> [-Name] <String>
  -DestinationStream <Stream> [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### InputObject_Path
 ```
 Get-AzureBatchNodeFileContent [[-InputObject] <PSNodeFile>] -DestinationPath <String> [-ByteRangeStart <Int64>]
- [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### InputObject_Stream
 ```
 Get-AzureBatchNodeFileContent [[-InputObject] <PSNodeFile>] -DestinationStream <Stream>
- [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-ByteRangeStart <Int64>] [-ByteRangeEnd <Int64>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,7 +128,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +142,7 @@ Accept wildcard characters: False
 ### -ByteRangeEnd
 The end of the byte range to be downloaded.
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -152,7 +156,7 @@ Accept wildcard characters: False
 ### -ByteRangeStart
 The start of the byte range to be downloaded.
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +171,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node that contains the node file that this cmdlet returns.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode_Id_Path, ComputeNode_Id_Stream
 Aliases: 
 
@@ -182,7 +186,7 @@ Accept wildcard characters: False
 Specifies the file path where this cmdlet saves the node file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_Id_Path, ComputeNode_Id_Path, InputObject_Path
 Aliases: 
 
@@ -198,7 +202,7 @@ Specifies the stream into which this cmdlet writes the node file contents.
 This cmdlet does not close or rewind this stream.
 
 ```yaml
-Type: Stream
+Type: System.IO.Stream
 Parameter Sets: Task_Id_Stream, ComputeNode_Id_Stream, InputObject_Stream
 Aliases: 
 
@@ -214,7 +218,7 @@ Specifies the file that this cmdlet gets, as a **PSNodeFile** object.
 To obtain a node file object, use the Get-AzureBatchNodeFile cmdlet.
 
 ```yaml
-Type: PSNodeFile
+Type: Microsoft.Azure.Commands.Batch.Models.PSNodeFile
 Parameter Sets: InputObject_Path, InputObject_Stream
 Aliases: 
 
@@ -229,7 +233,7 @@ Accept wildcard characters: False
 Specifies the ID of the job that contains the target task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_Id_Path, Task_Id_Stream
 Aliases: 
 
@@ -245,7 +249,7 @@ Specifies the name of the node file that this cmdlet retrieves.
 You cannot specify wildcard characters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_Id_Path, Task_Id_Stream, ComputeNode_Id_Path, ComputeNode_Id_Stream
 Aliases: 
 
@@ -260,7 +264,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute node that contains the node file that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode_Id_Path, ComputeNode_Id_Stream
 Aliases: 
 
@@ -275,7 +279,7 @@ Accept wildcard characters: False
 Specifies the ID of the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_Id_Path, Task_Id_Stream
 Aliases: 
 
@@ -286,17 +290,28 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSNodeFile
-
 Parameter 'InputObject' accepts value of type 'PSNodeFile' from the pipeline
 
 ## OUTPUTS

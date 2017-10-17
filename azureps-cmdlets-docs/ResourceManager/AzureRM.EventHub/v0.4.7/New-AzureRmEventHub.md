@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module Name: AzureRM.EventHub
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/New-AzureRmEventHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/New-AzureRmEventHub.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/28baa4a53a4efceb1197c032a8db08e199f0858d
 ---
 
 # New-AzureRmEventHub
@@ -17,19 +17,20 @@ Creates a new Event Hub.
 ### EventhubInputObjectSet
 ```
 New-AzureRmEventHub [-ResourceGroupName] <String> -Namespace <String> [[-Location] <String>] -Name <String>
- [-InputObject <EventHubAttributes>] [-WhatIf] [-Confirm]
+ [-InputObject <EventHubAttributes>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### EventhubPropertiesSet
 ```
 New-AzureRmEventHub [-ResourceGroupName] <String> -Namespace <String> [[-Location] <String>] -Name <String>
- [-MessageRetentionInDays <Int64>] [-PartitionCount <Int64>] [-WhatIf] [-Confirm]
+ [-MessageRetentionInDays <Int64>] [-PartitionCount <Int64>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-AzureRmEventHub cmdlet creates a new Azure Event Hub.
 To create Eventhub with Capture description properties, please follow the below steps (Examples 2). 
-
 
 ## EXAMPLES
 
@@ -67,7 +68,7 @@ Creates an Event Hub named \`MyEventHubName\` with a 3-day message retention per
 Namespace geographic location.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 Event Hubs message retention time in days.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: EventhubPropertiesSet
 Aliases: 
 
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 Number of partitions in the Event Hub.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: EventhubPropertiesSet
 Aliases: 
 
@@ -112,7 +113,7 @@ Accept wildcard characters: False
 Resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -127,7 +128,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -143,7 +144,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 EventHub Input object.
 
 ```yaml
-Type: EventHubAttributes
+Type: Microsoft.Azure.Commands.EventHub.Models.EventHubAttributes
 Parameter Sets: EventhubInputObjectSet
 Aliases: EventHubObj
 
@@ -173,7 +174,7 @@ Accept wildcard characters: False
 Eventhub Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: EventHubName
 
@@ -188,7 +189,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -198,6 +199,22 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

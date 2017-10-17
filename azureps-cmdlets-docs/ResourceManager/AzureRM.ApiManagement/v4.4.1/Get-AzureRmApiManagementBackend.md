@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementBackend.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementBackend.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/eb2b5c5505d48a33661e70ccdab72360e6ff0798
 ---
 
 # Get-AzureRmApiManagementBackend
@@ -16,12 +16,14 @@ Get the details of the Backend.
 
 ### Get all backends (Default)
 ```
-Get-AzureRmApiManagementBackend -Context <PsApiManagementContext> [<CommonParameters>]
+Get-AzureRmApiManagementBackend -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Get by backend ID
 ```
-Get-AzureRmApiManagementBackend -Context <PsApiManagementContext> -BackendId <String> [<CommonParameters>]
+Get-AzureRmApiManagementBackend -Context <PsApiManagementContext> -BackendId <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,6 +38,8 @@ Get the details of the Backend.
 
 
 
+
+
 ```
 Get-AzureRmApiManagementBackend -Context $apimContext
 ```
@@ -44,6 +48,8 @@ Gets a list of all the Backends configured in the Api Management service.
 
 ### --------------------------  Example 2  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -63,7 +69,7 @@ If specified will try to find backend by the identifier.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by backend ID
 Aliases: 
 
@@ -79,7 +85,7 @@ Instance of PsApiManagementContext.
 This parameter is required.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,6 +93,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

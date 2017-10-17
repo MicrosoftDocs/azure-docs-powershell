@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 04B1E3A6-6D52-46A3-8241-2CCDB5E71642
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmADSpCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmADSpCredential.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/928b010f993c0b8148a305b24dcd72d1b9141705
 ---
 
 # Remove-AzureRmADSpCredential
@@ -17,25 +17,26 @@ Removes a credential from a service principal.
 
 ### ObjectIdWithKeyIdParameterSet (Default)
 ```
-Remove-AzureRmADSpCredential -ObjectId <String> -KeyId <Guid> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmADSpCredential -ObjectId <String> -KeyId <Guid> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ObjectIdWithAllParameterSet
 ```
-Remove-AzureRmADSpCredential -ObjectId <String> [-All] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmADSpCredential -ObjectId <String> [-All] [-Force] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SPNWithKeyIdParameterSet
 ```
-Remove-AzureRmADSpCredential -ServicePrincipalName <String> -KeyId <Guid> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmADSpCredential -ServicePrincipalName <String> -KeyId <Guid> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SPNWithAllParameterSet
 ```
-Remove-AzureRmADSpCredential -ServicePrincipalName <String> [-All] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmADSpCredential -ServicePrincipalName <String> [-All] [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,7 +69,7 @@ In this example, all credentials will be removed from the service principal asso
 Switch to remove all the credentials associated with the service principal.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ObjectIdWithAllParameterSet, SPNWithAllParameterSet
 Aliases: 
 
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 Switch to delete credential without a confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +100,7 @@ Specifies the credential key to be removed.
 The key Ids for a service principal can be obtained using the Get-AzureRmADSpCredential cmdlet.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ObjectIdWithKeyIdParameterSet, SPNWithKeyIdParameterSet
 Aliases: 
 
@@ -114,7 +115,7 @@ Accept wildcard characters: False
 The object id of the service principal to remove the credentials from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ObjectIdWithKeyIdParameterSet, ObjectIdWithAllParameterSet
 Aliases: 
 
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 The name (SPN) of the service principal to remove the credentials from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SPNWithKeyIdParameterSet, SPNWithAllParameterSet
 Aliases: 
 
@@ -144,7 +145,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -157,9 +158,22 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

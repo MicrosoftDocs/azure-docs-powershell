@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsJobPipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsJobPipeline.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/f57c3b73ec2505b13a4d30a49aad8c39cb226397
 ---
 
 # Get-AzureRmDataLakeAnalyticsJobPipeline
@@ -17,13 +17,14 @@ Gets a Data Lake Analytics Job pipeline or pipelines.
 ### All In Account (Default)
 ```
 Get-AzureRmDataLakeAnalyticsJobPipeline [-Account] <String> [-SubmittedAfter <DateTimeOffset>]
- [-SubmittedBefore <DateTimeOffset>] [<CommonParameters>]
+ [-SubmittedBefore <DateTimeOffset>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Specific Job Pipeline
 ```
 Get-AzureRmDataLakeAnalyticsJobPipeline [-Account] <String> [-PipelineId] <Guid>
- [-SubmittedAfter <DateTimeOffset>] [-SubmittedBefore <DateTimeOffset>] [<CommonParameters>]
+ [-SubmittedAfter <DateTimeOffset>] [-SubmittedBefore <DateTimeOffset>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,14 +46,13 @@ PS C:\>Get-AzureRmDataLakeAnalyticsJobPipeline -AccountName "contosoadla"
 
 This command gets a list of all pipelines in the account "contosoadla"
 
-
 ## PARAMETERS
 
 ### -Account
 Name of the Data Lake Analytics account name under which want to retrieve the job pipeline.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ID of the specific job pipeline to return information for.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Specific Job Pipeline
 Aliases: Id
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 An optional filter which returns job pipeline(s) only submitted after the specified time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 An optional filter which returns job pipeline(s) only submitted before the specified time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,12 +108,26 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
+
 ### System.Guid
 
 ## OUTPUTS

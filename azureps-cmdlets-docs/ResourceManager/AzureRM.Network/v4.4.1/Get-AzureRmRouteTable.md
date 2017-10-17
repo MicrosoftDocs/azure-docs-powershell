@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmRouteTable.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Get-AzureRmRouteTable
@@ -16,16 +15,16 @@ Gets route tables.
 
 ## SYNTAX
 
-### Expand
-```
-Get-AzureRmRouteTable -ResourceGroupName <String> -Name <String> -ExpandResource <String>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
-
 ### NoExpand
 ```
-Get-AzureRmRouteTable [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
+Get-AzureRmRouteTable [-Name <String>] [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
+```
+
+### Expand
+```
+Get-AzureRmRouteTable -Name <String> -ResourceGroupName <String> -ExpandResource <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,24 +63,9 @@ This command gets the route table named RouteTable01 in the resource group named
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExpandResource
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Expand
 Aliases: 
 
@@ -96,11 +80,11 @@ Accept wildcard characters: False
 Specifies the name of the route table that this cmdlet gets.
 
 ```yaml
-Type: String
-Parameter Sets: Expand
+Type: System.String
+Parameter Sets: NoExpand
 Aliases: ResourceName
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -108,11 +92,11 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
-Parameter Sets: NoExpand
+Type: System.String
+Parameter Sets: Expand
 Aliases: ResourceName
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -123,7 +107,19 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the route tables that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
+Parameter Sets: NoExpand
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
 Parameter Sets: Expand
 Aliases: 
 
@@ -134,15 +130,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
 ```yaml
-Type: String
-Parameter Sets: NoExpand
-Aliases: 
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

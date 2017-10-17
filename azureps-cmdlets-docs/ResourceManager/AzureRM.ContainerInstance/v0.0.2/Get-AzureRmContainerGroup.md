@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Get-AzureRmContainerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Get-AzureRmContainerGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/c0a38fa2cc379b7e7c8e1057f23d1f188d4daf1f
 ---
 
 # Get-AzureRmContainerGroup
@@ -17,17 +16,19 @@ Gets container groups.
 
 ### ListContainerGroupParamSet (Default)
 ```
-Get-AzureRmContainerGroup [[-ResourceGroupName] <String>]
+Get-AzureRmContainerGroup [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### GetContainerGroupInResourceGroupParamSet
 ```
 Get-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### GetContainerGroupByResourceIdParamSet
 ```
-Get-AzureRmContainerGroup -ResourceId <String>
+Get-AzureRmContainerGroup -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -109,7 +110,7 @@ The command gets the container group with the resource Id.
 The container group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetContainerGroupInResourceGroupParamSet
 Aliases: 
 
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 The resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListContainerGroupParamSet
 Aliases: 
 
@@ -136,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetContainerGroupInResourceGroupParamSet
 Aliases: 
 
@@ -151,7 +152,7 @@ Accept wildcard characters: False
 The resource id.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetContainerGroupByResourceIdParamSet
 Aliases: 
 
@@ -162,15 +163,29 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 
-
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup
-
 
 ## NOTES
 

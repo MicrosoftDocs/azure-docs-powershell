@@ -8,7 +8,6 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/AzureRM.RecoveryServices.SiteRecovery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/AzureRM.RecoveryServices.SiteRecovery.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/01991997d8025016140f94010af77fc3145fefff
 ---
 
 # AzureRM.RecoveryServices.SiteRecovery Module

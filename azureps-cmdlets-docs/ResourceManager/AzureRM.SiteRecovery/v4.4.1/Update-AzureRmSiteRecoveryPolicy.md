@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 313E7444-2EB4-4B91-9E56-5730CB006046
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Update-AzureRmSiteRecoveryPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Update-AzureRmSiteRecoveryPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Update-AzureRmSiteRecoveryPolicy
@@ -19,7 +19,8 @@ Update-AzureRmSiteRecoveryPolicy -Policy <ASRPolicy> [-ReplicationMethod <String
  [-ReplicationFrequencyInSeconds <String>] [-RecoveryPoints <Int32>]
  [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-Compression <String>] [-ReplicationPort <UInt16>]
  [-Authentication <String>] [-ReplicationStartTime <TimeSpan>] [-ReplicaDeletion <String>]
- [-RecoveryAzureStorageAccountId <String>] [-Encryption <String>] [<CommonParameters>]
+ [-RecoveryAzureStorageAccountId <String>] [-Encryption <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +31,7 @@ Update-AzureRmSiteRecoveryPolicy -Policy <ASRPolicy> [-ReplicationMethod <String
 
 ### -ApplicationConsistentSnapshotFrequencyInHours
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -43,7 +44,7 @@ Accept wildcard characters: False
 
 ### -Authentication
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Certificate, Kerberos
@@ -57,7 +58,7 @@ Accept wildcard characters: False
 
 ### -Compression
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enable, Disable
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 
 ### -Encryption
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enable, Disable
@@ -85,7 +86,7 @@ Accept wildcard characters: False
 
 ### -Policy
 ```yaml
-Type: ASRPolicy
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRPolicy
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 
 ### -RecoveryAzureStorageAccountId
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -111,7 +112,7 @@ Accept wildcard characters: False
 
 ### -RecoveryPoints
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ReplicaDeletion
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Required, NotRequired
@@ -138,7 +139,7 @@ Accept wildcard characters: False
 
 ### -ReplicationFrequencyInSeconds
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: 30, 300, 900
@@ -152,7 +153,7 @@ Accept wildcard characters: False
 
 ### -ReplicationMethod
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Online, Offline
@@ -166,7 +167,7 @@ Accept wildcard characters: False
 
 ### -ReplicationPort
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: (All)
 Aliases: 
 
@@ -179,9 +180,22 @@ Accept wildcard characters: False
 
 ### -ReplicationStartTime
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -196,7 +210,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### ASRPolicy
-
 Parameter 'Policy' accepts value of type 'ASRPolicy' from the pipeline
 
 ## OUTPUTS

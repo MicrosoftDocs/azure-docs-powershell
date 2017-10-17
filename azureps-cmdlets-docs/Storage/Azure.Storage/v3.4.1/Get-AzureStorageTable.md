@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: 4631D36F-926A-4279-AA4D-5F694C18081E
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageTable.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureStorageTable
@@ -58,7 +58,7 @@ Specifies the storage context.
 To create it, you can use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ If the table name is empty, the cmdlet lists all the tables.
 Otherwise, it lists all tables that match the specified name or the regular name pattern.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TableName
 Aliases: N, Table
 
@@ -91,7 +91,7 @@ Specifies a prefix used in the name of the table or tables you want to get.
 You can use this to find all tables that start with the same string, such as table.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TablePrefix
 Aliases: 
 
@@ -108,11 +108,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### String
-
 Parameter 'Name' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

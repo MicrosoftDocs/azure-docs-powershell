@@ -8,7 +8,6 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/AzureRM.Insights.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/AzureRM.Insights.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/bc68f11db3b16b8ed21d578a6edeb50312deedb0
 ---
 
 # AzureRM.Insights Module

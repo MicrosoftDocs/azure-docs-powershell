@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+Module Name: AzureRM.TrafficManager
 ms.assetid: DE31891A-0EF7-44D7-B955-A3279D27CC21
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/New-AzureRmTrafficManagerProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/New-AzureRmTrafficManagerProfile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/f02935a2fd454cd4f423df7ea14d97ea97ce82a3
 ---
 
 # New-AzureRmTrafficManagerProfile
@@ -20,7 +20,7 @@ New-AzureRmTrafficManagerProfile -Name <String> -ResourceGroupName <String> [-Pr
  -RelativeDnsName <String> -Ttl <UInt32> -TrafficRoutingMethod <String> -MonitorProtocol <String>
  -MonitorPort <UInt32> [-MonitorPath <String>] [-MonitorIntervalInSeconds <Int32>]
  [-MonitorTimeoutInSeconds <Int32>] [-MonitorToleratedNumberOfFailures <Int32>] [-Tag <Hashtable>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +49,7 @@ The DNS FQDN is contosoapp.trafficmanager.net.
 The interval (in seconds) at which Traffic Manager will check the health of each endpoint in this profile. The default is 30.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: IntervalInSecondsForMonitor
 
@@ -66,7 +66,7 @@ Specify a value relative to the endpoint domain name.
 This value must begin with a slash (/).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: PathForMonitor
 
@@ -82,7 +82,7 @@ Specifies the TCP port that is used to monitor endpoint health.
 Valid values are integers from 1 through 65535.
 
 ```yaml
-Type: UInt32
+Type: System.UInt32
 Parameter Sets: (All)
 Aliases: PortForMonitor
 
@@ -101,7 +101,7 @@ Valid values are:
 - HTTPS
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ProtocolForMonitor
 Accepted values: HTTP, HTTPS, TCP
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 The time (in seconds) that Traffic Manager allows endpoints in this profile to respond to the health check. The default is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: TimeoutInSecondsForMonitor
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 The number of consecutive failed health checks that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next consecutive failed health check. The default is 3.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: ToleratedNumberOfFailuresForMonitor
 
@@ -147,9 +147,9 @@ Accept wildcard characters: False
 Specifies a name for the Traffic Manager profile that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -163,9 +163,9 @@ Specifies the status of the profile.
 Valid values are: Enabled and Disabled.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Enabled, Disabled
 
 Required: False
@@ -180,9 +180,9 @@ Specifies the relative DNS name that this Traffic Manager profile provides.
 Traffic Manager combines this value and the DNS domain name that Azure Traffic Manager uses to form the fully qualified domain name (FQDN) of the profile.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -196,9 +196,9 @@ Specifies the name of a resource group.
 This cmdlet creates a Traffic Manager profile in the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -213,7 +213,7 @@ Key-value pairs in the form of a hash table set as tags on the server. For examp
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -234,9 +234,9 @@ Valid values are:
 - Priority
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Performance, Weighted, Priority, Geographic
 
 Required: True
@@ -250,11 +250,24 @@ Accept wildcard characters: False
 Specifies the DNS Time to Live (TTL) value.
 
 ```yaml
-Type: UInt32
+Type: System.UInt32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

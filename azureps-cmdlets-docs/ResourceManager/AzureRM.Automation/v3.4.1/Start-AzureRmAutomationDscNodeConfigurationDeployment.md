@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Start-AzureRmAutomationDscNodeConfigurationDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Start-AzureRmAutomationDscNodeConfigurationDeployment.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/f1c9319e37a8912a147bb71acae6f9e96f3fce7e
 ---
 
 # Start-AzureRmAutomationDscNodeConfigurationDeployment
@@ -15,8 +15,20 @@ Deploys a DSC Node configuration in Automation.
 
 ## SYNTAX
 
+### ByAll (Default)
 ```
-Start-AzureRmAutomationDscNodeConfigurationDeployment -NodeConfigurationName <String> -NodeNames <Array> [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-Schedule <Schedule>] [<CommonParameters>]
+Start-AzureRmAutomationDscNodeConfigurationDeployment [-NodeConfigurationName] <String>
+ [-NodeName] <String[][]> [-Schedule <Schedule>] [-Force] [-ResourceGroupName] <String>
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByByInputObject
+```
+Start-AzureRmAutomationDscNodeConfigurationDeployment [-NodeConfigurationName] <String>
+ [-NodeName] <String[][]> -InputObject <NodeConfigurationDeployment> [-ResourceGroupName] <String>
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,7 +36,7 @@ The **Start-AzureRmAutomationDscNodeConfigurationDeployment** cmdlet deployes a 
 
 ## EXAMPLES
 
-### Example 1: Deploy an Azure DSC node configuration in Automation 
+### Example 1: Deploy an Azure DSC node configuration in Automation
 ```
 PS C:\> $pilot = @("WebServerPilot1", "WebServerPilot2")
 PS C:\> $prod = @("WebServerProd1", "WebServerProd2")
@@ -82,7 +94,6 @@ NodeStatus            :
 NodeConfigurationName : Config01.Node1
 JobSchedule           : Microsoft.Azure.Commands.Automation.Model.JobSchedule
 JobScheduleId         : 2b1d7738-093d-4ff7-b87b-e4b2321319e5
-
 ```
 
 The above command schedules a deployment of a DSC node configuration named "Config01.Node1" to the given two-dimensional array of Node Names. The deployment happens in a staged manner and will be executed based on the schedule.
@@ -93,7 +104,7 @@ The above command schedules a deployment of a DSC node configuration named "Conf
 Specifies the name of a resource group in which this cmdlet compiles a configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,14 +119,14 @@ Accept wildcard characters: False
 Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByInputObject)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -123,8 +134,20 @@ Accept wildcard characters: False
 Specifies the name of the DSC node configuration that this cmdlet deploys.
 
 ```yaml
-Type: String
-Parameter Sets: (All, ByInputObject)
+Type: System.String
+Parameter Sets: ByAll
+Aliases: Name
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: ByByInputObject
 Aliases: Name
 
 Required: True
@@ -138,14 +161,14 @@ Accept wildcard characters: False
 Specifies the names of the nodes to which the Node Configuration would be deployed to.
 
 ```yaml
-Type: Array
-Parameter Sets: (All, ByInputObject)
+Type: System.String[][]
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
 Position: 3
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -153,14 +176,14 @@ Accept wildcard characters: False
 Automation Schedule object to schedule the deployment job.
 
 ```yaml
-Type: Schedule
-Parameter Sets: (All)
+Type: Microsoft.Azure.Commands.Automation.Model.Schedule
+Parameter Sets: ByAll
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -168,8 +191,8 @@ Accept wildcard characters: False
 ps_force
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ByAll
 Aliases: 
 
 Required: False
@@ -183,7 +206,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -199,7 +222,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -207,6 +230,32 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Input object for Piping.```yaml
+Type: Microsoft.Azure.Commands.Automation.Model.NodeConfigurationDeployment
+Parameter Sets: ByByInputObject
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

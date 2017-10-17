@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 15B6EAE2-56ED-4A01-B8EA-52B9FCDC1F66
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementOpenIdConnectProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementOpenIdConnectProvider.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmApiManagementOpenIdConnectProvider
@@ -17,19 +17,20 @@ Gets OpenID Connect providers.
 
 ### Get all OpenID Connect Providers (Default)
 ```
-Get-AzureRmApiManagementOpenIdConnectProvider -Context <PsApiManagementContext> [<CommonParameters>]
+Get-AzureRmApiManagementOpenIdConnectProvider -Context <PsApiManagementContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get by OpenID Connect Provider ID
 ```
 Get-AzureRmApiManagementOpenIdConnectProvider -Context <PsApiManagementContext>
- [-OpenIdConnectProviderId <String>] [<CommonParameters>]
+ [-OpenIdConnectProviderId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find by OpenID Connect Provider friendly Name
 ```
 Get-AzureRmApiManagementOpenIdConnectProvider -Context <PsApiManagementContext> [-Name <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +65,7 @@ This command gets the provider named Contoso OpenID Connect Provider.
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,7 +81,7 @@ Specifies a friendly name of a provider.
 If you specify a name, this cmdlet gets that provider.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find by OpenID Connect Provider friendly Name
 Aliases: 
 
@@ -96,7 +97,7 @@ Specifies an ID of the provider that this cmdlet removes.
 If you specify an ID, this cmdlet gets that provider.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by OpenID Connect Provider ID
 Aliases: 
 
@@ -104,6 +105,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

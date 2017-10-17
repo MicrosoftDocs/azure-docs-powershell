@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/New-AzureRmEventGridSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/New-AzureRmEventGridSubscription.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4efd0aa50bcd6f6c11433dca98f6f42e824aee56
 ---
 
 # New-AzureRmEventGridSubscription
@@ -15,36 +14,36 @@ Creates a new Azure Event Grid Event Subscription to a topic, Azure resource, Az
 
 ## SYNTAX
 
-### CustomTopicEventSubscriptionParameterSet (Default)
+### ResourceGroupNameParameterSet (Default)
 ```
 New-AzureRmEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <String>
- [-ResourceGroupName] <String> [-TopicName] <String> [[-EndpointType] <String>] [[-SubjectBeginsWith] <String>]
+ [[-ResourceGroupName] <String>] [[-EndpointType] <String>] [[-SubjectBeginsWith] <String>]
  [[-SubjectEndsWith] <String>] [-SubjectCaseSensitive] [[-IncludedEventType] <String[]>] [[-Label] <String[]>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceIdEventSubscriptionParameterSet
 ```
 New-AzureRmEventGridSubscription [-ResourceId] <String> [-EventSubscriptionName] <String> [-Endpoint] <String>
  [[-EndpointType] <String>] [[-SubjectBeginsWith] <String>] [[-SubjectEndsWith] <String>]
- [-SubjectCaseSensitive] [[-IncludedEventType] <String[]>] [[-Label] <String[]>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SubjectCaseSensitive] [[-IncludedEventType] <String[]>] [[-Label] <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EventSubscriptionInputObjectSet
 ```
 New-AzureRmEventGridSubscription [-InputObject] <PSTopic> [-EventSubscriptionName] <String>
  [-Endpoint] <String> [[-EndpointType] <String>] [[-SubjectBeginsWith] <String>] [[-SubjectEndsWith] <String>]
- [-SubjectCaseSensitive] [[-IncludedEventType] <String[]>] [[-Label] <String[]>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SubjectCaseSensitive] [[-IncludedEventType] <String[]>] [[-Label] <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ResourceGroupNameParameterSet
+### CustomTopicEventSubscriptionParameterSet
 ```
 New-AzureRmEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <String>
- [[-ResourceGroupName] <String>] [[-EndpointType] <String>] [[-SubjectBeginsWith] <String>]
+ [-ResourceGroupName] <String> [-TopicName] <String> [[-EndpointType] <String>] [[-SubjectBeginsWith] <String>]
  [[-SubjectEndsWith] <String>] [-SubjectCaseSensitive] [[-IncludedEventType] <String[]>] [[-Label] <String[]>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,8 +106,8 @@ Event subscription destination endpoint.
 This can be a webhook URL or the Azure resource ID of an EventHub.
 
 ```yaml
-Type: String
-Parameter Sets: CustomTopicEventSubscriptionParameterSet, ResourceIdEventSubscriptionParameterSet, ResourceGroupNameParameterSet
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
 Aliases: 
 
 Required: True
@@ -119,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -135,10 +134,10 @@ Endpoint Type.
 This can be webhook or eventhub
 
 ```yaml
-Type: String
-Parameter Sets: CustomTopicEventSubscriptionParameterSet, ResourceIdEventSubscriptionParameterSet, ResourceGroupNameParameterSet
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
 Aliases: 
-Accepted values: webhook, eventhub
+Accepted values: webhook, eventhub, webhook, eventhub
 
 Required: False
 Position: 4
@@ -148,10 +147,10 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
-Accepted values: webhook, eventhub
+Accepted values: webhook, eventhub, webhook, eventhub
 
 Required: False
 Position: 4
@@ -164,8 +163,8 @@ Accept wildcard characters: False
 The name of the event subscription
 
 ```yaml
-Type: String
-Parameter Sets: CustomTopicEventSubscriptionParameterSet, ResourceIdEventSubscriptionParameterSet, ResourceGroupNameParameterSet
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
 Aliases: 
 
 Required: True
@@ -176,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -191,8 +190,8 @@ Accept wildcard characters: False
 Filter that specifies a list of event types to include.If not specified, all event types will be included.
 
 ```yaml
-Type: String[]
-Parameter Sets: CustomTopicEventSubscriptionParameterSet, ResourceIdEventSubscriptionParameterSet, ResourceGroupNameParameterSet
+Type: System.String[]
+Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
 Aliases: 
 
 Required: False
@@ -203,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -218,7 +217,7 @@ Accept wildcard characters: False
 EventGrid Topic object.
 
 ```yaml
-Type: PSTopic
+Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -233,8 +232,8 @@ Accept wildcard characters: False
 Labels for the event subscription
 
 ```yaml
-Type: String[]
-Parameter Sets: CustomTopicEventSubscriptionParameterSet, ResourceIdEventSubscriptionParameterSet, ResourceGroupNameParameterSet
+Type: System.String[]
+Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
 Aliases: 
 
 Required: False
@@ -245,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -260,19 +259,7 @@ Accept wildcard characters: False
 The resource group of the topic.
 
 ```yaml
-Type: String
-Parameter Sets: CustomTopicEventSubscriptionParameterSet
-Aliases: ResourceGroup
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupNameParameterSet
 Aliases: ResourceGroup
 
@@ -283,11 +270,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+```yaml
+Type: System.String
+Parameter Sets: CustomTopicEventSubscriptionParameterSet
+Aliases: ResourceGroup
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceId
 The identifier of the resource to which the event subscription should be created.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -303,8 +302,8 @@ Filter that specifies that only events matching the specified subject prefix wil
 If not specified, events with all subject prefixes will be included.
 
 ```yaml
-Type: String
-Parameter Sets: CustomTopicEventSubscriptionParameterSet, ResourceIdEventSubscriptionParameterSet, ResourceGroupNameParameterSet
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
 Aliases: 
 
 Required: False
@@ -315,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -331,7 +330,7 @@ Filter that specifies that the subject field should be compared in a case sensit
 If not specified, subject will be compared in a case insensitive manner.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -347,8 +346,8 @@ Filter that specifies that only events matching the specified subject suffix wil
 If not specified, events with all subject suffixes will be included.
 
 ```yaml
-Type: String
-Parameter Sets: CustomTopicEventSubscriptionParameterSet, ResourceIdEventSubscriptionParameterSet, ResourceGroupNameParameterSet
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, CustomTopicEventSubscriptionParameterSet
 Aliases: 
 
 Required: False
@@ -359,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -374,7 +373,7 @@ Accept wildcard characters: False
 The name of the topic to which the event subscription should be created.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CustomTopicEventSubscriptionParameterSet
 Aliases: 
 
@@ -389,7 +388,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -405,9 +404,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

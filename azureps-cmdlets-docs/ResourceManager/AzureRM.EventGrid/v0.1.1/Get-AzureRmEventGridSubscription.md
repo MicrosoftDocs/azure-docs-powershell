@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridSubscription.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4efd0aa50bcd6f6c11433dca98f6f42e824aee56
 ---
 
 # Get-AzureRmEventGridSubscription
@@ -18,24 +17,27 @@ Gets the details of an event subscription, or gets a list of all event subscript
 ### EventSubscriptionTopicNameParameterSet (Default)
 ```
 Get-AzureRmEventGridSubscription [[-EventSubscriptionName] <String>] [[-ResourceGroupName] <String>]
- [[-TopicName] <String>] [-IncludeFullEndpointUrl] [<CommonParameters>]
+ [[-TopicName] <String>] [-IncludeFullEndpointUrl] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ResourceIdEventSubscriptionParameterSet
 ```
 Get-AzureRmEventGridSubscription [[-EventSubscriptionName] <String>] [-ResourceId] <String>
- [-IncludeFullEndpointUrl] [<CommonParameters>]
+ [-IncludeFullEndpointUrl] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### EventSubscriptionTopicTypeNameParameterSet
 ```
 Get-AzureRmEventGridSubscription [[-ResourceGroupName] <String>] [[-TopicTypeName] <String>]
- [[-Location] <String>] [-IncludeFullEndpointUrl] [<CommonParameters>]
+ [[-Location] <String>] [-IncludeFullEndpointUrl] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### EventSubscriptionInputObjectSet
 ```
-Get-AzureRmEventGridSubscription [-InputObject] <PSTopic> [<CommonParameters>]
+Get-AzureRmEventGridSubscription [-InputObject] <PSTopic> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,7 +130,7 @@ Gets the list of all event subscriptions created for the specific resource group
 The name of the event subscription
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionTopicNameParameterSet, ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -143,7 +145,7 @@ Accept wildcard characters: False
 Include the full endpoint URL of the event subscription destination.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: EventSubscriptionTopicNameParameterSet, ResourceIdEventSubscriptionParameterSet, EventSubscriptionTopicTypeNameParameterSet
 Aliases: 
 
@@ -158,7 +160,7 @@ Accept wildcard characters: False
 EventGrid Event Subscription object.
 
 ```yaml
-Type: PSTopic
+Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -173,7 +175,7 @@ Accept wildcard characters: False
 Location
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionTopicTypeNameParameterSet
 Aliases: 
 
@@ -188,7 +190,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionTopicNameParameterSet, EventSubscriptionTopicTypeNameParameterSet
 Aliases: ResourceGroup
 
@@ -203,7 +205,7 @@ Accept wildcard characters: False
 Identifier of the resource to which event subscriptions have been created.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -218,7 +220,7 @@ Accept wildcard characters: False
 EventGrid Topic Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionTopicNameParameterSet
 Aliases: 
 
@@ -233,7 +235,7 @@ Accept wildcard characters: False
 TopicType name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionTopicTypeNameParameterSet
 Aliases: 
 
@@ -241,6 +243,19 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

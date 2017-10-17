@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmExpressRouteCircuitPeeringConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmExpressRouteCircuitPeeringConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # New-AzureRmExpressRouteCircuitPeeringConfig
@@ -82,26 +81,11 @@ New-AzureRmExpressRouteCircuit @parameters
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LegacyMode
 The legacy mode of the Peering
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,7 +119,7 @@ If you are advertising prefixes that are not registered to the peering AS number
 the AS number to which they are registered.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -150,7 +134,7 @@ Accept wildcard characters: False
 The Routing Registry Name (RIR / IRR) to which the AS number and prefixes are registered.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -165,7 +149,7 @@ Accept wildcard characters: False
 The name of the peering configuration to be created.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -180,7 +164,7 @@ Accept wildcard characters: False
 PeerAddressType
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: IPv4, IPv6
@@ -197,7 +181,7 @@ The AS number of your ExpressRoute circuit. This must be a Public ASN when the P
 AzurePublicPeering.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -213,7 +197,7 @@ The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePubli
 `MicrosoftPeering`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzurePrivatePeering, AzurePublicPeering, MicrosoftPeering
@@ -231,7 +215,7 @@ be a /30 CIDR subnet. The first odd-numbered address in this subnet should be as
 router interface. Azure will configure the next even-numbered address to the Azure router interface.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -246,7 +230,7 @@ Accept wildcard characters: False
 This is an existing RouteFilter object.
 
 ```yaml
-Type: PSRouteFilter
+Type: Microsoft.Azure.Commands.Network.Models.PSRouteFilter
 Parameter Sets: MicrosoftPeeringConfigRoutFilter
 Aliases: 
 
@@ -261,7 +245,7 @@ Accept wildcard characters: False
 This is the resource Id of an existing RouteFilter object.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: MicrosoftPeeringConfigRoutFilterId
 Aliases: 
 
@@ -278,7 +262,7 @@ be a /30 CIDR subnet. The first odd-numbered address in this subnet should be as
 router interface. Azure will configure the next even-numbered address to the Azure router interface.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -293,7 +277,7 @@ Accept wildcard characters: False
 This is an optional MD5 hash used as a pre-shared key for the peering configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -308,11 +292,26 @@ Accept wildcard characters: False
 This is the Id number of the VLAN assigned for this peering.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: DBA7AD5F-CC13-417A-B753-F998942530BB
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagement.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmApiManagement
@@ -17,17 +17,19 @@ Gets a list or a particular API Management Service description.
 
 ### All In Subscription (Default)
 ```
-Get-AzureRmApiManagement [<CommonParameters>]
+Get-AzureRmApiManagement [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### All In Resource Group
 ```
-Get-AzureRmApiManagement -ResourceGroupName <String> [<CommonParameters>]
+Get-AzureRmApiManagement -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Specific API Management Service
 ```
-Get-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [<CommonParameters>]
+Get-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +57,7 @@ This command gets all API Management service by name.
 Specifies the name of API Management service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific API Management Service
 Aliases: 
 
@@ -70,7 +72,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group under in which this cmdlet gets the API Management service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: All In Resource Group, Specific API Management Service
 Aliases: 
 
@@ -78,6 +80,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

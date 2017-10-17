@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
 ms.assetid: 234D579E-B62D-4D70-8D2E-22AC0D9AC513
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/999b10c08071465894341393a111fbacd14d9ada
 ---
 
 # Get-AzureRmDataLakeStoreAccount
@@ -17,17 +17,19 @@ Gets details of a Data Lake Store account.
 
 ### All In Subscription (Default)
 ```
-Get-AzureRmDataLakeStoreAccount [<CommonParameters>]
+Get-AzureRmDataLakeStoreAccount [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### All In Resource Group
 ```
-Get-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [<CommonParameters>]
+Get-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Specific Account
 ```
-Get-AzureRmDataLakeStoreAccount [[-ResourceGroupName] <String>] [-Name] <String> [<CommonParameters>]
+Get-AzureRmDataLakeStoreAccount [[-ResourceGroupName] <String>] [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +50,7 @@ This command gets the account named ContosoADL.
 Specifies the name of the account to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific Account
 Aliases: 
 
@@ -63,7 +65,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the Data Lake Store account to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: All In Resource Group
 Aliases: 
 
@@ -75,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific Account
 Aliases: 
 
@@ -83,6 +85,19 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

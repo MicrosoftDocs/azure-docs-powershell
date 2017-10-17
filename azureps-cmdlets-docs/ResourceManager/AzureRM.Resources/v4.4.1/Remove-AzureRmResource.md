@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: A262DFD1-8B90-462C-A4E2-ABA0F51173FA
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmResource.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Remove-AzureRmResource
@@ -18,21 +18,22 @@ Removes a resource.
 ### The resource Id. (Default)
 ```
 Remove-AzureRmResource -ResourceId <String> [-ODataQuery <String>] [-Force] [-ApiVersion <String>] [-Pre]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Resource that resides at the subscription level.
 ```
 Remove-AzureRmResource -ResourceName <String> -ResourceType <String> [-ExtensionResourceName <String>]
  [-ExtensionResourceType <String>] [-ODataQuery <String>] [-ResourceGroupName <String>] [-Force]
- [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Resource that resides at the tenant level.
 ```
 Remove-AzureRmResource -ResourceName <String> -ResourceType <String> [-ExtensionResourceName <String>]
  [-ExtensionResourceType <String>] [-ODataQuery <String>] [-TenantLevel] [-Force] [-ApiVersion <String>] [-Pre]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +58,7 @@ Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +76,7 @@ For instance, to specify a database, use the following format:
 server name`/`database name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
 Aliases: 
 
@@ -94,7 +95,7 @@ For instance:
 `Microsoft.Sql/Servers/Databases`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
 Aliases: 
 
@@ -109,7 +110,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -125,7 +126,7 @@ Specifies an Open Data Protocol (OData) style filter.
 This cmdlet appends this value to the request in addition to any other filters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -140,7 +141,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +156,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group from which this cmdlet removes a resource.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Resource that resides at the subscription level.
 Aliases: 
 
@@ -173,7 +174,7 @@ The ID includes the subscription, as in the following example:
 `/subscriptions/`subscription ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The resource Id.
 Aliases: Id
 
@@ -191,7 +192,7 @@ For instance, to specify a database, use the following format:
 `ContosoServer/ContosoDatabase`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
 Aliases: Name
 
@@ -209,7 +210,7 @@ For instance, for a database, the resource type is as follows:
 `Microsoft.Sql/Servers/Databases`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Resource that resides at the subscription level., Resource that resides at the tenant level.
 Aliases: 
 
@@ -224,7 +225,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Resource that resides at the tenant level.
 Aliases: 
 
@@ -239,7 +240,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -255,13 +256,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

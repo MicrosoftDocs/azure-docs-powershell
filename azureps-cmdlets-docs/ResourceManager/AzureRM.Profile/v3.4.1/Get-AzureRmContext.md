@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+Module Name: AzureRM.profile
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Get-AzureRmContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Get-AzureRmContext.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/aa54483275743cdfa0d391a298e2608780df5d5f
 ---
 
 # Get-AzureRmContext
@@ -47,7 +47,6 @@ CurrentStorageAccount :
 
 In this example we are logging into our account with an Azure subscription using Add-AzureRmAccount, and then we are getting the context of the current session by calling Get-AzureRmContext.
 
-
 ### Example 2: Listing all available contexts
 ```
 PS C:\> Get-AzureRmContext -ListAvailable
@@ -77,7 +76,7 @@ In this example, all currently available contexts are displayed.  The user may s
 The credentials, account, tenant and subscription used for communication with azure
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -92,7 +91,7 @@ Accept wildcard characters: False
 List all available contexts in the current session.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ListAllContexts
 Aliases: 
 
@@ -107,9 +106,10 @@ Accept wildcard characters: False
 The name of the context
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetSingleContext
 Aliases: 
+Accepted values: [contrib@AzureSDKTeam.onmicrosoft.com, 0b1f6471-1bf0-4dda-aec3-cb9272f09590], [markcowl@microsoft.com, 00977cdb-163f-435f-9c32-39ec8ae61f4d]
 
 Required: False
 Position: 0

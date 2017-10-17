@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+Module Name: AzureRM.Storage
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Update-AzureRmStorageAccountNetworkRuleSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Update-AzureRmStorageAccountNetworkRuleSet.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/0ab1968c9642895683c4dd9266a166404dd563c8
 ---
 
 # Update-AzureRmStorageAccountNetworkRuleSet
@@ -17,7 +17,8 @@ Update the NetworkRule property of a Storage Account
 ```
 Update-AzureRmStorageAccountNetworkRuleSet [-ResourceGroupName] <String> [-Name] <String>
  [-Bypass <PSNetWorkRuleBypassEnum>] [-DefaultAction <PSNetWorkRuleDefaultActionEnum>] [-IPRule <PSIpRule[]>]
- [-VirtualNetworkRule <PSVirtualNetworkRule[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VirtualNetworkRule <PSVirtualNetworkRule[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +59,7 @@ The allowed value are none or any combination of:
 • Azureservices
 
 ```yaml
-Type: PSNetWorkRuleBypassEnum
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetWorkRuleBypassEnum
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Logging, Metrics, AzureServices
@@ -77,7 +78,7 @@ The allowed Options:
 • Deny
 
 ```yaml
-Type: PSNetWorkRuleDefaultActionEnum
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetWorkRuleDefaultActionEnum
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Deny, Allow
@@ -93,7 +94,7 @@ Accept wildcard characters: False
 The Array of IpRule objects to update to the NetworkRule Property of a Storage Account.
 
 ```yaml
-Type: PSIpRule[]
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSIpRule[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +109,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName, AccountName
 
@@ -123,7 +124,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group contains the Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +139,7 @@ Accept wildcard characters: False
 The Array of VirtualNetworkRule objects to update to the NetworkRule Property of a Storage Account.
 
 ```yaml
-Type: PSVirtualNetworkRule[]
+Type: Microsoft.Azure.Commands.Management.Storage.Models.PSVirtualNetworkRule[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +154,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -169,9 +170,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

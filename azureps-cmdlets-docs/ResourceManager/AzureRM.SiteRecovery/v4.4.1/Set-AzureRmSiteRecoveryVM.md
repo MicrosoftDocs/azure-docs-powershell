@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 483D4C1A-D34E-40ED-B92B-82187FF321F7
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryVM.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Set-AzureRmSiteRecoveryVM
@@ -18,7 +18,8 @@ Sets the recovery-side options for a Site Recovery protection entity.
 ```
 Set-AzureRmSiteRecoveryVM -VirtualMachine <ASRVirtualMachine> [-Name <String>] [-Size <String>]
  [-PrimaryNic <String>] [-RecoveryNetworkId <String>] [-RecoveryNicSubnetName <String>]
- [-RecoveryNicStaticIPAddress <String>] [-NicSelectionType <String>] [<CommonParameters>]
+ [-RecoveryNicStaticIPAddress <String>] [-NicSelectionType <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +33,7 @@ The **Set-AzureRmSiteRecoveryVM** cmdlet sets the recovery-side protection optio
 Specifies the name of the target virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -51,7 +52,7 @@ The acceptable values for this parameter are:
 - SelectedByUser
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NotSelected, SelectedByUser
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 Specifies the primary network adapter card.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 Specifies the recovery network ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 Specifies the static IP address that is assigned to primary network adapter controller on recovery.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -112,7 +113,7 @@ Accept wildcard characters: False
 Specifies the Azure virtual network subnet name with which to attach the primary network adapter controller on recovery.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -127,7 +128,7 @@ Accept wildcard characters: False
 Specifies the target virtual machine size.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,7 +143,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery virtual machine object.
 
 ```yaml
-Type: ASRVirtualMachine
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRVirtualMachine
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,13 +154,25 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### ASRVirtualMachine
-
 Parameter 'VirtualMachine' accepts value of type 'ASRVirtualMachine' from the pipeline
 
 ## OUTPUTS

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 015E3BC9-C535-4EA2-8A30-C728385DBFF8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/New-AzureRmBackupVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/New-AzureRmBackupVault.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmBackupVault
@@ -17,7 +17,7 @@ Creates a Backup vault.
 
 ```
 New-AzureRmBackupVault [-ResourceGroupName] <String> [-Name] <String> [-Region] <String>
- [[-Storage] <AzureBackupVaultStorageType>] [<CommonParameters>]
+ [[-Storage] <AzureBackupVaultStorageType>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,7 +63,7 @@ Specifies a name for the Azure Backup vault.
 The name must be unique in a resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,7 +80,7 @@ For hybrid backup scenarios, we recommend that you create a vault in a region cl
 For backup of Azure infrastructure as a service (IaaS) virtual machines, the vault becomes the point of discovery for local virtual machines.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +97,7 @@ To create a resource group, use the New-AzureRMResourceGroup cmdlet.
 The resource group and the Azure Backup vault do not have to be in the same region.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,13 +114,26 @@ The acceptable values for this parameter are: LocallyRedundant and GeoRedundant.
 The default value is GeoRedundant.
 
 ```yaml
-Type: AzureBackupVaultStorageType
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureBackupVaultStorageType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: GeoRedundant, LocallyRedundant
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

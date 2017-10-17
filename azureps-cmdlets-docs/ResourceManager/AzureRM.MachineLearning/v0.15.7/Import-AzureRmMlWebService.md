@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+Module Name: AzureRM.MachineLearning
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Import-AzureRmMlWebService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Import-AzureRmMlWebService.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Import-AzureRmMlWebService
@@ -16,12 +16,12 @@ Imports a JSON object into a web service definition.
 
 ### Import from JSON file.
 ```
-Import-AzureRmMlWebService -InputFile <String> [<CommonParameters>]
+Import-AzureRmMlWebService -InputFile <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Import from JSON string.
 ```
-Import-AzureRmMlWebService -JsonString <String> [<CommonParameters>]
+Import-AzureRmMlWebService -JsonString <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,12 +34,16 @@ The Import-AzureRmMlWebService cmdlet imports , specified either directly or in 
 
 
 
+
+
 ```
 Import-AzureRmMlWebService -JsonString $jsonDefinition
 ```
 
 ### --------------------------  Example 2: Import from file path  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -53,7 +57,7 @@ Import-AzureRmMlWebService -InputFile "C:\mlservice.json"
 The path to the file containing the web service definition to import.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Import from JSON file.
 Aliases: 
 
@@ -68,11 +72,24 @@ Accept wildcard characters: False
 The JSON formatted string containing the web service definition to import.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Import from JSON string.
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

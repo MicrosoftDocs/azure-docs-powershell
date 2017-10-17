@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNodeConfigurationDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNodeConfigurationDeployment.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/f1c9319e37a8912a147bb71acae6f9e96f3fce7e
 ---
 
 # Get-AzureRmAutomationDscNodeConfigurationDeployment
@@ -17,12 +17,15 @@ Gets DSC Node configuration deployments in Automation.
 
 ### ByAll (Default)
 ```
-Get-AzureRmAutomationDscNodeConfigurationDeployment [-Status <string>] [-StartTime <DateTimeOffset>] [-EndTime <DateTimeOffset>] [<CommonParameters>]
+Get-AzureRmAutomationDscNodeConfigurationDeployment [[-Status] <String>] [[-StartTime] <DateTimeOffset>]
+ [[-EndTime] <DateTimeOffset>] [-ResourceGroupName] <String> [-AutomationAccountName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByJobId
 ```
-Get-AzureRmAutomationDscNodeConfigurationDeployment -JobId <Guid [-ResourceGroupName] <String> [-AutomationAccountName] <String> [<CommonParameters>]
+Get-AzureRmAutomationDscNodeConfigurationDeployment -JobId <Guid> [-ResourceGroupName] <String>
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +57,6 @@ Key        Value
 WebServer  Pending
 WebServer2 Pending
 WebServer3 Compliant
-
 ```
 
 The above command deploys the DSC node configuration named "Config01.Node1" to the given two-dimensional array of Node Names. The deployment happens in a staged manner.
@@ -65,11 +67,12 @@ The above command deploys the DSC node configuration named "Config01.Node1" to t
 Specifies the Job id of an existing deployment job.
 
 ```yaml
-Type: Guid
-Parameter Sets: (JobId)
+Type: System.Guid
+Parameter Sets: ByJobId
 Aliases: 
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -79,7 +82,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group in which this cmdlet compiles a configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +97,7 @@ Accept wildcard characters: False
 Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,14 +112,14 @@ Accept wildcard characters: False
 Status of the Job filter.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: ByAll
 Aliases: 
 
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -124,14 +127,14 @@ Accept wildcard characters: False
 Start time filter.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.Nullable`1[System.DateTimeOffset]
+Parameter Sets: ByAll
 Aliases: 
 
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -139,14 +142,27 @@ Accept wildcard characters: False
 End time filter.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.Nullable`1[System.DateTimeOffset]
+Parameter Sets: ByAll
 Aliases: 
 
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

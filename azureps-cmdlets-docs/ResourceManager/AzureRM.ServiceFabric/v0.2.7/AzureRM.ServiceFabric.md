@@ -8,7 +8,6 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/AzureRM.ServiceFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/AzureRM.ServiceFabric.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/31afd32f413c3c88a30ab5322da0446efc925bf5
 ---
 
 # AzureRM.ServiceFabric Module

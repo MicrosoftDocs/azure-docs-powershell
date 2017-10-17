@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 2BA76B02-B786-4A77-86E0-E7D4191120B5
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Export-AzureRmApiManagementApi.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Export-AzureRmApiManagementApi.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Export-AzureRmApiManagementApi
@@ -18,14 +18,15 @@ Exports an API to a file.
 ### Export to pipeline (Default)
 ```
 Export-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
- -SpecificationFormat <PsApiManagementApiFormat> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -SpecificationFormat <PsApiManagementApiFormat> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### Export to File
 ```
 Export-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
- -SpecificationFormat <PsApiManagementApiFormat> -SaveAs <String> [-Force] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -SpecificationFormat <PsApiManagementApiFormat> -SaveAs <String> [-Force] [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +47,7 @@ This command exports an API to a WADL file.
 Specifies the ID of the API to export.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +62,7 @@ Accept wildcard characters: False
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +77,7 @@ Accept wildcard characters: False
 Indicates that this operation overwrites the file of the same name if it already exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Export to File
 Aliases: 
 
@@ -91,7 +92,7 @@ Accept wildcard characters: False
 Indicates that this operation returns $True if the API is exported successfully, or $False otherwise.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Export to File
 Aliases: 
 
@@ -106,7 +107,7 @@ Accept wildcard characters: False
 Specifies the file path to which to save the exported API.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Export to File
 Aliases: 
 
@@ -122,7 +123,7 @@ Specifies the API format.
 psdx_paramvalues Wadl and Swagger.
 
 ```yaml
-Type: PsApiManagementApiFormat
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiFormat
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Wadl, Swagger, Wsdl
@@ -138,7 +139,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -154,13 +155,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

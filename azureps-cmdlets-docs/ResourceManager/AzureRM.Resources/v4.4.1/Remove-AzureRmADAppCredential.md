@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: C61FA834-BEBE-4DBF-888F-C6CB8CC95390
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmADAppCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmADAppCredential.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/928b010f993c0b8148a305b24dcd72d1b9141705
 ---
 
 # Remove-AzureRmADAppCredential
@@ -17,24 +17,26 @@ Removes a credential from an application.
 
 ### ApplicationObjectIdWithKeyIdParameterSet (Default)
 ```
-Remove-AzureRmADAppCredential -ObjectId <String> -KeyId <Guid> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmADAppCredential -ObjectId <String> -KeyId <Guid> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationObjectIdWithAllParameterSet
 ```
-Remove-AzureRmADAppCredential -ObjectId <String> [-All] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmADAppCredential -ObjectId <String> [-All] [-Force] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationIdWithKeyIdParameterSet
 ```
-Remove-AzureRmADAppCredential -ApplicationId <String> -KeyId <Guid> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmADAppCredential -ApplicationId <String> -KeyId <Guid> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationIdWithAllParameterSet
 ```
-Remove-AzureRmADAppCredential -ApplicationId <String> [-All] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmADAppCredential -ApplicationId <String> [-All] [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +68,7 @@ In this example, all credentials will be removed from the application associated
 Switch to remove all the credentials associated with the application.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ApplicationObjectIdWithAllParameterSet, ApplicationIdWithAllParameterSet
 Aliases: 
 
@@ -81,7 +83,7 @@ Accept wildcard characters: False
 The id of the application to remove the credentials from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ApplicationIdWithKeyIdParameterSet, ApplicationIdWithAllParameterSet
 Aliases: 
 
@@ -96,7 +98,7 @@ Accept wildcard characters: False
 Switch to delete credential without a confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -112,7 +114,7 @@ Specifies the credential key to be removed.
 The key Ids for the application can be obtained using the Get-AzureRmADAppCredential cmdlet.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ApplicationObjectIdWithKeyIdParameterSet, ApplicationIdWithKeyIdParameterSet
 Aliases: 
 
@@ -127,7 +129,7 @@ Accept wildcard characters: False
 The object id of the application to remove the credentials from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ApplicationObjectIdWithKeyIdParameterSet, ApplicationObjectIdWithAllParameterSet
 Aliases: 
 
@@ -142,7 +144,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -155,9 +157,22 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

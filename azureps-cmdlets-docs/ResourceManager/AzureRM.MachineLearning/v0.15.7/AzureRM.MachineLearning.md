@@ -6,7 +6,6 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/c5a769e862ae125fd6424a8325774670efa4f075
 ---
 
 # AzureRM.MachineLearning Module

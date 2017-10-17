@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: BB90E6BB-7F53-4441-A7B2-EDA940621D49
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Find-AzureRmResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Find-AzureRmResource.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Find-AzureRmResource
@@ -20,15 +20,16 @@ Searches for resources based on specified parameters.
 Find-AzureRmResource [-ResourceNameContains <String>] [-ResourceNameEquals <String>] [-ResourceType <String>]
  [-ExtensionResourceType <String>] [-Top <Int32>] [-ODataQuery <String>] [-ResourceGroupNameContains <String>]
  [-ResourceGroupNameEquals <String>] [-ExpandProperties] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### Lists the resources based on the specified scope at the tenant level.
 ```
 Find-AzureRmResource [-ResourceNameContains <String>] [-ResourceNameEquals <String>] -ResourceType <String>
  [-ExtensionResourceType <String>] [-Top <Int32>] [-ODataQuery <String>] [-ExpandProperties] [-TenantLevel]
- [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+ [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### Get a resources using a multi-subscription query.
@@ -36,21 +37,22 @@ Find-AzureRmResource [-ResourceNameContains <String>] [-ResourceNameEquals <Stri
 Find-AzureRmResource [-ResourceNameContains <String>] [-ResourceNameEquals <String>] -ResourceType <String>
  [-ExtensionResourceType <String>] [-Top <Int32>] [-ODataQuery <String>] [-ResourceGroupNameContains <String>]
  [-ResourceGroupNameEquals <String>] [-ExpandProperties] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### Lists resources by a tag object specified as a hashset.
 ```
 Find-AzureRmResource [-Top <Int32>] [-ODataQuery <String>] [-Tag <Hashtable>] [-ExpandProperties]
- [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+ [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### Lists resources by a tag specified as a individual name and value parameters.
 ```
 Find-AzureRmResource [-Top <Int32>] [-ODataQuery <String>] [-TagName <String>] [-TagValue <String>]
- [-ExpandProperties] [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+ [-ExpandProperties] [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,9 +81,9 @@ Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -94,9 +96,9 @@ Accept wildcard characters: False
 Indicates that this cmdlet expands the properties of the resource.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -112,9 +114,9 @@ For instance:
 `Microsoft.Sql/Servers/Databases`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -136,7 +138,7 @@ The acceptable values for this parameter are:
 - Suspend
 
 ```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -151,7 +153,7 @@ Accept wildcard characters: False
 Specifies an information variable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -167,9 +169,9 @@ Specifies an Open Data Protocol (OData) style filter.
 This cmdlet appends this value to the request in addition to any other filters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -182,9 +184,9 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -199,7 +201,7 @@ This cmdlet matches resource groups of which this value is a substring.
 The cmdlet searches for resources in those resource groups.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
 Aliases: ResourceGroupName
 
@@ -214,9 +216,9 @@ Accept wildcard characters: False
 The resource group name for a full match.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Get a resources using a multi-subscription query.
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -230,7 +232,7 @@ Specifies a partial name of a resource.
 The cmdlet searches for resources which contain this value as a substring.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
 Aliases: Name
 
@@ -245,9 +247,9 @@ Accept wildcard characters: False
 The resource name for a full match. e.g. if your resource name is testResource, you can specify testResource.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope., Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -265,9 +267,9 @@ For instance, for a database, the resource type is as follows:
 This cmdlet searches for resources of the specified type.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope.
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -277,9 +279,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get a resources using a multi-subscription query.
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -292,9 +294,9 @@ Accept wildcard characters: False
 The tag filter for the OData query. The expected format is @{tagName=$null} or @{tagName = 'tagValue'}.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: Lists resources by a tag object specified as a hashset.
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -305,9 +307,9 @@ Accept wildcard characters: False
 
 ### -TagName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists resources by a tag specified as a individual name and value parameters.
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -318,9 +320,9 @@ Accept wildcard characters: False
 
 ### -TagValue
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists resources by a tag specified as a individual name and value parameters.
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -333,9 +335,9 @@ Accept wildcard characters: False
 Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Lists the resources based on the specified scope at the tenant level.
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -348,9 +350,22 @@ Accept wildcard characters: False
 Specifies the number of resources to retrieve.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

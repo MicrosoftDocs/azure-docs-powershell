@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: 8C5D29AD-0B15-4CD4-8637-86ABD19F41C8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlCapability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlCapability.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/d0252b58ee183fa2c6d6c0b19de68a56936969a1
 ---
 
 # Get-AzureRmSqlCapability
@@ -18,12 +18,14 @@ Gets SQL Database capabilities for the current subscription.
 ### FilterResults (Default)
 ```
 Get-AzureRmSqlCapability [-LocationName] <String> [-ServerVersionName <String>] [-EditionName <String>]
- [-ServiceObjectiveName <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ServiceObjectiveName <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DefaultResults
 ```
-Get-AzureRmSqlCapability [-LocationName] <String> [-Defaults] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-AzureRmSqlCapability [-LocationName] <String> [-Defaults] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,7 +71,7 @@ This command gets default capabilities for SQL Databases for the specified servi
 Indicates that this cmdlet gets only defaults.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: DefaultResults
 Aliases: 
 
@@ -84,7 +86,7 @@ Accept wildcard characters: False
 Specifies the name of the database edition for which this cmdlet gets capabilities.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FilterResults
 Aliases: 
 
@@ -100,7 +102,7 @@ Specifies the name of the Location for which this cmdlet gets capabilities.
 For more information, see Azure Regionshttp://azure.microsoft.com/en-us/regions/ (http://azure.microsoft.com/en-us/regions/).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -115,7 +117,7 @@ Accept wildcard characters: False
 Specifies the name of the server version for which this cmdlet gets capabilities.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FilterResults
 Aliases: 
 
@@ -130,7 +132,7 @@ Accept wildcard characters: False
 Specifies the name of the service objective for which this cmdlet gets capabilities.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FilterResults
 Aliases: 
 
@@ -145,7 +147,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -161,13 +163,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

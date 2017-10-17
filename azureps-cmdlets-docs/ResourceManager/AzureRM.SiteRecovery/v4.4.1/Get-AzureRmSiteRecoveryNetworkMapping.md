@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 01AE09A8-B779-475A-9E86-776E0774E89E
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryNetworkMapping.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryNetworkMapping.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmSiteRecoveryNetworkMapping
@@ -17,29 +17,31 @@ Gets information about Site Recovery network mappings for the current vault.
 
 ### Default (Default)
 ```
-Get-AzureRmSiteRecoveryNetworkMapping [<CommonParameters>]
+Get-AzureRmSiteRecoveryNetworkMapping [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### EnterpriseToEnterprise
 ```
 Get-AzureRmSiteRecoveryNetworkMapping -PrimaryFabric <ASRFabric> -RecoveryFabric <ASRFabric>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### EnterpriseToAzure
 ```
-Get-AzureRmSiteRecoveryNetworkMapping -PrimaryFabric <ASRFabric> [-Azure] [<CommonParameters>]
+Get-AzureRmSiteRecoveryNetworkMapping -PrimaryFabric <ASRFabric> [-Azure]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### EnterpriseToAzureLegacy
 ```
-Get-AzureRmSiteRecoveryNetworkMapping [-Azure] -PrimaryServer <ASRServer> [<CommonParameters>]
+Get-AzureRmSiteRecoveryNetworkMapping [-Azure] -PrimaryServer <ASRServer>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### EnterpriseToEnterpriseLegacy
 ```
 Get-AzureRmSiteRecoveryNetworkMapping -PrimaryServer <ASRServer> -RecoveryServer <ASRServer>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +55,7 @@ The **Get-AzureRmSiteRecoveryNetworkMapping** cmdlet gets information about Azur
 Indicates that the command gets a list of network mappings for networks on the primary server mapped to Azure virtual networks.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: EnterpriseToAzure, EnterpriseToAzureLegacy
 Aliases: 
 
@@ -66,7 +68,7 @@ Accept wildcard characters: False
 
 ### -PrimaryFabric
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure
 Aliases: 
 
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 
 ### -PrimaryServer
 ```yaml
-Type: ASRServer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRServer
 Parameter Sets: EnterpriseToAzureLegacy, EnterpriseToEnterpriseLegacy
 Aliases: 
 
@@ -92,7 +94,7 @@ Accept wildcard characters: False
 
 ### -RecoveryFabric
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 
@@ -105,11 +107,24 @@ Accept wildcard characters: False
 
 ### -RecoveryServer
 ```yaml
-Type: ASRServer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRServer
 Parameter Sets: EnterpriseToEnterpriseLegacy
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -122,11 +137,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### ASRFabric
-
 Parameter 'PrimaryFabric' accepts value of type 'ASRFabric' from the pipeline
 
 ### ASRServer
-
 Parameter 'PrimaryServer' accepts value of type 'ASRServer' from the pipeline
 
 ## OUTPUTS

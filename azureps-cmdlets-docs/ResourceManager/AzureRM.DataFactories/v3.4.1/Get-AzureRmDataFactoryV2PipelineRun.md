@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Get-AzureRmDataFactoryV2PipelineRun.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Get-AzureRmDataFactoryV2PipelineRun.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/094cbc91c59c6def36b0b0db15759d964dba67c3
 ---
 
 # Get-AzureRmDataFactoryV2PipelineRun
@@ -71,7 +70,7 @@ This command gets details about the pipeline run with ID "61eb095a-fe23-4591-8a9
 The data factory object.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
 Parameter Sets: ByFactoryObjectByRunId, ByFactoryObjectByPipeline
 Aliases: 
 
@@ -86,7 +85,7 @@ Accept wildcard characters: False
 The data factory name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryNameByPipeline
 Aliases: 
 
@@ -97,26 +96,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LastUpdatedAfter
 The time at or after which the pipeline run was updated in ISO8601 format.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
 Aliases: 
 
@@ -131,7 +115,7 @@ Accept wildcard characters: False
 The time at or before which the pipeline run was updated in ISO8601 format.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
 Aliases: 
 
@@ -146,7 +130,7 @@ Accept wildcard characters: False
 The pipeline name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
 Aliases: 
 
@@ -161,7 +145,7 @@ Accept wildcard characters: False
 The Run ID of the pipeline.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryObjectByRunId
 Aliases: 
 
@@ -176,7 +160,7 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryNameByPipeline
 Aliases: 
 
@@ -184,6 +168,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

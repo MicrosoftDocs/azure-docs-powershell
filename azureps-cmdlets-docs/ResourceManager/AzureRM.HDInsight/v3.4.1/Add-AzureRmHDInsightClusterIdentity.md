@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module Name: AzureRM.HDInsight
 ms.assetid: A40AB6AB-D3CB-4A6C-B614-0B22085759DA
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightClusterIdentity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightClusterIdentity.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Add-AzureRmHDInsightClusterIdentity
@@ -18,14 +18,15 @@ Adds a cluster identity to a cluster configuration object.
 ### CertificateFilePath (Default)
 ```
 Add-AzureRmHDInsightClusterIdentity [-Config] <AzureHDInsightConfig> [-ObjectId] <Guid>
- [-CertificateFilePath] <String> [-CertificatePassword] <String> [[-AadTenantId] <Guid>] [<CommonParameters>]
+ [-CertificateFilePath] <String> [-CertificatePassword] <String> [[-AadTenantId] <Guid>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### CertificateFileContents
 ```
 Add-AzureRmHDInsightClusterIdentity [-Config] <AzureHDInsightConfig> [-ObjectId] <Guid>
  [-CertificateFileContents] <Byte[]> [-CertificatePassword] <String> [[-AadTenantId] <Guid>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +85,7 @@ This command adds Cluster Identity info to the cluster named your-hadoop-001, al
 Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +100,7 @@ Accept wildcard characters: False
 Specifies file contents of the certificate that will be used when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Byte[]
+Type: System.Byte[]
 Parameter Sets: CertificateFileContents
 Aliases: 
 
@@ -115,7 +116,7 @@ Specifies the file path to the certificate that will be used to authenticate as 
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CertificateFilePath
 Aliases: 
 
@@ -131,7 +132,7 @@ Specifies the password for the certificate that will be used to authenticate as 
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -147,7 +148,7 @@ Specifies the HDInsight cluster configuration object that this cmdlet modifies.
 This object is created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -163,7 +164,7 @@ Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -174,17 +175,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### AzureHDInsightConfig
-
 Parameter 'Config' accepts value of type 'AzureHDInsightConfig' from the pipeline
 
 ### Guid
-
 Parameter 'ObjectId' accepts value of type 'Guid' from the pipeline
 
 ## OUTPUTS

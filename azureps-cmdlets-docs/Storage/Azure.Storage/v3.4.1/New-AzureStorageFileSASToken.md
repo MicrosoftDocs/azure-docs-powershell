@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: BB139312-A536-4B61-A005-6CAF02BE1637
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageFileSASToken.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageFileSASToken.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureStorageFileSASToken
@@ -77,7 +77,7 @@ Specifies an Azure Storage context.
 To obtain a context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: NameSasPermission, NameSasPolicy
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies the time at which the shared access signature becomes invalid.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +108,7 @@ Specifies a **CloudFile** object.
 You can create a cloud file or obtain one by using the Get-AzureStorageFile cmdlet.
 
 ```yaml
-Type: CloudFile
+Type: Microsoft.WindowsAzure.Storage.File.CloudFile
 Parameter Sets: FileSasPermission, FileSasPolicy
 Aliases: 
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet return the full blob URI and the shared access signature token.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,7 +139,7 @@ Specifies the IP address or range of IP addresses from which to accept requests,
 The range is inclusive.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 Specifies the path of the file relative to a Storage share.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameSasPermission, NameSasPolicy
 Aliases: 
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Specifies the permissions for a Storage file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameSasPermission, FileSasPermission
 Aliases: 
 
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 Specifies the stored access policy for a file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameSasPolicy, FileSasPolicy
 Aliases: 
 
@@ -204,7 +204,7 @@ The acceptable values for this parameter are:
 The default value is HttpsOrHttp.
 
 ```yaml
-Type: SharedAccessProtocol
+Type: System.Nullable`1[Microsoft.WindowsAzure.Storage.SharedAccessProtocol]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HttpsOnly, HttpsOrHttp
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage share.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameSasPermission, NameSasPolicy
 Aliases: 
 
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 Specifies the time at which the shared access signature becomes valid.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -252,19 +252,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### CloudFile
-
 Parameter 'File' accepts value of type 'CloudFile' from the pipeline
 
 ### String
-
 Parameter 'Path' accepts value of type 'String' from the pipeline
 
 ### String
-
 Parameter 'ShareName' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

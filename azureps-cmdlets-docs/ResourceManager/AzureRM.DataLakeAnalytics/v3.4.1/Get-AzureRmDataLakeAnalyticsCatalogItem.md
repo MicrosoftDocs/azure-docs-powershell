@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 ms.assetid: A6899341-1E5E-4F8B-8D5D-5923B1223628
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsCatalogItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsCatalogItem.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/64a9dec4b4f019c1460d9e7f11d3d1637996e690
 ---
 
 # Get-AzureRmDataLakeAnalyticsCatalogItem
@@ -17,7 +17,7 @@ Gets a Data Lake Analytics catalog item or types of items.
 
 ```
 Get-AzureRmDataLakeAnalyticsCatalogItem [-Account] <String> [-ItemType] <CatalogItemType>
- [[-Path] <CatalogPathInstance>] [<CommonParameters>]
+ [[-Path] <CatalogPathInstance>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +45,7 @@ This command gets a list of tables in the specified database.
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -75,7 +75,7 @@ The acceptable values for this parameter are:
 - TablePartition
 
 ```yaml
-Type: CatalogItemType
+Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+CatalogItemType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Database, Schema, Assembly, Table, TablePartition, TableValuedFunction, TableStatistics, ExternalDataSource, View, Procedure, Secret, Credential, Types, Package
@@ -92,7 +92,7 @@ Specifies the multi-part path to the item to retrieve, or to the parent item of 
 The parts of the path should be separated by a period (.).
 
 ```yaml
-Type: CatalogPathInstance
+Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -100,6 +100,19 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

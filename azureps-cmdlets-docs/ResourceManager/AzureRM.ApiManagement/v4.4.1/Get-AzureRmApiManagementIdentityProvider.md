@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementIdentityProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementIdentityProvider.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/eb2b5c5505d48a33661e70ccdab72360e6ff0798
 ---
 
 # Get-AzureRmApiManagementIdentityProvider
@@ -16,13 +16,14 @@ Get the identity provider configuration details.
 
 ### AllIdentityProviders (Default)
 ```
-Get-AzureRmApiManagementIdentityProvider -Context <PsApiManagementContext> [<CommonParameters>]
+Get-AzureRmApiManagementIdentityProvider -Context <PsApiManagementContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### IdentityProviderByType
 ```
 Get-AzureRmApiManagementIdentityProvider -Context <PsApiManagementContext>
- -Type <PsApiManagementIdentityProviderType> [<CommonParameters>]
+ -Type <PsApiManagementIdentityProviderType> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,6 +33,8 @@ Get the identity provider configuration details.
 
 ### --------------------------  Example 1  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -50,6 +53,8 @@ Get all the identity provider Configuration on the service.
 
 
 
+
+
 ```
 Get-AzureRmApiManagementIdentityProvider -Context $context -Type Aad
 ```
@@ -63,7 +68,7 @@ Instance of PsApiManagementContext.
 This parameter is required.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,7 +85,7 @@ If specified will try to find identity provider configuration by the identifier.
 This parameter is optional.
 
 ```yaml
-Type: PsApiManagementIdentityProviderType
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProviderType
 Parameter Sets: IdentityProviderByType
 Aliases: 
 Accepted values: Facebook, Google, Microsoft, Twitter, Aad
@@ -89,6 +94,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

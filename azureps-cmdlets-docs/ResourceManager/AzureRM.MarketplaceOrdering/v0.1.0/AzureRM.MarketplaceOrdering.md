@@ -6,7 +6,6 @@ Help Version: 0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MarketplaceOrdering/Commands.MarketplaceOrdering/help/AzureRM.MarketplaceOrdering.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MarketplaceOrdering/Commands.MarketplaceOrdering/help/AzureRM.MarketplaceOrdering.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4507d32f6263238f082ce5c7d995f3c20fb88117
 ---
 
 # AzureRM.MarketplaceOrdering Module

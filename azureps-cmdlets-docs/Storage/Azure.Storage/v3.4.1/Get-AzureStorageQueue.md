@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: C2EBCCF0-56CE-4D49-A138-74E52FC3A9AC
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageQueue.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageQueue.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureStorageQueue
@@ -58,7 +58,7 @@ Specifies the Azure storage context.
 You can create it by using the **New-AzureStorageContext** cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ If no name is specified, the cmdlet gets a list of all the queues.
 If a full or partial name is specified, the cmdlet gets all queues that match the name pattern.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: QueueName
 Aliases: N, Queue
 
@@ -90,7 +90,7 @@ Accept wildcard characters: True
 Specifies a prefix used in the name of the queues you want to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: QueuePrefix
 Aliases: 
 
@@ -107,11 +107,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### String
-
 Parameter 'Name' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

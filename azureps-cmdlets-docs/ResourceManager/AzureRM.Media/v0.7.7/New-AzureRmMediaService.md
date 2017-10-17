@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
+Module Name: AzureRM.Media
 ms.assetid: 5CEA7323-4CF7-42B2-BA94-BB3C8F73D2E9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/New-AzureRmMediaService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/New-AzureRmMediaService.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmMediaService
@@ -18,13 +18,15 @@ Creates a media service if the media service already exists, all its properties 
 ### StorageAccountIdParamSet
 ```
 New-AzureRmMediaService [-ResourceGroupName] <String> [-AccountName] <String> [-Location] <String>
- [-StorageAccountId] <String> [-Tags <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StorageAccountId] <String> [-Tags <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### StorageAccountsParamSet
 ```
 New-AzureRmMediaService [-ResourceGroupName] <String> [-AccountName] <String> [-Location] <String>
- [-StorageAccounts] <PSStorageAccount[]> [-Tags <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StorageAccounts] <PSStorageAccount[]> [-Tags <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,7 +108,7 @@ This script uses several other cmdlets.
 Specifies the name of the media service that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name, ResourceName
 
@@ -121,7 +123,7 @@ Accept wildcard characters: False
 Specifies the region that this cmdlet creates the media service in.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,7 +138,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that the media service is assigned to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -151,7 +153,7 @@ Accept wildcard characters: False
 Specifies the storage account associated with the media service account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: StorageAccountIdParamSet
 Aliases: Id
 
@@ -166,7 +168,7 @@ Accept wildcard characters: False
 Specifies an array of storage accounts to associate with the media service.
 
 ```yaml
-Type: PSStorageAccount[]
+Type: Microsoft.Azure.Commands.Media.Models.PSStorageAccount[]
 Parameter Sets: StorageAccountsParamSet
 Aliases: 
 
@@ -181,7 +183,7 @@ Accept wildcard characters: False
 Specifies tags for the media service.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -196,7 +198,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -212,13 +214,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

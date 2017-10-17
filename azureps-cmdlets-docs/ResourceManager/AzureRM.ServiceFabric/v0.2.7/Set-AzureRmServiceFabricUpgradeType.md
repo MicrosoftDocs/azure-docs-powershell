@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+Module Name: AzureRM.ServiceFabric
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Set-AzureRmServiceFabricUpgradeType.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Set-AzureRmServiceFabricUpgradeType.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/928c918a88f76273c14645e599fb59baea0cb3d6
 ---
 
 # Set-AzureRmServiceFabricUpgradeType
@@ -17,13 +17,15 @@ Change the Service Fabric upgrade type of the cluster.
 ### Automatic
 ```
 Set-AzureRmServiceFabricUpgradeType [-ResourceGroupName] <String> [-Name] <String>
- -UpgradeMode <ClusterUpgradeMode> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -UpgradeMode <ClusterUpgradeMode> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Manual
 ```
 Set-AzureRmServiceFabricUpgradeType [-ResourceGroupName] <String> [-Name] <String>
- -UpgradeMode <ClusterUpgradeMode> -Version <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -UpgradeMode <ClusterUpgradeMode> -Version <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +46,7 @@ This command will set the cluster upgrade mode to automatic.
 Specify the name of the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ClusterName
 
@@ -59,7 +61,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +76,7 @@ Accept wildcard characters: False
 ClusterUpgradeMode
 
 ```yaml
-Type: ClusterUpgradeMode
+Type: Microsoft.Azure.Commands.ServiceFabric.Models.ClusterUpgradeMode
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Automatic, Manual
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 Cluster code version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Manual
 Aliases: ClusterCodeVersion
 
@@ -105,7 +107,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -120,9 +122,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

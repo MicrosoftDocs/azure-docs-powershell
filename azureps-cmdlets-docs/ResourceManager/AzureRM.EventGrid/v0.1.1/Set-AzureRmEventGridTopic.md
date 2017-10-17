@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Set-AzureRmEventGridTopic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Set-AzureRmEventGridTopic.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4adbb8ec83ca5c97c15fb7e66787f80c7fbedafb
 ---
 
 # Set-AzureRmEventGridTopic
@@ -17,20 +16,20 @@ Set the properties of an Event Grid topic.
 
 ### TopicNameParameterSet (Default)
 ```
-Set-AzureRmEventGridTopic [-ResourceGroupName] <String> [-Name] <String> [-Tag] <Hashtable> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-AzureRmEventGridTopic [-ResourceGroupName] <String> [-Name] <String> [-Tag] <Hashtable>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceIdEventSubscriptionParameterSet
 ```
-Set-AzureRmEventGridTopic [-ResourceId] <String> [-Tag] <Hashtable> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-AzureRmEventGridTopic [-ResourceId] <String> [-Tag] <Hashtable> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TopicInputObjectParameterSet
 ```
-Set-AzureRmEventGridTopic [-InputObject] <PSTopic> [-Tag] <Hashtable> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-AzureRmEventGridTopic [-InputObject] <PSTopic> [-Tag] <Hashtable>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +50,7 @@ Sets the properties of the Event Grid topic \`Topic1\` in resource group \`MyRes
 EventGrid Topic object.
 
 ```yaml
-Type: PSTopic
+Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
 Parameter Sets: TopicInputObjectParameterSet
 Aliases: 
 
@@ -66,7 +65,7 @@ Accept wildcard characters: False
 EventGrid Topic Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: TopicName
 
@@ -81,7 +80,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: ResourceGroup
 
@@ -96,7 +95,7 @@ Accept wildcard characters: False
 EventGrid Topic ResourceID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -111,7 +110,7 @@ Accept wildcard characters: False
 Hashtables which represents resource Tag.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: TopicNameParameterSet, ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -123,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: TopicInputObjectParameterSet
 Aliases: 
 
@@ -138,7 +137,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -154,9 +153,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

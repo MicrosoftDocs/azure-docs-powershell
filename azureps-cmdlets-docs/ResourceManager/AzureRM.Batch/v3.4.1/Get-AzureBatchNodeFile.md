@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 38ED2854-23D0-400E-A5C8-239346B2AF99
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchNodeFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchNodeFile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureBatchNodeFile
@@ -18,37 +18,38 @@ Gets the properties of Batch node files.
 ### ComputeNode_Id (Default)
 ```
 Get-AzureBatchNodeFile [-PoolId] <String> [-ComputeNodeId] <String> [[-Name] <String>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Task_Id
 ```
 Get-AzureBatchNodeFile -JobId <String> -TaskId <String> [[-Name] <String>] -BatchContext <BatchAccountContext>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Task_ODataFilter
 ```
 Get-AzureBatchNodeFile -JobId <String> -TaskId <String> [-Filter <String>] [-MaxCount <Int32>] [-Recursive]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ParentTask
 ```
 Get-AzureBatchNodeFile [[-Task] <PSCloudTask>] [-Filter <String>] [-MaxCount <Int32>] [-Recursive]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ComputeNode_ODataFilter
 ```
 Get-AzureBatchNodeFile [-PoolId] <String> [-ComputeNodeId] <String> [-Filter <String>] [-MaxCount <Int32>]
- [-Recursive] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-Recursive] -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ParentComputeNode
 ```
 Get-AzureBatchNodeFile [[-ComputeNode] <PSComputeNode>] [-Filter <String>] [-MaxCount <Int32>] [-Recursive]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -147,7 +148,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -163,7 +164,7 @@ Specifies the compute node, as a **PSComputeNode** object, that contains the Bat
 To obtain a compute node object, use the Get-AzureBatchComputeNode cmdlet.
 
 ```yaml
-Type: PSComputeNode
+Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
 Parameter Sets: ParentComputeNode
 Aliases: 
 
@@ -178,7 +179,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node that contains the Batch node files.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode_Id, ComputeNode_ODataFilter
 Aliases: 
 
@@ -194,7 +195,7 @@ Specifies an OData filter clause.
 This cmdlet returns properties for node files that match the filter that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_ODataFilter, ParentTask, ComputeNode_ODataFilter, ParentComputeNode
 Aliases: 
 
@@ -209,7 +210,7 @@ Accept wildcard characters: False
 Specifies the ID of the job that contains the target task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_Id, Task_ODataFilter
 Aliases: 
 
@@ -226,7 +227,7 @@ If you specify a value of zero (0) or less, the cmdlet does not use an upper lim
 The default value is 1000.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Task_ODataFilter, ParentTask, ComputeNode_ODataFilter, ParentComputeNode
 Aliases: 
 
@@ -242,7 +243,7 @@ Specifies the name of the node file for which this cmdlet retrieves properties.
 You cannot specify wildcard characters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode_Id, Task_Id
 Aliases: 
 
@@ -257,7 +258,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute node from which to get properties of node files.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode_Id, ComputeNode_ODataFilter
 Aliases: 
 
@@ -273,7 +274,7 @@ Indicates that this cmdlet returns a recursive list of files.
 Otherwise, it returns only the files in the root folder.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Task_ODataFilter, ParentTask, ComputeNode_ODataFilter, ParentComputeNode
 Aliases: 
 
@@ -289,7 +290,7 @@ Specifies the task, as a **PSCloudTask** object, with which the node files are a
 To obtain a task object, use the Get-AzureBatchTask cmdlet.
 
 ```yaml
-Type: PSCloudTask
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudTask
 Parameter Sets: ParentTask
 Aliases: 
 
@@ -304,7 +305,7 @@ Accept wildcard characters: False
 Specifies the ID of the task for which this cmdlet gets properties of node files.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task_Id, Task_ODataFilter
 Aliases: 
 
@@ -315,21 +316,31 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSComputeNode
-
 Parameter 'ComputeNode' accepts value of type 'PSComputeNode' from the pipeline
 
 ### PSCloudTask
-
 Parameter 'Task' accepts value of type 'PSCloudTask' from the pipeline
 
 ## OUTPUTS

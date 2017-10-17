@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Start-AzureStorageBlobIncrementalCopy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Start-AzureStorageBlobIncrementalCopy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/e87bc1c9e534808427b7dc77aa06eacc46663253
 ---
 
 # Start-AzureStorageBlobIncrementalCopy
@@ -92,7 +92,7 @@ This command start Incremental Copy Operation from CloudPageBlob object to desti
 Absolute Uri to the source. Be noted that the credential should be provided in the Uri, if the source requires any.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UriPipeline
 Aliases: SrcUri, SourceUri
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 The client side maximum execution time for each request in seconds.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 CloudBlob object from Azure Storage Client library. You can create it or use Get-AzureStorageBlob cmdlet.
 
 ```yaml
-Type: CloudPageBlob
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob
 Parameter Sets: BlobInstance, BlobInstanceToBlobInstance
 Aliases: SrcICloudBlob, SrcCloudBlob, ICloudBlob, SourceICloudBlob, SourceCloudBlob
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 CloudBlobContainer object from Azure Storage Client library. You can create it or use Get-AzureStorageContainer cmdlet.
 
 ```yaml
-Type: CloudBlobContainer
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer
 Parameter Sets: ContainerInstance
 Aliases: SourceCloudBlobContainer
 
@@ -153,7 +153,7 @@ The total amount of concurrent async tasks.
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Source Azure Storage Context. You can create it by New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: ContainerInstance, BlobInstance, BlobInstanceToBlobInstance, ContainerName
 Aliases: SrcContext, SourceContext
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: UriPipeline
 Aliases: SrcContext, SourceContext
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 Destination blob name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerInstance, BlobInstance, ContainerName
 Aliases: DestinationBlob
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UriPipeline
 Aliases: DestinationBlob
 
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 Destination CloudBlob object
 
 ```yaml
-Type: CloudPageBlob
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudPageBlob
 Parameter Sets: BlobInstanceToBlobInstance
 Aliases: DestICloudBlob, DestinationCloudBlob, DestinationICloudBlob
 
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 Destination container name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerInstance, BlobInstance, ContainerName, UriPipeline
 Aliases: DestinationContainer
 
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 Destination Azure Storage Context. You can create it by New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: DestinationContext
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 The server time out for each request in seconds.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 Source page blob name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerInstance, ContainerName
 Aliases: SourceBlob
 
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 Source page blob snapshot time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: ContainerInstance, ContainerName
 Aliases: SourceBlobSnapshotTime
 
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 Source Container name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ContainerName
 Aliases: SourceContainer
 
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -343,7 +343,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

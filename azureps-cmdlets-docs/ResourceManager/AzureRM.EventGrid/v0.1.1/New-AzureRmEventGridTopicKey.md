@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/New-AzureRmEventGridTopicKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/New-AzureRmEventGridTopicKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4efd0aa50bcd6f6c11433dca98f6f42e824aee56
 ---
 
 # New-AzureRmEventGridTopicKey
@@ -17,20 +16,20 @@ Regenerates the shared access key for an Azure Event Grid Topic.
 
 ### TopicNameParameterSet (Default)
 ```
-New-AzureRmEventGridTopicKey [-ResourceGroupName] <String> [-TopicName] <String> [-KeyName] <String> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-AzureRmEventGridTopicKey [-ResourceGroupName] <String> [-TopicName] <String> [-KeyName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TopicInputObjectParameterSet
 ```
-New-AzureRmEventGridTopicKey [-KeyName] <String> [-InputObject] <PSTopic> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-AzureRmEventGridTopicKey [-KeyName] <String> [-InputObject] <PSTopic>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceIdEventSubscriptionParameterSet
 ```
-New-AzureRmEventGridTopicKey [-KeyName] <String> [-ResourceId] <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-AzureRmEventGridTopicKey [-KeyName] <String> [-ResourceId] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +57,7 @@ Regenerate the key corresponding to key \'key1'\ of Event Grid topic \`Topic1\` 
 EventGrid Topic object.
 
 ```yaml
-Type: PSTopic
+Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
 Parameter Sets: TopicInputObjectParameterSet
 Aliases: 
 
@@ -73,7 +72,7 @@ Accept wildcard characters: False
 The name of the key that needs to be regenerated
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet, ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -85,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicInputObjectParameterSet
 Aliases: 
 
@@ -100,7 +99,7 @@ Accept wildcard characters: False
 Resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: ResourceGroup
 
@@ -115,7 +114,7 @@ Accept wildcard characters: False
 Resource Identifier representing the Event Grid Topic.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -130,7 +129,7 @@ Accept wildcard characters: False
 The name of the topic.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: 
 
@@ -145,7 +144,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -161,9 +160,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

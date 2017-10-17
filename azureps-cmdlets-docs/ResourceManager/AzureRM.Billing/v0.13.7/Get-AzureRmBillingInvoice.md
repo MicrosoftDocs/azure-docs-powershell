@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Billing.dll-Help.xml
+Module Name: AzureRM.Billing
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingInvoice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingInvoice.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/dbbac5b71c9946c33dcc700ce2b7eaae8cbad761
 ---
 
 # Get-AzureRmBillingInvoice
@@ -16,17 +16,19 @@ Get billing invoices of the subscription.
 
 ### List (Default)
 ```
-Get-AzureRmBillingInvoice [-MaxCount <Int32>] [-GenerateDownloadUrl] [<CommonParameters>]
+Get-AzureRmBillingInvoice [-MaxCount <Int32>] [-GenerateDownloadUrl] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Latest
 ```
-Get-AzureRmBillingInvoice [-Latest] [<CommonParameters>]
+Get-AzureRmBillingInvoice [-Latest] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Single
 ```
-Get-AzureRmBillingInvoice -Name <System.Collections.Generic.List`1[System.String]> [<CommonParameters>]
+Get-AzureRmBillingInvoice -Name <System.Collections.Generic.List`1[System.String]>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,7 +70,7 @@ Get most recent 10 invoices of the subscription and include the download Url in 
 Generate the download url of the invoices.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: List
 Aliases: 
 
@@ -83,7 +85,7 @@ Accept wildcard characters: False
 Get the latest invoice.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Latest
 Aliases: 
 
@@ -98,7 +100,7 @@ Accept wildcard characters: False
 Determines the maximum number of records to return.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: List
 Aliases: 
 
@@ -118,6 +120,19 @@ Parameter Sets: Single
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
