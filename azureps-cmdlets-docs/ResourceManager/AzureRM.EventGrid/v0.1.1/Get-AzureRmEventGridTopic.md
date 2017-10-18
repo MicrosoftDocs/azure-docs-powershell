@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridTopic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridTopic.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4efd0aa50bcd6f6c11433dca98f6f42e824aee56
 ---
 
 # Get-AzureRmEventGridTopic
@@ -15,19 +14,22 @@ Gets the details of an Event Grid topic, or gets a list of all Event Grid topics
 
 ## SYNTAX
 
-### TopicNameParameterSet (Default)
+### ResourceGroupNameParameterSet (Default)
 ```
-Get-AzureRmEventGridTopic [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureRmEventGridTopic [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
-### ResourceGroupNameParameterSet
+### TopicNameParameterSet
 ```
-Get-AzureRmEventGridTopic [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmEventGridTopic [-ResourceGroupName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ResourceIdEventSubscriptionParameterSet
 ```
-Get-AzureRmEventGridTopic [-ResourceId] <String> [<CommonParameters>]
+Get-AzureRmEventGridTopic [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +73,7 @@ List all the Event Grid topics in the subscription.
 EventGrid Topic Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: TopicName
 
@@ -86,19 +88,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
-Parameter Sets: TopicNameParameterSet
-Aliases: ResourceGroup
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupNameParameterSet
 Aliases: ResourceGroup
 
@@ -109,11 +99,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+```yaml
+Type: System.String
+Parameter Sets: TopicNameParameterSet
+Aliases: ResourceGroup
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceId
 Resource Identifier representing the Event Grid Topic.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -121,6 +123,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

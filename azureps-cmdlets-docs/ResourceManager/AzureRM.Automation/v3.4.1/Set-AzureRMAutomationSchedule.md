@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 6429C564-1995-4D9B-BF9B-963B4F5FB3BD
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Set-AzureRMAutomationSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Set-AzureRMAutomationSchedule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmAutomationSchedule
@@ -17,7 +17,8 @@ Modifies an Automation schedule.
 
 ```
 Set-AzureRmAutomationSchedule [-Name] <String> [-IsEnabled <Boolean>] [-Description <String>]
- [-ResourceGroupName] <String> [-AutomationAccountName] <String> [<CommonParameters>]
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +39,7 @@ This command modifies the description of the schedule named Schedule01.
 Specifies the name of an Automation account for which this cmdlet modifies a schedule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -53,7 +54,7 @@ Accept wildcard characters: False
 Specifies a description for the schedule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +69,7 @@ Accept wildcard characters: False
 Specifies whether this cmdlet enables the schedule.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 Specifies the name for the schedule that this cmdlet modifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet modifies a schedule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,6 +107,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

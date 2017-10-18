@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: 10656EA5-EA5F-4394-951F-BC64BE3BF6F9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlDatabaseIndexRecommendations.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlDatabaseIndexRecommendations.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/789b304db1c84d59b885eb471c060e6922de2b2b
 ---
 
 # Get-AzureRmSqlDatabaseIndexRecommendations
@@ -17,7 +17,8 @@ Gets the recommended index operations for a server or database.
 
 ```
 Get-AzureRmSqlDatabaseIndexRecommendations -ServerName <String> [-DatabaseName <String>] [-TableName <String>]
- [-IndexRecommendationName <String>] [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IndexRecommendationName <String>] [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +53,7 @@ This command returns single index recommendation by name.
 Specifies the name of the database for which this cmdlet gets index recommendations.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 Specifies the name of the index recommendation that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +84,7 @@ Specifies the name of the resource group that the server is assigned for.
 This cmdlet gets index recommendations for a database hosted by this server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 Specifies the server that hosts the database for which this cmdlet gets index recommendations.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +114,7 @@ Accept wildcard characters: False
 Specifies the name of an Azure SQL table.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -128,7 +129,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -144,13 +145,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

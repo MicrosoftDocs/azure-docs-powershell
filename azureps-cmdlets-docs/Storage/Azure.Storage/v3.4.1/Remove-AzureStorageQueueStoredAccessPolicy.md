@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: 80DE5D60-93F8-4509-AA9C-F54E4AB70013
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageQueueStoredAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageQueueStoredAccessPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Remove-AzureStorageQueueStoredAccessPolicy
@@ -39,7 +39,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -55,7 +55,7 @@ Indicates that this cmdlet returns a **Boolean** that reflects the success of th
 By default, this cmdlet does not return a value.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 Specifies the name of the stored access policy that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 Specifies the Azure storage queue name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: N, Name
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -116,7 +116,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -133,7 +133,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ## OUTPUTS

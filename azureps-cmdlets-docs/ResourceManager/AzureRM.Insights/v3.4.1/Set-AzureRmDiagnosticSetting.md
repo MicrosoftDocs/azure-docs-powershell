@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: B5F2388E-0136-4F8A-8577-67CE2A45671E
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Set-AzureRmDiagnosticSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Set-AzureRmDiagnosticSetting.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Set-AzureRmDiagnosticSetting
@@ -17,9 +17,11 @@ Sets the logs and metrics settings for the resource.
 
 ```
 Set-AzureRmDiagnosticSetting -ResourceId <String> [-StorageAccountId <String>] [-ServiceBusRuleId <String>]
- [-Enabled <Boolean>] [-Categories <System.Collections.Generic.List`1[System.String]>]
+ [-EventHubAuthorizationRuleId <String>] [-Enabled <Boolean>]
+ [-Categories <System.Collections.Generic.List`1[System.String]>]
  [-Timegrains <System.Collections.Generic.List`1[System.String]>] [-RetentionEnabled <Boolean>]
- [-WorkspaceId <String>] [-RetentionInDays <Int32>] [<CommonParameters>]
+ [-WorkspaceId <String>] [-RetentionInDays <Int32>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -98,7 +100,7 @@ Indicates whether to enable diagnostics.
 Specify $True to enable diagnostics, or $False to disable diagnostics.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +115,7 @@ Accept wildcard characters: False
 Specifies the ID of the resource.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -128,7 +130,7 @@ Accept wildcard characters: False
 Indicates whether retention of diagnostic information is enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -143,7 +145,7 @@ Accept wildcard characters: False
 Specifies the retention policy, in days.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,7 +158,7 @@ Accept wildcard characters: False
 
 ### -ServiceBusRuleId
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,7 +173,7 @@ Accept wildcard characters: False
 Specifies the ID of the Storage account in which to save the data.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -202,7 +204,33 @@ Accept wildcard characters: False
 The Id of the workspace
 
 ```yaml
-Type: String
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EventHubAuthorizationRuleId
+The event hub rule id```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

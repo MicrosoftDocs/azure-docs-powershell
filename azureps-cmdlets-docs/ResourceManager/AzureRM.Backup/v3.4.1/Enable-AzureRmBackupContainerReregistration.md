@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 2605B232-10CA-4426-9917-7C9719C15166
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Enable-AzureRmBackupContainerReregistration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Enable-AzureRmBackupContainerReregistration.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Enable-AzureRmBackupContainerReregistration
@@ -16,7 +16,8 @@ Reregisters a server to connect to a Backup vault.
 ## SYNTAX
 
 ```
-Enable-AzureRmBackupContainerReregistration [-Container] <AzureRMBackupContainer> [<CommonParameters>]
+Enable-AzureRmBackupContainerReregistration [-Container] <AzureRMBackupContainer>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +42,7 @@ Specifies the container that this cmdlet reregisters.
 To obtain an **AzureRmBackupContainer**, use the Get-AzureRmBackupContainer cmdlet.
 
 ```yaml
-Type: AzureRMBackupContainer
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupContainer
 Parameter Sets: (All)
 Aliases: 
 
@@ -49,6 +50,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

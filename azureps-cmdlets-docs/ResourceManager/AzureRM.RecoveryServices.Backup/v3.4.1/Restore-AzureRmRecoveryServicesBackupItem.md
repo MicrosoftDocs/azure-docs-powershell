@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+Module Name: AzureRM.RecoveryServices.Backup
 ms.assetid: F49FA524-28BC-464F-BD0A-F898E99C83D8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Restore-AzureRmRecoveryServicesBackupItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Restore-AzureRmRecoveryServicesBackupItem.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Restore-AzureRmRecoveryServicesBackupItem
@@ -17,7 +17,7 @@ Restores the data and configuration for a Backup item to a recovery point.
 
 ```
 Restore-AzureRmRecoveryServicesBackupItem [-RecoveryPoint] <RecoveryPointBase> [-StorageAccountName] <String>
- [-StorageAccountResourceGroupName] <String> [<CommonParameters>]
+ [-StorageAccountResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +65,7 @@ Specifies the recovery point to which to restore the virtual machine.
 To obtain an **AzureRmRecoveryServicesBackupRecoveryPoint** object, use the Get-AzureRmRecoveryServicesBackupRecoveryPoint cmdlet.
 
 ```yaml
-Type: RecoveryPointBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.RecoveryPointBase
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Specifies the name of the target Storage account in your subscription.
 As a part of the restore process, this cmdlet stores the disks and the configuration information in this Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,12 +97,25 @@ Specifies the name of the resource group that contains the target Storage accoun
 As a part of the restore process, this cmdlet stores the disks and the configuration information in this Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -114,7 +127,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### RecoveryPointBase
-
 Parameter 'RecoveryPoint' accepts value of type 'RecoveryPointBase' from the pipeline
 
 ## OUTPUTS

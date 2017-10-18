@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: FCDCEF0B-6E2C-480E-9841-EF4E64D61D54
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageShare.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # New-AzureStorageShare
@@ -40,7 +40,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -59,7 +59,7 @@ This parameter can help reduce network connection problems in low bandwidth envi
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the [New-AzureStorageContext](./New-AzureStorageContext.md) cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,7 +91,7 @@ Specifies the name of a file share.
 This cmdlet creates a file share that has the name that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -123,11 +123,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### String
-
 Parameter 'Name' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+Module Name: AzureRM.Dns
 ms.assetid: AD97BCAF-69BA-4C16-8B57-AB243D796B71
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/New-AzureRmDnsRecordConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/New-AzureRmDnsRecordConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmDnsRecordConfig
@@ -17,43 +17,46 @@ Creates a new DNS record local object.
 
 ### A
 ```
-New-AzureRmDnsRecordConfig -Ipv4Address <String> [<CommonParameters>]
+New-AzureRmDnsRecordConfig -Ipv4Address <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Aaaa
 ```
-New-AzureRmDnsRecordConfig -Ipv6Address <String> [<CommonParameters>]
+New-AzureRmDnsRecordConfig -Ipv6Address <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Ns
 ```
-New-AzureRmDnsRecordConfig -Nsdname <String> [<CommonParameters>]
+New-AzureRmDnsRecordConfig -Nsdname <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Mx
 ```
-New-AzureRmDnsRecordConfig -Exchange <String> -Preference <UInt16> [<CommonParameters>]
+New-AzureRmDnsRecordConfig -Exchange <String> -Preference <UInt16> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Ptr
 ```
-New-AzureRmDnsRecordConfig -Ptrdname <String> [<CommonParameters>]
+New-AzureRmDnsRecordConfig -Ptrdname <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Txt
 ```
-New-AzureRmDnsRecordConfig -Value <String> [<CommonParameters>]
+New-AzureRmDnsRecordConfig -Value <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Srv
 ```
 New-AzureRmDnsRecordConfig -Priority <UInt16> -Target <String> -Port <UInt16> -Weight <UInt16>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### CName
 ```
-New-AzureRmDnsRecordConfig -Cname <String> [<CommonParameters>]
+New-AzureRmDnsRecordConfig -Cname <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -184,7 +187,7 @@ To create a **RecordSet** using only one line of pn_PowerShell_short, or to crea
 Specifies the domain name for a canonical name (CNAME) record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CName
 Aliases: 
 
@@ -199,7 +202,7 @@ Accept wildcard characters: False
 Specifies the mail exchange server name for a mail exchange (MX) record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Mx
 Aliases: 
 
@@ -214,7 +217,7 @@ Accept wildcard characters: False
 Specifies an IPv4 address for an A record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: A
 Aliases: 
 
@@ -229,7 +232,7 @@ Accept wildcard characters: False
 Specifies an IPv6 address for an AAAA record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Aaaa
 Aliases: 
 
@@ -244,7 +247,7 @@ Accept wildcard characters: False
 Specifies the name server name for a name server (NS) record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Ns
 Aliases: 
 
@@ -259,7 +262,7 @@ Accept wildcard characters: False
 Specifies the port for a service (SRV) record.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: Srv
 Aliases: 
 
@@ -274,7 +277,7 @@ Accept wildcard characters: False
 Specifies the preference for an MX record.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: Mx
 Aliases: 
 
@@ -289,7 +292,7 @@ Accept wildcard characters: False
 Specifies the priority for an SRV record.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: Srv
 Aliases: 
 
@@ -304,7 +307,7 @@ Accept wildcard characters: False
 Specifies the target domain name of a pointer resource (PTR) record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Ptr
 Aliases: 
 
@@ -319,7 +322,7 @@ Accept wildcard characters: False
 Specifies the target for an SRV record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Srv
 Aliases: 
 
@@ -334,7 +337,7 @@ Accept wildcard characters: False
 Specifies the value for a TXT record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Txt
 Aliases: 
 
@@ -349,7 +352,7 @@ Accept wildcard characters: False
 Specifies the weight for an SRV record.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: Srv
 Aliases: 
 
@@ -357,6 +360,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

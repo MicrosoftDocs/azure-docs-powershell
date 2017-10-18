@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: 989CE245-FD1D-4E1D-90A2-2D7DA3975D0B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmAutoscaleSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmAutoscaleSetting.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmAutoscaleSetting
@@ -16,7 +16,8 @@ Gets Autoscale settings.
 ## SYNTAX
 
 ```
-Get-AzureRmAutoscaleSetting -ResourceGroup <String> [-Name <String>] [-DetailedOutput] [<CommonParameters>]
+Get-AzureRmAutoscaleSetting -ResourceGroup <String> [-Name <String>] [-DetailedOutput]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -207,7 +208,7 @@ This command gets the Autoscale setting named DefaultServerFarm-Default-Web-East
 Indicates that this operation displays full details in the output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -222,7 +223,7 @@ Accept wildcard characters: False
 Specifies the name of the setting to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -237,7 +238,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -245,6 +246,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+Module Name: AzureRM.Relay
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/Remove-AzureRmRelayAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/Remove-AzureRmRelayAuthorizationRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/9764f6e5b1286093b4050fe1ad8794467a8f1bd8
 ---
 
 # Remove-AzureRmRelayAuthorizationRule
@@ -16,20 +16,22 @@ Removes the authorization rule of a HybridConnection from the given Relay entiti
 
 ### NamespaceAuthorizationRuleSet (Default)
 ```
-Remove-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String> [-WhatIf]
- [-Confirm]
+Remove-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
+ [-Force] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### WcfRelayAuthorizationRuleSet
 ```
 Remove-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [[-Namespace] <String>] [-WcfRelay] <String>
- [-Name] <String> [-WhatIf] [-Confirm]
+ [-Name] <String> [-Force] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### HybridConnectionAuthorizationRuleSet
 ```
 Remove-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [[-Namespace] <String>]
- [-HybridConnection] <String> [-Name] <String> [-WhatIf] [-Confirm]
+ [-HybridConnection] <String> [-Name] <String> [-Force] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +66,7 @@ Removes the authorization rule `AuthoRule1` of the HybridConnection `TestHybridC
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 HybridConnection Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HybridConnectionAuthorizationRuleSet
 Aliases: 
 
@@ -94,7 +96,7 @@ Accept wildcard characters: False
 AuthorizationRule Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +111,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NamespaceAuthorizationRuleSet
 Aliases: 
 
@@ -121,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WcfRelayAuthorizationRuleSet, HybridConnectionAuthorizationRuleSet
 Aliases: 
 
@@ -136,7 +138,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -151,7 +153,7 @@ Accept wildcard characters: False
 WcfRelay Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WcfRelayAuthorizationRuleSet
 Aliases: 
 
@@ -167,7 +169,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -178,15 +180,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Do not ask for confirmation.```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+{{Fill PassThru Description}}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 
-
 ## OUTPUTS
 
 ### System.Boolean
-
 
 ## NOTES
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module Name: AzureRM.HDInsight
 ms.assetid: 6288DD8A-FF23-4B12-A065-856DBAE200E8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Grant-AzureRmHDInsightRdpServicesAccess.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Grant-AzureRmHDInsightRdpServicesAccess.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Grant-AzureRmHDInsightRdpServicesAccess
@@ -17,7 +17,8 @@ Grants RDP access to the Windows cluster.
 
 ```
 Grant-AzureRmHDInsightRdpServicesAccess [-ClusterName] <String> [-RdpCredential] <PSCredential>
- [-RdpAccessExpiry] <DateTime> [-ResourceGroupName <String>] [<CommonParameters>]
+ [-RdpAccessExpiry] <DateTime> [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +46,7 @@ This command grants RDP access to the cluster named your-hadoop-001.
 Specifies the name of the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -60,7 +61,7 @@ Accept wildcard characters: False
 Specifies the expiration, as a **DateTime** object, for RDP access to a cluster.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +77,7 @@ Specifies the RDP credentials for the cluster.
 This is only for Windows clusters.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,9 +92,22 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

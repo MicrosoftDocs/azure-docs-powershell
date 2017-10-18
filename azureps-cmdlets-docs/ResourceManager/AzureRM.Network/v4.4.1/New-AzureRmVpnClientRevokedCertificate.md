@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVpnClientRevokedCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVpnClientRevokedCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # New-AzureRmVpnClientRevokedCertificate
@@ -47,26 +46,11 @@ This variable can then be used by the **New-AzureRmVirtualNetworkGateway** cmdle
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies a unique name for the new client-revocation certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,11 +71,26 @@ You can return thumbprint information for your certificates by using a Windows P
 The preceding command returns information for all the Local Computer certificates found in the Root certificate store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

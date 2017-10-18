@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmRouteTable.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/e9bf0a7152083c64c2b859770b915626c63de392
 ---
 
 # Set-AzureRmRouteTable
@@ -17,8 +16,8 @@ Sets the goal state for a route table.
 ## SYNTAX
 
 ```
-Set-AzureRmRouteTable -RouteTable <PSRouteTable> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-AzureRmRouteTable -RouteTable <PSRouteTable> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,26 +76,11 @@ The command passes that table to the Add-AzureRmRouteConfig cmdlet by using the 
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RouteTable
 Specifies a route table object that represents the goal state to which this cmdlet sets the route table.
 
 ```yaml
-Type: PSRouteTable
+Type: Microsoft.Azure.Commands.Network.Models.PSRouteTable
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,28 +91,13 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: SwitchParameter
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

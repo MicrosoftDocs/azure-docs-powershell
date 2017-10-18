@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+Module Name: AzureRM.OperationalInsights
 ms.assetid: 95B54065-B6CC-4D10-A747-28CE3F412ABF
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Disable-AzureRmOperationalInsightsIISLogCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Disable-AzureRmOperationalInsightsIISLogCollection.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Disable-AzureRmOperationalInsightsIISLogCollection
@@ -18,13 +18,13 @@ Stops collection of IIS logs from computers.
 ### ByWorkspaceName (Default)
 ```
 Disable-AzureRmOperationalInsightsIISLogCollection [-ResourceGroupName] <String> [-WorkspaceName] <String>
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByWorkspaceObject
 ```
-Disable-AzureRmOperationalInsightsIISLogCollection [-Workspace] <PSWorkspace> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Disable-AzureRmOperationalInsightsIISLogCollection [-Workspace] <PSWorkspace>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +43,7 @@ The **Disable-AzureRmOperationalInsightsIISLogCollection** cmdlet stops collecti
 Specifies the name of a resource group that contains computers.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByWorkspaceName
 Aliases: 
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Specifies a workspace in which this cmdlet operates.
 
 ```yaml
-Type: PSWorkspace
+Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
 Parameter Sets: ByWorkspaceObject
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the name of a workspace in which this cmdlet operates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByWorkspaceName
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -104,7 +104,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -115,13 +115,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### PSWorkspace
-
 Parameter 'Workspace' accepts value of type 'PSWorkspace' from the pipeline
 
 ## OUTPUTS

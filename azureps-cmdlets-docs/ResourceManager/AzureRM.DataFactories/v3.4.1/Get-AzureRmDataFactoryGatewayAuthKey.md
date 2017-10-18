@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module Name: AzureRM.DataFactories
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Get-AzureRmDataFactoryGatewayAuthKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Get-AzureRmDataFactoryGatewayAuthKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/b436019fa2b1305e1fb70f2d8739dd7b4bcd3423
 ---
 
 # Get-AzureRmDataFactoryGatewayAuthKey
@@ -17,13 +17,13 @@ Gets gateway auth key for an Azure Data Factory.
 ### ByFactoryName (Default)
 ```
 Get-AzureRmDataFactoryGatewayAuthKey [-DataFactoryName] <String> [-GatewayName] <String>
- [-ResourceGroupName] <String> [<CommonParameters>]
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByFactoryObject
 ```
-Get-AzureRmDataFactoryGatewayAuthKey [-DataFactory] <PSDataFactory> [-GatewayName] <String>
- [<CommonParameters>]
+Get-AzureRmDataFactoryGatewayAuthKey -InputObject <PSDataFactory> [-GatewayName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,26 +45,11 @@ This command gets gateway auth key for the data factory gateway named MyGateway.
 
 ## PARAMETERS
 
-### -DataFactory
-The data factory object.
-
-```yaml
-Type: PSDataFactory
-Parameter Sets: ByFactoryObject
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DataFactoryName
 The data factory name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -79,7 +64,7 @@ Accept wildcard characters: False
 The data factory gateway name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +79,7 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -102,6 +87,32 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+The data factory object.```yaml
+Type: Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory
+Parameter Sets: ByFactoryObject
+Aliases: DataFactory
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: 1B29AB8C-95DD-4C4F-86E2-2F81E8020CEA
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageTable.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Remove-AzureStorageTable
@@ -46,7 +46,7 @@ Specifies the Azure storage context.
 You can create it by using the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies the name of the table to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: N, Table
 
@@ -92,7 +92,7 @@ Indicates that this cmdlet returns a **Boolean** that reflects the success of th
 By default, this cmdlet does not return a value.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -123,7 +123,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -140,11 +140,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### String
-
 Parameter 'Name' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

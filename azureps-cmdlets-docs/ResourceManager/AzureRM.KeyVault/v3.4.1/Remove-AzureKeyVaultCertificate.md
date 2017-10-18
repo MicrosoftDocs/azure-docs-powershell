@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 34985F06-4D8D-463B-B113-972666D18485
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzureKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Remove-AzureKeyVaultCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # Remove-AzureKeyVaultCertificate
@@ -17,7 +17,7 @@ Removes a certificate from a key vault.
 
 ```
 Remove-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String> [-Force] [-InRemovedState] [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +55,7 @@ Executing this cmdlet requires the 'purge' permission, which must have been prev
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -InRemovedState
 If present, removes the previously deleted certificate permanently.```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +84,7 @@ Specifies the name of the certificate that this cmdlet removes from a key vault.
 This cmdlet constructs the fully qualified domain name (FQDN) of a certificate based on the name that this parameter specifies, the name of the key vault, and your current environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -100,7 +100,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,7 +116,7 @@ Specifies the name of the key vault from which this cmdlet removes a certificate
 This cmdlet constructs the FQDN of a key vault based on the name that this parameter specifies and your current environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -148,13 +148,26 @@ The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

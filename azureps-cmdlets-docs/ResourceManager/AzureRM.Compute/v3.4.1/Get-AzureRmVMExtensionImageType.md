@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 45F35BDD-969E-4521-9E8D-3499A15434A6
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMExtensionImageType.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMExtensionImageType.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Get-AzureRmVMExtensionImageType
@@ -16,7 +16,8 @@ Gets the type of an Azure extension.
 ## SYNTAX
 
 ```
-Get-AzureRmVMExtensionImageType -Location <String> -PublisherName <String> [<CommonParameters>]
+Get-AzureRmVMExtensionImageType -Location <String> -PublisherName <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,12 +34,25 @@ This command gets the extension image type for the specified publisher and locat
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
 Specifies the location of an extension.
 This cmdlet gets the type for an extension at the location that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -55,7 +69,7 @@ To obtain an extension publisher, use the Get-AzureRmVMImagePublisher cmdlet.
 This cmdlet gets the type for an extension from the publisher that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

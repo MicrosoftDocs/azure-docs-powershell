@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: 85492E00-3776-4F20-A444-9C28CC6154B7
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmLog.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/0766b8f8f8280dd02113a3604493c9cea258639b
 ---
 
 # Get-AzureRmLog
@@ -18,31 +18,35 @@ Gets a log of events.
 ### Query on CorrelationId
 ```
 Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
- [-DetailedOutput] [-CorrelationId] <String> [-MaxEvents <Int32>] [<CommonParameters>]
+ [-DetailedOutput] [-CorrelationId] <String> [-MaxEvents <Int32>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Query on ResourceIdName
 ```
 Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
- [-DetailedOutput] [-ResourceId] <String> [-MaxEvents <Int32>] [<CommonParameters>]
+ [-DetailedOutput] [-ResourceId] <String> [-MaxEvents <Int32>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Query on ResourceGroupProvider
 ```
 Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
- [-DetailedOutput] [-ResourceGroup] <String> [-MaxEvents <Int32>] [<CommonParameters>]
+ [-DetailedOutput] [-ResourceGroup] <String> [-MaxEvents <Int32>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Query on ResourceProvider
 ```
 Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
- [-DetailedOutput] [-ResourceProvider] <String> [-MaxEvents <Int32>] [<CommonParameters>]
+ [-DetailedOutput] [-ResourceProvider] <String> [-MaxEvents <Int32>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Query at subscription level
 ```
 Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
- [-DetailedOutput] [-MaxEvents <Int32>] [<CommonParameters>]
+ [-DetailedOutput] [-MaxEvents <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -200,7 +204,7 @@ This command lists at most 1000 events associated with the specified resource pr
 Specifies a caller.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -216,7 +220,7 @@ Specifies the correlation ID.
 This parameter is required.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Query on CorrelationId
 Aliases: 
 
@@ -232,7 +236,7 @@ Indicates that this cmdlet displays detailed output.
 By default, output is summarized.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -251,7 +255,7 @@ The value must be later than *StartTime*.
 You can use the Get-Date cmdlet to get a **DateTime** object.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -267,7 +271,7 @@ Specifies the total number of records to fetch for the specified filter.
 The default value is 1000 and the maximum value accepted is 100000. Negative values and 0 are ignored and the default value will be used.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: MaxRecords
 
@@ -282,7 +286,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Query on ResourceGroupProvider
 Aliases: 
 
@@ -297,7 +301,7 @@ Accept wildcard characters: False
 Specifies the resource ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Query on ResourceIdName
 Aliases: 
 
@@ -312,7 +316,7 @@ Accept wildcard characters: False
 Specifies a filter by resource provider.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Query on ResourceProvider
 Aliases: 
 
@@ -330,7 +334,7 @@ The default value is *EndTime* minus seven days.
 You can use the Get-Date cmdlet to get a **DateTime** object.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -345,7 +349,7 @@ Accept wildcard characters: False
 Specifies the status.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -353,6 +357,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

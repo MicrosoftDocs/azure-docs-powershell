@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 4E5C059B-36F3-41C8-9FDB-69F5318CF39B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Set-AzureRmResourceGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Set-AzureRmResourceGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Set-AzureRmResourceGroup
@@ -17,12 +17,14 @@ Modifies a resource group.
 
 ### Lists the resource group based in the name. (Default)
 ```
-Set-AzureRmResourceGroup [-Name] <String> [-Tag] <Hashtable> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Set-AzureRmResourceGroup [-Name] <String> [-Tag] <Hashtable> [-ApiVersion <String>] [-Pre]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Lists the resource group based in the Id.
 ```
-Set-AzureRmResourceGroup [-Tag] <Hashtable> [-Id] <String> [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Set-AzureRmResourceGroup [-Tag] <Hashtable> [-Id] <String> [-ApiVersion <String>] [-Pre]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,9 +85,9 @@ Specifies the API version that is supported by the resource Provider.
 You can specify a different version than the default version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -98,7 +100,7 @@ Accept wildcard characters: False
 Specifies the ID of the resource group to modify.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resource group based in the Id.
 Aliases: ResourceGroupId, ResourceId
 
@@ -113,7 +115,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to modify.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resource group based in the name.
 Aliases: ResourceGroupName
 
@@ -128,9 +130,9 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -156,7 +158,7 @@ tag, enter a hash table with all tags currently applied to the resource group, f
 resource group, specify an empty hash table: `@{}`.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -164,6 +166,19 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

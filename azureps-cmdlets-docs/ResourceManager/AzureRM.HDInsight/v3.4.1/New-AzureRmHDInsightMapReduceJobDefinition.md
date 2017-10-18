@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module Name: AzureRM.HDInsight
 ms.assetid: 6BF6F9A7-BED3-4CCE-9E0A-46ECBFF55DA9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightMapReduceJobDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightMapReduceJobDefinition.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmHDInsightMapReduceJobDefinition
@@ -18,7 +18,7 @@ Creates a MapReduce job object.
 ```
 New-AzureRmHDInsightMapReduceJobDefinition [-Arguments <String[]>] [-Files <String[]>] [-StatusFolder <String>]
  -ClassName <String> [-Defines <Hashtable>] -JarFile <String> [-JobName <String>] [-LibJars <String[]>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +49,7 @@ Specifies an array of arguments for the job.
 The arguments are passed as command-line arguments to each task.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 Specifies the job class in the JAR file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Specifies Hadoop configuration values to set for when the job runs.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Specifies a collection of files that are associated with a Hive job.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 Specifies the JAR file to use for the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies the name of the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 Specifies the lib JARS for the job.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -154,9 +154,22 @@ Accept wildcard characters: False
 Specifies the location of the folder that contains standard outputs and error outputs for a job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

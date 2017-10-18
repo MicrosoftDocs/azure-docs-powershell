@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: 3FC9E586-3962-437E-B89F-BB4EA1FBF403
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlElasticPoolRecommendedAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlElasticPoolRecommendedAction.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/789b304db1c84d59b885eb471c060e6922de2b2b
 ---
 
 # Get-AzureRmSqlElasticPoolRecommendedAction
@@ -17,7 +17,8 @@ Gets one or more recommended actions for an Azure SQL Elastic Pool Advisor.
 
 ```
 Get-AzureRmSqlElasticPoolRecommendedAction [-RecommendedActionName <String>] -ServerName <String>
- -ElasticPoolName <String> -AdvisorName <String> [-ResourceGroupName] <String> [<CommonParameters>]
+ -ElasticPoolName <String> -AdvisorName <String> [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -163,7 +164,7 @@ This command gets the recommended action named IR_\[test_schema\]_\[test_table_0
 Specifies the name of the advisor for which this cmdlet requests recommended actions.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -178,7 +179,7 @@ Accept wildcard characters: False
 Specifies the name of the elastic pool for which this cmdlet requests recommended actions.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -193,7 +194,7 @@ Accept wildcard characters: False
 Specifies the name of the recommended action that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -208,7 +209,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the server that contains this elastic pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -223,7 +224,7 @@ Accept wildcard characters: False
 Specifies the name of the server the elastic pool is in.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -231,6 +232,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

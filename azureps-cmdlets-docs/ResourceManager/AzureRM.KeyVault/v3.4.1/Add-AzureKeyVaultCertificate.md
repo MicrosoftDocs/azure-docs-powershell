@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 89299823-3382-402D-9458-519466748051
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzureKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzureKeyVaultCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # Add-AzureKeyVaultCertificate
@@ -17,8 +17,8 @@ Adds a certificate to a key vault.
 
 ```
 Add-AzureKeyVaultCertificate [-VaultName] <String> [-Name] <String>
- [[-CertificatePolicy] <KeyVaultCertificatePolicy>] [-Tag <Hashtable>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [[-CertificatePolicy] <KeyVaultCertificatePolicy>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +91,7 @@ The final command uses the Get-AzureKeyVaultCertificate cmdlet to get the certif
 Specifies a **KeyVaultCertificatePolicy** object.
 
 ```yaml
-Type: KeyVaultCertificatePolicy
+Type: Microsoft.Azure.Commands.KeyVault.Models.KeyVaultCertificatePolicy
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 Specifies the name of the certificate to add.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: CertificateName
 
@@ -123,7 +123,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 Specifies the name of a key vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -169,9 +169,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

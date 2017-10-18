@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 05E6155D-4F0E-406B-9312-77AD97EF66EE
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/New-AzureRmVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/New-AzureRmVM.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # New-AzureRmVM
@@ -16,9 +16,9 @@ Creates a virtual machine.
 ## SYNTAX
 
 ```
-New-AzureRmVM [-ResourceGroupName] <String> [-Location] <String> [-VM] <PSVirtualMachine>
- [-DisableBginfoExtension] [-Tags <Hashtable>] [-LicenseType <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-AzureRmVM [-ResourceGroupName] <String> [-Location] <String> [-VM] <PSVirtualMachine> [[-Zone] <String[]>]
+ [-DisableBginfoExtension] [-Tags <Hashtable>] [-LicenseType <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,16 +141,29 @@ You can confirm your login status by using the **Get-AzureSubscription** cmdlet.
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableBginfoExtension
 Indicates that this cmdlet does not install the **BG Info** extension on the virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 3
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -168,7 +181,7 @@ This value cannot be updated.
 If you specify this parameter for an update, the value must match the initial value for the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -183,7 +196,7 @@ Accept wildcard characters: False
 Specifies a location for the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -198,7 +211,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -215,7 +228,7 @@ Adding tags to resources enables you to group resources together across resource
 Each resource or resource group can have a maximum of 15 tags.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -232,7 +245,7 @@ To obtain a virtual machine object, use the New-AzureRmVMConfig cmdlet.
 Other cmdlets can be used to configure the virtual machine, such as Set-AzureRmVMOperatingSystem, Set-AzureRmVMSourceImage, and Add-AzureRmVMNetworkInterface.
 
 ```yaml
-Type: PSVirtualMachine
+Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 Parameter Sets: (All)
 Aliases: VMProfile
 
@@ -243,11 +256,24 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -Zone
+Specifies the zone list of the virtual machine.```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -264,7 +290,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

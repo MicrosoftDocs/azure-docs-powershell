@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 9574CEB5-B699-4606-8C5E-CE2C0D01092D
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/New-AzureRmBackupRetentionPolicyObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/New-AzureRmBackupRetentionPolicyObject.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # New-AzureRmBackupRetentionPolicyObject
@@ -17,38 +17,41 @@ Creates a Backup retention policy.
 
 ### DailyRetentionParamSet
 ```
-New-AzureRmBackupRetentionPolicyObject [-DailyRetention] -Retention <Int32> [<CommonParameters>]
+New-AzureRmBackupRetentionPolicyObject [-DailyRetention] -Retention <Int32>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### WeeklyRetentionParamSet
 ```
 New-AzureRmBackupRetentionPolicyObject [-WeeklyRetention] -DaysOfWeek <String[]> -Retention <Int32>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### MonthlyRetentionInDailyFormatParamSet
 ```
 New-AzureRmBackupRetentionPolicyObject [-MonthlyRetentionInDailyFormat]
- -DaysOfMonth <System.Collections.Generic.List`1[System.String]> -Retention <Int32> [<CommonParameters>]
+ -DaysOfMonth <System.Collections.Generic.List`1[System.String]> -Retention <Int32>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### MonthlyRetentionInWeeklyFormatParamSet
 ```
 New-AzureRmBackupRetentionPolicyObject [-MonthlyRetentionInWeeklyFormat] -DaysOfWeek <String[]>
- -WeekNumber <String[]> -Retention <Int32> [<CommonParameters>]
+ -WeekNumber <String[]> -Retention <Int32> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### YearlyRetentionInDailyFormatParamSet
 ```
 New-AzureRmBackupRetentionPolicyObject [-YearlyRetentionInDailyFormat]
  -DaysOfMonth <System.Collections.Generic.List`1[System.String]> -MonthsOfYear <String[]> -Retention <Int32>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### YearlyRetentionInWeeklyFormatParamSet
 ```
 New-AzureRmBackupRetentionPolicyObject [-YearlyRetentionInWeeklyFormat] -DaysOfWeek <String[]>
- -WeekNumber <String[]> -MonthsOfYear <String[]> -Retention <Int32> [<CommonParameters>]
+ -WeekNumber <String[]> -MonthsOfYear <String[]> -Retention <Int32> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,7 +109,7 @@ The second command displays the contents of $Monthly.
 Indicates that this cmdlet creates a Daily retention policy.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: DailyRetentionParamSet
 Aliases: 
 
@@ -154,7 +157,7 @@ Be sure that the days of the week you select for backup and for retention are al
 For example, if your backup is set for Saturdays, the retention policies must also use Saturday.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: WeeklyRetentionParamSet, MonthlyRetentionInWeeklyFormatParamSet, YearlyRetentionInWeeklyFormatParamSet
 Aliases: 
 Accepted values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
@@ -170,7 +173,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet creates a Monthly policy in Daily format.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: MonthlyRetentionInDailyFormatParamSet
 Aliases: 
 
@@ -185,7 +188,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet creates a Monthly policy in Weekly format.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: MonthlyRetentionInWeeklyFormatParamSet
 Aliases: 
 
@@ -201,7 +204,7 @@ Specifies which months of the year have the recovery points that Backup retains 
 The acceptable values for this parameter are: names of months, such as January or February.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: YearlyRetentionInDailyFormatParamSet, YearlyRetentionInWeeklyFormatParamSet
 Aliases: 
 Accepted values: January, February, March, April, May, June, July, August, September, October, November, December
@@ -219,7 +222,7 @@ The unit depends on whether this cmdlet selects a daily, monthly, or yearly rete
 For example, if specify the *DailyRetention* parameter, the cmdlet interprets the current parameter as a number of days.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -234,7 +237,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet creates a Weekly retention policy.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: WeeklyRetentionParamSet
 Aliases: 
 
@@ -256,7 +259,7 @@ The acceptable values for this parameter are:
 - Last
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: MonthlyRetentionInWeeklyFormatParamSet, YearlyRetentionInWeeklyFormatParamSet
 Aliases: 
 Accepted values: First, Second, Third, Fourth, Last
@@ -272,7 +275,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet creates a Yearly retention policy in Daily format.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: YearlyRetentionInDailyFormatParamSet
 Aliases: 
 
@@ -287,9 +290,22 @@ Accept wildcard characters: False
 Indicates that this cmdlet creates a Yearly retention policy in Weekly format.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: YearlyRetentionInWeeklyFormatParamSet
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

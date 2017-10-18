@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 5B17A241-BF36-48A6-BC29-4C32C08F5F94
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmResourceGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmResourceGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmResourceGroup
@@ -18,12 +18,13 @@ Gets resource groups.
 ### Lists the resource group based on the name. (Default)
 ```
 Get-AzureRmResourceGroup [-Name <String>] [-Location <String>] [-ApiVersion <String>] [-Pre]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Lists the resource group based on the Id.
 ```
-Get-AzureRmResourceGroup [-Location <String>] [-Id <String>] [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+Get-AzureRmResourceGroup [-Location <String>] [-Id <String>] [-ApiVersion <String>] [-Pre]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +57,7 @@ Specifies the API version that is supported by the resource Provider.
 You can specify a different version than the default version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +73,7 @@ Specifies the ID of the resource group to get.
 Wildcard characters are not permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resource group based on the Id.
 Aliases: ResourceGroupId, ResourceId
 
@@ -87,7 +88,7 @@ Accept wildcard characters: False
 Specifies the location of the resource group to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +104,7 @@ Specifies the name of the resource group to get.
 Wildcard characters are not permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resource group based on the name.
 Aliases: ResourceGroupName
 
@@ -118,9 +119,22 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

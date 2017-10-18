@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+Module Name: AzureRM.LogicApp
 ms.assetid: EBDBB9F0-CA2E-4E4F-9034-3D0FAB88E442
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/Remove-AzureRmIntegrationAccountAgreement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/Remove-AzureRmIntegrationAccountAgreement.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmIntegrationAccountAgreement
@@ -17,7 +17,7 @@ Removes an integration account agreement.
 
 ```
 Remove-AzureRmIntegrationAccountAgreement -ResourceGroupName <String> -Name <String> -AgreementName <String>
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +45,7 @@ The command does not prompt you for confirmation.
 Specifies the name of the integration account agreement.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of an integration account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: IntegrationAccountName, ResourceName
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -121,13 +121,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

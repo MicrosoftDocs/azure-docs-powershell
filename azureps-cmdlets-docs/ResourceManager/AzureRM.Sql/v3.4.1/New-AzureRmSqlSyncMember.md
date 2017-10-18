@@ -1,17 +1,16 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlSyncMember.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlSyncMember.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/a203f7add45b0393cdb38ee87ff317692fcefb7f
 ---
 
 # New-AzureRmSqlSyncMember
 
 ## SYNOPSIS
 Creates an Azure SQL Database Sync Member.
-
 
 ## SYNTAX
 
@@ -20,7 +19,7 @@ Creates an Azure SQL Database Sync Member.
 New-AzureRmSqlSyncMember -Name <String> -MemberDatabaseType <String> -MemberServerName <String>
  -MemberDatabaseName <String> -MemberDatabaseCredential <PSCredential> [-SyncDirection <String>]
  [-SyncGroupName] <String> [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
- [-WhatIf] [-Confirm]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### OnPremisesDatabaseSyncAgentComponent
@@ -28,14 +27,15 @@ New-AzureRmSqlSyncMember -Name <String> -MemberDatabaseType <String> -MemberServ
 New-AzureRmSqlSyncMember -Name <String> -MemberDatabaseType <String> -SyncAgentResourceGroupName <String>
  -SyncAgentServerName <String> -SyncAgentName <String> -SqlServerDatabaseId <String> [-SyncDirection <String>]
  [-SyncGroupName] <String> [-ServerName] <String> [-DatabaseName] <String> [-ResourceGroupName] <String>
- [-WhatIf] [-Confirm]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### OnPremisesDatabaseSyncAgentResourceID
 ```
 New-AzureRmSqlSyncMember -Name <String> -MemberDatabaseType <String> -SqlServerDatabaseId <String>
  -SyncAgentResourceID <String> [-SyncDirection <String>] [-SyncGroupName] <String> [-ServerName] <String>
- [-DatabaseName] <String> [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
+ [-DatabaseName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +62,7 @@ MemberServerName            : memberServer01.full.dns.name
 MemberDatabaseName          : memberDatabase01
 MemberDatabaseUserName      : myAccount
 MemberDatabasePassword      : 
-SyncState                   : UnProvisioned 
+SyncState                   : UnProvisioned
 ```
 
 This command creates a sync member for an Azure SQL database.
@@ -87,7 +87,7 @@ MemberServerName            :
 MemberDatabaseName          : 
 MemberDatabaseUserName      : myAccount
 MemberDatabasePassword      : 
-SyncState                   : UnProvisioned 
+SyncState                   : UnProvisioned
 ```
 
 This command creates a sync member for an on-premises SQL database.
@@ -98,7 +98,7 @@ This command creates a sync member for an on-premises SQL database.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 The credential (username and password) of the Azure SQL Database.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: AzureSqlDatabase
 Aliases: 
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 The Azure SQL Database name of the member database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AzureSqlDatabase
 Aliases: 
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 The database type of the member database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: SqlServerDatabase, AzureSqlDatabase
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 The Azure SQL Server Name of the member database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AzureSqlDatabase
 Aliases: 
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 The sync member name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SyncMemberName
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 The name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 The id of the SQL server database which is connected by the sync agent.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: OnPremisesDatabaseSyncAgentComponent, OnPremisesDatabaseSyncAgentResourceID
 Aliases: 
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 The name of the sync agent.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: OnPremisesDatabaseSyncAgentComponent
 Aliases: 
 
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 The name of the resource group where the sync agent is under.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: OnPremisesDatabaseSyncAgentComponent
 Aliases: 
 
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 The resource ID of the sync agent.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: OnPremisesDatabaseSyncAgentResourceID
 Aliases: 
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Server where the sync agent is under.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: OnPremisesDatabaseSyncAgentComponent
 Aliases: 
 
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 The sync direction of this sync member.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Bidirectional, OneWayMemberToHub, OneWayHubToMember
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 The sync group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -341,7 +341,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -351,6 +351,22 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

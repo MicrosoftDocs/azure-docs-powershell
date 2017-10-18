@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 029361F0-C4E9-4948-9EBA-BFBD1B029909
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Restart-AzureBatchComputeNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Restart-AzureBatchComputeNode.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Restart-AzureBatchComputeNode
@@ -18,13 +18,13 @@ Reboots the specified compute node.
 ### Id (Default)
 ```
 Restart-AzureBatchComputeNode [-PoolId] <String> [-Id] <String> [[-RebootOption] <ComputeNodeRebootOption>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### InputObject
 ```
 Restart-AzureBatchComputeNode [[-ComputeNode] <PSComputeNode>] [[-RebootOption] <ComputeNodeRebootOption>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +53,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Specifies the **PSComputeNode** object that represents the compute node to reboot.
 
 ```yaml
-Type: PSComputeNode
+Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
 Parameter Sets: InputObject
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node to reboot.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute node.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -114,7 +114,7 @@ Specifies when to reboot the node and what to do with currently running tasks.
 The default is Requeue.
 
 ```yaml
-Type: ComputeNodeRebootOption
+Type: System.Nullable`1[Microsoft.Azure.Batch.Common.ComputeNodeRebootOption]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Requeue, Terminate, TaskCompletion, RetainedData
@@ -126,17 +126,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSComputeNode
-
 Parameter 'ComputeNode' accepts value of type 'PSComputeNode' from the pipeline
 
 ## OUTPUTS

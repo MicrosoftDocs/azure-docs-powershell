@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 4C40DAC9-5C0B-4AFD-9BDB-D407E0B9F701
 online version: http://go.microsoft.com/fwlink/?LinkId=690160
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/New-AzureRmKeyVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/New-AzureRmKeyVault.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # New-AzureRmKeyVault
@@ -18,7 +18,8 @@ Creates a key vault.
 ```
 New-AzureRmKeyVault [-VaultName] <String> [-ResourceGroupName] <String> [-Location] <String>
  [-EnabledForDeployment] [-EnabledForTemplateDeployment] [-EnabledForDiskEncryption] [-EnableSoftDelete]
- [-Sku <SkuName>] [-Tag <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Sku <SkuName>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +58,7 @@ Enables the Microsoft.Compute resource provider to retrieve secrets from this ke
 key vault is referenced in resource creation, for example when creating a virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +73,7 @@ Accept wildcard characters: False
 Enables the Azure disk encryption service to get secrets and unwrap keys from this key vault.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +88,7 @@ Accept wildcard characters: False
 Enables Azure Resource Manager to get secrets from this key vault when this key vault is referenced in a template deployment.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +103,7 @@ Accept wildcard characters: False
 If specified, 'soft delete' functionality is enabled for this key vault.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +120,7 @@ Specifies the Azure region in which to create the key vault. Use the command Get
 information, type `Get-Help Get-AzureLocation`.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -134,7 +135,7 @@ Accept wildcard characters: False
 Specifies the name of an existing resource group in which to create the key vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -150,7 +151,7 @@ Specifies the SKU of the key vault instance. For information about which feature
 each SKU, see the Azure Key Vault Pricing website (http://go.microsoft.com/fwlink/?linkid=512521).
 
 ```yaml
-Type: SkuName
+Type: Microsoft.Azure.Management.KeyVault.Models.SkuName
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Standard, Premium
@@ -168,7 +169,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -185,7 +186,7 @@ or hyphens. The name must start and end with a letter or digit. The name must be
 unique.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -200,7 +201,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -216,9 +217,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

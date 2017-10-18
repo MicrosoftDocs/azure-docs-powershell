@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 ms.assetid: A38D8BF6-D302-4586-B7AF-4C80B546E96F
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Add-AzureRmDataLakeAnalyticsDataSource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Add-AzureRmDataLakeAnalyticsDataSource.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/acaa012bbc3d2249dc7ee2c45b30f62c620d7998
 ---
 
 # Add-AzureRmDataLakeAnalyticsDataSource
@@ -18,13 +18,13 @@ Adds a data source to a Data Lake Analytics account.
 ### Add a Data Lake storage account
 ```
 Add-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <String>
- [[-ResourceGroupName] <String>] [<CommonParameters>]
+ [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Add a Blob storage account
 ```
 Add-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-Blob] <String> [-AccessKey] <String>
- [[-ResourceGroupName] <String>] [<CommonParameters>]
+ [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +45,7 @@ This command adds a Data Lake Store data source to a Data Lake Analytics account
 Specifies the access key of the Azure Blob storage account to add.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Add a Blob storage account
 Aliases: 
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure Blob Storage account to add.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Add a Blob storage account
 Aliases: AzureBlob
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure Data Lake Store account to add.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Add a Data Lake storage account
 Aliases: 
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,6 +113,19 @@ Required: False
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

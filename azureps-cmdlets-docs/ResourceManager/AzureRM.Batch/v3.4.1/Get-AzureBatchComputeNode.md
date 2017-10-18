@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 93614655-A8F2-4A67-887D-43D41AB91F82
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchComputeNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchComputeNode.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureBatchComputeNode
@@ -18,19 +18,19 @@ Gets Batch compute nodes from a pool.
 ### ODataFilter (Default)
 ```
 Get-AzureBatchComputeNode [-PoolId] <String> [-Filter <String>] [-MaxCount <Int32>] [-Select <String>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Id
 ```
 Get-AzureBatchComputeNode [-PoolId] <String> [[-Id] <String>] [-Select <String>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ParentObject
 ```
 Get-AzureBatchComputeNode [[-Pool] <PSCloudPool>] [-Filter <String>] [-MaxCount <Int32>] [-Select <String>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -152,7 +152,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -169,7 +169,7 @@ This cmdlet returns compute nodes that match the filter that this parameter spec
 If you do not specify a filter, this cmdlet returns all compute nodes for the pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ODataFilter, ParentObject
 Aliases: 
 
@@ -185,7 +185,7 @@ Specifies the ID of the compute node that this cmdlet gets from the pool.
 You cannot specify wildcard characters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -202,7 +202,7 @@ If you specify a value of zero (0) or less, the cmdlet does not use an upper lim
 The default value is 1000.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: ODataFilter, ParentObject
 Aliases: 
 
@@ -218,7 +218,7 @@ Specifies the pool, as a **PSCloudPool** object, that contains the compute nodes
 To obtain a **PSCloudPool** object, use the Get-AzureBatchPool cmdlet.
 
 ```yaml
-Type: PSCloudPool
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudPool
 Parameter Sets: ParentObject
 Aliases: 
 
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute nodes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ODataFilter, Id
 Aliases: 
 
@@ -249,9 +249,22 @@ Specifies an OData select clause.
 Specify a value for this parameter to get specific properties rather than all object properties.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -266,11 +279,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSCloudPool
-
 Parameter 'Pool' accepts value of type 'PSCloudPool' from the pipeline
 
 ## OUTPUTS

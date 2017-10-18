@@ -6,7 +6,6 @@ Help Version: 2.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/AzureRM.Billing.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/AzureRM.Billing.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/dbbac5b71c9946c33dcc700ce2b7eaae8cbad761
 ---
 
 # AzureRM.Billing Module

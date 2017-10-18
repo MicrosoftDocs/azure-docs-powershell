@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: 730ECC60-72DE-46DA-A177-D5749F540710
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageContainerStoredAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageContainerStoredAccessPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Set-AzureStorageContainerStoredAccessPolicy
@@ -42,7 +42,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +61,7 @@ This parameter can help reduce network connection problems in low bandwidth envi
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies the Azure storage container name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: N, Name
 
@@ -92,7 +92,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the time at which the stored access policy becomes invalid.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Indicates that the access policy has no expiration date.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 Sets the start time to be $Null.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 Specifies permissions in the stored access policy to access the storage container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Specifies the name for the stored access policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -184,7 +184,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 Specifies the time at which the stored access policy becomes valid.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -246,11 +246,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### String
-
 Parameter 'Container' accepts value of type 'String' from the pipeline
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ## OUTPUTS

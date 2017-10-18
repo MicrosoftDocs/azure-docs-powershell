@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 8FB78A4A-8392-44EE-A907-10FDF756071B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRMAutomationVariable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRMAutomationVariable.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmAutomationVariable
@@ -18,13 +18,13 @@ Gets an Automation variable.
 ### ByAll (Default)
 ```
 Get-AzureRmAutomationVariable [-ResourceGroupName] <String> [-AutomationAccountName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByName
 ```
 Get-AzureRmAutomationVariable [-Name] <String> [-ResourceGroupName] <String> [-AutomationAccountName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +51,7 @@ The command stores the value in the $value variable.
 Specifies the name of the Automation account that contains the variables that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 Specifies the name of a variable that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Specifies the resource group for which this cmdlet gets variables.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -89,6 +89,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmBgpServiceCommunity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmBgpServiceCommunity.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Get-AzureRmBgpServiceCommunity
@@ -35,7 +34,7 @@ PS C:\> {{ Add example code here }}
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

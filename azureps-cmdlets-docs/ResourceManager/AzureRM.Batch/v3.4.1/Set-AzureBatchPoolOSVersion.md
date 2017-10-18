@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 4C3C6C81-7486-4ED6-BA30-2F202E654F77
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzureBatchPoolOSVersion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzureBatchPoolOSVersion.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Set-AzureBatchPoolOSVersion
@@ -17,7 +17,7 @@ Changes the operating system version of the specified pool.
 
 ```
 Set-AzureBatchPoolOSVersion [-Id] <String> [-TargetOSVersion] <String> -BatchContext <BatchAccountContext>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +39,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,12 +70,25 @@ Specifies the Azure Guest operating system version to install on the virtual mac
 For more information on Azure Guest operating system versions, see Azure Guest OS Releases and SDK Compatibility Matrixhttp://azure.microsoft.com/en-us/documentation/articles/cloud-services-guestos-update-matrix/ (http://azure.microsoft.com/en-us/documentation/articles/cloud-services-guestos-update-matrix/).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -87,11 +100,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### String
-
 Parameter 'Id' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

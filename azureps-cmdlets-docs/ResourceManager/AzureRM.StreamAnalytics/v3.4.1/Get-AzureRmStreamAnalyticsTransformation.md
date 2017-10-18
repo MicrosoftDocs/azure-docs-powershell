@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+Module Name: AzureRM.StreamAnalytics
 ms.assetid: 34E1CC9E-9F81-4DA6-A777-D816B09BDE1B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Get-AzureRmStreamAnalyticsTransformation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Get-AzureRmStreamAnalyticsTransformation.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmStreamAnalyticsTransformation
@@ -17,7 +17,7 @@ Gets information about a Stream Analytics job transformation.
 
 ```
 Get-AzureRmStreamAnalyticsTransformation [-JobName] <String> [-Name] <String> [-ResourceGroupName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ This command returns information about the transformation called StreamingJob on
 Specifies the name of the Azure Stream Analytics job to which the Azure Stream Analytics transformation belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure Stream Analytics transformation to retrieve.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the Azure Stream Analytics transformation belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,6 +76,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

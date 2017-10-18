@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: A73B388A-E859-40D3-BA63-0E231CF1E81D
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationModule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationModule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmAutomationModule
@@ -18,13 +18,13 @@ Gets metadata for modules from Automation.
 ### ByAll (Default)
 ```
 Get-AzureRmAutomationModule [-ResourceGroupName] <String> [-AutomationAccountName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByName
 ```
 Get-AzureRmAutomationModule [-Name] <String> [-ResourceGroupName] <String> [-AutomationAccountName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +52,7 @@ This command gets a module named ContosoModule in the Automation account named C
 Specifies the name of the Automation account for which this cmdlet gets module metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 Specifies the name of the module for which this cmdlet gets metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet gets module metadata.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -90,6 +90,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

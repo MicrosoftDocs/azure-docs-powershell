@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: BF80D456-DAB1-4B51-B50F-A75C2C66A472
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Add-AzureRmVMNetworkInterface.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Add-AzureRmVMNetworkInterface.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Add-AzureRmVMNetworkInterface
@@ -17,14 +17,15 @@ Adds a network interface to a virtual machine.
 
 ### GetNicFromNicId (Default)
 ```
-Add-AzureRmVMNetworkInterface [-VM] <PSVirtualMachine> [-Id] <String> [-Primary] [<CommonParameters>]
+Add-AzureRmVMNetworkInterface [-VM] <PSVirtualMachine> [-Id] <String> [-Primary]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### GetNicFromNicObject
 ```
 Add-AzureRmVMNetworkInterface [-VM] <PSVirtualMachine>
- [-NetworkInterface] <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterface]>
- [<CommonParameters>]
+ [-NetworkInterface] <System.Collections.Generic.List`1[Microsoft.Azure.Management.Internal.Network.Common.INetworkInterfaceReference]>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,12 +61,25 @@ The final command updates the state of the virtual machine stored in $VirtualMac
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Id
 Specifies the ID of a network interface to add to a virtual machine.
 You can use the [Get-AzureRmNetworkInterface](./Get-AzureRmNetworkInterface.md) cmdlet to obtain a network interface.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetNicFromNicId
 Aliases: NicId, NetworkInterfaceId
 
@@ -80,7 +94,7 @@ Accept wildcard characters: False
 Specifies the network interface.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkInterface]
+Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Internal.Network.Common.INetworkInterfaceReference]
 Parameter Sets: GetNicFromNicObject
 Aliases: 
 
@@ -95,7 +109,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet adds the network interface as the primary interface.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: GetNicFromNicId
 Aliases: 
 
@@ -112,7 +126,7 @@ To create a virtual machine, use the **New-AzureRmVMConfig** cmdlet.
 To obtain an existing virtual machine, use the **Get-AzureRmVM** cmdlet.
 
 ```yaml
-Type: PSVirtualMachine
+Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 Parameter Sets: (All)
 Aliases: VMProfile
 

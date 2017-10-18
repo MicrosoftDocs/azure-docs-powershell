@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 7F7D1F05-617C-4EC5-8FF5-D816E9148841
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Start-AzureRmVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Start-AzureRmVmss.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Start-AzureRmVmss
@@ -16,8 +16,8 @@ Starts the VMSS or a set of virtual machines within the VMSS.
 ## SYNTAX
 
 ```
-Start-AzureRmVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String> [[-InstanceId] <String[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-AzureRmVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String> [[-InstanceId] <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,12 +42,25 @@ This command starts all virtual machines that belong to the VMSS named ContosoVM
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstanceId
 Specifies, as a string array, the ID or IDs of the instances that cmdlet starts.
 For instance: `-InstanceId "0", "3"`
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -62,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the VMSS.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +90,7 @@ Accept wildcard characters: False
 Specifies the name of the VMSS that this cmdlet starts the virtual machines.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -92,7 +105,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -107,7 +120,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

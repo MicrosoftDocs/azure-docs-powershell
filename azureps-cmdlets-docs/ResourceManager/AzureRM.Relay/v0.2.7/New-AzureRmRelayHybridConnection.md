@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+Module Name: AzureRM.Relay
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/New-AzureRmRelayHybridConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/New-AzureRmRelayHybridConnection.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/9764f6e5b1286093b4050fe1ad8794467a8f1bd8
 ---
 
 # New-AzureRmRelayHybridConnection
@@ -17,13 +17,15 @@ Creates a HybridConnection in the specified Relay namespace.
 ### HybridConnectionInputObjectSet
 ```
 New-AzureRmRelayHybridConnection -ResourceGroupName <String> -Namespace <String> -Name <String>
- [-InputObject <HybridConnectionAttibutes>] [-WhatIf] [-Confirm]
+ [-InputObject <HybridConnectionAttibutes>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### HybridConnectionPropertiesSet
 ```
 New-AzureRmRelayHybridConnection -ResourceGroupName <String> -Namespace <String> -Name <String>
- [-RequiresClientAuthorization <Boolean>] [-UserMetadata <String>] [-WhatIf] [-Confirm]
+ [-RequiresClientAuthorization <Boolean>] [-UserMetadata <String>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +39,6 @@ PS C:\> $getHybirdConnection = Get-AzureRmRelayHybridConnection -ResourceGroupNa
 PS C:\> $getHybirdConnection.UserMetadata = "TestHybirdConnection2"
 PS C:\> $getHybirdConnection.RequiresClientAuthorization = $False
 PS C:\> New-AzureRmRelayHybridConnection -ResourceGroupName Default-Storage-WestUS -Namespace TestNameSpace-HybirdConnection -Name TestHybirdConnection2 -InputObject $getHybirdConnection
-
 ```
 
 Creates a new HybirdConnection \`TestHybirdConnection2\` in the specified Relay namespace \`TestNameSpace-HybirdConnection\`.
@@ -55,7 +56,7 @@ Creates a new HybirdConnection \`TestHybirdConnection1\` in the specified Relay 
 true if client authorization is needed for this HybridConnections; otherwise, false
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: HybridConnectionPropertiesSet
 Aliases: 
 
@@ -71,7 +72,7 @@ Gets or sets usermetadata is a placeholder to store user-defined string data for
 it can be used to store  descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HybridConnectionPropertiesSet
 Aliases: 
 
@@ -86,7 +87,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -102,7 +103,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -117,7 +118,7 @@ Accept wildcard characters: False
 HybridConnections object.
 
 ```yaml
-Type: HybridConnectionAttibutes
+Type: Microsoft.Azure.Commands.Relay.Models.HybridConnectionAttibutes
 Parameter Sets: HybridConnectionInputObjectSet
 Aliases: 
 
@@ -132,7 +133,7 @@ Accept wildcard characters: False
 HybridConnections Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -147,7 +148,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -162,7 +163,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -172,6 +173,22 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

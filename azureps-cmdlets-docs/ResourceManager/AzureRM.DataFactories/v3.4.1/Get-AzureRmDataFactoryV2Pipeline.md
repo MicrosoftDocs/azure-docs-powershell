@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Get-AzureRmDataFactoryV2Pipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Get-AzureRmDataFactoryV2Pipeline.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/094cbc91c59c6def36b0b0db15759d964dba67c3
 ---
 
 # Get-AzureRmDataFactoryV2Pipeline
@@ -130,7 +129,7 @@ Specifies a PSDataFactory object.
 This cmdlet gets pipelines that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
 Parameter Sets: ByFactoryObject
 Aliases: 
 
@@ -146,7 +145,7 @@ Specifies the name of a data factory.
 This cmdlet gets pipelines that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -157,26 +156,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the pipeline about which to get information.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: PipelineName
 
@@ -192,7 +176,7 @@ Specifies the name of an Azure resource group.
 This cmdlet gets pipelines that belong to the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -200,6 +184,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

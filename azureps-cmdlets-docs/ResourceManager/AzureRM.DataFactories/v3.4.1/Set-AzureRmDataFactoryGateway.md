@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module Name: AzureRM.DataFactories
 ms.assetid: 663D27A3-0B51-48F5-81D0-8DDBC5A3A33C
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Set-AzureRmDataFactoryGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Set-AzureRmDataFactoryGateway.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmDataFactoryGateway
@@ -18,13 +18,13 @@ Sets the description for a gateway in Azure Data Factory.
 ### ByFactoryName (Default)
 ```
 Set-AzureRmDataFactoryGateway [-DataFactoryName] <String> [-Name] <String> [-Description] <String>
- [-ResourceGroupName] <String> [<CommonParameters>]
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByFactoryObject
 ```
 Set-AzureRmDataFactoryGateway [-DataFactory] <PSDataFactory> [-Name] <String> [-Description] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +56,7 @@ Specifies a **PSDataFactory** object.
 This cmdlet sets the description for the gateway in the data factory that this parameter specifies.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory
 Parameter Sets: ByFactoryObject
 Aliases: 
 
@@ -72,7 +72,7 @@ Specifies the name of a data factory.
 This cmdlet sets the description for the gateway in the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Specifies a description for the gateway.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 Specifies the name of the gateway for which to set a description.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +118,7 @@ Specifies the name of an Azure resource group.
 This cmdlet sets the description for a gateway that belongs to the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -126,6 +126,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

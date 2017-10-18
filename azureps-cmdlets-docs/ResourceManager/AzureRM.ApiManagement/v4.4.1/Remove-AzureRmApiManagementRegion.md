@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 17D7EBD2-FE3F-4D24-A1AA-8C45B9B1FEF5
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzureRmApiManagementRegion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzureRmApiManagementRegion.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Remove-AzureRmApiManagementRegion
@@ -16,7 +16,8 @@ Removes an existing deployment region from PsApiManagement instance.
 ## SYNTAX
 
 ```
-Remove-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> [<CommonParameters>]
+Remove-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +48,7 @@ The final command then removes the region named East US from that instance then 
 Specifies the **PsApiManagement** instance that this cmdlet removes the additional deployment region from.
 
 ```yaml
-Type: PsApiManagement
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,7 +81,7 @@ Valid values are:
 - Australia Southeast
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,13 +92,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### PsApiManagement
-
 Parameter 'ApiManagement' accepts value of type 'PsApiManagement' from the pipeline
 
 ## OUTPUTS

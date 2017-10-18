@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmPolicySetDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmPolicySetDefinition.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/336ee1c6cf46a1ce4d8f4e86aa5b233cd9b8e808
 ---
 
 # Remove-AzureRmPolicySetDefinition
@@ -17,14 +16,14 @@ Removes a policy set definition.
 
 ### The policy set definition name parameter set. (Default)
 ```
-Remove-AzureRmPolicySetDefinition -Name <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmPolicySetDefinition -Name <String> [-Force] [-ApiVersion <String>] [-Pre]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### The policy set definition Id parameter set.
 ```
-Remove-AzureRmPolicySetDefinition -Id <String> [-Force] [-ApiVersion <String>] [-Pre] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmPolicySetDefinition -Id <String> [-Force] [-ApiVersion <String>] [-Pre]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +49,7 @@ When set, indicates the version of the resource provider API to use.
 If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -65,7 +64,7 @@ Accept wildcard characters: False
 Do not ask for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,7 +81,7 @@ e.g.
 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy set definition Id parameter set.
 Aliases: ResourceId
 
@@ -97,7 +96,7 @@ Accept wildcard characters: False
 The policy set definition name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy set definition name parameter set.
 Aliases: 
 
@@ -112,7 +111,7 @@ Accept wildcard characters: False
 When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -127,7 +126,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -143,9 +142,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

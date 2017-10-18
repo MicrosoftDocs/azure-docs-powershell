@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+Module Name: AzureRM.ServerManagement
 ms.assetid: 41F8F851-6F9F-4DA4-8CE6-D8C9B7CF68D7
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/Remove-AzureRmServerManagementGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/Remove-AzureRmServerManagementGateway.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Remove-AzureRmServerManagementGateway
@@ -18,12 +18,13 @@ Removes a Server Management gateway.
 ### ByName
 ```
 Remove-AzureRmServerManagementGateway [-ResourceGroupName] <String> [-GatewayName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByObject
 ```
-Remove-AzureRmServerManagementGateway [-Gateway] <Gateway> [<CommonParameters>]
+Remove-AzureRmServerManagementGateway [-Gateway] <Gateway> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +45,7 @@ Specifies the gateway that this cmdlet removes.
 This parameter may be used instead of the *ResourceGroupName* and the *GatewayName* parameters.
 
 ```yaml
-Type: Gateway
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Gateway
 Parameter Sets: ByObject
 Aliases: 
 
@@ -59,7 +60,7 @@ Accept wildcard characters: False
 Specifies the name of the gateway that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -74,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group in that the gateway belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -85,13 +86,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Gateway
-
 Parameter 'Gateway' accepts value of type 'Gateway' from the pipeline
 
 ## OUTPUTS

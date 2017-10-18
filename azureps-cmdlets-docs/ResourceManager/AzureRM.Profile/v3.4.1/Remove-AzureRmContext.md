@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+Module Name: AzureRM.profile
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Remove-AzureRmContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Remove-AzureRmContext.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/aa54483275743cdfa0d391a298e2608780df5d5f
 ---
 
 # Remove-AzureRmContext
@@ -44,7 +44,7 @@ Remove the context named default
 The credentials, tenant and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Remove context even if it is the defualt
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 A context object, normally passed through the pipeline.
 
 ```yaml
-Type: PSAzureContext
+Type: Microsoft.Azure.Commands.Profile.Models.PSAzureContext
 Parameter Sets: Input Object
 Aliases: 
 
@@ -89,9 +89,10 @@ Accept wildcard characters: False
 The name of the context
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Named Context
 Aliases: 
+Accepted values: [contrib@AzureSDKTeam.onmicrosoft.com, 0b1f6471-1bf0-4dda-aec3-cb9272f09590], [markcowl@microsoft.com, 00977cdb-163f-435f-9c32-39ec8ae61f4d]
 
 Required: True
 Position: 0
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 Return the removed context
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 Determines the scope of context changes, for example, wheher changes apply only to the cusrrent process, or to all sessions started by this user
 
 ```yaml
-Type: ContextModificationScope
+Type: Microsoft.Azure.Commands.Profile.Common.ContextModificationScope
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Process, CurrentUser
@@ -135,7 +136,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -151,7 +152,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

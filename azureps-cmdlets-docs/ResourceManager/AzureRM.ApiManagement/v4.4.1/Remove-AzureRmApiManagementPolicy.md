@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 466AFB8C-C272-4A4F-8E13-A4DBD6EE3A85
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzureRmApiManagementPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzureRmApiManagementPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmApiManagementPolicy
@@ -17,26 +17,26 @@ Removes the API Management policy from a specified scope.
 
 ### Tenant level (Default)
 ```
-Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Product level
 ```
-Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ProductId <String> [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ProductId <String> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### API level
 ```
-Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Operation level
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> -OperationId <String>
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,7 +79,7 @@ Specifies the identifier of an existing API.
 If you specify this parameter, the cmdlet removes the API-scope policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: API level, Operation level
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Specifies the instance of the **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -110,7 +110,7 @@ Specifies the identifier of an existing operation.
 If you specify this parameter with the *ApiId* parameter, this cmdlet removes the operation-scope policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Operation level
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet returns a value of $True, if it succeeds, or a value of $False, otherwise.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -141,7 +141,7 @@ Specifies the identifier of the existing product.
 If you specify this parameter, the cmdlet removes the product-scope policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Product level
 Aliases: 
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -172,13 +172,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

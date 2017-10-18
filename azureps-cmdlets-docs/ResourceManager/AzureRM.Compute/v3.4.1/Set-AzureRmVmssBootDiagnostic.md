@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVmssBootDiagnostic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVmssBootDiagnostic.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVmssBootDiagnostic
@@ -15,8 +15,8 @@ Sets the virtual machine scale set boot diagnostics profile.
 ## SYNTAX
 
 ```
-Set-AzureRmVmssBootDiagnostic [-VirtualMachineScaleSet] <VirtualMachineScaleSet> [[-Enabled] <Boolean>]
- [[-StorageUri] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AzureRmVmssBootDiagnostic [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[-Enabled] <Boolean>]
+ [[-StorageUri] <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,11 +35,24 @@ This command sets boot diagnostics profile property for the VMSS named ContosoVM
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Enabled
 Whether boot diagnostics should be enabled on the virtual machine scale set.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +67,7 @@ Accept wildcard characters: False
 URI of the storage account to use for placing the console output and screenshot.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +83,7 @@ Specifies the VMSS object.
 You can use the New-AzureRmVmssConfig cmdlet to create the object.
 
 ```yaml
-Type: VirtualMachineScaleSet
+Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,7 +98,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -101,7 +114,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

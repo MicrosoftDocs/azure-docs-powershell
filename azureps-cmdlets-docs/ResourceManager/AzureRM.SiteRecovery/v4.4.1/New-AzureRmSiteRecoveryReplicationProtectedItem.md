@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: F801A78E-6C11-4BD1-BEF4-01C4D6CD36D7
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryReplicationProtectedItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryReplicationProtectedItem.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # New-AzureRmSiteRecoveryReplicationProtectedItem
@@ -17,28 +17,30 @@ Enables replication for a protectable item by creating a protected item
 
 ### DisableDR (Default)
 ```
-New-AzureRmSiteRecoveryReplicationProtectedItem [-WaitForCompletion] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzureRmSiteRecoveryReplicationProtectedItem [-WaitForCompletion] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EnterpriseToEnterprise
 ```
 New-AzureRmSiteRecoveryReplicationProtectedItem -ProtectableItem <ASRProtectableItem> -Name <String>
- -ProtectionContainerMapping <ASRProtectionContainerMapping> [-WaitForCompletion] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -ProtectionContainerMapping <ASRProtectionContainerMapping> [-WaitForCompletion]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EnterpriseToAzure
 ```
 New-AzureRmSiteRecoveryReplicationProtectedItem -ProtectableItem <ASRProtectableItem> -Name <String>
  -ProtectionContainerMapping <ASRProtectionContainerMapping> -RecoveryAzureStorageAccountId <String>
- [-WaitForCompletion] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WaitForCompletion] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### HyperVSiteToAzure
 ```
 New-AzureRmSiteRecoveryReplicationProtectedItem -ProtectableItem <ASRProtectableItem> -Name <String>
  -ProtectionContainerMapping <ASRProtectionContainerMapping> -RecoveryAzureStorageAccountId <String>
- -OSDiskName <String> -OS <String> [-WaitForCompletion] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -OSDiskName <String> -OS <String> [-WaitForCompletion] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +55,7 @@ Use this cmdlet to enable replication for a protectable item.
 Specifies the name of the Azure Site Recovery Replication Protected Item.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -69,7 +71,7 @@ Specifies the operating system family.
 The acceptable values for this parameter are: Windows or Linux.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HyperVSiteToAzure
 Aliases: 
 Accepted values: Windows, Linux
@@ -85,7 +87,7 @@ Accept wildcard characters: False
 Specifies the name of the operating system disk.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HyperVSiteToAzure
 Aliases: 
 
@@ -100,7 +102,7 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery Protectable Item.
 
 ```yaml
-Type: ASRProtectableItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectableItem
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -115,7 +117,7 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery Protection Container mapping object to use for replication.
 
 ```yaml
-Type: ASRProtectionContainerMapping
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionContainerMapping
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -130,7 +132,7 @@ Accept wildcard characters: False
 Specifies the ID of the Azure storage account that this cmdlet replicates to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -145,7 +147,7 @@ Accept wildcard characters: False
 Indicates that the cmdlet waits for completion.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -160,7 +162,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -177,7 +179,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -188,13 +190,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### ASRProtectableItem
-
 Parameter 'ProtectableItem' accepts value of type 'ASRProtectableItem' from the pipeline
 
 ## OUTPUTS

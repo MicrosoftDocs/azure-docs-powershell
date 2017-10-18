@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmIpsecPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmIpsecPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # New-AzureRmIpsecPolicy
@@ -36,26 +35,11 @@ Creating an IPSec policy to be used for a new virtual network gateway connection
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DhGroup
 The DH Groups used in IKE Phase 1 for initial SA
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, DHGroup1, DHGroup14, DHGroup2, DHGroup2048, DHGroup24, ECP256, ECP384
@@ -71,7 +55,7 @@ Accept wildcard characters: False
 The IKE encryption algorithm (IKE Phase 2)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DES, DES3, AES128, AES192, AES256
@@ -87,7 +71,7 @@ Accept wildcard characters: False
 The IKE integrity algorithm (IKE Phase 2)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: MD5, SHA1, SHA256, SHA384
@@ -103,7 +87,7 @@ Accept wildcard characters: False
 The IPSec encryption algorithm (IKE Phase 1)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES192, GCMAES256
@@ -119,7 +103,7 @@ Accept wildcard characters: False
 The IPSec integrity algorithm (IKE Phase 1)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: MD5, SHA1, SHA256, GCMAES128, GCMAES192, GCMAES256
@@ -135,7 +119,7 @@ Accept wildcard characters: False
 The DH Groups used in IKE Phase 2 for new child SA
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, PFS1, PFS2, PFS2048, PFS24, ECP256, ECP384
@@ -151,7 +135,7 @@ Accept wildcard characters: False
 The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -166,9 +150,24 @@ Accept wildcard characters: False
 The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

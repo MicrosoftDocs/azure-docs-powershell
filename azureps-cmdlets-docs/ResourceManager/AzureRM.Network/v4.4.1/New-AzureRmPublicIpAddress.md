@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmPublicIpAddress.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmPublicIpAddress.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4d6d0c296d811ccb3bbcb549b0efe8a1cabfdb75
 ---
 
 # New-AzureRmPublicIpAddress
@@ -57,7 +56,7 @@ Specifies the method with which to allocate the public IP address.
 The acceptable values for this parameter are: Static or Dynamic.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Dynamic, Static
@@ -73,7 +72,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -88,7 +87,7 @@ Accept wildcard characters: False
 Specifies the relative DNS name for a public IP address.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +102,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +117,7 @@ Accept wildcard characters: False
 Specifies the idle time-out, in minutes.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -133,7 +132,7 @@ Accept wildcard characters: False
 Specifies the version of the IP address.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: IPv4, IPv6
@@ -149,7 +148,7 @@ Accept wildcard characters: False
 Specifies the region in which to create a public IP address.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -164,7 +163,7 @@ Accept wildcard characters: False
 Specifies the name of the public IP address that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -179,7 +178,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group in which to create a public IP address.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -194,7 +193,7 @@ Accept wildcard characters: False
 Specifies a reverse fully qualified domain name (FQDN).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -209,7 +208,7 @@ Accept wildcard characters: False
 The public IP Sku name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Basic, Standard
@@ -227,7 +226,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -257,7 +256,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -273,7 +272,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

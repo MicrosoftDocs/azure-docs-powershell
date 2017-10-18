@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: E1FC931E-4EB8-4DCA-92BD-8013DDC13219
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationWebhook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationWebhook.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ae0426e9c11926a85437110c09d6a348dcea7b72
 ---
 
 # New-AzureRmAutomationWebhook
@@ -18,7 +18,8 @@ Creates a webhook for an Automation runbook.
 ```
 New-AzureRmAutomationWebhook [-Name] <String> [-RunbookName] <String> [-IsEnabled] <Boolean>
  [-ExpiryTime] <DateTimeOffset> [-Parameters <IDictionary>] [-Force] [-RunOn <String>]
- [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +59,7 @@ The command assigns the parameters in $Params to the webhook.
 Specifies the name of an Automation account in which this cmdlet creates a webhook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +75,7 @@ Specifies the expiry time for the webhook as a **DateTimeOffset** object.
 You can specify a string or a **DateTime** that can be converted to a valid **DateTimeOffset**.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.DateTimeOffset
 Parameter Sets: (All)
 Aliases: 
 
@@ -89,7 +90,7 @@ Accept wildcard characters: False
 ps_force
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 Specifies whether the webhook is enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 Specifies a name for the webhook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +138,7 @@ The values are the runbook parameter values.
 When the runbook starts in response to a webhook, these parameters are passed to the runbook.
 
 ```yaml
-Type: IDictionary
+Type: System.Collections.IDictionary
 Parameter Sets: (All)
 Aliases: 
 
@@ -152,7 +153,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group for which this cmdlet creates a webhook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 Specifies the name of the runbook to associate to the webhook.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -182,7 +183,7 @@ Accept wildcard characters: False
 Optional name of the hybrid agent which should execute the runbook
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: HybridWorker
 
@@ -197,7 +198,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -213,13 +214,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

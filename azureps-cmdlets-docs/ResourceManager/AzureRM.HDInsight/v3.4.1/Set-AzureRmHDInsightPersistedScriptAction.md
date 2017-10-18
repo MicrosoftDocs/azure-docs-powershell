@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module Name: AzureRM.HDInsight
 ms.assetid: 92F21752-4FB6-4162-B542-DA25ACA3340B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Set-AzureRmHDInsightPersistedScriptAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Set-AzureRmHDInsightPersistedScriptAction.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Set-AzureRmHDInsightPersistedScriptAction
@@ -17,7 +17,7 @@ Sets a previously executed script action to be a persisted script action.
 
 ```
 Set-AzureRmHDInsightPersistedScriptAction [-ClusterName] <String> [-ScriptExecutionId] <Int64>
- [-ResourceGroupName <String>] [<CommonParameters>]
+ [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +42,7 @@ This command sets a previously successful script action to be a persisted script
 Specifies the name of the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,12 +74,25 @@ This script action must have succeeded in order to be promoted.
 You can find the script action execution ID using Get-AzureRmHDInsightScriptActionHistory.
 
 ```yaml
-Type: Int64
+Type: System.Int64
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: 40054224-52FF-4AF6-A090-9F6D07A2BA99
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlDatabaseReplicationLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlDatabaseReplicationLink.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/789b304db1c84d59b885eb471c060e6922de2b2b
 ---
 
 # Get-AzureRmSqlDatabaseReplicationLink
@@ -18,14 +18,15 @@ Gets the geo-replication links between an Azure SQL Database and a resource grou
 ### ByDatabaseName (Default)
 ```
 Get-AzureRmSqlDatabaseReplicationLink [-DatabaseName] <String> -PartnerResourceGroupName <String>
- [-ServerName] <String> [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ServerName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByPartnerServerName
 ```
 Get-AzureRmSqlDatabaseReplicationLink [-DatabaseName] <String> -PartnerResourceGroupName <String>
- [-PartnerServerName <String>] [-ServerName] <String> [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-PartnerServerName <String>] [-ServerName] <String> [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +46,7 @@ It gets all geo-replication links between the specified Azure SQL Database and a
 Specifies the name of the SQL Database for which to retrieve links.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -60,7 +61,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the partner is assigned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +76,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure SQL Server for the partner.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByPartnerServerName
 Aliases: 
 
@@ -90,7 +91,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure resource group for the database for which to retrieve links.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,7 +106,7 @@ Accept wildcard characters: False
 Specifies the name of the SQL Server for the database to retrieve links for.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +121,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -135,9 +136,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

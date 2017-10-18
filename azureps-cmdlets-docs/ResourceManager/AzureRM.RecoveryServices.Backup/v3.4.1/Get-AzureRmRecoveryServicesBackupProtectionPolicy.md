@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+Module Name: AzureRM.RecoveryServices.Backup
 ms.assetid: 2E202D0D-076D-431D-9338-9A84ABC0B461
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupProtectionPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupProtectionPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmRecoveryServicesBackupProtectionPolicy
@@ -17,23 +17,26 @@ Gets Backup protection policies for a vault.
 
 ### NoParamSet (Default)
 ```
-Get-AzureRmRecoveryServicesBackupProtectionPolicy [<CommonParameters>]
+Get-AzureRmRecoveryServicesBackupProtectionPolicy [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### PolicyNameParamSet
 ```
-Get-AzureRmRecoveryServicesBackupProtectionPolicy [-Name] <String> [<CommonParameters>]
+Get-AzureRmRecoveryServicesBackupProtectionPolicy [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### WorkloadParamSet
 ```
-Get-AzureRmRecoveryServicesBackupProtectionPolicy [-WorkloadType] <WorkloadType> [<CommonParameters>]
+Get-AzureRmRecoveryServicesBackupProtectionPolicy [-WorkloadType] <WorkloadType>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### WorkloadBackupManagementTypeParamSet
 ```
 Get-AzureRmRecoveryServicesBackupProtectionPolicy [-WorkloadType] <WorkloadType>
- [-BackupManagementType] <BackupManagementType> [<CommonParameters>]
+ [-BackupManagementType] <BackupManagementType> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,7 +72,7 @@ Specifies the Backup management type.
 Currently, only AzureVM is supported.
 
 ```yaml
-Type: BackupManagementType
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType]
 Parameter Sets: WorkloadBackupManagementTypeParamSet
 Aliases: 
 Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
@@ -85,7 +88,7 @@ Accept wildcard characters: False
 Specifies the name of the policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: PolicyNameParamSet
 Aliases: 
 
@@ -101,13 +104,26 @@ Specifies the workload type.
 Currently, only AzureVM is supported.
 
 ```yaml
-Type: WorkloadType
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType]
 Parameter Sets: WorkloadParamSet, WorkloadBackupManagementTypeParamSet
 Aliases: 
 Accepted values: AzureVM, AzureSQLDatabase
 
 Required: True
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

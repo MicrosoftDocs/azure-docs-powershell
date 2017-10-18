@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsFirewallRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsFirewallRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/acaa012bbc3d2249dc7ee2c45b30f62c620d7998
 ---
 
 # Get-AzureRmDataLakeAnalyticsFirewallRule
@@ -16,7 +16,7 @@ Retrieves a firewall rule or list of firewall rules from a Data Lake Analytics a
 
 ```
 Get-AzureRmDataLakeAnalyticsFirewallRule [-Account] <String> [[-Name] <String>] [[-ResourceGroupName] <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +44,7 @@ This command gets all firewall rules from account "ContosoAdlAcct"
 The Data Lake Analytics account to get the firewall rule from
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 The name of the firewall rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Name of resource group under which want to retrieve the account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,6 +82,19 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 82C7B128-8818-4390-B1A5-CB40AC9D53CA
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureRmBatchAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureRmBatchAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/f02935a2fd454cd4f423df7ea14d97ea97ce82a3
 ---
 
 # New-AzureRmBatchAccount
@@ -17,7 +17,8 @@ Creates a Batch account.
 
 ```
 New-AzureRmBatchAccount [-AccountName] <String> [-Location] <String> [-ResourceGroupName] <String>
- [[-AutoStorageAccountId] <String>] [-Tag <Hashtable>] [<CommonParameters>]
+ [[-AutoStorageAccountId] <String>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +49,7 @@ Specifies the name of the Batch account that this cmdlet creates.
 Batch account names must be between 3 and 24 characters long and contain only numbers and lowercase letters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -63,9 +64,9 @@ Accept wildcard characters: False
 Specifies the resource ID of the storage account to be used for auto storage.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: 3
@@ -79,9 +80,9 @@ Specifies the region where this cmdlet creates the account.
 For more information, see [Azure Regions](https://azure.microsoft.com/en-us/regions).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -94,9 +95,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group in which this cmdlet creates the account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -111,7 +112,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -119,6 +120,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

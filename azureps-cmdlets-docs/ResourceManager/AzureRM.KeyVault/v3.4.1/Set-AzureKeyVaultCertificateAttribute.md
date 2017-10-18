@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 3BD243C7-A40E-4061-93FF-DDE7DECAD0A7
 online version: http://go.microsoft.com/fwlink/?LinkId=822861
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzureKeyVaultCertificateAttribute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzureKeyVaultCertificateAttribute.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # Set-AzureKeyVaultCertificateAttribute
@@ -17,7 +17,8 @@ Modifies editable attributes of a certificate.
 
 ```
 Set-AzureKeyVaultCertificateAttribute [-VaultName] <String> [-Name] <String> [[-Version] <String>]
- [-Enable <Boolean>] [-Tag <Hashtable>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Enable <Boolean>] [-Tag <Hashtable>] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,7 +73,7 @@ Indicates whether to enable or disable a certificate.
 Specify $True to enable or $False to disable.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -89,7 +90,7 @@ based on the key vault name, your currently selected environment, the certificat
 certificate version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: CertificateName
 
@@ -105,7 +106,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +123,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +139,7 @@ Specifies the key vault name in which this cmdlet modifies a certificate.
 This cmdlet constructs the FQDN of a key vault based on the name and currently selected environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -154,7 +155,7 @@ Specifies the version of a certificate.
 This cmdlet constructs the FQDN of a certificate based on the key vault name, your currently selected environment, the certificate name, and the certificate version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: CertificateVersion
 
@@ -169,7 +170,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -185,9 +186,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

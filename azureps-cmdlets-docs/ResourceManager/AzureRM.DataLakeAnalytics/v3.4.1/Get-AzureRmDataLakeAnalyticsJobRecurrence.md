@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsJobRecurrence.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsJobRecurrence.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/54dbcaa2bdab75e3a398c097244ed564f9b6b772
 ---
 
 # Get-AzureRmDataLakeAnalyticsJobRecurrence
@@ -17,13 +17,14 @@ Gets a Data Lake Analytics Job recurrence or recurrences.
 ### All In Account (Default)
 ```
 Get-AzureRmDataLakeAnalyticsJobRecurrence [-Account] <String> [-SubmittedAfter <DateTimeOffset>]
- [-SubmittedBefore <DateTimeOffset>] [<CommonParameters>]
+ [-SubmittedBefore <DateTimeOffset>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Specific Job Recurrence
 ```
 Get-AzureRmDataLakeAnalyticsJobRecurrence [-Account] <String> [-RecurrenceId] <Guid>
- [-SubmittedAfter <DateTimeOffset>] [-SubmittedBefore <DateTimeOffset>] [<CommonParameters>]
+ [-SubmittedAfter <DateTimeOffset>] [-SubmittedBefore <DateTimeOffset>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,7 @@ This command gets a list of all recurrences in the account "contosoadla"
 Name of the Data Lake Analytics account name under which want to retrieve the job recurrence.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 ID of the specific job recurrence to return information for.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Specific Job Recurrence
 Aliases: Id
 
@@ -81,7 +82,7 @@ Accept wildcard characters: False
 An optional filter which returns job recurrence(s) only submitted after the specified time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +97,7 @@ Accept wildcard characters: False
 An optional filter which returns job recurrence(s) only submitted before the specified time.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: (All)
 Aliases: 
 
@@ -104,6 +105,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

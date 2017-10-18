@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+Module Name: AzureRM.RecoveryServices.Backup
 ms.assetid: DEB3D7B5-D974-472B-B8B4-9A19CA6AECCC
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupItem.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmRecoveryServicesBackupItem
@@ -19,14 +19,14 @@ Gets the items from a container in Backup.
 ```
 Get-AzureRmRecoveryServicesBackupItem [-Container] <ContainerBase> [[-Name] <String>]
  [[-ProtectionStatus] <ItemProtectionStatus>] [[-ProtectionState] <ItemProtectionState>]
- [-WorkloadType] <WorkloadType> [<CommonParameters>]
+ [-WorkloadType] <WorkloadType> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### GetItemsForVault
 ```
 Get-AzureRmRecoveryServicesBackupItem [-BackupManagementType] <BackupManagementType> [[-Name] <String>]
  [[-ProtectionStatus] <ItemProtectionStatus>] [[-ProtectionState] <ItemProtectionState>]
- [-WorkloadType] <WorkloadType> [<CommonParameters>]
+ [-WorkloadType] <WorkloadType> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +62,7 @@ The acceptable values for this parameter are:
  AzureSQL
 
 ```yaml
-Type: BackupManagementType
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType
 Parameter Sets: GetItemsForVault
 Aliases: 
 Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
@@ -79,7 +79,7 @@ Specifies a container object from which this cmdlet gets backup items.
 To obtain an **AzureRmRecoveryServicesBackupContainer**, use the Get-AzureRmRecoveryServicesBackupContainer cmdlet.
 
 ```yaml
-Type: ContainerBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase
 Parameter Sets: GetItemsForContainer
 Aliases: 
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 Specifies the name of the container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +119,7 @@ There is a protection error.
 Protection is disabled.
 
 ```yaml
-Type: ItemProtectionState
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemProtectionState
 Parameter Sets: (All)
 Aliases: 
 Accepted values: IRPending, ProtectionError, Protected, ProtectionStopped
@@ -139,7 +139,7 @@ The acceptable values for this parameter are:
 - Unhealthy
 
 ```yaml
-Type: ItemProtectionStatus
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemProtectionStatus
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Healthy, Unhealthy
@@ -159,13 +159,26 @@ The acceptable values for this parameter are:
 - AzureSQLDatabase
 
 ```yaml
-Type: WorkloadType
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureVM, AzureSQLDatabase
 
 Required: True
 Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

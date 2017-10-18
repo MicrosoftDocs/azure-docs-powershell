@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 2D5B16F0-0662-4D9F-A13F-808CE5EEBBA3
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRmAutomationAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRmAutomationAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ae0426e9c11926a85437110c09d6a348dcea7b72
 ---
 
 # New-AzureRmAutomationAccount
@@ -17,7 +17,7 @@ Creates an Automation account.
 
 ```
 New-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [-Plan <String>] [-Tags <IDictionary>] [<CommonParameters>]
+ [-Plan <String>] [-Tags <IDictionary>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +43,7 @@ Specifies the location in which this cmdlet creates the Automation account.
 To obtain valid locations, use the Get-AzureRMLocation cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Specifies a name for the Automation account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AutomationAccountName
 
@@ -77,7 +77,7 @@ Valid values are:
 - Free
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Free, Basic
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group to which this cmdlet adds an Automation account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -110,7 +110,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: IDictionary
+Type: System.Collections.IDictionary
 Parameter Sets: (All)
 Aliases: Tag
 
@@ -118,6 +118,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

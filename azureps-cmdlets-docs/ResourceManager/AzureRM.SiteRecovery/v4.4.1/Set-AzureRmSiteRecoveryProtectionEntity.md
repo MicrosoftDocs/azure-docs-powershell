@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 70CF4CA5-F456-4953-87E5-12B5CBDE6D52
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryProtectionEntity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryProtectionEntity.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Set-AzureRmSiteRecoveryProtectionEntity
@@ -18,27 +18,30 @@ Sets the state for a Site Recovery protection entity.
 ### DisableDR (Default)
 ```
 Set-AzureRmSiteRecoveryProtectionEntity -ProtectionEntity <ASRProtectionEntity> -Protection <String>
- [-WaitForCompletion] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WaitForCompletion] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### EnterpriseToEnterprise
 ```
 Set-AzureRmSiteRecoveryProtectionEntity -ProtectionEntity <ASRProtectionEntity> -Protection <String>
- -Policy <ASRPolicy> [-WaitForCompletion] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Policy <ASRPolicy> [-WaitForCompletion] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### EnterpriseToAzure
 ```
 Set-AzureRmSiteRecoveryProtectionEntity -ProtectionEntity <ASRProtectionEntity> -Protection <String>
- -Policy <ASRPolicy> -RecoveryAzureStorageAccountId <String> [-WaitForCompletion] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -Policy <ASRPolicy> -RecoveryAzureStorageAccountId <String> [-WaitForCompletion] [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### HyperVSiteToAzure
 ```
 Set-AzureRmSiteRecoveryProtectionEntity -ProtectionEntity <ASRProtectionEntity> -Protection <String>
  -Policy <ASRPolicy> -RecoveryAzureStorageAccountId <String> -OSDiskName <String> -OS <String>
- [-WaitForCompletion] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WaitForCompletion] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +55,7 @@ The **Set-AzureRmSiteRecoveryProtectionEntity** cmdlet enables or disables prote
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +74,7 @@ The acceptable values for this parameter are:
 - Linux
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HyperVSiteToAzure
 Aliases: 
 Accepted values: Windows, Linux
@@ -87,7 +90,7 @@ Accept wildcard characters: False
 Specifies the name of the disk that contains the operating system.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HyperVSiteToAzure
 Aliases: 
 
@@ -102,7 +105,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery policy object.
 
 ```yaml
-Type: ASRPolicy
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRPolicy
 Parameter Sets: EnterpriseToEnterprise, EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -121,7 +124,7 @@ The acceptable values for this parameter are:
 - Disable
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enable, Disable
@@ -137,7 +140,7 @@ Accept wildcard characters: False
 Specifies the protection entity object.
 
 ```yaml
-Type: ASRProtectionEntity
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity
 Parameter Sets: (All)
 Aliases: 
 
@@ -152,7 +155,7 @@ Accept wildcard characters: False
 Specifies the ID of the target Azure Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure, HyperVSiteToAzure
 Aliases: 
 
@@ -167,7 +170,7 @@ Accept wildcard characters: False
 Indicates that the command waits for completion before returning.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -182,7 +185,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -199,7 +202,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -210,13 +213,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### ASRProtectionEntity
-
 Parameter 'ProtectionEntity' accepts value of type 'ASRProtectionEntity' from the pipeline
 
 ## OUTPUTS

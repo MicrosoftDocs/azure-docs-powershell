@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+Module Name: AzureRM.IotHub
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzureRmIotHubConnectionString.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzureRmIotHubConnectionString.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/04e47f8329ba9e64790c974f9666dbf41de7483f
 ---
 
 # Get-AzureRmIotHubConnectionString
@@ -16,7 +16,7 @@ Gets the IotHub connectionstrings.
 
 ```
 Get-AzureRmIotHubConnectionString [-ResourceGroupName] <String> [-Name] <String> [[-KeyName] <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +45,7 @@ Gets the connectionstrings for the key named "mykey" for the iothub named "myiot
 Name of the Key
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Name of the IotHub
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,6 +83,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

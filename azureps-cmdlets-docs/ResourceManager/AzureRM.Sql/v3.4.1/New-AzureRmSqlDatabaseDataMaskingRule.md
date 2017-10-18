@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: A123CB7F-2F95-49EE-9F57-E264EB1F9093
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlDatabaseDataMaskingRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlDatabaseDataMaskingRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/963a7095854437d5a78994af1ac9e037501b7362
 ---
 
 # New-AzureRmSqlDatabaseDataMaskingRule
@@ -19,7 +19,8 @@ Creates a data masking rule for a database.
 New-AzureRmSqlDatabaseDataMaskingRule -MaskingFunction <String> [-PrefixSize <UInt32>]
  [-ReplacementString <String>] [-SuffixSize <UInt32>] [-NumberFrom <Double>] [-NumberTo <Double>] [-PassThru]
  -SchemaName <String> -TableName <String> -ColumnName <String> [-ServerName] <String> [-DatabaseName] <String>
- [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +53,7 @@ The rule is named Rule01.
 Specifies the name of the column targeted by the masking rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 Specifies the name of the database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -93,7 +94,7 @@ The acceptable values for this parameter are:
 The default value is Default.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NoMasking, Default, Text, Number, SocialSecurityNumber, CreditCardNumber, Email
@@ -111,7 +112,7 @@ Specify this parameter only if you specify a value of Number for the *MaskingFun
 The default value is 0.
 
 ```yaml
-Type: Double
+Type: System.Nullable`1[System.Double]
 Parameter Sets: (All)
 Aliases: 
 
@@ -128,7 +129,7 @@ Specify this parameter only if you specify a value of Number for the *MaskingFun
 The default value is 0.
 
 ```yaml
-Type: Double
+Type: System.Nullable`1[System.Double]
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +145,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -161,7 +162,7 @@ Specify this parameter only if you specify a value of Text for the *MaskingFunct
 The default value is 0.
 
 ```yaml
-Type: UInt32
+Type: System.Nullable`1[System.UInt32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -178,7 +179,7 @@ Specify this parameter only if you specify a value of Text for the *MaskingFunct
 The default value is an empty string.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -193,7 +194,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the database is assigned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -208,7 +209,7 @@ Accept wildcard characters: False
 Specifies the name of a schema.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -223,7 +224,7 @@ Accept wildcard characters: False
 Specifies the name of the server that hosts the database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -240,7 +241,7 @@ Specify this parameter only if you specify a value of Text for the *MaskingFunct
 The default value is 0.
 
 ```yaml
-Type: UInt32
+Type: System.Nullable`1[System.UInt32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -255,7 +256,7 @@ Accept wildcard characters: False
 Specifies the name of the database table that contains the masked column.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -270,7 +271,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -286,13 +287,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

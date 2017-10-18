@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: B087194B-DA3F-4E45-BD2D-788F9E6F03EA
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryFabric.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmSiteRecoveryFabric
@@ -16,7 +16,8 @@ Creates an Azure Site Recovery Fabric.
 ## SYNTAX
 
 ```
-New-AzureRmSiteRecoveryFabric -Name <String> [-Type <String>] [<CommonParameters>]
+New-AzureRmSiteRecoveryFabric -Name <String> [-Type <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +31,7 @@ The **New-AzureRmSiteRecoveryFabric** cmdlet creates an Azure Site Recovery Fabr
 Specifies the name of the Azure Site Recovery Fabric
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -45,10 +46,23 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery Fabric Type.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HyperVSite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

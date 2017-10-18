@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+Module Name: AzureRM.NotificationHubs
 ms.assetid: 7E9CBEE9-DD5F-4552-9187-ECBBEF6174B0
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHubAuthorizationRules.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHubAuthorizationRules.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmNotificationHubAuthorizationRules
@@ -18,14 +18,15 @@ Creates an authorization rule and assigns the rule to a notification hub.
 ### InputFileParameterSet
 ```
 New-AzureRmNotificationHubAuthorizationRules [-ResourceGroup] <String> [-Namespace] <String>
- [-NotificationHub] <String> [-InputFile] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NotificationHub] <String> [-InputFile] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SASRuleParameterSet
 ```
 New-AzureRmNotificationHubAuthorizationRules [-ResourceGroup] <String> [-Namespace] <String>
- [-NotificationHub] <String> [-SASRule] <SharedAccessAuthorizationRuleAttributes> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-NotificationHub] <String> [-SASRule] <SharedAccessAuthorizationRuleAttributes>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +54,7 @@ Note that all the configuration information for the rule, including the rule nam
 Specifies the input file for the authorization rule that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: InputFileParameterSet
 Aliases: 
 
@@ -69,7 +70,7 @@ Specifies the namespace to which the authorization rules are assigned.
 Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +89,7 @@ Note that you must specify the name of an existing notification hub.
 The **New-AzureRmNotificationHubAuthorizationRules** cmdlet cannot create new notification hubs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +104,7 @@ Accept wildcard characters: False
 Specifies the resource group that the notification hub is assigned to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +119,7 @@ Accept wildcard characters: False
 Specifies the **SharedAccessAuthorizationRuleAttributes** object containing configuration information for the new rules.
 
 ```yaml
-Type: SharedAccessAuthorizationRuleAttributes
+Type: Microsoft.Azure.Commands.NotificationHubs.Models.SharedAccessAuthorizationRuleAttributes
 Parameter Sets: SASRuleParameterSet
 Aliases: 
 
@@ -133,7 +134,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -148,9 +149,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

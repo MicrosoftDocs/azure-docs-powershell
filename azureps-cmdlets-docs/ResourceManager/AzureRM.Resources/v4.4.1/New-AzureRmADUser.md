@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 86D8965D-D999-48A4-A4EE-9E054E5486EE
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmADUser.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmADUser
@@ -17,7 +17,8 @@ Creates a new active directory user.
 
 ```
 New-AzureRmADUser -DisplayName <String> -UserPrincipalName <String> -Password <String> [-ImmutableId <String>]
- [-ForceChangePasswordNextLogin] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ForceChangePasswordNextLogin] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +41,7 @@ The name to display in the address book for the user.
 example 'Alex Wu'.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +57,7 @@ It must be specified if the user must change the password on the next successful
 Default behavior is (false) to not change the password on the next successful login.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 It needs to be specified only if you are using a federated domain for the user's user principal name (upn) property.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +89,7 @@ It must meet the tenant's password complexity requirements.
 It is recommended to set a strong password.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -104,7 +105,7 @@ The user principal name.
 Example-'someuser@contoso.com'.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -132,9 +133,22 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

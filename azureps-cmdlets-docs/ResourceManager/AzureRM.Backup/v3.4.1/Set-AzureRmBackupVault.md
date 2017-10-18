@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: D57C32D1-EB4F-495E-A11B-3B4066E8C552
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Set-AzureRmBackupVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Set-AzureRmBackupVault.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmBackupVault
@@ -17,7 +17,7 @@ Changes the storage type of a Backup vault.
 
 ```
 Set-AzureRmBackupVault [[-Storage] <AzureBackupVaultStorageType>] [-Vault] <AzureRMBackupVault>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +42,7 @@ Specifies the storage type for the backup data.
 The acceptable values for this parameter are: LocallyRedundant and GeoRedundant.
 
 ```yaml
-Type: AzureBackupVaultStorageType
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureBackupVaultStorageType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: GeoRedundant, LocallyRedundant
@@ -59,7 +59,7 @@ Specifies a Backup vault that this cmdlet modifies.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,6 +67,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

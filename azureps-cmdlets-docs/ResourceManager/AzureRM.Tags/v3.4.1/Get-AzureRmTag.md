@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
+Module Name: AzureRM.Tags
 ms.assetid: 726E01DD-D73C-4D4B-8FC0-52767927367C
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/Get-AzureRmTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/Get-AzureRmTag.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Get-AzureRmTag
@@ -16,7 +16,7 @@ Gets predefined Azure tags.
 ## SYNTAX
 
 ```
-Get-AzureRmTag [[-Name] <String>] [-Detailed] [<CommonParameters>]
+Get-AzureRmTag [[-Name] <String>] [-Detailed] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -109,7 +109,7 @@ Using the *Detailed* parameter is the equivalent of using the *Name* parameter f
 Indicates that this operation adds information about tag values to the output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ By default, **Get-AzureRmTag** gets basic information about all predefined tags 
 When you specify the *Name* parameter, the *Detailed* parameter has no effect.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -134,6 +134,19 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module Name: AzureRM.DataFactories
 ms.assetid: 7100B5F0-A07B-4305-BF80-1F52647A03AB
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Get-AzureRmDataFactoryRun.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Get-AzureRmDataFactoryRun.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmDataFactoryRun
@@ -18,13 +18,13 @@ Gets runs for a data slice of a dataset in Azure Data Factory.
 ### ByFactoryName (Default)
 ```
 Get-AzureRmDataFactoryRun [-DataFactoryName] <String> [-DatasetName] <String> [-StartDateTime] <DateTime>
- [-ResourceGroupName] <String> [<CommonParameters>]
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByFactoryObject
 ```
 Get-AzureRmDataFactoryRun [-DataFactory] <PSDataFactory> [-DatasetName] <String> [-StartDateTime] <DateTime>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,7 +81,7 @@ Specifies a **PSDataFactory** object.
 This cmdlet gets runs for slices that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory
 Parameter Sets: ByFactoryObject
 Aliases: 
 
@@ -97,7 +97,7 @@ Specifies the name of a data factory.
 This cmdlet gets runs for slices that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -113,7 +113,7 @@ Specifies the name of the dataset.
 This cmdlet gets runs for slices that belong to the dataset that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ Specifies the name of an Azure resource group.
 This cmdlet gets factory runs for slices that belong to the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -154,12 +154,25 @@ This cmdlet gets runs for the data slices that match this time period.
 The default time zone designator is UTC.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
 Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

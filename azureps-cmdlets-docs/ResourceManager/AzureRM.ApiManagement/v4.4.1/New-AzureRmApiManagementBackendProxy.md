@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementBackendProxy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementBackendProxy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/eb2b5c5505d48a33661e70ccdab72360e6ff0798
 ---
 
 # New-AzureRmApiManagementBackendProxy
@@ -16,7 +16,7 @@ Creates a new Backend Proxy Object.
 
 ```
 New-AzureRmApiManagementBackendProxy -Url <String> [-UserName <String>] [-Password <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ Proxy Password used to connect to Backend Proxy.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +54,7 @@ Url of the Proxy server to be used when forwarding calls to Backend.
 This parameter is required.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,9 +70,22 @@ Proxy UserName used to connect to Backend Proxy.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

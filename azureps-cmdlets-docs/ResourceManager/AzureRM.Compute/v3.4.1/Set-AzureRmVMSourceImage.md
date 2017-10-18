@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 91B2DE2F-442D-4428-8A6F-9C2CEC181CA7
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMSourceImage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMSourceImage.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVMSourceImage
@@ -18,12 +18,13 @@ Specifies the image for a virtual machine.
 ### ImageReferenceSkuParameterSet (Default)
 ```
 Set-AzureRmVMSourceImage [-VM] <PSVirtualMachine> [-PublisherName] <String> [-Offer] <String> [-Skus] <String>
- [-Version] <String> [<CommonParameters>]
+ [-Version] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ImageReferenceIdParameterSet
 ```
-Set-AzureRmVMSourceImage [-VM] <PSVirtualMachine> [-Id] <String> [<CommonParameters>]
+Set-AzureRmVMSourceImage [-VM] <PSVirtualMachine> [-Id] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,11 +50,24 @@ The **Get-AzureRmVMImagePublisher**, **Get-AzureRmVMImageOffer**, **Get-AzureRmV
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Id
 Specifies the ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ImageReferenceIdParameterSet
 Aliases: 
 
@@ -69,7 +83,7 @@ Specifies the type of VMImage offer.
 To obtain an image offer, use the Get-AzureRmVMImageOffer cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ImageReferenceSkuParameterSet
 Aliases: 
 
@@ -85,7 +99,7 @@ Specifies the name of a publisher of a VMImage.
 To obtain a publisher, use the Get-AzureRmVMImagePublisher cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ImageReferenceSkuParameterSet
 Aliases: 
 
@@ -101,7 +115,7 @@ Specifies a VMImage SKU.
 To obtain SKUs, use the Get-AzureRmVMImageSku cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ImageReferenceSkuParameterSet
 Aliases: 
 
@@ -117,7 +131,7 @@ Specifies a version of a VMImage.
 To use the latest version, specify a value of latest instead of a particular version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ImageReferenceSkuParameterSet
 Aliases: 
 
@@ -132,7 +146,7 @@ Accept wildcard characters: False
 Specifies the local virtual machine object to configure.
 
 ```yaml
-Type: PSVirtualMachine
+Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 Parameter Sets: (All)
 Aliases: VMProfile
 

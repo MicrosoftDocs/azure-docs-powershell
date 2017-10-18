@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 52115C49-0229-4F2C-B7B0-02FC52C1D32D
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzureRmApiManagementSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Set-AzureRmApiManagementSubscription.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmApiManagementSubscription
@@ -18,7 +18,8 @@ Sets existing subscription details.
 ```
 Set-AzureRmApiManagementSubscription -Context <PsApiManagementContext> -SubscriptionId <String>
  [-Name <String>] [-PrimaryKey <String>] [-SecondaryKey <String>] [-State <PsApiManagementSubscriptionState>]
- [-ExpiresOn <DateTime>] [-StateComment <String>] [-PassThru] [<CommonParameters>]
+ [-ExpiresOn <DateTime>] [-StateComment <String>] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +40,7 @@ This command sets the primary and secondary keys for a subscription and activate
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -55,7 +56,7 @@ Specifies a subscription expiration date.
 The default value of this parameter is $Null.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +71,7 @@ Accept wildcard characters: False
 Specifies a subscription name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,7 +86,7 @@ Accept wildcard characters: False
 passthru
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +103,7 @@ This parameter is generated automatically if not specified.
 This parameter must be 1 to 300 characters long.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +120,7 @@ This parameter is generated automatically if not specified.
 This parameter must be 1 to 300 characters long.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,7 +136,7 @@ Specifies the subscription state.
 The default value of this parameter is $Null.
 
 ```yaml
-Type: PsApiManagementSubscriptionState
+Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionState]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Suspended, Active, Expired, Submitted, Rejected, Cancelled
@@ -152,7 +153,7 @@ Specifies the subscription state comment.
 The default value of this parameter is $Null.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 Specifies the subscription ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -175,6 +176,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

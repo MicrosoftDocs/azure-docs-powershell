@@ -1,32 +1,51 @@
 ---
 external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+Module Name: AzureRM.Relay
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/Set-AzureRmRelayAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/Set-AzureRmRelayAuthorizationRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/9764f6e5b1286093b4050fe1ad8794467a8f1bd8
 ---
 
 # Set-AzureRmRelayAuthorizationRule
 
 ## SYNOPSIS
-The **Set-AzureRmRelayAuthorizationRule** Updates the specified authorization rule description for the given Relay entities (Namespace/WcfRelay/HybridConnection).
+Updates the specified authorization rule description for the given Relay entities (Namespace/WcfRelay/HybridConnection).
 
 ## SYNTAX
 
 ### NamespaceAuthorizationRuleSet (Default)
 ```
-Set-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String> -Rights <String[]> [-WhatIf] [-Confirm]
+Set-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
+ [-InputObject <AuthorizationRuleAttributes>] [-Rights <String[]>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### WcfRelayAuthorizationRuleSet
 ```
-Set-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [[-Namespace] <String>] [-WcfRelay] <String> [-Name] <String> -Rights <String[]> [-WhatIf] [-Confirm]
+Set-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [[-Namespace] <String>] [-WcfRelay] <String>
+ [-Name] <String> [-InputObject <AuthorizationRuleAttributes>] [-Rights <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### HybridConnectionAuthorizationRuleSet
 ```
-Set-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [[-Namespace] <String>] [-HybridConnection] <String> [-Name] <String> -Rights <String[]> [-WhatIf] [-Confirm]
+Set-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [[-Namespace] <String>]
+ [-HybridConnection] <String> [-Name] <String> [-InputObject <AuthorizationRuleAttributes>]
+ [-Rights <String[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AuthoRuleInputObjectSet
+```
+Set-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [-Name] <String>
+ -InputObject <AuthorizationRuleAttributes> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### AuthoRulePropertiesSet
+```
+Set-AzureRmRelayAuthorizationRule [-ResourceGroupName] <String> [-Name] <String> -Rights <String[]>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +70,6 @@ PS C:\> Set-AzureRmRelayAuthorizationRule -ResourceGroupName Default-ServiceBus-
 ```
 
 Adds **Send** from the access rights of the authorization rule `AuthoRule1` in namespace `TestNameSpace-Relay1`.
-
 
 ### Example 2.1 - WcfRelay with InputObject
 ```
@@ -85,14 +103,13 @@ PS C:\> Set-AzureRmRelayAuthorizationRule -ResourceGroupName Default-ServiceBus-
 
 Adds **Send** to the access rights of the authorization rule `AuthoRule1` of the HybridConnection `TestHybridConnection`.
 
-
 ## PARAMETERS
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -107,9 +124,9 @@ Accept wildcard characters: False
 HybridConnection Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: HybridConnectionAuthorizationRuleSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -122,9 +139,9 @@ Accept wildcard characters: False
 AuthorizationRule Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -137,9 +154,9 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NamespaceAuthorizationRuleSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -149,9 +166,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WcfRelayAuthorizationRuleSet, HybridConnectionAuthorizationRuleSet
-Aliases:
+Aliases: 
 
 Required: False
 Position: 1
@@ -164,9 +181,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -176,18 +193,30 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
-Rights, e.g.
+Rights, e.g. 
 @("Listen","Send","Manage")
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
+Type: System.String[]
+Parameter Sets: NamespaceAuthorizationRuleSet, WcfRelayAuthorizationRuleSet, HybridConnectionAuthorizationRuleSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String[]
+Parameter Sets: AuthoRulePropertiesSet
+Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -195,9 +224,9 @@ Accept wildcard characters: False
 WcfRelay Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WcfRelayAuthorizationRuleSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -211,7 +240,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -221,28 +250,72 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: Microsoft.Azure.Commands.Relay.Models.AuthorizationRuleAttributes
+Parameter Sets: NamespaceAuthorizationRuleSet, WcfRelayAuthorizationRuleSet, HybridConnectionAuthorizationRuleSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: Microsoft.Azure.Commands.Relay.Models.AuthorizationRuleAttributes
+Parameter Sets: AuthoRuleInputObjectSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### -ResourceGroupName
- System.String
+ System.String 
 
 ### -Namespace
- System.String
+ System.String 
+ 
 
 ### -WcfRelay
- System.String
+ System.String 
 
 ### -HybridConnection
- System.String
+ System.String 
+ 
 
 ### -Name
  System.String
 
 ### -InputObject
  Microsoft.Azure.Commands.Relay.Models.AuthorizationRuleAttributes
+ 
 
 ### -Rights
  System.String []
@@ -269,7 +342,7 @@ Name   : AuthoRule1
 Type   : Microsoft.Relay/AuthorizationRules
 Id     : /subscriptions/854d368f-1828-428f-8f3c-f2affa9b2f7d/resourceGroups/Default-ServiceBus-WestUS/providers/Microsoft.Relay/namespaces/TestNameSpace-Relay1/HybridConnections/TestHybridConnection/authorizationRules/AuthoRule1
 
-
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.AnalysisServices.Dataplane.dll-Help.xml
+Module Name: Azure.AnalysisServices
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AnalysisServices/Commands.AnalysisServices.Dataplane/help/Add-AzureAnalysisServicesAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AnalysisServices/Commands.AnalysisServices.Dataplane/help/Add-AzureAnalysisServicesAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Add-AzureAnalysisServicesAccount
@@ -68,7 +68,7 @@ This example will add the application service principal account specified by the
 The application ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipalWithCertificateParameterSetName
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 Certificate Hash (Thumbprint)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipalWithCertificateParameterSetName
 Aliases: 
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 Login credentials
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: UserParameterSetName
 Aliases: 
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: ServicePrincipalWithPasswordParameterSetName
 Aliases: 
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Name of the Azure Analysis Services environment to which to logon to. Given the full name of the server for example asazure://westcentralus.asazure.windows.net/testserver , the correct value for this variable will be westcentralus.asazure.windows.net
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UserParameterSetName
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipalWithPasswordParameterSetName, ServicePrincipalWithCertificateParameterSetName
 Aliases: 
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 Indicates that this account authenticates by providing service principal credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ServicePrincipalWithPasswordParameterSetName, ServicePrincipalWithCertificateParameterSetName
 Aliases: 
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Tenant name or ID
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipalWithPasswordParameterSetName, ServicePrincipalWithCertificateParameterSetName
 Aliases: 
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -198,7 +198,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

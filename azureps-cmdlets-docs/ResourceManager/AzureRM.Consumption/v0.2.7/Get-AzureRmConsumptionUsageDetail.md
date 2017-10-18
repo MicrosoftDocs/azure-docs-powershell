@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Consumption.dll-Help.xml
+Module Name: AzureRM.Consumption
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Consumption/Commands.Consumption/help/Get-AzureRmConsumptionUsageDetail.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Consumption/Commands.Consumption/help/Get-AzureRmConsumptionUsageDetail.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/dbbac5b71c9946c33dcc700ce2b7eaae8cbad761
 ---
 
 # Get-AzureRmConsumptionUsageDetail
@@ -17,19 +17,21 @@ Get usage details of the subscription.
 ### Subscription (Default)
 ```
 Get-AzureRmConsumptionUsageDetail [-MaxCount <Int32>] [-IncludeMeterDetails] [-IncludeAdditionalProperties]
- [-StartDate <DateTime>] [-EndDate <DateTime>] [<CommonParameters>]
+ [-StartDate <DateTime>] [-EndDate <DateTime>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Invoice
 ```
 Get-AzureRmConsumptionUsageDetail -InvoiceName <String> [-MaxCount <Int32>] [-IncludeMeterDetails]
- [-IncludeAdditionalProperties] [-StartDate <DateTime>] [-EndDate <DateTime>] [<CommonParameters>]
+ [-IncludeAdditionalProperties] [-StartDate <DateTime>] [-EndDate <DateTime>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### BillingPeriod
 ```
 Get-AzureRmConsumptionUsageDetail -BillingPeriodName <String> [-MaxCount <Int32>] [-IncludeMeterDetails]
- [-IncludeAdditionalProperties] [-StartDate <DateTime>] [-EndDate <DateTime>] [<CommonParameters>]
+ [-IncludeAdditionalProperties] [-StartDate <DateTime>] [-EndDate <DateTime>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +66,7 @@ Get usage details of the subscription that is between 2017-01-17 to 2017-01-19.
 Name of a specific billing period to get the usage details that associate with.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BillingPeriod
 Aliases: 
 
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 The end date (in UTC) of the usages.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +96,7 @@ Accept wildcard characters: False
 Include additional properties in the usages.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +111,7 @@ Accept wildcard characters: False
 Include meter details in the usages.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +126,7 @@ Accept wildcard characters: False
 Name of a specific invoice to get the usage details that associate with.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Invoice
 Aliases: 
 
@@ -139,7 +141,7 @@ Accept wildcard characters: False
 Determine the maximum number of records to return.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -154,9 +156,22 @@ Accept wildcard characters: False
 The start date (in UTC) of the usages.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

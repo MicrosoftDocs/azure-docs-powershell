@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: BA508F0B-847F-4531-9D5D-A5A044A2D207
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Import-AzureRmAutomationDscConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Import-AzureRmAutomationDscConfiguration.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ae0426e9c11926a85437110c09d6a348dcea7b72
 ---
 
 # Import-AzureRmAutomationDscConfiguration
@@ -18,7 +18,7 @@ Imports a DSC configuration into Automation.
 ```
 Import-AzureRmAutomationDscConfiguration -SourcePath <String> [-Tags <IDictionary>] [-Description <String>]
  [-Published] [-Force] [-LogVerbose <Boolean>] [-ResourceGroupName] <String> [-AutomationAccountName] <String>
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +42,7 @@ configuration, this command replaces it.
 Specifies the name of the Automation account into which this cmdlet imports a DSC configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 Specifies a description of the configuration that this cmdlet imports.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet replaces an existing DSC configuration in Automation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +88,7 @@ Specifies whether this cmdlet turns verbose logging on or off for compilation jo
 configuration. Specify a value of $True to turn verbose logging on or $False to turn it off.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet imports the DSC configuration in the published state.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet imports a DSC configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Specifies the path of the wps_2 script that contains the DSC configuration that this cmdlet imports.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Path
 
@@ -150,7 +150,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: IDictionary
+Type: System.Collections.IDictionary
 Parameter Sets: (All)
 Aliases: Tag
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -181,13 +181,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

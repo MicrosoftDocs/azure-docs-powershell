@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
 ms.assetid: D79080D5-2785-4C46-86FD-FDAA11117D17
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreTrustedIdProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreTrustedIdProvider.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/e3ac458aba81d13f083403365de32bc2f03d1edf
 ---
 
 # Get-AzureRmDataLakeStoreTrustedIdProvider
@@ -18,7 +18,7 @@ If no provider is specified, then lists all providers for the account.
 
 ```
 Get-AzureRmDataLakeStoreTrustedIdProvider [-Account] <String> [[-Name] <String>]
- [[-ResourceGroupName] <String>] [<CommonParameters>]
+ [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +47,7 @@ Lists all providers under the account "ContosoADL"
 The Data Lake Store account to retrieve the trusted identity provider from
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 The name of the trusted identity provider to retrieve
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Name of resource group under which want to retrieve the specified account's specified trusted identity provider.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,6 +85,19 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

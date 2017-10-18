@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: D19488C1-9E87-4F1A-94E3-8AFDE6AFC982
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryStorageClassificationMapping.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryStorageClassificationMapping.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmSiteRecoveryStorageClassificationMapping
@@ -17,12 +17,14 @@ Gets a storage classification mapping in Site Recovery.
 
 ### Default (Default)
 ```
-Get-AzureRmSiteRecoveryStorageClassificationMapping [<CommonParameters>]
+Get-AzureRmSiteRecoveryStorageClassificationMapping [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-AzureRmSiteRecoveryStorageClassificationMapping -Name <String> [<CommonParameters>]
+Get-AzureRmSiteRecoveryStorageClassificationMapping -Name <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,11 +38,24 @@ The **Get-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet gets a storag
 Specifies the name of the storage classification mapping that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

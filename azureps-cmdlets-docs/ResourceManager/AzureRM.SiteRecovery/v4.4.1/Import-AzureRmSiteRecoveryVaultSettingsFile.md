@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 070DA86E-9EA4-4777-9D53-64B58B4401B8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Import-AzureRmSiteRecoveryVaultSettingsFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Import-AzureRmSiteRecoveryVaultSettingsFile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Import-AzureRmSiteRecoveryVaultSettingsFile
@@ -16,7 +16,8 @@ Imports a Site Recovery vault settings file.
 ## SYNTAX
 
 ```
-Import-AzureRmSiteRecoveryVaultSettingsFile [-Path] <String> [<CommonParameters>]
+Import-AzureRmSiteRecoveryVaultSettingsFile [-Path] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +32,7 @@ Specifies the path of the Site Recovery vault settings file.
 This file can be downloaded from the Site Recovery vault portal and stored locally.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -39,6 +40,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

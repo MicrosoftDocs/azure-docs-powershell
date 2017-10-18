@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 15CAC050-F2E9-4872-88E7-516A6D194FAB
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMBootDiagnosticsData.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMBootDiagnosticsData.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Get-AzureRmVMBootDiagnosticsData
@@ -18,13 +18,13 @@ Gets boot diagnostics data for a virtual machine.
 ### WindowsParamSet (Default)
 ```
 Get-AzureRmVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Windows]
- [-LocalPath] <String> [<CommonParameters>]
+ [-LocalPath] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### LinuxParamSet
 ```
 Get-AzureRmVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Linux]
- [[-LocalPath] <String>] [<CommonParameters>]
+ [[-LocalPath] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,11 +43,24 @@ The command stores the data in specified local path.
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Linux
 Indicates that the virtual machine runs the Linux operating system.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: LinuxParamSet
 Aliases: 
 
@@ -62,7 +75,7 @@ Accept wildcard characters: False
 Specifies the local path for the boot diagnostics data.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WindowsParamSet
 Aliases: 
 
@@ -74,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: LinuxParamSet
 Aliases: 
 
@@ -89,7 +102,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine for which this cmdlet gets diagnostics data.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName, VMName
 
@@ -104,7 +117,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -119,7 +132,7 @@ Accept wildcard characters: False
 Indicates that the virtual machine runs the Windows operating system.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: WindowsParamSet
 Aliases: 
 

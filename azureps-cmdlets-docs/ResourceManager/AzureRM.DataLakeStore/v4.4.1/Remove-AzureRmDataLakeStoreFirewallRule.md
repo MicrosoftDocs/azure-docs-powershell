@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
 ms.assetid: 6C7A7E1A-87A2-4F0D-9091-413C111F47F0
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreFirewallRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreFirewallRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/e3ac458aba81d13f083403365de32bc2f03d1edf
 ---
 
 # Remove-AzureRmDataLakeStoreFirewallRule
@@ -17,7 +17,8 @@ Removes the specified firewall rule in the specified Data Lake Store.
 
 ```
 Remove-AzureRmDataLakeStoreFirewallRule [-Account] <String> [[-Name] <String>] [-PassThru]
- [[-ResourceGroupName] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +39,7 @@ Removes firewall rule "MyFirewallRule" from account "ContosoADL"
 The Data Lake Store account to update the firewall rule in
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -53,7 +54,7 @@ Accept wildcard characters: False
 The name of the firewall rule to delete.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +69,7 @@ Accept wildcard characters: False
 Indicates a boolean response should be returned indicating the result of the delete operation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the account to remove the firewall rule from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -111,9 +112,22 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

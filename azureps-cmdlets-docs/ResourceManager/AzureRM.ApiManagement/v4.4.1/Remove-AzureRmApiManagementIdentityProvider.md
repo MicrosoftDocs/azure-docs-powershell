@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzureRmApiManagementIdentityProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzureRmApiManagementIdentityProvider.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/eb2b5c5505d48a33661e70ccdab72360e6ff0798
 ---
 
 # Remove-AzureRmApiManagementIdentityProvider
@@ -16,7 +16,8 @@ Removes an existing Identity Provider Configuration.
 
 ```
 Remove-AzureRmApiManagementIdentityProvider -Context <PsApiManagementContext>
- -Type <PsApiManagementIdentityProviderType> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Type <PsApiManagementIdentityProviderType> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +26,6 @@ Removes an existing Identity Provider Configuration.
 ## EXAMPLES
 
 ### Removes the Facebook identity provider settings from ApiManagement service
-
 ```
 Remove-AzureRmApiManagementIdentityProvider -Context $apimContext -Type 'Facebook' -PassThru
 ```
@@ -39,7 +39,7 @@ Instance of PsApiManagementContext.
 This parameter is required.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -55,7 +55,7 @@ Indicates that this cmdlet returns a value of $True if the operation succeeds or
 
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +71,7 @@ Identifier of an existing Identity Provider.
 This parameter is required.
 
 ```yaml
-Type: PsApiManagementIdentityProviderType
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProviderType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Facebook, Google, Microsoft, Twitter, Aad
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -102,9 +102,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -125,6 +138,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
 [New-AzureRmApiManagementIdentityProvider](./New-AzureRmApiManagementIdentityProvider.md)
 
 [Get-AzureRmApiManagementIdentityProvider](./Get-AzureRmApiManagementIdentityProvider.md)

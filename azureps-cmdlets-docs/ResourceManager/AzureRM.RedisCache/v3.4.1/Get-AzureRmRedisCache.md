@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+Module Name: AzureRM.RedisCache
 ms.assetid: 8EF45FCE-5475-4A18-BFB0-C016E239612E
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzureRmRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzureRmRedisCache.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmRedisCache
@@ -17,17 +17,19 @@ Gets a Redis Cache.
 
 ### All In Subscription (Default)
 ```
-Get-AzureRmRedisCache [<CommonParameters>]
+Get-AzureRmRedisCache [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### All In Resource Group
 ```
-Get-AzureRmRedisCache -ResourceGroupName <String> [<CommonParameters>]
+Get-AzureRmRedisCache -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Specific Redis Cache
 ```
-Get-AzureRmRedisCache -ResourceGroupName <String> -Name <String> [<CommonParameters>]
+Get-AzureRmRedisCache -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -163,7 +165,7 @@ Specifies the name of the Redis Cache to get.
 Use with the *ResourceGroupName* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Specific Redis Cache
 Aliases: 
 
@@ -180,7 +182,7 @@ Specifies the name of the resource group that contains the Redis Cache to get.
 If you specify only the *ResourceGroupName* parameter, this operation gets every Redis Cache in the specified resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: All In Resource Group, Specific Redis Cache
 Aliases: 
 
@@ -188,6 +190,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

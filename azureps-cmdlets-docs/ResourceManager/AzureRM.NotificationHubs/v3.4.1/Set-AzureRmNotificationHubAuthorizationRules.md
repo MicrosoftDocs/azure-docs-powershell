@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+Module Name: AzureRM.NotificationHubs
 ms.assetid: BD311CEF-378B-463E-8998-CC3E9A5B3A7B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Set-AzureRmNotificationHubAuthorizationRules.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Set-AzureRmNotificationHubAuthorizationRules.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Set-AzureRmNotificationHubAuthorizationRules
@@ -18,14 +18,15 @@ Sets authorization rules for a notification hub.
 ### InputFileParameterSet
 ```
 Set-AzureRmNotificationHubAuthorizationRules [-ResourceGroup] <String> [-Namespace] <String>
- [-NotificationHub] <String> [-InputFile] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NotificationHub] <String> [-InputFile] <String> [-Force] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SASRuleParameterSet
 ```
 Set-AzureRmNotificationHubAuthorizationRules [-ResourceGroup] <String> [-Namespace] <String>
- [-NotificationHub] <String> [-SASRule] <SharedAccessAuthorizationRuleAttributes> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-NotificationHub] <String> [-SASRule] <SharedAccessAuthorizationRuleAttributes> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +78,7 @@ Instead, that information is found in the input file C:\Configuration\Authorizat
 Do not ask for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +93,7 @@ Accept wildcard characters: False
 Specifies the path to a JSON file containing configuration information for the new rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: InputFileParameterSet
 Aliases: 
 
@@ -108,7 +109,7 @@ Specifies the namespace to which the notification hub is assigned.
 Namespaces provide a way to group and categorize notification hubs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +125,7 @@ Specifies the notification hub that this cmdlet assigns authorization rules to.
 Notification hubs are used to send push notifications to multiple clients regardless of the used by those clients.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -140,7 +141,7 @@ Specifies the resource group to which the notification hub is assigned.
 Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +156,7 @@ Accept wildcard characters: False
 Specifies the **SharedAccessAuthorizationRuleAttributes** object that contains configuration information for the authorization rules that are modified.
 
 ```yaml
-Type: SharedAccessAuthorizationRuleAttributes
+Type: Microsoft.Azure.Commands.NotificationHubs.Models.SharedAccessAuthorizationRuleAttributes
 Parameter Sets: SASRuleParameterSet
 Aliases: 
 
@@ -170,7 +171,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -185,9 +186,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

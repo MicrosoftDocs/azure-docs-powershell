@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 9BEE5888-304D-4438-BE97-D1FE254AEE98
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzureRmBatchAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzureRmBatchAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/f02935a2fd454cd4f423df7ea14d97ea97ce82a3
 ---
 
 # Set-AzureRmBatchAccount
@@ -17,7 +17,7 @@ Updates a Batch account.
 
 ```
 Set-AzureRmBatchAccount [-AccountName] <String> [-Tag] <Hashtable> [-ResourceGroupName <String>]
- [-AutoStorageAccountId <String>] [<CommonParameters>]
+ [-AutoStorageAccountId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +52,7 @@ This command updates the tags on the account named pfuller.
 Specifies the name of the Batch account that this cmdlet updates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -67,9 +67,9 @@ Accept wildcard characters: False
 Specifies the resource ID of the storage account to be used for auto storage.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -82,9 +82,9 @@ Accept wildcard characters: False
 Specifies the resource group of the account that this cmdlet updates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -107,6 +107,19 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

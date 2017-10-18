@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 4DC26C26-6162-4A15-BFCB-4D2B6B52DD81
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADServicePrincipal.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmADServicePrincipal
@@ -17,22 +17,25 @@ Filters active directory service principals.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>] [<CommonParameters>]
+Get-AzureRmADServicePrincipal [-ServicePrincipalName <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADServicePrincipal -SearchString <String> [<CommonParameters>]
+Get-AzureRmADServicePrincipal -SearchString <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADServicePrincipal -ObjectId <Guid> [<CommonParameters>]
+Get-AzureRmADServicePrincipal -ObjectId <Guid> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SPNParameterSet
 ```
-Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [<CommonParameters>]
+Get-AzureRmADServicePrincipal -ServicePrincipalName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +70,7 @@ Gets all AD service principals.
 Object id of the service principal.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ObjectIdParameterSet
 Aliases: 
 
@@ -82,7 +85,7 @@ Accept wildcard characters: False
 Fetches all service principals that have the display name starting with this value.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SearchStringParameterSet
 Aliases: 
 
@@ -97,7 +100,7 @@ Accept wildcard characters: False
 SPN of the service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EmptyParameterSet
 Aliases: SPN
 
@@ -109,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SPNParameterSet
 Aliases: SPN
 
@@ -117,6 +120,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

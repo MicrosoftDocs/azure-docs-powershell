@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkSecurityRuleConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/a25c903f9b7a79009b1a89b220d7bb3a7c379946
 ---
 
 # Get-AzureRmNetworkSecurityRuleConfig
@@ -48,7 +47,7 @@ This command retrieves user defined rule named "rdp-rule" from Azure network sec
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -63,7 +62,7 @@ Accept wildcard characters: False
 Indicates whether this cmdlet gets a user-created rule configuration or a default rule configuration.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -78,7 +77,7 @@ Accept wildcard characters: False
 Specifies the name of the network security rule configuration to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -93,7 +92,7 @@ Accept wildcard characters: False
 Specifies a **NetworkSecurityGroup** object that contains the network security rule configuration to get.
 
 ```yaml
-Type: PSNetworkSecurityGroup
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup
 Parameter Sets: (All)
 Aliases: 
 

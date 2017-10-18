@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+Module Name: AzureRM.profile
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Add-AzureRmAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Add-AzureRmAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/cfc6a96078270da5caa8b1924dd150a6ccdaa584
 ---
 
 # Add-AzureRmAccount
@@ -116,7 +116,7 @@ This command adds an Azure Resource Manager account to run cmdlets for the speci
 Specifies an access token.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccessTokenWithSubscriptionId
 Aliases: 
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 Account Id for access token
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccessTokenWithSubscriptionId
 Aliases: 
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 SPN
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipalCertificateWithSubscriptionId
 Aliases: 
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 Certificate Hash (Thumbprint)
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipalCertificateWithSubscriptionId
 Aliases: 
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 Name of the default context from this login.  You will be able to select this context by this name after login.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -194,7 +194,7 @@ For more information about the PSCredential object, type Get-Help Get-Credential
 The PSCredential object provides the user ID and password for organizational ID credentials, or the application ID and secret for service principal credentials.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: UserWithSubscriptionId
 Aliases: 
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: ServicePrincipalWithSubscriptionId
 Aliases: 
 
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 Environment containing the account to log into
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: EnvironmentName
 
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 Overwrite the existing context with the same name, if any.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 AccessToken for Graph Service
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccessTokenWithSubscriptionId
 Aliases: 
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 AccessToken for KeyVault Service
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccessTokenWithSubscriptionId
 Aliases: 
 
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 Determines the scope of context changes, for example, wheher changes apply only to the cusrrent process, or to all sessions started by this user.
 
 ```yaml
-Type: ContextModificationScope
+Type: Microsoft.Azure.Commands.Profile.Common.ContextModificationScope
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Process, CurrentUser
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 Indicates that this account authenticates by providing service principal credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ServicePrincipalWithSubscriptionId, ServicePrincipalCertificateWithSubscriptionId
 Aliases: 
 
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 Subscription Name or ID
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SubscriptionName, SubscriptionId
 
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 Optional tenant name or ID
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UserWithSubscriptionId, AccessTokenWithSubscriptionId
 Aliases: Domain
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ServicePrincipalWithSubscriptionId, ServicePrincipalCertificateWithSubscriptionId
 Aliases: Domain
 
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

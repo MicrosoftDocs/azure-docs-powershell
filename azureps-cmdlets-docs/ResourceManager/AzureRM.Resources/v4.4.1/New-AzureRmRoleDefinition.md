@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 8300B143-E322-419E-BC98-DBA56DD90A59
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmRoleDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmRoleDefinition.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmRoleDefinition
@@ -21,12 +21,13 @@ Finally, use this command to create a custom role using role definition.
 
 ### InputFileParameterSet
 ```
-New-AzureRmRoleDefinition [-InputFile] <String> [<CommonParameters>]
+New-AzureRmRoleDefinition [-InputFile] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RoleDefinitionParameterSet
 ```
-New-AzureRmRoleDefinition [-Role] <PSRoleDefinition> [<CommonParameters>]
+New-AzureRmRoleDefinition [-Role] <PSRoleDefinition> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -118,7 +119,7 @@ PS C:\> New-AzureRmRoleDefinition -InputFile C:\Temp\roleDefinition.json
 File name containing a single json role definition.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: InputFileParameterSet
 Aliases: 
 
@@ -133,12 +134,25 @@ Accept wildcard characters: False
 Role definition object.
 
 ```yaml
-Type: PSRoleDefinition
+Type: Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition
 Parameter Sets: RoleDefinitionParameterSet
 Aliases: 
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.Websites
 ms.assetid: D3FE0440-C663-4379-8F5F-2E66EF024E5D
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/New-AzureRmWebAppBackup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/New-AzureRmWebAppBackup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmWebAppBackup
@@ -17,13 +17,14 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb
 ### FromResourceName
 ```
 New-AzureRmWebAppBackup [[-BackupName] <String>] [-ResourceGroupName] <String> [-Name] <String>
- [[-Slot] <String>] [-StorageAccountUrl] <String> [-Databases <DatabaseBackupSetting[]>] [<CommonParameters>]
+ [[-Slot] <String>] [-DefaultProfile <IAzureContextContainer>] [-StorageAccountUrl] <String>
+ [-Databases <DatabaseBackupSetting[]>] [<CommonParameters>]
 ```
 
 ### FromWebApp
 ```
-New-AzureRmWebAppBackup [[-BackupName] <String>] [-WebApp] <Site> [-StorageAccountUrl] <String>
- [-Databases <DatabaseBackupSetting[]>] [<CommonParameters>]
+New-AzureRmWebAppBackup [[-BackupName] <String>] [-WebApp] <Site> [-DefaultProfile <IAzureContextContainer>]
+ [-StorageAccountUrl] <String> [-Databases <DatabaseBackupSetting[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +45,7 @@ Creates a backup of the specified app ContosoWebApp that is within resource grou
 Backup Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -59,7 +60,7 @@ Accept wildcard characters: False
 Databases of type DatabaseBackupSetting[]
 
 ```yaml
-Type: DatabaseBackupSetting[]
+Type: Microsoft.Azure.Management.WebSites.Models.DatabaseBackupSetting[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +75,7 @@ Accept wildcard characters: False
 WebApp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -89,7 +90,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 WebApp Slot Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FromResourceName
 Aliases: 
 
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 Storage Account Url
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -134,7 +135,7 @@ Accept wildcard characters: False
 WebApp Object
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: FromWebApp
 Aliases: 
 
@@ -145,13 +146,25 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Site
-
 Parameter 'WebApp' accepts value of type 'Site' from the pipeline
 
 ## OUTPUTS

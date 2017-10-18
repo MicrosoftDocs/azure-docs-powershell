@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+Module Name: AzureRM.StreamAnalytics
 ms.assetid: 7F08A880-1FC5-4542-8AB8-927BB999A552
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Get-AzureRmStreamAnalyticsFunction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Get-AzureRmStreamAnalyticsFunction.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Get-AzureRmStreamAnalyticsFunction
@@ -17,7 +17,7 @@ Gets functions in a Stream Analytics job.
 
 ```
 Get-AzureRmStreamAnalyticsFunction [-JobName] <String> [[-Name] <String>] [-ResourceGroupName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +46,7 @@ Specifies the name of the Stream Analytics job to which functions belong.
 This cmdlet gets functions for the job that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies the name of the Stream Analytics function that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +77,7 @@ Specifies the name of the resource group to which Stream Analytics functions bel
 This cmdlet gets functions for the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,6 +85,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

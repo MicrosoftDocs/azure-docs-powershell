@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Set-AzureRmDataFactoryV2IntegrationRuntime.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Set-AzureRmDataFactoryV2IntegrationRuntime.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/094cbc91c59c6def36b0b0db15759d964dba67c3
 ---
 
 # Set-AzureRmDataFactoryV2IntegrationRuntime
@@ -68,7 +67,7 @@ The cmdlet updates the description of integration runtime named 'test-selfhost-i
 The catalog database administrator credential of the integration runtime.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +82,7 @@ Accept wildcard characters: False
 The catalog database pricing tier of the integration runtime.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,9 +97,24 @@ Accept wildcard characters: False
 The catalog database server endpoint of the integration runtime.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -113,7 +127,7 @@ Accept wildcard characters: False
 The data factory name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByIntegrationRuntimeName
 Aliases: 
 
@@ -124,26 +138,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Description
 The integration runtime description.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -158,7 +157,7 @@ Accept wildcard characters: False
 Runs the cmdlet without prompting for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -173,7 +172,7 @@ Accept wildcard characters: False
 The integration runtime object.
 
 ```yaml
-Type: PSIntegrationRuntime
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime
 Parameter Sets: ByIntegrationRuntimeObject
 Aliases: 
 
@@ -188,7 +187,7 @@ Accept wildcard characters: False
 The integration runtime location.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -203,7 +202,7 @@ Accept wildcard characters: False
 Maximum parallel execution count per node for a managed dedicated integration runtime.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -218,7 +217,7 @@ Accept wildcard characters: False
 The integration runtime name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByIntegrationRuntimeName
 Aliases: IntegrationRuntimeName
 
@@ -233,7 +232,7 @@ Accept wildcard characters: False
 Target nodes count of the integration runtime.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -248,7 +247,7 @@ Accept wildcard characters: False
 The integration runtime node size.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -263,7 +262,7 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByIntegrationRuntimeName
 Aliases: 
 
@@ -278,7 +277,7 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByResourceId
 Aliases: Id
 
@@ -293,7 +292,7 @@ Accept wildcard characters: False
 The name of the subnet in the VNet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SubnetName
 
@@ -308,7 +307,7 @@ Accept wildcard characters: False
 The integration runtime type.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Managed, SelfHosted
@@ -324,24 +323,9 @@ Accept wildcard characters: False
 The ID of the VNet that the integration runtime joins.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -354,9 +338,24 @@ Accept wildcard characters: False
 Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

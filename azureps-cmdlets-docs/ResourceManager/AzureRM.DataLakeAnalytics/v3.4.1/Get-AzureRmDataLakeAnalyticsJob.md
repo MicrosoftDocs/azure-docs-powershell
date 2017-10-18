@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 ms.assetid: A0293D80-5935-4D2C-AF11-2837FEC95760
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureRmDataLakeAnalyticsJob
@@ -19,13 +19,14 @@ Gets a Data Lake Analytics job.
 ```
 Get-AzureRmDataLakeAnalyticsJob [-Account] <String> [[-Name] <String>] [[-Submitter] <String>]
  [[-SubmittedAfter] <DateTimeOffset>] [[-SubmittedBefore] <DateTimeOffset>] [[-State] <JobState[]>]
- [[-Result] <JobResult[]>] [-Top <Int32>] [-PipelineId <Guid>] [-RecurrenceId <Guid>] [<CommonParameters>]
+ [[-Result] <JobResult[]>] [-Top <Int32>] [-PipelineId <Guid>] [-RecurrenceId <Guid>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Specific JobInformation
 ```
 Get-AzureRmDataLakeAnalyticsJob [-Account] <String> [-JobId] <Guid> [[-Include] <ExtendedJobData>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +55,7 @@ This command gets jobs submitted in the past week.
 Specifies the name of a Data Lake Analytics account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -75,7 +76,7 @@ The acceptable values for this parameter are:
 - All
 
 ```yaml
-Type: ExtendedJobData
+Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+ExtendedJobData
 Parameter Sets: Specific JobInformation
 Aliases: 
 Accepted values: None, All, DebugInfo, Statistics
@@ -91,7 +92,7 @@ Accept wildcard characters: False
 Specifies the ID of the job to get.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Specific JobInformation
 Aliases: 
 
@@ -112,7 +113,7 @@ The acceptable values for this parameter are:
 - All
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 
@@ -127,7 +128,7 @@ Accept wildcard characters: False
 An optional ID that indicates only jobs part of the specified pipeline should be returned.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 
@@ -142,7 +143,7 @@ Accept wildcard characters: False
 An optional ID that indicates only jobs part of the specified recurrence should be returned.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 
@@ -163,7 +164,7 @@ The acceptable values for this parameter are:
 - Succeeded
 
 ```yaml
-Type: JobResult[]
+Type: Microsoft.Azure.Management.DataLake.Analytics.Models.JobResult[]
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 Accepted values: None, Succeeded, Cancelled, Failed
@@ -190,7 +191,7 @@ The acceptable values for this parameter are:
 - Ended
 
 ```yaml
-Type: JobState[]
+Type: Microsoft.Azure.Management.DataLake.Analytics.Models.JobState[]
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 Accepted values: Accepted, Compiling, Ended, New, Queued, Running, Scheduling, Starting, Paused, WaitingForCapacity
@@ -207,7 +208,7 @@ Specifies a date filter.
 Use this parameter to filter the job list result to jobs submitted after the specified date.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 
@@ -223,7 +224,7 @@ Specifies a date filter.
 Use this parameter to filter the job list result to jobs submitted before the specified date.
 
 ```yaml
-Type: DateTimeOffset
+Type: System.Nullable`1[System.DateTimeOffset]
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 
@@ -239,7 +240,7 @@ Specifies the email address of a user.
 Use this parameter to filter the job list results to jobs submitted by a specified user.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 
@@ -254,7 +255,7 @@ Accept wildcard characters: False
 An optional value which indicates the number of jobs to return. Default value is 500
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: All In Resource Group and Account
 Aliases: 
 
@@ -265,13 +266,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Guid
-
 Parameter 'JobId' accepts value of type 'Guid' from the pipeline
 
 ## OUTPUTS

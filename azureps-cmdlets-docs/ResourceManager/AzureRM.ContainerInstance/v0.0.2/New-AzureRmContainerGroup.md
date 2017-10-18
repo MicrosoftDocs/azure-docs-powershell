@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/New-AzureRmContainerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/New-AzureRmContainerGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/c0a38fa2cc379b7e7c8e1057f23d1f188d4daf1f
 ---
 
 # New-AzureRmContainerGroup
@@ -15,11 +14,12 @@ Creates a container group.
 
 ## SYNTAX
 
-### CreateContainerGroupBaseParamSet
+### CreateContainerGroupBaseParamSet (Default)
 ```
 New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> -Image <String> [-Location <String>]
  [-OsType <String>] [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-Port <Int32>]
- [-Command <String>] [-EnvironmentVariable <Hashtable>] [-Tag <Hashtable>] [-WhatIf] [-Confirm]
+ [-Command <String>] [-EnvironmentVariable <Hashtable>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CreateContainerGroupWithRegistryParamSet
@@ -27,7 +27,8 @@ New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> -Image 
 New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> -Image <String> [-Location <String>]
  [-OsType <String>] [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-Port <Int32>]
  [-Command <String>] [-EnvironmentVariable <Hashtable>] [-RegistryServerDomain <String>]
- -RegistryCredential <PSCredential> [-Tag <Hashtable>] [-WhatIf] [-Confirm]
+ -RegistryCredential <PSCredential> [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -133,7 +134,7 @@ This commands creates a container group using a custom image from a custom conta
 The command to run in the container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -148,7 +149,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -164,7 +165,7 @@ The required CPU cores.
 Default: 1
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -179,7 +180,7 @@ Accept wildcard characters: False
 The container environment variables.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -194,7 +195,7 @@ Accept wildcard characters: False
 The container image.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -209,7 +210,7 @@ Accept wildcard characters: False
 The IP address type.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Public
@@ -226,7 +227,7 @@ The container group Location.
 Default to the location of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -242,7 +243,7 @@ The required memory in GB.
 Default: 1.5
 
 ```yaml
-Type: Double
+Type: System.Nullable`1[System.Double]
 Parameter Sets: (All)
 Aliases: Memory
 
@@ -257,7 +258,7 @@ Accept wildcard characters: False
 The container group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -273,7 +274,7 @@ The container OS type.
 Default: Linux
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Linux, Windows
@@ -290,7 +291,7 @@ The port to open.
 Default: 80
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -305,7 +306,7 @@ Accept wildcard characters: False
 The custom container registry credential.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: CreateContainerGroupWithRegistryParamSet
 Aliases: 
 
@@ -320,7 +321,7 @@ Accept wildcard characters: False
 The custom container registry login server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CreateContainerGroupWithRegistryParamSet
 Aliases: RegistryServer
 
@@ -335,7 +336,7 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -350,7 +351,7 @@ Accept wildcard characters: False
 {{Fill Tag Description}}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -366,7 +367,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -377,16 +378,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 System.Collections.Hashtable
 
-
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup
-
 
 ## NOTES
 

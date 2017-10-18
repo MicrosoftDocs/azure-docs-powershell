@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+Module Name: AzureRM.Storage
 ms.assetid: 006B4341-274C-4929-86EE-2E107BA9E485
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Remove-AzureRmStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Remove-AzureRmStorageAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Remove-AzureRmStorageAccount
@@ -16,8 +16,8 @@ Removes a Storage account from Azure.
 ## SYNTAX
 
 ```
-Remove-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ This command removes the specified Storage account.
 
 ### -Force
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage account to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName, AccountName
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the Storage account to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -97,13 +97,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

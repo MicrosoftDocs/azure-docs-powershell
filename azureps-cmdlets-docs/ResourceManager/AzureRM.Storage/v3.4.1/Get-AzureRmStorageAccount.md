@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+Module Name: AzureRM.Storage
 ms.assetid: E53D5040-C1E8-4DC1-8371-F41C00B666E3
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Get-AzureRmStorageAccount
@@ -17,12 +17,14 @@ Gets a Storage account.
 
 ### ResourceGroupParameterSet
 ```
-Get-AzureRmStorageAccount [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmStorageAccount [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### AccountNameParameterSet
 ```
-Get-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +59,7 @@ This command gets all of the Storage accounts in the subscription.
 Specifies the name of the Storage account to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameParameterSet
 Aliases: StorageAccountName, AccountName
 
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the Storage account to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupParameterSet
 Aliases: 
 
@@ -84,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameParameterSet
 Aliases: 
 
@@ -92,6 +94,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

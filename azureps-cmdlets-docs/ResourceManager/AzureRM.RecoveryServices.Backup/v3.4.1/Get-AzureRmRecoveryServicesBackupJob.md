@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+Module Name: AzureRM.RecoveryServices.Backup
 ms.assetid: 12F8A120-7282-4844-90E0-1C3393336E8A
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmRecoveryServicesBackupJob
@@ -18,7 +18,7 @@ Gets Backup jobs.
 ```
 Get-AzureRmRecoveryServicesBackupJob [[-Status] <JobStatus>] [[-Operation] <JobOperation>] [[-From] <DateTime>]
  [[-To] <DateTime>] [[-JobId] <String>] [[-Job] <JobBase>] [-BackupManagementType <BackupManagementType>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,7 +78,7 @@ Specifies the Backup management type.
 Currently, only AzureVM is supported.
 
 ```yaml
-Type: BackupManagementType
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
@@ -97,7 +97,7 @@ For more information about **DateTime** objects, type `Get-Help Get-Date`.
 Use UTC format for dates.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 Specifies the name of the Backup job to get.
 
 ```yaml
-Type: JobBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ The ID is the InstanceId property of an **AzureRmRecoveryServicesBackupJob** obj
 To obtain an **AzureRmRecoveryServicesBackupJob** object, use Get-AzureRmRecoveryServicesBackupJob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +153,7 @@ The acceptable values for this parameter are:
 - Unregister
 
 ```yaml
-Type: JobOperation
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobOperation]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Backup, Restore, ConfigureBackup, DisableBackup, DeleteBackupData
@@ -177,7 +177,7 @@ The acceptable values for this parameter are:
 - CompletedWithWarnings
 
 ```yaml
-Type: JobStatus
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobStatus]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: InProgress, Cancelling, Cancelled, Completed, CompletedWithWarnings, Failed
@@ -196,12 +196,25 @@ If you specify this parameter, you must also specify the *From* parameter.
 Use UTC format for dates.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 4285EF77-FA70-4BE7-96E0-89E2E8FC5AD6
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Export-AzureRmAutomationDscNodeReportContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Export-AzureRmAutomationDscNodeReportContent.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Export-AzureRmAutomationDscNodeReportContent
@@ -17,7 +17,8 @@ Exports the raw content of a DSC report sent from a DSC node to Automation.
 
 ```
 Export-AzureRmAutomationDscNodeReportContent -NodeId <Guid> -ReportId <Guid> [-OutputFolder <String>] [-Force]
- [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +43,7 @@ Specifies the name of an Automation account.
 This cmdlet exports report content for a DSC node that belongs to the Automation account that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -57,7 +58,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet replaces an existing local file with a new file that has the same name.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +73,7 @@ Accept wildcard characters: False
 Specifies the unique ID of the DSC node for which this cmdlet exports report contents.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +88,7 @@ Accept wildcard characters: False
 Specifies the output folder where this cmdlet exports report contents.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +103,7 @@ Accept wildcard characters: False
 Specifies the unique ID of the DSC node report that this cmdlet exports.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: Id
 
@@ -118,7 +119,7 @@ Specifies the name of a resource group.
 This cmdlet exports the contents of a report for the DSC node that belongs to the resource group that this cmdlet specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -133,7 +134,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -149,13 +150,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

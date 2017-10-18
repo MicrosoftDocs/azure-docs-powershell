@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+Module Name: AzureRM.ServiceBus
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzureRmServiceBusAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzureRmServiceBusAuthorizationRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ec6eabb5fcc8e564f660117cecebd8a922251a6b
 ---
 
 # Set-AzureRmServiceBusAuthorizationRule
@@ -17,33 +17,35 @@ Updates the specified authorization rule description for the given Service Bus n
 ### NamespaceAuthorizationRuleSet (Default)
 ```
 Set-AzureRmServiceBusAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
- [[-InputObject] <SharedAccessAuthorizationRuleAttributes>] [[-Rights] <String[]>] [-WhatIf] [-Confirm]
+ [[-InputObject] <SharedAccessAuthorizationRuleAttributes>] [[-Rights] <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### QueueAuthorizationRuleSet
 ```
-Set-AzureRmServiceBusAuthorizationRule [-ResourceGroupName] <String> [[-Namespace] <String>] [-Queue] <String>
- [-Name] <String> [[-InputObject] <SharedAccessAuthorizationRuleAttributes>] [[-Rights] <String[]>] [-WhatIf]
- [-Confirm]
+Set-AzureRmServiceBusAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Queue] <String>
+ [-Name] <String> [[-InputObject] <SharedAccessAuthorizationRuleAttributes>] [[-Rights] <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TopicAuthorizationRuleSet
 ```
-Set-AzureRmServiceBusAuthorizationRule [-ResourceGroupName] <String> [[-Namespace] <String>] [-Topic] <String>
- [-Name] <String> [[-InputObject] <SharedAccessAuthorizationRuleAttributes>] [[-Rights] <String[]>] [-WhatIf]
- [-Confirm]
+Set-AzureRmServiceBusAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Topic] <String>
+ [-Name] <String> [[-InputObject] <SharedAccessAuthorizationRuleAttributes>] [[-Rights] <String[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AuthoRuleInputObjectSet
 ```
 Set-AzureRmServiceBusAuthorizationRule [-ResourceGroupName] <String> [-Name] <String>
- [-InputObject] <SharedAccessAuthorizationRuleAttributes> [-WhatIf] [-Confirm]
+ [-InputObject] <SharedAccessAuthorizationRuleAttributes> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### AuthoRulePropertiesSet
 ```
 Set-AzureRmServiceBusAuthorizationRule [-ResourceGroupName] <String> [-Name] <String> [-Rights] <String[]>
- [-WhatIf] [-Confirm]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,7 +92,7 @@ Removes **Manage** from the access rights of the authorization rule `AuthoRule1`
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -105,26 +107,26 @@ Accept wildcard characters: False
 ServiceBus AuthorizationRule Object.
 
 ```yaml
-Type: SharedAccessAuthorizationRuleAttributes
+Type: Microsoft.Azure.Commands.ServiceBus.Models.SharedAccessAuthorizationRuleAttributes
 Parameter Sets: NamespaceAuthorizationRuleSet, QueueAuthorizationRuleSet, TopicAuthorizationRuleSet
 Aliases: AuthRuleObj
 
 Required: False
 Position: 4
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ```yaml
-Type: SharedAccessAuthorizationRuleAttributes
+Type: Microsoft.Azure.Commands.ServiceBus.Models.SharedAccessAuthorizationRuleAttributes
 Parameter Sets: AuthoRuleInputObjectSet
 Aliases: AuthRuleObj
 
 Required: True
 Position: 4
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -132,7 +134,7 @@ Accept wildcard characters: False
 AuthorizationRule Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AuthorizationRuleName
 
@@ -147,23 +149,11 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
-Parameter Sets: NamespaceAuthorizationRuleSet
+Type: System.String
+Parameter Sets: NamespaceAuthorizationRuleSet, QueueAuthorizationRuleSet, TopicAuthorizationRuleSet
 Aliases: NamespaceName
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: QueueAuthorizationRuleSet, TopicAuthorizationRuleSet
-Aliases: NamespaceName
-
-Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -174,7 +164,7 @@ Accept wildcard characters: False
 Queue Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: QueueAuthorizationRuleSet
 Aliases: QueueName
 
@@ -189,7 +179,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -205,26 +195,26 @@ Rights, e.g.
 @("Listen","Send","Manage")
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: NamespaceAuthorizationRuleSet, QueueAuthorizationRuleSet, TopicAuthorizationRuleSet
 Aliases: 
 
 Required: False
 Position: 4
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: AuthoRulePropertiesSet
 Aliases: 
 
 Required: True
 Position: 4
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -232,7 +222,7 @@ Accept wildcard characters: False
 Topic Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicAuthorizationRuleSet
 Aliases: TopicName
 
@@ -248,7 +238,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -259,17 +249,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 Microsoft.Azure.Commands.ServiceBus.Models.SharedAccessAuthorizationRuleAttributes
 System.String[]
 
-
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.ServiceBus.Models.SharedAccessAuthorizationRuleAttributes
-
 
 ## NOTES
 

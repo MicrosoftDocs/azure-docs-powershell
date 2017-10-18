@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 169E6694-82CD-4FCB-AB3D-E8A74001B8DB
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Add-AzureRmVMDataDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Add-AzureRmVMDataDisk.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Add-AzureRmVMDataDisk
@@ -19,7 +19,7 @@ Adds a data disk to a virtual machine.
 Add-AzureRmVMDataDisk [-VM] <PSVirtualMachine> [[-Name] <String>] [[-VhdUri] <String>]
  [[-Caching] <CachingTypes>] [[-DiskSizeInGB] <Int32>] [-Lun] <Int32> [-CreateOption] <DiskCreateOptionTypes>
  [[-SourceImageUri] <String>] [[-ManagedDiskId] <String>] [[-StorageAccountType] <StorageAccountTypes>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -112,7 +112,7 @@ Changing this value causes the virtual machine to restart.
 This setting affects the consistency and performance of the disk.
 
 ```yaml
-Type: CachingTypes
+Type: Microsoft.Azure.Management.Compute.Models.CachingTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, ReadOnly, ReadWrite
@@ -140,7 +140,7 @@ When you specify this option, you must specify the *SourceImageUri* parameter al
 The *VhdUri* parameter is used as the location identifying where the data disk VHD will be stored when it is used by the virtual machine.
 
 ```yaml
-Type: DiskCreateOptionTypes
+Type: Microsoft.Azure.Management.Compute.Models.DiskCreateOptionTypes
 Parameter Sets: (All)
 Aliases: 
 Accepted values: FromImage, Empty, Attach
@@ -152,11 +152,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DiskSizeInGB
 Specifies the size, in gigabytes, of an empty disk to attach to a virtual machine.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,7 +184,7 @@ Accept wildcard characters: False
 Specifies the logical unit number (LUN) for a data disk.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -186,7 +199,7 @@ Accept wildcard characters: False
 Specifies the ID of a managed disk.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -201,7 +214,7 @@ Accept wildcard characters: False
 Specifies the name of the data disk to add.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -216,7 +229,7 @@ Accept wildcard characters: False
 Specifies the source URI of the disk that this cmdlet attaches.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SourceImage
 
@@ -231,7 +244,7 @@ Accept wildcard characters: False
 Specifies the storage account type of managed disk.
 
 ```yaml
-Type: StorageAccountTypes
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.StorageAccountTypes]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: StandardLRS, PremiumLRS
@@ -249,7 +262,7 @@ This cmdlet copies the image binary large object (blob) to this location.
 This is the location from which to start the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -266,7 +279,7 @@ You can use the **Get-AzureRmVM** cmdlet to obtain a virtual machine object.
 You can use the **New-AzureRmVMConfig** cmdlet to create a virtual machine object.
 
 ```yaml
-Type: PSVirtualMachine
+Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 Parameter Sets: (All)
 Aliases: VMProfile
 

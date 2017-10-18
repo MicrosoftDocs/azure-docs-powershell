@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Stop-AzureRmAutomationDscNodeConfigurationDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Stop-AzureRmAutomationDscNodeConfigurationDeployment.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ae0426e9c11926a85437110c09d6a348dcea7b72
 ---
 
 # Stop-AzureRmAutomationDscNodeConfigurationDeployment
@@ -15,8 +15,18 @@ Stops a DSC Node configuration deployment in Automation. It only stops the curre
 
 ## SYNTAX
 
+### ByJobId (Default)
 ```
-Stop-AzureRmAutomationDscNodeConfigurationDeployment [-ResourceGroupName] <String> [-AutomationAccountName] <String> [<CommonParameters>]
+Stop-AzureRmAutomationDscNodeConfigurationDeployment -JobId <Guid> [-Force] [-PassThru]
+ [-ResourceGroupName] <String> -AutomationAccountName <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByByInputObject
+```
+Stop-AzureRmAutomationDscNodeConfigurationDeployment [-PassThru] -InputObject <NodeConfigurationDeployment>
+ [-ResourceGroupName] <String> -AutomationAccountName <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,14 +44,23 @@ The above command stops the DSC node configuration deployment job with the jobId
 ## PARAMETERS
 
 ### -AutomationAccountName
-Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
+Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
 
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -ResourceGroupName
 Specifies the name of a resource group in which this cmdlet compiles a configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -52,28 +71,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -JobId
 Specifies the Job id of an existing deployment job.
 
 ```yaml
-Type: Guid
-Parameter Sets: (JobId)
+Type: System.Guid
+Parameter Sets: ByJobId
 Aliases: 
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -84,7 +91,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,8 +106,8 @@ Accept wildcard characters: False
 ps_force
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ByJobId
 Aliases: 
 
 Required: False
@@ -114,7 +121,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -130,7 +137,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -138,6 +145,32 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Input object for Piping.```yaml
+Type: Microsoft.Azure.Commands.Automation.Model.NodeConfigurationDeployment
+Parameter Sets: ByByInputObject
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

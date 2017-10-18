@@ -6,7 +6,6 @@ Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/AzureRM.Batch.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/AzureRM.Batch.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/9d36b3fc507d36b49b1ec3ae7cb43bbccbfe5381
 ---
 
 # AzureRM.Batch Module

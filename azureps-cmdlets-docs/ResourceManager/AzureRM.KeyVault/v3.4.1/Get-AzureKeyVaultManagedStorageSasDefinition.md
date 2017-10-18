@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 online version: https://msdn.microsoft.com/en-us/library/dn868052.aspx
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureKeyVaultManagedStorageSasDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureKeyVaultManagedStorageSasDefinition.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4d5786e0b0dfcc4386fd0f627ecbc75ac46bbdad
 ---
 
 # Get-AzureKeyVaultManagedStorageSasDefinition
@@ -16,13 +16,14 @@ Gets Key Vault managed Storage SAS Definitions.
 
 ### ByAccountName (Default)
 ```
-Get-AzureKeyVaultManagedStorageSasDefinition [-VaultName] <String> [-AccountName] <String> [<CommonParameters>]
+Get-AzureKeyVaultManagedStorageSasDefinition [-VaultName] <String> [-AccountName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByDefinitionName
 ```
 Get-AzureKeyVaultManagedStorageSasDefinition [-VaultName] <String> [-AccountName] <String> [-Name] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,7 @@ Vault name.
 Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName
 
@@ -67,7 +68,7 @@ Storage sas definition name.
 Cmdlet constructs the FQDN of a storage sas definition from vault name, currently selected environment, storage account name and sas definition name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByDefinitionName
 Aliases: SasDefinitionName
 
@@ -83,7 +84,7 @@ Vault name.
 Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,6 +92,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

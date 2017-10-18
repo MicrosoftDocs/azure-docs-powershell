@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: D1C5B35C-5419-4739-9D57-6C4228E98DAC
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Stop-AzureBatchJobSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Stop-AzureBatchJobSchedule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Stop-AzureBatchJobSchedule
@@ -16,7 +16,8 @@ Stops a Batch job schedule.
 ## SYNTAX
 
 ```
-Stop-AzureBatchJobSchedule [-Id] <String> -BatchContext <BatchAccountContext> [<CommonParameters>]
+Stop-AzureBatchJobSchedule [-Id] <String> -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +40,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +55,7 @@ Accept wildcard characters: False
 Specifies the ID of the job schedule that this cmdlet stops.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -65,17 +66,28 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### String
-
 Parameter 'Id' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

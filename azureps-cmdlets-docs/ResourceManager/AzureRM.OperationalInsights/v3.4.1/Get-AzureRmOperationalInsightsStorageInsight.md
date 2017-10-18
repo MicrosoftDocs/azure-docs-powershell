@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+Module Name: AzureRM.OperationalInsights
 ms.assetid: 29ABCC1B-8590-4243-A629-709F207927B4
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzureRmOperationalInsightsStorageInsight.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzureRmOperationalInsightsStorageInsight.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmOperationalInsightsStorageInsight
@@ -18,12 +18,13 @@ Gets information about a Storage Insight.
 ### ByWorkspaceName (Default)
 ```
 Get-AzureRmOperationalInsightsStorageInsight [-ResourceGroupName] <String> [-WorkspaceName] <String>
- [[-Name] <String>] [<CommonParameters>]
+ [[-Name] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByWorkspaceObject
 ```
-Get-AzureRmOperationalInsightsStorageInsight [-Workspace] <PSWorkspace> [[-Name] <String>] [<CommonParameters>]
+Get-AzureRmOperationalInsightsStorageInsight [-Workspace] <PSWorkspace> [[-Name] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +57,7 @@ The second command gets the storage insight named MyStorageInsight for the works
 Specifies the Storage Insight name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 Specifies the name of an Azure resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByWorkspaceName
 Aliases: 
 
@@ -86,7 +87,7 @@ Accept wildcard characters: False
 Specifies the workspace that contains the Storage Insights.
 
 ```yaml
-Type: PSWorkspace
+Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
 Parameter Sets: ByWorkspaceObject
 Aliases: 
 
@@ -101,7 +102,7 @@ Accept wildcard characters: False
 Specifies the name of the workspace that contains the Storage Insights.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByWorkspaceName
 Aliases: 
 
@@ -112,13 +113,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### PSWorkspace
-
 Parameter 'Workspace' accepts value of type 'PSWorkspace' from the pipeline
 
 ## OUTPUTS

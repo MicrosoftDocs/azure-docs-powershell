@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 7B8C8239-16A3-4C47-9D6F-DE31885532F4
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Set-AzureRmADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Set-AzureRmADServicePrincipal.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/928b010f993c0b8148a305b24dcd72d1b9141705
 ---
 
 # Set-AzureRmADServicePrincipal
@@ -17,14 +17,14 @@ Updates an existing azure active directory service principal.
 
 ### SpObjectIdWithDisplayNameParameterSet (Default)
 ```
-Set-AzureRmADServicePrincipal -ObjectId <String> -DisplayName <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-AzureRmADServicePrincipal -ObjectId <String> -DisplayName <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SPNWithDisplayNameParameterSet
 ```
-Set-AzureRmADServicePrincipal -ServicePrincipalName <String> -DisplayName <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-AzureRmADServicePrincipal -ServicePrincipalName <String> -DisplayName <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +54,7 @@ Updates the display name for the service principal with specified service princi
 New display name for the service principal.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 The object id of the service principal to update.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SpObjectIdWithDisplayNameParameterSet
 Aliases: ServicePrincipalObjectId
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 The SPN of service principal to update.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SPNWithDisplayNameParameterSet
 Aliases: SPN
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -112,9 +112,22 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
+Module Name: AzureRM.Scheduler
 ms.assetid: D82270AD-50C2-4980-ABE2-58049C187875
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/New-AzureRmSchedulerJobCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/New-AzureRmSchedulerJobCollection.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmSchedulerJobCollection
@@ -17,8 +17,8 @@ Creates a job collection.
 
 ```
 New-AzureRmSchedulerJobCollection -ResourceGroupName <String> -JobCollectionName <String> -Location <String>
- [-Plan <String>] [-MaxJobCount <Int32>] [-Frequency <String>] [-Interval <Int32>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-Plan <String>] [-MaxJobCount <Int32>] [-Frequency <String>] [-Interval <Int32>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +44,7 @@ The acceptable values for this parameter are:
 - Month
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Minute, Hour, Day, Week, Month
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Specifies an interval of recurrence.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies a name for the job collection.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name, ResourceName
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Specifies the Azure region in which this cmdlet creates the job collection.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,7 +106,7 @@ Specifies the maximum number of jobs that you can create in the job collection.
 The maximum depends on the plan that the *Plan* parameter specifies.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -127,7 +127,7 @@ The acceptable values for this parameter are:
 - P20Premium
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Free, Standard, P10Premium, P20Premium
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 Specifies the resource group for the job collection.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -174,13 +174,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

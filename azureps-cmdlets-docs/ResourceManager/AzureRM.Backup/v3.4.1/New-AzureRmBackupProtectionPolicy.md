@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 3A7B0280-CE6E-4374-87AF-4C1015EB88FA
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/New-AzureRmBackupProtectionPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/New-AzureRmBackupProtectionPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmBackupProtectionPolicy
@@ -19,20 +19,21 @@ Creates a Backup policy.
 ```
 New-AzureRmBackupProtectionPolicy [-Name] <String> [-Type] <String> [-BackupTime] <DateTime>
  [[-DaysOfWeek] <String[]>] [-RetentionPolicy] <AzureRMBackupRetentionPolicy[]> [-Vault] <AzureRMBackupVault>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### DailyScheduleParamSet
 ```
 New-AzureRmBackupProtectionPolicy [-Name] <String> [-Type] <String> [-Daily] [-BackupTime] <DateTime>
- [-RetentionPolicy] <AzureRMBackupRetentionPolicy[]> [-Vault] <AzureRMBackupVault> [<CommonParameters>]
+ [-RetentionPolicy] <AzureRMBackupRetentionPolicy[]> [-Vault] <AzureRMBackupVault>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### WeeklyScheduleParamSet
 ```
 New-AzureRmBackupProtectionPolicy [-Name] <String> [-Type] <String> [-Weekly] [-BackupTime] <DateTime>
  [-DaysOfWeek] <String[]> [-RetentionPolicy] <AzureRMBackupRetentionPolicy[]> [-Vault] <AzureRMBackupVault>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,7 +75,7 @@ To obtain a **DateTime**, use the Get-Date cmdlet.
 For information about **DateTime** objects, type `Get-Help Get-Date`.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -89,7 +90,7 @@ Accept wildcard characters: False
 Indicates that the backup operation runs on a Daily schedule.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: DailyScheduleParamSet
 Aliases: 
 
@@ -116,10 +117,10 @@ The acceptable values for this parameter are:
 If you specify the *Weekly* parameter, specify this parameter.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: NoScheduleParamSet
 Aliases: 
-Accepted values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+Accepted values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 
 Required: False
 Position: 6
@@ -129,10 +130,10 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: WeeklyScheduleParamSet
 Aliases: 
-Accepted values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+Accepted values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 
 Required: True
 Position: 6
@@ -146,7 +147,7 @@ Specifies a name for the backup policy.
 Select a name that is unique in the vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -162,7 +163,7 @@ Specifies an array of retention policies for the backup policy.
 To obtain an **AzureRmBackupRetentionPolicy**, use the New-AzureRmBackupRetentionPolicyObject cmdlet.
 
 ```yaml
-Type: AzureRMBackupRetentionPolicy[]
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupRetentionPolicy[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -178,7 +179,7 @@ Specifies the type of backup item to which the policy applies.
 Currently, the only supported value is AzureVM.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureVM
@@ -195,7 +196,7 @@ Specifies the Azure Backup vault to which the backup policy belongs.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: (All)
 Aliases: 
 
@@ -210,12 +211,25 @@ Accept wildcard characters: False
 Indicates that the backup policy is triggered weekly on one or more days of the week.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: WeeklyScheduleParamSet
 Aliases: 
 
 Required: True
 Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

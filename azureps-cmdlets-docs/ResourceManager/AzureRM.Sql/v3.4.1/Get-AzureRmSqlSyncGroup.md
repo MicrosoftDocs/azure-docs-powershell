@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlSyncGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlSyncGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/82511d9105edd4959fd9e3d71bbb8827dd368d49
 ---
 
 # Get-AzureRmSqlSyncGroup
@@ -16,7 +16,7 @@ Returns information about Azure SQL Database Sync Groups.
 
 ```
 Get-AzureRmSqlSyncGroup [[-Name] <String>] [-ServerName] <String> [-DatabaseName] <String>
- [-ResourceGroupName] <String>
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,7 +24,6 @@ The **Get-AzureRmSqlSyncGroup** cmdlet returns information about one or more Azu
 Specify the name of a sync group to see information for only that sync group.
 
 ## EXAMPLES
-
 
 ### Example 1: Get all instances of Azure SQL Sync Group assigned to an Azure SQL Database
 ```
@@ -55,7 +54,7 @@ HubDatabaseUserName         : myAccount
 HubDatabasePassword         : 
 SyncState                   : NotReady
 LastSyncTime                : 1/1/0001 12:00:00 AM
-Schema                      : 
+Schema                      :
 ```
 
 This command gets information about all the Azure SQL Database Sync Groups assigned to an Azure SQL Database.
@@ -75,7 +74,7 @@ HubDatabaseUserName         : myAccount
 HubDatabasePassword         : 
 SyncState                   : NotReady
 LastSyncTime                : 1/1/0001 12:00:00 AM
-Schema                      : 
+Schema                      :
 ```
 
 This command gets information about the Azure SQL Database Sync Group with name "SyncGroup01"
@@ -86,7 +85,7 @@ This command gets information about the Azure SQL Database Sync Group with name 
 The name of the Azure SQL Database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +100,7 @@ Accept wildcard characters: False
 The sync group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: SyncGroupName
 
@@ -116,7 +115,7 @@ Accept wildcard characters: False
 The name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,7 +130,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -141,6 +140,22 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

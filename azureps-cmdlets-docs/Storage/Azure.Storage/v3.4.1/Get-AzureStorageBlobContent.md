@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: C091D654-E113-4AE0-A6C8-24630D1294A4
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageBlobContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageBlobContent.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureStorageBlobContent
@@ -69,7 +69,7 @@ This example uses the asterisk wildcard character and the pipeline to find and d
 Specifies the name of the blob to be downloaded.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ReceiveManual, ContainerPipeline
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Specifies whether to check the Md5 sum for the downloaded file.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -117,7 +117,7 @@ Specifies a cloud blob.
 To obtain a **CloudBlob** object, use the Get-AzureStorageBlob cmdlet.
 
 ```yaml
-Type: CloudBlob
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlob
 Parameter Sets: BlobPipeline
 Aliases: ICloudBlob
 
@@ -133,7 +133,7 @@ Specifies a **CloudBlobContainer** object from the Azure storage client library.
 You can create it or use the Get-AzureStorageContainer cmdlet.
 
 ```yaml
-Type: CloudBlobContainer
+Type: Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer
 Parameter Sets: ContainerPipeline
 Aliases: 
 
@@ -154,7 +154,7 @@ The default value is 10.
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Specifies the name of container that has the blob you want to download.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ReceiveManual
 Aliases: 
 
@@ -185,7 +185,7 @@ Specifies the Azure storage account from which you want to download blob content
 You can use the New-AzureStorageContext cmdlet to create a storage context.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 Specifies the location to store the downloaded file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Path
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 Overwrites an existing file without confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -231,7 +231,7 @@ Specifies the service side time-out interval, in seconds, for a request.
 If the specified interval elapses before the service processes the request, the storage service returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -262,7 +262,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -279,7 +279,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ## OUTPUTS

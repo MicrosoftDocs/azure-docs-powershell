@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 85C543FE-BBC1-4A1B-9974-1D3BF520085C
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmSiteRecoveryPolicy
@@ -20,7 +20,8 @@ Creates a Site Recovery replication policy.
 New-AzureRmSiteRecoveryPolicy -Name <String> -ReplicationProvider <String>
  -ReplicationFrequencyInSeconds <String> [-RecoveryPoints <Int32>]
  [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-ReplicationStartTime <TimeSpan>]
- [-RecoveryAzureStorageAccountId <String>] [-Encryption <String>] [<CommonParameters>]
+ [-RecoveryAzureStorageAccountId <String>] [-Encryption <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### EnterpriseToEnterprise
@@ -28,7 +29,8 @@ New-AzureRmSiteRecoveryPolicy -Name <String> -ReplicationProvider <String>
 New-AzureRmSiteRecoveryPolicy -Name <String> -ReplicationProvider <String> [-ReplicationMethod <String>]
  -ReplicationFrequencyInSeconds <String> [-RecoveryPoints <Int32>]
  [-ApplicationConsistentSnapshotFrequencyInHours <Int32>] [-Compression <String>] -ReplicationPort <UInt16>
- [-Authentication <String>] [-ReplicationStartTime <TimeSpan>] [-ReplicaDeletion <String>] [<CommonParameters>]
+ [-Authentication <String>] [-ReplicationStartTime <TimeSpan>] [-ReplicaDeletion <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +45,7 @@ The replication policy is used to specify replication settings such as the repli
 Specifies the frequency of the application consistent snapshot in hours.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -62,7 +64,7 @@ Valid values are:
 -  Kerberos
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 Accepted values: Certificate, Kerberos
@@ -76,7 +78,7 @@ Accept wildcard characters: False
 
 ### -Compression
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 Accepted values: Enable, Disable
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 
 ### -Encryption
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure
 Aliases: 
 Accepted values: Enable, Disable
@@ -106,7 +108,7 @@ Accept wildcard characters: False
 Specifies a friendly name which identifies the Site Recovery replication policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,7 +123,7 @@ Accept wildcard characters: False
 Specifies the Azure storage account ID of the replication target.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToAzure
 Aliases: 
 
@@ -136,7 +138,7 @@ Accept wildcard characters: False
 Specifies the number of hours to retain recovery points.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -149,7 +151,7 @@ Accept wildcard characters: False
 
 ### -ReplicaDeletion
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 Accepted values: Required, NotRequired
@@ -170,7 +172,7 @@ Valid values are:
 - 900
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: 30, 300, 900
@@ -190,7 +192,7 @@ Valid values are:
 - Offline
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 Accepted values: Online, Offline
@@ -206,7 +208,7 @@ Accept wildcard characters: False
 Specifies the port used for replication.
 
 ```yaml
-Type: UInt16
+Type: System.UInt16
 Parameter Sets: EnterpriseToEnterprise
 Aliases: 
 
@@ -226,7 +228,7 @@ Valid values are:
 - HyperVReplicaAzure
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HyperVReplica2012R2, HyperVReplica2012, HyperVReplicaAzure
@@ -243,9 +245,22 @@ Specifies the replication start time.
 It must be no later than 24-hours from the start of the job.
 
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

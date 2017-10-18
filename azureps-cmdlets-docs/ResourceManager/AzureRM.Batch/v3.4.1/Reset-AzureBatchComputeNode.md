@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: A202537B-D292-4822-A0B9-27A6A20621D4
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Reset-AzureBatchComputeNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Reset-AzureBatchComputeNode.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Reset-AzureBatchComputeNode
@@ -18,13 +18,13 @@ Reinstalls the operating system on the specified compute node.
 ### Id (Default)
 ```
 Reset-AzureBatchComputeNode [-PoolId] <String> [-Id] <String> [-ReimageOption <ComputeNodeReimageOption>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### InputObject
 ```
 Reset-AzureBatchComputeNode [[-ComputeNode] <PSComputeNode>] [-ReimageOption <ComputeNodeReimageOption>]
- -BatchContext <BatchAccountContext> [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +54,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the **PSComputeNode** object that represents the compute node to reimage.
 
 ```yaml
-Type: PSComputeNode
+Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
 Parameter Sets: InputObject
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node to reimage.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute node.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -115,10 +115,23 @@ Specifies when to reimage the node and what to do with currently running tasks.
 The default is Requeue.
 
 ```yaml
-Type: ComputeNodeReimageOption
+Type: System.Nullable`1[Microsoft.Azure.Batch.Common.ComputeNodeReimageOption]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Requeue, Terminate, TaskCompletion, RetainedData
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -133,11 +146,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSComputeNode
-
 Parameter 'ComputeNode' accepts value of type 'PSComputeNode' from the pipeline
 
 ## OUTPUTS

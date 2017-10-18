@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkInterface.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkInterface.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Set-AzureRmNetworkInterface
@@ -89,26 +88,11 @@ The first command gets an existing network interface called NetworkInterface1 an
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NetworkInterface
 Specifies a **NetworkInterface** object that represents the goal state for a network interface.
 
 ```yaml
-Type: PSNetworkInterface
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkInterface
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,6 +100,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 2FD2C5C0-5A5A-4CF0-9260-21B9E3DE52B9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzureRmApiManagementProductFromGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Remove-AzureRmApiManagementProductFromGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Remove-AzureRmApiManagementProductFromGroup
@@ -17,7 +17,7 @@ Removes a product from a group.
 
 ```
 Remove-AzureRmApiManagementProductFromGroup -Context <PsApiManagementContext> -GroupId <String>
- -ProductId <String> [-PassThru] [<CommonParameters>]
+ -ProductId <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +40,7 @@ Specifies a **PsApiManagementContext** object.
 This parameter is required.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +56,7 @@ Specifies the group ID.
 This parameter is required.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet returns a value of $True, if it succeeds, or $False, otherwise.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +87,7 @@ Specifies the product ID.
 This parameter is required.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,6 +95,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: DBA02017-8372-4A91-A4F1-985777DEDAB9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzureBatchNodeFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzureBatchNodeFile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Remove-AzureBatchNodeFile
@@ -18,19 +18,22 @@ Deletes a node file for a task or compute node.
 ### Task
 ```
 Remove-AzureBatchNodeFile -JobId <String> -TaskId <String> -Name <String> [-Force] [-Recursive]
- -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ComputeNode
 ```
 Remove-AzureBatchNodeFile [-PoolId] <String> [-ComputeNodeId] <String> -Name <String> [-Force] [-Recursive]
- -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### InputObject
 ```
 Remove-AzureBatchNodeFile [[-InputObject] <PSNodeFile>] [-Force] [-Recursive]
- -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,7 +75,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +90,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node that contains the Batch node file that this cmdlet deletes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode
 Aliases: 
 
@@ -102,7 +105,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +121,7 @@ Specifies **PSNodeFile** object that represent the node file that this cmdlet de
 To obtain a **PSNodeFile**, use the Get-AzureBatchNodeFile cmdlet.
 
 ```yaml
-Type: PSNodeFile
+Type: Microsoft.Azure.Commands.Batch.Models.PSNodeFile
 Parameter Sets: InputObject
 Aliases: 
 
@@ -133,7 +136,7 @@ Accept wildcard characters: False
 Specifies the ID of the job that contains the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task
 Aliases: 
 
@@ -148,7 +151,7 @@ Accept wildcard characters: False
 Specifies the name of the node file that this cmdlet deletes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task, ComputeNode
 Aliases: 
 
@@ -163,7 +166,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute nodes for which this cmdlet removes a file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ComputeNode
 Aliases: 
 
@@ -179,7 +182,7 @@ Indicates that this cmdlet deletes the folder and all subfolders and files under
 This cmdlet is relevant only if the path is a folder.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -194,7 +197,7 @@ Accept wildcard characters: False
 Specifies the ID of the task.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Task
 Aliases: 
 
@@ -209,7 +212,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -225,7 +228,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -236,17 +239,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSNodeFile
-
 Parameter 'InputObject' accepts value of type 'PSNodeFile' from the pipeline
 
 ## OUTPUTS

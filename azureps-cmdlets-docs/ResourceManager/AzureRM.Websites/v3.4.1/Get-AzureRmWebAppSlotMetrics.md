@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.Websites
 ms.assetid: 3BCEADF3-15DC-4033-A94A-4C8B4F5E7340
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSlotMetrics.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSlotMetrics.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureRmWebAppSlotMetrics
@@ -19,13 +19,14 @@ Gets metrics for an Azure Web App slot.
 ```
 Get-AzureRmWebAppSlotMetrics [-Metrics] <String[]> [-StartTime] <DateTime> [[-EndTime] <DateTime>]
  [-Granularity] <String> [-InstanceDetails] [-ResourceGroupName] <String> [-Name] <String> [-Slot] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### S2
 ```
 Get-AzureRmWebAppSlotMetrics [-Metrics] <String[]> [-StartTime] <DateTime> [[-EndTime] <DateTime>]
- [-Granularity] <String> [-InstanceDetails] [-WebApp] <Site> [<CommonParameters>]
+ [-Granularity] <String> [-InstanceDetails] [-WebApp] <Site> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +48,7 @@ This command gets Request of the specified Web App
 End Time in UTC
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -62,7 +63,7 @@ Accept wildcard characters: False
 Granularity
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +78,7 @@ Accept wildcard characters: False
 Instance Details
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +93,7 @@ Accept wildcard characters: False
 Metrics
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +108,7 @@ Accept wildcard characters: False
 WebApp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -122,7 +123,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -137,7 +138,7 @@ Accept wildcard characters: False
 WebApp Slot Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -152,7 +153,7 @@ Accept wildcard characters: False
 Start Time in UTC
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 WebApp Object
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: S2
 Aliases: 
 
@@ -178,13 +179,25 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Site
-
 Parameter 'WebApp' accepts value of type 'Site' from the pipeline
 
 ## OUTPUTS

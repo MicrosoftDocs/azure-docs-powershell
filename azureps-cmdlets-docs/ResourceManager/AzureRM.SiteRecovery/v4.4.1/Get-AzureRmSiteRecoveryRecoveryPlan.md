@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 3B879056-5BF3-4262-8BAA-E79589149370
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryRecoveryPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryRecoveryPlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmSiteRecoveryRecoveryPlan
@@ -17,17 +17,19 @@ Gets a recovery plan in Site Recovery.
 
 ### Default (Default)
 ```
-Get-AzureRmSiteRecoveryRecoveryPlan [<CommonParameters>]
+Get-AzureRmSiteRecoveryRecoveryPlan [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-AzureRmSiteRecoveryRecoveryPlan -Name <String> [[-Path] <String>] [<CommonParameters>]
+Get-AzureRmSiteRecoveryRecoveryPlan -Name <String> [[-Path] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByFriendlyName
 ```
-Get-AzureRmSiteRecoveryRecoveryPlan -FriendlyName <String> [[-Path] <String>] [<CommonParameters>]
+Get-AzureRmSiteRecoveryRecoveryPlan -FriendlyName <String> [[-Path] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +43,7 @@ The **Get-AzureRmSiteRecoveryRecoveryPlan** cmdlet gets a recovery plan in Azure
 Specifies the friendly name of the recovery plan that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFriendlyName
 Aliases: 
 
@@ -56,7 +58,7 @@ Accept wildcard characters: False
 Specifies the name of the recovery plan that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -71,12 +73,25 @@ Accept wildcard characters: False
 Specifies the file path to which this cmdlet saves the recovery plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName, ByFriendlyName
 Aliases: 
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

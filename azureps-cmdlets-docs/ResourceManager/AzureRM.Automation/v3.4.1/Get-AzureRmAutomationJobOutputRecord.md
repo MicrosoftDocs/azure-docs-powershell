@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: 38BB4F4E-B72B-460E-8DF2-2A7A9CACDB41
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationJobOutputRecord.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationJobOutputRecord.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmAutomationJobOutputRecord
@@ -17,7 +17,7 @@ Gets the full output of an Automation job output record.
 
 ```
 Get-AzureRmAutomationJobOutputRecord [-JobId] <Guid> [-Id] <String> [-ResourceGroupName] <String>
- [-AutomationAccountName] <String> [<CommonParameters>]
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +43,7 @@ This command gets the full output of the job that has the specified job ID.
 Specifies the name of an Automation account for which this cmdlet gets a job output record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 Specifies the ID of a job output record for this cmdlet to retrieve.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StreamRecordId
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the ID of a job for which this cmdlet gets an output record.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet gets a job output record.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,6 +96,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

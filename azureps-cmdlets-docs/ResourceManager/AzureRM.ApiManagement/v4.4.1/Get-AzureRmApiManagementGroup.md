@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: EEB52CCA-F5D6-4ACB-A6C9-D07C510A5878
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmApiManagementGroup
@@ -17,25 +17,26 @@ Gets all or specific API management groups.
 
 ### Get all groups (Default)
 ```
-Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [<CommonParameters>]
+Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get by group ID
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-GroupId <String>] [-Name <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find groups by user
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [-UserId <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find groups by product
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [-ProductId <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +78,7 @@ This command gets all user groups with the user ID named 0123456789.
 Specifies an instance of PsApiManagementContext.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -93,7 +94,7 @@ Specifies the group ID.
 If specified, the cmdlet attempts to find the group by the identifier.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by group ID
 Aliases: 
 
@@ -108,7 +109,7 @@ Accept wildcard characters: False
 Specifies the name of the management group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -125,7 +126,7 @@ If specified will return all groups the product assigned to.
 This parameter is optional.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find groups by product
 Aliases: 
 
@@ -141,7 +142,7 @@ Specifies the identifier of existing product.
 If specified the cmdlet will return all groups the product assigned to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find groups by user
 Aliases: 
 
@@ -149,6 +150,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

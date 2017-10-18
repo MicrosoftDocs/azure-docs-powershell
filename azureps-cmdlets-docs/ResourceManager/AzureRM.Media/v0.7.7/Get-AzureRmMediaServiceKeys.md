@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
+Module Name: AzureRM.Media
 ms.assetid: 2099938F-5325-416C-AE10-6813546A1055
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Get-AzureRmMediaServiceKeys.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Get-AzureRmMediaServiceKeys.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmMediaServiceKeys
@@ -16,7 +16,8 @@ Gets key information for accessing the REST endpoint associated with the media s
 ## SYNTAX
 
 ```
-Get-AzureRmMediaServiceKeys [-ResourceGroupName] <String> [-AccountName] <String> [<CommonParameters>]
+Get-AzureRmMediaServiceKeys [-ResourceGroupName] <String> [-AccountName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +38,7 @@ This command gets the key information for accessing the media service named Medi
 Specifies the name of the media service that this cmdlet gets the media service keys from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name, ResourceName
 
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the media service.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -60,6 +61,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

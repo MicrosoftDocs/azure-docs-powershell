@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 ms.assetid: 0DB9595A-6C8B-4F3F-A707-2DB41D7C7470
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Submit-AzureRmDataLakeAnalyticsJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Submit-AzureRmDataLakeAnalyticsJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Submit-AzureRmDataLakeAnalyticsJob
@@ -19,28 +19,30 @@ Submits a job.
 ```
 Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-ScriptPath] <String>
  [[-Runtime] <String>] [[-CompileMode] <String>] [-CompileOnly] [[-DegreeOfParallelism] <Int32>]
- [[-Priority] <Int32>] [<CommonParameters>]
+ [[-Priority] <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Submit U-SQL Job
 ```
 Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-Script] <String>
  [[-Runtime] <String>] [[-CompileMode] <String>] [-CompileOnly] [[-DegreeOfParallelism] <Int32>]
- [[-Priority] <Int32>] [<CommonParameters>]
+ [[-Priority] <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Submit job with script path for U-SQL with reucurrence information
 ```
 Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-ScriptPath] <String>
  [[-Runtime] <String>] [[-CompileMode] <String>] [-CompileOnly] [[-DegreeOfParallelism] <Int32>]
- [[-Priority] <Int32>] -RecurrenceId <Guid> [-RecurrenceName <String>] [<CommonParameters>]
+ [[-Priority] <Int32>] -RecurrenceId <Guid> [-RecurrenceName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Submit U-SQL Job with recurrence information
 ```
 Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-Script] <String>
  [[-Runtime] <String>] [[-CompileMode] <String>] [-CompileOnly] [[-DegreeOfParallelism] <Int32>]
- [[-Priority] <Int32>] -RecurrenceId <Guid> [-RecurrenceName <String>] [<CommonParameters>]
+ [[-Priority] <Int32>] -RecurrenceId <Guid> [-RecurrenceName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Submit job with script path for U-SQL with reucurrence and pipeline information
@@ -48,7 +50,8 @@ Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-Script
 Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-ScriptPath] <String>
  [[-Runtime] <String>] [[-CompileMode] <String>] [-CompileOnly] [[-DegreeOfParallelism] <Int32>]
  [[-Priority] <Int32>] -RecurrenceId <Guid> [-RecurrenceName <String>] -PipelineId <Guid>
- [-PipelineName <String>] [-PipelineUri <String>] [-RunId <Guid>] [<CommonParameters>]
+ [-PipelineName <String>] [-PipelineUri <String>] [-RunId <Guid>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Submit U-SQL Job with recurrence and pipeline information
@@ -56,7 +59,8 @@ Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-Script
 Submit-AzureRmDataLakeAnalyticsJob [-Account] <String> [-Name] <String> [-Script] <String>
  [[-Runtime] <String>] [[-CompileMode] <String>] [-CompileOnly] [[-DegreeOfParallelism] <Int32>]
  [[-Priority] <Int32>] -RecurrenceId <Guid> [-RecurrenceName <String>] -PipelineId <Guid>
- [-PipelineName <String>] [-PipelineUri <String>] [-RunId <Guid>] [<CommonParameters>]
+ [-PipelineName <String>] [-PipelineUri <String>] [-RunId <Guid>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +81,7 @@ This command submits a Data Lake Analytics job.
 Specifies the Data Lake Analytics account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -97,7 +101,7 @@ The acceptable values for this parameter are:
 - SingleBox
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Semantic, Full, SingleBox
@@ -113,10 +117,9 @@ Accept wildcard characters: False
 Indicates that this cmdlet compiles the job without running it.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 
 Required: False
 Position: 5
@@ -129,7 +132,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Analytics Units (DLAU) of the job, which indicates the maximum allowable parallelism of the job.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +147,7 @@ Accept wildcard characters: False
 Specifies the job name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -159,7 +162,7 @@ Accept wildcard characters: False
 An ID that indicates the submission of this job is a part of a set of recurring jobs and also associated with a job pipeline.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -174,7 +177,7 @@ Accept wildcard characters: False
 An optional friendly name for the pipeline associated with this job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -189,7 +192,7 @@ Accept wildcard characters: False
 An optional uri that links to the originating service associated with this pipeline.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -206,7 +209,7 @@ If not specified, the priority is 1000.
 A low number indicates a higher job priority.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -221,7 +224,7 @@ Accept wildcard characters: False
 An ID that indicates the submission of this job is a part of a set of recurring jobs with the same recurrence ID.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Submit job with script path for U-SQL with reucurrence information, Submit U-SQL Job with recurrence information, Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -236,7 +239,7 @@ Accept wildcard characters: False
 An optional friendly name for the recurrence correlation between jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit job with script path for U-SQL with reucurrence information, Submit U-SQL Job with recurrence information, Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -251,7 +254,7 @@ Accept wildcard characters: False
 An ID that identifies this specific run iteration of the pipeline.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: Submit job with script path for U-SQL with reucurrence and pipeline information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -266,7 +269,7 @@ Accept wildcard characters: False
 Specifies the runtime version of the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -281,7 +284,7 @@ Accept wildcard characters: False
 Specifies the contents of the script to run.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit U-SQL Job, Submit U-SQL Job with recurrence information, Submit U-SQL Job with recurrence and pipeline information
 Aliases: 
 
@@ -296,7 +299,7 @@ Accept wildcard characters: False
 Specifies the local file path to the script to run.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Submit job with script path for U-SQL, Submit job with script path for U-SQL with reucurrence information, Submit job with script path for U-SQL with reucurrence and pipeline information
 Aliases: 
 
@@ -307,13 +310,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
-
 Parameter 'Script' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

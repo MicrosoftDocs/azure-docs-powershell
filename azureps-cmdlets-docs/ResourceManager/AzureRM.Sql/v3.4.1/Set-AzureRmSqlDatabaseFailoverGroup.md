@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabaseFailoverGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabaseFailoverGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/d0252b58ee183fa2c6d6c0b19de68a56936969a1
 ---
 
 # Set-AzureRmSqlDatabaseFailoverGroup
@@ -18,7 +18,7 @@ Modifies the configuration of an Azure SQL Database Failover Group.
 Set-AzureRmSqlDatabaseFailoverGroup [-ServerName] <String> [-FailoverGroupName] <String>
  [-FailoverPolicy <FailoverPolicy>] [-GracePeriodWithDataLossHours <Int32>]
  [-AllowReadOnlyFailoverToPrimary <AllowReadOnlyFailoverToPrimary>] [-ResourceGroupName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +52,7 @@ Sets a Failover Group's failover policy to 'Manual' by piping in the Failover Gr
 Whether outages on the secondary server should trigger automatic failover of the read-only endpoint. This feature is not yet supported.
 
 ```yaml
-Type: AllowReadOnlyFailoverToPrimary
+Type: Microsoft.Azure.Commands.Sql.FailoverGroup.Model.AllowReadOnlyFailoverToPrimary
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enabled, Disabled
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Database Failover Group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 The failover policy of the Azure SQL Database Failover Group.
 
 ```yaml
-Type: FailoverPolicy
+Type: Microsoft.Azure.Commands.Sql.FailoverGroup.Model.FailoverPolicy
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Automatic, Manual
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 Interval before automatic failover is initiated if an outage occurs on the primary server and failover cannot be completed without data loss.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 The name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 The name of the primary Azure SQL Database Server of the Failover Group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,6 +137,19 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

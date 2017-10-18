@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 9BE2E42C-594B-4B67-866C-BBA3B84AA5FD
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Add-AzureRmVmssAdditionalUnattendContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Add-AzureRmVmssAdditionalUnattendContent.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Add-AzureRmVmssAdditionalUnattendContent
@@ -16,9 +16,9 @@ Adds information to the unattended Windows Setup answer file.
 ## SYNTAX
 
 ```
-Add-AzureRmVmssAdditionalUnattendContent [-VirtualMachineScaleSet] <VirtualMachineScaleSet>
+Add-AzureRmVmssAdditionalUnattendContent [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>
  [[-PassName] <PassNames>] [[-ComponentName] <ComponentNames>] [[-SettingName] <SettingNames>]
- [[-Content] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Content] <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +40,7 @@ Specifies the name of the component to configure with the added content.
 The only allowable value is Microsoft-Windows-Shell-Setup.
 
 ```yaml
-Type: ComponentNames
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.ComponentNames]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: MicrosoftWindowsShellSetup
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,12 +67,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassName
 Specifies the name of the pass that the content applies to.
 The only allowable value is oobeSystem.
 
 ```yaml
-Type: PassNames
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.PassNames]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: OobeSystem
@@ -92,7 +105,7 @@ The acceptable values for this parameter are::
 - AutoLogon
 
 ```yaml
-Type: SettingNames
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.SettingNames]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AutoLogon, FirstLogonCommands
@@ -109,7 +122,7 @@ Specify the virtual machine **Scale Set** object.
 You can use the [New-AzureRmVmssConfig](./New-AzureRmVmssConfig.md) cmdlet to create the object.
 
 ```yaml
-Type: VirtualMachineScaleSet
+Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +137,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -139,7 +152,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

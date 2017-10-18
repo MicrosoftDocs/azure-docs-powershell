@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: A1EA7D34-A8B4-4FA0-BD8C-3E846715AFBA
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMPlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVMPlan
@@ -17,7 +17,7 @@ Sets the Marketplace plan information on a virtual machine.
 
 ```
 Set-AzureRmVMPlan [-VM] <PSVirtualMachine> [-Name] <String> [[-Product] <String>] [[-PromotionCode] <String>]
- [[-Publisher] <String>] [<CommonParameters>]
+ [[-Publisher] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,13 +29,26 @@ Before being able to deploy a Marketplace image through the command-line, progra
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the image from the Marketplace.
 This is the same value that is returned by the Get-AzureRmVMImageSku cmdlet.
 For more information about how to find image information, see Navigating and Selecting Azure Virtual Machine images with PowerShell and the Azure CLIhttps://azure.microsoft.com/documentation/articles/resource-groups-vm-searching/ (https://azure.microsoft.com/documentation/articles/resource-groups-vm-searching/) in the Microsoft Azure documentation.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -51,7 +64,7 @@ Specifies the product of the image from the Marketplace.
 This is the same information as the **Offer** value of the **imageReference** element.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -66,7 +79,7 @@ Accept wildcard characters: False
 Specifies a promotion code.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -82,7 +95,7 @@ Specifies the publisher of the image.
 You can find this information by using the Get-AzureRmVMImagePublisher cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +112,7 @@ You can use the Get-AzureRmVM cmdlet to obtain a virtual machine object.
 You can use the New-AzureRmVMConfig cmdlet to create a virtual machine object.
 
 ```yaml
-Type: PSVirtualMachine
+Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 Parameter Sets: (All)
 Aliases: VMProfile
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: B5CA6FD9-49EE-4115-8477-551CE5D8E6CE
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmSiteRecoveryJob
@@ -18,17 +18,17 @@ Gets the operation information for the current Site Recovery vault.
 ### ByParam (Default)
 ```
 Get-AzureRmSiteRecoveryJob [-StartTime <DateTime>] [-EndTime <DateTime>] [-TargetObjectId <String>]
- [-State <String>] [<CommonParameters>]
+ [-State <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-AzureRmSiteRecoveryJob -Name <String> [<CommonParameters>]
+Get-AzureRmSiteRecoveryJob -Name <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByObject
 ```
-Get-AzureRmSiteRecoveryJob -Job <ASRJob> [<CommonParameters>]
+Get-AzureRmSiteRecoveryJob -Job <ASRJob> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +46,7 @@ To obtain a **DateTime** object for this parameter, use the Get-Date cmdlet.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: ByParam
 Aliases: 
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery job.
 
 ```yaml
-Type: ASRJob
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRJob
 Parameter Sets: ByObject
 Aliases: 
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Specifies a unique name that identifies the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -92,7 +92,7 @@ Specifies the start time for the jobs.
 This cmdlet gets all jobs that started after the specified time.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: ByParam
 Aliases: 
 
@@ -117,7 +117,7 @@ The acceptable values for this parameter are:
 - Suspended
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByParam
 Aliases: 
 Accepted values: NotStarted, InProgress, Succeeded, Other, Failed, Cancelled, Suspended
@@ -133,9 +133,22 @@ Accept wildcard characters: False
 Specifies the ID of the object targeted by the job.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByParam
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -150,7 +163,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### ASRJob
-
 Parameter 'Job' accepts value of type 'ASRJob' from the pipeline
 
 ## OUTPUTS

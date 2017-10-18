@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmNetworkSecurityRuleConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/a25c903f9b7a79009b1a89b220d7bb3a7c379946
 ---
 
 # Remove-AzureRmNetworkSecurityRuleConfig
@@ -45,7 +44,7 @@ The third command removes the network security rule configuration named rdp-rule
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -60,7 +59,7 @@ Accept wildcard characters: False
 Specifies the name of the network security rule configuration that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +75,7 @@ Specifies a **NetworkSecurityGroup** object.
 This object contains the network security rule configuration to remove.
 
 ```yaml
-Type: PSNetworkSecurityGroup
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup
 Parameter Sets: (All)
 Aliases: 
 

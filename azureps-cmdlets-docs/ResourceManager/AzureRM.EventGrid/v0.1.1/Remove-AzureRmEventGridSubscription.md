@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Remove-AzureRmEventGridSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Remove-AzureRmEventGridSubscription.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/e335207ee2be8da383f89b2ff636be1e9a4c3347
 ---
 
 # Remove-AzureRmEventGridSubscription
@@ -15,22 +14,29 @@ Removes an Azure Event Grid event subscription.
 
 ## SYNTAX
 
-### EventSubscriptionNameParameterSet (Default)
+### ResourceGroupNameParameterSet (Default)
 ```
 Remove-AzureRmEventGridSubscription [-EventSubscriptionName] <String> [[-ResourceGroupName] <String>]
- [[-TopicName] <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceIdEventSubscriptionParameterSet
 ```
 Remove-AzureRmEventGridSubscription [-ResourceId] <String> [-EventSubscriptionName] <String> [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EventSubscriptionInputObjectSet
 ```
 Remove-AzureRmEventGridSubscription [-InputObject] <PSTopic> [-EventSubscriptionName] <String> [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### TopicNameParameterSet
+```
+Remove-AzureRmEventGridSubscription [-EventSubscriptionName] <String> [-ResourceGroupName] <String>
+ [-TopicName] <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,8 +85,8 @@ Removes the event subscription \`EventSubscription1\` to an Event Grid Topic.
 Name of the event subscription that needs to be removed.
 
 ```yaml
-Type: String
-Parameter Sets: EventSubscriptionNameParameterSet, ResourceIdEventSubscriptionParameterSet
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSet, ResourceIdEventSubscriptionParameterSet, TopicNameParameterSet
 Aliases: 
 
 Required: True
@@ -91,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -106,7 +112,7 @@ Accept wildcard characters: False
 EventGrid EventSubscription object.
 
 ```yaml
-Type: PSTopic
+Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
 Parameter Sets: EventSubscriptionInputObjectSet
 Aliases: 
 
@@ -121,7 +127,7 @@ Accept wildcard characters: False
 Returns the status of the Remove operation. By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,11 +142,23 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
-Parameter Sets: EventSubscriptionNameParameterSet
+Type: System.String
+Parameter Sets: ResourceGroupNameParameterSet
 Aliases: ResourceGroup
 
 Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.String
+Parameter Sets: TopicNameParameterSet
+Aliases: ResourceGroup
+
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -151,7 +169,7 @@ Accept wildcard characters: False
 Identifier of the resource whose event subscription needs to be removed.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -166,11 +184,11 @@ Accept wildcard characters: False
 Event Grid Topic Name.
 
 ```yaml
-Type: String
-Parameter Sets: EventSubscriptionNameParameterSet
+Type: System.String
+Parameter Sets: TopicNameParameterSet
 Aliases: 
 
-Required: False
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -181,7 +199,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -197,9 +215,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

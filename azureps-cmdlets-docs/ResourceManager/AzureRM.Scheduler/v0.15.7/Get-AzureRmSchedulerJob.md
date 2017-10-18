@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
+Module Name: AzureRM.Scheduler
 ms.assetid: DC151161-72C0-40F7-B2F0-45FA01142AE1
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/Get-AzureRmSchedulerJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/Get-AzureRmSchedulerJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmSchedulerJob
@@ -17,7 +17,7 @@ Gets Scheduler jobs.
 
 ```
 Get-AzureRmSchedulerJob -ResourceGroupName <String> -JobCollectionName <String> [-JobName <String>]
- [-JobState <String>] [<CommonParameters>]
+ [-JobState <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ The **Get-AzureRmSchedulerJob** cmdlet gets Azure Scheduler jobs.
 Specifies the name of a job collection that contains jobs to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name, ResourceName
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 Specifies the name of a job to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ The acceptable values for this parameter are:
 - Completed
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enabled, Disabled, Faulted, Completed
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Specifies the resource group of the jobs to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,6 +96,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

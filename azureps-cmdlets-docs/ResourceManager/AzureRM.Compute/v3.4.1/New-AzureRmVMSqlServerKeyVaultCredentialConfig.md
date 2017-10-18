@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+Module Name: Azure
 ms.assetid: B30C2BDD-6DA9-47B5-88FE-3AD43E15A072
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/New-AzureRmVMSqlServerKeyVaultCredentialConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/New-AzureRmVMSqlServerKeyVaultCredentialConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # New-AzureVMSqlServerKeyVaultCredentialConfig
@@ -16,9 +16,10 @@ Creates a configuration object for SQL server key vault credential on a virtual 
 ## SYNTAX
 
 ```
-New-AzureVMSqlServerKeyVaultCredentialConfig [-ResourceGroupName] <String> [-Enable] [-CredentialName <String>]
- [-AzureKeyVaultUrl <String>] [-ServicePrincipalName <String>] [-ServicePrincipalSecret <SecureString>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzureVMSqlServerKeyVaultCredentialConfig [-Enable] [[-CredentialName] <String>]
+ [[-AzureKeyVaultUrl] <String>] [[-ServicePrincipalName] <String>] [[-ServicePrincipalSecret] <SecureString>]
+ [-Profile <AzureSMProfile>] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,14 +28,14 @@ New-AzureVMSqlServerKeyVaultCredentialConfig [-ResourceGroupName] <String> [-Ena
 
 ## PARAMETERS
 
-### -AzureKeyVaultUrl
+### -Enable
 ```yaml
-Type: String
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -42,37 +43,24 @@ Accept wildcard characters: False
 
 ### -CredentialName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Enable
+### -AzureKeyVaultUrl
 ```yaml
-Type: SwitchParameter
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -81,12 +69,12 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -94,45 +82,52 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalSecret
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Profile
+@{Text=}```yaml
+Type: Microsoft.WindowsAzure.Commands.Utilities.Common.AzureSMProfile
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
+### -InformationAction
+@{Text=}```yaml
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
-Aliases: wi
+Aliases: infa
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+@{Text=}```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: iv
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

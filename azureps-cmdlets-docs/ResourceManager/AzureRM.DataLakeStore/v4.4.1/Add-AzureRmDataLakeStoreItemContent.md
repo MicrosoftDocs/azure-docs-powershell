@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
 ms.assetid: B008028D-27FC-4469-BE71-54F7218C068B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Add-AzureRmDataLakeStoreItemContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Add-AzureRmDataLakeStoreItemContent.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Add-AzureRmDataLakeStoreItemContent
@@ -17,7 +17,8 @@ Adds content to an item in a Data Lake Store.
 
 ```
 Add-AzureRmDataLakeStoreItemContent [-Account] <String> [-Path] <DataLakeStorePathInstance> [-Value] <Object>
- [[-Encoding] <FileSystemCmdletProviderEncoding>] [<CommonParameters>]
+ [[-Encoding] <FileSystemCmdletProviderEncoding>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +39,7 @@ This command adds content to the file myFile.txt.
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -66,7 +67,7 @@ The acceptable values for this parameter are:
 - BigEndianUTF32
 
 ```yaml
-Type: FileSystemCmdletProviderEncoding
+Type: Microsoft.PowerShell.Commands.FileSystemCmdletProviderEncoding
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Unknown, String, Unicode, Byte, BigEndianUnicode, UTF8, UTF7, UTF32, Ascii, Default, Oem, BigEndianUTF32
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Store path of the item to modify, starting with the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 Specifies the content to add to the item.
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,13 +109,25 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Object
-
 Parameter 'Value' accepts value of type 'Object' from the pipeline
 
 ## OUTPUTS

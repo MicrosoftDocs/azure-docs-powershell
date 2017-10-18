@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.Websites
 ms.assetid: 86E0D477-DD32-49BD-82E7-1CF191E4F612
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Stop-AzureRmWebAppSlot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Stop-AzureRmWebAppSlot.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Stop-AzureRmWebAppSlot
@@ -17,12 +17,13 @@ Stops an Azure Web App slot.
 
 ### S1
 ```
-Stop-AzureRmWebAppSlot [-ResourceGroupName] <String> [-Name] <String> [-Slot] <String> [<CommonParameters>]
+Stop-AzureRmWebAppSlot [-ResourceGroupName] <String> [-Name] <String> [-Slot] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### S2
 ```
-Stop-AzureRmWebAppSlot [-WebApp] <Site> [<CommonParameters>]
+Stop-AzureRmWebAppSlot [-WebApp] <Site> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +44,7 @@ This command stops the slot Slot001 pertaining to the Web App named ContosoWebAp
 WebApp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -58,7 +59,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -73,7 +74,7 @@ Accept wildcard characters: False
 WebApp Slot Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -88,7 +89,7 @@ Accept wildcard characters: False
 WebApp Object
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: S2
 Aliases: 
 
@@ -99,13 +100,25 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Site
-
 Parameter 'WebApp' accepts value of type 'Site' from the pipeline
 
 ## OUTPUTS

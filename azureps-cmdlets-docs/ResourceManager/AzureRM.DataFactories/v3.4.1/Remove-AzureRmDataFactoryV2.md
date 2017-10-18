@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Remove-AzureRmDataFactoryV2.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Remove-AzureRmDataFactoryV2.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/094cbc91c59c6def36b0b0db15759d964dba67c3
 ---
 
 # Remove-AzureRmDataFactoryV2
@@ -52,28 +51,13 @@ This command returns a value of $True.
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: IAzureContextContainer
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Runs the cmdlet without prompting for confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
@@ -86,7 +70,7 @@ Accept wildcard characters: False
 Specifies the DataFactory object to remove.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
 Parameter Sets: ByFactoryObject
 Aliases: 
 
@@ -97,11 +81,26 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -Force
+Runs the cmdlet without prompting for confirmation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the data factory to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: DataFactoryName
 
@@ -117,7 +116,7 @@ Specifies the name of an Azure resource group.
 This cmdlet removes a data factory from the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -132,7 +131,7 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByResourceId
 Aliases: 
 
@@ -143,13 +142,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -WhatIf
+Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -158,13 +157,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: SwitchParameter
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: wi
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

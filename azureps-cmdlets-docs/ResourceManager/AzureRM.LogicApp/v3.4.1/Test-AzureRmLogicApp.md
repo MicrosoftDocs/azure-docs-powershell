@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+Module Name: AzureRM.LogicApp
 ms.assetid: 929F4593-2A71-49B9-87F8-F24FA9F6E314
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/Test-AzureRmLogicApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/Test-AzureRmLogicApp.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Test-AzureRmLogicApp
@@ -19,14 +19,14 @@ Validates a logic app definition.
 ```
 Test-AzureRmLogicApp -ResourceGroupName <String> -Name <String> -Location <String> [-State <String>]
  [-Definition <Object>] [-IntegrationAccountId <String>] [-Parameters <Object>] [-ParameterFilePath <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### LogicAppWithDefinitionFileParameterSet
 ```
 Test-AzureRmLogicApp -ResourceGroupName <String> -Name <String> -Location <String> [-State <String>]
  [-DefinitionFilePath <String>] [-IntegrationAccountId <String>] [-Parameters <Object>]
- [-ParameterFilePath <String>] [<CommonParameters>]
+ [-ParameterFilePath <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +62,7 @@ The command specifies definition and parameter objects.
 Specifies the definition of a logic app as an object or a string in JavaScript Object Notation (JSON) format.
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: LogicAppWithDefinitionParameterSet
 Aliases: 
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Specifies the definition of your logic app as the path of a definition file in JSON format.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: LogicAppWithDefinitionFileParameterSet
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies an integration account ID for the logic app.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -109,7 +109,7 @@ Enter an Azure data center location, such as West US or Southeast Asia.
 You can place a logic app in any location.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 Specifies the name of the logic app.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 Specifies the path of a JSON formatted parameter file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +155,7 @@ Specifies a parameters collection object of the logic app.
 Specify a hash table, Dictionary\<string\>, or Dictionary\<string, WorkflowParameter\>.
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: (All)
 Aliases: 
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -186,10 +186,23 @@ Specifies a state of the logic app.
 The acceptable values for this parameter are: Enabled and Disabled.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Enabled, Disabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

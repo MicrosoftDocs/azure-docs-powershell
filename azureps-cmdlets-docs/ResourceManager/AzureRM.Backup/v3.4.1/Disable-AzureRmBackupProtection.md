@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 6E886340-864C-4FF6-8FA3-669D637770F3
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Disable-AzureRmBackupProtection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Disable-AzureRmBackupProtection.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Disable-AzureRmBackupProtection
@@ -16,8 +16,8 @@ Disables protection for a Backup protected item.
 ## SYNTAX
 
 ```
-Disable-AzureRmBackupProtection [-RemoveRecoveryPoints] [-Force] [-Item] <AzureRMBackupItem> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Disable-AzureRmBackupProtection [-RemoveRecoveryPoints] [-Force] [-Item] <AzureRMBackupItem>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ This cmdlet can delete existing recovery points for the backup item.
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +54,7 @@ Specifies the Backup item for which this cmdlet disables protection.
 To obtain an **AzureRmBackupItem**, use the Get-AzureRmBackupItem cmdlet.
 
 ```yaml
-Type: AzureRMBackupItem
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupItem
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +70,7 @@ Indicates that this cmdlet deletes existing recovery points.
 To delete stored recovery points later, run this cmdlet again and specify this parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -101,13 +101,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

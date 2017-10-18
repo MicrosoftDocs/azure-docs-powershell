@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmLoadBalancerInboundNatPoolConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmLoadBalancerInboundNatPoolConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # New-AzureRmLoadBalancerInboundNatPoolConfig
@@ -43,7 +42,7 @@ New-AzureRmLoadBalancerInboundNatPoolConfig -Name <String>
 
 ### -BackendPort
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,24 +53,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -FrontendIpConfiguration
 ```yaml
-Type: PSFrontendIPConfiguration
+Type: Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -84,7 +68,7 @@ Accept wildcard characters: False
 
 ### -FrontendIpConfigurationId
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -97,7 +81,7 @@ Accept wildcard characters: False
 
 ### -FrontendPortRangeEnd
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -110,7 +94,7 @@ Accept wildcard characters: False
 
 ### -FrontendPortRangeStart
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -123,7 +107,7 @@ Accept wildcard characters: False
 
 ### -Name
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,12 +120,27 @@ Accept wildcard characters: False
 
 ### -Protocol
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Tcp, Udp
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

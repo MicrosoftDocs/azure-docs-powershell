@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
+Module Name: AzureRM.DataLakeAnalytics
 ms.assetid: 0377C4E9-C1DC-49BA-BBC4-5598C83234F8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsDataSource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeAnalytics/Commands.DataLakeAnalytics/help/Get-AzureRmDataLakeAnalyticsDataSource.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmDataLakeAnalyticsDataSource
@@ -17,19 +17,20 @@ Gets a Data Lake Analytics data source.
 
 ### List all data sources (Default)
 ```
-Get-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [[-ResourceGroupName] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get a Data Lake Store account
 ```
 Get-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <String>
- [[-ResourceGroupName] <String>] [<CommonParameters>]
+ [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get a Blob storage account
 ```
 Get-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-Blob] <String> [[-ResourceGroupName] <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +58,7 @@ This command gets all Data Lake Store accounts from a Data Lake Analytics accoun
 Specifies the Data Lake Analytics account that this cmdlet gets data sources.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -72,7 +73,7 @@ Accept wildcard characters: False
 Specifies the name of the Azure Blob Storage data source.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a Blob storage account
 Aliases: AzureBlob
 
@@ -87,7 +88,7 @@ Accept wildcard characters: False
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a Data Lake Store account
 Aliases: 
 
@@ -102,7 +103,7 @@ Accept wildcard characters: False
 Specifies the resource group name that contains the data source.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -110,6 +111,19 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

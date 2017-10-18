@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
+Module Name: AzureRM.OperationalInsights
 ms.assetid: 23ED4D24-66BD-46E9-BB57-6E0DA679B733
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Set-AzureRmOperationalInsightsIntelligencePack.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Set-AzureRmOperationalInsightsIntelligencePack.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmOperationalInsightsIntelligencePack
@@ -17,7 +17,8 @@ Enables or disables the specified Intelligence Pack.
 
 ```
 Set-AzureRmOperationalInsightsIntelligencePack [-ResourceGroupName] <String> [-WorkspaceName] <String>
- [-IntelligencePackName] <String> [-Enabled] <Boolean> [<CommonParameters>]
+ [-IntelligencePackName] <String> [-Enabled] <Boolean> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +37,7 @@ This command enables the specified Intelligence Pack.
 
 ### -Enabled
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -51,7 +52,7 @@ Accept wildcard characters: False
 Specifies the Intelligence Pack name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 Specifies the resource group name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +82,7 @@ Accept wildcard characters: False
 Specifies the name of the workspace.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -89,6 +90,19 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

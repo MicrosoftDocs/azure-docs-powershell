@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkWatcherNextHop.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkWatcherNextHop.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Get-AzureRmNetworkWatcherNextHop
@@ -53,26 +52,11 @@ Get's the Next Hop for outbound communication from the primary Network Interface
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DestinationIPAddress
 Destination IP address.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +71,7 @@ Accept wildcard characters: False
 The network watcher resource.
 
 ```yaml
-Type: PSNetworkWatcher
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -102,7 +86,7 @@ Accept wildcard characters: False
 The name of network watcher.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByName
 Aliases: Name
 
@@ -117,7 +101,7 @@ Accept wildcard characters: False
 The name of the network watcher resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByName
 Aliases: 
 
@@ -132,7 +116,7 @@ Accept wildcard characters: False
 Source IP address.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -147,7 +131,7 @@ Accept wildcard characters: False
 Target network interface Id.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -162,7 +146,7 @@ Accept wildcard characters: False
 The target virtual machine ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -170,6 +154,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

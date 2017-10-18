@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+Module Name: AzureRM.LogicApp
 ms.assetid: 39D1576D-7042-4A62-AB41-0B5131C150D5
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/Remove-AzureRmLogicApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/Remove-AzureRmLogicApp.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Remove-AzureRmLogicApp
@@ -16,8 +16,8 @@ Removes a logic app from a resource group.
 ## SYNTAX
 
 ```
-Remove-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmLogicApp -ResourceGroupName <String> -Name <String> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +45,7 @@ The command includes the *Force* parameter, which prevents the command from prom
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Specifies the name of the logic app that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the logic app that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -106,13 +106,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

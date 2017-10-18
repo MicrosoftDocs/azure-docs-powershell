@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: 54E01B3B-FFA5-4E3C-BA5A-A281FF5C9F8B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlDatabaseSecondary.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Remove-AzureRmSqlDatabaseSecondary.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/789b304db1c84d59b885eb471c060e6922de2b2b
 ---
 
 # Remove-AzureRmSqlDatabaseSecondary
@@ -17,8 +17,8 @@ Terminates data replication between a SQL Database and the specified secondary d
 
 ```
 Remove-AzureRmSqlDatabaseSecondary [-DatabaseName] <String> -PartnerResourceGroupName <String>
- -PartnerServerName <String> [-ServerName] <String> [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -PartnerServerName <String> [-ServerName] <String> [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +39,7 @@ There is no replication synchronization before termination.
 Specifies the name of the primary Azure SQL Database that has the replication link that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 Specifies the name of the partner  resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the name of the partner SQL Server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that is associated with the replication link to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 Specifies the name of the SQL Server that has the replication link to remove.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -130,13 +130,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

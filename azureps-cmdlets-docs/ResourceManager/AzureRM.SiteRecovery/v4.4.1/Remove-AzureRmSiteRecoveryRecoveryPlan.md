@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 7C695E83-78AA-4008-91D6-D6B23BC96B92
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Remove-AzureRmSiteRecoveryRecoveryPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Remove-AzureRmSiteRecoveryRecoveryPlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Remove-AzureRmSiteRecoveryRecoveryPlan
@@ -17,12 +17,14 @@ Removes a site recovery plan from Site Recovery.
 
 ### ByObject (Default)
 ```
-Remove-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> [<CommonParameters>]
+Remove-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-AzureRmSiteRecoveryRecoveryPlan -Name <String> [<CommonParameters>]
+Remove-AzureRmSiteRecoveryRecoveryPlan -Name <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +48,7 @@ The second command removes the recovery plan in $RecoveryPlan.
 Specifies the name of the recovery plan that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
@@ -61,7 +63,7 @@ Accept wildcard characters: False
 Specifies the recovery plan that this cmdlet removes.
 
 ```yaml
-Type: ASRRecoveryPlan
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlan
 Parameter Sets: ByObject
 Aliases: 
 
@@ -72,13 +74,25 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### ASRRecoveryPlan
-
 Parameter 'RecoveryPlan' accepts value of type 'ASRRecoveryPlan' from the pipeline
 
 ## OUTPUTS

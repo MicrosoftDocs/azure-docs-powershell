@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: B5C909D7-6087-463A-83BF-99DD196B9862
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlDatabaseActivity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlDatabaseActivity.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/d0252b58ee183fa2c6d6c0b19de68a56936969a1
 ---
 
 # Get-AzureRmSqlDatabaseActivity
@@ -17,7 +17,8 @@ Gets the status of moving elastic databases.
 
 ```
 Get-AzureRmSqlDatabaseActivity [-ServerName] <String> -ElasticPoolName <String> -DatabaseName <String>
- [-OperationId <Guid>] [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-OperationId <Guid>] [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +39,7 @@ This command returns the operation status of all SQL Database instances in an el
 Specifies the name of the database for which this cmdlet gets status.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -53,7 +54,7 @@ Accept wildcard characters: False
 Specifies the name of the elastic database pool for which this cmdlet gets status.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +69,7 @@ Accept wildcard characters: False
 Specifies the ID of the operation that this cmdlet gets.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the database is assigned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 Specifies the name of the Microsoft SQL Server that hosts the elastic database pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +114,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -129,13 +130,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

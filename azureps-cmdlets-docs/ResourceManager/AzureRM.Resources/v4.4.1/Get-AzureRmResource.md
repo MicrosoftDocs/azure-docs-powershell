@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: C2C608E5-3351-4D01-8533-9668B2E9F1D1
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmResource.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmResource
@@ -18,55 +18,56 @@ Gets resources.
 ### The list all resources parameter set. (Default)
 ```
 Get-AzureRmResource [-ExpandProperties] [-ODataQuery <String>] [-ApiVersion <String>] [-Pre]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get a single resource by its Id.
 ```
 Get-AzureRmResource -ResourceId <String> [-ExpandProperties] [-ODataQuery <String>] [-ApiVersion <String>]
- [-Pre] [<CommonParameters>]
+ [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get a single resource at the tenant level.
 ```
 Get-AzureRmResource -ResourceName <String> -ResourceType <String> [-ExtensionResourceName <String>]
  [-ExtensionResourceType <String>] [-ExpandProperties] [-IsCollection] [-ODataQuery <String>] [-TenantLevel]
- [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+ [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Lists the resources based on the specified scope at the tenant level.
 ```
 Get-AzureRmResource [-ResourceName <String>] [-ResourceType <String>] [-ExtensionResourceName <String>]
  [-ExtensionResourceType <String>] [-ExpandProperties] [-IsCollection] [-Top <Int32>] [-ODataQuery <String>]
- [-TenantLevel] [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+ [-TenantLevel] [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get resource by name and group
 ```
 Get-AzureRmResource [-ResourceName <String>] [-ExtensionResourceName <String>]
  [-ExtensionResourceType <String>] [-ExpandProperties] [-IsCollection] [-ODataQuery <String>]
- [-ResourceGroupName <String>] [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+ [-ResourceGroupName <String>] [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Get a resource by name and type.
 ```
 Get-AzureRmResource [-ResourceName <String>] [-ResourceType <String>] [-ExtensionResourceName <String>]
  [-ExtensionResourceType <String>] [-ExpandProperties] [-IsCollection] [-ODataQuery <String>]
- [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+ [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get resource by name, group and type
 ```
 Get-AzureRmResource -ResourceName <String> -ResourceType <String> [-ExtensionResourceName <String>]
  [-ExtensionResourceType <String>] [-ExpandProperties] [-ODataQuery <String>] -ResourceGroupName <String>
- [-ApiVersion <String>] [-Pre] [<CommonParameters>]
+ [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get resource collection
 ```
 Get-AzureRmResource [-ResourceType <String>] [-ExtensionResourceType <String>] [-ExpandProperties]
  [-IsCollection] [-ODataQuery <String>] [-ResourceGroupName <String>] [-ApiVersion <String>] [-Pre]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,7 +86,7 @@ This command gets a resource of the type microsoft.web/sites, named ContosoWebsi
 
 ### -ApiVersion
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 
 ### -ExpandProperties
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -111,7 +112,7 @@ Accept wildcard characters: False
 
 ### -ExtensionResourceName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource at the tenant level., Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type., Get resource by name, group and type
 Aliases: 
 
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ExtensionResourceType
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource at the tenant level., Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type., Get resource by name, group and type
 Aliases: 
 
@@ -136,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource collection
 Aliases: 
 
@@ -149,7 +150,7 @@ Accept wildcard characters: False
 
 ### -IsCollection
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Get a single resource at the tenant level., Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type., Get resource collection
 Aliases: 
 
@@ -162,7 +163,7 @@ Accept wildcard characters: False
 
 ### -ODataQuery
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -175,7 +176,7 @@ Accept wildcard characters: False
 
 ### -Pre
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -188,7 +189,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource by name and group
 Aliases: 
 
@@ -200,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource by name, group and type
 Aliases: 
 
@@ -212,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource collection
 Aliases: 
 
@@ -231,7 +232,7 @@ Specifies the fully qualified resource ID, including the subscription, as in the
 This cmdlet gets the resource that has this ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource by its Id.
 Aliases: Id
 
@@ -244,7 +245,7 @@ Accept wildcard characters: False
 
 ### -ResourceName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource at the tenant level., Get resource by name, group and type
 Aliases: Name
 
@@ -256,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get resource by name and group, Get a resource by name and type.
 Aliases: Name
 
@@ -269,7 +270,7 @@ Accept wildcard characters: False
 
 ### -ResourceType
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get a single resource at the tenant level., Get resource by name, group and type
 Aliases: 
 
@@ -281,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Lists the resources based on the specified scope at the tenant level., Get a resource by name and type.
 Aliases: 
 
@@ -293,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get resource collection
 Aliases: 
 
@@ -308,7 +309,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Get a single resource at the tenant level., Lists the resources based on the specified scope at the tenant level.
 Aliases: 
 
@@ -321,9 +322,22 @@ Accept wildcard characters: False
 
 ### -Top
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: Lists the resources based on the specified scope at the tenant level.
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

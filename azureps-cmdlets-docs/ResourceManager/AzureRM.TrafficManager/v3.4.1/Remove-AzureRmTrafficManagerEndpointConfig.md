@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+Module Name: AzureRM.TrafficManager
 ms.assetid: 8E12A392-A100-4814-9003-B2999150DCE1
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Remove-AzureRmTrafficManagerEndpointConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Remove-AzureRmTrafficManagerEndpointConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Remove-AzureRmTrafficManagerEndpointConfig
@@ -17,7 +17,7 @@ Removes an endpoint from a local Traffic Manager profile object.
 
 ```
 Remove-AzureRmTrafficManagerEndpointConfig -EndpointName <String>
- -TrafficManagerProfile <TrafficManagerProfile> [<CommonParameters>]
+ -TrafficManagerProfile <TrafficManagerProfile> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +51,7 @@ The final command updates the Traffic Manager profile named ContosoProfile to ma
 Specifies the name of the Traffic Manager endpoint that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +68,7 @@ This cmdlet modifies this local object.
 To obtain a **TrafficManagerProfile** object, use the Get-AzureRmTrafficManagerProfile cmdlet.
 
 ```yaml
-Type: TrafficManagerProfile
+Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,6 +76,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

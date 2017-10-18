@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: BF254F2F-F658-45CC-8AC8-53FF96CFCAAD
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADUser.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmADUser
@@ -17,27 +17,27 @@ Filters active directory users.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADUser [-UserPrincipalName <String>] [<CommonParameters>]
+Get-AzureRmADUser [-UserPrincipalName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SearchStringParameterSet
 ```
-Get-AzureRmADUser -SearchString <String> [<CommonParameters>]
+Get-AzureRmADUser -SearchString <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ObjectIdParameterSet
 ```
-Get-AzureRmADUser -ObjectId <Guid> [<CommonParameters>]
+Get-AzureRmADUser -ObjectId <Guid> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### UPNParameterSet
 ```
-Get-AzureRmADUser -UserPrincipalName <String> [<CommonParameters>]
+Get-AzureRmADUser -UserPrincipalName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### MailParameterSet
 ```
-Get-AzureRmADUser -Mail <String> [<CommonParameters>]
+Get-AzureRmADUser -Mail <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,7 +70,7 @@ Gets all AD users
 
 ### -Mail
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: MailParameterSet
 Aliases: 
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 Object id of the user.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ObjectIdParameterSet
 Aliases: 
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 The user display name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SearchStringParameterSet
 Aliases: 
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 UPN of the user.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: EmptyParameterSet
 Aliases: UPN
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: UPNParameterSet
 Aliases: UPN
 
@@ -135,6 +135,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

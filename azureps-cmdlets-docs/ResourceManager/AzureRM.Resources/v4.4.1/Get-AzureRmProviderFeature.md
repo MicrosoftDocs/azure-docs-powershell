@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 2970E81E-A788-4829-B1FF-B522A91DE4B1
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmProviderFeature.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmProviderFeature.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmProviderFeature
@@ -17,12 +17,14 @@ Gets information about Azure provider features.
 
 ### ListAvailableParameterSet (Default)
 ```
-Get-AzureRmProviderFeature [-ProviderNamespace <String>] [-ListAvailable] [<CommonParameters>]
+Get-AzureRmProviderFeature [-ProviderNamespace <String>] [-ListAvailable]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### GetFeature
 ```
-Get-AzureRmProviderFeature -ProviderNamespace <String> -FeatureName <String> [<CommonParameters>]
+Get-AzureRmProviderFeature -ProviderNamespace <String> -FeatureName <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +52,7 @@ This command gets information for the feature named AllowPreReleaseRegions for t
 Specifies the name of the feature to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetFeature
 Aliases: 
 
@@ -65,7 +67,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet gets all features.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ListAvailableParameterSet
 Aliases: 
 
@@ -80,7 +82,7 @@ Accept wildcard characters: False
 Specifies the namespace for which this cmdlet gets provider features.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListAvailableParameterSet
 Aliases: 
 
@@ -92,11 +94,24 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetFeature
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

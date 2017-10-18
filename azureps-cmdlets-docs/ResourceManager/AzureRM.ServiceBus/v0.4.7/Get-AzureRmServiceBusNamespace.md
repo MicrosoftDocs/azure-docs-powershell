@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+Module Name: AzureRM.ServiceBus
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Get-AzureRmServiceBusNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Get-AzureRmServiceBusNamespace.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ec6eabb5fcc8e564f660117cecebd8a922251a6b
 ---
 
 # Get-AzureRmServiceBusNamespace
@@ -15,7 +15,8 @@ Gets a description for the specified Service Bus namespace within the resource g
 ## SYNTAX
 
 ```
-Get-AzureRmServiceBusNamespace [[-ResourceGroup] <String>] [[-NamespaceName] <String>] [<CommonParameters>]
+Get-AzureRmServiceBusNamespace [-ResourceGroupName <String>] [-Name <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,36 +33,44 @@ Returns a description of the specified Service Bus namespace.
 
 ## PARAMETERS
 
-### -NamespaceName
-The Service Bus namespace name.
-
-```yaml
-Type: String
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: 
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
-Position: 1
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Namespace Name.```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: NamespaceName
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroup
-The name of the resource group.
-
-```yaml
-Type: String
+### -ResourceGroupName
+The name of the resource group```yaml
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases: ResourceGroup
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -89,5 +98,7 @@ ServiceBusEndpoint : https://SB-Example1.servicebus.windows.net:443/
 Enabled            : True
 
 ## NOTES
+## RELATED LINKS
 
 ## RELATED LINKS
+

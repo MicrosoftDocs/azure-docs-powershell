@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+Module Name: AzureRM.IotHub
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzureRmIotHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzureRmIotHub.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/04e47f8329ba9e64790c974f9666dbf41de7483f
 ---
 
 # Get-AzureRmIotHub
@@ -16,12 +16,14 @@ Gets information about the IotHubs in a subscription.
 
 ### ListIotHubsByResourceGroup (Default)
 ```
-Get-AzureRmIotHub [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmIotHub [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### GetIotHubByName
 ```
-Get-AzureRmIotHub [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureRmIotHub [-ResourceGroupName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +59,7 @@ Gets information about the IotHub named "myiothub".
 Name of the IotHub
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetIotHubByName
 Aliases: 
 
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 Name of the ResourceGroup
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ListIotHubsByResourceGroup
 Aliases: 
 
@@ -84,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetIotHubByName
 Aliases: 
 
@@ -92,6 +94,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

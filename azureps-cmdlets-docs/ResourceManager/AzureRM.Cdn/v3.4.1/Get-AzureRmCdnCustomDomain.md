@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+Module Name: AzureRM.Cdn
 ms.assetid: 53246003-D1E9-4863-94E9-8E0BF1272134
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnCustomDomain.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnCustomDomain.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureRmCdnCustomDomain
@@ -18,12 +18,13 @@ Gets a CDN custom domain.
 ### Parameter Set for fields parameters (Default)
 ```
 Get-AzureRmCdnCustomDomain [-CustomDomainName <String>] -EndpointName <String> -ProfileName <String>
- -ResourceGroupName <String> [<CommonParameters>]
+ -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Parameter Set for object parameters
 ```
-Get-AzureRmCdnCustomDomain [-CustomDomainName <String>] -CdnEndpoint <PSEndpoint> [<CommonParameters>]
+Get-AzureRmCdnCustomDomain [-CustomDomainName <String>] -CdnEndpoint <PSEndpoint>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +43,7 @@ The **Get-AzureRmCdnCustomDomain** cmdlet gets an Azure Content Delivery Network
 Specifies the CDN endpoint object of which the custom domain is a member.
 
 ```yaml
-Type: PSEndpoint
+Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
 Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
@@ -58,7 +59,7 @@ Specifies the name of the custom domain.
 The name of the custom domain differs from the host name of the custom domain.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,7 +74,7 @@ Accept wildcard characters: False
 Specifies the name of the endpoint to which the custom domain belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -88,7 +89,7 @@ Accept wildcard characters: False
 Specifies the name of the Profile to which the custom domain belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -103,11 +104,24 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the custom domain belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -120,7 +134,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### PSEndpoint
-
 Parameter 'CdnEndpoint' accepts value of type 'PSEndpoint' from the pipeline
 
 ## OUTPUTS

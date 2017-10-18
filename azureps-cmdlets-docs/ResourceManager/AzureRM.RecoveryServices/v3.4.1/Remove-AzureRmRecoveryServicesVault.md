@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
+Module Name: AzureRM.RecoveryServices
 ms.assetid: 466F6B7C-BA7E-4DFD-8504-5A196A335231
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Remove-AzureRmRecoveryServicesVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Remove-AzureRmRecoveryServicesVault.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Remove-AzureRmRecoveryServicesVault
@@ -16,7 +16,8 @@ Deletes a Recovery Services vault.
 ## SYNTAX
 
 ```
-Remove-AzureRmRecoveryServicesVault -Vault <ARSVault> [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmRecoveryServicesVault -Vault <ARSVault> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +36,7 @@ The **Remove-AzureRmRecoveryServicesVault** cmdlet deletes a Recovery Services v
 Specifies an Azure Site Recovery vault object.
 
 ```yaml
-Type: ARSVault
+Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault
 Parameter Sets: (All)
 Aliases: 
 
@@ -50,7 +51,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -65,9 +66,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -82,7 +96,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### ARSVault
-
 Parameter 'Vault' accepts value of type 'ARSVault' from the pipeline
 
 ## OUTPUTS

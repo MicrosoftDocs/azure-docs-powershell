@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+Module Name: AzureRM.Storage
 ms.assetid: A57A9EFA-47AC-44D8-BFA7-CDE0E2A612B3
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Get-AzureRmStorageAccountKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Get-AzureRmStorageAccountKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Get-AzureRmStorageAccountKey
@@ -16,7 +16,8 @@ Gets the access keys for an Azure Storage account.
 ## SYNTAX
 
 ```
-Get-AzureRmStorageAccountKey [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureRmStorageAccountKey [-ResourceGroupName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +47,7 @@ PS C:\>(Get-AzureRmStorageAccountKey -ResourceGroupName "RG01" -AccountName "MyS
 Specifies the name of the Storage account for which this cmdlet gets keys.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName, AccountName
 
@@ -61,7 +62,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the Storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,6 +70,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

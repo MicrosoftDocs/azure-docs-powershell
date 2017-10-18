@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmApplicationGatewaySslCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmApplicationGatewaySslCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Add-AzureRmApplicationGatewaySslCertificate
@@ -40,7 +39,7 @@ This command gets an application gateway named ApplicationGateway01 and then add
 Specifies the name of application gateway to which this cmdlet adds an SSL certificate.
 
 ```yaml
-Type: PSApplicationGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -55,7 +54,7 @@ Accept wildcard characters: False
 Specifies the .pfx file of an SSL certificate that this cmdlet adds.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -66,26 +65,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the SSL certificate that this cmdlet adds.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -100,11 +84,26 @@ Accept wildcard characters: False
 Specifies the password of the SSL certificate that this cmdlet adds.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

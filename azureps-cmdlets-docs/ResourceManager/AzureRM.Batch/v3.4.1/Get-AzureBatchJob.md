@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 8BF49C4D-E7CD-4FD0-AFAC-9856239D24EC
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Get-AzureBatchJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureBatchJob
@@ -18,19 +18,21 @@ Gets Batch jobs for a Batch account or job schedule.
 ### ODataFilter (Default)
 ```
 Get-AzureBatchJob [-JobScheduleId <String>] [-Filter <String>] [-MaxCount <Int32>] [-Select <String>]
- [-Expand <String>] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-Expand <String>] -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Id
 ```
 Get-AzureBatchJob [[-Id] <String>] [-Select <String>] [-Expand <String>] -BatchContext <BatchAccountContext>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ParentObject
 ```
 Get-AzureBatchJob [[-JobSchedule] <PSCloudJobSchedule>] [-Filter <String>] [-MaxCount <Int32>]
- [-Select <String>] [-Expand <String>] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-Select <String>] [-Expand <String>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,7 +134,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -148,7 +150,7 @@ Specifies an Open Data Protocol (OData) expand clause.
 Specify a value for this parameter to get associated entities of the main entity that you get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -164,7 +166,7 @@ Specifies an OData filter clause for jobs.
 If you do not specify a filter, this cmdlet returns all jobs for the Batch account or job schedule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ODataFilter, ParentObject
 Aliases: 
 
@@ -180,7 +182,7 @@ Specifies the ID of the job that this cmdlet gets.
 You cannot specify wildcard characters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -196,7 +198,7 @@ Specifies a **PSCloudJobSchedule** object that represents the job schedule which
 To obtain a **PSCloudJobSchedule** object, use the Get-AzureBatchJobSchedule cmdlet.
 
 ```yaml
-Type: PSCloudJobSchedule
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudJobSchedule
 Parameter Sets: ParentObject
 Aliases: 
 
@@ -211,7 +213,7 @@ Accept wildcard characters: False
 Specifies the ID of the job schedule which contains the jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ODataFilter
 Aliases: 
 
@@ -228,7 +230,7 @@ If you specify a value of zero (0) or less, the cmdlet does not use an upper lim
 The default value is 1000.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: ODataFilter, ParentObject
 Aliases: 
 
@@ -244,9 +246,22 @@ Specifies an OData select clause.
 Specify a value for this parameter to get specific properties rather than all object properties.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -261,11 +276,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSCloudJobSchedule
-
 Parameter 'JobSchedule' accepts value of type 'PSCloudJobSchedule' from the pipeline
 
 ## OUTPUTS

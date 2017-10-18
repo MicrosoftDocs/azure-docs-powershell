@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+Module Name: AzureRM.RecoveryServices.Backup
 ms.assetid: 04D7317E-2089-4197-909D-89F0CEC4851A
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Backup-AzureRmRecoveryServicesBackupItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Backup-AzureRmRecoveryServicesBackupItem.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Backup-AzureRmRecoveryServicesBackupItem
@@ -16,7 +16,8 @@ Starts a backup for a Backup item.
 ## SYNTAX
 
 ```
-Backup-AzureRmRecoveryServicesBackupItem -Item <ItemBase> [-ExpiryDateTimeUTC <DateTime>] [<CommonParameters>]
+Backup-AzureRmRecoveryServicesBackupItem -Item <ItemBase> [-ExpiryDateTimeUTC <DateTime>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +50,7 @@ The last command triggers the backup job for the Backup item in $Item.
 Specifies an expiry time as a **DateTime** object.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,7 +65,7 @@ Accept wildcard characters: False
 Specifies a Backup item for which this cmdlet starts a backup operation.
 
 ```yaml
-Type: ItemBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,17 +76,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### DateTime
-
 Parameter 'ExpiryDateTimeUTC' accepts value of type 'DateTime' from the pipeline
 
 ### ItemBase
-
 Parameter 'Item' accepts value of type 'ItemBase' from the pipeline
 
 ## OUTPUTS

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 331F32CB-7777-401C-A42A-23098944CFBE
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Get-AzureRmBackupJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Get-AzureRmBackupJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmBackupJob
@@ -18,12 +18,13 @@ Gets Backup jobs.
 ### FiltersSet (Default)
 ```
 Get-AzureRmBackupJob -Vault <AzureRMBackupVault> [-JobId <String>] [-From <DateTime>] [-To <DateTime>]
- [-Status <String>] [-Type <String>] [-Operation <String>] [<CommonParameters>]
+ [-Status <String>] [-Type <String>] [-Operation <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### JobsListFilter
 ```
-Get-AzureRmBackupJob -Job <AzureRMBackupJob> [<CommonParameters>]
+Get-AzureRmBackupJob -Job <AzureRMBackupJob> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,7 +108,7 @@ To obtain a **DateTime** object, use the Get-Date cmdlet.
 For more information about **DateTime** objects, type `Get-Help Get-Date`.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: FiltersSet
 Aliases: 
 
@@ -123,7 +124,7 @@ Specifies a job that this cmdlet gets.
 To obtain an **AzureRmBackupJob** object, use the Get-AzureRmBackupJob cmdlet.
 
 ```yaml
-Type: AzureRMBackupJob
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupJob
 Parameter Sets: JobsListFilter
 Aliases: 
 
@@ -140,7 +141,7 @@ The ID is the **InstanceId** property of an **AzureRmBackupJob** object.
 To obtain an **AzureRmBackupJob** object, use Get-AzureRmBackupJob.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FiltersSet
 Aliases: 
 
@@ -164,7 +165,7 @@ The acceptable values for this parameter are:
 - Unregister
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FiltersSet
 Aliases: 
 Accepted values: Backup, ConfigureBackup, DeleteBackupData, Register, Restore, UnProtect, Unregister
@@ -190,7 +191,7 @@ The acceptable values for this parameter are:
 You can specify this parameter to find all in progress jobs or all failed jobs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FiltersSet
 Aliases: 
 Accepted values: Cancelled, Cancelling, Completed, CompletedWithWarnings, Failed, InProgress
@@ -208,7 +209,7 @@ The default value is the current system time.
 If you specify this parameter, you must also specify the *From* parameter.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: FiltersSet
 Aliases: 
 
@@ -224,7 +225,7 @@ Specifies the type of container for which this cmdlet gets backup jobs.
 Currently, the only supported value is AzureVM.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FiltersSet
 Aliases: 
 Accepted values: AzureVM
@@ -241,7 +242,7 @@ Specifies the Backup vault for which this cmdlet gets jobs.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: FiltersSet
 Aliases: 
 
@@ -249,6 +250,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

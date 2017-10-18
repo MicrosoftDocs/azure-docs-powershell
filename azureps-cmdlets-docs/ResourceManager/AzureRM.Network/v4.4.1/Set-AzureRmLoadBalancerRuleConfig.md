@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmLoadBalancerRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmLoadBalancerRuleConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Set-AzureRmLoadBalancerRuleConfig
@@ -59,7 +58,7 @@ Note that the configuration does not enable a floating IP address, which had bee
 Specifies a **BackendAddressPool** object to associate with a load balancer rule.
 
 ```yaml
-Type: PSBackendAddressPool
+Type: Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -74,7 +73,7 @@ Accept wildcard characters: False
 Specifies the ID of a **BackendAddressPool** object to associate with a load balancer rule configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -89,24 +88,9 @@ Accept wildcard characters: False
 Specifies the backend port for traffic that is matched by this rule configuration.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -119,7 +103,7 @@ Accept wildcard characters: False
 Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -134,7 +118,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet enables a floating IP address for a rule configuration.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -149,7 +133,7 @@ Accept wildcard characters: False
 Specifies a list of front-end IP addresses to associate with a load balancer rule configuration.
 
 ```yaml
-Type: PSFrontendIPConfiguration
+Type: Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -164,7 +148,7 @@ Accept wildcard characters: False
 Specifies the ID for a front-end IP address configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -179,7 +163,7 @@ Accept wildcard characters: False
 Specifies the front-end port that is matched by a load balancer rule configuration.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -194,7 +178,7 @@ Accept wildcard characters: False
 Specifies the length of time, in minutes, for which the state of conversations is maintained in a load balancer.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -210,7 +194,7 @@ Specifies a load balancer.
 This cmdlet sets the goal state rule configuration for the load balancer that this parameter specifies.
 
 ```yaml
-Type: PSLoadBalancer
+Type: Microsoft.Azure.Commands.Network.Models.PSLoadBalancer
 Parameter Sets: (All)
 Aliases: 
 
@@ -226,7 +210,7 @@ Specifies a load distribution.
 The acceptable values for this parameter are: SourceIP and SourceIPProtocol.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Default, SourceIP, SourceIPProtocol
@@ -242,7 +226,7 @@ Accept wildcard characters: False
 Specifies the name of a load balancer.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -257,7 +241,7 @@ Accept wildcard characters: False
 Specifies a probe to associate with a load balancer rule configuration.
 
 ```yaml
-Type: PSProbe
+Type: Microsoft.Azure.Commands.Network.Models.PSProbe
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -272,7 +256,7 @@ Accept wildcard characters: False
 Specifies the ID of the probe to associate with a load balancer rule configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -288,10 +272,25 @@ Specifies the protocol that is matched by a load balancer rule.
 The acceptable values for this parameter are: Tcp or Udp.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Tcp, Udp, All
+Accepted values: Tcp, Udp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

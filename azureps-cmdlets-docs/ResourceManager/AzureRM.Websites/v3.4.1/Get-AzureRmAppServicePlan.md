@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.Websites
 ms.assetid: 89ED4231-7616-47D0-BDAA-D849C245DC79
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmAppServicePlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmAppServicePlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmAppServicePlan
@@ -17,12 +17,13 @@ Gets an Azure App Service plan in the specified resource group.
 
 ### S1
 ```
-Get-AzureRmAppServicePlan [[-ResourceGroupName] <String>] [[-Name] <String>] [<CommonParameters>]
+Get-AzureRmAppServicePlan [[-ResourceGroupName] <String>] [[-Name] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### S2
 ```
-Get-AzureRmAppServicePlan [-Location] <String> [<CommonParameters>]
+Get-AzureRmAppServicePlan [-Location] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +51,7 @@ This command gets all App Service plans located in the "West US" region.
 Location 
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S2
 Aliases: 
 
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 App Service Plan Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -80,12 +81,25 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

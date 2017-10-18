@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 7B3259CD-079D-4E07-8608-F818522EE7CF
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Start-AzureRmVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Start-AzureRmVM.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Start-AzureRmVM
@@ -17,12 +17,14 @@ Starts an Azure virtual machine.
 
 ### ResourceGroupNameParameterSetName (Default)
 ```
-Start-AzureRmVM [-Name] <String> [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-AzureRmVM [-Name] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### IdParameterSetName
 ```
-Start-AzureRmVM [-Name] <String> [-Id] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-AzureRmVM [-Name] <String> [-Id] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,9 +41,22 @@ This command starts the virtual machine named VirtualMachine07 in ResourceGroup1
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Id
 The resource group name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: IdParameterSetName
 Aliases: 
 
@@ -54,7 +69,7 @@ Accept wildcard characters: False
 
 ### -Name
 The virtual machine name.```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +84,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupNameParameterSetName
 Aliases: 
 
@@ -84,7 +99,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -99,7 +114,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
 ms.assetid: 7D27F7B1-BAF8-4A01-8BA7-A75A4CFAE370
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreFirewallRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreFirewallRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/e3ac458aba81d13f083403365de32bc2f03d1edf
 ---
 
 # Get-AzureRmDataLakeStoreFirewallRule
@@ -18,7 +18,7 @@ If no firewall rule is specified, then lists all firewall rules for the account.
 
 ```
 Get-AzureRmDataLakeStoreFirewallRule [-Account] <String> [[-Name] <String>] [[-ResourceGroupName] <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +47,7 @@ Returns all firewall rules in account "ContosoADL"
 The Data Lake Store account to retrieve the firewall rule from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 The name of the firewall rule to retrieve
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Name of resource group under which want to retrieve the specified account's specified firewall rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -85,6 +85,19 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

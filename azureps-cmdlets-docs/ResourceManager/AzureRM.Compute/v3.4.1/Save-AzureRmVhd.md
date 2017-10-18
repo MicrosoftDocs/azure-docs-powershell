@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 18E1AD70-42A6-47A2-A685-6E218B6DC4BE
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Save-AzureRmVhd.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Save-AzureRmVhd.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Save-AzureRmVhd
@@ -18,13 +18,13 @@ Saves downloaded .vhd images locally.
 ### ResourceGroupParameterSetName
 ```
 Save-AzureRmVhd [-ResourceGroupName] <String> [-SourceUri] <Uri> [-LocalFilePath] <FileInfo>
- [[-NumberOfThreads] <Int32>] [-OverWrite] [<CommonParameters>]
+ [[-NumberOfThreads] <Int32>] [-OverWrite] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### StorageKeyParameterSetName
 ```
 Save-AzureRmVhd [-StorageKey] <String> [-SourceUri] <Uri> [-LocalFilePath] <FileInfo>
- [[-NumberOfThreads] <Int32>] [-OverWrite] [<CommonParameters>]
+ [[-NumberOfThreads] <Int32>] [-OverWrite] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,11 +70,24 @@ This command downloads a .vhd file and specifies the storage key.
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LocalFilePath
 Specifies the local file path of the saved image.
 
 ```yaml
-Type: FileInfo
+Type: System.IO.FileInfo
 Parameter Sets: (All)
 Aliases: lf
 
@@ -89,7 +102,7 @@ Accept wildcard characters: False
 Specifies the number of download threads that this cmdlet uses during download.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: th
 
@@ -104,7 +117,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet replaces the file specified by *LocalFilePath* file if it exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: o
 
@@ -119,7 +132,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupParameterSetName
 Aliases: 
 
@@ -134,7 +147,7 @@ Accept wildcard characters: False
 Specifies the Uniform Resource Identifier (URI) of the blob in `Azure`.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: src, Source
 
@@ -150,7 +163,7 @@ Specifies the storage key of the blob storage account.
 If you do not specify a key, this cmdlet attempts to determine the storage key of the account in *SourceUri* from Azure.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: StorageKeyParameterSetName
 Aliases: sk
 

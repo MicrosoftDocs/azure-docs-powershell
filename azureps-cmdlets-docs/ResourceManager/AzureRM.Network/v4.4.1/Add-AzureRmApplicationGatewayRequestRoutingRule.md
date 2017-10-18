@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmApplicationGatewayRequestRoutingRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmApplicationGatewayRequestRoutingRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Add-AzureRmApplicationGatewayRequestRoutingRule
@@ -54,7 +53,7 @@ The second command adds the request routing rule to the application gateway.
 Specifies an application gateway to which this cmdlet adds a request routing rule.
 
 ```yaml
-Type: PSApplicationGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +68,7 @@ Accept wildcard characters: False
 Specifies an application gateway back-end address pool object.
 
 ```yaml
-Type: PSApplicationGatewayBackendAddressPool
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -84,7 +83,7 @@ Accept wildcard characters: False
 Specifies an application gateway back-end address pool ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -99,7 +98,7 @@ Accept wildcard characters: False
 Specifies a back-end HTTP settings object for an application gateway.
 
 ```yaml
-Type: PSApplicationGatewayBackendHttpSettings
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -114,24 +113,9 @@ Accept wildcard characters: False
 Specifies a backend HTTP settings ID for an application gateway.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -144,7 +128,7 @@ Accept wildcard characters: False
 Specifies application gateway HTTP listener object.
 
 ```yaml
-Type: PSApplicationGatewayHttpListener
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -159,7 +143,7 @@ Accept wildcard characters: False
 Specifies application gateway HTTP listener ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -174,7 +158,7 @@ Accept wildcard characters: False
 Specifies the name of request routing rule this cmdlet adds.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -189,7 +173,7 @@ Accept wildcard characters: False
 Application gateway RedirectConfiguration
 
 ```yaml
-Type: PSApplicationGatewayRedirectConfiguration
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -204,7 +188,7 @@ Accept wildcard characters: False
 ID of the application gateway RedirectConfiguration
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -219,7 +203,7 @@ Accept wildcard characters: False
 Specifies the type of request routing rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Basic, PathBasedRouting
@@ -233,7 +217,7 @@ Accept wildcard characters: False
 
 ### -UrlPathMap
 ```yaml
-Type: PSApplicationGatewayUrlPathMap
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -248,9 +232,24 @@ Accept wildcard characters: False
 Specifies the URL path map ID for the routing rule.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

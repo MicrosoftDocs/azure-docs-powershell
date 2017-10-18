@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+Module Name: AzureRM.ServiceFabric
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Remove-AzureRmServiceFabricSetting.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/928c918a88f76273c14645e599fb59baea0cb3d6
 ---
 
 # Remove-AzureRmServiceFabricSetting
@@ -17,13 +17,14 @@ Remove one or multiple Service Fabric setting from the cluster.
 ### OneSetting
 ```
 Remove-AzureRmServiceFabricSetting [-ResourceGroupName] <String> [-Name] <String> -Section <String>
- -Parameter <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Parameter <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BatchSettings
 ```
 Remove-AzureRmServiceFabricSetting [-ResourceGroupName] <String> [-Name] <String>
- -SettingsSectionDescription <PSSettingsSectionDescription[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -SettingsSectionDescription <PSSettingsSectionDescription[]> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +45,7 @@ This command will remove settings 'MaxCursors' under 'EseStore' section.
 Specify the name of the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ClusterName
 
@@ -59,7 +60,7 @@ Accept wildcard characters: False
 Parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: OneSetting
 Aliases: 
 
@@ -74,7 +75,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -89,7 +90,7 @@ Accept wildcard characters: False
 Section.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: OneSetting
 Aliases: 
 
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 Client authentication type.
 
 ```yaml
-Type: PSSettingsSectionDescription[]
+Type: Microsoft.Azure.Commands.ServiceFabric.Models.PSSettingsSectionDescription[]
 Parameter Sets: BatchSettings
 Aliases: 
 
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -134,9 +135,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

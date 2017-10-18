@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: 44C5AF58-ADC1-4BC6-9771-3FD8F0480106
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Stop-AzureRmBackupJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Stop-AzureRmBackupJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Stop-AzureRmBackupJob
@@ -17,12 +17,13 @@ Cancels an existing Backup job.
 
 ### IdFiltersSet
 ```
-Stop-AzureRmBackupJob -Vault <AzureRMBackupVault> -JobID <String> [<CommonParameters>]
+Stop-AzureRmBackupJob -Vault <AzureRMBackupVault> -JobID <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### JobFiltersSet
 ```
-Stop-AzureRmBackupJob -Job <AzureRMBackupJob> [<CommonParameters>]
+Stop-AzureRmBackupJob -Job <AzureRMBackupJob> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +68,7 @@ Specifies a job that this cmdlet cancels.
 To obtain an **AzureRmBackupJob** object, use the Get-AzureRmBackupJob cmdlet.
 
 ```yaml
-Type: AzureRMBackupJob
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupJob
 Parameter Sets: JobFiltersSet
 Aliases: 
 
@@ -83,7 +84,7 @@ Specifies a job that this cmdlet cancels.
 To obtain an **AzureRmBackupJob** object, use the Get-AzureRmBackupJob cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: IdFiltersSet
 Aliases: 
 
@@ -99,11 +100,24 @@ Specifies the Backup vault in which this cmdlet cancels a job.
 To obtain an **AzureRmBackupVault** object, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: IdFiltersSet
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

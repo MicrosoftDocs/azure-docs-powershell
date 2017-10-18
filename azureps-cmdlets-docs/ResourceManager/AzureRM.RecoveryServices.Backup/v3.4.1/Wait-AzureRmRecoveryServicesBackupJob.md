@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+Module Name: AzureRM.RecoveryServices.Backup
 ms.assetid: F671A7CC-2A27-460E-B064-2FBF1B9C6A0B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Wait-AzureRmRecoveryServicesBackupJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Wait-AzureRmRecoveryServicesBackupJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Wait-AzureRmRecoveryServicesBackupJob
@@ -16,7 +16,8 @@ Waits for a Backup job to finish.
 ## SYNTAX
 
 ```
-Wait-AzureRmRecoveryServicesBackupJob [-Job] <Object> [[-Timeout] <Int64>] [<CommonParameters>]
+Wait-AzureRmRecoveryServicesBackupJob [-Job] <Object> [[-Timeout] <Int64>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +58,7 @@ Specifies the job to wait for.
 To obtain a **BackupJob** object, use the Get-AzureRmRecoveryServicesBackupJob cmdlet.
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,12 +74,25 @@ Specifies the maximum time, in seconds, that this cmdlet waits for the job to fi
 It is recommended to specify a time-out value.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -90,7 +104,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Object
-
 Parameter 'Job' accepts value of type 'Object' from the pipeline
 
 ## OUTPUTS

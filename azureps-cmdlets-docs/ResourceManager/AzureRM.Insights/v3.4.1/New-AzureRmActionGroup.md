@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/bc68f11db3b16b8ed21d578a6edeb50312deedb0
 ---
 
 # New-AzureRmActionGroup
@@ -16,7 +16,9 @@ Creates an ActionGroup reference object in memory.
 ## SYNTAX
 
 ```
-New-AzureRmActionGroup -ActionGroupId <String> -WebhookProperties System.Collections.Generic.Dictionary`1[<string>, <string>] [<CommonParameters>]
+New-AzureRmActionGroup -ActionGroupId <String>
+ [-WebhookProperty <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +39,7 @@ PS C:\>$actionGrp1 = New-AzureRmActionGroup -ActionGroupId 'actiongr1' -WebhookP
 The Id/name of the action group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -48,11 +50,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WebhookProperties
-The dictionary of webhook properties, i.e. list of unique string, string pairs.
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
-```yaml
-Type: System.Collections.Generic.Dictionary`1[<string>, <string>]
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WebhookProperty
+The webhook properties of the action group```yaml
+Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
 Aliases: 
 

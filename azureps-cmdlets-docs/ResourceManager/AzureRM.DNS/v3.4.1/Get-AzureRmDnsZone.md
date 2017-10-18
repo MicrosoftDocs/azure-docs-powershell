@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+Module Name: AzureRM.Dns
 ms.assetid: B831ABE6-348C-4DD6-9295-18D23A1FDF63
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Get-AzureRmDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Get-AzureRmDnsZone.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmDnsZone
@@ -17,12 +17,13 @@ Gets a DNS zone.
 
 ### Default (Default)
 ```
-Get-AzureRmDnsZone [<CommonParameters>]
+Get-AzureRmDnsZone [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ResourceGroup
 ```
-Get-AzureRmDnsZone [-Name <String>] -ResourceGroupName <String> [<CommonParameters>]
+Get-AzureRmDnsZone [-Name <String>] -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,7 +64,7 @@ If you do not specify a value for the *Name* parameter, this cmdlet gets all DNS
 If you also omit the *ResourceGroupName* parameter, this cmdlet gets all DNS zones in the current Azure subscription.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroup
 Aliases: 
 
@@ -81,7 +82,7 @@ If you do not specify the *ResourceGroupName*, then you must also omit the *Name
 In this case, this cmdlet gets all DNS zones in the current Azure subscription.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroup
 Aliases: 
 
@@ -89,6 +90,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

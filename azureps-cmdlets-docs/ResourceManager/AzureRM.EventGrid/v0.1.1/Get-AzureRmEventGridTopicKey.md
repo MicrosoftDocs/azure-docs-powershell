@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridTopicKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridTopicKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4efd0aa50bcd6f6c11433dca98f6f42e824aee56
 ---
 
 # Get-AzureRmEventGridTopicKey
@@ -17,17 +16,20 @@ Gets the shared access keys used to publish events to an Event Grid topic.
 
 ### TopicNameParameterSet (Default)
 ```
-Get-AzureRmEventGridTopicKey [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureRmEventGridTopicKey [-ResourceGroupName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### TopicInputObjectParameterSet
 ```
-Get-AzureRmEventGridTopicKey [-InputObject] <PSTopic> [<CommonParameters>]
+Get-AzureRmEventGridTopicKey [-InputObject] <PSTopic> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ResourceIdEventSubscriptionParameterSet
 ```
-Get-AzureRmEventGridTopicKey [-ResourceId] <String> [<CommonParameters>]
+Get-AzureRmEventGridTopicKey [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +57,7 @@ Gets the shared access keys of Event Grid topic \`Topic1\` in resource group \`M
 EventGrid Topic object.
 
 ```yaml
-Type: PSTopic
+Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
 Parameter Sets: TopicInputObjectParameterSet
 Aliases: 
 
@@ -70,7 +72,7 @@ Accept wildcard characters: False
 EventGrid Topic Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: TopicName
 
@@ -85,7 +87,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: ResourceGroup
 
@@ -100,7 +102,7 @@ Accept wildcard characters: False
 Resource Identifier representing the Event Grid Topic.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -108,6 +110,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

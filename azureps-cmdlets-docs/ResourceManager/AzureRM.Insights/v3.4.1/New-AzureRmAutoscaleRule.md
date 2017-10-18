@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: 5E854358-CA9D-4336-BA6A-BF7B1FADAB50
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAutoscaleRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAutoscaleRule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmAutoscaleRule
@@ -20,7 +20,7 @@ New-AzureRmAutoscaleRule -MetricName <String> -MetricResourceId <String> -Operat
  -MetricStatistic <MetricStatisticType> -Threshold <Double> [-TimeAggregationOperator <TimeAggregationType>]
  -TimeGrain <TimeSpan> [-TimeWindow <TimeSpan>] -ScaleActionCooldown <TimeSpan>
  -ScaleActionDirection <ScaleDirection> [-ScaleActionScaleType <ScaleType>] -ScaleActionValue <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +59,7 @@ The second command creates a second rule for the Requests metric, and then store
 Specifies the name of the metric.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the metric resource ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +95,7 @@ The acceptable values for this parameter are:
 - Sum
 
 ```yaml
-Type: MetricStatisticType
+Type: Microsoft.Azure.Management.Monitor.Management.Models.MetricStatisticType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Average, Min, Max, Sum
@@ -119,7 +119,7 @@ The acceptable values for this parameter are:
 - LessThanOrEqual
 
 ```yaml
-Type: ComparisonOperationType
+Type: Microsoft.Azure.Management.Monitor.Management.Models.ComparisonOperationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Equals, NotEquals, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies the Autoscale action cooldown time.
 
 ```yaml
-Type: TimeSpan
+Type: System.TimeSpan
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +155,7 @@ The acceptable values for this parameter are:
 - Decrease
 
 ```yaml
-Type: ScaleDirection
+Type: Microsoft.Azure.Management.Monitor.Management.Models.ScaleDirection
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, Increase, Decrease
@@ -177,7 +177,7 @@ The acceptable values for this parameter are:
 - ExactCount
 
 ```yaml
-Type: ScaleType
+Type: Microsoft.Azure.Management.Monitor.Management.Models.ScaleType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: ChangeCount, PercentChangeCount, ExactCount
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 Specifies the action value.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 Specifies the threshold of the metric value.
 
 ```yaml
-Type: Double
+Type: System.Double
 Parameter Sets: (All)
 Aliases: 
 
@@ -230,7 +230,7 @@ The acceptable values for this parameter are:
 - Total, Count
 
 ```yaml
-Type: TimeAggregationType
+Type: Microsoft.Azure.Management.Monitor.Management.Models.TimeAggregationType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Average, Minimum, Maximum, Total, Count
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 Specifies the time grain.
 
 ```yaml
-Type: TimeSpan
+Type: System.TimeSpan
 Parameter Sets: (All)
 Aliases: 
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 Specifies the time window.
 
 ```yaml
-Type: TimeSpan
+Type: System.TimeSpan
 Parameter Sets: (All)
 Aliases: 
 
@@ -269,6 +269,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

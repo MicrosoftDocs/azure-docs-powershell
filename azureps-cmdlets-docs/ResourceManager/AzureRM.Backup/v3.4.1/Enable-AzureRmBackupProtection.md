@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: DD150A2C-27D5-4119-9B43-FAB82F9F7D5B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Enable-AzureRmBackupProtection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Enable-AzureRmBackupProtection.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Enable-AzureRmBackupProtection
@@ -17,7 +17,7 @@ Associates an item with an Azure Backup protection policy.
 
 ```
 Enable-AzureRmBackupProtection -Policy <AzureRMBackupProtectionPolicy>
- [-Item] <AzureRMBackupContainerContextObject> [<CommonParameters>]
+ [-Item] <AzureRMBackupContainerContextObject> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +56,7 @@ Specifies the Backup item for which this cmdlet enables protection.
 To obtain an **AzureRmBackupItem**, use the Get-AzureRmBackupItem cmdlet.
 
 ```yaml
-Type: AzureRMBackupContainerContextObject
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupContainerContextObject
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,11 +72,24 @@ Specifies protection policy that this cmdlet associates with an item.
 To obtain an **AzureRmBackupProtectionPolicy** object, use the Get-AzureRmBackupProtectionPolicy cmdlet.
 
 ```yaml
-Type: AzureRMBackupProtectionPolicy
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupProtectionPolicy
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

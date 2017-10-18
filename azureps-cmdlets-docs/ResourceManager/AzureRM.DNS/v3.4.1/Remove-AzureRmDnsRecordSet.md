@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+Module Name: AzureRM.Dns
 ms.assetid: 505562A4-30BC-44E7-94EF-579763B8D794
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzureRmDnsRecordSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzureRmDnsRecordSet.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Remove-AzureRmDnsRecordSet
@@ -18,19 +18,20 @@ Deletes a record set.
 ### Fields
 ```
 Remove-AzureRmDnsRecordSet -Name <String> -RecordType <RecordType> -ZoneName <String>
- -ResourceGroupName <String> [-Force] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -ResourceGroupName <String> [-Force] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### Mixed
 ```
 Remove-AzureRmDnsRecordSet -Name <String> -RecordType <RecordType> -Zone <DnsZone> [-Force] [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Object
 ```
-Remove-AzureRmDnsRecordSet -RecordSet <DnsRecordSet> [-Overwrite] [-Force] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmDnsRecordSet -RecordSet <DnsRecordSet> [-Overwrite] [-Force] [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +83,7 @@ It will be removed in a future release.
 To control whether this cmdlet prompts you for confirmation, use the *Confirm* parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -100,7 +101,7 @@ When specifying the record set by name, the DNS zone must be specified using eit
 Alternatively, the record set can be specified using a **RecordSet** object, passed using the *RecordSet* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields, Mixed
 Aliases: 
 
@@ -117,7 +118,7 @@ This provides protection for concurrent changes.
 This can be suppressed using the *Overwrite* parameter, which deletes the record set regardless of concurrent changes.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Object
 Aliases: 
 
@@ -132,7 +133,7 @@ Accept wildcard characters: False
 passthru
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -149,7 +150,7 @@ Specifies the **RecordSet** object to remove.
 Alternatively, the record set can be specified using the *Name* and *Zone* parameters, or using the *Name*, *ZoneName*, and *ResourceGroupName* parameters.
 
 ```yaml
-Type: DnsRecordSet
+Type: Microsoft.Azure.Commands.Dns.DnsRecordSet
 Parameter Sets: Object
 Aliases: 
 
@@ -178,7 +179,7 @@ SOA records are deleted automatically when the zone is deleted.
 You cannot manually delete SOA records.
 
 ```yaml
-Type: RecordType
+Type: Microsoft.Azure.Management.Dns.Models.RecordType
 Parameter Sets: Fields, Mixed
 Aliases: 
 Accepted values: A, AAAA, CNAME, MX, NS, PTR, SOA, SRV, TXT
@@ -197,7 +198,7 @@ This parameter is applicable only when the record set and DNS zone are specified
 Alternatively, you can specify the record set using either the *RecordSet* parameter, or the *Name* and *Zone* parameters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -215,7 +216,7 @@ This parameter is applicable only when specifying the record set using the *Name
 Alternatively, you can specify the record set using either the *RecordSet* parameter, or the *Name*, *ZoneName*, and *ResourceGroupName* parameters.
 
 ```yaml
-Type: DnsZone
+Type: Microsoft.Azure.Commands.Dns.DnsZone
 Parameter Sets: Mixed
 Aliases: 
 
@@ -233,7 +234,7 @@ You must also specify the *Name* and *ResourceGroupName* parameters.
 Alternatively, the record set can be specified using either the *RecordSet* parameter, or the *Name* and *Zone* parameters.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -248,7 +249,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -264,13 +265,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

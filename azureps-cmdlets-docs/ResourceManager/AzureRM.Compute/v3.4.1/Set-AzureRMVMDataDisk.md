@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: C453485D-67A7-480E-83F6-527D4F5EBC93
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRMVMDataDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRMVMDataDisk.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVMDataDisk
@@ -18,13 +18,15 @@ Modifies properties of a virtual machine data disk.
 ### ChangeWithName
 ```
 Set-AzureRmVMDataDisk [-VM] <PSVirtualMachine> [-Name] <String> [[-Caching] <CachingTypes>]
- [[-DiskSizeInGB] <Int32>] [<CommonParameters>]
+ [[-DiskSizeInGB] <Int32>] [-StorageAccountType <StorageAccountTypes>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ChangeWithLun
 ```
 Set-AzureRmVMDataDisk [-VM] <PSVirtualMachine> [-Lun] <Int32> [[-Caching] <CachingTypes>]
- [[-DiskSizeInGB] <Int32>] [<CommonParameters>]
+ [[-DiskSizeInGB] <Int32>] [-StorageAccountType <StorageAccountTypes>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +62,7 @@ Changing this value causes the virtual machine to restart.
 This setting affects the consistency and performance of the disk.
 
 ```yaml
-Type: CachingTypes
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.CachingTypes]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: None, ReadOnly, ReadWrite
@@ -72,11 +74,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DiskSizeInGB
 Specifies the size, in gigabytes, for the data disk.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,7 +106,7 @@ Accept wildcard characters: False
 Specifies the logical unit number (LUN) of the data disk that this cmdlet modifies.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: ChangeWithLun
 Aliases: 
 
@@ -106,7 +121,7 @@ Accept wildcard characters: False
 Specifies the name of the data disk that this cmdlet modifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ChangeWithName
 Aliases: 
 
@@ -117,12 +132,26 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -StorageAccountType
+The virtual machine managed disk's account type.```yaml
+Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.StorageAccountTypes]
+Parameter Sets: (All)
+Aliases: 
+Accepted values: StandardLRS, PremiumLRS
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -VM
 Specifies the virtual machine for which this cmdlet modifies a data disk.
 To obtain a virtual machine object, use the Get-AzureRmVM cmdlet.
 
 ```yaml
-Type: PSVirtualMachine
+Type: Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 Parameter Sets: (All)
 Aliases: VMProfile
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: 37E76360-B683-407C-9AEF-7138374562D8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageShareStoredAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageShareStoredAccessPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureStorageShareStoredAccessPolicy
@@ -42,7 +42,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -61,7 +61,7 @@ This parameter can help reduce network connection problems in low bandwidth envi
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +77,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the [New-AzureStorageContext](./New-AzureStorageContext.md) cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies the time at which the stored access policy becomes invalid.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies permissions in the stored access policy to access the Storage share or files under it.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Specifies a name for the stored access policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage share.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: N, Name
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Specifies the time at which the stored access policy becomes valid.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -184,11 +184,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### String
-
 Parameter 'ShareName' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

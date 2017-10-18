@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Remove-AzureRmEventGridTopic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Remove-AzureRmEventGridTopic.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4efd0aa50bcd6f6c11433dca98f6f42e824aee56
 ---
 
 # Remove-AzureRmEventGridTopic
@@ -17,18 +16,20 @@ Removes an Azure Event Grid Topic.
 
 ### TopicNameParameterSet (Default)
 ```
-Remove-AzureRmEventGridTopic [-ResourceGroupName] <String> [-Name] <String> [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzureRmEventGridTopic [-ResourceGroupName] <String> [-Name] <String> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceIdEventSubscriptionParameterSet
 ```
-Remove-AzureRmEventGridTopic [-ResourceId] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmEventGridTopic [-ResourceId] <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### TopicInputObjectParameterSet
 ```
-Remove-AzureRmEventGridTopic [-InputObject] <PSTopic> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmEventGridTopic [-InputObject] <PSTopic> [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +57,7 @@ Removes the Event Grid topic \`Topic1\` in resource group \`MyResourceGroupName\
 EventGrid Topic object.
 
 ```yaml
-Type: PSTopic
+Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
 Parameter Sets: TopicInputObjectParameterSet
 Aliases: 
 
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 EventGrid Topic Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: TopicName
 
@@ -86,7 +87,7 @@ Accept wildcard characters: False
 Returns the status of the Remove operation. By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +102,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: TopicNameParameterSet
 Aliases: ResourceGroup
 
@@ -116,7 +117,7 @@ Accept wildcard characters: False
 EventGrid Topic ResourceID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
 Aliases: 
 
@@ -131,7 +132,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -147,9 +148,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

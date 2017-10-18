@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
 ms.assetid: FFB335D4-AE3E-4788-B6FD-9AFC36F52B61
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzureRmDataLakeStoreItemAcl.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzureRmDataLakeStoreItemAcl.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Set-AzureRmDataLakeStoreItemAcl
@@ -17,7 +17,8 @@ Modifies the ACL of a file or folder in Data Lake Store.
 
 ```
 Set-AzureRmDataLakeStoreItemAcl [-Account] <String> [-Path] <DataLakeStorePathInstance>
- [-Acl] <DataLakeStoreItemAce[]> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Acl] <DataLakeStoreItemAce[]> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +42,7 @@ The second command sets the ACL for the file Test.txt to the one in $ACL.
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -56,7 +57,7 @@ Accept wildcard characters: False
 Specifies an ACL for a file or a folder.
 
 ```yaml
-Type: DataLakeStoreItemAce[]
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 Indicates the resulting ACL should be returned.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -86,7 +87,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Store path of the file or folder, starting with the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +102,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -117,7 +118,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -128,13 +129,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### DataLakeStoreItemAce[]
-
 Parameter 'Acl' accepts value of type 'DataLakeStoreItemAce[]' from the pipeline
 
 ## OUTPUTS

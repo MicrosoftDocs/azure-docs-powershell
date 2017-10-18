@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: F41953F1-9515-4081-8624-6A1494DA4BB2
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMChefExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMChefExtension.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Get-AzureRmVMChefExtension
@@ -18,13 +18,13 @@ Gets information about a Chef extension.
 ### Linux
 ```
 Get-AzureRmVMChefExtension [-ResourceGroupName] <String> [-VMName] <String> [[-Name] <String>] [-Status]
- [-Linux] [<CommonParameters>]
+ [-Linux] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Windows
 ```
 Get-AzureRmVMChefExtension [-ResourceGroupName] <String> [-VMName] <String> [[-Name] <String>] [-Status]
- [-Windows] [<CommonParameters>]
+ [-Windows] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,11 +48,24 @@ This command gets the Chef extension from a Linux virtual machine named LinuxVM0
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Linux
 Indicates that this cmdlet works on a Linux virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Linux
 Aliases: 
 
@@ -67,7 +80,7 @@ Accept wildcard characters: False
 Specifies the name of the Chef extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ExtensionName
 
@@ -82,7 +95,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +110,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet gets only the instance view of the Chef extension.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -112,7 +125,7 @@ Accept wildcard characters: False
 Specifies the name of a virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -127,7 +140,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet is for a Windows virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Windows
 Aliases: 
 

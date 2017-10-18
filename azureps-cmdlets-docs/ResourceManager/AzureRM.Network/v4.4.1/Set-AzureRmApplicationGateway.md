@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmApplicationGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmApplicationGateway.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Set-AzureRmApplicationGateway
@@ -39,7 +38,7 @@ This command updates the application gateway with settings in the $AppGw variabl
 Specifies an application gateway object representing the state to which the application gateway should be set.
 
 ```yaml
-Type: PSApplicationGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +53,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

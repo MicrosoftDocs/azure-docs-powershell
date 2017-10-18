@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+Module Name: AzureRM.MachineLearning
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlCommitmentPlanUsageHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlCommitmentPlanUsageHistory.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmMlCommitmentPlanUsageHistory
@@ -15,7 +15,8 @@ Retrieves usage history information for a specified commitment plan.
 ## SYNTAX
 
 ```
-Get-AzureRmMlCommitmentPlanUsageHistory -ResourceGroupName <String> -Name <String> [<CommonParameters>]
+Get-AzureRmMlCommitmentPlanUsageHistory -ResourceGroupName <String> -Name <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,6 +26,8 @@ Retrieves usage history information for a specified commitment plan, including r
 
 ### --------------------------  Example 1: Get usage history for a specific commitment plan  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -38,7 +41,7 @@ Get-AzureRmMlCommitmentPlanUsageHistory -ResourceGroupName "MyResourceGroup" -Na
 The name of the Azure ML commitment plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -53,11 +56,24 @@ Accept wildcard characters: False
 The name of the resource group for the Azure ML commitment plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

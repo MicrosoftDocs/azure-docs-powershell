@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: C71C486E-34EB-42B5-B38A-D85B7DAA2F74
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchPool.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # New-AzureBatchPool
@@ -24,7 +24,8 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
  [-CertificateReferences <PSCertificateReference[]>]
  [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
  [-CloudServiceConfiguration <PSCloudServiceConfiguration>] [-NetworkConfiguration <PSNetworkConfiguration>]
- -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### VirtualMachineAndTargetDedicated
@@ -36,8 +37,8 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
  [-CertificateReferences <PSCertificateReference[]>]
  [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
  [-VirtualMachineConfiguration <PSVirtualMachineConfiguration>]
- [-NetworkConfiguration <PSNetworkConfiguration>] -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-NetworkConfiguration <PSNetworkConfiguration>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CloudServiceAndAutoScale
@@ -49,7 +50,8 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
  [-CertificateReferences <PSCertificateReference[]>]
  [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
  [-CloudServiceConfiguration <PSCloudServiceConfiguration>] [-NetworkConfiguration <PSNetworkConfiguration>]
- -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### VirtualMachineAndAutoScale
@@ -61,8 +63,8 @@ New-AzureBatchPool [-Id] <String> -VirtualMachineSize <String> [-DisplayName <St
  [-CertificateReferences <PSCertificateReference[]>]
  [-ApplicationPackageReferences <PSApplicationPackageReference[]>]
  [-VirtualMachineConfiguration <PSVirtualMachineConfiguration>]
- [-NetworkConfiguration <PSNetworkConfiguration>] -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-NetworkConfiguration <PSNetworkConfiguration>] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +93,7 @@ The pool is configured to use small virtual machines imaged with the latest oper
 
 ### -ApplicationPackageReferences
 ```yaml
-Type: PSApplicationPackageReference[]
+Type: Microsoft.Azure.Commands.Batch.Models.PSApplicationPackageReference[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +109,7 @@ Specifies the amount of time, in minutes, that elapses before the pool size is a
 The default value is 15 minutes, and the minimum value is 5 minutes.
 
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
 Aliases: 
 
@@ -122,7 +124,7 @@ Accept wildcard characters: False
 Specifies the formula for automatically scaling the pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: CloudServiceAndAutoScale, VirtualMachineAndAutoScale
 Aliases: 
 
@@ -138,7 +140,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -154,7 +156,7 @@ Specifies certificates associated with the pool.
 The Batch service installs the referenced certificates on each compute node of the pool.
 
 ```yaml
-Type: PSCertificateReference[]
+Type: Microsoft.Azure.Commands.Batch.Models.PSCertificateReference[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -169,7 +171,7 @@ Accept wildcard characters: False
 Specifies configuration settings for a pool based on the Azure cloud service platform.
 
 ```yaml
-Type: PSCloudServiceConfiguration
+Type: Microsoft.Azure.Commands.Batch.Models.PSCloudServiceConfiguration
 Parameter Sets: CloudServiceAndTargetDedicated, CloudServiceAndAutoScale
 Aliases: 
 
@@ -184,7 +186,7 @@ Accept wildcard characters: False
 Specifies the display name of the pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -199,7 +201,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool to create.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -214,7 +216,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet sets up the pool for direct communication between dedicated compute nodes.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -229,7 +231,7 @@ Accept wildcard characters: False
 Specifies the maximum number of tasks that can run on a single compute node.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -246,7 +248,7 @@ The key is the metadata name.
 The value is the metadata value.
 
 ```yaml
-Type: IDictionary
+Type: System.Collections.IDictionary
 Parameter Sets: (All)
 Aliases: 
 
@@ -259,7 +261,7 @@ Accept wildcard characters: False
 
 ### -NetworkConfiguration
 ```yaml
-Type: PSNetworkConfiguration
+Type: Microsoft.Azure.Commands.Batch.Models.PSNetworkConfiguration
 Parameter Sets: (All)
 Aliases: 
 
@@ -274,7 +276,7 @@ Accept wildcard characters: False
 Specifies the time-out for allocating compute nodes to the pool.
 
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
 Aliases: 
 
@@ -290,7 +292,7 @@ Specifies the start task specification for the pool.
 The start task is run when a compute node joins the pool, or when the compute node is rebooted or reimaged.
 
 ```yaml
-Type: PSStartTask
+Type: Microsoft.Azure.Commands.Batch.Models.PSStartTask
 Parameter Sets: (All)
 Aliases: 
 
@@ -305,7 +307,7 @@ Accept wildcard characters: False
 Specifies the target number of compute nodes to allocate to the pool.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
 Aliases: 
 
@@ -320,7 +322,7 @@ Accept wildcard characters: False
 Specifies the task scheduling policy, such as the ComputeNodeFillType.
 
 ```yaml
-Type: PSTaskSchedulingPolicy
+Type: Microsoft.Azure.Commands.Batch.Models.PSTaskSchedulingPolicy
 Parameter Sets: (All)
 Aliases: 
 
@@ -335,7 +337,7 @@ Accept wildcard characters: False
 Specifies configuration settings for a pool on the virtual machines infrastructure.
 
 ```yaml
-Type: PSVirtualMachineConfiguration
+Type: Microsoft.Azure.Commands.Batch.Models.PSVirtualMachineConfiguration
 Parameter Sets: VirtualMachineAndTargetDedicated, VirtualMachineAndAutoScale
 Aliases: 
 
@@ -351,7 +353,7 @@ Specifies the size of the virtual machines in the pool.
 For more information about virtual machine sizes, see Sizes for virtual machineshttps://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/ (https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/) in the Microsoft Azure site.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -366,7 +368,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -382,7 +384,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -393,13 +395,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ## OUTPUTS

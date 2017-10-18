@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module Name: AzureRM.DataFactories
 ms.assetid: 1D07222C-17D1-421C-8C9B-37043CBCF517
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Set-AzureRmDataFactorySliceStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Set-AzureRmDataFactorySliceStatus.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmDataFactorySliceStatus
@@ -19,13 +19,14 @@ Sets the status of slices for a dataset in Azure Data Factory.
 ```
 Set-AzureRmDataFactorySliceStatus [[-EndDateTime] <DateTime>] [-Status] <String> [[-UpdateType] <String>]
  [-DataFactoryName] <String> [-DatasetName] <String> [-StartDateTime] <DateTime> [-ResourceGroupName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByFactoryObject
 ```
 Set-AzureRmDataFactorySliceStatus [[-EndDateTime] <DateTime>] [-Status] <String> [[-UpdateType] <String>]
- [-DataFactory] <PSDataFactory> [-DatasetName] <String> [-StartDateTime] <DateTime> [<CommonParameters>]
+ [-DataFactory] <PSDataFactory> [-DatasetName] <String> [-StartDateTime] <DateTime>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,7 @@ Specifies a **PSDataFactory** object.
 This cmdlet modifies the status of slices that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: PSDataFactory
+Type: Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory
 Parameter Sets: ByFactoryObject
 Aliases: 
 
@@ -67,7 +68,7 @@ Specifies the name of a data factory.
 This cmdlet modifies the status of slices that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -82,7 +83,7 @@ Accept wildcard characters: False
 Specifies the name of the dataset for which this cmdlet modifies slices.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +109,7 @@ For more information about **DateTime** objects, type `Get-Help Get-Date`.
 The default time zone designator is UTC.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +125,7 @@ Specifies the name of an Azure resource group.
 This cmdlet modifies the status of slices that belong to the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: 
 
@@ -140,7 +141,7 @@ Specifies the start of a time period as a **DateTime** object.
 This time is the beginning of a data slice.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -167,7 +168,7 @@ Data processing failed.
 Skipped processing the data slice.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Failed, InProgress, Ready, Skipped, Waiting
@@ -189,13 +190,26 @@ Sets the status of each slice for the dataset in the specified time range.
 Sets the status of each slice for the dataset and all the dependent datasets, which are used as input datasets for activities in the pipeline.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Individual, UpstreamInPipeline
 
 Required: False
 Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

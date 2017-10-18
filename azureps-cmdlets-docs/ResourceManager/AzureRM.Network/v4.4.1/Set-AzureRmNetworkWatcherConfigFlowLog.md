@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkWatcherConfigFlowLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmNetworkWatcherConfigFlowLog.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Set-AzureRmNetworkWatcherConfigFlowLog
@@ -59,26 +58,11 @@ In this example we configure flow logging status for a Network Security Group. I
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableFlowLog
 Flag to enable/disable flow logging.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -93,7 +77,7 @@ Accept wildcard characters: False
 Flag to enable/disable retention.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -108,7 +92,7 @@ Accept wildcard characters: False
 The network watcher resource.
 
 ```yaml
-Type: PSNetworkWatcher
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -123,7 +107,7 @@ Accept wildcard characters: False
 The name of network watcher.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByName
 Aliases: Name
 
@@ -138,7 +122,7 @@ Accept wildcard characters: False
 The name of the network watcher resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByName
 Aliases: 
 
@@ -153,7 +137,7 @@ Accept wildcard characters: False
 Number of days to retain flow log records.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -168,7 +152,7 @@ Accept wildcard characters: False
 ID of the storage account which is used to store the flow log.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -183,7 +167,7 @@ Accept wildcard characters: False
 The target resource ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -198,7 +182,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -213,9 +197,24 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

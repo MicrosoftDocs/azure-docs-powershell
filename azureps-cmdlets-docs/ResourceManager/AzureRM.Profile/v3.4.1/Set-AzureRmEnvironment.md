@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+Module Name: AzureRM.profile
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Set-AzureRmEnvironment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Set-AzureRmEnvironment.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/cfc6a96078270da5caa8b1924dd150a6ccdaa584
 ---
 
 # Set-AzureRmEnvironment
@@ -103,7 +103,7 @@ In this example we are creating a new Azure environment with sample endpoints us
 Specifies the base authority for Azure Active Directory authentication.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: AdEndpointUrl, ActiveDirectory, ActiveDirectoryAuthority
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 Specifies the audience for tokens that authenticate requests to Azure Resource Manager or Service Management (RDFE) endpoints.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Specifies the default Active Directory tenant.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 The Azure Resource Manager endpoint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ARMEndpoint
 Aliases: ArmUrl
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 Dns Suffix of Azure Data Lake Analytics job and catalog services
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -179,7 +179,7 @@ Dns Suffix of Azure Data Lake Store FileSystem.
 Example: azuredatalake.net
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 Specifies the domain name suffix for Key Vault services.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 Specifies the audience for access tokens that authorize requests for Key Vault services.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 The audience for tokens authenticating with the AD Data Lake services Endpoint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DataLakeEndpointResourceId, DataLakeResourceId
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 The credentials, account, tenant and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 Indicates that Active Directory Federation Services (ADFS) on-premise authentication is allowed.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Name
 Aliases: OnPremise
 
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 Specifies the endpoint for the Azure Resource Manager gallery of deployment templates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: Gallery, GalleryUrl
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 The audience for tokens authenticating with the AD Graph Endpoint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: GraphEndpointResourceId, GraphResourceId
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 Specifies the URL for Graph (Active Directory metadata) requests.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: Graph, GraphUrl
 
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 Specifies the URL for the Management Portal.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 Specifies the name of the environment to modify.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 Specifies the URL from which .publishsettings files can be downloaded.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 Specifies the URL for Azure Resource Manager requests.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: ResourceManager, ResourceManagerUrl
 
@@ -374,7 +374,7 @@ Accept wildcard characters: False
 Determines the scope of context changes, for example, wheher changes apply only to the cusrrent process, or to all sessions started by this user.
 
 ```yaml
-Type: ContextModificationScope
+Type: Microsoft.Azure.Commands.Profile.Common.ContextModificationScope
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Process, CurrentUser
@@ -390,7 +390,7 @@ Accept wildcard characters: False
 Specifies the endpoint for Service Management (RDFE) requests.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: ServiceManagement, ServiceManagementUrl
 
@@ -405,7 +405,7 @@ Accept wildcard characters: False
 Specifies the domain-name suffix for Azure SQL Database servers.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -420,7 +420,7 @@ Accept wildcard characters: False
 Specifies the endpoint for storage (blob, table, queue, and file) access.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageEndpointSuffix
 
@@ -435,7 +435,7 @@ Accept wildcard characters: False
 Specifies the domain-name suffix for Azure Traffic Manager services.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Name
 Aliases: 
 
@@ -450,7 +450,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -465,7 +465,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

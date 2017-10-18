@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: B80389B9-E143-4E24-A222-E95F691DA2E9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementApi.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementApi.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmApiManagementApi
@@ -17,22 +17,26 @@ Gets an API.
 
 ### All APIs (Default)
 ```
-Get-AzureRmApiManagementApi -Context <PsApiManagementContext> [<CommonParameters>]
+Get-AzureRmApiManagementApi -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Find by ID
 ```
-Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String> [<CommonParameters>]
+Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find by Name
 ```
-Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -Name <String> [<CommonParameters>]
+Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -Name <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find by product ID
 ```
-Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ProductId <String> [<CommonParameters>]
+Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ProductId <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +71,7 @@ This command gets the API with the specified name.
 Specifies the ID of the API to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find by ID
 Aliases: 
 
@@ -82,7 +86,7 @@ Accept wildcard characters: False
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +101,7 @@ Accept wildcard characters: False
 Specifies the name of the API to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find by Name
 Aliases: 
 
@@ -112,7 +116,7 @@ Accept wildcard characters: False
 Specifies the ID of the product for which to get the API.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find by product ID
 Aliases: 
 
@@ -120,6 +124,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

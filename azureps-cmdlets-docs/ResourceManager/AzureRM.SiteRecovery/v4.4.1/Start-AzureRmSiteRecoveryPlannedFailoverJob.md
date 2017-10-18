@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: DBB0E08F-63F4-4D61-A69E-3C16A35301EC
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Start-AzureRmSiteRecoveryPlannedFailoverJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Start-AzureRmSiteRecoveryPlannedFailoverJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Start-AzureRmSiteRecoveryPlannedFailoverJob
@@ -19,14 +19,15 @@ Starts a Site Recovery planned failover operation.
 ```
 Start-AzureRmSiteRecoveryPlannedFailoverJob -ProtectionEntity <ASRProtectionEntity> -Direction <String>
  [-Optimize <String>] [-CreateVmIfNotFound <String>] [-Server <ASRServer>]
- [-DataEncryptionPrimaryCertFile <String>] [-DataEncryptionSecondaryCertFile <String>] [<CommonParameters>]
+ [-DataEncryptionPrimaryCertFile <String>] [-DataEncryptionSecondaryCertFile <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByRPObject
 ```
 Start-AzureRmSiteRecoveryPlannedFailoverJob -RecoveryPlan <ASRRecoveryPlan> -Direction <String>
  [-Optimize <String>] [-CreateVmIfNotFound <String>] [-DataEncryptionPrimaryCertFile <String>]
- [-DataEncryptionSecondaryCertFile <String>] [<CommonParameters>]
+ [-DataEncryptionSecondaryCertFile <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByRPIObject
@@ -34,7 +35,7 @@ Start-AzureRmSiteRecoveryPlannedFailoverJob -RecoveryPlan <ASRRecoveryPlan> -Dir
 Start-AzureRmSiteRecoveryPlannedFailoverJob -ReplicationProtectedItem <ASRReplicationProtectedItem>
  -Direction <String> [-Optimize <String>] [-CreateVmIfNotFound <String>]
  [-ServicesProvider <ASRRecoveryServicesProvider>] [-DataEncryptionPrimaryCertFile <String>]
- [-DataEncryptionSecondaryCertFile <String>] [<CommonParameters>]
+ [-DataEncryptionSecondaryCertFile <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +53,7 @@ The acceptable values for this parameter are:
 - No
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Yes, No
@@ -68,7 +69,7 @@ Accept wildcard characters: False
 Specifies the primary certificate file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 Specifies the secondary certificate file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +103,7 @@ The acceptable values for this parameter are:
 - RecoveryToPrimary
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: PrimaryToRecovery, RecoveryToPrimary
@@ -132,7 +133,7 @@ With this setting enabled, the virtual machine is shut down immediately.
 Synchronization starts after shutdown to complete the failover operation.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: ForDownTime, ForSynchronization
@@ -148,7 +149,7 @@ Accept wildcard characters: False
 Specifies the Site Recovery protection entity object.
 
 ```yaml
-Type: ASRProtectionEntity
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity
 Parameter Sets: ByPEObject
 Aliases: 
 
@@ -163,7 +164,7 @@ Accept wildcard characters: False
 Specifies a recovery plan object.
 
 ```yaml
-Type: ASRRecoveryPlan
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlan
 Parameter Sets: ByRPObject
 Aliases: 
 
@@ -176,7 +177,7 @@ Accept wildcard characters: False
 
 ### -ReplicationProtectedItem
 ```yaml
-Type: ASRReplicationProtectedItem
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem
 Parameter Sets: ByRPIObject
 Aliases: 
 
@@ -189,7 +190,7 @@ Accept wildcard characters: False
 
 ### -Server
 ```yaml
-Type: ASRServer
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRServer
 Parameter Sets: ByPEObject
 Aliases: 
 
@@ -202,9 +203,22 @@ Accept wildcard characters: False
 
 ### -ServicesProvider
 ```yaml
-Type: ASRRecoveryServicesProvider
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryServicesProvider
 Parameter Sets: ByRPIObject
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -219,15 +233,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### ASRProtectionEntity
-
 Parameter 'ProtectionEntity' accepts value of type 'ASRProtectionEntity' from the pipeline
 
 ### ASRRecoveryPlan
-
 Parameter 'RecoveryPlan' accepts value of type 'ASRRecoveryPlan' from the pipeline
 
 ### ASRReplicationProtectedItem
-
 Parameter 'ReplicationProtectedItem' accepts value of type 'ASRReplicationProtectedItem' from the pipeline
 
 ## OUTPUTS

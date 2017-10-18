@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+Module Name: AzureRM.MachineLearning
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlCommitmentAssociation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlCommitmentAssociation.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmMlCommitmentAssociation
@@ -16,7 +16,7 @@ Retrieves the summary information for one or more commitment associations.
 
 ```
 Get-AzureRmMlCommitmentAssociation -ResourceGroupName <String> -CommitmentPlanName <String> [-Name <String>]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,12 +30,16 @@ Depending on the paramenters passed, the cmdlet returns a specific commitment as
 
 
 
+
+
 ```
 Get-AzureRmMlCommitmentAssociation -ResourceGroupName "MyResourceGroup" -CommitmentPlanName "MyCommitmentPlanName" -Name "MyCommitmentAssociationName"
 ```
 
 ### --------------------------  Example 2: Get all commitment associations for the specified commitment plan  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -49,7 +53,7 @@ Get-AzureRmMlCommitmentAssociation -ResourceGroupName "MyResourceGroup" -Commitm
 The name of the Azure ML commitment plan which has one or more commitment associations.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,7 +68,7 @@ Accept wildcard characters: False
 The name of the Azure ML commitment association.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -79,11 +83,24 @@ Accept wildcard characters: False
 The name of the resource group for the Azure ML commitment association.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

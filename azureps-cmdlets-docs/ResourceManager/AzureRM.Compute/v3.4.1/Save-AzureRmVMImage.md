@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: D2B5BC27-6D51-45BC-AE6A-F7FED11B8651
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Save-AzureRmVMImage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Save-AzureRmVMImage.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Save-AzureRmVMImage
@@ -18,13 +18,14 @@ Saves a virtual machine as a VMImage.
 ### ResourceGroupNameParameterSetName (Default)
 ```
 Save-AzureRmVMImage [-Name] <String> [-DestinationContainerName] <String> [-VHDNamePrefix] <String>
- [-Overwrite] [[-Path] <String>] [-ResourceGroupName] <String> [<CommonParameters>]
+ [-Overwrite] [[-Path] <String>] [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### IdParameterSetName
 ```
 Save-AzureRmVMImage [-Name] <String> [-DestinationContainerName] <String> [-VHDNamePrefix] <String>
- [-Overwrite] [[-Path] <String>] [-Id] <String> [<CommonParameters>]
+ [-Overwrite] [[-Path] <String>] [-Id] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,6 +50,19 @@ The **Output** property returns a JSON template.
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DestinationContainerName
 Specifies the name of a container inside the "system" container that you want to hold your images.
 
@@ -60,7 +74,7 @@ The URL of the saved image is similar to:
 https://\<storageAccountName\>.blob.core.windows.net/system/Microsoft.Compute/Images/\<imagesContainer\>/\<vhdPrefix-osDisk\>.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.vhd.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +89,7 @@ Accept wildcard characters: False
 Specifies the Resource ID of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: IdParameterSetName
 Aliases: 
 
@@ -90,7 +104,7 @@ Accept wildcard characters: False
 Specifies a name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: VMName
 
@@ -105,7 +119,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet overwrites any VHDs that have the same prefix in the destination container.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +134,7 @@ Accept wildcard characters: False
 Specifies the path of the VHD.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,7 +149,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupNameParameterSetName
 Aliases: 
 
@@ -152,7 +166,7 @@ Specifies the prefix in the name of the blobs that constitute the storage profil
 For example, a prefix vhdPrefix for an operating system disk results in the name vhdPrefix-osdisk.\<guid\>.vhd.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: VirtualHardDiskNamePrefix
 

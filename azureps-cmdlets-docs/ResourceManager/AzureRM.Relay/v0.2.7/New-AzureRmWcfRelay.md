@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+Module Name: AzureRM.Relay
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/New-AzureRmWcfRelay.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/New-AzureRmWcfRelay.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/9764f6e5b1286093b4050fe1ad8794467a8f1bd8
 ---
 
 # New-AzureRmWcfRelay
@@ -16,13 +16,16 @@ Creates a WcfRelay in the specified Relay namespace.
 
 ### WcfRelayInputObjectSet
 ```
-New-AzureRmWcfRelay -ResourceGroupName <String> -Namespace <String> -Name <String> [-InputObject <WcfRelayAttributes>] [-WhatIf] [-Confirm]
+New-AzureRmWcfRelay -ResourceGroupName <String> -Namespace <String> -Name <String>
+ [-InputObject <WcfRelayAttributes>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### WcfRelayPropertiesSet
 ```
-New-AzureRmWcfRelay -ResourceGroupName <String> -Namespace <String> -Name <String> [-WcfRelayType <String>] [-RequiresClientAuthorization <Boolean>] [-RequiresTransportSecurity <Boolean>] [-UserMetadata <String>]
- [-WhatIf] [-Confirm]
+New-AzureRmWcfRelay -ResourceGroupName <String> -Namespace <String> -Name <String> [-WcfRelayType <String>]
+ [-RequiresClientAuthorization <Boolean>] [-RequiresTransportSecurity <Boolean>] [-UserMetadata <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +40,6 @@ PS C:\> $GetWcfRelay.UserMetadata = "TestWCFRelay2"
 PS C:\> $GetWcfRelay.RequiresClientAuthorization = $False
 PS C:\> $GetWcfRelay.RelayType = "Http"
 PS C:\> New-AzureRmWcfRelay -ResourceGroupName Default-Storage-WestUS -Namespace TestNameSpace-Relay1 -Name TestWCFRelay2 -InputObject
-
 ```
 
 Creates a new WcfRelay \`TestWCFRelay2\` in the specified Relay namespace \`TestNameSpace-Relay\`.
@@ -55,7 +57,7 @@ Creates a new WcfRelay \`TestWCFRelay\` in the specified Relay namespace \`TestN
 true if client authorization is needed for this relay; otherwise, false
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: WcfRelayPropertiesSet
 Aliases: 
 
@@ -70,7 +72,7 @@ Accept wildcard characters: False
 true if transport security is needed for this relay; otherwise, false
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: WcfRelayPropertiesSet
 Aliases: 
 
@@ -86,7 +88,7 @@ Gets or sets usermetadata is a placeholder to store user-defined string data for
 it can be used to store  descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WcfRelayPropertiesSet
 Aliases: 
 
@@ -102,7 +104,7 @@ WcfRelay Type.
 Possible values include: 'NetTcp' or 'Http'
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WcfRelayPropertiesSet
 Aliases: 
 Accepted values: NetTcp, Http
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -134,7 +136,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -149,7 +151,7 @@ Accept wildcard characters: False
 WcfRelay object.
 
 ```yaml
-Type: WcfRelayAttributes
+Type: Microsoft.Azure.Commands.Relay.Models.WcfRelayAttributes
 Parameter Sets: WcfRelayInputObjectSet
 Aliases: 
 
@@ -164,7 +166,7 @@ Accept wildcard characters: False
 WcfRelay Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -179,7 +181,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -194,7 +196,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -204,6 +206,20 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -236,6 +252,7 @@ System.String
 ## OUTPUTS
 
 ### Example 1 - InputObject
+
 ### Microsoft.Azure.Commands.Relay.Models.WcfRelayAttributes
 RelayType                   : Http
 CreatedAt                   : 4/26/2017 5:14:46 PM
@@ -251,6 +268,7 @@ Name                        : TestWCFRelay2
 Type                        : Microsoft.Relay/WcfRelays
 
 ### Example 2 - Properties
+
 ### Microsoft.Azure.Commands.Relay.Models.WcfRelayAttributes
 RelayType                   : NetTcp
 CreatedAt                   : 4/26/2017 5:20:08 PM

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 133668A0-0D11-4034-A743-4C0D3CE0FAF1
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryVaultSettings.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryVaultSettings.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Set-AzureRmSiteRecoveryVaultSettings
@@ -17,12 +17,14 @@ Sets the Site Recovery vault context for further operations.
 
 ### AzureSiteRecoveryVault
 ```
-Set-AzureRmSiteRecoveryVaultSettings -ASRVault <ASRVault> [<CommonParameters>]
+Set-AzureRmSiteRecoveryVaultSettings -ASRVault <ASRVault> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### AzureRecoveryServicesVault
 ```
-Set-AzureRmSiteRecoveryVaultSettings -ARSVault <ARSVault> [<CommonParameters>]
+Set-AzureRmSiteRecoveryVaultSettings -ARSVault <ARSVault> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +39,7 @@ This does not apply to recovery services vaults.
 Specifies an **ARSVault** object.
 
 ```yaml
-Type: ARSVault
+Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault
 Parameter Sets: AzureRecoveryServicesVault
 Aliases: 
 
@@ -52,7 +54,7 @@ Accept wildcard characters: False
 Specifies an **ASRVault** object.
 
 ```yaml
-Type: ASRVault
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRVault
 Parameter Sets: AzureSiteRecoveryVault
 Aliases: 
 
@@ -63,17 +65,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### ARSVault
-
 Parameter 'ARSVault' accepts value of type 'ARSVault' from the pipeline
 
 ### ASRVault
-
 Parameter 'ASRVault' accepts value of type 'ASRVault' from the pipeline
 
 ## OUTPUTS

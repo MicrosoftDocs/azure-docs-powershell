@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module Name: AzureRM.HDInsight
 ms.assetid: FB37494B-4035-45B7-88AB-DF33CEEF0D0A
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightSecurityProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightSecurityProfile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Add-AzureRmHDInsightSecurityProfile
@@ -18,7 +18,8 @@ Adds a security profileto a cluster configuration object.
 ```
 Add-AzureRmHDInsightSecurityProfile [-Config] <AzureHDInsightConfig> -Domain <String>
  -DomainUserCredential <PSCredential> -OrganizationalUnitDN <String> -LdapsUrls <String[]>
- [-ClusterUsersGroupDNs <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ClusterUsersGroupDNs <String[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +41,7 @@ PS C:\> {{ Add example code here }}
 Distinguished names of the Active Directory groups that will be available in Ambari and Ranger
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,7 +57,7 @@ Specifies the HDInsight cluster configuration object that this cmdlet modifies.
 This object is created by the New-AzureRmHDInsightClusterConfig cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 Active Directory domain for the cluster
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +88,7 @@ A domain user account credential with sufficient permissions for creating the cl
 Username should be in user@domain format
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +103,7 @@ Accept wildcard characters: False
 Urls of one or multiple LDAPS servers for the Active Directory
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -117,7 +118,7 @@ Accept wildcard characters: False
 Distinguished name of the organizational unit in the Active directory where user and computer accounts will be created
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -132,7 +133,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -145,9 +146,22 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -162,7 +176,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### AzureHDInsightConfig
-
 Parameter 'Config' accepts value of type 'AzureHDInsightConfig' from the pipeline
 
 ## OUTPUTS

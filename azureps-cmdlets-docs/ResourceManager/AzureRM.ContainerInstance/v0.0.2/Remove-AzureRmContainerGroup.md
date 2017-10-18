@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Remove-AzureRmContainerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/Remove-AzureRmContainerGroup.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/c0a38fa2cc379b7e7c8e1057f23d1f188d4daf1f
 ---
 
 # Remove-AzureRmContainerGroup
@@ -15,19 +14,22 @@ Removes a container group.
 
 ## SYNTAX
 
-### RemoveContainerGroupByResourceGroupAndNameParamSet
+### RemoveContainerGroupByResourceGroupAndNameParamSet (Default)
 ```
-Remove-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-PassThru] [-WhatIf] [-Confirm]
+Remove-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveContainerGroupByPSContainerGroupParamSet
 ```
-Remove-AzureRmContainerGroup -InputObject <PSContainerGroup> [-PassThru] [-WhatIf] [-Confirm]
+Remove-AzureRmContainerGroup -InputObject <PSContainerGroup> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveContainerGroupByResourceIdParamSet
 ```
-Remove-AzureRmContainerGroup -ResourceId <String> [-PassThru] [-WhatIf] [-Confirm]
+Remove-AzureRmContainerGroup -ResourceId <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +64,7 @@ This command removes a container group by resource Id.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -77,7 +79,7 @@ Accept wildcard characters: False
 The container group to remove.
 
 ```yaml
-Type: PSContainerGroup
+Type: Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup
 Parameter Sets: RemoveContainerGroupByPSContainerGroupParamSet
 Aliases: 
 
@@ -92,14 +94,14 @@ Accept wildcard characters: False
 The container group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RemoveContainerGroupByResourceGroupAndNameParamSet
 Aliases: 
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -107,7 +109,7 @@ Accept wildcard characters: False
 {{Fill PassThru Description}}
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,14 +124,14 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RemoveContainerGroupByResourceGroupAndNameParamSet
 Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -137,7 +139,7 @@ Accept wildcard characters: False
 The resource id.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RemoveContainerGroupByResourceIdParamSet
 Aliases: 
 
@@ -153,7 +155,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -164,16 +166,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup
 
-
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.ContainerInstance.Models.PSContainerGroup
-
 
 ## NOTES
 

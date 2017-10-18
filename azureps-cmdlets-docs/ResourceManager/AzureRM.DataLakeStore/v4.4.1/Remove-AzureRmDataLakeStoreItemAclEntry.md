@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
 ms.assetid: 33E7607E-C2BC-4F46-9038-91AC92041F00
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreItemAclEntry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreItemAclEntry.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Remove-AzureRmDataLakeStoreItemAclEntry
@@ -18,13 +18,15 @@ Removes an entry from the ACL of a file or folder in Data Lake Store.
 ### Remove ACL Entries using ACL object (Default)
 ```
 Remove-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
- [-Acl] <DataLakeStoreItemAce[]> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Acl] <DataLakeStoreItemAce[]> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Remove specific ACE
 ```
 Remove-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
- [-AceType] <AceType> [[-Id] <Guid>] [-Default] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AceType] <AceType> [[-Id] <Guid>] [-Default] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +47,7 @@ This command removes the user ACE for Patti Fuller from the ContosoADL account.
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -66,7 +68,7 @@ The acceptable values for this parameter are:
 - Other
 
 ```yaml
-Type: AceType
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+AceType
 Parameter Sets: Remove specific ACE
 Aliases: 
 Accepted values: User, Group, Mask, Other
@@ -82,7 +84,7 @@ Accept wildcard characters: False
 Specifies the ACL object that contains the entries to be removed.
 
 ```yaml
-Type: DataLakeStoreItemAce[]
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce[]
 Parameter Sets: Remove ACL Entries using ACL object
 Aliases: 
 
@@ -97,7 +99,7 @@ Accept wildcard characters: False
 Indicates that this operation removes the default ACE from the specified ACL.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Remove specific ACE
 Aliases: 
 
@@ -112,7 +114,7 @@ Accept wildcard characters: False
 Specifies the object ID of the AzureActive Directory user, group, or service principal for which to remove an ACE.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Remove specific ACE
 Aliases: 
 
@@ -127,7 +129,7 @@ Accept wildcard characters: False
 Indicates a boolean response should be returned indicating the result of the delete operation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,7 +144,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Store path of the item from which to remove an ACE, starting with the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -157,7 +159,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -173,7 +175,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -184,13 +186,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### DataLakeStoreItemAce[]
-
 Parameter 'Acl' accepts value of type 'DataLakeStoreItemAce[]' from the pipeline
 
 ## OUTPUTS

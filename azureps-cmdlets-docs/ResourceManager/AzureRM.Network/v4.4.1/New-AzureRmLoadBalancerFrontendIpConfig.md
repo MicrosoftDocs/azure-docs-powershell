@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmLoadBalancerFrontendIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmLoadBalancerFrontendIpConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/4d6d0c296d811ccb3bbcb549b0efe8a1cabfdb75
 ---
 
 # New-AzureRmLoadBalancerFrontendIpConfig
@@ -65,7 +64,7 @@ The second command creates a front-end IP configuration named FrontendIpConfig01
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -80,7 +79,7 @@ Accept wildcard characters: False
 Specifies the front-end IP configuration that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +95,7 @@ Specifies the private IP address of the load balancer.
 Specify this parameter only if you also specify the *Subnet* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceSubnet, SetByResourceIdSubnet
 Aliases: 
 
@@ -111,7 +110,7 @@ Accept wildcard characters: False
 Specifies the **PublicIpAddress** object to associate with a front-end IP configuration.
 
 ```yaml
-Type: PSPublicIpAddress
+Type: Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress
 Parameter Sets: SetByResourcePublicIpAddress
 Aliases: 
 
@@ -126,7 +125,7 @@ Accept wildcard characters: False
 Specifies the ID of the **PublicIpAddress** object to associate with a front-end IP configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceIdPublicIpAddress
 Aliases: 
 
@@ -141,7 +140,7 @@ Accept wildcard characters: False
 Specifies the **Subnet** object in which to create a front-end IP configuration.
 
 ```yaml
-Type: PSSubnet
+Type: Microsoft.Azure.Commands.Network.Models.PSSubnet
 Parameter Sets: SetByResourceSubnet
 Aliases: 
 
@@ -156,7 +155,7 @@ Accept wildcard characters: False
 Specifies the ID of the subnet in which to create a front-end IP configuration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceIdSubnet
 Aliases: 
 

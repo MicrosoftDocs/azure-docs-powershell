@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.AnalysisServices.dll-Help.xml
+Module Name: AzureRM.AnalysisServices
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Test-AzureRmAnalysisServicesServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AnalysisServices/Commands.AnalysisServices/help/Test-AzureRmAnalysisServicesServer.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Test-AzureRmAnalysisServicesServer
@@ -15,7 +15,8 @@ Tests the existence of an instance of Analysis Services server
 ## SYNTAX
 
 ```
-Test-AzureRmAnalysisServicesServer [-Name] <String> [[-ResourceGroupName] <String>] [<CommonParameters>]
+Test-AzureRmAnalysisServicesServer [-Name] <String> [[-ResourceGroupName] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +37,7 @@ This command will test if there is a server named testserver in the resourcegrou
 Name of the Analysis Services server
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -51,7 +52,7 @@ Accept wildcard characters: False
 Name of the Azure resource group to which the server belongs
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -59,6 +60,19 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

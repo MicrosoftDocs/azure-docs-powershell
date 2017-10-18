@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+Module Name: AzureRM.MachineLearning
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlWebService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Get-AzureRmMlWebService.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmMlWebService
@@ -15,7 +15,8 @@ Retrieves the summary information for one or more web services.
 ## SYNTAX
 
 ```
-Get-AzureRmMlWebService [-ResourceGroupName <String>] [-Name <String>] [<CommonParameters>]
+Get-AzureRmMlWebService [-ResourceGroupName <String>] [-Name <String>] [-Region <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +30,8 @@ Depending on the paramenters passed, the cmdlet returns the defintion for a spec
 
 
 
+
+
 ```
 Get-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
 ```
@@ -38,12 +41,16 @@ Get-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservice
 
 
 
+
+
 ```
 Get-AzureRmMlWebService
 ```
 
 ### --------------------------  Example 3: Get all web services in the current subscription and given resource group  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -57,7 +64,7 @@ Get-AzureRmMlWebService -ResourceGroupName "myresourcegroup"
 The name of the web service for which the details are retrieved.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +79,33 @@ Accept wildcard characters: False
 The resource group from which the details for the web service are retrieved.
 
 ```yaml
-Type: String
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Region
+The name of region```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

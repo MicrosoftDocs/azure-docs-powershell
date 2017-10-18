@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
+Module Name: AzureRM.RecoveryServices
 ms.assetid: 818B5302-91EE-425F-B1CD-86B626F1B7A3
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzureRmRecoveryServicesVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzureRmRecoveryServicesVault.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmRecoveryServicesVault
@@ -16,7 +16,8 @@ Gets a list of Recovery Services vaults.
 ## SYNTAX
 
 ```
-Get-AzureRmRecoveryServicesVault [-ResourceGroupName <String>] [-Name <String>] [<CommonParameters>]
+Get-AzureRmRecoveryServicesVault [-ResourceGroupName <String>] [-Name <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +36,7 @@ The **Get-AzureRmRecoveryServicesVault** cmdlet gets a list of Recovery Services
 Specifies the name of the vault to query for.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -50,9 +51,22 @@ Accept wildcard characters: False
 Specifies the name of the Azure resource group in which to create or from which to retrieve the specified Recovery Services object.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

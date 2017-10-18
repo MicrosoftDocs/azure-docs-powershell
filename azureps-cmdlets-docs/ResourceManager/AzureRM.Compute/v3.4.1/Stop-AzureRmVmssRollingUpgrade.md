@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Stop-AzureRmVmssRollingUpgrade.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Stop-AzureRmVmssRollingUpgrade.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/439ab54c665698c261e590791d876316cbae8a4a
 ---
 
 # Stop-AzureRmVmssRollingUpgrade
@@ -44,7 +44,7 @@ This command cancels on-going rolling upgrade of VM scale set "VMSS001" in resou
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 The name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: DefaultParameter
 Aliases: 
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 The name of the VM scale set.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: DefaultParameter
 Aliases: Name
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -120,7 +120,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

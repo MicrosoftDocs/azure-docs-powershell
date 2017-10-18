@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+Module Name: AzureRM.CognitiveServices
 ms.assetid: 11E2D82A-1DF1-4E19-8328-44674641D1BB
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Set-AzureRmCognitiveServicesAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Set-AzureRmCognitiveServicesAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Set-AzureRmCognitiveServicesAccount
@@ -17,7 +17,8 @@ Modifies an account.
 
 ```
 Set-AzureRmCognitiveServicesAccount [-ResourceGroupName] <String> [-Name] <String> [-SkuName <String>]
- [-Tag <Hashtable[]>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Tag <Hashtable[]>] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,9 +37,9 @@ The **Set-AzureRmCognitiveServicesAccount** cmdlet modifies the SKU or tags of t
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -51,7 +52,7 @@ Accept wildcard characters: False
 Specifies the name of the account to modify.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: CognitiveServicesAccountName, AccountName
 
@@ -66,9 +67,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group the account is assigned to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -89,9 +90,9 @@ The acceptable values for this parameter are:
 - S4
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 Specifies a tag as a name/value pair.
 
 ```yaml
-Type: Hashtable[]
+Type: System.Collections.Hashtable[]
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -135,13 +136,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

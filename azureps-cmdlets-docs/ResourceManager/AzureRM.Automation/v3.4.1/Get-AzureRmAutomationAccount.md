@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: B32A8423-A7AA-418E-A95D-6C18566741AB
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmAutomationAccount
@@ -17,12 +17,14 @@ Gets Automation accounts in a resource group.
 
 ### ByAll (Default)
 ```
-Get-AzureRmAutomationAccount [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmAutomationAccount [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ByAutomationAccountName
 ```
-Get-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureRmAutomationAccount [-ResourceGroupName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +54,7 @@ This command gets the Automation account named ContosoAutomationAccount in the r
 Specifies the name of the Automation account that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAutomationAccountName
 Aliases: AutomationAccountName
 
@@ -67,7 +69,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group in which this cmdlet gets Automation accounts.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAll
 Aliases: 
 
@@ -79,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByAutomationAccountName
 Aliases: 
 
@@ -87,6 +89,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module Name: AzureRM.HDInsight
 ms.assetid: 8F0634BD-D817-4365-B6D1-924DC36AE4C9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightScriptAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Add-AzureRmHDInsightScriptAction.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Add-AzureRmHDInsightScriptAction
@@ -17,7 +17,7 @@ Adds a script action to a cluster configuration object.
 
 ```
 Add-AzureRmHDInsightScriptAction [-Config] <AzureHDInsightConfig> [-NodeType] <ClusterNodeType> [-Uri] <Uri>
- [-Name] <String> [[-Parameters] <String>] [<CommonParameters>]
+ [-Name] <String> [[-Parameters] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,7 +89,7 @@ Specifies the HDInsight cluster configuration object that this cmdlet modifies.
 This object is created by the **New-AzureRmHDInsightClusterConfig** cmdlet.
 
 ```yaml
-Type: AzureHDInsightConfig
+Type: Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig
 Parameter Sets: (All)
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Specifies the name of the script action.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +124,7 @@ The acceptable values for this parameter are:
 - ZookeeperNode
 
 ```yaml
-Type: ClusterNodeType
+Type: Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HeadNode, WorkerNode, ZookeeperNode, EdgeNode
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 Specifies the parameters for the script action.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,12 +155,25 @@ Accept wildcard characters: False
 Specifies the public URI for the script action (a PowerShell or Bash script).
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -172,7 +185,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### AzureHDInsightConfig
-
 Parameter 'Config' accepts value of type 'AzureHDInsightConfig' from the pipeline
 
 ## OUTPUTS

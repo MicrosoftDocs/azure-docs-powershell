@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: 38207027-FD76-45EE-8817-88599735C0B0
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageFile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/d0286b97f861c0922de0b6fb193dc798ae5eeed2
 ---
 
 # Get-AzureStorageFile
@@ -67,7 +67,7 @@ If the previous call fails within the specified interval, this cmdlet retries th
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -86,7 +86,7 @@ This parameter can help mitigate network connection problems in low bandwidth en
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -102,7 +102,7 @@ Specifies an Azure Storage context.
 To obtain a Storage context, use the New-AzureStorageContext cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: ShareName
 Aliases: 
 
@@ -120,7 +120,7 @@ To obtain a directory, use the New-AzureStorageDirectory cmdlet.
 You can also use the **Get-AzureStorageFile** cmdlet to obtain a directory.
 
 ```yaml
-Type: CloudFileDirectory
+Type: Microsoft.WindowsAzure.Storage.File.CloudFileDirectory
 Parameter Sets: Directory
 Aliases: 
 
@@ -138,7 +138,7 @@ If you omit the *Path* parameter, **Get-AzureStorageFile** lists the directories
 If you include the *Path* parameter, **Get-AzureStorageFile** returns an instance of a directory or file in the specified path.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -154,7 +154,7 @@ Specifies the service-side timeout interval, in seconds, for a request.
 If the specified interval elapses before the service processes the request, the Storage service returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -173,7 +173,7 @@ This object contains the Storage context.
 If you specify this parameter, do not specify the *Context* parameter.
 
 ```yaml
-Type: CloudFileShare
+Type: Microsoft.WindowsAzure.Storage.File.CloudFileShare
 Parameter Sets: Share
 Aliases: 
 
@@ -189,7 +189,7 @@ Specifies the name of the file share.
 This cmdlet gets a file or directory from the file share that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ShareName
 Aliases: 
 
@@ -206,15 +206,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### CloudFileDirectory
-
 Parameter 'Directory' accepts value of type 'CloudFileDirectory' from the pipeline
 
 ### CloudFileShare
-
 Parameter 'Share' accepts value of type 'CloudFileShare' from the pipeline
 
 ## OUTPUTS

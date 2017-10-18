@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+Module Name: AzureRM.Cdn
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnProfileResourceUsage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnProfileResourceUsage.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmCdnProfileResourceUsage
@@ -16,12 +16,14 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616
 
 ### Parameter Set for fields parameters (Default)
 ```
-Get-AzureRmCdnProfileResourceUsage -ProfileName <String> -ResourceGroupName <String> [<CommonParameters>]
+Get-AzureRmCdnProfileResourceUsage -ProfileName <String> -ResourceGroupName <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Parameter Set for object parameters
 ```
-Get-AzureRmCdnProfileResourceUsage -CdnProfile <PSProfile> [<CommonParameters>]
+Get-AzureRmCdnProfileResourceUsage -CdnProfile <PSProfile> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +44,7 @@ PS C:\> {{ Add example code here }}
 The Azure CDN profile object.
 
 ```yaml
-Type: PSProfile
+Type: Microsoft.Azure.Commands.Cdn.Models.Profile.PSProfile
 Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
@@ -57,7 +59,7 @@ Accept wildcard characters: False
 The name of the profile.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -72,11 +74,24 @@ Accept wildcard characters: False
 The resource group to which the profile belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

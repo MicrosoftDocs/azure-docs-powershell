@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: F3774658-A5E4-40BE-9A85-B33C70BC0A09
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Get-AzureRmBackupContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Get-AzureRmBackupContainer.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmBackupContainer
@@ -18,7 +18,7 @@ Gets Backup containers.
 ```
 Get-AzureRmBackupContainer [-Name <String>] -Type <AzureBackupContainerType>
  [-ManagedResourceGroupName <String>] [-Status <AzureBackupContainerRegistrationStatus>]
- [-Vault] <AzureRMBackupVault> [<CommonParameters>]
+ [-Vault] <AzureRMBackupVault> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +80,7 @@ Specifies the name of the resource group associated with the container.
 This name is the same value that you specified for the *ServiceName* or *ResourceGroupName* parameter of the Register-AzureRmBackupContainer cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Specifies the name of the container that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -115,7 +115,7 @@ The acceptable values for this parameter are:
 - Registering
 
 ```yaml
-Type: AzureBackupContainerRegistrationStatus
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureBackupContainerRegistrationStatus
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Registered, Registering, NotRegistered
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 Specifies the type of containers that this cmdlet gets.
 
 ```yaml
-Type: AzureBackupContainerType
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureBackupContainerType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Windows, SCDPM, AzureVM, AzureBackupServer, Other
@@ -148,7 +148,7 @@ Specifies a Backup vault from which this cmdlet gets containers.
 To obtain an **AzureRmBackupVault**, use the Get-AzureRmBackupVault cmdlet.
 
 ```yaml
-Type: AzureRMBackupVault
+Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupVault
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,6 +156,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

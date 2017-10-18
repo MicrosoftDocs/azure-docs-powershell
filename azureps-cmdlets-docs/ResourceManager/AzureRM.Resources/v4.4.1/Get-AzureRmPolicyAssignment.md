@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmPolicyAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmPolicyAssignment.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/6cfb14ea9fe2234fe0827521681866fed75acd0e
 ---
 
 # Get-AzureRmPolicyAssignment
@@ -18,21 +17,22 @@ Gets policy assignments.
 
 ### The list all policy assignments parameter set. (Default)
 ```
-Get-AzureRmPolicyAssignment [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>]
- [-InformationVariable <String>] [<CommonParameters>]
+Get-AzureRmPolicyAssignment [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### The policy assignment name parameter set.
 ```
 Get-AzureRmPolicyAssignment [-Name <String>] -Scope <String> [-PolicyDefinitionId <String>]
- [-ApiVersion <String>] [-Pre] [-InformationAction <ActionPreference>] [-InformationVariable <String>]
- [<CommonParameters>]
+ [-ApiVersion <String>] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ### The policy assignment Id parameter set.
 ```
 Get-AzureRmPolicyAssignment -Id <String> [-PolicyDefinitionId <String>] [-ApiVersion <String>] [-Pre]
- [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +66,7 @@ Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Specifies the fully qualified resource ID for the policy assignment that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy assignment Id parameter set.
 Aliases: ResourceId
 
@@ -105,7 +105,7 @@ The acceptable values for this parameter are:
 - Suspend
 
 ```yaml
-Type: ActionPreference
+Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Specifies an information variable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies the name of the policy assignment that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy assignment name parameter set.
 Aliases: 
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 Specifies the ID of the policy definition of the policy assignments that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy assignment name parameter set., The policy assignment Id parameter set.
 Aliases: 
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 Specifies the scope at which the policy is applied for the assignment that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The policy assignment name parameter set.
 Aliases: 
 
@@ -188,6 +188,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

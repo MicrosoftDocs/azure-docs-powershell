@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmVirtualNetworkGatewayDefaultSite.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmVirtualNetworkGatewayDefaultSite.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Set-AzureRmVirtualNetworkGatewayDefaultSite
@@ -48,27 +47,12 @@ The third command uses the **Set-AzureRmVirtualNetworkGatewayDefaultSite** cmdle
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -GatewayDefaultSite
 Specifies an object reference to the local network gateway to be assigned as the default site for the specified virtual network.
 You can use the Get-AzureRmLocalNetworkGateway cmdlet to create an object reference to a local gateway.
 
 ```yaml
-Type: PSLocalNetworkGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -86,7 +70,7 @@ You can create an object reference to a virtual network gateway by using the **G
 The variable $VirtualGateway can then be used as the parameter value for the *VirtualNetworkGateway* parameter:
 
 ```yaml
-Type: PSVirtualNetworkGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,6 +78,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
+Module Name: AzureRM.RecoveryServices.Backup
 ms.assetid: E247C6DF-B53D-487E-AAA2-551FCBFD77E7
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupSchedulePolicyObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupSchedulePolicyObject.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmRecoveryServicesBackupSchedulePolicyObject
@@ -17,7 +17,8 @@ Gets a base schedule policy object.
 
 ```
 Get-AzureRmRecoveryServicesBackupSchedulePolicyObject [-WorkloadType] <WorkloadType>
- [[-BackupManagementType] <BackupManagementType>] [<CommonParameters>]
+ [[-BackupManagementType] <BackupManagementType>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,7 +74,7 @@ The acceptable values for this parameter are:
 - AzureSQLDatabase
 
 ```yaml
-Type: BackupManagementType
+Type: System.Nullable`1[Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureVM, MARS, SCDPM, AzureBackupServer, AzureSQL
@@ -93,13 +94,26 @@ The acceptable values for this parameter are:
 - AzureSQLDatabase
 
 ```yaml
-Type: WorkloadType
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AzureVM, AzureSQLDatabase
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

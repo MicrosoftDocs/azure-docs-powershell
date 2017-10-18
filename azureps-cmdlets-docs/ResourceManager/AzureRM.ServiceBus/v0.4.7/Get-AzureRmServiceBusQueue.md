@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+Module Name: AzureRM.ServiceBus
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Get-AzureRmServiceBusQueue.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Get-AzureRmServiceBusQueue.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/e66fe8b33ca829c1a5e79a1afb9209bd63ce094b
 ---
 
 # Get-AzureRmServiceBusQueue
@@ -15,8 +15,8 @@ Returns a description for the specified Service Bus queue.
 ## SYNTAX
 
 ```
-Get-AzureRmServiceBusQueue [-ResourceGroup] <String> [-NamespaceName] <String> [[-QueueName] <String>]
- [<CommonParameters>]
+Get-AzureRmServiceBusQueue -ResourceGroupName <String> -Namespace <String> [-Name <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,46 +33,53 @@ Returns the description of the queue.
 
 ## PARAMETERS
 
-### -NamespaceName
-The Service Bus namespace name.
-
-```yaml
-Type: String
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -QueueName
-The queue name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
-Position: 1
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Queue Name.```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: QueueName
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroup
-The name of the resource group.
-
-```yaml
-Type: String
+### -Namespace
+Namespace Name.```yaml
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases: NamespaceName
 
 Required: True
-Position: 0
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+The name of the resource group```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: ResourceGroup
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

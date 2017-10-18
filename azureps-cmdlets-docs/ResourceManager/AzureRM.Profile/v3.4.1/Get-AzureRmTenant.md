@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+Module Name: AzureRM.profile
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Get-AzureRmTenant.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Get-AzureRmTenant.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/5e57026ec8882492f2c12e76718828c1853631a9
 ---
 
 # Get-AzureRmTenant
@@ -54,7 +54,7 @@ This example shows how to get a specific authorized tenant of an Azure account.
 The credentials, tenant and subscription used for communication with azure
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the ID of the tenant that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Domain, Tenant
 

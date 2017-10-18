@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVirtualNetworkGatewayConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/New-AzureRmVirtualNetworkGatewayConnection.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # New-AzureRmVirtualNetworkGatewayConnection
@@ -50,7 +49,7 @@ New-AzureRmVirtualNetworkGatewayConnection -Name conn-client-1 -ResourceGroupNam
 
 ### -AuthorizationKey
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -63,7 +62,7 @@ Accept wildcard characters: False
 
 ### -ConnectionType
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: IPsec, Vnet2Vnet, ExpressRoute, VPNClient
@@ -75,24 +74,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableBgp
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,7 +89,7 @@ Accept wildcard characters: False
 
 ### -Force
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -132,7 +116,7 @@ Accept wildcard characters: False
 
 ### -LocalNetworkGateway2
 ```yaml
-Type: PSLocalNetworkGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -145,7 +129,7 @@ Accept wildcard characters: False
 
 ### -Location
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -158,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Name
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -171,7 +155,7 @@ Accept wildcard characters: False
 
 ### -Peer
 ```yaml
-Type: PSPeering
+Type: Microsoft.Azure.Commands.Network.Models.PSPeering
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -184,7 +168,7 @@ Accept wildcard characters: False
 
 ### -PeerId
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -197,7 +181,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -210,7 +194,7 @@ Accept wildcard characters: False
 
 ### -RoutingWeight
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -223,7 +207,7 @@ Accept wildcard characters: False
 
 ### -SharedKey
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -240,7 +224,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -255,7 +239,7 @@ Accept wildcard characters: False
 Use policy-based traffic selectors for a S2S connection
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -268,7 +252,7 @@ Accept wildcard characters: False
 
 ### -VirtualNetworkGateway1
 ```yaml
-Type: PSVirtualNetworkGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -281,7 +265,7 @@ Accept wildcard characters: False
 
 ### -VirtualNetworkGateway2
 ```yaml
-Type: PSVirtualNetworkGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -296,7 +280,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -312,13 +296,28 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

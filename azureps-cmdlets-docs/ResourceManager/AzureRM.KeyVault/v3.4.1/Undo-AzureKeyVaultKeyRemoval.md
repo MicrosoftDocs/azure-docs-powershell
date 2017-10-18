@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 online version: https://msdn.microsoft.com/en-us/library/dn868052.aspx
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Undo-AzureKeyVaultKeyRemoval.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Undo-AzureKeyVaultKeyRemoval.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # Undo-AzureKeyVaultKeyRemoval
@@ -15,7 +15,8 @@ Recovers a deleted key in a key vault into an active state.
 ## SYNTAX
 
 ```
-Undo-AzureKeyVaultKeyRemoval [-VaultName] <String> [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Undo-AzureKeyVaultKeyRemoval [-VaultName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +40,7 @@ Key name.
 Cmdlet constructs the FQDN of a key from vault name, currently selected environment and key name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: KeyName
 
@@ -55,7 +56,7 @@ Vault name.
 Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +71,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -86,9 +87,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

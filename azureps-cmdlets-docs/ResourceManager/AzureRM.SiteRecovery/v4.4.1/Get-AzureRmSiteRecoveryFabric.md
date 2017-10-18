@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 28EEB54B-C8C9-4C20-9454-5069C23583B9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryFabric.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmSiteRecoveryFabric
@@ -17,17 +17,18 @@ Get the properties of an Azure Site Recovery Fabric.
 
 ### Default (Default)
 ```
-Get-AzureRmSiteRecoveryFabric [<CommonParameters>]
+Get-AzureRmSiteRecoveryFabric [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-AzureRmSiteRecoveryFabric -Name <String> [<CommonParameters>]
+Get-AzureRmSiteRecoveryFabric -Name <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByFriendlyName
 ```
-Get-AzureRmSiteRecoveryFabric -FriendlyName <String> [<CommonParameters>]
+Get-AzureRmSiteRecoveryFabric -FriendlyName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +42,7 @@ The **Get-AzureRmSiteRecoveryFabric** cmdlet gets the properties of a specified 
 Specifies the friendly name of the Azure Site Recovery Fabric.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFriendlyName
 Aliases: 
 
@@ -56,11 +57,24 @@ Accept wildcard characters: False
 Specifies the name of the Azure Site Recovery Fabric.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

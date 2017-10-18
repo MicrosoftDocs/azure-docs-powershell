@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
 ms.assetid: C5126E20-0A93-4ACE-8297-F1E8E17BEF53
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Wait-AzureRmBackupJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Wait-AzureRmBackupJob.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/94e42834e29c78cafba9e3f1e99e14af92561036
 ---
 
 # Wait-AzureRmBackupJob
@@ -16,7 +16,8 @@ Waits for a Backup job to finish.
 ## SYNTAX
 
 ```
-Wait-AzureRmBackupJob -Job <Object> [-TimeOut <Int64>] [<CommonParameters>]
+Wait-AzureRmBackupJob -Job <Object> [-TimeOut <Int64>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +41,7 @@ Specifies a job that this cmdlet cancels.
 To obtain an **AzureRmBackupJob** object, use the Get-AzureRmBackupJob cmdlet.
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: (All)
 Aliases: 
 
@@ -56,9 +57,22 @@ Specifies the maximum time, in seconds, that this cmdlet waits for the job to fi
 We recommend that you specify a time-out value.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

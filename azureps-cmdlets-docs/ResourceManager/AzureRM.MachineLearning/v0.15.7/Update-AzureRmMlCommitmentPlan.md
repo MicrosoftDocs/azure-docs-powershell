@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
+Module Name: AzureRM.MachineLearning
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Update-AzureRmMlCommitmentPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Update-AzureRmMlCommitmentPlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Update-AzureRmMlCommitmentPlan
@@ -16,7 +16,8 @@ Updates properties of an existing commitment plan resource.
 
 ```
 Update-AzureRmMlCommitmentPlan -ResourceGroupName <String> -Name <String> -SkuName <String> -SkuTier <String>
- [-SkuCapacity <Int32>] [-Tags <Hashtable>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SkuCapacity <Int32>] [-Tags <Hashtable>] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,6 +27,8 @@ Updates an existing commitment plan resource. Note that most properties of the c
 
 ### --------------------------  Example 1: Update a commitment plan  --------------------------
 @{paragraph=PS C:\\\>}
+
+
 
 
 
@@ -39,7 +42,7 @@ Update-AzureRmMlCommitmentPlan -ResourceGroupName "MyResourceGroup" -Name "MyCom
 Do not ask for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -54,7 +57,7 @@ Accept wildcard characters: False
 The name of the Azure ML commitment plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -69,7 +72,7 @@ Accept wildcard characters: False
 The name of the resource group for the Azure ML commitment plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +87,7 @@ Accept wildcard characters: False
 The capacity of the SKU to use when updating the Azure ML commitment plan.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +102,7 @@ Accept wildcard characters: False
 The name of the SKU to use when updating the Azure ML commitment plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,7 +117,7 @@ Accept wildcard characters: False
 The tier of the SKU to use when updating the Azure ML commitment plan.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +132,7 @@ Accept wildcard characters: False
 Tags for the commitment plan resource.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +147,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -159,9 +162,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

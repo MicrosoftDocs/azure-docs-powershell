@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 3E7B9EFA-8BC2-46EB-9AD7-43EAB7FF3891
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVmssOsProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVmssOsProfile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVmssOsProfile
@@ -16,12 +16,13 @@ Sets the VMSS operating system profile properties.
 ## SYNTAX
 
 ```
-Set-AzureRmVmssOsProfile [-VirtualMachineScaleSet] <VirtualMachineScaleSet> [[-ComputerNamePrefix] <String>]
+Set-AzureRmVmssOsProfile [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[-ComputerNamePrefix] <String>]
  [[-AdminUsername] <String>] [[-AdminPassword] <String>] [[-CustomData] <String>]
  [[-WindowsConfigurationProvisionVMAgent] <Boolean>] [[-WindowsConfigurationEnableAutomaticUpdate] <Boolean>]
  [[-TimeZone] <String>] [[-AdditionalUnattendContent] <AdditionalUnattendContent[]>]
  [[-Listener] <WinRMListener[]>] [[-LinuxConfigurationDisablePasswordAuthentication] <Boolean>]
- [[-PublicKey] <SshPublicKey[]>] [[-Secret] <VaultSecretGroup[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-PublicKey] <SshPublicKey[]>] [[-Secret] <VaultSecretGroup[]>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +45,7 @@ Specifies an unattended content object.
 You can use the Add-AzureRmVMAdditionalUnattendContent to create the object.
 
 ```yaml
-Type: AdditionalUnattendContent[]
+Type: Microsoft.Azure.Management.Compute.Models.AdditionalUnattendContent[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -59,7 +60,7 @@ Accept wildcard characters: False
 Specifies the administrator password to use for all the virtual machine instances in the VMSS.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +75,7 @@ Accept wildcard characters: False
 Specifies the administrator account name to use for all the virtual machine instances in the VMSS.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -90,7 +91,7 @@ Specifies the computer name prefix for all the virtual machine instances in the 
 Computer names must be 1 to 15 characters long.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +108,7 @@ This is decoded to a binary array that is saved as a file on the virtual machine
 The maximum length of the binary array is 65535 bytes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,11 +119,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LinuxConfigurationDisablePasswordAuthentication
 Indicates that this cmdlet disables password authentication.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,7 +153,7 @@ This enables remote Windows PowerShell.
 You can use the Add-AzureRmVmssWinRMListener cmdlet to create the listener.
 
 ```yaml
-Type: WinRMListener[]
+Type: Microsoft.Azure.Management.Compute.Models.WinRMListener[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +169,7 @@ Specifies the Secure Shell (SSH) public key object.
 You can use the Add-AzureRmVMSshPublicKey cmdlet to create the object.
 
 ```yaml
-Type: SshPublicKey[]
+Type: Microsoft.Azure.Management.Compute.Models.SshPublicKey[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,7 +185,7 @@ Specifies the secrets object which contains the certificate references to place 
 You can use the Add-AzureRmVmssSecret cmdlet to create the secrets object.
 
 ```yaml
-Type: VaultSecretGroup[]
+Type: Microsoft.Azure.Management.Compute.Models.VaultSecretGroup[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -186,7 +200,7 @@ Accept wildcard characters: False
 Specifies the time zone for the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -202,7 +216,7 @@ Specifies the VMSS object.
 You can use the New-AzureRmVmssConfig cmdlet to create the object.
 
 ```yaml
-Type: VirtualMachineScaleSet
+Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
 Parameter Sets: (All)
 Aliases: 
 
@@ -217,7 +231,7 @@ Accept wildcard characters: False
 Indicates whether the virtual machines in the VMSS are enabled for automatic updates.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -232,7 +246,7 @@ Accept wildcard characters: False
 Indicates whether virtual machine agent should be provisioned on the virtual machines in the VMSS.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -247,7 +261,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -262,7 +276,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

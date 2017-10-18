@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+Module Name: AzureRM.CognitiveServices
 ms.assetid: E0819A61-157A-4DFD-B492-09C8F1C38E18
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/New-AzureRmCognitiveServicesAccountKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/New-AzureRmCognitiveServicesAccountKey.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmCognitiveServicesAccountKey
@@ -17,7 +17,7 @@ Regenerates an account key.
 
 ```
 New-AzureRmCognitiveServicesAccountKey [-ResourceGroupName] <String> [-Name] <String> [-KeyName] <KeyName>
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ The **New-AzureRmCognitiveServicesAccountKey** cmdlet regenerates an API key for
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -55,7 +55,7 @@ The acceptable values for this parameter are:
 - Key2
 
 ```yaml
-Type: KeyName
+Type: Microsoft.Azure.Management.CognitiveServices.Models.KeyName
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Key1, Key2
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Specifies the name of the account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: CognitiveServicesAccountName, AccountName
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group the account is assigned to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -117,13 +117,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 66AC5120-80B1-46F2-AA51-132BF361602E
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADApplication.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmADApplication
@@ -17,27 +17,29 @@ Lists existing azure active directory applications.
 
 ### EmptyParameterSet (Default)
 ```
-Get-AzureRmADApplication [<CommonParameters>]
+Get-AzureRmADApplication [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ApplicationObjectIdParameterSet
 ```
-Get-AzureRmADApplication -ObjectId <Guid> [<CommonParameters>]
+Get-AzureRmADApplication -ObjectId <Guid> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ApplicationIdParameterSet
 ```
-Get-AzureRmADApplication -ApplicationId <Guid> [<CommonParameters>]
+Get-AzureRmADApplication -ApplicationId <Guid> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ApplicationDisplayNameParameterSet
 ```
-Get-AzureRmADApplication -DisplayNameStartWith <String> [<CommonParameters>]
+Get-AzureRmADApplication -DisplayNameStartWith <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ApplicationIdentifierUriParameterSet
 ```
-Get-AzureRmADApplication -IdentifierUri <String> [<CommonParameters>]
+Get-AzureRmADApplication -IdentifierUri <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +69,7 @@ Gets the application with identifier uri as "http://mySecretApp1".
 The application id of the application to fetch.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ApplicationIdParameterSet
 Aliases: 
 
@@ -82,7 +84,7 @@ Accept wildcard characters: False
 Fetch all applications starting with the display name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ApplicationDisplayNameParameterSet
 Aliases: 
 
@@ -97,7 +99,7 @@ Accept wildcard characters: False
 Unique identifier Uri of the application to fetch.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ApplicationIdentifierUriParameterSet
 Aliases: 
 
@@ -112,7 +114,7 @@ Accept wildcard characters: False
 The object id of the application to fetch.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: ApplicationObjectIdParameterSet
 Aliases: 
 
@@ -120,6 +122,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

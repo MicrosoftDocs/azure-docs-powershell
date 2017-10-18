@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+Module Name: AzureRM.Cdn
 ms.assetid: A8C6F3BC-EE93-49A4-BF7B-8420967EEB7B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/New-AzureRmCdnEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/New-AzureRmCdnEndpoint.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmCdnEndpoint
@@ -22,7 +22,7 @@ New-AzureRmCdnEndpoint -EndpointName <String> -ProfileName <String> -ResourceGro
  [-IsCompressionEnabled <Boolean>] [-IsHttpAllowed <Boolean>] [-IsHttpsAllowed <Boolean>]
  [-QueryStringCachingBehavior <PSQueryStringCachingBehavior>] -OriginName <String> -OriginHostName <String>
  [-HttpPort <Int32>] [-HttpsPort <Int32>] [-OptimizationType <String>] [-GeoFilters <PSGeoFilter[]>]
- [-Tags <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Tags <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Parameter Set for object parameters
@@ -32,7 +32,7 @@ New-AzureRmCdnEndpoint -EndpointName <String> -CdnProfile <PSProfile> [-OriginHo
  [-IsHttpAllowed <Boolean>] [-IsHttpsAllowed <Boolean>]
  [-QueryStringCachingBehavior <PSQueryStringCachingBehavior>] -OriginName <String> -OriginHostName <String>
  [-HttpPort <Int32>] [-HttpsPort <Int32>] [-OptimizationType <String>] [-GeoFilters <PSGeoFilter[]>]
- [-Tags <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Tags <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +51,7 @@ The **New-AzureRmCdnEndpoint** cmdlet creates an Azure Content Delivery Network 
 Specifies the CDN profile object to which the endpoint is added.
 
 ```yaml
-Type: PSProfile
+Type: Microsoft.Azure.Commands.Cdn.Models.Profile.PSProfile
 Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 Specifies an array of content types to compress from the edge node to the client.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Specifies the name of the endpoint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 The list of geo filters that applies to this endpoint.
 
 ```yaml
-Type: PSGeoFilter[]
+Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSGeoFilter[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 Specifies the HTTP port number on the origin server.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Specifies the HTTPS port number on the origin server.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Indicates whether compression is enabled for the endpoint.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Indicates whether the endpoint enables HTTP traffic.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 Indicates whether the endpoint enables HTTPS traffic.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 Specifies the resource location of the endpoint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 Specifies any optimization this endpoint has.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 Specifies the origin host head of the endpoint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 Specifies the host name of the origin server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 Specifies the resource name of the origin server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 Specifies the path of the origin server.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 Specifies the name of the profile.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 Specifies the behavior of CDN endpoint when a query string is in the request URL.
 
 ```yaml
-Type: PSQueryStringCachingBehavior
+Type: System.Nullable`1[Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSQueryStringCachingBehavior]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: IgnoreQueryString, BypassCaching, UseQueryString, NotSet
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which this endpoint belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 Specifies a hash table of the tags that associated with this resource.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -353,7 +353,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -364,13 +364,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### PSProfile
-
 Parameter 'CdnProfile' accepts value of type 'PSProfile' from the pipeline
 
 ## OUTPUTS

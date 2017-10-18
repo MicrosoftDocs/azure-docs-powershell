@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+Module Name: AzureRM.ContainerRegistry
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzureRmContainerRegistry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzureRmContainerRegistry.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/41f4a7b63c9651a305b985d28fcd40e60968957c
 ---
 
 # Get-AzureRmContainerRegistry
@@ -16,12 +16,14 @@ Gets a container registry.
 
 ### ResourceGroupParameterSet
 ```
-Get-AzureRmContainerRegistry [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmContainerRegistry [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### RegistryNameParameterSet
 ```
-Get-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -126,7 +128,7 @@ This command gets all the container registries in the subscription.
 Container Registry Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RegistryNameParameterSet
 Aliases: ContainerRegistryName, RegistryName, ResourceName
 
@@ -141,7 +143,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupParameterSet
 Aliases: 
 
@@ -153,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RegistryNameParameterSet
 Aliases: 
 
@@ -161,6 +163,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ContainerRegistry.dll-Help.xml
+Module Name: AzureRM.ContainerRegistry
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzureRmContainerRegistryCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/Get-AzureRmContainerRegistryCredential.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureRmContainerRegistryCredential
@@ -16,12 +16,14 @@ Gets the login credentials for a container registry.
 
 ### NameResourceGroupParameterSet (Default)
 ```
-Get-AzureRmContainerRegistryCredential [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureRmContainerRegistryCredential [-ResourceGroupName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RegistryObjectParameterSet
 ```
-Get-AzureRmContainerRegistryCredential -Registry <PSContainerRegistry> [<CommonParameters>]
+Get-AzureRmContainerRegistryCredential -Registry <PSContainerRegistry>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +48,7 @@ This command gets the login credentials for the specified container registry. Ad
 Container Registry Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameResourceGroupParameterSet
 Aliases: ContainerRegistryName, RegistryName, ResourceName
 
@@ -61,7 +63,7 @@ Accept wildcard characters: False
 Container Registry Object.
 
 ```yaml
-Type: PSContainerRegistry
+Type: Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistry
 Parameter Sets: RegistryObjectParameterSet
 Aliases: 
 
@@ -76,12 +78,25 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameResourceGroupParameterSet
 Aliases: 
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -93,7 +108,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### PSContainerRegistry
-
 Parameter 'Registry' accepts value of type 'PSContainerRegistry' from the pipeline
 
 ## OUTPUTS

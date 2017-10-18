@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: B64E9C13-97A6-4E8B-92DB-EFAF8A48C5B8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementProduct.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementProduct.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmApiManagementProduct
@@ -17,17 +17,20 @@ Gets a list or a particular product.
 
 ### Get all producst (Default)
 ```
-Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [<CommonParameters>]
+Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Get by Id
 ```
-Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> -ProductId <String> [<CommonParameters>]
+Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> -ProductId <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Get by Title
 ```
-Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-Title <String>] [<CommonParameters>]
+Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-Title <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +58,7 @@ This command get an API Management product by ID.
 Specifies an instance of a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +73,7 @@ Accept wildcard characters: False
 Specifies the identifier of the product to search for.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by Id
 Aliases: 
 
@@ -86,7 +89,7 @@ Specifies the title of the product to look for.
 If specified, the cmdlet attempts to get the product by title.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by Title
 Aliases: 
 
@@ -94,6 +97,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

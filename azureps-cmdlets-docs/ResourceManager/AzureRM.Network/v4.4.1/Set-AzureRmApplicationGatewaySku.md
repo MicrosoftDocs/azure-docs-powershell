@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmApplicationGatewaySku.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Set-AzureRmApplicationGatewaySku.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Set-AzureRmApplicationGatewaySku
@@ -42,7 +41,7 @@ The second command updates the SKU of the application gateway.
 Specifies the application gateway object with which this cmdlet associates the SKU.
 
 ```yaml
-Type: PSApplicationGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -57,26 +56,11 @@ Accept wildcard characters: False
 Specifies the instance count of the application gateway.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -94,7 +78,7 @@ The acceptable values for this parameter are:
 - WAF_Large
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Standard_Small, Standard_Medium, Standard_Large, WAF_Medium, WAF_Large
@@ -114,12 +98,27 @@ The acceptable values for this parameter are:
 - WAF
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Standard, WAF
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

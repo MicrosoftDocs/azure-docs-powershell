@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module Name: AzureRM.EventHub
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzureRmEventHubNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Set-AzureRmEventHubNamespace.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/6911f050bfba3248a3fd992fbc2645e3a1a8641d
 ---
 
 # Set-AzureRmEventHubNamespace
@@ -16,16 +16,17 @@ Updates the specified Event Hubs namespace.
 
 ### NamespaceParameterSet (Default)
 ```
-Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [[-SkuName] <String>] [[-SkuCapacity] <Int32>] [[-State] <NamespaceState>] [[-Tag] <Hashtable>]
- [-EnableAutoInflate] [[-MaximumThroughputUnits] <Int32>] [-WhatIf] [-Confirm]
+Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> -Name <String> [-Location] <String>
+ [[-SkuName] <String>] [-SkuCapacity <Int32>] [-State <NamespaceState>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AutoInflateParameterSet
 ```
-Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [[-SkuName] <String>] [[-SkuCapacity] <Int32>] [[-State] <NamespaceState>] [[-Tag] <Hashtable>]
- [-EnableAutoInflate] [[-MaximumThroughputUnits] <Int32>] [-WhatIf] [-Confirm]
+Set-AzureRmEventHubNamespace [-ResourceGroupName] <String> -Name <String> [-Location] <String>
+ [[-SkuName] <String>] [-SkuCapacity <Int32>] [-State <NamespaceState>] [-Tag <Hashtable>] [-EnableAutoInflate]
+ [-MaximumThroughputUnits <Int32>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +54,7 @@ Updates the state of namespace \`MyNamespaceName\` with AutoInflate = enabled an
 Event Hubs namespace geo-location.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +69,7 @@ Accept wildcard characters: False
 Resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 The Event Hub throughput units.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 Namespace Sku name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Basic, Standard, Premium
@@ -114,7 +115,7 @@ Accept wildcard characters: False
 Specifies the state (disabled or enabled) of the namespace.
 
 ```yaml
-Type: NamespaceState
+Type: System.Nullable`1[Microsoft.Azure.Commands.EventHub.Models.NamespaceState]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Unknown, Creating, Created, Activating, Enabling, Active, Disabling, Disabled, SoftDeleting, SoftDeleted, Removing, Removed, Failed
@@ -130,7 +131,7 @@ Accept wildcard characters: False
 Hashtables that represent resource tags.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -145,7 +146,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -161,7 +162,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -176,11 +177,11 @@ Accept wildcard characters: False
 Indicates whether AutoInflate is enabled
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: NamespaceParameterSet
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: AutoInflateParameterSet
 Aliases: 
 
-Required: False
+Required: True
 Position: 6
 Default value: None
 Accept pipeline input: False
@@ -191,8 +192,8 @@ Accept wildcard characters: False
 Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units.
 
 ```yaml
-Type: Int32
-Parameter Sets: (All)
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: AutoInflateParameterSet
 Aliases: 
 
 Required: False
@@ -206,7 +207,7 @@ Accept wildcard characters: False
 EventHub Namespace Name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -216,6 +217,22 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

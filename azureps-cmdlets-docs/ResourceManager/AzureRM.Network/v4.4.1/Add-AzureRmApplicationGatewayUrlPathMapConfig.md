@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmApplicationGatewayUrlPathMapConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Add-AzureRmApplicationGatewayUrlPathMapConfig.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Add-AzureRmApplicationGatewayUrlPathMapConfig
@@ -50,7 +49,7 @@ The **Add-AzureRmApplicationGatewayUrlPathMapConfig** cmdlet adds an array of UR
 Specifies the application gateway to which this cmdlet adds a URL path map configuration.
 
 ```yaml
-Type: PSApplicationGateway
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
 Parameter Sets: (All)
 Aliases: 
 
@@ -65,7 +64,7 @@ Accept wildcard characters: False
 Specifies the default backend address pool to route in case none of the rules specified in the *pathRules* parameter match.
 
 ```yaml
-Type: PSApplicationGatewayBackendAddressPool
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -80,7 +79,7 @@ Accept wildcard characters: False
 Specifies the default backend address pool ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -95,7 +94,7 @@ Accept wildcard characters: False
 Specifies the default backend HTTP settings to use in case none of the rules specified in the *pathRules* parameter match.
 
 ```yaml
-Type: PSApplicationGatewayBackendHttpSettings
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -110,24 +109,9 @@ Accept wildcard characters: False
 Specifies the default backend HTTP settings ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -140,7 +124,7 @@ Accept wildcard characters: False
 Application gateway default RedirectConfiguration
 
 ```yaml
-Type: PSApplicationGatewayRedirectConfiguration
+Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -155,7 +139,7 @@ Accept wildcard characters: False
 ID of the application gateway default RedirectConfiguration
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByResourceId
 Aliases: 
 
@@ -170,7 +154,7 @@ Accept wildcard characters: False
 Specifies the URL path map name that this cmdlet adds to the backend server pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -191,6 +175,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

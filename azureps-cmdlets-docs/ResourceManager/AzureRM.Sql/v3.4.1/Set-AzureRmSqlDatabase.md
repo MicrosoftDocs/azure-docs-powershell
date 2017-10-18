@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: 2E4F5C27-C50F-4133-B193-BC477BCD6778
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Set-AzureRmSqlDatabase.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/f02935a2fd454cd4f423df7ea14d97ea97ce82a3
 ---
 
 # Set-AzureRmSqlDatabase
@@ -18,8 +18,8 @@ Sets properties for a database, or moves an existing database into an elastic po
 ```
 Set-AzureRmSqlDatabase [-DatabaseName] <String> [-MaxSizeBytes <Int64>] [-Edition <DatabaseEdition>]
  [-RequestedServiceObjectiveName <String>] [-ElasticPoolName <String>] [-ReadScale <DatabaseReadScale>]
- [-Tags <Hashtable>] [-ServerName] <String> [-ResourceGroupName] <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-Tags <Hashtable>] [-ServerName] <String> [-ResourceGroupName] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,7 +85,7 @@ This command adds a database named Database01 to the elastic pool named ElasticP
 Specifies the name of the database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -108,9 +108,9 @@ The acceptable values for this parameter are:
 - Free
 
 ```yaml
-Type: DatabaseEdition
+Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: None, Premium, Basic, Standard, DataWarehouse, Stretch, Free, PremiumRS
 
 Required: False
@@ -124,9 +124,9 @@ Accept wildcard characters: False
 Specifies name of the elastic pool in which to move the database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -141,9 +141,9 @@ You can specify either this parameter or *MaxSizeGB*.
 See the *MaxSizeGB* parameter for acceptable values per edition.
 
 ```yaml
-Type: Int64
+Type: System.Int64
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -156,9 +156,9 @@ Accept wildcard characters: False
 The read scale option to assign to the Azure SQL Database.(Enabled/Disabled)
 
 ```yaml
-Type: DatabaseReadScale
+Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseReadScale
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -174,9 +174,9 @@ service objectives, see [Azure SQL Database Service Tiers and Performance Levels
 in the Microsoft Developer Network Library.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -189,9 +189,9 @@ Accept wildcard characters: False
 Specifies the name of resource group to which the server is assigned.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -204,9 +204,9 @@ Accept wildcard characters: False
 Specifies the name of the server that hosts the database.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -221,7 +221,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tag
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -252,13 +252,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

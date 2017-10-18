@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
+Module Name: AzureRM.PowerBIEmbedded
 ms.assetid: EEF32F48-00F6-4C57-B4F1-B58B566EAFEF
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Get-AzureRmPowerBIWorkspaceCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Get-AzureRmPowerBIWorkspaceCollection.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmPowerBIWorkspaceCollection
@@ -17,13 +17,14 @@ Gets Power BI workspace collections.
 
 ### ResourceGroupParameterSet
 ```
-Get-AzureRmPowerBIWorkspaceCollection [[-ResourceGroupName] <String>] [<CommonParameters>]
+Get-AzureRmPowerBIWorkspaceCollection [[-ResourceGroupName] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### WorkspaceCollectionNameParameterSet
 ```
 Get-AzureRmPowerBIWorkspaceCollection [-ResourceGroupName] <String> [-WorkspaceCollectionName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,7 @@ This command gets the workspace collection named WCN11 in the specified resource
 Specifies the name of the resource group from which this cmdlet gets workspace collections.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ResourceGroupParameterSet
 Aliases: 
 
@@ -63,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WorkspaceCollectionNameParameterSet
 Aliases: 
 
@@ -78,7 +79,7 @@ Accept wildcard characters: False
 Specifies the name of the Power BI workspace collection that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: WorkspaceCollectionNameParameterSet
 Aliases: Name, ResourceName
 
@@ -86,6 +87,19 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

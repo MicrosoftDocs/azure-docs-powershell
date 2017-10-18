@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.Websites
 ms.assetid: EE3D2BA0-32E7-4A37-BCAF-F0E8FAAC43CE
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSSLBinding.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSSLBinding.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureRmWebAppSSLBinding
@@ -18,12 +18,13 @@ Gets an Azure Web App certificate SSL binding.
 ### S1
 ```
 Get-AzureRmWebAppSSLBinding [[-Name] <String>] [-ResourceGroupName] <String> [-WebAppName] <String>
- [[-Slot] <String>] [<CommonParameters>]
+ [[-Slot] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### S2
 ```
-Get-AzureRmWebAppSSLBinding [[-Name] <String>] [-WebApp] <Site> [<CommonParameters>]
+Get-AzureRmWebAppSSLBinding [[-Name] <String>] [-WebApp] <Site> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +59,7 @@ This variable, and the **Get-AzureRmWebAppSSLBinding** cmdlet, are then used by 
 Specifies the name of the SSL binding.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +76,7 @@ Specifies the name of the resource group that the certificate is assigned to.
 You cannot use the *ResourceGroupName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -91,7 +92,7 @@ Specifies a Web App deployment slot.
 To get a deployment slot, use the Get-AzureRMWebAppSlot cmdlet.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
@@ -107,7 +108,7 @@ Specifies a Web App.
 To get a Web App, use the Get-AzureRmWebApp cmdlet.
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: S2
 Aliases: 
 
@@ -124,12 +125,25 @@ Specifies the name of the Web App that this cmdlet gets SSL bindings from.
 You cannot use the *WebAppName* parameter and the *WebApp* parameter in the same command.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
 Aliases: 
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -141,7 +155,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Site
-
 Parameter 'WebApp' accepts value of type 'Site' from the pipeline
 
 ## OUTPUTS

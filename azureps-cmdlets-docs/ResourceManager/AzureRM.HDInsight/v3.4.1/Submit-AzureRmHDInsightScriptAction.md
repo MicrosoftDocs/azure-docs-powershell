@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module Name: AzureRM.HDInsight
 ms.assetid: 15C5D659-472B-41DD-806A-A0A175434EE3
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Submit-AzureRmHDInsightScriptAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/Submit-AzureRmHDInsightScriptAction.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Submit-AzureRmHDInsightScriptAction
@@ -18,7 +18,8 @@ Submits a new script action to an Azure HDInsight cluster.
 ```
 Submit-AzureRmHDInsightScriptAction [-ClusterName] <String> [-Name] <String> [-Uri] <Uri>
  [-NodeTypes] <RuntimeScriptActionClusterNodeType[]> [[-Parameters] <String>] [[-ApplicationName] <String>]
- [-PersistOnSuccess] [-ResourceGroupName <String>] [<CommonParameters>]
+ [-PersistOnSuccess] [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +46,7 @@ Specifies the application name for the script action.
 When *ApplicationName* is specified, *PersistOnSuccess* should be set to False, nodes must contain only edgenode, and script action count should equal 1.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -60,7 +61,7 @@ Accept wildcard characters: False
 Specifies the name of the cluster.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +76,7 @@ Accept wildcard characters: False
 Specifies the name of the script action.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -90,7 +91,7 @@ Accept wildcard characters: False
 Specifies the node types on which to run the script action.
 
 ```yaml
-Type: RuntimeScriptActionClusterNodeType[]
+Type: Microsoft.Azure.Commands.HDInsight.Models.Management.RuntimeScriptActionClusterNodeType[]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: HeadNode, WorkerNode, ZookeeperNode, EdgeNode
@@ -106,7 +107,7 @@ Accept wildcard characters: False
 Specifies the parameters for the script action.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +123,7 @@ Indicates that the script action should run each time the cluster is scaled up.
 This switch parameter is ignored if the script action initially fails.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -137,7 +138,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -152,7 +153,7 @@ Accept wildcard characters: False
 Specifies the public URI for the script action (a PowerShell or Bash script).
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 
@@ -160,6 +161,19 @@ Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

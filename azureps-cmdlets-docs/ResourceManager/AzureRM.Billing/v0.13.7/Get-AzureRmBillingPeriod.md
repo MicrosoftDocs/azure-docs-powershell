@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.Billing.dll-Help.xml
+Module Name: AzureRM.Billing
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingPeriod.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingPeriod.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/dbbac5b71c9946c33dcc700ce2b7eaae8cbad761
 ---
 
 # Get-AzureRmBillingPeriod
@@ -16,12 +16,13 @@ Get billing periods of the subscription.
 
 ### List (Default)
 ```
-Get-AzureRmBillingPeriod [-MaxCount <Int32>] [<CommonParameters>]
+Get-AzureRmBillingPeriod [-MaxCount <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Single
 ```
-Get-AzureRmBillingPeriod -Name <System.Collections.Generic.List`1[System.String]> [<CommonParameters>]
+Get-AzureRmBillingPeriod -Name <System.Collections.Generic.List`1[System.String]>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +57,7 @@ Get at most 2 billing periods of the subscription.
 Determine the maximum number of records to return.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: List
 Aliases: 
 
@@ -76,6 +77,19 @@ Parameter Sets: Single
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

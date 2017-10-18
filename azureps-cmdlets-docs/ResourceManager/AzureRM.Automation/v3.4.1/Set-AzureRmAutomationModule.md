@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: A06D36D7-3F72-4D21-8995-9DBBB9A9B880
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Set-AzureRmAutomationModule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Set-AzureRmAutomationModule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/ae0426e9c11926a85437110c09d6a348dcea7b72
 ---
 
 # Set-AzureRmAutomationModule
@@ -17,7 +17,8 @@ Updates a module in Automation.
 
 ```
 Set-AzureRmAutomationModule [-Name] <String> [-ContentLinkUri <Uri>] [-ContentLinkVersion <String>]
- [-ResourceGroupName] <String> [-AutomationAccountName] <String> [<CommonParameters>]
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +56,7 @@ This command imports an updated version of an existing module named ContosoModul
 Specifies the name of the Automation account for which this cmdlet updates a module.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +71,7 @@ Accept wildcard characters: False
 Specifies the URL of the .zip file that contains the new version of a module that this cmdlet imports.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: ContentLink
 
@@ -85,7 +86,7 @@ Accept wildcard characters: False
 Specifies the version of the module to which this cmdlet updates Automation.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -100,7 +101,7 @@ Accept wildcard characters: False
 Specifies the name of the module that this cmdlet imports.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -115,7 +116,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet updates a module.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -123,6 +124,19 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

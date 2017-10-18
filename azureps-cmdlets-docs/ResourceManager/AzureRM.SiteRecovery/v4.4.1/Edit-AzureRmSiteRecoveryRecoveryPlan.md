@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 59C3E7D7-530F-4D07-904E-41610ECE9253
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Edit-AzureRmSiteRecoveryRecoveryPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Edit-AzureRmSiteRecoveryRecoveryPlan.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Edit-AzureRmSiteRecoveryRecoveryPlan
@@ -17,37 +17,41 @@ Edits a Site Recovery plan.
 
 ### AppendGroup (Default)
 ```
-Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> [-AppendGroup] [<CommonParameters>]
+Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> [-AppendGroup]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RemoveGroup
 ```
 Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -RemoveGroup <ASRRecoveryPlanGroup>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### AddProtectedEntities
 ```
 Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -Group <ASRRecoveryPlanGroup>
- -AddProtectedEntities <ASRProtectionEntity[]> [<CommonParameters>]
+ -AddProtectedEntities <ASRProtectionEntity[]> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RemoveProtectedEntities
 ```
 Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -Group <ASRRecoveryPlanGroup>
- -RemoveProtectedEntities <ASRProtectionEntity[]> [<CommonParameters>]
+ -RemoveProtectedEntities <ASRProtectionEntity[]> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### AddReplicationProtectedItems
 ```
 Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -Group <ASRRecoveryPlanGroup>
- -AddProtectedItems <ASRReplicationProtectedItem[]> [<CommonParameters>]
+ -AddProtectedItems <ASRReplicationProtectedItem[]> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### RemoveReplicationProtectedItems
 ```
 Edit-AzureRmSiteRecoveryRecoveryPlan -RecoveryPlan <ASRRecoveryPlan> -Group <ASRRecoveryPlanGroup>
- -RemoveProtectedItems <ASRReplicationProtectedItem[]> [<CommonParameters>]
+ -RemoveProtectedItems <ASRReplicationProtectedItem[]> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +65,7 @@ The **Edit-AzureRmSiteRecoveryRecoveryPlan** cmdlet edits an Azure Site Recovery
 Specifies an array of protected entities to add.
 
 ```yaml
-Type: ASRProtectionEntity[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity[]
 Parameter Sets: AddProtectedEntities
 Aliases: 
 
@@ -74,7 +78,7 @@ Accept wildcard characters: False
 
 ### -AddProtectedItems
 ```yaml
-Type: ASRReplicationProtectedItem[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem[]
 Parameter Sets: AddReplicationProtectedItems
 Aliases: 
 
@@ -89,7 +93,7 @@ Accept wildcard characters: False
 Indicates that this operation appends the group to the recovery plan object.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: AppendGroup
 Aliases: 
 
@@ -104,7 +108,7 @@ Accept wildcard characters: False
 Specifies a Site Recovery plan group.
 
 ```yaml
-Type: ASRRecoveryPlanGroup
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlanGroup
 Parameter Sets: AddProtectedEntities, RemoveProtectedEntities, AddReplicationProtectedItems, RemoveReplicationProtectedItems
 Aliases: 
 
@@ -119,7 +123,7 @@ Accept wildcard characters: False
 Specifies a recovery plan.
 
 ```yaml
-Type: ASRRecoveryPlan
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlan
 Parameter Sets: (All)
 Aliases: 
 
@@ -134,7 +138,7 @@ Accept wildcard characters: False
 Removes the specified Site Recovery recovery plan group.
 
 ```yaml
-Type: ASRRecoveryPlanGroup
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRRecoveryPlanGroup
 Parameter Sets: RemoveGroup
 Aliases: 
 
@@ -149,7 +153,7 @@ Accept wildcard characters: False
 Specifies an array of protected entities.
 
 ```yaml
-Type: ASRProtectionEntity[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRProtectionEntity[]
 Parameter Sets: RemoveProtectedEntities
 Aliases: 
 
@@ -162,11 +166,24 @@ Accept wildcard characters: False
 
 ### -RemoveProtectedItems
 ```yaml
-Type: ASRReplicationProtectedItem[]
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRReplicationProtectedItem[]
 Parameter Sets: RemoveReplicationProtectedItems
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -179,7 +196,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### ASRRecoveryPlan
-
 Parameter 'RecoveryPlan' accepts value of type 'ASRRecoveryPlan' from the pipeline
 
 ## OUTPUTS

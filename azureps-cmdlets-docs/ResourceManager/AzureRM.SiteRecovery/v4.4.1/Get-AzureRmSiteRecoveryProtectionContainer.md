@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 77F1556C-323D-49CA-BD6C-75B2D4E0F894
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryProtectionContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Get-AzureRmSiteRecoveryProtectionContainer.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmSiteRecoveryProtectionContainer
@@ -17,32 +17,37 @@ Gets protection containers for the current Site Recovery vault.
 
 ### Default (Default)
 ```
-Get-AzureRmSiteRecoveryProtectionContainer [<CommonParameters>]
+Get-AzureRmSiteRecoveryProtectionContainer [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByObjectWithName
 ```
-Get-AzureRmSiteRecoveryProtectionContainer -Name <String> -Fabric <ASRFabric> [<CommonParameters>]
+Get-AzureRmSiteRecoveryProtectionContainer -Name <String> -Fabric <ASRFabric>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByObjectWithNameLegacy
 ```
-Get-AzureRmSiteRecoveryProtectionContainer -Name <String> [<CommonParameters>]
+Get-AzureRmSiteRecoveryProtectionContainer -Name <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ByObjectWithFriendlyName
 ```
-Get-AzureRmSiteRecoveryProtectionContainer -FriendlyName <String> -Fabric <ASRFabric> [<CommonParameters>]
+Get-AzureRmSiteRecoveryProtectionContainer -FriendlyName <String> -Fabric <ASRFabric>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByObjectWithFriendlyNameLegacy
 ```
-Get-AzureRmSiteRecoveryProtectionContainer -FriendlyName <String> [<CommonParameters>]
+Get-AzureRmSiteRecoveryProtectionContainer -FriendlyName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ByFabricObject
 ```
-Get-AzureRmSiteRecoveryProtectionContainer -Fabric <ASRFabric> [<CommonParameters>]
+Get-AzureRmSiteRecoveryProtectionContainer -Fabric <ASRFabric> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +61,7 @@ Protection policies define replication settings for protected items and can be a
 
 ### -Fabric
 ```yaml
-Type: ASRFabric
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRFabric
 Parameter Sets: ByObjectWithName, ByObjectWithFriendlyName, ByFabricObject
 Aliases: 
 
@@ -71,7 +76,7 @@ Accept wildcard characters: False
 Specifies the friendly name of the protection container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectWithFriendlyName, ByObjectWithFriendlyNameLegacy
 Aliases: 
 
@@ -86,11 +91,24 @@ Accept wildcard characters: False
 Specifies the name of the protection container.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectWithName, ByObjectWithNameLegacy
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -103,7 +121,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### ASRFabric
-
 Parameter 'Fabric' accepts value of type 'ASRFabric' from the pipeline
 
 ## OUTPUTS

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.Websites
 ms.assetid: 100A5980-31E2-41F9-84D4-2F5F0CB78B8A
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSlot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSlot.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/903e8e27aa61f5598dcbb645e9a0e205bbda2433
 ---
 
 # Get-AzureRmWebAppSlot
@@ -15,14 +15,16 @@ Gets an Azure Web App slot.
 
 ## SYNTAX
 
-### Get by Name
+### S1
 ```
-Get-AzureRmWebAppSlot [-ResourceGroupName] <String> [-Name] <String> [[-Slot] <String>] [<CommonParameters>]
+Get-AzureRmWebAppSlot [-ResourceGroupName] <String> [-Name] <String> [[-Slot] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### Get by Slot
+### S2
 ```
-Get-AzureRmWebAppSlot [[-Slot] <String>] [-WebApp] <Site> [<CommonParameters>]
+Get-AzureRmWebAppSlot [[-Slot] <String>] [-WebApp] <Site> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,9 +46,9 @@ resource group Default-Web-WestUS.
 WebApp Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -59,9 +61,9 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: S1
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -74,9 +76,9 @@ Accept wildcard characters: False
 WebApp Slot Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: 2
@@ -89,9 +91,9 @@ Accept wildcard characters: False
 WebApp Object
 
 ```yaml
-Type: Site
+Type: Microsoft.Azure.Management.WebSites.Models.Site
 Parameter Sets: S2
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -100,17 +102,25 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### CommonParameters
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see about_CommonParameters
-(http://go.microsoft.com/fwlink/?LinkID=113216).
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Site
-
 Parameter 'WebApp' accepts value of type 'Site' from the pipeline
 
 ## OUTPUTS

@@ -6,7 +6,6 @@ Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/AzureRM.EventHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/AzureRM.EventHub.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/28baa4a53a4efceb1197c032a8db08e199f0858d
 ---
 
 # AzureRM.EventHub Module

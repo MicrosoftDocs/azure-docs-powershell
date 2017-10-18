@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 9D4A68A8-0A39-4C9A-8EA6-391A5E7A0E25
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Add-AzureRmApiManagementRegion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Add-AzureRmApiManagementRegion.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Add-AzureRmApiManagementRegion
@@ -17,7 +17,8 @@ Adds new deployment regions to a PsApiManagement instance.
 
 ```
 Add-AzureRmApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> [-Sku <PsApiManagementSku>]
- [-Capacity <Int32>] [-VirtualNetwork <PsApiManagementVirtualNetwork>] [<CommonParameters>]
+ [-Capacity <Int32>] [-VirtualNetwork <PsApiManagementVirtualNetwork>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +48,7 @@ This command gets a **PsApiManagement** object, adds two premium SKU units for t
 Specifies the **PsApiManagement** instance that this cmdlet adds additional deployment regions to.
 
 ```yaml
-Type: PsApiManagement
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 Parameter Sets: (All)
 Aliases: 
 
@@ -62,7 +63,7 @@ Accept wildcard characters: False
 Specifies the SKU capacity of the deployment region.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +96,7 @@ Valid values are:
 - Australia Southeast
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -115,7 +116,7 @@ Valid values are:
 - Premium
 
 ```yaml
-Type: PsApiManagementSku
+Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Developer, Standard, Premium
@@ -131,9 +132,22 @@ Accept wildcard characters: False
 Specifies a virtual network configuration.
 
 ```yaml
-Type: PsApiManagementVirtualNetwork
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -148,7 +162,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### PsApiManagement
-
 Parameter 'ApiManagement' accepts value of type 'PsApiManagement' from the pipeline
 
 ## OUTPUTS

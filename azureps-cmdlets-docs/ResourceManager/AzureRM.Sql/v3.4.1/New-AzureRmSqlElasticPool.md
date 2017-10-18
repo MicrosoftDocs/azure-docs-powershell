@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
 ms.assetid: 009899E5-83BF-4A3F-877E-70C16D5CD1AC
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlElasticPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/New-AzureRmSqlElasticPool.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # New-AzureRmSqlElasticPool
@@ -18,7 +18,8 @@ Creates an elastic database pool for a SQL Database.
 ```
 New-AzureRmSqlElasticPool -ElasticPoolName <String> [-Edition <DatabaseEdition>] [-Dtu <Int32>]
  [-StorageMB <Int32>] [-DatabaseDtuMin <Int32>] [-DatabaseDtuMax <Int32>] [-Tags <Hashtable>]
- [-ServerName] <String> [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ServerName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,9 +65,9 @@ For details about which values are valid, see the table for your specific size p
 
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -82,9 +83,9 @@ The default value is zero (0).
 For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool). 
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -107,9 +108,9 @@ The default values for the different editions are as follows:
 For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool). 
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -131,9 +132,9 @@ The acceptable values for this parameter are:
 - PremiumRS
 
 ```yaml
-Type: DatabaseEdition
+Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: None, Premium, Basic, Standard, DataWarehouse, Stretch, Free, PremiumRS
 
 Required: False
@@ -147,7 +148,7 @@ Accept wildcard characters: False
 Specifies the name of the elastic pool that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -162,9 +163,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which this cmdlet assigns the elastic pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -177,9 +178,9 @@ Accept wildcard characters: False
 Specifies the name of the server that hosts the elastic pool.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -189,16 +190,15 @@ Accept wildcard characters: False
 ```
 
 ### -StorageMB
-
 Specifies the storage limit, in megabytes, for the elastic pool. If you do not specify this
 parameter, this cmdlet calculates a value that depends on the value of the *Dtu* parameter.
 
 See [eDTU and storage limits](/azure/sql-database/sql-database-elastic-pool#edtu-and-storage-limits-for-elastic-pools) for possible values.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ with the elastic pool. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tag
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -245,13 +245,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

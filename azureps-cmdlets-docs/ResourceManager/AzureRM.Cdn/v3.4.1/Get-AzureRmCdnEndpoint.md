@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+Module Name: AzureRM.Cdn
 ms.assetid: F93D9D7C-AC2A-4D83-87EC-4A54CD45272B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnEndpoint.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Get-AzureRmCdnEndpoint
@@ -18,12 +18,13 @@ Gets a CDN endpoint.
 ### Parameter Set for fields parameters (Default)
 ```
 Get-AzureRmCdnEndpoint [-EndpointName <String>] -ProfileName <String> -ResourceGroupName <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Parameter Set for object parameters
 ```
-Get-AzureRmCdnEndpoint [-EndpointName <String>] -CdnProfile <PSProfile> [<CommonParameters>]
+Get-AzureRmCdnEndpoint [-EndpointName <String>] -CdnProfile <PSProfile>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +43,7 @@ The **Get-AzureRMCdnEndpoint** cmdlet gets an Azure Content Delivery Network (CD
 Specifies the CDN profile object to which the endpoint belongs.
 
 ```yaml
-Type: PSProfile
+Type: Microsoft.Azure.Commands.Cdn.Models.Profile.PSProfile
 Parameter Sets: Parameter Set for object parameters
 Aliases: 
 
@@ -58,7 +59,7 @@ Specifies the name of the endpoint.
 The name of the endpoint is not the host name of the endpoint.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,7 +74,7 @@ Accept wildcard characters: False
 Specifies the name of the profile to which the endpoint belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
@@ -88,11 +89,24 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the endpoint belongs.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Parameter Set for fields parameters
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -105,7 +119,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### PSProfile
-
 Parameter 'CdnProfile' accepts value of type 'PSProfile' from the pipeline
 
 ## OUTPUTS

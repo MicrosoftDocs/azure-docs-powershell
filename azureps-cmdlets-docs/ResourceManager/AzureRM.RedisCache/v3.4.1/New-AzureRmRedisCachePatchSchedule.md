@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+Module Name: AzureRM.RedisCache
 ms.assetid: F7FAFF52-5E07-4D88-B48F-BC70C43E8691
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzureRmRedisCachePatchSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzureRmRedisCachePatchSchedule.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # New-AzureRmRedisCachePatchSchedule
@@ -17,7 +17,7 @@ Adds a patch schedule.
 
 ```
 New-AzureRmRedisCachePatchSchedule -ResourceGroupName <String> -Name <String> -Entries <PSScheduleEntry[]>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +40,7 @@ Specifies an array of schedules that this cmdlet sets on a cache.
 To obtain a **PSScheduleEntry** object, use the New-AzureRmRedisCacheScheduleEntry cmdlet.
 
 ```yaml
-Type: PSScheduleEntry[]
+Type: Microsoft.Azure.Commands.RedisCache.Models.PSScheduleEntry[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 Specifies the name of the cache.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group which contains the cache.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -78,6 +78,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

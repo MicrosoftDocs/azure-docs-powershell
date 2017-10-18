@@ -6,7 +6,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmVpnClientRootCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Remove-AzureRmVpnClientRootCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Remove-AzureRmVpnClientRootCertificate
@@ -50,21 +49,6 @@ The third command uses the information stored in the $CertificateText variable a
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PublicCertData
 Specifies the text representation of the root certificate to be removed.
 To obtain the text representation, export your certificate in .cer format (using Base64) encoding, then open the resulting file in a text editor.
@@ -81,7 +65,7 @@ $Text = Get-Content -Path "C:\Azure\Certificates\ExportedCertficate.cer"
 $CertificateText = for ($i=1; $i -lt $Text.Length -1 ; $i++){$Text\[$i\]}
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -98,7 +82,7 @@ Specifies the name of the resource group that the virtual network gateway is ass
 Resource groups categorize items to help simplify inventory management and general Azure administration.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -113,7 +97,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual network gateway that the certificate is removed from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -128,7 +112,7 @@ Accept wildcard characters: False
 Specifies the name of the client root certificate that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName
 
@@ -136,6 +120,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

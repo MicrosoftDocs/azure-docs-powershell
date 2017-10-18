@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 98367100-4FFD-46F6-8974-603B32533626
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Import-AzureRmApiManagementHostnameCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Import-AzureRmApiManagementHostnameCertificate.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Import-AzureRmApiManagementHostnameCertificate
@@ -18,7 +18,7 @@ Imports a certificate in a PFX format for an API Management Service.
 ```
 Import-AzureRmApiManagementHostnameCertificate -ResourceGroupName <String> -Name <String>
  -HostnameType <PsApiManagementHostnameType> -PfxPath <String> -PfxPassword <String> [-PassThru]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +45,7 @@ Valid values are:
 - Portal
 
 ```yaml
-Type: PsApiManagementHostnameType
+Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementHostnameType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Proxy, Portal
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Specifies the name of the API Management deployment that this cmdlet imports.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +77,7 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies the password for the .pfx certificate file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the path to a .pfx certificate file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Specifies the name of the of resource group under which the API Management deployment exists.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -130,6 +130,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

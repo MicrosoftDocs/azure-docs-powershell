@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 6AC9DA05-756D-4D59-BD97-DBAAFBB3C7AC
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADAppCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADAppCredential.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmADAppCredential
@@ -17,12 +17,13 @@ Retrieves a list of credentials associated with an application.
 
 ### ApplicationObjectIdParameterSet (Default)
 ```
-Get-AzureRmADAppCredential -ObjectId <String> [<CommonParameters>]
+Get-AzureRmADAppCredential -ObjectId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ApplicationIdParameterSet
 ```
-Get-AzureRmADAppCredential -ApplicationId <String> [<CommonParameters>]
+Get-AzureRmADAppCredential -ApplicationId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +46,7 @@ Returns a list of credentials associated with the application having object id '
 The id of the application to retrieve credentials from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ApplicationIdParameterSet
 Aliases: 
 
@@ -60,7 +61,7 @@ Accept wildcard characters: False
 The object id of the application to retrieve credentials from.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ApplicationObjectIdParameterSet
 Aliases: 
 
@@ -68,6 +69,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

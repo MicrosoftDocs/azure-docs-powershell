@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
+Module Name: AzureRM.ServerManagement
 ms.assetid: D7485CB9-AE12-445B-8984-3D21FCA0E82F
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/New-AzureRmServerManagementGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/New-AzureRmServerManagementGateway.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmServerManagementGateway
@@ -17,7 +17,7 @@ Creates a Server Management gateway.
 
 ```
 New-AzureRmServerManagementGateway [-ResourceGroupName] <String> [-GatewayName] <String> [-Location] <String>
- [-AutoUpgrade] [-Tags <Hashtable>] [<CommonParameters>]
+ [-AutoUpgrade] [-Tags <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ The **New-AzureRmServerManagementGateway** cmdlet creates an Azure Server Manage
 Indicates that the gateway will auto upgrade itself when a new version is released.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 Specifies the name of the gateway that this cmdlet creates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 Specifies the location in which to create the gateway.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group in which this cmdlet creates the gateway.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +97,7 @@ Specifies tags as key-value pairs.
 You can use tags to identify a Gateway from other Azure resources.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,6 +105,19 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: FE7689DE-4EC6-4C6B-94A4-D22C61CA569D
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchComputeNodeUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchComputeNodeUser.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # New-AzureBatchComputeNodeUser
@@ -18,13 +18,15 @@ Creates a user account on a Batch compute node.
 ### Id
 ```
 New-AzureBatchComputeNodeUser [-PoolId] <String> [-ComputeNodeId] <String> -Name <String> -Password <String>
- [-ExpiryTime <DateTime>] [-IsAdmin] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-ExpiryTime <DateTime>] [-IsAdmin] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ParentObject
 ```
 New-AzureBatchComputeNodeUser [[-ComputeNode] <PSComputeNode>] -Name <String> -Password <String>
- [-ExpiryTime <DateTime>] [-IsAdmin] -BatchContext <BatchAccountContext> [<CommonParameters>]
+ [-ExpiryTime <DateTime>] [-IsAdmin] -BatchContext <BatchAccountContext>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +60,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -73,7 +75,7 @@ Accept wildcard characters: False
 Specifies the compute node, as a **PSComputeNode** object, on which this cmdlet creates a user account.
 
 ```yaml
-Type: PSComputeNode
+Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
 Parameter Sets: ParentObject
 Aliases: 
 
@@ -88,7 +90,7 @@ Accept wildcard characters: False
 Specifies the ID of the compute node on which this cmdlet creates a user account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -103,7 +105,7 @@ Accept wildcard characters: False
 Specifies the expiry time for the new user account.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases: 
 
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 Indicates that the cmdlet creates a user account that has administrative credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -133,7 +135,7 @@ Accept wildcard characters: False
 Specifies the name of the new local Windows account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -148,7 +150,7 @@ Accept wildcard characters: False
 Specifies the user account password.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -163,12 +165,25 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute node on which to create the user account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -180,11 +195,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSComputeNode
-
 Parameter 'ComputeNode' accepts value of type 'PSComputeNode' from the pipeline
 
 ## OUTPUTS

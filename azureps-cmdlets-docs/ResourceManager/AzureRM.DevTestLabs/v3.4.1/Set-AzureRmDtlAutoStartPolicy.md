@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+Module Name: AzureRM.DevTestLabs
 ms.assetid: 3FADEC2E-4A2B-46EB-8A94-CF48D717C7FC
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Set-AzureRmDtlAutoStartPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Set-AzureRmDtlAutoStartPolicy.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Set-AzureRmDtlAutoStartPolicy
@@ -18,13 +18,15 @@ Sets the auto start policy of a lab in DevTest Labs.
 ### Enable (Default)
 ```
 Set-AzureRmDtlAutoStartPolicy [[-Time] <DateTime>] [[-Days] <DayOfWeek[]>] [-Enable] [-LabName] <String>
- [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Disable
 ```
 Set-AzureRmDtlAutoStartPolicy [[-Time] <DateTime>] [[-Days] <DayOfWeek[]>] [-Disable] [-LabName] <String>
- [-ResourceGroupName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +46,7 @@ The cmdlet uses the specified resource group and name of the lab to set the poli
 Specifies, as an array, the days of the week for when the virtual machines of the lab must be started.
 
 ```yaml
-Type: DayOfWeek[]
+Type: System.DayOfWeek[]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
@@ -60,7 +62,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet disables the policy for the virtual machines in the lab.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Disable
 Aliases: 
 
@@ -75,7 +77,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet enables the policy for the virtual machines in the lab.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Enable
 Aliases: 
 
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 Specifies the name of the lab for which this cmdlet sets the automatic start policy.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -105,7 +107,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that the lab belongs to.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +122,7 @@ Accept wildcard characters: False
 Specifies the time when the virtual machines of the lab must be started.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: (All)
 Aliases: 
 
@@ -135,7 +137,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -151,13 +153,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

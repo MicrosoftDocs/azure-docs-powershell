@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkWatcherPacketCapture.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Get-AzureRmNetworkWatcherPacketCapture.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/904b1421219fc34591976d376360f37a8a28fa9a
 ---
 
 # Get-AzureRmNetworkWatcherPacketCapture
@@ -53,26 +52,11 @@ Note: The Azure Network Watcher extension must be installed on the target virtua
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NetworkWatcher
 The network watcher resource.
 
 ```yaml
-Type: PSNetworkWatcher
+Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 Parameter Sets: SetByResource
 Aliases: 
 
@@ -87,7 +71,7 @@ Accept wildcard characters: False
 The name of network watcher.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByName
 Aliases: Name
 
@@ -102,7 +86,7 @@ Accept wildcard characters: False
 The packet capture name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -117,7 +101,7 @@ Accept wildcard characters: False
 The name of the network watcher resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SetByName
 Aliases: 
 
@@ -125,6 +109,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

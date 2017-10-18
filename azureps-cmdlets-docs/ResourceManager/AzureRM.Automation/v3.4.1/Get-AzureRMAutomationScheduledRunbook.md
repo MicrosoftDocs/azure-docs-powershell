@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module Name: AzureRM.Automation
 ms.assetid: EE854F8A-4B6B-4831-992A-6EC318BEE234
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRMAutomationScheduledRunbook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRMAutomationScheduledRunbook.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/8810c0614b76be8d014616888a4ae7733a452af9
 ---
 
 # Get-AzureRmAutomationScheduledRunbook
@@ -18,31 +18,32 @@ Gets Automation runbooks and associated schedules.
 ### ByAll (Default)
 ```
 Get-AzureRmAutomationScheduledRunbook [-ResourceGroupName] <String> [-AutomationAccountName] <String>
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByJobScheduleId
 ```
 Get-AzureRmAutomationScheduledRunbook -JobScheduleId <Guid> [-ResourceGroupName] <String>
- [-AutomationAccountName] <String> [<CommonParameters>]
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByRunbookName
 ```
 Get-AzureRmAutomationScheduledRunbook -RunbookName <String> [-ResourceGroupName] <String>
- [-AutomationAccountName] <String> [<CommonParameters>]
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByRunbookNameAndScheduleName
 ```
 Get-AzureRmAutomationScheduledRunbook -RunbookName <String> -ScheduleName <String>
- [-ResourceGroupName] <String> [-AutomationAccountName] <String> [<CommonParameters>]
+ [-ResourceGroupName] <String> [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ByScheduleName
 ```
 Get-AzureRmAutomationScheduledRunbook -ScheduleName <String> [-ResourceGroupName] <String>
- [-AutomationAccountName] <String> [<CommonParameters>]
+ [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,7 +80,7 @@ This command gets all scheduled runbooks for the schedule Schedule01 in the Azur
 Specifies an Automation account for the runbook on which this cmdlet operates.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -94,7 +95,7 @@ Accept wildcard characters: False
 Specifies the ID of a scheduled job that this cmdlet gets.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: ByJobScheduleId
 Aliases: 
 
@@ -109,7 +110,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group for scheduled runbooks that this cmdlet gets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 Specifies the name of a runbook for which this cmdlet gets scheduled runbooks.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookName, ByRunbookNameAndScheduleName
 Aliases: Name
 
@@ -139,7 +140,7 @@ Accept wildcard characters: False
 Specifies the name of a schedule for which this cmdlet gets scheduled runbooks.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByRunbookNameAndScheduleName, ByScheduleName
 Aliases: 
 
@@ -147,6 +148,19 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

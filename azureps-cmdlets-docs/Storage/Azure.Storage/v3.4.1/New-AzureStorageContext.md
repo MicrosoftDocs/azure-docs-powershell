@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: 383402B2-6B7C-41AB-AFF9-36C86156B0A9
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContext.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/89262bc4144696c69376c3fb654c881de55b6450
 ---
 
 # New-AzureStorageContext
@@ -153,7 +153,7 @@ The final command lists all the blobs associated with the container named Contos
 Indicates that this cmdlet creates an Azure Storage context for anonymous logon.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: AnonymousAccount, AnonymousAccountEnvironment
 Aliases: 
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Specifies a connection string for the Azure Storage context.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ConnectionString
 Aliases: 
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 Specifies the endpoint for the Azure Storage context.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameAndKey, AnonymousAccount, SasToken
 Aliases: 
 
@@ -200,7 +200,7 @@ The acceptable values for this parameter are: AzureCloud and AzureChinaCloud.
 For more information, type `Get-Help Get-AzureEnvironment`.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameAndKeyEnvironment, AnonymousAccountEnvironment
 Aliases: Name, EnvironmentName
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SasTokenWithAzureEnvironment
 Aliases: Name, EnvironmentName
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet creates a context by using the local development storage account.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: LocalDevelopment
 Aliases: 
 
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 Transfer Protocol (https/http).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameAndKey, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment, SasToken
 Aliases: 
 Accepted values: Http, Https
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 Specifies a Shared Access Signature (SAS) token for the context.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SasToken, SasTokenWithAzureEnvironment
 Aliases: 
 
@@ -274,7 +274,7 @@ Specifies an Azure Storage account key.
 This cmdlet creates a context for the key that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameAndKey, AccountNameAndKeyEnvironment
 Aliases: 
 
@@ -290,7 +290,7 @@ Specifies an Azure Storage account name.
 This cmdlet creates a context for the account that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: AccountNameAndKey, AccountNameAndKeyEnvironment, AnonymousAccount, AnonymousAccountEnvironment, SasToken, SasTokenWithAzureEnvironment
 Aliases: 
 

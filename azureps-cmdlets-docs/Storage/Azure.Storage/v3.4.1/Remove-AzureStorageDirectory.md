@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module Name: Azure.Storage
 ms.assetid: 53988D79-1F8B-4138-9F92-2912D418C121
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageDirectory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageDirectory.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Remove-AzureStorageDirectory
@@ -56,7 +56,7 @@ If the previous call fails in the specified interval, this cmdlet retries the re
 If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,7 +75,7 @@ This parameter can help reduce network connection problems in low bandwidth envi
 The default value is 10.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,7 +91,7 @@ Specifies an Azure storage context.
 To obtain a storage context, use the [New-AzureStorageContext](./New-AzureStorageContext.md) cmdlet.
 
 ```yaml
-Type: IStorageContext
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 Parameter Sets: ShareName
 Aliases: 
 
@@ -109,7 +109,7 @@ To obtain a directory, use the New-AzureStorageDirectory cmdlet.
 You can also use the **Get-AzureStorageFile** cmdlet to obtain a directory.
 
 ```yaml
-Type: CloudFileDirectory
+Type: Microsoft.WindowsAzure.Storage.File.CloudFileDirectory
 Parameter Sets: Directory
 Aliases: 
 
@@ -126,7 +126,7 @@ If you specify this parameter, and if the cmdlet is unsuccessful because of an i
 If you do not specify this parameter, this cmdlet does not return a value.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -143,7 +143,7 @@ If the folder that this parameter specifies is empty, this cmdlet deletes that f
 If the folder is not empty, this cmdlet makes no change, and returns an error.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ShareName, Share
 Aliases: 
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Directory
 Aliases: 
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 Specifies the length of the time-out period for the server part of a request.
 
 ```yaml
-Type: Int32
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
 
@@ -189,7 +189,7 @@ This object contains the storage context.
 If you specify this parameter, do not specify the *Context* parameter.
 
 ```yaml
-Type: CloudFileShare
+Type: Microsoft.WindowsAzure.Storage.File.CloudFileShare
 Parameter Sets: Share
 Aliases: 
 
@@ -205,7 +205,7 @@ Specifies the name of the file share.
 This cmdlet removes a folder under the file share that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ShareName
 Aliases: 
 
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -236,7 +236,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -253,15 +253,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### IStorageContext
-
 Parameter 'Context' accepts value of type 'IStorageContext' from the pipeline
 
 ### CloudFileDirectory
-
 Parameter 'Directory' accepts value of type 'CloudFileDirectory' from the pipeline
 
 ### CloudFileShare
-
 Parameter 'Share' accepts value of type 'CloudFileShare' from the pipeline
 
 ## OUTPUTS

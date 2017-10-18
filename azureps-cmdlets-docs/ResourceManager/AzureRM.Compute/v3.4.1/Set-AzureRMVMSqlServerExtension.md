@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: C650E465-7CDE-47F8-B85A-8FA3E1756FAF
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRMVMSqlServerExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRMVMSqlServerExtension.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/066074eca5267f491d3aabead8d64c573bf7783b
 ---
 
 # Set-AzureRmVMSqlServerExtension
@@ -19,7 +19,7 @@ Sets the Azure SQL Server extension on a virtual machine.
 Set-AzureRmVMSqlServerExtension [[-Version] <String>] [-ResourceGroupName] <String> [-VMName] <String>
  [[-Name] <String>] [[-AutoPatchingSettings] <AutoPatchingSettings>]
  [[-AutoBackupSettings] <AutoBackupSettings>] [[-KeyVaultCredentialSettings] <KeyVaultCredentialSettings>]
- [[-Location] <String>] [<CommonParameters>]
+ [[-Location] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,7 +79,7 @@ Specifies the automatic SQL Server backup settings.
 To create an **AutoBackupSettings** object , use the New-AzureVMSqlServerAutoBackupConfig cmdlet.
 
 ```yaml
-Type: AutoBackupSettings
+Type: Microsoft.Azure.Commands.Compute.AutoBackupSettings
 Parameter Sets: (All)
 Aliases: 
 
@@ -95,7 +95,7 @@ Specifies the automatic SQL Server patching settings.
 To create an **AutoPatchingSettings** object , use the New-AzureVMSqlServerAutoPatchingConfig cmdlet.
 
 ```yaml
-Type: AutoPatchingSettings
+Type: Microsoft.Azure.Commands.Compute.AutoPatchingSettings
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,9 +106,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeyVaultCredentialSettings
 ```yaml
-Type: KeyVaultCredentialSettings
+Type: Microsoft.Azure.Commands.Compute.KeyVaultCredentialSettings
 Parameter Sets: (All)
 Aliases: 
 
@@ -123,7 +136,7 @@ Accept wildcard characters: False
 Specifies the location of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +151,7 @@ Accept wildcard characters: False
 Specifies the name of the SQL Server the extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -153,7 +166,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group of the virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -168,7 +181,7 @@ Accept wildcard characters: False
 Specifies the version of the SQL Server extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: HandlerVersion
 
@@ -183,7 +196,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine on which this cmdlet sets the SQL Server extension.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 7740AC3B-F643-4F8D-8DC5-ACBF59323BD8
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmRoleDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmRoleDefinition.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmRoleDefinition
@@ -17,17 +17,20 @@ Lists all Azure RBAC roles that are available for assignment.
 
 ### RoleDefinitionNameParameterSet
 ```
-Get-AzureRmRoleDefinition [[-Name] <String>] [-Scope <String>] [-AtScopeAndBelow] [<CommonParameters>]
+Get-AzureRmRoleDefinition [[-Name] <String>] [-Scope <String>] [-AtScopeAndBelow]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RoleDefinitionIdParameterSet
 ```
-Get-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [<CommonParameters>]
+Get-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### RoleDefinitionCustomParameterSet
 ```
-Get-AzureRmRoleDefinition [-Scope <String>] [-Custom] [-AtScopeAndBelow] [<CommonParameters>]
+Get-AzureRmRoleDefinition [-Scope <String>] [-Custom] [-AtScopeAndBelow]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +59,7 @@ Lists all RBAC role definitions
 If specified, displays all role definitions.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: RoleDefinitionNameParameterSet, RoleDefinitionCustomParameterSet
 Aliases: 
 
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 If specified, only displays the custom created roles in the directory.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: RoleDefinitionCustomParameterSet
 Aliases: 
 
@@ -86,7 +89,7 @@ Accept wildcard characters: False
 Role definition Id.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: RoleDefinitionIdParameterSet
 Aliases: 
 
@@ -103,7 +106,7 @@ For e.g.
 Reader, Contributor, Virtual Machine Contributor.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RoleDefinitionNameParameterSet
 Aliases: 
 
@@ -118,7 +121,7 @@ Accept wildcard characters: False
 Role definition scope.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,13 +132,25 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
-
 Parameter 'Scope' accepts value of type 'String' from the pipeline
 
 ## OUTPUTS

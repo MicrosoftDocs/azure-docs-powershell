@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 online version: https://msdn.microsoft.com/en-us/library/dn868052.aspx
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzureKeyVaultManagedStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzureKeyVaultManagedStorageAccount.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Add-AzureKeyVaultManagedStorageAccount
@@ -17,7 +17,8 @@ Adds an existing Azure Storage Account to the specified key vault for its keys t
 ```
 Add-AzureKeyVaultManagedStorageAccount [-VaultName] <String> [-AccountName] <String>
  [-AccountResourceId] <String> [-ActiveKeyName] <String> [-DisableAutoRegenerateKey]
- [-RegenerationPeriod <TimeSpan>] [-Disable] [-Tag <Hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RegenerationPeriod <TimeSpan>] [-Disable] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +58,7 @@ Key Vault managed storage account name. Cmdlet constructs the FQDN of a managed 
 name from vault name, currently selected environment and manged storage account name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountName, Name
 
@@ -72,7 +73,7 @@ Accept wildcard characters: False
 Azure resource id of the storage account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: StorageAccountResourceId
 
@@ -87,9 +88,9 @@ Accept wildcard characters: False
 Name of the storage account key that must be used for generating sas tokens.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -102,7 +103,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -117,9 +118,9 @@ Accept wildcard characters: False
 Disables the use of managed storage account's key for generation of sas tokens.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -134,9 +135,9 @@ and becomes the new active key after the regeneration period. If false, then the
 storage account are not auto regenerated.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -150,9 +151,9 @@ Regeneration period. If auto regenerate key is enabled, this value specifies the
 which managed storage account's inactive keygets auto regenerated and becomes the new active key.
 
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -167,7 +168,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -183,9 +184,9 @@ Vault name.
 Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -199,9 +200,22 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

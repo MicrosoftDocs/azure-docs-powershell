@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 80AAA327-77C6-4372-9461-FFED5A15E678
 online version: http://go.microsoft.com/fwlink/?LinkId=690296
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Backup-AzureKeyVaultSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Backup-AzureKeyVaultSecret.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # Backup-AzureKeyVaultSecret
@@ -17,14 +17,14 @@ Backs up a secret in a key vault.
 
 ### BySecretName (Default)
 ```
-Backup-AzureKeyVaultSecret [-VaultName] <String> [-Name] <String> [[-OutputFile] <String>] [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Backup-AzureKeyVaultSecret [-VaultName] <String> [-Name] <String> [[-OutputFile] <String>] [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BySecret
 ```
-Backup-AzureKeyVaultSecret [-Secret] <Secret> [[-OutputFile] <String>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Backup-AzureKeyVaultSecret [-Secret] <Secret> [[-OutputFile] <String>] [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,7 +68,7 @@ This command uses the $secret object's vault name and name to retrieves the secr
 Prompts you for confirmation before overwriting the output file, if that exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 Specifies the name of the secret to back up.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BySecretName
 Aliases: SecretName
 
@@ -100,7 +100,7 @@ If you do not specify this parameter, this cmdlet generates a file name for you.
 If you specify the name of an existing output file, the operation will not complete and returns an error message that the backup file already exists.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 Specifies the object whose name and vault should be used for the backup operation.
 
 ```yaml
-Type: Secret
+Type: Microsoft.Azure.Commands.KeyVault.Models.Secret
 Parameter Sets: BySecret
 Aliases: 
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 Specifies the name of the key vault that contains the secret to back up.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: BySecretName
 Aliases: 
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -161,13 +161,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

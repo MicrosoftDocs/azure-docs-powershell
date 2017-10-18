@@ -376,6 +376,7 @@
             "ms.devlang": "powershell"
         },
         "dest": "azureps",
+        "xref": ["_xref/xrefmap0.yml","_xref/xrefmap1.yml"],
         "lruSize": 0
     }
 }

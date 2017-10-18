@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
 ms.assetid: A8222AB8-0003-4AC6-8114-294ABE8054CE
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/New-AzureRmDataLakeStoreItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/New-AzureRmDataLakeStoreItem.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # New-AzureRmDataLakeStoreItem
@@ -17,7 +17,8 @@ Creates a new file or folder in Data Lake Store.
 
 ```
 New-AzureRmDataLakeStoreItem [-Account] <String> [-Path] <DataLakeStorePathInstance> [[-Value] <Object>]
- [[-Encoding] <FileSystemCmdletProviderEncoding>] [-Folder] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Encoding] <FileSystemCmdletProviderEncoding>] [-Folder] [-Force] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +42,7 @@ The second command creates the folder NewFolder at the root folder.
 Specifies the name of the Data Lake Store account.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -69,7 +70,7 @@ The acceptable values for this parameter are:
 - BigEndianUTF32
 
 ```yaml
-Type: FileSystemCmdletProviderEncoding
+Type: Microsoft.PowerShell.Commands.FileSystemCmdletProviderEncoding
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +85,7 @@ Accept wildcard characters: False
 Indicates that this operation creates a folder.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,7 +100,7 @@ Accept wildcard characters: False
 Indicates that this operation can overwrite the destination item if it already exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -114,7 +115,7 @@ Accept wildcard characters: False
 Specifies the Data Lake Store path of the item to create, starting with the root directory (/).
 
 ```yaml
-Type: DataLakeStorePathInstance
+Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance
 Parameter Sets: (All)
 Aliases: 
 
@@ -129,7 +130,7 @@ Accept wildcard characters: False
 Specifies the content to add to the item you create.
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: (All)
 Aliases: 
 
@@ -144,7 +145,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -160,7 +161,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -171,13 +172,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Object
-
 Parameter 'Value' accepts value of type 'Object' from the pipeline
 
 ## OUTPUTS

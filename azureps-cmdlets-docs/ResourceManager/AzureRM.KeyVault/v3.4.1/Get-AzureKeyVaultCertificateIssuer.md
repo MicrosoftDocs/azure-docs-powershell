@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module Name: AzureRM.KeyVault
 ms.assetid: 5F856280-C561-47B5-AA96-27E34C86D604
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureKeyVaultCertificateIssuer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Get-AzureKeyVaultCertificateIssuer.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/10ea130b3dfc40f806c05ccfaef77b4f0104f46e
 ---
 
 # Get-AzureKeyVaultCertificateIssuer
@@ -17,12 +17,14 @@ Gets a certificate issuer for a key vault.
 
 ### ByVaultName (Default)
 ```
-Get-AzureKeyVaultCertificateIssuer [-VaultName] <String> [<CommonParameters>]
+Get-AzureKeyVaultCertificateIssuer [-VaultName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-AzureKeyVaultCertificateIssuer [-VaultName] <String> [-Name] <String> [<CommonParameters>]
+Get-AzureKeyVaultCertificateIssuer [-VaultName] <String> [-Name] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +50,7 @@ This command gets the certificate issuer named TestIssuer01.
 Specifies the name of the certificate issuer to get.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: IssuerName
 
@@ -63,7 +65,7 @@ Accept wildcard characters: False
 Specifies the name of a key vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -71,6 +73,19 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

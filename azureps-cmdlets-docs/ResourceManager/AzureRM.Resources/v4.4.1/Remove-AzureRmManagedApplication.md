@@ -5,7 +5,6 @@ online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmManagedApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmManagedApplication.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/3f1afe58e625c04bb95051c6a5a4629d00822a6e
 ---
 
 # Remove-AzureRmManagedApplication
@@ -18,13 +17,13 @@ Removes a managed application
 ### The managed application name parameter set. (Default)
 ```
 Remove-AzureRmManagedApplication -Name <String> -ResourceGroupName <String> [-Force] [-ApiVersion <String>]
- [-Pre] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-Pre] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### The managed application Id parameter set.
 ```
 Remove-AzureRmManagedApplication -Id <String> [-Force] [-ApiVersion <String>] [-Pre]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +49,7 @@ When set, indicates the version of the resource provider API to use.
 If not specified, the API version is automatically determined as the latest available.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -65,7 +64,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -80,7 +79,7 @@ Accept wildcard characters: False
 Do not ask for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -97,7 +96,7 @@ e.g.
 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The managed application Id parameter set.
 Aliases: ResourceId
 
@@ -112,7 +111,7 @@ Accept wildcard characters: False
 The managed application name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The managed application name parameter set.
 Aliases: 
 
@@ -127,7 +126,7 @@ Accept wildcard characters: False
 When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,7 +141,7 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: The managed application name parameter set.
 Aliases: 
 
@@ -157,7 +156,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -173,7 +172,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -184,15 +183,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 
-
 ## OUTPUTS
 
 ### System.Boolean
-
 
 ## NOTES
 

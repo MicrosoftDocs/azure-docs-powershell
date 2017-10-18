@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
+Module Name: AzureRM.ServiceBus
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzureRmServiceBusTopic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzureRmServiceBusTopic.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/e66fe8b33ca829c1a5e79a1afb9209bd63ce094b
 ---
 
 # New-AzureRmServiceBusTopic
@@ -15,13 +15,13 @@ Creates a new Service Bus topic in  the specified Service Bus namespace.
 ## SYNTAX
 
 ```
-New-AzureRmServiceBusTopic [-ResourceGroup] <String> [-NamespaceName] <String> [-TopicName] <String>
+New-AzureRmServiceBusTopic -ResourceGroupName <String> -Namespace <String> -Name <String>
  -EnablePartitioning <Boolean> [-AutoDeleteOnIdle <String>] [-DefaultMessageTimeToLive <String>]
  [-DuplicateDetectionHistoryTimeWindow <String>] [-EnableBatchedOperations <Boolean>]
  [-EnableExpress <Boolean>] [-EnableSubscriptionPartitioning <Boolean>]
  [-FilteringMessagesBeforePublishing <Boolean>] [-IsAnonymousAccessible <Boolean>] [-IsExpress <Boolean>]
  [-MaxSizeInMegabytes <Int64>] [-RequiresDuplicateDetection <Boolean>] [-SupportOrdering <Boolean>]
- [-SizeInBytes <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SizeInBytes <Int64>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +42,7 @@ Creates a new Service Bus topic `SB-Topic_exampl1` in the specified Service Bus 
 Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 Specifies the duration after which the message expires, starting from when the message is sent to Service Bus.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Indicates whether server-side batched operations are enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Specifies whether to enable the topic to be partitioned across multiple message brokers. 
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 Specifies whether to enable subscription partitioning.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Indicates whether filtering is enabled for messages before publishing.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Indicates whether the message allows anonymous access.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 Indicates whether the topic is express enabled.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 The maximum size of the topic in megabytes, which is the size of memory allocated for the topic.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -210,26 +210,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NamespaceName
-The Service Bus namespace name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -RequiresDuplicateDetection
 Indicates whether the topic requires duplication detection.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -241,26 +226,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceGroup
-The name of the resource group.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -SizeInBytes
 Specifies the size of the topic in bytes.
 
 ```yaml
-Type: Int64
+Type: System.Nullable`1[System.Int64]
 Parameter Sets: (All)
 Aliases: 
 
@@ -275,7 +245,7 @@ Accept wildcard characters: False
 Indicates whether the topic supports ordering.
 
 ```yaml
-Type: Boolean
+Type: System.Nullable`1[System.Boolean]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: TRUE, FALSE
@@ -287,26 +257,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TopicName
-The Service Bus topic name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -322,7 +277,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -330,6 +285,58 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Topic Name.```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: TopicName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Namespace
+Namespace Name.```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: NamespaceName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+The name of the resource group```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: ResourceGroup
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

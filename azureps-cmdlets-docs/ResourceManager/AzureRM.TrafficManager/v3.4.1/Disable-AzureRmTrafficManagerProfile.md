@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
+Module Name: AzureRM.TrafficManager
 ms.assetid: B6E043FF-F4DD-44B7-BEAA-6B17C8F21D58
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Disable-AzureRmTrafficManagerProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Disable-AzureRmTrafficManagerProfile.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Disable-AzureRmTrafficManagerProfile
@@ -17,14 +17,14 @@ Disables a Traffic Manager profile.
 
 ### Fields
 ```
-Disable-AzureRmTrafficManagerProfile -Name <String> -ResourceGroupName <String> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Disable-AzureRmTrafficManagerProfile -Name <String> -ResourceGroupName <String> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Object
 ```
-Disable-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfile> [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Disable-AzureRmTrafficManagerProfile -TrafficManagerProfile <TrafficManagerProfile> [-Force]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +59,7 @@ Therefore, it does not prompt you for confirmation.
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the name of the Traffic Manager profile that this cmdlet disables.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -90,7 +90,7 @@ Specifies the name of a resource group.
 This cmdlet disables a Traffic Manager profile in the group that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Fields
 Aliases: 
 
@@ -106,7 +106,7 @@ Specifies a **TrafficManagerProfile** object to disable.
 To obtain a **TrafficManagerProfile** object, use the Get-AzureRmTrafficManagerProfile cmdlet.
 
 ```yaml
-Type: TrafficManagerProfile
+Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile
 Parameter Sets: Object
 Aliases: 
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -137,13 +137,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

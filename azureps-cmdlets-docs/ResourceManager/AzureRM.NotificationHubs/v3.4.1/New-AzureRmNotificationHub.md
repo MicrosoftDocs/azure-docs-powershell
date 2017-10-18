@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+Module Name: AzureRM.NotificationHubs
 ms.assetid: 8EDDA991-55B6-4151-8619-E13E14599ECD
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHub.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # New-AzureRmNotificationHub
@@ -17,14 +17,15 @@ Creates a notification hub.
 
 ### InputFileParameterSet
 ```
-New-AzureRmNotificationHub [-ResourceGroup] <String> [-Namespace] <String> [-InputFile] <String> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-AzureRmNotificationHub [-ResourceGroup] <String> [-Namespace] <String> [-InputFile] <String>
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NotificationHubParameterSet
 ```
 New-AzureRmNotificationHub [-ResourceGroup] <String> [-Namespace] <String>
- [-NotificationHubObj] <NotificationHubAttributes> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NotificationHubObj] <NotificationHubAttributes> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +58,7 @@ You do not need to specify a name or any other configuration information for the
 Specifies the path to a JSON file containing configuration values for the new notification hub.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: InputFileParameterSet
 Aliases: 
 
@@ -76,7 +77,7 @@ Notification hubs must be assigned to an existing namespace.
 The **New-AzureRmNotificationHub** cmdlet cannot create a new namespace.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -91,7 +92,7 @@ Accept wildcard characters: False
 Specifies the **NotificationHubAttributes** object that contains configuration information for the new hub.
 
 ```yaml
-Type: NotificationHubAttributes
+Type: Microsoft.Azure.Commands.NotificationHubs.Models.NotificationHubAttributes
 Parameter Sets: NotificationHubParameterSet
 Aliases: 
 
@@ -110,7 +111,7 @@ You must use an existing resource group.
 The **New-AzureRmNotificationHub** cmdlet cannot create a new resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -125,7 +126,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -140,9 +141,22 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: 0BB79553-26DA-413C-8086-740DB6B31A85
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzureBatchComputeNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Remove-AzureBatchComputeNode.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/173e94aec59d7f539b72e43e90e5e7f8ba5f62bc
 ---
 
 # Remove-AzureBatchComputeNode
@@ -19,14 +19,16 @@ Removes compute nodes from a pool.
 ```
 Remove-AzureBatchComputeNode [-PoolId] <String> [-Ids] <String[]>
  [-DeallocationOption <ComputeNodeDeallocationOption>] [-ResizeTimeout <TimeSpan>] [-Force]
- -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### InputObject
 ```
 Remove-AzureBatchComputeNode [[-ComputeNode] <PSComputeNode>]
  [-DeallocationOption <ComputeNodeDeallocationOption>] [-ResizeTimeout <TimeSpan>] [-Force]
- -BatchContext <BatchAccountContext> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -BatchContext <BatchAccountContext> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,7 +71,7 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 To obtain a **BatchAccountContext** object that contains access keys for your subscription, use the Get-AzureRmBatchAccountKeys cmdlet.
 
 ```yaml
-Type: BatchAccountContext
+Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
 Parameter Sets: (All)
 Aliases: 
 
@@ -84,7 +86,7 @@ Accept wildcard characters: False
 Specifies the **PSComputeNode** object that represents the compute node that this cmdlet removes.
 
 ```yaml
-Type: PSComputeNode
+Type: Microsoft.Azure.Commands.Batch.Models.PSComputeNode
 Parameter Sets: InputObject
 Aliases: 
 
@@ -100,7 +102,7 @@ Specifies a deallocation option for the removal operation that this cmdlet start
 The default value is Requeue.
 
 ```yaml
-Type: ComputeNodeDeallocationOption
+Type: System.Nullable`1[Microsoft.Azure.Batch.Common.ComputeNodeDeallocationOption]
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Requeue, Terminate, TaskCompletion, RetainedData
@@ -116,7 +118,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,7 +133,7 @@ Accept wildcard characters: False
 Specifies an array of IDs of compute nodes that this cmdlet removes from the pool.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: Id
 Aliases: Id
 
@@ -146,7 +148,7 @@ Accept wildcard characters: False
 Specifies the ID of the pool that contains the compute nodes that this cmdlet removes.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Id
 Aliases: 
 
@@ -163,7 +165,7 @@ The default value is 10 minutes.
 The minimum value is 5 minutes.
 
 ```yaml
-Type: TimeSpan
+Type: System.Nullable`1[System.TimeSpan]
 Parameter Sets: (All)
 Aliases: 
 
@@ -178,7 +180,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -194,7 +196,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -205,17 +207,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BatchAccountContext
-
 Parameter 'BatchContext' accepts value of type 'BatchAccountContext' from the pipeline
 
 ### PSComputeNode
-
 Parameter 'ComputeNode' accepts value of type 'PSComputeNode' from the pipeline
 
 ## OUTPUTS

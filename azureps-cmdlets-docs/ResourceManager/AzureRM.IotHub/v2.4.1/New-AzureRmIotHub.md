@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+Module Name: AzureRM.IotHub
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/New-AzureRmIotHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/New-AzureRmIotHub.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/04e47f8329ba9e64790c974f9666dbf41de7483f
 ---
 
 # New-AzureRmIotHub
@@ -16,7 +16,8 @@ Creates a new IotHub.
 
 ```
 New-AzureRmIotHub [-ResourceGroupName] <String> [-Name] <String> [-SkuName] <PSIotHubSku> [-Units] <Int64>
- [-Location] <String> [-Properties <PSIotHubInputProperties>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Location] <String> [-Properties <PSIotHubInputProperties>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +48,7 @@ $psCloudToDeviceProperties = New-Object Microsoft.Azure.Commands.Management.IotH
 Location where the IoT hub needs to be created. 
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -62,7 +63,7 @@ Accept wildcard characters: False
 Name of the IotHub
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -77,7 +78,7 @@ Accept wildcard characters: False
 Properties of the IoT hub. 
 
 ```yaml
-Type: PSIotHubInputProperties
+Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubInputProperties
 Parameter Sets: (All)
 Aliases: 
 
@@ -92,7 +93,7 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -107,7 +108,7 @@ Accept wildcard characters: False
 Name of the sku
 
 ```yaml
-Type: PSIotHubSku
+Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubSku
 Parameter Sets: (All)
 Aliases: 
 Accepted values: F1, S1, S2, S3
@@ -123,7 +124,7 @@ Accept wildcard characters: False
 Number of units
 
 ```yaml
-Type: Int64
+Type: System.Int64
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,7 +139,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -154,13 +155,26 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

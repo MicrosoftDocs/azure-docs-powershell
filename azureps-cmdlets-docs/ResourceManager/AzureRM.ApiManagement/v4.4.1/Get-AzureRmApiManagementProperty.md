@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
+Module Name: AzureRM.ApiManagement
 ms.assetid: 894297BF-2771-4871-9E4C-8684364DAC4B
 online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/Get-AzureRmApiManagementProperty.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb28ee43cd0f4c654af9
 ---
 
 # Get-AzureRmApiManagementProperty
@@ -16,22 +16,26 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/1fa63f743120d7a7cd6cbb
 
 ### Get all properties (Default)
 ```
-Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [<CommonParameters>]
+Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Get by property ID
 ```
-Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-PropertyId <String>] [<CommonParameters>]
+Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-PropertyId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find properties containing Name
 ```
-Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Name <String>] [<CommonParameters>]
+Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Name <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### Find properties by Tag
 ```
-Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Tag <String>] [<CommonParameters>]
+Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Tag <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,9 +51,9 @@ PS C:\> Get-AzureRmApiManagementProperty -Context $Context -Name $PropertyName
 
 ### -Context
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -60,9 +64,9 @@ Accept wildcard characters: False
 
 ### -Name
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find properties containing Name
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -73,9 +77,9 @@ Accept wildcard characters: False
 
 ### -PropertyId
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Get by property ID
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -90,14 +94,27 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Find properties by Tag
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -115,3 +132,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

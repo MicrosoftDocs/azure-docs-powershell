@@ -8,7 +8,6 @@ Help Version:
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/AzureRM.RecoveryServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/AzureRM.RecoveryServices.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/0b4ecb51495cc4a808ac05ad5254511b7140362b
 ---
 
 # AzureRM.RecoveryServices Module
