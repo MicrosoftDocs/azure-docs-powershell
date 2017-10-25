@@ -1,4 +1,3 @@
-
 ---
 title: Overview of Azure PowerShell | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
@@ -11,8 +10,8 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 08/31/2017
----
 
+---
 # Overview of Azure PowerShell
 
 Azure PowerShell provides a set of cmdlets that use the [Azure Resource
