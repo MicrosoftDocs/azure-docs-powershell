@@ -24,7 +24,7 @@ The **Remove-AzureEndpoint** cmdlet deletes an endpoint from an Azure virtual ma
 
 ### Example 1: Remove an endpoint
 ```
-PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirutalMachine01" | Remove-AzureEndpoint -Name "HttpIn" | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine01" | Remove-AzureEndpoint -Name "HttpIn" | Update-AzureVM
 ```
 
 This command retrieves the configuration of a virtual machine named VirtualMachine01 by using the **Get-AzureVM** cmdlet.

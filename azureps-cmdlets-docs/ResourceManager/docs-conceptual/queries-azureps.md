@@ -44,7 +44,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 The `Select-Object` cmdlet can be used to select the specific properties that are interesting to you.
 
 ```powershell
-Get-AzureRmVM | Select-Object Name,ResourceGroupName,Location
+Get-AzureRmVM | Select Name,ResourceGroupName,Location
 ```
 
 ```
@@ -61,7 +61,7 @@ path to that nested property. The following example shows how to select the VM N
 from the `Get-AzureRmVM` cmdlet.
 
 ```powershell
-Get-AzureRmVM | Select-Object name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
+Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
 ```
@@ -77,7 +77,7 @@ The `Where-Object` cmdlet allows you to filter the result based on any property 
 following example, the filter selects only VMs that have the text "RGD" in their name.
 
 ```powershell
-Get-AzureRmVM | Where-Object ResourceGroupName -like "RGD*" | Select-Object ResourceGroupName,Name
+Get-AzureRmVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
 ```
 
 ```
@@ -90,7 +90,7 @@ RGDEMO001          KBDemo020
 With the next example, the results will return the VMs that have the vmSize 'Standard_DS1_V2'.
 
 ```powershell
-Get-AzureRmVM | Where-Object vmSize -eq 'Standard_DS1_V2'
+Get-AzureRmVM | Where vmSize -eq Standard_DS1_V2
 ```
 
 ```
