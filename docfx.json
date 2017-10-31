@@ -18,7 +18,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-1.2.9/docs-conceptual",
+                "src": "docs-conceptual/azurermps-1.2.9",
                 "version": "azurermps-1.2.9",
                 "dest": "azure"
             },
@@ -39,7 +39,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-1.7.0/docs-conceptual",
+                "src": "docs-conceptual/azurermps-1.7.0",
                 "version": "azurermps-1.7.0",
                 "dest": "azure"
             },
@@ -60,7 +60,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-2.2.0/docs-conceptual",
+                "src": "docs-conceptual/azurermps-2.2.0",
                 "version": "azurermps-2.2.0",
                 "dest": "azure"
             },
@@ -81,7 +81,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-3.7.0/docs-conceptual",
+                "src": "docs-conceptual/azurermps-3.7.0",
                 "version": "azurermps-3.7.0",
                 "dest": "azure"
             },
@@ -102,7 +102,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-3.8.0/docs-conceptual",
+                "src": "docs-conceptual/azurermps-3.8.0",
                 "version": "azurermps-3.8.0",
                 "dest": "azure"
             },
@@ -123,7 +123,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-4.4.1/docs-conceptual",
+                "src": "docs-conceptual/azurermps-4.4.1",
                 "version": "azurermps-4.4.1",
                 "dest": "azure"
             },
@@ -151,7 +151,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azuresmps-3.7.0/docs-conceptual",
+                "src": "docs-conceptual/azuresmps-3.7.0",
                 "version": "azuresmps-3.7.0",
                 "dest": "azure/servicemanagement"
             },
@@ -179,7 +179,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azuresmps-4.0.0/docs-conceptual",
+                "src": "docs-conceptual/azuresmps-4.0.0",
                 "version": "azuresmps-4.0.0",
                 "dest": "azure/servicemanagement"
             },
@@ -207,7 +207,7 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurestackps-1.2.10/docs-conceptual",
+                "src": "docs-conceptual/azurestackps-1.2.10",
                 "version": "azurestackps-1.2.10",
                 "dest": "azure/azure-stack"
             },
