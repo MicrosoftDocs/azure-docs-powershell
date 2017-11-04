@@ -187,16 +187,16 @@
                 "files": [
                     "toc.yml"
                 ],
-                "src": "azurestackps-1.2.10",
-                "version": "azurestackps-1.2.10",
+                "src": "azurestackps-1.2.11",
+                "version": "azurestackps-1.2.11",
                 "dest": "module/azure-stack"
             },
             {
                 "files": [
                     "**/*.md"
                 ],
-                "src": "azurestackps-1.2.10",
-                "version": "azurestackps-1.2.10",
+                "src": "azurestackps-1.2.11",
+                "version": "azurestackps-1.2.11",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -207,8 +207,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "docs-conceptual/azurestackps-1.2.10",
-                "version": "azurestackps-1.2.10",
+                "src": "docs-conceptual/azurestackps-1.2.11",
+                "version": "azurestackps-1.2.11",
                 "dest": "azure/azure-stack"
             },
             {
@@ -346,8 +346,8 @@
             "azurestackps-1.2.9": {
                 "dest": "azurestackps-1.2.9"
             },
-            "azurestackps-1.2.10": {
-                "dest": "azurestackps-1.2.10"
+            "azurestackps-1.2.11": {
+                "dest": "azurestackps-1.2.11"
             },
             "azureipps": {
                 "dest": "azureipps"
