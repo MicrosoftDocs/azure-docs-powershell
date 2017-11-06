@@ -34,9 +34,9 @@
         "conceptualTocUrl": "/powershell/azure/toc.json",
         "referenceTocUrl": "/powershell/module/toc.json"
     },
-    "azurestackps-1.2.10": {
-        "packageRoot": "azurestackps-1.2.10",
-        "conceptualToc":"docs-conceptual/azurestackps-1.2.10/toc.yml",
+    "azurestackps-1.2.11": {
+        "packageRoot": "azurestackps-1.2.11",
+        "conceptualToc":"docs-conceptual/azurestackps-1.2.11/toc.yml",
         "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
         "referenceTocUrl": "/powershell/module/azure-stack/toc.json"
     },
