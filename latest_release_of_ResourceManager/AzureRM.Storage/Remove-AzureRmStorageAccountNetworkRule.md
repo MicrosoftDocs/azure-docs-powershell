@@ -1,80 +1,78 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 Module Name: AzureRM.Storage
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage/add-azurermstorageaccountnetworkrule
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage/remove-azurermstorageaccountnetworkrule
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Add-AzureRmStorageAccountNetworkRule.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Add-AzureRmStorageAccountNetworkRule.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzureRmStorageAccountNetworkRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Remove-AzureRmStorageAccountNetworkRule.md
 ---
 
-# Add-AzureRmStorageAccountNetworkRule
+# Remove-AzureRmStorageAccountNetworkRule
 
 ## SYNOPSIS
- Add IpRules or VirtualNetworkRules to the NetworkRule property of a Storage Account
+Remove IpRules or VirtualNetworkRules from the NetWorkRule property of a Storage Account
 
 ## SYNTAX
 
 ### NetWorkRuleString (Default)
 ```
-Add-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
+Remove-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
  -VirtualNetworkResourceId <String[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### IpRuleObject
 ```
-Add-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String> -IPRule <PSIpRule[]>
+Remove-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String> -IPRule <PSIpRule[]>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NetworkRuleObject
 ```
-Add-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
+Remove-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
  -VirtualNetworkRule <PSVirtualNetworkRule[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### IpRuleString
 ```
-Add-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
+Remove-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
  -IPAddressOrRange <String[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-AzureRmStorageAccountNetworkRule** cmdlet adds IpRules or VirtualNetworkRules to the NetworkRule property of a Storage Account
+The **Remove-AzureRmStorageAccountNetworkRule** cmdlet removes IpRules or VirtualNetworkRules from the NetWorkRule property of a Storage Account
 
 ## EXAMPLES
 
-### Example 1: Add several IpRules with IPAddressOrRange
+### Example 1: Remove several IpRules with IPAddressOrRange
 ```
-PS C:\>Add-AzureRMStorageAccountNetworkRule -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -IPAddressOrRange "10.0.0.0/24","28.2.0.0/16"
-```
-
-This command add several IpRules with IPAddressOrRange.
-
-### Example 2: Add a VirtualNetworkRule with VirtualNetworkResourceID
-```
-PS C:\>$subnet = Get-AzureRmVirtualNetwork -ResourceGroupName "myResourceGroup" -Name "myvirtualnetwork" | Get-AzureRmVirtualNetworkSubnetConfig
-PS C:\>Add-AzureRMStorageAccountNetworkRule -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -VirtualNetworkResourceId $subnet[0].Id
+PS C:\>Remove-AzureRmStorageAccountNetworkRule -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -IPAddressOrRange "10.0.0.0/24,28.1.0.0/16"
 ```
 
-This command add a VirtualNetworkRule with VirtualNetworkResourceID.
+This command remove several IpRules with IPAddressOrRange.
 
-### Example 3: Add VirtualNetworkRules with VirtualNetworkRule Objects from another account
+### Example 2: Remove a VirtualNetworkRule with VirtualNetworkRule Object input with JSON
 ```
-PS C:\> $networkrule = Get-AzureRMStorageAccountNetworkRuleSet -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount1"
-PS C:\> Add-AzureRMStorageAccountNetworkRule -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount2" -VirtualNetworkRule $networkrule.VirtualNetworkRules
-```
-
-This command add VirtualNetworkRules with VirtualNetworkRule Objects from another account.
-
-### Example 4: Add several IpRule with IpRule objects, input with JSON
-```
-PS C:\>Add-AzureRMStorageAccountNetworkRule -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -IPRule (@{IPAddressOrRange="10.0.0.0/24";Action="allow"},@{IPAddressOrRange="28.2.0.0/16";Action="allow"})
+PS C:\>Remove-AzureRmStorageAccountNetworkRule -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -VirtualNetworkRules (@{VirtualNetworkReourceId="/subscriptions/s1/resourceGroups/g1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1";Action="allow"})
 ```
 
-This command add several IpRule with IpRule objects, input with JSON.
+This command remove a VirtualNetworkRule with VirtualNetworkRule Object input with JSON.
+
+### Example 3: Remove first IpRule with pipeline
+```
+PS C:\>(Get-AzureRmStorageAccountNetworkRuleSet -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount").IpRules[0] | Remove-AzureRmStorageAccountNetworkRule -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount"
+```
+
+This command remove first IpRule with pipeline.
+
+### Example 4: Remove several VirtualNetworkRules with VirtualNetworkResourceID
+```
+PS C:\>Remove-AzureRmStorageAccountNetworkRule -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -VirtualNetworkResourceId "/subscriptions/s1/resourceGroups/g1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1","/subscriptions/s1/resourceGroups/g1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/subnet2"
+```
+
+This command remove several VirtualNetworkRules with VirtualNetworkResourceID.
 
 ## PARAMETERS
 
@@ -94,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressOrRange
-The Array of IpAddressOrRange, add IpRules with the input IpAddressOrRange and default Action Allow to NetworkRule Property.
+The Array of IpAddressOrRange, will remove IpRule with same IpAddressOrRange from the NetWorkRule Property.
 
 ```yaml
 Type: System.String[]
@@ -109,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPRule
-The Array of IpRule objects to add to the NetworkRule Property.
+The Array of IpRule objects to remove from the NetWorkRule Property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.Storage.Models.PSIpRule[]
@@ -154,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkResourceId
-The Array of VirtualNetworkResourceId, will add VirtualNetworkRule with input VirtualNetworkResourceId and default Action Allow to NetworkRule Property.
+The Array of VirtualNetworkResourceId, will remove VirtualNetworkRule with same VirtualNetworkResourceId from the NetWorkRule Property.
 
 ```yaml
 Type: System.String[]
@@ -169,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkRule
-The Array of VirtualNetworkRule objects to add to the NetworkRule Property.
+The Array of VirtualNetworkRule objects to remove from the NetWorkRule Property.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.Storage.Models.PSVirtualNetworkRule[]

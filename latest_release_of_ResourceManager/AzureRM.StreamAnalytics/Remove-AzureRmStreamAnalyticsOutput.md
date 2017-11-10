@@ -1,34 +1,36 @@
 ---
-external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
-Module Name: AzureRM.Scheduler
-ms.assetid: BA79EDC8-BE89-4836-92EF-748D6F518886
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.scheduler/enable-azurermschedulerjobcollection
+external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
+Module Name: AzureRM.StreamAnalytics
+ms.assetid: EE41BE86-37D4-4A2B-9007-D019CD62BA9D
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.streamanalytics/remove-azurermstreamanalyticsoutput
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/Enable-AzureRmSchedulerJobCollection.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/Enable-AzureRmSchedulerJobCollection.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Remove-AzureRmStreamAnalyticsOutput.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/Remove-AzureRmStreamAnalyticsOutput.md
 ---
 
-# Enable-AzureRmSchedulerJobCollection
+# Remove-AzureRmStreamAnalyticsOutput
 
 ## SYNOPSIS
-Enables a job collection.
+Deletes an output from a Stream Analytics job.
 
 ## SYNTAX
 
 ```
-Enable-AzureRmSchedulerJobCollection -ResourceGroupName <String> -JobCollectionName <String> [-PassThru]
+Remove-AzureRmStreamAnalyticsOutput [-JobName] <String> [-Name] <String> [-ResourceGroupName] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Enable-AzureRmSchedulerJobCollection** cmdlet enables a job collection in Azure Scheduler.
+The **Remove-AzureRmStreamAnalyticsOutput** cmdlet asynchronously deletes an output from a Stream Analytics job in Azure.
 
 ## EXAMPLES
 
-### 1:
+### EXAMPLE 1: Remove an output from a job
+```
+PS C:\>Remove-AzureRmStreamAnalyticsOutput -ResourceGroupName "StreamAnalytics-Default-West-US" -JobName "StreamingJob" -Name "Output"
 ```
 
-```
+This command removes the output Output in the job StreamingJob.
 
 ## PARAMETERS
 
@@ -47,39 +49,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -JobCollectionName
-Specifies the name of a job collection.
+### -JobName
+Specifies the name of the Azure Stream Analytics job to which the Azure Stream Analytics output belongs.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: Name, ResourceName
+Aliases: 
 
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PassThru
-Indicates that this cmdlet returns a value of Success on success.
-By default, this cmdlet does not generate any output.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the resource group of the job collection.
+### -Name
+Specifies the name of the Azure Stream Analytics output to remove.
 
 ```yaml
 Type: System.String
@@ -87,7 +73,22 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the name of the resource group to which the Azure Stream Analytics output belongs.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -131,18 +132,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Disable-AzureRmSchedulerJobCollection](./Disable-AzureRmSchedulerJobCollection.md)
+[Get-AzureRmStreamAnalyticsOutput](./Get-AzureRmStreamAnalyticsOutput.md)
 
-[Get-AzureRmSchedulerJobCollection](./Get-AzureRmSchedulerJobCollection.md)
+[New-AzureRmStreamAnalyticsOutput](./New-AzureRmStreamAnalyticsOutput.md)
 
-[New-AzureRmSchedulerJobCollection](./New-AzureRmSchedulerJobCollection.md)
-
-[Remove-AzureRmSchedulerJobCollection](./Remove-AzureRmSchedulerJobCollection.md)
-
-[Set-AzureRmSchedulerJobCollection](./Set-AzureRmSchedulerJobCollection.md)
+[Test-AzureRmStreamAnalyticsOutput](./Test-AzureRmStreamAnalyticsOutput.md)
 
 
