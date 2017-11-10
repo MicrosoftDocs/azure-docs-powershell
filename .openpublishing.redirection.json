@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "docs-conceptual/index.md",
+      "redirect_url": "/powershell/azure/overview",
+      "redirect_document_id": "False"
+    },
+    {
       "source_path": "azureipps/azure/aip/index.md",
       "redirect_url": "/powershell/azure/aip/overview",
       "redirect_document_id": false
