@@ -1,0 +1,13 @@
+log/
+obj/
+_site/
+.optemp/
+_themes*/
+
+_tmp_
+*.stackdump
+
+.openpublishing.buildcore.ps1
+_dependentPackages/
+_themes/
+.optemp/

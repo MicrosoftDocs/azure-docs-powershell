@@ -1,0 +1,72 @@
+{
+  "build_entry_point": "docs",
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "enable_incremental_build": false,
+  "docsets_to_publish": [
+    {
+      "docset_name": "azureps",
+      "build_source_folder": ".",
+      "build_output_subfolder": "azureps",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content",
+        "AzurePSModulePage": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0,
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
+      }
+    }
+  ],
+  "notification_subscribers": [],
+  "branches_to_filter": [],
+  "skip_source_output_uploading": false,
+  "git_repository_branch_open_to_public_contributors": "master",
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "dotnet-xref",
+      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
+      "branch": "live",
+      "branch_mapping": {}
+    }
+  ],
+  "dependent_packages": [
+    {
+      "path_to_root": "_dependentPackages/azurecli.plugins",
+      "id": "opbuild.templates.azurecli",
+      "version": "latest",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    },
+    {
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest"
+    }
+  ],
+  "monikerPath": [
+    "mapping/monikerMapping.json"
+  ],
+  "need_generate_pdf_url_template": false,
+  "dest": "_site"
+}
