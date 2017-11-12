@@ -27,20 +27,26 @@ The Set-AzsUserSubscription cmdlet reassigns the currently logged user's subscri
 ```
 $subscriptionToUpdate = Get-AzsUserSubscription
 $subscriptionToUpdate.OfferId = "Abc123"
-$subscriptionToUpdate.Owner = "<username for which you want to assign the subscription. For example: tenant2@msazurestack.onmicrosoft.com>" 
 Set-AzsUserSubscription -Subscription $subscriptionToUpdate
 ```
 
-This example modifies the OfferId property of the current logged-in user's tenant subscription. The first statement gets the subscription and stores the object in the $subscriptionToUpdate variable. After the OfferId property is changed, the updated object is passed in the Subscription parameter of the Set-AzureRMTenantSubscription cmdlet.
+By using the above example, the administrator can modify the OfferId property of the currently logged-in user's subscription. 
 
 ### Example 2
+```
+$subscriptionToUpdate = Get-AzsUserSubscription
+$subscriptionToUpdate.Owner = "<username for which you want to assign the subscription. For example: tenant2@msazurestack.onmicrosoft.com>" 
+Set-AzsUserSubscription -Subscription $subscriptionToUpdate
+```
+By using the above example, the administrator can change the ownership of a user subscription. 
+
+### Example 3
 ```
 $sub = Get-AzsUserSubscription 
 $sub.State ="Disabled" 
 Set-AzsUserSubscription -Subscription $sub
 ```
-
-By running the above example, an administrator can suspend an existing user subscription.
+By using the above example, the administrator can suspend an existing user subscription.
 
 ## PARAMETERS
 
