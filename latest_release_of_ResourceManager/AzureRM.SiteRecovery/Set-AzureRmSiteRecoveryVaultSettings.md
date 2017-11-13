@@ -1,9 +1,11 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
-Module Name: AzureRM
+Module Name: AzureRM.SiteRecovery
 ms.assetid: 133668A0-0D11-4034-A743-4C0D3CE0FAF1
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.siterecovery/set-azurermsiterecoveryvaultsettings
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryVaultSettings.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/Set-AzureRmSiteRecoveryVaultSettings.md
 ---
 
 # Set-AzureRmSiteRecoveryVaultSettings
@@ -37,7 +39,7 @@ This does not apply to recovery services vaults.
 Specifies an **ARSVault** object.
 
 ```yaml
-Type: ARSVault
+Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault
 Parameter Sets: AzureRecoveryServicesVault
 Aliases: 
 
@@ -52,7 +54,7 @@ Accept wildcard characters: False
 Specifies an **ASRVault** object.
 
 ```yaml
-Type: ASRVault
+Type: Microsoft.Azure.Commands.SiteRecovery.ASRVault
 Parameter Sets: AzureSiteRecoveryVault
 Aliases: 
 
@@ -67,7 +69,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
