@@ -3,6 +3,13 @@
         "content": [
             {
                 "files": [
+                    "index.md"
+                ],
+                "src": "docs-conceptual",
+                "dest": "azure"
+            },
+            {
+                "files": [
                     "**/*.yml",
                     "**/*.md"
                 ],
