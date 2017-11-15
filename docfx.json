@@ -342,6 +342,12 @@
             },
             {
                 "files": [
+                    "media/**"
+                ],
+                "version": "azurermps-5.0.0"
+            },
+            {
+                "files": [
                     "bread/toc.json"
                 ]
             }
