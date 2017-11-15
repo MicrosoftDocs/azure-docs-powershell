@@ -9,7 +9,7 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 08/31/2017
+ms.date: 11/15/2017
 ---
 # Getting started with Azure PowerShell
 
@@ -44,7 +44,7 @@ information about the latest release, see the [release notes](./release-notes-az
 
 1. [Install Azure PowerShell](install-azurerm-ps.md).
 
-2. To verify the installation was successful, run `Get-Module AzureRM` from your
+2. To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your
    command line.
 
 ## Log in to Azure

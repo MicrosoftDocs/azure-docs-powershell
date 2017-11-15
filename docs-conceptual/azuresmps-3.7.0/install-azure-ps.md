@@ -3,6 +3,7 @@ title: Install and configure the Azure PowerShell Service Management module | Mi
 description: How to install and configure Azure PowerShell for first time use.
 services: azure
 author: sdwheeler
+ms.author: sewhee
 manager: carmonm
 ms.product: azure
 ms.service: azure-powershell
