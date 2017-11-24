@@ -54,7 +54,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 If you would prefer you can view information in a list format. The following example shows this using the`Format-List` cmdlet.
 
 ```powershell
-Get-AzureVM | Format-List Name,VmId,Location,ResourceGroupName
+Get-AzureRmVM | Format-List Name,VmId,Location,ResourceGroupName
 ```
 
 ```
