@@ -598,7 +598,7 @@
     "Remove-AzureRmVmssExtension":  "VM Scale Sets",
     "Set-AzureRmBatchApplication":  "Batch",
     "Get-AzureRmADGroupMember":  "Active Directory",
-    "Test-AzureRmDnsAvailability":  "DNS",
+    "Test-AzureRmDnsAvailability":  "Networking",
     "Get-AzureRmWebAppSlotConfigName":  "App Service",
     "Set-AzureRmSqlDatabaseDataMaskingRule":  "SQL",
     "Get-AzureRmExpressRouteCircuitRouteTableSummary":  "ExpressRoute",
