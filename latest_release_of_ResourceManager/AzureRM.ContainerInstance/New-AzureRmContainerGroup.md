@@ -16,18 +16,28 @@ Creates a container group.
 
 ### CreateContainerGroupBaseParamSet (Default)
 ```
-New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> -Image <String> [-Location <String>]
- [-OsType <String>] [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-Port <Int32>]
- [-Command <String>] [-EnvironmentVariable <Hashtable>] [-Tag <Hashtable>]
+New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-Image] <String> [-Location <String>]
+ [-OsType <String>] [-RestartPolicy <String>] [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>]
+ [-Port <Int32[]>] [-Command <String>] [-EnvironmentVariable <Hashtable>] [-Tag <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CreateContainerGroupWithRegistryParamSet
 ```
-New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> -Image <String> [-Location <String>]
- [-OsType <String>] [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-Port <Int32>]
- [-Command <String>] [-EnvironmentVariable <Hashtable>] [-RegistryServerDomain <String>]
- -RegistryCredential <PSCredential> [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-Image] <String>
+ -RegistryCredential <PSCredential> [-Location <String>] [-OsType <String>] [-RestartPolicy <String>]
+ [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-Port <Int32[]>] [-Command <String>]
+ [-EnvironmentVariable <Hashtable>] [-RegistryServerDomain <String>] [-Tag <Hashtable>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateContainerGroupWithAzureFileMountParamSet
+```
+New-AzureRmContainerGroup [-ResourceGroupName] <String> [-Name] <String> [-Image] <String>
+ -AzureFileVolumeShareName <String> -AzureFileVolumeAccountCredential <PSCredential>
+ -AzureFileVolumeMountPath <String> [-Location <String>] [-OsType <String>] [-RestartPolicy <String>]
+ [-Cpu <Int32>] [-MemoryInGB <Double>] [-IpAddressType <String>] [-Port <Int32[]>] [-Command <String>]
+ [-EnvironmentVariable <Hashtable>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -188,6 +198,51 @@ This commands creates a container group that mounts the provided Azure File shar
 
 ## PARAMETERS
 
+### -AzureFileVolumeAccountCredential
+The storage account credential of the Azure File share to mount where the username is the storage account name and the key is the storage account key.
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: CreateContainerGroupWithAzureFileMountParamSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureFileVolumeMountPath
+The mount path for the Azure File volume.
+
+```yaml
+Type: System.String
+Parameter Sets: CreateContainerGroupWithAzureFileMountParamSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureFileVolumeShareName
+The name of the Azure File share to mount.
+
+```yaml
+Type: System.String
+Parameter Sets: CreateContainerGroupWithAzureFileMountParamSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Command
 The command to run in the container.
 
@@ -258,7 +313,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -348,7 +403,7 @@ Accept wildcard characters: False
 The port(s) to open. Default: [80]
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: System.Int32[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -401,6 +456,22 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RestartPolicy
+The container restart policy. Default: Always
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Always, Never, OnFailure
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

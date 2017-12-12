@@ -40,7 +40,7 @@ Add-AzureRmAccount [-Environment <String>] -CertificateThumbprint <String> -Appl
 ```
 Add-AzureRmAccount [-Environment <String>] [-TenantId <String>] -AccessToken <String>
  [-GraphAccessToken <String>] [-KeyVaultAccessToken <String>] -AccountId <String> [-Subscription <String>]
- [-ContextName <String>] [-Force] [-Scope <ContextModificationScope>]
+ [-ContextName <String>] [-SkipValidation] [-Force] [-Scope <ContextModificationScope>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -391,6 +391,19 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipValidation
+Skip validation for access token```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: AccessTokenWithSubscriptionId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

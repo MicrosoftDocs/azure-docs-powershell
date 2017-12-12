@@ -17,9 +17,9 @@ Creates a Data Lake Analytics account.
 
 ```
 New-AzureRmDataLakeAnalyticsAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [-DefaultDataLakeStore] <String> [[-Tags] <Hashtable>] [-MaxDegreeOfParallelism <Int32>]
- [-MaxJobCount <Int32>] [-QueryStoreRetention <Int32>] [-Tier <TierType>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-DefaultDataLakeStore] <String> [[-Tags] <Hashtable>] [-MaxAnalyticsUnits <Int32>] [-MaxJobCount <Int32>]
+ [-QueryStoreRetention <Int32>] [-Tier <TierType>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,13 +82,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MaxDegreeOfParallelism
-The optional maximum supported degree of parallelism for this account. If none is specified, defaults to 30
+### -MaxAnalyticsUnits
+The optional maximum supported analytics units for this account.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
-Aliases: 
+Aliases: MaxDegreeOfParallelism
 
 Required: False
 Position: Named

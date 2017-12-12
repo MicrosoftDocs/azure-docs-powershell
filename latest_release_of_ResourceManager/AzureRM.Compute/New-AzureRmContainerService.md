@@ -16,7 +16,7 @@ Creates a container service.
 ## SYNTAX
 
 ```
-New-AzureRmContainerService [-ResourceGroupName] <String> [-Name] <String>
+New-AzureRmContainerService [-AsJob] [-ResourceGroupName] <String> [-Name] <String>
  [-ContainerService] <PSContainerService> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -44,6 +44,19 @@ The final command creates a container service for the container stored in $Conta
 The service is named csResourceGroup17.
 
 ## PARAMETERS
+
+### -AsJob
+RRun cmdlet in the background and return a Job to track progress.```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ContainerService
 Specifies a container service object that contains the properties for the new service.

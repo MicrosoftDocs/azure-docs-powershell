@@ -17,7 +17,7 @@ Modifies a Data Lake Analytics account.
 
 ```
 Set-AzureRmDataLakeAnalyticsAccount [-Name] <String> [[-Tags] <Hashtable>] [[-ResourceGroupName] <String>]
- [-MaxDegreeOfParallelism <Int32>] [-MaxJobCount <Int32>] [-QueryStoreRetention <Int32>] [-Tier <TierType>]
+ [-MaxAnalyticsUnits <Int32>] [-MaxJobCount <Int32>] [-QueryStoreRetention <Int32>] [-Tier <TierType>]
  [-FirewallState <FirewallState>] [-AllowAzureIpState <FirewallAllowAzureIpsState>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
@@ -83,13 +83,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MaxDegreeOfParallelism
-The optional maximum supported degree of parallelism to update the account with.
+### -MaxAnalyticsUnits
+The optional maximum supported analytics units to update the account with.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
-Aliases: 
+Aliases: MaxDegreeOfParallelism
 
 Required: False
 Position: Named

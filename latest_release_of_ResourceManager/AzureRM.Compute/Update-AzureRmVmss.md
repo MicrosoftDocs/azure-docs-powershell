@@ -16,7 +16,7 @@ Updates the state of a VMSS.
 ## SYNTAX
 
 ```
-Update-AzureRmVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String>
+Update-AzureRmVmss [-AsJob] [-ResourceGroupName] <String> [-VMScaleSetName] <String>
  [[-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>] [-ImageReferenceSku <String>]
  [-EnableAutomaticUpdate <Boolean>] [-ManagedDiskStorageAccountType <StorageAccountTypes>]
  [-PlanPublisher <String>] [-ProvisionVMAgent <Boolean>] [-BootDiagnosticsEnabled <Boolean>]
@@ -45,6 +45,19 @@ PS C:\> Update-AzureRmVmss -ResourceGroupName "Group001" -Name "VMSS001" -Virtua
 This command updates the state of the VMSS named VMSS001 that belongs to the resource group named Group001 to the state of a local VMSS object named LocalVMSS.
 
 ## PARAMETERS
+
+### -AsJob
+Run cmdlet in the background and return a Job to track progress.```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AutomaticOSUpgrade
 Sets whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the image becomes available.```yaml
@@ -144,6 +157,7 @@ Specify the identity for the virtual machine scale set. The acceptable values fo
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.ResourceIdentityType]
 Parameter Sets: (All)
 Aliases: 
+Accepted values: SystemAssigned
 
 Required: False
 Position: Named
@@ -252,6 +266,7 @@ Specifies the storage account type for managed disk. The acceptable values for t
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.StorageAccountTypes]
 Parameter Sets: (All)
 Aliases: 
+Accepted values: StandardLRS, PremiumLRS
 
 Required: False
 Position: Named
@@ -302,6 +317,8 @@ Accept wildcard characters: False
 ### -OsDiskCaching
 Specifies the caching mode of the operating system disk.  The acceptable values for this parameter are:
 
+- None
+
 - ReadOnly
 
 - ReadWrite
@@ -314,6 +331,7 @@ This setting affects the consistency and performance of the disk.```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.CachingTypes]
 Parameter Sets: (All)
 Aliases: 
+Accepted values: None, ReadOnly, ReadWrite
 
 Required: False
 Position: Named
@@ -517,10 +535,13 @@ Specified the mode of an upgrade to virtual machines in the scale set. The accep
 
 - Automatic
 
-- Manual```yaml
+- Manual
+
+- Rolling```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.UpgradeMode]
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Automatic, Manual, Rolling
 
 Required: False
 Position: Named

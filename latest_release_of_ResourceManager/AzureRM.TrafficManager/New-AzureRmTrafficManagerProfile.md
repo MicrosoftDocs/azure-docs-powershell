@@ -247,6 +247,7 @@ Valid values are:
 - Performance
 - Weighted
 - Priority
+- Geographic
 
 ```yaml
 Type: System.String

@@ -15,11 +15,19 @@ Sets properties for a database, or moves an existing database into an elastic po
 
 ## SYNTAX
 
+### Update
 ```
 Set-AzureRmSqlDatabase [-DatabaseName] <String> [-MaxSizeBytes <Int64>] [-Edition <DatabaseEdition>]
  [-RequestedServiceObjectiveName <String>] [-ElasticPoolName <String>] [-ReadScale <DatabaseReadScale>]
  [-Tags <Hashtable>] [-ZoneRedundant] [-ServerName] <String> [-ResourceGroupName] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Rename
+```
+Set-AzureRmSqlDatabase [-DatabaseName] <String> -NewName <String> [-ServerName] <String>
+ [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,7 +132,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition
-Parameter Sets: (All)
+Parameter Sets: Update
 Aliases: 
 Accepted values: None, Premium, Basic, Standard, DataWarehouse, Stretch, Free, PremiumRS
 
@@ -140,7 +148,7 @@ Specifies name of the elastic pool in which to move the database.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Update
 Aliases: 
 
 Required: False
@@ -157,10 +165,25 @@ See the *MaxSizeGB* parameter for acceptable values per edition.
 
 ```yaml
 Type: System.Int64
-Parameter Sets: (All)
+Parameter Sets: Update
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NewName
+The new name to rename the database to.
+
+```yaml
+Type: System.String
+Parameter Sets: Rename
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -172,7 +195,7 @@ The read scale option to assign to the Azure SQL Database.(Enabled/Disabled)
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseReadScale
-Parameter Sets: (All)
+Parameter Sets: Update
 Aliases: 
 Accepted values: Disabled, Enabled
 
@@ -190,7 +213,7 @@ in the Microsoft Developer Network Library.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Update
 Aliases: 
 
 Required: False
@@ -237,7 +260,7 @@ Key-value pairs in the form of a hash table. For example:
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: Update
 Aliases: Tag
 
 Required: False
@@ -252,7 +275,7 @@ The zone redundancy to associate with the Azure Sql Database
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Update
 Aliases: 
 
 Required: False
