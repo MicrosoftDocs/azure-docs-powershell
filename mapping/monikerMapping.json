@@ -1,8 +1,8 @@
 {
-   "azurermps-5.0.0": {
-      "serviceMap": "mapping/rm-groupMapping-5.0.0.json",
-      "packageRoot": "azurermps-5.0.0",
-      "conceptualToc":"docs-conceptual/azurermps-5.0.0/toc.yml",
+   "azurermps-5.1.1": {
+      "serviceMap": "mapping/rm-groupMapping-5.1.1.json",
+      "packageRoot": "azurermps-5.1.1",
+      "conceptualToc":"docs-conceptual/azurermps-5.1.1/toc.yml",
       "conceptualTocUrl": "/powershell/azure/toc.json",
       "referenceTocUrl": "/powershell/module/toc.json"
     },
