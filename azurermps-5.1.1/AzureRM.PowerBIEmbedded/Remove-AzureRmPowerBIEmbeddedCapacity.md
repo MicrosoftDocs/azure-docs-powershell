@@ -65,7 +65,7 @@ Name of the Azure resource group to which the capacity belongs
 ```yaml
 Type: System.String
 Parameter Sets: ByNameAndResourceGroup
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,7 +80,7 @@ Name of the PowerBI Embedded Capacity
 ```yaml
 Type: System.String
 Parameter Sets: ByNameAndResourceGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -95,7 +95,7 @@ Azure resource ID
 ```yaml
 Type: System.String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -110,7 +110,7 @@ Input object for Piping
 ```yaml
 Type: Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity
 Parameter Sets: ByInputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -125,7 +125,7 @@ Will return the deleted capacity details if the operation completes successfully
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
