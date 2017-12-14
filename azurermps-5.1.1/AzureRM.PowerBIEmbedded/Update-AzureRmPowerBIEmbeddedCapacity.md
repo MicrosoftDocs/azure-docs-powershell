@@ -3,7 +3,6 @@ Download Help Link: None_Azure
 external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
 Help Version: 0.0.1.0
 Locale: en-US
-Module Guid: acace26c-1775-4100-85c0-20c4d71eaa22
 Module Name: AzureRM.PowerBIEmbedded
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Update-AzureRmPowerBIEmbeddedCapacity.md
@@ -68,7 +67,7 @@ Name of the PowerBI Embedded Capacity
 ```yaml
 Type: System.String
 Parameter Sets: ByNameAndResourceGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -83,7 +82,7 @@ Name of the Azure resource group to which the capacity belongs
 ```yaml
 Type: System.String
 Parameter Sets: ByNameAndResourceGroup
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +97,7 @@ The name of the Sku for the capacity.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: A1, A2, A3, A4, A5, A6
 
 Required: False
@@ -114,7 +113,7 @@ Key-value pairs in the form of a hash table set as tags on the capacity.
 ```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +128,7 @@ A comma separated capacity names to set as administrator on the capacity
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +143,7 @@ PowerBI Embedded Capacity ResourceID.
 ```yaml
 Type: System.String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -159,7 +158,7 @@ Input object for Piping
 ```yaml
 Type: Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity
 Parameter Sets: ByInputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -174,7 +173,7 @@ Will return the deleted capacity details if the operation completes successfully
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
