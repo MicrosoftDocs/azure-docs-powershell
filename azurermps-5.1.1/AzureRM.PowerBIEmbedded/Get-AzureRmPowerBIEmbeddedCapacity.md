@@ -3,7 +3,6 @@ Download Help Link: None_Azure
 external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
 Help Version: 0.0.1.0
 Locale: en-US
-Module Guid: acace26c-1775-4100-85c0-20c4d71eaa22
 Module Name: AzureRM.PowerBIEmbedded
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Get-AzureRmPowerBIEmbeddedCapacity.md
@@ -87,7 +86,7 @@ Name of the Azure resource group to which the capacity belongs
 ```yaml
 Type: System.String
 Parameter Sets: ByCapacityOrResourceGroupOrSubscription
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +101,7 @@ Name of the PowerBI Embedded Capacity
 ```yaml
 Type: System.String
 Parameter Sets: ByCapacityOrResourceGroupOrSubscription
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -117,7 +116,7 @@ Azure resource ID
 ```yaml
 Type: System.String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
