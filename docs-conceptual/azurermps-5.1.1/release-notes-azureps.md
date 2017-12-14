@@ -17,7 +17,7 @@ ms.date: 11/14/2017
 
 This is a list of changes made to Azure PowerShell in this release.
 
-## 2017.12.8 Version 5.1.1
+## 2017.12.08 Version 5.1.1
 * AnalysisServices
     - Change validate set of location to dynamic lookup so that all clouds are supported.
 * Automation
@@ -108,6 +108,8 @@ This is a list of changes made to Azure PowerShell in this release.
     - Removed all RemoteApp Cmdles
 * Azure.Storage
     - Upgrade to Azure Storage Client Library 8.6.0 and Azure Storage DataMovement Library 0.6.5
+
+Changes since last release: Changes since last release:  https://github.com/azure/azure-powershell/compare/v5.0.1-November2017...v5.1.1-December2017
 
 ## 2017.11.10 Version 5.0.1
 * Fixed assembly loading issue that caused some cmdlets to fail when executing in the following modules:
