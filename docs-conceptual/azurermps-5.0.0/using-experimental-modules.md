@@ -27,15 +27,11 @@ These modules can be installed side-by-side with existing Azure PowerShell modul
 names have been shortened to provide shorter names and avoid name conflicts with existing,
 non-experimental cmdlets.
 
-The experimental modules use the following naming convention:
-
-- AzureRM.Compute.Experiments
-- AzureRM.Websites.Experiments
-
-This naming convention is similar to the naming of Preview modules: `AzureRM.*.Preview`. Preview
-modules differ from experimental modules. Preview modules implement new functionality of Azure
-services that is only available as a Preview offering. Preview modules replace existing Azure
-PowerShell modules and use the same cmdlet and parameter names.
+The experimental modules use the following naming convention: `AzureRM.*.Experiments`. This naming
+convention is similar to the naming of Preview modules: `AzureRM.*.Preview`. Preview modules differ
+from experimental modules. Preview modules implement new functionality of Azure services that is
+only available as a Preview offering. Preview modules replace existing Azure PowerShell modules and
+use the same cmdlet and parameter names.
 
 ## How to install an experimental module
 
@@ -47,10 +43,10 @@ Find-Module AzureRM.*.Experiments
 ```
 
 ```Output
-Version    Name                                Repository           Description
--------    ----                                ----------           -----------
-1.0.0      AzureRM.Websites.Experiments        PSGallery            Create and deploy web applications using Azure Ap...
-1.0.25     AzureRM.Compute.Experiments         PSGallery            Azure Compute experiments for VM creation
+Version Name                         Repository Description
+------- ----                         ---------- -----------
+1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
+1.0.0   AzureRM.Websites.Experiments PSGallery  Create and deploy web applications using Azure App Services.
 ```
 
 To install the experimental module, use the following commands from an elevated PowerShell session:
@@ -131,30 +127,3 @@ automatically add an "azure" remote to an existing git repository.
 - Output Format - Azure PowerShell currently returns `PSObject`s and there is little console
   output. Azure PowerShell may need to display some information to the user regarding the "smart
   defaults" used.
-
-## Try using the experiments
-
-### Install
-
-```powershell
-Install-Module AzureRM.Compute.Experiments
-```
-
-### Create a VM
-
-```powershell
-$job = New-AzVm -Name MyVm -AsJob
-Receive-Job $job
-```
-
-### Send us feedback
-
-```powershell
-Send-Feedback
-```
-
-### Uninstall the experimental modules
-
-```powershell
-Uninstall-Module AzureRM.Compute.Experiments
-```
