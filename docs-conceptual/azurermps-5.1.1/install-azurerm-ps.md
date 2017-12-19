@@ -133,7 +133,8 @@ Service Management module](/powershell/azure/servicemanagement/install-azure-ps)
 common dependencies. If you use both the Azure and AzureRM modules, you should install the same
 version of each package.
 
-### <a id="update-azps"></a>Updating to a new version of Azure PowerShell
+### <a id="update-azps"></a>
+Updating to a new version of Azure PowerShell
 
 If you have a previous version of Azure PowerShell installed that includes the Service Management
 module, you may receive the following error:
