@@ -1,8 +1,6 @@
 {
   "build_entry_point": "docs",
   "need_generate_pdf": true,
-  "need_generate_intellisense": false,
-  "enable_incremental_build": false,
   "docsets_to_publish": [
     {
       "docset_name": "azureps",
@@ -11,7 +9,6 @@
       "locale": "en-us",
       "monikers": [],
       "open_to_public_contributors": true,
-
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -33,8 +30,10 @@
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
-  "skip_source_output_uploading": false,
   "git_repository_branch_open_to_public_contributors": "master",
+  "skip_source_output_uploading": false,
+  "enable_incremental_build": false,
+  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -49,6 +48,14 @@
       "branch_mapping": {}
     }
   ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "need_generate_pdf_url_template": true,
+  "need_generate_intellisense": false,
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
@@ -67,6 +74,5 @@
   "monikerPath": [
     "mapping/monikerMapping.json"
   ],
-  "need_generate_pdf_url_template": true,
   "dest": "_site"
 }
