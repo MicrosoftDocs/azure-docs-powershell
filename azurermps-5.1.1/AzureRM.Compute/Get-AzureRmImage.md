@@ -25,21 +25,21 @@ The **Get-AzureRmImage** cmdlet gets the properties of an image.
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> Get-AzureRmImage -ResourceGroupName 'ResourceGroup01' -ImageName 'Image01'
 ```
 
 This command gets the properties of the image named 'Image01' in the resource group 'ResourceGroup01'.
 
 ### Example 2
-```
+```powershell
 PS C:\> Get-AzureRmImage -ResourceGroupName 'ResourceGroup01'
 ```
 
 This command gets the properties of all images in the resource group 'ResourceGroup01'.
 
 ### Example 3
-```
+```powershell
 PS C:\> Get-AzureRmImage
 ```
 
@@ -48,7 +48,8 @@ This command gets the properties of all images under the subscription.
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with Azure.
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
