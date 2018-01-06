@@ -57,6 +57,7 @@ loaded using the `Import-Module` cmdlet, as follows:
 
 ```powershell
 Import-Module AzureRM.Netcore
+Import-Module AzureRM.Profile.Netcore
 ```
 
 After the import completes, you can test your newly installed and module by attempting to sign into
