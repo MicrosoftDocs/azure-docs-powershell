@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AzureSubscription
 
 ## SYNOPSIS
-Creates or changes an Azure subscription.
+Changes an Azure subscription.
 
 ## SYNTAX
 
