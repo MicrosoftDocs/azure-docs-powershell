@@ -11,6 +11,7 @@ ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
 ---
+
 # Getting started with Azure PowerShell
 
 Azure PowerShell is designed for managing and administering Azure resources from the command line,
