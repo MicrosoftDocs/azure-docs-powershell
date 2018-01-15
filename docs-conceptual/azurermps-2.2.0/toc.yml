@@ -31,7 +31,8 @@
     href: release-notes-azureps.md
     items:
     - name: Breaking changes for Azure PowerShell 2.x
-      href: migration-guide.2.0.0.md- name: Sample Scripts
+      href: migration-guide.2.0.0.md
+- name: Sample Scripts
   items:
   - name: Linux Virtual Machines
     href: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
