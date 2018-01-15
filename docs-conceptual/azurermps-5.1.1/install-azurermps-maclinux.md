@@ -38,7 +38,7 @@ To install **PowerShell 6** (beta) on Linux or macOS, you need to:
 1. Get PowerShell for the specific OS and version, from [GitHub](https://github.com/powershell/powershell#get-powershell)
 2. Follow the installation instructions
    - [Linux](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md)
-   - [macOS](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#macos-1012)
+   - [macOS](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md)
 
 ## Step 2: Install Azure PowerShell for .NET Core
 
