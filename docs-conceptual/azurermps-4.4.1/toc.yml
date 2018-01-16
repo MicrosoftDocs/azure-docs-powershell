@@ -39,6 +39,9 @@
       href: using-experimental-modules.md
   - name: Release notes
     href: release-notes-azureps.md
+    items:
+    - name: Breaking changes for Azure PowerShell 4.x
+      href: migration-guide.4.0.0.md
 - name: Sample Scripts
   items:
   - name: Linux Virtual Machines

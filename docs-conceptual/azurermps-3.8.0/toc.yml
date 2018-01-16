@@ -29,6 +29,9 @@
       href: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-powershell-sas-token
   - name: Release notes
     href: release-notes-azureps.md
+    items:
+    - name: Breaking changes for Azure PowerShell 3.x
+      href: migration-guide.3.0.0.md
 - name: Sample Scripts
   items:
   - name: Linux Virtual Machines
