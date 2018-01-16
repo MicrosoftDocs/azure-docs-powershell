@@ -37,10 +37,11 @@
     items:
     - name: Using experimental modules
       href: using-experimental-modules.md
-    - name: Running cmdlets in parallel using PowerShell jobs
-      href: using-psjobs.md
   - name: Release notes
     href: release-notes-azureps.md
+    items:
+    - name: Breaking changes for Azure PowerShell 5.x
+      href: migration-guide.5.0.0.md
 - name: Sample Scripts
   items:
   - name: Linux Virtual Machines
