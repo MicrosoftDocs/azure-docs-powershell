@@ -76,7 +76,7 @@ Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.ps
 ## Install on Windows using the MSI Package
 
 Azure PowerShell can be installed using the MSI file available from
-[GitHub](https://github.com/Azure/azure-powershell/releases/latest). If you have installed previous
+[GitHub](https://aka.ms/azps-release). If you have installed previous
 versions of Azure modules, the installer automatically removes them. The MSI package installs
 modules in `$env:ProgramFiles\WindowsPowerShell\Modules` but does not create version-specific
 folders.
