@@ -26,30 +26,11 @@ Updates an existing commitment plan resource. Note that most properties of the c
 ## EXAMPLES
 
 ### Example 1: Update a commitment plan
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Update-AzureRmMlCommitmentPlan -ResourceGroupName "MyResourceGroup" -Name "MyCommitmentPlanName" -Tags @{'MyTagKey'='MyTagValue'}
 ```
 
 ## PARAMETERS
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 Do not ask for confirmation.
@@ -142,9 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Tags for the commitment plan resource.
-
-```yaml
+Tags for the commitment plan resource.```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
@@ -178,6 +157,21 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

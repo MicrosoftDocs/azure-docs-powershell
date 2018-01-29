@@ -16,8 +16,8 @@ Sets the goal state for a network interface.
 ## SYNTAX
 
 ```
-Set-AzureRmNetworkInterface -NetworkInterface <PSNetworkInterface> [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+Set-AzureRmNetworkInterface -NetworkInterface <PSNetworkInterface> [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,11 +88,26 @@ The first command gets an existing network interface called NetworkInterface1 an
 
 ## PARAMETERS
 
+### -AsJob
+Run cmdlet in the background
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -107,9 +122,9 @@ Accept wildcard characters: False
 Specifies a **NetworkInterface** object that represents the goal state for a network interface.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Network.Models.PSNetworkInterface
+Type: PSNetworkInterface
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

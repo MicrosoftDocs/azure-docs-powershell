@@ -62,7 +62,7 @@ Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies a new description for the policy definition.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies a new display name for the policy definition.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Specifies the fully qualified resource ID for the policy definition that this cmdlet modifies.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByPolicyDefinitionId
 Aliases: ResourceId
 
@@ -146,7 +146,7 @@ The acceptable values for this parameter are:
 - Suspend
 
 ```yaml
-Type: System.Management.Automation.ActionPreference
+Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 Specifies an information variable.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 The metadata for policy definition. This can either be a path to a file name containing the metadata, or the metadata as string.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 Specifies the name of the policy definition that this cmdlet modifies.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByPolicyDefintionName
 Aliases:
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 The parameters declaration for policy definition. This can either be a path to a file name or uri containing the parameters declaration, or the parameters declaration as string.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -222,7 +222,7 @@ Specifies new policy rule for the policy definition.
 You can specify the path of a .json file or a string that contains the policy in JavaScript Object Notation (JSON) format.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

@@ -44,7 +44,7 @@ Specifies the API version that is supported by the resource Provider.
 You can specify a different version than the default version.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Specifies the ID of the resource group deployment to remove.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: RemoveByResourceGroupDeploymentId
 Aliases: DeploymentId, ResourceId
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group deployment to remove.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: RemoveByResourceGroupName
 Aliases: DeploymentName
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to remove.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: RemoveByResourceGroupName
 Aliases:
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -150,7 +150,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

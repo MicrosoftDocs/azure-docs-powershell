@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.RecoveryServices.SiteRecovery
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery/start-azurermrecoveryservicesasrtestfailovercleanupjob
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Start-AzureRmRecoveryServicesAsrTestFailoverCleanupJob.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Start-AzureRmRecoveryServicesAsrTestFailoverCleanupJob.md
 ---
 
 # Start-AzureRmRecoveryServicesAsrTestFailoverCleanupJob
@@ -57,7 +55,7 @@ Job to track test failover Cleanup of an Azure Site Recovery recoveryPlan.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -72,9 +70,9 @@ Accept wildcard characters: False
 Recovery Plan to perform the test failover cleanup on.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan
+Type: ASRRecoveryPlan
 Parameter Sets: ByRPObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -87,9 +85,9 @@ Accept wildcard characters: False
 Replication Protected Item to perform the test failover cleanup on.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem
+Type: ASRReplicationProtectedItem
 Parameter Sets: ByRPIObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -103,7 +101,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -118,7 +116,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -133,9 +131,9 @@ Accept wildcard characters: False
 Resource Id of replication protected item / recovery plan for cleaningup test failover.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -148,9 +146,9 @@ Accept wildcard characters: False
 User Comment for Test Failover.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -174,3 +172,4 @@ Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedIt
 ## NOTES
 
 ## RELATED LINKS
+

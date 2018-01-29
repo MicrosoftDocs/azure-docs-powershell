@@ -15,17 +15,16 @@ Stops the VMSS or a set of virtual machines within the VMSS.
 
 ## SYNTAX
 
-### DefaultParameter (Default)
+### InvokeByDynamicParameters (Default)
 ```
-Stop-AzureRmVmss [-AsJob] [-ResourceGroupName] <String> [-VMScaleSetName] <String> [[-InstanceId] <String[]>]
- [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Stop-AzureRmVmss [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [-ResourceGroupName] <String>
+ [-VMScaleSetName] <String> [[-InstanceId] <String[]>] [-Force] [<CommonParameters>]
 ```
 
-### FriendMethod
+### InvokeByDynamicParametersForFriendMethod
 ```
-Stop-AzureRmVmss [-AsJob] [-ResourceGroupName] <String> [-VMScaleSetName] <String> [[-InstanceId] <String[]>]
- [-Force] [-StayProvisioned] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Stop-AzureRmVmss [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [-ResourceGroupName] <String>
+ [-VMScaleSetName] <String> [[-InstanceId] <String[]>] [-Force] [-StayProvisioned] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,32 +49,6 @@ This command stops a specific set of virtual machines specified by the instance 
 
 ## PARAMETERS
 
-### -AsJob
-Run cmdlet in the background and return a Job to track progress.```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 Forces the command to run without asking for user confirmation.
 
@@ -85,7 +58,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -128,11 +101,11 @@ If specified, the virtual machine will enter stopped state. If not specified, th
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: FriendMethod
+Parameter Sets: InvokeByDynamicParametersForFriendMethod
 Aliases:
 
 Required: True
-Position: Named
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -175,6 +148,19 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

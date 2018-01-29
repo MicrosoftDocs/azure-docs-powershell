@@ -71,21 +71,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 Do not ask for confirmation.
 
@@ -188,21 +173,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies name-value pairs that can be used to categorize and organize Azure items.
-Tags function similar to keywords, and operate across a deployment.
-For example, if you search for all items with the tag Department:IT the search will return all the Azure items that have that tag, regardless of such things as item type, location, or resource group.
+Specifies name-value pairs that can be used to categorize and organize Azure items. Tags function similar to keywords, and operate across a deployment. For example, if you search for all items with the tag Department:IT the search will return all the Azure items that have that tag, regardless of such things as item type, location, or resource group.
 
-An individual tag consists of two parts: the *Name* and (optionally) the *Value*.
-For example, in Department:IT, the tag name is Department and the tag value is IT.
-To add a tag, use hash table syntax similar to this, which creates the tag CalendarYear:2016:
+An individual tag consists of two parts: the Name and (optionally) the Value . For example, in Department:IT, the tag name is Department and the tag value is IT. To add a tag, use hash table syntax similar to this, which creates the tag CalendarYear:2016:
 
 -Tags @{Name="CalendarYear";Value="2016"}
 
 To add multiple tags in the same command, separate the individual tags by using commas:
 
--Tag @{Name="CalendarYear";Value="2016"}, @{Name="FiscalYear";Value="2017"}
-
-```yaml
+-Tag @{Name="CalendarYear";Value="2016"}, @{Name="FiscalYear";Value="2017"}```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
@@ -236,6 +215,21 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

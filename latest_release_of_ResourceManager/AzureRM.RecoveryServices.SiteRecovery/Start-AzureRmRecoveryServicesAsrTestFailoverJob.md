@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.RecoveryServices.SiteRecovery
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery/start-azurermrecoveryservicesasrtestfailoverjob
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Start-AzureRmRecoveryServicesAsrTestFailoverJob.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Start-AzureRmRecoveryServicesAsrTestFailoverJob.md
 ---
 
 # Start-AzureRmRecoveryServicesAsrTestFailoverJob
@@ -79,9 +77,9 @@ Starts the test failover operation for the recovery plan with the specified para
 Specifies the Azure virtual network ID to connect the test fail over virtual machine(s) to.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByRPObjectWithAzureVMNetworkId, ByRPIObjectWithAzureVMNetworkId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -94,7 +92,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -109,9 +107,9 @@ Accept wildcard characters: False
 Specifies the primary certificate file.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -124,9 +122,9 @@ Accept wildcard characters: False
 Specifies the secondary certificate file.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -143,9 +141,9 @@ The acceptable values for this parameter are:
 - RecoveryToPrimary
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: PrimaryToRecovery, RecoveryToPrimary
 
 Required: True
@@ -159,9 +157,9 @@ Accept wildcard characters: False
 Specifies an ASR recovery plan object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan
+Type: ASRRecoveryPlan
 Parameter Sets: ByRPObject, ByRPObjectWithVMNetwork, ByRPObjectWithAzureVMNetworkId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -174,9 +172,9 @@ Accept wildcard characters: False
 Specifies a custom recovery point to test failover the protected machine to.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPoint
+Type: ASRRecoveryPoint
 Parameter Sets: ByRPIObject, ByRPIObjectWithVMNetwork, ByRPIObjectWithAzureVMNetworkId
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -189,9 +187,9 @@ Accept wildcard characters: False
 Specifies the recovery tag to test failover to
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByRPObject, ByRPObjectWithVMNetwork, ByRPObjectWithAzureVMNetworkId
-Aliases:
+Aliases: 
 Accepted values: Latest, LatestAvailable, LatestAvailableApplicationConsistent
 
 Required: False
@@ -205,9 +203,9 @@ Accept wildcard characters: False
 Specifies an ASR replication protected item.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem
+Type: ASRReplicationProtectedItem
 Parameter Sets: ByRPIObject, ByRPIObjectWithVMNetwork, ByRPIObjectWithAzureVMNetworkId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -220,9 +218,9 @@ Accept wildcard characters: False
 Specifies the Site Recovery virtual machine network to connect the test failover virtual machine(s) to.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRNetwork
+Type: ASRNetwork
 Parameter Sets: ByRPObjectWithVMNetwork, ByRPIObjectWithVMNetwork
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -235,7 +233,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -250,7 +248,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

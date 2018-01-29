@@ -46,7 +46,7 @@ Returns a list of credentials associated with the application having object id '
 The id of the application to retrieve credentials from.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ApplicationIdParameterSet
 Aliases:
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 The object id of the application to retrieve credentials from.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ApplicationObjectIdParameterSet
 Aliases:
 

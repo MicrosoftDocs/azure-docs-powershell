@@ -15,7 +15,7 @@ Modifies an API Management certificate which is configured for mutual authentica
 
 ## SYNTAX
 
-### LoadFromFile (Default)
+### Load from file (Default)
 ```
 Set-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -CertificateId <String>
  -PfxFilePath <String> -PfxPassword <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>]
@@ -74,21 +74,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PassThru
 passthru
 
@@ -126,7 +111,7 @@ This parameter is required if you do not specify the *PfxBytes* parameter.
 
 ```yaml
 Type: System.String
-Parameter Sets: LoadFromFile
+Parameter Sets: Load from file
 Aliases:
 
 Required: True
@@ -148,6 +133,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

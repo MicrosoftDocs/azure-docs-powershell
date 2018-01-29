@@ -141,7 +141,7 @@ Removes the first role assignment object which is fetched from the Get-AzureRmRo
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Role Assignment object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleAssignment
+Type: PSRoleAssignment
 Parameter Sets: RoleAssignmentParameterSet
 Aliases:
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 Azure AD ObjectId of the user, group or service principal.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: EmptyParameterSet, ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, ScopeWithObjectIdParameterSet, RoleIdWithScopeAndObjectIdParameterSet
 Aliases: Id, PrincipalId
 
@@ -187,7 +187,7 @@ The parent resource in the hierarchy(of the resource specified using ResourceNam
 Must be used in conjunction with ResourceGroupName, ResourceType and ResourceName parameters to construct a hierarchical scope in the form of a relative URI that identifies the resource.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceWithObjectIdParameterSet, ResourceWithSignInNameParameterSet, ResourceWithSPNParameterSet
 Aliases:
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 If specified, displays the deleted role assignment
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -219,7 +219,7 @@ Attempts to delete an assignment at the specified resource group scope.
 When used in conjunction with ResourceName, ResourceType and (optionally)ParentResource parameters, the command constructs a hierarchical scope in the form of a relative URI that identifies a resource.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet, ResourceWithSPNParameterSet, ResourceGroupWithSPNParameterSet
 Aliases:
 
@@ -237,7 +237,7 @@ storageaccountprod.
 Must be used in conjunction with ResourceGroupName, ResourceType and (optionally)ParentResource parameters, to construct a hierarchical scope in the form of a relative URI that identifies the resource and delete an assignment at that scope.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceWithObjectIdParameterSet, ResourceWithSignInNameParameterSet, ResourceWithSPNParameterSet
 Aliases:
 
@@ -255,7 +255,7 @@ Microsoft.Network/virtualNetworks.
 Must be used in conjunction with ResourceGroupName, ResourceName and (optionally)ParentResource parameters to construct a hierarchical scope in the form of a relative URI that identifies the resource and delete an assignment at that resource scope.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceWithObjectIdParameterSet, ResourceWithSignInNameParameterSet, ResourceWithSPNParameterSet
 Aliases:
 
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 Id of the RBAC role for which the assignment needs to be deleted.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: RoleIdWithScopeAndObjectIdParameterSet
 Aliases:
 
@@ -286,7 +286,7 @@ Name of the RBAC role for which the assignment needs to be deleted i.e.
 Reader, Contributor, Virtual Network Administrator, etc.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: EmptyParameterSet, ResourceWithObjectIdParameterSet, ResourceGroupWithObjectIdParameterSet, ScopeWithObjectIdParameterSet, ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet, ScopeWithSignInNameParameterSet, ResourceWithSPNParameterSet, ResourceGroupWithSPNParameterSet, ScopeWithSPNParameterSet
 Aliases:
 
@@ -306,7 +306,7 @@ If not specified, will attempt to delete the role at subscription level.
 If specified, it should start with "/subscriptions/{id}".
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: EmptyParameterSet, ScopeWithObjectIdParameterSet, RoleIdWithScopeAndObjectIdParameterSet, ScopeWithSignInNameParameterSet, ScopeWithSPNParameterSet
 Aliases:
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 The ServicePrincipalName of the Azure AD application
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceWithSPNParameterSet, ResourceGroupWithSPNParameterSet, ScopeWithSPNParameterSet
 Aliases: SPN
 
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 The email address or the user principal name of the user.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceWithSignInNameParameterSet, ResourceGroupWithSignInNameParameterSet, ScopeWithSignInNameParameterSet
 Aliases: Email, UserPrincipalName
 
@@ -351,7 +351,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -364,7 +364,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

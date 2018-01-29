@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
-Module Name: AzureRM.ServiceBus
+Module Name: AzureRM
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.servicebus/new-azurermservicebusqueue
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzureRmServiceBusQueue.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzureRmServiceBusQueue.md
 ---
 
 # New-AzureRmServiceBusQueue
@@ -42,9 +40,9 @@ Creates a new Service Bus queue `SB-Queue_exampl1` in the specified Service Bus 
 Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) idle interval, after which the queue is automatically deleted. The minimum duration is 5 minutes.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -57,9 +55,9 @@ Accept wildcard characters: False
 Specifies whether messages are deadlettered on expiration.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: TRUE, FALSE
 
 Required: False
@@ -73,9 +71,9 @@ Accept wildcard characters: False
 Specifies the default message time-to-live (TTL).
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -88,7 +86,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -103,9 +101,9 @@ Accept wildcard characters: False
 Specifies the duplicate detection history time window, a [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) valuethat defines the duration of the duplicate detection history. The default value is 10 minutes.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -118,9 +116,9 @@ Accept wildcard characters: False
 Specifies whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: TRUE, FALSE
 
 Required: False
@@ -134,9 +132,9 @@ Accept wildcard characters: False
 Specifies whether EnablePartitioning is enabled.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: TRUE, FALSE
 
 Required: False
@@ -150,9 +148,9 @@ Accept wildcard characters: False
 Specifies the lock duration.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -165,9 +163,9 @@ Accept wildcard characters: False
 Specifies the maximum delivery count. A message is automatically deadlettered after this number of deliveries.
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -180,9 +178,9 @@ Accept wildcard characters: False
 Specifies the maximum size of the queue in megabytes, which is the size of memory allocated for the queue.
 
 ```yaml
-Type: System.Nullable`1[System.Int64]
+Type: Int64
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -195,9 +193,9 @@ Accept wildcard characters: False
 Specifies the number of messages in the queue.
 
 ```yaml
-Type: System.Nullable`1[System.Int64]
+Type: Int64
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -210,7 +208,7 @@ Accept wildcard characters: False
 Queue Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: QueueName
 
@@ -225,7 +223,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -240,9 +238,9 @@ Accept wildcard characters: False
 Specifies whether the queue requires duplicate detection.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: TRUE, FALSE
 
 Required: False
@@ -256,9 +254,9 @@ Accept wildcard characters: False
 Specifies whether this queue supports sessions.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: TRUE, FALSE
 
 Required: False
@@ -272,7 +270,7 @@ Accept wildcard characters: False
 The name of the resource group
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: ResourceGroup
 
@@ -287,9 +285,9 @@ Accept wildcard characters: False
 The size of the queue in bytes.
 
 ```yaml
-Type: System.Nullable`1[System.Int64]
+Type: Int64
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -302,7 +300,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -318,7 +316,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -372,3 +370,4 @@ UpdatedAt                           : 1/20/2017 2:51:37 AM
 ## NOTES
 
 ## RELATED LINKS
+

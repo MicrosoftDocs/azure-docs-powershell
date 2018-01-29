@@ -47,21 +47,6 @@ This command creates a data factory named WikiADF in the resource group named AD
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 Indicates that this cmdlet replaces an existing data factory without prompting you for confirmation.
 
@@ -125,9 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies tags for the data factory.
-
-```yaml
+Specifies tags for the data factory.```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
@@ -166,6 +149,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

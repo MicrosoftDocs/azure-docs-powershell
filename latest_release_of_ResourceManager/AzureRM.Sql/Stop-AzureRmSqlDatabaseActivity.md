@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Stop-AzureRmSqlDatabaseActivity
 
 ## SYNOPSIS
-Cancels the asynchronous updateslo operation on the database.
+Cancels the asynchronous updates operation on the database.
 
 ## SYNTAX
 
@@ -22,11 +22,11 @@ Stop-AzureRmSqlDatabaseActivity [-ServerName] <String> [-ElasticPoolName <String
 ```
 
 ## DESCRIPTION
-The **Stop-AzureRmSqlDatabaseActivity** cmdlet cancels the asynchronous updateslo operation on the database.
+The **Stop-AzureRmSqlDatabaseActivity** cmdlet cancels the asynchronous updates operation on the database.
 
 ## EXAMPLES
 
-### Example 1: Cancel the asynchronous updateslo operation on the database
+### Example 1: Cancel the asynchronous updates operation on the database
 ```
 PS C:\>Stop-AzureRmSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -OperationId af97005d-9243-4f8a-844e-402d1cc855f5
 
@@ -44,7 +44,7 @@ PercentComplete :
 Properties      : Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseActivityModel+DatabaseState
 ```
 
-This command cancels the asynchronous updateslo operation on the database.
+This command cancels the asynchronous updates operation on the database.
 
 ## PARAMETERS
 
@@ -52,7 +52,7 @@ This command cancels the asynchronous updateslo operation on the database.
 Specifies the name of the database for which this cmdlet gets status.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 The name of the Azure SQL Elastic Pool.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 Specifies the ID of the operation that this cmdlet gets.
 
 ```yaml
-Type: System.Nullable`1[System.Guid]
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the database is assigned.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 Specifies the name of the Microsoft SQL Server that hosts the database.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -158,7 +158,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

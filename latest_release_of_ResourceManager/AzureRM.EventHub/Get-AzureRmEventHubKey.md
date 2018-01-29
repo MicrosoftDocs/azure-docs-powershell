@@ -14,16 +14,9 @@ Gets the primary key details of the specified Event Hubs authorization rule.
 
 ## SYNTAX
 
-### NamespaceAuthorizationRuleSet (Default)
 ```
-Get-AzureRmEventHubKey [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
-
-### EventhubAuthorizationRuleSet
-```
-Get-AzureRmEventHubKey [-ResourceGroupName] <String> [-Namespace] <String> [-EventHub] <String>
- [-Name] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmEventHubKey [-ResourceGroupName] <String> [-NamespaceName] <String> [-EventHubName] <String>
+ [-AuthorizationRuleName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,43 +33,11 @@ Gets details of Primary and Secondary connectionstrings and keys for the authori
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EventHub
-EventHub Name.
-
-```yaml
-Type: System.String
-Parameter Sets: EventhubAuthorizationRuleSet
-Aliases: EventHubName
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-AuthorizationRule Name.
-
-```yaml
+### -AuthorizationRuleName
+Event Hubs authorization rule name.```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: AuthorizationRuleName
+Aliases:
 
 Required: True
 Position: 3
@@ -85,25 +46,24 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namespace
-Namespace Name.
-
-```yaml
+### -EventHubName
+The Event Hub name.```yaml
 Type: System.String
-Parameter Sets: NamespaceAuthorizationRuleSet
-Aliases: NamespaceName
+Parameter Sets: (All)
+Aliases:
 
 Required: True
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-```yaml
+### -NamespaceName
+The Event Hubs namespace name.```yaml
 Type: System.String
-Parameter Sets: EventhubAuthorizationRuleSet
-Aliases: NamespaceName
+Parameter Sets: (All)
+Aliases:
 
 Required: True
 Position: 1
@@ -124,6 +84,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -47,7 +47,7 @@ This command retrieves user defined rule named "rdp-rule" from Azure network sec
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -62,9 +62,9 @@ Accept wildcard characters: False
 Indicates whether this cmdlet gets a user-created rule configuration or a default rule configuration.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -77,9 +77,9 @@ Accept wildcard characters: False
 Specifies the name of the network security rule configuration to get.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -92,9 +92,9 @@ Accept wildcard characters: False
 Specifies a **NetworkSecurityGroup** object that contains the network security rule configuration to get.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup
+Type: PSNetworkSecurityGroup
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

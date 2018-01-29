@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: EAFB9C98-000C-4EAC-A32D-6B0F1939AA2F
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/get-azurermmetric
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetric.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetric.md
 ---
 
 # Get-AzureRmMetric
@@ -17,13 +15,13 @@ Gets the metric values of a resource.
 
 ### GetWithDefaultParameters
 ```
-Get-AzureRmMetric [-ResourceId] <String> [[-MetricName] <String[]>] [-DetailedOutput]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmMetric [-ResourceId] <String> [-TimeGrain <TimeSpan>] [-StartTime <DateTime>] [-EndTime <DateTime>]
+ [[-MetricName] <String[]>] [-DetailedOutput] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### GetWithFullParameters
 ```
-Get-AzureRmMetric [-ResourceId] <String> [[-TimeGrain] <TimeSpan>] [-AggregationType <AggregationType>]
+Get-AzureRmMetric [-ResourceId] <String> [-TimeGrain <TimeSpan>] [-AggregationType <AggregationType>]
  [-StartTime <DateTime>] [-EndTime <DateTime>] [-MetricName] <String[]> [-DetailedOutput]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
@@ -167,9 +165,9 @@ This command gets detailed output for the Requests metric.
 The aggregation type of the query
 
 ```yaml
-Type: System.Nullable`1[Microsoft.Azure.Management.Monitor.Models.AggregationType]
+Type: AggregationType
 Parameter Sets: GetWithFullParameters
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -182,7 +180,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -198,9 +196,9 @@ Indicates that this cmdlet displays detailed output.
 By default, output is summarized.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -214,9 +212,9 @@ Specifies the end time of the query in local time.
 The default is the current time.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: GetWithFullParameters
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -229,11 +227,11 @@ Accept wildcard characters: False
 Specifies an array of names of metrics.
 
 ```yaml
-Type: System.String[]
-Parameter Sets: GetWithDefaultParameters
+Type: String[]
+Parameter Sets: (All)
 Aliases: MetricNames
 
-Required: False
+Required: False (GetWithDefaultParameters), True (GetAzureRmAMetricFullParamGroup)
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -241,12 +239,12 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: GetWithFullParameters
-Aliases: MetricNames
+Aliases: 
 
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -256,9 +254,9 @@ Accept wildcard characters: False
 Specifies the resource ID of the metric.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -272,9 +270,9 @@ Specifies the start time of the query in local time.
 The default is the current local time minus one hour.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: GetWithFullParameters
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -287,9 +285,9 @@ Accept wildcard characters: False
 Specifies the time grain of the metric as a **TimeSpan** object in the format hh:mm:ss.
 
 ```yaml
-Type: System.TimeSpan
+Type: TimeSpan
 Parameter Sets: GetWithFullParameters
-Aliases:
+Aliases: 
 
 Required: False
 Position: 1

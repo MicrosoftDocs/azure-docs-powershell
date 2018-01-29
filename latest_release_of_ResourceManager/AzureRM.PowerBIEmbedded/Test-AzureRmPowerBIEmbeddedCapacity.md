@@ -18,8 +18,9 @@ Tests the existence of an instance of PowerBI Embedded Capacity.
 ## SYNTAX
 
 ```
-Test-AzureRmPowerBIEmbeddedCapacity [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+Test-AzureRmPowerBIEmbeddedCapacity 
+	[-Name] <String> 
+	[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,27 +42,12 @@ This command will test if there is a capacity named testcapacity
 Name of the PowerBI Embedded Capacity
 
 ```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
+Type: String
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

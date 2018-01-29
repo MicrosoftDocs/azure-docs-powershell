@@ -15,14 +15,14 @@ Exports an API to a file.
 
 ## SYNTAX
 
-### ExportToPipeline (Default)
+### Export to pipeline (Default)
 ```
 Export-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
  -SpecificationFormat <PsApiManagementApiFormat> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
-### ExportToFile
+### Export to File
 ```
 Export-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
  -SpecificationFormat <PsApiManagementApiFormat> -SaveAs <String> [-Force] [-PassThru]
@@ -74,27 +74,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 Indicates that this operation overwrites the file of the same name if it already exists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: ExportToFile
+Parameter Sets: Export to File
 Aliases:
 
 Required: False
@@ -109,7 +94,7 @@ Indicates that this operation returns $True if the API is exported successfully,
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: ExportToFile
+Parameter Sets: Export to File
 Aliases:
 
 Required: False
@@ -124,7 +109,7 @@ Specifies the file path to which to save the exported API.
 
 ```yaml
 Type: System.String
-Parameter Sets: ExportToFile
+Parameter Sets: Export to File
 Aliases:
 
 Required: True
@@ -178,6 +163,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

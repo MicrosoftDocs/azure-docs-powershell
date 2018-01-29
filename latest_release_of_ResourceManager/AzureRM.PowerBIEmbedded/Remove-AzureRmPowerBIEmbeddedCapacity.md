@@ -17,22 +17,14 @@ Deletes an instance of PowerBI Embedded Capacity.
 
 ## SYNTAX
 
-### ByNameAndResourceGroup (Default)
 ```
-Remove-AzureRmPowerBIEmbeddedCapacity -Name <String> [-ResourceGroupName <String>] [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByResourceId
-```
-Remove-AzureRmPowerBIEmbeddedCapacity [-ResourceId] <String> [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByInputObject
-```
-Remove-AzureRmPowerBIEmbeddedCapacity [-InputObject] <PSPowerBIEmbeddedCapacity> [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmPowerBIEmbeddedCapacity 
+	[-Name] <String> 
+	[[-ResourceGroupName] <String>] 
+	[-PassThru] 
+	[-WhatIf]
+ 	[-Confirm] 
+	[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,6 +45,7 @@ Administrator          : {admin@microsoft.com}
 Sku                    : A1
 Tier                   : PBIE_Azure
 Tag                    : {}
+
 ```
 
 This command will remove the capacity named testcapacity in the resourcegroup testRG
@@ -63,14 +56,12 @@ This command will remove the capacity named testcapacity in the resourcegroup te
 Name of the Azure resource group to which the capacity belongs
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: False
-Position: Named
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -78,14 +69,12 @@ Accept wildcard characters: False
 Name of the PowerBI Embedded Capacity
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNameAndResourceGroup
-Aliases:
+Aliases: 
 
-Required: True
-Position: Named
+Required: False
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -93,9 +82,9 @@ Accept wildcard characters: False
 Azure resource ID
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -108,9 +97,9 @@ Accept wildcard characters: False
 Input object for Piping
 
 ```yaml
-Type: Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity
+Type: PSPowerBIEmbeddedCapacity
 Parameter Sets: ByInputObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -123,9 +112,9 @@ Accept wildcard characters: False
 Will return the deleted capacity details if the operation completes successfully
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -138,7 +127,7 @@ Accept wildcard characters: False
 Prompts user to confirm whether to perform the operation
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -153,22 +142,9 @@ Accept wildcard characters: False
 Describes the actions the current operation will perform without actually performing them
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

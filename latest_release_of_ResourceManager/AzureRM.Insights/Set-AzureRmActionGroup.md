@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 4A6816DB-0E46-44F0-8AE9-180B1C4AAB22
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/set-azurermactiongroup
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Set-AzureRmActionGroup.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Set-AzureRmActionGroup.md
 ---
 
 # Set-AzureRmActionGroup
@@ -60,7 +58,7 @@ The final command creates an Action Group including the two receivers.
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -75,9 +73,9 @@ Accept wildcard characters: False
 Disables the action group.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: ByPropertyName, ByResourceId
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -87,9 +85,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: ByInputObject
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -102,9 +100,9 @@ Accept wildcard characters: False
 The action group resourc
 
 ```yaml
-Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource
+Type: PSActionGroupResource
 Parameter Sets: ByInputObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -117,9 +115,9 @@ Accept wildcard characters: False
 The name of the action group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByPropertyName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -134,7 +132,7 @@ The list of receivers of the action group.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupReceiverBase]
 Parameter Sets: ByPropertyName, ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -147,9 +145,9 @@ Accept wildcard characters: False
 The resource group nam
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByPropertyName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -162,9 +160,9 @@ Accept wildcard characters: False
 The resource i
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -177,9 +175,9 @@ Accept wildcard characters: False
 The short name of the action group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByPropertyName, ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -189,9 +187,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByInputObject
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -206,7 +204,7 @@ The tags of the action group resourc
 ```yaml
 Type: System.Collections.Generic.IDictionary`2[System.String,System.String]
 Parameter Sets: ByPropertyName, ByResourceId
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -218,7 +216,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Collections.Generic.IDictionary`2[System.String,System.String]
 Parameter Sets: ByInputObject
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -231,7 +229,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -246,7 +244,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

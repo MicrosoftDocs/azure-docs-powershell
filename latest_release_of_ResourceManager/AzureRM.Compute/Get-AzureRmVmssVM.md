@@ -15,16 +15,16 @@ Gets the properties of a VMSS virtual machine.
 
 ## SYNTAX
 
-### DefaultParameter (Default)
+### InvokeByDynamicParameters (Default)
 ```
-Get-AzureRmVmssVM [[-ResourceGroupName] <String>] [[-VMScaleSetName] <String>] [[-InstanceId] <String>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmVmssVM [-DefaultProfile <IAzureContextContainer>] [[-ResourceGroupName] <String>]
+ [[-VMScaleSetName] <String>] [[-InstanceId] <String>] [<CommonParameters>]
 ```
 
-### FriendMethod
+### InvokeByDynamicParametersForFriendMethod
 ```
-Get-AzureRmVmssVM [[-ResourceGroupName] <String>] [[-VMScaleSetName] <String>] [[-InstanceId] <String>]
- [-InstanceView] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmVmssVM [-DefaultProfile <IAzureContextContainer>] [[-ResourceGroupName] <String>]
+ [[-VMScaleSetName] <String>] [[-InstanceId] <String>] [-InstanceView] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,19 +62,6 @@ The command gets the instance ID stored in the variable $ID for which to get the
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstanceId
 Specifies the instance ID for which to get the model view.
 
@@ -95,11 +82,11 @@ Indicates that this cmdlet gets only the instance view of the virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: FriendMethod
+Parameter Sets: InvokeByDynamicParametersForFriendMethod
 Aliases:
 
 Required: True
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -132,6 +119,19 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

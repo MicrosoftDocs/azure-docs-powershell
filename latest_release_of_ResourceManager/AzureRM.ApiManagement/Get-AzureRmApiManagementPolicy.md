@@ -15,26 +15,26 @@ Gets the specified scope policy.
 
 ## SYNTAX
 
-### GetTenantLevel (Default)
+### Tenant level (Default)
 ```
 Get-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [-SaveAs <String>] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### GetProductLevel
+### Product level
 ```
 Get-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [-SaveAs <String>]
  -ProductId <String> [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### GetApiLevel
+### API level
 ```
 Get-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [-SaveAs <String>]
  -ApiId <String> [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### GetOperationLevel
+### Operation level
 ```
 Get-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-Format <String>] [-SaveAs <String>]
  -ApiId <String> -OperationId <String> [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
@@ -86,7 +86,7 @@ If you specify this parameter the cmdlet returns the API-scope policy.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetApiLevel, GetOperationLevel
+Parameter Sets: API level, Operation level
 Aliases:
 
 Required: True
@@ -108,21 +108,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -163,7 +148,7 @@ If you specify this parameter with *ApiId* the cmdlet returns operation-scope po
 
 ```yaml
 Type: System.String
-Parameter Sets: GetOperationLevel
+Parameter Sets: Operation level
 Aliases:
 
 Required: True
@@ -179,7 +164,7 @@ If you specify this parameter the cmdlet returns the product-scope policy.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetProductLevel
+Parameter Sets: Product level
 Aliases:
 
 Required: True
@@ -232,6 +217,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

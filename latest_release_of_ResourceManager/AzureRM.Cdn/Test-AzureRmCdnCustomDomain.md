@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 Module Name: AzureRM.Cdn
 ms.assetid: 8C4E824F-FB4A-4DE7-8FD9-3FDA3848F25C
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn/test-azurermcdncustomdomain
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Test-AzureRmCdnCustomDomain.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Test-AzureRmCdnCustomDomain.md
 ---
 
 # Test-AzureRmCdnCustomDomain
@@ -43,9 +41,9 @@ The **Test-AzureRmCdnCustomDomain** cmdlet checks whether a custom domain can be
 Specifies the endpoint to which you want to add the custom domain.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
+Type: PSEndpoint
 Parameter Sets: ByObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -58,9 +56,9 @@ Accept wildcard characters: False
 Specifies the host name of the custom domain.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -73,7 +71,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -88,9 +86,9 @@ Accept wildcard characters: False
 Specifies the name of the endpoint to which you want to add the custom domain.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -103,9 +101,9 @@ Accept wildcard characters: False
 Specifies the name of the profile.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -118,9 +116,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

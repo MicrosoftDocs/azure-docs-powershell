@@ -56,7 +56,7 @@ This command creates an export request for the specified database.
 Specifies the name of the SQL administrator.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 Specifies the password of the SQL administrator.
 
 ```yaml
-Type: System.Security.SecureString
+Type: SecureString
 Parameter Sets: (All)
 Aliases:
 
@@ -98,7 +98,7 @@ Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure AD admini
 This parameter is only available on SQL Database V12 servers.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Sql.ImportExport.Model.AuthenticationType
+Type: AuthenticationType
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, Sql, AdPassword
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 Specifies the name of the SQL Database.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group for the SQL Database server.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 Specifies the name of the SQL Database server.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 Specifies the access key for the storage account.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -196,7 +196,7 @@ This value uses a storage account key.
 This value uses a Shared Access Signature (SAS) key.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Sql.ImportExport.Model.StorageKeyType
+Type: StorageKeyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: StorageAccessKey, SharedAccessKey
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 Specifies the blob link, as a URL, to the .bacpac file.
 
 ```yaml
-Type: System.Uri
+Type: Uri
 Parameter Sets: (All)
 Aliases:
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -243,7 +243,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

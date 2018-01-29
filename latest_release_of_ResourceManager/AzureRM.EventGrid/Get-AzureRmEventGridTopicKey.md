@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventGrid.dll-Help.xml
 Module Name: AzureRM.EventGrid
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventgrid/get-azurermeventgridtopickey
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridTopicKey.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridTopicKey.md
 ---
 
 # Get-AzureRmEventGridTopicKey
@@ -57,7 +55,7 @@ Gets the shared access keys of Event Grid topic \`Topic1\` in resource group \`M
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -72,9 +70,9 @@ Accept wildcard characters: False
 EventGrid Topic object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
+Type: PSTopic
 Parameter Sets: TopicInputObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -87,7 +85,7 @@ Accept wildcard characters: False
 EventGrid Topic Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicNameParameterSet
 Aliases: TopicName
 
@@ -102,7 +100,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicNameParameterSet
 Aliases: ResourceGroup
 
@@ -117,9 +115,9 @@ Accept wildcard characters: False
 Resource Identifier representing the Event Grid Topic.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -142,3 +140,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

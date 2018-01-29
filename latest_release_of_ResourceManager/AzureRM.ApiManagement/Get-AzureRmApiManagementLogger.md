@@ -15,13 +15,13 @@ Gets API Management Logger objects.
 
 ## SYNTAX
 
-### GetAllLoggers (Default)
+### Get all loggers (Default)
 ```
 Get-AzureRmApiManagementLogger -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### GetByLoggerId
+### Get by logger ID
 ```
 Get-AzureRmApiManagementLogger -Context <PsApiManagementContext> -LoggerId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -65,6 +65,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -LoggerId
+Specifies the ID of the specific logger to get.
+
+```yaml
+Type: System.String
+Parameter Sets: Get by logger ID
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.
  
@@ -77,21 +92,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LoggerId
-Specifies the ID of the specific logger to get.
-
-```yaml
-Type: System.String
-Parameter Sets: GetByLoggerId
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

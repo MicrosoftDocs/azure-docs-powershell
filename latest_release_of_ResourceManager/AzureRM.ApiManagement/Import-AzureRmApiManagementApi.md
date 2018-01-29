@@ -15,7 +15,7 @@ Imports an API from a file or a URL.
 
 ## SYNTAX
 
-### ImportFromLocalFile (Default)
+### From Local File (Default)
 ```
 Import-AzureRmApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>]
  -SpecificationFormat <PsApiManagementApiFormat> -SpecificationPath <String> [-Path <String>]
@@ -23,7 +23,7 @@ Import-AzureRmApiManagementApi -Context <PsApiManagementContext> [-ApiId <String
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### ImportFromUrl
+### From URL
 ```
 Import-AzureRmApiManagementApi -Context <PsApiManagementContext> [-ApiId <String>]
  -SpecificationFormat <PsApiManagementApiFormat> -SpecificationUrl <String> [-Path <String>]
@@ -109,21 +109,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Path
 Specifies a web API path as the last part of the API's public URL.
 This URL is used by API consumers for sending requests to the web service.
@@ -164,7 +149,7 @@ Specifies the specification file path.
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportFromLocalFile
+Parameter Sets: From Local File
 Aliases:
 
 Required: True
@@ -179,7 +164,7 @@ Specifies the specification URL.
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportFromUrl
+Parameter Sets: From URL
 Aliases:
 
 Required: True
@@ -216,6 +201,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

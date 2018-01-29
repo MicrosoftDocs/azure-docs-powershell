@@ -94,9 +94,9 @@ Specifies a PSDataFactory object.
 This cmdlet gets linked services that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
+Type: PSDataFactory
 Parameter Sets: ByFactoryObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -110,9 +110,9 @@ Specifies the name of a data factory.
 This cmdlet gets linked services that belong to the data factory that this parameter specifies.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 Specifies the name of the linked service about which to get information.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryName, ByFactoryObject
 Aliases: LinkedServiceName
 
@@ -156,9 +156,9 @@ Specifies the name of an Azure resource group.
 This cmdlet gets linked services that belong to the group that this parameter specifies.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -171,9 +171,9 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

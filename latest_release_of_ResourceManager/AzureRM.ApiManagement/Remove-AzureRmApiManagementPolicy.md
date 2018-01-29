@@ -15,25 +15,25 @@ Removes the API Management policy from a specified scope.
 
 ## SYNTAX
 
-### RemoveTenantLevel (Default)
+### Tenant level (Default)
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveProductLevel
+### Product level
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ProductId <String> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveApiLevel
+### API level
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveOperationLevel
+### Operation level
 ```
 Remove-AzureRmApiManagementPolicy -Context <PsApiManagementContext> -ApiId <String> -OperationId <String>
  [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -84,7 +84,7 @@ If you specify this parameter, the cmdlet removes the API-scope policy.
 
 ```yaml
 Type: System.String
-Parameter Sets: RemoveApiLevel, RemoveOperationLevel
+Parameter Sets: API level, Operation level
 Aliases:
 
 Required: True
@@ -109,28 +109,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OperationId
 Specifies the identifier of an existing operation.
 If you specify this parameter with the *ApiId* parameter, this cmdlet removes the operation-scope policy.
 
 ```yaml
 Type: System.String
-Parameter Sets: RemoveOperationLevel
+Parameter Sets: Operation level
 Aliases:
 
 Required: True
@@ -161,7 +146,7 @@ If you specify this parameter, the cmdlet removes the product-scope policy.
 
 ```yaml
 Type: System.String
-Parameter Sets: RemoveProductLevel
+Parameter Sets: Product level
 Aliases:
 
 Required: True
@@ -198,6 +183,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

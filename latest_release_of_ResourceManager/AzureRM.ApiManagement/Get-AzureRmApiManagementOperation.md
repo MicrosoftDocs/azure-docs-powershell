@@ -15,13 +15,13 @@ Gets a list or a specified API Operation.
 
 ## SYNTAX
 
-### GetAllApiOperations (Default)
+### All API Operations (Default)
 ```
 Get-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetById
+### Find by ID
 ```
 Get-AzureRmApiManagementOperation -Context <PsApiManagementContext> -ApiId <String> -OperationId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -80,6 +80,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -OperationId
+Specifies the operation identifier.
+
+```yaml
+Type: System.String
+Parameter Sets: Find by ID
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.
  
@@ -92,21 +107,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OperationId
-Specifies the operation identifier.
-
-```yaml
-Type: System.String
-Parameter Sets: GetById
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

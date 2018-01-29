@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 Module Name: AzureRM.Cdn
 ms.assetid: 5727E2CA-0A0B-4050-9F4A-7E06758D9B53
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn/remove-azurermcdncustomdomain
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Remove-AzureRmCdnCustomDomain.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Remove-AzureRmCdnCustomDomain.md
 ---
 
 # Remove-AzureRmCdnCustomDomain
@@ -44,9 +42,9 @@ The **Remove-AzureRmCdnCustomDomain** cmdlet removes the custom domain from an A
 Specifies the custom domain that this cmdlet removes.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Cdn.Models.CustomDomain.PSCustomDomain
+Type: PSCustomDomain
 Parameter Sets: ByObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -59,9 +57,9 @@ Accept wildcard characters: False
 Specifies the resource name of the custom domain that this cmdlet removes.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -74,7 +72,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -89,9 +87,9 @@ Accept wildcard characters: False
 Specifies the name of the endpoint from which this cmdlet removes a custom domain.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -105,9 +103,9 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -120,9 +118,9 @@ Accept wildcard characters: False
 Specifies the name of the profile from which this cmdlet removes a custom domain.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -135,9 +133,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group from which this cmdlet removes a custom domain.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -150,7 +148,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -166,7 +164,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

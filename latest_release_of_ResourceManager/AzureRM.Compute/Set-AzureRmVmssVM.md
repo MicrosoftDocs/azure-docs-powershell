@@ -15,16 +15,16 @@ Modifies the state of a VMSS instance.
 
 ## SYNTAX
 
-### DefaultParameter (Default)
+### InvokeByDynamicParameters (Default)
 ```
-Set-AzureRmVmssVM [-ResourceGroupName] <String> [-VMScaleSetName] <String> [-InstanceId] <String> [-Reimage]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AzureRmVmssVM [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [-ResourceGroupName] <String>
+ [-VMScaleSetName] <String> [-InstanceId] <String> [-Reimage] [<CommonParameters>]
 ```
 
-### FriendMethod
+### InvokeByDynamicParametersForFriendMethod
 ```
-Set-AzureRmVmssVM [-ResourceGroupName] <String> [-VMScaleSetName] <String> [-InstanceId] <String> [-ReimageAll]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AzureRmVmssVM [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [-ResourceGroupName] <String>
+ [-VMScaleSetName] <String> [-InstanceId] <String> [-ReimageAll] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,19 +33,6 @@ The **Set-AzureRmVmssVM** cmdlet modifies the state of a Virtual Machine Scale S
 ## EXAMPLES
 
 ## PARAMETERS
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -InstanceId
 Specifies the ID of the VMSS instance for which this cmdlet modifies state.
@@ -67,11 +54,11 @@ Indicates that this cmdlet reimages the VMSS instance.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: DefaultParameter
+Parameter Sets: InvokeByDynamicParameters
 Aliases:
 
 Required: True
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -82,11 +69,11 @@ Indicates that the cmdlet reimages all the disks in the VMSS instance.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: FriendMethod
+Parameter Sets: InvokeByDynamicParametersForFriendMethod
 Aliases:
 
 Required: True
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -144,6 +131,19 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

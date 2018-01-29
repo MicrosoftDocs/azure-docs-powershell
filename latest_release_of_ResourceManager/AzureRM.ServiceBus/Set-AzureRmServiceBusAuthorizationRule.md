@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
-Module Name: AzureRM.ServiceBus
+Module Name: AzureRM
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.servicebus/set-azurermservicebusauthorizationrule
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzureRmServiceBusAuthorizationRule.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/Set-AzureRmServiceBusAuthorizationRule.md
 ---
 
 # Set-AzureRmServiceBusAuthorizationRule
@@ -92,7 +90,7 @@ Removes **Manage** from the access rights of the authorization rule `AuthoRule1`
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -107,7 +105,7 @@ Accept wildcard characters: False
 ServiceBus AuthorizationRule Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ServiceBus.Models.SharedAccessAuthorizationRuleAttributes
+Type: SharedAccessAuthorizationRuleAttributes
 Parameter Sets: NamespaceAuthorizationRuleSet, QueueAuthorizationRuleSet, TopicAuthorizationRuleSet
 Aliases: AuthRuleObj
 
@@ -119,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: Microsoft.Azure.Commands.ServiceBus.Models.SharedAccessAuthorizationRuleAttributes
+Type: SharedAccessAuthorizationRuleAttributes
 Parameter Sets: AuthoRuleInputObjectSet
 Aliases: AuthRuleObj
 
@@ -134,7 +132,7 @@ Accept wildcard characters: False
 AuthorizationRule Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: AuthorizationRuleName
 
@@ -149,7 +147,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: NamespaceAuthorizationRuleSet, QueueAuthorizationRuleSet, TopicAuthorizationRuleSet
 Aliases: NamespaceName
 
@@ -164,7 +162,7 @@ Accept wildcard characters: False
 Queue Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: QueueAuthorizationRuleSet
 Aliases: QueueName
 
@@ -179,9 +177,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -195,10 +193,10 @@ Rights, e.g.
 @("Listen","Send","Manage")
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: NamespaceAuthorizationRuleSet, QueueAuthorizationRuleSet, TopicAuthorizationRuleSet
-Aliases:
-Accepted values: Listen, Send, Manage, Listen, Send, Manage
+Aliases: 
+Accepted values: Listen, Send, Manage
 
 Required: False
 Position: 4
@@ -208,10 +206,10 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: AuthoRulePropertiesSet
-Aliases:
-Accepted values: Listen, Send, Manage, Listen, Send, Manage
+Aliases: 
+Accepted values: Listen, Send, Manage
 
 Required: True
 Position: 4
@@ -224,7 +222,7 @@ Accept wildcard characters: False
 Topic Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicAuthorizationRuleSet
 Aliases: TopicName
 
@@ -239,7 +237,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -255,7 +253,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -282,3 +280,4 @@ System.String[]
 ## NOTES
 
 ## RELATED LINKS
+

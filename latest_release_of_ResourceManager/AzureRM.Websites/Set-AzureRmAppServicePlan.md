@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module Name: AzureRM.Websites
+Module Name: AzureRM
 ms.assetid: 32D45795-FBCD-4157-BF45-41BD1F61782E
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/set-azurermappserviceplan
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Set-AzureRmAppServicePlan.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Set-AzureRmAppServicePlan.md
 ---
 
 # Set-AzureRmAppServicePlan
@@ -18,13 +16,14 @@ Sets an Azure App Service plan.
 ### S1
 ```
 Set-AzureRmAppServicePlan [[-AdminSiteName] <String>] [[-Tier] <String>] [[-NumberofWorkers] <Int32>]
- [[-WorkerSize] <String>] [-PerSiteScaling <Boolean>] [-ResourceGroupName] <String> [-Name] <String>
+ [[-WorkerSize] <String>] [-PerSiteScaling <Boolean>] [-ResourceGroupName] <String> [-Name] <String> [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### S2
 ```
-Set-AzureRmAppServicePlan [-AppServicePlan] <ServerFarmWithRichSku> [-DefaultProfile <IAzureContextContainer>]
+Set-AzureRmAppServicePlan [-AppServicePlan] <ServerFarmWithRichSku> [-AsJob]
+[-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
@@ -47,9 +46,9 @@ This command sets the PerSiteScaling option to true on the App Service plan name
 Admin Site Name
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: S1
-Aliases:
+Aliases: 
 
 Required: False
 Position: 2
@@ -62,9 +61,9 @@ Accept wildcard characters: False
 App Service Plan Object
 
 ```yaml
-Type: Microsoft.Azure.Management.WebSites.Models.ServerFarmWithRichSku
+Type: ServerFarmWithRichSku
 Parameter Sets: S2
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -77,7 +76,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -92,9 +91,9 @@ Accept wildcard characters: False
 App Service Plan Name
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: S1
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -107,9 +106,9 @@ Accept wildcard characters: False
 Number Of Workers
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: S1
-Aliases:
+Aliases: 
 
 Required: False
 Position: 4
@@ -122,9 +121,9 @@ Accept wildcard characters: False
 Per Site Scaling Boolean
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: S1
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -137,9 +136,9 @@ Accept wildcard characters: False
 Resource Group Name
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: S1
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -152,9 +151,9 @@ Accept wildcard characters: False
 Tier
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: S1
-Aliases:
+Aliases: 
 Accepted values: Free, Shared, Basic, Standard, Premium, PremiumV2
 
 Required: False
@@ -168,13 +167,27 @@ Accept wildcard characters: False
 Worker Size
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: S1
-Aliases:
+Aliases: 
 Accepted values: Small, Medium, Large, ExtraLarge
 
 Required: False
 Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -AsJob
+Run cmdlet in the background
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

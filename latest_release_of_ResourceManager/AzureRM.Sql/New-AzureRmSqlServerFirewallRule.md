@@ -62,7 +62,7 @@ You cannot use this parameter if you intend to use the *FirewallRuleName*, *Star
 If you want to allow Azure IPs to access the server, this parameter should be used in a separate cmdlet call that does not use the *FirewallRuleName*, *StartIpAddress*, and *EndIpAddress* parameters.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: AzureIpRuleSet
 Aliases:
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 Specifies the end value of the IP address range for this rule.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UserSpecifiedRuleSet
 Aliases:
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Specifies the name of the new firewall rule.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UserSpecifiedRuleSet
 Aliases: Name
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Specifies the name of a resource group to which the server is assigned.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -138,7 +138,7 @@ Specifies the name of a server.
 Specify the server name, not the fully qualified DNS name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Specifies the start value of the IP address range for the firewall rule.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UserSpecifiedRuleSet
 Aliases:
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -184,7 +184,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

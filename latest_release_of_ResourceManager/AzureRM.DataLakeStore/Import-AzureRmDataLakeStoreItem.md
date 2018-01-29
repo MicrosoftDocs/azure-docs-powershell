@@ -15,14 +15,14 @@ Uploads a local file or directory to a Data Lake Store.
 
 ## SYNTAX
 
-### NoDiagnosticLogging (Default)
+### No diagnostic logging (Default)
 ```
 Import-AzureRmDataLakeStoreItem [-Account] <String> [-Path] <String> [-Destination] <DataLakeStorePathInstance>
  [-Recurse] [-Resume] [-ForceBinary] [[-PerFileThreadCount] <Int32>] [[-ConcurrentFileCount] <Int32>] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### IncludeDiagnosticLogging
+### Include diagnostic logging
 ```
 Import-AzureRmDataLakeStoreItem [-Account] <String> [-Path] <String> [-Destination] <DataLakeStorePathInstance>
  [-Recurse] [-Resume] [-ForceBinary] [[-PerFileThreadCount] <Int32>] [[-ConcurrentFileCount] <Int32>] [-Force]
@@ -37,10 +37,10 @@ The **Import-AzureRmDataLakeStoreItem** cmdlet uploads a local file or directory
 
 ### Example 1: Upload a file
 ```
-PS C:\>Import-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "C:\SrcFile.csv" -Destination "/MyFiles/File.csv" -Concurrency 4
+PS C:\>Import-AzureRmDataLakeStoreItem -AccountName "ContosoADL" -Path "C:\SrcFile.csv" -Destination "/MyFiles/File.csv"
 ```
 
-This command uploads the file SrcFile.csv and adds it to the MyFiles folder in the Data Lake Store as File.csv with a concurrency of 4.
+This command uploads the file SrcFile.csv and adds it to the MyFiles folder in the Data Lake Store as File.csv.
 
 ## PARAMETERS
 
@@ -60,7 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentFileCount
-Indicates the maximum number of files to upload in parallel for a folder upload.  Default will be computed as a best effort based on folder and file size
+Specify the maximum number of files to upload in parallel for a folder upload.
+The default value is five (5).
 
 ```yaml
 Type: System.Int32
@@ -71,21 +72,6 @@ Required: False
 Position: 7
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -109,7 +95,7 @@ Optionally indicates the diagnostic log level to use to record events during the
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.LogLevel
-Parameter Sets: IncludeDiagnosticLogging
+Parameter Sets: Include diagnostic logging
 Aliases:
 Accepted values: Debug, Information, Error, None
 
@@ -125,7 +111,7 @@ Specifies the path for the diagnostic log to record events to during the file or
 
 ```yaml
 Type: System.String
-Parameter Sets: IncludeDiagnosticLogging
+Parameter Sets: Include diagnostic logging
 Aliases:
 
 Required: True
@@ -151,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceBinary
-Indicates that the file(s) being copied should be copied with no concern for new line preservation across appends.
+Indicates that this operation uploads the file as a binary file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -181,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -PerFileThreadCount
-Indicates the maximum number of threads to use per file.  Default will be computed as a best effort based on folder and file size
+Specifies the maximum number of threads to use per file.
+The default value is ten (10).
 
 ```yaml
 Type: System.Int32
@@ -211,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Resume
-Indicates that the file(s) being copied are a continuation of a previous upload. This will cause the system to attempt to resume from the last file that was not fully uploaded.
+Indicates that this operation should resume a previously canceled or failed upload.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -252,6 +239,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

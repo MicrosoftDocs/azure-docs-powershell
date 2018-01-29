@@ -64,7 +64,7 @@ This command updates the tags for the factory WikiADF to a dictionary containing
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -79,9 +79,9 @@ Accept wildcard characters: False
 The data factory object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
+Type: PSDataFactory
 Parameter Sets: ByFactoryObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 The data factory name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryName
 Aliases: DataFactoryName
 
@@ -109,9 +109,9 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -124,9 +124,9 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -139,9 +139,9 @@ Accept wildcard characters: False
 The tags of the data factory.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: 2
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -196,3 +196,4 @@ Microsoft.Azure.Management.DataFactory.Models.FactoryIdentity
 ## NOTES
 
 ## RELATED LINKS
+

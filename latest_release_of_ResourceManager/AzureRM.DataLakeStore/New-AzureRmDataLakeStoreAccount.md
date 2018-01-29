@@ -15,7 +15,7 @@ Creates a new Data Lake Store account.
 
 ## SYNTAX
 
-### UserOrSystemAssignedEncryption (Default)
+### User or System assigned encryption (Default)
 ```
 New-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
  [[-DefaultGroup] <String>] [[-Tags] <Hashtable>] [[-Encryption] <EncryptionConfigType>]
@@ -23,7 +23,7 @@ New-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-Name] <String> [
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### DisableEncryption
+### Disable Encryption
 ```
 New-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
  [[-DefaultGroup] <String>] [[-Tags] <Hashtable>] [-DisableEncryption] [-Tier <TierType>]
@@ -59,27 +59,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableEncryption
 Indicates that the account will not have any form of encryption applied to it.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: DisableEncryption
+Parameter Sets: Disable Encryption
 Aliases:
 
 Required: False
@@ -92,7 +77,7 @@ Accept wildcard characters: False
 ### -Encryption
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Store.Models.EncryptionConfigType]
-Parameter Sets: UserOrSystemAssignedEncryption
+Parameter Sets: User or System assigned encryption
 Aliases:
 Accepted values: UserManaged, ServiceManaged
 
@@ -106,7 +91,7 @@ Accept wildcard characters: False
 ### -KeyName
 ```yaml
 Type: System.String
-Parameter Sets: UserOrSystemAssignedEncryption
+Parameter Sets: User or System assigned encryption
 Aliases:
 
 Required: False
@@ -119,7 +104,7 @@ Accept wildcard characters: False
 ### -KeyVaultId
 ```yaml
 Type: System.String
-Parameter Sets: UserOrSystemAssignedEncryption
+Parameter Sets: User or System assigned encryption
 Aliases:
 
 Required: False
@@ -132,7 +117,7 @@ Accept wildcard characters: False
 ### -KeyVersion
 ```yaml
 Type: System.String
-Parameter Sets: UserOrSystemAssignedEncryption
+Parameter Sets: User or System assigned encryption
 Aliases:
 
 Required: False
@@ -191,10 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies tags as key-value pairs.
-You can use tags to identify a Data Lake Store account from other Azure resources.
-
-```yaml
+Specifies tags as key-value pairs. You can use tags to identify a Data Lake Store account from other Azure resources.```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
@@ -219,6 +201,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

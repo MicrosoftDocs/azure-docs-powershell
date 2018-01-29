@@ -15,13 +15,13 @@ Gets Stream Analytics jobs information.
 
 ## SYNTAX
 
-### ByResourceGroup
+### For stream analytics objects in the given resource group
 ```
 Get-AzureRmStreamAnalyticsJob [-ResourceGroupName] <String> [[-Name] <String>] [-NoExpand]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### BySubscription
+### For stream analytics objects in the given subscription
 ```
 Get-AzureRmStreamAnalyticsJob [-NoExpand] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
@@ -54,27 +54,12 @@ This command returns information about the Stream Analytics job StreamingJob in 
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the Azure Stream Analytics job to retrieve.
 
 ```yaml
 Type: System.String
-Parameter Sets: ByResourceGroup
+Parameter Sets: For stream analytics objects in the given resource group
 Aliases:
 
 Required: False
@@ -104,13 +89,28 @@ Specifies the name of the resource group to which the Azure Stream Analytics job
 
 ```yaml
 Type: System.String
-Parameter Sets: ByResourceGroup
+Parameter Sets: For stream analytics objects in the given resource group
 Aliases:
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

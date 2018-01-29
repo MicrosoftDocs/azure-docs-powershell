@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: B5F2388E-0136-4F8A-8577-67CE2A45671E
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/disable-azurermactivitylogalert
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Disable-AzureRmActivityLogAlert.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Disable-AzureRmActivityLogAlert.md
 ---
 
 # Disable-AzureRmActivityLogAlert
@@ -69,7 +67,7 @@ This command disables the ActivityLogAlert using the ResourceId parameter from t
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -84,9 +82,9 @@ Accept wildcard characters: False
 Sets the InputObject tags property of the call to extract the required name, resource group name, and the optional tag properties.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
+Type: PSActivityLogAlertResource
 Parameter Sets: DisableByInputObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -99,9 +97,9 @@ Accept wildcard characters: False
 The name of the activity log alert.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: DisableByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -114,9 +112,9 @@ Accept wildcard characters: False
 The name of the resource group where the alert resource is going to exist.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: DisableByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -129,9 +127,9 @@ Accept wildcard characters: False
 Sets the ResourceId tags property of the call to extract the required name, resource group name properties.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: DisableByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -144,7 +142,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -159,7 +157,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

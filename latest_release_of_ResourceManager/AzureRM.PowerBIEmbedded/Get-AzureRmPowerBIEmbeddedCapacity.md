@@ -17,16 +17,12 @@ Gets the details of a PowerBI Embedded Capacity.
 
 ## SYNTAX
 
-### ByCapacityOrResourceGroupOrSubscription (Default)
 ```
-Get-AzureRmPowerBIEmbeddedCapacity [-ResourceGroupName <String>] [[-Name] <String>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
+Get-AzureRmPowerBIEmbeddedCapacity [[-ResourceGroupName] <String>] 
+    [<CommonParameters>]
 
-### ByResourceId
-```
-Get-AzureRmPowerBIEmbeddedCapacity [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+Get-AzureRmPowerBIEmbeddedCapacity [-ResourceGroupName] <String> [-Name] <String> 
+    [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,6 +71,7 @@ Administrator          : {admin@microsoft.com}
 Sku                    : A1
 Tier                   : PBIE_Azure
 Tag                    : {}
+
 ```
 
 This command gets the Azure PowerBI Embedded Capacity named testcapacity in the resource group named testRG.
@@ -85,14 +82,12 @@ This command gets the Azure PowerBI Embedded Capacity named testcapacity in the 
 Name of the Azure resource group to which the capacity belongs
 
 ```yaml
-Type: System.String
-Parameter Sets: ByCapacityOrResourceGroupOrSubscription
-Aliases:
+Type: String
+Parameter Sets: ByResourceGroup, ByCapacity
+Aliases: 
 
 Required: False
-Position: Named
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -100,14 +95,13 @@ Accept wildcard characters: False
 Name of the PowerBI Embedded Capacity
 
 ```yaml
-Type: System.String
-Parameter Sets: ByCapacityOrResourceGroupOrSubscription
-Aliases:
+Type: String
+Parameter Sets: ByCapacity
+Aliases: 
 
-Required: False
+Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -115,27 +109,14 @@ Accept wildcard characters: False
 Azure resource ID
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -31,7 +31,7 @@ The Get-AzureRmNetworkWatcher cmdlet gets one or more Azure Network Watcher reso
 
 ## EXAMPLES
 
-### Example 1: Get a Network Watcher
+### --------------------------  Example 1: Get a Network Watcher  --------------------------
 ```
 Get-AzureRmNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroup NetworkWatcherRG
 
@@ -51,7 +51,7 @@ Gets the Network Watcher named NetworkWatcher_westcentralus in the resource grou
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 The network watcher name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Get
 Aliases: ResourceName
 
@@ -81,9 +81,9 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Get
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -93,9 +93,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: List
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
 Module Name: AzureRM.ApplicationInsights
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.applicationinsights/new-azurermapplicationinsightsapikey
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/New-AzureRmApplicationInsightsApiKey.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/New-AzureRmApplicationInsightsApiKey.md
 ---
 
 # New-AzureRmApplicationInsightsApiKey
@@ -59,9 +57,9 @@ Create application insights api key description as "testapiKey" with permissions
 Application Insights Component Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ApplicationInsights.Models.PSApplicationInsightsComponent
+Type: PSApplicationInsightsComponent
 Parameter Sets: ComponentObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -74,7 +72,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -89,7 +87,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -104,9 +102,9 @@ Accept wildcard characters: False
 Description to help identify this API key.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -119,7 +117,7 @@ Accept wildcard characters: False
 Component Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComponentNameParameterSet
 Aliases: ApplicationInsightsComponentName, ComponentName
 
@@ -134,9 +132,9 @@ Accept wildcard characters: False
 Permissions that API key allow apps to do.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: ReadTelemetry, WriteAnnotations, AuthenticateSDKControlChannel
 
 Required: True
@@ -150,9 +148,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComponentNameParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -165,9 +163,9 @@ Accept wildcard characters: False
 Application Insights Component Resource Id.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -180,7 +178,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -206,3 +204,4 @@ System.String[]
 ## NOTES
 
 ## RELATED LINKS
+

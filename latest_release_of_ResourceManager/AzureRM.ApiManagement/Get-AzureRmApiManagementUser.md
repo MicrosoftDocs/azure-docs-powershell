@@ -15,19 +15,19 @@ Gets a user or users.
 
 ## SYNTAX
 
-### GeAllUsers (Default)
+### Get all users (Default)
 ```
 Get-AzureRmApiManagementUser -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### GetByUserId
+### Get user by ID
 ```
 Get-AzureRmApiManagementUser -Context <PsApiManagementContext> [-UserId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByUser
+### Find users
 ```
 Get-AzureRmApiManagementUser -Context <PsApiManagementContext> [-FirstName <String>] [-LastName <String>]
  [-State <PsApiManagementUserState>] [-Email <String>] [-GroupId <String>]
@@ -96,21 +96,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Email
 Specifies the email address of the user.
 If this parameter is specified, this cmdlet finds a user by email.
@@ -118,7 +103,7 @@ This parameter is optional.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByUser
+Parameter Sets: Find users
 Aliases:
 
 Required: False
@@ -135,7 +120,7 @@ This parameter is optional.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByUser
+Parameter Sets: Find users
 Aliases:
 
 Required: False
@@ -152,7 +137,7 @@ This parameter is optional.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByUser
+Parameter Sets: Find users
 Aliases:
 
 Required: False
@@ -169,7 +154,7 @@ This parameter is optional.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByUser
+Parameter Sets: Find users
 Aliases:
 
 Required: False
@@ -186,7 +171,7 @@ This parameter is optional.
 
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserState]
-Parameter Sets: GetByUser
+Parameter Sets: Find users
 Aliases:
 Accepted values: Active, Blocked
 
@@ -204,13 +189,28 @@ This parameter is optional.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByUserId
+Parameter Sets: Get user by ID
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -17,22 +17,14 @@ Resumes an instance of PowerBI Embedded Capacity.
 
 ## SYNTAX
 
-### ByNameAndResourceGroup (Default)
 ```
-Resume-AzureRmPowerBIEmbeddedCapacity [-Name] <String> [-ResourceGroupName <String>] [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByResourceId
-```
-Resume-AzureRmPowerBIEmbeddedCapacity [-ResourceId] <String> [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByInputObject
-```
-Resume-AzureRmPowerBIEmbeddedCapacity [-InputObject] <PSPowerBIEmbeddedCapacity> [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Resume-AzureRmPowerBIEmbeddedCapacity 
+	[-Name] <String> 
+	[[-ResourceGroupName] <String>] 
+	[-PassThru] 
+	[-WhatIf]
+ 	[-Confirm] 
+	[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,14 +55,13 @@ This command will resume a paused capacity named testcapacity in the resourcegro
 Name of the PowerBI Embedded Capacity
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -78,14 +69,12 @@ Accept wildcard characters: False
 Name of the Azure resource group to which the capacity belongs
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: False
-Position: Named
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -93,9 +82,9 @@ Accept wildcard characters: False
 Azure resource ID
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -108,9 +97,9 @@ Accept wildcard characters: False
 Input object for Piping
 
 ```yaml
-Type: Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity
+Type: PSPowerBIEmbeddedCapacity
 Parameter Sets: ByInputObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -123,7 +112,7 @@ Accept wildcard characters: False
 Prompts user to confirm whether to perform the operation
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -138,37 +127,9 @@ Accept wildcard characters: False
 Describes the actions the current operation will perform without actually performing them
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-{{Fill PassThru Description}}
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named

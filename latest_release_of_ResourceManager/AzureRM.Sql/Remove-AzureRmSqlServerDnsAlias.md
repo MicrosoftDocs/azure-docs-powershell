@@ -16,20 +16,20 @@ Removes Azure SQL Server DNS Alias.
 
 ### Remove a Server Dns Alias from cmdlet input parameters
 ```
-Remove-AzureRmSqlServerDnsAlias -Name <String> -ServerName <String> -ResourceGroupName <String> [-Force]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmSqlServerDnsAlias -Name <String> -ServerName <String> [-ResourceGroupName] <String> [-Force]
+ [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Remove a Server Dns Alias from AzureSqlServerDnsAliasModel instance definition
 ```
-Remove-AzureRmSqlServerDnsAlias -InputObject <AzureSqlServerDnsAliasModel> [-Force]
+Remove-AzureRmSqlServerDnsAlias -InputObject <AzureSqlServerDnsAliasModel> [-Force] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Remove a Server Dns Alias from an Azure resource id
 ```
-Remove-AzureRmSqlServerDnsAlias -ResourceId <String> [-Force] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzureRmSqlServerDnsAlias -ResourceId <String> [-Force] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,11 +46,25 @@ Removes Azure SQL Server DNS Alias with the name aliasName from the server with 
 
 ## PARAMETERS
 
+### -AsJob
+Run cmdlet in the background
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -65,7 +79,7 @@ Accept wildcard characters: False
 Skip confirmation message for performing the action
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -80,7 +94,7 @@ Accept wildcard characters: False
 The Server Dns Alias object to remove
 
 ```yaml
-Type: Microsoft.Azure.Commands.Sql.ServerDnsAlias.Model.AzureSqlServerDnsAliasModel
+Type: AzureSqlServerDnsAliasModel
 Parameter Sets: Remove a Server Dns Alias from AzureSqlServerDnsAliasModel instance definition
 Aliases:
 
@@ -95,7 +109,7 @@ Accept wildcard characters: False
 Azure Sql Server Dns Alias name
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Remove a Server Dns Alias from cmdlet input parameters
 Aliases: DnsAliasName
 
@@ -110,12 +124,12 @@ Accept wildcard characters: False
 The name of the resource group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Remove a Server Dns Alias from cmdlet input parameters
 Aliases:
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -125,7 +139,7 @@ Accept wildcard characters: False
 The resource id of Server Dns Alias object to remove
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Remove a Server Dns Alias from an Azure resource id
 Aliases:
 
@@ -140,7 +154,7 @@ Accept wildcard characters: False
 The Azure Sql Server name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Remove a Server Dns Alias from cmdlet input parameters
 Aliases:
 
@@ -155,7 +169,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -171,7 +185,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

@@ -110,6 +110,18 @@ Tenant: xxxx-xxxx-xxxx-xxxx
 
 This command adds an Azure Resource Manager account to run cmdlets for the specified tenant and subscription by default.
 
+### Example 5: Add an Account Using Managed Service Identity Login
+```
+PS C:\>Add-AzureRmAccount -MSI
+Account: MSI@50342
+Environment: AzureCloud
+Subscription: yyyy-yyyy-yyyy-yyyy
+Tenant: xxxx-xxxx-xxxx-xxxx
+```
+
+This command logs in using the managed service identity of the host environment (for example, if executed on a 
+VirtualMachine with an assigned Managed Service Identity, this will allow the code to login using that assigned identity)
+
 ## PARAMETERS
 
 ### -AccessToken
@@ -396,7 +408,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipValidation
-Skip validation for access token```yaml
+Skip validation for access token
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: AccessTokenWithSubscriptionId
 Aliases:

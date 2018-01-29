@@ -14,31 +14,11 @@ Updates the specified authorization rule on an Event Hub.
 
 ## SYNTAX
 
-### NamespaceAuthorizationRuleSet (Default)
 ```
-Set-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
- [[-InputObject] <SharedAccessAuthorizationRuleAttributes>] [[-Rights] <String[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### EventhubAuthorizationRuleSet
-```
-Set-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-Namespace] <String> [-EventHub] <String>
- [-Name] <String> [[-InputObject] <SharedAccessAuthorizationRuleAttributes>] [[-Rights] <String[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AuthoRuleInputObjectSet
-```
-Set-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-Name] <String>
- [-InputObject] <SharedAccessAuthorizationRuleAttributes> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+Set-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-NamespaceName] <String>
+ [-EventHubName] <String> [-AuthRuleObj] <SharedAccessAuthorizationRuleAttributes>
+ [-AuthorizationRuleName] <String> [-Rights <String[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
-```
-
-### AuthoRulePropertiesSet
-```
-Set-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-Name] <String> [-Rights] <String[]>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,70 +35,11 @@ Updates the authorization rule \`MyAuthRuleName\` to grant Manage rights to the 
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EventHub
-EventHub Name.
-
-```yaml
-Type: System.String
-Parameter Sets: EventhubAuthorizationRuleSet
-Aliases: EventHubName
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InputObject
-{{Fill InputObject Description}}
-
-```yaml
-Type: Microsoft.Azure.Commands.EventHub.Models.SharedAccessAuthorizationRuleAttributes
-Parameter Sets: NamespaceAuthorizationRuleSet, EventhubAuthorizationRuleSet
-Aliases: AuthRuleObj
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: Microsoft.Azure.Commands.EventHub.Models.SharedAccessAuthorizationRuleAttributes
-Parameter Sets: AuthoRuleInputObjectSet
-Aliases: AuthRuleObj
-
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-AuthorizationRule Name.
-
-```yaml
+### -AuthorizationRuleName
+Authorization rule name.```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: AuthorizationRuleName
+Aliases:
 
 Required: True
 Position: 3
@@ -127,25 +48,37 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namespace
-Namespace Name.
-
-```yaml
-Type: System.String
-Parameter Sets: NamespaceAuthorizationRuleSet
-Aliases: NamespaceName
+### -AuthRuleObj
+Event Hubs authorization rule object.```yaml
+Type: Microsoft.Azure.Commands.EventHub.Models.SharedAccessAuthorizationRuleAttributes
+Parameter Sets: (All)
+Aliases:
 
 Required: True
-Position: 1
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EventHubName
+The Event Hub name.```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-```yaml
+### -NamespaceName
+The Event Hubs namespace name.```yaml
 Type: System.String
-Parameter Sets: EventhubAuthorizationRuleSet
-Aliases: NamespaceName
+Parameter Sets: (All)
+Aliases:
 
 Required: True
 Position: 1
@@ -175,25 +108,11 @@ Rights; for example, @("Listen","Send","Manage")
 
 ```yaml
 Type: System.String[]
-Parameter Sets: NamespaceAuthorizationRuleSet, EventhubAuthorizationRuleSet
+Parameter Sets: (All)
 Aliases:
-Accepted values: Listen, Send, Manage, Listen, Send, Manage
 
 Required: False
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: System.String[]
-Parameter Sets: AuthoRulePropertiesSet
-Aliases:
-Accepted values: Listen, Send, Manage, Listen, Send, Manage
-
-Required: True
-Position: 4
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -226,6 +145,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

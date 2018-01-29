@@ -14,12 +14,12 @@ Imports a JSON object into a web service definition.
 
 ## SYNTAX
 
-### ImportFromJSONFile
+### Import from JSON file.
 ```
 Import-AzureRmMlWebService -InputFile <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### ImportFromJSONString.
+### Import from JSON string.
 ```
 Import-AzureRmMlWebService -JsonString <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
@@ -30,45 +30,23 @@ The Import-AzureRmMlWebService cmdlet imports , specified either directly or in 
 ## EXAMPLES
 
 ### Example 1: Import from string
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Import-AzureRmMlWebService -JsonString $jsonDefinition
 ```
 
 ### Example 2: Import from file path
-@{paragraph=PS C:\\\>}
-
-
 ```
 Import-AzureRmMlWebService -InputFile "C:\mlservice.json"
 ```
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InputFile
 The path to the file containing the web service definition to import.
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportFromJSONFile
+Parameter Sets: Import from JSON file.
 Aliases:
 
 Required: True
@@ -83,10 +61,25 @@ The JSON formatted string containing the web service definition to import.
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportFromJSONString.
+Parameter Sets: Import from JSON string.
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

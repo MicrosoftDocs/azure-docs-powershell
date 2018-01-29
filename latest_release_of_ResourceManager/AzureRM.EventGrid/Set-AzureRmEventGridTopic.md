@@ -1,16 +1,14 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventGrid.dll-Help.xml
 Module Name: AzureRM.EventGrid
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventgrid/set-azurermeventgridtopic
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Set-AzureRmEventGridTopic.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Set-AzureRmEventGridTopic.md
 ---
 
 # Set-AzureRmEventGridTopic
 
 ## SYNOPSIS
-Set the properties of an Event Grid topic.
+Sets the properties of an Event Grid topic.
 
 ## SYNTAX
 
@@ -33,7 +31,7 @@ Set-AzureRmEventGridTopic [-InputObject] <PSTopic> [-Tag] <Hashtable>
 ```
 
 ## DESCRIPTION
-Set the properties of an Event Grid topic. This can be used to replace the tags of an Event Grid topic.
+Sets the properties of an Event Grid topic. This can be used to replace the tags of an Event Grid topic.
 
 ## EXAMPLES
 
@@ -50,7 +48,7 @@ Sets the properties of the Event Grid topic \`Topic1\` in resource group \`MyRes
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -65,9 +63,9 @@ Accept wildcard characters: False
 EventGrid Topic object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
+Type: PSTopic
 Parameter Sets: TopicInputObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -80,7 +78,7 @@ Accept wildcard characters: False
 EventGrid Topic Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicNameParameterSet
 Aliases: TopicName
 
@@ -95,7 +93,7 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicNameParameterSet
 Aliases: ResourceGroup
 
@@ -110,9 +108,9 @@ Accept wildcard characters: False
 EventGrid Topic ResourceID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -125,9 +123,9 @@ Accept wildcard characters: False
 Hashtables which represents resource Tag.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: TopicNameParameterSet, ResourceIdEventSubscriptionParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -137,9 +135,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: TopicInputObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -152,7 +150,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -168,7 +166,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -194,3 +192,4 @@ System.Collections.Hashtable
 ## NOTES
 
 ## RELATED LINKS
+

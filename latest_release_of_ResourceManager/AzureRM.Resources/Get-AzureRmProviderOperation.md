@@ -16,7 +16,7 @@ Gets the operations for an Azure resource provider that are securable using Azur
 ## SYNTAX
 
 ```
-Get-AzureRmProviderOperation [-OperationSearchString] <String> [-DefaultProfile <IAzureContextContainer>]
+Get-AzureRmProviderOperation [[-OperationSearchString] <String>] [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
@@ -52,7 +52,7 @@ PS C:\> Get-AzureRmProviderOperation */virtualMachines/*
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -67,13 +67,13 @@ Accept wildcard characters: False
 The operation search string (with possible wildcard (*) characters)
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: Name
 
-Required: True
+Required: False
 Position: 0
-Default value: None
+Default value: "*"
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```

@@ -16,7 +16,7 @@ Creates an Autoscale webhook.
 ## SYNTAX
 
 ```
-New-AzureRmAutoscaleWebhook [-ServiceUri] <String> [[-Property] <Hashtable>]
+New-AzureRmAutoscaleWebhook [-ServiceUri] <String> [[-Properties] <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -32,28 +32,11 @@ The **New-AzureRmAutoscaleWebhook** cmdlet creates an Autoscale webhook.
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Property
-Specifies the list of properties in the format @(property1 = 'value1',....).
-
-```yaml
+### -Properties
+Specifies the list of properties in the format @(property1 = 'value1',....).```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
-Aliases: Properties
+Aliases:
 
 Required: False
 Position: 1
@@ -74,6 +57,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

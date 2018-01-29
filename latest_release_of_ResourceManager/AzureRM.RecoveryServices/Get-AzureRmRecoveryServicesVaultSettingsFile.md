@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.RecoveryServices.ARM.dll-Help.xml
 Module Name: AzureRM.RecoveryServices
 ms.assetid: 56074606-28A6-4F91-A56C-4C8A9A31543F
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices/get-azurermrecoveryservicesvaultsettingsfile
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzureRmRecoveryServicesVaultSettingsFile.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/Get-AzureRmRecoveryServicesVaultSettingsFile.md
 ---
 
 # Get-AzureRmRecoveryServicesVaultSettingsFile
@@ -72,9 +70,9 @@ The command gets the vault credentials file for $Vault01.
 Indicates the vault credentials file is applicable to Azure Backup.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: ForBackupVaultType
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -88,9 +86,9 @@ Specifies the path to the Azure Site Recovery vault settings file.
 You can download this file from the Azure Site Recovery vault portal and store it locally.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: 2
@@ -104,9 +102,9 @@ Specifies the site friendly name.
 Use this parameter if you are downloading the vault credentials for a Hyper-V site.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ForSite
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -120,9 +118,9 @@ Specifies the site identifier.
 Use this parameter if you are downloading the vault credentials for a Hyper-V site.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ForSite
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -135,9 +133,9 @@ Accept wildcard characters: False
 Indicates the vault credentials file is applicable to Azure Site Recovery.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: ForSite, ByDefault
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -150,9 +148,9 @@ Accept wildcard characters: False
 Specifies the Azure Site Recovery vault object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault
+Type: ARSVault
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -163,7 +161,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

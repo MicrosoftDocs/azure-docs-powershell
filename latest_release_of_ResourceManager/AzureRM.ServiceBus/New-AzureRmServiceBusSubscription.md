@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
-Module Name: AzureRM.ServiceBus
+Module Name: AzureRM
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.servicebus/new-azurermservicebussubscription
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzureRmServiceBusSubscription.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceBus/Commands.ServiceBus/help/New-AzureRmServiceBusSubscription.md
 ---
 
 # New-AzureRmServiceBusSubscription
@@ -40,9 +38,9 @@ Creates	the subscription `SB-TopicSubscription-Example1` for the specified Servi
 Specifies the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) idle interval, after which the subscription is automatically deleted. The minimum duration is 5 minutes.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -55,9 +53,9 @@ Accept wildcard characters: False
 Indicates if a subscription has deadletter support when a message expires.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: TRUE, FALSE
 
 Required: False
@@ -71,9 +69,9 @@ Accept wildcard characters: False
 Timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself. For Standard = Timespan.Max and Basic = 14 dyas
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -86,7 +84,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -101,9 +99,9 @@ Accept wildcard characters: False
 Indicates whether server-side batched operations are enabled.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: TRUE, FALSE
 
 Required: False
@@ -117,9 +115,9 @@ Accept wildcard characters: False
 Specifies the lock duration time span for the subscription.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -132,9 +130,9 @@ Accept wildcard characters: False
 Specifies the number of maximum deliveries. A message is automatically deadlettered after this number of deliveries.
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -147,7 +145,7 @@ Accept wildcard characters: False
 Subscription Name
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: SubscriptionName
 
@@ -162,7 +160,7 @@ Accept wildcard characters: False
 Namespace Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: NamespaceName
 
@@ -177,9 +175,9 @@ Accept wildcard characters: False
 Specifies whether a subscription supports the concept of sessions.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: TRUE, FALSE
 
 Required: False
@@ -193,7 +191,7 @@ Accept wildcard characters: False
 The name of the resource grou.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: ResourceGroup
 
@@ -208,7 +206,7 @@ Accept wildcard characters: False
 Topic Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: TopicName
 
@@ -223,7 +221,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -239,7 +237,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -291,3 +289,4 @@ UpdatedAt                                 : 1/20/2017 3:18:54 AM
 ## NOTES
 
 ## RELATED LINKS
+

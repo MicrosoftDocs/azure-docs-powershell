@@ -15,15 +15,14 @@ Gets a Data Lake Analytics job.
 
 ## SYNTAX
 
-### GetAllInResourceGroupAndAccount (Default)
+### All In Resource Group and Account (Default)
 ```
 Get-AzureRmDataLakeAnalyticsJob [-Account] <String> [[-Name] <String>] [[-Submitter] <String>]
  [[-SubmittedAfter] <DateTimeOffset>] [[-SubmittedBefore] <DateTimeOffset>] [[-State] <JobState[]>]
- [[-Result] <JobResult[]>] [-Top <Int32>] [-PipelineId <Guid>] [-RecurrenceId <Guid>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [[-Result] <JobResult[]>] [-Top <Int32>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetBySpecificJobInformation
+### Specific JobInformation
 ```
 Get-AzureRmDataLakeAnalyticsJob [-Account] <String> [-JobId] <Guid> [[-Include] <ExtendedJobData>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -66,21 +65,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Include
 Specifies options that indicate the type of additional information to retrieve about the job.
 The acceptable values for this parameter are:
@@ -92,7 +76,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+ExtendedJobData
-Parameter Sets: GetBySpecificJobInformation
+Parameter Sets: Specific JobInformation
 Aliases:
 Accepted values: None, All, DebugInfo, Statistics
 
@@ -108,7 +92,7 @@ Specifies the ID of the job to get.
 
 ```yaml
 Type: System.Guid
-Parameter Sets: GetBySpecificJobInformation
+Parameter Sets: Specific JobInformation
 Aliases:
 
 Required: True
@@ -129,41 +113,11 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: System.String
-Parameter Sets: GetAllInResourceGroupAndAccount
+Parameter Sets: All In Resource Group and Account
 Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PipelineId
-An optional ID that indicates only jobs part of the specified pipeline should be returned.
-
-```yaml
-Type: System.Nullable`1[System.Guid]
-Parameter Sets: GetAllInResourceGroupAndAccount
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RecurrenceId
-An optional ID that indicates only jobs part of the specified recurrence should be returned.
-
-```yaml
-Type: System.Nullable`1[System.Guid]
-Parameter Sets: GetAllInResourceGroupAndAccount
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -180,7 +134,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: Microsoft.Azure.Management.DataLake.Analytics.Models.JobResult[]
-Parameter Sets: GetAllInResourceGroupAndAccount
+Parameter Sets: All In Resource Group and Account
 Aliases:
 Accepted values: None, Succeeded, Cancelled, Failed
 
@@ -207,7 +161,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: Microsoft.Azure.Management.DataLake.Analytics.Models.JobState[]
-Parameter Sets: GetAllInResourceGroupAndAccount
+Parameter Sets: All In Resource Group and Account
 Aliases:
 Accepted values: Accepted, Compiling, Ended, New, Queued, Running, Scheduling, Starting, Paused, WaitingForCapacity
 
@@ -224,7 +178,7 @@ Use this parameter to filter the job list result to jobs submitted after the spe
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
-Parameter Sets: GetAllInResourceGroupAndAccount
+Parameter Sets: All In Resource Group and Account
 Aliases:
 
 Required: False
@@ -240,7 +194,7 @@ Use this parameter to filter the job list result to jobs submitted before the sp
 
 ```yaml
 Type: System.Nullable`1[System.DateTimeOffset]
-Parameter Sets: GetAllInResourceGroupAndAccount
+Parameter Sets: All In Resource Group and Account
 Aliases:
 
 Required: False
@@ -256,7 +210,7 @@ Use this parameter to filter the job list results to jobs submitted by a specifi
 
 ```yaml
 Type: System.String
-Parameter Sets: GetAllInResourceGroupAndAccount
+Parameter Sets: All In Resource Group and Account
 Aliases:
 
 Required: False
@@ -271,13 +225,28 @@ An optional value which indicates the number of jobs to return. Default value is
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
-Parameter Sets: GetAllInResourceGroupAndAccount
+Parameter Sets: All In Resource Group and Account
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

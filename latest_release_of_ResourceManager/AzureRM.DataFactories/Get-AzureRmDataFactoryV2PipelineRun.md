@@ -70,9 +70,9 @@ This command gets details about the pipeline run with ID "61eb095a-fe23-4591-8a9
 The data factory object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
+Type: PSDataFactory
 Parameter Sets: ByFactoryObjectByRunId, ByFactoryObjectByPipeline
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -85,9 +85,9 @@ Accept wildcard characters: False
 The data factory name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryNameByPipeline
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -115,9 +115,9 @@ Accept wildcard characters: False
 The time at or after which the pipeline run was updated in ISO8601 format.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -130,9 +130,9 @@ Accept wildcard characters: False
 The time at or before which the pipeline run was updated in ISO8601 format.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -145,9 +145,9 @@ Accept wildcard characters: False
 The pipeline name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryObjectByPipeline, ByFactoryNameByPipeline
-Aliases:
+Aliases: 
 
 Required: False
 Position: 3
@@ -160,9 +160,9 @@ Accept wildcard characters: False
 The Run ID of the pipeline.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryObjectByRunId
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -175,9 +175,9 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryNameByRunId, ByFactoryNameByPipeline
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0

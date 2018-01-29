@@ -51,7 +51,7 @@ Removes a container registry replication.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -82,7 +82,7 @@ Container Registry Replication Name.
 Default to the location name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: NameResourceGroupParameterSet
 Aliases: ReplicationName, ResourceName
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 Container Registry Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: NameResourceGroupParameterSet
 Aliases: ContainerRegistryName
 
@@ -112,9 +112,9 @@ Accept wildcard characters: False
 Container Registry Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistryReplication
+Type: PSContainerRegistryReplication
 Parameter Sets: ReplicationObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -127,9 +127,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: NameResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 The container registry replication resource id
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdParameterSet
 Aliases: Id
 
@@ -158,7 +158,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -173,9 +173,9 @@ Accept wildcard characters: False
 Indicates that this cmdlet returns true if the removal was successful.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

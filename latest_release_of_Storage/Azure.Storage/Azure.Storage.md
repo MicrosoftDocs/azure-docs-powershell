@@ -1,9 +1,11 @@
-﻿---
+---
 Module Name: Azure.Storage
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: ./Azure.Storage.md
-Help Version: 
+Help Version:
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
 ---
 
 # Azure.Storage Module
@@ -49,6 +51,9 @@ Gets logging properties for Azure Storage services.
 
 ### [Get-AzureStorageServiceMetricsProperty](Get-AzureStorageServiceMetricsProperty.md)
 Gets metrics properties for the Azure Storage service.
+
+### [Get-AzureStorageServiceProperty](Get-AzureStorageServiceProperty.md)
+Gets properties for Azure Storage services.
 
 ### [Get-AzureStorageShare](Get-AzureStorageShare.md)
 Gets a list of file shares.
@@ -196,4 +201,7 @@ Stops a copy operation.
 
 ### [Stop-AzureStorageFileCopy](Stop-AzureStorageFileCopy.md)
 Stops a copy operation to the specified destination file.
+
+### [Update-AzureStorageServiceProperty](Update-AzureStorageServiceProperty.md)
+Modifies the properties for the Azure Storage service.
 

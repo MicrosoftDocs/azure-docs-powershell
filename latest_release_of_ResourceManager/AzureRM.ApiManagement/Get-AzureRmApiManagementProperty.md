@@ -14,25 +14,25 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 
 ## SYNTAX
 
-### GetAllProperties (Default)
+### Get all properties (Default)
 ```
 Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### GetByPropertyId
+### Get by property ID
 ```
 Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-PropertyId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByName
+### Find properties containing Name
 ```
 Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Name <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByTag
+### Find properties by Tag
 ```
 Get-AzureRmApiManagementProperty -Context <PsApiManagementContext> [-Tag <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -63,25 +63,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 ```yaml
 Type: System.String
-Parameter Sets: GetByName
+Parameter Sets: Find properties containing Name
 Aliases:
 
 Required: False
@@ -94,7 +79,7 @@ Accept wildcard characters: False
 ### -PropertyId
 ```yaml
 Type: System.String
-Parameter Sets: GetByPropertyId
+Parameter Sets: Get by property ID
 Aliases:
 
 Required: False
@@ -111,13 +96,28 @@ Key-value pairs in the form of a hash table. For example:
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByTag
+Parameter Sets: Find properties by Tag
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

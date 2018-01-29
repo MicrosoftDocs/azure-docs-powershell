@@ -14,13 +14,13 @@ Deletes a web service.
 
 ## SYNTAX
 
-### RemoveByNameAndResourceGroup
+### Remove an Azure ML web service resouce by name and resource group.
 ```
 Remove-AzureRmMlWebService -ResourceGroupName <String> -Name <String> [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveByObject
+### Remove an Azure ML web service specified as an object.
 ```
 Remove-AzureRmMlWebService -MlWebService <WebService> [-Force] [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -32,30 +32,11 @@ Deletes a Azure Machine Learning web service referenced by resource group and na
 ## EXAMPLES
 
 ### Example 1
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Remove-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
 ```
 
 ## PARAMETERS
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 Do not ask for confirmation.
@@ -77,7 +58,7 @@ The web service to be removed.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
-Parameter Sets: RemoveByObject
+Parameter Sets: Remove an Azure ML web service specified as an object.
 Aliases:
 
 Required: True
@@ -92,7 +73,7 @@ The name of the web service to be removed.
 
 ```yaml
 Type: System.String
-Parameter Sets: RemoveByNameAndResourceGroup
+Parameter Sets: Remove an Azure ML web service resouce by name and resource group.
 Aliases:
 
 Required: True
@@ -107,7 +88,7 @@ The resource group of the web service.
 
 ```yaml
 Type: System.String
-Parameter Sets: RemoveByNameAndResourceGroup
+Parameter Sets: Remove an Azure ML web service resouce by name and resource group.
 Aliases:
 
 Required: True
@@ -140,6 +121,21 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Get-AzureRmStorageAccountNetworkRuleSet
 
 ## SYNOPSIS
-Get the NetWorkRule property of a Storage Account
+Get the NetWorkRule property of a Storage account
 
 ## SYNTAX
 
@@ -20,24 +20,24 @@ Get-AzureRmStorageAccountNetworkRuleSet [-ResourceGroupName] <String> [-Name] <S
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmStorageAccountNetworkRuleSet** cmdlet gets the NetworkRule property of a Storage Account
+The **Get-AzureRmStorageAccountNetworkRuleSet** cmdlet gets the NetworkRule property of a Storage account
 
 ## EXAMPLES
 
-### Example 1: Get NetworkRule property of a specified storage account
+### Example 1: Get NetworkRule property of a specified Storage account
 ```
 PS C:\> Get-AzureRmStorageAccountNetworkRuleSet  -ResourceGroupName "rg1" -AccountName "mystorageaccount"
 ```
 
-This command gets NetworkRule property of a specified storage account
+This command gets NetworkRule property of a specified Storage account
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
+The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage account.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: StorageAccountName, AccountName
 
@@ -67,9 +67,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group contains the Storage account.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -92,3 +92,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

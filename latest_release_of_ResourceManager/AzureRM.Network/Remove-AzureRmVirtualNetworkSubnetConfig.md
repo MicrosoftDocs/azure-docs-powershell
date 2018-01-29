@@ -54,7 +54,7 @@ This example creates a resource group and a virtual network with two subnets. It
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -69,9 +69,9 @@ Accept wildcard characters: False
 Specifies the name of the subnet configuration to remove.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -84,9 +84,9 @@ Accept wildcard characters: False
 Specifies the **VirtualNetwork** object that contains the subnet configuration to remove.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork
+Type: PSVirtualNetwork
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

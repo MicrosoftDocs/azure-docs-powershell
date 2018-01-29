@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.MachineLearningCompute.dll-Help.xml
 Module Name: AzureRM.MachineLearningCompute
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.machinelearningcompute/test-azurermmlopclustersystemservicesupdateavailability
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearningCompute/Commands.MachineLearningCompute/help/Test-AzureRmMlOpClusterSystemServicesUpdateAvailability.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearningCompute/Commands.MachineLearningCompute/help/Test-AzureRmMlOpClusterSystemServicesUpdateAvailability.md
 ---
 
 # Test-AzureRmMlOpClusterSystemServicesUpdateAvailability
@@ -58,7 +56,7 @@ PS C:\> Find-AzureRmResource -ResourceType Microsoft.MachineLearningCompute/oper
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -73,7 +71,7 @@ Accept wildcard characters: False
 The operationalization cluster object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.MachineLearningCompute.Models.PSOperationalizationCluster
+Type: PSOperationalizationCluster
 Parameter Sets: TestByInputObject
 Aliases: Cluster
 
@@ -88,9 +86,9 @@ Accept wildcard characters: False
 The name of the operationalization cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TestByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -103,9 +101,9 @@ Accept wildcard characters: False
 The name of the resource group for the operationalization cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TestByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -118,9 +116,9 @@ Accept wildcard characters: False
 The Azure resource id for the operationalization cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TestByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -145,3 +143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

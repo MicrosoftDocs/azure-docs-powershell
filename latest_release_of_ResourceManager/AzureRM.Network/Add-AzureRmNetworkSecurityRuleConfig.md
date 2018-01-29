@@ -79,9 +79,9 @@ Specifies whether network traffic is allowed or denied.
 The acceptable values for this parameter are: Allow and Deny.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Allow, Deny
 
 Required: False
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -110,9 +110,9 @@ Accept wildcard characters: False
 Specifies a description of a network security rule configuration.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ You can use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ The application security group set as destination for the rule. It cannot be use
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup]
 Parameter Sets: SetByResource
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ The application security group set as destination for the rule. It cannot be use
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByResourceId
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -198,9 +198,9 @@ Specifies whether a rule is evaluated on incoming or outgoing traffic.
 The acceptable values for this parameter are: Inbound and Outbound.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Inbound, Outbound
 
 Required: False
@@ -214,9 +214,9 @@ Accept wildcard characters: False
 Specifies the name of a network security rule configuration.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -230,9 +230,9 @@ Specifies a **NetworkSecurityGroup** object.
 This cmdlet adds a network security rule configuration to the object that this parameter specifies.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup
+Type: PSNetworkSecurityGroup
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -249,9 +249,9 @@ The priority number must be unique for each rule in the collection.
 The lower the priority number, the higher the priority of the rule.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -269,9 +269,9 @@ The acceptable values for this parameter are:
 - Wildcard character (*) to match both
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Tcp, Udp, *
 
 Required: False
@@ -294,7 +294,7 @@ You can also use tags such as VirtualNetwork, AzureLoadBalancer and Internet.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -309,7 +309,7 @@ The application security group set as source for the rule. It cannot be used wit
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup]
 Parameter Sets: SetByResource
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ The application security group set as source for the rule. It cannot be used wit
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByResourceId
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -340,7 +340,7 @@ This value is expressed as an integer, as a range between 0 and 65535, or as a w
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

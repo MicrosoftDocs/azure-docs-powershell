@@ -15,14 +15,14 @@ Removes a data source from a Data Lake Analytics account.
 
 ## SYNTAX
 
-### RemoveDataLakeStorageAccount
+### Remove a Data Lake storage account
 ```
 Remove-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <String> [-Force] [-PassThru]
  [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### RemoveBlobStorageAccount
+### Remove a Blob storage account
 ```
 Remove-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-Blob] <String> [-Force] [-PassThru]
  [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
@@ -63,7 +63,7 @@ Specifies the name of the AzureBlob Storage account to remove.
 
 ```yaml
 Type: System.String
-Parameter Sets: RemoveBlobStorageAccount
+Parameter Sets: Remove a Blob storage account
 Aliases: AzureBlob
 
 Required: True
@@ -78,28 +78,13 @@ Specifies the name of the AzureData Lake Store account to remove.
 
 ```yaml
 Type: System.String
-Parameter Sets: RemoveDataLakeStorageAccount
+Parameter Sets: Remove a Data Lake storage account
 Aliases:
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -176,6 +161,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

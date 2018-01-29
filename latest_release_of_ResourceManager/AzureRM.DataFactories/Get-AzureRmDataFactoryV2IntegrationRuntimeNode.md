@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.DataFactoryV2.dll-Help.xml
-Module Name: AzureRM.DataFactoryV2
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/get-azurermdatafactoryv2integrationruntimenode
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Get-AzureRmDataFactoryV2IntegrationRuntimeNode.md
@@ -104,9 +103,9 @@ The cmdlet gets information of node named 'Node_1' in self-hosted integration ru
 The data factory name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -119,7 +118,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -134,9 +133,9 @@ Accept wildcard characters: False
 The integration runtime object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime
+Type: PSIntegrationRuntime
 Parameter Sets: ByIntegrationRuntimeObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -149,9 +148,9 @@ Accept wildcard characters: False
 The integration runtime name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -164,9 +163,9 @@ Accept wildcard characters: False
 The IP Address of integration runtime node.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -179,9 +178,9 @@ Accept wildcard characters: False
 The integration runtime node name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -194,9 +193,9 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -209,7 +208,7 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
 Aliases: Id
 

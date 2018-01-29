@@ -77,7 +77,7 @@ Creates a new azure active directory application and associates password credent
 The value specifying whether the application is a single tenant or a multi-tenant.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -93,7 +93,7 @@ The value of the "asymmetric" credential type.
 It represents the base 64 encoded certificate.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ApplicationWithKeyPlainParameterSet
 Aliases:
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Display name of the new application.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -140,7 +140,7 @@ The default end date value is one year from today.
 For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: ApplicationWithPasswordPlainParameterSet, ApplicationWithKeyPlainParameterSet
 Aliases:
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 The URL to the application homepage.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 The URIs that identify the application.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 The list of certificate credentials associated with the application.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential[]
+Type: PSADKeyCredential[]
 Parameter Sets: ApplicationWithKeyCredentialParameterSet
 Aliases:
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 The password to be associated with the application.
 
 ```yaml
-Type: System.Security.SecureString
+Type: SecureString
 Parameter Sets: ApplicationWithPasswordPlainParameterSet
 Aliases:
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 The list of password credentials associated with the application.
 
 ```yaml
-Type: Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential[]
+Type: PSADPasswordCredential[]
 Parameter Sets: ApplicationWithPasswordCredentialParameterSet
 Aliases:
 
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 The application reply urls.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -247,7 +247,7 @@ The default start date value is today.
 For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: ApplicationWithPasswordPlainParameterSet, ApplicationWithKeyPlainParameterSet
 Aliases:
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

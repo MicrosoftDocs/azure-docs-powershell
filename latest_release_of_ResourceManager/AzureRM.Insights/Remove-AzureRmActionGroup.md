@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 8D8FE2FE-03E7-453E-B968-E28B07E42EF2
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/remove-azurermactiongroup
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Remove-AzureRmActionGroup.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Remove-AzureRmActionGroup.md
 ---
 
 # Remove-AzureRmActionGroup
@@ -52,7 +50,7 @@ RequestId                                                                       
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -67,9 +65,9 @@ Accept wildcard characters: False
 The action group resourc
 
 ```yaml
-Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource
+Type: PSActionGroupResource
 Parameter Sets: ByInputObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -82,9 +80,9 @@ Accept wildcard characters: False
 The name of the action group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByPropertyName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -97,9 +95,9 @@ Accept wildcard characters: False
 The resource group nam
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByPropertyName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -112,9 +110,9 @@ Accept wildcard characters: False
 The resource i
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -127,7 +125,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -142,7 +140,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

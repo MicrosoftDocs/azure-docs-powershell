@@ -44,7 +44,7 @@ This commands returns predefined policy with name AppGwSslPolicy20170401.
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -59,9 +59,9 @@ Accept wildcard characters: False
 Name of the ssl predefined policy
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -85,3 +85,4 @@ System.Collections.Generic.IEnumerable`1[[Microsoft.Azure.Commands.Network.Model
 ## NOTES
 
 ## RELATED LINKS
+

@@ -14,45 +14,25 @@ Updates a container registry.
 
 ## SYNTAX
 
-### NameResourceGroupParameterSet (Default)
+### Empty (Default)
 ```
 Update-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-Tag <Hashtable>]
- [-StorageAccountName <String>] [-Sku <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-StorageAccountName <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### EnableAdminUserByResourceNameParameterSet
+### EnableAdminUserParameterSet
 ```
 Update-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-EnableAdminUser]
- [-Tag <Hashtable>] [-StorageAccountName <String>] [-Sku <String>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DisableAdminUser] [-Tag <Hashtable>] [-StorageAccountName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### DisableAdminUserByResourceNameParameterSet
+### DisableAdminUserParameterSet
 ```
-Update-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-DisableAdminUser]
- [-Tag <Hashtable>] [-StorageAccountName <String>] [-Sku <String>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### EnableAdminUserByResourceIdParameterSet
-```
-Update-AzureRmContainerRegistry [-EnableAdminUser] [-Tag <Hashtable>] [-StorageAccountName <String>]
- [-Sku <String>] -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### DisableAdminUserByResourceIdParameterSet
-```
-Update-AzureRmContainerRegistry [-DisableAdminUser] [-Tag <Hashtable>] [-StorageAccountName <String>]
- [-Sku <String>] -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### ResourceIdParameterSet
-```
-Update-AzureRmContainerRegistry [-Tag <Hashtable>] [-StorageAccountName <String>] [-Sku <String>]
- -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-EnableAdminUser]
+ [-DisableAdminUser] [-Tag <Hashtable>] [-StorageAccountName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,7 +75,19 @@ Enable admin user for the container registry.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: DisableAdminUserByResourceNameParameterSet, DisableAdminUserByResourceIdParameterSet
+Parameter Sets: EnableAdminUserParameterSet
+Aliases: DisableAdmin
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: DisableAdminUserParameterSet
 Aliases: DisableAdmin
 
 Required: True
@@ -110,10 +102,22 @@ Enable admin user for the container registry.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: EnableAdminUserByResourceNameParameterSet, EnableAdminUserByResourceIdParameterSet
+Parameter Sets: EnableAdminUserParameterSet
 Aliases: EnableAdmin
 
 Required: True
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: DisableAdminUserParameterSet
+Aliases: EnableAdmin
+
+Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
@@ -125,19 +129,7 @@ Container Registry Name.
 
 ```yaml
 Type: System.String
-Parameter Sets: NameResourceGroupParameterSet
-Aliases: ContainerRegistryName, RegistryName, ResourceName
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: System.String
-Parameter Sets: EnableAdminUserByResourceNameParameterSet, DisableAdminUserByResourceNameParameterSet
+Parameter Sets: (All)
 Aliases: ContainerRegistryName, RegistryName, ResourceName
 
 Required: True
@@ -152,19 +144,7 @@ Resource Group Name.
 
 ```yaml
 Type: System.String
-Parameter Sets: NameResourceGroupParameterSet
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: System.String
-Parameter Sets: EnableAdminUserByResourceNameParameterSet, DisableAdminUserByResourceNameParameterSet
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -245,36 +225,6 @@ The credentials, account, tenant, and subscription used for communication with a
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceId
-The container registry resource id
-
-```yaml
-Type: System.String
-Parameter Sets: EnableAdminUserByResourceIdParameterSet, DisableAdminUserByResourceIdParameterSet, ResourceIdParameterSet
-Aliases: Id
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Sku
-Container Registry SKU.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: ContainerRegistrySku, RegistrySku
 
 Required: False
 Position: Named

@@ -14,13 +14,13 @@ Get the details of the Backend.
 
 ## SYNTAX
 
-### GetAllBackends (Default)
+### Get all backends (Default)
 ```
 Get-AzureRmApiManagementBackend -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### GetByBackendId
+### Get by backend ID
 ```
 Get-AzureRmApiManagementBackend -Context <PsApiManagementContext> -BackendId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -56,7 +56,7 @@ This parameter is optional.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByBackendId
+Parameter Sets: Get by backend ID
 Aliases:
 
 Required: True

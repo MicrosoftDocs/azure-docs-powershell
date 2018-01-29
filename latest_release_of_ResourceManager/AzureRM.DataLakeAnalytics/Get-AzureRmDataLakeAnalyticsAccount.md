@@ -15,18 +15,18 @@ Gets information about a Data Lake Analytics account.
 
 ## SYNTAX
 
-### GetAllInSubscription (Default)
+### All In Subscription (Default)
 ```
 Get-AzureRmDataLakeAnalyticsAccount [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByResourceGroup
+### All In Resource Group
 ```
 Get-AzureRmDataLakeAnalyticsAccount [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### GetBySpecificAccount
+### Specific Account
 ```
 Get-AzureRmDataLakeAnalyticsAccount [[-ResourceGroupName] <String>] [-Name] <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -46,27 +46,12 @@ This command gets information about the account named ContosoAdlAccount.
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the Data Lake Analytics account.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetBySpecificAccount
+Parameter Sets: Specific Account
 Aliases:
 
 Required: True
@@ -81,7 +66,7 @@ Specifies the resource group name of the Data Lake Analytics account.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByResourceGroup
+Parameter Sets: All In Resource Group
 Aliases:
 
 Required: True
@@ -93,13 +78,28 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.String
-Parameter Sets: GetBySpecificAccount
+Parameter Sets: Specific Account
 Aliases:
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

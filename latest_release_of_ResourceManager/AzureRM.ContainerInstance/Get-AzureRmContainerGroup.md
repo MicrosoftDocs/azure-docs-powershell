@@ -114,7 +114,7 @@ The command gets the container group with the resource Id.
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -129,9 +129,9 @@ Accept wildcard characters: False
 The container group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetContainerGroupInResourceGroupParamSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -144,9 +144,9 @@ Accept wildcard characters: False
 The resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListContainerGroupParamSet
-Aliases:
+Aliases: 
 
 Required: False
 Position: 0
@@ -156,9 +156,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetContainerGroupInResourceGroupParamSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -171,9 +171,9 @@ Accept wildcard characters: False
 The resource id.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetContainerGroupByResourceIdParamSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -196,3 +196,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

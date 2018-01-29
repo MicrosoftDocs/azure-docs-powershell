@@ -80,7 +80,7 @@ Gets all the replications of a container registry
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 Container Registry Replication Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ShowReplicationByNameResourceGroupParameterSet, ShowReplicationByRegistryObjectParameterSet
 Aliases: ReplicationName, ResourceName
 
@@ -110,9 +110,9 @@ Accept wildcard characters: False
 Container Registry Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistry
+Type: PSContainerRegistry
 Parameter Sets: ShowReplicationByRegistryObjectParameterSet, ListReplicationByRegistryObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Container Registry Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListReplicationByNameResourceGroupParameterSet, ShowReplicationByNameResourceGroupParameterSet
 Aliases: ContainerRegistryName
 
@@ -140,9 +140,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListReplicationByNameResourceGroupParameterSet, ShowReplicationByNameResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 The container registry replication resource id
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdParameterSet
 Aliases: Id
 

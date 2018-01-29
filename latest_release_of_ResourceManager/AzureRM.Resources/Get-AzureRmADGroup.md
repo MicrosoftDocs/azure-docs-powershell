@@ -62,7 +62,7 @@ Gets all AD groups
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Object id of the group.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: EmptyParameterSet
 Aliases:
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: ObjectIdParameterSet
 Aliases:
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 The group display name
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SearchStringParameterSet
 Aliases:
 

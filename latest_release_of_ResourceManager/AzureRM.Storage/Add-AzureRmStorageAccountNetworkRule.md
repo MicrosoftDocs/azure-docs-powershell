@@ -10,39 +10,39 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Add-AzureRmStorageAccountNetworkRule
 
 ## SYNOPSIS
- Add IpRules or VirtualNetworkRules to the NetworkRule property of a Storage Account
+ Add IpRules or VirtualNetworkRules to the NetworkRule property of a Storage account
 
 ## SYNTAX
 
 ### NetWorkRuleString (Default)
 ```
 Add-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
- -VirtualNetworkResourceId <String[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ -VirtualNetworkResourceId <String[]> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### IpRuleObject
 ```
 Add-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String> -IPRule <PSIpRule[]>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NetworkRuleObject
 ```
 Add-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
- -VirtualNetworkRule <PSVirtualNetworkRule[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -VirtualNetworkRule <PSVirtualNetworkRule[]> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### IpRuleString
 ```
 Add-AzureRmStorageAccountNetworkRule [-ResourceGroupName] <String> [-Name] <String>
- -IPAddressOrRange <String[]> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ -IPAddressOrRange <String[]> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-AzureRmStorageAccountNetworkRule** cmdlet adds IpRules or VirtualNetworkRules to the NetworkRule property of a Storage Account
+The **Add-AzureRmStorageAccountNetworkRule** cmdlet adds IpRules or VirtualNetworkRules to the NetworkRule property of a Storage account
 
 ## EXAMPLES
 
@@ -78,11 +78,26 @@ This command add several IpRule with IpRule objects, input with JSON.
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
+### -AsJob
+Run cmdlet in the background
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with Azure.
+
+```yaml
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -97,9 +112,9 @@ Accept wildcard characters: False
 The Array of IpAddressOrRange, add IpRules with the input IpAddressOrRange and default Action Allow to NetworkRule Property.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: IpRuleString
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -112,9 +127,9 @@ Accept wildcard characters: False
 The Array of IpRule objects to add to the NetworkRule Property.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Management.Storage.Models.PSIpRule[]
+Type: PSIpRule[]
 Parameter Sets: IpRuleObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -127,7 +142,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage account.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: StorageAccountName, AccountName
 
@@ -142,9 +157,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group contains the Storage account.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -157,7 +172,7 @@ Accept wildcard characters: False
 The Array of VirtualNetworkResourceId, will add VirtualNetworkRule with input VirtualNetworkResourceId and default Action Allow to NetworkRule Property.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: NetWorkRuleString
 Aliases: SubnetId, VirtualNetworkId
 
@@ -172,9 +187,9 @@ Accept wildcard characters: False
 The Array of VirtualNetworkRule objects to add to the NetworkRule Property.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Management.Storage.Models.PSVirtualNetworkRule[]
+Type: PSVirtualNetworkRule[]
 Parameter Sets: NetworkRuleObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -187,7 +202,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -203,7 +218,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -231,3 +246,4 @@ Microsoft.Azure.Commands.Management.Storage.Models.PSIpRule
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 Module Name: AzureRM.OperationalInsights
 ms.assetid: 1F094EBA-E4AE-4B3E-BA20-858818C6FD12
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.operationalinsights/get-azurermoperationalinsightsdatasource
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzureRmOperationalInsightsDataSource.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/Get-AzureRmOperationalInsightsDataSource.md
 ---
 
 # Get-AzureRmOperationalInsightsDataSource
@@ -62,7 +60,7 @@ You can filter the results based on the kind of data source.
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -85,10 +83,10 @@ The acceptable values for this parameter are:
 - WindowsPerformanceCounter
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByWorkspaceObjectByKind
-Aliases:
-Accepted values: AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObject, LinuxSyslog, WindowsEvent, WindowsPerformanceCounter, AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObject, LinuxSyslog, WindowsEvent, WindowsPerformanceCounter
+Aliases: 
+Accepted values: AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObject, LinuxSyslog, WindowsEvent, WindowsPerformanceCounter
 
 Required: False
 Position: 4
@@ -98,10 +96,10 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByWorkspaceNameByKind
-Aliases:
-Accepted values: AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObject, LinuxSyslog, WindowsEvent, WindowsPerformanceCounter, AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObject, LinuxSyslog, WindowsEvent, WindowsPerformanceCounter
+Aliases: 
+Accepted values: AzureAuditLog, AzureActivityLog, CustomLog, LinuxPerformanceObject, LinuxSyslog, WindowsEvent, WindowsPerformanceCounter
 
 Required: True
 Position: 4
@@ -114,9 +112,9 @@ Accept wildcard characters: False
 Specifies the name of a data source to get.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByWorkspaceObjectByName
-Aliases:
+Aliases: 
 
 Required: False
 Position: 3
@@ -126,9 +124,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByWorkspaceNameByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -141,9 +139,9 @@ Accept wildcard characters: False
 Specifies the name of a resource group that contains data sources to get.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByWorkspaceNameByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -153,9 +151,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByWorkspaceNameByKind
-Aliases:
+Aliases: 
 
 Required: False
 Position: 1
@@ -168,9 +166,9 @@ Accept wildcard characters: False
 Specifies a workspace in which this cmdlet operates.
 
 ```yaml
-Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
+Type: PSWorkspace
 Parameter Sets: ByWorkspaceObjectByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -180,9 +178,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
+Type: PSWorkspace
 Parameter Sets: ByWorkspaceObjectByKind
-Aliases:
+Aliases: 
 
 Required: False
 Position: 0
@@ -195,9 +193,9 @@ Accept wildcard characters: False
 Specifies the name of a workspace in which this cmdlet operates.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByWorkspaceNameByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -207,9 +205,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByWorkspaceNameByKind
-Aliases:
+Aliases: 
 
 Required: False
 Position: 2

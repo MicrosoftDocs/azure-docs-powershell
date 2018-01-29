@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 85492E00-3776-4F20-A444-9C28CC6154B7
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/get-azurermactivitylogalert
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmActivityLogAlert.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmActivityLogAlert.md
 ---
 
 # Get-AzureRmActivityLogAlert
@@ -59,7 +57,7 @@ This command lists one (a list with a single element) activity log alert.
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -74,9 +72,9 @@ Accept wildcard characters: False
 The name of the activity log alert.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -90,9 +88,9 @@ The name of the resource group where the alert resource exists.
 If Name is not null or empty, this parameter must contain and non empty string.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -102,9 +100,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByResourceGroup
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

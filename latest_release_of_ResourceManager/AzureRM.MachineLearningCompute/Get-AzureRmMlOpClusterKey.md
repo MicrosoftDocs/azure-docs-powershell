@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.MachineLearningCompute.dll-Help.xml
 Module Name: AzureRM.MachineLearningCompute
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.machinelearningcompute/get-azurermmlopclusterkey
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearningCompute/Commands.MachineLearningCompute/help/Get-AzureRmMlOpClusterKey.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearningCompute/Commands.MachineLearningCompute/help/Get-AzureRmMlOpClusterKey.md
 ---
 
 # Get-AzureRmMlOpClusterKey
@@ -49,7 +47,7 @@ Returns the secret keys for the services associated with the operationalization 
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -64,7 +62,7 @@ Accept wildcard characters: False
 The operationalization cluster object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.MachineLearningCompute.Models.PSOperationalizationCluster
+Type: PSOperationalizationCluster
 Parameter Sets: GetByInputObject
 Aliases: Cluster
 
@@ -79,9 +77,9 @@ Accept wildcard characters: False
 The name of the operationalization cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -94,9 +92,9 @@ Accept wildcard characters: False
 The name of the resource group for the operationalization cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -109,9 +107,9 @@ Accept wildcard characters: False
 The Azure resource id for the operationalization cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -135,3 +133,4 @@ System.String
 ## NOTES
 
 ## RELATED LINKS
+

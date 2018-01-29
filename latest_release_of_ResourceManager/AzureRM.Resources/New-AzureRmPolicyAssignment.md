@@ -88,7 +88,7 @@ Specifies the version of the resource provider API to use.
 If you do not specify a version, this cmdlet uses the latest available version.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 The description for policy assignment
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Specifies a display name for the policy assignment.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -157,7 +157,7 @@ The acceptable values for this parameter are:
 - Suspend
 
 ```yaml
-Type: System.Management.Automation.ActionPreference
+Type: ActionPreference
 Parameter Sets: (All)
 Aliases: infa
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 Specifies an information variable.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: iv
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 Specifies a name for the policy assignment.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 The not scopes for policy assignment.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 Specifies a policy, as a **PSObject** object that contains the policy rule.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: PSObject
 Parameter Sets: CreateWithoutParameters, CreateWithPolicySetParameterObject, CreateWithPolicySetParameterString
 Aliases:
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: PSObject
 Parameter Sets: CreateWithPolicyParameterObject, CreateWithPolicyParameterString
 Aliases:
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 The policy parameter file path or policy parameter string.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateWithPolicyParameterString, CreateWithPolicySetParameterString
 Aliases:
 
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 The policy parameter object.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: CreateWithPolicyParameterObject, CreateWithPolicySetParameterObject
 Aliases:
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 The policy set definition object.
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: PSObject
 Parameter Sets: CreateWithoutParameters, CreateWithPolicyParameterObject, CreateWithPolicyParameterString
 Aliases:
 
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.Management.Automation.PSObject
+Type: PSObject
 Parameter Sets: CreateWithPolicySetParameterObject, CreateWithPolicySetParameterString
 Aliases:
 
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -319,7 +319,7 @@ For instance, to assign a policy to a resource group, specify the following:
 `/subscriptions/`subscription ID`/resourcegroups/`resource group name
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 A hash table which represents sku properties. Defaults to Free Sku: Name = A0, Tier = Fre
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: SkuObject
 

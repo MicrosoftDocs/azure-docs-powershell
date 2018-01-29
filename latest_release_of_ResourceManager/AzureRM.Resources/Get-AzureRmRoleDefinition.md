@@ -59,7 +59,7 @@ Lists all RBAC role definitions
 If specified, displays all role definitions.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: RoleDefinitionNameParameterSet, RoleDefinitionCustomParameterSet
 Aliases:
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 If specified, only displays the custom created roles in the directory.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: RoleDefinitionCustomParameterSet
 Aliases:
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Role definition Id.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: RoleDefinitionIdParameterSet
 Aliases:
 
@@ -121,7 +121,7 @@ For e.g.
 Reader, Contributor, Virtual Machine Contributor.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: RoleDefinitionNameParameterSet
 Aliases:
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 Role definition scope.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

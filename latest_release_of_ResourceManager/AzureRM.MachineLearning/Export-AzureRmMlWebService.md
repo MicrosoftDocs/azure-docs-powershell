@@ -14,13 +14,13 @@ Exports the web service definition object as a JSON formatted string.
 
 ## SYNTAX
 
-### ExportToFile
+### Export to file.
 ```
 Export-AzureRmMlWebService -WebService <WebService> -OutputFile <String> [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ExportToJSON
+### Export to JSON string.
 ```
 Export-AzureRmMlWebService -WebService <WebService> [-ToJsonString] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -33,39 +33,16 @@ You can return the string immediately or save it to a file.
 ## EXAMPLES
 
 ### Example 1: Export as string
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Export-AzureRmMlWebService -WebService $svc -ToJsonString
 ```
 
 ### Example 2: Export to file
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Export-AzureRmMlWebService -WebService $svc -OutputFile "C:\mlservice.json"
 ```
 
 ## PARAMETERS
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 Do not ask for confirmation.
@@ -87,7 +64,7 @@ The file path for exported definition.
 
 ```yaml
 Type: System.String
-Parameter Sets: ExportToFile
+Parameter Sets: Export to file.
 Aliases:
 
 Required: True
@@ -102,7 +79,7 @@ Specifies that the definition will be exported as a JSON string.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: ExportToJSON
+Parameter Sets: Export to JSON string.
 Aliases:
 
 Required: True
@@ -150,6 +127,21 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

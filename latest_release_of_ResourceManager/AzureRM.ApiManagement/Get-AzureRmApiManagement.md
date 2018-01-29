@@ -15,18 +15,18 @@ Gets a list or a particular API Management Service description.
 
 ## SYNTAX
 
-### GetBySubscription (Default)
+### All In Subscription (Default)
 ```
 Get-AzureRmApiManagement [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByResourceGroup
+### All In Resource Group
 ```
 Get-AzureRmApiManagement -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### GetByResource
+### Specific API Management Service
 ```
 Get-AzureRmApiManagement -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
@@ -53,27 +53,12 @@ This command gets all API Management service by name.
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of API Management service.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByResource
+Parameter Sets: Specific API Management Service
 Aliases:
 
 Required: True
@@ -88,13 +73,28 @@ Specifies the name of the resource group under in which this cmdlet gets the API
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByResourceGroup, GetByResource
+Parameter Sets: All In Resource Group, Specific API Management Service
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

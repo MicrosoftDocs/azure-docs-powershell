@@ -14,7 +14,7 @@ Updates properties of an existing web service resource.
 
 ## SYNTAX
 
-### UpdateFromParameters
+### Update specific properties of the .
 ```
 Update-AzureRmMlWebService -ResourceGroupName <String> -Name <String> [-Title <String>] [-Description <String>]
  [-IsReadOnly] [-Keys <WebServiceKeys>] [-StorageAccountKey <String>] [-Diagnostics <DiagnosticsConfiguration>]
@@ -24,7 +24,7 @@ Update-AzureRmMlWebService -ResourceGroupName <String> -Name <String> [-Title <S
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### UpdateFromObject
+### Create a new Azure ML webservice from a WebService instance definition.
 ```
 Update-AzureRmMlWebService -ResourceGroupName <String> -Name <String> -ServiceUpdates <WebService> [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -38,10 +38,6 @@ Pass only the properties that you want modified.
 ## EXAMPLES
 
 ### Example 1: Selective update arguments
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Update-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -Description "new update to description" -Keys @{Primary='changed primary key'} -Diagnostics @{Level='All'}
 ```
@@ -49,10 +45,6 @@ Update-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebserv
 Here, we change the description, primary access key and enable the diagnostics collection for all traces during runtime for the web service.
 
 ### Example 2: Update based on a web service instance
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 $updates = @{ Properties = @{ Title="New Title"; RealtimeConfiguration = @{ MaxConcurrentCalls=25 }}}
 
@@ -68,23 +60,8 @@ The set of assets (e.g. modules, datasets) that make up the web service.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -99,7 +76,7 @@ This is visible in the service's Swagger API schema.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -114,7 +91,7 @@ The settings that control the diagnostics traces collection for the web service.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.DiagnosticsConfiguration
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -144,7 +121,7 @@ The definition for the web service's input(s), provided as a Swagger schema cons
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.ServiceInputOutputSpecification
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -160,7 +137,7 @@ Once set, the web service can longer be updated, including changing the value of
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -175,7 +152,7 @@ Updates one or both of the access keys used to authenticate calls to the service
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebServiceKeys
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -205,7 +182,7 @@ The definition for the web service's output(s), provided as a Swagger schema con
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.ServiceInputOutputSpecification
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -220,7 +197,7 @@ The definition of the graph package that defines this web service.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.GraphPackage
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -236,7 +213,7 @@ If no default value is specified, the parameter is considered to be required.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -251,7 +228,7 @@ Updates for the configuration of the service's realtime endpoint.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.RealtimeConfiguration
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -282,7 +259,7 @@ Only non-static fields are modified.
 
 ```yaml
 Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
-Parameter Sets: UpdateFromObject
+Parameter Sets: Create a new Azure ML webservice from a WebService instance definition.
 Aliases:
 
 Required: True
@@ -297,7 +274,7 @@ Rotates the access key for the storage account associated with the web service.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -313,7 +290,7 @@ This is visible in the service's Swagger API schema.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateFromParameters
+Parameter Sets: Update specific properties of the .
 Aliases:
 
 Required: False
@@ -346,6 +323,21 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

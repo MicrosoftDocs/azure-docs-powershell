@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.RecoveryServices.SiteRecovery
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery/update-azurermrecoveryservicesasrnetworkmapping
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Update-AzureRmRecoveryServicesAsrNetworkMapping.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Update-AzureRmRecoveryServicesAsrNetworkMapping.md
 ---
 
 # Update-AzureRmRecoveryServicesAsrNetworkMapping
@@ -45,7 +43,7 @@ Starts the update network mapping operation using the specified parameters and r
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -60,7 +58,7 @@ Accept wildcard characters: False
 Input Object: Specifies the ASR network mapping object corresponding to the ASR network mapping to be updated 
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRNetworkMapping
+Type: ASRNetworkMapping
 Parameter Sets: (All)
 Aliases: NetworkMapping
 
@@ -75,9 +73,9 @@ Accept wildcard characters: False
 Specifies the recovery azure network ID for the network mapping.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ById
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -90,9 +88,9 @@ Accept wildcard characters: False
 Specifies the recovery network object for the network mapping.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRNetwork
+Type: ASRNetwork
 Parameter Sets: ByNetworkObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -105,7 +103,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -120,7 +118,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -145,3 +143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

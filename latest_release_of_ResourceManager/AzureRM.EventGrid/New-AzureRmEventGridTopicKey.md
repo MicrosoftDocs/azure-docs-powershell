@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventGrid.dll-Help.xml
 Module Name: AzureRM.EventGrid
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventgrid/new-azurermeventgridtopickey
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/New-AzureRmEventGridTopicKey.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/New-AzureRmEventGridTopicKey.md
 ---
 
 # New-AzureRmEventGridTopicKey
@@ -57,7 +55,7 @@ Regenerate the key corresponding to key \'key1'\ of Event Grid topic \`Topic1\` 
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -72,9 +70,9 @@ Accept wildcard characters: False
 EventGrid Topic object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
+Type: PSTopic
 Parameter Sets: TopicInputObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -87,9 +85,9 @@ Accept wildcard characters: False
 The name of the key that needs to be regenerated
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicNameParameterSet, ResourceIdEventSubscriptionParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -99,9 +97,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicInputObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -114,7 +112,7 @@ Accept wildcard characters: False
 Resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicNameParameterSet
 Aliases: ResourceGroup
 
@@ -129,9 +127,9 @@ Accept wildcard characters: False
 Resource Identifier representing the Event Grid Topic.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdEventSubscriptionParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -144,9 +142,9 @@ Accept wildcard characters: False
 The name of the topic.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TopicNameParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -159,7 +157,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -175,7 +173,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -200,3 +198,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 85492E00-3776-4F20-A444-9C28CC6154B7
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/get-azurermlog
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmLog.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmLog.md
 ---
 
 # Get-AzureRmLog
@@ -32,8 +30,8 @@ Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] 
 ### GetByResourceGroup
 ```
 Get-AzureRmLog [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>] [-Caller <String>]
- [-DetailedOutput] [-ResourceGroupName] <String> [-MaxRecord <Int32>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-DetailedOutput] [-ResourceGroupName] <String> [-MaxRecord <Int32>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### GetByResourceProvider
@@ -204,9 +202,9 @@ This command lists at most 1000 events associated with the specified resource pr
 Specifies a caller.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -220,9 +218,9 @@ Specifies the correlation ID.
 This parameter is required.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByCorrelationId
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -235,7 +233,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -251,9 +249,9 @@ Indicates that this cmdlet displays detailed output.
 By default, output is summarized.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -270,9 +268,9 @@ The value must be later than *StartTime*.
 You can use the Get-Date cmdlet to get a **DateTime** object.
 
 ```yaml
-Type: System.Nullable`1[System.DateTime]
+Type: DateTime
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -286,7 +284,7 @@ Specifies the total number of records to fetch for the specified filter.
 The default value is 1000 and the maximum value accepted is 100000. Negative values and 0 are ignored and the default value will be used.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases: MaxRecords, MaxEvents
 
@@ -301,7 +299,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByResourceGroup
 Aliases: ResourceGroup
 
@@ -316,9 +314,9 @@ Accept wildcard characters: False
 Specifies the resource ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -331,9 +329,9 @@ Accept wildcard characters: False
 Specifies a filter by resource provider.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByResourceProvider
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -349,9 +347,9 @@ The default value is *EndTime* minus seven days.
 You can use the Get-Date cmdlet to get a **DateTime** object.
 
 ```yaml
-Type: System.Nullable`1[System.DateTime]
+Type: DateTime
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -364,9 +362,9 @@ Accept wildcard characters: False
 Specifies the status.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -386,8 +384,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
-## OUTPUTS
-
 ## NOTES
 
 ## RELATED LINKS
+

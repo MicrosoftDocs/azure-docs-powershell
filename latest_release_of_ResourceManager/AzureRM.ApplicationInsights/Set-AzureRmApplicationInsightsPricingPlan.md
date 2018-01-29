@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
 Module Name: AzureRM.ApplicationInsights
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.applicationinsights/set-azurermapplicationinsightspricingplan
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Set-AzureRmApplicationInsightsPricingPlan.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Set-AzureRmApplicationInsightsPricingPlan.md
 ---
 
 # Set-AzureRmApplicationInsightsPricingPlan
@@ -57,9 +55,9 @@ Set the pricing plan to "Basic", set the daily data volumen cap to 400GB per day
 Application Insights Component Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ApplicationInsights.Models.PSApplicationInsightsComponent
+Type: PSApplicationInsightsComponent
 Parameter Sets: ComponentObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -72,7 +70,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -87,9 +85,9 @@ Accept wildcard characters: False
 Daily Cap.
 
 ```yaml
-Type: System.Nullable`1[System.Double]
+Type: Double
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -102,7 +100,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -117,9 +115,9 @@ Accept wildcard characters: False
 Stop send notification when hit cap.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -132,7 +130,7 @@ Accept wildcard characters: False
 Application Insights Component Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComponentNameParameterSet
 Aliases: ApplicationInsightsComponentName, ComponentName
 
@@ -147,9 +145,9 @@ Accept wildcard characters: False
 Pricing plan name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Basic, Application Insights Enterprise, Limited Basic
 
 Required: False
@@ -163,9 +161,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComponentNameParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -178,9 +176,9 @@ Accept wildcard characters: False
 Application Insights Component Resource Id.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -193,7 +191,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -220,3 +218,4 @@ System.Boolean
 ## NOTES
 
 ## RELATED LINKS
+

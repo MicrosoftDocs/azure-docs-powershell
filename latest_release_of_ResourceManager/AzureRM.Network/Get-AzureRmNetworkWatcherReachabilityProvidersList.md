@@ -18,21 +18,21 @@ Lists all available internet service providers for a specified Azure region.
 ```
 Get-AzureRmNetworkWatcherReachabilityProvidersList -NetworkWatcherName <String> -ResourceGroupName <String>
  [-Location <System.Collections.Generic.List`1[System.String]>] [-Country <String>] [-State <String>]
- [-City <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-City <String>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SetByResource
 ```
 Get-AzureRmNetworkWatcherReachabilityProvidersList -NetworkWatcher <PSNetworkWatcher>
  [-Location <System.Collections.Generic.List`1[System.String]>] [-Country <String>] [-State <String>]
- [-City <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-City <String>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SetByResourceId
 ```
 Get-AzureRmNetworkWatcherReachabilityProvidersList -ResourceId <String>
  [-Location <System.Collections.Generic.List`1[System.String]>] [-Country <String>] [-State <String>]
- [-City <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-City <String>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,13 +72,28 @@ Lists all available providers in Seattle, WA for Azure Data Center in West US.
 
 ## PARAMETERS
 
+### -AsJob
+Run cmdlet in the background
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -City
 The name of the city.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -91,9 +106,9 @@ Accept wildcard characters: False
 The name of the country.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -106,7 +121,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -123,7 +138,7 @@ Optional Azure regions to scope the query to.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -136,9 +151,9 @@ Accept wildcard characters: False
 The network watcher resource.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
+Type: PSNetworkWatcher
 Parameter Sets: SetByResource
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -151,7 +166,7 @@ Accept wildcard characters: False
 The name of network watcher.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SetByName
 Aliases: ResourceName, Name
 
@@ -166,9 +181,9 @@ Accept wildcard characters: False
 The name of the network watcher resource group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SetByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -181,9 +196,9 @@ Accept wildcard characters: False
 The Id of network watcher resource.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SetByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -196,9 +211,9 @@ Accept wildcard characters: False
 The name of the state.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -221,7 +236,6 @@ System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Cul
 ### Microsoft.Azure.Commands.Network.Models.PSAvailableProvidersList
 
 ## NOTES
-
 Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, next, hop 
 
 ## RELATED LINKS

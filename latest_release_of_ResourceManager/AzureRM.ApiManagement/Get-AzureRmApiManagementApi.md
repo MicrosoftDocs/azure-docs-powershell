@@ -15,25 +15,25 @@ Gets an API.
 
 ## SYNTAX
 
-### GetAllApis (Default)
+### All APIs (Default)
 ```
 Get-AzureRmApiManagementApi -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### GetByApiId
+### Find by ID
 ```
 Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ApiId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByName
+### Find by Name
 ```
 Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -Name <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByProductId
+### Find by product ID
 ```
 Get-AzureRmApiManagementApi -Context <PsApiManagementContext> -ProductId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -75,7 +75,7 @@ Specifies the ID of the API to get.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByApiId
+Parameter Sets: Find by ID
 Aliases:
 
 Required: True
@@ -100,27 +100,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the API to get.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByName
+Parameter Sets: Find by Name
 Aliases:
 
 Required: True
@@ -135,13 +120,28 @@ Specifies the ID of the product for which to get the API.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByProductId
+Parameter Sets: Find by product ID
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

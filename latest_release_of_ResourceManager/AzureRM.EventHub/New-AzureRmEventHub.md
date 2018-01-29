@@ -14,18 +14,10 @@ Creates a new Event Hub.
 
 ## SYNTAX
 
-### EventhubInputObjectSet
 ```
-New-AzureRmEventHub [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
- [-InputObject <EventHubAttributes>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### EventhubPropertiesSet
-```
-New-AzureRmEventHub [-ResourceGroupName] <String> [-Namespace] <String> [-Name] <String>
- [-MessageRetentionInDays <Int64>] [-PartitionCount <Int64>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzureRmEventHub [-ResourceGroupName] <String> [-NamespaceName] <String> [-Location] <String>
+ [-EventHubName] <String> [-EventHubObj <EventHubAttributes>] [-MessageRetentionInDays <Int64>]
+ [-PartitionCount <Int64>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,31 +56,40 @@ Creates an Event Hub named \`MyEventHubName\` with a 3-day message retention per
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+### -EventHubName
+The Event Hub name.```yaml
+Type: System.String
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EventHubObj
+The Event Hubs object.```yaml
+Type: Microsoft.Azure.Commands.EventHub.Models.EventHubAttributes
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InputObject
-EventHub Input object.
+### -Location
+Namespace geographic location.```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
 
-```yaml
-Type: Microsoft.Azure.Commands.EventHub.Models.EventHubAttributes
-Parameter Sets: EventhubInputObjectSet
-Aliases: EventHubObj
-
-Required: False
-Position: Named
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -99,7 +100,7 @@ Event Hubs message retention time in days.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
-Parameter Sets: EventhubPropertiesSet
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -109,28 +110,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Eventhub Name.
-
-```yaml
+### -NamespaceName
+The Event Hubs namespace name.```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: EventHubName
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Namespace
-Namespace Name.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: NamespaceName
+Aliases:
 
 Required: True
 Position: 1
@@ -144,7 +128,7 @@ Number of partitions in the Event Hub.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
-Parameter Sets: EventhubPropertiesSet
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -196,6 +180,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

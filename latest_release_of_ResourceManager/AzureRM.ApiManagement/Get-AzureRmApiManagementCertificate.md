@@ -15,13 +15,13 @@ Gets API Management certificates configured for Mutual Authentication with Backe
 
 ## SYNTAX
 
-### GetAllCertificates (Default)
+### Get all certificates (Default)
 ```
 Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### GetByCertificateId
+### Get certificate by ID
 ```
 Get-AzureRmApiManagementCertificate -Context <PsApiManagementContext> -CertificateId <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -55,7 +55,7 @@ Specifies the ID of the certificate to get.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByCertificateId
+Parameter Sets: Get certificate by ID
 Aliases:
 
 Required: True
@@ -77,21 +77,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -122,6 +107,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

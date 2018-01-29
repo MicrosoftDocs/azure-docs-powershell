@@ -15,19 +15,19 @@ Gets a list or a particular product.
 
 ## SYNTAX
 
-### GetAllProducts (Default)
+### Get all producst (Default)
 ```
 Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
-### GetByProductId
+### Get by Id
 ```
 Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> -ProductId <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByTitle
+### Get by Title
 ```
 Get-AzureRmApiManagementProduct -Context <PsApiManagementContext> [-Title <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -71,27 +71,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ProductId
 Specifies the identifier of the product to search for.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByProductId
+Parameter Sets: Get by Id
 Aliases:
 
 Required: True
@@ -107,13 +92,28 @@ If specified, the cmdlet attempts to get the product by title.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByTitle
+Parameter Sets: Get by Title
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

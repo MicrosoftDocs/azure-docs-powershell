@@ -15,7 +15,7 @@ Creates a new Backend Proxy Object.
 ## SYNTAX
 
 ```
-New-AzureRmApiManagementBackendProxy -Url <String> [-ProxyCredential <PSCredential>]
+New-AzureRmApiManagementBackendProxy -Url <String> [-UserName <String>] [-Password <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -35,26 +35,9 @@ Creates a Backend Proxy Object
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyCredential
-Credentials used to connect to Backend Proxy. This parameter is optional.
-
-```yaml
-Type: System.Management.Automation.PSCredential
+### -Password
+Proxy Password used to connect to Backend Proxy. This parameter is optional.```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -75,6 +58,34 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserName
+Proxy UserName used to connect to Backend Proxy. This parameter is optional.```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

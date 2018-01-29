@@ -27,12 +27,6 @@ Update-AzureRmContainerRegistryCredential -Registry <PSContainerRegistry> -Passw
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ResourceIdParameterSet
-```
-Update-AzureRmContainerRegistryCredential -PasswordName <PasswordName> -ResourceId <String>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 The Update-AzureRmContainerRegistryCredential cmdlet regenerates a login credential for a container registry.
 
@@ -80,7 +74,7 @@ Accepted values: Password, Password2
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -157,21 +151,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceId
-The container registry resource id
-
-```yaml
-Type: System.String
-Parameter Sets: ResourceIdParameterSet
-Aliases: Id
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

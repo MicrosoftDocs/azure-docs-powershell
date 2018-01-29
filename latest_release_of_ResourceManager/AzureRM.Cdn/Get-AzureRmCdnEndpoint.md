@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 Module Name: AzureRM.Cdn
 ms.assetid: F93D9D7C-AC2A-4D83-87EC-4A54CD45272B
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn/get-azurermcdnendpoint
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnEndpoint.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnEndpoint.md
 ---
 
 # Get-AzureRmCdnEndpoint
@@ -43,9 +41,9 @@ The **Get-AzureRMCdnEndpoint** cmdlet gets an Azure Content Delivery Network (CD
 Specifies the CDN profile object to which the endpoint belongs.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Cdn.Models.Profile.PSProfile
+Type: PSProfile
 Parameter Sets: ByObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -58,7 +56,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -74,9 +72,9 @@ Specifies the name of the endpoint.
 The name of the endpoint is not the host name of the endpoint.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -89,9 +87,9 @@ Accept wildcard characters: False
 Specifies the name of the profile to which the endpoint belongs.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -104,9 +102,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the endpoint belongs.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

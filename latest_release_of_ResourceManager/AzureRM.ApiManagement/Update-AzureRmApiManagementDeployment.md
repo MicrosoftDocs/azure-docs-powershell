@@ -15,7 +15,7 @@ Updates deployment of an API Management Service.
 
 ## SYNTAX
 
-### UpdateSpecificService (Default)
+### Specific API Management service (Default)
 ```
 Update-AzureRmApiManagementDeployment -ResourceGroupName <String> -Name <String> -Location <String>
  -Sku <PsApiManagementSku> -Capacity <Int32> [-VirtualNetwork <PsApiManagementVirtualNetwork>]
@@ -24,7 +24,7 @@ Update-AzureRmApiManagementDeployment -ResourceGroupName <String> -Name <String>
  [-PassThru] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### UpdateFromPsApiManagementInstance
+### Update from PsApiManagement instance
 ```
 Update-AzureRmApiManagementDeployment -ApiManagement <PsApiManagement> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -76,7 +76,7 @@ Specifies additional deployment regions of Azure API Management.
 
 ```yaml
 Type: System.Collections.Generic.IList`1[Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion]
-Parameter Sets: UpdateSpecificService
+Parameter Sets: Specific API Management service
 Aliases:
 
 Required: False
@@ -92,7 +92,7 @@ Use this parameter if the instance already has all the required changes.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
-Parameter Sets: UpdateFromPsApiManagementInstance
+Parameter Sets: Update from PsApiManagement instance
 Aliases:
 
 Required: True
@@ -107,28 +107,13 @@ Specifies the SKU capacity of the master Azure API Management deployment region.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: UpdateSpecificService
+Parameter Sets: Specific API Management service
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -140,7 +125,7 @@ Get-AzureRmResourceProvider -ProviderNamespace "Microsoft.ApiManagement" | where
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateSpecificService
+Parameter Sets: Specific API Management service
 Aliases:
 
 Required: True
@@ -155,7 +140,7 @@ Specifies the name of API Management that this cmdlet updates.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateSpecificService
+Parameter Sets: Specific API Management service
 Aliases:
 
 Required: True
@@ -186,7 +171,7 @@ Specifies the name of resource group under which API Management exists.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateSpecificService
+Parameter Sets: Specific API Management service
 Aliases:
 
 Required: True
@@ -207,7 +192,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
-Parameter Sets: UpdateSpecificService
+Parameter Sets: Specific API Management service
 Aliases:
 Accepted values: Developer, Standard, Premium
 
@@ -223,7 +208,7 @@ Specifies the Virtual Network configuration of the master Azure API Management d
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
-Parameter Sets: UpdateSpecificService
+Parameter Sets: Specific API Management service
 Aliases:
 
 Required: False
@@ -247,7 +232,7 @@ The API Management deployment has an intranet facing virtual address.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVpnType
-Parameter Sets: UpdateSpecificService
+Parameter Sets: Specific API Management service
 Aliases:
 Accepted values: None, External, Internal
 
@@ -255,6 +240,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

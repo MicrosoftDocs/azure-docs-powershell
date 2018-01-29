@@ -15,14 +15,14 @@ Modifies an Azure Data Lake Analytics catalog credential password.
 
 ## SYNTAX
 
-### SetByHostNameAndPort (Default)
+### Specify host name and port (Default)
 ```
 Set-AzureRmDataLakeAnalyticsCatalogCredential [-Account] <String> [-DatabaseName] <String>
  [-CredentialName] <String> [-Credential] <PSCredential> [-NewPassword] <PSCredential> [-Uri] <Uri>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SetByFullURI
+### Specify full URI
 ```
 Set-AzureRmDataLakeAnalyticsCatalogCredential [-Account] <String> [-DatabaseName] <String>
  [-CredentialName] <String> [-Credential] <PSCredential> [-NewPassword] <PSCredential> [-DatabaseHost] <String>
@@ -98,7 +98,7 @@ Specifies the host name of the external data source the credential can connect t
 
 ```yaml
 Type: System.String
-Parameter Sets: SetByFullURI
+Parameter Sets: Specify full URI
 Aliases:
 
 Required: True
@@ -123,21 +123,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NewPassword
 Specifies the new password for the credential
 
@@ -158,7 +143,7 @@ Specifies the port number used to connect to the specified DatabaseHost using th
 
 ```yaml
 Type: System.Int32
-Parameter Sets: SetByFullURI
+Parameter Sets: Specify full URI
 Aliases:
 
 Required: True
@@ -173,7 +158,7 @@ Specifies the full Uniform Resource Identifier (URI) of the external data source
 
 ```yaml
 Type: System.Uri
-Parameter Sets: SetByHostNameAndPort
+Parameter Sets: Specify host name and port
 Aliases:
 
 Required: True
@@ -203,6 +188,21 @@ Accept wildcard characters: False
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

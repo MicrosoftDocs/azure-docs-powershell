@@ -19,13 +19,13 @@ Sets properties for a database, or moves an existing database into an elastic po
 ```
 Set-AzureRmSqlDatabase [-DatabaseName] <String> [-MaxSizeBytes <Int64>] [-Edition <DatabaseEdition>]
  [-RequestedServiceObjectiveName <String>] [-ElasticPoolName <String>] [-ReadScale <DatabaseReadScale>]
- [-Tags <Hashtable>] [-ZoneRedundant] [-ServerName] <String> [-ResourceGroupName] <String>
+ [-Tags <Hashtable>] [-ZoneRedundant] [-AsJob] [-ServerName] <String> [-ResourceGroupName] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Rename
 ```
-Set-AzureRmSqlDatabase [-DatabaseName] <String> -NewName <String> [-ServerName] <String>
+Set-AzureRmSqlDatabase [-DatabaseName] <String> -NewName <String> [-AsJob] [-ServerName] <String>
  [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -89,11 +89,25 @@ This command adds a database named Database01 to the elastic pool named ElasticP
 
 ## PARAMETERS
 
+### -AsJob
+Run cmdlet in the background
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DatabaseName
 Specifies the name of the database.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: Name
 
@@ -108,7 +122,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -131,7 +145,7 @@ The acceptable values for this parameter are:
 - Free
 
 ```yaml
-Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition
+Type: DatabaseEdition
 Parameter Sets: Update
 Aliases:
 Accepted values: None, Premium, Basic, Standard, DataWarehouse, Stretch, Free, PremiumRS
@@ -147,7 +161,7 @@ Accept wildcard characters: False
 Specifies name of the elastic pool in which to move the database.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Update
 Aliases:
 
@@ -164,7 +178,7 @@ You can specify either this parameter or *MaxSizeGB*.
 See the *MaxSizeGB* parameter for acceptable values per edition.
 
 ```yaml
-Type: System.Int64
+Type: Int64
 Parameter Sets: Update
 Aliases:
 
@@ -179,7 +193,7 @@ Accept wildcard characters: False
 The new name to rename the database to.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Rename
 Aliases:
 
@@ -194,7 +208,7 @@ Accept wildcard characters: False
 The read scale option to assign to the Azure SQL Database.(Enabled/Disabled)
 
 ```yaml
-Type: Microsoft.Azure.Commands.Sql.Database.Model.DatabaseReadScale
+Type: DatabaseReadScale
 Parameter Sets: Update
 Aliases:
 Accepted values: Disabled, Enabled
@@ -212,7 +226,7 @@ service objectives, see [Azure SQL Database Service Tiers and Performance Levels
 in the Microsoft Developer Network Library.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Update
 Aliases:
 
@@ -227,7 +241,7 @@ Accept wildcard characters: False
 Specifies the name of resource group to which the server is assigned.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -242,7 +256,7 @@ Accept wildcard characters: False
 Specifies the name of the server that hosts the database.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -259,7 +273,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: Update
 Aliases: Tag
 
@@ -274,7 +288,7 @@ Accept wildcard characters: False
 The zone redundancy to associate with the Azure Sql Database
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: Update
 Aliases:
 
@@ -289,7 +303,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -305,7 +319,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

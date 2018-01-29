@@ -15,8 +15,8 @@ Updates an image.
 ## SYNTAX
 
 ```
-Update-AzureRmImage [-AsJob] [-ResourceGroupName] <String> [-ImageName] <String> [-Image] <PSImage>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-AzureRmImage [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-ResourceGroupName] <String> [-ImageName] <String> [-Image] <Image> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,37 +33,11 @@ This command removes the data disk of logical unit number 1 from the existing im
 
 ## PARAMETERS
 
-### -AsJob
-Run cmdlet in the background and return a Job to track progress.```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Image
 Specifies a local image object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSImage
+Type: Microsoft.Azure.Management.Compute.Models.Image
 Parameter Sets: (All)
 Aliases:
 
@@ -127,6 +101,19 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

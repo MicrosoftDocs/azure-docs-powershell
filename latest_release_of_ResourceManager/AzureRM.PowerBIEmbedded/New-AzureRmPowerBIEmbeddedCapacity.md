@@ -18,9 +18,16 @@ Creates a new PowerBI Embedded Capacity.
 ## SYNTAX
 
 ```
-New-AzureRmPowerBIEmbeddedCapacity [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [-Sku] <String> [-Administrator] <String[]> [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzureRmPowerBIEmbeddedCapacity 
+	[-ResourceGroupName] <String> 
+	[-Name] <String> 
+	[-Location] <String>
+ 	[-Sku] <String> 
+	[-Administrator] <String>
+	[[-Tag] <Hashtable>] 
+ 	[-WhatIf] 
+	[-Confirm] 
+	[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,14 +58,13 @@ Creates a capacity named testcapacity in the Azure region West Central US and in
 Name of the Azure resource group to which the capacity belongs
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -66,14 +72,13 @@ Accept wildcard characters: False
 Name of the PowerBI Embedded Capacity
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -81,14 +86,13 @@ Accept wildcard characters: False
 The Azure region where the PowerBI Embedded Capacity is hosted
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
 Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -96,15 +100,14 @@ Accept wildcard characters: False
 The name of the Sku for the capacity.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: A1, A2, A3, A4, A5, A6
 
 Required: True
 Position: 3
 Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -112,14 +115,13 @@ Accept wildcard characters: False
 A comma separated capacity names to set as administrator on the capacity
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 4
 Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -127,14 +129,12 @@ Accept wildcard characters: False
 Key-value pairs in the form of a hash table set as tags on the capacity.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
-Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 Prompts user to confirm whether to perform the operation
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -157,22 +157,9 @@ Accept wildcard characters: False
 Describes the actions the current operation will perform without actually performing them
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

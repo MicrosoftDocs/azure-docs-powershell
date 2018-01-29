@@ -15,14 +15,14 @@ Removes an entry from the ACL of a file or folder in Data Lake Store.
 
 ## SYNTAX
 
-### RemoveByACLObject (Default)
+### Remove ACL Entries using ACL object (Default)
 ```
 Remove-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
  [-Acl] <DataLakeStoreItemAce[]> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### RemoveSpecificACE
+### Remove specific ACE
 ```
 Remove-AzureRmDataLakeStoreItemAclEntry [-Account] <String> [-Path] <DataLakeStorePathInstance>
  [-AceType] <AceType> [[-Id] <Guid>] [-Default] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
@@ -69,7 +69,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+AceType
-Parameter Sets: RemoveSpecificACE
+Parameter Sets: Remove specific ACE
 Aliases:
 Accepted values: User, Group, Mask, Other
 
@@ -85,7 +85,7 @@ Specifies the ACL object that contains the entries to be removed.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce[]
-Parameter Sets: RemoveByACLObject
+Parameter Sets: Remove ACL Entries using ACL object
 Aliases:
 
 Required: True
@@ -100,7 +100,7 @@ Indicates that this operation removes the default ACE from the specified ACL.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: RemoveSpecificACE
+Parameter Sets: Remove specific ACE
 Aliases:
 
 Required: False
@@ -110,27 +110,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Id
 Specifies the object ID of the AzureActive Directory user, group, or service principal for which to remove an ACE.
 
 ```yaml
 Type: System.Guid
-Parameter Sets: RemoveSpecificACE
+Parameter Sets: Remove specific ACE
 Aliases:
 
 Required: False
@@ -197,6 +182,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

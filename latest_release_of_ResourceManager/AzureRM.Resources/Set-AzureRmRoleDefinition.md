@@ -60,7 +60,7 @@ PS C:\> $roleDef = Get-AzureRmRoleDefinition "Contoso On-Call"
           PS C:\> $roleDef.Description = "Can monitor all resources and start and restart virtual machines"
           PS C:\> $roleDef.AssignableScopes = @("/subscriptions/eb910d4f-edbf-429b-94F6-d76bae7ff401", "/subscriptions/a846d197-5eac-45c7-b885-a6227fe6d388")
 
-          PS C:\> New-AzureRmRoleDefinition -Role $roleDef
+          PS C:\> Set-AzureRmRoleDefinition -Role $roleDef
 ```
 
 ### Create using JSON file
@@ -74,7 +74,7 @@ PS C:\> Set-AzureRmRoleDefinition -InputFile C:\Temp\roleDefinition.json
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -91,7 +91,7 @@ Only include the properties that are to be updated in the JSON.
 Id property is Required.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: InputFileParameterSet
 Aliases:
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 Role definition object to be updated
 
 ```yaml
-Type: Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleDefinition
+Type: PSRoleDefinition
 Parameter Sets: RoleDefinitionParameterSet
 Aliases:
 

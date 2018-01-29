@@ -90,15 +90,15 @@ This command will return metadata such as the deletion date, and the scheduled p
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
+### -InRemovedState
+Specifies whether to show the previously deleted keys in the output
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ByDeletedKey
+Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -115,21 +115,6 @@ If you do not specify the *IncludeVersions* parameter, this cmdlet gets the curr
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByKeyVersions
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InRemovedState
-Specifies whether to show the previously deleted keys in the output
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: ByDeletedKey
 Aliases:
 
 Required: True
@@ -195,6 +180,21 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

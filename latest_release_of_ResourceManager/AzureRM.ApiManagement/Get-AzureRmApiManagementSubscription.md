@@ -15,25 +15,25 @@ Gets subscriptions.
 
 ## SYNTAX
 
-### GetAllSubscriptions (Default)
+### Get all subscriptions (Default)
 ```
 Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetBySubscriptionId
+### Get by subsctiption ID
 ```
 Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-SubscriptionId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByUserId
+### Get by user ID
 ```
 Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-UserId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByProductId
+### Get by product ID
 ```
 Get-AzureRmApiManagementSubscription -Context <PsApiManagementContext> [-ProductId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -93,28 +93,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ProductId
 Specifies a product identifier.
 If specified, this cmdlet finds all subscriptions by the product identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByProductId
+Parameter Sets: Get by product ID
 Aliases:
 
 Required: False
@@ -130,7 +115,7 @@ If specified, this cmdlet finds subscription by the identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetBySubscriptionId
+Parameter Sets: Get by subsctiption ID
 Aliases:
 
 Required: False
@@ -146,13 +131,28 @@ If specified, this cmdlet finds all subscriptions by the user identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByUserId
+Parameter Sets: Get by user ID
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -15,13 +15,13 @@ Adds a data source to a Data Lake Analytics account.
 
 ## SYNTAX
 
-### AddDataLakeStorageAccount
+### Add a Data Lake storage account
 ```
 Add-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <String>
  [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### AddBlobStorageAccount
+### Add a Blob storage account
 ```
 Add-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-Blob] <String> [-AccessKey] <String>
  [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -46,7 +46,7 @@ Specifies the access key of the Azure Blob storage account to add.
 
 ```yaml
 Type: System.String
-Parameter Sets: AddBlobStorageAccount
+Parameter Sets: Add a Blob storage account
 Aliases:
 
 Required: True
@@ -76,7 +76,7 @@ Specifies the name of the Azure Blob Storage account to add.
 
 ```yaml
 Type: System.String
-Parameter Sets: AddBlobStorageAccount
+Parameter Sets: Add a Blob storage account
 Aliases: AzureBlob
 
 Required: True
@@ -91,11 +91,26 @@ Specifies the name of the Azure Data Lake Store account to add.
 
 ```yaml
 Type: System.String
-Parameter Sets: AddDataLakeStorageAccount
+Parameter Sets: Add a Data Lake storage account
 Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group name of the Data Lake Analytics account.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -113,21 +128,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the resource group name of the Data Lake Analytics account.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

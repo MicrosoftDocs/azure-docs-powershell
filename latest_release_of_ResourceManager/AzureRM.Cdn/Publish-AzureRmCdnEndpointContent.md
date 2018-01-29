@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
 Module Name: AzureRM.Cdn
 ms.assetid: AFDBE48E-63B0-4A9E-9825-5246081AA129
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn/publish-azurermcdnendpointcontent
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Publish-AzureRmCdnEndpointContent.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Publish-AzureRmCdnEndpointContent.md
 ---
 
 # Publish-AzureRmCdnEndpointContent
@@ -43,9 +41,9 @@ The **Publish-AzureRmCdnEndpointContent** cmdlet loads content from an origin se
 Sepcifies the CDN endpoint.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Cdn.Models.Endpoint.PSEndpoint
+Type: PSEndpoint
 Parameter Sets: ByObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -58,7 +56,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -73,9 +71,9 @@ Accept wildcard characters: False
 Specifies the name of the endpoint.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -88,9 +86,9 @@ Accept wildcard characters: False
 Specifies an array of relative paths for the content on the origin server that this cmdlet publishes.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -104,9 +102,9 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -119,9 +117,9 @@ Accept wildcard characters: False
 Specifies the name of the profile to which the origin server belongs.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -134,9 +132,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group to which the origin server belongs.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

@@ -14,22 +14,16 @@ Gets a container registry.
 
 ## SYNTAX
 
-### ListRegistriesParameterSet (Default)
+### ResourceGroupParameterSet
 ```
-Get-AzureRmContainerRegistry [[-ResourceGroupName] <String>] [-IncludeDetail]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmContainerRegistry [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### RegistryNameParameterSet
 ```
-Get-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-IncludeDetail]
+Get-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
-
-### ResourceIdParameterSet
-```
-Get-AzureRmContainerRegistry [-IncludeDetail] -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,7 +111,7 @@ Resource Group Name.
 
 ```yaml
 Type: System.String
-Parameter Sets: ListRegistriesParameterSet
+Parameter Sets: ResourceGroupParameterSet
 Aliases:
 
 Required: False
@@ -151,36 +145,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeDetail
-Show more details about the container registry.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceId
-The container registry resource id
-
-```yaml
-Type: System.String
-Parameter Sets: ResourceIdParameterSet
-Aliases: Id
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

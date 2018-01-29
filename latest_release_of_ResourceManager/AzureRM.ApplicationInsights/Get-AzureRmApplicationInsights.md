@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
 Module Name: AzureRM.ApplicationInsights
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.applicationinsights/get-azurermapplicationinsights
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Get-AzureRmApplicationInsights.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Get-AzureRmApplicationInsights.md
 ---
 
 # Get-AzureRmApplicationInsights
@@ -102,7 +100,7 @@ The credentials, account, tenant, and subscription used for communication with a
 
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -117,7 +115,7 @@ Accept wildcard characters: False
 If specified, it will get back pricing plan/daily cap and status of the application insights component.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: ComponentNameParameterSet, ResourceIdParameterSet
 Aliases: IncludeDailyCap, IncludeDailyCapStatus, IncludePricingPlan
 
@@ -132,7 +130,7 @@ Accept wildcard characters: False
 Application Insights Resource Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComponentNameParameterSet
 Aliases: ApplicationInsightsComponentName, ComponentName
 
@@ -147,9 +145,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: False
 Position: 0
@@ -159,9 +157,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComponentNameParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -174,9 +172,9 @@ Accept wildcard characters: False
 Application Insights Component Resource Id.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -199,3 +197,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

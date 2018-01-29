@@ -59,9 +59,9 @@ This command starts a run for "DPWikisample" pipeline in the "WikiADF" factory.
 The data factory name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryNameByParameterFile, ByFactoryNameByParameterObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -89,9 +89,9 @@ Accept wildcard characters: False
 The data factory object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSPipeline
+Type: PSPipeline
 Parameter Sets: ByPipelineObjectByParameterFile, ByPipelineObjectByParameterObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -104,9 +104,9 @@ Accept wildcard characters: False
 Parameters for pipeline run.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: ByPipelineObjectByParameterObject, ByFactoryNameByParameterObject
-Aliases:
+Aliases: 
 
 Required: False
 Position: 3
@@ -119,9 +119,9 @@ Accept wildcard characters: False
 The name of the file with parameters for pipeline run.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryNameByParameterFile, ByPipelineObjectByParameterFile
-Aliases:
+Aliases: 
 
 Required: False
 Position: 3
@@ -134,9 +134,9 @@ Accept wildcard characters: False
 The pipeline name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryNameByParameterFile, ByFactoryNameByParameterObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -149,9 +149,9 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFactoryNameByParameterFile, ByFactoryNameByParameterObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

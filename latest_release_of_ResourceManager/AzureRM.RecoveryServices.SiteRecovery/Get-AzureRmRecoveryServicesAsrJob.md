@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.RecoveryServices.SiteRecovery
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery/get-azurermrecoveryservicesasrjob
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Get-AzureRmRecoveryServicesAsrJob.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Get-AzureRmRecoveryServicesAsrJob.md
 ---
 
 # Get-AzureRmRecoveryServicesAsrJob
@@ -53,9 +51,9 @@ To obtain a **DateTime** object for this parameter, use the Get-Date cmdlet.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml
-Type: System.Nullable`1[System.DateTime]
+Type: DateTime
 Parameter Sets: ByParam
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -68,9 +66,9 @@ Accept wildcard characters: False
 Specifies the ASR job object to get updated details for.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob
+Type: ASRJob
 Parameter Sets: ByObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -83,9 +81,9 @@ Accept wildcard characters: False
 Specify the ASR job by name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -99,9 +97,9 @@ Specifies the start time for the jobs.
 This cmdlet gets all jobs that started after the specified time.
 
 ```yaml
-Type: System.Nullable`1[System.DateTime]
+Type: DateTime
 Parameter Sets: ByParam
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -124,9 +122,9 @@ The acceptable values for this parameter are:
 - Suspended
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByParam
-Aliases:
+Aliases: 
 Accepted values: NotStarted, InProgress, Succeeded, Other, Failed, Cancelled, Suspended
 
 Required: False
@@ -140,9 +138,9 @@ Accept wildcard characters: False
 Specifies the ID of the object. Used to search for jobs on the specified object.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByParam
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -155,7 +153,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

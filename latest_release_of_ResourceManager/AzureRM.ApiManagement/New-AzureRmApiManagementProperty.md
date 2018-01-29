@@ -61,21 +61,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the property that this cmdlet creates.
 Maximum length is 100 characters.
@@ -126,10 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies an array of tags that this cmdlet associates to the property.
-You can use tags to filter the property list.
-
-```yaml
+Specifies an array of tags that this cmdlet associates to the property. You can use tags to filter the property list.```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
@@ -156,6 +138,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

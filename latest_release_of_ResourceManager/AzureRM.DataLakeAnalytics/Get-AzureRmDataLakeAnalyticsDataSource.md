@@ -15,19 +15,19 @@ Gets a Data Lake Analytics data source.
 
 ## SYNTAX
 
-### GetAllDataSources (Default)
+### List all data sources (Default)
 ```
 Get-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [[-ResourceGroupName] <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetDataLakeStoreAccount
+### Get a Data Lake Store account
 ```
 Get-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-DataLakeStore] <String>
  [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetBlobStorageAccount
+### Get a Blob storage account
 ```
 Get-AzureRmDataLakeAnalyticsDataSource [-Account] <String> [-Blob] <String> [[-ResourceGroupName] <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -74,7 +74,7 @@ Specifies the name of the Azure Blob Storage data source.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetBlobStorageAccount
+Parameter Sets: Get a Blob storage account
 Aliases: AzureBlob
 
 Required: True
@@ -89,11 +89,26 @@ Specifies the name of the Data Lake Store account.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetDataLakeStoreAccount
+Parameter Sets: Get a Data Lake Store account
 Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Specifies the resource group name that contains the data source.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -111,21 +126,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Specifies the resource group name that contains the data source.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

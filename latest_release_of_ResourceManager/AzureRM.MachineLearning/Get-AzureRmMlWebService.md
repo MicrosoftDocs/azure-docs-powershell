@@ -26,48 +26,21 @@ Depending on the paramenters passed, the cmdlet returns the defintion for a spec
 ## EXAMPLES
 
 ### Example 1: Get details of specific web service
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Get-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
 ```
 
 ### Example 2: Get all web service resources in current subscription
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Get-AzureRmMlWebService
 ```
 
 ### Example 3: Get all web services in the current subscription and given resource group
-@{paragraph=PS C:\\\>}
-
-
-
 ```
 Get-AzureRmMlWebService -ResourceGroupName "myresourcegroup"
 ```
 
 ## PARAMETERS
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Name
 The name of the web service for which the details are retrieved.
@@ -84,8 +57,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Region
-The name of regio
+### -ResourceGroupName
+The resource group from which the details for the web service are retrieved.
 
 ```yaml
 Type: System.String
@@ -99,8 +72,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceGroupName
-The resource group from which the details for the web service are retrieved.
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Region
+The name of regio
 
 ```yaml
 Type: System.String

@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.RecoveryServices.SiteRecovery
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery/edit-azurermrecoveryservicesasrrecoveryplan
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Edit-AzureRmRecoveryServicesAsrRecoveryPlan.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Edit-AzureRmRecoveryServicesAsrRecoveryPlan.md
 ---
 
 # Edit-AzureRmRecoveryServicesAsrRecoveryPlan
@@ -58,7 +56,7 @@ Appends a group to existing Azure Site Recovery recovery plan and returns the in
 List of ASR replication protected items to be added to the recovery plan group in the recovery plan object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem[]
+Type: ASRReplicationProtectedItem[]
 Parameter Sets: AddReplicationProtectedItems
 Aliases: AddProtectedItems
 
@@ -73,9 +71,9 @@ Accept wildcard characters: False
 Switch parameter to append a recovery plan group to the recovery plan object.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: AppendGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -88,7 +86,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -103,9 +101,9 @@ Accept wildcard characters: False
 Specifies a recovery plan group.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlanGroup
+Type: ASRRecoveryPlanGroup
 Parameter Sets: AddReplicationProtectedItems, RemoveReplicationProtectedItems
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -118,7 +116,7 @@ Accept wildcard characters: False
 The ASR recovery plan object to be edited (In memory operation. To update the recovery plan run Update-AzureRmASRRecoveryPlan with the edited recovery plan object.)
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan
+Type: ASRRecoveryPlan
 Parameter Sets: (All)
 Aliases: RecoveryPlan
 
@@ -133,9 +131,9 @@ Accept wildcard characters: False
 Removes the specified group from the recovery plan object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlanGroup
+Type: ASRRecoveryPlanGroup
 Parameter Sets: RemoveGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -148,7 +146,7 @@ Accept wildcard characters: False
 List of ASR replication protected items to be removed from the recovery plan group in the recovery plan object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem[]
+Type: ASRReplicationProtectedItem[]
 Parameter Sets: RemoveReplicationProtectedItems
 Aliases: RemoveProtectedItems
 
@@ -163,7 +161,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -178,7 +176,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

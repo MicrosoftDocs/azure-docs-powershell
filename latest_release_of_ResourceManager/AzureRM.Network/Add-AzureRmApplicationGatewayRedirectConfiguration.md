@@ -55,9 +55,9 @@ The second command adds the redirect configuration to the application gateway.
 The applicationGateway
 
 ```yaml
-Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
+Type: PSApplicationGateway
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -86,9 +86,9 @@ Include path in the redirected url.
 Default is true.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -102,9 +102,9 @@ Include query string in the redirected url.
 Default is true.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -117,9 +117,9 @@ Accept wildcard characters: False
 The name of the Redirect Configuration
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -132,9 +132,9 @@ Accept wildcard characters: False
 The type of redirect
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Permanent, Found, SeeOther, Temporary
 
 Required: True
@@ -148,9 +148,9 @@ Accept wildcard characters: False
 HTTPListener to redirect the request to
 
 ```yaml
-Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener
+Type: PSApplicationGatewayHttpListener
 Parameter Sets: SetByResource
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -163,9 +163,9 @@ Accept wildcard characters: False
 ID of  listener to redirect the request to
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SetByResourceId
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -178,9 +178,9 @@ Accept wildcard characters: False
 Target URL fo redirection
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SetByURL
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -203,3 +203,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

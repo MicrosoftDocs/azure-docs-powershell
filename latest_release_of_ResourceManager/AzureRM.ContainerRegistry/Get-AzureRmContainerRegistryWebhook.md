@@ -93,7 +93,7 @@ Get a specified webhook of a container registry with configuration details
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -108,9 +108,9 @@ Accept wildcard characters: False
 Get the configuration information for a webhook.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Webhook Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ShowWebhookByNameResourceGroupParameterSet, ShowWebhookByRegistryObjectParameterSet
 Aliases: WebhookName, ResourceName
 
@@ -138,9 +138,9 @@ Accept wildcard characters: False
 Container Registry Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistry
+Type: PSContainerRegistry
 Parameter Sets: ShowWebhookByRegistryObjectParameterSet, ListWebhookByRegistryObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 Container Registry Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListWebhookByNameResourceGroupParameterSet, ShowWebhookByNameResourceGroupParameterSet
 Aliases: ContainerRegistryName
 
@@ -168,9 +168,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListWebhookByNameResourceGroupParameterSet, ShowWebhookByNameResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 The container registry Webhook resource id
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdParameterSet
 Aliases: Id
 

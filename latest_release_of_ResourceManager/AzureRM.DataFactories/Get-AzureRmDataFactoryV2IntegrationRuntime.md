@@ -119,9 +119,9 @@ This command displays information about the integration runtime named 'test-dedi
 The data factory name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -149,9 +149,9 @@ Accept wildcard characters: False
 The integration runtime object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime
+Type: PSIntegrationRuntime
 Parameter Sets: ByIntegrationRuntimeObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 The integration runtime name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
 Aliases: IntegrationRuntimeName
 
@@ -179,9 +179,9 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
 Aliases: Id
 
@@ -209,9 +209,9 @@ Accept wildcard characters: False
 The integration runtime detail status.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

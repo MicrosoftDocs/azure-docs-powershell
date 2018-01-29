@@ -40,21 +40,6 @@ Gets all the eventhub consumergroups for the operationsMonitoringEvents eventhub
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EventHubEndpointName
 Name of the Event Hub endpoint.
 Possible values events, operationsMonitoringEvents
@@ -63,7 +48,6 @@ Possible values events, operationsMonitoringEvents
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Accepted values: events, operationsMonitoringEvents
 
 Required: True
 Position: 2
@@ -99,6 +83,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

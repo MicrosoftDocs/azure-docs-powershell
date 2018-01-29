@@ -16,8 +16,7 @@ Starts to resize a pool.
 ## SYNTAX
 
 ```
-Start-AzureBatchPoolResize [-Id] <String> [-TargetDedicatedComputeNodes <Int32>]
- [-TargetLowPriorityComputeNodes <Int32>] [-ResizeTimeout <TimeSpan>]
+Start-AzureBatchPoolResize [-Id] <String> -TargetDedicated <Int32> [-ResizeTimeout <TimeSpan>]
  [-ComputeNodeDeallocationOption <ComputeNodeDeallocationOption>] -BatchContext <BatchAccountContext>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
@@ -83,21 +82,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Id
 Specifies the ID of the pool that this cmdlet resizes.
 
@@ -129,28 +113,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TargetDedicatedComputeNodes
-The number of target dedicated compute nodes.
-
-```yaml
-Type: System.Nullable`1[System.Int32]
+### -TargetDedicated
+Specifies the target number of dedicated compute nodes.```yaml
+Type: System.Int32
 Parameter Sets: (All)
-Aliases: TargetDedicated
+Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TargetLowPriorityComputeNodes
-The number of target low-priority compute nodes.
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
-Aliases:
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

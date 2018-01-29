@@ -15,25 +15,25 @@ Gets all or specific API management groups.
 
 ## SYNTAX
 
-### GetAllGroups (Default)
+### Get all groups (Default)
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByGroupId
+### Get by group ID
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-GroupId <String>] [-Name <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByUserId
+### Find groups by user
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [-UserId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### GetByProductId
+### Find groups by product
 ```
 Get-AzureRmApiManagementGroup -Context <PsApiManagementContext> [-Name <String>] [-ProductId <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -93,28 +93,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
- ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -GroupId
 Specifies the group ID.
 If specified, the cmdlet attempts to find the group by the identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByGroupId
+Parameter Sets: Get by group ID
 Aliases:
 
 Required: False
@@ -146,7 +131,7 @@ This parameter is optional.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByProductId
+Parameter Sets: Find groups by product
 Aliases:
 
 Required: False
@@ -162,13 +147,28 @@ If specified the cmdlet will return all groups the product assigned to.
 
 ```yaml
 Type: System.String
-Parameter Sets: GetByUserId
+Parameter Sets: Find groups by user
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+ ```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

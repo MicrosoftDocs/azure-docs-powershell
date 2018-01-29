@@ -16,8 +16,8 @@ Creates an Autoscale email notification.
 ## SYNTAX
 
 ```
-New-AzureRmAutoscaleNotification [[-Webhook] <WebhookNotification[]>] [[-CustomEmail] <String[]>]
- [-SendEmailToSubscriptionAdministrator] [-SendEmailToSubscriptionCoAdministrator]
+New-AzureRmAutoscaleNotification [[-Webhooks] <WebhookNotification[]>] [[-CustomEmails] <String[]>]
+ [-SendEmailToSubscriptionAdministrator] [-SendEmailToSubscriptionCoAdministrators]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -42,33 +42,16 @@ This command creates an Autosacale email notification for the subscription admin
 
 ## PARAMETERS
 
-### -CustomEmail
-Specifies a comma-separated list of email addresses.
-
-```yaml
+### -CustomEmails
+Specifies a comma-separated list of email addresses.```yaml
 Type: System.String[]
 Parameter Sets: (All)
-Aliases: CustomEmails
+Aliases:
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -87,33 +70,44 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SendEmailToSubscriptionCoAdministrator
-Indicates that this operation sends an email notification to the subscription co-administrators.
-
-```yaml
+### -SendEmailToSubscriptionCoAdministrators
+Indicates that this operation sends an email notification to the subscription co-administrators.```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: SendEmailToSubscriptionCoAdministrators
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Webhook
-Specifies a comma-separated list of Autoscale webhooks.
-
-```yaml
+### -Webhooks
+Specifies a comma-separated list of Autoscale webhooks.```yaml
 Type: Microsoft.Azure.Management.Monitor.Management.Models.WebhookNotification[]
 Parameter Sets: (All)
-Aliases: Webhooks
+Aliases:
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

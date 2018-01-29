@@ -17,9 +17,9 @@ Creates a Data Lake Analytics account.
 
 ```
 New-AzureRmDataLakeAnalyticsAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [-DefaultDataLakeStore] <String> [[-Tags] <Hashtable>] [-MaxAnalyticsUnits <Int32>] [-MaxJobCount <Int32>]
- [-QueryStoreRetention <Int32>] [-Tier <TierType>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+ [-DefaultDataLakeStore] <String> [[-Tags] <Hashtable>] [-MaxDegreeOfParallelism <Int32>]
+ [-MaxJobCount <Int32>] [-QueryStoreRetention <Int32>] [-Tier <TierType>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,21 +51,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Location
 Specifies the location at which to create the Data Lake Analytics account.
 Only East US 2 is supported at this time.
@@ -82,13 +67,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MaxAnalyticsUnits
-The optional maximum supported analytics units for this account.
-
-```yaml
+### -MaxDegreeOfParallelism
+The optional maximum supported degree of parallelism for this account. If none is specified, defaults to 30```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
-Aliases: MaxDegreeOfParallelism
+Aliases:
 
 Required: False
 Position: Named
@@ -159,9 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.
-
-```yaml
+Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
@@ -186,6 +167,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

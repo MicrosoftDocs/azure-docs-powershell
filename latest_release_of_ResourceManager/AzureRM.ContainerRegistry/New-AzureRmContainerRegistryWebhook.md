@@ -59,7 +59,7 @@ Create a container registry webhook.
 Space separated list of actions that trigger the webhook to post notifications.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
 Aliases: WebhookActions
 Accepted values: delete, push
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 Custom headers that will be added to the webhook notifications.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: WebhookHeaders
 
@@ -121,7 +121,7 @@ Webhook Location.
 Default to the location of the registry.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: WebhookLocation
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 Webhook Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: WebhookName, ResourceName
 
@@ -151,9 +151,9 @@ Accept wildcard characters: False
 Container Registry Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistry
+Type: PSContainerRegistry
 Parameter Sets: RegistryObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 Container Registry Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: NameResourceGroupParameterSet
 Aliases: ContainerRegistryName
 
@@ -181,9 +181,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: NameResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 The container registry resource id
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdParameterSet
 Aliases: Id
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 Webhook scope.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: WebhookScope
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 Webhook status, default value is enabled
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: WebhookStatus
 Accepted values: enabled, disabled
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 Webhook tags.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 The service URI for the webhook to post notifications.
 
 ```yaml
-Type: System.Uri
+Type: Uri
 Parameter Sets: (All)
 Aliases: WebhookUri
 
@@ -273,7 +273,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

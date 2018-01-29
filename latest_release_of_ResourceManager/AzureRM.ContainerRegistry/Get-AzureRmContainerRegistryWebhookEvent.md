@@ -64,7 +64,7 @@ Gets all the events of a webhook.
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 Container Registry Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListWebhookEventsByNameResourceGroupParameterSet
 Aliases: ContainerRegistryName
 
@@ -94,9 +94,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListWebhookEventsByNameResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 The container registry Webhook resource id
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceIdParameterSet
 Aliases: Id
 
@@ -124,9 +124,9 @@ Accept wildcard characters: False
 Container Registry Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistryWebhook
+Type: PSContainerRegistryWebhook
 Parameter Sets: ListWebhookEventsByWebhookObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -138,9 +138,9 @@ Accept wildcard characters: False
 ### -WebhookName
 Webhook Name.
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListWebhookEventsByNameResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

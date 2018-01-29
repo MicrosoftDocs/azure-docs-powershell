@@ -45,7 +45,7 @@ This command creates a policy called "myPolicy" in account "contosoadla" for the
 Name of the account to add the compute policy to.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: AccountName
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -76,7 +76,7 @@ The maximum supported analytics units per job for this policy.
 Either this, MinPriorityPerJob, or both parameters must be specified.
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Int32
 Parameter Sets: (All)
 Aliases: MaxDegreeOfParallelismPerJob
 
@@ -92,9 +92,9 @@ The minimum supported priority per job for this policy.
 Either this, MaxAnalyticsUnitsPerJob, or both parameters must be specified.
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 Name of the compute policy to create.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: ComputePolicyName
 
@@ -122,9 +122,9 @@ Accept wildcard characters: False
 The Azure Active Directory object id for the user or group to apply the policy to.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -137,9 +137,9 @@ Accept wildcard characters: False
 The Azure Active Directory object type for the object ID passed in.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: User, Group, ServicePrincipal
 
 Required: True
@@ -154,9 +154,9 @@ Name of resource group under which you the account exists.
 Optional and will attempt to discover if not provided.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -211,3 +211,4 @@ System.Int32
 ## NOTES
 
 ## RELATED LINKS
+

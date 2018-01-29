@@ -71,13 +71,6 @@ A new key credential is added to an existing service principal.
 In this example, the supplied base64 encoded public X509 certificate ("myapp.cer") is added to the service principal using its SPN.
 
 ### Example 3
-@{paragraph=PS C:\\\>}
-
-
-
-
-
-
 
 ```
 PS E:\> New-AzureRmADSpCredential -ServicePrincipalName "http://test123" -CertValue $credValue
@@ -90,7 +83,7 @@ The value of the "asymmetric" credential type.
 It represents the base 64 encoded certificate.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SpObjectIdWithCertValueParameterSet, SPNWithCertValueParameterSet
 Aliases:
 
@@ -105,7 +98,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -122,7 +115,7 @@ The default end date value is one year from today.
 For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -137,7 +130,7 @@ Accept wildcard characters: False
 The object id of the service principal to add the credentials to.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SpObjectIdWithPasswordParameterSet, SpObjectIdWithCertValueParameterSet
 Aliases: ServicePrincipalObjectId
 
@@ -152,7 +145,7 @@ Accept wildcard characters: False
 The password to be associated with the application.
 
 ```yaml
-Type: System.Security.SecureString
+Type: SecureString
 Parameter Sets: SpObjectIdWithPasswordParameterSet, SPNWithPasswordParameterSet
 Aliases:
 
@@ -167,7 +160,7 @@ Accept wildcard characters: False
 The name (SPN) of the service principal to add the credentials to.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SPNWithCertValueParameterSet, SPNWithPasswordParameterSet
 Aliases: SPN
 
@@ -184,7 +177,7 @@ The default start date value is today.
 For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -199,7 +192,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -212,7 +205,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

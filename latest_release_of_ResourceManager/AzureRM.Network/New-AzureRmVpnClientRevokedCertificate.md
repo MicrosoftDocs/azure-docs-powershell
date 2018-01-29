@@ -50,7 +50,7 @@ This variable can then be used by the **New-AzureRmVirtualNetworkGateway** cmdle
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -65,9 +65,9 @@ Accept wildcard characters: False
 Specifies a unique name for the new client-revocation certificate.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -86,9 +86,9 @@ You can return thumbprint information for your certificates by using a Windows P
 The preceding command returns information for all the Local Computer certificates found in the Root certificate store.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

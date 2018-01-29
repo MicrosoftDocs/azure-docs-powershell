@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.RecoveryServices.SiteRecovery
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery/get-azurermrecoveryservicesasrrecoveryplan
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Get-AzureRmRecoveryServicesAsrRecoveryPlan.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Get-AzureRmRecoveryServicesAsrRecoveryPlan.md
 ---
 
 # Get-AzureRmRecoveryServicesAsrRecoveryPlan
@@ -49,9 +47,9 @@ Gets the recovery plan with the specified name.
 Specifies the friendly name of the recovery plan to get.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByFriendlyName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -64,9 +62,9 @@ Accept wildcard characters: False
 Specifies the name of the recovery plan to get.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -79,9 +77,9 @@ Accept wildcard characters: False
 Specifies the file path to which this cmdlet saves the recovery plan json definition. The json definition can be edited to modify the recovery plan and used to update the recovery plan through the Update-AzureRmRecoveryServicesASRRecoveryPlan cmdlet
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByName, ByFriendlyName
-Aliases:
+Aliases: 
 
 Required: False
 Position: 1
@@ -94,7 +92,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 

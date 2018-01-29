@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 Module Name: AzureRM.Automation
 ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/get-azurermautomationdscnodeconfigurationdeployment
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNodeConfigurationDeployment.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationDscNodeConfigurationDeployment.md
 ---
 
 # Get-AzureRmAutomationDscNodeConfigurationDeployment
@@ -67,9 +65,9 @@ The above command deploys the DSC node configuration named "Config01.Node1" to t
 Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -82,7 +80,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -97,9 +95,9 @@ Accept wildcard characters: False
 End time filter.
 
 ```yaml
-Type: System.Nullable`1[System.DateTimeOffset]
+Type: DateTimeOffset
 Parameter Sets: ByAll
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -112,9 +110,9 @@ Accept wildcard characters: False
 Specifies the Job id of an existing deployment job.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: ByJobId
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -127,9 +125,9 @@ Accept wildcard characters: False
 Specifies the name of a resource group in which this cmdlet compiles a configuration.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -142,9 +140,9 @@ Accept wildcard characters: False
 Start time filter.
 
 ```yaml
-Type: System.Nullable`1[System.DateTimeOffset]
+Type: DateTimeOffset
 Parameter Sets: ByAll
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -157,9 +155,9 @@ Accept wildcard characters: False
 Status of the Job filter.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByAll
-Aliases:
+Aliases: 
 Accepted values: Completed, Failed, Queued, Starting, Resuming, Running, Stopped, Stopping, Suspended, Suspending, Activating
 
 Required: False

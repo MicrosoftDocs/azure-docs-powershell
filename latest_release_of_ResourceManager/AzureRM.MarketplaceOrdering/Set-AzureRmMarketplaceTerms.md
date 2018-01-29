@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.MarketplaceOrdering.dll-Help.xml
 Module Name: AzureRM.MarketplaceOrdering
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.marketplaceordering/set-azurermmarketplaceterms
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MarketplaceOrdering/Commands.MarketplaceOrdering/help/Set-AzureRmMarketplaceTerms.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MarketplaceOrdering/Commands.MarketplaceOrdering/help/Set-AzureRmMarketplaceTerms.md
 ---
 
 # Set-AzureRmMarketplaceTerms
@@ -61,9 +59,9 @@ PS C:\> Get-AzureRmMarketplaceTerms -Publisher "microsoft-ads" -Product "windows
 Pass this to accept the legal terms.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: AgreementAcceptParameterSet, InputObjectAcceptParametrSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -76,7 +74,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -91,9 +89,9 @@ Accept wildcard characters: False
 Terms object returned in Get-AzureRmMarketplaceTerms cmdlet. This is a mandatory parameter if Accepted paramter is true.
 
 ```yaml
-Type: Microsoft.Azure.Commands.MarketplaceOrdering.Models.PSAgreementTerms
+Type: PSAgreementTerms
 Parameter Sets: InputObjectAcceptParametrSet, InputObjectRejectParametrSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -106,9 +104,9 @@ Accept wildcard characters: False
 Plan identifier string of image being deployed.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: AgreementAcceptParameterSet, AgreementRejectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -121,9 +119,9 @@ Accept wildcard characters: False
 Offer identifier string of image being deployed.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: AgreementAcceptParameterSet, AgreementRejectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -136,9 +134,9 @@ Accept wildcard characters: False
 Publisher identifier string of image being deployed.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: AgreementAcceptParameterSet, AgreementRejectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -151,9 +149,9 @@ Accept wildcard characters: False
 Pass this to reject the legal terms.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: AgreementRejectParameterSet, InputObjectRejectParametrSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -166,9 +164,9 @@ Accept wildcard characters: False
 Terms object returned in Get-AzureRmMarketplaceTerms cmdlet. This is a mandatory parameter if Accepted paramter is true.
 
 ```yaml
-Type: Microsoft.Azure.Commands.MarketplaceOrdering.Models.PSAgreementTerms
+Type: PSAgreementTerms
 Parameter Sets: AgreementAcceptParameterSet, AgreementRejectParameterSet
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -181,7 +179,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -196,7 +194,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -223,3 +221,4 @@ Microsoft.Azure.Commands.MarketplaceOrdering.Models.PSAgreementTerms
 ## NOTES
 
 ## RELATED LINKS
+

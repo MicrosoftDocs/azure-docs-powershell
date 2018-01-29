@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-Module Name: AzureRM.Storage
 ms.assetid: 4D7EEDD7-89D4-4B1E-A9A1-B301E759CE72
 online version:
 schema: 2.0.0
@@ -17,24 +16,24 @@ Modifies a Storage account.
 
 ### StorageEncryption (Default)
 ```
-Set-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [-SkuName <String>]
- [-AccessTier <String>] [-CustomDomainName <String>] [-UseSubDomain <Boolean>]
- [-EnableEncryptionService <EncryptionSupportServiceEnum>]
- [-DisableEncryptionService <EncryptionSupportServiceEnum>] [-Tag <Hashtable>]
+Set-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [[-SkuName] <String>]
+ [[-AccessTier] <String>] [[-CustomDomainName] <String>] [[-UseSubDomain] <Boolean>]
+ [[-EnableEncryptionService] <EncryptionSupportServiceEnum>]
+ [[-DisableEncryptionService] <EncryptionSupportServiceEnum>] [[-Tag] <Hashtable>]
  [-EnableHttpsTrafficOnly <Boolean>] [-StorageEncryption] [-AssignIdentity]
- [-NetworkRuleSet <PSNetworkRuleSet>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### KeyvaultEncryption
 ```
-Set-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [-SkuName <String>]
- [-AccessTier <String>] [-CustomDomainName <String>] [-UseSubDomain <Boolean>]
- [-EnableEncryptionService <EncryptionSupportServiceEnum>]
- [-DisableEncryptionService <EncryptionSupportServiceEnum>] [-Tag <Hashtable>]
+Set-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [[-SkuName] <String>]
+ [[-AccessTier] <String>] [[-CustomDomainName] <String>] [[-UseSubDomain] <Boolean>]
+ [[-EnableEncryptionService] <EncryptionSupportServiceEnum>]
+ [[-DisableEncryptionService] <EncryptionSupportServiceEnum>] [[-Tag] <Hashtable>]
  [-EnableHttpsTrafficOnly <Boolean>] [-KeyvaultEncryption] -KeyName <String> -KeyVersion <String>
- -KeyVaultUri <String> [-AssignIdentity] [-NetworkRuleSet <PSNetworkRuleSet>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -KeyVaultUri <String> [-AssignIdentity] [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,13 +109,12 @@ For more information, see Azure Blob Storage: Hot and cool storage tiershttp://g
 If the kind of Storage account is Storage, do not specify this parameter.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
-Accepted values: Hot, Cool
+Aliases: 
 
 Required: False
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -124,9 +122,9 @@ Accept wildcard characters: False
 
 ### -AssignIdentity
 Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -139,25 +137,12 @@ Accept wildcard characters: False
 Specifies the name of the custom domain.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -168,13 +153,12 @@ Indicates whether this cmdlet disables Storage Service encryption on the Storage
 Azure Blob and Azure File Services are supported.
 
 ```yaml
-Type: System.Nullable`1[Microsoft.Azure.Commands.Management.Storage.StorageAccountBaseCmdlet+EncryptionSupportServiceEnum]
+Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
-Aliases:
-Accepted values: None, Blob, File
+Aliases: 
 
 Required: False
-Position: Named
+Position: 7
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -185,13 +169,12 @@ Indicates whether this cmdlet enables Storage Service encryption on the Storage 
 Azure Blob and Azure File Services are supported.
 
 ```yaml
-Type: System.Nullable`1[Microsoft.Azure.Commands.Management.Storage.StorageAccountBaseCmdlet+EncryptionSupportServiceEnum]
+Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
-Aliases:
-Accepted values: None, Blob, File
+Aliases: 
 
 Required: False
-Position: Named
+Position: 6
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -199,9 +182,9 @@ Accept wildcard characters: False
 
 ### -EnableHttpsTrafficOnly
 Indicates whether or not the Storage Account only enable https traffic.```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -216,9 +199,48 @@ For more information, see Azure Blob Storage: Hot and cool storage tiershttp://g
 If the kind of Storage account is Storage, do not specify this parameter.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationAction
+Specifies how this cmdlet responds to an information event.
+
+The acceptable values for this parameter are:
+
+- Continue
+- Ignore
+- Inquire
+- SilentlyContinue
+- Stop
+- Suspend
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: infa
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationVariable
+Specifies an information variable.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: iv
 
 Required: False
 Position: Named
@@ -229,9 +251,9 @@ Accept wildcard characters: False
 
 ### -KeyName
 Storage Account encryption keySource KeyVault KeyName```yaml
-Type: System.String
+Type: String
 Parameter Sets: KeyvaultEncryption
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -244,9 +266,9 @@ Accept wildcard characters: False
 Whether to set Storage Account Encryption KeySource to Microsoft.Keyvault or not. 
 If you specify KeyName, KeyVersion and KeyvaultUri, Storage Account encryption keySource will also be set to Microsoft.Keyvault weather this parameter is set or not.
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: KeyvaultEncryption
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -257,9 +279,9 @@ Accept wildcard characters: False
 
 ### -KeyVaultUri
 Storage Account encryption keySource KeyVault KeyVaultUri```yaml
-Type: System.String
+Type: String
 Parameter Sets: KeyvaultEncryption
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -270,9 +292,9 @@ Accept wildcard characters: False
 
 ### -KeyVersion
 Storage Account encryption keySource KeyVault KeyVersion```yaml
-Type: System.String
+Type: String
 Parameter Sets: KeyvaultEncryption
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -285,7 +307,7 @@ Accept wildcard characters: False
 Specifies the name of the Storage account to Modify.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: StorageAccountName, AccountName
 
@@ -296,26 +318,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NetworkRuleSet
-Storage Account NetworkRuleSet```yaml
-Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 Specifies the name of the resource group in which to modify the Storage account.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -343,13 +352,12 @@ You cannot change Standard_ZRS and Premium_LRS types to other account types.
 You cannot change other account types to Standard_ZRS or Premium_LRS.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: StorageAccountType, AccountType, Type
-Accepted values: Standard_LRS, Standard_ZRS, Standard_GRS, Standard_RAGRS, Premium_LRS
 
 Required: False
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -357,9 +365,9 @@ Accept wildcard characters: False
 
 ### -StorageEncryption
 Whether to set Storage Account Encryption KeySource to Microsoft.Storage or not.```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: StorageEncryption
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -374,12 +382,12 @@ If you specify a value of BlobStorage for the *Kind* parameter of the New-AzureR
 If you specify a value of Storage for this *Kind* parameter, do not specify the *AccessTier* parameter.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tags
 
 Required: False
-Position: Named
+Position: 8
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -389,12 +397,12 @@ Accept wildcard characters: False
 Indicates whether to enable indirect CName validation.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
-Position: Named
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -404,7 +412,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -420,7 +428,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 Module Name: AzureRM.PowerBIEmbedded
 ms.assetid: EEF32F48-00F6-4C57-B4F1-B58B566EAFEF
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded/get-azurermpowerbiworkspacecollection
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Get-AzureRmPowerBIWorkspaceCollection.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Get-AzureRmPowerBIWorkspaceCollection.md
 ---
 
 # Get-AzureRmPowerBIWorkspaceCollection
@@ -52,7 +50,7 @@ This command gets the workspace collection named WCN11 in the specified resource
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -67,9 +65,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group from which this cmdlet gets workspace collections.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: False
 Position: 0
@@ -79,9 +77,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: WorkspaceCollectionNameParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -94,7 +92,7 @@ Accept wildcard characters: False
 Specifies the name of the Power BI workspace collection that this cmdlet gets.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: WorkspaceCollectionNameParameterSet
 Aliases: Name, ResourceName
 

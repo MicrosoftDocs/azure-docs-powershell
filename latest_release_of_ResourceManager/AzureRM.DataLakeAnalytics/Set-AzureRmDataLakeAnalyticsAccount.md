@@ -17,7 +17,7 @@ Modifies a Data Lake Analytics account.
 
 ```
 Set-AzureRmDataLakeAnalyticsAccount [-Name] <String> [[-Tags] <Hashtable>] [[-ResourceGroupName] <String>]
- [-MaxAnalyticsUnits <Int32>] [-MaxJobCount <Int32>] [-QueryStoreRetention <Int32>] [-Tier <TierType>]
+ [-MaxDegreeOfParallelism <Int32>] [-MaxJobCount <Int32>] [-QueryStoreRetention <Int32>] [-Tier <TierType>]
  [-FirewallState <FirewallState>] [-AllowAzureIpState <FirewallAllowAzureIpsState>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
@@ -52,21 +52,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -FirewallState
 Optionally enable/disable existing firewall rules.
 
@@ -83,13 +68,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MaxAnalyticsUnits
-The optional maximum supported analytics units to update the account with.
-
-```yaml
+### -MaxDegreeOfParallelism
+The optional maximum supported degree of parallelism to update the account with.```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
-Aliases: MaxDegreeOfParallelism
+Aliases:
 
 Required: False
 Position: Named
@@ -159,9 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.
-
-```yaml
+Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
@@ -186,6 +167,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

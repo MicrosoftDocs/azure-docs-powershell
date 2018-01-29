@@ -15,13 +15,13 @@ Creates a Data Lake Analytics catalog secret.
 
 ## SYNTAX
 
-### CreateByFullURI
+### Specify full URI
 ```
 New-AzureRmDataLakeAnalyticsCatalogSecret [-Account] <String> [-DatabaseName] <String> [-Secret] <PSCredential>
  [-DatabaseHost] <String> [-Port] <Int32> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### CreateByHostNameAndPort
+### Specify host name and port
 ```
 New-AzureRmDataLakeAnalyticsCatalogSecret [-Account] <String> [-DatabaseName] <String> [-Secret] <PSCredential>
  [-Uri] <Uri> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -61,7 +61,7 @@ Specifies the host name for the database the secret is associated with in the fo
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateByFullURI
+Parameter Sets: Specify full URI
 Aliases: Host
 
 Required: True
@@ -86,27 +86,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Port
 Specifies the port number of the secret.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: CreateByFullURI
+Parameter Sets: Specify full URI
 Aliases:
 
 Required: True
@@ -136,13 +121,28 @@ Specifies the Uniform Resource Identifier (URI) of the secret.
 
 ```yaml
 Type: System.Uri
-Parameter Sets: CreateByHostNameAndPort
+Parameter Sets: Specify host name and port
 Aliases:
 
 Required: True
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

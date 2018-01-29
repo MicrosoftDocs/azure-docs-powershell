@@ -15,16 +15,16 @@ Gets the properties of a VMSS.
 
 ## SYNTAX
 
-### DefaultParameter (Default)
+### InvokeByDynamicParameters (Default)
 ```
-Get-AzureRmVmss [[-ResourceGroupName] <String>] [[-VMScaleSetName] <String>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmVmss [-DefaultProfile <IAzureContextContainer>] [[-ResourceGroupName] <String>]
+ [[-VMScaleSetName] <String>] [<CommonParameters>]
 ```
 
-### FriendMethod
+### InvokeByDynamicParametersForFriendMethod
 ```
-Get-AzureRmVmss [[-ResourceGroupName] <String>] [[-VMScaleSetName] <String>] [-InstanceView]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmVmss [-DefaultProfile <IAzureContextContainer>] [[-ResourceGroupName] <String>]
+ [[-VMScaleSetName] <String>] [-InstanceView] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,29 +45,16 @@ Since the command does not specify the *InstanceView* switch parameter, the cmdl
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InstanceView
 Indicates that this cmdlet gets only the instance view of the virtual machine.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: FriendMethod
+Parameter Sets: InvokeByDynamicParametersForFriendMethod
 Aliases:
 
 Required: True
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -100,6 +87,19 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

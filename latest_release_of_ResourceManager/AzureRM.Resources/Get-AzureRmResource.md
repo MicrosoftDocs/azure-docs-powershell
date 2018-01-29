@@ -101,7 +101,7 @@ PS C:\>Get-AzureRmResource -ResourceGroupName ResourceGroup11 -ResourceType Micr
 
 ### -ApiVersion
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -ExpandProperties
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -ExtensionResourceName
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByTenantLevel, GetBySpecifiedScopeAtTenantLevel, GetByNameAndGroup, GetByResourceNameAndType, GetByNameGroupAndType
 Aliases:
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -ExtensionResourceType
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByTenantLevel, GetBySpecifiedScopeAtTenantLevel, GetByNameAndGroup, GetByResourceNameAndType, GetByNameGroupAndType
 Aliases:
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetResourceCollection
 Aliases:
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 ### -IsCollection
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: GetByTenantLevel, GetBySpecifiedScopeAtTenantLevel, GetByNameAndGroup, GetByResourceNameAndType, GetResourceCollection
 Aliases:
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -ODataQuery
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -Pre
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByNameAndGroup
 Aliases:
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByNameGroupAndType
 Aliases:
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetResourceCollection
 Aliases:
 
@@ -262,7 +262,7 @@ Specifies the fully qualified resource ID, including the subscription, as in the
 This cmdlet gets the resource that has this ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByResourceId
 Aliases: Id
 
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 
 ### -ResourceName
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByTenantLevel, GetByNameGroupAndType
 Aliases: Name
 
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetBySpecifiedScopeAtTenantLevel, GetByNameAndGroup, GetByResourceNameAndType
 Aliases: Name
 
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 
 ### -ResourceType
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetByTenantLevel, GetByNameGroupAndType
 Aliases:
 
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetBySpecifiedScopeAtTenantLevel, GetByResourceNameAndType
 Aliases:
 
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetResourceCollection
 Aliases:
 
@@ -339,7 +339,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet operates at the tenant level.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: GetByTenantLevel, GetBySpecifiedScopeAtTenantLevel
 Aliases:
 
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 
 ### -Top
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Int32
 Parameter Sets: GetBySpecifiedScopeAtTenantLevel
 Aliases:
 

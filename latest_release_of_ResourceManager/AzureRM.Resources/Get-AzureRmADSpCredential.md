@@ -45,7 +45,7 @@ Returns a list of credentials associated with the service principal having SPN '
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 The object id of the service principal to retrieve credentials from.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ObjectIdParameterSet
 Aliases:
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 The name (SPN) of the service principal to retrieve credentials from.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: SPNParameterSet
 Aliases:
 

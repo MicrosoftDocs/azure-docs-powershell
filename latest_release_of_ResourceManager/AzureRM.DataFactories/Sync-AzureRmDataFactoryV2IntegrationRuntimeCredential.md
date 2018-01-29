@@ -51,9 +51,9 @@ The cmdlet synchronizes credentials among integration runtime nodes.
 The data factory name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -81,9 +81,9 @@ Accept wildcard characters: False
 Runs the cmdlet without prompting for confirmation.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -96,9 +96,9 @@ Accept wildcard characters: False
 The integration runtime object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime
+Type: PSIntegrationRuntime
 Parameter Sets: ByIntegrationRuntimeObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -111,9 +111,9 @@ Accept wildcard characters: False
 The integration runtime name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -126,9 +126,9 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByIntegrationRuntimeName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
 Aliases: Id
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -197,3 +197,4 @@ Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime
 ## NOTES
 
 ## RELATED LINKS
+

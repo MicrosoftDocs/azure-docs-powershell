@@ -17,25 +17,17 @@ Modifies  an instance of PowerBI Embedded Capacity.
 
 ## SYNTAX
 
-### ByNameAndResourceGroup (Default)
 ```
-Update-AzureRmPowerBIEmbeddedCapacity [-Name] <String> [-ResourceGroupName <String>] [-Sku <String>]
- [-Tag <Hashtable>] [-Administrator <String[]>] [-PassThru] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByResourceId
-```
-Update-AzureRmPowerBIEmbeddedCapacity [-Sku <String>] [-Tag <Hashtable>] [-Administrator <String[]>]
- [-ResourceId] <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### ByInputObject
-```
-Update-AzureRmPowerBIEmbeddedCapacity [-Sku <String>] [-Tag <Hashtable>] [-Administrator <String[]>]
- [-InputObject] <PSPowerBIEmbeddedCapacity> [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Update-AzureRmPowerBIEmbeddedCapacity 
+	[-Name] <String> 
+	[[-ResourceGroupName] <String>] 
+	[[-Sku] <String>]
+ 	[[-Tag] <Hashtable>] 
+	[[-Administrator] <String>] 
+	[-PassThru] 
+	[-WhatIf]
+ 	[-Confirm] 
+    [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +48,7 @@ Administrator          : {testuser1@contoso.com, testuser2@contoso.com}
 Sku                    : A1
 Tier                   : PBIE_Azure
 Tag                    : {[key1, value1], [key2, value2]}
+
 ```
 
 Modifies the capacity named testcapacity in resourcegroup testgroup to set the tags as key1:value1 and key2:value2 and administrator to testuser1@contoso.com
@@ -66,14 +59,13 @@ Modifies the capacity named testcapacity in resourcegroup testgroup to set the t
 Name of the PowerBI Embedded Capacity
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -81,14 +73,12 @@ Accept wildcard characters: False
 Name of the Azure resource group to which the capacity belongs
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNameAndResourceGroup
-Aliases:
+Aliases: 
 
 Required: False
-Position: Named
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -96,15 +86,13 @@ Accept wildcard characters: False
 The name of the Sku for the capacity.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: A1, A2, A3, A4, A5, A6
 
 Required: False
-Position: Named
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -112,29 +100,24 @@ Accept wildcard characters: False
 Key-value pairs in the form of a hash table set as tags on the capacity.
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
-Position: Named
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 ### -Administrator
 A comma separated capacity names to set as administrator on the capacity
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
-Position: Named
 Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -142,9 +125,9 @@ Accept wildcard characters: False
 PowerBI Embedded Capacity ResourceID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByResourceId
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -157,9 +140,9 @@ Accept wildcard characters: False
 Input object for Piping
 
 ```yaml
-Type: Microsoft.Azure.Commands.PowerBI.Models.PSPowerBIEmbeddedCapacity
+Type: PSPowerBIEmbeddedCapacity
 Parameter Sets: ByInputObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -172,9 +155,9 @@ Accept wildcard characters: False
 Will return the deleted capacity details if the operation completes successfully
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -187,7 +170,7 @@ Accept wildcard characters: False
 Prompts user to confirm whether to perform the operation
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -202,22 +185,9 @@ Accept wildcard characters: False
 Describes the actions the current operation will perform without actually performing them
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
