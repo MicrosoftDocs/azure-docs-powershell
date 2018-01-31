@@ -1,13 +1,9 @@
 ---
-Download Help Link: None_Azure
-external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
-Help Version: 0.0.1.0
-Locale: en-US
-Module Guid: acace26c-1775-4100-85c0-20c4d71eaa22
+external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 Module Name: AzureRM.PowerBIEmbedded
+ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded/get-azurermpowerbiworkspace
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Test-AzureRmPowerBIEmbeddedCapacity.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Test-AzureRmPowerBIEmbeddedCapacity.md
 ---
 
 # Test-AzureRmPowerBIEmbeddedCapacity
@@ -18,8 +14,8 @@ Tests the existence of an instance of PowerBI Embedded Capacity.
 ## SYNTAX
 
 ```
-Test-AzureRmPowerBIEmbeddedCapacity 
-	[-Name] <String> 
+Test-AzureRmPowerBIEmbeddedCapacity
+	[-Name] <String>
 	[<CommonParameters>]
 ```
 
@@ -43,7 +39,7 @@ Name of the PowerBI Embedded Capacity
 
 ```yaml
 Type: String
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

@@ -1,13 +1,9 @@
 ---
-Download Help Link: None_Azure
-external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
-Help Version: 0.0.1.0
-Locale: en-US
-Module Guid: acace26c-1775-4100-85c0-20c4d71eaa22
+external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 Module Name: AzureRM.PowerBIEmbedded
+ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded/get-azurermpowerbiworkspace
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Update-AzureRmPowerBIEmbeddedCapacity.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Update-AzureRmPowerBIEmbeddedCapacity.md
 ---
 
 # Update-AzureRmPowerBIEmbeddedCapacity
@@ -18,15 +14,15 @@ Modifies  an instance of PowerBI Embedded Capacity.
 ## SYNTAX
 
 ```
-Update-AzureRmPowerBIEmbeddedCapacity 
-	[-Name] <String> 
-	[[-ResourceGroupName] <String>] 
+Update-AzureRmPowerBIEmbeddedCapacity
+	[-Name] <String>
+	[[-ResourceGroupName] <String>]
 	[[-Sku] <String>]
- 	[[-Tag] <Hashtable>] 
-	[[-Administrator] <String>] 
-	[-PassThru] 
+ 	[[-Tag] <Hashtable>]
+	[[-Administrator] <String>]
+	[-PassThru]
 	[-WhatIf]
- 	[-Confirm] 
+ 	[-Confirm]
     [<CommonParameters>]
 ```
 
@@ -61,7 +57,7 @@ Name of the PowerBI Embedded Capacity
 ```yaml
 Type: String
 Parameter Sets: ByNameAndResourceGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -75,7 +71,7 @@ Name of the Azure resource group to which the capacity belongs
 ```yaml
 Type: String
 Parameter Sets: ByNameAndResourceGroup
-Aliases: 
+Aliases:
 
 Required: False
 Default value: None
@@ -88,7 +84,7 @@ The name of the Sku for the capacity.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: A1, A2, A3, A4, A5, A6
 
 Required: False
@@ -102,7 +98,7 @@ Key-value pairs in the form of a hash table set as tags on the capacity.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Default value: None
@@ -114,7 +110,7 @@ A comma separated capacity names to set as administrator on the capacity
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Default value: None
@@ -127,7 +123,7 @@ PowerBI Embedded Capacity ResourceID.
 ```yaml
 Type: String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -142,7 +138,7 @@ Input object for Piping
 ```yaml
 Type: PSPowerBIEmbeddedCapacity
 Parameter Sets: ByInputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -157,7 +153,7 @@ Will return the deleted capacity details if the operation completes successfully
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
