@@ -2,10 +2,8 @@
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 6250EC11-79CF-428B-A72F-9BD72C1751F0
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvm
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVM.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVM.md
 ---
 
 # Get-AzureRmVM
@@ -77,6 +75,21 @@ This command gets all the virtual machines in your subscription.
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayHint
 Determines how the virtual machine object is displayed.
 
@@ -86,9 +99,9 @@ Valid values are:
 
 -- Expand: displays all properties in all levels
 ```yaml
-Type: Microsoft.Azure.Commands.Compute.Models.DisplayHintType
+Type: DisplayHintType
 Parameter Sets: GetVirtualMachineInResourceGroupParamSet
-Aliases:
+Aliases: 
 Accepted values: Compact, Expand
 
 Required: False
@@ -102,7 +115,7 @@ Accept wildcard characters: False
 Specifies the name of the virtual machine to get.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: GetVirtualMachineInResourceGroupParamSet
 Aliases: ResourceName, VMName
 
@@ -117,9 +130,9 @@ Accept wildcard characters: False
 Specifies the next link.
 
 ```yaml
-Type: System.Uri
+Type: Uri
 Parameter Sets: ListNextLinkVirtualMachinesParamSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -132,9 +145,9 @@ Accept wildcard characters: False
 Specifies the name of a resource group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ListVirtualMachineInResourceGroupParamSet, GetVirtualMachineInResourceGroupParamSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -147,25 +160,12 @@ Accept wildcard characters: False
 Indicates that this cmdlet gets only the instance view of the virtual machine.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -177,6 +177,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
+
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineInstanceView
 
 ## NOTES
 
