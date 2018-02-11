@@ -14,8 +14,8 @@ ms.date: 08/31/2017
 
 # Install and configure Azure PowerShell
 
-This article explains the steps to install the Azure PowerShell modules in a Windows environment.
-If you want to use Azure PowerShell on macOS or Linux, see the following article:
+This article explains the steps to install the Azure PowerShell modules in a Windows environment.  
+If you want to use Azure PowerShell on macOS or Linux, see the following article:  
 [Install and configure Azure PowerShell on macOS and Linux](install-azurermps-maclinux.md).
 
 Installing Azure PowerShell from the PowerShell Gallery is the preferred method of installation.
@@ -36,6 +36,10 @@ You should see something similar to the following output:
 Name          Version Path
 ----          ------- ----
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
+```
+In addition you may want to update PowerShellGet with the command below:
+```powershell
+Install-Module PowerShellGet -Force
 ```
 
 If you do not have PowerShellGet installed, see the [How to get PowerShellGet](#how-to-get-powershellget)
@@ -108,11 +112,11 @@ feedback from the command line, use the `Send-Feedback` cmdlet.
 
 ### How to get PowerShellGet
 
-|OS Version|Install instructions|
+|Scenario|Install instructions|
 |---|---|
-|I have Windows 10 or Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
-|I want to upgrade to PowerShell 5|[Install the latest version of WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
-|I am running on a version of Windows with PowerShell 3 or PowerShell 4|[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)|
+|Windows 10<br/>Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
+|I want to upgrade to PowerShell 5|<ol><li>[Install the latest version of WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)</li><li>Run the following command:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
+|I am running on a version of Windows with PowerShell 3 or PowerShell 4|<ol><il>[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Run the following command:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
 
 <a id="helpmechoose"></a>
 ### Checking the version of Azure PowerShell
