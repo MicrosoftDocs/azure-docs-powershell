@@ -41,15 +41,6 @@ PS C:\> Import-AzurePublishSettingsFile -PublishSettingsFile C:\Temp\MyAccount.p
 
 This command imports the "C:\Temp\MyAccount.publishsettings" file.
 
-### Example 2: Import a file and save subscription data
-```
-PS C:\> Import-AzurePublishSettingsFile -PublishSettingsFile C:\Temp\MyAccount.publishsettings -SubscriptionDataFile C:\Subs\Subscriptions.xml
-```
-
-This command imports the "C:\Temp\MyAccountName-date-credentials.publishsettings" file and then saves the subscription data file in C:\Subs\Subscriptions.xml.
-
-When you use the **SubscriptionDataFile** parameter to save your subscription data file in an alternate location, be sure to use the **SubscriptionDataFile** parameter of cmdlets that use subscription data file, such as **Select-AzureSubscription** and **Remove-AzureAccount**.
-
 ## PARAMETERS
 
 ### -Environment
