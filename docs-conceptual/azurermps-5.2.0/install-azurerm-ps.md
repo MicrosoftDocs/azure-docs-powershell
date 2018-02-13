@@ -27,7 +27,7 @@ the appropriate version of PowerShellGet and other system requirements. Run the 
 to see if you have PowerShellGet installed on your system.
 
 ```powershell
-Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 You should see something similar to the following output:
@@ -53,7 +53,7 @@ following command from an elevated PowerShell session:
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 By default, the PowerShell gallery is not configured as a Trusted repository for PowerShellGet. The
@@ -89,7 +89,7 @@ do this in a normal (non-elevated) PowerShell session. Modules are loaded using 
 cmdlet, as follows:
 
 ```powershell
-Import-Module AzureRM
+Import-Module -Name AzureRM
 ```
 
 ## Next Steps
@@ -122,7 +122,7 @@ of Azure PowerShell are supported. To determine the version of Azure PowerShell 
 run `Get-Module AzureRM` from your command line.
 
 ```powershell
-Get-Module AzureRM -list | Select-Object Name,Version,Path
+Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 ### Support for classic deployment methods
@@ -155,7 +155,7 @@ the following command:
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 For more information, see the help topic for
@@ -177,7 +177,7 @@ Only one version of the module can be loaded in a PowerShell session. You must o
 PowerShell window and use `Import-Module` to import a specific version of the AzureRM cmdlets:
 
 ```powershell
-Import-Module AzureRM -RequiredVersion 1.2.9
+Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 
 > [!NOTE]
