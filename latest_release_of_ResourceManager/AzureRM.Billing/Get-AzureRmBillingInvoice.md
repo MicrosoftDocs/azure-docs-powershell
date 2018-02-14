@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Billing.dll-Help.xml
 Module Name: AzureRM.Billing
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.billing/get-azurermbillinginvoice
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingInvoice.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingInvoice.md
 ---
 
 # Get-AzureRmBillingInvoice
@@ -66,13 +64,28 @@ Get most recent 10 invoices of the subscription and include the download Url in 
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GenerateDownloadUrl
 Generate the download url of the invoices.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: List
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -85,9 +98,9 @@ Accept wildcard characters: False
 Get the latest invoice.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: Latest
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -100,9 +113,9 @@ Accept wildcard characters: False
 Determines the maximum number of records to return.
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Int32
 Parameter Sets: List
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -117,24 +130,9 @@ Name of a specific invoice to get or the most recent if not specified.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: Single
-Aliases:
+Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -156,3 +154,4 @@ Microsoft.Azure.Management.Billing.Models.Invoice
 ## NOTES
 
 ## RELATED LINKS
+

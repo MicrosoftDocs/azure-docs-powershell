@@ -50,7 +50,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The availability set name.```yaml
+The availability set name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName, AvailabilitySetName
@@ -110,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with Azure.```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

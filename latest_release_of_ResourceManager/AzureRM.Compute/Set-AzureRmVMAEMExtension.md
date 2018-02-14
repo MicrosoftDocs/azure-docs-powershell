@@ -53,7 +53,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWAD
-If this parameter is provided, the commandlet will enable Windows Azure Diagnostics for this virtual machine.```yaml
+If this parameter is provided, the commandlet will enable Windows Azure Diagnostics for this virtual machine.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
@@ -145,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with Azure.```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
 Module Name: AzureRM.Backup
 ms.assetid: 9FF4F649-F50C-4C27-842F-1CD6C5BC7A2B
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.backup/backup-azurermbackupitem
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Backup-AzureRmBackupItem.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Backup-AzureRmBackupItem.md
 ---
 
 # Backup-AzureRmBackupItem
@@ -50,26 +48,11 @@ The current cmdlet starts backing up the virtual machine in the container.
 
 ## PARAMETERS
 
-### -Item
-Specifies a Backup item for which this cmdlet starts a backup operation.
-
-```yaml
-Type: Microsoft.Azure.Commands.AzureBackup.Models.AzureRMBackupItem
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -77,6 +60,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Item
+Specifies a Backup item for which this cmdlet starts a backup operation.
+
+```yaml
+Type: AzureRMBackupItem
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

@@ -14,8 +14,8 @@ ms.date: 08/31/2017
 
 # Install and configure Azure PowerShell
 
-This article explains the steps to install the Azure PowerShell modules in a Windows environment.
-If you want to use Azure PowerShell on macOS or Linux, see the following article:
+This article explains the steps to install the Azure PowerShell modules in a Windows environment.  
+If you want to use Azure PowerShell on macOS or Linux, see the following article:  
 [Install and configure Azure PowerShell on macOS and Linux](install-azurermps-maclinux.md).
 
 Installing Azure PowerShell from the PowerShell Gallery is the preferred method of installation.
@@ -27,7 +27,7 @@ the appropriate version of PowerShellGet and other system requirements. Run the 
 to see if you have PowerShellGet installed on your system.
 
 ```powershell
-Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 You should see something similar to the following output:
@@ -36,6 +36,10 @@ You should see something similar to the following output:
 Name          Version Path
 ----          ------- ----
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
+```
+In addition you may want to update PowerShellGet with the command below:
+```powershell
+Install-Module PowerShellGet -Force
 ```
 
 If you do not have PowerShellGet installed, see the [How to get PowerShellGet](#how-to-get-powershellget)
@@ -53,7 +57,7 @@ following command from an elevated PowerShell session:
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 By default, the PowerShell gallery is not configured as a Trusted repository for PowerShellGet. The
@@ -89,7 +93,7 @@ do this in a normal (non-elevated) PowerShell session. Modules are loaded using 
 cmdlet, as follows:
 
 ```powershell
-Import-Module AzureRM
+Import-Module -Name AzureRM
 ```
 
 ## Next Steps
@@ -108,11 +112,11 @@ feedback from the command line, use the `Send-Feedback` cmdlet.
 
 ### How to get PowerShellGet
 
-|OS Version|Install instructions|
+|Scenario|Install instructions|
 |---|---|
-|I have Windows 10 or Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
-|I want to upgrade to PowerShell 5|[Install the latest version of WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
-|I am running on a version of Windows with PowerShell 3 or PowerShell 4|[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)|
+|Windows 10<br/>Windows Server 2016|Built into Windows Management Framework (WMF) 5.0 included in the OS|
+|I want to upgrade to PowerShell 5|<ol><li>[Install the latest version of WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)</li><li>Run the following command:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
+|I am running on a version of Windows with PowerShell 3 or PowerShell 4|<ol><il>[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Run the following command:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
 
 <a id="helpmechoose"></a>
 ### Checking the version of Azure PowerShell
@@ -122,7 +126,7 @@ of Azure PowerShell are supported. To determine the version of Azure PowerShell 
 run `Get-Module AzureRM` from your command line.
 
 ```powershell
-Get-Module AzureRM -list | Select-Object Name,Version,Path
+Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 ### Support for classic deployment methods
@@ -155,7 +159,7 @@ the following command:
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 For more information, see the help topic for
@@ -177,7 +181,7 @@ Only one version of the module can be loaded in a PowerShell session. You must o
 PowerShell window and use `Import-Module` to import a specific version of the AzureRM cmdlets:
 
 ```powershell
-Import-Module AzureRM -RequiredVersion 1.2.9
+Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 
 > [!NOTE]

@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 Module Name: AzureRM.Automation
 ms.assetid: 055526FA-5DB7-4F1D-81B3-5D9753283FE2
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/new-azurermautomationkey
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRmAutomationKey.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRmAutomationKey.md
 ---
 
 # New-AzureRmAutomationKey
@@ -38,14 +36,29 @@ This command regenerates the primary key for the Azure Automation account named 
 Specifies the name of an Automation account for which this cmdlet regenerates keys.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -57,9 +70,9 @@ Valid values are:
 - Secondary
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Primary, Secondary
 
 Required: True
@@ -74,29 +87,14 @@ Specifies the name of a resource group.
 This cmdlet regenerates keys for an Automation account in the resource group that this parameter specifies.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -112,3 +110,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

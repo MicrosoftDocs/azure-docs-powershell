@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 Module Name: AzureRM.Automation
 ms.assetid: 739EB137-E4A8-4E85-96BD-4CF26D2C5763
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/new-azurermautomationcredential
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationCredential.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationCredential.md
 ---
 
 # New-AzureRmAutomationCredential
@@ -49,9 +47,9 @@ The final command creates an Automation credential named ContosoCredential that 
 Specifies the name of the Automation account in which this cmdlet stores the credential.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -60,13 +58,28 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Specifies a description for the credential.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -79,9 +92,9 @@ Accept wildcard characters: False
 Specifies a name for the credential.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -94,9 +107,9 @@ Accept wildcard characters: False
 Specifies a description for the resource group for which this cmdlet creates a credential.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -109,29 +122,14 @@ Accept wildcard characters: False
 Specifies the credentials as a **PSCredential** object.
 
 ```yaml
-Type: System.Management.Automation.PSCredential
+Type: PSCredential
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

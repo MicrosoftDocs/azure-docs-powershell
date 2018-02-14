@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 Module Name: AzureRM.Automation
 ms.assetid: B6E35D4D-B2C1-4527-94A6-E7E3488F510B
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/new-azurermautomationrunbook
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationRunbook.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationRunbook.md
 ---
 
 # New-AzureRmAutomationRunbook
@@ -40,9 +38,9 @@ This command creates a runbook named Runbook02 in the Azure Automation account n
 Specifies the name of the Automation account in which this cmdlet creates a runbook.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -51,13 +49,28 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Specifies a description for the runbook.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -70,9 +83,9 @@ Accept wildcard characters: False
 Specifies whether the runbook logs progress.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -85,9 +98,9 @@ Accept wildcard characters: False
 Specifies whether logging includes detailed information.
 
 ```yaml
-Type: System.Nullable`1[System.Boolean]
+Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -100,7 +113,7 @@ Accept wildcard characters: False
 Specifies a name for the runbook.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: RunbookName
 
@@ -115,9 +128,9 @@ Accept wildcard characters: False
 Specifies the name of the resource group for which this cmdlet creates a runbook.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -132,7 +145,7 @@ Key-value pairs in the form of a hash table. For example:
 @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
-Type: System.Collections.IDictionary
+Type: IDictionary
 Parameter Sets: (All)
 Aliases: Tag
 
@@ -157,27 +170,12 @@ The value Graph is obsolete.
 It is equivalent to GraphicalPowerShellWorkflow.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: PowerShell, GraphicalPowerShell, PowerShellWorkflow, GraphicalPowerShellWorkflow, Graph
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

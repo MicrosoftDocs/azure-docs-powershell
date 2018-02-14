@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 Module Name: AzureRM.Automation
 ms.assetid: 2DC97415-D59A-428E-8FFE-56B17B320DAF
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/new-azurermautomationmodule
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRmAutomationModule.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRmAutomationModule.md
 ---
 
 # New-AzureRmAutomationModule
@@ -16,7 +14,7 @@ Imports a module into Automation.
 ## SYNTAX
 
 ```
-New-AzureRmAutomationModule [-Name] <String> [-ContentLink] <Uri> [-ResourceGroupName] <String>
+New-AzureRmAutomationModule [-Name] <String> [-ContentLinkUri] <Uri> [-ResourceGroupName] <String>
  [-AutomationAccountName] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -56,9 +54,9 @@ The module is stored in an Azure blob in a storage account named contosostorage 
 Specifies the name of the Automation account for which this cmdlet imports a module.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -67,11 +65,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ContentLink
-Specifies the URL of the .zip file that contains a module that this cmdlet imports.```yaml
-Type: System.Uri
+### -ContentLinkUri
+The url to a module zip package
+
+```yaml
+Type: Uri
 Parameter Sets: (All)
-Aliases:
+Aliases: ContentLink
 
 Required: True
 Position: 3
@@ -80,13 +80,28 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the module that this cmdlet imports.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -99,29 +114,14 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet imports a module.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
