@@ -1,9 +1,11 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: AzureRM.ApiManagement
 ms.assetid: 5CBEDFF8-C441-44CC-B011-5F5AAFA2E5C6
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.apimanagement/new-azurermapimanagementcertificate
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementCertificate.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApiManagement/Commands.ApiManagement/help/New-AzureRmApiManagementCertificate.md
 ---
 
 # New-AzureRmApiManagementCertificate
@@ -13,7 +15,7 @@ Creates an API Management certificate to be used during Authentication with Back
 
 ## SYNTAX
 
-### LoadFromFile (Default)
+### Load from file (Default)
 ```
 New-AzureRmApiManagementCertificate -Context <PsApiManagementContext> [-CertificateId <String>]
  -PfxFilePath <String> -PfxPassword <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -45,9 +47,9 @@ Specifies the ID of the certificate to create.
 If you do not specify this parameter, an ID is generated for you.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -60,9 +62,9 @@ Accept wildcard characters: False
 Specifies a **PsApiManagementContext** object.
 
 ```yaml
-Type: PsApiManagementContext
+Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -71,29 +73,14 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PfxBytes
 Specifies an array of bytes of the certificate file in .pfx format.
 This parameter is required if you do not specify the *PfxFilePath* parameter.
 
 ```yaml
-Type: Byte[]
+Type: System.Byte[]
 Parameter Sets: Raw
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -107,9 +94,9 @@ Specifies the path to the certificate file in .pfx format to create and upload.
 This parameter is required if you do not specify the *PfxBytes* parameter.
 
 ```yaml
-Type: String
-Parameter Sets: LoadFromFile
-Aliases: 
+Type: System.String
+Parameter Sets: Load from file
+Aliases:
 
 Required: True
 Position: Named
@@ -122,14 +109,29 @@ Accept wildcard characters: False
 Specifies the password for the certificate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+ 
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

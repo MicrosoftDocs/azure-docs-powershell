@@ -16,13 +16,19 @@ Removes a container registry.
 
 ### NameResourceGroupParameterSet (Default)
 ```
-Remove-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String>
+Remove-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RegistryObjectParameterSet
 ```
-Remove-AzureRmContainerRegistry -Registry <PSContainerRegistry> [-DefaultProfile <IAzureContextContainer>]
+Remove-AzureRmContainerRegistry -Registry <PSContainerRegistry> [-PassThru]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ResourceIdParameterSet
+```
+Remove-AzureRmContainerRegistry -ResourceId <String> [-PassThru] [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -44,7 +50,7 @@ This command removes the specified container registry.
 Container Registry Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: NameResourceGroupParameterSet
 Aliases: ContainerRegistryName, RegistryName, ResourceName
 
@@ -59,14 +65,14 @@ Accept wildcard characters: False
 Container Registry Object.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ContainerRegistry.PSContainerRegistry
+Type: PSContainerRegistry
 Parameter Sets: RegistryObjectParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -74,9 +80,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: NameResourceGroupParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -89,7 +95,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -105,7 +111,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -120,9 +126,39 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceId
+The container registry resource id
+
+```yaml
+Type: String
+Parameter Sets: ResourceIdParameterSet
+Aliases: Id
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PassThru
+Indicates that this cmdlet returns true if the removal was successful.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
