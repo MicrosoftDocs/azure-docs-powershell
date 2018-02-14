@@ -14,16 +14,22 @@ Gets a container registry.
 
 ## SYNTAX
 
-### ResourceGroupParameterSet
+### ListRegistriesParameterSet (Default)
 ```
-Get-AzureRmContainerRegistry [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+Get-AzureRmContainerRegistry [[-ResourceGroupName] <String>] [-IncludeDetail]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RegistryNameParameterSet
 ```
-Get-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String>
+Get-AzureRmContainerRegistry [-ResourceGroupName] <String> [-Name] <String> [-IncludeDetail]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### ResourceIdParameterSet
+```
+Get-AzureRmContainerRegistry [-IncludeDetail] -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,7 +101,7 @@ This command gets all the container registries in the subscription.
 Container Registry Name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: RegistryNameParameterSet
 Aliases: ContainerRegistryName, RegistryName, ResourceName
 
@@ -110,9 +116,9 @@ Accept wildcard characters: False
 Resource Group Name.
 
 ```yaml
-Type: System.String
-Parameter Sets: ResourceGroupParameterSet
-Aliases:
+Type: String
+Parameter Sets: ListRegistriesParameterSet
+Aliases: 
 
 Required: False
 Position: 0
@@ -122,9 +128,9 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: RegistryNameParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -137,7 +143,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -145,6 +151,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeDetail
+Show more details about the container registry.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceId
+The container registry resource id
+
+```yaml
+Type: String
+Parameter Sets: ResourceIdParameterSet
+Aliases: Id
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
