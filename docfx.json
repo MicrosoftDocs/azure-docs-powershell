@@ -245,8 +245,6 @@
                     "AADRM/**/*.yml",
                     "AzureInformationProtection/**/*.md",
                     "AzureInformationProtection/**/*.yml",
-                    "RMSProtection/**/*.md",
-                    "RMSProtection/**/*.yml",
                     "AzureAD/**/*.md",
                     "AzureAD/**/*.yml",
                     "ElasticDatabaseJobs/**/*.md",
