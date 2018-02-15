@@ -1,13 +1,9 @@
 ---
-Download Help Link: None_Azure
-external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
-Help Version: 0.0.1.0
-Locale: en-US
-Module Guid: acace26c-1775-4100-85c0-20c4d71eaa22
+external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 Module Name: AzureRM.PowerBIEmbedded
+ms.assetid: 5321FC62-3585-4493-A3D2-22CD82503CA7
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded/get-azurermpowerbiembeddedcapacity
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Get-AzureRmPowerBIEmbeddedCapacity.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Get-AzureRmPowerBIEmbeddedCapacity.md
 ---
 
 # Get-AzureRmPowerBIEmbeddedCapacity
@@ -18,10 +14,10 @@ Gets the details of a PowerBI Embedded Capacity.
 ## SYNTAX
 
 ```
-Get-AzureRmPowerBIEmbeddedCapacity [[-ResourceGroupName] <String>] 
+Get-AzureRmPowerBIEmbeddedCapacity [[-ResourceGroupName] <String>]
     [<CommonParameters>]
 
-Get-AzureRmPowerBIEmbeddedCapacity [-ResourceGroupName] <String> [-Name] <String> 
+Get-AzureRmPowerBIEmbeddedCapacity [-ResourceGroupName] <String> [-Name] <String>
     [<CommonParameters>]
 ```
 
@@ -84,7 +80,7 @@ Name of the Azure resource group to which the capacity belongs
 ```yaml
 Type: String
 Parameter Sets: ByResourceGroup, ByCapacity
-Aliases: 
+Aliases:
 
 Required: False
 Default value: None
@@ -97,7 +93,7 @@ Name of the PowerBI Embedded Capacity
 ```yaml
 Type: String
 Parameter Sets: ByCapacity
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -111,7 +107,7 @@ Azure resource ID
 ```yaml
 Type: String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
