@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # New-AzureStorageContainerSASToken
 
 ## SYNOPSIS
-Generates an SAS token for an Azure storage container.
+Generates an SAS token for an Azure Storage Container.
 
 ## SYNTAX
 
