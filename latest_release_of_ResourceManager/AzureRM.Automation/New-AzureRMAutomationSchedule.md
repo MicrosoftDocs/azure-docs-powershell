@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 Module Name: AzureRM.Automation
 ms.assetid: CB621890-EF8A-4F14-8F18-D8806E624DAB
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/new-azurermautomationschedule
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationSchedule.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationSchedule.md
 ---
 
 # New-AzureRmAutomationSchedule
@@ -95,9 +93,9 @@ The final command creates a daily schedule named Schedule01 to begin at the time
 Specifies the name of an Automation account for which this cmdlet creates a schedule.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -111,9 +109,9 @@ Specifies an interval, in days, for the schedule.
 If you do not specify this parameter, and you do not specify the *OneTime* parameter, the default value is one (1).
 
 ```yaml
-Type: System.Byte
+Type: Byte
 Parameter Sets: ByDaily
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -126,9 +124,9 @@ Accept wildcard characters: False
 Specifies a list of days of the week for the weekly schedule.
 
 ```yaml
-Type: System.Nullable`1[System.DayOfWeek]
+Type: DayOfWeek
 Parameter Sets: ByMonthlyDayOfWeek
-Aliases:
+Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
 Required: False
@@ -154,9 +152,9 @@ psdx_paramvalues
 - LastDay
 
 ```yaml
-Type: Microsoft.Azure.Commands.Automation.Cmdlet.DayOfWeekOccurrence
+Type: DayOfWeekOccurrence
 Parameter Sets: ByMonthlyDayOfWeek
-Aliases:
+Aliases: 
 Accepted values: First, Second, Third, Fourth, Last
 
 Required: False
@@ -170,9 +168,9 @@ Accept wildcard characters: False
 Specifies a list of days of the month for the monthly schedule.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Automation.Cmdlet.DaysOfMonth[]
+Type: DaysOfMonth[]
 Parameter Sets: ByMonthlyDaysOfMonth
-Aliases:
+Aliases: 
 Accepted values: One, Two, Three, Four, Five, Six, Seventh, Eighth, Ninth, Tenth, Eleventh, Twelfth, Thirteenth, Fourteenth, Fifteenth, Sixteenth, Seventeenth, Eighteenth, Nineteenth, Twentieth, TwentyFirst, TwentySecond, TwentyThird, TwentyFourth, TwentyFifth, TwentySixth, TwentySeventh, TwentyEighth, TwentyNinth, Thirtieth, ThirtyFirst, LastDay
 
 Required: False
@@ -186,10 +184,25 @@ Accept wildcard characters: False
 Specifies a list of days of the week for the weekly schedule.
 
 ```yaml
-Type: System.DayOfWeek[]
+Type: DayOfWeek[]
 Parameter Sets: ByWeekly
-Aliases:
+Aliases: 
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -202,9 +215,9 @@ Accept wildcard characters: False
 Specifies a description for the schedule.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -218,9 +231,9 @@ Specifies the expiry time of a schedule as a **DateTimeOffest** object.
 You can specify a string that can be converted to a valid **DateTimeOffset**.
 
 ```yaml
-Type: System.DateTimeOffset
+Type: DateTimeOffset
 Parameter Sets: ByDaily, ByWeekly, ByMonthlyDaysOfMonth, ByMonthlyDayOfWeek, ByHourly
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -233,9 +246,9 @@ Accept wildcard characters: False
 Specifies an interval, in hours, for the schedule.
 
 ```yaml
-Type: System.Byte
+Type: Byte
 Parameter Sets: ByHourly
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -248,9 +261,9 @@ Accept wildcard characters: False
 Specifies an interval, in Months, for the schedule.
 
 ```yaml
-Type: System.Byte
+Type: Byte
 Parameter Sets: ByMonthlyDaysOfMonth, ByMonthlyDayOfWeek
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -263,9 +276,9 @@ Accept wildcard characters: False
 Specifies a name for the schedule.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -278,9 +291,9 @@ Accept wildcard characters: False
 Specifies that the cmdlet creates a one-time schedule.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: ByOneTime
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -293,9 +306,9 @@ Accept wildcard characters: False
 Specifies the name of a resource group for which this cmdlet creates a schedule.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -310,9 +323,9 @@ You can specify a string that can be converted to a valid **DateTimeOffset**.
 . If the *TimeZone* parameter is specified, the offset will be ignored and the time zone specified is used.
 
 ```yaml
-Type: System.DateTimeOffset
+Type: DateTimeOffset
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -326,9 +339,9 @@ Specifies the time zone for the schedule.
 This string can be the IANA ID or the Windows Time Zone ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -341,26 +354,11 @@ Accept wildcard characters: False
 Specifies an interval, in weeks, for the schedule.
 
 ```yaml
-Type: System.Byte
+Type: Byte
 Parameter Sets: ByWeekly
-Aliases:
+Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

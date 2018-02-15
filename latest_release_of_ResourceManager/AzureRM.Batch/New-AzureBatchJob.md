@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 Module Name: AzureRM.Batch
 ms.assetid: B6229D26-D38C-44CD-B9CA-7F39365C8B9D
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.batch/new-azurebatchjob
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchJob.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchJob.md
 ---
 
 # New-AzureBatchJob
@@ -52,9 +50,9 @@ Specifies the **BatchAccountContext** instance that this cmdlet uses to interact
 If you use the Get-AzureRmBatchAccount cmdlet to get your BatchAccountContext, then Azure Active Directory authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzureRmBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Batch.BatchAccountContext
+Type: BatchAccountContext
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -69,9 +67,9 @@ The key is the environment variable name.
 The value is the environment variable value.
 
 ```yaml
-Type: System.Collections.IDictionary
+Type: IDictionary
 Parameter Sets: (All)
-Aliases:
+Aliases: CommonEnvironmentSetting
 
 Required: False
 Position: Named
@@ -84,9 +82,24 @@ Accept wildcard characters: False
 Specifies the execution constraints for the job.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Batch.Models.PSJobConstraints
+Type: PSJobConstraints
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -99,9 +112,9 @@ Accept wildcard characters: False
 Specifies the display name for the job.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -114,9 +127,9 @@ Accept wildcard characters: False
 Specifies an ID for the job.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -130,9 +143,9 @@ Specifies the Job Manager task.
 The Batch service runs the Job Manager task when the job is started.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Batch.Models.PSJobManagerTask
+Type: PSJobManagerTask
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -146,9 +159,9 @@ Specifies the Job Preparation task.
 The Batch service runs the Job Preparation task on a compute node before it starts any tasks of that job on that compute node.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Batch.Models.PSJobPreparationTask
+Type: PSJobPreparationTask
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -163,9 +176,9 @@ The Batch service runs the Job Release task when the job ends.
 The Batch service runs the Job Release task on each compute node where it ran any task of the job.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Batch.Models.PSJobReleaseTask
+Type: PSJobReleaseTask
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -180,9 +193,9 @@ The key is the metadata name.
 The value is the metadata value.
 
 ```yaml
-Type: System.Collections.IDictionary
+Type: IDictionary
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -195,9 +208,9 @@ Accept wildcard characters: False
 Specifies an action the Batch service takes if all tasks in the job are in the completed state.
 
 ```yaml
-Type: System.Nullable`1[Microsoft.Azure.Batch.Common.OnAllTasksComplete]
+Type: OnAllTasksComplete
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: NoAction, TerminateJob
 
 Required: False
@@ -211,9 +224,9 @@ Accept wildcard characters: False
 Specifies an action the Batch service takes if any task in the job fails.
 
 ```yaml
-Type: System.Nullable`1[Microsoft.Azure.Batch.Common.OnTaskFailure]
+Type: OnTaskFailure
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: NoAction, PerformExitOptionsJobAction
 
 Required: False
@@ -227,9 +240,9 @@ Accept wildcard characters: False
 Specifies the details of the pool on which the Batch service runs the tasks of the job.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Batch.Models.PSPoolInformation
+Type: PSPoolInformation
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -246,9 +259,9 @@ A value of 1000 is the highest priority.
 The default value is 0.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -259,24 +272,9 @@ Accept wildcard characters: False
 
 ### -UsesTaskDependencies
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: 
 
 Required: False
 Position: Named

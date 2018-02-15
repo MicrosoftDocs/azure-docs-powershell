@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
-Module Name: AzureRM.ServerManagement
+Module Name: AzureRM
 ms.assetid: ECF85C07-2C9E-487D-A2ED-77875C380244
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.servermanagement/save-azurermservermanagementgatewayprofile
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/Save-AzureRmServerManagementGatewayProfile.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/Save-AzureRmServerManagementGatewayProfile.md
 ---
 
 # Save-AzureRmServerManagementGatewayProfile
@@ -39,15 +37,30 @@ The **Save-AzureRmServerManagementGatewayProfile** cmdlet downloads the profile 
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Gateway
 Specifies the gateway that this cmdlet gets the profile for.
 
 May be used instead of specifying ResourceGroupName and GatewayName
 
 ```yaml
-Type: Microsoft.Azure.Commands.ServerManagement.Model.Gateway
+Type: Gateway
 Parameter Sets: ByObject
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -60,9 +73,9 @@ Accept wildcard characters: False
 Specifies the name of the gateway that this cmdlet gets the profile for.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -75,9 +88,9 @@ Accept wildcard characters: False
 Specifies the local file in which to save the profile data.
 
 ```yaml
-Type: System.IO.FileInfo
+Type: FileInfo
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -90,29 +103,14 @@ Accept wildcard characters: False
 Specifies the name of the resource group that the gateway belongs to.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByName
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

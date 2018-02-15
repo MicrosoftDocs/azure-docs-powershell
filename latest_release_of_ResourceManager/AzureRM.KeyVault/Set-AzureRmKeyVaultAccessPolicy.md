@@ -1,9 +1,11 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 636FAD5B-8C39-4E5C-8978-6845C6B89BC0
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzureRmKeyVaultAccessPolicy.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Set-AzureRmKeyVaultAccessPolicy.md
 ---
 
 # Set-AzureRmKeyVaultAccessPolicy
@@ -35,14 +37,6 @@ Set-AzureRmKeyVaultAccessPolicy [-VaultName] <String> [[-ResourceGroupName] <Str
  [-ApplicationId <Guid>] [-PermissionsToKeys <String[]>] [-PermissionsToSecrets <String[]>]
  [-PermissionsToCertificates <String[]>] [-PermissionsToStorage <String[]>] [-BypassObjectIdValidation]
  [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByEmailAddress
-```
-Set-AzureRmKeyVaultAccessPolicy [-VaultName] <String> [[-ResourceGroupName] <String>] -EmailAddress <String>
- [-PermissionsToKeys <String[]>] [-PermissionsToSecrets <String[]>] [-PermissionsToCertificates <String[]>]
- [-PermissionsToStorage <String[]>] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
 ```
 
 ### ForVault
@@ -153,9 +147,9 @@ When you run this command, specify your own key vault name but you must specify 
 For future use.
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,9 +164,9 @@ Enables you to specify an object ID without validating that the object exists in
 Use this parameter only if you want to grant access to your key vault to an object ID that refers to a delegated security group from another Azure tenant.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,13 +175,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: IAzureContextContainer
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
+Aliases: cf
 
 Required: False
 Position: Named
@@ -196,30 +190,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EmailAddress
-Specifies the user email address of the user to whom to grant permissions.
-
-This email address must exist in the directory associated with the current subscription and be unique.
-
-```yaml
-Type: String
-Parameter Sets: ByEmailAddress
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -EnabledForDeployment
 Enables the Microsoft.Compute resource provider to retrieve secrets from this key vault when this key vault is referenced in resource creation, for example when creating a virtual machine.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,9 +209,9 @@ Accept wildcard characters: False
 Enables the Azure disk encryption service to get secrets and unwrap keys from this key vault.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -247,9 +224,9 @@ Accept wildcard characters: False
 Enables Azure Resource Manager to get secrets from this key vault when this key vault is referenced in a template deployment.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ForVault
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -262,9 +239,9 @@ Accept wildcard characters: False
 Specifies the object ID of the user or service principal in Azure Active Directory for which to grant permissions.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByObjectId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -279,9 +256,9 @@ Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,10 +286,10 @@ The acceptable values for this parameter:
 - Manageissuers
 
 ```yaml
-Type: String[]
-Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId, ByEmailAddress
-Aliases: 
-Accepted values: get, list, delete, create, import, update, managecontacts, getissuers, listissuers, setissuers, deleteissuers, manageissuers, recover, purge, all
+Type: System.String[]
+Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId
+Aliases:
+Accepted values: get, list, delete, create, import, update, managecontacts, getissuers, listissuers, setissuers, deleteissuers, manageissuers, all
 
 Required: False
 Position: Named
@@ -344,9 +321,9 @@ The acceptable values for this parameter:
 - Purge
 
 ```yaml
-Type: String[]
-Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId, ByEmailAddress
-Aliases: 
+Type: System.String[]
+Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId
+Aliases:
 Accepted values: decrypt, encrypt, unwrapKey, wrapKey, verify, sign, get, list, update, create, import, delete, backup, restore, recover, purge, all
 
 Required: False
@@ -371,9 +348,9 @@ The acceptable values for this parameter:
 - Purge
 
 ```yaml
-Type: String[]
-Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId, ByEmailAddress
-Aliases: 
+Type: System.String[]
+Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId
+Aliases:
 Accepted values: get, list, set, delete, backup, restore, recover, purge, all
 
 Required: False
@@ -387,9 +364,9 @@ Accept wildcard characters: False
 Specifies managed storage account and SaS-definition operation permissions to grant to a user or service principal.
 
 ```yaml
-Type: String[]
-Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId, ByEmailAddress
-Aliases: 
+Type: System.String[]
+Parameter Sets: ByServicePrincipalName, ByUserPrincipalName, ByObjectId
+Aliases:
 Accepted values: get, list, delete, set, update, regeneratekey, getsas, listsas, deletesas, setsas, all
 
 Required: False
@@ -403,9 +380,9 @@ Accept wildcard characters: False
 Specifies the name of a resource group.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -420,7 +397,7 @@ Specifies the service principal name of the application to which to grant permis
 Specify the application ID, also known as client ID, registered for the application in AzureActive Directory. The application with the service principal name that this parameter specifies must be registered in the Azure directory that contains your current subscription.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByServicePrincipalName
 Aliases: SPN
 
@@ -437,7 +414,7 @@ Specifies the user principal name of the user to whom to grant permissions.
 This user principal name must exist in the directory associated with the current subscription.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByUserPrincipalName
 Aliases: UPN
 
@@ -454,9 +431,9 @@ Specifies the name of a key vault.
 This cmdlet modifies the access policy for the key vault that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -465,13 +442,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: wi
 
 Required: False
 Position: Named
@@ -480,13 +457,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
 
 ```yaml
-Type: SwitchParameter
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
-Aliases: wi
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

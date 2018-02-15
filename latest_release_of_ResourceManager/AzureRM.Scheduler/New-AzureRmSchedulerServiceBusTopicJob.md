@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Scheduler.dll-Help.xml
-Module Name: AzureRM.Scheduler
+Module Name: AzureRM
 ms.assetid: 2B9FEEDB-09AA-40B6-B42C-F9090F54EB3B
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.scheduler/new-azurermschedulerservicebustopicjob
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/New-AzureRmSchedulerServiceBusTopicJob.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/New-AzureRmSchedulerServiceBusTopicJob.md
 ---
 
 # New-AzureRmSchedulerServiceBusTopicJob
@@ -42,14 +40,29 @@ If you omit a required parameter, the cmdlet prompts you for the value.
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EndTime
 Specifies an end time, as a **DateTime** object, for the job.
 To obtain a **DateTime** object, use the Get-Date cmdlet.
 
 ```yaml
-Type: System.Nullable`1[System.DateTime]
+Type: DateTime
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -69,9 +82,9 @@ The acceptable values for this parameter are:
 - ServiceBusTopic
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Http, Https, StorageQueue, ServiceBusQueue, ServiceBusTopic
 
 Required: False
@@ -86,9 +99,9 @@ Specifies how many times the job runs.
 By default, a job recurs indefinitely.
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -108,9 +121,9 @@ The acceptable values for this parameter are:
 - Month
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Minute, Hour, Day, Week, Month
 
 Required: False
@@ -124,9 +137,9 @@ Accept wildcard characters: False
 Specifies an interval of recurrence for the job.
 
 ```yaml
-Type: System.Nullable`1[System.Int32]
+Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -139,7 +152,7 @@ Accept wildcard characters: False
 Specifies the name of the job collection to which the job belongs.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: Name, ResourceName
 
@@ -154,9 +167,9 @@ Accept wildcard characters: False
 Specifies a name for the job.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -173,9 +186,9 @@ The acceptable values for this parameter are:
 - Disabled
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: Enabled, Disabled
 
 Required: False
@@ -189,9 +202,9 @@ Accept wildcard characters: False
 Specifies the resource group to which the job belongs.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -204,9 +217,9 @@ Accept wildcard characters: False
 Specifies a service bus topic message.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -219,9 +232,9 @@ Accept wildcard characters: False
 Specifies a service bus namespace.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -234,9 +247,9 @@ Accept wildcard characters: False
 Specifies a shared access signature key name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -249,9 +262,9 @@ Accept wildcard characters: False
 Specifies a shared access signature key value.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -264,9 +277,9 @@ Accept wildcard characters: False
 Specifies a service bus topic path.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -283,9 +296,9 @@ The acceptable values for this parameter are:
 - AMQP
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: NetMessaging, AMQP
 
 Required: True
@@ -299,9 +312,9 @@ Accept wildcard characters: False
 Specifies the start time, as a **DateTime** object, for the job.
 
 ```yaml
-Type: System.Nullable`1[System.DateTime]
+Type: DateTime
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -314,7 +327,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -330,28 +343,13 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
