@@ -104,6 +104,18 @@ PS C:\>Find-AzureRmResource -ResourceGroupEquals "myResourceGroup" -ResourceName
 
 If the given log alert rule exists this command disables it.
 
+### Example 5: Set an activity log alert based using an action group created using Set-AzureRmActionGroup 
+```
+$email = New-AzureRmActionGroupReceiver -Name 'user1' -EmailReceiver -EmailAddress 'angshuman@contoso.com'
+$AGOnlyEmail = Set-AzureRmActionGroup -Name 'agOnlyEmail' -ResourceGroup 'Default-ActivityLogAlerts' -ShortName 'testEmail' -Receiver $email
+$condition = New-AzureRmActivityLogAlertCondition -Field 'category' -Equal 'ServiceHealth'
+$AGAlertObject = New-Object Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup
+$AGAlertObject.ActionGroupId = $AGOnlyEmail.Id
+Set-AzureRmActivityLogAlert -Location 'Global' -Name 'MaintenanceAlert' -ResourceGroupName 'Default-ActivityLogAlerts' `
+ -Scope '/subscriptions/79spb2pq-9q02-9r7-8329-z3osp93pq9wp' -Action $AGAlertObject -Condition $condition -Verbose
+```
+This will create or update an activity log alert using an already created action group using Set-AzureRmActionGroup. 
+
 ## PARAMETERS
 
 ### -Action
