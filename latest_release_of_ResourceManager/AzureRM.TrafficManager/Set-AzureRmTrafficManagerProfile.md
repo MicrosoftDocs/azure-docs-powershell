@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-Module Name: AzureRM.TrafficManager
+Module Name: AzureRM
 ms.assetid: 975DD42E-61B6-437B-884D-C15A8DB7A667
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.trafficmanager/set-azurermtrafficmanagerprofile
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Set-AzureRmTrafficManagerProfile.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Set-AzureRmTrafficManagerProfile.md
 ---
 
 # Set-AzureRmTrafficManagerProfile
@@ -47,27 +45,11 @@ The third command updates the Traffic Manager profile named ContosoProfile to ma
 
 ## PARAMETERS
 
-### -TrafficManagerProfile
-Specifies a local **TrafficManagerProfile** object.
-This cmdlet updates Traffic Manager to match this local object.
-
-```yaml
-Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -75,6 +57,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TrafficManagerProfile
+Specifies a local **TrafficManagerProfile** object.
+This cmdlet updates Traffic Manager to match this local object.
+
+```yaml
+Type: TrafficManagerProfile
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

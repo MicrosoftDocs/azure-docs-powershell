@@ -1,10 +1,8 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
-Module Name: AzureRM.ServiceFabric
+Module Name: AzureRM
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.servicefabric/add-azurermservicefabricapplicationcertificate
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricApplicationCertificate.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/Add-AzureRmServiceFabricApplicationCertificate.md
 ---
 
 # Add-AzureRmServiceFabricApplicationCertificate
@@ -65,7 +63,7 @@ This command will create a self-signed certificate in the Azure key vault with t
 The existing certificate file path.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByExistingPfxAndVaultName
 Aliases: Source
 
@@ -80,7 +78,7 @@ Accept wildcard characters: False
 The folder path of the new certificate to be created.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNewPfxAndVaultName
 Aliases: Destination
 
@@ -95,7 +93,7 @@ Accept wildcard characters: False
 The password of the pfx file.
 
 ```yaml
-Type: System.Security.SecureString
+Type: SecureString
 Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
 Aliases: CertPassword
 
@@ -110,7 +108,7 @@ Accept wildcard characters: False
 The Dns name of the certificate to be created.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNewPfxAndVaultName
 Aliases: Subject
 
@@ -121,13 +119,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeyVaultName
 Azure key vault name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -140,9 +153,9 @@ Accept wildcard characters: False
 Azure key vault resource group name.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByNewPfxAndVaultName, ByExistingPfxAndVaultName
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -155,7 +168,7 @@ Accept wildcard characters: False
 Specify the name of the cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases: ClusterName
 
@@ -170,9 +183,9 @@ Accept wildcard characters: False
 Specify the name of the resource group.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -185,9 +198,9 @@ Accept wildcard characters: False
 The existing Azure key vault secret uri.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByExistingKeyVault
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -200,7 +213,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -215,24 +228,9 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named

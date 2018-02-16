@@ -4,8 +4,6 @@ Module Name: AzureRM.SiteRecovery
 ms.assetid: 4BF1E20A-46EA-48E2-8C7A-F121AE6815AF
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.siterecovery/new-azurermsiterecoverynetworkmapping
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryNetworkMapping.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/SiteRecovery/Commands.SiteRecovery/help/New-AzureRmSiteRecoveryNetworkMapping.md
 ---
 
 # New-AzureRmSiteRecoveryNetworkMapping

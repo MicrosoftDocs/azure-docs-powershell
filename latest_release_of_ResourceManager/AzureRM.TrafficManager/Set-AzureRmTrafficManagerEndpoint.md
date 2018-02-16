@@ -1,11 +1,9 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
-Module Name: AzureRM.TrafficManager
+Module Name: AzureRM
 ms.assetid: 5287D4DB-2709-4A3C-97D5-DB494CEEFD18
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.trafficmanager/set-azurermtrafficmanagerendpoint
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Set-AzureRmTrafficManagerEndpoint.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/TrafficManager/Commands.TrafficManager2/help/Set-AzureRmTrafficManagerEndpoint.md
 ---
 
 # Set-AzureRmTrafficManagerEndpoint
@@ -47,27 +45,11 @@ The third command updates the endpoint in Traffic Manager to match the local val
 
 ## PARAMETERS
 
-### -TrafficManagerEndpoint
-Specifies a local **TrafficManagerEndpoint** object.
-This cmdlet updates Traffic Manager to match this local object.
-
-```yaml
-Type: Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
 
@@ -75,6 +57,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TrafficManagerEndpoint
+Specifies a local **TrafficManagerEndpoint** object.
+This cmdlet updates Traffic Manager to match this local object.
+
+```yaml
+Type: TrafficManagerEndpoint
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -94,3 +92,4 @@ This cmdlet returns a **TrafficManagerEndpoint** object.
 ## NOTES
 
 ## RELATED LINKS
+
