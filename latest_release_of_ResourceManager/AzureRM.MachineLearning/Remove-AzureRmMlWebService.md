@@ -1,8 +1,10 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.MachineLearning.dll-Help.xml
 Module Name: AzureRM.MachineLearning
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.machinelearning/remove-azurermmlwebservice
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Remove-AzureRmMlWebService.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/Remove-AzureRmMlWebService.md
 ---
 
 # Remove-AzureRmMlWebService
@@ -12,13 +14,13 @@ Deletes a web service.
 
 ## SYNTAX
 
-### RemoveByNameAndResourceGroup
+### Remove an Azure ML web service resouce by name and resource group.
 ```
 Remove-AzureRmMlWebService -ResourceGroupName <String> -Name <String> [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### RemoveByObject
+### Remove an Azure ML web service specified as an object.
 ```
 Remove-AzureRmMlWebService -MlWebService <WebService> [-Force] [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -29,35 +31,20 @@ Deletes a Azure Machine Learning web service referenced by resource group and na
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1
 ```
 Remove-AzureRmMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
 ```
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 Do not ask for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,9 +57,9 @@ Accept wildcard characters: False
 The web service to be removed.
 
 ```yaml
-Type: WebService
-Parameter Sets: RemoveByObject
-Aliases: 
+Type: Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService
+Parameter Sets: Remove an Azure ML web service specified as an object.
+Aliases:
 
 Required: True
 Position: Named
@@ -85,9 +72,9 @@ Accept wildcard characters: False
 The name of the web service to be removed.
 
 ```yaml
-Type: String
-Parameter Sets: RemoveByNameAndResourceGroup
-Aliases: 
+Type: System.String
+Parameter Sets: Remove an Azure ML web service resouce by name and resource group.
+Aliases:
 
 Required: True
 Position: Named
@@ -100,9 +87,9 @@ Accept wildcard characters: False
 The resource group of the web service.
 
 ```yaml
-Type: String
-Parameter Sets: RemoveByNameAndResourceGroup
-Aliases: 
+Type: System.String
+Parameter Sets: Remove an Azure ML web service resouce by name and resource group.
+Aliases:
 
 Required: True
 Position: Named
@@ -115,7 +102,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -131,9 +118,24 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
 
 Required: False
 Position: Named
@@ -158,4 +160,3 @@ Parameter 'MlWebService' accepts value of type 'WebService' from the pipeline
 Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
 
 ## RELATED LINKS
-

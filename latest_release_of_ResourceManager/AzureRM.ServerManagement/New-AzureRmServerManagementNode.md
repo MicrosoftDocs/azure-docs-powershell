@@ -18,14 +18,14 @@ Creates a Server Management node.
 ### ByName
 ```
 New-AzureRmServerManagementNode [-ResourceGroupName] <String> [-GatewayName] <String> [-Location] <String>
- -NodeName <String> [-ComputerName <String>] -Credential <PSCredential> [-Tags <Hashtable>]
+ -NodeName <String> [-ComputerName <String>] -Credential <PSCredential> [-Tag <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByObject
 ```
 New-AzureRmServerManagementNode [-Gateway] <Gateway> -NodeName <String> [-ComputerName <String>]
- -Credential <PSCredential> [-Tags <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ -Credential <PSCredential> [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,7 +44,7 @@ The **New-AzureRmServerManagementNode** cmdlet creates an Azure Server Managemen
 Specifies the computer name of the computer that is being managed.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -61,11 +61,26 @@ To obtain a credential object, use the Get-Credential cmdlet.
 For more information, type `Get-Help Get-Credential`.
 
 ```yaml
-Type: System.Management.Automation.PSCredential
+Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -78,7 +93,7 @@ Specifies the gateway that manages the node.
 This parameter can be used instead of the *ResourceGroupName*, *GatewayName*, and *Location* parameters.
 
 ```yaml
-Type: Microsoft.Azure.Commands.ServerManagement.Model.Gateway
+Type: Gateway
 Parameter Sets: ByObject
 Aliases:
 
@@ -93,7 +108,7 @@ Accept wildcard characters: False
 Specifies the name of the gateway that accesses the node.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByName
 Aliases:
 
@@ -108,7 +123,7 @@ Accept wildcard characters: False
 Specifies the location in which this cmdlet creates the node.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByName
 Aliases:
 
@@ -123,7 +138,7 @@ Accept wildcard characters: False
 Specifies the name of the node.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -138,7 +153,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group in which this cmdlet creates the node.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ByName
 Aliases:
 
@@ -149,31 +164,18 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tags
-Specifies tags as key-value pairs.```yaml
-Type: System.Collections.Hashtable
+### -Tag
+Key/value pairs associated with the object.
+
+```yaml
+Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+Aliases: Tags
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

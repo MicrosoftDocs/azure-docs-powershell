@@ -1,9 +1,11 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.RecoveryServices.Backup.dll-Help.xml
 Module Name: AzureRM.RecoveryServices.Backup
 ms.assetid: 838026E4-F001-434C-86F0-B2A838E93A9C
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.backup/get-azurermrecoveryservicesbackuprecoverypoint
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupRecoveryPoint.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/Get-AzureRmRecoveryServicesBackupRecoveryPoint.md
 ---
 
 # Get-AzureRmRecoveryServicesBackupRecoveryPoint
@@ -60,28 +62,13 @@ The last command gets an array of recovery points for the item in $BackupItem, a
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EndDate
 Specifies the end of the date range.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: DateTimeFilter
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -95,9 +82,9 @@ Specifies the item for which this cmdlet gets recovery points.
 To obtain an **AzureRmRecoveryServicesBackupItem** object, use the Get-AzureRmRecoveryServicesBackupItem cmdlet.
 
 ```yaml
-Type: ItemBase
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -110,9 +97,9 @@ Accept wildcard characters: False
 Specifies the location to download the input file to restore the KeyVault key for an encrypted virtual machine.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RecoveryPointId
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -125,9 +112,9 @@ Accept wildcard characters: False
 Specifies the recovery point ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RecoveryPointId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -140,12 +127,27 @@ Accept wildcard characters: False
 Specifies the start of the date range.
 
 ```yaml
-Type: DateTime
+Type: System.Nullable`1[System.DateTime]
 Parameter Sets: DateTimeFilter
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

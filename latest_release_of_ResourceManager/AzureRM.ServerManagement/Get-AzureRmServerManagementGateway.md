@@ -1,9 +1,11 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
-Module Name: AzureRM
+Module Name: AzureRM.ServerManagement
 ms.assetid: C579BF90-FD8B-4384-96EB-46154E308492
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.servermanagement/get-azurermservermanagementgateway
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/Get-AzureRmServerManagementGateway.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServerManagement/Commands.ServerManagement/help/Get-AzureRmServerManagementGateway.md
 ---
 
 # Get-AzureRmServerManagementGateway
@@ -75,21 +77,6 @@ This command gets all instances of a Server Management Gateway named Gateway01 t
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Gateway
 Specifies a gateway that this cmdlet gets.
 
@@ -98,9 +85,9 @@ The cmdlet uses the *ResourceGroupName* and *GatewayName* parameters through the
 When this parameter is specified, this cmdlet will include detailed status for the gateway.
 
 ```yaml
-Type: Gateway
+Type: Microsoft.Azure.Commands.ServerManagement.Model.Gateway
 Parameter Sets: Single-ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -115,9 +102,9 @@ Specifies the name of the Server Management Gateway for which this cmdlet gets g
 When you specify the *GatewayName* parameter, this cmdlet will include detailed status on the gateway.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Single-ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -130,14 +117,29 @@ Accept wildcard characters: False
 Specifies the name of the resource group for which this cmdlet gets gateways.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Many-ByResourceGroup, Single-ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

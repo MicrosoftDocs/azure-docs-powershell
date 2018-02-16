@@ -15,18 +15,18 @@ Creates a new Data Lake Store account.
 
 ## SYNTAX
 
-### User or System assigned encryption (Default)
+### UserOrSystemAssignedEncryption (Default)
 ```
 New-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [[-DefaultGroup] <String>] [[-Tags] <Hashtable>] [[-Encryption] <EncryptionConfigType>]
+ [[-DefaultGroup] <String>] [[-Tag] <Hashtable>] [[-Encryption] <EncryptionConfigType>]
  [[-KeyVaultId] <String>] [[-KeyName] <String>] [[-KeyVersion] <String>] [-Tier <TierType>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### Disable Encryption
+### DisableEncryption
 ```
 New-AzureRmDataLakeStoreAccount [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
- [[-DefaultGroup] <String>] [[-Tags] <Hashtable>] [-DisableEncryption] [-Tier <TierType>]
+ [[-DefaultGroup] <String>] [[-Tag] <Hashtable>] [-DisableEncryption] [-Tier <TierType>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ This command creates a Data Lake Store account named ContosoADL for the East US 
 Specifies the object ID of the AzureActive Directory group to use as the default group owner for new files and folders.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -59,12 +59,27 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableEncryption
 Indicates that the account will not have any form of encryption applied to it.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: Disable Encryption
+Type: SwitchParameter
+Parameter Sets: DisableEncryption
 Aliases:
 
 Required: False
@@ -76,8 +91,8 @@ Accept wildcard characters: False
 
 ### -Encryption
 ```yaml
-Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Store.Models.EncryptionConfigType]
-Parameter Sets: User or System assigned encryption
+Type: EncryptionConfigType
+Parameter Sets: UserOrSystemAssignedEncryption
 Aliases:
 Accepted values: UserManaged, ServiceManaged
 
@@ -90,8 +105,8 @@ Accept wildcard characters: False
 
 ### -KeyName
 ```yaml
-Type: System.String
-Parameter Sets: User or System assigned encryption
+Type: String
+Parameter Sets: UserOrSystemAssignedEncryption
 Aliases:
 
 Required: False
@@ -103,8 +118,8 @@ Accept wildcard characters: False
 
 ### -KeyVaultId
 ```yaml
-Type: System.String
-Parameter Sets: User or System assigned encryption
+Type: String
+Parameter Sets: UserOrSystemAssignedEncryption
 Aliases:
 
 Required: False
@@ -116,8 +131,8 @@ Accept wildcard characters: False
 
 ### -KeyVersion
 ```yaml
-Type: System.String
-Parameter Sets: User or System assigned encryption
+Type: String
+Parameter Sets: UserOrSystemAssignedEncryption
 Aliases:
 
 Required: False
@@ -134,7 +149,7 @@ The acceptable values for this parameter are:
 - East US 2
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -149,7 +164,7 @@ Accept wildcard characters: False
 Specifies the name of the account to create.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -164,7 +179,7 @@ Accept wildcard characters: False
 Specifies the name of the resource group that contains the account.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -175,11 +190,14 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tags
-Specifies tags as key-value pairs. You can use tags to identify a Data Lake Store account from other Azure resources.```yaml
-Type: System.Collections.Hashtable
+### -Tag
+Specifies tags as key-value pairs.
+You can use tags to identify a Data Lake Store account from other Azure resources.
+
+```yaml
+Type: Hashtable
 Parameter Sets: (All)
-Aliases:
+Aliases: Tags
 
 Required: False
 Position: 4
@@ -192,7 +210,7 @@ Accept wildcard characters: False
 The desired commitment tier for this account to use.
 
 ```yaml
-Type: System.Nullable`1[Microsoft.Azure.Management.DataLake.Store.Models.TierType]
+Type: TierType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Consumption, Commitment1TB, Commitment10TB, Commitment100TB, Commitment500TB, Commitment1PB, Commitment5PB
@@ -201,21 +219,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
