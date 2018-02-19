@@ -126,7 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies an array of tags that this cmdlet associates to the property. You can use tags to filter the property list.```yaml
+Specifies an array of tags that this cmdlet associates to the property. You can use tags to filter the property list.
+
+```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
@@ -157,8 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
- 
+The credentials, account, tenant and subscription used for communication with azure.
+
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
@@ -189,5 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmApiManagementProperty](./New-AzureRmApiManagementProperty.md)
 
 [Remove-AzureRmApiManagementProperty](./Remove-AzureRmApiManagementProperty.md)
-
-

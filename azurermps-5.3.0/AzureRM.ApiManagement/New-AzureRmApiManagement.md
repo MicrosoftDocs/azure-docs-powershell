@@ -33,10 +33,7 @@ The **New-AzureRmApiManagement** cmdlet creates an API Management deployment in 
 PS C:\>New-AzureRmApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com"
 ```
 
-This command creates a Developer tier API Management service.
-The command specifies the organization and the administrator address.
-The command does not specify the *SKU* parameter.
-Therefore, the cmdlet uses the default value of Developer.
+This command creates a Developer tier API Management service.The command does not specify the *SKU* parameter.The command specifies the organization and the administrator address. Therefore, the cmdlet uses the default value of Developer.
 
 ### Example 2: Create a Standard tier service that has three units
 ```
@@ -51,7 +48,7 @@ PS C:\> $virtualNetwork = New-AzureRmApiManagementVirtualNetwork -Location "West
 PS C:\> New-AzureRmApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization Contoso -AdminEmail admin@contoso.com -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
 ```
 
-This command creates a Premium-tier API Management service in an Azure virtual network subnet having an external-facing gateway endpoint with a master region in the West US.
+This command creates a **Premium-tier API Management** service in an Azure virtual network subnet having an external-facing gateway endpoint with a master region in the West US.
 
 ### Example 4: Create an API Management service for an internal virtual network
 ```
@@ -175,11 +172,11 @@ Accept wildcard characters: False
 
 ### -Sku
 Specifies the tier of the API Management service.
-Valid values are: 
+Valid values are:
 
-- Developer 
-- Standard 
-- Premium 
+- Developer
+- Standard
+- Premium
 
 The default is Developer.
 
@@ -225,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -VpnType
-Virtual Network Type of the ApiManagement Deployment. Valid Values are 
+Virtual Network Type of the ApiManagement Deployment. Valid Values are
 - "None" (Default Value. ApiManagement is not part of any Virtual Network")
 - "External" (ApiManagement Deployment is setup inside a Virtual Network having an Internet Facing Endpoint)
 - "Internal" (ApiManagement Deployment is setup inside a Virtual Network having an Intranet Facing Endpoint)
@@ -245,7 +242,7 @@ Accept wildcard characters: False
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.
- 
+
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
@@ -278,5 +275,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApiManagement](./Remove-AzureRmApiManagement.md)
 
 [Restore-AzureRmApiManagement](./Restore-AzureRmApiManagement.md)
-
-

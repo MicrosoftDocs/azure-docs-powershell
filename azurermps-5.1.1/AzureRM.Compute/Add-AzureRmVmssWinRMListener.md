@@ -45,7 +45,7 @@ Specifies a link, as a URL, of the certificate with which new virtual machines a
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -55,7 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -77,7 +78,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Compute.Models.ProtocolTypes]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Http, Https
 
 Required: False
@@ -94,7 +95,7 @@ You can use the New-AzureRmVmssConfig cmdlet to create the object.
 ```yaml
 Type: Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -119,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -147,5 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-AzureRmVmssConfig](./New-AzureRmVmssConfig.md)
-
-
