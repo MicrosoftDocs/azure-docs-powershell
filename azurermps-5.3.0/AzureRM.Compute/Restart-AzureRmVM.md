@@ -4,6 +4,8 @@ Module Name: AzureRM.Compute
 ms.assetid: EF155949-5766-4BC4-9C8A-2B97E8EA032D
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/restart-azurermvm
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Restart-AzureRmVM.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Restart-AzureRmVM.md
 ---
 
 # Restart-AzureRmVM
