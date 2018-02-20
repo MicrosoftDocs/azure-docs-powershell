@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 ms.assetid: 021D4624-AE78-4FBE-B1DE-A8A84DF1FC90
 online version: 
@@ -120,7 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -ChefServiceInterval
-Specifies the frequency (in minutes) at which the chef-service runs. If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.```yaml
+Specifies the frequency (in minutes) at which the chef-service runs. If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -152,7 +154,9 @@ Configures the chef-client service for unattended execution. The node platform s
   Allowed options: 'none','service' and 'task'.
   none - Currently prevents the chef-client service from being configured as a service.
   service - Configures the chef-client to run automatically in the background as a service.
-  task - Configures the chef-client to run automatically in the background as a secheduled task.```yaml
+  task - Configures the chef-client to run automatically in the background as a secheduled task.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -204,7 +208,9 @@ Accept wildcard characters: False
 ```
 
 ### -JsonAttribute
-A JSON string to be added to the first run of chef-client. e.g. -JsonAttribute '{"foo" : "bar"}'```yaml
+A JSON string to be added to the first run of chef-client. e.g. -JsonAttribute '{"foo" : "bar"}'
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -278,7 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -Secret
-The encryption key used to encrypt and decrypt the data bag item values.```yaml
+The encryption key used to encrypt and decrypt the data bag item values.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -291,7 +299,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecretFile
-The path to the file that contains the encryption key used to encrypt and decrypt the data bag item values.```yaml
+The path to the file that contains the encryption key used to encrypt and decrypt the data bag item values.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
