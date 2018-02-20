@@ -35,12 +35,7 @@ A back-end address can be specified using an IP address, a fully-qualified domai
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Adding a backend address pool by using a backend server FQDN  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
+### Example 1: Adding a backend address pool by using a backend server FQDN
 
 ```
 PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -50,12 +45,7 @@ PS C:\> $AppGw = Add-AzureRmApplicationGatewayBackendAddressPool -ApplicationGat
 
 The first command gets the application gateway named ApplicationGateway01 in the resource group named ResourceGroup01, and stores it in the $AppGw variable.
 
-### --------------------------  Example 2: Adding a backend address pool by using backend server IP addresses  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
+### Example 2: Adding a backend address pool by using backend server IP addresses
 
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -65,12 +55,7 @@ PS C:\> $AppGw = Add -AzureApplicationGatewayBackendAddressPool -ApplicationGate
 
 The first command gets the application gateway named ApplicationGateway01 in the resource group named ResourceGroup01, and stores it in the $AppGw variable.
 
-### --------------------------  Example 3: Setting a backend address pool by using the ID of the backend server's IP address  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
+### Example 3: Setting a backend address pool by using the ID of the backend server's IP address
 
 ```
 PS C:\>$Nic01 = Get-AzureRmNetworkInterface -Name "Nic01" -ResourceGroupName "ResourceGroup01"
@@ -166,8 +151,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
-System.String
+### System.String
 
 ## OUTPUTS
 
@@ -185,4 +169,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 [Remove-AzureRmApplicationGatewayBackendAddressPool]()
 
 [Set-AzureRmApplicationGatewayBackendAddressPool]()
-
