@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 Module Name: AzureRM.Storage
 online version:
@@ -54,9 +54,9 @@ This command clean up rules of NetworkRule of a Storage Account (other propertie
 ### -Bypass
 The Bypass value to update to the NetworkRule property of a Storage Account.
 The allowed value are none or any combination of:
-• Logging
-• Metrics
-• Azureservices
+â€¢ Logging
+â€¢ Metrics
+â€¢ Azureservices
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetWorkRuleBypassEnum
@@ -74,8 +74,8 @@ Accept wildcard characters: False
 ### -DefaultAction
 The DefaultAction value to update to the NetworkRule property of a Storage Account.
 The allowed Options:
-• Allow
-• Deny
+â€¢ Allow
+â€¢ Deny
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetWorkRuleDefaultActionEnum
@@ -182,7 +182,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

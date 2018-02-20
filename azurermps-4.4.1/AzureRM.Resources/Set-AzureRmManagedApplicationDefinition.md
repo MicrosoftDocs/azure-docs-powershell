@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 Module Name: AzureRM.Resources
 online version:
@@ -227,7 +227,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The fully qualified managed application definition Id, including the subscription. e.g. /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}```yaml
+The fully qualified managed application definition Id, including the subscription. e.g. /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}
+
+```yaml
 Type: System.String
 Parameter Sets: The managed application definition Id parameter set.
 Aliases: ResourceId

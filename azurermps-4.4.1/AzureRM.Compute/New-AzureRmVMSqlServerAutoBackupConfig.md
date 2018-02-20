@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 Module Name: Azure
 ms.assetid: 0AC17275-17A9-47DE-BF04-C1A51DF057DC
@@ -177,7 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. If you do not specify a profile, this cmdlet reads from the local default profile.```yaml
+Specifies the Azure profile from which this cmdlet reads. If you do not specify a profile, this cmdlet reads from the local default profile.
+
+```yaml
 Type: Microsoft.WindowsAzure.Commands.Utilities.Common.AzureSMProfile
 Parameter Sets: (All)
 Aliases: 
@@ -190,7 +192,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -203,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: iv
@@ -233,7 +239,9 @@ Accept wildcard characters: False
 ```
 
 ### -BackupScheduleType
-Backup schedule type, manual or automated```yaml
+Backup schedule type, manual or automated
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
@@ -246,7 +254,9 @@ Accept wildcard characters: False
 ```
 
 ### -BackupSystemDbs
-Backup system databases```yaml
+Backup system databases
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -259,7 +269,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupFrequency
-Sql Server Full Backup frequency, daily or weekly```yaml
+Sql Server Full Backup frequency, daily or week
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
@@ -272,7 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupStartHour
-Hour of the day (0-23) when the Sql Server Full Backup should start```yaml
+Hour of the day (0-23) when the Sql Server Full Backup should start
+
+```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
@@ -285,7 +299,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupWindowInHours
-Sql Server Full Backup window in hours```yaml
+Sql Server Full Backup window in hours
+
+```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 
@@ -298,7 +314,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogBackupFrequencyInMinutes
-Sql Server Log Backup frequency, once every 1-60 minutes```yaml
+Sql Server Log Backup frequency, once every 1-60 minutes
+
+```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 

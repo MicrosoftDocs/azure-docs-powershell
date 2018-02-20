@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 7EC166C7-151D-4DA0-9B10-165E735D4F12
@@ -53,7 +53,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -66,7 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpdateTag
-If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.```yaml
+If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 

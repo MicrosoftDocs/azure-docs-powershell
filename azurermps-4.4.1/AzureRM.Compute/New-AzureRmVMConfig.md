@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 1BECAC91-BB43-46EB-B2C9-C965C6FBC831
@@ -42,7 +42,9 @@ The virtual machine belongs to the availability set stored in $AvailabilitySet.
 ## PARAMETERS
 
 ### -AssignIdentity
-Specify the system assigned identity for the virtual machine.```yaml
+Specify the system assigned identity for the virtual machine.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -72,7 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -161,7 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-Specifies the zone list for the virtual machine.```yaml
+Specifies the zone list for the virtual machine.
+
+```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases: 

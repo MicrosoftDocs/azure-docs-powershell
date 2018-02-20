@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 Module Name: AzureRM.Resources
 ms.assetid: C3B2C33F-8BD4-4E31-9450-EF6A3A6A5325
@@ -199,7 +199,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -212,7 +214,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description for policy assignment.```yaml
+The description for policy assignment.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
@@ -225,7 +229,9 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-A hash table which represents sku properties.```yaml
+A hash table which represents sku properties.
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases: SkuObject

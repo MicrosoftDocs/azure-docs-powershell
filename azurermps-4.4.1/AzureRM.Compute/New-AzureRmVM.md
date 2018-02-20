@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 05E6155D-4F0E-406B-9312-77AD97EF66EE
@@ -142,7 +142,9 @@ You can confirm your login status by using the **Get-AzureSubscription** cmdlet.
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -257,7 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-Specifies the zone list of the virtual machine.```yaml
+Specifies the zone list of the virtual machine.
+
+```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases: 

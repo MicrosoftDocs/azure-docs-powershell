@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: CE32F620-8DB2-4004-8012-F1C4AA235B60
@@ -61,7 +61,9 @@ The second command uses the **New-AzureRmVmss** cmdlet to create a VMSS that use
 ## PARAMETERS
 
 ### -AssignIdentity
-Specify the system assigned identity for the virtual machine scale set.```yaml
+Specify the system assigned identity for the virtual machine scale set.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -74,7 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutoOSUpgrade
-Sets whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the image becomes available.```yaml
+Sets whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the image becomes available.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -102,7 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -131,7 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -HealthProbeId
-Specify the ID of a load balancer probe used to determine the health of an instance in the virtual machine scale set. HealthProbeId is in the form of '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.```yaml
+Specify the ID of a load balancer probe used to determine the health of an instance in the virtual machine scale set. HealthProbeId is in the form of '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
@@ -313,7 +321,9 @@ Accept wildcard characters: False
 ```
 
 ### -RollingUpgradePolicy
-Specifies the rolling upgrade policy.```yaml
+Specifies the rolling upgrade policy.
+
+```yaml
 Type: Microsoft.Azure.Management.Compute.Models.RollingUpgradePolicy
 Parameter Sets: (All)
 Aliases: 
@@ -443,7 +453,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-Specifies the zone list for the virtual machine scale set.```yaml
+Specifies the zone list for the virtual machine scale set.
+
+```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases: 

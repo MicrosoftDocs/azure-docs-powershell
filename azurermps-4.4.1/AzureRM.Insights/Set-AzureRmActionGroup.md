@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 4A6816DB-0E46-44F0-8AE9-180B1C4AAB22
@@ -156,7 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -169,7 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-The action group resource```yaml
+The action group resource
+
+```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource
 Parameter Sets: ByInputObject
 Aliases: 
@@ -182,7 +186,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name```yaml
+The resource group name
+
+```yaml
 Type: System.String
 Parameter Sets: ByPropertyName
 Aliases: 
@@ -195,7 +201,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-The resource id```yaml
+The resource id
+
+```yaml
 Type: System.String
 Parameter Sets: ByResourceId
 Aliases: 
@@ -208,7 +216,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-The tags of the action group resource```yaml
+The tags of the action group resource
+
+```yaml
 Type: System.Collections.Generic.IDictionary`2[System.String,System.String]
 Parameter Sets: ByPropertyName, ByResourceId
 Aliases: 

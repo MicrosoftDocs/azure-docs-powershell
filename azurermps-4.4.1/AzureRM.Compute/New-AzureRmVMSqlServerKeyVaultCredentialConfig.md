@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 Module Name: Azure
 ms.assetid: B30C2BDD-6DA9-47B5-88FE-3AD43E15A072
@@ -94,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: Microsoft.WindowsAzure.Commands.Utilities.Common.AzureSMProfile
 Parameter Sets: (All)
 Aliases: 
@@ -107,7 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -120,7 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: iv

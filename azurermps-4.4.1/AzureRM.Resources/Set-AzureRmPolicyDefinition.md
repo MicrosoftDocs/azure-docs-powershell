@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 Module Name: AzureRM.Resources
 ms.assetid: E1AC7139-786C-4DD6-A898-242723E0D159
@@ -196,7 +196,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -209,7 +211,9 @@ Accept wildcard characters: False
 ```
 
 ### -Metadata
-The metadata for policy definition. This can either be a path to a file name containing the metadata, or the metadata as string.```yaml
+The metadata for policy definition. This can either be a path to a file name containing the metadata, or the metadata as string.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
@@ -222,7 +226,9 @@ Accept wildcard characters: False
 ```
 
 ### -Parameter
-The parameters declaration for policy definition. This can either be a path to a file name or uri containing the parameters declaration, or the parameters declaration as string.```yaml
+The parameters declaration for policy definition. This can either be a path to a file name or uri containing the parameters declaration, or the parameters declaration as string.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
