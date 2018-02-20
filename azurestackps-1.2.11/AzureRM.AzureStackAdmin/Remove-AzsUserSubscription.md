@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 Module Name: AzureRM.AzureStackAdmin
 online version: 
@@ -38,7 +38,9 @@ This is executed after logging in to the azure stack environment as a service ad
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
