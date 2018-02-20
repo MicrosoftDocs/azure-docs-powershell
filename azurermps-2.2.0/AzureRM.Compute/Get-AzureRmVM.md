@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 3A4888E7-DF4E-47EF-95EC-C86929DD9B34
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -75,39 +75,13 @@ This command gets all the virtual machines in your subscription.
 
 ## PARAMETERS
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 Specifies the name of a resource group.
 
 ```yaml
 Type: String
 Parameter Sets: ListVirtualMachineInResourceGroupParamSet, GetVirtualMachineInResourceGroupParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -137,7 +111,7 @@ Indicates that this cmdlet gets only the instance view of the virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: GetVirtualMachineInResourceGroupParamSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -152,7 +126,7 @@ Specifies the next link.
 ```yaml
 Type: Uri
 Parameter Sets: ListNextLinkVirtualMachinesParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -183,5 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmVM](./Stop-AzureRmVM.md)
 
 [Update-AzureRmVM](./Update-AzureRmVM.md)
-
-

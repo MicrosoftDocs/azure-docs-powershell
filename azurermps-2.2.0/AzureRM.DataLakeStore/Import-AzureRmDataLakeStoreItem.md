@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 ms.assetid: D66CCFDC-9E49-4302-88AC-D27D1B8E0CB2
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -37,7 +37,7 @@ Specifies the Data Lake Store path to which to upload a file or folder, starting
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -52,7 +52,7 @@ Indicates that this operation can overwrite the destination file if it already e
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -67,7 +67,7 @@ Indicates that this operation uploads the file as a binary file.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -77,10 +77,12 @@ Accept wildcard characters: False
 ```
 
 ### -NumThreads
-Specifies the number of threads to use to upload the file or folder.```yaml
+Specifies the number of threads to use to upload the file or folder.
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -95,7 +97,7 @@ Specifies the local path of the file or folder to upload.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -110,7 +112,7 @@ Indicates that this operation should upload all items in all subfolders.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -125,7 +127,7 @@ Indicates that this operation should resume a previously canceled or failed uplo
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -173,5 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmDataLakeStoreItem](./Remove-AzureRmDataLakeStoreItem.md)
 
 [Test-AzureRmDataLakeStoreItem](./Test-AzureRmDataLakeStoreItem.md)
-
-

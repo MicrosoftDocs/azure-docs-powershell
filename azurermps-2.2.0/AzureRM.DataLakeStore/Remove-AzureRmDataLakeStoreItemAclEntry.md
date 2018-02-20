@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 ms.assetid: 78CD47B3-1953-4DE5-A255-A1E408C87929
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -50,7 +50,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: AceType
 Parameter Sets: Remove specific ACE
-Aliases: 
+Aliases:
 Accepted values: User, Group, Mask, Other
 
 Required: True
@@ -66,7 +66,7 @@ Specifies the ACL object that contains the entries to be removed.
 ```yaml
 Type: DataLakeStoreItemAcl
 Parameter Sets: Remove ACL Entries using ACL object
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -81,7 +81,7 @@ Indicates that this operation removes the default ACE from the specified ACL.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Remove specific ACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -91,10 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -109,7 +111,7 @@ Specifies the object ID of the AzureActive Directory user, group, or service pri
 ```yaml
 Type: Guid
 Parameter Sets: Remove specific ACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -124,7 +126,7 @@ Specifies the Data Lake Store path of the item from which to remove an ACE, star
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -160,5 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmDataLakeStoreItemAclEntry](./Set-AzureRmDataLakeStoreItemAclEntry.md)
-
-
