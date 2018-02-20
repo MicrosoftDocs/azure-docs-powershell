@@ -24,7 +24,6 @@ Get-AzureRmExpressRouteCircuitPeeringConfig [-Name <String>] -Circuit <PSExpress
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
