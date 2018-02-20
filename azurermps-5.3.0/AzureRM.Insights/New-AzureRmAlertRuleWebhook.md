@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 0137ECA3-37E1-4064-8A65-A582519E9017
@@ -42,7 +42,9 @@ This command creates an alert rule webhook for Contoso.com that has one property
 ## PARAMETERS
 
 ### -Properties
-Specifies the list of properties in the format @(property1 = 'value1',....).```yaml
+Specifies the list of properties in the format @(property1 = 'value1',....).
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 Module Name: AzureRM.Batch
 ms.assetid: DBA02017-8372-4A91-A4F1-985777DEDAB9
@@ -148,7 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the node file that this cmdlet deletes.```yaml
+Specifies the name of the node file that this cmdlet deletes.
+
+```yaml
 Type: System.String
 Parameter Sets: Task, ComputeNode
 Aliases:

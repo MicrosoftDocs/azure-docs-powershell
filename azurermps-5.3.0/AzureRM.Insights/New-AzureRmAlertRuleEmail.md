@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: B1000C10-265E-4465-B167-F1251470BE3E
@@ -49,7 +49,9 @@ This command creates an alert rule email action for the specified address and fo
 ## PARAMETERS
 
 ### -CustomEmails
-Specifies a list of comma-separated e-mail addresses.```yaml
+Specifies a list of comma-separated e-mail addresses.
+
+```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
@@ -62,7 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendToServiceOwners
-Indicates that this operation sends an e-mail to the service owners when the rule fires.```yaml
+Indicates that this operation sends an e-mail to the service owners when the rule fires.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:

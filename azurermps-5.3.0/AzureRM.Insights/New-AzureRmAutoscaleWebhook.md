@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 674A11E4-36B9-4075-9F4E-952BD9FF07A7
@@ -33,7 +33,9 @@ The **New-AzureRmAutoscaleWebhook** cmdlet creates an Autoscale webhook.
 ## PARAMETERS
 
 ### -Properties
-Specifies the list of properties in the format @(property1 = 'value1',....).```yaml
+Specifies the list of properties in the format @(property1 = 'value1',....).
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:

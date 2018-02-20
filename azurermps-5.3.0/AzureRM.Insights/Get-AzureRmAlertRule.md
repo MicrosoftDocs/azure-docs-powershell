@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: A837077C-0A79-431C-93D2-799B2134EE69
@@ -95,7 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.```yaml
+Specifies the name of the resource group.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

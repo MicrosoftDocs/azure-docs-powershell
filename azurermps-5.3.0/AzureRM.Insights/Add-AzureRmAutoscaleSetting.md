@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 7436F31F-9DCB-4365-BA6D-41BDB5D7FCB6
@@ -61,7 +61,9 @@ The final command creates an Autoscale setting using the profiles in $Profile1 a
 ## PARAMETERS
 
 ### -AutoscaleProfiles
-Specifies a list of profiles to add to the Autoscale setting, or $Null to add no profile.```yaml
+Specifies a list of profiles to add to the Autoscale setting, or $Null to add no profile.
+
+```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.AutoscaleProfile]
 Parameter Sets: (All)
 Aliases:
@@ -119,7 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -Notifications
-Specifies a list of comma-separated notifications.```yaml
+Specifies a list of comma-separated notifications.
+
+```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.AutoscaleNotification]
 Parameter Sets: (All)
 Aliases:
@@ -132,7 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group for the resource associated with the Autoscale setting.```yaml
+Specifies the name of the resource group for the resource associated with the Autoscale setting.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
 Module Name: AzureRM.EventHub
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/remove-azurermeventhubconsumergroup
@@ -35,7 +35,9 @@ Deletes the consumer group \`MyConsumerGroupName\` from the Event Hub \`MyEventH
 ## PARAMETERS
 
 ### -ConsumerGroupName
-Consumer group Name.```yaml
+Consumer group Name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -48,7 +50,9 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.```yaml
+The Event Hub name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -61,7 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.```yaml
+The Event Hubs namespace name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

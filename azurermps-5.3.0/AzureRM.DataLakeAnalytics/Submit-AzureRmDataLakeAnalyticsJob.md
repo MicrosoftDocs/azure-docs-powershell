@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
 Module Name: AzureRM.DataLakeAnalytics
 ms.assetid: 0DB9595A-6C8B-4F3F-A707-2DB41D7C7470
@@ -110,7 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -DegreeOfParallelism
-Specifies the Data Lake Analytics Units (DLAU) of the job, which indicates the maximum allowable parallelism of the job.```yaml
+Specifies the Data Lake Analytics Units (DLAU) of the job, which indicates the maximum allowable parallelism of the job.
+
+```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:

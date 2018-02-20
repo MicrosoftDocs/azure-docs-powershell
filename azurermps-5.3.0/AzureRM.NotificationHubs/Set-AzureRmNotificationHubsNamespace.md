@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
 Module Name: AzureRM.NotificationHubs
 ms.assetid: 1B2AA717-ECD6-4CC0-AB6D-A199AF21A4A5
@@ -181,7 +181,9 @@ An individual tag consists of two parts: the Name and (optionally) the Value . F
 
 To add multiple tags in the same command, separate the individual tags by using commas:
 
--Tag @{Name="CalendarYear";Value="2016"}, @{Name="FiscalYear";Value="2017"}```yaml
+-Tag @{Name="CalendarYear";Value="2016"}, @{Name="FiscalYear";Value="2017"}
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:

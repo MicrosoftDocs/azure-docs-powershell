@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
 Module Name: AzureRM.Media
 ms.assetid: 0FA49058-F3A7-4ED9-93F2-0C84BC130FB7
@@ -85,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies tags for the media service.```yaml
+Specifies tags for the media service.
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:

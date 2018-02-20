@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
 Module Name: AzureRM.EventHub
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/new-azurermeventhubauthorizationrule
@@ -42,7 +42,9 @@ Creates an authorization rule \`MyAuthRuleName\` granting Listen and Send rights
 ## PARAMETERS
 
 ### -AuthorizationRuleName
-Authorization rule name.```yaml
+Authorization rule name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -55,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.```yaml
+The Event Hub name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -68,7 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.```yaml
+The Event Hubs namespace name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

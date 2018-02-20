@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 Module Name: AzureRM.Batch
 ms.assetid: 2B4BFDDA-9721-42E6-84E1-A209CB782954
@@ -347,7 +347,9 @@ Accept wildcard characters: False
 ```
 
 ### -RunElevated
-Indicates that the task process runs with administrator privileges.```yaml
+Indicates that the task process runs with administrator privileges.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: JobId_Single, JobObject_Single
 Aliases:

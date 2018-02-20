@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: AzureRM.ApiManagement
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.apimanagement/new-azurermapimanagementbackendproxy
@@ -36,7 +36,9 @@ Creates a Backend Proxy Object
 ## PARAMETERS
 
 ### -Password
-Proxy Password used to connect to Backend Proxy. This parameter is optional.```yaml
+Proxy Password used to connect to Backend Proxy. This parameter is optional.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -65,7 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-Proxy UserName used to connect to Backend Proxy. This parameter is optional.```yaml
+Proxy UserName used to connect to Backend Proxy. This parameter is optional.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

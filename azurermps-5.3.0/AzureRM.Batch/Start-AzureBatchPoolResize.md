@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 Module Name: AzureRM.Batch
 ms.assetid: 82DC8DC4-D8EC-4847-A54C-B779256FD590
@@ -114,7 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDedicated
-Specifies the target number of dedicated compute nodes.```yaml
+Specifies the target number of dedicated compute nodes.
+
+```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:

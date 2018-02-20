@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: FBAE5F75-1E28-4F1C-A9ED-20075FFD4AC7
@@ -43,7 +43,9 @@ This command adds or updates a webtest alert rule.
 ## PARAMETERS
 
 ### -Actions
-Specifies a comma-separated list of actions.```yaml
+Specifies a comma-separated list of actions.
+
+```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.RuleAction]
 Parameter Sets: (All)
 Aliases:
@@ -163,7 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group.```yaml
+Specifies the name of the resource group.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

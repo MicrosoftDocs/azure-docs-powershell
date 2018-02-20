@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: A90564B5-57D7-48EB-976D-38C03D930289
@@ -65,7 +65,9 @@ This command creates a metric alert rule for a website.
 ## PARAMETERS
 
 ### -Actions
-Specifies a comma-separated list of actions.```yaml
+Specifies a comma-separated list of actions.
+
+```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.RuleAction]
 Parameter Sets: (All)
 Aliases:
@@ -177,7 +179,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Specifies the name of the resource group for the rule.```yaml
+Specifies the name of the resource group for the rule.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
