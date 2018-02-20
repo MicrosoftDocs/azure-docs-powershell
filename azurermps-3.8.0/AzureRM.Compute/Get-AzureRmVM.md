@@ -81,12 +81,13 @@ Determines how the virtual machine object is displayed.
 
 Valid values are:
 
--- Compact: displays only top level properties
+- Compact: displays only top level properties
+- Expand: displays all properties in all levels
 
--- Expand: displays all properties in all levels```yaml
+```yaml
 Type: DisplayHintType
 Parameter Sets: GetVirtualMachineInResourceGroupParamSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +117,7 @@ Specifies the next link.
 ```yaml
 Type: Uri
 Parameter Sets: ListNextLinkVirtualMachinesParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -131,7 +132,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: ListVirtualMachineInResourceGroupParamSet, GetVirtualMachineInResourceGroupParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -146,7 +147,7 @@ Indicates that this cmdlet gets only the instance view of the virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -177,5 +178,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmVM](./Stop-AzureRmVM.md)
 
 [Update-AzureRmVM](./Update-AzureRmVM.md)
-
-

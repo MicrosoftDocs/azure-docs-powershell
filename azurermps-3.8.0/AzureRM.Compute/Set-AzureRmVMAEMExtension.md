@@ -42,7 +42,7 @@ Indicates that this cmdlet does not enable Azure Diagnostics for the virtual mac
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -52,10 +52,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWAD
-If this parameter is provided, the commandlet will enable Windows Azure Diagnostics for this virtual machine.```yaml
+If this parameter is provided, the commandlet will enable Windows Azure Diagnostics for this virtual machine.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +74,7 @@ The acceptable values for this parameter are: Windows and Linux.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -87,7 +89,7 @@ Specifies the name of the resource group of the virtual machine that this cmdlet
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -102,7 +104,7 @@ Indicates that this cmdlet skips configuration of storage.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -134,7 +136,7 @@ If the virtual machine does not use a standard storage account, you must specify
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -159,5 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmVMAEMExtension](./Remove-AzureRmVMAEMExtension.md)
 
 [Test-AzureRmVMAEMExtension](./Test-AzureRmVMAEMExtension.md)
-
-

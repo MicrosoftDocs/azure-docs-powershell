@@ -46,7 +46,7 @@ Specifies authentication certificates for the application gateway.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -56,10 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionDraining
-Connection draining of the backend http settings resource.```yaml
+Connection draining of the backend http settings resource.
+
+```yaml
 Type: PSApplicationGatewayConnectionDraining
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +76,7 @@ Specifies whether cookie-based affinity should be enabled or disabled for the ba
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +130,7 @@ Specifies the name of the back-end HTTP settings that this cmdlet creates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +145,7 @@ Specifies the port of the back-end server pool.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -158,7 +160,7 @@ Specifies a probe to associate with the back-end server pool.
 ```yaml
 Type: PSApplicationGatewayProbe
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +175,7 @@ Specifies the ID of the probe to associate with the back-end server pool.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +191,7 @@ The acceptable values for this parameter are: Http and Https.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +206,7 @@ Specifies a request time-out value.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,5 +237,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmApplicationGatewayBackendHttpSettings](./Remove-AzureRmApplicationGatewayBackendHttpSettings.md)
 
 [Set-AzureRmApplicationGatewayBackendHttpSettings](./Set-AzureRmApplicationGatewayBackendHttpSettings.md)
-
-

@@ -10,7 +10,7 @@ gitcommit: https://github.com/Azure/azure-powershell/blob/c7f39003a0e9914b1fdc76
 # New-AzureRmSqlDatabaseFailoverGroup
 
 ## SYNOPSIS
-This command is executed in the context of the primary server. It creates the new Azure SQL Failover Group on the server. 
+This command is executed in the context of the primary server. It creates the new Azure SQL Failover Group on the server.
 
 
 ## SYNTAX
@@ -23,7 +23,7 @@ New-AzureRmSqlDatabaseFailoverGroup -FailoverGroupName <String> [-PartnerResourc
 ```
 
 ## DESCRIPTION
-Cmdlet that creates the new Azure SQL Failover Group on the server. 
+Cmdlet that creates the new Azure SQL Failover Group on the server.
 
 
 ## EXAMPLES
@@ -38,10 +38,12 @@ PS C:\> C:\> $ag = New-AzureRMSqlDatabaseFailoverGroup –ResourceGroupName "myr
 ## PARAMETERS
 
 ### -AllowReadOnlyFailoverToPrimary
-The failover policy for read only endpoint of the failover group.```yaml
+The failover policy for read only endpoint of the failover group.
+
+```yaml
 Type: AllowReadOnlyFailoverToPrimary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -51,10 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverGroupName
-The name of the Azure SQL FailoverGroup to create.```yaml
+The name of the Azure SQL FailoverGroup to create.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -64,10 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverPolicy
-The failover policy without data loss for the failover group.```yaml
+The failover policy without data loss for the failover group.
+
+```yaml
 Type: FailoverPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,10 +83,12 @@ Accept wildcard characters: False
 ```
 
 ### -GracePeriodWithDataLossHours
-The grace period for failover with data loss of the failover group.```yaml
+The grace period for failover with data loss of the failover group.
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,10 +98,12 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerResourceGroupName
-The partner resource group name for Azure SQL Database Failover Group.```yaml
+The partner resource group name for Azure SQL Database Failover Group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,10 +113,12 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServerName
-The partner server name for Azure SQL Database Failover Group.```yaml
+The partner server name for Azure SQL Database Failover Group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,10 +128,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.```yaml
+The name of the resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -129,10 +143,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Failover Group is in.```yaml
+The name of the Azure SQL Server the Failover Group is in.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tag to associate with the Azure Sql Failover Group```yaml
+The tag to associate with the Azure Sql Failover Group
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tag
@@ -198,4 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -21,7 +21,7 @@ Set-AzureRmSqlDatabaseFailoverGroup -FailoverGroupName <String> [-FailoverPolicy
 ```
 
 ## DESCRIPTION
-This command modifies the configuration of the failover group. Adding or removing servers and databases requires using the specialized cmdlets. 
+This command modifies the configuration of the failover group. Adding or removing servers and databases requires using the specialized cmdlets.
 
 
 ## EXAMPLES
@@ -31,14 +31,15 @@ This command modifies the configuration of the failover group. Adding or removin
 PS C:\> Set-AzureRmSqlDatabaseFailoverGroup -FailoverGroupName testfg -PartnerServerName testsvr -FailoverPolicy Automatic -GracePeriodWithDataLossHours 1 -AllowReadOnlyFailoverToPrimary Disabled -ServerName test1 -ResourceGroupName rg2
 ```
 
-
 ## PARAMETERS
 
 ### -AllowReadOnlyFailoverToPrimary
-The failover policy for read only endpoint of the failover group.```yaml
+The failover policy for read only endpoint of the failover group.
+
+```yaml
 Type: AllowReadOnlyFailoverToPrimary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -48,10 +49,12 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverGroupName
-The name of the Azure SQL Failover Group.```yaml
+The name of the Azure SQL Failover Group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -61,10 +64,12 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverPolicy
-The failover policy without data loss for the failover group.```yaml
+The failover policy without data loss for the failover group.
+
+```yaml
 Type: FailoverPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,10 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -GracePeriodWithDataLossHours
-The grace period for failover with data loss of the failover group.```yaml
+The grace period for failover with data loss of the failover group.
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,10 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.```yaml
+The name of the resource group.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -100,10 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Failover Group is in.```yaml
+The name of the Azure SQL Server the Failover Group is in.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,7 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tag to associate with the Azure Sql Failover Group```yaml
+The tag to associate with the Azure Sql Failover Group
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tag
@@ -169,4 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

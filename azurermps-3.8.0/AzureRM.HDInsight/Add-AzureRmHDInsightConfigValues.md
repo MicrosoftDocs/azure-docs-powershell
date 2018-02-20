@@ -79,7 +79,7 @@ This object is created by the New-AzureRmHDInsightClusterConfig cmdlet.
 ```yaml
 Type: AzureHDInsightConfig
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -94,7 +94,7 @@ Specifies the Core Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ Specifies the Hive Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Specifies the Hive Env configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ Specifies the Oozie Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Specifies the Oozie Env configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Specifies the WebHCat Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ Specifies the HBase Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ Specifies the HBase Env configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ Specifies the Storm Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ Specifies the YARN Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +244,7 @@ Specifies the MapRed Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ Specifies the Tez Site configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -274,7 +274,7 @@ Specifies the HDFS configurations of this HDInsight cluster.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -284,10 +284,12 @@ Accept wildcard characters: False
 ```
 
 ### -RServer
-Specifies the RServer configurations. Valid only for RServer clusters.```yaml
+Specifies the RServer configurations. Valid only for RServer clusters.
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -347,5 +349,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-AzureRmHDInsightClusterConfig](./New-AzureRmHDInsightClusterConfig.md)
-
-

@@ -37,10 +37,12 @@ This command adds the specified tag to the Data Lake Store account named Contoso
 ## PARAMETERS
 
 ### -AllowAzureIpState
-Optionally allow/block Azure originating IPs through the firewall.```yaml
+Optionally allow/block Azure originating IPs through the firewall.
+
+```yaml
 Type: FirewallAllowAzureIpsState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -56,7 +58,7 @@ This group is the default group for files and folders that you create.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -66,10 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallState
-Optionally enable or disable existing firewall rules.```yaml
+Optionally enable or disable existing firewall rules.
+
+```yaml
 Type: FirewallState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -84,7 +88,7 @@ Specifies the name of a Data Lake Store account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -99,7 +103,7 @@ Specifies the name of the resource group that contains the Data Lake Store accou
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -115,7 +119,7 @@ You can use tags to identify a Data Lake Store account from other Azure resource
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -125,10 +129,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The desired commitment tier for this account to use.```yaml
+The desired commitment tier for this account to use.
+
+```yaml
 Type: TierType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,10 +144,12 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedIdProviderState
-Optionally enable or disable the existing trusted ID providers.```yaml
+Optionally enable or disable the existing trusted ID providers.
+
+```yaml
 Type: TrustedIdProviderState
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -171,5 +179,3 @@ The updated account details.
 [Remove-AzureRmDataLakeStoreAccount](./Remove-AzureRmDataLakeStoreAccount.md)
 
 [Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
-
-

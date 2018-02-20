@@ -89,7 +89,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: FileSystemCmdletProviderEncoding
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -104,7 +104,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Preview file content
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -114,10 +114,12 @@ Accept wildcard characters: False
 ```
 
 ### -Head
-The number of rows (new line delimited) from the beginning of the file to preview. If no new line is encountered in the first 4mb of data, only that data will be returned.```yaml
+The number of rows (new line delimited) from the beginning of the file to preview. If no new line is encountered in the first 4mb of data, only that data will be returned.
+
+```yaml
 Type: Int32
 Parameter Sets: Preview file rows from the head of the file
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +134,7 @@ Specifies the length, in bytes, of the content to get.
 ```yaml
 Type: Int64
 Parameter Sets: Preview file content
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -147,7 +149,7 @@ Specifies the number of bytes to skip in a file before getting content.
 ```yaml
 Type: Int64
 Parameter Sets: Preview file content
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -162,7 +164,7 @@ Specifies the Data Lake Store path of a file, starting with the root directory (
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -172,10 +174,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tail
-The number of rows (new line delimited) from the end of the file to preview. If no new line is encountered in the first 4mb of data, only that data will be returned.```yaml
+The number of rows (new line delimited) from the end of the file to preview. If no new line is encountered in the first 4mb of data, only that data will be returned.
+
+```yaml
 Type: Int32
 Parameter Sets: Preview file rows from the tail of the file
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,4 +235,3 @@ The string representation (in the specified encoding) of the file contents retri
 ## NOTES
 
 ## RELATED LINKS
-

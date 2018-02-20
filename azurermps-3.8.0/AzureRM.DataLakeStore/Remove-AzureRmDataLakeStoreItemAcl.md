@@ -55,7 +55,7 @@ Indicates that the cmdlet removes the default ACL for a file or a folder.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -70,7 +70,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -80,10 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates a boolean response should be returned indicating the result of the delete operation.```yaml
+Indicates a boolean response should be returned indicating the result of the delete operation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +100,7 @@ Specifies the Data Lake Store path of the item, starting with the root directory
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -158,5 +160,3 @@ If PassThru is specified, returns true upon successful completion.
 [Set-AzureRmDataLakeStoreItemAcl](./Set-AzureRmDataLakeStoreItemAcl.md)
 
 [Set-AzureRmDataLakeStoreItemAclEntry](./Set-AzureRmDataLakeStoreItemAclEntry.md)
-
-

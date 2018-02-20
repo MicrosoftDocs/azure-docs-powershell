@@ -130,7 +130,7 @@ Specifies the location for the cluster.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -145,7 +145,7 @@ Specifies the name of the resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -160,7 +160,7 @@ Specifies the name of the cluster.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -175,7 +175,7 @@ Specifies the number of Worker nodes for the cluster.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -190,7 +190,7 @@ Specifies the cluster login (HTTP) credentials for the cluster.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -206,7 +206,7 @@ You can alternatively use the Set-AzureRmHDInsightDefaultStorage cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -222,7 +222,7 @@ You can alternatively use the Set-AzureRmHDInsightDefaultStorage cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -232,10 +232,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountType
-Specifies the type of the default storage account that the HDInsight cluster will use. Possible values are AzureStorage and AzureDataLakeStore. Defaults to AzureStorage if not specified.```yaml
+Specifies the type of the default storage account that the HDInsight cluster will use. Possible values are AzureStorage and AzureDataLakeStore. Defaults to AzureStorage if not specified.
+
+```yaml
 Type: StorageType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +253,7 @@ This object can be created by using the New-AzureRmHDInsightClusterConfig cmdlet
 ```yaml
 Type: AzureHDInsightConfig
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -267,7 +269,7 @@ You can alternatively use the Add-AzureRmHDInsightMetastore cmdlet.
 ```yaml
 Type: AzureHDInsightMetastore
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -283,7 +285,7 @@ You can alternatively use the Add-AzureRmHDInsightMetastore cmdlet.
 ```yaml
 Type: AzureHDInsightMetastore
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,7 +301,7 @@ You can alternatively use the Add-AzureRmHDInsightStorage cmdlet.
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,7 +317,7 @@ You can alternatively use the Add-AzureRmHDInsightConfigValues cmdlet.
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.Collections.Generic.Dictionary`2[System.String,System.String]]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -331,7 +333,7 @@ You can alternatively use Add-AzureRmHDInsightScriptAction.
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType,System.Collections.Generic.List`1[Microsoft.Azure.Commands.HDInsight.Models.Management.AzureHDInsightScriptAction]]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -347,7 +349,7 @@ You can alternatively use the Set-AzureRmHDInsightDefaultStorage cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -357,10 +359,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageRootPath
-Specifies the path-prefix in the Data Lake Store Account that the HDInsight cluster will use as the default filesystem.```yaml
+Specifies the path-prefix in the Data Lake Store Account that the HDInsight cluster will use as the default filesystem.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -375,7 +379,7 @@ Specifies the HDI version of the HDInsight cluster.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -391,7 +395,7 @@ Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -407,7 +411,7 @@ Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -424,7 +428,7 @@ This parameter is valid only for HBase or Storm clusters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -434,10 +438,12 @@ Accept wildcard characters: False
 ```
 
 ### -EdgeNodeSize
-Specifies the size of the virtual machine for the edge node. Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page. This parameter is valid only for RServer clusters.```yaml
+Specifies the size of the virtual machine for the edge node. Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page. This parameter is valid only for RServer clusters.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -453,7 +459,7 @@ Options are: Hadoop, HBase, Storm, Spark
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -466,7 +472,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -481,7 +487,7 @@ Specifies the ID of the virtual network into which to provision the cluster.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -496,7 +502,7 @@ Specifies the name of a subnet within the chosen virtual network for the cluster
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -512,7 +518,7 @@ Options are: Windows, Linux
 ```yaml
 Type: OSType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -529,7 +535,7 @@ The Premium tier can only be used with Linux clusters, and it enables the use of
 ```yaml
 Type: Tier
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -545,7 +551,7 @@ This is only for Linux clusters.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -561,7 +567,7 @@ This is only for Linux clusters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -577,7 +583,7 @@ This is only for Windows clusters.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -592,7 +598,7 @@ Specifies the expiration, as a DateTime object, for Remote Desktop Protocol (RDP
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -608,7 +614,7 @@ The cluster will use this when accessing Azure Data Lake Store.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -624,7 +630,7 @@ The cluster will use this when accessing Azure Data Lake Store.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -639,7 +645,7 @@ Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lak
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -655,7 +661,7 @@ You can alternatively use the Add-AzureRmHDInsightSecurityProfile cmdlet.
 ```yaml
 Type: AzureHDInsightSecurityProfile
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -671,7 +677,7 @@ The cluster will use this when accessing Azure Data Lake Store.
 ```yaml
 Type: String
 Parameter Sets: CertificateFilePath
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -686,7 +692,7 @@ Specifies file contents of the certificate that will be used when accessing Azur
 ```yaml
 Type: Byte[]
 Parameter Sets: CertificateFileContents
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -747,4 +753,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, hadoop, hdinsight,
 ## RELATED LINKS
 
 [New-AzureRmHDInsightClusterConfig]()
-
