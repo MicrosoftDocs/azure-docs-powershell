@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 Module Name: AzureRM.AzureStackAdmin
 online version: 
@@ -37,7 +37,9 @@ The example removes the location named Chicago.
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.AzureStack.AzureConsistentStorage.Commands.dll-Help.xml
 Module Name: AzureRM.AzureStackStorage
 online version: 
@@ -30,7 +30,9 @@ Get-AzsStorageFarmMetricDefinition -DetailedOutput | Format-Table -Wrap
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
