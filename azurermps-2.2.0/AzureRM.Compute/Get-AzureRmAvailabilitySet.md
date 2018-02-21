@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 75B0ED43-28FC-4A3E-9EBE-F8A664185448
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -45,7 +45,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -69,32 +69,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -109,5 +83,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmAvailabilitySet](./New-AzureRmAvailabilitySet.md)
 
 [Remove-AzureRmAvailabilitySet](./Remove-AzureRmAvailabilitySet.md)
-
-

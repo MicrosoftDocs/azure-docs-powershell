@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -35,12 +35,7 @@ A back-end address can be specified using an IP address, a fully-qualified domai
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Adding a backend address pool by using a backend server FQDN  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
+### Example 1: Adding a backend address pool by using a backend server FQDN
 
 ```
 PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -50,12 +45,7 @@ PS C:\> $AppGw = Add-AzureRmApplicationGatewayBackendAddressPool -ApplicationGat
 
 The first command gets the application gateway named ApplicationGateway01 in the resource group named ResourceGroup01, and stores it in the $AppGw variable.
 
-### --------------------------  Example 2: Adding a backend address pool by using backend server IP addresses  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
+### Example 2: Adding a backend address pool by using backend server IP addresses
 
 ```
 PS C:\>$AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
@@ -65,12 +55,7 @@ PS C:\> $AppGw = Add -AzureApplicationGatewayBackendAddressPool -ApplicationGate
 
 The first command gets the application gateway named ApplicationGateway01 in the resource group named ResourceGroup01, and stores it in the $AppGw variable.
 
-### --------------------------  Example 3: Setting a backend address pool by using the ID of the backend server's IP address  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
+### Example 3: Setting a backend address pool by using the ID of the backend server's IP address
 
 ```
 PS C:\>$Nic01 = Get-AzureRmNetworkInterface -Name "Nic01" -ResourceGroupName "ResourceGroup01"
@@ -92,7 +77,7 @@ Specifies the application gateway to which this cmdlet adds a back-end address p
 ```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -107,7 +92,7 @@ Specifies the name of the back-end server pool that this cmdlet adds.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,10 +102,12 @@ Accept wildcard characters: False
 ```
 
 ### -BackendIPConfigurationIds
-Specifies a list of back-end server IP configuration IDs that this cmdlet adds as a back-end server pool.```yaml
+Specifies a list of back-end server IP configuration IDs that this cmdlet adds as a back-end server pool.
+
+```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +122,7 @@ Specifies a list of back-end IP addresses which this cmdlet adds as a back-end s
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByIP
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +137,7 @@ Specifies a list of backend FQDNs which this cmdlet adds as a back-end server po
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByFqdn
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,8 +151,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-System.String
+### System.String
 
 ## OUTPUTS
 
@@ -183,4 +169,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 [Remove-AzureRmApplicationGatewayBackendAddressPool]()
 
 [Set-AzureRmApplicationGatewayBackendAddressPool]()
-

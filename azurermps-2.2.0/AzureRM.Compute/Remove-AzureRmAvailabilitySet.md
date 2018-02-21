@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: E1E49576-BFC0-4D07-B25B-67947D7D66FE
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -37,7 +37,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -67,36 +67,10 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -116,5 +90,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAvailabilitySet](./Get-AzureRmAvailabilitySet.md)
 
 [New-AzureRmAvailabilitySet](./New-AzureRmAvailabilitySet.md)
-
-

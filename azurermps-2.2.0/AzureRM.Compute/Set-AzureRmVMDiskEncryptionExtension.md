@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: CF10062F-03C0-4832-931A-097DCC468D7E
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -77,7 +77,7 @@ PS C:\> $ServicePrincipal = New-AzureRmADServicePrincipal -ApplicationId $AzureA
 PS C:\> $AADClientID = $AzureAdApplication.ApplicationId;
 PS C:\> $aadClientCertThumbprint= $cert.Thumbprint;
 
-#Upload pfx to KeyVault 
+#Upload pfx to KeyVault
 PS C:\> $KeyVaultSecretName = "MyAADCert';
 PS C:\> $FileContentBytes = get-content $CertPath -Encoding Byte;
 PS C:\> $FileContentEncoded = [System.Convert]::ToBase64String($fileContentBytes);
@@ -92,9 +92,9 @@ PS C:\> Set-AzureRmKeyVaultAccessPolicy -VaultName $VaultName -ResourceGroupName
 #deploy cert to VM
 PS C:\> $CertUrl = (Get-AzureKeyVaultSecret -VaultName $VaultName -Name $KeyVaultSecretName).Id
 $SourceVaultId = (Get-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName).ResourceId
-PS C:\> $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName 
+PS C:\> $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 PS C:\> $VM = Add-AzureRmVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl
-PS C:\> Update-AzureRmVM -VM $VM -ResourceGroupName $RGName 
+PS C:\> Update-AzureRmVM -VM $VM -ResourceGroupName $RGName
 
 #Enable encryption on the virtual machine using Azure AD client ID and client cert thumbprint
 PS C:\> Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId ;
@@ -146,12 +146,12 @@ PS C:\> $ServicePrincipal = New-AzureRmADServicePrincipal -ApplicationId $AzureA
 PS C:\> $AADClientID = $AzureAdApplication.ApplicationId;
 PS C:\> $AADClientCertThumbprint= $Cert.Thumbprint;
 
-#Upload pfx to KeyVault 
+#Upload pfx to KeyVault
 PS C:\> $KeyVaultSecretName = "MyAADCert";
 PS C:\> $FileContentBytes = get-content $CertPath -Encoding Byte;
 PS C:\> $FileContentEncoded = [System.Convert]::ToBase64String($FileContentBytes);
 $JSONObject = @" { "data": "$filecontentencoded", "dataType" :"pfx", "password": "$CertPassword" } "@ ;
-PS C:\> $JSONObjectBytes = 
+PS C:\> $JSONObjectBytes =
 [System.Text.Encoding]::UTF8.GetBytes($JSONObject);$jsonEncoded = [System.Convert]::ToBase64String($JSONObjectBytes);
 PS C:\> $Secret = ConvertTo-SecureString -String $JSONEncoded -AsPlainText -Force;
 PS C:\> Set-AzureKeyVaultSecret -VaultName $VaultName-Name $KeyVaultSecretName -SecretValue $Secret;
@@ -160,9 +160,9 @@ PS C:\> Set-AzureRmKeyVaultAccessPolicy -VaultName $VaultName -ResourceGroupName
 #deploy cert to VM
 PS C:\> $CertUrl = (Get-AzureKeyVaultSecret -VaultName $VaultName -Name $KeyVaultSecretName).Id
 PS C:\> $SourceVaultId = (Get-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName).ResourceId
-PS C:\> $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName 
-PS C:\> $VM = Add-AzureRmVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl 
-PS C:\> Update-AzureRmVM -VM $VM -ResourceGroupName $RGName 
+PS C:\> $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+PS C:\> $VM = Add-AzureRmVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl
+PS C:\> Update-AzureRmVM -VM $VM -ResourceGroupName $RGName
 
 #Enable encryption on the virtual machine using Azure AD client ID and client cert thumbprint
 PS C:\> Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGname -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId ;
@@ -178,7 +178,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -208,7 +208,7 @@ Specifies the client ID of the Azure AD application that has permissions to writ
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -223,7 +223,7 @@ Specifies the client secret of the Azure AD application that has permissions to 
 ```yaml
 Type: String
 Parameter Sets: AAD Client Secret Parameters
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -238,7 +238,7 @@ Specifies the **KeyVault** URL to which the virtual machine encryption keys shou
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -253,7 +253,7 @@ Specifies the resource ID of the **KeyVault** to which the virtual machine encry
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -269,7 +269,7 @@ This must be the full versioned URL.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -285,7 +285,7 @@ This must be a full versioned URL.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -301,7 +301,7 @@ The default value is RSA-OAEP.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -318,7 +318,7 @@ The allowed values for Linux virtual machines are as follows: Data only.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -335,7 +335,7 @@ The Get-AzureRmVMExtension cmdlet can be used to retrieve the previous sequence 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -382,7 +382,7 @@ This parameter is not used for virtual machines that run the Windows operating s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 13
@@ -397,33 +397,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
+Aliases:
 
 Required: False
 Position: Named
@@ -442,7 +416,7 @@ The certificate must be previously deployed to the virtual machine local compute
 ```yaml
 Type: String
 Parameter Sets: AAD Client Cert Parameters
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -467,5 +441,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVMDiskEncryptionStatus](./Get-AzureRmVMDiskEncryptionStatus.md)
 
 [Remove-AzureRmVMDiskEncryptionExtension](./Remove-AzureRmVMDiskEncryptionExtension.md)
-
-

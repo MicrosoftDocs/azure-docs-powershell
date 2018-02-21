@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 6408729A-7D0C-4084-A719-7B63D2A73DFE
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -59,7 +59,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -74,38 +74,12 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupNameParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -115,7 +89,7 @@ Specifies the Resource ID of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: IdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -146,5 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmVM](./Stop-AzureRmVM.md)
 
 [Update-AzureRmVM](./Update-AzureRmVM.md)
-
-

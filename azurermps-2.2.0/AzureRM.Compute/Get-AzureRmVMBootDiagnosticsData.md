@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 6F97C577-432E-4CDF-B2DB-CFF07BF0AD84
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -48,7 +48,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -78,7 +78,7 @@ Indicates that the virtual machine runs the Windows operating system.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WindowsParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -93,7 +93,7 @@ Specifies the local path for the boot diagnostics data.
 ```yaml
 Type: String
 Parameter Sets: WindowsParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -105,38 +105,12 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: LinuxParamSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -146,7 +120,7 @@ Indicates that the virtual machine runs the Linux operating system.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: LinuxParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -167,5 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmVMBootDiagnostics](./Set-AzureRmVMBootDiagnostics.md)
-
-

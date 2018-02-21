@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 8FD2F1B4-E680-46E8-8CFD-9C2F9F40C5C4
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -37,7 +37,7 @@ Specifies the location of the VMImage.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -52,7 +52,7 @@ Specifies the publisher of a VMImage.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -67,38 +67,12 @@ Specifies the type of VMImage offer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -120,5 +94,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVMImagePublisher](./Get-AzureRmVMImagePublisher.md)
 
 [Save-AzureRmVMImage](./Save-AzureRmVMImage.md)
-
-

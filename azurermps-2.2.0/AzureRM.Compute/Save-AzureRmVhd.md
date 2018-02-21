@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: EA92B7F8-216F-4004-97E5-7FE83A281458
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -75,7 +75,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -144,32 +144,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -StorageKey
 Specifies the storage key of the blob storage account.
 If you do not specify a key, this cmdlet attempts to determine the storage key of the account in *SourceUri* from Azure.
@@ -198,5 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Add-AzureRmVhd](./Add-AzureRMVhd.md)
-
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 72CE872A-1653-4016-8EAB-22D9310869F2
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -53,7 +53,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -115,7 +115,7 @@ Specifies the name of the Azure storage container where this cmdlet stores the s
 ```yaml
 Type: String
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -130,7 +130,7 @@ Specifies the name of the script file.
 ```yaml
 Type: String[]
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -145,7 +145,7 @@ Specifies the name of the Azure storage account where this cmdlet stores the scr
 ```yaml
 Type: String
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -160,7 +160,7 @@ Specifies the storage endpoint suffix.
 ```yaml
 Type: String
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -175,7 +175,7 @@ Specifies the key for the Azure storage container.
 ```yaml
 Type: String
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -205,7 +205,7 @@ Specifies arguments that the script extension passes to the script.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -220,38 +220,12 @@ Specifies the location of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 11
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -261,7 +235,7 @@ Specifies the URI of the script file.
 ```yaml
 Type: String[]
 Parameter Sets: SetCustomScriptExtensionByUriLinks
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -274,7 +248,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -292,7 +266,7 @@ If forceUpdateTag is not changed, updates to public or protected settings are st
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -308,7 +282,7 @@ The value of *Run* might contain secrets or passwords to be passed to the script
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -331,5 +305,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVMCustomScriptExtension](./Get-AzureRmVMCustomScriptExtension.md)
 
 [Remove-AzureRmVMCustomScriptExtension](./Remove-AzureRmVMCustomScriptExtension.md)
-
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: B48F66B3-5F8E-4460-9BFC-E4C43AC83A36
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -28,7 +28,7 @@ Other cmdlets can be used to configure the virtual machine, such as Set-AzureRmV
 
 ### Example 1: Create a virtual machine
 ```
-PS C:\># Variables    
+PS C:\># Variables
 ## Global
 $ResourceGroupName = "ResourceGroup11"
 $Location = "WestEurope"
@@ -85,11 +85,11 @@ This script uses several other cmdlets.
 PS C:\>## VM Account
 # Credentials for Local Admin account you created in the sysprepped (generalized) vhd image
 $VMLocalAdminUser = "LocalAdminUser"
-$VMLocalAdminSecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force 
+$VMLocalAdminSecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
 ## Azure Account
 $LocationName = "westus"
 $ResourceGroupName = "MyResourceGroup"
-# This a Premium_LRS storage account. 
+# This a Premium_LRS storage account.
 # It is required in order to run a client VM with efficiency and high performance.
 $StorageAccount = "Mydisk"
 
@@ -99,9 +99,9 @@ $ComputerName = "MyClientVM"
 $OSDiskUri = "https://Mydisk.blob.core.windows.net/disks/MyOSDisk.vhd"
 $SourceImageUri = "https://Mydisk.blob.core.windows.net/vhds/MyOSImage.vhd"
 $VMName = "MyVM"
-# Modern hardware environment with fast disk, high IOPs performance. 
+# Modern hardware environment with fast disk, high IOPs performance.
 # Required to run a client VM with efficiency and performance
-$VMSize = "Standard_DS3" 
+$VMSize = "Standard_DS3"
 $OSDiskCaching = "ReadWrite"
 $OSCreateOption = "FromImage"
 
@@ -119,7 +119,7 @@ $Vnet = New-AzureRmVirtualNetwork -Name $NetworkName -ResourceGroupName $Resourc
 $PIP = New-AzureRmPublicIpAddress -Name $PublicIPAddressName -DomainNameLabel $DNSNameLabel -ResourceGroupName $ResourceGroupName -Location $LocationName -AllocationMethod Dynamic
 $NIC = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id -PublicIpAddressId $PIP.Id
 
-$Crededntial = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword); 
+$Crededntial = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
 
 $VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
@@ -144,7 +144,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +159,7 @@ Specifies a location for the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -193,38 +193,12 @@ Each resource or resource group can have a maximum of 15 tags.
 ```yaml
 Type: Hashtable[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -234,7 +208,7 @@ Indicates that this cmdlet does not install the **BG Info** extension on the vir
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +222,7 @@ Specifies a license type, which indicates that the image or disk for the virtual
 This value is used only for images that contain the Windows Server operating system.
 The acceptable values for this parameter are:
 
-- Windows_Client 
+- Windows_Client
 - Windows_Server
 
 This value cannot be updated.
@@ -257,7 +231,7 @@ If you specify this parameter for an update, the value must match the initial va
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

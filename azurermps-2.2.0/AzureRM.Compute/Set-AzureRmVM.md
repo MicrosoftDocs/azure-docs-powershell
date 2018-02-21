@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 15AD1E5C-5C7A-48EF-8422-B5C6E05B18B3
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -45,7 +45,7 @@ Specifies the name of the virtual machine on which this cmdlet operates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -60,7 +60,7 @@ Indicates that this cmdlet marks a virtual machine as generalized.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -75,38 +75,12 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupNameParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -116,7 +90,7 @@ Specifies the Resource ID of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: IdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -133,7 +107,7 @@ If you redeploy a virtual machine, it restarts, which results in the loss of eph
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,5 +128,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRmVM](./Get-AzureRmVM.md)
-
-

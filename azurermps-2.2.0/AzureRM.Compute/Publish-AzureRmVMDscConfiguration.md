@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: FF6FA970-797D-4021-AD68-E58F983B5D73
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -77,7 +77,7 @@ Specifies the name of the resource group that contains the storage account.
 ```yaml
 Type: String
 Parameter Sets: UploadArchive
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -93,7 +93,7 @@ The file can be a Windows PowerShell script (.ps1) file or a Windows PowerShell 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -108,7 +108,7 @@ Specifies the name of the Azure storage container the configuration is uploaded 
 ```yaml
 Type: String
 Parameter Sets: UploadArchive
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -123,7 +123,7 @@ Specifies the Azure storage account name that is used to upload the configuratio
 ```yaml
 Type: String
 Parameter Sets: UploadArchive
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -138,7 +138,7 @@ Specifies the suffix for the storage end point.
 ```yaml
 Type: String
 Parameter Sets: UploadArchive
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Indicates that this cmdlet excludes DSC resource dependencies from the configura
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ It gets overwritten by the configuration data path provided through the Set-Azur
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,38 +201,12 @@ It gets downloaded to the virtual machine together with the configuration.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -299,5 +273,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmVMDscExtension](./Remove-AzureRmVMDscExtension.md)
 
 [Set-AzureRmVMDscExtension](./Set-AzureRmVMDscExtension.md)
-
-

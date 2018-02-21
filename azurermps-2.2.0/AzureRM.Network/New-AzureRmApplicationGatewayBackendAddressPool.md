@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -36,11 +36,6 @@ A back-end address can be specified as an IP address, a fully-qualified domain n
 ## EXAMPLES
 
 ### --------------------------  Example 1: Create a backend address pool by using the FQDN of a backend server  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
 
 ```
 PS C:\>$Pool = New-AzureRmApplicationGatewayBackendAddressPool -Name "Pool01" -BackendFqdns "contoso1.com", "contoso2.com"
@@ -49,11 +44,6 @@ PS C:\>$Pool = New-AzureRmApplicationGatewayBackendAddressPool -Name "Pool01" -B
 This command creates a back-end address pool named Pool01 by using the FQDNs of back-end servers, and stores it in the $Pool variable.
 
 ### --------------------------  Example 2: Create a backend address pool by using the IP address of a backend server  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
 
 ```
 PS C:\>$Pool = New-AzureRmApplicationGatewayBackendAddressPool -Name "Pool02" -BackendFqdns "10.10.10.10", "10.10.10.11"
@@ -69,7 +59,7 @@ Specifies the name of the back-end server pool that this cmdlet creates.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,10 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -BackendIPConfigurationIds
-Specifies a list of back-end server IP configuration IDs that this cmdlet associates with the back-end server pool.```yaml
+Specifies a list of back-end server IP configuration IDs that this cmdlet associates with the back-end server pool.
+
+```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +89,7 @@ Specifies a list of back-end IP addresses that this cmdlet associates with the b
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByIP
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +104,7 @@ Specifies a list of back-end FQDNs that this cmdlet associates with the back-end
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByFqdn
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,4 +136,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 [Remove-AzureRmApplicationGatewayBackendAddressPool]()
 
 [Set-AzureRmApplicationGatewayBackendAddressPool]()
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 8C993655-9460-4E2F-85C0-840C8C88550E
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -38,7 +38,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -68,7 +68,7 @@ Specifies the location for the availability set.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -83,7 +83,7 @@ Specifies the platform update domain count.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -98,38 +98,12 @@ Specifies the platform fault domain count.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -147,5 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAvailabilitySet](./Get-AzureRmAvailabilitySet.md)
 
 [Remove-AzureRmAvailabilitySet](./Remove-AzureRmAvailabilitySet.md)
-
-

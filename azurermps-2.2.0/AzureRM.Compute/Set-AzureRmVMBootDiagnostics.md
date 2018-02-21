@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: A6798D07-1581-4377-AC5A-504FB006FB22
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -66,7 +66,7 @@ Indicates that this cmdlet enables the boot diagnostics for the virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: EnableBootDiagnostics
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -81,7 +81,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: EnableBootDiagnostics
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -96,38 +96,12 @@ Specifies the name of the storage account in which to save boot diagnostics data
 ```yaml
 Type: String
 Parameter Sets: EnableBootDiagnostics
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -137,7 +111,7 @@ Indicates that this cmdlet disables the boot diagnostics for the virtual machine
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DisableBootDiagnostics
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -160,5 +134,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVM](./Get-AzureRmVM.md)
 
 [Get-AzureRmVMBootDiagnosticsData](./Get-AzureRmVMBootDiagnosticsData.md)
-
-

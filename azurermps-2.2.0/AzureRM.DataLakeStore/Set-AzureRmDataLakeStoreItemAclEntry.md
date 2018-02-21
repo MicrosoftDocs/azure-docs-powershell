@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 ms.assetid: E8F8059C-FFD7-4147-A4C2-A2780726CAEA
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -42,15 +42,15 @@ This command modifies the ACE for Patti Fuller to have all permissions.
 Specifies the type of ACE to modify.
 The acceptable values for this parameter are:
 
-- User 
-- Group 
-- Mask 
+- User
+- Group
+- Mask
 - Other
 
 ```yaml
 Type: AceType
 Parameter Sets: Set specific ACE
-Aliases: 
+Aliases:
 Accepted values: User, Group, Mask, Other
 
 Required: True
@@ -66,7 +66,7 @@ Specifies the ACL object that contains the entries to modify.
 ```yaml
 Type: DataLakeStoreItemAcl
 Parameter Sets: Set ACL Entries using ACL object
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -81,7 +81,7 @@ Indicates that this operation modifies the default ACE from the specified ACL.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set specific ACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -91,10 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -109,7 +111,7 @@ Specifies the object ID of the AzureActive Directory user, group, or service pri
 ```yaml
 Type: Guid
 Parameter Sets: Set specific ACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -124,7 +126,7 @@ Specifies the Data Lake Store path of the item for which to modify an ACE, start
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -149,7 +151,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Permission
 Parameter Sets: Set specific ACE
-Aliases: 
+Aliases:
 Accepted values: None, Execute, Write, WriteExecute, Read, ReadExecute, ReadWrite, All
 
 Required: True

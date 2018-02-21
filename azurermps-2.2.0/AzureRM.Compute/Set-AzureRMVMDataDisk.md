@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: B93064E5-C04B-4F09-85A0-3CC09C9AC904
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -68,7 +68,7 @@ Specifies the name of the data disk that this cmdlet modifies.
 ```yaml
 Type: String
 Parameter Sets: ChangeWithName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -92,7 +92,7 @@ This setting affects the consistency and performance of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -107,38 +107,12 @@ Specifies the size, in gigabytes, for the data disk.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -148,7 +122,7 @@ Specifies the logical unit number (LUN) of the data disk that this cmdlet modifi
 ```yaml
 Type: Int32
 Parameter Sets: ChangeWithLun
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -171,5 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVM](./Get-AzureRmVM.md)
 
 [Update-AzureRmVM](./Update-AzureRmVM.md)
-
-
