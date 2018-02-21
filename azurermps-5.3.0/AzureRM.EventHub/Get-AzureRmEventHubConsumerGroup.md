@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
 Module Name: AzureRM.EventHub
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubconsumergroup
@@ -44,7 +44,9 @@ Gets a list of consumer groups in the Event Hub \`MyEventHubName\`, which exists
 ## PARAMETERS
 
 ### -ConsumerGroupName
-The specified consumer group name.```yaml
+The specified consumer group name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -57,7 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-The Event Hub name.```yaml
+The Event Hub name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -70,7 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.```yaml
+The Event Hubs namespace name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

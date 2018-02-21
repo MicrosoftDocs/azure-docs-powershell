@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
 Module Name: AzureRM.EventHub
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/remove-azurermeventhub
@@ -34,7 +34,9 @@ Removes the Event Hub \`MyEventHubName\`.
 ## PARAMETERS
 
 ### -EventHubName
-Name of the Event Hub to remove.```yaml
+Name of the Event Hub to remove.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -47,7 +49,9 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.```yaml
+The Event Hubs namespace name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

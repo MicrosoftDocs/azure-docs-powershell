@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 9EE192A5-4E3F-41ED-A539-8E0A5D5EA4C9
@@ -36,7 +36,9 @@ This command updates the state of the VMSS named VMSS001 that belongs to the res
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the VMSS that this cmdlet updates the state for.```yaml
+Specifies the name of the VMSS that this cmdlet updates the state for.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -113,7 +115,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.```yaml
+The credentials, account, tenant, and subscription used for communication with Azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

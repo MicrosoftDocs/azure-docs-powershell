@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: B5B5F494-D912-40D0-99E2-A62FAACA3EC9
@@ -43,7 +43,9 @@ This command creates an Autosacale email notification for the subscription admin
 ## PARAMETERS
 
 ### -CustomEmails
-Specifies a comma-separated list of email addresses.```yaml
+Specifies a comma-separated list of email addresses.
+
+```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
@@ -71,7 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailToSubscriptionCoAdministrators
-Indicates that this operation sends an email notification to the subscription co-administrators.```yaml
+Indicates that this operation sends an email notification to the subscription co-administrators.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
@@ -84,7 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -Webhooks
-Specifies a comma-separated list of Autoscale webhooks.```yaml
+Specifies a comma-separated list of Autoscale webhooks.
+
+```yaml
 Type: Microsoft.Azure.Management.Monitor.Management.Models.WebhookNotification[]
 Parameter Sets: (All)
 Aliases:

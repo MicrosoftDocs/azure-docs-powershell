@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
 Module Name: AzureRM.EventHub
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/remove-azurermeventhubnamespace
@@ -34,7 +34,9 @@ Removes the Event Hubs namespace \`MyNamespaceName\` in resource group \`MyResou
 ## PARAMETERS
 
 ### -NamespaceName
-The Event Hubs namespace name.```yaml
+The Event Hubs namespace name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

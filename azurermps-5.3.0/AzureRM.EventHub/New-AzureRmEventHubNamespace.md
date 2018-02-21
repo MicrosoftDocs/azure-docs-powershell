@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
 Module Name: AzureRM.EventHub
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/new-azurermeventhubnamespace
@@ -57,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -NamespaceName
-The Event Hubs namespace name.```yaml
+The Event Hubs namespace name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:

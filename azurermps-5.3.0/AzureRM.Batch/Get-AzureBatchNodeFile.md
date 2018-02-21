@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 Module Name: AzureRM.Batch
 ms.assetid: 38ED2854-23D0-400E-A5C8-239346B2AF99
@@ -239,7 +239,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the node file for which this cmdlet retrieves properties. You cannot specify wildcard characters.```yaml
+Specifies the name of the node file for which this cmdlet retrieves properties. You cannot specify wildcard characters.
+
+```yaml
 Type: System.String
 Parameter Sets: ComputeNode_Id, Task_Id
 Aliases:

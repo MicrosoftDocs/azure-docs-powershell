@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.DataLakeAnalytics.dll-Help.xml
 Module Name: AzureRM.DataLakeAnalytics
 ms.assetid: 8B10E476-F283-4BDC-BFAD-A33F8EC38341
@@ -69,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDegreeOfParallelism
-The optional maximum supported degree of parallelism to update the account with.```yaml
+The optional maximum supported degree of parallelism to update the account with.
+
+```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases:
@@ -142,7 +144,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.```yaml
+Specifies key-value pairs that can be used to identify the Data Lake Analytics account among other Azure resources.
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:

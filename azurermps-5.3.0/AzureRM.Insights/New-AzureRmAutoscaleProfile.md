@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
@@ -228,7 +228,9 @@ Accept wildcard characters: False
 ```
 
 ### -Rules
-Specifies the list of rules to add to the profile.```yaml
+Specifies the list of rules to add to the profile.
+
+```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule]
 Parameter Sets: (All)
 Aliases:
@@ -241,7 +243,9 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleDays
-Specifies the scheduled days.```yaml
+Specifies the scheduled days.
+
+```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
 Aliases:
@@ -254,7 +258,9 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleHours
-Specifies the scheduled hours.```yaml
+Specifies the scheduled hours.
+
+```yaml
 Type: System.Collections.Generic.List`1[System.Nullable`1[System.Int32]]
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
 Aliases:
@@ -267,7 +273,9 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleMinutes
-Specifies the scheduled minutes.```yaml
+Specifies the scheduled minutes.
+
+```yaml
 Type: System.Collections.Generic.List`1[System.Nullable`1[System.Int32]]
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
 Aliases:

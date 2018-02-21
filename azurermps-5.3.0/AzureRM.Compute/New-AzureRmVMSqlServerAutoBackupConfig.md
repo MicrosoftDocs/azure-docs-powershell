@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 Module Name: Azure
 ms.assetid: 0AC17275-17A9-47DE-BF04-C1A51DF057DC
@@ -177,7 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-Specifies the Azure profile from which this cmdlet reads. If you do not specify a profile, this cmdlet reads from the local default profile.```yaml
+Specifies the Azure profile from which this cmdlet reads. If you do not specify a profile, this cmdlet reads from the local default profile.
+
+```yaml
 Type: Microsoft.WindowsAzure.Commands.Utilities.Common.AzureSMProfile
 Parameter Sets: (All)
 Aliases:
@@ -190,7 +192,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationAction
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: System.Management.Automation.ActionPreference
 Parameter Sets: (All)
 Aliases: infa
@@ -203,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -InformationVariable
-@{Text=}```yaml
+@{Text=}
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: iv

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 Module Name: AzureRM.DataFactories
 ms.assetid: 7B18FA1B-F616-4479-B2F0-620FC0E3E962
@@ -110,7 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies tags for the data factory.```yaml
+Specifies tags for the data factory.
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:

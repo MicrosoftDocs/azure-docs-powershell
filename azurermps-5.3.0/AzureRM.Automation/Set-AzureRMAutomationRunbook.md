@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 Module Name: AzureRM.Automation
 ms.assetid: 920C028B-0471-43EB-9123-C444289FD845
@@ -126,7 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies a dictionary of tags to replace the current tags of the modified runbook.```yaml
+Specifies a dictionary of tags to replace the current tags of the modified runbook.
+
+```yaml
 Type: System.Collections.IDictionary
 Parameter Sets: (All)
 Aliases:

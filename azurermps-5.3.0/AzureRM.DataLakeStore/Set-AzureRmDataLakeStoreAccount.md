@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 Module Name: AzureRM.DataLakeStore
 ms.assetid: 0EB5C25C-D0A1-4444-AEA2-C963D5069CFC
@@ -115,7 +115,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies tags as key-value pairs. You can use tags to identify a Data Lake Store account from other Azure resources.```yaml
+Specifies tags as key-value pairs. You can use tags to identify a Data Lake Store account from other Azure resources.
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:

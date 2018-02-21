@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 18D5B95E-4CF1-4C79-AE8B-9F4DA49B46A9
@@ -45,7 +45,9 @@ Add-AzureRmLogProfile -Locations "Global","West US" -Name ExportLogProfile -Stor
 ## PARAMETERS
 
 ### -Categories
-Specifies the list of categories.```yaml
+Specifies the list of categories.
+
+```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 Aliases:
@@ -58,7 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -Locations
-Specifies the list of locations.```yaml
+Specifies the list of locations.
+
+```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 Aliases:

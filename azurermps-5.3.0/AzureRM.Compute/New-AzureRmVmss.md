@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 1A2C843C-6962-4B0E-ACBF-A5EFF609A5BE
@@ -132,7 +132,9 @@ The nineteenth command uses the **New-AzureRmVmss** cmdlet to create the VMSS.
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the VMSS that this cmdlet creates.```yaml
+Specifies the name of the VMSS that this cmdlet creates.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
@@ -207,7 +209,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.```yaml
+The credentials, account, tenant, and subscription used for communication with Azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

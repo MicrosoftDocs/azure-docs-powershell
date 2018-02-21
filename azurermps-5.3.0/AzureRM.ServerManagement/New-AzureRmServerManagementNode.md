@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ServerManagement.dll-Help.xml
 Module Name: AzureRM.ServerManagement
 ms.assetid: CEA14FAB-4B57-48F2-938C-E3AD4AAAE753
@@ -150,7 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-Specifies tags as key-value pairs.```yaml
+Specifies tags as key-value pairs.
+
+```yaml
 Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:

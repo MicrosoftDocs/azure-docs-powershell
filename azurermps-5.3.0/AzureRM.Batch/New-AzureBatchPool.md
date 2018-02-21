@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
 Module Name: AzureRM.Batch
 ms.assetid: C71C486E-34EB-42B5-B38A-D85B7DAA2F74
@@ -319,7 +319,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDedicated
-Specifies the target number of compute nodes to allocate to the pool.```yaml
+Specifies the target number of compute nodes to allocate to the pool.
+
+```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: CloudServiceAndTargetDedicated, VirtualMachineAndTargetDedicated
 Aliases:
