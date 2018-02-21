@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 ms.assetid: 55E097F4-1F49-4196-9A8B-949FD5D9108A
 online version: 
@@ -71,7 +71,9 @@ The certificatepassword ist stored in the variable named $CertPasswd.
 ## PARAMETERS
 
 ### -BackupScheduleType
-Backup schedule type, manual or automated```yaml
+Backup schedule type, manual or automated
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -84,7 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -BackupSystemDbs
-Backup system databases```yaml
+Backup system databases
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -144,7 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupFrequency
-Sql Server Full Backup frequency, daily or weekly```yaml
+Sql Server Full Backup frequency, daily or week
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -157,7 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupStartHour
-Hour of the day (0-23) when the Sql Server Full Backup should start```yaml
+Hour of the day (0-23) when the Sql Server Full Backup should start
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
@@ -170,7 +178,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupWindowInHours
-Sql Server Full Backup window in hours```yaml
+Sql Server Full Backup window in hours
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
@@ -222,7 +232,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogBackupFrequencyInMinutes
-Sql Server Log Backup frequency, once every 1-60 minutes```yaml
+Sql Server Log Backup frequency, once every 1-60 minutes
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
