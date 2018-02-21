@@ -49,7 +49,7 @@ Specifies the object ID of the AzureActive Directory group to use as the default
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -59,10 +59,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEncryption
-Indicates that the account will not have any form of encryption applied to it.```yaml
+Indicates that the account will not have any form of encryption applied to it.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: Disable Encryption
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +77,7 @@ Accept wildcard characters: False
 ```yaml
 Type: EncryptionConfigType
 Parameter Sets: User or System assigned encryption
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -88,7 +90,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: User or System assigned encryption
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -101,7 +103,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: User or System assigned encryption
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -114,7 +116,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: User or System assigned encryption
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -132,7 +134,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -147,7 +149,7 @@ Specifies the name of the account to create.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -162,7 +164,7 @@ Specifies the name of the resource group that contains the account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -178,7 +180,7 @@ You can use tags to identify a Data Lake Store account from other Azure resource
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -188,10 +190,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The desired commitment tier for this account to use.```yaml
+The desired commitment tier for this account to use.
+
+```yaml
 Type: TierType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,5 +225,3 @@ The created account details.
 [Set-AzureRmDataLakeStoreAccount](./Set-AzureRmDataLakeStoreAccount.md)
 
 [Test-AzureRmDataLakeStoreAccount](./Test-AzureRmDataLakeStoreAccount.md)
-
-

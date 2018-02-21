@@ -27,10 +27,10 @@ The New-AzureRmRouteFilterRuleConfig cmdlet creates a route filter rule for an A
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+New-AzureRmRouteFilterRuleConfig [-Force] -Name <String> -Access <String> -RouteFilterRuleType <String>
+ -CommunityList <System.Collections.Generic.List`1[System.String]> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -41,7 +41,7 @@ Valid values are Allow or Deny.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -51,10 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -CommunityList
-The list of community value that route filter will filter on```yaml
+The list of community value that route filter will filter on
+
+```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -64,10 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation if you want to overrite a resource```yaml
+Do not ask for confirmation if you want to overrite a resource
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +116,7 @@ Specifies a name for the route filter rule.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +132,7 @@ Valid values are: Community
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -186,4 +190,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 [Remove-AzureRmRouteFilterRuleConfig]()
 
 [Set-AzureRmRouteFilterRuleConfig]()
-

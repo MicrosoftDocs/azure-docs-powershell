@@ -61,15 +61,15 @@ Accept wildcard characters: False
 Specifies the type of ACE to modify.
 The acceptable values for this parameter are:
 
-- User 
-- Group 
-- Mask 
+- User
+- Group
+- Mask
 - Other
 
 ```yaml
 Type: AceType
 Parameter Sets: Set specific ACE
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -84,7 +84,7 @@ Specifies the ACL object that contains the entries to modify.
 ```yaml
 Type: DataLakeStoreItemAce[]
 Parameter Sets: Set ACL Entries using ACL object
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -99,7 +99,7 @@ Indicates that this operation modifies the default ACE from the specified ACL.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set specific ACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -114,7 +114,7 @@ Specifies the object ID of the AzureActive Directory user, group, or service pri
 ```yaml
 Type: Guid
 Parameter Sets: Set specific ACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -124,10 +124,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates the resulting ACL should be returned.```yaml
+Indicates the resulting ACL should be returned.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +144,7 @@ Specifies the Data Lake Store path of the item for which to modify an ACE, start
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -167,7 +169,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Permission
 Parameter Sets: Set specific ACE
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -222,5 +224,3 @@ If PassThru is specified, will return the resulting list of ACL entries.
 ## RELATED LINKS
 
 [Remove-AzureRmDataLakeStoreItemAclEntry](./Remove-AzureRmDataLakeStoreItemAclEntry.md)
-
-

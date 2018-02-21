@@ -40,7 +40,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -50,7 +50,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The availability set name.```yaml
+The availability set name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName, AvailabilitySetName
@@ -68,7 +70,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -123,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAvailabilitySet](./Get-AzureRmAvailabilitySet.md)
 
 [New-AzureRmAvailabilitySet](./New-AzureRmAvailabilitySet.md)
-
-

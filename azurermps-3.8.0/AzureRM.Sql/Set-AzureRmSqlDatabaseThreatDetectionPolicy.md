@@ -48,7 +48,7 @@ Specifies the name of the database where the policy is set.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -63,7 +63,7 @@ Specifies whether the threat detection policy contacts administrators by using e
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,16 +76,16 @@ Accept wildcard characters: False
 Specifies an array of detection types to exclude from the policy.
 The acceptable values for this parameter are:
 
-- Sql_Injection 
-- Sql_Injection_Vulnerability 
-- Access_Anomaly 
-- Usage_Anomaly 
+- Sql_Injection
+- Sql_Injection_Vulnerability
+- Access_Anomaly
+- Usage_Anomaly
 - None
 
 ```yaml
 Type: DetectionType[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ Specifies a semicolon-separated list of email addresses to which the policy send
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ Specifies the name of the resource group to which the server is assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -180,10 +180,12 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionInDays
-The number of retention days for the audit logs```yaml
+The number of retention days for the audit logs
+
+```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +200,7 @@ Specifies the name of the server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -208,10 +210,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Specifies the name of the storage account to be used. Wildcards are not permitted. This parameter is not required. When this parameter is not provided, the cmdlet will use the storage account that was defined previously as part of the threat detection policy of the database. If this is the first time a database threat detection policy is defined and this parameter is not provided, the cmdlet will fail.```yaml
+Specifies the name of the storage account to be used. Wildcards are not permitted. This parameter is not required. When this parameter is not provided, the cmdlet will use the storage account that was defined previously as part of the threat detection policy of the database. If this is the first time a database threat detection policy is defined and this parameter is not provided, the cmdlet will fail.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +260,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### None
 You cannot pipe input to this cmdlet.
 
 ## OUTPUTS
@@ -271,7 +275,3 @@ This cmdlet returns a **Model.DatabaseThreatDetectionPolicyModel** object.
 [Get-AzureRmSqlDatabaseThreatDetectionPolicy](./Get-AzureRmSqlServerThreatDetectionPolicy.md)
 
 [Remove-AzureRmSqlDatabaseThreatDetectionPolicy](./Remove-AzureRmSqlDatabaseThreatDetectionPolicy.md)
-
-
-
-

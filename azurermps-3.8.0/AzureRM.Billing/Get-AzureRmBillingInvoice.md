@@ -30,7 +30,7 @@ Get-AzureRmBillingInvoice -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmBillingInvoice** cmdlet gets billing invoices of the subscription. 
+The **Get-AzureRmBillingInvoice** cmdlet gets billing invoices of the subscription.
 
 ## EXAMPLES
 
@@ -53,7 +53,7 @@ Get the invoice of the subscription with the specified name.
 PS C:\> Get-AzureRmBillingInvoice
 ```
 
-Get all available invoices of the subscription in reverse chronological order beginning with the most recent invoice without download Url. 
+Get all available invoices of the subscription in reverse chronological order beginning with the most recent invoice without download Url.
 
 ### Example 4
 ```
@@ -65,10 +65,12 @@ Get most recent 10 invoices of the subscription and include the download Url in 
 ## PARAMETERS
 
 ### -GenerateDownloadUrl
-Generate the download url of the invoices.```yaml
+Generate the download url of the invoices.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: List
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,10 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -Latest
-Get the latest invoice.```yaml
+Get the latest invoice.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: Latest
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -96,7 +100,7 @@ Determines the maximum number of records to return.
 ```yaml
 Type: Int32
 Parameter Sets: List
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,10 +110,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a specific invoice to get or the most recent if not specified.```yaml
+Name of a specific invoice to get or the most recent if not specified.
+
+```yaml
 Type: String
 Parameter Sets: Single
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,4 +139,3 @@ Microsoft.Azure.Management.Billing.Models.Invoice
 ## NOTES
 
 ## RELATED LINKS
-

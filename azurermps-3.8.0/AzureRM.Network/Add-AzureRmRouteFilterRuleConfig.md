@@ -26,18 +26,7 @@ The Add-AzureRmRouteFilterRuleConfig cmdlet adds a route filter rule to an Azure
 
 ## EXAMPLES
 
-### --------------------------  Example 1: Add a route filter rule to a route filter  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-
-
-
-
-
-
-
+### Example 1: Add a route filter rule to a route filter
 
 ```
 PS C:\>$RouteFilter = Get-AzureRmRouteFilter -ResourceGroupName "ResourceGroup11" -Name "routefilter01"
@@ -55,7 +44,7 @@ Specifies the access of the route filter rule, Valid values are Deny or Allow.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -65,10 +54,12 @@ Accept wildcard characters: False
 ```
 
 ### -CommunityList
-The list of community value that route filter will filter on```yaml
+The list of community value that route filter will filter on
+
+```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,10 +69,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Do not ask for confirmation if you want to overrite a resource```yaml
+Do not ask for confirmation if you want to overrite a resource
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +119,7 @@ Specifies a name of the route filter rule to add to the route filter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -141,7 +134,7 @@ Specifies the route filter to which this cmdlet adds a route filter rule.
 ```yaml
 Type: PSRouteFilter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -157,7 +150,7 @@ Valid values are: Community
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -219,4 +212,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 [Set-AzureRmRouteFilterRuleConfigConfig]()
 
 [Set-AzureRmRouteFilter]()
-

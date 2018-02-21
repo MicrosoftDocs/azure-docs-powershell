@@ -69,7 +69,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,7 +99,7 @@ Specifies a name for the integration account agreement.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,17 +109,17 @@ Accept wildcard characters: False
 ```
 
 ### -AgreementType
-Specifies the integration account agreement type. 
+Specifies the integration account agreement type.
 The acceptable values for this parameter are:
 
-- X12 
+- X12
 - AS2
 - Edifact
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,7 +134,7 @@ Specifies the name of the guest partner.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +149,7 @@ Specifies the name of the host partner.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,7 +164,7 @@ Specifies a name business identity qualifier for the guest partner.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -179,7 +179,7 @@ Specifies a name business identity qualifier for the host partner.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -195,7 +195,7 @@ Specify either this parameter or the *AgreementContentFilePath* parameter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Specify either this parameter or the *AgreementContent* parameter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ Specifies a metadata object for the agreement.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -306,10 +306,12 @@ Accept wildcard characters: False
 ```
 
 ### -GuestIdentityQualifierValue
-The integration account agreement guest identity qualifier value.```yaml
+The integration account agreement guest identity qualifier value.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -319,10 +321,12 @@ Accept wildcard characters: False
 ```
 
 ### -HostIdentityQualifierValue
-The integration account agreement host identity qualifier value.```yaml
+The integration account agreement host identity qualifier value.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -349,5 +353,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmIntegrationAccountAgreement](./Remove-AzureRmIntegrationAccountAgreement.md)
 
 [Set-AzureRmIntegrationAccountAgreement](./Set-AzureRmIntegrationAccountAgreement.md)
-
-

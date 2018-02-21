@@ -26,18 +26,19 @@ Remove-AzureRmRouteFilterRuleConfig -Name <String> -RouteFilter <PSRouteFilter> 
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+Remove-AzureRmRouteFilterRuleConfig -Name <String> -RouteFilter <PSRouteFilter> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Force
-Do not ask for confirmation if you want to overrite a resource```yaml
+Do not ask for confirmation if you want to overrite a resource
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -52,7 +53,7 @@ The name of the route filter rule
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -67,7 +68,7 @@ The RouteFilter
 ```yaml
 Type: PSRouteFilter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,4 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

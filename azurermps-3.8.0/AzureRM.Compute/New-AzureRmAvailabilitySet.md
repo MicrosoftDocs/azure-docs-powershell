@@ -41,7 +41,7 @@ Specifies the location for the availability set.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -51,10 +51,12 @@ Accept wildcard characters: False
 ```
 
 ### -Managed
-Managed Availability Set```yaml
+Managed Availability Set
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +86,7 @@ Specifies the platform fault domain count.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -99,7 +101,7 @@ Specifies the platform update domain count.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -114,7 +116,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -124,10 +126,12 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-The Name of Sku```yaml
+The Name of Sku
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,5 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmAvailabilitySet](./Get-AzureRmAvailabilitySet.md)
 
 [Remove-AzureRmAvailabilitySet](./Remove-AzureRmAvailabilitySet.md)
-
-

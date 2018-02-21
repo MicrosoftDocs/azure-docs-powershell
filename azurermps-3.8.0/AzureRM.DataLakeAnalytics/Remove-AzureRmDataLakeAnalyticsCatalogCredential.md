@@ -57,7 +57,7 @@ Specifies the name of the database that holds the credential.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -67,10 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +87,7 @@ Specifies the name of the credential.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -102,7 +104,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +120,7 @@ This is required if the caller is not the owner of the account.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -128,10 +130,12 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-Indicates that this delete operation should go through and also delete and drop all resources dependent on this credential.```yaml
+Indicates that this delete operation should go through and also delete and drop all resources dependent on this credential.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -181,4 +185,3 @@ If PassThru is specified, returns true upon completion of the operation.
 ## NOTES
 
 ## RELATED LINKS
-

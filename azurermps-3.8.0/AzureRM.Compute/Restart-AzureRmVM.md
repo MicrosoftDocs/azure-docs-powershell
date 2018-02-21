@@ -40,10 +40,12 @@ This command restarts the virtual machine named VirtualMachine07 in ResourceGrou
 ## PARAMETERS
 
 ### -Id
-The resource group name.```yaml
+The resource group name.
+
+```yaml
 Type: String
 Parameter Sets: IdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -53,10 +55,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The virtual machine name.```yaml
+The virtual machine name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -71,7 +75,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupNameParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -132,5 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmVM](./Stop-AzureRmVM.md)
 
 [Update-AzureRmVM](./Update-AzureRmVM.md)
-
-

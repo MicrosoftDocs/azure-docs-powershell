@@ -21,7 +21,7 @@ Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName <String>
 ```
 
 ## DESCRIPTION
-Cmdlet to add Azure Sql Databases into a Failover Group. Database input parameters should be a Azure Sql Database Model object, which could be obtained either through pipelining or storing in Powershell environment variables with the Get_AzureRmSqlDatabase Cmdelet. 
+Cmdlet to add Azure Sql Databases into a Failover Group. Database input parameters should be a Azure Sql Database Model object, which could be obtained either through pipelining or storing in Powershell environment variables with the Get_AzureRmSqlDatabase Cmdelet.
 
 ## EXAMPLES
 
@@ -36,8 +36,7 @@ PS C:\> Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGr
 ```
 PS C:\> Get-AzureRmSqlDatabase -ServerName testsvr -ResourceGroupName rg2 | Add-AzureRmSqlDatabaseToFailoverGroup -FailoverGroupName myFg-ResourceGroupName myRg -ServerName mysvr
 ```
-Using Pipe Line to pipe in the database objects 
-
+Using Pipe Line to pipe in the database objects
 
 
 ## PARAMETERS
@@ -47,7 +46,7 @@ The Azure SQL Databases to be added to the secondary server.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -61,7 +60,7 @@ The name of the Azure SQL Failover Group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,7 +74,7 @@ The name of the resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -89,7 +88,7 @@ The name of the Azure SQL Server the Failover Group is in.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,7 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-The tags to associate with the Azure Sql Elastic Pool```yaml
+The tags to associate with the Azure Sql Elastic Pool
+
+```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: Tag
@@ -156,4 +157,3 @@ System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Sql.Database.Model.A
 ## NOTES
 
 ## RELATED LINKS
-
