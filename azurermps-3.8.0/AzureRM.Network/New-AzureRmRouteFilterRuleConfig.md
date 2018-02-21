@@ -26,7 +26,11 @@ The New-AzureRmRouteFilterRuleConfig cmdlet creates a route filter rule for an A
 ## EXAMPLES
 
 ### Example 1
-
+```
+New-AzureRmRouteFilterRuleConfig [-Force] -Name <String> -Access <String> -RouteFilterRuleType <String>
+ -CommunityList <System.Collections.Generic.List`1[System.String]> [-InformationAction <ActionPreference>]
+ [-InformationVariable <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
 
 ## PARAMETERS
 

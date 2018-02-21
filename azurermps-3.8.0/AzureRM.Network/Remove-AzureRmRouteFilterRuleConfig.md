@@ -25,7 +25,10 @@ Remove-AzureRmRouteFilterRuleConfig -Name <String> -RouteFilter <PSRouteFilter> 
 ## EXAMPLES
 
 ### Example 1
-
+```
+Remove-AzureRmRouteFilterRuleConfig -Name <String> -RouteFilter <PSRouteFilter> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
 
 ## PARAMETERS
 

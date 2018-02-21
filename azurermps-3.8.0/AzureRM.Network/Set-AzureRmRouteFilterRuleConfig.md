@@ -26,7 +26,11 @@ Set-AzureRmRouteFilterRuleConfig -RouteFilter <PSRouteFilter> [-Force] -Name <St
 ## EXAMPLES
 
 ### Example 1
-
+```
+Set-AzureRmRouteFilterRuleConfig -RouteFilter <PSRouteFilter> [-Force] -Name <String> -Access <String>
+ -RouteFilterRuleType <String> -CommunityList <System.Collections.Generic.List`1[System.String]> [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
 
 ## PARAMETERS
 

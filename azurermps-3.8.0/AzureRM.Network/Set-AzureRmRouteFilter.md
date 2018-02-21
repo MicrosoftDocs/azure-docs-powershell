@@ -20,11 +20,12 @@ Set-AzureRmRouteFilter -RouteFilter <PSRouteFilter> [-Force] [-WhatIf] [-Confirm
 
 ## DESCRIPTION
 
-
 ## EXAMPLES
 
 ### Example 1
-
+```
+Set-AzureRmRouteFilter -RouteFilter <PSRouteFilter> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
 
 ## PARAMETERS
 

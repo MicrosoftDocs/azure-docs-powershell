@@ -24,7 +24,10 @@ Reset-AzureRmVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGatew
 ## EXAMPLES
 
 ### 1:
-
+```
+Reset-AzureRmVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGateway> [-GatewayVip <String>]
+ [-InformationAction <ActionPreference>] [-InformationVariable <String>] [<CommonParameters>]
+```
 
 ## PARAMETERS
 
