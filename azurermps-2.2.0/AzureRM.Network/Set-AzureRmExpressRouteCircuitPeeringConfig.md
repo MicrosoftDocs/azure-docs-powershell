@@ -23,6 +23,13 @@ Set-AzureRmExpressRouteCircuitPeeringConfig -Name <String> -Circuit <PSExpressRo
 ## EXAMPLES
 
 ### Example 1
+```
+Set-AzureRmExpressRouteCircuitPeeringConfig -Name <String> -Circuit <PSExpressRouteCircuit>
+ -PeeringType <String> [-PeerASN <Int32>] -PrimaryPeerAddressPrefix <String>
+ -SecondaryPeerAddressPrefix <String> -VlanId <Int32> [-SharedKey <String>]
+ [-MicrosoftConfigAdvertisedPublicPrefixes <System.Collections.Generic.List`1[System.String]>]
+ [-MicrosoftConfigCustomerAsn <Int32>] [-MicrosoftConfigRoutingRegistryName <String>] [<CommonParameters>]
+```
 
 ## PARAMETERS
 

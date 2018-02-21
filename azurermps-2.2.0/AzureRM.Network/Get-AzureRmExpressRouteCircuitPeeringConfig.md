@@ -20,6 +20,10 @@ Get-AzureRmExpressRouteCircuitPeeringConfig [-Name <String>] -Circuit <PSExpress
 ## EXAMPLES
 
 ### Example 1
+```
+Get-AzureRmExpressRouteCircuitPeeringConfig [-Name <String>] -Circuit <PSExpressRouteCircuit>
+ [<CommonParameters>]
+```
 
 ## PARAMETERS
 
