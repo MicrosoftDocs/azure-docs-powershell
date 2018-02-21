@@ -242,7 +242,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
+### None
 You cannot pipe input to this cmdlet.
 
 ## OUTPUTS
