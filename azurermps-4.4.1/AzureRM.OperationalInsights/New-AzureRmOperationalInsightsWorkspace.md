@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.OperationalInsights.dll-Help.xml
 Module Name: AzureRM.OperationalInsights
 ms.assetid: 4682807D-34E8-4057-8894-36820447067B
@@ -192,7 +192,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -205,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionInDays
-The workspace data retention in days. 730 days is the maximum allowed for all other Skus.```yaml
+The workspace data retention in days. 730 days is the maximum allowed for all other Skus.
+
+```yaml
 Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases: 

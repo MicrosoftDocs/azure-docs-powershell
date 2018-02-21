@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 38917534-49C6-47EA-B815-240F794EE655
@@ -46,7 +46,9 @@ To obtain a virtual machine object, use the **Get-AzureRmVM** cmdlet.
 ## PARAMETERS
 
 ### -AssignIdentity
-Specify the system assigned identity for the virtual machine.```yaml
+Specify the system assigned identity for the virtual machine.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -59,7 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 Module Name: AzureRM.Storage
 ms.assetid: 11AAA319-DDBB-4156-9BE7-4DE8B80A904C
@@ -34,7 +34,9 @@ This command gets the Storage resources usage of the current subscription.
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

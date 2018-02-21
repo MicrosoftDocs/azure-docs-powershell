@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.SiteRecovery
 ms.assetid: D0336AB5-019F-4EFD-88D2-63E12BA1ED95
@@ -42,7 +42,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

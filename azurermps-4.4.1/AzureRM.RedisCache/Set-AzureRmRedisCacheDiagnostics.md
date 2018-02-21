@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
 Module Name: AzureRM.RedisCache
 ms.assetid: FA99C137-68E3-47D3-A0AC-FE33A481BE66
@@ -82,7 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ServiceBus.dll-Help.xml
 Module Name: AzureRM.ServiceBus
 online version:
@@ -49,7 +49,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -62,7 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-ServiceBus Queue AuthorizationRule Name.```yaml
+ServiceBus Queue AuthorizationRule Name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: AuthorizationRuleName
@@ -75,7 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-ServiceBus Namespace Name.```yaml
+ServiceBus Namespace Name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceName
@@ -88,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Queue
-ServiceBus Queue Name.```yaml
+ServiceBus Queue Name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: QueueName

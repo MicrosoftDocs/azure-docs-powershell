@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 Module Name: AzureRM.Resources
 online version:
@@ -251,7 +251,9 @@ Accept wildcard characters: False
 ```
 
 ### -CreateUiDefinition
-The managed application definition create ui definition.```yaml
+The managed application definition create ui definition.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
@@ -264,7 +266,9 @@ Accept wildcard characters: False
 ```
 
 ### -MainTemplate
-The managed application definition main template.```yaml
+The managed application definition main template.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 

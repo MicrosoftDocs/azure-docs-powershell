@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 Module Name: AzureRM.Storage
 ms.assetid: A3DA1205-B8FB-4B4C-9C40-AD303D038EDF
@@ -75,7 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.```yaml
+Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -120,7 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHttpsTrafficOnly
-Indicates whether or not the Storage Account only enable https traffic.```yaml
+Indicates whether or not the Storage Account only enable https traffic.
+
+```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
@@ -227,7 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkRuleSet
-Storage Account NetworkRuleSet```yaml
+Storage Account NetworkRuleSet
+
+```yaml
 Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
 Parameter Sets: (All)
 Aliases: 
@@ -314,7 +320,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

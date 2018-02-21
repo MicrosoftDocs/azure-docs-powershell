@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
 Module Name: AzureRM.Relay
 online version:
@@ -109,7 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -122,7 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Relay Namespace object.```yaml
+Relay Namespace object.
+
+```yaml
 Type: Microsoft.Azure.Commands.Relay.Models.RelayNamespaceAttirbutesUpdateParameter
 Parameter Sets: (All)
 Aliases: 
@@ -135,7 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Relay Namespace Name.```yaml
+Relay Namespace Name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.TrafficManager.dll-Help.xml
 Module Name: AzureRM.TrafficManager
 ms.assetid: 8E12A392-A100-4814-9003-B2999150DCE1
@@ -80,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

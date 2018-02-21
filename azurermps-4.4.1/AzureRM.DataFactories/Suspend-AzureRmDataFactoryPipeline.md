@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
 Module Name: AzureRM.DataFactories
 ms.assetid: 1FF0B0F9-4B2C-46BC-8BED-12BE865E4480
@@ -142,7 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

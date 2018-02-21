@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 7320B832-50FD-48AE-9089-445318F3B08A
@@ -35,7 +35,9 @@ This command removes an availability set named AvailablitySet03 in the resource 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -63,7 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The availability set name.```yaml
+The availability set name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: ResourceName, AvailabilitySetName

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: 6442E5BB-D59D-483B-8AC5-2586C6C1E925
@@ -43,7 +43,9 @@ This command reimages the VMSS named ContosoVMSS that belongs to the resource gr
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -56,7 +58,9 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceId
-The instance ID of the virtual machine.```yaml
+The instance ID of the virtual machine.
+
+```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases: 

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.StreamAnalytics.dll-Help.xml
 Module Name: AzureRM.StreamAnalytics
 ms.assetid: 35CE5C5F-F8D4-426F-A33A-4F9EA50E9B83
@@ -164,7 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

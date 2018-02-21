@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.SiteRecovery
 ms.assetid: 56F63287-0247-4921-9C99-E581E075F4D0
@@ -32,7 +32,9 @@ The **Get-AzureRmSiteRecoveryVaultSettings** cmdlet gets settings information re
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

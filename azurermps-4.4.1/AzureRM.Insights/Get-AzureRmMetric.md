@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: EAFB9C98-000C-4EAC-A32D-6B0F1939AA2F
@@ -269,7 +269,9 @@ Accept wildcard characters: False
 ```
 
 ### -AggregationType
-The aggregation type of the query```yaml
+The aggregation type of the quer
+
+```yaml
 Type: System.Nullable`1[Microsoft.Azure.Management.Monitor.Models.AggregationType]
 Parameter Sets: Parameters for Get-AzureRmMetric cmdlet in the full param set mode
 Aliases: 
@@ -282,7 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

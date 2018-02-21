@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
 Module Name: AzureRM.DevTestLabs
 ms.assetid: 8AAD9309-5763-4903-AF6A-1E50310146C0
@@ -149,7 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

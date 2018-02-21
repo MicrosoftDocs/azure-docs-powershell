@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 Module Name: AzureRM.Storage
 ms.assetid: 4D7EEDD7-89D4-4B1E-A9A1-B301E759CE72
@@ -124,7 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.```yaml
+Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
@@ -184,7 +186,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHttpsTrafficOnly
-Indicates whether or not the Storage Account only enable https traffic.```yaml
+Indicates whether or not the Storage Account only enable https traffic.
+
+```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
@@ -253,7 +257,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeyName
-Storage Account encryption keySource KeyVault KeyName```yaml
+Storage Account encryption keySource KeyVault KeyName
+
+```yaml
 Type: System.String
 Parameter Sets: KeyvaultEncryption
 Aliases: 
@@ -281,7 +287,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultUri
-Storage Account encryption keySource KeyVault KeyVaultUri```yaml
+Storage Account encryption keySource KeyVault KeyVaultUri
+
+```yaml
 Type: System.String
 Parameter Sets: KeyvaultEncryption
 Aliases: 
@@ -294,7 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVersion
-Storage Account encryption keySource KeyVault KeyVersion```yaml
+Storage Account encryption keySource KeyVault KeyVersion
+
+```yaml
 Type: System.String
 Parameter Sets: KeyvaultEncryption
 Aliases: 
@@ -322,7 +332,9 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkRuleSet
-Storage Account NetworkRuleSet```yaml
+Storage Account NetworkRuleSet
+
+```yaml
 Type: Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
 Parameter Sets: (All)
 Aliases: 
@@ -380,7 +392,9 @@ Accept wildcard characters: False
 ```
 
 ### -StorageEncryption
-Whether to set Storage Account Encryption KeySource to Microsoft.Storage or not.```yaml
+Whether to set Storage Account Encryption KeySource to Microsoft.Storage or not.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: StorageEncryption
 Aliases: 
@@ -456,7 +470,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

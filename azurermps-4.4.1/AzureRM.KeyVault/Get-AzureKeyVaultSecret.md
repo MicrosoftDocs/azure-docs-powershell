@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: AzureRM.KeyVault
 ms.assetid: 8C9B33EE-10DE-4803-B76D-FE9FC2AC3372
@@ -117,7 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -InRemovedState
-Specifies whether to show the previously deleted secrets in the output.```yaml
+Specifies whether to show the previously deleted secrets in the output.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ByDeletedSecrets
 Aliases: 
@@ -189,7 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential

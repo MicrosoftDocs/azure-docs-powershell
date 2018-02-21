@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 Module Name: AzureRM.Compute
 ms.assetid: EF155949-5766-4BC4-9C8A-2B97E8EA032D
@@ -54,7 +54,9 @@ This command restarts the virtual machine named VirtualMachine07 in ResourceGrou
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -67,7 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The resource group name.```yaml
+The resource group name.
+
+```yaml
 Type: System.String
 Parameter Sets: RestartIdParameterSetName, PerformMaintenanceIdParameterSetName
 Aliases: 
@@ -80,7 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The virtual machine name.```yaml
+The virtual machine name.
+
+```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
@@ -93,7 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -PerformMaintenance
-To perform the maintenance of virtual machine.```yaml
+To perform the maintenance of virtual machine.
+
+```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: PerformMaintenanceResourceGroupNameParameterSetName, PerformMaintenanceIdParameterSetName
 Aliases: 

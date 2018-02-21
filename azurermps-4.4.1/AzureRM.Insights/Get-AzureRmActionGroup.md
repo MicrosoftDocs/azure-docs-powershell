@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
 Module Name: AzureRM.Insights
 ms.assetid: 1CA26790-C791-4BFD-B986-70F28E3B095B
@@ -71,7 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.```yaml
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
@@ -84,7 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name```yaml
+The resource group name
+
+```yaml
 Type: System.String
 Parameter Sets: BySubscriptionOrResourceGroup
 Aliases: 
