@@ -1,13 +1,13 @@
 ---
 Download Help Link: None_Azure
-external help file: Microsoft.Azure.Commands.PowerBI.dll-Help.xml
+external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
 Help Version: 0.0.1.0
 Locale: en-US
 Module Guid: acace26c-1775-4100-85c0-20c4d71eaa22
 Module Name: AzureRM.PowerBIEmbedded
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Suspend-AzureRmPowerBIEmbeddedCapacity.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/Suspend-AzureRmPowerBIEmbeddedCapacity.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Suspend-AzureRmPowerBIEmbeddedCapacity.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Suspend-AzureRmPowerBIEmbeddedCapacity.md
 ---
 
 # Suspend-AzureRmPowerBIEmbeddedCapacity
