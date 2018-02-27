@@ -55,7 +55,7 @@ Specifies the object ID of the AzureActive Directory user, group, or service pri
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -65,10 +65,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates the resulting updated owner should be returned.```yaml
+Indicates the resulting updated owner should be returned.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +85,7 @@ Specifies the Data Lake Store path of the item to modify, starting with the root
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -99,7 +101,7 @@ The acceptable values for this parameter are: User and Group.
 ```yaml
 Type: Owner
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -154,5 +156,3 @@ If PassThru is specified, returns the updated owner.
 ## RELATED LINKS
 
 [Get-AzureRmDataLakeStoreItemOwner](./Get-AzureRmDataLakeStoreItemOwner.md)
-
-

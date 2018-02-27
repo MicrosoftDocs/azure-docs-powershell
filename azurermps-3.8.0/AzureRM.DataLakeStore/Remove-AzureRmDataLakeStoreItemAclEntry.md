@@ -68,7 +68,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: AceType
 Parameter Sets: Remove specific ACE
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -83,7 +83,7 @@ Specifies the ACL object that contains the entries to be removed.
 ```yaml
 Type: DataLakeStoreItemAce[]
 Parameter Sets: Remove ACL Entries using ACL object
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -98,7 +98,7 @@ Indicates that this operation removes the default ACE from the specified ACL.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Remove specific ACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -113,7 +113,7 @@ Specifies the object ID of the AzureActive Directory user, group, or service pri
 ```yaml
 Type: Guid
 Parameter Sets: Remove specific ACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -123,10 +123,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates a boolean response should be returned indicating the result of the delete operation.```yaml
+Indicates a boolean response should be returned indicating the result of the delete operation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +143,7 @@ Specifies the Data Lake Store path of the item from which to remove an ACE, star
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -196,5 +198,3 @@ If PassThru is specified, returns true upon successful completion.
 ## RELATED LINKS
 
 [Set-AzureRmDataLakeStoreItemAclEntry](./Set-AzureRmDataLakeStoreItemAclEntry.md)
-
-

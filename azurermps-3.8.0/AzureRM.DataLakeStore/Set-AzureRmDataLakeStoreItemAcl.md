@@ -58,7 +58,7 @@ Specifies an ACL for a file or a folder.
 ```yaml
 Type: DataLakeStoreItemAce[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -68,10 +68,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Indicates the resulting ACL should be returned.```yaml
+Indicates the resulting ACL should be returned.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +88,7 @@ Specifies the Data Lake Store path of the file or folder, starting with the root
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -139,4 +141,3 @@ If PassThru is specified, will return the resulting list of ACL entries.
 ## NOTES
 
 ## RELATED LINKS
-

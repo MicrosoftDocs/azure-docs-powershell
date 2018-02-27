@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -32,12 +32,11 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -Name
-@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -47,10 +46,11 @@ Accept wildcard characters: False
 ```
 
 ### -Circuit
-@{Text=}```yaml
+
+```yaml
 Type: PSExpressRouteCircuit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,12 +60,11 @@ Accept wildcard characters: False
 ```
 
 ### -PeeringType
-@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,12 +74,11 @@ Accept wildcard characters: False
 ```
 
 ### -PeerASN
-@{Text=}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,12 +88,11 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryPeerAddressPrefix
-@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,12 +102,11 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryPeerAddressPrefix
-@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,12 +116,11 @@ Accept wildcard characters: False
 ```
 
 ### -VlanId
-@{Text=}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,12 +130,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharedKey
-@{Text=}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,12 +144,11 @@ Accept wildcard characters: False
 ```
 
 ### -MicrosoftConfigAdvertisedPublicPrefixes
-@{Text=}
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,12 +158,11 @@ Accept wildcard characters: False
 ```
 
 ### -MicrosoftConfigCustomerAsn
-@{Text=}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +177,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

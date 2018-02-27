@@ -77,7 +77,7 @@ Specifies the name of the default storage account that the HDInsight cluster wil
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Specifies the account key for the default Azure Storage account that the HDInsig
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,10 +102,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStorageAccountType
-Specifies the type of the default storage account that the HDInsight cluster will use. Possible values are AzureStorage and AzureDataLakeStore.```yaml
+Specifies the type of the default storage account that the HDInsight cluster will use. Possible values are AzureStorage and AzureDataLakeStore.
+
+```yaml
 Type: StorageType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +123,7 @@ You can alternatively use the **Add-AzureRmHDInsightMetastore** cmdlet.
 ```yaml
 Type: AzureHDInsightMetastore
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +139,7 @@ You can alternatively use the Add-AzureRmHDInsightMetastore cmdlet.
 ```yaml
 Type: AzureHDInsightMetastore
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +155,7 @@ Use Get-AzureRMVMSize for acceptable VM sizes, and see HDInsight's pricing page.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +171,7 @@ Use Get-AzureRMVMSize for acceptable VM sizes, and see HDInsight's pricing page.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,7 +188,7 @@ This parameter is valid only for HBase or Storm clusters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,10 +198,12 @@ Accept wildcard characters: False
 ```
 
 ### -EdgeNodeSize
-Specifies the size of the virtual machine for the edge node. Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page. This parameter is valid only for RServer clusters.```yaml
+Specifies the size of the virtual machine for the edge node. Use Get-AzureRmVMSize for acceptable VM sizes, and see HDInsight's pricing page. This parameter is valid only for RServer clusters.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,7 +224,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -242,7 +246,7 @@ The Premium tier can only be used with Linux clusters, and it enables the use of
 ```yaml
 Type: Tier
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -258,7 +262,7 @@ The cluster will use this when accessing Azure Data Lake Store.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +277,7 @@ Specifies file contents of the certificate that will be used when accessing Azur
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,7 +293,7 @@ The cluster will use this when accessing Azure Data Lake Store.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -305,7 +309,7 @@ The cluster will use this when accessing Azure Data Lake Store.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -320,7 +324,7 @@ Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lak
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -380,5 +384,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Add-AzureRmHDInsightStorage](./Add-AzureRmHDInsightStorage.md)
-
-

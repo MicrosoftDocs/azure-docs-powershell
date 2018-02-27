@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
 ms.assetid: 58E7C555-9D4C-4584-8C96-8DEAD17DD4B9
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -32,10 +32,12 @@ This command sets the owner for the root directory to Patti Fuller.
 ## PARAMETERS
 
 ### -Force
-Forces the command to run without asking for user confirmation.```yaml
+Forces the command to run without asking for user confirmation.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -50,7 +52,7 @@ Specifies the object ID of the AzureActive Directory user, group, or service pri
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -65,7 +67,7 @@ Specifies the Data Lake Store path of the item to modify, starting with the root
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -81,7 +83,7 @@ The acceptable values for this parameter are: User and Group.
 ```yaml
 Type: Owner
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: User, Group
 
 Required: True

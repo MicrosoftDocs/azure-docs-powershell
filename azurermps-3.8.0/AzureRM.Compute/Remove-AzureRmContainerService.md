@@ -40,7 +40,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -55,7 +55,7 @@ Specifies the name of the container service that this cmdlet removes.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -70,7 +70,7 @@ Specifies the resource group of the container service that this cmdlet removes.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -80,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.```yaml
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
@@ -93,7 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.```yaml
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
@@ -121,5 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzureRmContainerService](./New-AzureRmContainerService.md)
 
 [Update-AzureRmContainerService](./Update-AzureRmContainerService.md)
-
-

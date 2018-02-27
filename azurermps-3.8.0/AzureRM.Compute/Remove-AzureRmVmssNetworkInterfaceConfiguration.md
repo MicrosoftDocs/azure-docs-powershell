@@ -45,10 +45,12 @@ The second command removes the network interface configuration named ContosoVmss
 ## PARAMETERS
 
 ### -Id
-Specifies the ID of the network interface configuration that this cmdlet removes.```yaml
+Specifies the ID of the network interface configuration that this cmdlet removes.
+
+```yaml
 Type: String
 Parameter Sets: IdParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,7 +65,7 @@ Specifies the name of the network interface configuration that this cmdlet remov
 ```yaml
 Type: String
 Parameter Sets: NameParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -78,7 +80,7 @@ Specifies the VMSS object.
 ```yaml
 Type: VirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -131,5 +133,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AzureRmVmssNetworkInterfaceConfiguration](./Add-AzureRmVmssNetworkInterfaceConfiguration.md)
 
 [Get-AzureRmVmss](./Get-AzureRmVmss.md)
-
-

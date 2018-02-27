@@ -77,7 +77,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ExtendedJobData
 Parameter Sets: Specific JobInformation
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -92,7 +92,7 @@ Specifies the ID of the job to get.
 ```yaml
 Type: Guid
 Parameter Sets: Specific JobInformation
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -113,7 +113,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: All In Resource Group and Account
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -134,7 +134,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: JobResult[]
 Parameter Sets: All In Resource Group and Account
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -160,7 +160,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: JobState[]
 Parameter Sets: All In Resource Group and Account
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -176,7 +176,7 @@ Use this parameter to filter the job list result to jobs submitted after the spe
 ```yaml
 Type: DateTimeOffset
 Parameter Sets: All In Resource Group and Account
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -192,7 +192,7 @@ Use this parameter to filter the job list result to jobs submitted before the sp
 ```yaml
 Type: DateTimeOffset
 Parameter Sets: All In Resource Group and Account
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -208,7 +208,7 @@ Use this parameter to filter the job list results to jobs submitted by a specifi
 ```yaml
 Type: String
 Parameter Sets: All In Resource Group and Account
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -218,10 +218,12 @@ Accept wildcard characters: False
 ```
 
 ### -Top
-An optional value which indicates the number of jobs to return. Default value is 500```yaml
+An optional value which indicates the number of jobs to return. Default value is 500
+
+```yaml
 Type: Int32
 Parameter Sets: All In Resource Group and Account
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,5 +254,3 @@ The list of jobs in the specified Data Lake Analytics account.
 [Submit-AzureRmDataLakeAnalyticsJob](./Submit-AzureRmDataLakeAnalyticsJob.md)
 
 [Wait-AzureRmDataLakeAnalyticsJob](./Wait-AzureRmDataLakeAnalyticsJob.md)
-
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 1E2F79FB-596A-4B7E-BF3B-E96CF20F0CBE
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -92,7 +92,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -107,7 +107,7 @@ Specifies the name of the virtual machine on which this cmdlet sets the SQL Serv
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -122,7 +122,7 @@ Specifies the name of the SQL Server the extension.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -138,7 +138,7 @@ To create an **AutoPatchingSettings** object , use the New-AzureVMSqlServerAutoP
 ```yaml
 Type: AutoPatchingSettings
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -154,7 +154,7 @@ To create an **AutoBackupSettings** object , use the New-AzureVMSqlServerAutoBac
 ```yaml
 Type: AutoBackupSettings
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -169,38 +169,12 @@ Specifies the location of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -226,5 +200,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRmVMSqlServerExtension](./Remove-AzureRMVMSqlServerExtension.md)
 
 [Update-AzureRmVM](./Update-AzureRmVM.md)
-
-

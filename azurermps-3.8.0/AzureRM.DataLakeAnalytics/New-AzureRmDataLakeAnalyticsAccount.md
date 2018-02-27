@@ -41,7 +41,7 @@ Specifies the name of the Data Lake Store account to set as the default data sou
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -57,7 +57,7 @@ Only East US 2 is supported at this time.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -67,10 +67,12 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDegreeOfParallelism
-The optional maximum supported degree of parallelism for this account. If none is specified, defaults to 30```yaml
+The optional maximum supported degree of parallelism for this account. If none is specified, defaults to 30
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -80,10 +82,12 @@ Accept wildcard characters: False
 ```
 
 ### -MaxJobCount
-The optional maximum supported jobs running under the account at the same time. If none is specified, defaults to 3```yaml
+The optional maximum supported jobs running under the account at the same time. If none is specified, defaults to 3
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +102,7 @@ Specifies the Data Lake Analytics account name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -108,10 +112,12 @@ Accept wildcard characters: False
 ```
 
 ### -QueryStoreRetention
-The optional number of days that job metadata is retained. If none specified, the default is 30 days.```yaml
+The optional number of days that job metadata is retained. If none specified, the default is 30 days.
+
+```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +133,7 @@ To create a resource group, use the New-AzureRmResourceGroup cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -142,7 +148,7 @@ Specifies key-value pairs that can be used to identify the Data Lake Analytics a
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -152,10 +158,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tier
-The desired commitment tier for this account to use.```yaml
+The desired commitment tier for this account to use.
+
+```yaml
 Type: TierType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,5 +193,3 @@ The details of the newly created account.
 [Set-AzureRmDataLakeAnalyticsAccount](./Set-AzureRmDataLakeAnalyticsAccount.md)
 
 [Test-AzureRmDataLakeAnalyticsAccount](./Test-AzureRmDataLakeAnalyticsAccount.md)
-
-

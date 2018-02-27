@@ -46,7 +46,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -56,10 +56,12 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The resource group name.```yaml
+The resource group name.
+
+```yaml
 Type: String
 Parameter Sets: IdParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -69,7 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The resource name.```yaml
+The resource name.
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceName, VMName
@@ -87,7 +91,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupNameParameterSetName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -150,5 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzureRmVM](./Stop-AzureRmVM.md)
 
 [Update-AzureRmVM](./Update-AzureRmVM.md)
-
-

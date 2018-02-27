@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 4A432EA1-0A2E-4F08-92EF-DD581C18EF1B
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -69,7 +69,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -116,7 +116,7 @@ The publisher provides a name when the publisher registers an extension.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -162,7 +162,7 @@ This cmdlet does not encrypt public configuration.
 ```yaml
 Type: Hashtable
 Parameter Sets: Settings
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -178,7 +178,7 @@ This cmdlet encrypts the private configuration.
 ```yaml
 Type: Hashtable
 Parameter Sets: Settings
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -193,38 +193,12 @@ Specifies the location of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -235,7 +209,7 @@ This cmdlet does not encrypt public configuration.
 ```yaml
 Type: String
 Parameter Sets: SettingString
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -251,7 +225,7 @@ This cmdlet encrypts the private configuration.
 ```yaml
 Type: String
 Parameter Sets: SettingString
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -267,7 +241,7 @@ By default, this cmdlet enables the guest agent to update the extensions.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -285,7 +259,7 @@ If forceUpdateTag is not changed, updates to public or protected settings are st
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -308,5 +282,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVMExtension](./Get-AzureRmVMExtension.md)
 
 [Remove-AzureRmVMExtension](./Remove-AzureRmVMExtension.md)
-
-

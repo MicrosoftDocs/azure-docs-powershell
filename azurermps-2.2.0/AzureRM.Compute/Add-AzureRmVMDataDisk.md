@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 94FD814C-6B76-4444-9118-3AC2EE7E737B
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -117,7 +117,7 @@ Specifies the name of the data disk to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -134,7 +134,7 @@ This is the location from which to start the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -159,7 +159,7 @@ This setting affects the consistency and performance of the disk.
 ```yaml
 Type: CachingTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -174,7 +174,7 @@ Specifies the size, in gigabytes, of an empty disk to attach to a virtual machin
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -189,7 +189,7 @@ Specifies the logical unit number (LUN) for a data disk.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -216,7 +216,7 @@ The *VhdUri* parameter is used as the location identifying where the data disk V
 ```yaml
 Type: DiskCreateOptionTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 6
@@ -237,32 +237,6 @@ Required: False
 Position: 7
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InformationAction
-@{Text=}```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: infa
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InformationVariable
-@{Text=}```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: iv
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

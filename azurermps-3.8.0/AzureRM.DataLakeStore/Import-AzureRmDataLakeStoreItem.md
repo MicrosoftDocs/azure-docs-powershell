@@ -65,7 +65,7 @@ The default value is five (5).
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -80,7 +80,7 @@ Specifies the Data Lake Store path to which to upload a file or folder, starting
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -90,10 +90,12 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticLogLevel
-Optionally indicates the diagnostic log level to use to record events during the file or folder import. Default is Error.```yaml
+Optionally indicates the diagnostic log level to use to record events during the file or folder import. Default is Error.
+
+```yaml
 Type: LogLevel
 Parameter Sets: Include diagnostic logging
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,10 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticLogPath
-Specifies the path for the diagnostic log to record events to during the file or folder import.```yaml
+Specifies the path for the diagnostic log to record events to during the file or folder import.
+
+```yaml
 Type: String
 Parameter Sets: Include diagnostic logging
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +125,7 @@ Indicates that this operation can overwrite the destination file if it already e
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -136,7 +140,7 @@ Indicates that this operation uploads the file as a binary file.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -151,7 +155,7 @@ Specifies the local path of the file or folder to upload.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -167,7 +171,7 @@ The default value is ten (10).
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -182,7 +186,7 @@ Indicates that this operation should upload all items in all subfolders.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -197,7 +201,7 @@ Indicates that this operation should resume a previously canceled or failed uplo
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -264,5 +268,3 @@ The full path in the Data Lake Store account to the uploaded file or folder.
 [Remove-AzureRmDataLakeStoreItem](./Remove-AzureRmDataLakeStoreItem.md)
 
 [Test-AzureRmDataLakeStoreItem](./Test-AzureRmDataLakeStoreItem.md)
-
-

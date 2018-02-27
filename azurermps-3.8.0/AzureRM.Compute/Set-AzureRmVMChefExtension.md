@@ -71,7 +71,7 @@ After bootstrapping, the virtual machine refers to the BootstrapOptions specifie
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 11
@@ -86,7 +86,7 @@ Specifies configuration settings in the client_rb option.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ Specifies the version of the bootstrap configuration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ Specifies the Chef server link, as a URL.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,10 +126,12 @@ Accept wildcard characters: False
 ```
 
 ### -ChefServiceInterval
-Specifies the frequency (in minutes) at which the chef-service runs. If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.```yaml
+Specifies the frequency (in minutes) at which the chef-service runs. If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +146,7 @@ Specifies the full path of the Chef client.rb.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,10 +156,12 @@ Accept wildcard characters: False
 ```
 
 ### -JsonAttribute
-A JSON string to be added to the first run of chef-client. e.g. -JsonAttribute '{"foo" : "bar"}'```yaml
+A JSON string to be added to the first run of chef-client. e.g. -JsonAttribute '{"foo" : "bar"}'
+
+```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +176,7 @@ Indicates that this cmdlet creates a Windows virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linux
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -187,7 +191,7 @@ Specifies the location of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -217,7 +221,7 @@ Specifies the organization name of the Chef extension.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +236,7 @@ Specifies the name of the resource group that contains the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -247,7 +251,7 @@ Specifies the Chef node run list.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +279,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,7 +294,7 @@ Specifies the Chef validator .pem file path
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -370,7 +374,7 @@ Indicates that this cmdlet creates a Windows virtual machine.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
