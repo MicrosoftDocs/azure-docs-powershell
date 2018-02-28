@@ -47,7 +47,7 @@
 - name: Tutorials
   items:
   - name: Create Virtual Machines
-    href: azure-ps-vm-tutorial.yml
+    href: azureps-vm-tutorial.yml
 - name: Sample Scripts
   items:
   - name: Linux Virtual Machines
