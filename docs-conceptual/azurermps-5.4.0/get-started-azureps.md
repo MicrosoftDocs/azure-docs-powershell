@@ -63,13 +63,110 @@ Sign on interactively:
 Once you have signed in to an Azure account, you can use the Azure PowerShell cmdlets to access and
 manager the resources in your subscription.
 
-## Create a resource group
+## Create a Windows virtual machine using simple defaults
 
-Now that we've got everything set up, let's use Azure PowerShell to create resources within Azure.
+The `New-AzureRmVM` cmdlet provides a simplified syntax making it easy to create a new virtual
+machine. There are only two parameter values you must provide: the name of the VM and a set of
+credentials for the local administrator account on the VM.
 
-First, create a Resource Group. Resource Groups in Azure provide a way to manage multiple resources
-that you want to logically group together. For example, you might create a Resource Group for an
-application or project and add a virtual machine, a database and a CDN service within it.
+First, create the credential object.
+
+```powershell
+$cred = Get-Credential -Message "Enter a username and password for the virtual machine."
+```
+
+```Output
+Windows PowerShell credential request.
+Enter a username and password for the virtual machine.
+User: localAdmin
+Password for user localAdmin: *********
+```
+Next, create the VM.
+
+```powershell
+New-AzureRmVM -Name SampleVM -Credential $cred
+```
+
+```Output
+ResourceGroupName        : SampleVM
+Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/SampleVM/providers/Microsoft.Compute/virtualMachines/SampleVM
+VmId                     : 43f6275d-ce50-49c8-a831-5d5974006e63
+Name                     : SampleVM
+Type                     : Microsoft.Compute/virtualMachines
+Location                 : eastus
+Tags                     : {}
+HardwareProfile          : {VmSize}
+NetworkProfile           : {NetworkInterfaces}
+OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+ProvisioningState        : Succeeded
+StorageProfile           : {ImageReference, OsDisk, DataDisks}
+FullyQualifiedDomainName : samplevm-2c0867.eastus.cloudapp.azure.com
+```
+
+That was easy. But, you may wonder what else is created and how is the VM configured. First, let's
+look at our resource groups.
+
+```powershell
+Get-AzureRmResourceGroup | Select-Object ResourceGroupName,Location
+```
+
+```Output
+ResourceGroupName          Location
+-----------------          --------
+cloud-shell-storage-westus westus
+SampleVM                   eastus
+```
+
+The **cloud-shell-storage-westus** resource group is created the first time you use the Cloud
+Shell. The **SampleVM** resource group was created by the `New-AzureRmVM` cmdlet.
+
+Now, what other resources were created in this new resource group?
+
+```powershell
+Get-AzureRmResource |
+  Where ResourceGroupName -eq SampleVM |
+    Select-Object ResourceGroupName,Location,ResourceType,Name
+```
+
+```Output
+ResourceGroupName          Location ResourceType                            Name
+-----------------          -------- ------------                            ----
+SAMPLEVM                   eastus   Microsoft.Compute/disks                 SampleVM_OsDisk_1_9b286c54b168457fa1f8c47...
+SampleVM                   eastus   Microsoft.Compute/virtualMachines       SampleVM
+SampleVM                   eastus   Microsoft.Network/networkInterfaces     SampleVM
+SampleVM                   eastus   Microsoft.Network/networkSecurityGroups SampleVM
+SampleVM                   eastus   Microsoft.Network/publicIPAddresses     SampleVM
+SampleVM                   eastus   Microsoft.Network/virtualNetworks       SampleVM
+```
+
+Let's get some more details about the VM. This examples shows how to retrieve
+information about the OS Image used to create the VM.
+
+```powershell
+Get-AzureRmVM -Name SampleVM -ResourceGroupName SampleVM |
+  Select-Object -ExpandProperty StorageProfile |
+    Select-Object -ExpandProperty ImageReference
+```
+
+```Output
+Publisher : MicrosoftWindowsServer
+Offer     : WindowsServer
+Sku       : 2016-Datacenter
+Version   : latest
+Id        :
+```
+
+## Create a fully configured Linux Virtual Machine
+
+The previous example used the simplified syntax and default parameter values to create a Windows
+virtual machine. In this example, we provide values for all options of the virtual machine.
+
+### Create a resource group
+
+For this example we want to create a Resource Group. Resource Groups in Azure provide a way to
+manage multiple resources that you want to logically group together. For example, you might create
+a Resource Group for an application or project and add a virtual machine, a database and a CDN
+service within it.
 
 Let's create a resource group named "MyResourceGroup" in the westeurope region of Azure. To do so
 type the following command:
@@ -86,112 +183,12 @@ Tags              :
 ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myResourceGroup
 ```
 
-## Create a Windows Virtual Machine
+This new resource group will be used to contain all of the resources needed for the new VM we
+create. To create a new Linux VM we must first create the other required resources and assign them
+to a configuration. Then we can use that configuration to create the VM. Also, you will need to
+have an SSH public key named `id_rsa.pub` in the .ssh directory of your user profile.
 
-Now that we have our resource group, let's create a Windows VM within it. To create a new VM we must
-first create the other required resources and assign them to a configuration. Then we can use that
-configuration to create the VM.
-
-### Create the required network resources
-
-First we need to create a subnet configuration to be used with the virtual network creation
-process. We also create a public IP address so that we can connect to this VM. We create a network
-security group to secure access to the public address. Finally we create the virtual NIC using all
-of the previous resources.
-
-```powershell
-# Variables for common values
-$resourceGroup = "myResourceGroup"
-$location = "westeurope"
-$vmName = "myWindowsVM"
-
-# Create a subnet configuration
-$subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet1 -AddressPrefix 192.168.1.0/24
-
-# Create a virtual network
-$vnet = New-AzureRmVirtualNetwork -ResourceGroupName $resourceGroup -Location $location `
-  -Name MYvNET1 -AddressPrefix 192.168.0.0/16 -Subnet $subnetConfig
-
-# Create a public IP address and specify a DNS name
-$publicIp = New-AzureRmPublicIpAddress -ResourceGroupName $resourceGroup -Location $location `
-  -Name "mypublicdns$(Get-Random)" -AllocationMethod Static -IdleTimeoutInMinutes 4
-$publicIp | Select-Object Name,IpAddress
-
-# Create an inbound network security group rule for port 3389
-$nsgRuleRDP = New-AzureRmNetworkSecurityRuleConfig -Name myNetworkSecurityGroupRuleRDP  -Protocol Tcp `
-  -Direction Inbound -Priority 1000 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * `
-  -DestinationPortRange 3389 -Access Allow
-
-# Create a network security group
-$nsg = New-AzureRmNetworkSecurityGroup -ResourceGroupName $resourceGroup -Location $location `
-  -Name myNetworkSecurityGroup1 -SecurityRules $nsgRuleRDP
-
-# Create a virtual network card and associate with public IP address and NSG
-$nic = New-AzureRmNetworkInterface -Name myNic1 -ResourceGroupName $resourceGroup -Location $location `
-  -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
-```
-
-### Create the virtual machine
-
-First we need a set of credentials for the OS.
-
-```powershell
-# Create user object
-$cred = Get-Credential -Message "Enter a username and password for the virtual machine."
-```
-
-Now that we have the required resources we can create the VM. For this step, we create a VM
-configuration object, then we use the configuration to create the VM.
-
-```powershell
-# Create a virtual machine configuration
-$vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
-  Set-AzureRmVMOperatingSystem -Windows -ComputerName $vmName -Credential $cred |
-  Set-AzureRmVMSourceImage -PublisherName MicrosoftWindowsServer -Offer WindowsServer -Skus 2016-Datacenter -Version latest |
-  Add-AzureRmVMNetworkInterface -Id $nic.Id
-
-# Create a virtual machine
-New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
-```
-
-The `New-AzureRmVM` command outputs results once the VM has been fully created and is ready to be used.
-
-```Output
-RequestId IsSuccessStatusCode StatusCode ReasonPhrase
---------- ------------------- ---------- ------------
-                         True         OK OK
-```
-
-Now log on to your newly created Windows Server VM using Remote Desktop and the public IP address
-of the VM. The following command displays the public IP address created in the previous script.
-
-```powershell
-$publicIp | Select-Object Name,IpAddress
-```
-
-```Output
-Name                  IpAddress
-----                  ---------
-mypublicdns1400512543 xx.xx.xx.xx
-```
-
-If you are on a Windows-based system, you can do this from the command line using the mstsc
-command:
-
-```powershell
-mstsc /v:xx.xxx.xx.xxx
-```
-
-Supply the same username/password combination you used when creating the VM to log in.
-
-## Create a Linux Virtual Machine
-
-To create a new Linux VM we must first create the other required resources and assign them to a
-configuration. Then we can use that configuration to create the VM. This assumes that you have
-already created the resource group as previously shown. Also, you will need to have an SSH public
-key named `id_rsa.pub` in the .ssh directory of your user profile.
-
-### Create the required network resources
+#### Create the required network resources
 
 First we need to create a subnet configuration to be used with the virtual network creation
 process. We also create a public IP address so that we can connect to this VM. We create a network
@@ -234,10 +231,9 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-### Create the virtual machine
+### Create the VM configuration
 
-Now that we have the required resources we can create the VM. For this step, we create a VM
-configuration object, then we use the configuration to create the VM.
+Now that we have the required resources we can create the VM configuration oboject.
 
 ```powershell
 # Create a virtual machine configuration
@@ -249,8 +245,13 @@ $vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
 # Configure SSH Keys
 $sshPublicKey = Get-Content "$env:USERPROFILE\.ssh\id_rsa.pub"
 Add-AzureRmVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azureuser/.ssh/authorized_keys"
+```
 
-# Create a virtual machine
+### Create the virtual machine
+
+Now we can create the VM using the VM configuration object.
+
+```powershell
 New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 ```
 
