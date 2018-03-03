@@ -115,7 +115,7 @@ items:
         \$newVM1 variable.
 
         ```powershell
-        $newVM
+        $newVM1
         ```
 
         ```Output
