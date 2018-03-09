@@ -9,7 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the available Azure Media Services accounts.
 
-> [!NOTES]
+> [!NOTE]
 > This version is deprecated, please see the [newer version](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
 
 ## SYNTAX
