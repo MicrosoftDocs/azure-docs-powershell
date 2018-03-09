@@ -6,11 +6,11 @@ schema: 2.0.0
 ---
 # Remove-AzureMediaServicesAccount
 
-> [!NOTE]
-> This version is deprecated, please see the newer version: [](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
-
 ## SYNOPSIS
 Removes the specified Azure Media Services account.
+
+> [!NOTE]
+> This version is deprecated, please see the newer version: [](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
 
 ## SYNTAX
 
