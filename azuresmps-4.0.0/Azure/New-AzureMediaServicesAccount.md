@@ -6,11 +6,11 @@ schema: 2.0.0
 ---
 # New-AzureMediaServicesAccount
 
-> [!NOTE]
-> This version is deprecated, please see the newer version: [](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
-
 ## SYNOPSIS
 Creates an Azure Media Services account.
+
+> [!NOTES]
+> This version is deprecated, please see the [newer version](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
 
 ## SYNTAX
 
