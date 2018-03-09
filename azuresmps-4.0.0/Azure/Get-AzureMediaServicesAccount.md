@@ -4,7 +4,6 @@ ms.assetid: A1327796-0CDC-43E0-97A6-FD1BF570066F
 online version: 
 schema: 2.0.0
 ---
-
 # Get-AzureMediaServicesAccount
 
 > [!Note]
