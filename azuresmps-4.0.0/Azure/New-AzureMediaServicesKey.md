@@ -4,10 +4,9 @@ ms.assetid: 756F757C-8CDE-43A5-A8A6-D55EF9C66183
 online version: 
 schema: 2.0.0
 ---
-
 # New-AzureMediaServicesKey
 
-> [!Note]
+> [!NOTES]
 > This version is deprecated, please see the newer version: [](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
 
 ## SYNOPSIS
