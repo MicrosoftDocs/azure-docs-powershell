@@ -4,11 +4,13 @@ ms.assetid: 6C4081EE-0BCD-4285-8ABB-778BD95BFE4F
 online version: 
 schema: 2.0.0
 ---
-
 # New-AzureMediaServicesAccount
 
 ## SYNOPSIS
 Creates an Azure Media Services account.
+
+> [!NOTE]
+> This version is deprecated, please see the [newer version](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
 
 ## SYNTAX
 
