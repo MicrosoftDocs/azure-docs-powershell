@@ -4,11 +4,13 @@ ms.assetid: A1327796-0CDC-43E0-97A6-FD1BF570066F
 online version: 
 schema: 2.0.0
 ---
-
 # Get-AzureMediaServicesAccount
 
 ## SYNOPSIS
 Gets the available Azure Media Services accounts.
+
+> [!NOTE]
+> This version is deprecated, please see the [newer version](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
 
 ## SYNTAX
 
