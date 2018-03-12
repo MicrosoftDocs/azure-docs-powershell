@@ -1,9 +1,8 @@
 ---
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVM.md
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 939320CB-2595-4150-AFDD-500CEA78559C
-online version: null
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVM.md
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/set-azurermvm
 schema: 2.0.0
 ---
 
@@ -12,28 +11,30 @@ schema: 2.0.0
 ## SYNOPSIS
 Marks a virtual machine as generalized.
 
-The genenralization process removes all your personal account information, among other things, and prepares the machine to be used as an image.
-
 ## SYNTAX
 
 ### GeneralizeResourceGroupNameParameterSetName (Default)
 ```
-Set-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Generalized] [<CommonParameters>]
+Set-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Generalized] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RedeployResourceGroupNameParameterSetName
 ```
-Set-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Redeploy] [<CommonParameters>]
+Set-AzureRmVM [-ResourceGroupName] <String> [-Name] <String> [-Redeploy] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### GeneralizeIdParameterSetName
 ```
-Set-AzureRmVM [-Id] <String> [-Name] <String> [-Generalized] [<CommonParameters>]
+Set-AzureRmVM [-Id] <String> [-Name] <String> [-Generalized] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### RedeployIdParameterSetName
 ```
-Set-AzureRmVM [-Id] <String> [-Name] <String> [-Redeploy] [<CommonParameters>]
+Set-AzureRmVM [-Id] <String> [-Name] <String> [-Redeploy] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,6 +52,36 @@ This command marks the virtual machine named VirtualMachine07 as generalized.
 
 ## PARAMETERS
 
+### -AsJob
+Run cmdlet in the background and return a Job to track progress.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Generalized
 Indicates that this cmdlet marks a virtual machine as generalized.
 
@@ -60,9 +91,9 @@ Parameter Sets: GeneralizeResourceGroupNameParameterSetName, GeneralizeIdParamet
 Aliases: 
 
 Required: True
-Position: 2
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -107,9 +138,9 @@ Parameter Sets: RedeployResourceGroupNameParameterSetName, RedeployIdParameterSe
 Aliases: 
 
 Required: True
-Position: 2
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -138,8 +169,12 @@ This cmdlet does not accept any input.
 
 ## OUTPUTS
 
+### Microsoft.Azure.Commands.Compute.Models.PSComputeLongRunningOperation
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Get-AzureRmVM](./Get-AzureRmVM.md)
+
+

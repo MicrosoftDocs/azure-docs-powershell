@@ -1,46 +1,39 @@
 ﻿---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module Name: AzureRM.Compute
-ms.assetid: A16C2084-30A4-4AB8-AE22-28CC6E74FD48
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/remove-azurermvm
+external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+Module Name: AzureRM.Storage
+ms.assetid: 006B4341-274C-4929-86EE-2E107BA9E485
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage/remove-azurermstorageaccount
 schema: 2.0.0
 ---
 
-# Remove-AzureRmVM
+# Remove-AzureRmStorageAccount
 
 ## SYNOPSIS
-Removes a virtual machine from Azure.
+Removes a Storage account from Azure.
 
 ## SYNTAX
 
-### ResourceGroupNameParameterSetName (Default)
 ```
-Remove-AzureRmVM [-Name] <String> [-Force] [-ResourceGroupName] <String> [-AsJob]
+Remove-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [-Force] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### IdParameterSetName
-```
-Remove-AzureRmVM [-Name] <String> [-Force] [-Id] <String> [-AsJob] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ## DESCRIPTION
-The **Remove-AzureRmVM** cmdlet removes a virtual machine from Azure.
+The **Remove-AzureRmStorageAccount** cmdlet removes a Storage account from Azure.
 
 ## EXAMPLES
 
-### Example 1: Remove a virtual machine
+### Example 1: Remove a Storage account
 ```
-PS C:\> Remove-AzureRmVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07"
+PS C:\>Remove-AzureRmStorageAccount -ResourceGroupName "RG01" -AccountName "mystorageaccount"
 ```
 
-This command removes the virtual machine named VirtualMachine07 in the resource group ResourceGroup11.
+This command removes the specified Storage account.
 
 ## PARAMETERS
 
 ### -AsJob
-Run cmdlet in the background and return a Job to track progress.
+Run cmdlet in the background
 
 ```yaml
 Type: SwitchParameter
@@ -55,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
+The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
 Type: IAzureContextContainer
@@ -70,42 +63,25 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-The resource group name.
-
-```yaml
-Type: String
-Parameter Sets: IdParameterSetName
-Aliases: 
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Name
-The resource name.
+Specifies the name of the Storage account to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: ResourceName, VMName
+Aliases: StorageAccountName, AccountName
 
 Required: True
 Position: 1
@@ -115,11 +91,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Specifies the name of a resource group.
+Specifies the name of the resource group that contains the Storage account to remove.
 
 ```yaml
 Type: String
-Parameter Sets: ResourceGroupNameParameterSetName
+Parameter Sets: (All)
 Aliases: 
 
 Required: True
@@ -146,7 +122,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-
 The cmdlet is not run.
 
 ```yaml
@@ -171,22 +146,14 @@ This cmdlet does not accept any input.
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.Compute.Models.PSComputeLongRunningOperation
-
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-AzureRmVM](./Get-AzureRmVM.md)
+[Get-AzureRmStorageAccount](./Get-AzureRmStorageAccount.md)
 
-[New-AzureRmVM](./New-AzureRmVM.md)
+[New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
 
-[Restart-AzureRmVM](./Restart-AzureRmVM.md)
-
-[Start-AzureRmVM](./Start-AzureRmVM.md)
-
-[Stop-AzureRmVM](./Stop-AzureRmVM.md)
-
-[Update-AzureRmVM](./Update-AzureRmVM.md)
+[Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
 
 
