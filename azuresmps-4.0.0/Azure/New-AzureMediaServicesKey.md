@@ -9,8 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates Azure Media Services account keys.
 
-> [!NOTE]
-> This version is deprecated, please see the [newer version](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
+**Note:** This version is deprecated, please see the [newer version](https://docs.microsoft.com/powershell/module/azurerm.media/?view=azurermps-5.4.0#media_services).
 
 ## SYNTAX
 
