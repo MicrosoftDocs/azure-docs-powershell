@@ -193,18 +193,31 @@ This is a list of changes made to Azure PowerShell in this release.
 
 ### AzureRM.EventHub
 * Added below new commands for Geo Disaster Recovery operations.
+
 	-Creating a new Alias(Disaster Recovery configuration):
+
 		- `New-AzureRmEventHubGeoDRConfiguration`
+
 	-Retrieve Alias(Disaster Recovery configuration) :
+
 		- `Get-AzureRmEventHubGeoDRConfiguration`
+
 	-Disabling the Disaster Recovery and stops replicating changes from primary to secondary namespaces
+
 		- `Set-AzureRmEventHubGeoDRConfigurationBreakPair`
+
 	-Invoking Disaster Recovery failover and reconfigure the alias to point to the secondary namespace
+
 		- `Set-AzureRmEventHubGeoDRConfigurationFailOver`
+
 	-Deleting an Alias(Disaster Recovery configuration)
+
 		- `Remove-AzureRmEventHubGeoDRConfiguration`
+
 * Added below new commands for checking the Namespace Name and GeoDr Configuration Name - Alias availability.
+
 	-Check the Availability of Namespace name or Alias(Disaster Recovery configuration) name:
+
 		- `Test-AzureRmEventHubName`
 
 ### AzureRM.Insights
@@ -224,19 +237,33 @@ This is a list of changes made to Azure PowerShell in this release.
 
 ### AzureRM.ServiceBus
 * Added functionality fix for `Remove-AzureRmServiceBusRule` and `Get-AzureRmServiceBusKey`
+
 * Added below new commandlets for Geo Disaster Recovery operations.
+
 	-Creating a new Alias(Disaster Recovery configuration):
+
 		- `New-AzureRmServiceBusDRConfigurations`
+
 	-Retrieve Alias(Disaster Recovery configuration) :
+
 		- `Get-AzureRmServiceBusDRConfigurations`
+
 	-Disabling the Disaster Recovery and stops replicating changes from primary to secondary namespaces
+
 		- `Set-AzureRmServiceBusDRConfigurationsBreakPairing`
+
 	-Invoking Disaster Recovery failover and reconfigure the alias to point to the secondary namespace
+
 		- `Set-AzureRmServiceBusDRConfigurationsFailOver`
+
 	-Deleting an Alias(Disaster Recovery configuration)
+
 		- `Remove-AzureRmServiceBusDRConfigurations`
+
 * Updated `Test-AzureRmServiceBusName` commandlets to support Geo Disaster Recovery - Alias name check availability operations.
+
 	-Check the Availability of Namespace name or Alias(Disaster Recovery configuration) name:
+
 		- `Test-AzureRmServiceBusName`
 
 ### AzureRM.UsageAggregates
