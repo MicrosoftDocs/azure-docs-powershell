@@ -87,6 +87,15 @@ If you have a previous version of Azure PowerShell installed you may receive an 
 this issue, see the [Updating to a new version of Azure PowerShell](#update-azps) section of this
 article.
 
+## Step 3: Load the AzureRM module
+Once the module is installed, you need to load the module into your PowerShell session. You should
+do this in a normal (non-elevated) PowerShell session. Modules are loaded using the `Import-Module`
+cmdlet, as follows:
+
+```powershell
+Import-Module -Name AzureRM
+```
+
 ## Next Steps
 
 For more information about using Azure PowerShell, see the following articles:
