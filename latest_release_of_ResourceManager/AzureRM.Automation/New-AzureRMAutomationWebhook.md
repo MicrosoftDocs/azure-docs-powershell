@@ -1,9 +1,11 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
 Module Name: AzureRM.Automation
 ms.assetid: E1FC931E-4EB8-4DCA-92BD-8013DDC13219
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/new-azurermautomationwebhook
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationWebhook.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/New-AzureRMAutomationWebhook.md
 ---
 
 # New-AzureRmAutomationWebhook
@@ -193,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunOn
-Optional name of the hybrid agent which should execute the runbook
+Optional name of the hybrid worker group which should execute the runbook
 
 ```yaml
 Type: String

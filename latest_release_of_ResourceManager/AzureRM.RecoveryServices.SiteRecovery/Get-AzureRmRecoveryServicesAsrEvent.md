@@ -1,8 +1,10 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: AzureRM.RecoveryServices.SiteRecovery
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery/get-azurermrecoveryservicesasrevent
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Get-AzureRmRecoveryServicesAsrEvent.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/Get-AzureRmRecoveryServicesAsrEvent.md
 ---
 
 # Get-AzureRmRecoveryServicesAsrEvent
@@ -86,106 +88,15 @@ List of event between time start time and end time , severity critical and healt
 
 ## PARAMETERS
 
-### -EndTime
-Specifies the end time of the search window. Use this parameter to get only those events that have occurred before the specified time.
-
-```yaml
-Type: DateTime
-Parameter Sets: ByParam, ByFabricId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Fabric
-Filter events by the specified fabric.
-
-```yaml
-Type: ASRFabric
-Parameter Sets: ByParam
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Severity
-Event severity to filter on.
-
-```yaml
-Type: String
-Parameter Sets: ByParam, ByFabricId
-Aliases: 
-Accepted values: Critical, Warning, OK, Unknown
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StartTime
-Specifies the start time of the search window. Use this parameter to get only those events that have occurred after the specified time.
-
-```yaml
-Type: DateTime
-Parameter Sets: ByParam, ByFabricId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AffectedObjectFriendlyName
-specifies AffectedObject FriendlyName for the search.
+Specifies AffectedObject FriendlyName for the search.
 
 ```yaml
 Type: String
 Parameter Sets: ByParam, ByFabricId
-Aliases: 
+Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EventType
-Event type to filter on.
-
-```yaml
-Type: String
-Parameter Sets: ByParam, ByFabricId
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies name of the event for search.
-
-```yaml
-Type: String
-Parameter Sets: ByName
-Aliases: 
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -207,13 +118,74 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EndTime
+Specifies the end time of the search window. Use this parameter to get only those events that have occurred before the specified time.
+
+```yaml
+Type: DateTime
+Parameter Sets: ByParam, ByFabricId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EventType
+Filter events by the event type.
+
+```yaml
+Type: String
+Parameter Sets: ByParam, ByFabricId
+Aliases:
+Accepted values: VmHealth, ServerHealth, AgentHealth
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fabric
+Filter events by the specified fabric.
+
+```yaml
+Type: ASRFabric
+Parameter Sets: ByParam
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FabricId
 Specifies the fabricId to filter.
 
 ```yaml
 Type: String
 Parameter Sets: ByFabricId
-Aliases: 
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies name of the event for search.
+
+```yaml
+Type: String
+Parameter Sets: ByName
+Aliases:
 
 Required: True
 Position: Named
@@ -228,12 +200,43 @@ Specifes the event ReourceId of event.
 ```yaml
 Type: String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Severity
+Event severity to filter on.
+
+```yaml
+Type: String
+Parameter Sets: ByParam, ByFabricId
+Aliases:
+Accepted values: Critical, Warning, OK, Unknown
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartTime
+Specifies the start time of the search window. Use this parameter to get only those events that have occurred after the specified time.
+
+```yaml
+Type: DateTime
+Parameter Sets: ByParam, ByFabricId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -251,4 +254,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

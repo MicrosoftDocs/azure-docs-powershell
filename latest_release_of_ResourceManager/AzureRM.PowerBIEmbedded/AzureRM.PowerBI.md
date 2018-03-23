@@ -1,9 +1,11 @@
-﻿---
+---
 Module Name: AzureRM.PowerBIEmbedded
 Module Guid: acace26c-1775-4100-85c0-20c4d71eaa22
 Download Help Link: None_Azure
 Help Version: 0.0.1.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/AzureRM.PowerBI.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.PowerBI/help/AzureRM.PowerBI.md
 ---
 
 # AzureRM.PowerBIEmbedded Module

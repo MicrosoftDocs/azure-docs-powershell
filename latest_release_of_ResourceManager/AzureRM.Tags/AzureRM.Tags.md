@@ -1,9 +1,11 @@
-﻿---
+---
 Module Name: AzureRM.Tags
 Module Guid: 59713673-194f-418a-b1f2-ac60db82edf9
 Download Help Link: None
 Help Version: 4.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/AzureRM.Tags.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/AzureRM.Tags.md
 ---
 
 # AzureRM.Tags Module

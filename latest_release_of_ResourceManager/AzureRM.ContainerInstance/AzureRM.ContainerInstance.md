@@ -1,9 +1,11 @@
-﻿---
+---
 Module Name: AzureRM.ContainerInstance
-Module Guid: 
-Download Help Link: 
-Help Version: 
+Module Guid:
+Download Help Link: null
+Help Version: null
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/AzureRM.ContainerInstance.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerInstance/Commands.ContainerInstance/help/AzureRM.ContainerInstance.md
 ---
 
 # AzureRM.ContainerInstance Module

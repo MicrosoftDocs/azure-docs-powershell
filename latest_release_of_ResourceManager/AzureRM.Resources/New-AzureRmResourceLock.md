@@ -1,9 +1,11 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
 Module Name: AzureRM.Resources
 ms.assetid: 6847ECFD-2E3D-46F6-ABE9-9D8E08C7858F
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/new-azurermresourcelock
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmResourceLock.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmResourceLock.md
 ---
 
 # New-AzureRmResourceLock
@@ -185,7 +187,7 @@ Accept wildcard characters: False
 
 ### -LockLevel
 Specifies the level for the lock.
-Currently, the only valid value is CanNotDelete.
+Currently, valid values are CanNotDelete, ReadOnly.
 
 ```yaml
 Type: LockLevel

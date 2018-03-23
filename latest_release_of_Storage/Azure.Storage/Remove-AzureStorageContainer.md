@@ -1,8 +1,10 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 6A46DA60-2ACF-4842-B5B3-58944264854A
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestoragecontainer
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageContainer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageContainer.md
 ---
 
 # Remove-AzureStorageContainer

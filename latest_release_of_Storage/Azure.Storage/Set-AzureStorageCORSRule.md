@@ -1,8 +1,10 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 288B7B56-B934-45AF-BF56-4EB0DD827522
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/set-azurestoragecorsrule
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageCORSRule.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageCORSRule.md
 ---
 
 # Set-AzureStorageCORSRule

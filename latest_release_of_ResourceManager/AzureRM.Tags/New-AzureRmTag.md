@@ -1,9 +1,11 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
 Module Name: AzureRM
 ms.assetid: 23DB0AD2-7EB7-4373-BB8D-BB6CB651DD54
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.tags/new-azurermtag
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/New-AzureRmTag.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/New-AzureRmTag.md
 ---
 
 # New-AzureRmTag

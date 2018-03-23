@@ -1,8 +1,10 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: FD3A0013-4365-4E65-891C-5C50A9D5658C
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestorageshare
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageShare.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageShare.md
 ---
 
 # Get-AzureStorageShare

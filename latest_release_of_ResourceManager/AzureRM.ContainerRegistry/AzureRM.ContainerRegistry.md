@@ -1,9 +1,11 @@
-﻿---
+---
 Module Name: AzureRM.ContainerRegistry
 Module Guid: b3ca459c-feb9-41cc-a954-46222505acb3
-Download Help Link: 
+Download Help Link:
 Help Version: 1.0.0.0
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/AzureRM.ContainerRegistry.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/AzureRM.ContainerRegistry.md
 ---
 
 # AzureRM.ContainerRegistry Module

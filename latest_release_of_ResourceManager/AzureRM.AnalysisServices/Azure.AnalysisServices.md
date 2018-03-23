@@ -1,9 +1,13 @@
-﻿---
+---
 Module Name: Azure.AnalysisServices
 Module Guid: c717b5a4-1f1b-4a2f-8aa1-bfd09934626e
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+  [object Object]:
+Help Version:
+  [object Object]: null
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AnalysisServices/Commands.AnalysisServices.Dataplane/help/Azure.AnalysisServices.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AnalysisServices/Commands.AnalysisServices.Dataplane/help/Azure.AnalysisServices.md
 ---
 
 # Azure.AnalysisServices Module

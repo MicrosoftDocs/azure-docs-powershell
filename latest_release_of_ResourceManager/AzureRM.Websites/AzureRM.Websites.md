@@ -1,9 +1,11 @@
-﻿---
+---
 Module Name: AzureRM.Websites
 Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
-Download Help Link: 
-Help Version: 1.0
+Download Help Link:
+Help Version: 1
 Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/AzureRM.Websites.md
 ---
 
 # AzureRM.Websites Module
