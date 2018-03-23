@@ -34,7 +34,7 @@ Set-AzureVMAccessExtension [-Uninstall] [[-ReferenceName] <String>] [[-Version] 
 ```
 
 ## DESCRIPTION
-The **Set-AzureVMAccessExtension** cmdlet sets the VMAccess extension for the virtual machine.
+The **Set-AzureVMAccessExtension** cmdlet adds the Virtual Machine VMAccess Extension to a virtual machine. VMAccess Extension can be used to set a temporary password and this should be immediately changed it after logging into the machine.
 
 ## EXAMPLES
 
