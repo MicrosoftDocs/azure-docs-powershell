@@ -1,10 +1,8 @@
 ---
 Module Name: AzureRM.Aks
 Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Download Help Link: None_Azure
+Help Version: 0.0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Aks/Commands.Aks/help/AzureRM.Aks.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Aks/Commands.Aks/help/AzureRM.Aks.md
@@ -35,4 +33,3 @@ Create a Kubectl SSH tunnel to the managed cluster's dashboard.
 
 ### [Stop-AzureRmAksDashboard](Stop-AzureRmAksDashboard.md)
 Stop the Kubectl SSH tunnel created in Start-AzureRmKubernetesDashboard.
-
