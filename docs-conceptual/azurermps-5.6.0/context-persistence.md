@@ -91,7 +91,7 @@ the background job. For more information, see [about_Jobs](/powershell/module/mi
 
 ## Creating, selecting, renaming, and removing contexts
 
-To create a context, you must be logged in to Azure. The `Add-AzureRmAccount` cmdlet (or its alias,
+To create a context, you must be logged in to Azure. The `Connect-AzureRmAccount` cmdlet (or its alias,
 `Login-AzureRmAccount`) sets the default context used by subsequent Azure PowerShell cmdlets, and
 allows you to access any tenants or subscriptions allowed by your login credentials.
 

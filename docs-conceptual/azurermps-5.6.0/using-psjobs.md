@@ -25,7 +25,7 @@ current session. To address these needs, Azure PowerShell provides first-class
 
 PSJobs are run in separate processes, which means that information about your Azure connection must
 be properly shared with the jobs you create. Upon connecting your Azure account to your PowerShell
-session with `Login-AzureRmAccount`, you can pass the context to a job.
+session with `Connect-AzureRmAccount`, you can pass the context to a job.
 
 ```powershell
 $creds = Get-Credential
