@@ -71,7 +71,7 @@ Specifies the location of the endpoint the cmdlet adds.
 This must be an Azure location.
 
 This parameter must contain a value for endpoints of the type "Any" or of type "TrafficManager" in a profile that has the load balancing method set to "Performance".
-The possible values are the Azure region names, as listed at  http://azure.microsoft.com/regions/http://azure.microsoft.com/regions/.
+The possible values are the Azure region names, as listed at http://azure.microsoft.com/regions/.
 
 ```yaml
 Type: String
