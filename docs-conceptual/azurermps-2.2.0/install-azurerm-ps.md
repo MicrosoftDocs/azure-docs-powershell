@@ -9,7 +9,7 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/17/2017
+ms.date: 03/27/2018
 ---
 
 # Install and configure Azure PowerShell
@@ -23,15 +23,24 @@ the appropriate version of PowerShellGet and other system requirements. Run the 
 to see if you have PowerShellGet installed on your system.
 
 ```powershell
-Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 You should see something similar to the following output:
 
-```
+```Output
 Name          Version Path
 ----          ------- ----
+Name          Version Path
+----          ------- ----
+PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
+```
+
+You need PowerShellGet version 1.1.2.0 or higher. To update PowerShellGet, use the following command:
+
+```powershell
+Install-Module PowerShellGet -Force
 ```
 
 If you do not have PowerShellGet installed, see the [How to get PowerShellGet](#how-to-get-powershellget)
@@ -40,7 +49,7 @@ section of this article.
 > [!NOTE]
 > Using PowerShellGet requires an Execution Policy that allows you to run scripts. For more
 > information about PowerShell's Execution Policy, see
-> [About Execution Policies](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).
+> [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 ## Step 2: Install Azure PowerShell
 
@@ -49,13 +58,13 @@ following command from an elevated PowerShell session:
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 By default, the PowerShell gallery is not configured as a Trusted repository for PowerShellGet. The
 first time you use the PSGallery you see the following prompt:
 
-```
+```Output
 Untrusted repository
 
 You are installing the modules from an untrusted repository. If you trust this repository, change
@@ -69,7 +78,7 @@ Answer 'Yes' or 'Yes to All' to continue with the installation.
 
 > [!NOTE]
 > If you have a version older than 2.8.5.201 of NuGet, you are prompted to download and install
-the latest version of NuGet.
+> the latest version of NuGet.
 
 The AzureRM module is a rollup module for the Azure Resource Manager cmdlets. When you install the
 AzureRM module, any Azure PowerShell module not previously installed is downloaded and from the
@@ -85,7 +94,7 @@ do this in a normal (non-elevated) PowerShell session. Modules are loaded using 
 cmdlet, as follows:
 
 ```powershell
-Import-Module AzureRM
+Import-Module -Name AzureRM
 ```
 
 ## Next Steps
@@ -108,11 +117,11 @@ For more information about using Azure PowerShell, see the following articles:
 ### Checking the version of Azure PowerShell
 
 Although we encourage you to upgrade to the latest version as early as possible, several versions
-of Azure PowerShell are support. To determine the version of Azure PowerShell you have installed,
+of Azure PowerShell are supported. To determine the version of Azure PowerShell you have installed,
 run `Get-Module AzureRM` from your command line.
 
 ```powershell
-Get-Module AzureRM -list | Select-Object Name,Version,Path
+Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 ### Support for classic deployment methods
@@ -128,7 +137,7 @@ version of each package.
 If you have a previous version of Azure PowerShell installed that includes the Service Management
 module, you may receive the following error:
 
-```
+```Output
 PackageManagement\Install-Package : A command with name 'Get-AzureStorageContainerAcl' is already
 available on this system. This module 'Azure.Storage' may override the existing commands. If you
 still want to install this module 'Azure.Storage', use -AllowClobber parameter.
@@ -145,7 +154,7 @@ the following command:
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 For more information, see the help topic for
@@ -167,7 +176,7 @@ Only one version of the module can be loaded in a PowerShell session. You must o
 PowerShell window and use `Import-Module` to import a specific version of the AzureRM cmdlets:
 
 ```powershell
-Import-Module AzureRM -RequiredVersion 1.2.9
+Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 
 > [!NOTE]
