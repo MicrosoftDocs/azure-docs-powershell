@@ -55,14 +55,14 @@ When attempting to load or execute cmdlets after installation, you can receive t
 message:
 
 ```
-PS C:\> Login-AzureRmAccount
-Login-AzureRmAccount : The term 'Login-AzureRmAccount' is not recognized as the name of a cmdlet,
+PS C:\> Connect-AzureRmAccount
+Connect-AzureRmAccount : The term 'Connect-AzureRmAccount' is not recognized as the name of a cmdlet,
 function, script file, or operable program. Check the spelling of the name, or if a path was
 included, verify that the path is correct and try again.
 At line:1 char:1
-+ Login-AzureRmAccount
++ Connect-AzureRmAccount
 + ~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (Login-AzureRmAccount:String) [], CommandNotFoundException
+    + CategoryInfo          : ObjectNotFound: (Connect-AzureRmAccount:String) [], CommandNotFoundException
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
 

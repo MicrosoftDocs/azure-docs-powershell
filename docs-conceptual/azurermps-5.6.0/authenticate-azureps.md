@@ -19,7 +19,7 @@ interactively at the command line.
 
 ## Interactive log in
 
-1. Type `Login-AzureRmAccount`. You will get dialog box asking for your Azure credentials.
+1. Type `Connect-AzureRmAccount`. You will get dialog box asking for your Azure credentials.
 
 2. Type the email address and password associated with your account. Azure authenticates and saves
    the credential information, and then closes the window.
@@ -36,7 +36,7 @@ ensure your automation scripts are even more secure.
 2. Log in with the service principal.
 
     ```powershell
-    Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+    Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
     To get your TenantId, log in interactively and then get the TenantId from your subscription.
@@ -70,7 +70,7 @@ environment when you sign in. For example, if you account is in the China cloud 
 the following command:
 
 ```powershell
-Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 Use the following command to get a list of available environments:

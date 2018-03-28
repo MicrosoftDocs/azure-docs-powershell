@@ -33,7 +33,7 @@ items:
         performing any other steps.
 
         ```powershell
-        Login-AzureRmAccount
+        Connect-AzureRmAccount
         ```
 
         Complete the login process by following the steps displayed in your terminal.

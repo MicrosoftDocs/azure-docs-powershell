@@ -9,13 +9,13 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/31/2017
+ms.date: 03/27/2018
 ---
 
 # Install and configure Azure PowerShell
 
-This article explains the steps to install the Azure PowerShell modules in a Windows environment.  
-If you want to use Azure PowerShell on macOS or Linux, see the following article:  
+This article explains the steps to install the Azure PowerShell modules in a Windows environment.
+If you want to use Azure PowerShell on macOS or Linux, see the following article:
 [Install and configure Azure PowerShell on macOS and Linux](install-azurermps-maclinux.md).
 
 Installing Azure PowerShell from the PowerShell Gallery is the preferred method of installation.
@@ -35,9 +35,14 @@ You should see something similar to the following output:
 ```Output
 Name          Version Path
 ----          ------- ----
+Name          Version Path
+----          ------- ----
+PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
 ```
-In addition you may want to update PowerShellGet with the command below:
+
+You need PowerShellGet version 1.1.2.0 or higher. To update PowerShellGet, use the following command:
+
 ```powershell
 Install-Module PowerShellGet -Force
 ```
