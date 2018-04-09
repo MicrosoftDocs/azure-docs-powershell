@@ -118,8 +118,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-5.6.0",
-                "version": "azurermps-5.6.0",
+                "src": "azurermps-5.7.0",
+                "version": "azurermps-5.7.0",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -130,8 +130,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "docs-conceptual/azurermps-5.6.0",
-                "version": "azurermps-5.6.0",
+                "src": "docs-conceptual/azurermps-5.7.0",
+                "version": "azurermps-5.7.0",
                 "dest": "azure"
             },
             {
@@ -321,7 +321,7 @@
                 "files": [
                     "media/**"
                 ],
-                "version": "azurermps-5.6.0"
+                "version": "azurermps-5.7.0"
             },
             {
                 "files": [
@@ -348,8 +348,8 @@
             "azurermps-4.4.1": {
                 "dest": "azurermps-4.4.1"
             },
-            "azurermps-5.6.0": {
-              "dest": "azurermps-5.6.0"
+            "azurermps-5.7.0": {
+              "dest": "azurermps-5.7.0"
             },
             "azuresmps-3.7.0": {
                 "dest": "azuresmps-3.7.0"
