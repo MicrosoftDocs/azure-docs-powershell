@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 ms.assetid: FDD2CE98-6C7E-4B95-BA5B-B03B6AC6EAEF
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/New-AzureRmStorageAccountKey.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/New-AzureRmStorageAccountKey.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzureRmStorageAccountKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzureRmStorageAccountKey.md
 ---
 
 # New-AzureRmStorageAccountKey
@@ -37,13 +37,13 @@ This command regenerates a storage key for the specified Storage account.
 Specifies which key to regenerate.
 The acceptable values for this parameter are:
 
-- key1 
+- key1
 - key2
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: key1, key2
 
 Required: True
@@ -74,7 +74,7 @@ Specifies the name of the resource group that contains the Storage account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -98,5 +98,3 @@ This cmdlet does not accept any input.
 ## RELATED LINKS
 
 [Get-AzureRmStorageAccountKey](./Get-AzureRmStorageAccountKey.md)
-
-

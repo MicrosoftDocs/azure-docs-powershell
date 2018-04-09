@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 ms.assetid: E53D5040-C1E8-4DC1-8371-F41C00B666E3
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
 ---
 
 # Get-AzureRmStorageAccount
@@ -73,7 +73,7 @@ Specifies the name of the resource group that contains the Storage account to ge
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: AccountNameParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -113,5 +113,3 @@ This cmdlet does not accept any input.
 [Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
 
 [Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
-
-

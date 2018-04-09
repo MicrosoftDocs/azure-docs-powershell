@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 ms.assetid: 4D7EEDD7-89D4-4B1E-A9A1-B301E759CE72
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Set-AzureRmStorageAccount.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/Set-AzureRmStorageAccount.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Set-AzureRmStorageAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Set-AzureRmStorageAccount.md
 ---
 
 # Set-AzureRmStorageAccount
@@ -111,7 +111,7 @@ If the kind of Storage account is Storage, do not specify this parameter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -126,7 +126,7 @@ Generate and assign a new Storage Account Identity for this storage account for 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Specifies the name of the custom domain.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -157,7 +157,7 @@ Azure Blob and Azure File Services are supported.
 ```yaml
 Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -173,7 +173,7 @@ Azure Blob and Azure File Services are supported.
 ```yaml
 Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -188,7 +188,7 @@ Indicates whether or not the Storage Account only enable https traffic.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ If the kind of Storage account is Storage, do not specify this parameter.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ Storage Account encryption keySource KeyVault KeyName
 ```yaml
 Type: String
 Parameter Sets: KeyvaultEncryption
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -269,12 +269,12 @@ Accept wildcard characters: False
 ```
 
 ### -KeyvaultEncryption
-Whether to set Storage Account Encryption KeySource to Microsoft.Keyvault or not. 
+Whether to set Storage Account Encryption KeySource to Microsoft.Keyvault or not.
 If you specify KeyName, KeyVersion and KeyvaultUri, Storage Account encryption keySource will also be set to Microsoft.Keyvault weather this parameter is set or not.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: KeyvaultEncryption
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -289,7 +289,7 @@ Storage Account encryption keySource KeyVault KeyVaultUri
 ```yaml
 Type: String
 Parameter Sets: KeyvaultEncryption
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -304,7 +304,7 @@ Storage Account encryption keySource KeyVault KeyVersion
 ```yaml
 Type: String
 Parameter Sets: KeyvaultEncryption
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -334,7 +334,7 @@ Specifies the name of the resource group in which to modify the Storage account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -348,13 +348,13 @@ Specifies the SKU name of the storage account.
 The acceptable values for this parameter are:
 
 - Standard_LRS.
-Locally-redundant storage. 
+Locally-redundant storage.
 - Standard_ZRS.
 Zone-redundant storage.
 - Standard_GRS.
-Geo-redundant storage. 
+Geo-redundant storage.
 - Standard_RAGRS.
-Read access geo-redundant storage. 
+Read access geo-redundant storage.
 - Premium_LRS.
 Premium locally-redundant storage.
 
@@ -379,7 +379,7 @@ Whether to set Storage Account Encryption KeySource to Microsoft.Storage or not.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: StorageEncryption
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -411,7 +411,7 @@ Indicates whether to enable indirect CName validation.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -470,5 +470,3 @@ This cmdlet does not accept any input.
 [New-AzureRmStorageAccount](./New-AzureRmStorageAccount.md)
 
 [Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
-
-

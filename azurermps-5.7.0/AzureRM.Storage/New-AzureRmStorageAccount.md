@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 ms.assetid: A3DA1205-B8FB-4B4C-9C40-AD303D038EDF
 online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/New-AzureRmStorageAccount.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/New-AzureRmStorageAccount.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzureRmStorageAccount.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/New-AzureRmStorageAccount.md
 ---
 
 # New-AzureRmStorageAccount
@@ -47,7 +47,7 @@ The account has enabled Storage Service encryption on Blob Service.
 PS C:\>New-AzureRmStorageAccount -ResourceGroupName "MyResourceGroup" -AccountName "MyStorageAccount" -Location "West US" -SkuName "Standard_GRS" -EnableEncryptionService "Blob,File" -AssignIdentity
 ```
 
-This command creates a Storage account that enabled Storage Service encryption on Blob and File Services.  It also generates and assigns an identity that can be used to manage 
+This command creates a Storage account that enabled Storage Service encryption on Blob and File Services.  It also generates and assigns an identity that can be used to manage
 account keys through Azure KeyVault.
 
 ## PARAMETERS
@@ -63,7 +63,7 @@ If you specify a value of Storage for this *Kind* parameter, do not specify the 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -78,7 +78,7 @@ Generate and assign a new Storage Account Identity for this storage account for 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ The default value is Storage.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -110,7 +110,7 @@ Azure Blob and Azure File Services are supported.
 ```yaml
 Type: EncryptionSupportServiceEnum
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -125,7 +125,7 @@ Indicates whether or not the Storage Account only enable https traffic.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,17 +179,17 @@ The acceptable values for this parameter are:
 
 - Storage.
 General purpose storage account that supports storage of Blobs, Tables, Queues, Files and Disks.
- 
+
 - BlobStorage.
 Blob storage account which supports storage of Blobs only.
- 
+
 
 The default value is Storage.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -204,7 +204,7 @@ Specifies the location of the Storage account to create.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -234,7 +234,7 @@ Specifies the name of the resource group in which to add the Storage account.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -248,13 +248,13 @@ Specifies the SKU name of the storage account that this cmdlet creates.
 The acceptable values for this parameter are:
 
 - Standard_LRS.
-Locally-redundant storage. 
+Locally-redundant storage.
 - Standard_ZRS.
 Zone-redundant storage.
 - Standard_GRS.
-Geo-redundant storage. 
+Geo-redundant storage.
 - Standard_RAGRS.
-Read access geo-redundant storage. 
+Read access geo-redundant storage.
 - Premium_LRS.
 Premium locally-redundant storage.
 
@@ -293,7 +293,7 @@ Indicates whether to enable indirect CName validation.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -321,5 +321,3 @@ This cmdlet does not accept any input.
 [Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
 
 [Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
-
-
