@@ -19,6 +19,81 @@ This is a list of changes made to Azure PowerShell in this release.
 
 ---
 
+# Azure PowerShell 5.7.0
+
+Azure PowerShell 5.7.0 Installer: [link](https://github.com/Azure/azure-powershell/releases/download/v5.7.0-April2018/azure-powershell.5.7.0.msi)
+
+Gallery Module for ARM Cmdlets: [link](https://www.powershellgallery.com/packages/AzureRM/5.7.0)
+
+To install `AzureRM` from the PowerShell Gallery, run the following command:
+
+```powershell
+Install-Module -Name AzureRM -Repository PSGallery -Force
+```
+
+To update from an older version of `AzureRM`, run the following command:
+
+```powershell
+Update-Module -Name AzureRM
+```
+
+## Changes Since Last Release
+
+#### General
+* Updated to the latest version of the Azure ClientRuntime
+
+#### Azure.Storage
+* Fix the issue that upload Blob and upload File cmdlets fail on FIPS policy enabled machines
+	- Set-AzureStorageBlobContent
+	- Set-AzureStorageFileContent
+
+#### AzureRM.Billing
+* New Cmdlet Get-AzureRmEnrollmentAccount
+  - cmdlet to retrieve enrollment accounts
+
+#### AzureRM.CognitiveServices
+* Integrate with Cognitive Services Management SDK version 4.0.0.
+* Add Get-AzureRmCognitiveServicesAccountUsage operation.
+
+#### AzureRM.Compute
+* `Get-AzureRmVmssDiskEncryptionStatus` supports encryption status at data disk level
+* `Get-AzureRmVmssVmDiskEncryptionStatus` supports encryption status at data disk level
+* Update for Zone Resilient
+* 'New-AzureRmVm' and 'New-AzureRmVmss' (simple parameter set) support availability zones.
+
+#### AzureRM.ContainerRegistry
+* Decouple reliance on Commands.Resources.Rest and ARM/Storage SDKs.
+
+#### AzureRM.DataLakeStore
+* Add debug functionality
+* Update the version of the ADLS dataplane SDK to 1.1.2
+* Export-AzureRmDataLakeStoreItem - Deprecated parameters PerFileThreadCount, ConcurrentFileCount and introduced parameter Concurrency
+* Import-AzureRMDataLakeStoreItem - Deprecated parametersPerFileThreadCount, ConcurrentFileCount and introduced parameter Concurrency
+* Get-AzureRMDataLakeStoreItemContent - Fixed the tail behavior for contents greater than 4MB
+* Set-AzureRMDataLakeStoreItemExpiry - Introduced new parameter set SetRelativeExpiry for setting relative expiration time
+* Remove-AzureRmDataLakeStoreItem - Deprecated parameter Clean.
+
+#### AzureRM.EventHub
+* Fixed AlternameName in New-AzureRmEventHubGeoDRConfiguration
+
+#### AzureRM.KeyVault
+* Updated cmdlets to include piping scenarios
+* Add deprecation messages for upcoming breaking change release
+
+#### AzureRM.Network
+* Fix error message with Network cmdlets
+
+#### AzureRM.ServiceBus
+* Added 'properties' in CorrelationFilter of Rules to support customproperties
+* updated New-AzureRmServiceBusGeoDRConfiguration help and fixed Rules cmdlet output
+* Fixed auto-forward properties in New-AzureRmServiceBusQueue and New-AzureRmServiceBusSubscription cmdlet
+
+#### AzureRM.Sql
+* Add new cmdlet 'Stop-AzureRmSqlElasticPoolActivity' to support canceling the asynchronous operations on elastic pool
+* Update the response for cmdlets Get-AzureRmSqlDatabaseActivity and Get-AzureRmSqlElasticPoolActivity to reflect more information in the response
+
+Changes since last release: https://github.com/Azure/azure-powershell/compare/v5.6.0-March2018...v5.7.0-April2018
+
 ## 5.6.0 - March 2018
 
 #### General
