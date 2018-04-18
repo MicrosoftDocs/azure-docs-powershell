@@ -233,7 +233,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
 
 ### Create the VM configuration
 
-Now that we have the required resources we can create the VM configuration oboject.
+Now that we have the required resources we can create the VM configuration object.
 
 ```powershell
 # Create a virtual machine configuration
