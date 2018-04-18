@@ -128,13 +128,13 @@ Forgets the context that was named 'Contoso2'. You can recreate this context sub
 ## Removing credentials
 
 You can remove all credentials and associated contexts for a user or service principal using
-`Remove-AzureRmAccount` (also known as `Logout-AzureRmAccount`). When executed without parameters,
-the `Remove-AzureRmAccount` cmdlet removes all credentials and contexts associated with the User or
+`Disconnect-AzureRmAccount` (also known as `Logout-AzureRmAccount`). When executed without parameters,
+the `Disconnect-AzureRmAccount` cmdlet removes all credentials and contexts associated with the User or
 Service Principal in the current context. You may pass in a Username, Service Principal Name, or
 context to target a particular principal.
 
 ```powershell
-Remove-AzureRmAccount user1@contoso.org
+Disconnect-AzureRmAccount user1@contoso.org
 ```
 
 ## Using context scopes
@@ -174,7 +174,7 @@ New cmdlets for managing context
   session is required to log in again.
 - [Select-AzureRmContext][select] - Select a context as the default. All subsequent cmdlets use the
   credentials in this context for authentication.
-- [Remove-AzureRmAccount][remove-cred] - Remove all credentials and contexts associated with an
+- [Disconnect-AzureRmAccount][remove-cred] - Remove all credentials and contexts associated with an
   account.
 - [Remove-AzureRmContext][remove-context] - Remove a named context.
 - [Rename-AzureRmContext][rename] - Rename an existing context.
@@ -191,11 +191,11 @@ Changes to existing profile cmdlets
 [enable]: /powershell/module/azurerm.profile/Enable-AzureRmContextAutosave
 [disable]: /powershell/module/azurerm.profile/Disable-AzureRmContextAutosave
 [select]: /powershell/module/azurerm.profile/Select-AzureRmContext
-[remove-cred]: /powershell/module/azurerm.profile/Remove-AzureRmAccount
+[remove-cred]: /powershell/module/azurerm.profile/Disconnect-AzureRmAccount
 [remove-context]: /powershell/module/azurerm.profile/Remove-AzureRmContext
 [rename]: /powershell/module/azurerm.profile/Rename-AzureRmContext
 
 <!-- Updated cmdlets -->
-[login]: /powershell/module/azurerm.profile/Add-AzureRmAccount
+[login]: /powershell/module/azurerm.profile/Connect-AzureRmAccount
 [import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
