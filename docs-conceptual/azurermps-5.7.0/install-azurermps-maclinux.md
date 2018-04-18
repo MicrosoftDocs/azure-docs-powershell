@@ -62,7 +62,7 @@ After the import completes, you can test your newly installed and module by atte
 Azure using the following command:
 
 ```powershell
-Login-AzureRmAccount
+Connect-AzureRmAccount
 ```
 
 The above command should prompt you to go to `https://aka.ms/devicelogin` and enter the
