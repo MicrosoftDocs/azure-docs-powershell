@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.RecoveryServices.Backup
-Module Guid: 3d444bee-6742-4ce2-b573-dfd1b7c4144c
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.RecoveryServices.Backup
+Module_Guid: 3d444bee-6742-4ce2-b573-dfd1b7c4144c
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/AzureRM.RecoveryServices.Backup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/AzureRM.RecoveryServices.Backup.md

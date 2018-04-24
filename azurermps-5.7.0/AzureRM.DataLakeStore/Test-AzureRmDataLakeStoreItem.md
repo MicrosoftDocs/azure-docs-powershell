@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
-Module Name: AzureRM.DataLakeStore
+external_help_file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module_Name: AzureRM.DataLakeStore
 ms.assetid: 0937A390-6AC2-4611-AA6C-99936AC0ABFD
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/test-azurermdatalakestoreitem
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/test-azurermdatalakestoreitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Test-AzureRmDataLakeStoreItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Test-AzureRmDataLakeStoreItem.md
@@ -70,7 +70,7 @@ Specifies the Data Lake Store path of the item to test, starting with the root d
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -90,7 +90,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: PathType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Any, File, Folder
 
 Required: False

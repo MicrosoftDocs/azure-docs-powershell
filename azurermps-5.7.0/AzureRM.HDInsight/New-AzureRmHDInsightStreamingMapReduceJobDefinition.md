@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-Module Name: AzureRM.HDInsight
+external_help_file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module_Name: AzureRM.HDInsight
 ms.assetid: 17CB76E7-2F91-4EFE-9DA3-F083F02235E1
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.hdinsight/new-azurermhdinsightstreamingmapreducejobdefinition
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.hdinsight/new-azurermhdinsightstreamingmapreducejobdefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightStreamingMapReduceJobDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightStreamingMapReduceJobDefinition.md

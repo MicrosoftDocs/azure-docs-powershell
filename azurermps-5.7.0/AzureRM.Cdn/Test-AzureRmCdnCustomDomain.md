@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
-Module Name: AzureRM.Cdn
+external_help_file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+Module_Name: AzureRM.Cdn
 ms.assetid: 8C4E824F-FB4A-4DE7-8FD9-3FDA3848F25C
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn/test-azurermcdncustomdomain
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn/test-azurermcdncustomdomain
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Test-AzureRmCdnCustomDomain.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Test-AzureRmCdnCustomDomain.md
@@ -45,7 +45,7 @@ Specifies the endpoint to which you want to add the custom domain.
 ```yaml
 Type: PSEndpoint
 Parameter Sets: ByObjectParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,7 +60,7 @@ Specifies the host name of the custom domain.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -90,7 +90,7 @@ Specifies the name of the endpoint to which you want to add the custom domain.
 ```yaml
 Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ Specifies the name of the profile.
 ```yaml
 Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,7 +120,7 @@ Specifies the name of the resource group.
 ```yaml
 Type: String
 Parameter Sets: ByFieldsParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

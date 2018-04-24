@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module Name: AzureRM.Insights
+external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module_Name: AzureRM.Insights
 ms.assetid: FBAE5F75-1E28-4F1C-A9ED-20075FFD4AC7
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/add-azurermwebtestalertrule
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/add-azurermwebtestalertrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Add-AzureRmWebtestAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Add-AzureRmWebtestAlertRule.md
@@ -48,7 +48,7 @@ Specifies a comma-separated list of actions.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.RuleAction]
 Parameter Sets: (All)
-Aliases: Actions
+Aliases:
 
 Required: False
 Position: Named

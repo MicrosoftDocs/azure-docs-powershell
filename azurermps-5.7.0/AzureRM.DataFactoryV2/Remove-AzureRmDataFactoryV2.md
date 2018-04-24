@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.DataFactoryV2.dll-Help.xml
-Module Name: AzureRM.DataFactoryV2
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/remove-azurermdatafactoryv2
+external_help_file: Microsoft.Azure.Commands.DataFactoryV2.dll-Help.xml
+Module_Name: AzureRM.DataFactoryV2
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/remove-azurermdatafactoryv2
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactoryV2/Commands.DataFactoryV2/help/Remove-AzureRmDataFactoryV2.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactoryV2/Commands.DataFactoryV2/help/Remove-AzureRmDataFactoryV2.md

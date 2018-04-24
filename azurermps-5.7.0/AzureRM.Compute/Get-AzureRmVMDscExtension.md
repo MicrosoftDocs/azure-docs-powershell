@@ -1,10 +1,11 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module_Name: AzureRM.Compute
 ms.assetid: 5B7A1BE6-F5F5-4968-BE32-7743D0E25FE3
-online version:
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextension
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMDscExtension.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMDscExtension.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmVMDscExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmVMDscExtension.md
 ---
 
 # Get-AzureRmVMDscExtension
@@ -16,7 +17,7 @@ Gets the settings of the DSC extension on a particular virtual machine.
 
 ```
 Get-AzureRmVMDscExtension [-ResourceGroupName] <String> [-VMName] <String> [[-Name] <String>] [-Status]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,6 +34,21 @@ This command gets the settings of extension named DSC on the virtual machine nam
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the Azure Resource Manager resource that represents the extension.
 The Set-AzureRmVMDscExtension cmdlet sets this name to Microsoft.Powershell.DSC, which is the same value that is used by **Get-AzureRmVMDscExtension**.
@@ -41,7 +57,7 @@ Specify this parameter only if you changed the default name in the **Set-AzureRm
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -56,7 +72,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -71,7 +87,7 @@ Indicates that this cmdlet gets the instance view of the DSC extension.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +102,7 @@ Specifies the name of a virtual machine for which this cmdlet gets the DSC exten
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

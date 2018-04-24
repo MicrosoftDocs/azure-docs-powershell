@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
-Module Name: AzureRM.EventHub
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubnamespace
+external_help_file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module_Name: AzureRM.EventHub
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubnamespace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubNamespace.md
@@ -31,7 +31,7 @@ If the namespace name is not provided, a list of namespaces is returned.
 PS C:\> Get-AzureRmEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName
 ```
 
-Gets the details of the Event Hubs namespace \`MyNamespaceName\` in the resource group \`MyResourceGroupName\`.
+Gets the details of namespace \`MyNamespaceName\` in the resource group \`MyResourceGroupName\`.
 
 ## PARAMETERS
 

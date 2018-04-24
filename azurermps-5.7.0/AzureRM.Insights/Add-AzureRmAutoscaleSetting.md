@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module Name: AzureRM.Insights
+external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module_Name: AzureRM.Insights
 ms.assetid: 7436F31F-9DCB-4365-BA6D-41BDB5D7FCB6
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/add-azurermautoscalesetting
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/add-azurermautoscalesetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Add-AzureRmAutoscaleSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Add-AzureRmAutoscaleSetting.md
@@ -66,7 +66,7 @@ Specifies a list of profiles to add to the Autoscale setting, or $Null to add no
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.AutoscaleProfile]
 Parameter Sets: (All)
-Aliases: AutoscaleProfiles
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Specifies a list of comma-separated notifications.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.AutoscaleNotification]
 Parameter Sets: (All)
-Aliases: Notifications
+Aliases:
 
 Required: False
 Position: Named

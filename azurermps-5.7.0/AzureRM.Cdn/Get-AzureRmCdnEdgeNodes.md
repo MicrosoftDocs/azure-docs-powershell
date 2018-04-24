@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
-Module Name: AzureRM.Cdn
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn/get-azurermcdnedgenodes
+external_help_file: Microsoft.Azure.Commands.Cdn.dll-Help.xml
+Module_Name: AzureRM.Cdn
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn/get-azurermcdnedgenodes
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnEdgeNodes.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/Get-AzureRmCdnEdgeNodes.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Get-AzureRmCdnEdgeNodes
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets Azure CDN edgenodes.
 
 ## SYNTAX
 
@@ -61,4 +61,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

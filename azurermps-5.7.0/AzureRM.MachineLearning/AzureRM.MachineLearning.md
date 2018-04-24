@@ -1,8 +1,8 @@
 ---
-Module Name: AzureRM.MachineLearning
-Module Guid: bb030259-49f9-46ef-806f-2a3f5a2e018e
-Download Help Link:
-Help Version: 1.0.0.0
+Module_Name: AzureRM.MachineLearning
+Module_Guid: bb030259-49f9-46ef-806f-2a3f5a2e018e
+Download_Help_Link: 
+Help_Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearning/Commands.MachineLearning/help/AzureRM.MachineLearning.md

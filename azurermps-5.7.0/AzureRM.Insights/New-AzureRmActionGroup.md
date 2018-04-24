@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module Name: AzureRM.Insights
+external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module_Name: AzureRM.Insights
 ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermactiongroup
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermactiongroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmActionGroup.md

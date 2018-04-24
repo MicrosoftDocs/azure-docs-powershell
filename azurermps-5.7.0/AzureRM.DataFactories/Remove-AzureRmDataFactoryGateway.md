@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-Module Name: AzureRM.DataFactories
+external_help_file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module_Name: AzureRM.DataFactories
 ms.assetid: E1461540-DEAE-43C3-83DF-7DF3FE8D4EC0
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/remove-azurermdatafactorygateway
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/remove-azurermdatafactorygateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Remove-AzureRmDataFactoryGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Remove-AzureRmDataFactoryGateway.md

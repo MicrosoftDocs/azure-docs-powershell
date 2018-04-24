@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
-Module Name: AzureRM.Resources
+external_help_file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module_Name: AzureRM.Resources
 ms.assetid: C791C593-F7D5-4961-97F9-E4909813FFE7
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/remove-azurermadapplication
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/remove-azurermadapplication
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Remove-AzureRmADApplication.md

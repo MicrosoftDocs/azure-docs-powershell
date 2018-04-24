@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
-Module Name: AzureRM.EventHub
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/test-azurermeventhubname
+external_help_file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module_Name: AzureRM.EventHub
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/test-azurermeventhubname
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Test-AzureRmEventHubName.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Test-AzureRmEventHubName.md
@@ -35,7 +35,7 @@ The **Test-AzureRmEventhubName** Cmdlet Check Availability of the NameSpace Name
 PS C:\> Test-AzureRmEventhubName -Namespace MyNameSapceName
 ```
 
-Returns the status on availability of the namespace name 'MyNameSapceName' as True
+Returns the status on availability of the namespace name 'MyNameSapceName' as True if available
 
 ### Example 2
 ```
@@ -49,7 +49,7 @@ Returns the status on availability of the namespace name 'MyNameSapceName' as Fa
 PS C:\> Test-AzureRmEventhubName -ResourceGroupName MyResourceGroup -Namespace Test123 -AliasName myAliasName
 ```
 
-Returns the status on availability of the alias name 'myAliasName' under namespace 'MyNameSapceName' as True
+Returns the status on availability of the alias name 'myAliasName' for namespace 'MyNameSapceName' as True if available
 
 ## PARAMETERS
 

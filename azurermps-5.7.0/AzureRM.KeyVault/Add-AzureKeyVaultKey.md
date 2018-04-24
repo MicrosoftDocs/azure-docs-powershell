@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
-Module Name: AzureRM.KeyVault
+external_help_file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+Module_Name: AzureRM.KeyVault
 ms.assetid: 846F781C-73A3-4BBE-ABD9-897371109FBE
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/add-azurekeyvaultkey
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/add-azurekeyvaultkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzureKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/Add-AzureKeyVaultKey.md
@@ -60,7 +60,7 @@ For any of these operations, you can provide key attributes or accept default se
 If you create or import a key that has the same name as an existing key in your key vault, the
 original key is updated with the values that you specify for the new key. You can access the
 previous values by using the version-specific URI for that version of the key. To learn about key
-versions and the URI structure, see [About Keys andSecrets](http://go.microsoft.com/fwlink/?linkid=518560)
+versions and the URI structure, see [About Keys and Secrets](http://go.microsoft.com/fwlink/?linkid=518560)
 in the Key Vault REST API documentation.
 
 Note: To import a key from your own hardware security module, you must first generate a BYOK

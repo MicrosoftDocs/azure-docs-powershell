@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 494291A1-D854-4E97-B5EE-27BB5653D97C
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestorageserviceloggingproperty
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestorageserviceloggingproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageServiceLoggingProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageServiceLoggingProperty.md

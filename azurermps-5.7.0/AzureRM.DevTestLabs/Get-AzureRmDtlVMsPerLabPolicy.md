@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
-Module Name: AzureRM.DevTestLabs
+external_help_file: Microsoft.Azure.Commands.DevTestLabs.dll-Help.xml
+Module_Name: AzureRM.DevTestLabs
 ms.assetid: A3F653C7-6F9D-4B2B-81F8-0A012D80ECC7
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.devtestlabs/get-azurermdtlvmsperlabpolicy
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.devtestlabs/get-azurermdtlvmsperlabpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Get-AzureRmDtlVMsPerLabPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/Get-AzureRmDtlVMsPerLabPolicy.md

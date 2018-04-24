@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
-Module Name: AzureRM.NotificationHubs
+external_help_file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+Module_Name: AzureRM.NotificationHubs
 ms.assetid: A03F32C3-BB01-46A5-86C5-B7A4DDC42351
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.notificationhubs/new-azurermnotificationhubkey
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.notificationhubs/new-azurermnotificationhubkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHubKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/New-AzureRmNotificationHubKey.md

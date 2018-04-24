@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
-Module Name: AzureRM.RedisCache
+external_help_file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+Module_Name: AzureRM.RedisCache
 ms.assetid: 6234F211-6ED4-443F-9B83-DEB9AC51B763
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache/set-azurermrediscache
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache/set-azurermrediscache
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Set-AzureRmRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Set-AzureRmRedisCache.md
@@ -17,9 +17,9 @@ Modifies a Redis Cache.
 
 ```
 Set-AzureRmRedisCache [-ResourceGroupName <String>] -Name <String> [-Size <String>] [-Sku <String>]
- [-MaxMemoryPolicy <String>] [-RedisConfiguration <Hashtable>] [-EnableNonSslPort <Boolean>]
- [-TenantSettings <Hashtable>] [-ShardCount <Int32>] [-Tag <Hashtable>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RedisConfiguration <Hashtable>] [-EnableNonSslPort <Boolean>] [-TenantSettings <Hashtable>]
+  [-ShardCount <Int32>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] 
+  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,25 +76,6 @@ The default value is $False (the non-SSL port is disabled).
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MaxMemoryPolicy
-This parameter has been deprecated.
-Use the *RedisConfiguration* parameter to set maxmemory-policy.
-For example: 
-
-`-RedisConfiguration @{"maxmemory-policy" = "allkeys-lru"}`
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 

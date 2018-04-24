@@ -1,10 +1,11 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module_Name: AzureRM.Compute
 ms.assetid: 2AB1B227-68C4-49AE-84C0-E1421E609DE7
-online version:
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/remove-azurermvmbackup
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Remove-AzureRmVMBackup.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Remove-AzureRmVMBackup.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzureRmVMBackup.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Remove-AzureRmVMBackup.md
 ---
 
 # Remove-AzureRmVMBackup
@@ -15,7 +16,8 @@ Removes the backup from a virtual machine.
 ## SYNTAX
 
 ```
-Remove-AzureRmVMBackup [-ResourceGroupName] <String> [-VMName] <String> [-Tag] <String> [<CommonParameters>]
+Remove-AzureRmVMBackup [-ResourceGroupName] <String> [-VMName] <String> [-Tag] <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,16 +26,31 @@ Remove-AzureRmVMBackup [-ResourceGroupName] <String> [-VMName] <String> [-Tag] <
 
 ### 1:
 ```
-PS C:\> 
+PS C:\>
 ```
 
 ## PARAMETERS
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ResourceGroupName
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -46,7 +63,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -78,7 +95,8 @@ This cmdlet does not accept any input.
 
 ## OUTPUTS
 
+### Microsoft.Azure.Commands.Compute.Models.PSAzureOperationResponse
+
 ## NOTES
 
 ## RELATED LINKS
-

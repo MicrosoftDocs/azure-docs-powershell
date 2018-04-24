@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 03EC0D20-C737-4B2B-B8D9-71D06A938FAD
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestorageblob
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestorageblob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageBlob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageBlob.md

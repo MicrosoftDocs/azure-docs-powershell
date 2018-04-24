@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-Module Name: AzureRM.DataFactories
+external_help_file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module_Name: AzureRM.DataFactories
 ms.assetid: F8C67F7B-64C5-45E4-A0BF-32212BEBE885
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/get-azurermdatafactoryactivitywindow
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/get-azurermdatafactoryactivitywindow
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Get-AzureRmDataFactoryActivityWindow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/Get-AzureRmDataFactoryActivityWindow.md

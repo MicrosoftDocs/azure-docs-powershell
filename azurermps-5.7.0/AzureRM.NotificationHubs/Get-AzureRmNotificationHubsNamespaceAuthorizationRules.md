@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
-Module Name: AzureRM.NotificationHubs
+external_help_file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+Module_Name: AzureRM.NotificationHubs
 ms.assetid: 08D03498-D18D-47FE-8916-702FA2E7D719
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.notificationhubs/get-azurermnotificationhubsnamespaceauthorizationrules
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.notificationhubs/get-azurermnotificationhubsnamespaceauthorizationrules
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Get-AzureRmNotificationHubsNamespaceAuthorizationRules.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Get-AzureRmNotificationHubsNamespaceAuthorizationRules.md

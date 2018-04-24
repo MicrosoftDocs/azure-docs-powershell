@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
-Module Name: AzureRM.Resources
+external_help_file: Microsoft.Azure.Commands.ResourceManager.Cmdlets.dll-Help.xml
+Module_Name: AzureRM.Resources
 ms.assetid: BB90E6BB-7F53-4441-A7B2-EDA940621D49
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/find-azurermresource
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/find-azurermresource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Find-AzureRmResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Find-AzureRmResource.md

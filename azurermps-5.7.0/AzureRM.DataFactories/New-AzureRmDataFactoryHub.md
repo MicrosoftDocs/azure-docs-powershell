@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
-Module Name: AzureRM.DataFactories
+external_help_file: Microsoft.Azure.Commands.DataFactories.dll-Help.xml
+Module_Name: AzureRM.DataFactories
 ms.assetid: B656B4C4-97DE-4F9F-937C-E115CB3F0E80
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/new-azurermdatafactoryhub
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/new-azurermdatafactoryhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/New-AzureRmDataFactoryHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/New-AzureRmDataFactoryHub.md

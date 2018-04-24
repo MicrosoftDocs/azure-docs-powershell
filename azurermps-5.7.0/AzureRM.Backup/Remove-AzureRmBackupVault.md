@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
-Module Name: AzureRM.Backup
+external_help_file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module_Name: AzureRM.Backup
 ms.assetid: 698DCD00-13C0-4C36-A74B-35215D608339
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.backup/remove-azurermbackupvault
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.backup/remove-azurermbackupvault
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Remove-AzureRmBackupVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Remove-AzureRmBackupVault.md

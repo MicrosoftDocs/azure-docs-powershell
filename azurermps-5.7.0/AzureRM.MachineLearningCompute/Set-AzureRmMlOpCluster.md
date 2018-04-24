@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.MachineLearningCompute.dll-Help.xml
-Module Name: AzureRM.MachineLearningCompute
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.machinelearningcompute/set-azurermmlopcluster
+external_help_file: Microsoft.Azure.Commands.MachineLearningCompute.dll-Help.xml
+Module_Name: AzureRM.MachineLearningCompute
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.machinelearningcompute/set-azurermmlopcluster
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearningCompute/Commands.MachineLearningCompute/help/Set-AzureRmMlOpCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearningCompute/Commands.MachineLearningCompute/help/Set-AzureRmMlOpCluster.md

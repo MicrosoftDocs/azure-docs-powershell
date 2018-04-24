@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
-Module Name: AzureRM.PowerBIEmbedded
+external_help_file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
+Module_Name: AzureRM.PowerBIEmbedded
 ms.assetid: 3FED0088-47DA-4565-B9F0-DACF9B2DC0C7
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded/get-azurermpowerbiworkspacecollectionaccesskeys
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded/get-azurermpowerbiworkspacecollectionaccesskeys
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/Get-AzureRmPowerBIWorkspaceCollectionAccessKeys.md

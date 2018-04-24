@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
-Module Name: AzureRM.Resources
+external_help_file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module_Name: AzureRM.Resources
 ms.assetid: 52C5CD8B-2489-4FE6-9F33-B3350531CD8E
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermadgroupmember
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermadgroupmember
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADGroupMember.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADGroupMember.md

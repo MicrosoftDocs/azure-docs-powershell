@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 26E06BA3-C550-40A5-B8E3-FEC8E9BF3867
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestoragecorsrule
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestoragecorsrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageCORSRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageCORSRule.md

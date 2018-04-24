@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
-Module Name: AzureRM.HDInsight
+external_help_file: Microsoft.Azure.Commands.HDInsight.dll-Help.xml
+Module_Name: AzureRM.HDInsight
 ms.assetid: B9BA5FD1-A4F8-4E24-8FCB-847649B82AB6
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.hdinsight/new-azurermhdinsightpigjobdefinition
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.hdinsight/new-azurermhdinsightpigjobdefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightPigJobDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/New-AzureRmHDInsightPigJobDefinition.md

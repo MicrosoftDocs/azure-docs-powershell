@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
-Module Name: AzureRM.Batch
+external_help_file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module_Name: AzureRM.Batch
 ms.assetid: 6A6D6C7D-EED7-4AD4-ACE6-BFA64404455E
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.batch/set-azurebatchtask
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.batch/set-azurebatchtask
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzureBatchTask.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzureBatchTask.md

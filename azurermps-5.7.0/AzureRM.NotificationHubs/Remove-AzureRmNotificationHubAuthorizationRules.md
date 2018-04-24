@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
-Module Name: AzureRM.NotificationHubs
+external_help_file: Microsoft.Azure.Commands.NotificationHubs.dll-Help.xml
+Module_Name: AzureRM.NotificationHubs
 ms.assetid: 715F8821-BBD1-440A-AD54-E960939E288A
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.notificationhubs/remove-azurermnotificationhubauthorizationrules
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.notificationhubs/remove-azurermnotificationhubauthorizationrules
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Remove-AzureRmNotificationHubAuthorizationRules.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/Remove-AzureRmNotificationHubAuthorizationRules.md

@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 383402B2-6B7C-41AB-AFF9-36C86156B0A9
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azurestoragecontext
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azurestoragecontext
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageContext.md

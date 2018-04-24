@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.EventGrid.dll-Help.xml
-Module Name: AzureRM.EventGrid
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventgrid/get-azurermeventgridtopic
+external_help_file: Microsoft.Azure.Commands.EventGrid.dll-Help.xml
+Module_Name: AzureRM.EventGrid
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventgrid/get-azurermeventgridtopic
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridTopic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/Get-AzureRmEventGridTopic.md

@@ -1,10 +1,11 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module_Name: AzureRM.Compute
 ms.assetid: 15CAC050-F2E9-4872-88E7-516A6D194FAB
-online version:
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmbootdiagnosticsdata
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMBootDiagnosticsData.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMBootDiagnosticsData.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmVMBootDiagnosticsData.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmVMBootDiagnosticsData.md
 ---
 
 # Get-AzureRmVMBootDiagnosticsData
@@ -17,13 +18,13 @@ Gets boot diagnostics data for a virtual machine.
 ### WindowsParamSet (Default)
 ```
 Get-AzureRmVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Windows]
- [-LocalPath] <String> [<CommonParameters>]
+ [-LocalPath] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### LinuxParamSet
 ```
 Get-AzureRmVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Linux]
- [[-LocalPath] <String>] [<CommonParameters>]
+ [[-LocalPath] <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,13 +43,28 @@ The command stores the data in specified local path.
 
 ## PARAMETERS
 
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Linux
 Indicates that the virtual machine runs the Linux operating system.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: LinuxParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -63,7 +79,7 @@ Specifies the local path for the boot diagnostics data.
 ```yaml
 Type: String
 Parameter Sets: WindowsParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -75,7 +91,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: LinuxParamSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -105,7 +121,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -120,7 +136,7 @@ Indicates that the virtual machine runs the Windows operating system.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WindowsParamSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -138,6 +154,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet does not accept any input.
 
 ## OUTPUTS
+
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
+
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineInstanceView
 
 ## NOTES
 

@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
-Module Name: AzureRM.DataLakeStore
+external_help_file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module_Name: AzureRM.DataLakeStore
 ms.assetid: 33E7607E-C2BC-4F46-9038-91AC92041F00
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/remove-azurermdatalakestoreitemaclentry
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/remove-azurermdatalakestoreitemaclentry
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreItemAclEntry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreItemAclEntry.md
@@ -70,7 +70,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: AceType
 Parameter Sets: RemoveSpecificACE
-Aliases: 
+Aliases:
 Accepted values: User, Group, Mask, Other
 
 Required: True
@@ -86,7 +86,7 @@ Specifies the ACL object that contains the entries to be removed.
 ```yaml
 Type: DataLakeStoreItemAce[]
 Parameter Sets: RemoveByACLObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -101,7 +101,7 @@ Indicates that this operation removes the default ACE from the specified ACL.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveSpecificACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -131,7 +131,7 @@ Specifies the object ID of the AzureActive Directory user, group, or service pri
 ```yaml
 Type: Guid
 Parameter Sets: RemoveSpecificACE
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -146,7 +146,7 @@ Indicates a boolean response should be returned indicating the result of the del
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ Specifies the Data Lake Store path of the item from which to remove an ACE, star
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

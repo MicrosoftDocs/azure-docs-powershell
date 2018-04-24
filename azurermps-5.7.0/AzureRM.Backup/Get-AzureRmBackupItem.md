@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
-Module Name: AzureRM.Backup
+external_help_file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module_Name: AzureRM.Backup
 ms.assetid: 8A638FB1-F530-4E28-BAAE-5382671092C4
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.backup/get-azurermbackupitem
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.backup/get-azurermbackupitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Get-AzureRmBackupItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Get-AzureRmBackupItem.md

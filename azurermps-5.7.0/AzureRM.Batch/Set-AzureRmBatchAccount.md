@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
-Module Name: AzureRM.Batch
+external_help_file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module_Name: AzureRM.Batch
 ms.assetid: 9BEE5888-304D-4438-BE97-D1FE254AEE98
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.batch/set-azurermbatchaccount
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.batch/set-azurermbatchaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzureRmBatchAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/Set-AzureRmBatchAccount.md

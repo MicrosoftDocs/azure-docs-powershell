@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module Name: AzureRM.Insights
+external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module_Name: AzureRM.Insights
 ms.assetid: B5B5F494-D912-40D0-99E2-A62FAACA3EC9
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermautoscalenotification
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermautoscalenotification
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAutoscaleNotification.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAutoscaleNotification.md
@@ -48,7 +48,7 @@ Specifies a comma-separated list of email addresses.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: CustomEmails
+Aliases:
 
 Required: False
 Position: 1
@@ -93,7 +93,7 @@ Indicates that this operation sends an email notification to the subscription co
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: SendEmailToSubscriptionCoAdministrators
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Specifies a comma-separated list of Autoscale webhooks.
 ```yaml
 Type: WebhookNotification[]
 Parameter Sets: (All)
-Aliases: Webhooks
+Aliases:
 
 Required: False
 Position: 0

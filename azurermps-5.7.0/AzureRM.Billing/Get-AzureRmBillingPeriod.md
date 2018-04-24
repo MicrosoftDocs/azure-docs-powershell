@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.Billing.dll-Help.xml
-Module Name: AzureRM.Billing
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.billing/get-azurermbillingperiod
+external_help_file: Microsoft.Azure.Commands.Billing.dll-Help.xml
+Module_Name: AzureRM.Billing
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.billing/get-azurermbillingperiod
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingPeriod.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Billing/Commands.Billing/help/Get-AzureRmBillingPeriod.md

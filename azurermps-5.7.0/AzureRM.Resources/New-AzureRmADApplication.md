@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
-Module Name: AzureRM.Resources
+external_help_file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module_Name: AzureRM.Resources
 ms.assetid: F58FD77E-2946-44B1-B410-6E983FC20E21
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/new-azurermadapplication
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/new-azurermadapplication
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/New-AzureRmADApplication.md

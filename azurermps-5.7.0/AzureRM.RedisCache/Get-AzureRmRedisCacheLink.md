@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
-Module Name: AzureRM.RedisCache
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache/get-azurermrediscachelink
+external_help_file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+Module_Name: AzureRM.RedisCache
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache/get-azurermrediscachelink
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzureRmRedisCacheLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzureRmRedisCacheLink.md

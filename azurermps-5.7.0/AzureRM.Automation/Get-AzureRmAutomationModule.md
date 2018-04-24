@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
-Module Name: AzureRM.Automation
+external_help_file: Microsoft.Azure.Commands.ResourceManager.Automation.dll-Help.xml
+Module_Name: AzureRM.Automation
 ms.assetid: A73B388A-E859-40D3-BA63-0E231CF1E81D
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/get-azurermautomationmodule
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.automation/get-azurermautomationmodule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationModule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Automation/Commands.Automation/help/Get-AzureRmAutomationModule.md

@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.DataFactoryV2.dll-Help.xml
-Module Name: AzureRM.DataFactoryV2
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/invoke-azurermdatafactoryv2pipeline
+external_help_file: Microsoft.Azure.Commands.DataFactoryV2.dll-Help.xml
+Module_Name: AzureRM.DataFactoryV2
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories/invoke-azurermdatafactoryv2pipeline
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactoryV2/Commands.DataFactoryV2/help/Invoke-AzureRmDataFactoryV2Pipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactoryV2/Commands.DataFactoryV2/help/Invoke-AzureRmDataFactoryV2Pipeline.md

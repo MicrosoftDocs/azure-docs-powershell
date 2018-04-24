@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.ManagementPartner.dll-Help.xml
-Module Name: AzureRM.ManagementPartner
-online version: https://docs.microsoft.com/en-us/powershell/module/get-azurermmanagementpartner
+external_help_file: Microsoft.Azure.Commands.ManagementPartner.dll-Help.xml
+Module_Name: AzureRM.ManagementPartner
+online_version: https://docs.microsoft.com/en-us/powershell/module/get-azurermmanagementpartner
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagementPartner/Commands.Partner/help/Get-AzureRmManagementPartner.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagementPartner/Commands.Partner/help/Get-AzureRmManagementPartner.md

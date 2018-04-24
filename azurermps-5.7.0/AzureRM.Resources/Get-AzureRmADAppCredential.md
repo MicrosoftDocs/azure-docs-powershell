@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
-Module Name: AzureRM.Resources
+external_help_file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module_Name: AzureRM.Resources
 ms.assetid: 6AC9DA05-756D-4D59-BD97-DBAAFBB3C7AC
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermadappcredential
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermadappcredential
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADAppCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmADAppCredential.md

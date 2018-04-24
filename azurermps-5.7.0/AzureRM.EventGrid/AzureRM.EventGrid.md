@@ -1,8 +1,8 @@
 ---
-Module Name: AzureRM.EventGrid
-Module Guid: 53BF7132-5BB4-46EB-AC05-61A49A6CD5EB
-Download Help Link: None_Azure
-Help Version: 1.0.0.0
+Module_Name: AzureRM.EventGrid
+Module_Guid: 53BF7132-5BB4-46EB-AC05-61A49A6CD5EB
+Download_Help_Link: None_Azure
+Help_Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/AzureRM.EventGrid.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventGrid/Commands.EventGrid/help/AzureRM.EventGrid.md

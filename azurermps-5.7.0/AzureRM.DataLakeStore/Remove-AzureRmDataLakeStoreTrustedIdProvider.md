@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
-Module Name: AzureRM.DataLakeStore
+external_help_file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module_Name: AzureRM.DataLakeStore
 ms.assetid: 30C10687-F172-4663-8D4A-F0DDEA5C3741
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/remove-azurermdatalakestoretrustedidprovider
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/remove-azurermdatalakestoretrustedidprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreTrustedIdProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Remove-AzureRmDataLakeStoreTrustedIdProvider.md
@@ -71,7 +71,7 @@ The name of the trusted identity provider.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -86,7 +86,7 @@ Indicates a boolean response should be returned indicating the result of the del
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ Specifies the name of the resource group that contains the account to remove the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -154,4 +154,3 @@ If PassThru is specified, returns true upon successful completion.
 ## NOTES
 
 ## RELATED LINKS
-

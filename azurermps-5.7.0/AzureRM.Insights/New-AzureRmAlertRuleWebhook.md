@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module Name: AzureRM.Insights
+external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module_Name: AzureRM.Insights
 ms.assetid: 0137ECA3-37E1-4064-8A65-A582519E9017
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermalertrulewebhook
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermalertrulewebhook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAlertRuleWebhook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAlertRuleWebhook.md
@@ -61,7 +61,7 @@ Specifies the list of properties in the format @(property1 = 'value1',....).
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: Properties
+Aliases:
 
 Required: False
 Position: 1

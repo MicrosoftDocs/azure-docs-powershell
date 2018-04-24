@@ -1,9 +1,8 @@
 ---
-Module Name: AzureRM.LocationBasedServices
-Module Guid: bf60f35d-6c0b-42f2-be30-eb333a31279d
-Download Help Link:
-  [object Object]:
-Help Version: 1.0.0.0
+Module_Name: AzureRM.LocationBasedServices
+Module_Guid: bf60f35d-6c0b-42f2-be30-eb333a31279d
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LocationBasedServices/Commands.LocationBasedServices/help/AzureRM.LocationBasedServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LocationBasedServices/Commands.LocationBasedServices/help/AzureRM.LocationBasedServices.md

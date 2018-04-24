@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.Cdn
-Module Guid: 52594002-db89-46df-928d-2755dad840e8
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.Cdn
+Module_Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/AzureRM.Cdn.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/AzureRM.Cdn.md
@@ -15,20 +13,29 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 The topics in this section document the Azure PowerShell cmdlets for Azure Content Delivery Network (CDN) in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.Cdn namespace.
 
 ## AzureRM.Cdn Cmdlets
+### [Confirm-AzureRmCdnEndpointProbeURL](Confirm-AzureRmCdnEndpointProbeURL.md)
+Validates a probe URL.
+
+### [Disable-AzureRmCdnCustomDomain](Disable-AzureRmCdnCustomDomain.md)
+Disables custom HTTPS.
+
+### [Enable-AzureRmCdnCustomDomain](Enable-AzureRmCdnCustomDomain.md)
+Enables custom HTTPS.
+
 ### [Get-AzureRmCdnCustomDomain](Get-AzureRmCdnCustomDomain.md)
 Gets a CDN custom domain.
 
 ### [Get-AzureRmCdnEdgeNodes](Get-AzureRmCdnEdgeNodes.md)
-{{Fill in the Synopsis}}
+Gets Azure CDN edgenodes.
 
 ### [Get-AzureRmCdnEndpoint](Get-AzureRmCdnEndpoint.md)
 Gets a CDN endpoint.
 
 ### [Get-AzureRmCdnEndpointNameAvailability](Get-AzureRmCdnEndpointNameAvailability.md)
-Gets availability status of the CDN endpoint.
+Gets availability status of a CDN endpoint.
 
 ### [Get-AzureRmCdnEndpointResourceUsage](Get-AzureRmCdnEndpointResourceUsage.md)
-{{Fill in the Synopsis}}
+Gets the resource usage of a CDN endpoint.
 
 ### [Get-AzureRmCdnOrigin](Get-AzureRmCdnOrigin.md)
 Gets a CDN origin server.
@@ -37,13 +44,16 @@ Gets a CDN origin server.
 Gets a CDN profile.
 
 ### [Get-AzureRmCdnProfileResourceUsage](Get-AzureRmCdnProfileResourceUsage.md)
-{{Fill in the Synopsis}}
+Gets the resource usage of a CDN profile.
 
 ### [Get-AzureRmCdnProfileSsoUrl](Get-AzureRmCdnProfileSsoUrl.md)
 Gets the single sign-on URL of a CDN profile.
 
+### [Get-AzureRmCdnProfileSupportedOptimizationType](Get-AzureRmCdnProfileSupportedOptimizationType.md)
+Gets the supported optimization types for a CDN profile.
+
 ### [Get-AzureRmCdnSubscriptionResourceUsage](Get-AzureRmCdnSubscriptionResourceUsage.md)
-{{Fill in the Synopsis}}
+Gets the resource usage for a susbscription.
 
 ### [New-AzureRmCdnCustomDomain](New-AzureRmCdnCustomDomain.md)
 Creates a custom domain for a CDN endpoint.

@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
-Module Name: AzureRM.ApplicationInsights
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.applicationinsights/set-azurermapplicationinsightscontinuousexport
+external_help_file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
+Module_Name: AzureRM.ApplicationInsights
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.applicationinsights/set-azurermapplicationinsightscontinuousexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Set-AzureRmApplicationInsightsContinuousExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Set-AzureRmApplicationInsightsContinuousExport.md

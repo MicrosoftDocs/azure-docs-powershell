@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module Name: AzureRM
+external_help_file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module_Name: AzureRM
 ms.assetid: A87ED954-9C09-4329-A005-ABFF36C45E6E
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/get-azurermwebapp
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/get-azurermwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebApp.md

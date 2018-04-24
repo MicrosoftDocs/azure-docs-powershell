@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module Name: AzureRM
+external_help_file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module_Name: AzureRM
 ms.assetid: 3BCEADF3-15DC-4033-A94A-4C8B4F5E7340
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/get-azurermwebappslotmetrics
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/get-azurermwebappslotmetrics
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSlotMetrics.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Get-AzureRmWebAppSlotMetrics.md

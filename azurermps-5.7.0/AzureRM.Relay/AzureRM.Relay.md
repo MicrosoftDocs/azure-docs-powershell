@@ -1,8 +1,8 @@
 ---
-Module Name: AzureRm.Relay
-Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
-Download Help Link: None_Azure
-Help Version: 4.0.0.0
+Module_Name: AzureRm.Relay
+Module_Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
+Download_Help_Link: None_Azure
+Help_Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/AzureRM.Relay.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/AzureRM.Relay.md

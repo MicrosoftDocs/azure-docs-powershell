@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
-Module Name: AzureRM.EventHub
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubkey
+external_help_file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module_Name: AzureRM.EventHub
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubKey.md
@@ -37,14 +37,19 @@ The Get-AzureRmEventHubKey cmdlet returns Primary and Secondary connectionstring
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Namespace
+```
+PS C:\> Get-AzureRmEventHubKey -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AuthorizationRuleName MyAuthRuleName
+```
+
+### Example 2 - EventHub
 ```
 PS C:\> Get-AzureRmEventHubKey -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRuleName MyAuthRuleName
 ```
 
 Gets details of Primary and Secondary connectionstrings and keys for the authorization rule \`MyAuthRuleName\`.
 
-### Example 1
+### Example 3 - Alias (GeoRecovery Configuration)
 ```
 PS C:\> Get-AzureRmEventHubKey -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AliasName MyAliasName -Name MyAuthRuleName
 ```

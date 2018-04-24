@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 53988D79-1F8B-4138-9F92-2912D418C121
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestoragedirectory
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestoragedirectory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageDirectory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageDirectory.md

@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.LocationBasedServices.dll-Help.xml
-Module Name: AzureRM.LocationBasedServices
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.locationbasedservices/get-azurermlocationbasedservicesaccount
+external_help_file: Microsoft.Azure.Commands.LocationBasedServices.dll-Help.xml
+Module_Name: AzureRM.LocationBasedServices
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.locationbasedservices/get-azurermlocationbasedservicesaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LocationBasedServices/Commands.LocationBasedServices/help/Get-AzureRmLocationBasedServicesAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LocationBasedServices/Commands.LocationBasedServices/help/Get-AzureRmLocationBasedServicesAccount.md

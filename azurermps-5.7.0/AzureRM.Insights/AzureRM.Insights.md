@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.Insights
-Module Guid: 698c387c-bd6b-41c6-82ce-721f1ef39548
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.Insights
+Module_Guid: 698c387c-bd6b-41c6-82ce-721f1ef39548
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/AzureRM.Insights.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/AzureRM.Insights.md

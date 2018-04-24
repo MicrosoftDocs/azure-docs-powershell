@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module Name: AzureRM.Insights
+external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module_Name: AzureRM.Insights
 ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermautoscaleprofile
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermautoscaleprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAutoscaleProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAutoscaleProfile.md
@@ -245,7 +245,7 @@ Specifies the list of rules to add to the profile.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule]
 Parameter Sets: (All)
-Aliases: Rules
+Aliases:
 
 Required: True
 Position: Named
@@ -260,7 +260,7 @@ Specifies the scheduled days.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
-Aliases: ScheduleDays
+Aliases:
 
 Required: True
 Position: Named
@@ -275,7 +275,7 @@ Specifies the scheduled hours.
 ```yaml
 Type: System.Collections.Generic.List`1[System.Nullable`1[System.Int32]]
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
-Aliases: ScheduleHours
+Aliases:
 
 Required: True
 Position: Named
@@ -290,7 +290,7 @@ Specifies the scheduled minutes.
 ```yaml
 Type: System.Collections.Generic.List`1[System.Nullable`1[System.Int32]]
 Parameter Sets: Parameters for New-AzureRmAutoscaleProfile cmdlet using recurrent scheduling
-Aliases: ScheduleMinutes
+Aliases:
 
 Required: True
 Position: Named

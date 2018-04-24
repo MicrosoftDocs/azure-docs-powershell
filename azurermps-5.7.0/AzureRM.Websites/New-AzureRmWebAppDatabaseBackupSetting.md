@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module Name: AzureRM
+external_help_file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module_Name: AzureRM
 ms.assetid: 22ACB910-0C41-4649-8D22-537E38CB4570
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/new-azurermwebappdatabasebackupsetting
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/new-azurermwebappdatabasebackupsetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/New-AzureRmWebAppDatabaseBackupSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/New-AzureRmWebAppDatabaseBackupSetting.md

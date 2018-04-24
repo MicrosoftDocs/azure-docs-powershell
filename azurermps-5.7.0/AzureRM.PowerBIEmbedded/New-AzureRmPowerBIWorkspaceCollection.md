@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
-Module Name: AzureRM.PowerBIEmbedded
+external_help_file: Microsoft.Azure.Commands.Management.PowerBIEmbedded.dll-Help.xml
+Module_Name: AzureRM.PowerBIEmbedded
 ms.assetid: 9F9E4273-6747-4963-AF1F-C0AEB46770A4
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded/new-azurermpowerbiworkspacecollection
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded/new-azurermpowerbiworkspacecollection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/New-AzureRmPowerBIWorkspaceCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/New-AzureRmPowerBIWorkspaceCollection.md

@@ -1,13 +1,11 @@
 ---
-Module Name: AzureRM.Storage
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.Storage
+Module_Guid: da67eaa7-4cb1-4bfa-a194-8bf3faae8ac5
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/AzureRM.Storage.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Stack/Commands.Management.Storage/help/AzureRM.Storage.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/AzureRM.Storage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/AzureRM.Storage.md
 ---
 
 # AzureRM.Storage Module
@@ -15,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 This topic displays help topics for the Azure Storage Management Cmdlets.
 
 ## AzureRM.Storage Cmdlets
+### [Add-AzureRmStorageAccountNetworkRule](Add-AzureRmStorageAccountNetworkRule.md)
+ Add IpRules or VirtualNetworkRules to the NetworkRule property of a Storage account
+
 ### [Get-AzureRmStorageAccount](Get-AzureRmStorageAccount.md)
 Gets a Storage account.
 
@@ -22,7 +23,10 @@ Gets a Storage account.
 Gets the access keys for an Azure Storage account.
 
 ### [Get-AzureRmStorageAccountNameAvailability](Get-AzureRmStorageAccountNameAvailability.md)
-Checks the availability of a storage account name.
+Checks the availability of a Storage account name.
+
+### [Get-AzureRmStorageAccountNetworkRuleSet](Get-AzureRmStorageAccountNetworkRuleSet.md)
+Get the NetWorkRule property of a Storage account
 
 ### [Get-AzureRmStorageUsage](Get-AzureRmStorageUsage.md)
 Gets the Storage resource usage of the current subscription.
@@ -36,9 +40,15 @@ Regenerates a storage key for an Azure Storage account.
 ### [Remove-AzureRmStorageAccount](Remove-AzureRmStorageAccount.md)
 Removes a Storage account from Azure.
 
+### [Remove-AzureRmStorageAccountNetworkRule](Remove-AzureRmStorageAccountNetworkRule.md)
+Remove IpRules or VirtualNetworkRules from the NetWorkRule property of a Storage account
+
 ### [Set-AzureRmCurrentStorageAccount](Set-AzureRmCurrentStorageAccount.md)
 Modifies the current Storage account of the specified subscription.
 
 ### [Set-AzureRmStorageAccount](Set-AzureRmStorageAccount.md)
 Modifies a Storage account.
+
+### [Update-AzureRmStorageAccountNetworkRuleSet](Update-AzureRmStorageAccountNetworkRuleSet.md)
+Update the NetworkRule property of a Storage account
 

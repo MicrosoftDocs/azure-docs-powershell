@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-Module Name: AzureRM.Dns
+external_help_file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+Module_Name: AzureRM.Dns
 ms.assetid: A8E230A0-5057-40BC-81CD-6D397A503A84
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.dns/remove-azurermdnszone
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.dns/remove-azurermdnszone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzureRmDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzureRmDnsZone.md
@@ -17,13 +17,13 @@ Removes a DNS zone from a resource group.
 
 ### Fields
 ```
-Remove-AzureRmDnsZone -Name <String> -ResourceGroupName <String> [-Force] [-PassThru]
+Remove-AzureRmDnsZone -Name <String> -ResourceGroupName <String> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Object
 ```
-Remove-AzureRmDnsZone -Zone <DnsZone> [-Overwrite] [-Force] [-PassThru]
+Remove-AzureRmDnsZone -Zone <DnsZone> [-Overwrite] [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -57,24 +57,6 @@ The credentials, account, tenant, and subscription used for communication with a
 Type: IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-This parameter is deprecated for this cmdlet.
-It will be removed in a future release.
-
-To control whether this cmdlet prompts you for confirmation, use the *Confirm* parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-Module Name: AzureRM.Dns
+external_help_file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+Module_Name: AzureRM.Dns
 ms.assetid: B78F3E8B-C7D2-458C-AB23-06F584FE97E0
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.dns/new-azurermdnszone
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.dns/new-azurermdnszone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/New-AzureRmDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/New-AzureRmDnsZone.md

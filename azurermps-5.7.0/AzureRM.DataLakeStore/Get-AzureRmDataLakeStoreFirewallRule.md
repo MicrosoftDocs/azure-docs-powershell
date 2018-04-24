@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
-Module Name: AzureRM.DataLakeStore
+external_help_file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module_Name: AzureRM.DataLakeStore
 ms.assetid: 7D27F7B1-BAF8-4A01-8BA7-A75A4CFAE370
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/get-azurermdatalakestorefirewallrule
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/get-azurermdatalakestorefirewallrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreFirewallRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Get-AzureRmDataLakeStoreFirewallRule.md
@@ -79,7 +79,7 @@ The name of the firewall rule to retrieve
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -94,7 +94,7 @@ Name of resource group under which want to retrieve the specified account's spec
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -122,4 +122,3 @@ The list of firewall rules in the specified account.
 ## NOTES
 
 ## RELATED LINKS
-

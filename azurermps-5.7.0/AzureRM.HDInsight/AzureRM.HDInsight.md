@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.HDInsight
-Module Guid: 3fd1475f-cb23-4ffb-bf08-33d94b7d1acb
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.HDInsight
+Module_Guid: 3fd1475f-cb23-4ffb-bf08-33d94b7d1acb
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/AzureRM.HDInsight.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/AzureRM.HDInsight.md

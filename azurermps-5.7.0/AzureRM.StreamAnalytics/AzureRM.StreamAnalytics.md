@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.StreamAnalytics
-Module Guid: 59713673-194f-418a-b1f2-ac60db82edf9
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.StreamAnalytics
+Module_Guid: 59713673-194f-418a-b1f2-ac60db82edf9
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/AzureRM.StreamAnalytics.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/StreamAnalytics/Commands.StreamAnalytics/help/AzureRM.StreamAnalytics.md

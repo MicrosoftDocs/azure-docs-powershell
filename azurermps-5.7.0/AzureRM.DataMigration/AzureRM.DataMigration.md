@@ -1,7 +1,7 @@
 ---
-Module Name: AzureRM.DataMigration
-Module Guid: 150d9544-6348-4373-806f-10cd0b4de4cb
-Help Version: 0.1.0
+Module_Name: AzureRM.DataMigration
+Module_Guid: 150d9544-6348-4373-806f-10cd0b4de4cb
+Help_Version: 0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/AzureRM.DataMigration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/AzureRM.DataMigration.md

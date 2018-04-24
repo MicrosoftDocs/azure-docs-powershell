@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
-Module Name: AzureRM.EventHub
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhub
+external_help_file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module_Name: AzureRM.EventHub
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHub.md
@@ -26,14 +26,14 @@ If an Event Hub name is not provided, a list of all Event Hubs in the specified 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - specified EventHub
 ```
 PS C:\> Get-AzureRmEventHub -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
 ```
 
 Returns the details of the Event Hub \`MyEventHubName\`.
 
-### Example 2
+### Example 2 - List of EventHub in specified Namespace
 ```
 PS C:\> Get-AzureRmEventHub -ResourceGroup MyResourceGroupName -NamespaceName MyNamespaceName
 ```

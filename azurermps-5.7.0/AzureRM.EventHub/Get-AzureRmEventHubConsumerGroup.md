@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
-Module Name: AzureRM.EventHub
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubconsumergroup
+external_help_file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module_Name: AzureRM.EventHub
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubconsumergroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubConsumerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubConsumerGroup.md
@@ -26,7 +26,7 @@ If the name of a consumer group is not provided, a list of consumer groups in th
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 
 ```
 PS C:\> Get-AzureRmEventHubConsumerGroup -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -ConsumerGroupName MyConsumerGroupName
 ```

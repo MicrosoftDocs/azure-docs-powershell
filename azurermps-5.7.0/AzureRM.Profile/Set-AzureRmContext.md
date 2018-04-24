@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
-Module Name: AzureRM.Profile
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.profile/set-azurermcontext
+external_help_file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+Module_Name: AzureRM.Profile
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.profile/set-azurermcontext
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Set-AzureRmContext.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/Set-AzureRmContext.md

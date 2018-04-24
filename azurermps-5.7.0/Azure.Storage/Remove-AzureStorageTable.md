@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 1B29AB8C-95DD-4C4F-86E2-2F81E8020CEA
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestoragetable
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/remove-azurestoragetable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Remove-AzureStorageTable.md

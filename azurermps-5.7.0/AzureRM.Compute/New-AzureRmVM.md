@@ -1,9 +1,11 @@
-﻿---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module Name: AzureRM.Compute
+---
+external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module_Name: AzureRM.Compute
 ms.assetid: 05E6155D-4F0E-406B-9312-77AD97EF66EE
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/new-azurermvm
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/new-azurermvm
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/New-AzureRmVM.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/New-AzureRmVM.md
 ---
 
 # New-AzureRmVM
@@ -15,12 +17,13 @@ Creates a virtual machine.
 
 ### SimpleParameterSet (Default)
 ```
-New-AzureRmVM [[-ResourceGroupName] <String>] [[-Location] <String>] -Name <String> -Credential <PSCredential>
- [-VirtualNetworkName <String>] [-AddressPrefix <String>] [-SubnetName <String>]
+New-AzureRmVM [[-ResourceGroupName] <String>] [[-Location] <String>] [[-Zone] <String[]>] -Name <String>
+ -Credential <PSCredential> [-VirtualNetworkName <String>] [-AddressPrefix <String>] [-SubnetName <String>]
  [-SubnetAddressPrefix <String>] [-PublicIpAddressName <String>] [-DomainNameLabel <String>]
  [-AllocationMethod <String>] [-SecurityGroupName <String>] [-OpenPorts <Int32[]>] [-ImageName <String>]
  [-Size <String>] [-AvailabilitySetName <String>] [-AsJob] [-DataDiskSizeInGb <Int32[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-SystemAssignedIdentity] [-UserAssignedIdentity <String>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### DefaultParameterSet
@@ -37,7 +40,8 @@ New-AzureRmVM [[-ResourceGroupName] <String>] [[-Location] <String>] -Name <Stri
  [-SubnetAddressPrefix <String>] [-PublicIpAddressName <String>] [-DomainNameLabel <String>]
  [-AllocationMethod <String>] [-SecurityGroupName <String>] [-OpenPorts <Int32[]>] -DiskFile <String> [-Linux]
  [-Size <String>] [-AvailabilitySetName <String>] [-AsJob] [-DataDiskSizeInGb <Int32[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-SystemAssignedIdentity] [-UserAssignedIdentity <String>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -497,6 +501,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SystemAssignedIdentity
+If the parameter is present then the VM is assingned a managed system identity that is auto generated.
+
+```yaml
+Type: SwithParameter
+Parameter Sets: SimpleParameterSet, DiskFileParameterSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tag
 Specifies that resources and resource groups can be tagged with a set of name-value pairs.
 Adding tags to resources enables you to group resources together across resource groups and to create your own views.
@@ -505,12 +524,27 @@ Each resource or resource group can have a maximum of 15 tags.
 ```yaml
 Type: Hashtable
 Parameter Sets: DefaultParameterSet
-Aliases: Tags
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserAssignedIdentity
+The name of a managed service identity that should be assigned to the VM.
+
+```yaml
+Type: String
+Parameter Sets: SimpleParameterSet, DiskFileParameterSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -551,13 +585,25 @@ Specifies the zone list of the virtual machine.
 
 ```yaml
 Type: String[]
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String[]
 Parameter Sets: DefaultParameterSet
 Aliases:
 
 Required: False
 Position: 3
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

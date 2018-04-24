@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module Name: AzureRM
+external_help_file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module_Name: AzureRM
 ms.assetid: 65A78654-A490-4B60-8C16-B0CC597EE995
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/remove-azurermwebappbackup
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/remove-azurermwebappbackup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzureRmWebAppBackup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzureRmWebAppBackup.md

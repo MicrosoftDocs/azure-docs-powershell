@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-Module Name: Azure.Storage
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module_Name: Azure.Storage
 ms.assetid: E54BFD3A-CD54-4E6B-9574-92B8D3E88FF3
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestorageblob
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestorageblob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageBlob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageBlob.md

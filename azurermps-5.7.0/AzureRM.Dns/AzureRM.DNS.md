@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.Dns
-Module Guid: 5e5ed8bc-27bf-4380-9de1-4b22ba0920b2
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.Dns
+Module_Guid: 5e5ed8bc-27bf-4380-9de1-4b22ba0920b2
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/AzureRM.DNS.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/AzureRM.DNS.md

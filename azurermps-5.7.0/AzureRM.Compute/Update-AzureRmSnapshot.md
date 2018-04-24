@@ -1,9 +1,10 @@
 ---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-online version:
+external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module_Name: AzureRM.Compute
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/update-azurermsnapshot
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Update-AzureRmSnapshot.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Update-AzureRmSnapshot.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Update-AzureRmSnapshot.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Update-AzureRmSnapshot.md
 ---
 
 # Update-AzureRmSnapshot
@@ -16,13 +17,14 @@ Updates a snapshot.
 ### DefaultParameter (Default)
 ```
 Update-AzureRmSnapshot [-ResourceGroupName] <String> [-SnapshotName] <String>
- [-SnapshotUpdate] <SnapshotUpdate> [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SnapshotUpdate] <PSSnapshotUpdate> [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### FriendMethod
 ```
-Update-AzureRmSnapshot [-ResourceGroupName] <String> [-SnapshotName] <String> [-Snapshot] <Snapshot> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Update-AzureRmSnapshot [-ResourceGroupName] <String> [-SnapshotName] <String> [-Snapshot] <PSSnapshot> [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,13 +66,43 @@ These commands also update an existing snapshot with name 'Snapshot01' in resour
 
 ## PARAMETERS
 
+### -AsJob
+Run cmdlet in the background and return a Job to track progress.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Specifies the name of a resource group.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -83,9 +115,9 @@ Accept wildcard characters: False
 Specifies a local snapshot object.
 
 ```yaml
-Type: Snapshot
+Type: PSSnapshot
 Parameter Sets: FriendMethod
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -113,9 +145,9 @@ Accept wildcard characters: False
 Specifies a local snapshot update object.
 
 ```yaml
-Type: SnapshotUpdate
+Type: PSSnapshotUpdate
 Parameter Sets: DefaultParameter
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -161,14 +193,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-Microsoft.Azure.Management.Compute.Models.SnapshotUpdate
-Microsoft.Azure.Management.Compute.Models.Snapshot
+Microsoft.Azure.Commands.Compute.Automation.Models.PSSnapshotUpdate
+Microsoft.Azure.Commands.Compute.Automation.Models.PSSnapshot
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Azure.Commands.Compute.Automation.Models.PSSnapshot
 
 ## NOTES
 
 ## RELATED LINKS
-

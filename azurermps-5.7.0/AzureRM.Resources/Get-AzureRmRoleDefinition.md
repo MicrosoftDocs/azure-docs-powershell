@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
-Module Name: AzureRM.Resources
+external_help_file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module_Name: AzureRM.Resources
 ms.assetid: 7740AC3B-F643-4F8D-8DC5-ACBF59323BD8
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermroledefinition
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermroledefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmRoleDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmRoleDefinition.md
@@ -17,7 +17,7 @@ Lists all Azure RBAC roles that are available for assignment.
 
 ### RoleDefinitionNameParameterSet
 ```
-Get-AzureRmRoleDefinition [[-Name] <String>] [-Scope <String>] [-AtScopeAndBelow]
+Get-AzureRmRoleDefinition [[-Name] <String>] [-Scope <String>] 
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -29,7 +29,7 @@ Get-AzureRmRoleDefinition -Id <Guid> [-Scope <String>] [-DefaultProfile <IAzureC
 
 ### RoleDefinitionCustomParameterSet
 ```
-Get-AzureRmRoleDefinition [-Scope <String>] [-Custom] [-AtScopeAndBelow]
+Get-AzureRmRoleDefinition [-Scope <String>] [-Custom] 
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -54,21 +54,6 @@ PS C:\> Get-AzureRmRoleDefinition
 Lists all RBAC role definitions
 
 ## PARAMETERS
-
-### -AtScopeAndBelow
-If specified, displays all role definitions.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: RoleDefinitionNameParameterSet, RoleDefinitionCustomParameterSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -Custom
 If specified, only displays the custom created roles in the directory.

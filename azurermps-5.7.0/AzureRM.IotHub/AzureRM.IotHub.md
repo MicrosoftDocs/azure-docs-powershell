@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.IotHub
-Module Guid: 51a3a993-fe39-4f8f-a437-2cb751584af5
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.IotHub
+Module_Guid: 51a3a993-fe39-4f8f-a437-2cb751584af5
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/AzureRM.IotHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/AzureRM.IotHub.md

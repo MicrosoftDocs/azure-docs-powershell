@@ -1,8 +1,8 @@
 ---
-Module Name: AzureRM.DataLakeStore
-Module Guid: 90dfd814-abce-4e1f-99b6-fe16760c079a
-Download Help Link: None
-Help Version: 1.0.0.0
+Module_Name: AzureRM.DataLakeStore
+Module_Guid: 90dfd814-abce-4e1f-99b6-fe16760c079a
+Download_Help_Link: None
+Help_Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/AzureRM.DataLakeStore.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/AzureRM.DataLakeStore.md

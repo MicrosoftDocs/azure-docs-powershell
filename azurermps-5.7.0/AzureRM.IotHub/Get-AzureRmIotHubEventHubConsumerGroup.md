@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
-Module Name: AzureRM.IotHub
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.iothub/get-azurermiothubeventhubconsumergroup
+external_help_file: Microsoft.Azure.Commands.IotHub.dll-Help.xml
+Module_Name: AzureRM.IotHub
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.iothub/get-azurermiothubeventhubconsumergroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzureRmIotHubEventHubConsumerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/IotHub/Commands.IotHub/help/Get-AzureRmIotHubEventHubConsumerGroup.md

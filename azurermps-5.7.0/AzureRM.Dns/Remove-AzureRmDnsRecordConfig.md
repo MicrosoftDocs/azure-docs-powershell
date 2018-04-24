@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-Module Name: AzureRM.Dns
+external_help_file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+Module_Name: AzureRM.Dns
 ms.assetid: D1A2326C-CD41-45A6-B37A-FC6176193B01
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.dns/remove-azurermdnsrecordconfig
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.dns/remove-azurermdnsrecordconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzureRmDnsRecordConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Remove-AzureRmDnsRecordConfig.md

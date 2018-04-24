@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
-Module Name: AzureRM.CognitiveServices
+external_help_file: Microsoft.Azure.Commands.Management.CognitiveServices.dll-Help.xml
+Module_Name: AzureRM.CognitiveServices
 ms.assetid: 11E2D82A-1DF1-4E19-8328-44674641D1BB
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cognitiveservices/set-azurermcognitiveservicesaccount
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.cognitiveservices/set-azurermcognitiveservicesaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Set-AzureRmCognitiveServicesAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/Set-AzureRmCognitiveServicesAccount.md

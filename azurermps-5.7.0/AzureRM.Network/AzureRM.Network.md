@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.Network
-Module Guid: eb75c732-e274-4a20-b502-e9958e63484a
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.Network
+Module_Guid: eb75c732-e274-4a20-b502-e9958e63484a
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/AzureRM.Network.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/AzureRM.Network.md

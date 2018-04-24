@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
-Module Name: AzureRM.ApplicationInsights
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.applicationinsights/remove-azurermapplicationinsights
+external_help_file: Microsoft.Azure.Commands.ApplicationInsights.dll-Help.xml
+Module_Name: AzureRM.ApplicationInsights
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.applicationinsights/remove-azurermapplicationinsights
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Remove-AzureRmApplicationInsights.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/Remove-AzureRmApplicationInsights.md

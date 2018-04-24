@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 3B4F32F3-51ED-4851-B38F-172658186C96
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azurestoragetable
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azurestoragetable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageTable.md

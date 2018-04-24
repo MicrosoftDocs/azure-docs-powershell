@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Dns.dll-Help.xml
-Module Name: AzureRM.Dns
+external_help_file: Microsoft.Azure.Commands.Dns.dll-Help.xml
+Module_Name: AzureRM.Dns
 ms.assetid: 40179CF3-7896-4C45-BC18-4CB653B245B6
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.dns/get-azurermdnsrecordset
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.dns/get-azurermdnsrecordset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Get-AzureRmDnsRecordSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Dns/Commands.Dns/help/Get-AzureRmDnsRecordSet.md

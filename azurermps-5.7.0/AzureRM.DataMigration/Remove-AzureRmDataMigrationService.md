@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.DataMigration.dll-Help.xml
-Module Name: AzureRM.DataMigration
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datamigration/remove-azurermdatamigrationservice
+external_help_file: Microsoft.Azure.Commands.DataMigration.dll-Help.xml
+Module_Name: AzureRM.DataMigration
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datamigration/remove-azurermdatamigrationservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/Remove-AzureRmDataMigrationService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/Remove-AzureRmDataMigrationService.md

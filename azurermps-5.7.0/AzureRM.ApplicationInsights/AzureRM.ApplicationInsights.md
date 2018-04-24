@@ -1,8 +1,8 @@
 ---
-Module Name: AzureRM.ApplicationInsights
-Module Guid: da67eaa7-4cb1-4bfa-a194-8bf3faae8ac6
-Download Help Link: None
-Help Version: 0.1.2
+Module_Name: AzureRM.ApplicationInsights
+Module_Guid: da67eaa7-4cb1-4bfa-a194-8bf3faae8ac6
+Download_Help_Link: None
+Help_Version: 0.1.2
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/AzureRM.ApplicationInsights.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ApplicationInsights/Commands.ApplicationInsights/help/AzureRM.ApplicationInsights.md

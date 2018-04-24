@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.ManagementPartner.dll-Help.xml
-Module Name: AzureRM.ManagementPartner
-online version: http://go.microsoft.com/fwlink/?LinkID=393045
+external_help_file: Microsoft.Azure.Commands.ManagementPartner.dll-Help.xml
+Module_Name: AzureRM.ManagementPartner
+online_version: http://go.microsoft.com/fwlink/?LinkID=393045
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagementPartner/Commands.Partner/help/Remove-AzureRmManagementPartner.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagementPartner/Commands.Partner/help/Remove-AzureRmManagementPartner.md

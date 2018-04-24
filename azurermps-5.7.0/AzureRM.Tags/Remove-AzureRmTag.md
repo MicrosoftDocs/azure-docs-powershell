@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Tags.dll-Help.xml
-Module Name: AzureRM
+external_help_file: Microsoft.Azure.Commands.Tags.dll-Help.xml
+Module_Name: AzureRM
 ms.assetid: 66B25541-0FA5-46CF-90D8-FE9527BE11C6
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.tags/remove-azurermtag
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.tags/remove-azurermtag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/Remove-AzureRmTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Tags/Commands.Tags/help/Remove-AzureRmTag.md

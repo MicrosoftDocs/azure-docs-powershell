@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
-Module Name: AzureRM.Media
+external_help_file: Microsoft.Azure.Commands.Media.dll-Help.xml
+Module_Name: AzureRM.Media
 ms.assetid: D28EB28D-DBC6-48D5-AB0A-C56F56CD0104
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.media/set-azurermmediaservicekey
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.media/set-azurermmediaservicekey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Set-AzureRmMediaServiceKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Set-AzureRmMediaServiceKey.md

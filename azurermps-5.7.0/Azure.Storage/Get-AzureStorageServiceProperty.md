@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
-Module Name: Azure.Storage
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestorageserviceproperty
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+Module_Name: Azure.Storage
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestorageserviceproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageServiceProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Get-AzureStorageServiceProperty.md

@@ -1,7 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+external_help_file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+Module_Name: AzureRM.Storage
 ms.assetid: F6EA099A-D588-49AE-9D2C-865BC32685BA
-online version:
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage/get-azurermstorageaccountnameavailability
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzureRmStorageAccountNameAvailability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzureRmStorageAccountNameAvailability.md
@@ -10,12 +11,13 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Get-AzureRmStorageAccountNameAvailability
 
 ## SYNOPSIS
-Checks the availability of a storage account name.
+Checks the availability of a Storage account name.
 
 ## SYNTAX
 
 ```
-Get-AzureRmStorageAccountNameAvailability [-Name] <String> [<CommonParameters>]
+Get-AzureRmStorageAccountNameAvailability [-Name] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,14 +25,29 @@ The **Get-AzureRmStorageAccountNameAvailability** cmdlet checks whether the name
 
 ## EXAMPLES
 
-### Example 1: Check availability of a storage account name
+### Example 1: Check availability of a Storage account name
 ```
-PS C:\>Get-AzureRmStorageAccountNameAvailability -Name 'ContosoStorage03'
+PS C:\>Get-AzureRmStorageAccountNameAvailability -Name 'contosostorage03'
 ```
 
 This command checks the availability of the name ContosoStorage03.
 
 ## PARAMETERS
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with Azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 Specifies the name of the Storage account that this cmdlet checks.
@@ -57,8 +74,12 @@ This cmdlet does not accept any input.
 
 ## OUTPUTS
 
+### Microsoft.Azure.Management.Storage.Models.CheckNameAvailabilityResult
+
 ## NOTES
 
 ## RELATED LINKS
 
 [Azure Storage Manager Cmdlets](./AzureRM.Storage.md)
+
+

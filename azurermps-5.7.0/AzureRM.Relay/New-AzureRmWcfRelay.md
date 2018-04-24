@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.Relay.dll-Help.xml
-Module Name: AzureRM
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.relay/new-azurermwcfrelay
+external_help_file: Microsoft.Azure.Commands.Relay.dll-Help.xml
+Module_Name: AzureRM
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.relay/new-azurermwcfrelay
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/New-AzureRmWcfRelay.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Relay/Commands.Relay/help/New-AzureRmWcfRelay.md

@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.Commands.ManagedServiceIdentity.dll-Help.xml
-Module Name: AzureRM.ManagedServiceIdentity
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.managedserviceidentity/new-azurermuserassignedidentity
+external_help_file: Microsoft.Azure.Commands.ManagedServiceIdentity.dll-Help.xml
+Module_Name: AzureRM.ManagedServiceIdentity
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.managedserviceidentity/new-azurermuserassignedidentity
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagedServiceIdentity/Commands.ManagedServiceIdentity/help/New-AzureRmUserAssignedIdentity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagedServiceIdentity/Commands.ManagedServiceIdentity/help/New-AzureRmUserAssignedIdentity.md

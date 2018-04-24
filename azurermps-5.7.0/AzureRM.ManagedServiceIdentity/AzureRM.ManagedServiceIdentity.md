@@ -1,8 +1,8 @@
 ---
-Module Name: AzureRM.ManagedServiceIdentity
-Module Guid: 2a27df8b-15e3-4fb9-b885-22c6bcafc203
-Download Help Link:
-Help Version: 1.0.0.0
+Module_Name: AzureRM.ManagedServiceIdentity
+Module_Guid: 2a27df8b-15e3-4fb9-b885-22c6bcafc203
+Download_Help_Link: 
+Help_Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagedServiceIdentity/Commands.ManagedServiceIdentity/help/AzureRM.ManagedServiceIdentity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagedServiceIdentity/Commands.ManagedServiceIdentity/help/AzureRM.ManagedServiceIdentity.md

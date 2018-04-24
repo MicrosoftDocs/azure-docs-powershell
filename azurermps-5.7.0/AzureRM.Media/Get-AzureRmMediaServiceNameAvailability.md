@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
-Module Name: AzureRM.Media
+external_help_file: Microsoft.Azure.Commands.Media.dll-Help.xml
+Module_Name: AzureRM.Media
 ms.assetid: 23C6C9D3-A745-46C8-AB2C-B874223FBFFF
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.media/get-azurermmediaservicenameavailability
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.media/get-azurermmediaservicenameavailability
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Get-AzureRmMediaServiceNameAvailability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Get-AzureRmMediaServiceNameAvailability.md

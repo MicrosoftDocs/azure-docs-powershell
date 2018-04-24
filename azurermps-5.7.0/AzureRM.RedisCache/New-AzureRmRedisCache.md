@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
-Module Name: AzureRM.RedisCache
+external_help_file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+Module_Name: AzureRM.RedisCache
 ms.assetid: 81179AFE-6524-4F59-8BC2-3E152F51D1DD
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache/new-azurermrediscache
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache/new-azurermrediscache
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzureRmRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/New-AzureRmRedisCache.md
@@ -16,11 +16,11 @@ Creates a Redis Cache.
 ## SYNTAX
 
 ```
-New-AzureRmRedisCache -ResourceGroupName <String> -Name <String> -Location <String> [-RedisVersion <String>]
- [-Size <String>] [-Sku <String>] [-MaxMemoryPolicy <String>] [-RedisConfiguration <Hashtable>]
- [-EnableNonSslPort <Boolean>] [-TenantSettings <Hashtable>] [-ShardCount <Int32>] [-VirtualNetwork <String>]
- [-Subnet <String>] [-SubnetId <String>] [-StaticIP <String>] [-Tag <Hashtable>] [-Zone <String[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzureRmRedisCache -ResourceGroupName <String> -Name <String> -Location <String> [-Size <String>]
+ [-Sku <String>] [-RedisConfiguration <Hashtable>] [-EnableNonSslPort <Boolean>]
+ [-TenantSettings <Hashtable>] [-ShardCount <Int32>] [-SubnetId <String>] [-StaticIP <String>]
+ [-Tag <Hashtable>] [-Zone <String[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -145,25 +145,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MaxMemoryPolicy
-This parameter has been deprecated.
-Use the *RedisConfiguration* parameter to set maxmemory-policy.
-For example: 
-
-`-RedisConfiguration @{"maxmemory-policy" = "allkeys-lru"}`
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Name
 Specifies the name of the Redis Cache to create.
 
@@ -225,21 +206,6 @@ For more information, see Manage Azure Redis Cache with Azure PowerShellhttp://g
 
 ```yaml
 Type: Hashtable
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RedisVersion
-This parameter is deprecated and will be removed from future releases.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -370,21 +336,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Subnet
-Specifies the name of the subnet in which to deploy the Redis Cache.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -SubnetId
 ```yaml
 Type: String
@@ -418,21 +369,6 @@ This parameter has been deprecated.
 
 ```yaml
 Type: Hashtable
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VirtualNetwork
-Specifies the resource ID of the virtual network in which to deploy the Redis Cache.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 

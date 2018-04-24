@@ -1,10 +1,8 @@
 ---
-Module Name: AzureRM.ServiceFabric
-Module Guid: 60f3ba88-443f-46ff-88a3-318cfd11c1da
-Download Help Link:
-  [object Object]:
-Help Version:
-  [object Object]: null
+Module_Name: AzureRM.ServiceFabric
+Module_Guid: 60f3ba88-443f-46ff-88a3-318cfd11c1da
+Download_Help_Link: {{Please enter FwLink manually}}
+Help_Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/AzureRM.ServiceFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/AzureRM.ServiceFabric.md

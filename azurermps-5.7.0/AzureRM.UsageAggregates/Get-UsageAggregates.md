@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.UsageAggregates.dll-Help.xml
-Module Name: AzureRM
+external_help_file: Microsoft.Azure.Commands.UsageAggregates.dll-Help.xml
+Module_Name: AzureRM
 ms.assetid: 52B3ECCB-80E5-4E16-954A-B83D0BDC7E22
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.usageaggregates/get-usageaggregates
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.usageaggregates/get-usageaggregates
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/UsageAggregates/Commands.UsageAggregates/help/Get-UsageAggregates.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/UsageAggregates/Commands.UsageAggregates/help/Get-UsageAggregates.md

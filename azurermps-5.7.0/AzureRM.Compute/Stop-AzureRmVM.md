@@ -1,9 +1,11 @@
-﻿---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module Name: AzureRM.Compute
+---
+external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module_Name: AzureRM.Compute
 ms.assetid: 7C3CF963-6F1A-444C-B90C-C1D24F89204D
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/stop-azurermvm
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/stop-azurermvm
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Stop-AzureRmVM.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Stop-AzureRmVM.md
 ---
 
 # Stop-AzureRmVM

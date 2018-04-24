@@ -1,8 +1,8 @@
 ---
-Module Name: AzureRM.DataFactoryV2
-Module Guid: e3c0f6bc-fe96-41a0-88f4-5e490a91f05d
-Download Help Link:
-Help Version: null
+Module_Name: AzureRM.DataFactoryV2
+Module_Guid: e3c0f6bc-fe96-41a0-88f4-5e490a91f05d
+Download_Help_Link: 
+Help_Version: 
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactoryV2/Commands.DataFactoryV2/help/AzureRM.DataFactoryV2.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactoryV2/Commands.DataFactoryV2/help/AzureRM.DataFactoryV2.md

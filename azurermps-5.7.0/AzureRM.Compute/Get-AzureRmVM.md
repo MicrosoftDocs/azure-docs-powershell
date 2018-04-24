@@ -1,9 +1,11 @@
-﻿---
-external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module Name: AzureRM.Compute
+---
+external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module_Name: AzureRM.Compute
 ms.assetid: 6250EC11-79CF-428B-A72F-9BD72C1751F0
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvm
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvm
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmVM.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmVM.md
 ---
 
 # Get-AzureRmVM

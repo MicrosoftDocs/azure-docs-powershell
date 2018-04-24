@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: FA98E64B-D589-4653-9ACC-86573FAF4550
-online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/set-azurestoragefilecontent
+online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/set-azurestoragefilecontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageFileContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Set-AzureStorageFileContent.md

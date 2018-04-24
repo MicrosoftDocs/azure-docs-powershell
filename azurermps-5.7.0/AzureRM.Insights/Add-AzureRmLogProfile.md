@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module Name: AzureRM.Insights
+external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module_Name: AzureRM.Insights
 ms.assetid: 18D5B95E-4CF1-4C79-AE8B-9F4DA49B46A9
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/add-azurermlogprofile
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/add-azurermlogprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Add-AzureRmLogProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Add-AzureRmLogProfile.md
@@ -50,7 +50,7 @@ Specifies the list of categories.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: Categories
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ Get-AzureLocation | Select DisplayName
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: Locations
+Aliases:
 
 Required: True
 Position: Named

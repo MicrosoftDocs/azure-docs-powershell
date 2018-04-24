@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Media.dll-Help.xml
-Module Name: AzureRM.Media
+external_help_file: Microsoft.Azure.Commands.Media.dll-Help.xml
+Module_Name: AzureRM.Media
 ms.assetid: 0FA49058-F3A7-4ED9-93F2-0C84BC130FB7
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.media/set-azurermmediaservice
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.media/set-azurermmediaservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Set-AzureRmMediaService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/Set-AzureRmMediaService.md
@@ -105,7 +105,7 @@ The tags associated with the media account.
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: Tags
+Aliases:
 
 Required: False
 Position: Named

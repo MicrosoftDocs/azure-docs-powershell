@@ -1,8 +1,8 @@
 ---
-external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module Name: AzureRM.Insights
+external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module_Name: AzureRM.Insights
 ms.assetid: B1000C10-265E-4465-B167-F1251470BE3E
-online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermalertruleemail
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermalertruleemail
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAlertRuleEmail.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAlertRuleEmail.md
@@ -53,7 +53,7 @@ Specifies a list of comma-separated e-mail addresses.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: CustomEmails
+Aliases:
 
 Required: False
 Position: 0
@@ -83,7 +83,7 @@ Indicates that this operation sends an e-mail to the service owners when the rul
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: SendToServiceOwners
+Aliases:
 
 Required: False
 Position: Named
