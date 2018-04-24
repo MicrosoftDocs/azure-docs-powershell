@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Get-AzureRmVM
 
 ## SYNOPSIS
-Gets the properties of a virtual machine.
+Gets the properties of an Azure Resource Manager (ARM) virtual machine.
 
 ## SYNTAX
 
