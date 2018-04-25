@@ -1,11 +1,10 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module_Name: AzureRM.Compute
+external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: E2A56E55-30A3-4A2F-80AE-9D166840909E
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermremotedesktopfile
+online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmRemoteDesktopFile.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmRemoteDesktopFile.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmRemoteDesktopFile.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmRemoteDesktopFile.md
 ---
 
 # Get-AzureRmRemoteDesktopFile
@@ -18,13 +17,13 @@ Gets an .rdp file.
 ### Download
 ```
 Get-AzureRmRemoteDesktopFile [-ResourceGroupName] <String> [-Name] <String> [-LocalPath] <String>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### Launch
 ```
 Get-AzureRmRemoteDesktopFile [-ResourceGroupName] <String> [-Name] <String> [[-LocalPath] <String>] [-Launch]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,28 +41,13 @@ The command stores the result in the file named D:\RemoteDesktopFile07.rdp.
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Launch
 Indicates that this cmdlet launches Remote Desktop after it gets the .rdp file.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Launch
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -78,7 +62,7 @@ Specifies the local full path where this cmdlet stores the .rdp file.
 ```yaml
 Type: String
 Parameter Sets: Download
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -90,7 +74,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Launch
-Aliases:
+Aliases: 
 
 Required: False
 Position: 2
@@ -120,7 +104,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -142,3 +126,4 @@ This cmdlet does not accept any input.
 ## NOTES
 
 ## RELATED LINKS
+

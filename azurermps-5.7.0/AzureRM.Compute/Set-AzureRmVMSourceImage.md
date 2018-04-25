@@ -1,11 +1,10 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module_Name: AzureRM.Compute
+external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 91B2DE2F-442D-4428-8A6F-9C2CEC181CA7
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/set-azurermvmsourceimage
+online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMSourceImage.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMSourceImage.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMSourceImage.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMSourceImage.md
 ---
 
 # Set-AzureRmVMSourceImage
@@ -18,13 +17,12 @@ Specifies the image for a virtual machine.
 ### ImageReferenceSkuParameterSet (Default)
 ```
 Set-AzureRmVMSourceImage [-VM] <PSVirtualMachine> [-PublisherName] <String> [-Offer] <String> [-Skus] <String>
- [-Version] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-Version] <String> [<CommonParameters>]
 ```
 
 ### ImageReferenceIdParameterSet
 ```
-Set-AzureRmVMSourceImage [-VM] <PSVirtualMachine> [-Id] <String> [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+Set-AzureRmVMSourceImage [-VM] <PSVirtualMachine> [-Id] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,28 +48,13 @@ The **Get-AzureRmVMImagePublisher**, **Get-AzureRmVMImageOffer**, **Get-AzureRmV
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Id
 Specifies the ID.
 
 ```yaml
 Type: String
 Parameter Sets: ImageReferenceIdParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -87,7 +70,7 @@ To obtain an image offer, use the Get-AzureRmVMImageOffer cmdlet.
 ```yaml
 Type: String
 Parameter Sets: ImageReferenceSkuParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -103,7 +86,7 @@ To obtain a publisher, use the Get-AzureRmVMImagePublisher cmdlet.
 ```yaml
 Type: String
 Parameter Sets: ImageReferenceSkuParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -119,7 +102,7 @@ To obtain SKUs, use the Get-AzureRmVMImageSku cmdlet.
 ```yaml
 Type: String
 Parameter Sets: ImageReferenceSkuParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -135,7 +118,7 @@ To use the latest version, specify a value of latest instead of a particular ver
 ```yaml
 Type: String
 Parameter Sets: ImageReferenceSkuParameterSet
-Aliases:
+Aliases: 
 
 Required: True
 Position: 4
@@ -164,12 +147,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### PSVirtualMachine
-Parameter 'VM' accepts value of type 'PSVirtualMachine' from the pipeline
+### None
+This cmdlet does not accept any input.
 
 ## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 
 ## NOTES
 

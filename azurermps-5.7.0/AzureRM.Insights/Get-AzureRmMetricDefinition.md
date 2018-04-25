@@ -1,8 +1,8 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module_Name: AzureRM.Insights
+external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: 7915A7AC-5A47-4868-B846-2896BCEBFAB2
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/get-azurermmetricdefinition
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/get-azurermmetricdefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetricDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/Get-AzureRmMetricDefinition.md
@@ -167,7 +167,7 @@ Specifies an array of names of metrics.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: MetricNames
 
 Required: False
 Position: Named

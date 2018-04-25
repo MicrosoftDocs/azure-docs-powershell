@@ -1,11 +1,10 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module_Name: AzureRM.Compute
+external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 45F35BDD-969E-4521-9E8D-3499A15434A6
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmextensionimagetype
+online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmVMExtensionImageType.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Get-AzureRmVMExtensionImageType.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMExtensionImageType.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Get-AzureRmVMExtensionImageType.md
 ---
 
 # Get-AzureRmVMExtensionImageType
@@ -16,8 +15,7 @@ Gets the type of an Azure extension.
 ## SYNTAX
 
 ```
-Get-AzureRmVMExtensionImageType -Location <String> -PublisherName <String>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmVMExtensionImageType -Location <String> -PublisherName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,21 +32,6 @@ This command gets the extension image type for the specified publisher and locat
 
 ## PARAMETERS
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Location
 Specifies the location of an extension.
 This cmdlet gets the type for an extension at the location that this parameter specifies.
@@ -56,7 +39,7 @@ This cmdlet gets the type for an extension at the location that this parameter s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -73,7 +56,7 @@ This cmdlet gets the type for an extension from the publisher that this paramete
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -91,8 +74,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet does not accept any input.
 
 ## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineExtensionImageType
 
 ## NOTES
 

@@ -1,11 +1,9 @@
----
-external_help_file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-Module_Name: AzureRM.Storage
+﻿---
+external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
+Module Name: AzureRM.Storage
 ms.assetid: 11AAA319-DDBB-4156-9BE7-4DE8B80A904C
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage/get-azurermstorageusage
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage/get-azurermstorageusage
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzureRmStorageUsage.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzureRmStorageUsage.md
 ---
 
 # Get-AzureRmStorageUsage

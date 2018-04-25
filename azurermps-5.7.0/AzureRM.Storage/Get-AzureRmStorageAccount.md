@@ -1,8 +1,7 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
-Module_Name: AzureRM.Storage
+external help file: Microsoft.Azure.Commands.Management.Storage.dll-Help.xml
 ms.assetid: E53D5040-C1E8-4DC1-8371-F41C00B666E3
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage/get-azurermstorageaccount
+online version:
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/Get-AzureRmStorageAccount.md
@@ -17,14 +16,12 @@ Gets a Storage account.
 
 ### ResourceGroupParameterSet
 ```
-Get-AzureRmStorageAccount [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+Get-AzureRmStorageAccount [[-ResourceGroupName] <String>] [<CommonParameters>]
 ```
 
 ### AccountNameParameterSet
 ```
-Get-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzureRmStorageAccount [-ResourceGroupName] <String> [-Name] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,9 +29,9 @@ The **Get-AzureRmStorageAccount** cmdlet gets a specified Storage account or all
 
 ## EXAMPLES
 
-### Example 1: Get a specified Storage account
+### Example 1: Get a specified storage account
 ```
-PS C:\>Get-AzureRmStorageAccount -ResourceGroupName "RG01" -AccountName "mystorageaccount"
+PS C:\>Get-AzureRmStorageAccount -ResourceGroupName "RG01" -AccountName "MyStorageAccount"
 ```
 
 This command gets the specified Storage account.
@@ -54,21 +51,6 @@ PS C:\>Get-AzureRmStorageAccount
 This command gets all of the Storage accounts in the subscription.
 
 ## PARAMETERS
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Name
 Specifies the name of the Storage account to get.
@@ -91,7 +73,7 @@ Specifies the name of the resource group that contains the Storage account to ge
 ```yaml
 Type: String
 Parameter Sets: ResourceGroupParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -103,7 +85,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: AccountNameParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -122,8 +104,6 @@ This cmdlet does not accept any input.
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount
-
 ## NOTES
 
 ## RELATED LINKS
@@ -133,5 +113,3 @@ This cmdlet does not accept any input.
 [Remove-AzureRmStorageAccount](./Remove-AzureRmStorageAccount.md)
 
 [Set-AzureRmStorageAccount](./Set-AzureRmStorageAccount.md)
-
-

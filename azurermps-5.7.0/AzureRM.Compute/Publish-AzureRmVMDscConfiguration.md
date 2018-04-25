@@ -1,11 +1,10 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module_Name: AzureRM.Compute
+external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: FB9ACBA2-081E-4876-A21A-F5BA11CBEDA2
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/publish-azurermvmdscconfiguration
+online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Publish-AzureRmVMDscConfiguration.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Publish-AzureRmVMDscConfiguration.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Publish-AzureRmVMDscConfiguration.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Publish-AzureRmVMDscConfiguration.md
 ---
 
 # Publish-AzureRmVMDscConfiguration
@@ -19,15 +18,15 @@ Uploads a DSC script to Azure blob storage.
 ```
 Publish-AzureRmVMDscConfiguration [-ResourceGroupName] <String> [-ConfigurationPath] <String>
  [[-ContainerName] <String>] [-StorageAccountName] <String> [-StorageEndpointSuffix <String>] [-Force]
- [-SkipDependencyDetection] [-ConfigurationDataPath <String>] [-AdditionalPath <String[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SkipDependencyDetection] [-ConfigurationDataPath <String>] [-AdditionalPath <String[]>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### CreateArchive
 ```
 Publish-AzureRmVMDscConfiguration [-ConfigurationPath] <String> [[-OutputArchivePath] <String>] [-Force]
- [-SkipDependencyDetection] [-ConfigurationDataPath <String>] [-AdditionalPath <String[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SkipDependencyDetection] [-ConfigurationDataPath <String>] [-AdditionalPath <String[]>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,7 +78,7 @@ It gets downloaded to the virtual machine together with the configuration.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -96,7 +95,7 @@ It gets overwritten by the configuration data path provided through the Set-Azur
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -112,7 +111,7 @@ The file can be a Windows PowerShell script (.ps1) file or a Windows PowerShell 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -127,27 +126,12 @@ Specifies the name of the Azure storage container the configuration is uploaded 
 ```yaml
 Type: String
 Parameter Sets: UploadArchive
-Aliases:
+Aliases: 
 
 Required: False
 Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -157,7 +141,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -188,7 +172,7 @@ Specifies the name of the resource group that contains the storage account.
 ```yaml
 Type: String
 Parameter Sets: UploadArchive
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -203,7 +187,7 @@ Indicates that this cmdlet excludes DSC resource dependencies from the configura
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -218,7 +202,7 @@ Specifies the Azure storage account name that is used to upload the configuratio
 ```yaml
 Type: String
 Parameter Sets: UploadArchive
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -233,7 +217,7 @@ Specifies the suffix for the storage end point.
 ```yaml
 Type: String
 Parameter Sets: UploadArchive
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -279,12 +263,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String
-Parameter 'ConfigurationPath' accepts value of type 'String' from the pipeline
+### None
+This cmdlet does not accept any input.
 
 ## OUTPUTS
-
-### System.String
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
-external_help_file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
-Module_Name: AzureRM.EventHub
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubauthorizationrule
+external help file: Microsoft.Azure.Commands.EventHub.dll-Help.xml
+Module Name: AzureRM.EventHub
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub/get-azurermeventhubauthorizationrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/Get-AzureRmEventHubAuthorizationRule.md
@@ -36,55 +36,30 @@ Get-AzureRmEventHubAuthorizationRule [-ResourceGroupName] <String> [-Namespace] 
 The Get-AzureRmEventHubAuthorizationRule cmdlet gets either the details of an authorization rule, or a list of all authorization rules for a specified Event Hub.
 If the name of an authorization rule is provided, the details of that single authorization rule are returned.
 If the name of an authorization rule is not provided, a list of all authorization rules for the specified Event Hub is returned.
-If (Disaster Recovery) Alias name provided, the details of authorization rule of the Namespace for Alias configured is returned.
+If (Disaster Recovery) Alias name provided, the details of authorization rule of the Namespace for Alias configured is returned. 
 
 ## EXAMPLES
-### Example 1.0 - AuthorizationRule for namespace
+
+### Example 1
 ```
-PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Name MyAuthRuleName
-```
-
-Gets the authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
-
-
-### Example 1.1 - AuthorizationRules for namespace
-```
-PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
-```
-
-Gets a list of all authorization rules in the namespace \`MyNamespaceName\`.
-
-
-### Example 2.0 - AuthorizationRule for EventHub
-```
-PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -Name MyAuthRuleName
+PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -AuthorizationRule MyAuthRuleName
 ```
 
 Gets the authorization rule \`MyAuthRuleName\` in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
 
-
-### Example 2.1 - AuthorizationRules for EventHub
+### Example 2
 ```
 PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
 ```
 
-Gets list authorization rules in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
+Gets a list of all authorization rules in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
 
-
-### Example 3.0 - AuthorizationRule for Alias (GeoRecovery Configuration)
+### Example 3
 ```
 PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AliasName MyAliasNameName -Name MyAuthRuleName
 ```
 
 Gets the authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
-
-### Example 3.1 -AuthorizationRules for Alias (GeoRecovery Configuration)
-```
-PS C:\> Get-AzureRmEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AliasName MyAliasNameName
-```
-
-Gets a list of all authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
-
 
 ## PARAMETERS
 

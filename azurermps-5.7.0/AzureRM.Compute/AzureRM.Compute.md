@@ -1,11 +1,11 @@
 ---
-Module_Name: AzureRM.Compute
-Module_Guid: 0a83c907-1ffb-4d87-a492-c65ac7d7ed37
-Download_Help_Link: 
-Help_Version: 3.5.0.0
+Module Name: AzureRM.Compute
+Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Download Help Link:
+Help Version: 3.5.0.0
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/AzureRM.Compute.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/AzureRM.Compute.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/AzureRM.Compute.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/AzureRM.Compute.md
 ---
 
 # AzureRM.Compute Module
@@ -67,15 +67,6 @@ Converts a virtual machine with blob-based disks to a virtual machine with manag
 ### [Disable-AzureRmVMDiskEncryption](Disable-AzureRmVMDiskEncryption.md)
 Disables encryption on an IaaS virtual machine.
 
-### [Disable-AzureRmVmssDiskEncryption](Disable-AzureRmVmssDiskEncryption.md)
-Disables disk encryption on a VM scale set.
-
-### [Export-AzureRmLogAnalyticRequestRateByInterval](Export-AzureRmLogAnalyticRequestRateByInterval.md)
-Export logs that show Api requests made by this subscription in the given time window to show throttling activities.
-
-### [Export-AzureRmLogAnalyticThrottledRequests](Export-AzureRmLogAnalyticThrottledRequests.md)
-Export logs that show total throttled Api requests for this subscription in the given time window.
-
 ### [Get-AzureRmAvailabilitySet](Get-AzureRmAvailabilitySet.md)
 Gets Azure availability sets in a resource group.
 
@@ -86,7 +77,7 @@ List all compute resource Skus
 Gets a container service.
 
 ### [Get-AzureRmDisk](Get-AzureRmDisk.md)
-Gets the properties of a Managed disk.
+Gets the properties of a disk.
 
 ### [Get-AzureRmImage](Get-AzureRmImage.md)
 Gets the properties of an image.
@@ -151,9 +142,6 @@ Gets the VMImage publishers.
 ### [Get-AzureRmVMImageSku](Get-AzureRmVMImageSku.md)
 Gets VMImage SKUs.
 
-### [Get-AzureRmVMRunCommandDocument](Get-AzureRmVMRunCommandDocument.md)
-Get run command document.
-
 ### [Get-AzureRmVMSize](Get-AzureRmVMSize.md)
 Gets available virtual machine sizes.
 
@@ -163,20 +151,11 @@ Gets the settings for a SQL Server extension on a virtual machine.
 ### [Get-AzureRmVmss](Get-AzureRmVmss.md)
 Gets the properties of a VMSS.
 
-### [Get-AzureRmVmssDiskEncryption](Get-AzureRmVmssDiskEncryption.md)
-Shows the disk encryption status of a VM scale set.
-
-### [Get-AzureRmVmssRollingUpgrade](Get-AzureRmVmssRollingUpgrade.md)
-Shows the status of the latest virtual machine scale set rolling upgrade.
-
 ### [Get-AzureRmVmssSku](Get-AzureRmVmssSku.md)
 Gets the available SKUs for the VMSS.
 
 ### [Get-AzureRmVmssVM](Get-AzureRmVmssVM.md)
 Gets the properties of a VMSS virtual machine.
-
-### [Get-AzureRmVmssVMDiskEncryption](Get-AzureRmVmssVMDiskEncryption.md)
-Shows the disk encryption status of VMs in a VM scale set.
 
 ### [Get-AzureRmVMUsage](Get-AzureRmVMUsage.md)
 Gets the virtual machine core count usage for a location.
@@ -186,9 +165,6 @@ Grants an access to a disk.
 
 ### [Grant-AzureRmSnapshotAccess](Grant-AzureRmSnapshotAccess.md)
 Grants an access to a snapshot.
-
-### [Invoke-AzureRmVMRunCommand](Invoke-AzureRmVMRunCommand.md)
-Run command on the VM.
 
 ### [New-AzureRmAvailabilitySet](New-AzureRmAvailabilitySet.md)
 Creates an Azure availability set.
@@ -331,9 +307,6 @@ Removes an extension from the VMSS.
 ### [Remove-AzureRmVmssNetworkInterfaceConfiguration](Remove-AzureRmVmssNetworkInterfaceConfiguration.md)
 Removes a network interface configuration from a VMSS.
 
-### [Repair-AzureRmVmssServiceFabricUpdateDomain](Repair-AzureRmVmssServiceFabricUpdateDomain.md)
-Manual platform update domain walk to update virtual machines in a service fabric virtual machine scale set.
-
 ### [Restart-AzureRmVM](Restart-AzureRmVM.md)
 Restarts an Azure virtual machine.
 
@@ -364,6 +337,9 @@ Sets the key encryption key properties on a disk object.
 ### [Set-AzureRmDiskUpdateDiskEncryptionKey](Set-AzureRmDiskUpdateDiskEncryptionKey.md)
 Sets the disk encryption key properties on on a disk update object.
 
+### [Set-AzureRmDiskUpdateImageReference](Set-AzureRmDiskUpdateImageReference.md)
+Sets the image reference properties on a disk update object.
+
 ### [Set-AzureRmDiskUpdateKeyEncryptionKey](Set-AzureRmDiskUpdateKeyEncryptionKey.md)
 Sets the key encryption key properties on a disk update object.
 
@@ -381,6 +357,9 @@ Sets the key encryption key properties on a snapshot object.
 
 ### [Set-AzureRmSnapshotUpdateDiskEncryptionKey](Set-AzureRmSnapshotUpdateDiskEncryptionKey.md)
 Sets the disk encryption key properties on a snapshot update object.
+
+### [Set-AzureRmSnapshotUpdateImageReference](Set-AzureRmSnapshotUpdateImageReference.md)
+Sets the image reference properties on a snapshot update object.
 
 ### [Set-AzureRmSnapshotUpdateKeyEncryptionKey](Set-AzureRmSnapshotUpdateKeyEncryptionKey.md)
 Sets the key encryption key properties on a snapshot update object.
@@ -437,7 +416,7 @@ Sets the operating system disk properties on a virtual machine.
 Sets the Marketplace plan information on a virtual machine.
 
 ### [Set-AzureRmVMSourceImage](Set-AzureRmVMSourceImage.md)
-Specifies the image for a virtual machine.
+Specifies the platform image for a virtual machine.
 
 ### [Set-AzureRmVMSqlServerExtension](Set-AzureRmVMSqlServerExtension.md)
 Sets the Azure SQL Server extension on a virtual machine.
@@ -448,14 +427,8 @@ Sets specific actions on a specified VMSS.
 ### [Set-AzureRmVmssBootDiagnostic](Set-AzureRmVmssBootDiagnostic.md)
 Sets the virtual machine scale set boot diagnostics profile.
 
-### [Set-AzureRmVmssDiskEncryptionExtension](Set-AzureRmVmssDiskEncryptionExtension.md)
-Enables disk encryption on a VM scale set.
-
 ### [Set-AzureRmVmssOsProfile](Set-AzureRmVmssOsProfile.md)
 Sets the VMSS operating system profile properties.
-
-### [Set-AzureRmVmssRollingUpgradePolicy](Set-AzureRmVmssRollingUpgradePolicy.md)
-Sets the VMSS rolling upgrade policy properties.
 
 ### [Set-AzureRmVmssStorageProfile](Set-AzureRmVmssStorageProfile.md)
 Sets the storage profile properties for the VMSS.
@@ -469,17 +442,11 @@ Starts an Azure virtual machine.
 ### [Start-AzureRmVmss](Start-AzureRmVmss.md)
 Starts the VMSS or a set of virtual machines within the VMSS.
 
-### [Start-AzureRmVmssRollingOSUpgrade](Start-AzureRmVmssRollingOSUpgrade.md)
-Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.
-
 ### [Stop-AzureRmVM](Stop-AzureRmVM.md)
 Stops an Azure virtual machine.
 
 ### [Stop-AzureRmVmss](Stop-AzureRmVmss.md)
 Stops the VMSS or a set of virtual machines within the VMSS.
-
-### [Stop-AzureRmVmssRollingUpgrade](Stop-AzureRmVmssRollingUpgrade.md)
-Cancels the current virtual machine scale set rolling upgrade.
 
 ### [Test-AzureRmVMAEMExtension](Test-AzureRmVMAEMExtension.md)
 Checks the configuration of the AEM extension.

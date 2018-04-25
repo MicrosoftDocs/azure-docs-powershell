@@ -1,11 +1,10 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module_Name: AzureRM.Compute
+external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 64AB1BAE-A756-43A8-A40F-10B746EA0946
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/set-azurermvmcustomscriptextension
+online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMCustomScriptExtension.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMCustomScriptExtension.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMCustomScriptExtension.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMCustomScriptExtension.md
 ---
 
 # Set-AzureRmVMCustomScriptExtension
@@ -21,7 +20,7 @@ Set-AzureRmVMCustomScriptExtension -ContainerName <String> -FileName <String[]> 
  [-StorageEndpointSuffix <String>] [-StorageAccountKey <String>] [-Run <String>] [-Argument <String>]
  [-SecureExecution] [-ResourceGroupName] <String> [-VMName] <String> [-Name <String>]
  [-TypeHandlerVersion <String>] [-Location <String>] [-DisableAutoUpgradeMinorVersion] [-ForceRerun <String>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetCustomScriptExtensionByUriLinks
@@ -29,7 +28,7 @@ Set-AzureRmVMCustomScriptExtension -ContainerName <String> -FileName <String[]> 
 Set-AzureRmVMCustomScriptExtension [-FileUri <String[]>] [-Run <String>] [-Argument <String>]
  [-SecureExecution] [-ResourceGroupName] <String> [-VMName] <String> [-Name <String>]
  [-TypeHandlerVersion <String>] [-Location <String>] [-DisableAutoUpgradeMinorVersion] [-ForceRerun <String>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +53,7 @@ Specifies arguments that the script extension passes to the script.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -69,7 +68,7 @@ Specifies the name of the Azure storage container where this cmdlet stores the s
 ```yaml
 Type: String
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -78,26 +77,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableAutoUpgradeMinorVersion
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -107,13 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-Specifies the name of the script file. If the file is stored in Azure Blob storage, the file name
-value is case-senstive. File names of files stored in Azure File storage are not case-senstive.
+Specifies the name of the script file.
 
 ```yaml
 Type: String[]
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -128,7 +111,7 @@ Specifies the URI of the script file.
 ```yaml
 Type: String[]
 Parameter Sets: SetCustomScriptExtensionByUriLinks
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -146,7 +129,7 @@ If forceUpdateTag is not changed, updates to public or protected settings are st
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -161,7 +144,7 @@ Specifies the location of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -191,7 +174,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -222,7 +205,7 @@ The value of *Run* might contain secrets or passwords to be passed to the script
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -237,7 +220,7 @@ Specifies the key for the Azure storage container.
 ```yaml
 Type: String
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -252,7 +235,7 @@ Specifies the name of the Azure storage account where this cmdlet stores the scr
 ```yaml
 Type: String
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -267,7 +250,7 @@ Specifies the storage endpoint suffix.
 ```yaml
 Type: String
 Parameter Sets: SetCustomScriptExtensionByContainerAndFileNames
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -349,8 +332,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet does not accept any input.
 
 ## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Models.PSAzureOperationResponse
 
 ## NOTES
 

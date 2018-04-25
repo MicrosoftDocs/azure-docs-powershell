@@ -1,7 +1,7 @@
 ---
-external_help_file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
-Module_Name: AzureRM.DataLakeStore
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/set-azurermdatalakestoreitemexpiry
+external help file: Microsoft.Azure.Commands.DataLakeStore.dll-Help.xml
+Module Name: AzureRM.DataLakeStore
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datalakestore/set-azurermdatalakestoreitemexpiry
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzureRmDataLakeStoreItemExpiry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataLakeStore/Commands.DataLakeStore/help/Set-AzureRmDataLakeStoreItemExpiry.md
@@ -24,7 +24,7 @@ Set-AzureRmDataLakeStoreItemExpiry [-Account] <String> [-Path] <DataLakeStorePat
 ### SetRelativeExpiry
 ```
 Set-AzureRmDataLakeStoreItemExpiry [-Account] <String> [-Path] <DataLakeStorePathInstance>
- [-RelativeFileExpiryOption] <PathRelativeExpiryOptions> [[-RelativeTime] <Int64>]
+ [[-RelativeFileExpiryOption] <PathRelativeExpiryOptions>] [[-RelativeTime] <Int64>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -48,6 +48,7 @@ PS C:\> Set-AzureRmDataLakeStoreItemExpiry -AccountName "ContosoADL" -Path /myfi
 
 Removes any expiration that was previously set on file 'myfile.txt' in account 'ContosoADL'.
 This means the file will not automatically expire (be marked for delete) and will need to be manually deleted or set to expire again.
+
 
 ### Example 3: Set expiration time for a file relative to now
 ```
@@ -97,10 +98,25 @@ If no value or set to MaxValue, the file will never expire.
 
 ```yaml
 Type: DateTimeOffset
-Parameter Sets: SetAbsoluteNeverExpireExpiry
-Aliases:
+Parameter Sets: Set expiry as Absolute or NeverExpire
+Aliases: 
 
 Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RelativeFileExpiryOption
+Relative expiry options. RelativeToNow or RelativeToCreationDate are current options
+```yaml
+Type: PathRelativeExpiryOptions
+Parameter Sets: Set expiry as relative to creation or now
+Aliases: 
+Accepted values: RelativeToNow, RelativeToCreationDate
+
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -113,25 +129,10 @@ Specifies the Data Lake Store path of the file item for which to set or remove e
 ```yaml
 Type: DataLakeStorePathInstance
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RelativeFileExpiryOption
-Relative expiry options. RelativeToNow or RelativeToCreationDate are current options
-```yaml
-Type: PathRelativeExpiryOptions
-Parameter Sets: SetRelativeExpiry
-Aliases:
-Accepted values: RelativeToNow, RelativeToCreationDate
-
-Required: True
-Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -141,8 +142,8 @@ Accept wildcard characters: False
 The relative time in milliseconds with respect to now or creation time
 ```yaml
 Type: Int64
-Parameter Sets: SetRelativeExpiry
-Aliases:
+Parameter Sets: Set expiry as relative to creation or now
+Aliases: 
 
 Required: False
 Position: 3

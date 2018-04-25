@@ -1,11 +1,10 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module_Name: AzureRM.Compute
+external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 ms.assetid: 39AADD19-2EDD-4C1F-BC9E-22186DD9A085
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/set-azurermvmoperatingsystem
+online version:
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMOperatingSystem.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Set-AzureRmVMOperatingSystem.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMOperatingSystem.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Stack/Commands.Compute/help/Set-AzureRmVMOperatingSystem.md
 ---
 
 # Set-AzureRmVMOperatingSystem
@@ -19,37 +18,20 @@ Sets operating system properties for a virtual machine.
 ```
 Set-AzureRmVMOperatingSystem [-VM] <PSVirtualMachine> [-Windows] [-ComputerName] <String>
  [-Credential] <PSCredential> [[-CustomData] <String>] [-ProvisionVMAgent] [-EnableAutoUpdate]
- [[-TimeZone] <String>] [-WinRMHttp] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [[-TimeZone] <String>] [-WinRMHttp] [<CommonParameters>]
 ```
 
 ### WindowsWinRmHttps
 ```
 Set-AzureRmVMOperatingSystem [-VM] <PSVirtualMachine> [-Windows] [-ComputerName] <String>
  [-Credential] <PSCredential> [[-CustomData] <String>] [-ProvisionVMAgent] [-EnableAutoUpdate]
- [[-TimeZone] <String>] [-WinRMHttp] [-WinRMHttps] [-WinRMCertificateUrl] <Uri>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
-
-### WindowsDisableVMAgent
-```
-Set-AzureRmVMOperatingSystem [-VM] <PSVirtualMachine> [-Windows] [-ComputerName] <String>
- [-Credential] <PSCredential> [[-CustomData] <String>] [-DisableVMAgent] [-EnableAutoUpdate]
- [[-TimeZone] <String>] [-WinRMHttp] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
-```
-
-### WindowsDisableVMAgentWinRmHttps
-```
-Set-AzureRmVMOperatingSystem [-VM] <PSVirtualMachine> [-Windows] [-ComputerName] <String>
- [-Credential] <PSCredential> [[-CustomData] <String>] [-DisableVMAgent] [-EnableAutoUpdate]
- [[-TimeZone] <String>] [-WinRMHttp] [-WinRMHttps] [-WinRMCertificateUrl] <Uri>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [[-TimeZone] <String>] [-WinRMHttp] [-WinRMHttps] [-WinRMCertificateUrl] <Uri> [<CommonParameters>]
 ```
 
 ### Linux
 ```
 Set-AzureRmVMOperatingSystem [-VM] <PSVirtualMachine> [-Linux] [-ComputerName] <String>
- [-Credential] <PSCredential> [[-CustomData] <String>] [-DisablePasswordAuthentication]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-Credential] <PSCredential> [[-CustomData] <String>] [-DisablePasswordAuthentication] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,7 +81,7 @@ Specifies the name of the computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 2
@@ -116,7 +98,7 @@ For more information, type `Get-Help Get-Credential`.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 3
@@ -133,27 +115,12 @@ The maximum length of the binary array is 65535 bytes.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with azure.
-
-```yaml
-Type: IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -163,7 +130,7 @@ Indicates that this cmdlet disables password authentication.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linux
-Aliases:
+Aliases: 
 
 Required: False
 Position: 5
@@ -172,28 +139,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DisableVMAgent
-Disable Provision VM Agent.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: WindowsDisableVMAgent, WindowsDisableVMAgentWinRmHttps
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableAutoUpdate
 Indicates that this cmdlet enables auto update.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Windows, WindowsWinRmHttps, WindowsDisableVMAgent, WindowsDisableVMAgentWinRmHttps
-Aliases:
+Parameter Sets: Windows, WindowsWinRmHttps
+Aliases: 
 
 Required: False
 Position: 6
@@ -208,7 +160,7 @@ Indicates that the type of operating system is Linux.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linux
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -223,7 +175,7 @@ Indicates that the settings require that the virtual machine agent be installed 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows, WindowsWinRmHttps
-Aliases:
+Aliases: 
 
 Required: False
 Position: 5
@@ -237,8 +189,8 @@ Specifies the time zone for the virtual machine.
 
 ```yaml
 Type: String
-Parameter Sets: Windows, WindowsWinRmHttps, WindowsDisableVMAgent, WindowsDisableVMAgentWinRmHttps
-Aliases:
+Parameter Sets: Windows, WindowsWinRmHttps
+Aliases: 
 
 Required: False
 Position: 7
@@ -269,8 +221,8 @@ Indicates that the type of operating system is Windows.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Windows, WindowsWinRmHttps, WindowsDisableVMAgent, WindowsDisableVMAgentWinRmHttps
-Aliases:
+Parameter Sets: Windows, WindowsWinRmHttps
+Aliases: 
 
 Required: True
 Position: 1
@@ -285,8 +237,8 @@ This needs to be stored in a Key Vault.
 
 ```yaml
 Type: Uri
-Parameter Sets: WindowsWinRmHttps, WindowsDisableVMAgentWinRmHttps
-Aliases:
+Parameter Sets: WindowsWinRmHttps
+Aliases: 
 
 Required: True
 Position: 10
@@ -300,8 +252,8 @@ Indicates that this operating system uses HTTP WinRM.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Windows, WindowsWinRmHttps, WindowsDisableVMAgent, WindowsDisableVMAgentWinRmHttps
-Aliases:
+Parameter Sets: Windows, WindowsWinRmHttps
+Aliases: 
 
 Required: False
 Position: 8
@@ -315,8 +267,8 @@ Indicates that this operating system uses HTTPS WinRM.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: WindowsWinRmHttps, WindowsDisableVMAgentWinRmHttps
-Aliases:
+Parameter Sets: WindowsWinRmHttps
+Aliases: 
 
 Required: True
 Position: 9
@@ -330,12 +282,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### PSVirtualMachine
-Parameter 'VM' accepts value of type 'PSVirtualMachine' from the pipeline
+### None
+This cmdlet does not accept any input.
 
 ## OUTPUTS
-
-### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 
 ## NOTES
 
