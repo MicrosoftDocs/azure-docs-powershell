@@ -136,6 +136,15 @@
             },
             {
                 "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azurermps-6.0.0",
+                "version": "azurermps-6.0.0",
+                "dest": "azure"
+            },
+            {
+                "files": [
                     "toc.yml"
                 ],
                 "src": "azuresmps-3.7.0",
@@ -325,6 +334,12 @@
             },
             {
                 "files": [
+                    "media/**"
+                ],
+                "version": "azurermps-6.0.0"
+            },
+            {
+                "files": [
                     "bread/toc.json"
                 ]
             }
@@ -350,6 +365,9 @@
             },
             "azurermps-5.7.0": {
               "dest": "azurermps-5.7.0"
+            },
+            "azurermps-6.0.0": {
+              "dest": "azurermps-6.0.0"
             },
             "azuresmps-3.7.0": {
                 "dest": "azuresmps-3.7.0"
