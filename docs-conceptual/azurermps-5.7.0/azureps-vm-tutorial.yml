@@ -13,6 +13,7 @@ metadata:
     manager: carmonm
     ms.devlang: azure-powershell
     ms.technology: azure
+    clicktale: true
 items:
     - durationInMinutes: 1
       content: |-
