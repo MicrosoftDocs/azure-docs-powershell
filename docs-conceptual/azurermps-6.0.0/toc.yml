@@ -42,8 +42,8 @@
   - name: Release notes
     href: release-notes-azureps.md
     items:
-    - name: Breaking changes for Azure PowerShell 5.x
-      href: migration-guide.5.0.0.md
+    - name: Breaking changes for Azure PowerShell 6.x
+      href: migration-guide.6.0.0.md
 - name: Tutorials
   items:
   - name: Create Virtual Machines
