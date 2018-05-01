@@ -1,7 +1,7 @@
 ---
 external_help_file: Microsoft.Azure.Commands.DataMigration.dll-Help.xml
 Module_Name: AzureRM.DataMigration
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datamigration/new-azurermdatamigrationproject
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datamigration/New-AzureRmDataMigrationProject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/New-AzureRmDataMigrationProject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/New-AzureRmDataMigrationProject.md
@@ -17,25 +17,25 @@ Creates a new Azure Database Migration Service project.
 ### ComponentNameParameterSet (Default)
 ```
 New-AzureRmDataMigrationProject -ResourceGroupName <String> -ServiceName <String> -Location <String>
- -Name <String> -SourceType <ProjectSourcePlatform> -TargetType <ProjectTargetPlatform>
- [-SourceConnection <ConnectionInfo>] [-TargetConnection <ConnectionInfo>] [-DatabaseInfo <DatabaseInfo[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ -Name <String> -SourceType <String> -TargetType <String> [-SourceConnection <ConnectionInfo>]
+ [-TargetConnection <ConnectionInfo>] [-DatabaseInfo <DatabaseInfo[]>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ComponentObjectParameterSet
 ```
-New-AzureRmDataMigrationProject [-InputObject] <PSDataMigrationService> -Location <String> -Name <String>
- -SourceType <ProjectSourcePlatform> -TargetType <ProjectTargetPlatform> [-SourceConnection <ConnectionInfo>]
+New-AzureRmDataMigrationProject -InputObject <PSDataMigrationService> -Location <String> -Name <String>
+ -SourceType <String> -TargetType <String> [-SourceConnection <ConnectionInfo>]
  [-TargetConnection <ConnectionInfo>] [-DatabaseInfo <DatabaseInfo[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceIdParameterSet
 ```
-New-AzureRmDataMigrationProject [-ResourceId] <String> -Location <String> -Name <String>
- -SourceType <ProjectSourcePlatform> -TargetType <ProjectTargetPlatform> [-SourceConnection <ConnectionInfo>]
- [-TargetConnection <ConnectionInfo>] [-DatabaseInfo <DatabaseInfo[]>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+New-AzureRmDataMigrationProject -ResourceId <String> -Location <String> -Name <String> -SourceType <String>
+ -TargetType <String> [-SourceConnection <ConnectionInfo>] [-TargetConnection <ConnectionInfo>]
+ [-DatabaseInfo <DatabaseInfo[]>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,8 +50,6 @@ PS C:\> New-AzureRmDataMigrationProject -ResourceGroupName MyResourceGroup -Serv
 
 The above example shows how to create new project named MyDMSProject located in Central US region under the Azure Database Migration Service instance named TestService.
 
-
-
 ## PARAMETERS
 
 ### -Confirm
@@ -61,21 +59,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DatabaseInfo[]
-Database information
-
-```yaml
-Type: DatabaseInfo[]
-Parameter Sets: (All)
-Aliases: 
 
 Required: False
 Position: Named
@@ -114,27 +97,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProjectName
-The name of the project.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 The name of the resource group.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ComponentNameParameterSet
 Aliases: 
 
 Required: True
@@ -149,7 +117,7 @@ The name of the Azure Database Migration Service instance.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ComponentNameParameterSet
 Aliases: 
 
 Required: True
@@ -178,7 +146,7 @@ Accept wildcard characters: False
 Source platform type for project.
 
 ```yaml
-Type: ProjectSourcePlatform
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: SQL
@@ -209,7 +177,7 @@ Accept wildcard characters: False
 Target platform type for project.
 
 ```yaml
-Type: ProjectTargetPlatform
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Accepted values: SQLDB
@@ -221,13 +189,89 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DatabaseInfo
+Database Infos.
 
+```yaml
+Type: DatabaseInfo[]
+Parameter Sets: (All)
+Aliases: 
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+PSDataMigrationService Object.
+
+```yaml
+Type: PSDataMigrationService
+Parameter Sets: ComponentObjectParameterSet
+Aliases: DataMigrationService
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+The name of the project.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ProjectName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceId
+DataMigrationService Resource Id.
+
+```yaml
+Type: String
+Parameter Sets: ResourceIdParameterSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
 
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.DataMigration.Models.PSProject
-
 
 ## NOTES
 

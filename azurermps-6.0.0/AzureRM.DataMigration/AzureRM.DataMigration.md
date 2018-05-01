@@ -31,11 +31,14 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ### [New-AzureRmDataMigrationProject](New-AzureRmDataMigrationProject.md)
 {{Creates a new Azure Database Migration Service project.}}
 
+### [New-AzureRmDataMigrationFileShare](New-AzureRmDataMigrationFileShare.md)
+{{Creates the File share object for the Azure Database Migration Service, which specifies the file share information for migration.}}
+
 ### [New-AzureRmDataMigrationService](New-AzureRmDataMigrationService.md)
 {{Creates a new instance of the Azure Database Migration Service.}}
 
-### [New-AzureRmDataMigrationSqlServerSqlDbSelectedDB](New-AzureRmDataMigrationSqlServerSqlDbSelectedDB.md)
-{{Creates a MigrateSqlServerSqlDbDatabaseInput object that contains information about source and target databases for migration.}}
+### [New-AzureRmDataMigrationSelectedDB](New-AzureRmDataMigrationSelectedDB.md)
+{{Creates a Database info object that contains information about source and target databases for migration.}}
 
 ### [New-AzureRmDataMigrationTask](New-AzureRmDataMigrationTask.md)
 {{Creates and starts a data migration task in the Azure Database Migration Service.}}
@@ -53,5 +56,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 {{Starts an instance of the Azure Database Migration Service in a stopped state.}}
 
 ### [Stop-AzureRmDataMigrationService](Stop-AzureRmDataMigrationService.md)
+{{Stops an instance of the Azure Database Migration Service that is in a running state.}}
+
+### [Stop-AzureRmDataMigrationTask](Stop-AzureRmDataMigrationTask.md)
 {{Stops an instance of the Azure Database Migration Service that is in a running state.}}
 

@@ -1,7 +1,7 @@
 ---
 external_help_file: Microsoft.Azure.Commands.DataMigration.dll-Help.xml
 Module_Name: AzureRM.DataMigration
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datamigration/new-azurermdatamigrationtask
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datamigration/New-AzureRmDataMigrationTask
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/New-AzureRmDataMigrationTask.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/New-AzureRmDataMigrationTask.md
@@ -18,22 +18,23 @@ Creates and starts a data migration task in the Azure Database Migration Service
 ```
 New-AzureRmDataMigrationTask -TaskType <TaskTypeEnum> -ResourceGroupName <String> -ServiceName <String>
  -ProjectName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ComponentObjectParameterSet
 ```
 New-AzureRmDataMigrationTask [-InputObject] <PSProject> -TaskType <TaskTypeEnum> -Name <String>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceIdParameterSet
 ```
 New-AzureRmDataMigrationTask [-ResourceId] <String> -TaskType <TaskTypeEnum> -Name <String>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-AzureRmDataMigrationTask cmdlet creates data migration task. This cmdlet takes in parameters for Task Type enumerator, Azure Resource Group, name of associated Azure Data Migration Service and Project as input. 
+The New-AzureRmDataMigrationTask cmdlet creates data migration task. This cmdlet takes in parameters for Task Type enumerator, Azure Resource Group, name of associated Azure Database Migration Service and Project as input. 
 
 ## EXAMPLES
 
@@ -41,6 +42,7 @@ The New-AzureRmDataMigrationTask cmdlet creates data migration task. This cmdlet
 ```
 PS C:\> New-AzureRmDmsTask -TaskType MigrateSqlServerSqlDb -ResourceGroupName myResourceGroup -ServiceName TestService -ProjectName myDMSProject -TaskName MyMigrationTask -SourceConnection $sourceConnInfo -SourceCred $sourceCred -TargetConnection $targetConnInfo -TargetCred $targetCred -SelectedDatabase  $selectedDbs
 ```
+
 This example script shows how to create a new Data Migration Task named MyMigrationTask in the project named myDMSProject and service named TestService. 
 
 ## PARAMETERS
@@ -151,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Data Migration Service Name.
+Database Migration Service Name.
 
 ```yaml
 Type: String
@@ -197,19 +199,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.Azure.Commands.DataMigration.Models.PSProject
 System.String
 
-
 ## OUTPUTS
 
 ### Microsoft.Azure.Commands.DataMigration.Models.PSProjectTask
 
-
 ## NOTES
 
 ## RELATED LINKS
-
 

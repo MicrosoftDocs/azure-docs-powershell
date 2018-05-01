@@ -1,6 +1,6 @@
 ---
 external_help_file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module_Name: AzureRM
+Module_Name: AzureRM.WebSites
 ms.assetid: 8337BEA9-4927-4718-83B9-F3F567BE0FBD
 online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/get-azurermwebappbackupconfiguration
 schema: 2.0.0

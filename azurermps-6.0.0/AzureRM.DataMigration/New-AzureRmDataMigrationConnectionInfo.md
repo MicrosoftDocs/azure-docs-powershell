@@ -1,7 +1,7 @@
 ---
 external_help_file: Microsoft.Azure.Commands.DataMigration.dll-Help.xml
 Module_Name: AzureRM.DataMigration
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datamigration/new-azurermdatamigrationconnectioninfo
+online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.datamigration/New-AzureRmDataMigrationConnectionInfo
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/New-AzureRmDataMigrationConnectionInfo.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataMigration/Commands.DataMigration/help/New-AzureRmDataMigrationConnectionInfo.md
@@ -64,13 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -ServerType
-Enum that describes server type to connect to. Currently supported values are SQL for SQL Server and SQLDB for SQL Azure Database. 
+Enum that describes server type to connect to. Currently supported values are SQL for SQL Server, Azure SQL Managed Instance and Azure SQL Database. 
 
 ```yaml
 Type: ServerTypeEnum
 Parameter Sets: (All)
 Aliases: 
-Accepted values: SQL, SQLDB
+Accepted values: SQL
 
 Required: True
 Position: Named

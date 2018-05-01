@@ -1,6 +1,6 @@
 ---
 external_help_file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module_Name: AzureRM
+Module_Name: AzureRM.WebSites
 ms.assetid: 32D45795-FBCD-4157-BF45-41BD1F61782E
 online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/set-azurermappserviceplan
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-AzureRmAppServicePlan [[-AdminSiteName] <String>] [[-Tier] <String>] [[-Numb
 
 ### S2
 ```
-Set-AzureRmAppServicePlan [-AppServicePlan] <ServerFarmWithRichSku> [-AsJob]
+Set-AzureRmAppServicePlan [-AppServicePlan] <AppServicePlan> [-AsJob]
 [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 App Service Plan Object
 
 ```yaml
-Type: ServerFarmWithRichSku
+Type: AppServicePlan
 Parameter Sets: S2
 Aliases: 
 
