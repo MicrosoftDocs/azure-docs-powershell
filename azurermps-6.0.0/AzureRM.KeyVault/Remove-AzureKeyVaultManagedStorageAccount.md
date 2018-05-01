@@ -14,9 +14,17 @@ Removes a Key Vault managed Azure Storage Account and all associated SAS definit
 
 ## SYNTAX
 
+### ByDefinitionName (Default)
 ```
 Remove-AzureKeyVaultManagedStorageAccount [-VaultName] <String> [-AccountName] <String> [-InRemovedState]
  [-Force] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByInputObject
+```
+Remove-AzureKeyVaultManagedStorageAccount [-InputObject] <PSKeyVaultManagedStorageAccountIdentityItem>
+ [-InRemovedState] [-Force] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +50,7 @@ Disassociates Azure Storage Account 'mystorageaccount' from Key Vault 'myvault' 
 ```
 PS C:\> Remove-AzureKeyVaultManagedStorageAccount -VaultName 'myvault' -AccountName 'mystorageaccount' 
 PS C:\> Get-AzureKeyVaultManagedStorageAccount -VaultName 'myvault' -AccountName 'mystorageaccount' -InRemovedState
-PS C:\> Remove-AzureKeyVaultManagedStorageAccount -VaultName 'myvault' -AccountName 'mystorageaccount' -InRemovedState 
+PS C:\> Remove-AzureKeyVaultManagedStorageAccount -VaultName 'myvault' -AccountName 'mystorageaccount' -InRemovedState
 ```
 
 The example assumes that soft-delete is enabled for this vault. Verify whether that is the case by examining the vault properties, or the RecoveryLevel attribute of an entity in the vault.
@@ -57,13 +65,13 @@ Key Vault managed storage account name. Cmdlet constructs the FQDN of a managed 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ByDefinitionName
 Aliases: StorageAccountName, Name
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -94,6 +102,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+ManagedStorageAccount object.
+
+```yaml
+Type: PSKeyVaultManagedStorageAccountIdentityItem
+Parameter Sets: ByInputObject
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -134,13 +157,13 @@ Cmdlet constructs the FQDN of a vault based on the name and currently selected e
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ByDefinitionName
 Aliases:
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

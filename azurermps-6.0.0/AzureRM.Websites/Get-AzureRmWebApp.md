@@ -1,6 +1,6 @@
 ---
 external_help_file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module_Name: AzureRM
+Module_Name: AzureRM.WebSites
 ms.assetid: A87ED954-9C09-4329-A005-ABFF36C45E6E
 online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/get-azurermwebapp
 schema: 2.0.0
@@ -23,7 +23,7 @@ Get-AzureRmWebApp [[-ResourceGroupName] <String>] [[-Name] <String>] [-DefaultPr
 
 ### S2
 ```
-Get-AzureRmWebApp [-AppServicePlan] <ServerFarmWithRichSku> [-DefaultProfile <IAzureContextContainer>]
+Get-AzureRmWebApp [-AppServicePlan] <AppServicePlan> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
@@ -50,7 +50,7 @@ This command gets the Web App named ContosoSite that belongs to the resource gro
 App Service Plan object
 
 ```yaml
-Type: ServerFarmWithRichSku
+Type: AppServicePlan
 Parameter Sets: S2
 Aliases: 
 
