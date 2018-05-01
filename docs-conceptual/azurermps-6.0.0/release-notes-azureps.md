@@ -124,6 +124,7 @@ This is a list of changes made to Azure PowerShell in this release.
     - Please refer to the migration guide for more information
 
 ### AzureRM.Profile
+* Enable context autosave by default
 * Add USGovernmentOperationalInsightsEndpoint and USGovernmentOperationalInsightsEndpointResourceId properties to Azure environment for US Gov.
 
 ### AzureRM.RecoveryServices.SiteRecovery
@@ -136,6 +137,18 @@ This is a list of changes made to Azure PowerShell in this release.
 ### AzureRM.Resources
 * Remove obsolete parameter -AtScopeAndBelow from Get-AzureRmRoledefinition call
 * Include assignments to deleted USers/Groups/ServicePrincipals in Get-AzureRmRoleAssignment result
+* Add Tab completers for Scope and ResourceType
+* Add convenience cmdlet for creating ServicePrincipals
+* Merge Get- and Find- functionality in Get-AzureRmResource
+* Add AD Cmdlets:
+  - Remove-AzureRmADGroupMember
+  - Get-AzureRmADGroup
+  - New-AzureRmADGroup
+  - Remove-AzureRmADGroup
+  - Remove-AzureRmADUser
+  - Update-AzureRmADApplication
+  - Update-AzureRmADServicePrincipal
+  - Update-AzureRmADUser
 
 ### AzureRM.ServiceFabric
 * Update default Linux image version sku
@@ -148,4 +161,4 @@ This is a list of changes made to Azure PowerShell in this release.
 ### AzureRM.Websites
 * Upgrade to latest version of the Websites SDK
 * Added -AssignIdentity & -Httpsonly properties for Set-AzureRmWebApp and Set-AzureRmWebAppSlot
-- Added two new cmdlets: Get-AzureRmWebAppSnapshots and Restore-AzureRmWebAppSnapshot
+* Added two new cmdlets: Get-AzureRmWebAppSnapshots and Restore-AzureRmWebAppSnapshot
