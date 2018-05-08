@@ -241,6 +241,34 @@
             },
             {
                 "files": [
+                    "toc.yml"
+                ],
+                "src": "azurestackps-1.2.12",
+                "version": "azurestackps-1.2.12",
+                "dest": "module/azure-stack"
+            },
+            {
+                "files": [
+                    "**/*.md"
+                ],
+                "src": "azurestackps-1.2.12",
+                "version": "azurestackps-1.2.12",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azurestackps-1.2.12",
+                "version": "azurestackps-1.2.12",
+                "dest": "azure/azure-stack"
+            },
+            {
+                "files": [
                     "AADRM/**/*.md",
                     "AADRM/**/*.yml",
                     "AzureInformationProtection/**/*.md",
