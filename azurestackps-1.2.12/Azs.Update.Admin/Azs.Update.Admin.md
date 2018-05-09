@@ -1,8 +1,8 @@
 ---
 Module Name: Azs.Update.Admin
 Module Guid: d0d2c45d-17fe-461c-9d63-fa5d3cc6a33d
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link: 
+Help Version: 0.0.0.1
 Locale: en-US
 ---
 

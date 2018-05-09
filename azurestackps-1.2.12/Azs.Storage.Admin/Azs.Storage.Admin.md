@@ -1,8 +1,8 @@
 ---
 Module Name: Azs.Storage.Admin
 Module Guid: eec34fde-3f4f-4759-aa52-c6a7b8857a4f
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link: 
+Help Version: 0.0.0.1
 Locale: en-US
 ---
 

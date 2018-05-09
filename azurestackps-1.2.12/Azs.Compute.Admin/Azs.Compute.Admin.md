@@ -1,8 +1,8 @@
 ---
 Module Name: Azs.Compute.Admin
 Module Guid: e662cef1-a477-40a2-ab9f-06e8de7cc423
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+Help Version: 0.0.0.1
 Locale: en-US
 ---
 
