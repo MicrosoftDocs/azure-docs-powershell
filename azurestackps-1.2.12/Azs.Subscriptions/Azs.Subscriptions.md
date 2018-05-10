@@ -4,6 +4,8 @@ Module Guid: 431fc327-dd41-4c3d-91fe-a7a77b48c8b3
 Download Help Link: 
 Help Version: 0.0.0.1
 Locale: en-US
+ms.date: 05/10/2018
+ms.topic: article
 ---
 
 # Azs.Subscriptions Module

@@ -4,6 +4,8 @@ Module Guid: 4cbbef87-4d4d-473f-b3a8-054d8e53e313
 Download Help Link: 
 Help Version: 0.0.0.1
 Locale: en-US
+ms.date: 05/10/2018
+ms.topic: article
 ---
 
 # Azs.Keyvault.Admin Module

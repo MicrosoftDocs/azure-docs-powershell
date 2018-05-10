@@ -4,6 +4,8 @@ Module Guid: e662cef1-a477-40a2-ab9f-06e8de7cc423
 Download Help Link:
 Help Version: 0.0.0.1
 Locale: en-US
+ms.date: 05/10/2018
+ms.topic: article
 ---
 
 # Azs.Compute.Admin Module

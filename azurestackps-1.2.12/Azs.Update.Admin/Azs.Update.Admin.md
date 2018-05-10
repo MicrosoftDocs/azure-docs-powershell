@@ -4,6 +4,8 @@ Module Guid: d0d2c45d-17fe-461c-9d63-fa5d3cc6a33d
 Download Help Link: 
 Help Version: 0.0.0.1
 Locale: en-US
+ms.date: 05/10/2018
+ms.topic: article
 ---
 
 # Azs.Update.Admin Module
