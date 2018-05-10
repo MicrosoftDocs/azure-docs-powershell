@@ -9,7 +9,7 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 08/31/2017
+ms.date: 05/09/2018
 ---
 
 # Overview of Azure PowerShell
@@ -18,6 +18,16 @@ Azure PowerShell provides a set of cmdlets that use the [Azure Resource
 Manager](/azure/azure-resource-manager/resource-group-overview) model for managing your Azure
 resources. You can use it in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or
 you can install it on your local machine and use it in any PowerShell session.
+
+Azure PowerShell is built to manager and administrate Azure resources from the command line, 
+and for building automation scripts that work against the Azure Resource Manager.  Using 
+Azure PowerShell, you can create a VM within Azure as easily as tying the following command:
+```azurepowershell-interactive
+New-AzureRmVm `
+    -ResourceGroupName "myResourceGroup" `
+    -Name "myVM" `
+    -Location "East US" `
+```
 
 Use the [Cloud Shell](/azure/cloud-shell/overview) to run the Azure PowerShell in your browser, or
 [install](install-azurerm-ps.md) it on own computer. Then read the [Get Started](get-started-azureps.md)
