@@ -412,7 +412,7 @@
                 "dest": "azureelasticdbjobsps-0.8.33"
             }
         },
-        "filemetadata": {
+        "fileMetadata": {
             "ms.author": {
                 "azurermps-*/**/*.md": "aaroney",
                 "azuresmps-*/**/*.md": "aaroney",
@@ -441,7 +441,10 @@
                 "Azure"
             ],
             "breadcrumb_path": "/powershell/bread/toc.json",
-            "ms.devlang": "powershell"
+            "ms.devlang": "powershell",
+            "feedback_system": "GitHub",
+            "feedback_github_repo": "https://github.com/azure/azure-docs-powershell",
+            "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new"
         },
         "dest": "azureps",
         "xref": [
