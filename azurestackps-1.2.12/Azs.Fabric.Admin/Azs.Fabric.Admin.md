@@ -4,6 +4,8 @@ Module Guid: 6ad9b0a0-a9c0-490c-83d3-02eeb307d1ad
 Download Help Link:
 Help Version: 0.0.0.1
 Locale: en-US
+ms.date: 05/10/2018
+ms.topic: article
 ---
 
 # Azs.Fabric.Admin Module

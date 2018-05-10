@@ -4,6 +4,8 @@ Module Guid: b461499b-3144-466b-a5b0-02a9eb59f1ec
 Download Help Link:
 Help Version: 0.0.0.1
 Locale: en-US
+ms.date: 05/10/2018
+ms.topic: article
 ---
 
 # Azs.Gallery.Admin Module

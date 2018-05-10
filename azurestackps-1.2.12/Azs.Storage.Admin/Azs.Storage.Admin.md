@@ -4,6 +4,8 @@ Module Guid: eec34fde-3f4f-4759-aa52-c6a7b8857a4f
 Download Help Link: 
 Help Version: 0.0.0.1
 Locale: en-US
+ms.date: 05/10/2018
+ms.topic: article
 ---
 
 # Azs.Storage.Admin Module

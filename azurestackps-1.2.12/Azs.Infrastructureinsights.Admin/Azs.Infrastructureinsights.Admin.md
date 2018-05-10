@@ -4,6 +4,8 @@ Module Guid: d137ff2f-6bd1-4220-896f-ec47b0485cb2
 Download Help Link:
 Help Version: 0.0.0.1
 Locale: en-US
+ms.date: 05/10/2018
+ms.topic: article
 ---
 
 # Azs.Infrastructureinsights.Admin Module
