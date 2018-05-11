@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.HDInsight
-Module_Guid: 3fd1475f-cb23-4ffb-bf08-33d94b7d1acb
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.hdinsight
-Help_Version: 4.1.2.0
+Module Name: AzureRM.HDInsight
+Module Guid: 3fd1475f-cb23-4ffb-bf08-33d94b7d1acb
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.hdinsight
+Help Version: 4.1.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/AzureRM.HDInsight.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/HDInsight/Commands.HDInsight/help/AzureRM.HDInsight.md

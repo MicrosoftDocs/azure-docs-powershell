@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.NotificationHubs
-Module_Guid: f875725d-8ce4-423f-a6af-ea880bc63f13
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.notificationhubs
-Help_Version: 4.1.1.0
+Module Name: AzureRM.NotificationHubs
+Module Guid: f875725d-8ce4-423f-a6af-ea880bc63f13
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.notificationhubs
+Help Version: 4.1.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/AzureRM.NotificationHubs.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/NotificationHubs/Commands.NotificationHubs/help/AzureRM.NotificationHubs.md

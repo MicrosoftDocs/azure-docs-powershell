@@ -1,8 +1,8 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Websites.dll-Help.xml
-Module_Name: AzureRM.WebSites
+external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.WebSites
 ms.assetid: 9057185C-6F22-4C4A-8480-BE542B5D6BAF
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/remove-azurermwebapp
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/remove-azurermwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzureRmWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Websites/Commands.Websites/help/Remove-AzureRmWebApp.md

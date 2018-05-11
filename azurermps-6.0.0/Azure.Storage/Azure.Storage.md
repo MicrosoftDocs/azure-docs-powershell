@@ -1,8 +1,8 @@
 ---
-Module_Name: Azure.Storage
-Module_Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azure.storage
-Help_Version: 4.2.1.0
+Module Name: Azure.Storage
+Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azure.storage
+Help Version: 4.2.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md

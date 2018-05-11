@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.MarketplaceOrdering
-Module_Guid: 6e0e216b-1dff-4992-b943-b3a4f14679ab
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.marketplaceordering
-Help_Version: 0.1.0.0
+Module Name: AzureRM.MarketplaceOrdering
+Module Guid: 6e0e216b-1dff-4992-b943-b3a4f14679ab
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.marketplaceordering
+Help Version: 0.1.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MarketplaceOrdering/Commands.MarketplaceOrdering/help/AzureRM.MarketplaceOrdering.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MarketplaceOrdering/Commands.MarketplaceOrdering/help/AzureRM.MarketplaceOrdering.md

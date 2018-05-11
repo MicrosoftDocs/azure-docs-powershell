@@ -1,7 +1,7 @@
 ---
-external_help_file: Microsoft.Azure.Commands.PolicyInsights.dll-Help.xml
-Module_Name: AzureRM.PolicyInsights
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.policyinsights/get-azurermpolicystate
+external help file: Microsoft.Azure.Commands.PolicyInsights.dll-Help.xml
+Module Name: AzureRM.PolicyInsights
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.policyinsights/get-azurermpolicystate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PolicyInsights/Commands.PolicyInsights/help/Get-AzureRmPolicyState.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PolicyInsights/Commands.PolicyInsights/help/Get-AzureRmPolicyState.md

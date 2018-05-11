@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.EventHub
-Module_Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub
-Help_Version: 4.0.0.0
+Module Name: AzureRM.EventHub
+Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.eventhub
+Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/AzureRM.EventHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/AzureRM.EventHub.md

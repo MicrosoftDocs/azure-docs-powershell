@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Subscription
-Module_Guid: 8074e741-0979-4b4e-8f9b-7243f213d98a
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.subscription
-Help_Version: 1.0.0.0
+Module Name: AzureRM.Subscription
+Module Guid: 8074e741-0979-4b4e-8f9b-7243f213d98a
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.subscription
+Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Subscription/Commands.Subscription/help/AzureRM.Subscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Subscription/Commands.Subscription/help/AzureRM.Subscription.md

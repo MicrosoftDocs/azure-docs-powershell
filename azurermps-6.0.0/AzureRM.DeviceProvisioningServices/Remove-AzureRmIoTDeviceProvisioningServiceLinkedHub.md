@@ -1,7 +1,7 @@
 ---
-external_help_file: Microsoft.Azure.Commands.DeviceProvisioningServices.dll-Help.xml
-Module_Name: AzureRM.DeviceProvisioningServices
-online_version: 
+external help file: Microsoft.Azure.Commands.DeviceProvisioningServices.dll-Help.xml
+Module Name: AzureRM.DeviceProvisioningServices
+online version: 
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DeviceProvisioningServices/Commands.DeviceProvisioningServices/help/Remove-AzureRmIoTDeviceProvisioningServiceLinkedHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DeviceProvisioningServices/Commands.DeviceProvisioningServices/help/Remove-AzureRmIoTDeviceProvisioningServiceLinkedHub.md

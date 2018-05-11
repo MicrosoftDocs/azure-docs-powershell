@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.ManagementPartner
-Module_Guid: bf60f35d-6c0b-42f2-be30-eb333a31279d
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.managementpartner
-Help_Version: 0.1.0.0
+Module Name: AzureRM.ManagementPartner
+Module Guid: bf60f35d-6c0b-42f2-be30-eb333a31279d
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.managementpartner
+Help Version: 0.1.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagementPartner/Commands.Partner/help/AzureRM.ManagementPartner.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ManagementPartner/Commands.Partner/help/AzureRM.ManagementPartner.md

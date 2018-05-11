@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.DeviceProvisioningServices
-Module_Guid: a9f5b86f-63be-4e7a-8e16-c8c7c36cae40
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.deviceprovisioningservices
-Help_Version: 1.0.0.0
+Module Name: AzureRM.DeviceProvisioningServices
+Module Guid: a9f5b86f-63be-4e7a-8e16-c8c7c36cae40
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.deviceprovisioningservices
+Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DeviceProvisioningServices/Commands.DeviceProvisioningServices/help/AzureRM.DeviceProvisioningServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DeviceProvisioningServices/Commands.DeviceProvisioningServices/help/AzureRM.DeviceProvisioningServices.md

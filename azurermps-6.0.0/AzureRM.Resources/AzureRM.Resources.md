@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Resources
-Module_Guid: ab3ca893-26fe-44b0-bd3c-8933df144d7b
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources
-Help_Version: 5.5.2.0
+Module Name: AzureRM.Resources
+Module Guid: ab3ca893-26fe-44b0-bd3c-8933df144d7b
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources
+Help Version: 5.5.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/AzureRM.Resources.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/AzureRM.Resources.md

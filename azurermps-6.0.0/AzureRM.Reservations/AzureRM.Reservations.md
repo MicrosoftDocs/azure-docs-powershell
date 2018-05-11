@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Reservations
-Module_Guid: 43d3b085-6323-4ac4-a7c3-81d75ea036e5
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.reservations
-Help_Version: 1.0.0.0
+Module Name: AzureRM.Reservations
+Module Guid: 43d3b085-6323-4ac4-a7c3-81d75ea036e5
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.reservations
+Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Reservations/Commands.Reservations/help/AzureRM.Reservations.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Reservations/Commands.Reservations/help/AzureRM.Reservations.md

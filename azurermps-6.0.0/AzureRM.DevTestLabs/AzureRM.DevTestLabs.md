@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.DevTestLabs
-Module_Guid: be2ca175-bfb9-4601-b01c-4de13eb2105c
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.devtestlabs
-Help_Version: 4.0.4.0
+Module Name: AzureRM.DevTestLabs
+Module Guid: be2ca175-bfb9-4601-b01c-4de13eb2105c
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.devtestlabs
+Help Version: 4.0.4.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/AzureRM.DevTestLabs.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DevTestLabs/Commands.DevTestLabs/help/AzureRM.DevTestLabs.md

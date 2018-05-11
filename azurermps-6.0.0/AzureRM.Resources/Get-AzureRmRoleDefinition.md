@@ -1,8 +1,8 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Resources.dll-Help.xml
-Module_Name: AzureRM.Resources
+external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
+Module Name: AzureRM.Resources
 ms.assetid: 7740AC3B-F643-4F8D-8DC5-ACBF59323BD8
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermroledefinition
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermroledefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmRoleDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Resources/Commands.Resources/help/Get-AzureRmRoleDefinition.md

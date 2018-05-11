@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.KeyVault
-Module_Guid: D48CF693-4125-4D2D-8790-1514F44CE325
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault
-Help_Version: 4.0.0.0
+Module Name: AzureRM.KeyVault
+Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault
+Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/AzureRM.KeyVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/KeyVault/Commands.KeyVault/help/AzureRM.KeyVault.md

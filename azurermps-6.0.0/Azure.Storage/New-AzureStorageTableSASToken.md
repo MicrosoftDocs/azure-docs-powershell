@@ -1,7 +1,7 @@
 ---
-external_help_file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 3CFA6E31-E243-4B22-AE8F-1942DD324639
-online_version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azurestoragetablesastoken
+online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azurestoragetablesastoken
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageTableSASToken.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/New-AzureStorageTableSASToken.md
