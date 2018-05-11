@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Media
-Module_Guid: c66edca6-2e57-4550-905e-f5cc104de25e
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.media
-Help_Version: 0.9.2.0
+Module Name: AzureRM.Media
+Module Guid: c66edca6-2e57-4550-905e-f5cc104de25e
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.media
+Help Version: 0.9.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/AzureRM.Media.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Media/Commands.Media/help/AzureRM.Media.md

@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Cdn
-Module_Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn
-Help_Version: 4.2.2.0
+Module Name: AzureRM.Cdn
+Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.cdn
+Help Version: 4.2.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/AzureRM.Cdn.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Cdn/Commands.Cdn/help/AzureRM.Cdn.md

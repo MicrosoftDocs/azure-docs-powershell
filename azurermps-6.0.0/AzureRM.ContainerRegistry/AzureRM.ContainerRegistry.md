@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.ContainerRegistry
-Module_Guid: b3ca459c-feb9-41cc-a954-46222505acb3
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.containerregistry
-Help_Version: 1.0.0.0
+Module Name: AzureRM.ContainerRegistry
+Module Guid: b3ca459c-feb9-41cc-a954-46222505acb3
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.containerregistry
+Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/AzureRM.ContainerRegistry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ContainerRegistry/Commands.ContainerRegistry/help/AzureRM.ContainerRegistry.md

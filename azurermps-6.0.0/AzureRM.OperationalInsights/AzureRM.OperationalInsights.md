@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.OperationalInsights
-Module_Guid: e827799a-7abf-4538-a61f-94dc52a48bd4
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.operationalinsights
-Help_Version: 4.3.2.0
+Module Name: AzureRM.OperationalInsights
+Module Guid: e827799a-7abf-4538-a61f-94dc52a48bd4
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.operationalinsights
+Help Version: 4.3.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/AzureRM.OperationalInsights.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/OperationalInsights/Commands.OperationalInsights/help/AzureRM.OperationalInsights.md

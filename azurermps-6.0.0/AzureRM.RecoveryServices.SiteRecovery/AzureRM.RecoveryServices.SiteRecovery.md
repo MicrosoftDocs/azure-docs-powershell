@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.RecoveryServices.SiteRecovery
-Module_Guid: d1de7560-48e1-48f3-bc8c-4eea3af2bbe2
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery
-Help_Version: 0.1.3.0
+Module Name: AzureRM.RecoveryServices.SiteRecovery
+Module Guid: d1de7560-48e1-48f3-bc8c-4eea3af2bbe2
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.siterecovery
+Help Version: 0.1.3.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/AzureRM.RecoveryServices.SiteRecovery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.SiteRecovery/Commands.RecoveryServices.SiteRecovery/help/AzureRM.RecoveryServices.SiteRecovery.md

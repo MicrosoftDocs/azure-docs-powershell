@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.RecoveryServices.Backup
-Module_Guid: 3d444bee-6742-4ce2-b573-dfd1b7c4144c
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.backup
-Help_Version: 4.1.2.0
+Module Name: AzureRM.RecoveryServices.Backup
+Module Guid: 3d444bee-6742-4ce2-b573-dfd1b7c4144c
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices.backup
+Help Version: 4.1.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/AzureRM.RecoveryServices.Backup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices.Backup/Commands.RecoveryServices.Backup/help/AzureRM.RecoveryServices.Backup.md

@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Profile
-Module_Guid: 342714fc-4009-4863-8afb-a9067e3db04b
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.profile
-Help_Version: 4.6.0.0
+Module Name: AzureRM.Profile
+Module Guid: 342714fc-4009-4863-8afb-a9067e3db04b
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.profile
+Help Version: 4.6.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Profile/Commands.Profile/help/AzureRM.Profile.md

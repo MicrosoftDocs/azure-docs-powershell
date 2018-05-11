@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.PowerBIEmbedded
-Module_Guid: 868389ce-dd36-4f57-a674-0970db085d9a
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded
-Help_Version: 4.1.4.0
+Module Name: AzureRM.PowerBIEmbedded
+Module Guid: 868389ce-dd36-4f57-a674-0970db085d9a
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.powerbiembedded
+Help Version: 4.1.4.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/AzureRM.PowerBIEmbedded.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PowerBIEmbedded/Commands.Management.PowerBIEmbedded/help/AzureRM.PowerBIEmbedded.md

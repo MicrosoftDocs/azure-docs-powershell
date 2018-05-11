@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.MachineLearningCompute
-Module_Guid: bb030259-49f9-46ef-806f-2a3f5a2e018f
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.machinelearningcompute
-Help_Version: 0.4.2.0
+Module Name: AzureRM.MachineLearningCompute
+Module Guid: bb030259-49f9-46ef-806f-2a3f5a2e018f
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.machinelearningcompute
+Help Version: 0.4.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearningCompute/Commands.MachineLearningCompute/help/AzureRM.MachineLearningCompute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/MachineLearningCompute/Commands.MachineLearningCompute/help/AzureRM.MachineLearningCompute.md

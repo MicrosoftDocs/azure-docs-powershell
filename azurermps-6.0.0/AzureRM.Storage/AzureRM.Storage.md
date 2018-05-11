@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Storage
-Module_Guid: da67eaa7-4cb1-4bfa-a194-8bf3faae8ac5
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage
-Help_Version: 4.2.3.0
+Module Name: AzureRM.Storage
+Module Guid: da67eaa7-4cb1-4bfa-a194-8bf3faae8ac5
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.storage
+Help Version: 4.2.3.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/AzureRM.Storage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Storage/Commands.Management.Storage/help/AzureRM.Storage.md

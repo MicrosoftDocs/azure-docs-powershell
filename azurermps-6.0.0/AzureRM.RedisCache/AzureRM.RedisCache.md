@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.RedisCache
-Module_Guid: 820628d7-6938-488a-8760-43373a5ffce6
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache
-Help_Version: 4.1.2.0
+Module Name: AzureRM.RedisCache
+Module Guid: 820628d7-6938-488a-8760-43373a5ffce6
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache
+Help Version: 4.1.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/AzureRM.RedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/AzureRM.RedisCache.md

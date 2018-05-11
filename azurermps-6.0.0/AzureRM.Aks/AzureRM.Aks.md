@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Aks
-Module_Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.aks
-Help_Version: 0.0.1.0
+Module Name: AzureRM.Aks
+Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.aks
+Help Version: 0.0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Aks/Commands.Aks/help/AzureRM.Aks.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Aks/Commands.Aks/help/AzureRM.Aks.md
