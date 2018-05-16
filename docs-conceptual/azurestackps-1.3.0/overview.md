@@ -1,4 +1,4 @@
-# Azure Stack Module 1.2.12
+# Azure Stack Module 1.3.0
 
 ## Requirements:
 Minimum supported Azure Stack version is 1804.
@@ -30,7 +30,7 @@ Install-Module -Name AzureRm.BootStrapper
 Use-AzureRmProfile -Profile 2017-03-09-profile -Force
 
 # Install Azure Stack Admin Module
-Install-Module -Name AzureStack -RequiredVersion 1.2.12
+Install-Module -Name AzureStack -RequiredVersion 1.3.0
 ```
 ## Content:
 ### Azure Bridge
