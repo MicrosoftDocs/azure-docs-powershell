@@ -2,8 +2,8 @@
 title: Formatting query results | Microsoft Docs
 description: How to query for resources in Azure and format the results.
 services: azure
-author: sdwheeler
-ms.author: sewhee
+author: sptramer
+ms.author: sttramer
 manager: carmonm
 ms.product: azure
 ms.service: azure-powershell
