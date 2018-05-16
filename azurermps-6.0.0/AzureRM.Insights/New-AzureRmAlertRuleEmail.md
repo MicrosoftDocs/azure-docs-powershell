@@ -1,8 +1,8 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Insights.dll-Help.xml
-Module_Name: AzureRM.Insights
+external help file: Microsoft.Azure.Commands.Insights.dll-Help.xml
+Module Name: AzureRM.Insights
 ms.assetid: B1000C10-265E-4465-B167-F1251470BE3E
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermalertruleemail
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.insights/new-azurermalertruleemail
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAlertRuleEmail.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Insights/Commands.Insights/help/New-AzureRmAlertRuleEmail.md

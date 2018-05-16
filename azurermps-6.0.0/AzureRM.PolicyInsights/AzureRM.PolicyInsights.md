@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.PolicyInsights
-Module_Guid: B1876B47-3652-4265-9AD5-782EC3E98319
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.policyinsights
-Help_Version: 0.9.0.0
+Module Name: AzureRM.PolicyInsights
+Module Guid: B1876B47-3652-4265-9AD5-782EC3E98319
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.policyinsights
+Help Version: 0.9.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PolicyInsights/Commands.PolicyInsights/help/AzureRM.PolicyInsights.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/PolicyInsights/Commands.PolicyInsights/help/AzureRM.PolicyInsights.md

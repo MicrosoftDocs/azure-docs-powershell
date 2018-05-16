@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.RecoveryServices
-Module_Guid: 4aa53b7e-fcfe-4e22-979c-9a4e6380de58
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices
-Help_Version: 4.1.2.0
+Module Name: AzureRM.RecoveryServices
+Module Guid: 4aa53b7e-fcfe-4e22-979c-9a4e6380de58
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.recoveryservices
+Help Version: 4.1.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/AzureRM.RecoveryServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RecoveryServices/Commands.RecoveryServices/help/AzureRM.RecoveryServices.md

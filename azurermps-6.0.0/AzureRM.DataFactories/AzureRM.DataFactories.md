@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.DataFactories
-Module_Guid: e3c0f6bc-fe96-41a0-88f4-5e490a91f05d
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories
-Help_Version: 4.2.2.0
+Module Name: AzureRM.DataFactories
+Module Guid: e3c0f6bc-fe96-41a0-88f4-5e490a91f05d
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.datafactories
+Help Version: 4.2.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/AzureRM.DataFactories.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactories/help/AzureRM.DataFactories.md

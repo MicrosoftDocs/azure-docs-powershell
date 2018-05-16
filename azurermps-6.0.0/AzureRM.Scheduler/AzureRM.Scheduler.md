@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Scheduler
-Module_Guid: 5c8a1c13-7e88-42d8-bbea-f3a81fdd6c1e
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.scheduler
-Help_Version: 0.16.3.0
+Module Name: AzureRM.Scheduler
+Module Guid: 5c8a1c13-7e88-42d8-bbea-f3a81fdd6c1e
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.scheduler
+Help Version: 0.16.3.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/AzureRM.Scheduler.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Scheduler/Commands.Scheduler/help/AzureRM.Scheduler.md

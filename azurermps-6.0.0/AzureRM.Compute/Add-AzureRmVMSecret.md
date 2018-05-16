@@ -1,8 +1,8 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Compute.dll-Help.xml
-Module_Name: AzureRM.Compute
+external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
+Module Name: AzureRM.Compute
 ms.assetid: 5008F83F-AF3E-47CF-99A3-55129E654128
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/add-azurermvmsecret
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/add-azurermvmsecret
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Add-AzureRmVMSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Compute/Commands.Compute/help/Add-AzureRmVMSecret.md

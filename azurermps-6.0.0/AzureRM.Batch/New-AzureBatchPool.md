@@ -1,8 +1,8 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Batch.dll-Help.xml
-Module_Name: AzureRM.Batch
+external help file: Microsoft.Azure.Commands.Batch.dll-Help.xml
+Module Name: AzureRM.Batch
 ms.assetid: C71C486E-34EB-42B5-B38A-D85B7DAA2F74
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.batch/new-azurebatchpool
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.batch/new-azurebatchpool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBatch/Commands.Batch/help/New-AzureBatchPool.md

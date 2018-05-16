@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Backup
-Module_Guid: 0b1d76f5-a928-4b8f-9c83-df26947568d4
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.backup
-Help_Version: 4.0.4.0
+Module Name: AzureRM.Backup
+Module Guid: 0b1d76f5-a928-4b8f-9c83-df26947568d4
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.backup
+Help Version: 4.0.4.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/AzureRM.Backup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/AzureRM.Backup.md

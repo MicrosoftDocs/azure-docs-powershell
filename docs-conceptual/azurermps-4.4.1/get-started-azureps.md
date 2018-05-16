@@ -2,8 +2,8 @@
 title: Get started with Azure PowerShell | Microsoft Docs
 description:
 services: azure
-author: sdwheeler
-ms.author: sewhee
+author: sptramer
+ms.author: sttramer
 manager: carmonm
 ms.product: azure
 ms.service: azure-powershell

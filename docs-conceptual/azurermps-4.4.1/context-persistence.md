@@ -2,8 +2,8 @@
 title: Persisting user logins across PowerShell sessions
 description: The article explains new features in Azure PowerShell that allow you to reuse credentials and other user information across multiple PowerShell sessions.
 services: azure
-author: sdwheeler
-ms.author: sewhee
+author: sptramer
+ms.author: sttramer
 manager: carmonm
 ms.product: azure
 ms.service: azure-powershell

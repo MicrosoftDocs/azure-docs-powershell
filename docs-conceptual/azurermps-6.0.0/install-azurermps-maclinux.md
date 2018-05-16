@@ -2,8 +2,8 @@
 title: Install and configure Azure PowerShell on macOS and Linux | Microsoft Docs
 description: How to install and configure Azure PowerShell for first time use on macOS and Linux.
 services: azure
-author: sdwheeler
-ms.author: sewhee
+author: sptramer
+ms.author: sttramer
 manager: carmonm
 ms.product: azure
 ms.service: azure-powershell
@@ -34,9 +34,10 @@ Linux. If you want to use Azure PowerShell on Windows, see the [install](./insta
 article for Windows.
 
 Installing **PowerShell Core v6** on Linux or macOS varies depending on the Linux distribution and OS version.
-Detailed instructions can be found in the following article:
+Detailed instructions can be found in the following articles:
 
-- [Installing PowerShell Core on macOS and Linux](/powershell/scripting/setup/installing-powershell-core-on-macos-and-linux)
+- [Installing PowerShell Core on macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
+- [Installing PowerShell Core on Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
 
 ## Step 2: Install Azure PowerShell for .NET Core
 

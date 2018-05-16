@@ -1,8 +1,8 @@
 ---
-external_help_file: Microsoft.Azure.Commands.Network.dll-Help.xml
-Module_Name: AzureRM.Network
+external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+Module Name: AzureRM.Network
 ms.assetid: 95731734-EDCA-432A-A7BF-94D1E3725FB2
-online_version: https://docs.microsoft.com/en-us/powershell/module/azurerm.network/start-azurermapplicationgateway
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.network/start-azurermapplicationgateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Start-AzureRmApplicationGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/Start-AzureRmApplicationGateway.md

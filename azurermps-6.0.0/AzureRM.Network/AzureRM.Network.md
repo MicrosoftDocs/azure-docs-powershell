@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.Network
-Module_Guid: eb75c732-e274-4a20-b502-e9958e63484a
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.network
-Help_Version: 5.4.2.0
+Module Name: AzureRM.Network
+Module Guid: eb75c732-e274-4a20-b502-e9958e63484a
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.network
+Help Version: 5.4.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/AzureRM.Network.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Network/Commands.Network/help/AzureRM.Network.md

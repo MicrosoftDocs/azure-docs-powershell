@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.LogicApp
-Module_Guid: 8a7d44bb-e747-4265-8f22-b3937961d709
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.logicapp
-Help_Version: 4.0.3.0
+Module Name: AzureRM.LogicApp
+Module Guid: 8a7d44bb-e747-4265-8f22-b3937961d709
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.logicapp
+Help Version: 4.0.3.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/AzureRM.LogicApp.md

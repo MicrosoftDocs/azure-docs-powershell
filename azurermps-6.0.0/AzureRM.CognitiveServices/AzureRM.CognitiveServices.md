@@ -1,8 +1,8 @@
 ---
-Module_Name: AzureRM.CognitiveServices
-Module_Guid: 66c566b4-950c-4a2b-9f3b-199d92f0df1a
-Download_Help_Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.cognitiveservices
-Help_Version: 0.9.4.0
+Module Name: AzureRM.CognitiveServices
+Module Guid: 66c566b4-950c-4a2b-9f3b-199d92f0df1a
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.cognitiveservices
+Help Version: 0.9.4.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/AzureRM.CognitiveServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/CognitiveServices/Commands.Management.CognitiveServices/help/AzureRM.CognitiveServices.md
