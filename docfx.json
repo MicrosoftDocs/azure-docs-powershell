@@ -52,7 +52,8 @@
                     "AzureStack/**/*.md", "AzureStack/**/*.yml",
                     "ServiceFabric/**/*.md", "ServiceFabric/**/*.yml",
                     "Storage/**/*.md", "Storage/**/*.yml",
-                    "azure ad cmdlets/**/*.md"
+                    "azure ad cmdlets/**/*.md",
+                    "bread/toc.yml"
                 ]
             },
             { "files": ["**/*.md"], "src": "azureipps", "version": "azureipps" },
@@ -69,8 +70,7 @@
             { "files": ["media/**"], "version": "azurermps-3.8.0" },
             { "files": ["media/**"], "version": "azurermps-4.4.1" },
             { "files": ["media/**"], "version": "azurermps-5.7.0" },
-            { "files": ["media/**"], "version": "azurermps-6.0.0" },
-            { "files": ["bread/toc.json"] }
+            { "files": ["media/**"], "version": "azurermps-6.0.0" }
         ],
         "versions": {
             "azurermps-1.2.9": { "dest": "azurermps-1.2.9" },
