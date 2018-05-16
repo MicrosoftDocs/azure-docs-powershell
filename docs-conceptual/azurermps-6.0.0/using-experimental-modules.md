@@ -38,11 +38,11 @@ use the same cmdlet and parameter names.
 Experimental modules are published to the PowerShell Gallery just like the existing Azure
 PowerShell modules. To see a list of experimental modules, run the following command:
 
-```powershell
+```azureazurepowershell-interactive
 Find-Module AzureRM.*.Experiments
 ```
 
-```Output
+```output
 Version Name                         Repository Description
 ------- ----                         ---------- -----------
 1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
@@ -51,7 +51,7 @@ Version Name                         Repository Description
 
 To install the experimental module, use the following commands from an elevated PowerShell session:
 
-```powershell
+```azureazurepowershell-interactive
 Install-Module AzureRM.Compute.Experiments
 Install-Module AzureRM.Websites.Experiments
 ```

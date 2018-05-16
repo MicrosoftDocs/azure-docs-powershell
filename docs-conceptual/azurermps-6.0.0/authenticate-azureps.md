@@ -11,7 +11,6 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ---
-
 # Log in with Azure PowerShell
 
 Azure PowerShell supports multiple login methods. The simplest way to get started is to log in
@@ -35,17 +34,17 @@ ensure your automation scripts are even more secure.
 
 2. Log in with the service principal.
 
-    ```powershell
+    ```azureazurepowershell-interactive
     Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
     To get your TenantId, log in interactively and then get the TenantId from your subscription.
 
-    ```powershell
+    ```azureazurepowershell-interactive
     Get-AzureRmSubscription
     ```
 
-    ```
+    ```output
     Environment           : AzureCloud
     Account               : username@contoso.com
     TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -69,17 +68,17 @@ various governments. If your Azure account is in one the government clouds, you 
 environment when you sign in. For example, if you account is in the China cloud you sign on using
 the following command:
 
-```powershell
+```azureazurepowershell-interactive
 Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 Use the following command to get a list of available environments:
 
-```powershell
+```azureazurepowershell-interactive
 Get-AzureRmEnvironment | Select-Object Name
 ```
 
-```
+```output
 Name
 ----
 AzureCloud
