@@ -55,3 +55,7 @@ Or attend the Microsoft Virtual Academy's [Getting Started with PowerShell Jumps
 * [Azure Information Protection](/powershell/azure/aip/)
 * [Azure Service Fabric](/powershell/azure/service-fabric/)
 * [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
+
+## Trigger build
+
+
