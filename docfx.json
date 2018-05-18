@@ -6,9 +6,6 @@
             { "files": ["**/*.yml", "**/*.md"], "src": "azurermps-1.2.9", "version": "azurermps-1.2.9", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-1.2.9", "version": "azurermps-1.2.9", "dest": "azure" },
 
-            { "files": ["**/*.yml", "**/*.md"], "src": "azurermps-1.7.0", "version": "azurermps-1.7.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-1.7.0", "version": "azurermps-1.7.0", "dest": "azure" },
-
             { "files": ["**/*.yml", "**/*.md"], "src": "azurermps-2.2.0", "version": "azurermps-2.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-2.2.0", "version": "azurermps-2.2.0", "dest": "azure" },
 
@@ -21,7 +18,7 @@
             { "files": ["**/*.yml", "**/*.md"], "src": "azurermps-5.7.0", "version": "azurermps-5.7.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-5.7.0", "version": "azurermps-5.7.0", "dest": "azure" },
 
-            { "files": ["**/*.yml", "**/*.md"], "src": "azurermps-6.0.0", "version": "azurermps-6.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "azurermps-6.1.0", "version": "azurermps-6.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-6.0.0", "version": "azurermps-6.0.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azuresmps-3.7.0", "version": "azuresmps-3.7.0", "dest": "module/servicemanagement" },
@@ -65,24 +62,19 @@
         ],
         "resource": [
             { "files": ["media/**"], "version": "azurermps-1.2.9" },
-            { "files": ["media/**"], "version": "azurermps-1.7.0" },
             { "files": ["media/**"], "version": "azurermps-2.2.0" },
             { "files": ["media/**"], "version": "azurermps-3.8.0" },
             { "files": ["media/**"], "version": "azurermps-4.4.1" },
             { "files": ["media/**"], "version": "azurermps-5.7.0" },
-            { "files": ["media/**"], "version": "azurermps-6.0.0" }
+            { "files": ["media/**"], "version": "azurermps-6.1.0" }
         ],
         "versions": {
             "azurermps-1.2.9": { "dest": "azurermps-1.2.9" },
-            "azurermps-1.7.0": { "dest": "azurermps-1.7.0" },
             "azurermps-2.2.0": { "dest": "azurermps-2.2.0" },
-            "azurermps-3.7.0": { "dest": "azurermps-3.7.0" },
             "azurermps-3.8.0": { "dest": "azurermps-3.8.0" },
             "azurermps-4.4.1": { "dest": "azurermps-4.4.1" },
             "azurermps-5.7.0": { "dest": "azurermps-5.7.0" },
-            "azurermps-6.0.0": { "dest": "azurermps-6.0.0" },
-            "azuresmps-3.7.0": { "dest": "azuresmps-3.7.0" },
-            "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
+            "azurermps-6.0.0": { "dest": "azurermps-6.1.0" },
             "azurestackps-1.2.9": { "dest": "azurestackps-1.2.9" },
             "azurestackps-1.2.11": { "dest": "azurestackps-1.2.11" },
             "azurestackps-1.3.0": { "dest": "azurestackps-1.3.0" },
