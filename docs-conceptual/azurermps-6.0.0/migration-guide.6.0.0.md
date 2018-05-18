@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.workload:
 ms.date: 5/1/2018
 ---
-
 # Breaking changes for Microsoft Azure PowerShell 6.0.0
 
 This document serves as both a breaking change notification and migration guide for consumers of the Microsoft Azure PowerShell cmdlets. Each section describes both the impetus for the breaking change and the migration path of least resistance. For in-depth context, please refer to the pull request associated with each change.
