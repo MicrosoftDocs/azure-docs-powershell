@@ -11,7 +11,6 @@ ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 08/31/2017
 ---
-
 # Overview of Azure PowerShell
 
 Azure PowerShell provides a set of cmdlets that use the [Azure Resource
@@ -36,7 +35,6 @@ The following samples can help you learn how to perform common scenarios with Az
 > you can install the Service Management version of Azure PowerShell. For more information, see
 > [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
 
-
 ### Need help with PowerShell?
 
 If you are unfamiliar with PowerShell, you may find an introduction to PowerShell helpful.
@@ -57,5 +55,4 @@ Or attend the Microsoft Virtual Academy's [Getting Started with PowerShell Jumps
 * [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
 
 ## Trigger build
-
 

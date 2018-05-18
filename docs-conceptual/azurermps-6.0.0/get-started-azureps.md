@@ -71,11 +71,11 @@ credentials for the local administrator account on the VM.
 
 First, create the credential object.
 
-```powershell
+```azureazurepowershell-interactive
 $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
 ```
 
-```Output
+```output
 Windows PowerShell credential request.
 Enter a username and password for the virtual machine.
 User: localAdmin
@@ -83,11 +83,11 @@ Password for user localAdmin: *********
 ```
 Next, create the VM.
 
-```powershell
+```azureazurepowershell-interactive
 New-AzureRmVM -Name SampleVM -Credential $cred
 ```
 
-```Output
+```output
 ResourceGroupName        : SampleVM
 Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/SampleVM/providers/Microsoft.Compute/virtualMachines/SampleVM
 VmId                     : 43f6275d-ce50-49c8-a831-5d5974006e63
@@ -106,11 +106,11 @@ FullyQualifiedDomainName : samplevm-2c0867.eastus.cloudapp.azure.com
 That was easy. But, you may wonder what else is created and how is the VM configured. First, let's
 look at our resource groups.
 
-```powershell
+```azureazurepowershell-interactive
 Get-AzureRmResourceGroup | Select-Object ResourceGroupName,Location
 ```
 
-```Output
+```output
 ResourceGroupName          Location
 -----------------          --------
 cloud-shell-storage-westus westus
@@ -122,13 +122,13 @@ Shell. The **SampleVM** resource group was created by the `New-AzureRmVM` cmdlet
 
 Now, what other resources were created in this new resource group?
 
-```powershell
+```azureazurepowershell-interactive
 Get-AzureRmResource |
   Where ResourceGroupName -eq SampleVM |
     Select-Object ResourceGroupName,Location,ResourceType,Name
 ```
 
-```Output
+```output
 ResourceGroupName          Location ResourceType                            Name
 -----------------          -------- ------------                            ----
 SAMPLEVM                   eastus   Microsoft.Compute/disks                 SampleVM_OsDisk_1_9b286c54b168457fa1f8c47...
@@ -142,13 +142,13 @@ SampleVM                   eastus   Microsoft.Network/virtualNetworks       Samp
 Let's get some more details about the VM. This examples shows how to retrieve
 information about the OS Image used to create the VM.
 
-```powershell
+```azureazurepowershell-interactive
 Get-AzureRmVM -Name SampleVM -ResourceGroupName SampleVM |
   Select-Object -ExpandProperty StorageProfile |
     Select-Object -ExpandProperty ImageReference
 ```
 
-```Output
+```output
 Publisher : MicrosoftWindowsServer
 Offer     : WindowsServer
 Sku       : 2016-Datacenter
@@ -171,11 +171,11 @@ service within it.
 Let's create a resource group named "MyResourceGroup" in the westeurope region of Azure. To do so
 type the following command:
 
-```powershell
+```azureazurepowershell-interactive
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
-```Output
+```output
 ResourceGroupName : myResourceGroup
 Location          : westeurope
 ProvisioningState : Succeeded
@@ -195,7 +195,7 @@ process. We also create a public IP address so that we can connect to this VM. W
 security group to secure access to the public address. Finally we create the virtual NIC using all
 of the previous resources.
 
-```powershell
+```azureazurepowershell-interactive
 # Variables for common values
 $resourceGroup = "myResourceGroup"
 $location = "westeurope"
@@ -235,7 +235,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
 
 Now that we have the required resources we can create the VM configuration object.
 
-```powershell
+```azureazurepowershell-interactive
 # Create a virtual machine configuration
 $vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
   Set-AzureRmVMOperatingSystem -Linux -ComputerName $vmName -Credential $cred -DisablePasswordAuthentication |
@@ -251,7 +251,7 @@ Add-AzureRmVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azur
 
 Now we can create the VM using the VM configuration object.
 
-```powershell
+```azureazurepowershell-interactive
 New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 ```
 
@@ -262,7 +262,7 @@ address of the VM you created:
 ssh xx.xxx.xxx.xxx
 ```
 
-```Output
+```output
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-65-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com/
@@ -301,14 +301,14 @@ can create many other types of Azure resources as well.
 For example, to create an Azure Network Load Balancer that we could then associate with our newly
 created VMs, we can use the following create command:
 
-```powershell
+```azureazurepowershell-interactive
 New-AzureRmLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
 We could also create a new private Virtual Network (commonly referred to as a "VNet" within Azure)
 for our infrastructure using the following command:
 
-```powershell
+```azureazurepowershell-interactive
 $subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
 $vnet = New-AzureRmVirtualNetwork -ResourceGroupName myResourceGroup -Location westeurope `
   -Name MYvNET3 -AddressPrefix 10.0.0.0/16 -Subnet $subnetConfig
@@ -323,7 +323,7 @@ managed platform service that provides a great way to host web apps without havi
 infrastructure. After creating the Azure AppService, you can create two new Azure Web Apps within
 the AppService using the following commands:
 
-```powershell
+```azureazurepowershell-interactive
 # Create an Azure AppService that we can host any number of web apps within
 New-AzureRmAppServicePlan -Name MyAppServicePlan -Tier Basic -NumberofWorkers 2 -WorkerSize Small -ResourceGroupName myResourceGroup -Location westeurope
 
@@ -337,13 +337,13 @@ New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -Resource
 You can use the `Get-AzureRmResource` cmdlet to list the resources running in Azure. The following
 example shows the resources we just created in the new resource group.
 
-```powershell
+```azureazurepowershell-interactive
 Get-AzureRmResource |
   Where-Object ResourceGroupName -eq myResourceGroup |
     Select-Object Name,Location,ResourceType
 ```
 
-```Output
+```output
 Name                                                  Location   ResourceType
 ----                                                  --------   ------------
 myLinuxVM_OsDisk_1_36ca038791f642ba91270879088c249a   westeurope Microsoft.Compute/disks
@@ -368,13 +368,13 @@ To clean up your Azure account, you want to remove the resources we created in t
 can use the `Remove-AzureRm*` cmdlets to delete the resources you no longer need. To remove the
 Windows VM we created, using the following command:
 
-```powershell
+```azureazurepowershell-interactive
 Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 ```
 
 You will be prompted to confirm that you want to remove the resource.
 
-```Output
+```output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -384,11 +384,11 @@ You can also use the delete many resources at one time. For example, the followi
 all the resource group "MyResourceGroup" that we've used for all the samples in this Get Started
 tutorial. This removes the resource group and all of the resources in it.
 
-```powershell
+```azureazurepowershell-interactive
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 
-```Output
+```output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y

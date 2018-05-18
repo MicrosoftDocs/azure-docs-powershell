@@ -98,7 +98,7 @@ allows you to access any tenants or subscriptions allowed by your login credenti
 To add a new context after login, use `Set-AzureRmContext` (or its alias,
 `Select-AzureRmSubscription`).
 
-```powershell
+```azureazurepowershell-interactive
 PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso1"
 ```
 
@@ -108,7 +108,7 @@ default name, using the account ID and subscription ID is used.
 
 To rename an existing context, use the `Rename-AzureRmContext` cmdlet. For example:
 
-```powershell
+```azureazurepowershell-interactive
 PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Contoso2'
 ```
 
@@ -118,7 +118,7 @@ to quickly select the context.
 
 Finally, to remove a context, use the `Remove-AzureRmContext` cmdlet.  For example:
 
-```powershell
+```azureazurepowershell-interactive
 PS C:\> Remove-AzureRmContext Contoso2
 ```
 
@@ -133,7 +133,7 @@ the `Disconnect-AzureRmAccount` cmdlet removes all credentials and contexts asso
 Service Principal in the current context. You may pass in a Username, Service Principal Name, or
 context to target a particular principal.
 
-```powershell
+```azureazurepowershell-interactive
 Disconnect-AzureRmAccount user1@contoso.org
 ```
 
@@ -148,7 +148,7 @@ just the current session.
 As an example, to change the default context in the current PowerShell session without impacting
 other windows, or the context used the next time a session is opened, use:
 
-```powershell
+```azureazurepowershell-interactive
 PS C:\> Select-AzureRmContext Contoso1 -Scope Process
 ```
 
@@ -158,7 +158,7 @@ The context AutoSave setting is saved to the user Azure PowerShell directory
 (`%AppData%\Roaming\Windows Azure PowerShell`). Some kinds of computer accounts may not have access
 to this directory. For such scenarios, you can use the environment variable
 
-```powershell
+```azureazurepowershell-interactive
 $env:AzureRmContextAutoSave="true" | "false"
 ```
 
