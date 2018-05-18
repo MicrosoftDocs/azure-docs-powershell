@@ -26,7 +26,7 @@ about formatting output, see [Formatting query results](formatting-output.md).
 
 Use the `Get-AzureRmVM` cmdlet to query for a list of VMs in your account.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM
 ```
 
@@ -41,7 +41,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 
 The `Select-Object` cmdlet can be used to select the specific properties that are interesting to you.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM | Select Name,ResourceGroupName,Location
 ```
 
@@ -58,7 +58,7 @@ If the property you want to select is nested deep in the JSON output you need to
 path to that nested property. The following example shows how to select the VM Name and the OS type
 from the `Get-AzureRmVM` cmdlet.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
@@ -74,7 +74,7 @@ MyWin2016VM   Windows
 The `Where-Object` cmdlet allows you to filter the result based on any property value. In the
 following example, the filter selects only VMs that have the text "RGD" in their name.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
 ```
 
@@ -87,7 +87,7 @@ RGDEMO001          KBDemo020
 
 With the next example, the results will return the VMs that have the vmSize 'Standard_DS1_V2'.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM | Where vmSize -eq Standard_DS1_V2
 ```
 

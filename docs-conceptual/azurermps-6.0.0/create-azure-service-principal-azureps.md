@@ -50,7 +50,7 @@ of the following ways to identify your deployed app:
 
 The `Get-AzureRmADApplication` cmdlet can be used to discover information about your application.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
 ```
 
@@ -70,7 +70,7 @@ ReplyUrls               : {}
 
 The `New-AzureRmADServicePrincipal` cmdlet is used to create the service principal.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Add-Type -Assembly System.Web
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 $securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
@@ -85,7 +85,7 @@ MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738
 
 ### Get information about the service principal
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $svcprincipal = Get-AzureRmADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 $svcprincipal | Select-Object *
 ```
@@ -104,7 +104,7 @@ You can now sign in as the new service principal for your app using the *appId* 
 provided. You need to supply the Tenant Id for your account. Your Tenant Id is displayed when you
 sign into Azure with your personal credentials.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
 Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
@@ -143,7 +143,7 @@ details on role-specific permissions or create custom ones through the Azure por
 In this example, we add the **Reader** role to our prior example, and delete the **Contributor**
 one:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 New-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
 ```
 
@@ -158,13 +158,13 @@ ObjectId           : 698138e7-d7b6-4738-a866-b4e3081a69e4
 ObjectType         : ServicePrincipal
 ```
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Remove-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
 ```
 
 To view the current roles assigned:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 ```
 
@@ -194,7 +194,7 @@ change the password of the service principal by creating a new password and remo
 
 ### Add a new password for the service principal
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 New-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -Password $password
 ```
@@ -207,7 +207,7 @@ StartDate           EndDate             KeyId                                Typ
 
 ### Get a list of credentials for the service principal
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
@@ -220,7 +220,7 @@ StartDate           EndDate             KeyId                                Typ
 
 ### Remove the old password from the service principal
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
 ```
 
@@ -233,7 +233,7 @@ service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
 
 ### Verify the list of credentials for the service principal
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
