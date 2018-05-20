@@ -71,7 +71,7 @@ credentials for the local administrator account on the VM.
 
 First, create the credential object.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
 ```
 
@@ -83,7 +83,7 @@ Password for user localAdmin: *********
 ```
 Next, create the VM.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 New-AzureRmVM -Name SampleVM -Credential $cred
 ```
 
@@ -106,7 +106,7 @@ FullyQualifiedDomainName : samplevm-2c0867.eastus.cloudapp.azure.com
 That was easy. But, you may wonder what else is created and how is the VM configured. First, let's
 look at our resource groups.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmResourceGroup | Select-Object ResourceGroupName,Location
 ```
 
@@ -122,7 +122,7 @@ Shell. The **SampleVM** resource group was created by the `New-AzureRmVM` cmdlet
 
 Now, what other resources were created in this new resource group?
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmResource |
   Where ResourceGroupName -eq SampleVM |
     Select-Object ResourceGroupName,Location,ResourceType,Name
@@ -142,7 +142,7 @@ SampleVM                   eastus   Microsoft.Network/virtualNetworks       Samp
 Let's get some more details about the VM. This examples shows how to retrieve
 information about the OS Image used to create the VM.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM -Name SampleVM -ResourceGroupName SampleVM |
   Select-Object -ExpandProperty StorageProfile |
     Select-Object -ExpandProperty ImageReference
@@ -171,7 +171,7 @@ service within it.
 Let's create a resource group named "MyResourceGroup" in the westeurope region of Azure. To do so
 type the following command:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
@@ -195,7 +195,7 @@ process. We also create a public IP address so that we can connect to this VM. W
 security group to secure access to the public address. Finally we create the virtual NIC using all
 of the previous resources.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 # Variables for common values
 $resourceGroup = "myResourceGroup"
 $location = "westeurope"
@@ -235,7 +235,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
 
 Now that we have the required resources we can create the VM configuration object.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 # Create a virtual machine configuration
 $vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
   Set-AzureRmVMOperatingSystem -Linux -ComputerName $vmName -Credential $cred -DisablePasswordAuthentication |
@@ -251,7 +251,7 @@ Add-AzureRmVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azur
 
 Now we can create the VM using the VM configuration object.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 ```
 
@@ -301,14 +301,14 @@ can create many other types of Azure resources as well.
 For example, to create an Azure Network Load Balancer that we could then associate with our newly
 created VMs, we can use the following create command:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 New-AzureRmLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
 We could also create a new private Virtual Network (commonly referred to as a "VNet" within Azure)
 for our infrastructure using the following command:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
 $vnet = New-AzureRmVirtualNetwork -ResourceGroupName myResourceGroup -Location westeurope `
   -Name MYvNET3 -AddressPrefix 10.0.0.0/16 -Subnet $subnetConfig
@@ -323,7 +323,7 @@ managed platform service that provides a great way to host web apps without havi
 infrastructure. After creating the Azure AppService, you can create two new Azure Web Apps within
 the AppService using the following commands:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 # Create an Azure AppService that we can host any number of web apps within
 New-AzureRmAppServicePlan -Name MyAppServicePlan -Tier Basic -NumberofWorkers 2 -WorkerSize Small -ResourceGroupName myResourceGroup -Location westeurope
 
@@ -337,7 +337,7 @@ New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -Resource
 You can use the `Get-AzureRmResource` cmdlet to list the resources running in Azure. The following
 example shows the resources we just created in the new resource group.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmResource |
   Where-Object ResourceGroupName -eq myResourceGroup |
     Select-Object Name,Location,ResourceType
@@ -368,7 +368,7 @@ To clean up your Azure account, you want to remove the resources we created in t
 can use the `Remove-AzureRm*` cmdlets to delete the resources you no longer need. To remove the
 Windows VM we created, using the following command:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 ```
 
@@ -384,7 +384,7 @@ You can also use the delete many resources at one time. For example, the followi
 all the resource group "MyResourceGroup" that we've used for all the samples in this Get Started
 tutorial. This removes the resource group and all of the resources in it.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 
