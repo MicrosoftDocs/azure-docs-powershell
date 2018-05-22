@@ -34,13 +34,13 @@ ensure your automation scripts are even more secure.
 
 2. Log in with the service principal.
 
-    ```azureazurepowershell-interactive
+    ```azurepowershell-interactive
     Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
     To get your TenantId, log in interactively and then get the TenantId from your subscription.
 
-    ```azureazurepowershell-interactive
+    ```azurepowershell-interactive
     Get-AzureRmSubscription
     ```
 
@@ -68,13 +68,13 @@ various governments. If your Azure account is in one the government clouds, you 
 environment when you sign in. For example, if you account is in the China cloud you sign on using
 the following command:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 Use the following command to get a list of available environments:
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-AzureRmEnvironment | Select-Object Name
 ```
 

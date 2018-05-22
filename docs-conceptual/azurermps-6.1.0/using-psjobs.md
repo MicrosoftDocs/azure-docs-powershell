@@ -27,7 +27,7 @@ PSJobs are run in separate processes, which means that information about your Az
 be properly shared with the jobs you create. Upon connecting your Azure account to your PowerShell
 session with `Connect-AzureRmAccount`, you can pass the context to a job.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $creds = Get-Credential
 $job = Start-Job { param($context,$vmadmin) New-AzureRmVM -Name MyVm -AzureRmContext $context -Credential $vmadmin} -Arguments (Get-AzureRmContext),$creds
 ```
@@ -35,7 +35,7 @@ $job = Start-Job { param($context,$vmadmin) New-AzureRmVM -Name MyVm -AzureRmCon
 However, if you have chosen to have your context automatically saved with
 `Enable-AzureRmContextAutosave`, the context is automatically shared with any jobs you create.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Enable-AzureRmContextAutosave
 $creds = Get-Credential
 $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin} -Arguments $creds
@@ -46,14 +46,14 @@ $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin
 As a convenience, Azure PowerShell also provides an `-AsJob` switch on some long-running cmdlets.
 The `-AsJob` switch makes creating PSJobs even easier.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $creds = Get-Credential
 $job = New-AzureRmVM -Name MyVm -Credential $creds -AsJob
 ```
 
 You can inspect the job and progress at any time with `Get-Job` and `Get-AzureRmVM`.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 Get-Job $job
 Get-AzureRmVM MyVm
 ```
@@ -75,7 +75,7 @@ Subsequently, upon completion, you can obtain the result of the job with `Receiv
 > For example, the `Receive-Job` result of `Do-Action -AsJob` is of the same type as the result of
 > `Do-Action`.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $vm = Receive-Job $job
 $vm
 ```
@@ -100,7 +100,7 @@ FullyQualifiedDomainName : myvmmyvm.eastus.cloudapp.azure.com
 
 Create multiple VMs at once.
 
-```azureazurepowershell-interactive
+```azurepowershell-interactive
 $creds = Get-Credential
 # Create 10 jobs.
 for($k = 0; $k -lt 10; $k++) {
