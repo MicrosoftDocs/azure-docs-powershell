@@ -5,6 +5,7 @@ Download Help Link: ./Azure.Storage.md
 Help Version: 1.0.0.0
 Locale: en-US
 ms.assetid: 36239E26-31C6-455A-969B-7FD82F576316
+ms.service: storage
 ---
 
 # Azure.Storage Module
