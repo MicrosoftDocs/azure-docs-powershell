@@ -40,7 +40,7 @@ The **Get-AzureVMAvailableExtension** cmdlet gets information for the latest ava
 ### Example 1: Get information for the latest available extensions
 ```
 PS C:\> Get-AzureVMAvailableExtension
-          Publisher                  : Contoso.Compute
+          Publisher                  : Microsoft.Compute
           ExtensionName              : VMAccessAgent
           Version                    : 1.0
           PublicConfigurationSchema  : <?xml version="1.0" encoding="utf-8"?>
@@ -75,8 +75,8 @@ This command gets information for the latest available extensions for all virtua
 
 ### Example 2: Get information from a specified extension name
 ```
-PS C:\> Get-AzureVMAvailableExtension -Publisher Contoso.Compute -ExtensionName "VMAccessAgent" -AllVersions
-          Publisher                  : Contoso.Compute
+PS C:\> Get-AzureVMAvailableExtension -Publisher Microsoft.Compute -ExtensionName "VMAccessAgent" -AllVersions
+          Publisher                  : Microsoft.Compute
           ExtensionName              : VMAccessAgent
           Version                    : 1.0.2
           PublicConfigurationSchema  : 
@@ -110,7 +110,7 @@ PS C:\> Get-AzureVMAvailableExtension -Publisher Contoso.Compute -ExtensionName 
           OperationId                : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
           OperationStatus            : Succeeded
 
-          Publisher                  : Contoso.Compute
+          Publisher                  : Microsoft.Compute
           ExtensionName              : VMAccessAgent
           Version                    : 1.0.3
           PublicConfigurationSchema  : <?xml version="1.0" encoding="utf-8"?>
@@ -141,12 +141,12 @@ PS C:\> Get-AzureVMAvailableExtension -Publisher Contoso.Compute -ExtensionName 
           OperationStatus            : Succeeded
 ```
 
-This command gets information from all versions of the extension named VMAccessAgent and the publisher named Contoso.Computer.
+This command gets information from all versions of the extension named VMAccessAgent and the publisher named Microsoft.Computer.
 
 ### Example 3: Get information from a specific virtual machine extension by version number
 ```
-PS C:\> Get-AzureVMAvailableExtension -Publisher Contoso.Compute -ExtensionName VMAccessAgent -Version 1.0.3
-          Publisher                  : Contoso.Compute
+PS C:\> Get-AzureVMAvailableExtension -Publisher Microsoft.Compute -ExtensionName VMAccessAgent -Version 1.0.3
+          Publisher                  : Microsoft.Compute
           ExtensionName              : VMAccessAgent
           Version                    : 1.0.3
           PublicConfigurationSchema  : <?xml version="1.0" encoding="utf-8"?>
@@ -177,7 +177,7 @@ PS C:\> Get-AzureVMAvailableExtension -Publisher Contoso.Compute -ExtensionName 
           OperationStatus            : Succeeded
 ```
 
-This command gets information for the extension named VMAccessAgent and the publisher named Contoso.Compute for the extension version 1.0.3.
+This command gets information for the extension named VMAccessAgent and the publisher named Microsoft.Compute for the extension version 1.0.3.
 
 ## PARAMETERS
 
