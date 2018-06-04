@@ -18,6 +18,45 @@ ms.date: 5/1/2018
 This is a list of changes made to Azure PowerShell in this release.
 
 ---
+## 6.2.0 - June 2018
+#### AzureRM.Profile
+* Fix issue where version 10.0.3 of Newtonsoft.Json wasn't being loaded on module import
+
+#### AzureRM.Compute
+* VMSS VM Update feature
+    - Added 'Update-AzureRmVmssVM' and 'New-AzureRmVMDataDisk' cmdlets
+    - Add VirtualMachineScaleSetVM parameter to 'Add-AzureRmVMDataDisk' cmdlet to support adding a data disk to Vmss VM.
+
+#### AzureRM.DataFactoryV2
+* Updated the ADF .Net SDK version to 0.8.0-preview containing following changes:
+    - Added Configure factory repository operation
+    - Updated QuickBooks LinkedService to expose consumerKey and consumerSecret properties
+    - Updated Several model types from SecretBase to Object
+    - Added Blob Events trigger
+
+### AzureRM.KeyVault
+* Update documentation with example output
+
+### AzureRM.Network
+* Enable Traffic Analytics parameters on Network Watcher cmdlets
+
+#### AzureRM.Resources
+* Fix issue with 'Properties' property of 'PSResource' object(s) returned from 'Get-AzureRmResource'
+
+#### AzureRM.Scheduler
+* Fix issue with update ServiceBusQueueJob not setting new Auth values
+
+### AzureRM.Sql
+* Updated the following cmdlets with optional LicenseType parameter
+	- New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase
+	- New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool
+	- New-AzureRmSqlDatabaseCopy
+	- New-AzureRmSqlDatabaseSecondary
+	- Restore-AzureRmSqlDatabase
+
+#### AzureRM.Websites
+* 'New-AzureRMWebApp' is updated to use common algorithms from the Strategy library.
+
 ## 6.1.0 - May 2018
 #### AzureRM.Profile
 * Fix issue where running 'Clear-AzureRmContext' would keep an empty context with the name of the previous default context, which prevented the user from creating a new context with the old name
