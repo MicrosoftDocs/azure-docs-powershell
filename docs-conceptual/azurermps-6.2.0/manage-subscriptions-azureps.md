@@ -1,7 +1,6 @@
 ---
-title: Manage Azure subscriptions with Azure PowerShell | Microsoft Docs
+title: Manage Azure subscriptions with Azure PowerShell
 description: Manage Azure subscriptions with Azure PowerShell
-keywords: Azure PowerShell, subscription
 author: sptramer
 ms.author: sttramer
 manager: carmonm
@@ -9,6 +8,7 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
 ---
+
 # Manage multiple Azure subscriptions
 
 If you are brand new to Azure, you probably only have a single subscription. But if you have been

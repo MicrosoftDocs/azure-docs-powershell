@@ -1,21 +1,21 @@
 ---
-title: Querying for Azure resources and formatting results | Microsoft Docs
+title: Query output of Azure PowerShell cmdlets
 description: How to query for resources in Azure and format the results.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
+ms.date: 06/08/2018
 ---
-# Querying for Azure resources
+# Query output of Azure PowerShell cmdlets
 
 Querying in PowerShell can be completed by using built-in cmdlets. In
 PowerShell, cmdlet names take the form of **_Verb-Noun_**. The cmdlets using the verb **_Get_** are
 the query cmdlets. The cmdlet nouns are the types of Azure resources that are acted upon by the
 cmdlet verbs.
 
-## Selecting simple properties
+## Select simple properties
 
 Azure PowerShell has default formatting defined for each cmdlet. The most common properties for
 each resource type are displayed in a table or list format automatically. For more information
@@ -49,7 +49,7 @@ MyUnbuntu1610 MYWESTEURG        westeurope
 MyWin2016VM   MYWESTEURG        westeurope
 ```
 
-## Selecting complex nested properties
+## Select complex nested properties
 
 If the property you want to select is nested deep in the JSON output you need to supply the full
 path to that nested property. The following example shows how to select the VM Name and the OS type
@@ -66,7 +66,7 @@ MyUnbuntu1610   Linux
 MyWin2016VM   Windows
 ```
 
-## Filter result using the Where-Object cmdlet
+## Filter results with the Where-Object cmdlet
 
 The `Where-Object` cmdlet allows you to filter the result based on any property value. In the
 following example, the filter selects only VMs that have the text "RGD" in their name.
