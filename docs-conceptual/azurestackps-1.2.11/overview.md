@@ -4,7 +4,6 @@ description: Overview of Azure Stack PowerShell installation and configuration.
 author: SnehaGunda
 manager: Byronr
 ms.product: azure-stack
-ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
 ms.author: sngun
