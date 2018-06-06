@@ -12,7 +12,9 @@ metadata:
     author: sdwheeler
     manager: carmonm
     ms.devlang: azure-powershell
-    ms.technology: azure
+    ms.prod: powershell
+    ms.technology: azure-powershell
+    ms.service: virtual-machines
     clicktale: true
 items:
     - durationInMinutes: 1

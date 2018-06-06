@@ -3,8 +3,6 @@ title: Overview of the Azure PowerShell Service Management module | Microsoft Do
 description: An overview of Azure PowerShell with links to installation and configuration.
 author: sptramer
 manager: carmonm
-ms.product: azure
-ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.author: sttramer
