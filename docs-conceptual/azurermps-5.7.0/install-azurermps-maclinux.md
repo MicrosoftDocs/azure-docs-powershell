@@ -1,7 +1,6 @@
 ---
 title: Install and configure Azure PowerShell on macOS and Linux | Microsoft Docs
 description: How to install and configure Azure PowerShell for first time use on macOS and Linux.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm

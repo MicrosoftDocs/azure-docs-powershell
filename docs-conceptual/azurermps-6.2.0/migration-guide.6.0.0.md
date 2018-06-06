@@ -1,7 +1,6 @@
 ---
 title: Breaking changes for Microsoft Azure PowerShell 6.0.0
 description: This migration guide contains a list of breakiing changes made to Azure PowerShell in the version 6 release.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm

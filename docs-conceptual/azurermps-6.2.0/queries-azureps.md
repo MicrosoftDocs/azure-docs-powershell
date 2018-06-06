@@ -1,7 +1,6 @@
 ---
 title: Querying for Azure resources and formatting results | Microsoft Docs
 description: How to query for resources in Azure and format the results.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm

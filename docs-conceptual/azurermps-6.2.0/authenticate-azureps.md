@@ -1,7 +1,6 @@
 ---
 title: Log in with Azure PowerShell
 description: Log in with Azure PowerShell
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
