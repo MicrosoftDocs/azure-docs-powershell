@@ -135,6 +135,8 @@
                 "Azure"
             ],
             "breadcrumb_path": "/powershell/bread/toc.json",
+            "ms.prod": "powershell",
+            "ms.technology": "azure-powershell",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
             "feedback_github_repo": "azure/azure-docs-powershell",

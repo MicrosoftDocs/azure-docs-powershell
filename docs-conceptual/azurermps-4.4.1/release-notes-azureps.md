@@ -5,8 +5,6 @@ services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
-ms.service: azure-powershell
-ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:

@@ -6,8 +6,6 @@ services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
-ms.product: azure
-ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017

@@ -5,8 +5,6 @@ keywords: Azure PowerShell, subscription
 author: sptramer
 ms.author: sttramer
 manager: carmonm
-ms.product: azure
-ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017

@@ -4,8 +4,6 @@ description: An overview of Azure PowerShell with links to installation and conf
 author: sptramer
 ms.author: sttramer
 manager: carmonm
-ms.product: azure
-ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
