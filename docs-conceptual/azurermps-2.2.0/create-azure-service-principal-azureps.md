@@ -2,7 +2,6 @@
 title: Create an Azure service principal with Azure PowerShell
 description: Learn how to create a service principal for your app or service with Azure PowerShell.
 keywords: Azure PowerShell, Azure Active Directory, Azure Active directory, AD, RBAC
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm

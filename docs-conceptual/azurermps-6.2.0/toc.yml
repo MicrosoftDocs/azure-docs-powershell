@@ -17,27 +17,27 @@
     items:
     - name: Create a service principal
       href: create-azure-service-principal-azureps.md
-    - name: Using persistent credentials
+    - name: Persistent credentials
       href: context-persistence.md
   - name: Queries
     href: queries-azureps.md
-  - name: Formatting
+  - name: Format output 
     href: formatting-output.md
-  - name: Subscriptions
+  - name: Manage subscriptions
     href: manage-subscriptions-azureps.md
   - name: Deploy
     items:
-    - name: Deploy using Resource Manager templates
+    - name: Deploy Resource Manager templates
       href: /azure/azure-resource-manager/resource-group-template-deploy
     - name: Export Resource Manager templates
       href: /azure/azure-resource-manager/resource-manager-export-template-powershell
-    - name: Deploy private Resource Manager template with SAS token
+    - name: Deploy private Resource Manager templates
       href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
   - name: Concepts
     items:
-    - name: Using experimental modules
+    - name: Experimental modules
       href: using-experimental-modules.md
-    - name: Using PowerShell jobs
+    - name: PowerShell jobs
       href: using-psjobs.md
   - name: Release notes
     href: release-notes-azureps.md

@@ -1,7 +1,6 @@
 ---
 title: Running cmdlets in parallel using PowerShell jobs
 description: How to run cmdlets in parallel using the -AsJob parameter.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
