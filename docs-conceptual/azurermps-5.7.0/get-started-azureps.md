@@ -1,7 +1,6 @@
 ---
 title: Get started with Azure PowerShell | Microsoft Docs
 description:
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm

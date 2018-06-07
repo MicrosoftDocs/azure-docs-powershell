@@ -1,7 +1,6 @@
 ---
 title: Using experimental Azure PowerShell modules
 description: Understand the philosophy and usage of experimental Azure PowerShell modules.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
