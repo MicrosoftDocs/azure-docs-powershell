@@ -1,6 +1,6 @@
 ---
-title: Install Azure PowerShell on macOS and Linux
-description: How to install Azure PowerShell on macOS and Linux.
+title: Install Azure PowerShell on macOS or Linux
+description: How to install Azure PowerShell on macOS or Linux.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
@@ -8,7 +8,7 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/06/2018
 ---
-# Install Azure PowerShell on macOS and Linux
+# Install Azure PowerShell on macOS or Linux
 
 For non-Windows platforms, it's possible to run Azure PowerShell on top of PowerShell Core v6. Rather than
 the standard Azure PowerShell built on .NET Framework for Windows, this product is built for .NET Core and can run on any
@@ -27,8 +27,8 @@ platform which supports the .Net Core runtime.
 Installing PowerShell Core v6 on Linux or macOS varies depending on the Linux distribution and OS version.
 Detailed instructions can be found in the following articles:
 
-- [Installing PowerShell Core on macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
-- [Installing PowerShell Core on Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
+- [Install PowerShell Core on macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
+- [Install PowerShell Core on Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
 
 ## Install Azure PowerShell for .NET Core
 

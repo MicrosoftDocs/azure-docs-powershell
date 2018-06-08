@@ -44,7 +44,7 @@ Once your storage has been created, the Cloud Shell will open a PowerShell sessi
 
 You can also install Azure PowerShell and use it locally in a PowerShell session.
 
-## Log in to Azure
+## Sign in to Azure
 
 Sign on interactively:
 
