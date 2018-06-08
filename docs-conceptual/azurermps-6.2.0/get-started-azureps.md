@@ -1,5 +1,5 @@
 ---
-title: Get started with Azure PowerShell | Microsoft Docs
+title: Get started with Azure PowerShell
 description:
 author: sptramer
 ms.author: sttramer
@@ -9,15 +9,24 @@ ms.topic: get-started-article
 ms.date: 11/15/2017
 ---
 
-# Getting started with Azure PowerShell
+# Get started with Azure PowerShell
 
 Azure PowerShell is designed for managing and administering Azure resources from the command line,
 and for building automation scripts that work against the Azure Resource Manager. You can use it in
-your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or you can install it on your
-local machine and use it in any PowerShell session. This article helps get you started using it,
-and teaches you the core concepts behind it.
+your browser with [Azure Cloud Shell](/azure/cloud-shell/overview) or you install it on your
+local machine. This article helps get you started with Azure PowerShell and teaches the core concepts behind it.
 
-## Connect
+## Install Azure PowerShell
+
+The first step is to make sure you have the latest version of the Azure PowerShell installed. For
+information about the latest release, see the [release notes](./release-notes-azureps.md).
+
+1. [Install Azure PowerShell](install-azurerm-ps.md).
+
+2. To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your
+   command line.
+
+## Azure Cloud Shell 
 
 The simplest way to get started is to [launch Cloud Shell](/azure/cloud-shell/quickstart).
 
@@ -35,17 +44,7 @@ Once your storage has been created, the Cloud Shell will open a PowerShell sessi
 
 You can also install Azure PowerShell and use it locally in a PowerShell session.
 
-## Install Azure PowerShell
-
-The first step is to make sure you have the latest version of the Azure PowerShell installed. For
-information about the latest release, see the [release notes](./release-notes-azureps.md).
-
-1. [Install Azure PowerShell](install-azurerm-ps.md).
-
-2. To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your
-   command line.
-
-## Log in to Azure
+## Sign in to Azure
 
 Sign on interactively:
 

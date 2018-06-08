@@ -1,42 +1,36 @@
 ---
-title: Install and configure Azure PowerShell on macOS and Linux | Microsoft Docs
-description: How to install and configure Azure PowerShell for first time use on macOS and Linux.
+title: Install Azure PowerShell on macOS or Linux
+description: How to install Azure PowerShell on macOS or Linux.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/12/2018
+ms.date: 06/06/2018
 ---
-# Install and configure Azure PowerShell on macOS and Linux
+# Install Azure PowerShell on macOS or Linux
 
-It is now possible to install PowerShell Core v6 and Azure PowerShell on non-Windows platforms.
-The process of installing Azure PowerShell on macOS and Linux is not that different from Windows,
-however, you must first install PowerShell Core v6.
+For non-Windows platforms, it's possible to run Azure PowerShell on top of PowerShell Core v6. Rather than
+the standard Azure PowerShell built on .NET Framework for Windows, this product is built for .NET Core and can run on any
+platform which supports the .Net Core runtime.
 
 > [!NOTE]
-
 > At this time, both PowerShell Core v6 and Azure PowerShell for .NET Core are still in beta.
-> Support for these products is limited. If you have problems or discover bugs, please file Issues
-> in GitHub.
+> Support for these products is limited. If you have problems or discover bugs, please file an issue
+> on GitHub.
 >
 > * [Issues for PowerShell Core v6](https://github.com/PowerShell/PowerShell/issues)
 > * [Issues for Azure PowerShell](https://github.com/azure/azure-docs-powershell/issues)
 
-## Step 1: Install PowerShell Core v6
+## Install PowerShell Core v6
 
-The process of installing PowerShell Core v6 varies depending on the target operating system.
-While it is possible to install PowerShell Core v6 on Windows, this article focuses on macOS and
-Linux. If you want to use Azure PowerShell on Windows, see the [install](./install-azurerm-ps.md)
-article for Windows.
-
-Installing **PowerShell Core v6** on Linux or macOS varies depending on the Linux distribution and OS version.
+Installing PowerShell Core v6 on Linux or macOS varies depending on the Linux distribution and OS version.
 Detailed instructions can be found in the following articles:
 
-- [Installing PowerShell Core on macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
-- [Installing PowerShell Core on Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
+- [Install PowerShell Core on macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
+- [Install PowerShell Core on Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
 
-## Step 2: Install Azure PowerShell for .NET Core
+## Install Azure PowerShell for .NET Core
 
 PowerShell Core v6 comes with the PowerShellGet module already installed. This makes it easy to
 install any module that is published to the PowerShell Gallery. To install Azure PowerShell, open a
@@ -46,7 +40,7 @@ new PowerShell session and run the following command:
 Install-Module AzureRM.NetCore
 ```
 
-## Step 3: Load the AzureRM.Netcore module
+## Load the AzureRM.Netcore module
 
 Once the module is installed, you need to load the module into your PowerShell session. Modules are
 loaded using the `Import-Module` cmdlet, as follows:
