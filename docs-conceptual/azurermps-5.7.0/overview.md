@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 08/31/2017
 ---
-
 # Overview of Azure PowerShell
 
 Azure PowerShell provides a set of cmdlets that use the [Azure Resource
@@ -33,7 +32,6 @@ The following samples can help you learn how to perform common scenarios with Az
 > If you have deployments that use the classic deployment model that cannot be converted,
 > you can install the Service Management version of Azure PowerShell. For more information, see
 > [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
-
 
 ### Need help with PowerShell?
 
