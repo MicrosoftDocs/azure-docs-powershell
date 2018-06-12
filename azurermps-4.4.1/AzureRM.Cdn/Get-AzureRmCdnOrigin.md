@@ -32,11 +32,6 @@ The **Get-AzureRmCdnOrigin** cmdlet gets an Azure Content Delivery Network (CDN)
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CdnEndpoint

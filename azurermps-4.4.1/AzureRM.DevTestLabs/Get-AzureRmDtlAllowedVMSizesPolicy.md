@@ -26,11 +26,6 @@ The cmdlet returns the enabled or disabled status of the policy and a list of al
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -LabName

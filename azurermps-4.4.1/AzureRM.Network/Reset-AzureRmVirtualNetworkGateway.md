@@ -23,11 +23,6 @@ Reset-AzureRmVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGatew
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -GatewayVip

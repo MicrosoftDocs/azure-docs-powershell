@@ -30,11 +30,6 @@ Use New-AzureRmCognitiveServicesAccountKey to regenerate a key.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

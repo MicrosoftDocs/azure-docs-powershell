@@ -25,11 +25,6 @@ The **Set-AzureBatchJobSchedule** cmdlet sets a job schedule in the Azure Batch 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -BatchContext

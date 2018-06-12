@@ -26,11 +26,6 @@ The **Get-AzureRmSqlServerDisasterRecoveryConfiguration** cmdlet gets a SQL data
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

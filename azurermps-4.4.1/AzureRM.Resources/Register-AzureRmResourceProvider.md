@@ -25,11 +25,6 @@ The **Register-AzureRmResourceProvider** cmdlet registers an Azure resource prov
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApiVersion

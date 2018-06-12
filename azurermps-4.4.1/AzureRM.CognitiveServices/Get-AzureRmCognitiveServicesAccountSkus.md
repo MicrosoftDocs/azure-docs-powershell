@@ -30,11 +30,6 @@ Paid tiers include S0, S1, S2, and so on.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name
