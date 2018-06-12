@@ -26,11 +26,6 @@ The **New-AzureRmOperationalInsightsComputerGroup** cmdlet creates a computer gr
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Category

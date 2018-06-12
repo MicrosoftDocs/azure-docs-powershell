@@ -49,11 +49,6 @@ Any change might affect the backup and retention of the items associated with th
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -BackupTime

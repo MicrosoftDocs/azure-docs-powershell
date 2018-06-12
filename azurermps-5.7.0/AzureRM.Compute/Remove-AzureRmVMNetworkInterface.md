@@ -24,11 +24,6 @@ The **Remove-AzureRmVMNetworkInterface** cmdlet removes a network interface from
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -NetworkInterfaceIDs

@@ -74,11 +74,6 @@ The **Test-AzureRmResourceGroupDeployment** cmdlet determines whether an Azure r
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApiVersion

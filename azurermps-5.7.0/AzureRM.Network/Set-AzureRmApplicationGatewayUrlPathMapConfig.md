@@ -38,11 +38,6 @@ The **Set-AzureRmApplicationGatewayUrlPathMapConfig** cmdlet sets configuration 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGateway

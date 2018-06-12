@@ -36,11 +36,6 @@ The **New-AzureRmOperationalInsightsWindowsPerformanceCounterDataSource** cmdlet
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CounterName

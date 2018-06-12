@@ -32,11 +32,6 @@ The **New-AzureRmServerManagementSession** cmdlet creates an Azure Server Manage
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Credential
