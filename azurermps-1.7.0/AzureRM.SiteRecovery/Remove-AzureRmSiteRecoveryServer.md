@@ -21,11 +21,6 @@ The **Remove-AzureRmSiteRecoveryServer** cmdlet unregisters an Azure Site Recove
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

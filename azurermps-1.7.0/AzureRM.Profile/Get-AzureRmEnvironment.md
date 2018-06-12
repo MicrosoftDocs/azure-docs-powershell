@@ -21,11 +21,6 @@ The **Get-AzureRmEnvironment** cmdlet gets endpoints and metadata for an instanc
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

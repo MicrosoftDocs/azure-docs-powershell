@@ -32,11 +32,6 @@ You can check whether the job succeeds by using the Get-AzureRmSiteRecoveryJob c
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CreateVmIfNotFound

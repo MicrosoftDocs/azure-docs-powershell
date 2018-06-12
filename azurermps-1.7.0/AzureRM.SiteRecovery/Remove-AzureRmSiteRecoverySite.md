@@ -21,11 +21,6 @@ The **Remove-AzureRmSiteRecoverySite** cmdlet deletes an Azure Site Recovery sit
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

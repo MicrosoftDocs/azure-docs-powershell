@@ -26,11 +26,6 @@ The **New-AzureRmCdnEndpoint** cmdlet creates an Azure Content Delivery Network 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ContentTypesToCompress

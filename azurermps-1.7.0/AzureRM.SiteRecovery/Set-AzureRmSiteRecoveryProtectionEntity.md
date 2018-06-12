@@ -43,11 +43,6 @@ The **Set-AzureRmSiteRecoveryProtectionEntity** cmdlet enables or disables prote
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

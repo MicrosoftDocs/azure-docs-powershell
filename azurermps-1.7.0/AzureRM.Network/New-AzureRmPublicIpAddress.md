@@ -24,11 +24,6 @@ The **New-AzureRmPublicIpAddress** cmdlet creates a public IP address.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AllocationMethod

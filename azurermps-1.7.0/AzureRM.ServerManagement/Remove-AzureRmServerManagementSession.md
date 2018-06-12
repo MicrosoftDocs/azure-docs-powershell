@@ -30,11 +30,6 @@ The **Remove-AzureRmServerManagementSession** cmdlet removes an Azure Server Man
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

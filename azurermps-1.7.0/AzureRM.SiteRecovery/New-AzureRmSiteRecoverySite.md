@@ -21,11 +21,6 @@ The **New-AzureRmSiteRecoverySite** cmdlet creates an Azure Site Recovery site i
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

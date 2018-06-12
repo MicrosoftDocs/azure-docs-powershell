@@ -37,11 +37,6 @@ The **Get-AzureRmSiteRecoveryNetwork** cmdlet gets information about Azure Site 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FriendlyName

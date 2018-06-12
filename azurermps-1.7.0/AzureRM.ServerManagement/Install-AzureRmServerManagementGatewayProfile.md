@@ -23,11 +23,6 @@ The file that this cmdlet installs is named profile.json.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

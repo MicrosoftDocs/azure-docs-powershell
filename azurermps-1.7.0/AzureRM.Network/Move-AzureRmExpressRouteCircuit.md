@@ -21,11 +21,6 @@ Move-AzureRmExpressRouteCircuit -Name <String> -ResourceGroupName <String> -Loca
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force
