@@ -26,11 +26,6 @@ The **Remove-AzureRmApplicationGatewayAuthenticationCertificate** cmdlet removes
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGateway

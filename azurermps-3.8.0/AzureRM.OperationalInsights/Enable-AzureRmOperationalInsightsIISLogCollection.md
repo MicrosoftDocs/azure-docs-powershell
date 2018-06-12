@@ -34,11 +34,6 @@ The **Enable-AzureRmOperationalInsightsIISLogCollection** cmdlet starts collecti
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

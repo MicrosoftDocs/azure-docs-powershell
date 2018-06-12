@@ -27,11 +27,6 @@ The **Set-AzureRmApplicationGatewaySslPolicy** cmdlet modifies the SSL policy of
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGateway

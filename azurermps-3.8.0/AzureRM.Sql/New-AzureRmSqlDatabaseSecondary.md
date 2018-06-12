@@ -29,11 +29,6 @@ It returns the geo-replication link object from the primary to the secondary dat
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DatabaseName

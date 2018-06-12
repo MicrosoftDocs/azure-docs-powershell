@@ -25,11 +25,6 @@ The **Get-AzureRmApplicationGatewaySslPolicy** cmdlet gets the SSL policy of an 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGateway

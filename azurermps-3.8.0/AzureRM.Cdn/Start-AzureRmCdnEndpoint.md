@@ -33,11 +33,6 @@ The **Start-AzureRmCdnEndpoint** cmdlet starts an Azure Content Delivery Network
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -EndpointName

@@ -25,11 +25,6 @@ The **Remove-AzureRmAutomationDscConfiguration** cmdlet removes APS Desired Stat
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AutomationAccountName

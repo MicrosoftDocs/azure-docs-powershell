@@ -25,11 +25,6 @@ The **Remove-AzureRmCognitiveServicesAccount** cmdlet deletes the specified Cogn
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

@@ -42,11 +42,6 @@ The **Add-AzureRmNetworkInterfaceIpConfig** cmdlet adds a network interface IP c
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGatewayBackendAddressPool
