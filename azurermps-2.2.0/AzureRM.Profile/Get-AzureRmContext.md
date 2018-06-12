@@ -24,11 +24,6 @@ By default, Resource Manager cmdlets use these settings when it makes Resource M
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### CommonParameters

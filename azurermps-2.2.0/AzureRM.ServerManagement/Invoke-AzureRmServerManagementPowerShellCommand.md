@@ -31,11 +31,6 @@ The **Invoke-AzureRmServerManagementPowerShellCommand** cmdlet executes a Window
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

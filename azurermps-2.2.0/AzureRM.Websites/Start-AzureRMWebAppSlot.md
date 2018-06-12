@@ -27,11 +27,6 @@ The **Start-AzureRmWebAppSlot** cmdlet starts an Azure Web App slot.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

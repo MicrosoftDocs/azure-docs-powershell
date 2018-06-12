@@ -31,11 +31,6 @@ The **New-AzureRmOperationalInsightsAzureAuditDataSource** cmdlet enables Azure 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -SubscriptionId

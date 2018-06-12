@@ -29,11 +29,6 @@ The **Get-AzureRmWebAppMetrics** cmdlet gets Azure Web App metrics.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Metrics

@@ -26,11 +26,6 @@ The new the server continues in the backup chain.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Container

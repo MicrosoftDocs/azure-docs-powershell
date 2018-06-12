@@ -35,11 +35,6 @@ The **Set-AzureRmWebApp** cmdlet modifies an Azure Web App.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AppServicePlan

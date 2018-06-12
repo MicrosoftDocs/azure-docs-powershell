@@ -21,11 +21,6 @@ The **Remove-AzureRmEnvironment** cmdlet removes endpoints and metadata informat
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

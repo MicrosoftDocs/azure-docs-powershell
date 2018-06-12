@@ -31,11 +31,6 @@ The **Disable-AzureRmOperationalInsightsLinuxSyslogCollection** cmdlet stops col
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

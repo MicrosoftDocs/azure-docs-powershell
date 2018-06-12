@@ -24,11 +24,6 @@ The policy is an Azure Backup resource used to define backup storage policy.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -State

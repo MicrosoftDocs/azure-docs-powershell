@@ -28,11 +28,6 @@ The **Remove-AzureRmWebAppSlot** cmdlet removes an Azure Web App slot.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

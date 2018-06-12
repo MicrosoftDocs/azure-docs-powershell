@@ -23,11 +23,6 @@ The **Set-AzureRmSqlServerDisasterRecoveryConfiguration** cmdlet modifies a SQL 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -VirtualEndpointName
