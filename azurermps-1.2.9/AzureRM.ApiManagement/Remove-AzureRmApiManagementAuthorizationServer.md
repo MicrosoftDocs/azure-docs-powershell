@@ -22,8 +22,6 @@ Deletes existing authorization server.
 ## EXAMPLES
 
 
-Delete existing authorization server.
-
 ## PARAMETERS
 
 ### -Context
