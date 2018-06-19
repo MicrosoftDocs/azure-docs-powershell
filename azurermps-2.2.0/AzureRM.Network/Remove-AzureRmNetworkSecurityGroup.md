@@ -21,14 +21,7 @@ The Remove-AzureRmNetworkSecurityGroup cmdlet removes an Azure network security 
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
-@{paragraph=PS C:\\\>}
 
-
-
-```
-
-```
 
 ## PARAMETERS
 

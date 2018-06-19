@@ -21,14 +21,6 @@ The Remove-AzureRmNetworkSecurityRuleConfig cmdlet removes a network security ru
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-```
-
-```
 
 ## PARAMETERS
 
