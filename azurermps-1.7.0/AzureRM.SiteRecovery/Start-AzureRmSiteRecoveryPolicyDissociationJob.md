@@ -30,11 +30,6 @@ The **Start-AzureRmSiteRecoveryPolicyDissociationJob** cmdlet initiates a dissoc
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Policy

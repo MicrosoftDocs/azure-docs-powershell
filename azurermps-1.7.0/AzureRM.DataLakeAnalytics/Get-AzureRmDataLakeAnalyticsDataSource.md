@@ -36,11 +36,6 @@ The **Get-AzureRmDataLakeAnalyticsDataSource** cmdlet gets an Azure Data Lake An
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Account

@@ -27,11 +27,6 @@ The **Stop-AzureRmSiteRecoveryJob** stops an Azure Site Recovery job.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Job

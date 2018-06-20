@@ -24,11 +24,6 @@ The **Set-AzureRmLocalNetworkGateway** cmdlet modifies a local network gateway.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AddressPrefix

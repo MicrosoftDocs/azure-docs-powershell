@@ -37,11 +37,6 @@ Azure Operational Insights can collect syslog data.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CollectAlert

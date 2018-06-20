@@ -31,11 +31,6 @@ The **New-AzureRmServerManagementNode** cmdlet creates an Azure Server Managemen
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ComputerName

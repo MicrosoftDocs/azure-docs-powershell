@@ -22,11 +22,6 @@ The **Remove-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet removes a 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -StorageClassificationMapping

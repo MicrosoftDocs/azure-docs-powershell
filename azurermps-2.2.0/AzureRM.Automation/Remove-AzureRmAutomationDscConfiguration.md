@@ -22,11 +22,6 @@ The **Remove-AzureRmAutomationDscConfiguration** cmdlet removes Azure PowerShell
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AutomationAccountName

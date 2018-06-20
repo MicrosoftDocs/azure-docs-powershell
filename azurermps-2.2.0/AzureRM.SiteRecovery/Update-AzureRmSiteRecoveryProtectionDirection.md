@@ -29,11 +29,6 @@ The **Update-AzureRmSiteRecoveryProtectionDirection** cmdlet updates the source 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Direction

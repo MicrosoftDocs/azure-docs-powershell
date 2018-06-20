@@ -26,11 +26,6 @@ The **Remove-AzureRmSchedulerJobCollection** cmdlet removes a job collection in 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

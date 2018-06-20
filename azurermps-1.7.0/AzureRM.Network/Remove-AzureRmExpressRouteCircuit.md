@@ -23,11 +23,6 @@ The **Remove-AzureRmExpressRouteCircuit** cmdlet removes an ExpressRoute circuit
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

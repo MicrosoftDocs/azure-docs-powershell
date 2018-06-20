@@ -22,11 +22,6 @@ The **Get-AzureRmNetworkSecurityRuleConfig** cmdlet gets a network security rule
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DefaultRules

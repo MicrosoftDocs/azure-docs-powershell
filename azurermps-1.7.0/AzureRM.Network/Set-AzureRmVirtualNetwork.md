@@ -22,11 +22,6 @@ The **Set-AzureRmVirtualNetwork** cmdlet sets the goal state for an Azure virtua
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

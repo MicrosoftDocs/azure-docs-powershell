@@ -58,11 +58,6 @@ You can check whether the job succeeded by using the Get-AzureRmSiteRecoveryJob 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AzureVMNetworkId

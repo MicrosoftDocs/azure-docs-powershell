@@ -32,11 +32,6 @@ The **Remove-AzureRmCdnEndpoint** cmdlet removes an Azure Content Delivery Netwo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CdnEndpoint

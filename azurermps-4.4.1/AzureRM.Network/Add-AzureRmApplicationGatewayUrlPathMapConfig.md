@@ -38,11 +38,6 @@ The **Add-AzureRmApplicationGatewayUrlPathMapConfig** cmdlet adds an array of UR
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGateway

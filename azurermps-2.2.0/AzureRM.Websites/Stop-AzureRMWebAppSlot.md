@@ -27,11 +27,6 @@ The **Stop-AzureRmWebAppSlot** cmdlet stops an Azure Web App slot.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

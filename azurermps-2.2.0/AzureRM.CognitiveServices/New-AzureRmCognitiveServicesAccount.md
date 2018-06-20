@@ -23,11 +23,6 @@ The **New-AzureRmCognitiveServicesAccount** cmdlet creates a Cognitive Services 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

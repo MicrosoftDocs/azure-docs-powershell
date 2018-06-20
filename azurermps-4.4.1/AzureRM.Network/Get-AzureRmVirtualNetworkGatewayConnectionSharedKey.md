@@ -23,11 +23,6 @@ Get-AzureRmVirtualNetworkGatewayConnectionSharedKey [-Name <String>] -ResourceGr
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

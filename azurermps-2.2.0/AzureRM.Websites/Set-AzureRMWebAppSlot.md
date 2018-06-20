@@ -40,11 +40,6 @@ The **Set-AzureRmWebAppSlot** cmdlet modifies an Azure Web App slot.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AppServicePlan

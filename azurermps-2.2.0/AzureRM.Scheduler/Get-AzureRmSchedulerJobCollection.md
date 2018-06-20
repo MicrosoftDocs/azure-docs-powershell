@@ -22,11 +22,6 @@ The **Get-AzureRmSchedulerJobCollection** cmdlet gets job collections in Azure S
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

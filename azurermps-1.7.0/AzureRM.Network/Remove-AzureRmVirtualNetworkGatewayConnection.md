@@ -23,11 +23,6 @@ The **Remove-AzureRmVirtualNetworkGatewayConnection** cmdlet removes a virtual n
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

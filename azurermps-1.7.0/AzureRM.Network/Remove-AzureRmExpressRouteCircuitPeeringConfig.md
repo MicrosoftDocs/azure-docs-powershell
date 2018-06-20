@@ -22,11 +22,6 @@ The **Remove-AzureRmExpressRouteCircuitPeeringConfig** cmdlet removes an Express
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ExpressRouteCircuit

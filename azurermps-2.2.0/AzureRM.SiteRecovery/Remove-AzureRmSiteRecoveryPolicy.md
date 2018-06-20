@@ -21,11 +21,6 @@ The **Remove-AzureRMSiteRecoveryPolicy** cmdlet removes an Azure Site Recovery r
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Policy

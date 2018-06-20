@@ -23,11 +23,6 @@ New-AzureRmLocalNetworkGateway -Name <String> -ResourceGroupName <String> -Locat
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AddressPrefix

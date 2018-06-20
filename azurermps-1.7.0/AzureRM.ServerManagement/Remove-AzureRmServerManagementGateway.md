@@ -29,11 +29,6 @@ The **Remove-AzureRmServerManagementGateway** cmdlet removes an Azure Server Man
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Gateway

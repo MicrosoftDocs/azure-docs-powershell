@@ -33,11 +33,6 @@ The **New-AzureRmLoadBalancerRuleConfig** cmdlet creates a rule configuration fo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -BackendAddressPool

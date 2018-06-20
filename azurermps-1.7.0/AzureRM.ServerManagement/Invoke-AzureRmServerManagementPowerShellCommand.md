@@ -31,11 +31,6 @@ The **Invoke-AzureRmServerManagementPowerShellCommand** cmdlet executes a wps_2 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Command

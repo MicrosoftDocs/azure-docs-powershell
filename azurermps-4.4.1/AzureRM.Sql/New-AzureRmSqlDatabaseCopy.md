@@ -33,11 +33,6 @@ This cmdlet is also supported by the SQL Server Stretch Database service on Azur
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CopyDatabaseName

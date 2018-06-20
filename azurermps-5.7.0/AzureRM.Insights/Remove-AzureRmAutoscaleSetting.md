@@ -27,11 +27,6 @@ This cmdlet implements the ShouldProcess pattern, i.e. it might request confirma
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DefaultProfile

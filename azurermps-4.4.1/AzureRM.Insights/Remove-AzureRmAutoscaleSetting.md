@@ -26,11 +26,6 @@ You must specify the name of the setting and the name of the resource group to w
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

@@ -38,11 +38,6 @@ In the latter case, the secondary database is synchronized with the primary befo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AllowDataLoss

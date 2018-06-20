@@ -25,11 +25,6 @@ There is no replication synchronization before termination.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DatabaseName

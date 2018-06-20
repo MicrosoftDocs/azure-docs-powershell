@@ -34,11 +34,6 @@ The **Remove-AzureRmCdnCustomDomain** cmdlet removes the custom domain from an A
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CustomDomainName

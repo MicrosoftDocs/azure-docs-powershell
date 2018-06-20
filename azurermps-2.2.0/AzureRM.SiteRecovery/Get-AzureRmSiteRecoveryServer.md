@@ -32,11 +32,6 @@ The **Get-AzureRmSiteRecoveryServer** cmdlet gets information about Azure Site R
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FriendlyName

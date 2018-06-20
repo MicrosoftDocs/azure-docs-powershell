@@ -22,16 +22,6 @@ Deletes existing authorization server.
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
-@{paragraph=PS C:\\\>}
-
-
-
-```
-
-```
-
-Delete existing authorization server.
 
 ## PARAMETERS
 

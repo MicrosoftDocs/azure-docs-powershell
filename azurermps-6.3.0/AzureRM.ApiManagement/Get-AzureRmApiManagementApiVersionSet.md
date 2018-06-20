@@ -24,8 +24,6 @@ The **Get-AzureRmApiManagementApiVersionSet** cmdlet gets the details of the API
 
 ## EXAMPLES
 
-### Example 1
-
 ### Example 1: Get all API Version Sets
 ```powershell
 PS C:\>$ApiMgmtContext = New-AzureRmApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"

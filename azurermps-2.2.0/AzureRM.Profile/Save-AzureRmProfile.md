@@ -22,11 +22,6 @@ The **Save-AzureRmProfile** cmdlet saves the current authentication information 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Path

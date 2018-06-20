@@ -22,11 +22,6 @@ The **Get-AzureRmNetworkInterfaceIPConfig** cmdlet gets a network interface IP c
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

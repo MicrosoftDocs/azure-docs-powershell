@@ -29,11 +29,6 @@ The **Set-AzureRmEnvironment** cmdlet sets endpoints and metadata for connecting
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ActiveDirectoryEndpoint

@@ -26,11 +26,6 @@ The **Set-AzureRmApplicationGatewayAuthenticationCertificate** cmdlet updates an
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGateway

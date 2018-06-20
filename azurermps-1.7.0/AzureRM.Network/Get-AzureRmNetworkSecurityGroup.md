@@ -29,11 +29,6 @@ The **Get-AzureRmNetworkSecurityGroup** cmdlet gets an Azure network security gr
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ExpandResource

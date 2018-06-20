@@ -25,11 +25,6 @@ The **New-AzureRmCdnProfile** cmdlet creates an Azure Content Delivery Network (
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Location

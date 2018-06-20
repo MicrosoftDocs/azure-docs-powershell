@@ -26,11 +26,6 @@ The **New-AzureRmSqlDatabaseSecondary** cmdlet replaces the depracted Start-Azur
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AllowConnections

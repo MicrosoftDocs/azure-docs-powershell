@@ -21,11 +21,6 @@ The **New-AzureRmSiteRecoveryVault** cmdlet creates an Azure Site Recovery servi
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Location

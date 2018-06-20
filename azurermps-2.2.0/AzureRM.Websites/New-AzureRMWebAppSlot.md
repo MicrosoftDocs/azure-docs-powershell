@@ -24,11 +24,6 @@ The **New-AzureRmWebAppSlot** cmdlet creates an Azure Web App slot.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

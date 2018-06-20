@@ -31,11 +31,6 @@ The **Add-AzureRmVirtualNetworkSubnetConfig** cmdlet adds a subnet configuration
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AddressPrefix

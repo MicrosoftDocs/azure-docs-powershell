@@ -30,11 +30,6 @@ The **Get-AzureRmWebAppSlotMetrics** cmdlet gets metrics for an Azure Web App sl
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Metrics

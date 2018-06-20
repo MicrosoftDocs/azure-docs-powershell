@@ -27,11 +27,6 @@ The **Get-AzureRmWebAppSlot** cmdlet gets an Azure Web App slot.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

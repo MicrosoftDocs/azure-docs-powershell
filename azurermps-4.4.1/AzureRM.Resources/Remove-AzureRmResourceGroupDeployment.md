@@ -32,11 +32,6 @@ The **Remove-AzureRmResourceGroupDeployment** cmdlet removes an Azure resource g
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApiVersion

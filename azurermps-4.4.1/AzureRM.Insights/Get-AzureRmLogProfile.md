@@ -24,11 +24,6 @@ The **Get-AzureRmLogProfile** cmdlet gets a log profile.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

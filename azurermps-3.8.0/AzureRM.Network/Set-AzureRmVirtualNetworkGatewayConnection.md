@@ -26,11 +26,6 @@ The **Set-AzureRmVirtualNetworkGatewayConnection** cmdlet configures a virtual n
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

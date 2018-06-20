@@ -25,11 +25,6 @@ The **Set-AzureRmCdnProfile** cmdlet updates an Azure Content Delivery Network (
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CdnProfile

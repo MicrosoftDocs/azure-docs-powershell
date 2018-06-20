@@ -37,11 +37,6 @@ The **Get-AzureRmSiteRecoveryStorageClassification** cmdlet gets storage classif
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FriendlyName

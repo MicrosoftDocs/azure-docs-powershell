@@ -21,11 +21,6 @@ The **Get-AzureRmTenant** cmdlet gets tenants that are authorized for the curren
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -TenantId

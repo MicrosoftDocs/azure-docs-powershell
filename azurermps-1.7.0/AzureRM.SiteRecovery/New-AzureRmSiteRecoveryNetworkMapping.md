@@ -29,11 +29,6 @@ The **New-AzureRMSiteRecoveryNetworkMapping** cmdlet creates a mapping between t
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AzureVMNetworkId

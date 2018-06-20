@@ -29,11 +29,6 @@ The **Get-AzureRmVirtualNetwork** cmdlet gets one or more virtual networks n a r
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ExpandResource

@@ -25,11 +25,6 @@ The **Enable-AzureRmSchedulerJobCollection** cmdlet enables a job collection in 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -JobCollectionName

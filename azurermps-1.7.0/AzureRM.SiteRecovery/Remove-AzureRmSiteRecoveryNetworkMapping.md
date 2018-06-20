@@ -21,11 +21,6 @@ The **Remove-AzureRMSiteRecoveryNetworkMapping** cmdlet removes a network mappin
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -NetworkMapping

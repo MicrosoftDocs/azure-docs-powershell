@@ -27,11 +27,6 @@ The **Restart-AzureRmSiteRecoveryJob** cmdlet restarts an Azure Site Recovery jo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Job

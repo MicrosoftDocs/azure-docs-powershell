@@ -23,14 +23,7 @@ The Set-AzureRmNetworkSecurityRuleConfig cmdlet sets the goal state for an Azure
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
-@{paragraph=PS C:\\\>}
 
-
-
-```
-
-```
 
 ## PARAMETERS
 

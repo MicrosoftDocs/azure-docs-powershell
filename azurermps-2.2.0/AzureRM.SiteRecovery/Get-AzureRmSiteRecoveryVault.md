@@ -21,11 +21,6 @@ The **Get-AzureRmSiteRecoveryVault** gets a list of Azure Site Recovery vaults o
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

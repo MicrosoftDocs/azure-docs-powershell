@@ -38,11 +38,6 @@ The **Get-AzureRmServerManagementSession** cmdlet gets a single Azure Server Man
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Node

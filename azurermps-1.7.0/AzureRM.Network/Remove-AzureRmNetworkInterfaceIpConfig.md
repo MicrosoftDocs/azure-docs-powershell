@@ -22,11 +22,6 @@ The **Remove-AzureRmNetworkInterfaceIpConfig** cmdlet removes a network interfac
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

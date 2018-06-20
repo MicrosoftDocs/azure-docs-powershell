@@ -23,11 +23,6 @@ The **Get-AzureRmCdnCustomDomain** cmdlet gets an Azure Content Delivery Network
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CustomDomainName

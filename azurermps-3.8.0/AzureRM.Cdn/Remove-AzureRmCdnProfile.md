@@ -33,11 +33,6 @@ The **Remove-AzureRmCdnProfile** cmdlet removes a Azure Content Delivery Network
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ProfileName

@@ -32,11 +32,6 @@ The **Get-AzureRmSiteRecoveryRecoveryPlan** cmdlet gets a recovery plan in Azure
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FriendlyName

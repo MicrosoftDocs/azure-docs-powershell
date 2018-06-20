@@ -33,11 +33,6 @@ The **Get-AzureRmSiteRecoveryVM** gets information about virtual machines manage
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FriendlyName

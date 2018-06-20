@@ -34,11 +34,6 @@ You can use this cmdlet to view the operation information for the current Site R
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -EndTime

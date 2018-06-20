@@ -21,11 +21,6 @@ The **Set-AzureRmRecoveryServicesVaultContext** cmdlet sets the vault context fo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Vault

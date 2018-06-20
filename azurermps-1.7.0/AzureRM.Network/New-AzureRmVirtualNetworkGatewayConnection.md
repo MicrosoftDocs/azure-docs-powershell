@@ -35,11 +35,6 @@ New-AzureRmVirtualNetworkGatewayConnection -Name <String> -ResourceGroupName <St
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AuthorizationKey

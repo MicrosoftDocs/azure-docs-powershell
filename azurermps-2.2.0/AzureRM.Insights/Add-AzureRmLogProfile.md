@@ -23,11 +23,6 @@ The **Add-AzureRmLogProfile** cmdlet creates a log profile.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

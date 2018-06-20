@@ -22,11 +22,6 @@ The **Remove-AzureRmVirtualNetworkSubnetConfig** cmdlet removes a subnet from an
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

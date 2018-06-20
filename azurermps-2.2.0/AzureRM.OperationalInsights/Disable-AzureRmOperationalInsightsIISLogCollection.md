@@ -31,11 +31,6 @@ The **Disable-AzureRmOperationalInsightsIISLogCollection** cmdlet stops collecti
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

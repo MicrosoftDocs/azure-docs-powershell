@@ -23,11 +23,6 @@ The **Remove-AzureRmPublicIpAddress** cmdlet removes an Azure public IP address.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

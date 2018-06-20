@@ -27,11 +27,6 @@ The **Resume-AzureRmSiteRecoveryJob** cmdlet resumes a suspended Azure Site Reco
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Job

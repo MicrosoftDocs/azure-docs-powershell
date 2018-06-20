@@ -34,11 +34,6 @@ Protection policies define replication settings for protected items and can be a
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FriendlyName
