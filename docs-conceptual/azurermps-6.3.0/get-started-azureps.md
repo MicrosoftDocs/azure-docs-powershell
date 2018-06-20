@@ -57,7 +57,7 @@ Sign on interactively:
    the credential information, and then closes the window.
 
 Once you have signed in to an Azure account, you can use the Azure PowerShell cmdlets to access and
-manager the resources in your subscription.
+manage the resources in your subscription.
 
 ## Create a Windows virtual machine using simple defaults
 
