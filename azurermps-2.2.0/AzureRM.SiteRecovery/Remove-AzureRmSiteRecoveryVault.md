@@ -21,11 +21,6 @@ The **Remove-AzureRmSiteRecoveryVault** cmdlet deletes an Azure Site Recovery va
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Vault

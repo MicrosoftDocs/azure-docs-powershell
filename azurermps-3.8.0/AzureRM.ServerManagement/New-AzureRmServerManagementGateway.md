@@ -26,11 +26,6 @@ The **New-AzureRmServerManagementGateway** cmdlet creates an Azure Server Manage
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

@@ -24,11 +24,6 @@ Before being able to deploy a Marketplace image through the command-line, progra
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

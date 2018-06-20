@@ -28,11 +28,6 @@ The **Set-AzureRmAppServicePlan** cmdlet sets an Azure App Service plan.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AdminSiteName

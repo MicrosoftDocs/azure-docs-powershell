@@ -34,11 +34,6 @@ The **Remove-AzureRmOperationalInsightsDataSource** cmdlet deletes a data source
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

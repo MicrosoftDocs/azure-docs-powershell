@@ -22,11 +22,6 @@ The **Set-AzureRmOperationalInsightsDataSource** cmdlet updates a data source.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DataSource

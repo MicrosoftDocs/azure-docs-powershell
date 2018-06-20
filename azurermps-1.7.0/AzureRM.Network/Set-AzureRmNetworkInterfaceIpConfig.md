@@ -39,11 +39,6 @@ The **Set-AzureRmNetworkInterfaceIpConfig** cmdlet sets the goal state for an Az
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGatewayBackendAddressPool

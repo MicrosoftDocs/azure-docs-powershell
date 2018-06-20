@@ -31,11 +31,6 @@ The **New-AzureRmOperationalInsightsCustomLogDataSource** cmdlet defines a custo
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CustomLogRawJson

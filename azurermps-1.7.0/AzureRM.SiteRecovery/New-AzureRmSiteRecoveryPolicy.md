@@ -34,11 +34,6 @@ The replication policy is used to specify replication settings such as the repli
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AllowReplicaDeletion

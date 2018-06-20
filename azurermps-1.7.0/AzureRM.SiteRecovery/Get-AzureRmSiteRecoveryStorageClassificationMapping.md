@@ -27,11 +27,6 @@ The **Get-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet gets a storag
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

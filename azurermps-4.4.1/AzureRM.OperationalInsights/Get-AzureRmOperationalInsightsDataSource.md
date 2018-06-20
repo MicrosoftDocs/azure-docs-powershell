@@ -51,11 +51,6 @@ You can filter the results based on the kind of data source.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Kind

@@ -31,11 +31,6 @@ The **Set-AzureRmVirtualNetworkSubnetConfig** cmdlet configures the goal state f
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AddressPrefix

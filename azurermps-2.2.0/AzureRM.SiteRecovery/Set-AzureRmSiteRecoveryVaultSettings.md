@@ -28,11 +28,6 @@ This does not apply to recovery services vaults.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ARSVault

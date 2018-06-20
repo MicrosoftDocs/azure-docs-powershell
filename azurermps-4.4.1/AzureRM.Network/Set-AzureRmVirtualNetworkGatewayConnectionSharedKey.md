@@ -25,11 +25,6 @@ The **Set-AzureRmVirtualNetworkGatewayConnectionSharedKey** cmdlet configures th
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

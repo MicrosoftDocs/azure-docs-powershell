@@ -22,11 +22,6 @@ The **New-AzureRmSiteRecoveryStorageClassificationMapping** cmdlet creates a sto
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -PrimaryStorageClassification

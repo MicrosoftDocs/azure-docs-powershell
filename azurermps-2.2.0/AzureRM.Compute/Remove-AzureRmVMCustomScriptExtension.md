@@ -22,11 +22,6 @@ The **Remove-AzureRmVMCustomScriptExtension** cmdlet removes a custom script Vir
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

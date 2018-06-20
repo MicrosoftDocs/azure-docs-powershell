@@ -33,11 +33,6 @@ The **Get-AzureRmSiteRecoveryVaultSettingsFile** cmdlet gets the settings file f
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Path

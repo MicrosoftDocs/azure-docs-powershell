@@ -21,11 +21,6 @@ The **Get-AzureRmRecoveryServicesVault** cmdlet gets a list of Recovery Services
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

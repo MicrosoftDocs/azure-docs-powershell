@@ -30,11 +30,6 @@ The built-in environments AzureCloud and AzureChinaCloud target existing public 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ActiveDirectoryEndpoint

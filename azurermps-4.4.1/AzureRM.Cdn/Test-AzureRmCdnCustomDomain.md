@@ -32,11 +32,6 @@ The **Test-AzureRmCdnCustomDomain** cmdlet checks whether a custom domain can be
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -CdnEndpoint

@@ -32,11 +32,6 @@ The **Remove-AzureRmServerManagementNode** cmdlet removes an Azure Server Manage
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Node

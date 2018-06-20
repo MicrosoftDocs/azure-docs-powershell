@@ -26,11 +26,6 @@ The **New-AzureRmApplicationGatewaySslPolicy** cmdlet creates an SSL policy for 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DisabledSslProtocols

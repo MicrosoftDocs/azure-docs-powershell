@@ -26,11 +26,6 @@ The **Add-AzureRmApplicationGatewayAuthenticationCertificate** cmdlet adds an au
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGateway

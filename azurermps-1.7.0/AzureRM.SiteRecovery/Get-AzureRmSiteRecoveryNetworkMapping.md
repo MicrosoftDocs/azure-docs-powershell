@@ -33,11 +33,6 @@ The **Get-AzureRmSiteRecoveryNetworkMapping** cmdlet gets information about Azur
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Azure

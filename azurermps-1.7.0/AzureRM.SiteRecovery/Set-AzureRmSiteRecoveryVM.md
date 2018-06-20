@@ -23,11 +23,6 @@ The **Set-AzureRmSiteRecoveryVM** cmdlet sets the recovery-side protection optio
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

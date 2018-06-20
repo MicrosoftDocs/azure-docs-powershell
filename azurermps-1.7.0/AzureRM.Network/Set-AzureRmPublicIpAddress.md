@@ -22,11 +22,6 @@ The **Set-AzureRmPublicIpAddress** cmdlet sets the goal state for a public IP ad
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

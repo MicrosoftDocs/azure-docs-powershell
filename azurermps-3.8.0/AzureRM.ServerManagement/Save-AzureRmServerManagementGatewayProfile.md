@@ -33,11 +33,6 @@ The **Save-AzureRmServerManagementGatewayProfile** cmdlet downloads the profile 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -OutputFile

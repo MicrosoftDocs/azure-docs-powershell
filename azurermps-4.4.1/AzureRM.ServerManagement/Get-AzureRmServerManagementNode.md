@@ -31,11 +31,6 @@ The **Get-AzureRmServerManagementNode** cmdlet gets one or more Azure Server Man
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Node

@@ -25,11 +25,6 @@ The **Remove-AzureRmLogProfile** cmdlet removes a log profile.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

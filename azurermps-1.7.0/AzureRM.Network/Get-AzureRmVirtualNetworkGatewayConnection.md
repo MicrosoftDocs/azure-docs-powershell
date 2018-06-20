@@ -20,11 +20,6 @@ Get-AzureRmVirtualNetworkGatewayConnection [-Name <String>] -ResourceGroupName <
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

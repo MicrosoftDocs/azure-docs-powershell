@@ -32,11 +32,6 @@ It gets all geo-replication links between the specified ssSDS and a resource gro
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DatabaseName

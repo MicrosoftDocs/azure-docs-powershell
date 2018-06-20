@@ -26,11 +26,6 @@ This extension lets your virtual machine join a domain.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Credential

@@ -34,11 +34,6 @@ The **Get-AzureRmSiteRecoveryProtectionEntity** cmdlet gets a list of protectabl
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FriendlyName

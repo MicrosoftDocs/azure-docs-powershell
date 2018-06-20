@@ -21,11 +21,6 @@ The **Update-AzureRmSiteRecoveryServer** cmdlet refreshes an Azure Site Recovery
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Server

@@ -25,11 +25,6 @@ The **New-AzureRmRecoveryServicesVault** cmdlet creates a new Recovery Services 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Location

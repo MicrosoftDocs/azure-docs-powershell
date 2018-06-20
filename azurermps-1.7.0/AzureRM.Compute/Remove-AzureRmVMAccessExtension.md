@@ -23,11 +23,6 @@ The **Remove-AzureRmVMAccessExtension** cmdlet removes the Virtual Machine Acces
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

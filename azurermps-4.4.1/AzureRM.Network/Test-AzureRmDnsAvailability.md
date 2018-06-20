@@ -23,11 +23,6 @@ Test-AzureRmDnsAvailability -DomainNameLabel <String> -Location <String>
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -DomainNameLabel

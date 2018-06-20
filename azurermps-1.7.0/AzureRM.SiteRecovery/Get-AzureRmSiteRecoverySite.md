@@ -32,11 +32,6 @@ The **Get-AzureRmSiteRecoverySite** cmdlet gets the Hyper-V sites in the Azure S
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -FriendlyName

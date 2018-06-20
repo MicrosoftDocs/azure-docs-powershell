@@ -24,11 +24,6 @@ The **New-AzureRmNetworkSecurityGroup** cmdlet creates an Azure network security
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

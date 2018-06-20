@@ -21,11 +21,6 @@ The **Get-AzureRmSiteRecoveryVaultSettings** cmdlet gets settings information re
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### CommonParameters

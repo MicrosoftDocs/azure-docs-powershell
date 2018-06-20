@@ -31,11 +31,6 @@ You will need to use the Save-AzureRmServerManagementGatewayProfile cmdlet to do
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Gateway

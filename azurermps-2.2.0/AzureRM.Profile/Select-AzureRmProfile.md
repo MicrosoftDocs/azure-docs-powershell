@@ -28,11 +28,6 @@ Cmdlets that you run in the current session use this information to authenticate
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Path

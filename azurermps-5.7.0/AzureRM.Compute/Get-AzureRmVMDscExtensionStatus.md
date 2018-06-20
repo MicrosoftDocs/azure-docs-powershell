@@ -25,11 +25,6 @@ When a configuration is applied this cmdlet produces output consistent with the 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Name

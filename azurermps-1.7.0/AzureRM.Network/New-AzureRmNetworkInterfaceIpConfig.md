@@ -37,11 +37,6 @@ The **New-AzureRmNetworkInterfaceIpConfig** cmdlet creates an Azure network inte
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ApplicationGatewayBackendAddressPool

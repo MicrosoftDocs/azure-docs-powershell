@@ -34,11 +34,6 @@ The **New-AzureRmCdnCustomDomain** cmdlet creates a custom domain for the Azure 
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -HostName

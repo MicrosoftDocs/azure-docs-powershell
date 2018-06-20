@@ -25,11 +25,6 @@ The **Add-AzureRmNetworkSecurityRuleConfig** cmdlet adds a network security rule
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Access

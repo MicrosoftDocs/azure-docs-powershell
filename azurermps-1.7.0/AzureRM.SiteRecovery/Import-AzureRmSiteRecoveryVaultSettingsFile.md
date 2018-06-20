@@ -21,11 +21,6 @@ The **Import-AzureRmSiteRecoveryVaultSettingsFile** cmdlet imports an Azure Site
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Path

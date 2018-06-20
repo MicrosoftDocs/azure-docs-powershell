@@ -26,11 +26,6 @@ The **Get-AzureRmSchedulerJob** cmdlet gets Azure Scheduler jobs.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -ResourceGroupName

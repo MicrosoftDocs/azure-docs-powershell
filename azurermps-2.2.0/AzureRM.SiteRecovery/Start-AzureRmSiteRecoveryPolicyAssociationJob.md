@@ -30,11 +30,6 @@ The **Start-AzureRmSiteRecoveryPolicyAssociationJob** cmdlet initiates an associ
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Policy

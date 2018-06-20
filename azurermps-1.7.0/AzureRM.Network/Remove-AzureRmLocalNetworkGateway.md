@@ -23,11 +23,6 @@ The **Remove-AzureRmLocalNetworkGateway** cmdlet removes a local network gateway
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -Force

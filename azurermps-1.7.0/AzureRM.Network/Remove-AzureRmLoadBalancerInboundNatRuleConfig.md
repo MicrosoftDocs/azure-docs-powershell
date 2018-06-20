@@ -22,11 +22,6 @@ The **Remove-AzureRmLoadBalancerInboundNatRuleConfig** cmdlet removes an inbound
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

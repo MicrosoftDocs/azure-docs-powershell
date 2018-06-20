@@ -27,14 +27,7 @@ The Set-AzureRMAppServicePlan cmdlet modifes an Azure App Service plan.
 
 ## EXAMPLES
 
-### --------------------------  1:  --------------------------
-@{paragraph=PS C:\\\>}
 
-
-
-```
-
-```
 
 ## PARAMETERS
 

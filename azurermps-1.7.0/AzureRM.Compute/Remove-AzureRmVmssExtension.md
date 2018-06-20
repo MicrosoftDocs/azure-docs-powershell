@@ -22,11 +22,6 @@ The **Remove-AzureRmVmssExtension** cmdlet removes an extension from the Virtual
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -InformationAction

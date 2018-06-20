@@ -26,11 +26,6 @@ The **New-AzureRmVirtualNetwork** cmdlet creates an Azure virtual network.
 
 ## EXAMPLES
 
-### 1:
-```
-
-```
-
 ## PARAMETERS
 
 ### -AddressPrefix
