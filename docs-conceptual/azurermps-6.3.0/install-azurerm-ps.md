@@ -12,7 +12,7 @@ ms.date: 06/15/2018
 # Install Azure PowerShell on Windows with PowerShellGet
 
 This article explains the steps to install the Azure PowerShell modules in a Windows environment using
-PowerShellGet.  This is the preferred way to install Azure PowerShell, but if you would rather install with
+PowerShellGet. PowerShellGet and module management is the preferred way to install Azure PowerShell but if you would rather install with
 the Web Platform Installer or MSI package, see [Other installation methods](other-install.md).
 
 For instructions to install Azure PowerShell on other platforms, see [Install and configure Azure PowerShell on macOS and Linux](install-azurermps-maclinux.md).
@@ -22,8 +22,8 @@ follow the instructions in [Install the Azure PowerShell Service Management modu
 
 ## Requirements
 
-Azure PowerShell version 6.1.0 requires version 5.0 (or higher) of PowerShell. To check the version of PowerShell running
-on your machine, use the following command:
+Starting with version 6.0, Azure PowerShell requires version 5.0 or higher of PowerShell running on Windows. To check the version of PowerShell running
+on your machine, run the following command:
 
 ```powershell
 $PSVersionTable.PSVersion
@@ -33,22 +33,18 @@ If you have an outdated version, see [Upgrading existing Windows PowerShell](/po
 
 ## Install the Azure PowerShell module
 
-Installing Azure PowerShell from the PowerShell Gallery requires elevated privileges. Run the
-following command from an elevated PowerShell session:
+You need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
+run the following command in an elevated session:
 
 ```powershell
-Install-Module -Name AzureRM 
+Install-Module -Name AzureRM
 ```
-
-> [!IMPORTANT]
-> This command will __not__ remove any existing installations of the Azure PowerShell module on
-> your system. To remove old installations see [Uninstall the Azure PowerShell module](#uninstall-the-azure-powershell-module).
 
 > [!NOTE]
 > If you have a version older than 2.8.5.201 of NuGet, you are prompted to download and install
 > the latest version of NuGet.
 
-By default, the PowerShell gallery is not configured as a trusted repository for PowerShellGet. The
+By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet. The
 first time you use the PSGallery you see the following prompt:
 
 ```output
@@ -61,88 +57,59 @@ Are you sure you want to install the modules from 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
-Answer 'Yes' or 'Yes to All' to continue with the installation.
+Answer `Yes` or `Yes to All` to continue with the installation.
 
-The AzureRM module is a rollup module for the Azure Resource Manager cmdlets, and downloads and
-installs all of the available cmdlets for working with Azure.
+The `AzureRM` module is a rollup module for the Azure PowerShell cmdlets. Installing it downloads all of
+the available Azure Resource Manager modules, and makes their cmdlets available for use.
 
-To start working with the Azure PowerShell module, you need to load it into your current PowerShell session
-with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then log in
+To start working with Azure PowerShell, you need to load `AzureRM` into your current PowerShell session
+with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in
 with your Azure credentials.
 
 ```powershell
 # Import the module into the PowerShell session
 Import-Module AzureRM
-# Connect to Azure with an interactive dialog for login
+# Connect to Azure with an interactive dialog for sign-in
 Connect-AzureRmAccount
 ```
 
-To learn about persisting your sign in credentials across sessions, see [Persist user logins across PowerShell sessions](context-persistence.md).
-
-## Uninstall the Azure PowerShell module
-
-To uninstall the Azure PowerShell module, use the [Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet. To uninstall 
-the most recent version of the Azure PowerShell on your system:
-
-```powershell
-Uninstall-Module -Name AzureRM
-```
-
-You can also delete a single version:
-
-```powershell
-Uninstall-Module -Name AzureRM -RequiredVersion 6.1.0
-```
-
-Or completely remove Azure PowerShell from your system.
-
-```powershell
-Uninstall-Module -Name AzureRM -AllVersions
-```
-
-To uninstall all versions of Azure PowerShell except for the latest, run the following
-command:
-
-```powershell
-Get-InstalledModule -Name AzureRM -AllVersions |
-    Where-Object -Property Version -ne $(Get-InstalledModule -Name AzureRM).Version |
-    ForEach-Object {Uninstall-Module -Name $_.Name -RequiredVersion $_.Version}
-```
+You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `AzureRM` module requires
+setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
+To learn how to persist your Azure sign in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
 
 ## Update the Azure PowerShell module
 
-You can update your Azure PowerShell installation by running [Update-Module](/powershell/module/powershellget/update-module) to pull the latest available version. This does __not__ uninstall earlier versions.
+You can update your Azure PowerShell installation by running [Update-Module](/powershell/module/powershellget/update-module). This command does __not__ uninstall earlier versions.
 
 ```powershell
 Update-Module -Name AzureRM
 ```
 
-If you do not want to keep earlier versions, you can run the following command to remove all _but_ the latest version of Azure PowerShell:
-
-```powershell
-Get-InstalledModule -Name AzureRM -AllVersions |
-    Where-Object -Property Version -ne $(Get-InstalledModule -Name AzureRM).Version |
-    ForEach-Object {Uninstall-Module -Name $_.Name -RequiredVersion $_.Version}
-```
+If you want to remove older versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
 
 ## Use multiple versions of Azure PowerShell
 
-If you need multiple versions of Azure PowerShell installed on your system, this is possible to do. When upgrading to a new version, take care to *not* delete
-any versions that you still need on your machine, by using only `Uninstall-Module` with the `-RequiredVersion` argument. When loading the Azure PowerShell
-module, the latest version is loaded by default, so if you require a different version then use the `-RequiredVersion` argument.
+It's possible to install multiple versions of Azure PowerShell. You might need more than one version if you work with on-premises Azure Stack resources,
+run an older version of Windows that you can't update to PowerShell 5.0, or use the Azure classic deployment model. To install an older version, provide the
+`-RequiredVersion` argument when installing.
 
 ```powershell
-# Import an earlier version of Azure PowerShell
-Import-Module -Name AzureRM -RequiredVersion 5.7.0
+# Install version 1.2.9 of Azure PowerShell
+Install-Module -Name AzureRM -RequiredVersion 1.2.9
+```
+
+When loading the Azure PowerShell module the latest version is loaded by default. To load a different version, provide the `-RequiredVersion` argument.
+
+```powershell
+# Load version 1.2.9 of Azure PowerShell
+Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 
 ## Provide feedback
 
-When using the Azure PowerShell, if you find any bugs, please [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues). 
-To provide feedback from the command line, use the `Send-Feedback` cmdlet.
+If you find a bug when using Azure Powershell, please [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).
+To provide feedback from the command line, use the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.
 
 ## Next Steps
 
-For more information about using Azure PowerShell, see the following articles:
-
-* [Get started with Azure PowerShell](get-started-azureps.md)
+To get started using Azure PowerShell, see [Get Started with Azure PowerShell](get-started-azureps.md) to learn more about the module and its features.
