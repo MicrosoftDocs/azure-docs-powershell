@@ -492,9 +492,6 @@
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new"
         },
         "dest": "azureps",
-        "xrefservice": [
-            "https://xref.docs.microsoft.com/query?uid={uid}"
-        ],
         "lruSize": 0
     }
 }
