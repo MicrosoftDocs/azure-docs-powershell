@@ -7,6 +7,7 @@
       "docset_name": "azureps",
       "build_source_folder": ".",
       "build_output_subfolder": "azureps",
+      "xref_query_tags":["/dotnet"],
       "locale": "en-us",
       "monikers": [],
       "open_to_public_contributors": true,
