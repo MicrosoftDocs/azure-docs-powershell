@@ -56,7 +56,7 @@ This command removes the database named Database01 from the Azure SQL Database s
 PS C:\> Remove-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
 ```
 
-This command removes the database named Database01 from the Azure SQL Database server namedlpqd0zbr8y.
+This command removes the database named Database01 from the Azure SQL Database server named lpqd0zbr8y.
 
 ### Example 3: Remove a database by using the pipeline
 ```
