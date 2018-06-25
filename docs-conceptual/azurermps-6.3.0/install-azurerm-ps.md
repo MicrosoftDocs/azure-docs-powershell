@@ -62,6 +62,8 @@ Answer `Yes` or `Yes to All` to continue with the installation.
 The `AzureRM` module is a rollup module for the Azure PowerShell cmdlets. Installing it downloads all of
 the available Azure Resource Manager modules, and makes their cmdlets available for use.
 
+## Sign in
+
 To start working with Azure PowerShell, you need to load `AzureRM` into your current PowerShell session
 with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in
 with your Azure credentials.
