@@ -41,7 +41,7 @@ Without setting up a context to persist credentials across sessions, you'll need
 
 Download the [Azure PowerShell WebPI package](http://aka.ms/webpi-azps) and start the install. If you have installed
 previous versions of Azure modules from an MSI or with WebPI, the installer automatically removes them. Modules are
-installed into `{$env:ProgramFiles}\WindowsPowerShell\Modules` but no version-specific folders are created.
+installed into `${env:ProgramFiles}\WindowsPowerShell\Modules`.
 
 When you install with the Web Platform Installer, the `AzureRM` and `Azure` modules are pre-loaded into your PowerShell sessions.
 To start working with Azure services, all you need to do is sign in with [Connect-AzureRmAccount](/powershell/module/azurerm.profile/connect-azurermaccount).

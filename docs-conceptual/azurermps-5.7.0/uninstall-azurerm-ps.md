@@ -15,9 +15,9 @@ your system. If you've decided to completely uninstall the Azure PowerShell, ple
 through the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet. 
 If you encountered a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues).
 
-# Uninstall MSI
+# Uninstall MSI or Web Platform Installer 
 
-If you installed Azure PowerShell using the MSI package, you must uninstall through the Windows
+If you installed Azure PowerShell using the MSI package or the Web Platform Installer, you must uninstall through the Windows
 system rather than PowerShell.
  
 | Platform | Instructions |
