@@ -15,6 +15,81 @@ ms.date: 5/1/2018
 This is a list of changes made to Azure PowerShell in this release.
 
 ---
+## 6.4.0 - July 2018
+#### General
+* Fixed formatting of OutputType in help files for most modules
+
+#### AzureRM.Profile
+* Ps1Xml attribute added to the basic output types
+
+#### AzureRM.Compute
+* IP Tag feature for VMSS
+    - 'New-AzureRmVmssIpTagConfig' cmdlet is added
+    - IpTag parameter is added to New-AzureRmVmssIpConfig
+* Auto OS Rollback feature for VMSS
+    - DisableAutoRollback parameters are added to New-AzureRmVmssConfig and Update-AzureRmVmss
+* OS Upgrade History feature for Vmss
+    - OSUpgradeHistory switch parameter is added to Get-AzureRmVmss
+
+#### AzureRM.DataLakeAnalytics
+* Add support for Catalog ACLs through the following commands:
+    - Get-AzureRmDataLakeAnalyticsCatalogItemAclEntry
+    - Set-AzureRmDataLakeAnalyticsCatalogItemAclEntry
+    - Remove-AzureRmDataLakeAnalyticsCatalogItemAclEntry
+
+#### AzureRM.DataLakeStore
+* Add cancellation support and progress tracking for Set-AzureRmDataLakeStoreItemAclEntry, Remove-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl
+* Add cancellation support for Export-AzureRmDataLakeStoreChildItemProperties
+* Fix flushing of debug messages for cmdlets that does recursive operations
+* Fix location of test of DataLake cmdlets
+
+#### AzureRM.EventHub
+* Added Optional MaxCount parameter to List Operations cmdlet Get-AzureRmEventHub and Get-AzureRmEventHubConsumerGroup
+* Fixed issue in New-AzureRmEventHub cmdlet where at least one parameter needed while creating New EventHub. Provided Default Parameter set.
+* Added optional Parameter -KeyValue to New-AzureRmEventHubKey cmdlet, which enables user to provide KeyValue.
+
+#### AzureRM.KeyVault
+* Fix issue where all resources were being returned by Get-AzureRmKeyVault -Tag
+
+#### AzureRM.Network
+* Expose new Skus for Zone-Redundant VirtualNetworkGateways
+* Added new commands for feature: ExpressRoute Partner APIs via ARM
+    - Added Get-AzureRmExpressRouteCrossConnection
+    - Added Set-AzureRmExpressRouteCrossConnection
+    - Added Add-AzureRmExpressRouteCrossConnectionPeering
+    - Added Get-AzureRmExpressRouteCrossConnectionPeering
+    - Added Remove-AzureRmExpressRouteCrossConnectionPeering
+    - Added Get-AzureRMExpressRouteCrossConnectionArpTable
+    - Added Get-AzureRMExpressRouteCrossConnectionRouteTable
+    - Added Get-AzureRMExpressRouteCrossConnectionRouteTableSummary
+
+#### AzureRM.RecoveryServices.Backup
+* Added Get-AzureRmRecoveryServicesBackupStatus cmdlet. This cmdlet takes a VM ID and checks if the VM is protected by some vault in the subscription. If there exists such a vault, the cmdlet outputs the vault details.
+
+#### AzureRM.Resources
+* Update Get-AzureRmPolicyAssignment cmdlets:
+    - Add support for listing -Scope values at management group level
+    - Add support for retrieving individual assignments with -Scope values at management group level
+    - Add -Effective and -All switches to control  parameter
+* Update Get/New/Remove/Set-AzureRmPolicyDefinition cmdlets
+    - Add -ManagementGroupName parameter to apply operations to a given management group
+    - Add -SubscriptionId parameter to apply operations to a given subscription
+* Update Get/New/Remove/Set-AzureRmPolicySetDefinition cmdlets
+    - Add -ManagementGroupName parameter to apply operations to a given management group
+    - Add -SubscriptionId parameter to apply operations to a given subscription
+* Add KeyVault secret reference support in parameters when using 'TemplateParameterObject' in 'New-AzureRmResourceGroupDeployment'
+* Fix issue where '-EndDate' parameter was ignored for 'New-AzureRmADAppCredential'
+    - https://github.com/Azure/azure-powershell/issues/6505
+* Fix issue where 'Add-AzureRmADGroupMember' used incorrect URL to make request
+    - https://github.com/Azure/azure-powershell/issues/6485
+
+#### AzureRM.ServiceBus
+* Added optional Parameter -KeyValue to New-AzureRmServiceBusKey cmdlet, which enables user to provide KeyValue.
+
+#### AzureRM.Sql
+* Clarified User-Defined Restore Points for SQLDW in New-AzureRmSqlDatabaseRestorePoint help
+* Updated documentation of -ComputeGeneration parameter in several cmdlets
+
 ## 6.3.0 - June 2018
 #### AzureRM.Profile
 * Updated error messages for Enable-AzureRmContextAutoSave
