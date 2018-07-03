@@ -139,8 +139,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-6.3.0",
-                "version": "azurermps-6.3.0",
+                "src": "azurermps-6.4.0",
+                "version": "azurermps-6.4.0",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -151,8 +151,8 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "docs-conceptual/azurermps-6.3.0",
-                "version": "azurermps-6.3.0",
+                "src": "docs-conceptual/azurermps-6.4.0",
+                "version": "azurermps-6.4.0",
                 "dest": "azure"
             },
             {
@@ -377,7 +377,7 @@
                 "files": [
                     "media/**"
                 ],
-                "version": "azurermps-6.3.0"
+                "version": "azurermps-6.4.0"
             }
         ],
         "versions": {
@@ -402,8 +402,8 @@
             "azurermps-5.7.0": {
                 "dest": "azurermps-5.7.0"
             },
-            "azurermps-6.3.0": {
-                "dest": "azurermps-6.3.0"
+            "azurermps-6.4.0": {
+                "dest": "azurermps-6.4.0"
             },
             "azuresmps-3.7.0": {
                 "dest": "azuresmps-3.7.0"
@@ -467,7 +467,7 @@
                 "azurermps-3.8.0/**/*": "None",
                 "azurermps-4.4.1/**/*": "None",
                 "azurermps-5.7.0/**/*": "None",
-                "azurermps-6.3.0/**/*": "None",
+                "azurermps-6.4.0/**/*": "None",
                 "azuresmps-3.7.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
                 "azurestackps-1.2.11/**/*": "None",
