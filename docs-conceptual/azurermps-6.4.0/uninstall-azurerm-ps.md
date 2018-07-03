@@ -35,7 +35,7 @@ If you installed Azure PowerShell using PowerShellGet, you can use the
 uninstall each module individually. Uninstallation can be complicated if you have multiple versions of Azure
 PowerShell installed.
 
-You use the following script can be used to completely remove a single version of Azure PowerShell. The
+The following script can be used to completely remove a single version of Azure PowerShell. The
 script queries the PowerShell Gallery to get a list of dependent submodules. Then, the script
 uninstalls the correct version of each submodule.
 
