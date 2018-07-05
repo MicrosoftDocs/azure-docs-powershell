@@ -243,7 +243,7 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 ## Breaking changes to AzureRM.KeyVault cmdlets
 
 **Add-AzureKeyVaultCertificate**
-- The `Certificate` parameter has become mandatory.
+- The `CertificatePolicy` parameter has become mandatory.
 
 **Set-AzureKeyVaultManagedStorageSasDefinition**
 - The cmdlet no longer accepts individual parameters that compose the access token; instead, the cmdlet replaces explicit token parameters, such as `Service` or `Permissions`, with a generic `TemplateUri` parameter, corresponding to a sample access token defined elsewhere (presumably using Storage PowerShell cmdlets, or composed manually according to the Storage documentation.) The cmdlet retains the `ValidityPeriod` parameter.
