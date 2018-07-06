@@ -46,7 +46,7 @@ Set-AzsUserSubscription -SubscriptionId 8e425478-c7f0-49ca-bb92-b42889ec3642 -Di
 Disable a subscription
 
 ```
-Get-AzsUserSubscription -SubscriptionId 8e425478-c7f0-49ca-bb92-b42889ec3642 -State Disabled
+Set-AzsUserSubscription -SubscriptionId 8e425478-c7f0-49ca-bb92-b42889ec3642 -State Disabled
 ```
 
 ### EXAMPLE 3
