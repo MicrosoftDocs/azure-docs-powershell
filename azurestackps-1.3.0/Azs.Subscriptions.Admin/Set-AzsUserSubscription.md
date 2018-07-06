@@ -36,9 +36,34 @@ Updates the specified user subscription
 ## EXAMPLES
 
 ### EXAMPLE 1
+Set or Update Display Name
+
 ```
 Set-AzsUserSubscription -SubscriptionId 8e425478-c7f0-49ca-bb92-b42889ec3642 -DisplayName "NewName"
 ```
+
+### EXAMPLE 2
+Disable a subscription
+
+```
+Set-AzsUserSubscription -SubscriptionId 8e425478-c7f0-49ca-bb92-b42889ec3642 -State Disabled
+```
+
+### EXAMPLE 3
+Enable a subscription
+
+```
+Set-AzsUserSubscription -SubscriptionId 8e425478-c7f0-49ca-bb92-b42889ec3642 -State Enabled
+```
+
+### EXAMPLE 4
+Delete a subscription
+
+```
+Set-AzsUserSubscription -SubscriptionId 8e425478-c7f0-49ca-bb92-b42889ec3642 -State Delete
+```
+
+
 
 Updates a subscription
 
