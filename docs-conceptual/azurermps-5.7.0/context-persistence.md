@@ -48,7 +48,7 @@ a special hidden folder in your user directory (`%AppData%\Roaming\Windows Azure
 Subsequently, each new PowerShell session targets the context used in your last session.
 
 To set PowerShell to forget your context and credentials, use `Disable-AzureRmContextAutoSave`. You
-will need to log in to Azure every time you open a PowerShell session.
+will need to sign in to Azure every time you open a PowerShell session.
 
 The cmdlets that allow you to manage Azure contexts also allow you fine grained control. If you
 want changes to apply only to the current PowerShell session (`Process` scope) or every PowerShell
