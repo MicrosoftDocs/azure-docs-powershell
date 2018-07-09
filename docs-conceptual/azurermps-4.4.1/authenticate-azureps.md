@@ -1,6 +1,6 @@
 ---
-title: Log in with Azure PowerShell
-description: Log in with Azure PowerShell
+title: Sign in with Azure PowerShell
+description: How to sign in with Azure PowerShell as a user, service principal, or with MSI.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
@@ -8,81 +8,66 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ---
+# Sign in with Azure PowerShell
 
-# Log in with Azure PowerShell
-
-Azure PowerShell supports multiple login methods. The simplest way to get started is to log in
+Azure PowerShell supports multiple authentication methods. The simplest way to get started is to sign in
 interactively at the command line.
 
-## Interactive log in
+## Sign in interactively
 
-1. Type `Login-AzureRmAccount`. You will get dialog box asking for your Azure credentials.
+To sign in interactively, use the [Connect-AzureRmAccount](/powershell/module/azurerm.profile/connect-azurermaccount) cmdlet.
 
-2. Type the email address and password associated with your account. Azure authenticates and saves
-   the credential information, and then closes the window.
+```azurepowershell
+Connect-AzureRmAccount
+```
 
-## Log in with a service principal
+When run, this cmdlet will bring up a dialog box prompting you for your email address and password associated with your Azure account. When you authenticate, that information is saved for the current PowerShell session, the dialog is closed, and you have access to all of the Azure PowerShell cmdlets.
+
+> [!IMPORTANT]
+> As of Azure PowerShell 6.3.0, your credentials are shared among multiple PowerShell sessions as long as you remain
+> signed in to Windows. For more information, see the article on [Persistent Credentials](context-persistence.md).
+
+## Sign in with a service principal
 
 Service principals provide a way for you to create non-interactive accounts that you can use to
 manipulate resources. Service principals are like user accounts to which you can apply rules using
 Azure Active Directory. By granting the minimum permissions needed to a service principal, you can
 ensure your automation scripts are even more secure.
 
-1. If you don't already have a service principal, [create one](create-azure-service-principal-azureps.md).
+If you need to create a service principal for use with Azure PowerShell, see [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).
 
-2. Log in with the service principal.
+To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzureRmAccount` cmdlet. You will also need the service princpal's application ID,
+sign-in credentials, and the tenant ID associate with the service principal. In order to get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will display a dialog box to enter the service principal user ID and password into.
 
-    ```powershell
-    Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
-    ```
+```azurepowershell-interactive
+$pscredential = Get-Credential
+Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+```
 
-    To get your TenantId, log in interactively and then get the TenantId from your subscription.
-
-    ```powershell
-    Get-AzureRmSubscription
-    ```
-
-    ```
-    Environment           : AzureCloud
-    Account               : username@contoso.com
-    TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-    SubscriptionId        : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-    SubscriptionName      : My Production Subscription
-    CurrentStorageAccount :
-    ```
-
-### Log in using an Azure VM Managed Service Identity
+## Sign in using an Azure VM Managed Service Identity
 
 Managed Service Identity (MSI) is a preview feature of Azure Active Directory. You can use an MSI
-service principal for sign-in, and acquire an app-only access token to access other resources.
+service principal for sign-in, and acquire an app-only access token to access other resources. MSI is only available on
+virtual machines running in an Azure cloud.
 
 For more information about MSI, see
 [How to use an Azure VM Managed Service Identity (MSI) for sign-in and token acquisition](/azure/active-directory/msi-how-to-get-access-token-using-msi).
 
-## Log in to another Cloud
+## Sign in to another Cloud
 
 Azure cloud services provide different environments that adhere to the data-handling regulations of
-various governments. If your Azure account is in one the government clouds, you need to specify the
+various regions. If your Azure account is in a cloud associated with one of these regions, you need to specify the
 environment when you sign in. For example, if you account is in the China cloud you sign on using
 the following command:
 
-```powershell
+```azurepowershell-interactive
 Login-AzureRmAccount -EnvironmentName AzureChinaCloud
 ```
 
 Use the following command to get a list of available environments:
 
-```powershell
+```azurepowershell-interactive
 Get-AzureRmEnvironment | Select-Object Name
-```
-
-```
-Name
-----
-AzureCloud
-AzureChinaCloud
-AzureUSGovernment
-AzureGermanCloud
 ```
 
 ## Learn more about managing Azure role-based access
@@ -90,7 +75,7 @@ AzureGermanCloud
 For more information about authentication and subscription management in Azure, see
 [Manage Accounts, Subscriptions, and Administrative Roles](/azure/active-directory/role-based-access-control-configure).
 
-Azure PowerShell cmdlets for role management
+Azure PowerShell cmdlets for role management:
 
 * [Get-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/Get-AzureRmRoleAssignment)
 * [Get-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Get-AzureRmRoleDefinition)

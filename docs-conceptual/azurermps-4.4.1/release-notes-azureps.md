@@ -145,9 +145,9 @@ This is a list of changes made to Azure PowerShell in this release.
     * All AzureRmCmdlets add -AzureRmContext parameter, which can accept a context (output of a Context cmdlet).
       - Common pattern for jobs with context persistence DISABLED: `Start-Job {param ($context) New-AzureRmVM -AzureRmContext $context [... other parameters]} -ArgumentList (Get-AzureRmContext)`
       - Common pattern for jobs with context persistence ENABLED:`Start-Job {New-AzureRmVM [... other parameters]}`
-  * Persist login information across sessions, new cmdlets:
-    - Enable-AzureRmContextAutosave - Enable login persistence across sessions.
-    - Disable-AzureRmContextAutosave - Disable login persistence across sessions.
+  * Persist sign in information across sessions, new cmdlets:
+    - Enable-AzureRmContextAutosave - Enable credential persistence across sessions.
+    - Disable-AzureRmContextAutosave - Disable credential persistence across sessions.
   * Manage context information, new cmdets
     - Select-AzureRmContext - Select the active named context.
     - Rename-AzureRmContext - Rename an exsiting context for easy reference.
@@ -207,7 +207,7 @@ This is a list of changes made to Azure PowerShell in this release.
     - Enable to set/disable backup blob container for backup/restore Azure Analysis Services Server
   * Updated Sku lookup in New-AzureRmAnalysisServicesServer and Set-AzureRmAnalysisServicesServer
     - Changed hard coded Sku into dynamic lookup.
-  * Add-AzureAnalysisServicesAccount to support login with Service Principal
+  * Add-AzureAnalysisServicesAccount to support sign in with Service Principal
 * Automation
   * Made changes to AutomationDSC* cmdlets to pull more than 100 records
   * Resolved the issue where the Verbose streams stop working after calling some Automation cmdlets (for example Get-AzureRmAutomationVariable, Get-AzureRmAutomationJob).
@@ -496,7 +496,7 @@ This is a list of changes made to Azure PowerShell in this release.
     * Resolve-AzureRmError
       * New cmdlet to show details of errors and exceptions thrown by cmdlets, including server request/response data
     * Send-Feedback
-      * Enabled sending feedback without logging in
+      * Enabled sending feedback without signing in
     * Get-AzureRmSubscription
       * Fix bug in retreiving CSP subscriptions
 * Resources

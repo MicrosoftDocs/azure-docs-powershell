@@ -189,7 +189,7 @@ Import-Module -Name AzureRM -RequiredVersion 1.2.9
 > [!NOTE]
 > Version 2.1.0 and version 1.2.6 are the first module versions designed to be installed and used
 side by side. When loading an earlier version of the Azure PowerShell, incompatible versions of the
-**AzureRM.Profile** module are loaded. This results in the cmdlets prompting you to log in whenever
+**AzureRM.Profile** module are loaded. This results in the cmdlets prompting you to sign in whenever
 you execute a cmdlet.
 
 ### Other installation methods

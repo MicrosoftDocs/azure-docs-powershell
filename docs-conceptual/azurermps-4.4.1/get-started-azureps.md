@@ -45,12 +45,12 @@ information about the latest release, see the [release notes](./release-notes-az
 2. To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your
    command line.
 
-## Log in to Azure
+## Sign in to Azure
 
 Sign on interactively:
 
 1. Type `Login-AzureRmAccount`. You will get dialog box asking for your Azure credentials. Option
-  '-EnvironmentName' can let you login in Azure China or Azure Germany.
+  '-EnvironmentName' can let you authenticate for Azure China or Azure Germany.
 
    e.g. Login-AzureRmAccount -EnvironmentName AzureChinaCloud
 
@@ -159,7 +159,7 @@ RequestId IsSuccessStatusCode StatusCode ReasonPhrase
                          True         OK OK
 ```
 
-Now log on to your newly created Windows Server VM using Remote Desktop and the public IP address
+Now sign in to your newly created Windows Server VM using Remote Desktop and the public IP address
 of the VM. The following command displays the public IP address created in the previous script.
 
 ```powershell
@@ -179,7 +179,7 @@ command:
 mstsc /v:xx.xxx.xx.xxx
 ```
 
-Supply the same username/password combination you used when creating the VM to log in.
+Supply the same username/password combination you used when creating the VM to sign in.
 
 ## Create a Linux Virtual Machine
 
@@ -402,7 +402,7 @@ To learn more about ways to use the Azure PowerShell, check out our most common 
 
 ## Next steps
 
-* [Login with Azure PowerShell](authenticate-azureps.md)
+* [Sign in with Azure PowerShell](authenticate-azureps.md)
 * [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
 * [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
 * Read the Release notes about migrating from an older release:
