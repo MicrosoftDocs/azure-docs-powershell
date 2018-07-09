@@ -10,9 +10,7 @@ ms.date: 08/31/2017
 ---
 # Persisting user credentials across PowerShell sessions
 
-In the September 2017 release of Azure PowerShell, Azure Resource Manager cmdlets introduce a new
-feature, **Azure Context Autosave**. This feature enables several new user scenarios,
-including:
+Azure PowerShell offers a feature called **Azure Context Autosave**, which gives the following features:
 
 - Retention of login information for reuse in new PowerShell sessions.
 - Easier use of background tasks for executing long-running cmdlets.
@@ -41,16 +39,14 @@ Azure Contexts whenever you open a new PowerShell session.
 
 ## Automatically saving the context for the next login
 
-By default, Azure PowerShell discards your context information whenever you close the
-PowerShell session.
+As of version 6.3.0, Azure PowerShell retains your context information automatically between
+sessions. To set PowerShell to forget your context and credentials, use `Disable-AzureRmContextAutoSave`. You
+will need to log in to Azure every time you open a PowerShell session.
 
 To allow Azure PowerShell to remember your context after the PowerShell session is closed, use
 `Enable-AzureRmContextAutosave`. Context and credential information are automatically saved in
 a special hidden folder in your user directory (`%AppData%\Roaming\Windows Azure PowerShell`).
 Subsequently, each new PowerShell session targets the context used in your last session.
-
-To set PowerShell to forget your context and credentials, use `Disable-AzureRmContextAutoSave`. You
-will need to log in to Azure every time you open a PowerShell session.
 
 The cmdlets that allow you to manage Azure contexts also allow you fine grained control. If you
 want changes to apply only to the current PowerShell session (`Process` scope) or every PowerShell
