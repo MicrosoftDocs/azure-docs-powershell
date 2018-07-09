@@ -22,7 +22,7 @@ follow the instructions in [Install the Azure PowerShell Service Management modu
 
 ## Requirements
 
-Starting with version 6.0, Azure PowerShell requires version 5.0 or higher of PowerShell running on Windows. To check the version of PowerShell running
+Starting with Azure PowerShell version 6.0, Azure PowerShell requires PowerShell version 5.0. To check the version of PowerShell running
 on your machine, run the following command:
 
 ```powershell
@@ -30,6 +30,11 @@ $PSVersionTable.PSVersion
 ```
 
 If you have an outdated version, see [Upgrading existing Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell).
+
+> [!IMPORTANT]
+> The module described in this document, AzureRM, uses .NET Framework. This makes it incompatible with PowerShell 6.0,
+> which uses .NET Core. If you are using PowerShell 6.0, follow the [installation instructions for
+> macOS and Linux](install-azurermps-maclinux.md). 
 
 ## Install the Azure PowerShell module
 
