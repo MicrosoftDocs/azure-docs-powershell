@@ -39,9 +39,9 @@ Previously, Azure PowerShell required _at least_ version 3.0 of PowerShell to ru
 
 ### Context autosave enabled by default
 
-Context autosave is the storage of Azure login information that can be used between new and different PowerShell sessions. For more information on context autosave, please see [this document](https://docs.microsoft.com/en-us/powershell/azure/context-persistence).
+Context autosave is the storage of Azure sign in information that can be used between new and different PowerShell sessions. For more information on context autosave, please see [this document](https://docs.microsoft.com/en-us/powershell/azure/context-persistence).
 
-Previously by default, context autosave was disabled, which meant the user's Azure login information was not stored between sessions until they ran the `Enable-AzureRmContextAutosave` cmdlet to turn on context persistence. Moving forward, context autosave will be enabled by default, which means that users _with no saved context autosave settings_ will have their context stored the next time they login. Users can opt out of this functionality by using the `Disable-AzureRmContextAutosave` cmdlet.
+Previously by default, context autosave was disabled, which meant the user's Azure authentication information was not stored between sessions until they ran the `Enable-AzureRmContextAutosave` cmdlet to turn on context persistence. Moving forward, context autosave will be enabled by default, which means that users _with no saved context autosave settings_ will have their context stored the next time they sign in. Users can opt out of this functionality by using the `Disable-AzureRmContextAutosave` cmdlet.
 
 _Note_: users that previously disabled context autosave or users with context autosave enabled and existing contexts will not be affected by this change
 

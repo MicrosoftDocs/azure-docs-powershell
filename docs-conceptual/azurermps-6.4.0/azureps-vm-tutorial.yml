@@ -30,16 +30,16 @@ items:
         Shell.
 
     - durationInMinutes: 1
-      title: Log in
+      title: Sign in
       content: |-
-        If you're using a local install of the Azure PowerShell, you need to log in before
+        If you're using a local install of the Azure PowerShell, you need to sign in before
         performing any other steps.
 
         ```powershell
         Connect-AzureRmAccount
         ```
 
-        Complete the login process by following the steps displayed in your terminal.
+        Complete the sign in process by following the steps displayed in your terminal.
 
     - durationInMinutes: 1
       title: Create a resource group
