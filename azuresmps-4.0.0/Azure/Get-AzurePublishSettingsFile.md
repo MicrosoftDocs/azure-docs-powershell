@@ -19,7 +19,7 @@ Get-AzurePublishSettingsFile [-Environment <String>] [-Realm <String>] [-PassThr
 
 ## DESCRIPTION
 The **Get-AzurePublishSettingsFile** cmdlet downloads a publish settings file for a subscription in your account.
-When the command completes, you can use the **Import-PublishSettingsFile** cmdlet to make the settings in the file available to Windows PowerShell.
+When the command completes, you can use the **Import-AzurePublishSettingsFile** cmdlet to make the settings in the file available to Windows PowerShell.
 
 To make your Azure account available to Windows PowerShell, you can use a publish settings file or the **Add-AzureAccount** cmdlet.
 Publish settings files let you prepare the session in advance so you can run scripts and background jobs unattended.
