@@ -10,7 +10,7 @@ ms.date: 05/15/2017
 ---
 # Sign in with Azure PowerShell
 
-Azure PowerShell supports multiple login methods. The simplest way to get started is to log in
+Azure PowerShell supports multiple authentication methods. The simplest way to get started is to sign in
 interactively at the command line.
 
 ## Sign in interactively
@@ -24,8 +24,8 @@ Connect-AzureRmAccount
 When run, this cmdlet will bring up a dialog box prompting you for your email address and password associated with your Azure account. When you authenticate, that information is saved for the current PowerShell session, the dialog is closed, and you have access to all of the Azure PowerShell cmdlets.
 
 > [!IMPORTANT]
-> This sign in is for the current PowerShell session _only_. To persist the login across multiple
-> sessions, see the article on [Persistent Credentials](context-persistence.md).
+> As of Azure PowerShell 6.3.0, your credentials are shared among multiple PowerShell sessions as long as you remain
+> signed in to Windows. For more information, see the article on [Persistent Credentials](context-persistence.md).
 
 ## Sign in with a service principal
 

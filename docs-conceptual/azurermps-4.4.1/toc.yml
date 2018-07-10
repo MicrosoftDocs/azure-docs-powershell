@@ -12,7 +12,7 @@
     href: get-started-azureps.md
   - name: Cloud Shell
     href: https://docs.microsoft.com/azure/cloud-shell/overview
-  - name: Log in
+  - name: Sign in
     href: authenticate-azureps.md
     items:
     - name: Create a service principal

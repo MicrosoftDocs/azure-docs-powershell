@@ -402,7 +402,7 @@ To learn more about ways to use the Azure PowerShell, check out our most common 
 
 ## Next steps
 
-* [Login with Azure PowerShell](authenticate-azureps.md)
+* [Sign in with Azure PowerShell](authenticate-azureps.md)
 * [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
 * [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
 * Read the Release notes about migrating from an older release:

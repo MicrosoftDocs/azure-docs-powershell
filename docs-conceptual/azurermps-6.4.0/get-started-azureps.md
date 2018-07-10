@@ -49,7 +49,7 @@ You can also install Azure PowerShell and use it locally in a PowerShell session
 Sign on interactively:
 
 1. Type `Connect-AzureRmAccount`. You will get dialog box asking for your Azure credentials. Option
-  '-Environment' can let you login in Azure China or Azure Germany.
+  '-Environment' can let you authenticate for Azure China or Azure Germany.
 
    e.g. Connect-AzureRmAccount -Environment AzureChinaCloud
 
@@ -402,7 +402,7 @@ To learn more about ways to use the Azure PowerShell, check out our most common 
 
 ## Next steps
 
-* [Login with Azure PowerShell](authenticate-azureps.md)
+* [Sign in with Azure PowerShell](authenticate-azureps.md)
 * [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
 * [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
 * Read the Release notes about migrating from an older release:
