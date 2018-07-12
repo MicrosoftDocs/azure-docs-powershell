@@ -9,7 +9,6 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
 ---
-
 # Manage multiple Azure subscriptions
 
 If you are brand new to Azure, you probably only have a single subscription. But if you have been
@@ -22,7 +21,7 @@ PowerShell to execute commands against a particular subscription.
     Get-AzureRmSubscription
     ```
 
-    ```
+    ```output
     Environment           : AzureCloud
     Account               : username@contoso.com
     TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -57,7 +56,7 @@ PowerShell to execute commands against a particular subscription.
     Get-AzureRmContext
     ```
 
-    ```
+    ```output
     Environment           : AzureCloud
     Account               : username@contoso.com
     TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX

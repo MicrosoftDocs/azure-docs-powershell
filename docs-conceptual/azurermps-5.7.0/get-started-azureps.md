@@ -26,7 +26,7 @@ information about the latest release, see the [release notes](./release-notes-az
 2. To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your
    command line.
 
-## Azure Cloud Shell 
+## Azure Cloud Shell
 
 The simplest way to get started is to [launch Cloud Shell](/azure/cloud-shell/quickstart).
 
@@ -77,6 +77,7 @@ Enter a username and password for the virtual machine.
 User: localAdmin
 Password for user localAdmin: *********
 ```
+
 Next, create the VM.
 
 ```azurepowershell-interactive

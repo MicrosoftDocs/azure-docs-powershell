@@ -34,8 +34,7 @@ The following samples can help you learn how to perform common scenarios with Az
 > you can install the Service Management version of Azure PowerShell. For more information, see
 > [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
 
-
-### Need help with PowerShell?
+## Learn PowerShell basics
 
 If you are unfamiliar with PowerShell, you may find an introduction to PowerShell helpful.
 

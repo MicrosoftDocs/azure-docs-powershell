@@ -12,14 +12,14 @@ ms.topic: conceptual
 
 This article tells you how to uninstall an older version of Azure PowerShell, or completely remove it from
 your system. If you've decided to completely uninstall the Azure PowerShell, please give us some feedback
-through the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet. 
+through the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.
 If you encountered a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues).
 
-# Uninstall MSI or Web Platform Installer 
+## Uninstall MSI or Web Platform Installer
 
 If you installed Azure PowerShell using the MSI package or the Web Platform Installer, you must uninstall through the Windows
 system rather than PowerShell.
- 
+
 | Platform | Instructions |
 |----------|--------------|
 | Windows 10 | Start > Settings > Apps |
@@ -27,10 +27,10 @@ system rather than PowerShell.
 
 Once on this screen you should see "Azure PowerShell" in the program listing, and can uninstall from there.
 
-# Uninstall from PowerShell
+## Uninstall from PowerShell
 
 If you installed Azure PowerShell using PowerShellGet, you can use the
-[Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet. However, 
+[Uninstall-Module](/powershell/module/powershellget/uninstall-module) cmdlet. However,
 `Uninstall-Module` only uninstalls one module. To remove Azure PowerShell completely, you must
 uninstall each module individually. Uninstallation can be complicated if you have multiple versions of Azure
 PowerShell installed.
