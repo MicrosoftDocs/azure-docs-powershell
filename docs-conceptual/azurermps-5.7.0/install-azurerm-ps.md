@@ -58,11 +58,11 @@ If you don't have PowerShellGet installed, follow the instructions in the table 
 > Using PowerShellGet requires an Execution Policy that allows you to run scripts. For more
 > information about PowerShell's Execution Policy, see
 > [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
-
+>
 > [!IMPORTANT]
 > The module described in this document, AzureRM, uses .NET Framework. This makes it incompatible with PowerShell 6.0,
 > which uses .NET Core. If you are using PowerShell 6.0, follow the [installation instructions for
-> macOS and Linux](install-azurermps-maclinux.md). 
+> macOS and Linux](install-azurermps-maclinux.md).
 
 ## Install the Azure PowerShell module
 

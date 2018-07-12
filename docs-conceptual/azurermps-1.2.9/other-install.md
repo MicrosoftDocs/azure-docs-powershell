@@ -8,7 +8,6 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
 ---
-
 # Other installation methods
 
 Azure PowerShell has multiple installation methods. Using PowerShellGet with the PowerShell Gallery
@@ -51,7 +50,7 @@ fail to include the path where Azure PowerShell is installed.
 When attempting to load or execute cmdlets after installation, you can receive the following error
 message:
 
-```
+```output
 PS C:\> Login-AzureRmAccount
 Login-AzureRmAccount : The term 'Login-AzureRmAccount' is not recognized as the name of a cmdlet,
 function, script file, or operable program. Check the spelling of the name, or if a path was
