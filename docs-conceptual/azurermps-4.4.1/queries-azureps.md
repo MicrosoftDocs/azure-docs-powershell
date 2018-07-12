@@ -16,7 +16,6 @@ PowerShell, cmdlet names take the form of **_Verb-Noun_**. The cmdlets using the
 the query cmdlets. The cmdlet nouns are the types of Azure resources that are acted upon by the
 cmdlet verbs.
 
-
 ## Selecting simple properties
 
 Azure PowerShell has default formatting defined for each cmdlet. The most common properties for
@@ -31,7 +30,7 @@ Get-AzureRmVM
 
 The default output is automatically formatted as a table.
 
-```
+```output
 ResourceGroupName          Name   Location          VmSize  OsType              NIC ProvisioningState
 -----------------          ----   --------          ------  ------              --- -----------------
 MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
@@ -44,7 +43,7 @@ The `Select-Object` cmdlet can be used to select the specific properties that ar
 Get-AzureRmVM | Select Name,ResourceGroupName,Location
 ```
 
-```
+```output
 Name          ResourceGroupName Location
 ----          ----------------- --------
 MyUnbuntu1610 MYWESTEURG        westeurope
@@ -61,7 +60,7 @@ from the `Get-AzureRmVM` cmdlet.
 Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
-```
+```output
 Name           OSType
 ----           ------
 MyUnbuntu1610   Linux
@@ -77,7 +76,7 @@ following example, the filter selects only VMs that have the text "RGD" in their
 Get-AzureRmVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
 ```
 
-```
+```output
 ResourceGroupName  Name
 -----------------  ----
 RGDEMO001          KBDemo001VM
@@ -90,7 +89,7 @@ With the next example, the results will return the VMs that have the vmSize 'Sta
 Get-AzureRmVM | Where vmSize -eq Standard_DS1_V2
 ```
 
-```
+```output
 ResourceGroupName          Name     Location          VmSize  OsType              NIC ProvisioningState
 -----------------          ----     --------          ------  ------              --- -----------------
 MYWESTEURG        MyUnbuntu1610   westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded

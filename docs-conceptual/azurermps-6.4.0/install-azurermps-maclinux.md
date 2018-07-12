@@ -27,8 +27,8 @@ version of Azure PowerShell available.
 The installation instructions for PowerShell Core are different for macOS and most Linux distributions.
 Detailed instructions can be found in the following articles:
 
-- [Install PowerShell Core on macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
-- [Install PowerShell Core on Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
+* [Install PowerShell Core on macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
+* [Install PowerShell Core on Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
 
 ## Install Azure PowerShell for .NET Core
 
@@ -89,19 +89,19 @@ provide the full set of cmdlets that are available for the Windows version of th
 following functions are implemented in AzureRM.Netcore modules:
 
 * Account management
-  - Sign in with Microsoft account, Organizational account, or Service Principal through Microsoft
+  * Sign in with Microsoft account, Organizational account, or Service Principal through Microsoft
     Azure Active Directory
-  - Save Credentials to disk with Save-AzureRmContext and load saved credentials using
+  * Save Credentials to disk with Save-AzureRmContext and load saved credentials using
     Import-AzureRmContext
 * Environment
-  - Get the different out-of-box Microsoft Azure environments
-  - Add/Set/Remove customized environments (like your Azure Stack or Windows Azure Pack environments)
+  * Get the different out-of-box Microsoft Azure environments
+  * Add/Set/Remove customized environments (like your Azure Stack or Windows Azure Pack environments)
 * Management plane cmdlets for Azure services using Resource Manager and Service Management interfaces.
-  - Virtual Machine
-  - App Service (Websites)
-  - SQL Database
-  - Storage
-  - Network
+  * Virtual Machine
+  * App Service (Websites)
+  * SQL Database
+  * Storage
+  * Network
 
 ## Next Steps
 

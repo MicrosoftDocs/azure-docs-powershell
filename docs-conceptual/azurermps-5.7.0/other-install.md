@@ -8,7 +8,6 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/20/2018
 ---
-
 # Install Azure PowerShell on Windows with MSI or Web Platform Installer
 
 This article explains how to install Azure PowerShell on Windows using an MSI or Web Platform Installer (WebPI).  

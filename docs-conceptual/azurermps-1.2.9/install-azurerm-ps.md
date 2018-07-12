@@ -86,6 +86,7 @@ this issue, see the [Updating to a new version of Azure PowerShell](#update-azps
 article.
 
 ## Step 3: Load the AzureRM module
+
 Once the module is installed, you need to load the module into your PowerShell session. You should
 do this in a normal (non-elevated) PowerShell session. Modules are loaded using the `Import-Module`
 cmdlet, as follows:
@@ -110,8 +111,7 @@ For more information about using Azure PowerShell, see the following articles:
 |I want to upgrade to PowerShell 5|[Install the latest version of WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
 |I am running on a version of Windows with PowerShell 3 or PowerShell 4|[Get the PackageManagement modules](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
-<a id="helpmechoose"></a>
-### Checking the version of Azure PowerShell
+### <div id="helpmechoose"/>Checking the version of Azure PowerShell
 
 Although we encourage you to upgrade to the latest version as early as possible, several versions
 of Azure PowerShell are supported. To determine the version of Azure PowerShell you have installed,
@@ -129,7 +129,7 @@ Service Management module](/powershell/azure/servicemanagement/install-azure-ps)
 common dependencies. If you use both the Azure and AzureRM modules, you should install the same
 version of each package.
 
-### <a id="update-azps"></a>Updating to a new version of Azure PowerShell
+### <div id="update-azps"/>Updating to a new version of Azure PowerShell
 
 If you have a previous version of Azure PowerShell installed that includes the Service Management
 module, you may receive the following error:

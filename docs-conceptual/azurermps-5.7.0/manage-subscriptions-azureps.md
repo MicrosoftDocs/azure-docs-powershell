@@ -8,7 +8,6 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
 ---
-
 # Manage multiple Azure subscriptions
 
 If you are brand new to Azure, you probably only have a single subscription. But if you have been

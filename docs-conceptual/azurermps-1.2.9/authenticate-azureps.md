@@ -42,7 +42,7 @@ ensure your automation scripts are even more secure.
     Get-AzureRmSubscription
     ```
 
-    ```
+    ```output
     Environment           : AzureCloud
     Account               : username@contoso.com
     TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -76,7 +76,7 @@ Use the following command to get a list of available environments:
 Get-AzureRmEnvironment | Select-Object Name
 ```
 
-```
+```output
 Name
 ----
 AzureCloud
