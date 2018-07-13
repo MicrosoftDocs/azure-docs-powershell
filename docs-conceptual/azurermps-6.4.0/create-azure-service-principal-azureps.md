@@ -102,11 +102,20 @@ provided. You need to supply the Tenant Id for your account. Your Tenant Id is d
 sign into Azure with your personal credentials.
 
 ```azurepowershell-interactive
-$cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
+$cred = Get-Credential -UserName 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Message "Enter Password"
 Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
-Run this command from a new PowerShell session. After a successfully signing on you see output
+If you want to login using the service principal from a script in a non-interactive way (without any user beign asked to enter a password) you could use this slightly different script:
+
+```azurepowershell-interactive
+$applicationId = 00c01aaa-1603-49fc-b6df-b78c4e5138b4
+$password = "The password you generated in the Service Principal Creation"
+$securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
+$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $applicationId, $securePassword
+Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+```
+Running any of these commands from a new PowerShell session will successfully signing on you, and you will see output
 something like this:
 
 ```output
