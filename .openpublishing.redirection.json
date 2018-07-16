@@ -307,7 +307,7 @@
     },
     {
       "source_path": "servicemanagement/index.md",
-      "redirect_url": "/powershell/azure/overview?view=azuresmps-3.7.0",
+      "redirect_url": "/powershell/azure/overview?view=azuresmps-4.0.0",
       "redirect_document_id": false
     },
     {
