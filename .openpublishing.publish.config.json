@@ -1,6 +1,6 @@
 {
   "build_entry_point": "docs",
-  "need_generate_pdf": true,
+  "need_generate_pdf": false,
   "need_preview_pull_request": true,
   "docsets_to_publish": [
     {
@@ -58,8 +58,7 @@
   ],
   "branch_target_mapping": {
     "live": [
-      "Publish",
-      "Pdf"
+      "Publish"
     ]
   },
    "Targets": {  
@@ -67,7 +66,7 @@
     "template_folder": "_themes.pdf"  
     }  
   },
-  "need_generate_pdf_url_template": true,
+  "need_generate_pdf_url_template": false,
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
