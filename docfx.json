@@ -94,22 +94,16 @@
             },
             {
                 "files": [
-                    "toc.yml"
-                ],
-                "src": "azuresmps-4.0.0",
-                "version": "azuresmps-4.0.0",
-                "dest": "module/servicemanagement"
-            },
-            {
-                "files": [
-                    "**/*.md"
+                    "**/*.md",
+                    "**/*.yml"
+
                 ],
                 "src": "azuresmps-4.0.0",
                 "version": "azuresmps-4.0.0",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest": "module"
+                "dest": "module/servicemanagement"
             },
             {
                 "files": [

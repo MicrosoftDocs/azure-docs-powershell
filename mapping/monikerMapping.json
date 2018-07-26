@@ -38,5 +38,12 @@
       "conceptualToc":"docs-conceptual/azurestackps-1.3.0/toc.yml",
       "conceptualTocUrl": "/powershell/azure/azure-stack/toc.json",
       "referenceTocUrl": "/powershell/module/azure-stack/toc.json"
-  }
+  },
+  "azuresmps-4.0.0": {
+    "serviceMap": "mapping/sm-groupMapping-4.0.0.json",
+    "packageRoot": "azuresmps-4.0.0",
+    "conceptualToc":"docs-conceptual/azuresmps-4.0.0/toc.yml",
+    "conceptualTocUrl": "/powershell/azure/servicemanagement/toc.json",
+    "referenceTocUrl": "/powershell/module/servicemanagement/toc.json"
+}
 }
