@@ -1,4 +1,7 @@
 {
+    "Azure":"Azure",
+    "Azure.Storage": "Azure",
+    "AzureRM.Profile": "Profile",
     "Add-AzureAccount": "Azure",
     "Add-AzureApplicationGatewaySslCertificate": "Application Gateway",
     "Add-AzureCacheWorkerRole": "Roles",
