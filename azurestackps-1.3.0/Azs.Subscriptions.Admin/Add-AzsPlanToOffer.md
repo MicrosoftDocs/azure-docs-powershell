@@ -81,6 +81,7 @@ Type of the plan link.
 Type: String
 Parameter Sets: (All)
 Aliases:
+Accepted values: None, Base, Addon
 
 Required: False
 Position: 4
