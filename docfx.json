@@ -172,6 +172,34 @@
             },
             {
                 "files": [
+                    "toc.yml"
+                ],
+                "src": "azurestackps-1.4.0",
+                "version": "azurestackps-1.4.0",
+                "dest": "module/azure-stack"
+            },
+            {
+                "files": [
+                    "**/*.md"
+                ],
+                "src": "azurestackps-1.4.0",
+                "version": "azurestackps-1.4.0",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azurestackps-1.4.0",
+                "version": "azurestackps-1.4.0",
+                "dest": "azure/azure-stack"
+            },			
+            {
+                "files": [
                     "AADRM/**/*.md",
                     "AADRM/**/*.yml",
                     "AzureInformationProtection/**/*.md",
@@ -290,6 +318,9 @@
             "azurestackps-1.3.0": {
                 "dest": "azurestackps-1.3.0"
             },
+            "azurestackps-1.4.0": {
+                "dest": "azurestackps-1.4.0"
+            },
             "azureipps": {
                 "dest": "azureipps"
             },
@@ -337,7 +368,8 @@
                 "azurermps-6.6.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
                 "azurestackps-1.2.11/**/*": "None",
-                "azurestackps-1.3.0/**/*": "None"
+                "azurestackps-1.3.0/**/*": "None",
+                "azurestackps-1.4.0/**/*": "None"				
             },
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.md": true
