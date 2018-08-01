@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 ---
 
-# New-EncryptionKeyBase64
+# New-AzsEncryptionKeyBase64
 
 ## SYNOPSIS
 Generate encryption key for infrastructure backups.
@@ -12,7 +12,7 @@ Generate encryption key for infrastructure backups.
 ## SYNTAX
 
 ```
-New-EncryptionKeyBase64 [<CommonParameters>]
+New-AzsEncryptionKeyBase64 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
