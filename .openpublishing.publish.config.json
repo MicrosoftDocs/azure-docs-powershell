@@ -1,6 +1,5 @@
 {
   "build_entry_point": "docs",
-  "need_generate_pdf": true,
   "need_preview_pull_request": true,
   "docsets_to_publish": [
     {
