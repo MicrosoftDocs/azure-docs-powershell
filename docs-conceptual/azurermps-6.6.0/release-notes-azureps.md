@@ -26,6 +26,7 @@ This is a list of changes made to Azure PowerShell in this release.
 
 #### Azure.Storage
 * Support get Storage Context from DefaulfProfile
+<!-- Linguist comment: The source contains an ambigous string that we can't translate properly. Please rephrase for clarity. -->
 * Add Ps1XmlAttribute to cmdlets output types properties.
 
 #### AzureRM.ApiManagement
