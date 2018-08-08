@@ -20,14 +20,12 @@ This is a list of changes made to Azure PowerShell in this release.
 * Updated all help files to include full parameter types and correct input/output types.
 
 #### AzureRM.Profile
-* Updated Common.Strategy library to be able to validate that the current config for a resource is compatible with the target resource. Default is always true, individual resources and overridet the default.
-<!-- Linguist comment: grammatically wrong sentence. Could you please clarify? -->
+* Updated Common.Strategy library to be able to validate that the current config for a resource is compatible with the target resource.
 * Added ps1xml types to Common.Storage
 
 #### Azure.Storage
-* Support get Storage Context from DefaulfProfile
-<!-- Linguist comment: The source contains an ambigous string that we can't translate properly. Please rephrase for clarity. -->
-* Add Ps1XmlAttribute to cmdlets output types properties.
+* Added support for getting Storage Context from DefaultProfile
+* Added Ps1XmlAttribute to cmdlets output types properties.
 
 #### AzureRM.ApiManagement
 * Fixed issue https://github.com/Azure/azure-powershell/issues/6370
