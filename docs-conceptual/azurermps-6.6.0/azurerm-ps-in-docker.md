@@ -10,7 +10,7 @@ ms.date: 06/20/2018
 ---
 # Run Azure PowerShell in a Docker container
 
-There are a set of Docker images preconfigured with Azure PowerShell. Two types of containers are available: Those running traditional
+There is a set of Docker images preconfigured with Azure PowerShell. Two types of containers are available: Those running traditional
 PowerShell on Windows, and a container running PowerShell Core on either Windows or Linux.
 
 | Environment | Docker image |
