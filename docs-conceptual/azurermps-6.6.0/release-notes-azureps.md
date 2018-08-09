@@ -20,7 +20,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * Updated all help files to include full parameter types and correct input/output types.
 
 #### AzureRM.Profile
-* Updated Common.Strategy library to be able to validate that the current config for a resource is compatible with the target resource. Default is always true, individual resources and overridet the default.
+* Updated Common.Strategy library to be able to validate that the current config for a resource is compatible with the target resource. Default is always true, individual resources and override the default.
 * Added ps1xml types to Common.Storage
 
 #### Azure.Storage
