@@ -24,7 +24,7 @@ Links a plan to an offer.
 
 ### EXAMPLE 1
 ```
-Add-AzsPlanToOffer -PlanLinkType Addon -Offer offer1 -PlanName plan1 -ResourceGroupName rg1 -MaxAcquisitionCount 2
+Add-AzsPlanToOffer -PlanLinkType Addon -OfferName offer1 -PlanName plan1 -ResourceGroupName rg1 -MaxAcquisitionCount 2
 ```
 
 ## PARAMETERS
@@ -81,6 +81,7 @@ Type of the plan link.
 Type: String
 Parameter Sets: (All)
 Aliases:
+Accepted values: None, Base, Addon
 
 Required: False
 Position: 4
