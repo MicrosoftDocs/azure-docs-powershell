@@ -47,7 +47,7 @@ PowerShell to execute commands against a particular subscription.
 2. Set the default.
 
     ```azurepowershell-interactive
-    Select-AzureRmSubscription -SubscriptionName "My Demos"
+    Select-AzureRmSubscription -Subscription "My Demos"
     ```
 
 3. Verify the change by running the `Get-AzureRmContext` cmdlet.
