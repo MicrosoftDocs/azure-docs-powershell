@@ -37,7 +37,7 @@ Adds a new single scale unit node.
 ```
 $NewNode1=New-AzsScaleUnitNodeObject -computername "Prefix-node08" -BMCIPv4Address "BMCIP-Node08" 
  
-$NewNode2=New-AzsScaleUnitNodeObject -computername "Prefix-node09" -BMCIPv4Address "BMCIP-Node09"$ 
+$NewNode2=New-AzsScaleUnitNodeObject -computername "Prefix-node09" -BMCIPv4Address "BMCIP-Node09"
  
 Add-AzsScaleUnitNode -NodeList @($NewNode1,$NewNode2) -ScaleUnit "S-cluster" 
 
