@@ -176,7 +176,7 @@ Changes to existing profile cmdlets
 
 - [Add-AzureRmAccount][login] - Allow scoping of the sign in to the process or the current user.
   Allow naming the default context after authentication.
-- [Import-AzureRmContext][import] - Allow scoping of the sign in to the process or the current user.
+- [Import-AzureRmContext][import-context] - Allow scoping of the sign in to the process or the current user.
 - [Set-AzureRmContext][set-context] - Allow selection of existing named contexts, and scope changes
   to the process or current user.
 
@@ -190,5 +190,5 @@ Changes to existing profile cmdlets
 
 <!-- Updated cmdlets -->
 [login]: /powershell/module/azurerm.profile/Connect-AzureRmAccount
-[import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
+[import-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
