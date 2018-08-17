@@ -52,7 +52,7 @@ Get all active alerts and display their fault and title.
 Get-AzsAlert -Filter "Properties/State eq 'Active'"
 ```
 
-Get all active alerts using much more efficient OData filter than getting all alerts from and filtering from example above.
+Get all active alerts using much more efficient OData filter than getting all alerts first and filtering from example above.
 
 Note: This is case sensitive so properties/state for instance will not work
 
