@@ -47,6 +47,15 @@ Get-AzsIpPool -Name "08786a0f-ad8c-43aa-a154-06083abfc1ac"
 
 Get an infrastructure ip pool based on name.
 
+### EXAMPLE 3
+```
+Get-AzsIpPool -Filter "Properties/StartIpAddress eq 'x.x.x.x'"
+```
+
+Get specific IP pool using much more efficient OData filter than getting all pools first and filtering from example above.
+
+Note: This is case sensitive so properties/startipaddress for instance will not work
+
 ## PARAMETERS
 
 ### -Name
