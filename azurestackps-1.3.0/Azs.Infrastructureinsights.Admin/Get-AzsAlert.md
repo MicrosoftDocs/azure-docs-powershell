@@ -47,6 +47,15 @@ Get-AzsAlert | Where State -EQ 'active' | select FaultTypeId, Title
 
 Get all active alerts and display their fault and title.
 
+### EXAMPLE 3
+```
+Get-AzsAlert -Filter "Properties/State eq 'Active'"
+```
+
+Get all active alerts using much more efficient OData filter than getting all alerts first and filtering from example above.
+
+Note: This is case sensitive so properties/state for instance will not work
+
 ## PARAMETERS
 
 ### -Name
