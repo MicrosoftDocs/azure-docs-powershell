@@ -37,11 +37,11 @@ ensure your automation scripts are even more secure.
 If you need to create a service principal for use with Azure PowerShell, see [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).
 
 To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzureRmAccount` cmdlet. You will also need the service princpal's application ID,
-sign-in credentials, and the tenant ID associate with the service principal. In order to get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will display a dialog box to enter the service principal user ID and password into.
+sign-in credentials, and the tenant ID associate with the service principal. In order to get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will display a dialog box to enter the service principal Id and password into.
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+Connect-AzureRmAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantid
 ```
 
 ## Sign in using an Azure VM Managed Service Identity
