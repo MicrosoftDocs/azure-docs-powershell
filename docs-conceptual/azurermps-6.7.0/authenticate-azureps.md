@@ -41,7 +41,18 @@ sign-in credentials, and the tenant ID associate with the service principal. In 
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+$tenantid = "<Tenant ID>"
+Connect-AzureRmAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantid
+```
+
+To sign in silently:
+
+```azurepowershell-interactive
+$user = "<Application ID>"
+$password = ConvertTo-SecureString -String "<Key>" -AsPlainText -Force
+$pscredential = New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList $user, $password
+$tenantid = "<Tenant ID>"
+Connect-AzureRmAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantid 
 ```
 
 ## Sign in using an Azure VM Managed Service Identity
