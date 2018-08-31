@@ -16,7 +16,7 @@ This document serves as both a breaking change notification and migration guide 
 
 - [General breaking changes](#general-breaking-changes)
     - [Minimum PowerShell version required bumped to 5.0](#minimum-powershell-version-required-bumped-to-50)
-    - [Context autosaved enabled by default](#context-autosaved-enabled-by-default)
+    - [Context autosaved enabled by default](#context-autosave-enabled-by-default)
     - [Removal of Tags alias](#removal-of-tags-alias)
 - [Breaking changes to AzureRM.Compute cmdlets](#breaking-changes-to-azurermcompute-cmdlets)
 - [Breaking changes to AzureRM.DataLakeStore cmdlets](#breaking-changes-to-azurermdatalakestore-cmdlets)
