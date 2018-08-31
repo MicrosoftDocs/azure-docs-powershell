@@ -190,5 +190,5 @@ Changes to existing profile cmdlets
 
 <!-- Updated cmdlets -->
 [login]: /powershell/module/azurerm.profile/Connect-AzureRmAccount
-[import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
-[set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
+[import]:  /powershell/module/azurerm.profile/Import-AzureRmContext
+[set-context]: /powershell/module/azurerm.profile/Set-AzureRmContext

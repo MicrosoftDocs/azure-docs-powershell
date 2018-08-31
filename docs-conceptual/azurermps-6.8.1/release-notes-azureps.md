@@ -7,7 +7,7 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
-ms.date: 5/1/2018
+ms.date: 08/28/2018
 ---
 
 # Release notes

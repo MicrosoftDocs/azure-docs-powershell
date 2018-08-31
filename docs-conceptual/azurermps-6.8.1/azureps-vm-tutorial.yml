@@ -8,13 +8,13 @@ metadata:
     displayType: two-column
     interactive: azurepowershell
     ms.date: 02/08/2018
-    ms.author: sewhee
-    author: sdwheeler
+    ms.author: sttramer
+    author: sptramer
     manager: carmonm
     ms.devlang: azure-powershell
     ms.prod: powershell
     ms.technology: azure-powershell
-    ms.service: virtual-machines
+    ms.topic: tutorial
     clicktale: true
 items:
     - durationInMinutes: 1
