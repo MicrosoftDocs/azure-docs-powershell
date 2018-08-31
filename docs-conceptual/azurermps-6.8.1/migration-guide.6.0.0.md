@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 5/1/2018
+ms.date: 05/01/2018
 ---
 # Breaking changes for Microsoft Azure PowerShell 6.0.0
 
