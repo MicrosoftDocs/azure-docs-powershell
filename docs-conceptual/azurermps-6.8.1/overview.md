@@ -7,7 +7,7 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 08/31/2017
+ms.date: 09/11/2018
 ---
 # Overview of Azure PowerShell
 
@@ -35,7 +35,7 @@ The following samples can help you learn how to perform common scenarios with Az
 
 ## Learn PowerShell basics
 
-If you are unfamiliar with PowerShell, you may find an introduction to PowerShell helpful.
+If you're unfamiliar with PowerShell, an introduction to PowerShell may be helpful.
 
 * [Installing PowerShell](/powershell/scripting/installing-windows-powershell)
 * [Scripting with PowerShell](/powershell/scripting/scripting-with-windows-powershell)
