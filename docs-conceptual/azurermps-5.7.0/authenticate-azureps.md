@@ -1,6 +1,6 @@
 ---
 title: Sign in with Azure PowerShell
-description: How to sign in with Azure PowerShell as a user, service principal, or with MSI.
+description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
@@ -44,14 +44,14 @@ $pscredential = Get-Credential
 Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
 ```
 
-## Sign in using an Azure VM Managed Service Identity
+## Sign in using managed identities for Azure resources
 
-Managed Service Identity (MSI) is a preview feature of Azure Active Directory. You can use an MSI
-service principal for sign-in, and acquire an app-only access token to access other resources. MSI is only available on
+Managed identities for Azure resources is a feature of Azure Active Directory. You can use a managed identity
+service principal for sign-in, and acquire an app-only access token to access other resources. Managed identities are only available on
 virtual machines running in an Azure cloud.
 
-For more information about MSI, see
-[How to use an Azure VM Managed Service Identity (MSI) for sign-in and token acquisition](/azure/active-directory/msi-how-to-get-access-token-using-msi).
+For more information about managed identities for Azure resources, see
+[How to use managed identities for Azure resources on an Azure VM to acquire an access token](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token).
 
 ## Sign in to another Cloud
 
