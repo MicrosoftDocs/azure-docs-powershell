@@ -6,12 +6,12 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
+ms.date: 09/11/2018
 ---
 
 # Manage multiple Azure subscriptions
 
-If you are brand new to Azure, you probably only have a single subscription. But if you have been
+If you're brand new to Azure, you probably only have a single subscription. But if you have been
 using Azure for a while, you may have created multiple Azure subscriptions. You can configure Azure
 PowerShell to execute commands against a particular subscription.
 
@@ -65,5 +65,5 @@ PowerShell to execute commands against a particular subscription.
     CurrentStorageAccount :
     ```
 
-Once you set your default subscription, all subsequent Azure PowerShell commands run against this
+Once you set your default subscription, all Azure PowerShell commands run against this
 subscription.

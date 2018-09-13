@@ -6,11 +6,12 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/20/2018
+ms.date: 09/09/2018
 ---
 # Run Azure PowerShell in a Docker container
 
-To make running Azure PowerShell in portable environments easy, Microsoft publishes Docker images with Azure PowerShell pre-installed. These images offer a Linux guest running PowerShell Core, or a Windows guest with either PowerShell Core or PowerShell 5.
+Microsoft publishes Docker images with Azure PowerShell pre-installed. These images allow for experimenting with Azure PowerShell or running it in an isolated environment. There are images running both PowerShell Core and
+PowerShell 5. 
 
 | Environment | Docker image |
 |-------------|--------------|
@@ -18,8 +19,7 @@ To make running Azure PowerShell in portable environments easy, Microsoft publis
 | PowerShell Core on Windows | [azuresdk/azure-powershell-core:nanoserver](https://hub.docker.com/r/azuresdk/azure-powershell-core/) |
 | PowerShell Core on Linux | [azuresdk/azure-powershell-core:latest](https://hub.docker.com/r/azuresdk/azure-powershell-core/) |
 
-To run any of these containers, you use `docker run -it $ImageName` to get an interactive terminal. For example, to run the PowerShell Core on Linux container,
-use:
+To run any of these containers, use `docker run -it $ImageName` to get an interactive terminal. For example, to run a Linux container with PowerShell Core:
 
 ```powershell
 docker run -it azuresdk/azure-powershell-core:latest

@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/06/2018
+ms.date: 09/11/2018
 ---
 # Install Azure PowerShell on macOS or Linux
 
@@ -80,11 +80,11 @@ Connect-AzureRmAccount
 
 You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `AzureRM` module requires
 setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
-On macOS and Linux, you should work with your profile through the `$Profile` environment variable. To learn how to persist your Azure sign in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
+On macOS and Linux, you should work with your profile through the `$Profile` environment variable. To learn how to persist your Azure sign-in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
 
 ## Available cmdlets
 
-The Azure PowerShell modules for .NET Core are still in development. These modules do not
+The Azure PowerShell modules for .NET Core are still in development. These modules don't 
 provide the full set of cmdlets that are available for the Windows version of the modules. The
 following functions are implemented in AzureRM.Netcore modules:
 
@@ -96,7 +96,7 @@ following functions are implemented in AzureRM.Netcore modules:
 * Environment
   * Get the different out-of-box Microsoft Azure environments
   * Add/Set/Remove customized environments (like your Azure Stack or Windows Azure Pack environments)
-* Management plane cmdlets for Azure services using Resource Manager and Service Management interfaces.
+* Management plane cmdlets for Azure services using Resource Manager and classic deployment model interfaces.
   * Virtual Machine
   * App Service (Websites)
   * SQL Database

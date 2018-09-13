@@ -7,12 +7,12 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/15/2017
+ms.date: 09/09/2018
 ---
 # Create an Azure service principal with Azure PowerShell
 
 If you plan to manage your app or service with Azure PowerShell, you should run it under an Azure
-Active Directory (AAD) service principal, rather than your own credentials. This topic steps you
+Active Directory (AAD) service principal, rather than your own credentials. This article steps you
 through creating a security principal with Azure PowerShell.
 
 > [!NOTE]
@@ -22,22 +22,21 @@ through creating a security principal with Azure PowerShell.
 
 An Azure service principal is a security identity used by user-created apps, services, and
 automation tools to access specific Azure resources. Think of it as a 'user identity' (username and
-password or certificate) with a specific role, and tightly controlled permissions. It only needs to
-be able to do specific things, unlike a general user identity. It improves security if you only
+password or certificate) with a specific role, and tightly controlled permissions. A service principal should only need to do specific things, unlike a general user identity. It improves security if you only
 grant it the minimum permissions level needed to perform its management tasks.
 
 ## Verify your own permission level
 
 First, you must have sufficient permissions in both your Azure Active Directory and your Azure
-subscription. Specifically, you must be able to create an app in the Active Directory, and assign a
+subscription. You must be able to create an app in the Active Directory and assign a
 role to the service principal.
 
-The easiest way to check whether your account has adequate permissions is through the portal. See
+The easiest way to check whether your account has the right permissions is through the portal. See
 [Check required permission in portal](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions).
 
 ## Create a service principal for your app
 
-Once you are signed into your Azure account, you can create the service principal. You must have one
+Once signed in to your Azure account, you can create the service principal. You must have one
 of the following ways to identify your deployed app:
 
 * The unique name of your deployed app, such as "MyDemoWebApp" in the following examples, or
@@ -45,7 +44,7 @@ of the following ways to identify your deployed app:
 
 ### Get information about your application
 
-The `Get-AzureRmADApplication` cmdlet can be used to discover information about your application.
+The `Get-AzureRmADApplication` cmdlet can be used to get information about your application.
 
 ```azurepowershell-interactive
 Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
@@ -98,16 +97,16 @@ Type                  : ServicePrincipal
 ### Sign in using the service principal
 
 You can now sign in as the new service principal for your app using the *appId* and *password* you
-provided. You need to supply the Tenant Id for your account. Your Tenant Id is displayed when you
-sign into Azure with your personal credentials.
+provided. You also need the Tenant ID for the service principal. Your Tenant ID is displayed when you
+sign into Azure with your personal credentials. To sign in with a service principal, use the
+following commands:
 
 ```azurepowershell-interactive
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
 Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
-Run this command from a new PowerShell session. After a successfully signing on you see output
-something like this:
+After a successful sign-in you see output like:
 
 ```output
 Environment           : AzureCloud

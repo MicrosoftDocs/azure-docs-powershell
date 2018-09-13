@@ -6,21 +6,21 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/05/2017
+ms.date: 09/11/2018
 ---
-# Using experimental Azure PowerShell modules
+# Use experimental Azure PowerShell modules
 
 With the emphasis on developer tools (especially CLIs) in Azure, the Azure PowerShell team is
 experimenting with many improvements to the Azure PowerShell experience.
 
 ## Experimentation methodology
 
-To facilitate experimentation, we are creating new Azure PowerShell modules that implement existing
+To facilitate experimentation, we're creating new Azure PowerShell modules that implement existing
 Azure SDK functionality in new, easier to use ways. In most cases, the cmdlets exactly mirror
 existing cmdlets. However, the experimental cmdlets provide a shorthand notation and smarter default
 values that make it easier to create and manage Azure resources.
 
-These modules can be installed side-by-side with existing Azure PowerShell modules. The cmdlet
+These modules can be installed side by side with existing Azure PowerShell modules. The cmdlet
 names have been shortened to provide shorter names and avoid name conflicts with existing,
 non-experimental cmdlets.
 
@@ -100,7 +100,7 @@ experimentation.
   fashion.
 
 - Gray Parameters - In many cases, some parameters could be "gray" or semi-optional. If the
-  parameter is not specified, the user is asked if they want the parameter generated for them. It
+  parameter isn't specified, the user is asked if they want the parameter generated for them. It
   also makes sense for gray parameters to infer a value based on context with the user's consent.
   For example, it may make sense to have the gray parameter suggest the most recently used value.
 
@@ -112,15 +112,15 @@ experimentation.
 For example, the "Create web app" scenario might have a `-Git` or `-AddRemote` switch that would
 automatically add an "azure" remote to an existing git repository.
 
-- Settable Defaults - Users should have the ability to default certain ubiquitous parameters like
+- Settable Defaults - Users should be able to set defaults for common parameters like
   `-ResourceGroupName` and `-Location`.
 
 - Size Defaults - Resource "sizes" can be confusing to users since many Resource Providers use
   different names (for example, "Standard\_DS1\_v2" or "S1"). However, most users care more about
-  cost. Therefore, it makes sense to define "universal" sizes based on a pricing schedule. Users
+  cost. So it makes sense to define "universal" sizes based on a pricing schedule. Users
   can choose a specific size or let Azure PowerShell choose the _best option_ based on the resource
   the budget.
 
-- Output Format - Azure PowerShell currently returns `PSObject`s and there is little console
-  output. Azure PowerShell may need to display some information to the user regarding the "smart
+- Output Format - Azure PowerShell currently returns `PSObject`s and there's little console
+  output. Azure PowerShell may need to display some information to the user about the "smart
   defaults" used.

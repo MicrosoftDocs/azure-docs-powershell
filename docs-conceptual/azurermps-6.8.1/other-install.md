@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/20/2018
+ms.date: 09/11/2018
 ---
 
 # Install Azure PowerShell on Windows with MSI
@@ -48,4 +48,4 @@ Connect-AzureRmAccount
 
 You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `AzureRM` module requires
 setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
-To learn how to persist your Azure sign in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
+To learn how to persist your Azure sign-in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).

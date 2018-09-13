@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/07/2018
+ms.date: 09/09/2018
 ---
 
 # Format AzurePowerShell cmdlet output
@@ -22,7 +22,7 @@ By default each Azure PowerShell cmdlet has predefined formatting of output maki
 
 ## Format examples
 
-In this example we get a list of Azure VMs in our default subscription.  The `Get-AzureRmVM` command defaults output into a table format.
+In this example, we get a list of Azure VMs in our default subscription.  The `Get-AzureRmVM` command defaults output into a table format.
 
 ```azurepowershell-interactive
 Get-AzureRmVM
@@ -35,7 +35,7 @@ MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610
 MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm880         Succeeded
 ```
 
-If you would like to limit the columns returned you can use the `Format-Table` cmdlet. In the following example we get the same list of virtual machines but restrict the output to just the name of the VM, the resource group, and the location of the VM.  The `-Autosize` parameter sizes the columns according to the size of the data.
+If you would like to limit the columns returned you can use the `Format-Table` cmdlet. In the following example, we get the same list of virtual machines but restrict the output to just the name of the VM, the resource group, and the location of the VM.  The `-Autosize` parameter sizes the columns according to the size of the data.
 
 ```azurepowershell-interactive
 Get-AzureRmVM | Format-Table Name,ResourceGroupName,Location -AutoSize
@@ -68,7 +68,7 @@ ResourceGroupName : MYWESTEURG
 
 ## Convert to other data types
 
-PowerShell also allows taking command output and converting it into multiple data formats. In the following example the `Select-Object` cmdlet is used to
+PowerShell also allows taking command output and converting it into multiple data formats. In the following example, the `Select-Object` cmdlet is used to
 get attributes of the virtual machines in our subscription and convert the output to CSV format for easy import into a database or spreadsheet.
 
 ```azurepowershell-interactive
