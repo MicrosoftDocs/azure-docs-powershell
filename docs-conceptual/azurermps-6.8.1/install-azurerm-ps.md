@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/15/2018
+ms.date: 09/11/2018
 ---
 
 # Install Azure PowerShell on Windows with PowerShellGet
@@ -82,7 +82,7 @@ Connect-AzureRmAccount
 
 You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `AzureRM` module requires
 setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
-To learn how to persist your Azure sign in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
+To learn how to persist your Azure sign-in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
 
 ## Update the Azure PowerShell module
 
@@ -96,8 +96,8 @@ If you want to remove older versions of Azure PowerShell from your system, see [
 
 ## Use multiple versions of Azure PowerShell
 
-It's possible to install multiple versions of Azure PowerShell. You might need more than one version if you work with on-premises Azure Stack resources,
-run an older version of Windows that you can't update to PowerShell 5.0, or use the Azure classic deployment model. To install an older version, provide the
+It's possible to install more than one version of Azure PowerShell. You might need more than one version if you work with on-premises Azure Stack resources,
+run an older version of Windows, or use the Azure classic deployment model. To install an older version, provide the
 `-RequiredVersion` argument when installing.
 
 ```powershell
@@ -114,7 +114,7 @@ Import-Module -Name AzureRM -RequiredVersion 1.2.9
 
 ## Provide feedback
 
-If you find a bug when using Azure Powershell, please [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).
+If you find a bug when using Azure Powershell, [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).
 To provide feedback from the command line, use the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.
 
 ## Next Steps

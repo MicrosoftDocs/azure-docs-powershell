@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 11/15/2017
+ms.date: 09/11/2018
 ---
 
 # Get started with Azure PowerShell
@@ -48,10 +48,10 @@ You can also install Azure PowerShell and use it locally in a PowerShell session
 
 Sign on interactively:
 
-1. Type `Connect-AzureRmAccount`. You will get dialog box asking for your Azure credentials. Option
+1. Type `Connect-AzureRmAccount`. You'll get a dialog box asking for your Azure credentials. Option
   '-Environment' can let you authenticate for Azure China or Azure Germany.
 
-   e.g. Connect-AzureRmAccount -Environment AzureChinaCloud
+   for example, Connect-AzureRmAccount -Environment AzureChinaCloud
 
 2. Type the email address and password associated with your account. Azure authenticates and saves
    the credential information, and then closes the window.
@@ -100,7 +100,7 @@ StorageProfile           : {ImageReference, OsDisk, DataDisks}
 FullyQualifiedDomainName : samplevm-2c0867.eastus.cloudapp.azure.com
 ```
 
-That was easy. But, you may wonder what else is created and how is the VM configured. First, let's
+You may wonder what else is created and how is the VM configured. First, let's
 look at our resource groups.
 
 ```azurepowershell-interactive
@@ -136,7 +136,7 @@ SampleVM                   eastus   Microsoft.Network/publicIPAddresses     Samp
 SampleVM                   eastus   Microsoft.Network/virtualNetworks       SampleVM
 ```
 
-Let's get some more details about the VM. This examples shows how to retrieve
+Let's get some more details about the VM. This example shows how to retrieve
 information about the OS Image used to create the VM.
 
 ```azurepowershell-interactive
@@ -160,7 +160,7 @@ virtual machine. In this example, we provide values for all options of the virtu
 
 ### Create a resource group
 
-For this example we want to create a Resource Group. Resource Groups in Azure provide a way to
+In this example, we want to create a Resource Group. Resource Groups in Azure provide a way to
 manage multiple resources that you want to logically group together. For example, you might create
 a Resource Group for an application or project and add a virtual machine, a database and a CDN
 service within it.
@@ -181,7 +181,7 @@ ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resource
 ```
 
 This new resource group will be used to contain all of the resources needed for the new VM we
-create. To create a new Linux VM we must first create the other required resources and assign them
+create. To create a new Linux VM, we must first create the other required resources and assign them
 to a configuration. Then we can use that configuration to create the VM. Also, you will need to
 have an SSH public key named `id_rsa.pub` in the .ssh directory of your user profile.
 
@@ -252,7 +252,7 @@ Now we can create the VM using the VM configuration object.
 New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 ```
 
-Now that the VM has been created, you can log on to your new Linux VM using SSH with the public IP
+Now that the VM has been created, you can sign in to your new Linux VM using SSH with the public IP
 address of the VM you created:
 
 ```bash
@@ -332,7 +332,7 @@ New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -Resource
 ## Listing deployed resources
 
 You can use the `Get-AzureRmResource` cmdlet to list the resources running in Azure. The following
-example shows the resources we just created in the new resource group.
+example shows the resources we created in the new resource group.
 
 ```azurepowershell-interactive
 Get-AzureRmResource |
@@ -369,7 +369,7 @@ Windows VM we created, using the following command:
 Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 ```
 
-You will be prompted to confirm that you want to remove the resource.
+You'll be prompted to confirm that you want to remove the resource.
 
 ```output
 Confirm
@@ -377,9 +377,9 @@ Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-You can also use the delete many resources at one time. For example, the following command deletes
-all the resource group "MyResourceGroup" that we've used for all the samples in this Get Started
-tutorial. This removes the resource group and all of the resources in it.
+You can also delete many resources at once. For example, the following command deletes
+the resource group "MyResourceGroup" that we've used for all the samples so far.
+All resources in the group are also deleted.
 
 ```azurepowershell-interactive
 Remove-AzureRmResourceGroup -Name myResourceGroup
@@ -391,7 +391,7 @@ Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-This can take several minutes to complete.
+The task can take several minutes to complete, depending on the number and type of resources.
 
 ## Get samples
 
@@ -406,7 +406,7 @@ To learn more about ways to use the Azure PowerShell, check out our most common 
 * [Sign in with Azure PowerShell](authenticate-azureps.md)
 * [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
 * [Create service principals in Azure using Azure PowerShell](create-azure-service-principal-azureps.md)
-* Read the Release notes about migrating from an older release:
+* Read the release notes about migrating from an older release:
   [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
 * Get help from the community:
   * [Azure forum on MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)

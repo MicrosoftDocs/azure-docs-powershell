@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/08/2018
+ms.date: 09/11/2018
 ---
 # Query output of Azure PowerShell cmdlets
 
@@ -51,8 +51,8 @@ MyWin2016VM   MYWESTEURG        westeurope
 
 ## Select complex nested properties
 
-If the property you want to select is nested deep in the JSON output you need to supply the full
-path to that nested property. The following example shows how to select the VM Name and the OS type
+If the property you want is nested in the JSON output, you need to supply the full
+path to the property. The following example shows how to select the VM Name and the OS type
 from the `Get-AzureRmVM` cmdlet.
 
 ```azurepowershell-interactive
