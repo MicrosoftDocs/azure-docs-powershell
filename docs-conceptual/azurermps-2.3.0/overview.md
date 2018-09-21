@@ -1,4 +1,15 @@
-# Azure Stack Module 1.5.0
+---
+title: Overview of Azure Stack PowerShell | Microsoft Docs
+description: An overview of Azure Stack PowerShell with instructions for installation and configuration.
+author: bganapa
+ms.author: bganapa
+manager: knithinc
+ms.devlang: powershell
+ms.topic: conceptual
+ms.manager: knithinc
+ms.date: 09/21/2018
+---
+# AzureRM Module 2.3.0
 
 ## Requirements:
 Minimum supported Azure Stack version is 1808.
@@ -23,8 +34,6 @@ Install-Module -Name AzureRm.BootStrapper
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
 Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 
-# Install Azure Stack Admin Module
-Install-Module -Name AzureStack -RequiredVersion 1.5.0
 ```
 
 ##Release Notes
