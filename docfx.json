@@ -13,27 +13,6 @@
                     "**/*.yml",
                     "**/*.md"
                 ],
-                "src": "azurermps-1.2.9",
-                "version": "azurermps-1.2.9",
-                "exclude": [
-                    "docs-conceptual/**"
-                ],
-                "dest": "module"
-            },
-            {
-                "files": [
-                    "**/*.yml",
-                    "**/*.md"
-                ],
-                "src": "docs-conceptual/azurermps-1.2.9",
-                "version": "azurermps-1.2.9",
-                "dest": "azure"
-            },
-            {
-                "files": [
-                    "**/*.yml",
-                    "**/*.md"
-                ],
                 "src": "azurermps-2.3.0",
                 "version": "azurermps-2.3.0",
                 "exclude": [
@@ -321,12 +300,6 @@
                 "files": [
                     "media/**"
                 ],
-                "version": "azurermps-1.2.9"
-            },
-            {
-                "files": [
-                    "media/**"
-                ],
                 "version": "azurermps-2.3.0"
             },
             {
@@ -349,9 +322,6 @@
             }
         ],
         "versions": {
-            "azurermps-1.2.9": {
-                "dest": "azurermps-1.2.9"
-            },
             "azurermps-2.3.0": {
                 "dest": "azurermps-2.3.0"
             },
@@ -366,9 +336,6 @@
             },
             "azuresmps-4.0.0": {
                 "dest": "azuresmps-4.0.0"
-            },
-            "azurestackps-1.2.9": {
-                "dest": "azurestackps-1.2.9"
             },
             "azurestackps-1.2.11": {
                 "dest": "azurestackps-1.2.11"
@@ -423,8 +390,7 @@
                 "azurermps-*/**/*.md": "azure-powershell"
             },
             "feedback_system": {
-                "azurermps-1.2.9/**/*": "None",
-				"azurermps-2.3.0/**/*": "None",
+     			"azurermps-2.3.0/**/*": "None",
                 "azurermps-4.4.1/**/*": "None",
                 "azurermps-5.7.0/**/*": "None",
                 "azurermps-6.8.1/**/*": "None",

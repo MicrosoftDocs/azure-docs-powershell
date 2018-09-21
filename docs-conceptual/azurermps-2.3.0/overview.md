@@ -7,7 +7,7 @@ Note: If you are using an earlier version install version 1.2.11
 
 
 ## Install
-```
+```powershell
 # Remove previous versions of AzureStack modules
 Uninstall-Module -Name AzureStack -Force 
 Uninstall-Module -Name AzureRM -Force 

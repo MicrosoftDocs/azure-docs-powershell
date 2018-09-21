@@ -20,13 +20,6 @@
         "conceptualTocUrl": "/powershell/azure/toc.json",
         "referenceTocUrl": "/powershell/module/toc.json"
     },
-    "azurermps-1.2.9": {
-        "serviceMap": "mapping/rm-groupMapping-1.2.9.json",
-        "packageRoot": "azurermps-1.2.9",
-        "conceptualToc":"docs-conceptual/azurermps-1.2.9/toc.yml",
-        "conceptualTocUrl": "/powershell/azure/toc.json",
-        "referenceTocUrl": "/powershell/module/toc.json"
-    },
     "azurermps-2.3.0": {
         "serviceMap": "mapping/rm-groupMapping-2.3.0.json",
         "packageRoot": "azurermps-2.3.0",
