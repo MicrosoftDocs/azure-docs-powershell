@@ -1,4 +1,4 @@
-  - name: Azure Stack PowerShell
+- name: Azure Stack PowerShell
   href: overview.md
   items:
   - name: Install
@@ -7,4 +7,3 @@
     href: https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-powershell-configure-admin
   - name: Connect - User
     href: https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-configure-user
-
