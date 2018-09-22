@@ -45,6 +45,11 @@ You can also watch this video:
 
 Or attend the Microsoft Virtual Academy's [Getting Started with PowerShell Jumpstart](https://mva.microsoft.com/liveevents/powershell-jumpstart).
 
+## Build your skills with Microsoft Learn
+
+- [Automate Azure tasks using scripts with PowerShell](/learn/modules/automate-azure-tasks-with-powershell/)
+- [More interactive learning...](/learn/browse/?term=powershell)
+
 ## Other Azure PowerShell modules
 
 * [Azure Active Directory](/powershell/azure/active-directory/)
