@@ -8,14 +8,18 @@
                 ],
                 "src":"docs-conceptual/azuredmps-0.9.0",
                 "version":"azuredmps-0.9.0-preview",
-                "dest":"azure"
+                "dest":"azure/deploymentmanager"
             },
             {
                 "files":[
-                    "**/*.md"
+                    "**/*.md",
+                    "**/*.yml"
                 ],
                 "src":"azuredmps-0.9.0",
                 "version":"azuredmps-0.9.0-preview",
+                "exclude":[
+                    "docs-conceptual/**"
+                ],
                 "dest":"module"
             },
             {
@@ -394,13 +398,13 @@
                 "azurermps-*/**/*.md": "aaroney",
                 "azuresmps-*/**/*.md": "aaroney",
                 "azurestackps-*/**/*.md": "jeffgilb",
-                "azuredmps-*/**/*.md":"devesh.oleti"
+                "azuredmps-*/**/*.md":"deveshguha"
             },
             "author": {
                 "azurermps-*/**/*.md": "twitchax",
                 "azuresmps-*/**/*.md": "twitchax",
                 "azurestackps-*/**/*.md": "jeffgilb",
-                "azuredmps-*/**/*.md":"devesh.oleti"
+                "azuredmps-*/**/*.md":"deveshguha"
             },
             "ms.manager": {
                 "azurermps-*/**/*.md": "carmonm",
