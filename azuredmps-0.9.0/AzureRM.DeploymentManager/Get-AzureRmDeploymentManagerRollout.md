@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.Commands.DeploymentManager.dll-Help.xml
 Module Name: AzureRM.DeploymentManager
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.deploymentmanager/get-azurermdeploymentmanagerrollout
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/DeploymentRollouts/src/ResourceManager/DeploymentManager/Commands.DeploymentManager/help/Get-AzureRmDeploymentManagerRollout.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/DeploymentRollouts/src/ResourceManager/DeploymentManager/Commands.DeploymentManager/help/Get-AzureRmDeploymentManagerRollout.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/DeploymentRollouts/src/ResourceManager/DeploymentManager/Commands.DeploymentManager/help/Get-AzureRMDeploymentManagerRollout.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/DeploymentRollouts/src/ResourceManager/DeploymentManager/Commands.DeploymentManager/help/Get-AzureRMDeploymentManagerRollout.md
 ---
 
 # Get-AzureRmDeploymentManagerRollout

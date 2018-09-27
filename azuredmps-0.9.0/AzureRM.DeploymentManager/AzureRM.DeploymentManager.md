@@ -1,9 +1,10 @@
 ---
 Module Name: AzureRM.DeploymentManager
-Module Guid: {{ Update Module Guid }}
-Download Help Link: {{ Update Download Link }}
-Help Version: {{ Update Help Version }}
-Locale: {{ Update Locale }}
+Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.deploymentmanager
+Help Version: 0.0.1.0
+Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/DeploymentRollouts/src/ResourceManager/DeploymentManager/Commands.DeploymentManager/help/AzureRM.DeploymentManager.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/DeploymentRollouts/src/ResourceManager/DeploymentManager/Commands.DeploymentManager/help/AzureRM.DeploymentManager.md
 ---
 
 # AzureRM.DeploymentManager Module
