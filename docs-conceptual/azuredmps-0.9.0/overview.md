@@ -1,6 +1,6 @@
 ---
-title: Overview of Azure PowerShell | Microsoft Docs
-description: An overview of Azure PowerShell with links to installation and configuration.
+title: Overview of Azure Deployment Manager PowerShell | Microsoft Docs
+description: An overview of Azure Deployment Manager PowerShell with links to installation and configuration.
 author: deveshguha
 ms.author: deoletim
 manager: sriramry
