@@ -2,6 +2,14 @@
     "build": {
         "content": [
             {
+                "files": [
+                    "toc.yml"
+                ],
+                "src": "azuredmps-0.9.0",
+                "version": "azuredmps-0.9.0-preview",
+                "dest": "module/deploymentmanager"
+            },
+            {
                 "files":[
                     "**/*.md",
                     "**/*.yml"
