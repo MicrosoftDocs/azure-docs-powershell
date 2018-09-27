@@ -1,8 +1,10 @@
 ---
 external help file: Microsoft.Azure.Commands.DeploymentManager.dll-Help.xml
 Module Name: AzureRM.DeploymentManager
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.deploymentmanager/remove-azurermdeploymentmanagerartifactsource
 schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/DeploymentRollouts/src/ResourceManager/DeploymentManager/Commands.DeploymentManager/help/Remove-AzureRmDeploymentManagerArtifactSource.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/DeploymentRollouts/src/ResourceManager/DeploymentManager/Commands.DeploymentManager/help/Remove-AzureRmDeploymentManagerArtifactSource.md
 ---
 
 # Remove-AzureRmDeploymentManagerArtifactSource
