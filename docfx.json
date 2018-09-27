@@ -422,8 +422,7 @@
             "ms.service": {
                 "azurestackps-*/**/*.md": "azure-stack",
                 "azuresmps-*/**/*.md": "azure-asm",
-                "azurermps-*/**/*.md": "azure-powershell",
-                "azuredmps-*/**/*.md": "azure-powershell"
+                "azurermps-*/**/*.md": "azure-powershell"
             },
             "feedback_system": {
      			"azurermps-2.3.0/**/*": "None",
