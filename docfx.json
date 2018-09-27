@@ -2,6 +2,23 @@
     "build": {
         "content": [
             {
+                "files":[
+                    "**/*.md",
+                    "**/*.yml"
+                ],
+                "src":"docs-conceptual/azuredmps-0.9.0",
+                "version":"azuredmps-0.9.0-preview",
+                "dest":"azure"
+            },
+            {
+                "files":[
+                    "**/*.md"
+                ],
+                "src":"azuredmps-0.9.0",
+                "version":"azuredmps-0.9.0-preview",
+                "dest":"module"
+            },
+            {
                 "files": [
                     "index.md"
                 ],
@@ -322,6 +339,10 @@
             }
         ],
         "versions": {
+            "azuredmps-0.9.0-preview":
+            {
+                "dest":"azuredmps-0.9.0-preview"
+            },
             "azurermps-2.3.0": {
                 "dest": "azurermps-2.3.0"
             },
@@ -372,12 +393,14 @@
             "ms.author": {
                 "azurermps-*/**/*.md": "aaroney",
                 "azuresmps-*/**/*.md": "aaroney",
-                "azurestackps-*/**/*.md": "jeffgilb"
+                "azurestackps-*/**/*.md": "jeffgilb",
+                "azuredmps-*/**/*.md":"devesh.oleti"
             },
             "author": {
                 "azurermps-*/**/*.md": "twitchax",
                 "azuresmps-*/**/*.md": "twitchax",
-                "azurestackps-*/**/*.md": "jeffgilb"
+                "azurestackps-*/**/*.md": "jeffgilb",
+                "azuredmps-*/**/*.md":"devesh.oleti"
             },
             "ms.manager": {
                 "azurermps-*/**/*.md": "carmonm",
@@ -387,7 +410,8 @@
             "ms.service": {
                 "azurestackps-*/**/*.md": "azure-stack",
                 "azuresmps-*/**/*.md": "azure-asm",
-                "azurermps-*/**/*.md": "azure-powershell"
+                "azurermps-*/**/*.md": "azure-powershell",
+                "azuredmps-*/**/*.md": "azure-powershell"
             },
             "feedback_system": {
      			"azurermps-2.3.0/**/*": "None",
@@ -398,7 +422,8 @@
                 "azurestackps-1.2.11/**/*": "None",
                 "azurestackps-1.3.0/**/*": "None",
                 "azurestackps-1.4.0/**/*": "None",
-                "azurestackps-1.5.0/**/*": "None"				
+                "azurestackps-1.5.0/**/*": "None",
+                "azuredmps-0.9.0/**/*":"None"			
             },
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.md": true
