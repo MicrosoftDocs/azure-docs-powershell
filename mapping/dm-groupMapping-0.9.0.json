@@ -1,0 +1,27 @@
+
+{
+  "Get-AzureRmDeploymentManagerArtifactSource": "Deployment Manager",
+  "New-AzureRmDeploymentManagerArtifactSource": "Deployment Manager",
+  "Set-AzureRmDeploymentManagerArtifactSource": "Deployment Manager",
+  "Remove-AzureRmDeploymentManagerArtifactSource": "Deployment Manager",
+  "Get-AzureRmDeploymentManagerRollout": "Deployment Manager",
+  "Stop-AzureRmDeploymentManagerRollout": "Deployment Manager",
+  "Restart-AzureRmDeploymentManagerRollout": "Deployment Manager",
+  "Remove-AzureRmDeploymentManagerRollout": "Deployment Manager",
+  "New-AzureRmDeploymentManagerServiceTopology": "Deployment Manager",
+  "Get-AzureRmDeploymentManagerServiceTopology": "Deployment Manager",
+  "Set-AzureRmDeploymentManagerServiceTopology": "Deployment Manager",
+  "Remove-AzureRmDeploymentManagerServiceTopology": "Deployment Manager",
+  "New-AzureRmDeploymentManagerService": "Deployment Manager",
+  "Get-AzureRmDeploymentManagerService": "Deployment Manager",
+  "Set-AzureRmDeploymentManagerService": "Deployment Manager",
+  "Remove-AzureRmDeploymentManagerService": "Deployment Manager",
+  "New-AzureRmDeploymentManagerServiceUnit": "Deployment Manager",
+  "Get-AzureRmDeploymentManagerServiceUnit": "Deployment Manager",
+  "Set-AzureRmDeploymentManagerServiceUnit": "Deployment Manager",
+  "Remove-AzureRmDeploymentManagerServiceUnit": "Deployment Manager",
+  "New-AzureRmDeploymentManagerStep": "Deployment Manager",
+  "Get-AzureRmDeploymentManagerStep": "Deployment Manager",
+  "Set-AzureRmDeploymentManagerStep": "Deployment Manager",
+  "Remove-AzureRmDeploymentManagerStep": "Deployment Manager"
+}

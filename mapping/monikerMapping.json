@@ -1,4 +1,11 @@
 {
+    "azuredmps-0.9.0-preview": {
+        "serviceMap": "mapping/dm-groupMapping-0.9.0.json",
+        "packageRoot": "azuredmps-0.9.0",
+        "conceptualToc":"docs-conceptual/azuredmps-0.9.0/toc.yml",
+        "conceptualTocUrl": "/powershell/azure/deploymentmanager/toc.json",
+        "referenceTocUrl": "/powershell/module/deploymentmanager/toc.json"
+    },
     "azurermps-6.9.0": {
         "serviceMap": "mapping/rm-groupMapping-6.9.0.json",
         "packageRoot": "azurermps-6.9.0",
