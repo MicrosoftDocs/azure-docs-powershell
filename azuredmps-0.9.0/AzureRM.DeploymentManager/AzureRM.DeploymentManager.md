@@ -1,5 +1,6 @@
 ---
 Module Name: AzureRM.DeploymentManager
+Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.deploymentmanager
 Help Version: 0.0.1.0
 Locale: en-US
