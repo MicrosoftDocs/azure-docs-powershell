@@ -424,6 +424,17 @@
                 "azuresmps-*/**/*.md": "azure-asm",
                 "azurermps-*/**/*.md": "azure-powershell"
             },
+            "ms.topic":
+            {
+                "azuredmps-*/**/*.md":"reference",
+                "azurermps-*/**/*.md":"reference",
+                "azurestackps-*/**/*.md":"reference",
+                "docs-conceptual/**/*.md":"article"
+            },
+            "ms.date":
+            {
+                "azuredmps-*/**/*.md":"09/28/2018"
+            },
             "feedback_system": {
      			"azurermps-2.3.0/**/*": "None",
                 "azurermps-4.4.1/**/*": "None",
