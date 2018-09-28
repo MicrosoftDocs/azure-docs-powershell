@@ -20,3 +20,6 @@
   - name: Azure PowerShell
     tocHref: /powershell/module/
     topicHref: /powershell/module/
+  - name: Azure/PowerShell
+    tocHref: /powershell/azure/deploymentmanager
+    topicHref: /powershell/azure/deploymentmanager/overview
