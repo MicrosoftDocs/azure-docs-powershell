@@ -49,7 +49,7 @@ Add-AzureRmServiceFabricClusterCertificate -ResourceGroupName 'Group1' -Name 'Co
 -SecretIdentifier 'https://contoso03vault.vault.azure.net/secrets/contoso03vaultrg/7f7de9131c034172b9df37ccc549524f'
 ```
 
-This command will add a certificate in the existing Azure key vault as a secondary cluster certificate.
+This command will add an existing certificate in Azure key vault as a secondary cluster certificate.
 
 ### Example 2
 ```
