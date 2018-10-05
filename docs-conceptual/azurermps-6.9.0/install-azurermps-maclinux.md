@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/24/2018
+ms.date: 10/05/2018
 ---
 # Install Azure PowerShell on macOS or Linux
 
@@ -15,11 +15,9 @@ is built for use on any platform that supports .NET Core. To work with these pla
 version of Azure PowerShell available.
 
 > [!NOTE]
-> At this time, both PowerShell Core v6 and Azure PowerShell for .NET Standard are still in beta.
-> Support for these products is limited. If you have problems or discover bugs, please file an issue
-> on GitHub.
+> At this time, Azure PowerShell for .NET Standard is still in beta.
+> If you have problems or discover bugs, please file an issue on GitHub.
 >
-> * [Issues for PowerShell Core v6](https://github.com/PowerShell/PowerShell/issues)
 > * [Issues for Azure PowerShell](https://github.com/azure/azure-docs-powershell/issues)
 
 ## Install PowerShell Core
