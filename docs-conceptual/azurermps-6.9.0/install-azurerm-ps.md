@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/11/2018
+ms.date: 10/08/2018
 ---
 
 # Install Azure PowerShell on Windows with PowerShellGet
@@ -42,7 +42,7 @@ You need elevated privileges to install modules from the PowerShell Gallery. To 
 run the following command in an elevated session:
 
 ```powershell
-Install-Module -Name AzureRM
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 > [!NOTE]
@@ -96,7 +96,16 @@ If you want to remove older versions of Azure PowerShell from your system, see [
 
 ## Use multiple versions of Azure PowerShell
 
-It's possible to install more than one version of Azure PowerShell. You might need more than one version if you work with on-premises Azure Stack resources,
+It's possible to install more than one version of Azure PowerShell. To check if you have multiple versions of Azure PowerShell installed, use the following
+command:
+
+```powershell
+Get-Module -Name AzureRM -List | select Name,Version
+```
+
+To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
+
+You might need more than one version if you work with on-premises Azure Stack resources,
 run an older version of Windows, or use the Azure classic deployment model. To install an older version, provide the
 `-RequiredVersion` argument when installing.
 
