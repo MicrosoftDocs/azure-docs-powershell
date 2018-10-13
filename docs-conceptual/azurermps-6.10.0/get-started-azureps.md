@@ -211,8 +211,7 @@ $vnet = New-AzureRmVirtualNetwork -ResourceGroupName $resourceGroup -Location $l
 
 # Create a public IP address and specify a DNS name
 $publicIp = New-AzureRmPublicIpAddress -ResourceGroupName $resourceGroup -Location $location `
-  -Name "mypublicdns$(Get-Random)" -AllocationMethod Static -IdleTimeoutInMinutes 4
-$publicIp | Select-Object Name,IpAddress
+  -Name "mypublicdns$(Get-Random)" -AllocationMethod Static -IdleTimeoutInMinutes 4 | Select-Object Name,IpAddress
 
 # Create an inbound network security group rule for port 22
 $nsgRuleSSH = New-AzureRmNetworkSecurityRuleConfig -Name myNetworkSecurityGroupRuleSSH  -Protocol Tcp `
