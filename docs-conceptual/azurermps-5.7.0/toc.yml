@@ -8,8 +8,6 @@
       href: install-azurermps-maclinux.md
     - name: Install with MSI or WebPI
       href: other-install.md
-    - name: Run in Docker
-      href: azurerm-ps-in-docker.md
   - name: Uninstall
     href: uninstall-azurerm-ps.md
   - name: Get started
