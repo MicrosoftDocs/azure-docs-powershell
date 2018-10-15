@@ -21,8 +21,6 @@ see [Install Azure PowerShell with PowerShellGet](install-azurerm-ps.md).
 > and higher. If you require use of the Web Platform Installer please consider using the MSI instead, or you can
 > install an earlier version of Azure PowerShell.
 
-To run Azure PowerShell in a Docker container, see [Run Azure PowerShell in Docker](azurerm-ps-in-docker.md).
-
 To install on Linux or macOS environments, see [Install Azure PowerShell on macOS or Linux](install-azurermps-maclinux.md).
 
 ## Install or update on Windows using the MSI Package
