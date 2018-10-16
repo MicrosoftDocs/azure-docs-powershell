@@ -1,14 +1,15 @@
 {
   "build_entry_point": "docs",
-  "need_preview_pull_request": true,
   "docsets_to_publish": [
     {
       "docset_name": "azureps",
       "build_source_folder": ".",
       "build_output_subfolder": "azureps",
-      "xref_query_tags":["/dotnet"],
       "locale": "en-us",
       "monikers": [],
+      "xref_query_tags": [
+        "/dotnet"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -28,12 +29,29 @@
           "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
         ]
       }
+    },
+    {
+      "docset_name": "azureps-az-preview",
+      "build_source_folder": "docs-ref-conceptual/az-0.3.0",
+      "build_output_subfolder": "azureps-az-preview",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
   "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "enable_incremental_build": false,
   "contribution_branch_mappings": {},
   "dependent_repositories": [
@@ -50,9 +68,10 @@
       "branch_mapping": {}
     },
     {
-    "path_to_root": "_themes.pdf",
-    "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-    "branch": "master"
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
@@ -61,12 +80,12 @@
       "Pdf"
     ]
   },
-   "Targets": {  
-    "Pdf": {  
-    "template_folder": "_themes.pdf"  
-    }  
-  },
   "need_generate_pdf_url_template": true,
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
