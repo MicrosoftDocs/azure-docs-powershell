@@ -78,7 +78,7 @@ forward in implementing these updates.
 - Scenario-based Cmdlets - **All*- cmdlets should be designed around scenarios, not the Azure REST
   service.
 
-- Shorter Names - Includes the names of cmdlets (for example, `New-AzureRmVM` => `New-AzVm`) and the
+- Shorter Names - Includes the names of cmdlets (for example, `New-AzVM` => `New-AzVm`) and the
   names of parameters (for example, `-ResourceGroupName` => `-Rg`). Use aliases for compatibility with
   "old" cmdlets. Provide _backwards compatible_ parameter sets.
 
