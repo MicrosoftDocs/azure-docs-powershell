@@ -29,22 +29,6 @@
           "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
         ]
       }
-    },
-    {
-      "docset_name": "azureps-az-preview",
-      "build_source_folder": "docs-ref-conceptual/az-0.3.0",
-      "build_output_subfolder": "azureps-az-preview",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [],
