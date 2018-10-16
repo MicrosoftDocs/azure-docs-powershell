@@ -20,20 +20,20 @@ provides first-class [PSJob](/powershell/module/microsoft.powershell.core/about/
 
 Since PSJobs are run as separate processes, your Azure connection must
 be shared with them. After signing in to your Azure account 
-with `Connect-AzureRmAccount`, pass the context to a job.
+with `Connect-AzAccount`, pass the context to a job.
 
 ```azurepowershell-interactive
 $creds = Get-Credential
-$job = Start-Job { param($context,$vmadmin) New-AzureRmVM -Name MyVm -AzureRmContext $context -Credential $vmadmin} -Arguments (Get-AzureRmContext),$creds
+$job = Start-Job { param($context,$vmadmin) New-AzVM -Name MyVm -AzureRmContext $context -Credential $vmadmin} -Arguments (Get-AzContext),$creds
 ```
 
 However, if you have chosen to have your context automatically saved with
-`Enable-AzureRmContextAutosave`, the context is automatically shared with any jobs you create.
+`Enable-AzContextAutosave`, the context is automatically shared with any jobs you create.
 
 ```azurepowershell-interactive
-Enable-AzureRmContextAutosave
+Enable-AzContextAutosave
 $creds = Get-Credential
-$job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin} -Arguments $creds
+$job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin} -Arguments $creds
 ```
 
 ## Automatic Jobs with `-AsJob`
@@ -43,20 +43,20 @@ The `-AsJob` switch makes creating PSJobs even easier.
 
 ```azurepowershell-interactive
 $creds = Get-Credential
-$job = New-AzureRmVM -Name MyVm -Credential $creds -AsJob
+$job = New-AzVM -Name MyVm -Credential $creds -AsJob
 ```
 
-You can inspect the job and progress at any time with `Get-Job` and `Get-AzureRmVM`.
+You can inspect the job and progress at any time with `Get-Job` and `Get-AzVM`.
 
 ```azurepowershell-interactive
 Get-Job $job
-Get-AzureRmVM MyVm
+Get-AzVM MyVm
 ```
 
 ```output
 Id Name                                       PSJobTypeName         State   HasMoreData Location  Command
 -- ----                                       -------------         -----   ----------- --------  -------
-1  Long Running Operation for 'New-AzureRmVM' AzureLongRunningJob`1 Running True        localhost New-AzureRmVM
+1  Long Running Operation for 'New-AzVM' AzureLongRunningJob`1 Running True        localhost New-AzVM
 
 ResourceGroupName    Name Location          VmSize  OsType     NIC ProvisioningState Zone
 -----------------    ---- --------          ------  ------     --- ----------------- ----
@@ -99,13 +99,13 @@ Create several VMs at once:
 $creds = Get-Credential
 # Create 10 jobs.
 for($k = 0; $k -lt 10; $k++) {
-    New-AzureRmVm -Name MyVm$k  -Credential $creds -AsJob
+    New-AzVm -Name MyVm$k  -Credential $creds -AsJob
 }
 
 # Get all jobs and wait on them.
 Get-Job | Wait-Job
 "All jobs completed"
-Get-AzureRmVM
+Get-AzVM
 ```
 
 In this example, the `Wait-Job` cmdlet causes the script to pause while jobs run. The script
@@ -115,26 +115,26 @@ script waits for completion before continuing.
 ```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
-2      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-3      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-4      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-5      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-6      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-7      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-8      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-9      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-10     Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-11     Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
-2      Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-3      Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-4      Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-5      Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-6      Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-7      Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-8      Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-9      Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-10     Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
-11     Long Running... AzureLongRun... Completed     True            localhost            New-AzureRmVM
+2      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+3      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+4      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+5      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+6      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+7      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+8      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+9      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+10     Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+11     Long Running... AzureLongRun... Running       True            localhost            New-AzVM
+2      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+3      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+4      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+5      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+6      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+7      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+8      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+9      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+10     Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
+11     Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
 All Jobs completed.
 
 ResourceGroupName        Name   Location          VmSize  OsType           NIC ProvisioningState Zone
