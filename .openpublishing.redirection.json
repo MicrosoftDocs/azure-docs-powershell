@@ -366,12 +366,12 @@
       "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azurermps-5.7.0/azurermps-ps-in-docker.md",
+        "source_path": "docs-conceptual/azurermps-5.7.0/azurerm-ps-in-docker.md",
         "redirect_url": "/powershell/azure/install-azurerm-ps",
         "redirect_document_id": false
     },
     {
-        "source_path": "docs-conceptual/azurermps-6.10.0/azurermps-ps-in-docker.md",
+        "source_path": "docs-conceptual/azurermps-6.10.0/azurerm-ps-in-docker.md",
         "redirect_url": "/powershell/azure/install-azurerm-ps",
         "redirect_document_id": false
     },
