@@ -14,12 +14,6 @@ For non-Windows platforms, it's possible to run Azure PowerShell in PowerShell C
 is built for use on any platform that supports .NET Core. To work with these platforms, there's a .NET Standard
 version of Azure PowerShell available.
 
-> [!NOTE]
-> At this time, Azure PowerShell for .NET Standard is still in beta.
-> If you have problems or discover bugs, please file an issue on GitHub.
->
-> * [Issues for Azure PowerShell](https://github.com/azure/azure-docs-powershell/issues)
-
 ## Install PowerShell Core
 
 The installation instructions for PowerShell Core are different for macOS and most Linux distributions.
@@ -33,6 +27,9 @@ Detailed instructions can be found in the following articles:
 > [!IMPORTANT]
 > The `AzureRM` module detailed in other articles does not work with PowerShell Core.
 > You must install the `Az` module to get Azure PowerShell functionality in PowerShell Core.
+>
+> The `Az` module is now in official pre-release, and has its own documentation space. See the
+> [Overview of Azure PowerShell Az](/powershell/azure/preview).
 
 PowerShell Core comes with the PowerShellGet module already installed. Start PowerShell with the command:
 

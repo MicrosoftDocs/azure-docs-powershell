@@ -42,6 +42,8 @@ You'll need to repeat these steps for every new PowerShell session you start. Au
 setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
 To learn how to persist your Azure sign in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
 
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
+
 ## Install or update on Windows using the Web Platform Installer
 
 Download the [Azure PowerShell WebPI package](http://aka.ms/webpi-azps) and start the install. If you have installed

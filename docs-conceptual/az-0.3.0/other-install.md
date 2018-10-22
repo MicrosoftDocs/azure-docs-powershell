@@ -16,12 +16,7 @@ Use these installation methods only if they're necessary for your system. The re
 on Windows is with PowerShellGet. For instructions on using PowerShellGet to install Azure PowerShell,
 see [Install Azure PowerShell with PowerShellGet](install-azurerm-ps.md).
 
-> [!NOTE]
-> The Web Platform Installer method of installation is no longer available for versions of Azure PowerShell 6.x
-> and higher. If you require use of the Web Platform Installer please consider using the MSI instead, or you can
-> install an earlier version of Azure PowerShell.
-
-To install on Linux or macOS environments, see [Install Azure PowerShell on macOS or Linux](install-azurermps-maclinux.md).
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 ## Install or update on Windows using the MSI Package
 

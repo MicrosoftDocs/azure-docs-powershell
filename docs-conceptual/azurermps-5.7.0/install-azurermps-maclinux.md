@@ -14,13 +14,7 @@ For non-Windows platforms, it's possible to run Azure PowerShell in PowerShell C
 is built for use on any platform that supports .NET Core. To work with these platforms, there's a special .NET Core
 version of Azure PowerShell available.
 
-> [!NOTE]
-> At this time, both PowerShell Core v6 and Azure PowerShell for .NET Core are still in beta.
-> Support for these products is limited. If you have problems or discover bugs, please file an issue
-> on GitHub.
->
-> * [Issues for PowerShell Core v6](https://github.com/PowerShell/PowerShell/issues)
-> * [Issues for Azure PowerShell](https://github.com/azure/azure-docs-powershell/issues)
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 ## Install PowerShell Core
 
