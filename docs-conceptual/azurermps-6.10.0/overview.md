@@ -28,10 +28,7 @@ The following samples can help you learn how to perform common scenarios with Az
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-> [!NOTE]
-> If you have deployments that use the classic deployment model that cannot be converted,
-> you can install the Service Management version of Azure PowerShell. For more information, see
-> [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 ## Learn PowerShell basics
 
