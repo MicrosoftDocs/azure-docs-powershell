@@ -44,8 +44,8 @@
   - name: Release notes
     href: release-notes-az.md
     items:
-    - name: Breaking changes for Azure PowerShell 6.x
-      href: migration-az-0.3.0.md
+      - name: Introducing new Azure PowerShell module
+        href: new-azureps-module-az.md
 - name: Tutorials
   items:
   - name: Create Virtual Machines
