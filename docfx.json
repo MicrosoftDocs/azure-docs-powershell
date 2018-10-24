@@ -123,6 +123,15 @@
             },
             {
                 "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azps-preview",
+                "version": "azps-0.4.0",
+                "dest": "azure"
+            },
+            {
+                "files": [
                     "**/*.md",
                     "**/*.yml"
 
@@ -348,6 +357,12 @@
                     "media/**"
                 ],
                 "version": "azurermps-6.11.0"
+            },
+            {
+                "files": [
+                    "media/**"
+                ],
+                "version": "azps-0.4.0"
             }
         ],
         "versions": {

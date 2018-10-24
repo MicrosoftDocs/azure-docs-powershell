@@ -6,6 +6,10 @@
         "conceptualTocUrl": "/powershell/azure/deploymentmanager/toc.json",
         "referenceTocUrl": "/powershell/module/deploymentmanager/toc.json"
     },
+    "azps-0.4.0": {
+        "conceptualToc": "docs-conceptual/azps-preview/toc.yml",
+        "conceptualTocUrl": "/powershell/azure/preview/toc.json"
+    },
     "azurermps-6.11.0": {
         "serviceMap": "mapping/rm-groupMapping-6.11.0.json",
         "packageRoot": "azurermps-6.11.0",
