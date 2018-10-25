@@ -7,7 +7,7 @@
         "referenceTocUrl": "/powershell/module/deploymentmanager/toc.json"
     },
     "azps-0.4.0": {
-        "serviceMap": "mapping/azps-groupMapping-0.4.0.json",
+        "serviceMap": "mapping/az-groupMapping-0.4.0.json",
         "packageRoot": "azps-preview",
         "conceptualToc": "docs-conceptual/azps-preview/toc.yml",
         "conceptualTocUrl": "/powershell/azure/preview/toc.json",
