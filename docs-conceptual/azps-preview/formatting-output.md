@@ -22,10 +22,10 @@ By default each Azure PowerShell cmdlet has predefined formatting of output maki
 
 ## Format examples
 
-In this example, we get a list of Azure VMs in our default subscription.  The `Get-AzureRmVM` command defaults output into a table format.
+In this example, we get a list of Azure VMs in our default subscription.  The `Get-AzVM` command defaults output into a table format.
 
 ```azurepowershell-interactive
-Get-AzureRmVM
+Get-AzVM
 ```
 
 ```output
@@ -38,7 +38,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 If you would like to limit the columns returned you can use the `Format-Table` cmdlet. In the following example, we get the same list of virtual machines but restrict the output to just the name of the VM, the resource group, and the location of the VM.  The `-Autosize` parameter sizes the columns according to the size of the data.
 
 ```azurepowershell-interactive
-Get-AzureRmVM | Format-Table Name,ResourceGroupName,Location -AutoSize
+Get-AzVM | Format-Table Name,ResourceGroupName,Location -AutoSize
 ```
 
 ```output
@@ -51,7 +51,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 Output can also be formatted into a list. The following example shows this using the`Format-List` cmdlet.
 
 ```azurepowershell-interactive
-Get-AzureRmVM | Format-List Name,VmId,Location,ResourceGroupName
+Get-AzVM | Format-List Name,VmId,Location,ResourceGroupName
 ```
 
 ```output
@@ -72,7 +72,7 @@ PowerShell also allows taking command output and converting it into multiple dat
 get attributes of the virtual machines in our subscription and convert the output to CSV format for easy import into a database or spreadsheet.
 
 ```azurepowershell-interactive
-Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation
+Get-AzVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation
 ```
 
 ```output
@@ -84,7 +84,7 @@ Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,Provisioni
 Output can also be converted into the JSON format.  The following example creates the same list of VMs but changes the output format to JSON.
 
 ```azurepowershell-interactive
-Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Json
+Get-AzVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Json
 ```
 
 ```output

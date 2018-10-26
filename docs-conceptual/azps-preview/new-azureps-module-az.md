@@ -32,7 +32,7 @@ All users should upgrade to the new `Az` module. To do so:
 
 Major updates like this can be inconvenient. However, the `Az` module has a compatibility mode to
 help you use existing scripts while you work on updates to the new syntax. Use the
-`Enable-AzureRMAlias` cmdlet to enable the `AzureRM` compatibility mode. This cmdlet defines
+`Enable-AzAlias` cmdlet to enable the `AzureRM` compatibility mode. This cmdlet defines
 `AzureRM` cmdlet names as aliases for the new `Az` cmdlet names.
 
 For a full description of the migration process, including an example, see [__TBD__](link-tbd.md).

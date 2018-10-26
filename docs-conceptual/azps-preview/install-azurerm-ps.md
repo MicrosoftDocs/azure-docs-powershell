@@ -76,7 +76,7 @@ with your Azure credentials.
 # Import the module into the PowerShell session
 Import-Module AzureRM
 # Connect to Azure with an interactive dialog for sign-in
-Connect-AzureRmAccount
+Connect-AzAccount
 ```
 
 You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `AzureRM` module requires

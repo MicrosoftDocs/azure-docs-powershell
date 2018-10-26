@@ -75,7 +75,7 @@ aliases for the `AzureRM` cmdlets. Before using the module for the first time, s
 # Import the module into the PowerShell session
 Import-Module Az
 # Enable AzureRM aliases for the user
-Enable-AzureRmAlias -Scope CurrentUser
+Enable-AzAlias -Scope CurrentUser
 ```
 
 This sets up aliases for the current user only. Check the cmdlet help for other values that can be provided to `-Scope` to
@@ -99,7 +99,7 @@ with your Azure credentials. Importing a module does __not__ require elevated pr
 # Import the module into the PowerShell session
 Import-Module Az
 # Connect to Azure with an interactive dialog for sign-in
-Connect-AzureRmAccount
+Connect-AzAccount
 ```
 
 You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `Az` module requires

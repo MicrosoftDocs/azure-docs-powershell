@@ -44,10 +44,10 @@ of the following ways to identify your deployed app:
 
 ### Get information about your application
 
-The `Get-AzureRmADApplication` cmdlet can be used to get information about your application.
+The `Get-AzADApplication` cmdlet can be used to get information about your application.
 
 ```azurepowershell-interactive
-Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
+Get-AzADApplication -DisplayNameStartWith MyDemoWebApp
 ```
 
 ```output
@@ -64,13 +64,13 @@ ReplyUrls               : {}
 
 ### Create a service principal for your application
 
-The `New-AzureRmADServicePrincipal` cmdlet is used to create the service principal.
+The `New-AzADServicePrincipal` cmdlet is used to create the service principal.
 
 ```azurepowershell-interactive
 Add-Type -Assembly System.Web
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 $securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
-New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $securePassword
+New-AzADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $securePassword
 ```
 
 ```output
@@ -82,7 +82,7 @@ MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738
 ### Get information about the service principal
 
 ```azurepowershell-interactive
-$svcprincipal = Get-AzureRmADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
+$svcprincipal = Get-AzADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 $svcprincipal | Select-Object *
 ```
 
@@ -103,7 +103,7 @@ following commands:
 
 ```azurepowershell-interactive
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
-Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Connect-AzAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
 After a successful sign-in you see output like:
@@ -127,9 +127,9 @@ permissions of the service principal.
 
 Azure PowerShell provides the following cmdlets to manage role assignments:
 
-* [Get-AzureRmRoleAssignment](/powershell/module/azurerm.resources/get-azurermroleassignment)
-* [New-AzureRmRoleAssignment](/powershell/module/azurerm.resources/new-azurermroleassignment)
-* [Remove-AzureRmRoleAssignment](/powershell/module/azurerm.resources/remove-azurermroleassignment)
+* [Get-AzRoleAssignment](/powershell/module/az.resources/get-azroleassignment)
+* [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
+* [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
 The default role for a service principal is **Contributor**. It may not be the best choice
 depending on the scope of your app's interactions with Azure services, given its broad permissions.
@@ -140,7 +140,7 @@ In this example, we add the **Reader** role to our prior example, and delete the
 one:
 
 ```azurepowershell-interactive
-New-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
+New-AzRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
 ```
 
 ```output
@@ -155,13 +155,13 @@ ObjectType         : ServicePrincipal
 ```
 
 ```azurepowershell-interactive
-Remove-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
+Remove-AzRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
 ```
 
 To view the current roles assigned:
 
 ```azurepowershell-interactive
-Get-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
+Get-AzRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 ```
 
 ```output
@@ -177,10 +177,10 @@ ObjectType         : ServicePrincipal
 
 Other Azure PowerShell cmdlets for role management:
 
-* [Get-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Get-AzureRmRoleDefinition)
-* [New-AzureRmRoleDefinition](/powershell/module/azurerm.resources/New-AzureRmRoleDefinition)
-* [Remove-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Remove-AzureRmRoleDefinition)
-* [Set-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Set-AzureRmRoleDefinition)
+* [Get-AzRoleDefinition](/powershell/module/az.resources/Get-azRoleDefinition)
+* [New-AzRoleDefinition](/powershell/module/az.resources/New-azRoleDefinition)
+* [Remove-AzRoleDefinition](/powershell/module/az.resources/Remove-azRoleDefinition)
+* [Set-AzRoleDefinition](/powershell/module/az.resources/Set-azRoleDefinition)
 
 ## Change the credentials of the security principal
 
@@ -192,7 +192,7 @@ change the password of the service principal by creating a new password and remo
 
 ```azurepowershell-interactive
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
-New-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -Password $password
+New-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp -Password $password
 ```
 
 ```output
@@ -204,7 +204,7 @@ StartDate           EndDate             KeyId                                Typ
 ### Get a list of credentials for the service principal
 
 ```azurepowershell-interactive
-Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
+Get-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
 ```output
@@ -217,7 +217,7 @@ StartDate           EndDate             KeyId                                Typ
 ### Remove the old password from the service principal
 
 ```azurepowershell-interactive
-Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
+Remove-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
 ```
 
 ```output
@@ -230,7 +230,7 @@ service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
 ### Verify the list of credentials for the service principal
 
 ```azurepowershell-interactive
-Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
+Get-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
 ```output

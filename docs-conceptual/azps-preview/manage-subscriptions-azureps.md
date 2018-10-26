@@ -18,7 +18,7 @@ PowerShell to execute commands against a particular subscription.
 1. Get a list of all subscriptions in your account.
 
     ```azurepowershell-interactive
-    Get-AzureRmSubscription
+    Get-AzSubscription
     ```
 
     ```output
@@ -47,13 +47,13 @@ PowerShell to execute commands against a particular subscription.
 2. Set the default.
 
     ```azurepowershell-interactive
-    Select-AzureRmSubscription -Subscription "My Demos"
+    Select-AzSubscription -Subscription "My Demos"
     ```
 
-3. Verify the change by running the `Get-AzureRmContext` cmdlet.
+3. Verify the change by running the `Get-AzContext` cmdlet.
 
     ```azurepowershell-interactive
-    Get-AzureRmContext
+    Get-AzContext
     ```
 
     ```output
