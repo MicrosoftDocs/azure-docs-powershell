@@ -123,7 +123,7 @@ Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ## Provide feedback
 
 If you find a bug when using Azure Powershell, [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).
-To provide feedback from the command line, use the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.
+To provide feedback from the command line, use the [Send-Feedback](/powershell/module/az.profile/send-feedback cmdlet.
 
 ## Next Steps
 
