@@ -14,6 +14,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 ## Description
 This topic displays help topics for the Azure Cognitive Services cmdlets.
 
+> [!NOTE]
+> This article lists the Azure PowerShell cmdlets for Azure Cognitive Services account and subscription management only. Refer to the [documentation] (https://docs.microsoft.com/azure/cognitive-services/) for individual services to learn how to use the APIs and supported SDKs.
+
 ## AzureRM.CognitiveServices Cmdlets
 ### [Get-AzureRmCognitiveServicesAccount](Get-AzureRmCognitiveServicesAccount.md)
 Gets an account.
