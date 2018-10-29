@@ -156,7 +156,7 @@ $env:AzureRmContextAutoSave="true" | "false"
 
 When set to 'true', the context is automatically saved. If set to 'false', the context isn't saved.
 
-## Changes to the AzureRM.Profile module
+## Changes to the Az.Profile module
 
 New cmdlets for managing context
 
@@ -180,14 +180,14 @@ Changes to existing profile cmdlets
   to the process or current user.
 
 <!-- Hyperlinks -->
-[enable]: /powershell/module/azurerm.profile/Enable-AzContextAutosave
-[disable]: /powershell/module/azurerm.profile/Disable-AzContextAutosave
-[select]: /powershell/module/azurerm.profile/Select-AzContext
-[remove-cred]: /powershell/module/azurerm.profile/Disconnect-AzAccount
-[remove-context]: /powershell/module/azurerm.profile/Remove-AzContext
-[rename]: /powershell/module/azurerm.profile/Rename-AzContext
+[enable]: /powershell/module/az.profile/Enable-AzContextAutosave
+[disable]: /powershell/module/az.profile/Disable-AzContextAutosave
+[select]: /powershell/module/az.profile/Select-AzContext
+[remove-cred]: /powershell/module/az.profile/Disconnect-AzAccount
+[remove-context]: /powershell/module/az.profile/Remove-AzContext
+[rename]: /powershell/module/az.profile/Rename-AzContext
 
 <!-- Updated cmdlets -->
-[login]: /powershell/module/azurerm.profile/Connect-AzAccount
-[import]:  /powershell/module/azurerm.profile/Import-AzContext
-[set-context]: /powershell/module/azurerm.profile/Set-AzContext
+[login]: /powershell/module/az.profile/Connect-AzAccount
+[import]:  /powershell/module/az.profile/Import-AzContext
+[set-context]: /powershell/module/az.profile/Set-AzContext
