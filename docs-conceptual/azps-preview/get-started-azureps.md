@@ -48,10 +48,10 @@ You can also install Azure PowerShell and use it locally in a PowerShell session
 
 Sign on interactively:
 
-1. Type `Connect-AzureRmAccount`. You'll get a dialog box asking for your Azure credentials. Option
+1. Type `Connect-AzAccount`. You'll get a dialog box asking for your Azure credentials. Option
   '-Environment' can let you authenticate for Azure China or Azure Germany.
 
-   for example, Connect-AzureRmAccount -Environment AzureChinaCloud
+   for example, Connect-AzAccount -Environment AzureChinaCloud
 
 2. Type the email address and password associated with your account. Azure authenticates and saves
    the credential information, and then closes the window.
@@ -61,7 +61,7 @@ manage the resources in your subscription.
 
 ## Create a Windows virtual machine using simple defaults
 
-The `New-AzureRmVM` cmdlet provides a simplified syntax making it easy to create a new virtual
+The `New-AzVM` cmdlet provides a simplified syntax making it easy to create a new virtual
 machine. There are only two parameter values you must provide: the name of the VM and a set of
 credentials for the local administrator account on the VM.
 
@@ -81,7 +81,7 @@ Password for user localAdmin: *********
 Next, create the VM.
 
 ```azurepowershell-interactive
-New-AzureRmVM -Name SampleVM -Credential $cred
+New-AzVM -Name SampleVM -Credential $cred
 ```
 
 ```output
@@ -104,7 +104,7 @@ You may wonder what else is created and how is the VM configured. First, let's
 look at our resource groups.
 
 ```azurepowershell-interactive
-Get-AzureRmResourceGroup | Select-Object ResourceGroupName,Location
+Get-AzResourceGroup | Select-Object ResourceGroupName,Location
 ```
 
 ```output
@@ -115,12 +115,12 @@ SampleVM                   eastus
 ```
 
 The **cloud-shell-storage-westus** resource group is created the first time you use the Cloud
-Shell. The **SampleVM** resource group was created by the `New-AzureRmVM` cmdlet.
+Shell. The **SampleVM** resource group was created by the `New-AzVM` cmdlet.
 
 Now, what other resources were created in this new resource group?
 
 ```azurepowershell-interactive
-Get-AzureRmResource |
+Get-AzResource |
   Where ResourceGroupName -eq SampleVM |
     Select-Object ResourceGroupName,Location,ResourceType,Name
 ```
@@ -140,7 +140,7 @@ Let's get some more details about the VM. This example shows how to retrieve
 information about the OS Image used to create the VM.
 
 ```azurepowershell-interactive
-Get-AzureRmVM -Name SampleVM -ResourceGroupName SampleVM |
+Get-AzVM -Name SampleVM -ResourceGroupName SampleVM |
   Select-Object -ExpandProperty StorageProfile |
     Select-Object -ExpandProperty ImageReference
 ```
@@ -169,7 +169,7 @@ Let's create a resource group named "MyResourceGroup" in the westeurope region o
 type the following command:
 
 ```azurepowershell-interactive
-New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
+New-AzResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
 ```output
@@ -203,28 +203,28 @@ $securePassword = ConvertTo-SecureString 'azurepassword' -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential ("azureuser", $securePassword)
 
 # Create a subnet configuration
-$subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 192.168.2.0/24
+$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 192.168.2.0/24
 
 # Create a virtual network
-$vnet = New-AzureRmVirtualNetwork -ResourceGroupName $resourceGroup -Location $location `
+$vnet = New-AzVirtualNetwork -ResourceGroupName $resourceGroup -Location $location `
   -Name MYvNET2 -AddressPrefix 192.168.0.0/16 -Subnet $subnetConfig
 
 # Create a public IP address and specify a DNS name
-$publicIp = New-AzureRmPublicIpAddress -ResourceGroupName $resourceGroup -Location $location `
+$publicIp = New-AzPublicIpAddress -ResourceGroupName $resourceGroup -Location $location `
   -Name "mypublicdns$(Get-Random)" -AllocationMethod Static -IdleTimeoutInMinutes 4
 $publicIp | Select-Object Name,IpAddress
 
 # Create an inbound network security group rule for port 22
-$nsgRuleSSH = New-AzureRmNetworkSecurityRuleConfig -Name myNetworkSecurityGroupRuleSSH  -Protocol Tcp `
+$nsgRuleSSH = New-AzNetworkSecurityRuleConfig -Name myNetworkSecurityGroupRuleSSH  -Protocol Tcp `
   -Direction Inbound -Priority 1000 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * `
   -DestinationPortRange 22 -Access Allow
 
 # Create a network security group
-$nsg = New-AzureRmNetworkSecurityGroup -ResourceGroupName $resourceGroup -Location $location `
+$nsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroup -Location $location `
   -Name myNetworkSecurityGroup2 -SecurityRules $nsgRuleSSH
 
 # Create a virtual network card and associate with public IP address and NSG
-$nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGroup -Location $location `
+$nic = New-AzNetworkInterface -Name myNic2 -ResourceGroupName $resourceGroup -Location $location `
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
@@ -234,14 +234,14 @@ Now that we have the required resources we can create the VM configuration objec
 
 ```azurepowershell-interactive
 # Create a virtual machine configuration
-$vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
-  Set-AzureRmVMOperatingSystem -Linux -ComputerName $vmName -Credential $cred -DisablePasswordAuthentication |
-  Set-AzureRmVMSourceImage -PublisherName Canonical -Offer UbuntuServer -Skus 14.04.2-LTS -Version latest |
-  Add-AzureRmVMNetworkInterface -Id $nic.Id
+$vmConfig = New-AzVMConfig -VMName $vmName -VMSize Standard_D1 |
+  Set-AzVMOperatingSystem -Linux -ComputerName $vmName -Credential $cred -DisablePasswordAuthentication |
+  Set-AzVMSourceImage -PublisherName Canonical -Offer UbuntuServer -Skus 14.04.2-LTS -Version latest |
+  Add-AzVMNetworkInterface -Id $nic.Id
 
 # Configure SSH Keys
 $sshPublicKey = Get-Content -Raw "$env:USERPROFILE\.ssh\id_rsa.pub"
-Add-AzureRmVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azureuser/.ssh/authorized_keys"
+Add-AzVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azureuser/.ssh/authorized_keys"
 ```
 
 ### Create the virtual machine
@@ -249,7 +249,7 @@ Add-AzureRmVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azur
 Now we can create the VM using the VM configuration object.
 
 ```azurepowershell-interactive
-New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
+New-AzVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 ```
 
 Now that the VM has been created, you can sign in to your new Linux VM using SSH with the public IP
@@ -299,15 +299,15 @@ For example, to create an Azure Network Load Balancer that we could then associa
 created VMs, we can use the following create command:
 
 ```azurepowershell-interactive
-New-AzureRmLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
+New-AzLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
 We could also create a new private Virtual Network (commonly referred to as a "VNet" within Azure)
 for our infrastructure using the following command:
 
 ```azurepowershell-interactive
-$subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
-$vnet = New-AzureRmVirtualNetwork -ResourceGroupName myResourceGroup -Location westeurope `
+$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
+$vnet = New-AzVirtualNetwork -ResourceGroupName myResourceGroup -Location westeurope `
   -Name MYvNET3 -AddressPrefix 10.0.0.0/16 -Subnet $subnetConfig
 ```
 
@@ -322,20 +322,20 @@ the AppService using the following commands:
 
 ```azurepowershell-interactive
 # Create an Azure AppService that we can host any number of web apps within
-New-AzureRmAppServicePlan -Name MyAppServicePlan -Tier Basic -NumberofWorkers 2 -WorkerSize Small -ResourceGroupName myResourceGroup -Location westeurope
+New-AzAppServicePlan -Name MyAppServicePlan -Tier Basic -NumberofWorkers 2 -WorkerSize Small -ResourceGroupName myResourceGroup -Location westeurope
 
 # Create Two Web Apps within the AppService (note: name param must be a unique DNS entry)
-New-AzureRmWebApp -Name MyWebApp43432 -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westeurope
-New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westeurope
+New-AzWebApp -Name MyWebApp43432 -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westeurope
+New-AzWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
 ## Listing deployed resources
 
-You can use the `Get-AzureRmResource` cmdlet to list the resources running in Azure. The following
+You can use the `Get-AzResource` cmdlet to list the resources running in Azure. The following
 example shows the resources we created in the new resource group.
 
 ```azurepowershell-interactive
-Get-AzureRmResource |
+Get-AzResource |
   Where-Object ResourceGroupName -eq myResourceGroup |
     Select-Object Name,Location,ResourceType
 ```
@@ -362,11 +362,11 @@ micromyresomywi032907510                              westeurope Microsoft.Stora
 ## Deleting resources
 
 To clean up your Azure account, you want to remove the resources we created in this example. You
-can use the `Remove-AzureRm*` cmdlets to delete the resources you no longer need. To remove the
+can use the `Remove-Az*` cmdlets to delete the resources you no longer need. To remove the
 Windows VM we created, using the following command:
 
 ```azurepowershell-interactive
-Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
+Remove-AzVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 ```
 
 You'll be prompted to confirm that you want to remove the resource.
@@ -382,7 +382,7 @@ the resource group "MyResourceGroup" that we've used for all the samples so far.
 All resources in the group are also deleted.
 
 ```azurepowershell-interactive
-Remove-AzureRmResourceGroup -Name myResourceGroup
+Remove-AzResourceGroup -Name myResourceGroup
 ```
 
 ```output

@@ -36,7 +36,7 @@ items:
         performing any other steps.
 
         ```powershell
-        Connect-AzureRmAccount
+        Connect-AzAccount
         ```
 
         Complete the sign in process by following the steps displayed in your terminal.
@@ -50,7 +50,7 @@ items:
         `TutorialResources`.
 
         ```powershell
-        New-AzureRmResourceGroup -Name TutorialResources -Location eastus
+        New-AzResourceGroup -Name TutorialResources -Location eastus
         ```
 
         ```Output
@@ -101,7 +101,7 @@ items:
           Credential = $cred
           OpenPorts = 3389
         }
-        $newVM1 = New-AzureRmVM @vmParams
+        $newVM1 = New-AzVM @vmParams
         ```
         As the VM is created, you see the parameter values used and Azure resources being created.
         PowerShell will displace a progress bar as shown below.
@@ -159,13 +159,13 @@ items:
         configuration.
 
         ```powershell
-        $newVM1 | Get-AzureRmNetworkInterface |
+        $newVM1 | Get-AzNetworkInterface |
           Select-Object -ExpandProperty IpConfigurations |
             Select-Object Name,PrivateIpAddress
         ```
 
         In this example we are using the PowerShell pipeline to send the \$newVM1 object to the
-        `Get-AzureRmNetworkInterface` cmdlet. From the resulting network interface object we are
+        `Get-AzNetworkInterface` cmdlet. From the resulting network interface object we are
         selecting the nested IpConfigurations object. From the IpConfigurations object we are
         selecting the Name and PrivateIpAddress properties.
 
@@ -179,12 +179,12 @@ items:
         to know the Public IP address.
 
         ```powershell
-        $publicIp = Get-AzureRmPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
+        $publicIp = Get-AzPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
 
         $publicIp | Select-Object Name,IpAddress,@{label='FQDN';expression={$_.DnsSettings.Fqdn}}
         ```
 
-        In this example, we use the `Get-AzureRmPublicIpAddress` and store the results in the
+        In this example, we use the `Get-AzPublicIpAddress` and store the results in the
         \$publicIp variable. From this variable we are selecting properties and using an expression
         to retrieve the nested Fqdn property.
 
@@ -220,7 +220,7 @@ items:
           Credential = $cred
           OpenPorts = 3389
         }
-        $newVM2 = New-AzureRmVM @vm2Params
+        $newVM2 = New-AzVM @vm2Params
 
         $newVM2
         ```
@@ -253,12 +253,12 @@ items:
       title: Cleanup
       content: |-
         Now that the tutorial is complete, it's time to clean up the created resources. You can
-        delete individual resources with the `Remove-AzureRmResource` command, but the safest way
+        delete individual resources with the `Remove-AzResource` command, but the safest way
         to remove all resources in a resource group is delete the group using the
-        `Remove-AzureRmResourceGroup` command.
+        `Remove-AzResourceGroup` command.
 
         ```powershell
-        $job = Remove-AzureRmResourceGroup -Name TutorialResources -Force -AsJob
+        $job = Remove-AzResourceGroup -Name TutorialResources -Force -AsJob
 
         $job
         ```
@@ -266,7 +266,7 @@ items:
         ```Output
         Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
         --     ----            -------------   -----         -----------     --------             -------
-        1      Long Running... AzureLongRun... Running       True            localhost            Remove-AzureRmResource...
+        1      Long Running... AzureLongRun... Running       True            localhost            Remove-AzResource...
         ```
 
         This command deletes the resources created during the tutorial, and is guaranteed to deallocate
@@ -297,12 +297,12 @@ items:
 
         For more information about the commands used in this tutorial, see the following articles.
 
-        - [New-AzureRmResourceGroup](/powershell/module/azurerm.resources/new-azurermresourcegroup)
+        - [New-AzResourceGroup](/powershell/module/Az.resources/new-Azresourcegroup)
         - [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential)
-        - [New-AzureRmVM](/powershell/module/azurerm.compute/new-azurermvm)
+        - [New-AzVM](/powershell/module/Az.compute/new-Azvm)
         - [Select-Object](/powershell/module/microsoft.powershell.utility/select-object)
-        - [Get-AzureRmPublicIpAddress](/powershell/module/azurerm.network/get-AzureRmPublicIpAddress)
-        - [Remove-AzureRmResourceGroup](/powershell/module/azurerm.resources/Remove-AzureRmResourceGroup)
+        - [Get-AzPublicIpAddress](/powershell/module/Az.network/get-AzPublicIpAddress)
+        - [Remove-AzResourceGroup](/powershell/module/Az.resources/Remove-AzResourceGroup)
         - [Wait-Job](/powershell/module/microsoft.powershell.core/wait-job)
 
         There are also articles that go deeper into the features that were shown in the tutorial.
