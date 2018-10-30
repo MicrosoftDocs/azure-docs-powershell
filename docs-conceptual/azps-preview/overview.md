@@ -17,7 +17,7 @@ resources. You can use it in your browser with [Azure Cloud Shell](/azure/cloud-
 you can install it on your local machine and use it in any PowerShell session.
 
 Use the [Cloud Shell](/azure/cloud-shell/overview) to run the Azure PowerShell in your browser, or
-[install](install-azurerm-ps.md) it on own computer. Then read the [Get Started](get-started-azureps.md)
+[install](install-az-ps.md) it on own computer. Then read the [Get Started](get-started-azureps.md)
 article to begin using it. For information about the latest release, see the
 [release notes](release-notes-azureps.md).
 

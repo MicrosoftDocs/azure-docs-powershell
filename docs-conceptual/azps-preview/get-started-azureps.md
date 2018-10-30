@@ -21,7 +21,7 @@ local machine. This article helps get you started with Azure PowerShell and teac
 The first step is to make sure you have the latest version of the Azure PowerShell installed. For
 information about the latest release, see the [release notes](./release-notes-azureps.md).
 
-1. [Install Azure PowerShell](install-azurerm-ps.md).
+1. [Install Azure PowerShell](install-az-ps.md).
 
 2. To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your
    command line.

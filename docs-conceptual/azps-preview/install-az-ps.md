@@ -85,7 +85,7 @@ You can update your Azure PowerShell installation by running [Update-Module](/po
 Update-Module -Name Az
 ```
 
-If you want to remove older versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
+If you want to remove older versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md).
 
 ## Use multiple versions of Azure PowerShell
 
@@ -96,7 +96,7 @@ command:
 Get-Module -Name Az -List | select Name,Version
 ```
 
-To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
+To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md).
 
 You can load a specific version of the `Az` module by providing the `-RequiredVersion` argument to `Install-Module` or `Import-Module`:
 

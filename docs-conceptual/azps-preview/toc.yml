@@ -2,9 +2,9 @@
   href: overview.md
   items:
   - name: Install
-    href: install-azurerm-ps.md
+    href: install-az-ps.md
   - name: Uninstall
-    href: uninstall-azurerm-ps.md
+    href: uninstall-az-ps.md
   - name: Get started
     href: get-started-azureps.md
   - name: Cloud Shell
