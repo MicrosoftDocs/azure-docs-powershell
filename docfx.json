@@ -123,6 +123,27 @@
             },
             {
                 "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "azps-preview",
+                "version": "azps-0.4.0",
+                "exclude": [
+                    "docs-conceptual/**"
+                ],
+                "dest": "module"
+            },
+            {
+                "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "docs-conceptual/azps-preview",
+                "version": "azps-0.4.0",
+                "dest": "azure/preview"
+            },
+            {
+                "files": [
                     "**/*.md",
                     "**/*.yml"
 
@@ -348,6 +369,12 @@
                     "media/**"
                 ],
                 "version": "azurermps-6.11.0"
+            },
+            {
+                "files": [
+                    "media/**"
+                ],
+                "version": "azps-0.4.0"
             }
         ],
         "versions": {
@@ -366,6 +393,9 @@
             },
             "azurermps-6.11.0": {
                 "dest": "azurermps-6.11.0"
+            },
+            "azps-0.4.0": {
+                "dest": "azps-preview"
             },
             "azuresmps-4.0.0": {
                 "dest": "azuresmps-4.0.0"
@@ -440,6 +470,7 @@
                 "azurermps-4.4.1/**/*": "None",
                 "azurermps-5.7.0/**/*": "None",
                 "azurermps-6.11.0/**/*": "None",
+                "azps-0.4.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
                 "azurestackps-1.2.11/**/*": "None",
                 "azurestackps-1.3.0/**/*": "None",
