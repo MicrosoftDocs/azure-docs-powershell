@@ -47,7 +47,8 @@ of the following ways to identify your deployed app:
 The `Get-AzADApplication` cmdlet can be used to get information about your application.
 
 ```azurepowershell-interactive
-Get-AzADApplication -DisplayNameStartWith MyDemoWebApp
+$app = Get-AzADApplication -DisplayNameStartWith MyDemoWebApp
+$app
 ```
 
 ```output
@@ -67,10 +68,9 @@ ReplyUrls               : {}
 The `New-AzADServicePrincipal` cmdlet is used to create the service principal.
 
 ```azurepowershell-interactive
-Add-Type -Assembly System.Web
-$password = [System.Web.Security.Membership]::GeneratePassword(16,3)
+$password = [System.Guid]::NewGuid().ToString()
 $securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
-New-AzADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $securePassword
+New-AzADServicePrincipal -ApplicationId $app.ApplicationId
 ```
 
 ```output
