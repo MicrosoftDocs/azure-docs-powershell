@@ -11,9 +11,8 @@ ms.date: 10/29/2018
 
 # Install Azure PowerShell with PowerShellGet
 
-This article explains the steps to install the Azure PowerShell modules in a Windows environment using
-PowerShellGet. PowerShellGet and module management is the preferred way to install Azure PowerShell but if you would rather install with
-the Web Platform Installer or MSI package, see [Other installation methods](other-install.md).
+This article explains the steps to install the Azure PowerShell modules using PowerShellGet. For the preview release of Az,
+no other install methods are supported. 
 
 ## Requirements
 
@@ -35,11 +34,17 @@ your platform.
 > the `Az` module, `AzureRM` must be uninstalled. For instructions on how to do that, see
 > [Uninstall the Azure PowerShell module (AzureRM)](/powershell/azure/uninstall-azurerm-ps?view=azurermps-6.11.0).
 
-You need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
+To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
 run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
 
 ```powershell
-Install-Module -Name AzureRM -AllowClobber
+Install-Module -Name Az -AllowClobber
+```
+
+If you don't have access to administrator privileges, you can install for the current user by adding the `-Scope` argument.
+
+```powershell
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
 ```
 
 By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet. The
@@ -69,7 +74,7 @@ with your Azure credentials.
 ```powershell
 # Import the module into the PowerShell session
 Import-Module Az
-# Connect to Azure with an interactive dialog for sign-in
+# Connect to Azure with a browser sign in token
 Connect-AzAccount
 ```
 

@@ -1,6 +1,8 @@
 - name: Azure PowerShell
   href: overview.md
   items:
+  - name: Introducing the new Azure PowerShell module
+    href: new-azureps-module-az.md
   - name: Install
     href: install-az-ps.md
   - name: Uninstall
@@ -38,9 +40,6 @@
       href: using-psjobs.md
   - name: Release notes
     href: release-notes-az.md
-    items:
-    - name: Introducing the new Azure PowerShell module
-      href: new-azureps-module-az.md
 - name: Tutorials
   items:
   - name: Create Virtual Machines
