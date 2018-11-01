@@ -7,7 +7,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/09/2018
+ms.date: 10/30/2018
 ---
 # Create an Azure service principal with Azure PowerShell
 
@@ -15,15 +15,12 @@ If you plan to manage your app or service with Azure PowerShell, you should run 
 Active Directory (AAD) service principal, rather than your own credentials. This article steps you
 through creating a security principal with Azure PowerShell.
 
-> [!NOTE]
-> You can also create a service principal through the Azure portal. Read [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal) for more details.
-
-## What is a 'service principal'?
+## What is a service principal?
 
 An Azure service principal is a security identity used by user-created apps, services, and
-automation tools to access specific Azure resources. Think of it as a 'user identity' (username and
-password or certificate) with a specific role, and tightly controlled permissions. A service principal should only need to do specific things, unlike a general user identity. It improves security if you only
-grant it the minimum permissions level needed to perform its management tasks.
+automation tools to access specific Azure resources. Service principals are assigned specific permissions
+related to their tasks, giving you better security control. This is unlike a general user identity, which is usually
+authorized to make any changes.
 
 ## Verify your own permission level
 
@@ -39,15 +36,16 @@ The easiest way to check whether your account has the right permissions is throu
 Once signed in to your Azure account, you can create the service principal. You must have one
 of the following ways to identify your deployed app:
 
-* The unique name of your deployed app, such as "MyDemoWebApp" in the following examples, or
-* the Application ID, the unique GUID associated with your deployed app, service, or object
+* The unique name of your deployed app, such as "MyDemoWebApp" in the following examples
+* The Application ID, the unique GUID associated with your deployed app, service, or object
 
 ### Get information about your application
 
 The `Get-AzADApplication` cmdlet can be used to get information about your application.
 
 ```azurepowershell-interactive
-Get-AzADApplication -DisplayNameStartWith MyDemoWebApp
+$app = Get-AzADApplication -DisplayNameStartWith MyDemoWebApp
+$app
 ```
 
 ```output
@@ -67,10 +65,9 @@ ReplyUrls               : {}
 The `New-AzADServicePrincipal` cmdlet is used to create the service principal.
 
 ```azurepowershell-interactive
-Add-Type -Assembly System.Web
-$password = [System.Web.Security.Membership]::GeneratePassword(16,3)
+$password = [System.Guid]::NewGuid().ToString()
 $securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
-New-AzADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $securePassword
+New-AzADServicePrincipal -ApplicationId $app.ApplicationId
 ```
 
 ```output

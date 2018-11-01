@@ -24,7 +24,7 @@ items:
         resource cleanup.
 
         This tutorial can be completed with the interactive experience offered through Azure Cloud
-        Shell, or you may [install Azure PowerShell](install-azurerm-ps.md) locally.
+        Shell, or you may [install Azure PowerShell](install-az-ps.md) locally.
 
         Use __ctrl-shift-v__ (__cmd-shift-v__ on macOS) to paste tutorial text into Azure Cloud
         Shell.

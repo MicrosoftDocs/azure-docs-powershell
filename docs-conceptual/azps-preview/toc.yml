@@ -1,15 +1,12 @@
 - name: Azure PowerShell
   href: overview.md
   items:
+  - name: Introducing the new Azure PowerShell module
+    href: new-azureps-module-az.md
   - name: Install
-    href: install-azurerm-ps.md
-    items:
-    - name: Install on macOS or Linux
-      href: install-azurermps-maclinux.md
-    - name: Install with MSI
-      href: other-install.md
+    href: install-az-ps.md
   - name: Uninstall
-    href: uninstall-azurerm-ps.md
+    href: uninstall-az-ps.md
   - name: Get started
     href: get-started-azureps.md
   - name: Cloud Shell
@@ -43,9 +40,6 @@
       href: using-psjobs.md
   - name: Release notes
     href: release-notes-az.md
-    items:
-    - name: Introducing the new Azure PowerShell module
-      href: new-azureps-module-az.md
 - name: Tutorials
   items:
   - name: Create Virtual Machines
