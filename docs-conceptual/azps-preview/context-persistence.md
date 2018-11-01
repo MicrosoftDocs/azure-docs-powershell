@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/09/2018
+ms.date: 10/30/2018
 ---
 # Persist user credentials across PowerShell sessions
 
@@ -33,19 +33,19 @@ context consists of five parts:
 - *Credentials* - The information used by Azure to verify your identity and confirm your
   authorization to access resources in Azure
 
-In previous releases, an Azure Context had to be created each time you opened a new PowerShell
-session. Beginning with Azure PowerShell v4.4.0, Azure Contexts can automatically be saved whenever opening
+With the latest version of Azure PowerShell, Azure Contexts can automatically be saved whenever opening
 a new PowerShell session.
 
 ## Automatically save the context for the next sign-in
 
-In versions 6.3.0 and later, Azure PowerShell retains your context information automatically between
-sessions. To set PowerShell to forget your context and credentials, use `Disable-AzContextAutoSave`. You'll need to sign in to Azure every time you open a PowerShell session.
+Azure PowerShell retains your context information automatically between
+sessions. To set PowerShell to forget your context and credentials, use `Disable-AzContextAutoSave`. With context saving disabled, you'll need to sign in to Azure every time you open a PowerShell session.
 
 To allow Azure PowerShell to remember your context after the PowerShell session is closed, use
 `Enable-AzContextAutosave`. Context and credential information are automatically saved in
-a special hidden folder in your user directory (`%AppData%\Roaming\Windows Azure PowerShell`).
-Each new PowerShell session targets the context used in your last session.
+a special hidden folder in your user directory (`$env:USERPROFILE\.Azure` on Windows, 
+and `$HOME/.Azure` on other platforms). Each new PowerShell session targets the context
+used in your last session.
 
 The cmdlets that allow you to manage Azure contexts also allow you fine grained control. If you
 want changes to apply only to the current PowerShell session (`Process` scope) or every PowerShell
@@ -147,7 +147,7 @@ PS C:\> Select-AzContext Contoso1 -Scope Process
 ## How the context autosave setting is remembered
 
 The context AutoSave setting is saved to the user Azure PowerShell directory
-(`%AppData%\Roaming\Windows Azure PowerShell`). Some kinds of computer accounts may not have access
+(`$env:USERPROFILE\.Azure` on Windows, and `$HOME/.Azure` on other platforms). Some kinds of computer accounts may not have access
 to this directory. For such scenarios, you can use the environment variable
 
 ```azurepowershell-interactive
