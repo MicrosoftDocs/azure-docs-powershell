@@ -18,6 +18,8 @@
       href: create-azure-service-principal-azureps.md
     - name: Persistent credentials
       href: context-persistence.md
+  - name: Migrate from AzureRM
+    href: migrate-from-azurerm-to-az.md
   - name: Queries
     href: queries-azureps.md
   - name: Format output 
