@@ -42,7 +42,7 @@ pwsh
 
 To install Azure PowerShell, run the following command:
 
-```powershell
+```powershell-interactive
 Install-Module Az
 ```
 
@@ -74,7 +74,7 @@ Answer `Yes` or `Yes to All` to continue with the installation.
 For compatibility with the existing `AzureRM` module, the new `Az` module has the ability to create backwards compatible
 aliases for the `AzureRM` cmdlets. Before using the module for the first time, set up these aliases with the following command:
 
-```powershell
+```powershell-interactive
 # Import the module into the PowerShell session
 Import-Module Az
 # Enable AzureRM aliases for the user
@@ -98,7 +98,7 @@ To start working with Azure PowerShell, you need to load `Az` into your PowerShe
 with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in
 with your Azure credentials. Importing a module does __not__ require elevated privileges.
 
-```powershell
+```powershell-interactive
 # Import the module into the PowerShell session
 Import-Module Az
 # Connect to Azure with an interactive dialog for sign-in

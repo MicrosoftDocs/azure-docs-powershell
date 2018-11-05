@@ -38,7 +38,7 @@ PowerShell installed.
 The following script queries the PowerShell Gallery to get a list of dependent submodules. Then, the script
 uninstalls the correct version of each submodule.
 
-```powershell
+```powershell-interactive
 function Uninstall-AllModules {
   param(
     [Parameter(Mandatory=$true)]
@@ -73,7 +73,7 @@ function Uninstall-AllModules {
 To use this function, copy and paste the code into your PowerShell session. The following example
 shows how to run the function to remove an older version of Azure PowerShell.
 
-```powershell
+```powershell-interactive
 Uninstall-AllModules -TargetModule AzureRM -Version 4.4.1 -Force
 ```
 
