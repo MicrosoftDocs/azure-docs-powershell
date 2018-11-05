@@ -38,7 +38,7 @@ To install the Azure PowerShell Az module, follow these steps:
 you remove _all_ installed versions of AzureRM, not just the most recent version.
 * [Install the Az module](install-az-ps.md)
 
-## Enable AzureRM alias mode
+## <a name="aliases"/>Enable AzureRM alias mode
 
 With AzureRM uninstalled and your scripts working with the latest AzureRM version, now is the time to
 enable the compatibility mode for the Az module. This is done with the command
