@@ -418,8 +418,11 @@
                 "azurestackps-*/**/*.md": "femila"
             },
             "ms.service": {
+                "docs-conceptual/azurestackps-*/**/*.md": "azure-stack",
                 "azurestackps-*/**/*.md": "azure-stack",
+                "docs-conceptual/azuresmps-*/**/*.md": "azure-powershell",
                 "azuresmps-*/**/*.md": "azure-powershell",
+                "docs-conceptual/azurermps-*/**/*.md": "azure-powershell",
                 "azurermps-*/**/*.md": "azure-powershell"
             },
             "ms.topic": {
