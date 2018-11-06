@@ -52,7 +52,7 @@ Sign on interactively:
   '-Environment' can let you authenticate for Azure China or Azure Germany. For example, to connect
   to Azure China:
 
-    ```powershell
+    ```powershell-interactive
     Connect-AzAccount -Environment AzureChinaCloud
     ```
 
@@ -258,7 +258,7 @@ New-AzVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 Now that the VM has been created, you can sign in to your new Linux VM using SSH with the public IP
 address of the VM you created:
 
-```powershell
+```powershell-interactive
 ssh azureuser@$($publicIp.IpAddress)
 ```
 

@@ -19,7 +19,7 @@ no other install methods are supported.
 Azure PowerShell works with either PowerShell 5.x on Windows, or PowerShell 6.x on any platform. To check the version of PowerShell running
 on your machine, run the following command:
 
-```powershell
+```powershell-interactive
 $PSVersionTable.PSVersion
 ```
 
@@ -37,13 +37,13 @@ your platform.
 To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
 run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
 
-```powershell
+```powershell-interactive
 Install-Module -Name Az -AllowClobber
 ```
 
 If you don't have access to administrator privileges, you can install for the current user by adding the `-Scope` argument.
 
-```powershell
+```powershell-interactive
 Install-Module -Name Az -AllowClobber -Scope CurrentUser
 ```
 
@@ -71,7 +71,7 @@ To start working with Azure PowerShell, you need to load `Az` into your current 
 with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in
 with your Azure credentials.
 
-```powershell
+```powershell-interactive
 # Import the module into the PowerShell session
 Import-Module Az
 # Connect to Azure with a browser sign in token
@@ -86,7 +86,7 @@ To learn how to persist your Azure sign-in across sessions, see [Persist user cr
 
 You can update your Azure PowerShell installation by running [Update-Module](/powershell/module/powershellget/update-module). This command does __not__ uninstall earlier versions.
 
-```powershell
+```powershell-interactive
 Update-Module -Name Az
 ```
 
@@ -97,7 +97,7 @@ If you want to remove older versions of Azure PowerShell from your system, see [
 It's possible to install more than one version of Azure PowerShell. To check if you have multiple versions of Azure PowerShell installed, use the following
 command:
 
-```powershell
+```powershell-interactive
 Get-Module -Name Az -List | select Name,Version
 ```
 
@@ -105,7 +105,7 @@ To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell mod
 
 You can load a specific version of the `Az` module by providing the `-RequiredVersion` argument to `Install-Module` or `Import-Module`:
 
-```powershell
+```powershell-interactive
 Install-Module -Name Az -RequiredVersion 0.4.0
 Import-Module -Name Az -RequiredVersion 0.4.0
 ```

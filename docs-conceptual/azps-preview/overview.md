@@ -34,12 +34,12 @@ To prepare for the module changeover and get all of your scripts up-to-date, we'
 cmdlet set. In general, the cmdlet names are the same except that any instance of `AzureRM` has been replaced with `Az`. So old commands like `New-AzureRmVM` have become
 `New-AzVM`.
 
-For detailed instructions on migrating to the new module, check out [Migrating from AzureRM to Az](__TBD__).
+For detailed instructions on migrating to the new module, check out [Migrating from AzureRM to Az](migrate-from-azurerm-to-az.md).
 
 > [!IMPORTANT]
 >
 > Since the `Az` module is in preview, our documentation in other sections of the site still use the `AzureRM` cmdlet set. You can use `AzureRM`-style cmdlets through
-> a compatibility mode that can be enabled with `Enable-AzureRmAlias`. To learn more about aliasing, see [Migrating from AzureRM to Az](__TBD__#aliases).
+> a compatibility mode that can be enabled with `Enable-AzureRmAlias`. To learn more about aliasing, see [Migrating from AzureRM to Az](migrate-from-azurerm-to-az.md#aliases).
 > If you run your PowerShell scripts in Cloud Shell, `AzureRM` aliases are already enabled for you.
 
 ## Common scenarios
