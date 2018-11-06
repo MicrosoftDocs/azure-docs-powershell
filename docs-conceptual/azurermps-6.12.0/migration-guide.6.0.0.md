@@ -93,7 +93,7 @@ The alias `Tags` for the `Tag` parameter has been removed across numerous cmdlet
 **Miscellaneous**
 - The sku name property nested in types `PSDisk` and `PSSnapshot` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
 
-```powershell
+```powershell-interactive
 $disk = Get-AzureRmDisk -ResourceGroupName "MyResourceGroup" -DiskName "MyDiskName"
 $disk.Sku.Name       # This will now return Standard_LRS or Premium_LRS
 
@@ -103,7 +103,7 @@ $snapshot.Sku.Name   # This will now return Standard_LRS or Premium_LRS
 
 - The storage account type property nested in types `PSVirtualMachine`, `PSVirtualMachineScaleSet` and `PSImage` changed from `StandardLRS` and `PremiumLRS` to `Standard_LRS` and `Premium_LRS`, respectively
 
-```powershell
+```powershell-interactive
 $vm = Get-AzureRmVM -ResourceGroupName "MyResourceGroup" -Name "MyVM"
 $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now return Standard_LRS or Premium_LRS
 ```
@@ -120,7 +120,7 @@ $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now
 **New-AzureRmAvailabilitySet**
 - The parameter `Managed` was removed in favor of `Sku`
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmAvailabilitySet -ResourceGroupName "MyRG" -Name "MyAvailabilitySet" -Location "West US" -Managed
 
@@ -164,7 +164,7 @@ New-AzureRmAvailabilitySet -ResourceGroupName "MyRG" -Name "MyAvailabilitySet" -
 **Export-AzureRmDataLakeStoreItem**
 - Parameters `PerFileThreadCount` and `ConcurrentFileCount` were removed. Please use the `Concurrency` parameter moving forward
 
-```powershell
+```powershell-interactive
 # Old
 Export-AzureRmDataLakeStoreItem -Account contoso -Path /test -Destination C:\test -Recurse -Resume -PerFileThreadCount 2 -ConcurrentFileCount 80
 
@@ -175,7 +175,7 @@ Export-AzureRmDataLakeStoreItem -Account contoso -Path /test -Destination C:\tes
 **Import-AzureRmDataLakeStoreItem**
 - Parameters `PerFileThreadCount` and `ConcurrentFileCount` were removed. Please use the `Concurrency` parameter moving forward
 
-```powershell
+```powershell-interactive
 # Old
 Import-AzureRmDataLakeStoreItem -Account contoso -Path C:\test -Destination /test -Recurse -Resume -ForceBinary -PerFileThreadCount 2 -ConcurrentFileCount 80
 
@@ -186,7 +186,7 @@ Import-AzureRmDataLakeStoreItem -Account contoso -Path C:\test -Destination /tes
 **Remove-AzureRmDataLakeStoreItem**
 - Parameter `Clean` was removed
 
-```powershell
+```powershell-interactive
 # Old
 Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse -Clean
 
@@ -252,7 +252,7 @@ For more information on composing shared access tokens for Azure Storage, please
 - [Constructing a Service SAS] (https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
 - [Constructing an Account SAS] (https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
 
-```powershell
+```powershell-interactive
 # Old
 $sas = Set-AzureKeyVaultManagedStorageSasDefinition -VaultName myVault -Name myKey -Service Blob -Permissions 'rcw' -ValidityPeriod 180d
 
@@ -374,7 +374,7 @@ $sas=Set-AzureKeyVaultManagedStorageSasDefinition -AccountName $sa.StorageAccoun
 - The parameter `RedisVersion` was removed
 - The parameter `MaxMemoryPolicy` was removed in favor of `RedisConfiguration`
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -Location "North Central US" -MaxMemoryPolicy "allkeys-lru"
 
@@ -385,7 +385,7 @@ New-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -Location "
 **Set-AzureRmRedisCache**
 - The parameter `MaxMemoryPolicy` was removed in favor of `RedisConfiguration`
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -MaxMemoryPolicy "allkeys-lru"
 
@@ -398,7 +398,7 @@ Set-AzureRmRedisCache -ResourceGroupName "MyRG" -Name "MyRedisCache" -RedisConfi
 **Find-AzureRmResource**
 - This cmdlet was removed and the functionality was moved into `Get-AzureRmResource`
 
-```powershell
+```powershell-interactive
 # Old
 Find-AzureRmResource -ResourceType "Microsoft.Web/sites" -ResourceGroupNameContains "ResourceGroup"
 Find-AzureRmResource -ResourceType "Microsoft.Web/sites" -ResourceNameContains "test"
@@ -411,7 +411,7 @@ Get-AzureRmResource -ResourceType "Microsoft.Web/sites" -Name "*test*"
 **Find-AzureRmResourceGroup**
 - This cmdlet was removed and the functionality was moved into `Get-AzureRmResourceGroup`
 
-```powershell
+```powershell-interactive
 # Old
 Find-AzureRmResourceGroup
 Find-AzureRmResourceGroup -Tag @{ "testtag" = $null }
@@ -426,7 +426,7 @@ Get-AzureRmResourceGroup -Tag @{ "testtag" = "testval" }
 **Get-AzureRmRoleDefinition**
 - Parameter `AtScopeAndBelow` was removed.
 
-```powershell
+```powershell-interactive
 
 # Old
 Get-AzureRmRoleDefinition [other required parameters] -AtScopeAndBelow
