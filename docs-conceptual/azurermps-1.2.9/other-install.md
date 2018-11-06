@@ -36,7 +36,7 @@ Once the installation completes, your `$env:PSModulePath` setting should include
 containing the Azure PowerShell cmdlets. The following command can be used to verify that the Azure
 PowerShell is installed properly.
 
-```powershell
+```powershell-interactive
 # To make sure the Azure PowerShell module is available after you install
 Get-Module -ListAvailable Azure* | Select-Object Name, Version, Path
 ```
@@ -64,7 +64,7 @@ At line:1 char:1
 This error can be corrected by restarting the machine or importing the module using the fully
 qualified path. For example:
 
-```powershell
+```powershell-interactive
 Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.psd1"
 ```
 

@@ -35,7 +35,7 @@ items:
         If you're using a local install of the Azure PowerShell, you need to sign in before
         performing any other steps.
 
-        ```powershell
+        ```powershell-interactive
         Connect-AzureRmAccount
         ```
 
@@ -49,7 +49,7 @@ items:
         For this tutorial, all of the created resources go into a single group named
         `TutorialResources`.
 
-        ```powershell
+        ```powershell-interactive
         New-AzureRmResourceGroup -Name TutorialResources -Location eastus
         ```
 
@@ -67,7 +67,7 @@ items:
         Before you can create a new virtual machine, you must create a credential object containing
         the username and password for the administrator account of the Windows VM.
 
-        ```powershell
+        ```powershell-interactive
         $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
         ```
 
@@ -91,7 +91,7 @@ items:
 
         Create a new virtual machine running Windows.
 
-        ```powershell
+        ```powershell-interactive
         $vmParams = @{
           ResourceGroupName = 'TutorialResources'
           Name = 'TutorialVM1'
@@ -117,7 +117,7 @@ items:
         Once the VM is ready, we can view the results in the Azure Portal or by inspecting the
         \$newVM1 variable.
 
-        ```powershell
+        ```powershell-interactive
         $newVM1
         ```
 
@@ -145,7 +145,7 @@ items:
         Let's get some more detailed information from the VM we just created. In this example, we verify
         the Name of the VM and the admin account we created.
 
-        ```powershell
+        ```powershell-interactive
         $newVM1.OSProfile | Select-Object ComputerName,AdminUserName
         ```
 
@@ -158,7 +158,7 @@ items:
         We can use other Azure PowerShell commands to get specific information about the network
         configuration.
 
-        ```powershell
+        ```powershell-interactive
         $newVM1 | Get-AzureRmNetworkInterface |
           Select-Object -ExpandProperty IpConfigurations |
             Select-Object Name,PrivateIpAddress
@@ -178,7 +178,7 @@ items:
         To confirm that the VM is running, we need to connect via Remote Desktop. For that, we need
         to know the Public IP address.
 
-        ```powershell
+        ```powershell-interactive
         $publicIp = Get-AzureRmPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
 
         $publicIp | Select-Object Name,IpAddress,@{label='FQDN';expression={$_.DnsSettings.Fqdn}}
@@ -197,7 +197,7 @@ items:
         From your local machine you can run the following command to connect to the VM over Remote
         Desktop.
 
-        ```powershell
+        ```powershell-interactive
         mstsc.exe /v <PUBLIC_IP_ADDRESS>
         ```
 
@@ -209,7 +209,7 @@ items:
       content: |-
         The second VM uses the existing subnet.
 
-        ```powershell
+        ```powershell-interactive
         $vm2Params = @{
           ResourceGroupName = 'TutorialResources'
           Name = 'TutorialVM2'
@@ -245,7 +245,7 @@ items:
         the FullyQualifiedDomainName property of the \$newVM2 object. Use the following command to
         connect using Remote Desktop.
 
-        ```powershell
+        ```powershell-interactive
         mstsc.exe /v $newVM2.FullyQualifiedDomainName
         ```
 
@@ -257,7 +257,7 @@ items:
         to remove all resources in a resource group is delete the group using the
         `Remove-AzureRmResourceGroup` command.
 
-        ```powershell
+        ```powershell-interactive
         $job = Remove-AzureRmResourceGroup -Name TutorialResources -Force -AsJob
 
         $job
@@ -273,7 +273,7 @@ items:
         them in the correct order. The `-AsJob` parameter keeps PowerShell from blocking while the
         deletion takes place. To wait until the deletion is complete, use the following command:
 
-        ```powershell
+        ```powershell-interactive
         Wait-Job -Id $job.Id
         ```
 
