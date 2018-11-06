@@ -1,6 +1,13 @@
 - name: Azure PowerShell
   href: overview.md
   items:
+  - name: Introducing the new Az module
+    href: new-azureps-module-az.md
+    items:
+    - name: Install Az
+      href: install-az-ps.md
+    - name: Migrate to Az
+      href: migrate-from-azurerm-to-az.md
   - name: Install
     href: install-azurerm-ps.md
     items:

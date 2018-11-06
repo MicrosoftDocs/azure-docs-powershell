@@ -22,11 +22,11 @@ This is a new module, so the version has been reset. The first stable release wi
 
 ## Upgrade to Az
 
-All users should upgrade to the new `Az` module. To do so:
+It's recommended that users upgrade to the new `Az` module. To do so:
 
-* [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-azurerm-ps?view=azurermps-6.11.0)
-* [Install the Azure PowerShell Az module](/powershell/azure/install-azurerm-ps?view=azureazps-0.5.0)
-* Migrate existing `AzureRM` scripts to the new `Az` command syntax.
+* [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-azurerm-ps)
+* [Install the Azure PowerShell Az module](/powershell/azure/install-az-ps)
+* Enable compatibility mode for AzureRM with `Enable-AzureRMAlias` while you become familiar with the new command set.
 
 ## Migrate existing scripts to Az
 
@@ -35,11 +35,15 @@ help you use existing scripts while you work on updates to the new syntax. Use t
 `Enable-AzAlias` cmdlet to enable the `AzureRM` compatibility mode. This cmdlet defines
 `AzureRM` cmdlet names as aliases for the new `Az` cmdlet names.
 
-For a full description of the migration process, including an example, see [__TBD__](link-tbd.md).
+The new cmdlet names have also been designed to be easy to learn. Instead of using `AzureRM` in cmdlet names,
+use `Az`. For most cmdlets, this should be the only change required. For example, the old command `New-AzureRMVM`
+has become `New-AzVM`.
+
+For a full description of the migration process, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
 
 ## The future of support for AzureRM
 
-The existing `AzureRM` module enters maintenance mode when `Az` version 1.0 is released. After this
-release, the `AzureRM` module will continue to receive important bug fixes. New features will only
-be added to the `Az` module. To keep up with the latest Azure services and features, you must
+The existing `AzureRM` module enters maintenance mode when `Az` version 1.0 is released in December
+2018. At that time, the `AzureRM` module will continue to receive important bug fixes. New features will only
+be added to the `Az` module. To keep up with the latest Azure services and features, you should
 switch to the `Az` module.

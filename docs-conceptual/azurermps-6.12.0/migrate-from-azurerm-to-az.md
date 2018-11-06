@@ -23,8 +23,8 @@ them in order unless you've already completed the process outlined in a single s
 ## Ensure your existing scripts work with the latest AzureRM release
 
 This is the most important step! Run your existing scripts, and make sure that they work with the
-_latest_ release of AzureRM (__6.11.0__). If your scripts do not work, make sure to go through and read
-the [AzureRM migration guide](/powershell/azure/migration-guide.6.0.0).
+_latest_ release of AzureRM (__6.12.0__). If your scripts do not work, make sure to go through and read
+the [AzureRM migration guide](migration-guide.6.0.0.md).
 
 ## Install the Azure PowerShell Az module
 
@@ -34,7 +34,7 @@ command set until your migration is completed.
 
 To install the Azure PowerShell Az module, follow these steps:
 
-* [Uninstall the AzureRM module](/powershell/azure/uninstall-azurerm-ps?view=azurermps-6.11.0). Make sure that
+* [Uninstall the AzureRM module](uninstall-azurerm-ps.md). Make sure that
 you remove _all_ installed versions of AzureRM, not just the most recent version.
 * [Install the Az module](install-az-ps.md)
 
@@ -52,9 +52,9 @@ aliases are written to the user profile for the selected scope. If no user profi
 
 > [!WARNING]
 >
-> You can use a different `-Scope` for this command, but it's not recommended! Because the aliases are written to
-> the user profile for the selected scope, keep enabling them to as limited a scope as possible. Enabling aliases
-> system-wide could also cause issues for other users which have AzureRM installed in their local scope.
+> You can use a different `-Scope` for this command, but it's not recommended! Aliases are written to
+> the user profile for the selected scope, so keep enabling them to as limited a scope as possible. Enabling aliases
+> system-wide could also cause issues for other users which have `AzureRM` installed in their local scope.
 
 Once the alias mode is enabled, run your scripts again to confirm that they still function as expected. 
 
@@ -78,7 +78,7 @@ so that `Azure` is replaced with `Az`. For example, `Get-AzureStorageBlob` has b
 
 To help with the renaming of modules and cmdlets in your scripts, you can use the following PowerShell script
 to automate most of the work. You will still need to make sure that the script runs at the end of the edits,
-but the number of changes you have to make on your own will hopefully be much fewer!
+but hopefully won't need to make any serious changes.
 
 ```powershell-interactive
 function Update-AzureRmScript {
@@ -150,17 +150,8 @@ function Update-AzureRmScript {
 > cause a problem. Just be aware that this script __will__ change all function and command names
 > containing `AzureRM`.
 
-## Disable AzureRM aliases
-
-When you've completed your script migration and no longer need AzureRM compatibility, you should disable the cmdlet
-aliases. This is done with the `Disable-AzureRmAlias` command:
-
-```powershell-interactive
-Disable-AzureRmAlias -Scope CurrentUser
-```
-
-If you provided a different value for `-Scope` when enabling aliases, make sure that you use it here as well.
-
 ## Summary
 
-By following these steps, you can update all of your existing scripts to use the new module without a lot of pain or difficulty. If you have any questions or encountered problems with these steps that made your migration difficult, please feel free to comment on this article so that we can improve the instructions.
+By following these steps, you can update all of your existing scripts to use the new module without a lot of pain or difficulty.
+If you have any questions or encountered problems with these steps that made your migration difficult, please comment on this article
+so that we can improve the instructions.
