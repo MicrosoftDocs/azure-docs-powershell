@@ -24,13 +24,13 @@ Gallery Module for ARM Cmdlets: [link](https://www.powershellgallery.com/package
 
 To install `AzureRM` from the PowerShell Gallery, run the following command:
 
-```powershell
+```powershell-interactive
 Install-Module -Name AzureRM -Repository PSGallery -Force
 ```
 
 To update from an older version of `AzureRM`, run the following command:
 
-```powershell
+```powershell-interactive
 Update-Module -Name AzureRM
 ```
 
