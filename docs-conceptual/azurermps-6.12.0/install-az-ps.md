@@ -32,7 +32,7 @@ your platform.
 >
 > It's not possible to have both the `AzureRM` and `Az` modules installed on a system at the same time. In order to install
 > the `Az` module, `AzureRM` must be uninstalled. For instructions on how to do that, see
-> [Uninstall the Azure PowerShell module (AzureRM)](/powershell/azure/uninstall-azurerm-ps?view=azurermps-6.11.0).
+> [Uninstall the Azure PowerShell module (AzureRM)](uninstall-azurerm-ps.md).
 
 To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
 run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
@@ -90,7 +90,7 @@ You can update your Azure PowerShell installation by running [Update-Module](/po
 Update-Module -Name Az
 ```
 
-If you want to remove older versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md).
+If you want to remove older versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
 
 ## Use multiple versions of Azure PowerShell
 
@@ -101,7 +101,7 @@ command:
 Get-Module -Name Az -List | select Name,Version
 ```
 
-To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md).
+To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
 
 You can load a specific version of the `Az` module by providing the `-RequiredVersion` argument to `Install-Module` or `Import-Module`:
 

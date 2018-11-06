@@ -28,7 +28,7 @@ The following samples can help you learn how to perform common scenarios with Az
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
+[!INCLUDE[az-replacing-azurerm](../includes/az-replacing-azurerm.md)]
 
 ## Learn PowerShell basics
 

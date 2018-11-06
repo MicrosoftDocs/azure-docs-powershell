@@ -20,7 +20,7 @@ For instructions to install Azure PowerShell on other platforms, see [Install an
 The Azure classic deployment model is not supported by this version of Azure PowerShell. For support for classic deployments,
 follow the instructions in [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
 
-[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
+[!INCLUDE[az-replacing-azurerm](../includes/az-replacing-azurerm.md)]
 
 ## Requirements
 
