@@ -10,25 +10,25 @@
                 "dest": "module/deploymentmanager"
             },
             {
-                "files":[
+                "files": [
                     "**/*.md",
                     "**/*.yml"
                 ],
-                "src":"docs-conceptual/azuredmps-0.9.0",
-                "version":"azuredmps-0.9.0-preview",
-                "dest":"azure/deploymentmanager"
+                "src": "docs-conceptual/azuredmps-0.9.0",
+                "version": "azuredmps-0.9.0-preview",
+                "dest": "azure/deploymentmanager"
             },
             {
-                "files":[
+                "files": [
                     "**/*.md",
                     "**/*.yml"
                 ],
-                "src":"azuredmps-0.9.0",
-                "version":"azuredmps-0.9.0-preview",
-                "exclude":[
+                "src": "azuredmps-0.9.0",
+                "version": "azuredmps-0.9.0-preview",
+                "exclude": [
                     "docs-conceptual/**"
                 ],
-                "dest":"module"
+                "dest": "module"
             },
             {
                 "files": [
@@ -125,7 +125,6 @@
                 "files": [
                     "**/*.md",
                     "**/*.yml"
-
                 ],
                 "src": "azuresmps-4.0.0",
                 "version": "azuresmps-4.0.0",
@@ -227,7 +226,7 @@
                 "version": "azurestackps-1.4.0",
                 "dest": "azure/azure-stack"
             },
-{
+            {
                 "files": [
                     "toc.yml"
                 ],
@@ -254,7 +253,7 @@
                 "src": "docs-conceptual/azurestackps-1.5.0",
                 "version": "azurestackps-1.5.0",
                 "dest": "azure/azure-stack"
-            },			
+            },
             {
                 "files": [
                     "AADRM/**/*.md",
@@ -351,9 +350,8 @@
             }
         ],
         "versions": {
-            "azuredmps-0.9.0-preview":
-            {
-                "dest":"azuredmps-0.9.0-preview"
+            "azuredmps-0.9.0-preview": {
+                "dest": "azuredmps-0.9.0-preview"
             },
             "azurermps-2.3.0": {
                 "dest": "azurermps-2.3.0"
@@ -406,13 +404,13 @@
                 "azurermps-*/**/*.md": "aaroney",
                 "azuresmps-*/**/*.md": "aaroney",
                 "azurestackps-*/**/*.md": "jeffgilb",
-                "azuredmps-*/**/*.md":"deveshguha"
+                "azuredmps-*/**/*.md": "deveshguha"
             },
             "author": {
                 "azurermps-*/**/*.md": "twitchax",
                 "azuresmps-*/**/*.md": "twitchax",
                 "azurestackps-*/**/*.md": "jeffgilb",
-                "azuredmps-*/**/*.md":"deveshguha"
+                "azuredmps-*/**/*.md": "deveshguha"
             },
             "ms.manager": {
                 "azurermps-*/**/*.md": "carmonm",
@@ -421,22 +419,31 @@
             },
             "ms.service": {
                 "azurestackps-*/**/*.md": "azure-stack",
-                "azuresmps-*/**/*.md": "azure-asm",
+                "azuresmps-*/**/*.md": "azure-powershell",
                 "azurermps-*/**/*.md": "azure-powershell"
             },
-            "ms.topic":
-            {
-                "azuredmps-*/**/*.md":"reference",
-                "azurermps-*/**/*.md":"reference",
-                "azurestackps-*/**/*.md":"reference",
-                "docs-conceptual/**/*.md":"article"
+            "ms.topic": {
+                "azuredmps-*/**/*.md": "reference",
+                "azurermps-*/**/*.md": "reference",
+                "azurestackps-*/**/*.md": "reference",
+                "docs-conceptual/**/*.md": "article"
             },
-            "ms.date":
-            {
-                "azuredmps-*/**/*.md":"09/28/2018"
+            "ms.date": {
+                "azuredmps-*/**/*.md": "09/28/2018",
+                "azurestackps-1.2.11/**/*.md": "02/21/2018",
+                "azurestackps-1.3.0/**/*.md": "05/16/2018",
+                "azurestackps-1.4.0/**/*.md": "08/18/2018",
+                "azurestackps-1.5.0/**/*.md": "09/19/2018",
+                "azurermps-1.2.9/**/*.md": "11/02/2017",
+                "azurermps-2.3.0/**/*.md": "11/02/2017",
+                "azurermps-4.4.1/**/*.md": "06/20/2018",
+                "azurermps-5.7.0/**/*.md": "07/26/2018",
+                "azurermps-6.10.0/**/*.md": "10/9/2018",
+                "azurermps-6.11.0/**/*.md": "10/23/2018",
+                "azuresmps-4.0.0/**/*.md": "09/11/2018"
             },
             "feedback_system": {
-     			"azurermps-2.3.0/**/*": "None",
+                "azurermps-2.3.0/**/*": "None",
                 "azurermps-4.4.1/**/*": "None",
                 "azurermps-5.7.0/**/*": "None",
                 "azurermps-6.11.0/**/*": "None",
@@ -445,7 +452,7 @@
                 "azurestackps-1.3.0/**/*": "None",
                 "azurestackps-1.4.0/**/*": "None",
                 "azurestackps-1.5.0/**/*": "None",
-                "azuredmps-0.9.0/**/*":"None"			
+                "azuredmps-0.9.0/**/*": "None"
             },
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.md": true
@@ -458,8 +465,6 @@
                 "Azure"
             ],
             "breadcrumb_path": "/powershell/bread/toc.json",
-            "ms.prod": "powershell",
-            "ms.technology": "azure-powershell",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
             "feedback_github_repo": "azure/azure-docs-powershell",
