@@ -43,7 +43,7 @@ you remove _all_ installed versions of AzureRM, not just the most recent version
 With AzureRM uninstalled and your scripts working with the latest AzureRM version, now is the time to
 enable the compatibility mode for the Az module. This is done with the command
 
-```powershell
+```powershell-interactive
 Enable-AzureRmAlias -Scope CurrentUser
 ```
 
@@ -80,7 +80,7 @@ To help with the renaming of modules and cmdlets in your scripts, you can use th
 to automate most of the work. You will still need to make sure that the script runs at the end of the edits,
 but the number of changes you have to make on your own will hopefully be much fewer!
 
-```powershell
+```powershell-interactive
 function Update-AzureRmScript {
     param(
         [Parameter(mandatory=$true)]
@@ -155,7 +155,7 @@ function Update-AzureRmScript {
 When you've completed your script migration and no longer need AzureRM compatibility, you should disable the cmdlet
 aliases. This is done with the `Disable-AzureRmAlias` command:
 
-```powershell
+```powershell-interactive
 Disable-AzureRmAlias -Scope CurrentUser
 ```
 
