@@ -89,4 +89,10 @@ Uninstalling Azure.AnalysisServices version 0.4.7
 ...
 ```
 
-Run this command for every version of Azure PowerShell that you want to uninstall.
+Run this command for every version of Azure PowerShell that you want to uninstall. For convenience, the following
+script will uninstall all versions of AzureRM __except__ for the latest.
+
+```powershell-interactive
+$versions = (get-installedmodule AzureRM -AllVersions | Select-Object Version)
+$versions[1..($versions.Length-1)]  | foreach { Uninstall-AllModules -TargetModule AzureRM -Version ($_.Version) -Force }
+```
