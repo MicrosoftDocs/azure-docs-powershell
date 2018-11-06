@@ -24,7 +24,7 @@ By default each PowerShell cmdlet has predefined formatting of output making it 
 
 In this example we get a list of Azure VMs in our default subscription.  The Get-AzureRmVM command defaults output into a table format.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM
 ```
 
@@ -37,7 +37,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 
 If you would like to limit the columns returned you can use the `Format-Table` cmdlet. In the following example we get the same list of virtual machines but restrict the output to just the name of the VM, the resource group, and the location of the VM.  The `-Autosize` parameter sizes the columns according to the size of the data.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Format-Table Name,ResourceGroupName,Location -AutoSize
 ```
 
@@ -50,7 +50,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 
 If you would prefer you can view information in a list format. The following example shows this using the`Format-List` cmdlet.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Format-List Name,VmId,Location,ResourceGroupName
 ```
 
@@ -70,7 +70,7 @@ ResourceGroupName : MYWESTEURG
 
 PowerShell also offers multiple output format you can use to meet your needs.  In the following example we use the `Select-Object` cmdlet to get attributes of the virtual machines in our subscription and and convert the output to CSV format for easy import into a database or spreadsheet.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation
 ```
 
@@ -82,7 +82,7 @@ Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,Provisioni
 
 You can also convert the output into JSON format.  The following example creates the same list of VMs but changes the output format to JSON.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Json
 ```
 
