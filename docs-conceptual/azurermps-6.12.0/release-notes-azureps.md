@@ -159,7 +159,7 @@ This is a list of changes made to Azure PowerShell in this release.
 #### AzureRM.Profile
 * Minor changes to the storage common code
 * Updated help files to include full parameter types.
-- Changed -ServicePrincipal to non-mandatory in the ServicePrincipalCertificateWithSubscriptionId parameter set 
+* Changed -ServicePrincipal to non-mandatory in the ServicePrincipalCertificateWithSubscriptionId parameter set 
 
 #### Azure.Storage
 * Support create Storage Context with OAuth. 
@@ -399,7 +399,7 @@ This is a list of changes made to Azure PowerShell in this release.
 
 #### Azure.Storage
 * Remove the 5TB limitation for Azure File Share quota
-- Set-AzureStorageShareQuota
+* Set-AzureStorageShareQuota
 
 #### AzureRM.AnalysisServices
 * Updated to the latest version of the Azure ClientRuntime.
@@ -676,8 +676,8 @@ This is a list of changes made to Azure PowerShell in this release.
 
 #### Azure.Storage
 * Support Upload Blob or File with write only Sas token
-- Set-AzureStorageBlobContent
-- Set-AzureStorageFileContent
+* Set-AzureStorageBlobContent
+* Set-AzureStorageFileContent
 
 #### AzureRM.AnalysisServices
 * Add required property ResourceGroupName to AS.

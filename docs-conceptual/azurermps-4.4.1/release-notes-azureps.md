@@ -116,7 +116,7 @@ This is a list of changes made to Azure PowerShell in this release.
     - Updated New-AzureRmNetworkSecurityRuleConfig: Updated SourcePortRange, DestinationPortRange, SourceAddressPrefix  parameter to accept a list of strings
     - Updated Set-AzureRmNetworkSecurityRuleConfig: Updated SourcePortRange, DestinationPortRange, SourceAddressPrefix parameter to accept a list of strings
     - Updated Add-AzureRmNetworkSecurityRuleConfig: Updated SourcePortRange, DestinationPortRange, SourceAddressPrefix parameter to accept a list of strings
-    - Updated New-AzureRmNetworkSecurityGroup : Updated SecurityRules parameter to accept SourcePortRange, DestinationPortRange, SourceAddressPrefix parameters which are list of strings in PSSecurityRule object
+    - Updated New-AzureRmNetworkSecurityGroup : Updated SecurityRules parameter to accept SourcePortRange, DestinationPortRange, SourceAddressPrefix parameters which are list of strings in PSSecurityRule object
     - Updated Get-AzureRmEffectiveNetworkSecurityGroup: Added parameter TagMap
     - Updated Get-AzureRmEffectiveNetworkSecurityGroup: Updated returned PSEffectiveSecurityRule object with SourcePortRange, DestinationPortRange, SourceAddressPrefix parameters which are list of strings.
   * Added support for DDoS protection for virtual networks
@@ -257,14 +257,15 @@ This is a list of changes made to Azure PowerShell in this release.
       - Remove-AzureRMRoleDefinition
       - Set-AzureRMRoleDefinition
 * ServiceBus
-    * Added below new commandlets for AuthorizationRules for NameSpace, Queue and Topic. according to parameter set the authorization rule orperations are perfomed.
-     - New-AzureRmServiceBusAuthorizationRule - Adds a new AuthorizationRule to the existing ServiceBus NameSpace/Queue/Topic.
-     - Get-AzureRmServiceBusAuthorizationRule - Gets AuthorizationRule / List of AuthorizationRules for the existing ServiceBus NameSpace/Queue/Topic.
-     - Set-AzureRmServiceBusAuthorizationRule - Updates properties of existing AuthorizationRule of Servicebus NameSpace/Queue/Topic.
-     - New-AzureRmServiceBusKey - Generates a new Primary/Secondary Key for AuthorizationRule of existing ServiceBus NameSpace/Queue/Topic.
-     - Get-AzureRmServiceBusKey - Gets Primary/Secondary Key for AuthorizationRule of existing ServiceBus NameSpace/Queue/Topic.
-     - Remove-AzureRmServiceBusNamespaceAuthorizationRule - Deletes the existing AuthorizationRule of ServiceBus NameSpace/Queue/Topic.
-    * Added Resource Group property to NamespceAttributes
+  * Added below new commandlets for AuthorizationRules for NameSpace, Queue and Topic. according to parameter set the authorization rule orperations are perfomed.
+    - New-AzureRmServiceBusAuthorizationRule - Adds a new AuthorizationRule to the existing ServiceBus NameSpace/Queue/Topic.
+    - Get-AzureRmServiceBusAuthorizationRule - Gets AuthorizationRule / List of AuthorizationRules for the existing ServiceBus NameSpace/Queue/Topic.
+    - Set-AzureRmServiceBusAuthorizationRule - Updates properties of existing AuthorizationRule of Servicebus NameSpace/Queue/Topic.
+    - New-AzureRmServiceBusKey - Generates a new Primary/Secondary Key for AuthorizationRule of existing ServiceBus NameSpace/Queue/Topic.
+    - Get-AzureRmServiceBusKey - Gets Primary/Secondary Key for AuthorizationRule of existing ServiceBus NameSpace/Queue/Topic.
+    - Remove-AzureRmServiceBusNamespaceAuthorizationRule - Deletes the existing AuthorizationRule of ServiceBus NameSpace/Queue/Topic.
+  * Added Resource Group property to NamespceAttributes
+
 * Sql
     * Updating Set-AzureRmSqlServerTransparentDataEncryptionProtector to display a warning and require confirmation if the Encryption Protector Type is being set to AzureKeyVault
     * Adding new updated cmdlets for Auditing settings
@@ -292,15 +293,16 @@ This is a list of changes made to Azure PowerShell in this release.
 
 ## 2017.07.17 - Version 4.2.1
 * Compute
-    - Fix issue with VM DIsk and VM Disk snapshot create and update cmdlets, (link)[https://github.com/azure/azure-powershell/issues/4309]
-      - New-AzureRmDisk
-      - New-AzureRmSnapshot
-      - Update-AzureRmDisk
-      - Update-AzureRmSnapshot
+  - Fix issue with VM DIsk and VM Disk snapshot create and update cmdlets, (link)[<https://github.com/azure/azure-powershell/issues/4309>]
+    - New-AzureRmDisk
+    - New-AzureRmSnapshot
+    - Update-AzureRmDisk
+    - Update-AzureRmSnapshot
 * Profile
-    - Fix issue with non-interactive user authentication in RDFE (link)[https://github.com/Azure/azure-powershell/issues/4299]
+  - Fix issue with non-interactive user authentication in RDFE (link)[<https://github.com/Azure/azure-powershell/issues/4299>]
+
 * ServiceManagement
-    - Fix issue with non-interactive user authentication (link)[https://github.com/Azure/azure-powershell/issues/4299]
+  - Fix issue with non-interactive user authentication (link)[<https://github.com/Azure/azure-powershell/issues/4299>]
 
 ## 2017.7.11 - Version 4.2.0
 * AnalysisServices
@@ -385,8 +387,8 @@ This is a list of changes made to Azure PowerShell in this release.
       - Both Cmdlets now have an -EmailAddress parameter that can be used instead of the -UserPrincipalName parameter when querying for email address is appropriate.  If there are more than one matching email addresses in the directory then the Cmdlet will fail.
 * Network
     * New-AzureRmIpsecPolicy: SALifeTimeSeconds and SADataSizeKilobytes are no longer mandatory parameters
-        - SALifeTimeSeconds defaults to 27000 seconds
-        - SADataSizeKilobytes defaults to 102400000 KB
+        - SALifeTimeSeconds defaults to 27000 seconds
+        - SADataSizeKilobytes defaults to 102400000 KB
     * Added support for custom cipher suite configuration using ssl policy and listing all ssl options api in Application Gateway
         - Added optional parameter -PolicyType, -PolicyName, -MinProtocolVersion, -Ciphersuite
             - Add-AzureRmApplicationGatewaySslPolicy
@@ -433,14 +435,14 @@ This is a list of changes made to Azure PowerShell in this release.
         - More information can be found in this issue: https://github.com/Azure/azure-powershell/issues/3954
 * RecoveryServices.SiteRecovery
     * Introducing a new module for Azure Site Recovery operations.
-    	- All cmdlets begin with AzureRmRecoveryServicesAsr*
+        - All cmdlets begin with AzureRmRecoveryServicesAsr*
 * Sql
     * Add Data Sync PowerShell Cmdlets to AzureRM.Sql
     * Updated AzureRmSqlServer cmdlets to use new REST API version that avoids timeouts when creating server.
     * Deprecated server upgrade cmdlets because the old server version (2.0) no longer exists.
     * Add new optional switch paramter "AssignIdentity" to New-AzureRmSqlServer and Set-AzureRmSqlServer cmdlets to support provisioning of a resource identity for the SQL server resource
     * The parameter ResourceGroupName is now optional for Get-AzureRmSqlServer
-    	- More information can be found in the following issue: https://github.com/Azure/azure-powershell/issues/635
+        - More information can be found in the following issue: https://github.com/Azure/azure-powershell/issues/635
 * ServiceManagement
     For ExpressRoute:
     * Updated New-AzureBgpPeering cmdlet to add following new options :
@@ -656,7 +658,7 @@ This is a list of changes made to Azure PowerShell in this release.
 * ServiceBus
 
   - Bug Fix: ServiceBus Queue object property values were set to null, the object is used as input parameter in Set-AzureRmServiceBusQueue cmdlet to update Queue.
-   - Properties affected are LockDuration, EntityAvailabilityStatus, DuplicateDetectionHistoryTimeWindow, MaxDeliveryCount and MessageCount
+    - Properties affected are LockDuration, EntityAvailabilityStatus, DuplicateDetectionHistoryTimeWindow, MaxDeliveryCount and MessageCount
 * ServiceFabric
 
   - Added cmdlets for service fabric
