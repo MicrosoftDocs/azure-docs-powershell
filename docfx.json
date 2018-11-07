@@ -474,6 +474,7 @@
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new"
         },
         "dest": "azureps",
-        "lruSize": 0
+        "lruSize": 0,
+        "markdownEngineName": "markdig"
     }
 }
