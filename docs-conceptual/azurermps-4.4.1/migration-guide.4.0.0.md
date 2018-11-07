@@ -12,7 +12,7 @@ This document serves as both a breaking change notification and migration guide 
 - [Breaking changes to Sql cmdlets](#breaking-changes-to-sql-cmdlets)
 - [Breaking changes to Storage cmdlets](#breaking-changes-to-storage-cmdlets)
 - [Breaking Changes to Profile Cmdlets](#breaking-changes-to-profile-cmdlets)
-## Breaking changes to Compute cmdlets
+  ## Breaking changes to Compute cmdlets
 
 The following output types were affected this release:
 
