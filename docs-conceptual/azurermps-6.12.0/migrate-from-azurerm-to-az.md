@@ -11,11 +11,12 @@ ms.date: 11/01/2018
 
 # Migrate from AzureRM to Azure PowerShell Az
 
-With the introduction of the Az module, older scripts which use the AzureRM modules and cmdlets no
-longer work automatically. No migration that changes command names is ever convenient or easy to
-handle. In order to help with the process of changing all your scripts over from AzureRM to Az,
-this article will outline steps, tools, and scripts that you can take advantage of to automate
-the process of migrating to Az as easy as possible.
+The Az module has feature parity with AzureRM, but uses shorter and more consistent cmdlet names.
+This means that scripts written for the AzureRM cmdlets won't automatically work with the new
+module. To make the transition easier, Az offers tools to allow you to run your existing scripts
+using AzureRM. No migration to a new command set is ever convenient, but this article will help
+you get started on transitioning to Az while minimizing the cost of upgrading so that you can
+take advantage of the features offered in this new module.
 
 Each section of this article outlines a step in the process, and it's recommended that you follow
 them in order unless you've already completed the process outlined in a single step.
@@ -23,19 +24,18 @@ them in order unless you've already completed the process outlined in a single s
 ## Ensure your existing scripts work with the latest AzureRM release
 
 This is the most important step! Run your existing scripts, and make sure that they work with the
-_latest_ release of AzureRM (__6.12.0__). If your scripts do not work, make sure to go through and read
+_latest_ release of AzureRM (__6.12.0__). If your scripts do not work, make sure to read
 the [AzureRM migration guide](migration-guide.6.0.0.md).
 
 ## Install the Azure PowerShell Az module
 
 The first step is to install the Az module on your platform. This _does_ require uninstalling
-the AzureRM module, but the following steps will outline how you can get compatibility with the old
-command set until your migration is completed.
+the AzureRM module. In the following steps you'll learn how to keep running your existing scripts
+and enable compatibility for old cmdlet names.
 
 To install the Azure PowerShell Az module, follow these steps:
 
-* [Uninstall the AzureRM module](uninstall-azurerm-ps.md). Make sure that
-you remove _all_ installed versions of AzureRM, not just the most recent version.
+* [Uninstall the AzureRM module](uninstall-azurerm-ps.md). Make sure that you remove _all_ installed versions of AzureRM, not just the most recent version.
 * [Install the Az module](install-az-ps.md)
 
 ## <a name="aliases"/>Enable AzureRM alias mode
@@ -75,80 +75,6 @@ There are some exceptions to this naming change that you should be aware of befo
 
 In the case of `Azure.Storage` and `Azure.AnalysisServices`, the associated cmdlets have also been renamed
 so that `Azure` is replaced with `Az`. For example, `Get-AzureStorageBlob` has been renamed to `Get-AzStorageBlob`.
-
-To help with the renaming of modules and cmdlets in your scripts, you can use the following PowerShell script
-to automate most of the work. You will still need to make sure that the script runs at the end of the edits,
-but hopefully won't need to make any serious changes.
-
-```powershell-interactive
-function Update-AzureRmScript {
-    param(
-        [Parameter(mandatory=$true)]
-        [string]$File
-    )
-
-    $replacements = @(
-        @{
-            "name"="Azure.Storage"
-            "module"="Az.Storage"
-        },
-        @{
-            "name"="Azure.AnalysisServices"
-            "module"="Az.AnalysisServices"
-        },
-        @{
-            "name"="AzureRM.DataFactories"
-            "module"="Az.DataFactory"
-            "moduleOnly"=$true
-        },
-        @{
-            "name"="AzureRM.DataFactoryV2"
-            "module"="Az.DataFactory"
-            "moduleOnly"=$true
-        },
-        @{
-            "name"="AzureRM.RecoveryServices.Backup"
-            "module"="Az.RecoveryServices"
-            "moduleOnly"=$true
-        },
-        @{
-            "name"="AzureRM.RecoveryServices.SiteRecovery"
-            "module"="Az.RecoveryServices"
-            "moduleOnly"=$true
-        }
-    )
-
-    echo "Updating $File..."
-    $content = Get-Content $file
-    for ($i=0; $i -lt $content.Length; $i++) {
-        $line = $content[$i]
-        if ($line -match "^\s*Import-Module.+(AzureRm)") {
-            $content[$i] = $line -replace $matches[1],"Az"
-        }
-        elseif ($line -match "[A-Za-z]+-(AzureRm)") {
-            $content[$i] = $line -replace $matches[1],"Az"
-        }
-        else {
-            foreach ($module in $renames) {
-                if ($line -match "^\s*Import-Module.+($($module.Name))") {
-                    $content[$i] = $line -replace $matches[1],$module.Module
-                }
-                elseif ((-not $module.moduleOnly) -and ($line -match "[A-Za-z]+-($($module.Module))")) {
-                    $content[$i] = $line -replace $matches[1],$module.Module
-                }
-            }
-        }
-    }
-    Set-Content -Path $file -Value $content -Force
-}
-```
-
-> [!IMPORTANT]
->
-> If you used `AzureRM` as part of any of your function names in your script, those commands will be renamed to
-> use `Az` instead. As long as you also update all scripts which call these functions, that shouldn't
-> cause a problem. Just be aware that this script __will__ change all function and command names
-> containing `AzureRM`.
 
 ## Summary
 

@@ -30,7 +30,7 @@ your platform.
 
 > [!IMPORTANT]
 >
-> It's not possible to have both the `AzureRM` and `Az` modules installed on a system at the same time. In order to install
+> You shouldn't have both the `AzureRM` and `Az` modules installed on a system at the same time. In order to install
 > the `Az` module, `AzureRM` must be uninstalled. For instructions on how to do that, see
 > [Uninstall the Azure PowerShell module (AzureRM)](uninstall-azurerm-ps.md).
 
