@@ -11,8 +11,7 @@ ms.date: 10/29/2018
 
 # Install Azure PowerShell with PowerShellGet
 
-This article explains the steps to install the Azure PowerShell modules using PowerShellGet. For the preview release of Az,
-no other install methods are supported. 
+This article tells you how to install the Azure PowerShell modules using PowerShellGet. For the preview release of Az, no other install methods are supported. 
 
 ## Requirements
 
@@ -23,8 +22,8 @@ on your machine, run the following command:
 $PSVersionTable.PSVersion
 ```
 
-If you have an outdated version or need to install PowerShell, see [Installing various versions of PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-powershell?view=powershell-6) and click on the link for
-your platform.
+If you have an outdated version or need to install PowerShell, see [Installing various versions of PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-powershell?view=powershell-6). Install
+information for your platform is linked from that page.
 
 ## Install the Azure PowerShell module
 
@@ -34,8 +33,7 @@ your platform.
 > the `Az` module, `AzureRM` must be uninstalled. For instructions on how to do that, see
 > [Uninstall the Azure PowerShell module (AzureRM)](uninstall-azurerm-ps.md).
 
-To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
-run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
+To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell, run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
 
 ```powershell-interactive
 Install-Module -Name Az -AllowClobber
@@ -103,7 +101,7 @@ Get-Module -Name Az -List | select Name,Version
 
 To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
 
-You can load a specific version of the `Az` module by providing the `-RequiredVersion` argument to `Install-Module` or `Import-Module`:
+You can load a specific version of the `Az` module by using the `-RequiredVersion` argument with `Install-Module` or `Import-Module`:
 
 ```powershell-interactive
 Install-Module -Name Az -RequiredVersion 0.4.0
