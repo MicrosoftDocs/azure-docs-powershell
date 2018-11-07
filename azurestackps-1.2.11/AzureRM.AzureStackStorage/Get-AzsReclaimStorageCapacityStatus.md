@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.AzureStack.AzureConsistentStorage.Commands.dll-Help.xml
 Module Name: AzureRM.AzureStackStorage
 online version: 

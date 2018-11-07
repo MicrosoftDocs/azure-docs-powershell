@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 6420CBE1-BF9D-493D-BCA8-E8C6688FAF3B
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestoragefilecontent

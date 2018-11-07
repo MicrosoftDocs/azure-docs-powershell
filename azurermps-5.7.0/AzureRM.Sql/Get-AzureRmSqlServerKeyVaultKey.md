@@ -53,7 +53,7 @@ CreationDate      : 1/1/2017 12:00:00 AM
 PS C:\> $MyServerKeyVaultKey = Get-AzureRmSqlServerKeyVaultKey -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' -ServerName 'ContosoServer' -ResourceGroupName 'ContosoResourceGroup'
 ```
 
-This command gets the Key Vault key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901', and then stores it in the $MyServerKeyVaultKey variable.
+This command gets the Key Vault key with Id '<https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901>', and then stores it in the $MyServerKeyVaultKey variable.
 You can inspect the properties of $MyServerKeyVaultKey to get details about the key vault.
 
 ## PARAMETERS

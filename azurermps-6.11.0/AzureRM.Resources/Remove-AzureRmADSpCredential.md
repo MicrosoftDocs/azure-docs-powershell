@@ -60,7 +60,7 @@ Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from th
 PS C:\> Remove-AzureRmADSpCredential -ServicePrincipalName http://test123
 ```
 
-Removes all credentials from the service principal with the SPN "http://test123".
+Removes all credentials from the service principal with the SPN "<http://test123>".
 
 ### Example 3 - Remove all credentials from a service principal using piping
 

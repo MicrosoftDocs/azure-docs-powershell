@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 5FA8A3F3-F52C-40BC-94C2-4CDA00C6F32F
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestoragecorsrule

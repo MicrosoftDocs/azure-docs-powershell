@@ -69,7 +69,6 @@ Administrator          : {admin@microsoft.com}
 Sku                    : A1
 Tier                   : PBIE_Azure
 Tag                    : {}
-
 ```
 
 This command gets the Azure PowerBI Embedded Capacity named testcapacity in the resource group named testRG.

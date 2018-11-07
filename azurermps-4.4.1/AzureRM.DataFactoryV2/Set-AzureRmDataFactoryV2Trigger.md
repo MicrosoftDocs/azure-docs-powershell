@@ -41,7 +41,6 @@ PS C:\> Set-AzureRmDataFactoryV2Trigger -ResourceGroupName "ADF" -DataFactoryNam
     DataFactoryName   : WikiADF
     Properties        : Microsoft.Azure.Management.DataFactory.Models.ScheduleTrigger
     RuntimeState      : Stopped
-
 ```
 
 Create a new trigger called "ScheduledTrigger" in the data factory "WikiADF". The trigger is created in the 'Stopped' state, meaning that it doesn't immediately start. A trigger can be started using the `Start-AzureRmDataFactoryV2Trigger` cmdlet.

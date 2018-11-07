@@ -30,12 +30,12 @@ The server must have 'get, wrapKey, unwrapKey' permissions to the vault.
 PS C:\> Add-AzureRmSqlServerKeyVaultKey -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' -ServerName 'ContosoServer' -ResourceGroupName 'ContosoResourceGroup'
 ```
 
-This command adds the Key Vault key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' to the SQL server named 'ContosoServer' in the resource group 'ContosoResourceGroup'.
+This command adds the Key Vault key with Id '<https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901>' to the SQL server named 'ContosoServer' in the resource group 'ContosoResourceGroup'.
 ResourceGroupName : ContosoResourceGroup
 ServerName        : ContosoServer
 ServerKeyName     : contoso_contosokey_01234567890123456789012345678901
 Type              : AzureKeyVault
-Uri               : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+Uri               : <https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901>
 Thumbprint        : 1122334455667788990011223344556677889900
 CreationDate      : 1/1/2017 12:00:00 AM
 

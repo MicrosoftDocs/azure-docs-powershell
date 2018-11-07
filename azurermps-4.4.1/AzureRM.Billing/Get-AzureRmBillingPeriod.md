@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Billing.dll-Help.xml
 Module Name: AzureRM.Billing
 online version:

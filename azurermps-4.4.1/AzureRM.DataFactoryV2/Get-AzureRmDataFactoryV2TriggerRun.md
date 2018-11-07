@@ -43,7 +43,6 @@ PS C:\> Get-AzureRmDataFactoryV2TriggerRun -ResourceGroupName "ADF" -DataFactory
     TriggerType         : ScheduleTrigger
     TriggerRunTimestamp : 9/18/2017 8:34:00 PM
     Status              : Succeeded
-
 ```
 
 This command shows information about runs for "WikiTrigger" in the factory "WikiADF" that started between "2017-09-01" and "2019-09-30".

@@ -37,7 +37,6 @@ ProvisioningState  : Succeeded
 CreatedAt          : 1/20/2017 1:40:01 AM
 UpdatedAt          : 1/20/2017 1:40:24 AM
 ServiceBusEndpoint : https://SB-Example1.servicebus.windows.net:443/
-
 ```
 
 ## PARAMETERS

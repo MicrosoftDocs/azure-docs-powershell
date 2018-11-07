@@ -32,7 +32,7 @@ ErrorCode: None
 Message:
 ```
 
-Validates the probe url "http://www.bing.com/images"
+Validates the probe url "<http://www.bing.com/images>"
 
 ## PARAMETERS
 

@@ -40,14 +40,12 @@ The Stop-AzureRmDataMigrationService cmdlet stops an instance of the Azure Datab
 ### Example 1
 ```
 PS C:\> Stop-AzureRmDataMigrationService -ResourceGroupName MyResourceGroup –ServiceName TestService
-
 ```
 The above example stops an instance of the Azure Database Migration Service called TestService based on service name passed in as input parameter
 
 ### Example 2
 ```
 PS C:\> Stop-AzureRmDataMigrationService -InputObject $TestService
-
 ```
 The above example stops an instance of the Azure Database Migration Service based on PSDataMigrationService object passed as input parameter.
 

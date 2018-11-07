@@ -53,7 +53,6 @@ PS C:\> Set-AzureRmDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name "DPWikis
     DataFactoryName   : WikiADF11
     Activities        : {MyCopyActivity_0_0, MyCopyActivity_1_0}
     Parameters        : {[OutputBlobName, Microsoft.Azure.Management.DataFactory.Models.ParameterSpecification]}
-
 ```
 
 This command creates a pipeline named DPWikisample in the data factory named ADF.

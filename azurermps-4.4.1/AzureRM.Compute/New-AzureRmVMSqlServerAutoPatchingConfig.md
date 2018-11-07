@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 Module Name: Azure
 ms.assetid: 7016BAA9-C25D-404E-9F75-2BE49FBF91A8

@@ -340,7 +340,7 @@ $namespace.Enabled
 # New
 # The call remains the same, but the returned values NameSpace object will not have the Status and Enabled property    
 $namespace = Set-AzureRmEventHubNamespace <parameters>
-```	
+``` 
   
 ### **New-AzureRmEventHubConsumerGroup**
 - The property 'EventHubPath' from the ConsumerGroupAttributes will be removed.

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: E9500392-6BE1-46EC-9AF5-9234281025E6
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azurestoragequeue

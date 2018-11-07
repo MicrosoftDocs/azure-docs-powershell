@@ -41,7 +41,6 @@ DeleteRetentionPolicy.Enabled       : True
 DeleteRetentionPolicy.RetentionDays : 70
 Cors                                : 
 DefaultServiceVersion               : 2017-07-29
-
 ```
 
 This command gets DefaultServiceVersion property of the Blob service.

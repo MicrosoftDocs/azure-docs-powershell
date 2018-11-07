@@ -52,7 +52,6 @@ Status                              : Active
 SubscriptionCount                   : 
 SupportOrdering                     : False
 UpdatedAt                           : 1/20/2017 3:16:43 AM
-
 ```
 Creates a new Service Bus topic `SB-Topic_exampl1` in the specified Service Bus namespace `SB-Example1`.
 

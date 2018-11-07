@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 4631D36F-926A-4279-AA4D-5F694C18081E
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestoragetable

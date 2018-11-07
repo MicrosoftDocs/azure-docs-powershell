@@ -47,7 +47,6 @@ PS C:\> Get-AzureRmDataFactoryV2Pipeline -ResourceGroupName "ADF" -DataFactoryNa
     DataFactoryName   : WikiADF
     Activities        : {MyCopyActivity_0_0, MyCopyActivity_1_0}
     Parameters        : {[OutputBlobName, Microsoft.Azure.Management.DataFactory.Models.ParameterSpecification]}
-
 ```
 
 This command gets information about all pipelines in the data factory named WikiADF.
@@ -107,7 +106,6 @@ PS C:\> (Get-AzureRmDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name DPWikis
     Name                            : MyCopyActivity_1_0
     Description                     :
     DependsOn                       : {Microsoft.Azure.Management.DataFactory.Models.ActivityDependency}
-
 ```
 
 This command gets information for the pipeline named DPWikisample in the data factory named WikiADF, and then uses standard dot notation to view the Activities property associated with that pipeline.
@@ -118,7 +116,6 @@ PS C:\> (Get-AzureRmDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name "DPWiki
 
     ReferenceName : dsIn
     Parameters    :
-
 ```
 
 This command gets information for the pipeline named DPWikisample in the data factory named WikiADF, and then uses standard dot notation to view the Activities property associated with that pipeline.

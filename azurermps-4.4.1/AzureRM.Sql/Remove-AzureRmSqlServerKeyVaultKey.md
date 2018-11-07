@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
 Module Name: AzureRM.Sql
 online version:
@@ -35,7 +35,7 @@ To remove a key from Key Vault, use Remove-AzureKeyVaultKey.
 PS C:\> Remove-AzureRmSqlServerKeyVaultKey -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' -ServerName 'ContosoServer' -ResourceGroupName 'ContosoResourceGroup'
 ```
 
-This command removes the Key Vault key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' from the specified server.
+This command removes the Key Vault key with Id '<https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901>' from the specified server.
 
 ResourceGroupName : ContosoResourceGroup
 ServerName        : ContosoServer

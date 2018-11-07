@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Resources.dll-Help.xml
 Module Name: AzureRM.Resources
 ms.assetid: 66AC5120-80B1-46F2-AA51-132BF361602E
@@ -78,7 +78,7 @@ Lists the first 100 applications under a tenant.
 PS C:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
 ```
 
-Gets the application with identifier uri as "http://mySecretApp1".
+Gets the application with identifier uri as "<http://mySecretApp1>".
 
 ### Example 4 - Get application by object id
 

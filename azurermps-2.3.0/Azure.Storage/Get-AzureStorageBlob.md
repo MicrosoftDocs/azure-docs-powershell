@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: E54BFD3A-CD54-4E6B-9574-92B8D3E88FF3
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/get-azurestorageblob

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.UsageAggregates.dll-Help.xml
 Module Name: AzureRM.UsageAggregates
 ms.assetid: 52B3ECCB-80E5-4E16-954A-B83D0BDC7E22

@@ -53,7 +53,6 @@ PS C:\> Get-AzureRmDataFactoryV2ActivityRun -ResourceGroupName "ADF" -DataFactor
     DurationInMs      : 2768
     Status            : Succeeded
     Error             : {errorCode, message, failureType, target}
-
 ```
 
 This command gets details about all activity runs in the pipeline run with ID "f288712d-fb08-4cb8-96ef-82d3b9b30621" that happened between "2017-09-01" and "2017-09-30".

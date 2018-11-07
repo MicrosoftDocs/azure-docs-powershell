@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 65962F9A-CC79-4B8B-9208-A993708FD36F
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/new-azurestoragedirectory

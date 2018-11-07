@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 176294FA-BB08-4A63-AD45-1E6C6D67A5D8
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/set-azurestoragesharequota

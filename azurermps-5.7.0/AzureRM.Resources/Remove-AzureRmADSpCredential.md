@@ -61,7 +61,7 @@ PS E:\> Remove-AzureRmADSpCredential -ServicePrincipalName http://test123 -All
 ```
 
 This command removes a credential key from a service principal.
-In this example, all credentials will be removed from the service principal associated with the service principal name "http://test123".
+In this example, all credentials will be removed from the service principal associated with the service principal name "<http://test123>".
 
 ## PARAMETERS
 

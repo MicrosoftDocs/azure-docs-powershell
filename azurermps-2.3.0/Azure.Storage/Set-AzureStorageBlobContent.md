@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: F20A5FD3-6EC3-4EFE-988C-75F8583961A4
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/set-azurestorageblobcontent

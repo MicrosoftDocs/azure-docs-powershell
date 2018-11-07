@@ -53,7 +53,6 @@ PS C:\> Get-AzureRmDataFactoryV2Dataset -ResourceGroupName "ADF" -DataFactoryNam
     DataFactoryName   : WikiADF
     Structure         :
     Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureBlobDataset
-
 ```
 
 This command gets information about all datasets in the data factory named WikiADF.
@@ -67,7 +66,6 @@ PS C:\> Get-AzureRmDataFactoryV2Dataset -ResourceGroupName "ADF" -DataFactoryNam
     DataFactoryName   : WikiADF
     Structure         :
     Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureBlobDataset
-
 ```
 
 This command gets information about the dataset named DAWikipediaClickEvents in the data factory named WikiADF.

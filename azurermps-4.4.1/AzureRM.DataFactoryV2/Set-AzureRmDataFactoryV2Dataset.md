@@ -52,7 +52,6 @@ PS C:\> Set-AzureRmDataFactoryV2Dataset -ResourceGroupName "ADF" -DataFactoryNam
     DataFactoryName   : WikiADF
     Structure         :
     Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureBlobDataset
-
 ```
 
 This command creates a dataset named DA_WikipediaClickEvents in the data factory named WikiADF.

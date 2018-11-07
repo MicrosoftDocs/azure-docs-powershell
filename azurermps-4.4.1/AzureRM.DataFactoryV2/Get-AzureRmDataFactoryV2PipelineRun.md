@@ -58,7 +58,6 @@ PS C:\> Get-AzureRmDataFactoryV2PipelineRun -ResourceGroupName "ADF" -DataFactor
     DurationInMs      : 8246
     Status            : Succeeded
     Message           :
-
 ```
 
 This command gets details about the pipeline run with ID "61eb095a-fe23-4591-8a97-fade6c65ca72".

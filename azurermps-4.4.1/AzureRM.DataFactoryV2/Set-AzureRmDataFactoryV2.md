@@ -43,7 +43,6 @@ PS C:\> Set-AzureRmDataFactoryV2 -ResourceGroupName "ADF" -Name "WikiADF" -Locat
     Tags              : {}
     Identity          : Microsoft.Azure.Management.DataFactory.Models.FactoryIdentity
     ProvisioningState : Succeeded
-
 ```
 
 This command creates a data factory named WikiADF in the resource group named ADF in the WestUS location.

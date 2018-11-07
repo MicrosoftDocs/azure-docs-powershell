@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.AzureStack.Commands.dll-Help.xml
 Module Name: AzureRM.AzureStackAdmin
 online version: 

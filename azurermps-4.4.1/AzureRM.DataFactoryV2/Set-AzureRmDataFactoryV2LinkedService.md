@@ -49,7 +49,6 @@ PS C:\> Set-AzureRmDataFactoryV2LinkedService -ResourceGroupName "ADF" -DataFact
     ResourceGroupName : ADF
     DataFactoryName   : WikiADF
     Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureStorageLinkedService
-
 ```
 
 This command creates a linked service named LinkedServiceCuratedWikiData in the data factory named WikiADF.

@@ -50,7 +50,6 @@ Id                                  : /subscriptions/{subscription id}/resourceG
                                       B-Queue_example1
 Name                                : SB-Queue_example1
 Type                                : Microsoft.ServiceBus/Queues
-
 ```
 
 Returns the description of the queue.
@@ -124,11 +123,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### -ResourceGroup
  System.String
- 
+
 
 ### -NamespaceName
  System.String
- 
+
 
 ### -QueueName
  System.String 

@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/disable-azurermvmssdiskencryption
 schema: 2.0.0
@@ -92,7 +92,6 @@ Accept wildcard characters: False
 
 ### -ResourceGroupName
 The resource group name.
-
 ```yaml
 Type: String
 Parameter Sets: (All)

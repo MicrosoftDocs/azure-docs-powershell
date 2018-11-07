@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Compute.dll-Help.xml
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/set-azurermvmssdiskencryptionextension
 schema: 2.0.0
@@ -148,7 +148,6 @@ Accept wildcard characters: False
 
 ### -KeyEncryptionAlgorithm
 KeyEncryption Algorithm used to encrypt the volume encryption key
-
 ```yaml
 Type: String
 Parameter Sets: (All)

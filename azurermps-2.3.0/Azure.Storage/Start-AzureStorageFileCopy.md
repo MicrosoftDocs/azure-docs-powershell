@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: A96A1A67-6C9C-499F-9935-B90F7ACEB50E
 online version: https://docs.microsoft.com/en-us/powershell/module/azure.storage/start-azurestoragefilecopy

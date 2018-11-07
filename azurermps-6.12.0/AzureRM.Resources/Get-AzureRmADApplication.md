@@ -80,7 +80,7 @@ Lists the first 100 applications under a tenant.
 PS C:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
 ```
 
-Gets the application with identifier uri as "http://mySecretApp1".
+Gets the application with identifier uri as "<http://mySecretApp1>".
 
 ### Example 4 - Get application by object id
 

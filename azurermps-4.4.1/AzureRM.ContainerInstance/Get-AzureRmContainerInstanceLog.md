@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.ContainerInstance.dll-Help.xml
 Module Name: AzureRM.ContainerInstance
 online version:

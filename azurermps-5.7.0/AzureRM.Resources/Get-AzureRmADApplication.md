@@ -61,7 +61,7 @@ Lists all the applications under a tenant.
 PS E:\> Get-AzureRmADApplication -IdentifierUri http://mySecretApp1
 ```
 
-Gets the application with identifier uri as "http://mySecretApp1".
+Gets the application with identifier uri as "<http://mySecretApp1>".
 
 ## PARAMETERS
 

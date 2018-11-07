@@ -41,7 +41,6 @@ The Remove-AzureRmDataMigrationTask cmdlet removes an Azure Database Migration S
 ```
 PS C:\> Remove-AzureRmDataMigrationTask –TaskName TestTask -ProjectName myTestProject -ServiceName MyTestService
  -ResourceGroupName MyResourceGroup
-
 ```
 
 The preceding example removes an Azure Database Migration Service task named TestTask from Azure based on task name parameter.
@@ -49,7 +48,6 @@ The preceding example removes an Azure Database Migration Service task named Tes
 ### Example 2
 ```
 PS C:\> Remove-AzureRmDataMigrationTask –InputObject $TestTask
-
 ```
 
 The preceding example removes an Azure Database Migration Service task based on PSProjectTask object passed in.

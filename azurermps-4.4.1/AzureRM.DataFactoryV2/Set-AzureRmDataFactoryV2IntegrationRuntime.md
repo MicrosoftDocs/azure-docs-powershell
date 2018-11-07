@@ -56,7 +56,6 @@ PS C:\> Set-AzureRmDataFactoryV2IntegrationRuntime -ResourceGroupName 'rg-test-d
     DataFactoryName   : test-df-eu2
     Name              : test-selfhost-ir
     Description       : New description
-
 ```
 
 The cmdlet updates the description of integration runtime named 'test-selfhost-ir'.

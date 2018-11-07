@@ -208,7 +208,6 @@ States : [
              ]
            }
          ]
-
 ```
 
 In this example we query the most recent connection states of the specified connection monitor.

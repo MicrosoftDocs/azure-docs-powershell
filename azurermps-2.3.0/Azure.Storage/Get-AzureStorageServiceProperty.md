@@ -37,7 +37,6 @@ MinuteMetrics.MetricsLevel  : None
 MinuteMetrics.RetentionDays : 
 Cors                        : 
 DefaultServiceVersion       : 2017-04-17
-
 ```
 
 This command gets DefaultServiceVersion property of the Blob service.

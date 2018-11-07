@@ -46,7 +46,6 @@ PS C:\> Get-AzureRmDataFactoryV2 -ResourceGroupName "ADF"
     Tags              : {}
     Identity          :
     ProvisioningState : Succeeded
-
 ```
 
 Displays information about all data factories in the Azure subscription.
@@ -63,7 +62,6 @@ PS C:\> $DataFactory = Get-AzureRmDataFactoryV2 -ResourceGroupName "ADF" -Name "
     Tags              : {}
     Identity          : Microsoft.Azure.Management.DataFactory.Models.FactoryIdentity
     ProvisioningState : Succeeded
-
 ```
 
 This command displays information about the data factory named WikiADF in the subscription for the resource group named ADF, and then stores it in the $DataFactory variable.

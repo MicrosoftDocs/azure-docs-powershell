@@ -38,7 +38,7 @@ PS C:\> Get-AzureRmVirtualNetworkGatewaySupportedVpnDevice -ResourceGroupName Te
 ```
 
 Returns list of supported VPN device brands, models and firmware versions:
-<?xml version="1.0" encoding="utf-8"?>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 <RpVpnDeviceList version="1.0">
   <Vendor name="Cisco-Test">
     <DeviceFamily name="IOS-Test">

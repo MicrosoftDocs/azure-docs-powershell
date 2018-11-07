@@ -1,4 +1,4 @@
-﻿---
+---
 Module Name: AzureRM.Resources
 Module Guid: ab3ca893-26fe-44b0-bd3c-8933df144d7b
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/azurerm.resources

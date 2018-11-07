@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Azure.Commands.Consumption.dll-Help.xml
 Module Name: AzureRM.Consumption
 online version:
