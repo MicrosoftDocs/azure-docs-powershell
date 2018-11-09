@@ -13,7 +13,7 @@ ms.topic: conceptual
 This article tells you how to uninstall an older version of Azure PowerShell, or completely remove it from
 your system. If you've decided to completely uninstall the Azure PowerShell, give us some feedback
 through the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.
-If you encountered a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues).
+If you encounter a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues).
 
 ## Uninstall from PowerShell
 
@@ -43,7 +43,7 @@ function Uninstall-AllModules {
   'Creating list of dependencies...'
   $target = Find-Module $TargetModule -RequiredVersion $version
   $target.Dependencies | ForEach-Object {
-    $AllModules += New-Object -TypeName psobject -Property @{name=$_.name; version=$_.requiredversion}
+    $AllModules += New-Object -TypeName psobject -Property @{name=$_.name; version=$_.minimumVersion}
   }
   $AllModules += New-Object -TypeName psobject -Property @{name=$TargetModule; version=$Version}
 
