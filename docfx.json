@@ -428,6 +428,7 @@
             "ms.topic": {
                 "azuredmps-*/**/*.md": "reference",
                 "azurermps-*/**/*.md": "reference",
+                "azuresmps-*/**/*.md": "reference",
                 "azurestackps-*/**/*.md": "reference",
                 "docs-conceptual/**/*.md": "article"
             },
