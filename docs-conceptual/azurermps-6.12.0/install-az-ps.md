@@ -1,6 +1,6 @@
 ---
-title: Install Azure PowerShell with PowerShellGet
-description: How to install Azure PowerShell with PowerShellGet
+title: Install Azure PowerShell 'Az' with PowerShellGet
+description: How to install Azure PowerShell with PowerShellGet on Windows, macOS, and Linux.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
@@ -9,9 +9,10 @@ ms.topic: conceptual
 ms.date: 11/16/2018
 ---
 
-# Install Azure PowerShell with PowerShellGet
+# Install the Azure PowerShell 'Az' module
 
-This article tells you how to install the Azure PowerShell modules using PowerShellGet. For the preview release of Az, no other install methods are supported. 
+This article tells you how to install the Azure PowerShell modules using PowerShellGet. These instructions work on Windows, macOS, and Linux
+platforms. For the preview release of Az, no other install methods are supported. 
 
 ## Requirements
 
