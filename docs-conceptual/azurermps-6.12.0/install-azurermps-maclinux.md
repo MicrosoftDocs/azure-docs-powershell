@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/05/2018
+ms.date: 11/16/2018
 ---
 # Install Azure PowerShell on macOS or Linux
 
@@ -75,8 +75,6 @@ For compatibility with the existing `AzureRM` module, the new `Az` module has th
 aliases for the `AzureRM` cmdlets. Before using the module for the first time, set up these aliases with the following command:
 
 ```powershell-interactive
-# Import the module into the PowerShell session
-Import-Module Az
 # Enable AzureRM aliases for the user
 Enable-AzureRmAlias -Scope CurrentUser
 ```
@@ -94,21 +92,15 @@ set up the aliases.
 
 ## Sign in
 
-To start working with Azure PowerShell, you need to load `Az` into your PowerShell session
-with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in
-with your Azure credentials. Importing a module does __not__ require elevated privileges.
+To start working with Azure PowerShell, sign in with your Azure credentials. Signing in and importing a module does __not__ require elevated privileges.
 
 ```powershell-interactive
-# Import the module into the PowerShell session
-Import-Module Az
 # Connect to Azure with an interactive dialog for sign-in
 Connect-AzureRmAccount
 ```
 
-You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `Az` module requires
-setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
-On macOS and Linux, you should work with your profile through the `$Profile` environment variable. To learn how to persist your Azure sign-in across sessions,
-see [Persist user credentials across PowerShell sessions](context-persistence.md).
+You'll need to repeat these steps for every new PowerShell session you start. To learn how to persist your Azure sign-in
+across PowerShell sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
 
 ## Next Steps
 
