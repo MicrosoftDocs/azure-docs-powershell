@@ -1,17 +1,18 @@
 ---
-title: Install Azure PowerShell with PowerShellGet
-description: How to install Azure PowerShell with PowerShellGet
+title: Install Azure PowerShell 'Az' with PowerShellGet
+description: How to install Azure PowerShell with PowerShellGet on Windows, macOS, and Linux.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/29/2018
+ms.date: 11/16/2018
 ---
 
-# Install Azure PowerShell with PowerShellGet
+# Install the Azure PowerShell 'Az' module
 
-This article tells you how to install the Azure PowerShell modules using PowerShellGet. For the preview release of Az, no other install methods are supported. 
+This article tells you how to install the Azure PowerShell modules using PowerShellGet. These instructions work on Windows, macOS, and Linux
+platforms. For the preview release of Az, no other install methods are supported. 
 
 ## Requirements
 
@@ -65,20 +66,20 @@ the available Azure Resource Manager modules, and makes their cmdlets available 
 
 ## Sign in
 
-To start working with Azure PowerShell, you need to load `Az` into your current PowerShell session
-with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in
-with your Azure credentials.
+To start working with Azure PowerShell, sign in with your Azure credentials.
 
 ```powershell-interactive
-# Import the module into the PowerShell session
-Import-Module Az
 # Connect to Azure with a browser sign in token
 Connect-AzAccount
 ```
 
-You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `Az` module requires
-setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
-To learn how to persist your Azure sign-in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
+> [!NOTE]
+>
+> If you've disabled module autoloading, you need to manually import the module with `Import-Module Az`. Because of
+> the way the module is structured, this can take a few seconds.
+
+You'll need to repeat these steps for every new PowerShell session you start. To learn how to persist your Azure sign-in
+across PowerShell sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
 
 ## Update the Azure PowerShell module
 
@@ -101,14 +102,14 @@ Get-Module -Name Az -List | select Name,Version
 
 To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
 
-You can load a specific version of the `Az` module by using the `-RequiredVersion` argument with `Install-Module` or `Import-Module`:
+You can load a specific version of the `Az` module by using the `-RequiredVersion` argument with `Install-Module` and `Import-Module`:
 
 ```powershell-interactive
 Install-Module -Name Az -RequiredVersion 0.4.0
 Import-Module -Name Az -RequiredVersion 0.4.0
 ```
 
-If you have more than one version of the module installed, the latest version is loaded by default when importing.
+If you have more than one version of the module installed, the latest version is loaded by default.
 
 ## Provide feedback
 
