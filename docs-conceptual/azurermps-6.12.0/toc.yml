@@ -12,7 +12,7 @@
     href: install-azurerm-ps.md
     items:
     - name: Install on macOS or Linux
-      href: install-azurermps-maclinux.md
+      href: install-az-ps.md
     - name: Install with MSI
       href: other-install.md
   - name: Uninstall
