@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/08/2018
+ms.date: 11/16/2018
 ---
 
 # Install Azure PowerShell on Windows with PowerShellGet
@@ -71,20 +71,21 @@ the available Azure Resource Manager modules, and makes their cmdlets available 
 
 ## Sign in
 
-To start working with Azure PowerShell, you need to load `AzureRM` into your current PowerShell session
-with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in
-with your Azure credentials.
+To start working with Azure PowerShell, sign in with your Azure credentials.
 
 ```powershell-interactive
-# Import the module into the PowerShell session
-Import-Module AzureRM
 # Connect to Azure with an interactive dialog for sign-in
 Connect-AzureRmAccount
 ```
 
-You'll need to repeat these steps for every new PowerShell session you start. Automatically importing the `AzureRM` module requires
-setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
-To learn how to persist your Azure sign-in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
+> [!NOTE]
+>
+> If you've disabled module autoloading, you need to manually import the module with `Import-Module AzureRM`. Because of
+> the way the module is structured, this can take a few seconds.
+
+
+You'll need to repeat these steps for every new PowerShell session you start. To learn how to persist your Azure sign-in
+across PowerShell sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).
 
 ## Update the Azure PowerShell module
 
