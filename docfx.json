@@ -256,6 +256,13 @@
             },
             {
                 "files": [
+                    "**/*.md"
+                ],
+                "src": "virtual-directory",
+                "dest": "azure"
+            },
+            {
+                "files": [
                     "AADRM/**/*.md",
                     "AADRM/**/*.yml",
                     "AzureInformationProtection/**/*.md",
