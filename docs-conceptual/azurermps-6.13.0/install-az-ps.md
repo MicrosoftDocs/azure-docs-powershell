@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 11/26/2018
 ---
 
 # Install the Azure PowerShell 'Az' module
@@ -30,11 +30,13 @@ information for your platform is linked from that page.
 
 > [!IMPORTANT]
 >
-> You shouldn't have both the `AzureRM` and `Az` modules installed on a system at the same time. In order to install
-> the `Az` module, `AzureRM` must be uninstalled. For instructions on how to do that, see
-> [Uninstall the Azure PowerShell module (AzureRM)](uninstall-azurerm-ps.md).
+> You can have both the `AzureRM` and `Az` modules installed at the same time. If you have both modules installed, __don't enable aliases__.
+> Enabling aliases will cause conflicts between `AzureRM` cmdlets and `Az` command aliases, and could cause unexpected behavior.
+> It's recommended that before installing the `Az` module, you uninstall `AzureRM`. You can always uninstall `AzureRM` or enable aliases
+> at any time. For uninstall instructions, see [Uninstall the Azure PowerShell module (AzureRM)](uninstall-azurerm-ps.md). 
 
-To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell, run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
+To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
+run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
 
 ```powershell-interactive
 Install-Module -Name Az -AllowClobber
