@@ -24,21 +24,21 @@ The **New-AzureRmAlertRuleEmail** cmdlet creates an e-mail action for an alert r
 
 ### Example 1: Create an alert rule email action for service owners
 ```
-PS C:\>New-AzureRmAlertRuleEmail -SendToServiceOwners
+PS C:\>New-AzureRmAlertRuleEmail -SendToServiceOwner
 ```
 
 This command creates an alert rule email action to send for its service owners when an alert rule is fired.
 
 ### Example 2: Create an alert rule email action for non-service owners
 ```
-PS C:\>New-AzureRmAlertRuleEmail -CustomEmails pattif@contoso.com,davidchew@contoso.net
+PS C:\>New-AzureRmAlertRuleEmail -CustomEmail pattif@contoso.com,davidchew@contoso.net
 ```
 
 This command creates an alert rule email action for the specified email addresses, but not for the service owners.
 
 ### Example 3: Create an alert rule email action for service owners and non-service owners
 ```
-PS C:\>New-AzureRmAlertRuleEmail -CustomEmails pattif@contoso.net -SendToServiceOwners
+PS C:\>New-AzureRmAlertRuleEmail -CustomEmail pattif@contoso.net -SendToServiceOwner
 ```
 
 This command creates an alert rule email action for the specified address and for its service owners.

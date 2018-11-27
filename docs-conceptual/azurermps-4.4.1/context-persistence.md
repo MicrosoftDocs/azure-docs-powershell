@@ -67,7 +67,7 @@ two different ways:
   Most AzureRM cmdlets allow you to pass the context as a parameter to the cmdlet. You can pass a
   context to a background job as shown in the following example:
 
-  ```powershell
+  ```powershell-interactive
   PS C:\> $job = Start-Job { param ($ctx) New-AzureRmVm -AzureRmContext $ctx [... Additional parameters ...]} -ArgumentList (Get-AzureRmContext)
   ```
 
@@ -76,7 +76,7 @@ two different ways:
   If you have enabled **Context Autosave**, background jobs automatically use the default saved
   context.
 
-  ```powershell
+  ```powershell-interactive
   PS C:\> $job = Start-Job { New-AzureRmVm [... Additional parameters ...]}
   ```
 

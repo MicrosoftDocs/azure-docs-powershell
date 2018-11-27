@@ -25,7 +25,7 @@ Installing items from the PowerShell Gallery requires the PowerShellGet module. 
 the appropriate version of PowerShellGet and other system requirements. Run the following command
 to see if you have PowerShellGet installed on your system.
 
-```powershell
+```powershell-interactive
 Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
@@ -42,7 +42,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 
 You need PowerShellGet version 1.1.2.0 or higher. To update PowerShellGet, use the following command:
 
-```powershell
+```powershell-interactive
 Install-Module PowerShellGet -Force
 ```
 
@@ -64,7 +64,7 @@ section of this article.
 Installing Azure PowerShell from the PowerShell Gallery requires elevated privileges. Run the
 following command from an elevated PowerShell session:
 
-```powershell
+```powershell-interactive
 # Install the Azure Resource Manager modules from the PowerShell Gallery
 Install-Module -Name AzureRM -AllowClobber
 ```
@@ -102,7 +102,7 @@ Once the module is installed, you need to load the module into your PowerShell s
 do this in a normal (non-elevated) PowerShell session. Modules are loaded using the `Import-Module`
 cmdlet, as follows:
 
-```powershell
+```powershell-interactive
 Import-Module -Name AzureRM
 ```
 
@@ -134,7 +134,7 @@ Although we encourage you to upgrade to the latest version as early as possible,
 of Azure PowerShell are supported. To determine the version of Azure PowerShell you have installed,
 run `Get-Module AzureRM` from your command line.
 
-```powershell
+```powershell-interactive
 Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
@@ -159,14 +159,14 @@ still want to install this module 'Azure.Storage', use -AllowClobber parameter.
 At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm1:1772 char:21
 + ...          $null = PackageManagement\Install-Package @PSBoundParameters
 +                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : InvalidOperation: (Microsoft.Power....InstallPackage:InstallPackage) [Install-Package], Exception
-    + FullyQualifiedErrorId : CommandAlreadyAvailable,Validate-ModuleCommandAlreadyAvailable,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage
+    + CategoryInfo          : InvalidOperation: (Microsoft.Power....InstallPackage:InstallPackage) [Install-Package], Exception
+    + FullyQualifiedErrorId : CommandAlreadyAvailable,Validate-ModuleCommandAlreadyAvailable,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage
 ```
 
 As the error message states, you need to use the -AllowClobber parameter to install the module. Use
 the following command:
 
-```powershell
+```powershell-interactive
 # Install the Azure Resource Manager modules from the PowerShell Gallery
 Install-Module -Name AzureRM -AllowClobber
 ```
@@ -181,7 +181,7 @@ multiple versions. For example, you may have scripts written using a previous ve
 PowerShell that you don't have the time or resources to updated. The following commands illustrate
 how to install multiple versions of Azure PowerShell:
 
-```powershell
+```powershell-interactive
 Install-Module -Name AzureRM -RequiredVersion 3.7.0
 Install-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
@@ -189,7 +189,7 @@ Install-Module -Name AzureRM -RequiredVersion 1.2.9
 Only one version of the module can be loaded in a PowerShell session. You must open a new
 PowerShell window and use `Import-Module` to import a specific version of the AzureRM cmdlets:
 
-```powershell
+```powershell-interactive
 Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 

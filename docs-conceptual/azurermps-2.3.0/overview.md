@@ -18,7 +18,7 @@ Note: If you are using an earlier version install version 1.2.11
 
 
 ## Install
-```powershell
+```powershell-interactive
 # Remove previous versions of AzureStack modules
 Uninstall-Module -Name AzureStack -Force 
 Uninstall-Module -Name AzureRM -Force 
@@ -36,7 +36,7 @@ Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 
 ```
 
-##Release Notes
+## Release Notes
 * The release 2.3.0 comes with a list of breaking changes. To upgrade from the 1.2.11 version, we have created a migration guide at https://aka.ms/azspowershellmigration
 * This release corresponds to the azurestack specific api profile 2018-03-01-hybrid
 * All the modules are taking greater than or equal to dependency on the AzureRm.Profile module.

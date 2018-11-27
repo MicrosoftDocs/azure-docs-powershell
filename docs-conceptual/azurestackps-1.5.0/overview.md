@@ -40,7 +40,7 @@ Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 Install-Module -Name AzureStack -RequiredVersion 1.5.0
 ```
 
-##Release Notes
+## Release Notes
 * All the Azure Stack Admin modules are updated for greater than or equal to dependency on the AzureRm.Profile module
 * Support for handling nested resource names in all the modules
 * Bug fix in all the modules where ErrorActionPreference is being overridden to be Stop

@@ -12,7 +12,7 @@ This document serves as both a breaking change notification and migration guide 
 - [Breaking changes to Sql cmdlets](#breaking-changes-to-sql-cmdlets)
 - [Breaking changes to Storage cmdlets](#breaking-changes-to-storage-cmdlets)
 - [Breaking Changes to Profile Cmdlets](#breaking-changes-to-profile-cmdlets)
-## Breaking changes to Compute cmdlets
+  ## Breaking changes to Compute cmdlets
 
 The following output types were affected this release:
 
@@ -26,7 +26,7 @@ The following output types were affected this release:
     - `Remove-AzureRmVMNetworkInterface`
     - `Set-AzureRmVMDataDisk`
 
-```powershell
+```powershell-interactive
 # Old
 $vm.DataDiskNames
 $vm.NetworkInterfaceIDs
@@ -56,7 +56,7 @@ The following cmdlets were affected this release:
 ### Remove-AzureRmAlertRule
 - The output of this cmdlet has changed from a list with a single object to a single object; this object includes the requestId, and status code.
     
-```powershell
+```powershell-interactive
 # Old  
 $s1 = Remove-AzureRmAlertRule -ResourceGroup $resourceGroup -name chiricutin
 if ($s1 -ne $null)
@@ -77,7 +77,7 @@ $s = $s1.StatusCode
 ### Get-AzureRmAlertRule
 - Each element of the the output (a list of objects) of this cmdlet is flattened, i.e. instead of returning objects with the structure `{ Id, Location, Name, Tags, Properties }` it will return objects with the structure `{ Id, Location, Name, Tags, Type, Description, IsEnabled, Condition, Actions, LastUpdatedTime, ...}`, which is all of the attributes of an Azure Resource plus all of the attributes of an AlertRuleResource at the top level.
     
-```powershell
+```powershell-interactive
 # Old
 $rules = Get-AzureRmAlertRule -ResourceGroup $resourceGroup
 if ($rules -and $rules.count -ge 1)
@@ -109,7 +109,7 @@ if ($rules -and $rules.count -ge 1)
 ### Get-AzureRmAutoscaleSetting
 - The `AutoscaleSettingResourceName` field is deprecated since it always has the same value as the `Name` field.
 
-```powershell
+```powershell-interactive
 # Old  
 $s1 = Get-AzureRmAutoscaleSetting -ResourceGroup $resourceGroup -Name MySetting
 if ($s1.AutoscaleSettingResourceName -ne $s1.Name)
@@ -127,7 +127,7 @@ Write-Host $s1.Name
 ### Remove-AzureRmLogProfile
 - The output of this cmdlet will change from `Boolean` to and object containing `RequestId` and `StatusCode`
 
-```powershell
+```powershell-interactive
 # Old  
 $s1 = Remove-AzureRmLogProfile -Name myLogProfile
 if ($s1 -eq $true)
@@ -148,7 +148,7 @@ $s = $s1.StatusCode
 ### Add-AzureRmLogProfile
 - The output of this cmdlet will change from an object that includes the requestId, status code, and the updated or newly created resource
     
-```powershell
+```powershell-interactive
 # Old  
 $s1 = Add-AzureRmLogProfile -Name default -StorageAccountId /subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162 -Locations Global -categ Delete, Write, Action -retention 3
 $r = $s1.ServiceBusRuleId
@@ -164,7 +164,7 @@ $a = $s1.NewResource.ServiceBusRuleId
 ### Set-AzureRmDiagnosticSettings
 - The command is going to be renamed to `Update-AzureRmDiagnsoticSettings`
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmDiagnosticSettings
 
@@ -179,7 +179,7 @@ The following cmdlets were affected this release:
 ### New-AzureRmVirtualNetworkGatewayConnection
 - `EnableBgp` parameter has been changed to take a `boolean` instead of a `string`
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmVirtualNetworkGatewayConnection -ResourceGroupName "RG" -name "conn1" -VirtualNetworkGateway1 $vnetGateway -LocalNetworkGateway2 $localnetGateway -ConnectionType IPsec -SharedKey "key" -EnableBgp "true"
 
@@ -206,7 +206,7 @@ The following cmdlets were affected this release:
 - `Tag` parameter has been removed
 - `GracePeriodWithDataLossHour` parameter has been renamed to `GracePeriodWithDataLossHours`
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1 -FailoverGroupName fg -PartnerServerName server2 -FailoverPolicy Automatic -GracePeriodWithDataLossHour 1 -Tag @{ Environment="Test" }
 
@@ -218,7 +218,7 @@ New-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1 -F
 - `Tag` parameter has been removed
 - `GracePeriodWithDataLossHour` parameter has been renamed to `GracePeriodWithDataLossHours`
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1 -FailoverGroupName fg -FailoverPolicy Automatic -GracePeriodWithDataLossHour 1 -Tag @{ Environment="Test" }
 
@@ -229,7 +229,7 @@ Set-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1 -F
 ### Add-AzureRmSqlDatabaseToFailoverGroup
 - `Tag` parameter has been removed
 
-```powershell
+```powershell-interactive
 # Old
 Add-AzureRmSqlDatabaseToFailoverGroup -ResourceGroupName rg -ServerName server1 -FailoverGroupName fg -Database $db1 -Tag @{ Environment="Test" }
 
@@ -240,7 +240,7 @@ Add-AzureRmSqlDatabaseToFailoverGroup -ResourceGroupName rg -ServerName server1 
 ###  Remove-AzureRmSqlDatabaseFromFailoverGroup
 - `Tag` parameter has been removed
 
-```powershell
+```powershell-interactive
 # Old
 Remove-AzureRmSqlDatabaseFromFailoverGroup -ResourceGroupName rg -ServerName server1 -FailoverGroupName fg -Database $db1 -Tag @{ Environment="Test" }
 
@@ -252,7 +252,7 @@ Remove-AzureRmSqlDatabaseFromFailoverGroup -ResourceGroupName rg -ServerName ser
 - `PartnerResourceGroupName` parameter has been removed
 - `PartnerServerName` parameter has been removed
 
-```powershell
+```powershell-interactive
 # Old
 Remove-AzureRmSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName server1 -FailoverGroupName fg -PartnerServerName server2 -PartnerResourceGroupName rg
 
@@ -318,7 +318,7 @@ The following output type properties were affected this release:
     - `Get-AzureStorageTable`
     - `New-AzureStorageTable`
     
-```powershell
+```powershell-interactive
 # Old
 $LocationMode = (Get-AzureStorageBlob -Container $containername)[0].ICloudBlob.ServiceClient.LocationMode		
 $ParallelOperationThreadCount = (Get-AzureStorageContainer -Container $containername).CloudBlobContainer.ServiceClient.ParallelOperationThreadCount
@@ -340,7 +340,7 @@ The following cmdlets and cmdlet output types were changed in this release.
 
 - ```EnvironmentName``` parameter has been removed and replaced with ```Environment```, the ```Environment``` now takes a string and not an ```AzureEnvironment``` object
 
-```powershell
+```powershell-interactive
 # Old
 Add-AzureRmAccount -EnvironmentName AzureChinaCloud
 
@@ -352,7 +352,7 @@ Add-AzureRmAccount -Environment AzureChinaCloud
 
 ```Select-AzureRmProfile``` was renamed to ```Import-AzureRmContext```
 
-```powershell
+```powershell-interactive
 # Old
 Select-AzureRmProfile -Path c:\mydir\myprofile.json
 
@@ -364,7 +364,7 @@ Import-AzureRmContext -Path c:\mydir\myprofile.json
 
 ```Save-AzureRmProfile``` was renamed to ```Save-AzureRmContext```
 
-```powershell
+```powershell-interactive
 # Old
 Save-AzureRmProfile -Path c:\mydir\myprofile.json
 
@@ -375,7 +375,7 @@ Save-AzureRmContext -Path c:\mydir\myprofile.json
 
 - The ```TokenCache``` property changed to a type that implements ```IAzureTokenCache``` instead of a ```byte[]```
 
-```powershell
+```powershell-interactive
 # Old
 $bytes = (Get-AzureRmContext).TokenCache
 $bytes = (Set-AzureRmContext -SubscriptionId xxx-xxx-xxx-xxx).TokenCache
@@ -391,7 +391,7 @@ $bytes = (Add-AzureRmAccount).Context.TokenCache.CacheData
 
 - The ```AccountType``` property was changed to ```Type```
 
-```powershell
+```powershell-interactive
 # Old
 $type = (Get-AzureRmContext).Account.AccountType
 $type = (Set-AzureRmContext -SubscriptionId xxx-xxx-xxx-xxx).Account.AccountType
@@ -406,7 +406,7 @@ $type = (Add-AzureRmAccount).Context.Account.Type
 ### Breaking Changes to the output PSAzureSubscription Type
 - The ```SubscriptionId``` property was changed to ```Id```
 
-```powershell
+```powershell-interactive
 # Old
 $id =(Get-AzureRmSubscription -SubscriptionId xxxx-xxxx-xxxx-xxxx).SubscriptionId
 $id =(Add-AzureRmAccount -SubscriptionId xxxx-xxxx-xxxx-xxxx).Context.Subscription.SubscriptionId
@@ -422,7 +422,7 @@ $id =(Set-AzureRmContext -SubscriptionId xxxx-xxxx-xxxx-xxxx).Subscription.Id
 
 - The ```SubscriptionName``` property was changed to ```Name```
 
-```powershell
+```powershell-interactive
 # Old
 $name =(Get-AzureRmSubscription -SubscriptionId xxxx-xxxx-xxxx-xxxx).SubscriptionName
 $name =(Add-AzureRmAccount -SubscriptionId xxxx-xxxx-xxxx-xxxx).Context.Subscription.SubscriptionName
@@ -440,7 +440,7 @@ $name =(Set-AzureRmContext -SubscriptionId xxxx-xxxx-xxxx-xxxx).Subscription.Nam
 
 - The ```TenantId``` property was changed to ```Id```
 
-```powershell
+```powershell-interactive
 # Old
 $id =(Get-AzureRmTenant -TenantId xxxx-xxxx-xxxx-xxxx).TenantId
 $id =(Add-AzureRmAccount -SubscriptionId xxxx-xxxx-xxxx-xxxx).Context.Tenant.TenantId
@@ -456,7 +456,7 @@ $id =(Set-AzureRmContext -SubscriptionId xxxx-xxxx-xxxx-xxxx).Tenant.Id
 
 - The ```Domain``` property was changed to ```Directory```
 
-```powershell
+```powershell-interactive
 # Old
 $tenantName =(Get-AzureRmTenant -TenantId xxxx-xxxx-xxxx-xxxx).Domain
 

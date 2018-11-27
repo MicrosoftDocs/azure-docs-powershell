@@ -18,7 +18,7 @@ This document serves as both a breaking change notification and migration guide 
 ### **New-AzureRmApiManagementBackendProxy**
 - Parameters "UserName" and "Password" are being replaced in favor of a PSCredential
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmApiManagementBackendProxy [other required parameters] -UserName "plain-text string" -Password "plain-text string"
 
@@ -29,7 +29,7 @@ New-AzureRmApiManagementBackendProxy [other required parameters] -Credential $PS
 ### **New-AzureRmApiManagementUser**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmApiManagementUser [other required parameters] -Password "plain-text string"
 
@@ -40,7 +40,7 @@ New-AzureRmApiManagementUser [other required parameters] -Password $SecureString
 ### **Set-AzureRmApiManagementUser**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmApiManagementUser [other required parameters] -Password "plain-text string"
 
@@ -53,7 +53,7 @@ Set-AzureRmApiManagementUser [other required parameters] -Password $SecureString
 ### **New-AzureBatchCertificate**
 - Parameter `Password` being replaced in favor of a Secure string
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureBatchCertificate [other required parameters] -Password "plain-text string"
 
@@ -64,7 +64,7 @@ New-AzureBatchCertificate [other required parameters] -Password $SecureStringVar
 ### **New-AzureBatchComputeNodeUser**
 - Parameter `Password` being replaced in favor of a Secure string
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureBatchComputeNodeUser [other required parameters] -Password "plain-text string"
 
@@ -75,7 +75,7 @@ New-AzureBatchComputeNodeUser [other required parameters] -Password $SecureStrin
 ### **Set-AzureRmBatchComputeNodeUser**
 - Parameter `Password` being replaced in favor of a Secure string
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmBatchComputeNodeUser [other required parameters] -Password "plain-text string"
 
@@ -86,7 +86,7 @@ Set-AzureRmBatchComputeNodeUser [other required parameters] -Password $SecureStr
 ### **New-AzureBatchTask**
  - Removed the `RunElevated` switch and replaced it with `UserIdentity`.
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureBatchTask -Id $taskId1 -JobId $jobId -CommandLine "cmd /c echo hello" -RunElevated $TRUE
 
@@ -102,7 +102,7 @@ This additionally impacts the `RunElevated` property on `PSCloudTask`, `PSStartT
 
 - `PSMultiInstanceSettings` constructor no longer takes a required `numberOfInstances` parameter, instead it takes a required `coordinationCommandLine` parameter.
 
-```powershell
+```powershell-interactive
 # Old
 $settings = New-Object Microsoft.Azure.Commands.Batch.Models.PSMultiInstanceSettings -ArgumentList @(2)
 $settings.CoordinationCommandLine = "cmd /c echo hello"
@@ -116,7 +116,7 @@ New-AzureBatchTask [other parameters] -MultiInstanceSettings $settings
 ### **Get-AzureBatchTask**
  - Removed the `RunElevated` property on `PSCloudTask`. The `UserIdentity` property has been added to replace `RunElevated`.
 
-```powershell
+```powershell-interactive
 # Old
 $task = Get-AzureBatchTask [parameters]
 $task.RunElevated
@@ -132,7 +132,7 @@ This additionally impacts the `RunElevated` property on `PSCloudTask`, `PSStartT
 
 - Renamed the `SchedulingError` property on `PSExitConditions` to `PreProcessingError`.
 
-```powershell
+```powershell-interactive
 # Old
 $task = Get-AzureBatchTask [parameters]
 $task.ExitConditions.SchedulingError
@@ -148,7 +148,7 @@ $task.ExitConditions.PreProcessingError
   - `FailureInformation` is returned any time there is a task failure. This includes all previous scheduling error cases, as well as nonzero task exit codes, and file upload failures from the new output files feature.
   - This is structured the same as before, so no code change is needed when using this type.
 
-```powershell
+```powershell-interactive
 # Old
 $task = Get-AzureBatchTask [parameters]
 $task.ExecutionInformation.SchedulingError
@@ -164,7 +164,7 @@ This additionally impacts: Get-AzureBatchPool, Get-AzureBatchSubtask, and Get-Az
  - Removed `TargetDedicated` and replaced it with `TargetDedicatedComputeNodes` and `TargetLowPriorityComputeNodes`.
  - `TargetDedicatedComputeNodes` has an alias `TargetDedicated`.
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureBatchPool [other parameters] [-TargetDedicated <Int32>]
 
@@ -177,7 +177,7 @@ This also impacts: Start-AzureBatchPoolResize
 ### **Get-AzureBatchPool**
  - Renamed the `TargetDedicated` and `CurrentDedicated` properties on `PSCloudPool` to `TargetDedicatedComputeNodes` and `CurrentDedicatedComputeNodes`.
 
-```powershell
+```powershell-interactive
 # Old
 $pool = Get-AzureBatchPool [parameters]
 $pool.TargetDedicated
@@ -193,7 +193,7 @@ $pool.CurrentDedicatedComputeNodes
 
 - Renamed `ResizeError` to `ResizeErrors` on `PSCloudPool`, and it is now a collection.
 
-```powershell
+```powershell-interactive
 # Old
 $pool = Get-AzureBatchPool [parameters]
 $pool.ResizeError
@@ -206,7 +206,7 @@ $pool.ResizeErrors[0]
 ### **New-AzureBatchJob**
 - Renamed the `TargetDedicated` property on `PSPoolSpecification` to `TargetDedicatedComputeNodes`.
 
-```powershell
+```powershell-interactive
 # Old
 $poolInfo = New-Object Microsoft.Azure.Commands.Batch.Models.PSPoolInformation
 $poolInfo.AutoPoolSpecification = New-Object Microsoft.Azure.Commands.Batch.Models.PSAutoPoolSpecification
@@ -226,7 +226,7 @@ New-AzureBatchJob [other parameters] -PoolInformation $poolInfo
  - Removed `Name` and replaced it with `Path`.
  - `Path` has an alias `Name`.
 
-```powershell
+```powershell-interactive
 # Old
 Get-AzureBatchNodeFile [other parameters] [[-Name] <String>]
 
@@ -240,7 +240,7 @@ This also impacts: Get-AzureBatchNodeFileContent, Remove-AzureBatchNodeFile
 
  - Renamed the `Name` property on `PSNodeFile` to `Path`.
 
-```powershell
+```powershell-interactive
 # Old
 $file = Get-AzureBatchNodeFile [parameters]
 $file.Name
@@ -254,7 +254,7 @@ $file.Path
 - The `PreviousState` and `State` properties of `PSSubtaskInformation` are no longer of type `TaskState`, instead they are of type `SubtaskState`.
   - Unlike `TaskState`, `SubtaskState` has no `Active` value, since it is not possible for subtasks to be in an `Active` state.
 
-```powershell
+```powershell-interactive
 # Old
 $subtask = Get-AzureBatchSubtask [parameters]
 if ($subtask.State -eq Microsoft.Azure.Batch.Common.TaskState.Running) { }
@@ -269,7 +269,7 @@ if ($subtask.State -eq Microsoft.Azure.Batch.Common.SubtaskState.Running) { }
 ### **Set-AzureRmVMAccessExtension**
 - Parameters "UserName" and "Password" are being replaced in favor of a PSCredential
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmVMAccessExtension [other required parameters] -UserName "plain-text string" -Password "plain-text string"
 
@@ -300,7 +300,7 @@ Set-AzureRmVMAccessExtension [other required parameters] -Credential $PSCredenti
 ### **New-AzureRmEventHubNamespace**
 - The property 'Status' and 'Enabled' from the NamespceAttributes will be removed. 
 
-```powershell
+```powershell-interactive
 # Old
 # The $namespace has Status and Enabled property  
 $namespace = New-AzureRmEventHubNamespace <parameters>
@@ -315,7 +315,7 @@ $namespace = Get-AzureRmEventHubNamespace <parameters>
 ### **Get-AzureRmEventHubNamespace**
 - The property 'Status' and 'Enabled' from the NamespceAttributes will be removed. 
 
-```powershell
+```powershell-interactive
 # Old
 # The $namespace has Status and Enabled property 
 $namespace = Get-AzureRmEventHubNamespace <parameters>
@@ -330,7 +330,7 @@ $namespace = Get-AzureRmEventHubNamespace <parameters>
 ### **Set-AzureRmEventHubNamespace**
 - The property 'Status' and 'Enabled' from the NamespceAttributes will be removed. 
 
-```powershell
+```powershell-interactive
 # Old
 # The $namespace has Status and Enabled property 
 $namespace = Set-AzureRmEventHubNamespace <parameters>
@@ -340,12 +340,12 @@ $namespace.Enabled
 # New
 # The call remains the same, but the returned values NameSpace object will not have the Status and Enabled property    
 $namespace = Set-AzureRmEventHubNamespace <parameters>
-```	
+``` 
   
 ### **New-AzureRmEventHubConsumerGroup**
 - The property 'EventHubPath' from the ConsumerGroupAttributes will be removed.
 
-```powershell
+```powershell-interactive
 # Old
 # The $consumergroup has EventHubPath property 
 $consumergroup = New-AzureRmEventHubConsumerGroup <parameters>
@@ -359,7 +359,7 @@ $consumergroup = New-AzureRmEventHubConsumerGroup <parameters>
 ### **Set-AzureRmEventHubConsumerGroup**
 - The property 'EventHubPath' from the ConsumerGroupAttributes will be removed.
 
-```powershell
+```powershell-interactive
 # Old
 # The $consumergroup has EventHubPath property 
 $consumergroup = Set-AzureRmEventHubConsumerGroup <parameters>
@@ -373,7 +373,7 @@ $consumergroup = Set-AzureRmEventHubConsumerGroup <parameters>
 ### **Get-AzureRmEventHubConsumerGroup**
 - The property 'EventHubPath' from the ConsumerGroupAttributes will be removed.
 
-```powershell
+```powershell-interactive
 # Old
 # The $consumergroup has EventHubPath property 
 $consumergroup = Get-AzureRmEventHubConsumerGroup <parameters>
@@ -399,7 +399,7 @@ $consumergroup = Get-AzureRmEventHubConsumerGroup <parameters>
 ### **Get-AzureRmAlertRule**
 - Output change: The output of this cmdlet will be flattened, i.e. elimination of the properties field, to improve the user experience.
 
-```powershell
+```powershell-interactive
 # Old
 $rules = Get-AzureRmAlertRule -ResourceGroup $resourceGroup
 if ($rules -and $rules.count -ge 1)
@@ -429,7 +429,7 @@ if ($rules -and $rules.count -ge 1)
 ### **Get-AzureRmAutoscaleSetting**
 - Output change: The AutoscaleSettingResourceName field will be deprecated since it always equals the Name field.
 
-```powershell
+```powershell-interactive
 # Old
 $s1 = Get-AzureRmAutoscaleSetting -ResourceGroup $resourceGroup -Name MySetting
 if ($s1.AutoscaleSettingResourceName -ne $s1.Name)
@@ -447,7 +447,7 @@ Write-Host $s1.Name
 ### **Remove-AzureRmAlertRule** / **Remove-AzureRmLogProfile**
 - Output change: The type of the output will change to return a single object containing the request Id and the status code.
 
-```powershell
+```powershell-interactive
 # Old
 $s1 = Remove-AzureRmAlertRule -ResourceGroup $resourceGroup -name $ruleName
 if ($s1 -ne $null)
@@ -467,7 +467,7 @@ $s = $s1.StatusCode
 ### **Add-AzureRmApplicationGatewaySslCertificate**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 Add-AzureRmApplicationGatewaySslCertificate [other required parameters] -Password "plain-text string"
 
@@ -478,7 +478,7 @@ Add-AzureRmApplicationGatewaySslCertificate [other required parameters] -Passwor
 ### **New-AzureRmApplicationGatewaySslCertificate**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmApplicationGatewaySslCertificate [other required parameters] -Password "plain-text string"
 
@@ -489,7 +489,7 @@ New-AzureRmApplicationGatewaySslCertificate [other required parameters] -Passwor
 ### **Set-AzureRmApplicationGatewaySslCertificate**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmApplicationGatewaySslCertificate [other required parameters] -Password "plain-text string"
 
@@ -502,7 +502,7 @@ Set-AzureRmApplicationGatewaySslCertificate [other required parameters] -Passwor
 ### **New-AzureRmADAppCredential**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmADAppCredential [other required parameters] -Password "plain-text string"
 
@@ -513,7 +513,7 @@ New-AzureRmADAppCredential [other required parameters] -Password $SecureStringVa
 ### **New-AzureRmADApplication**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmADApplication [other required parameters] -Password "plain-text string"
 
@@ -524,7 +524,7 @@ New-AzureRmADApplication [other required parameters] -Password $SecureStringVari
 ### **New-AzureRmADServicePrincipal**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmADServicePrincipal [other required parameters] -Password "plain-text string"
 
@@ -535,7 +535,7 @@ New-AzureRmADServicePrincipal [other required parameters] -Password $SecureStrin
 ### **New-AzureRmADSpCredential**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmADSpCredential [other required parameters] -Password "plain-text string"
 
@@ -546,7 +546,7 @@ New-AzureRmADSpCredential [other required parameters] -Password $SecureStringVar
 ### **New-AzureRmADUser**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 New-AzureRmADUser [other required parameters] -Password "plain-text string"
 
@@ -557,7 +557,7 @@ New-AzureRmADUser [other required parameters] -Password $SecureStringVariable
 ### **Set-AzureRmADUser**
 - Parameter "Password" being replaced in favor of a SecureString
 
-```powershell
+```powershell-interactive
 # Old
 Set-AzureRmADUser [other required parameters] -Password "plain-text string"
 
@@ -626,7 +626,7 @@ Set-AzureRmADUser [other required parameters] -Password $SecureStringVariable
     - Enabled
     - Status
    
-```powershell
+```powershell-interactive
 # Old
 # The $namespace has Status and Enabled property 
 $namespace = Get-AzureRmServiceBusNamespace <parameters>
@@ -645,7 +645,7 @@ $namespace = Get-AzureRmServiceBusNamespace <parameters>
     - IsAnonymousAccessible
     - SupportOrdering
 
-```powershell
+```powershell-interactive
 # Old
 # The $queue has EntityAvailabilityStatus, EnableBatchedOperations, IsAnonymousAccessible and SupportOrdering properties
 $queue = Get-AzureRmServiceBusQueue <parameters>
@@ -668,7 +668,7 @@ $queue = Get-AzureRmServiceBusQueue <parameters>
     - EnableSubscriptionPartitioning
     - EntityAvailabilityStatus
 
-```powershell
+```powershell-interactive
 # Old
 # The $topic has EntityAvailabilityStatus, EnableSubscriptionPartitioning, IsAnonymousAccessible, IsExpress, Location and FilteringMessagesBeforePublishing properties
 $topic = Get-AzureRmServiceBusTopic <parameters>
@@ -691,7 +691,7 @@ $topic = Get-AzureRmServiceBusTopic <parameters>
     - IsReadOnly
     - Location
    
-```powershell
+```powershell-interactive
 # Old
 # The $subscription has EntityAvailabilityStatus, EnableSubscriptionPartitioning, IsAnonymousAccessible, IsExpress, Location and FilteringMessagesBeforePublishing properties
 $subscription = Get-AzureRmServiceBussubscription <parameters>

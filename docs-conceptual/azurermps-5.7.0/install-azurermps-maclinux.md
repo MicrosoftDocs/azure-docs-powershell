@@ -35,7 +35,7 @@ sudo pwsh
 
 To install Azure PowerShell, run the following command:
 
-```powershell
+```powershell-interactive
 Install-Module AzureRM.NetCore
 ```
 
@@ -65,7 +65,7 @@ To start working with Azure PowerShell, you need to load `AzureRM.Netcore` into 
 with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in
 with your Azure credentials. Importing a module does __not__ require elevated privileges.
 
-```powershell
+```powershell-interactive
 # Import the module into the PowerShell session
 Import-Module AzureRM.Netcore
 # Connect to Azure with an interactive dialog for sign-in
