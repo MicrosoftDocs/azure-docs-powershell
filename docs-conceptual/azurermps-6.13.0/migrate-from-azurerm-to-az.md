@@ -20,7 +20,7 @@ you get started on transitioning to the new module.
 ## Ensure your existing scripts work with the latest AzureRM release
 
 This is the most important step! Run your existing scripts, and make sure that they work with the
-_latest_ release of AzureRM (__6.12.0__). If your scripts don't work, make sure to read
+_latest_ release of AzureRM (__6.13.0__). If your scripts don't work, make sure to read
 the [AzureRM migration guide](migration-guide.6.0.0.md).
 
 ## Install the Azure PowerShell Az module
