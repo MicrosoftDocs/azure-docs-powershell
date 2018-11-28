@@ -23,8 +23,22 @@ If you installed Azure PowerShell using PowerShellGet, you can use the
 uninstall each module individually. Uninstallation can be complicated if you have more than one version of Azure
 PowerShell installed.
 
+To check which versions of Azure PowerShell you currently have installed, run the following command:
+
+```powershell-interactive
+Get-InstalledModule -Name AzureRM -AllVersions
+```
+
+```output
+Version              Name                                Repository           Description
+-------              ----                                ----------           -----------
+6.11.0               AzureRM                             PSGallery            Azure Resource Manager Module
+6.13.1               AzureRM                             PSGallery            Azure Resource Manager Module
+```
+
 The following script queries the PowerShell Gallery to get a list of dependent submodules. Then, the script
-uninstalls the correct version of each submodule.
+uninstalls the correct version of each submodule. You will need to have administrator access to run this script
+in a scope other than `Process` or `CurrentUser`.
 
 ```powershell-interactive
 function Uninstall-AllModules {
