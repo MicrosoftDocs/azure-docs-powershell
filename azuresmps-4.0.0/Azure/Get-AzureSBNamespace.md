@@ -23,6 +23,8 @@ To get the version of the module you're using, in the Azure PowerShell console, 
 
 The **Get-AzureSBNamespace** cmdlet returns the Service Bus service namespaces associated with the current subscription.
 
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
+
 ## EXAMPLES
 
 ### Example 1: Get the Service Bus namespace

@@ -10,11 +10,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates existing Service Bus authorization rule.
 
-> [!IMPORTANT]
-> 
-> This PowerShell command for Service Bus will no longer be supported on __11/1/2019__. The Azure Service Management model is deprecated for Service Bus,
-> and will be disabled on that date. Please refer to commands that use the Azure Resource Management model.
-
 ## SYNTAX
 
 ### EntitySAS
@@ -32,6 +27,8 @@ Set-AzureSBAuthorizationRule -Name <String> [-Permission <AccessRights[]>] -Name
 
 ## DESCRIPTION
 Updates existing Service Bus authorization rule.
+
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
 
 ## EXAMPLES
 

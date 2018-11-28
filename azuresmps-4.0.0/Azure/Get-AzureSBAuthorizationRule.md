@@ -7,11 +7,6 @@ schema: 2.0.0
 
 # Get-AzureSBAuthorizationRule
 
-> [!IMPORTANT]
-> 
-> This PowerShell command for Service Bus will no longer be supported on __11/1/2019__. The Azure Service Management model is deprecated for Service Bus,
-> and will be disabled on that date. Please refer to commands that use the Azure Resource Management model.
-
 ## SYNOPSIS
 Gets Service bus authorization rules.
 
@@ -32,6 +27,8 @@ Get-AzureSBAuthorizationRule [-Name <String>] [-Permission <AccessRights[]>] -Na
 
 ## DESCRIPTION
 Gets Service bus authorization rules.
+
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
 
 ## EXAMPLES
 

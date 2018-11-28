@@ -10,11 +10,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a namespace.
 
-> [!IMPORTANT]
-> 
-> This PowerShell command for Service Bus will no longer be supported on __11/1/2019__. The Azure Service Management model is deprecated for Service Bus,
-> and will be disabled on that date. Please refer to commands that use the Azure Resource Management model.
-
 ## SYNTAX
 
 ```
@@ -27,6 +22,8 @@ This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure Pow
 To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **New-AzureSBNamespace** cmdlet creates a service namespace for use with Service Bus in Azure.
+
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
 
 ## EXAMPLES
 
