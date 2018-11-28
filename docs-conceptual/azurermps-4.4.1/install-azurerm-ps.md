@@ -181,14 +181,14 @@ how to install multiple versions of Azure PowerShell:
 
 ```powershell-interactive
 Install-Module -Name AzureRM -RequiredVersion 3.7.0
-Install-Module -Name AzureRM -RequiredVersion 1.2.9
+Install-Module -Name AzureRM -RequiredVersion 2.3.0
 ```
 
 Only one version of the module can be loaded in a PowerShell session. You must open a new
 PowerShell window and use `Import-Module` to import a specific version of the AzureRM cmdlets:
 
 ```powershell-interactive
-Import-Module -Name AzureRM -RequiredVersion 1.2.9
+Import-Module -Name AzureRM -RequiredVersion 2.3.0
 ```
 
 > [!NOTE]
