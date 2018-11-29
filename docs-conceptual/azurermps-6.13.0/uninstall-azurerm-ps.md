@@ -59,7 +59,7 @@ function Uninstall-AllModules {
   'Creating list of dependencies...'
   $target = Find-Module $TargetModule -RequiredVersion $version
   $target.Dependencies | ForEach-Object {
-    $AllModules += New-Object -TypeName psobject -Property @{name=$_.name; version=$_.requiredVersion; minimum=$_.minimumVersion}
+    $AllModules += New-Object -TypeName psobject -Property @{name=$_.name; version=$_.requiredVersion}
   }
   $AllModules += New-Object -TypeName psobject -Property @{name=$TargetModule; version=$Version}
 
@@ -82,7 +82,8 @@ Uninstall-AllModules -TargetModule AzureRM -Version 4.4.1 -Force
 ```
 
 As the script runs, it will display the name and version of each submodule that is being
-uninstalled.
+uninstalled. To run the script to only see what would be deleted, without removing it,
+use the `-WhatIf` option.
 
 ```output
 Creating list of dependencies...
