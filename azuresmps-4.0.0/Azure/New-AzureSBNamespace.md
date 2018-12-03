@@ -23,6 +23,8 @@ To get the version of the module you're using, in the Azure PowerShell console, 
 
 The **New-AzureSBNamespace** cmdlet creates a service namespace for use with Service Bus in Azure.
 
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
+
 ## EXAMPLES
 
 ### Example 1: Create a service namespace
