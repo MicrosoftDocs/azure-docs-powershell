@@ -127,7 +127,7 @@
                     "**/*.md"
                 ],
                 "src": "azps-1.0.0",
-                "version": "azps-0.4.0",
+                "version": "azps-1.0.0",
                 "exclude": [
                     "docs-conceptual/**"
                 ],
@@ -392,8 +392,8 @@
             "azurermps-6.13.0": {
                 "dest": "azurermps-6.13.0"
             },
-            "azps-0.4.0": {
-                "dest": "azps-preview"
+            "azps-1.0.0": {
+                "dest": "azps-1.0.0"
             },
             "azuresmps-4.0.0": {
                 "dest": "azuresmps-4.0.0"
