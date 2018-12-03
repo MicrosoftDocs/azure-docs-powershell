@@ -140,7 +140,7 @@
                 ],
                 "src": "docs-conceptual/azps-1.0.0",
                 "version": "azps-1.0.0",
-                "dest": "azure/preview"
+                "dest": "azure"
             },
             {
                 "files": [
