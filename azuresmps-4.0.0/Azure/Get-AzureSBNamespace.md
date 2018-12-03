@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets the namespace.
 
+
 ## SYNTAX
 
 ```
@@ -21,6 +22,8 @@ This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure Pow
 To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
 
 The **Get-AzureSBNamespace** cmdlet returns the Service Bus service namespaces associated with the current subscription.
+
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
 
 ## EXAMPLES
 

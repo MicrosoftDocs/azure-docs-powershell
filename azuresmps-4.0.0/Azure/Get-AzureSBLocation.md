@@ -22,6 +22,8 @@ To get the version of the module you're using, in the Azure PowerShell console, 
 
 The **Get-AzureSBLocation** cmdlet returns the locations from which the Service Bus is available.
 
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
+
 ## EXAMPLES
 
 ### Example 1: Get the Service Bus location

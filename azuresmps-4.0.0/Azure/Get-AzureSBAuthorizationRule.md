@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Gets Service bus authorization rules.
 
+
 ## SYNTAX
 
 ### EntitySAS
@@ -26,6 +27,8 @@ Get-AzureSBAuthorizationRule [-Name <String>] [-Permission <AccessRights[]>] -Na
 
 ## DESCRIPTION
 Gets Service bus authorization rules.
+
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
 
 ## EXAMPLES
 

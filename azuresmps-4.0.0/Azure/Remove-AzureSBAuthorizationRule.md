@@ -27,6 +27,8 @@ Remove-AzureSBAuthorizationRule -Name <String> -Namespace <String> [-PassThru] [
 ## DESCRIPTION
 Removes existing Service Bus authorization rule.
 
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
+
 ## EXAMPLES
 
 ### Example 1: Remove authorization rule at namespace level
