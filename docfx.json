@@ -401,14 +401,14 @@
         },
         "filemetadata": {
             "ms.author": {
-                "azurermps-*/**/*.md": "aaroney",
-                "azuresmps-*/**/*.md": "aaroney",
+                "azurermps-*/**/*.md": "jasonsha",
+                "azuresmps-*/**/*.md": "jasonsha",
                 "azurestackps-*/**/*.md": "jeffgilb",
                 "azuredmps-*/**/*.md": "deveshguha"
             },
             "author": {
-                "azurermps-*/**/*.md": "twitchax",
-                "azuresmps-*/**/*.md": "twitchax",
+                "azurermps-*/**/*.md": "JasonRShaver",
+                "azuresmps-*/**/*.md": "JasonRShaver",
                 "azurestackps-*/**/*.md": "jeffgilb",
                 "azuredmps-*/**/*.md": "deveshguha"
             },
