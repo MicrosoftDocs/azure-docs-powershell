@@ -28,6 +28,8 @@ Set-AzureSBAuthorizationRule -Name <String> [-Permission <AccessRights[]>] -Name
 ## DESCRIPTION
 Updates existing Service Bus authorization rule.
 
+[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
+
 ## EXAMPLES
 
 ### Example 1: Renew primary key for authorization rule at namespace level
