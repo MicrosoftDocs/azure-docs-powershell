@@ -356,6 +356,11 @@
         "redirect_document_id": false
     },
     {
+        "source_path": "docs-conceptual/azurermps-5.7.0/install-azurermps-maclinux.md",
+        "redirect_url": "/powershell/azure/install-az-ps",
+        "redirect_document_id": false
+    },
+    {
         "source_path": "docs-conceptual/azurermps-6.13.0/azurerm-ps-in-docker.md",
         "redirect_url": "/powershell/azure/install-az-ps",
         "redirect_document_id": false
@@ -368,6 +373,16 @@
     {
         "source_path": "docs-conceptual/azps-1.0.0/index.md",
         "redirect_url": "/powershell/azure/overview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs-conceptual/azps-1.0.0/install-azurerm-ps.md",
+        "redirect_url": "/powershell/azure/install-az-ps",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs-conceptual/azps-1.0.0/uninstall-azurerm-ps.md",
+        "redirect_url": "/powershell/azure/uninstall-az-ps",
         "redirect_document_id": false
     },
     {
