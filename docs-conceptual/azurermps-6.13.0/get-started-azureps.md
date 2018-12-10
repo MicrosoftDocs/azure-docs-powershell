@@ -5,7 +5,7 @@ author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.date: 09/11/2018
 ---
 
