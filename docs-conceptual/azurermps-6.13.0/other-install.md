@@ -25,8 +25,8 @@ To install on Linux or macOS environments, see [Install Azure PowerShell on macO
 
 ## Install or update on Windows using the MSI Package
 
-Azure PowerShell can be installed using the MSI file available from
-[GitHub](https://github.com/Azure/azure-powershell/releases/latest). If you have installed previous
+Azure PowerShell for Windows PowerShell 5.x can be installed using the MSI file available from
+[GitHub](https://github.com/Azure/azure-powershell/releases/tag/v6.13.1-November2018). If you have installed previous
 versions of Azure modules as an MSI, the installer automatically removes them. The MSI package installs
 modules in `${env:ProgramFiles}\WindowsPowerShell\Modules`. Both the `AzureRM` and `Azure` modules are installed.
 
