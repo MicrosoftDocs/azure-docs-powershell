@@ -52,6 +52,14 @@ virtual machines running in an Azure cloud.
 For more information about managed identities for Azure resources, see
 [How to use managed identities for Azure resources on an Azure VM to acquire an access token](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token).
 
+## Sign in as a Cloud Solution Provider (CSP)
+
+A [Cloud Solution Provider (CSP)](https://azure.microsoft.com/en-us/offers/ms-azr-0145p/) sign-in requires the use of `-TenantId`. Normally, this parameter can be provided as either a tenant ID or a domain name. However, for CSP sign-in, it must be provided a **tenant ID**.
+
+```azurepowershell-interactive
+Connect-AzAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'
+```
+
 ## Sign in to another Cloud
 
 Azure cloud services offer environments compliant with regional data-handling regulations.

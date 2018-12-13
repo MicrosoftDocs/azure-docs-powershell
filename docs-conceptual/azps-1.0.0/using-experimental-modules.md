@@ -6,12 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/29/2018
+ms.date: 12/13/2018
 ---
 # Use experimental Azure PowerShell modules
 
 With the emphasis on developer tools in Azure, the Azure PowerShell team experiments 
-with many improvements to the Azure PowerShell experience.
+with many improvements to the Azure PowerShell experience. This article describes how to
+opt-in to experiments with Azure PowerShell and give feedback to the development team.
 
 ## Experimentation methodology
 
@@ -39,7 +40,7 @@ PowerShell modules. To see a list of experimental modules, run the following com
 Find-Module Az.*.Experiments
 ```
 
-To install the experimental module, use the `Install-Module` cmdlet.
+To install an experimental module, use the `Install-Module` cmdlet.
 
 ### Documentation and support
 
@@ -66,9 +67,8 @@ forward in implementing these updates.
 - Scenario-based Cmdlets - **All*- cmdlets should be designed around scenarios, not the Azure REST
   service.
 
-- Shorter Names - Includes the names of cmdlets and the
-  names of parameters (for example, `-ResourceGroupName` => `-Rg`). Use aliases for compatibility with
-  "old" cmdlets. Provide _backwards compatible_ parameter sets.
+- Shorter Names - Includes the names of cmdlets and the names of parameters.
+  Use aliases for compatibility with "old" cmdlets. Provide _backwards compatible_ parameter sets.
 
 - Smart Defaults - Create smart defaults to fill in "required" information. For example:
   - Resource Group
