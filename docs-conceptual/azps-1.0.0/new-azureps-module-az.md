@@ -39,7 +39,7 @@ AzureRM cmdlet names as aliases for the new Az cmdlet names.
 The new cmdlet names have been designed to be easy to learn. Instead of using `AzureRm` or `Azure`
 in cmdlet names, use `Az`. For example, the old command `New-AzureRMVm` has become `New-AzVm`.
 
-For a full description of the migration process, see [Migrate from AzureRM to Az](migrate-from-Az-to-az.md).
+For a full description of the migration process, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
 
 ## The future of support for AzureRM
 
