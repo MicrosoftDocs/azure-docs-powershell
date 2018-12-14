@@ -23,8 +23,8 @@ To see the full list of breaking changes between AzureRM and Az, see the [Migrat
 
 The Az module can be installed side-by-side with the AzureRM module, but this is not recommended. Before
 taking any migration steps, check which versions of AzureRM are installed on your system. Doing so
-allows you to make sure scripts are already running on the latest release, and that you know which
-versions of AzureRM can be uninstalled.
+allows you to make sure scripts are already running on the latest release, and let you know
+if you can enable command aliases without uninstalling AzureRM.
 
 To check which version(s) of AzureRM you have installed, run the command:
 
@@ -46,7 +46,8 @@ scripts and enable compatibility for old cmdlet names.
 
 To install the Azure PowerShell Az module, follow these steps:
 
-* __RECOMMENDED__: [Uninstall the AzureRM module](uninstall-az-ps.md). Make sure that you remove _all_ installed versions of AzureRM, not just the most recent version.
+* __RECOMMENDED__: [Uninstall the AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module).
+  Make sure that you remove _all_ installed versions of AzureRM, not just the most recent version.
 * [Install the Az module](install-az-ps.md)
 
 ## <a name="aliases"/>Enable AzureRM compatibility aliases 
