@@ -15,6 +15,13 @@ ms.date: 08/28/2018
 This is a list of changes made to Azure PowerShell in this release.
 
 ---
+## Version 1.0.0 - December 2018
+
+#### General
+
+* General availability of `Az` module
+* For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
+
 ## 6.13.0 - November 2018
 #### AzureRM.Profile
 * Update common code to use latest version of ClientRuntime
