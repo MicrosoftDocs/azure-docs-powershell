@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/30/2018
+ms.date: 12/13/2018
 ---
 # Persist user credentials across PowerShell sessions
 
@@ -156,9 +156,7 @@ $env:AzureRmContextAutoSave="true" | "false"
 
 When set to 'true', the context is automatically saved. If set to 'false', the context isn't saved.
 
-## Changes to the Az.Profile module
-
-New cmdlets for managing context
+## Context management cmdlets
 
 - [Enable-AzContextAutosave][enable] - Allow saving the context between powershell sessions.
   Any changes alter the global context.
@@ -170,9 +168,6 @@ New cmdlets for managing context
   account.
 - [Remove-AzContext][remove-context] - Remove a named context.
 - [Rename-AzContext][rename] - Rename an existing context.
-
-Changes to existing profile cmdlets
-
 - [Add-AzAccount][login] - Allow scoping of the sign-in to the process or the current user.
   Allow naming the default context after authentication.
 - [Import-AzContext][import] - Allow scoping of the sign-in to the process or the current user.
@@ -180,14 +175,14 @@ Changes to existing profile cmdlets
   to the process or current user.
 
 <!-- Hyperlinks -->
-[enable]: /powershell/module/az.profile/Enable-AzContextAutosave
-[disable]: /powershell/module/az.profile/Disable-AzContextAutosave
-[select]: /powershell/module/az.profile/Select-AzContext
-[remove-cred]: /powershell/module/az.profile/Disconnect-AzAccount
-[remove-context]: /powershell/module/az.profile/Remove-AzContext
-[rename]: /powershell/module/az.profile/Rename-AzContext
+[enable]: /powershell/module/az.accounts/Enable-AzureRmContextAutosave
+[disable]: /powershell/module/az.accounts/Disable-AzContextAutosave
+[select]: /powershell/module/az.accounts/Select-AzContext
+[remove-cred]: /powershell/module/az.accounts/Disconnect-AzAccount
+[remove-context]: /powershell/module/az.accounts/Remove-AzContext
+[rename]: /powershell/module/az.accounts/Rename-AzContext
 
 <!-- Updated cmdlets -->
-[login]: /powershell/module/az.profile/Connect-AzAccount
-[import]:  /powershell/module/az.profile/Import-AzContext
-[set-context]: /powershell/module/az.profile/Set-AzContext
+[login]: /powershell/module/az.accounts/Connect-AzAccount
+[import]:  /powershell/module/az.accounts/Import-AzContext
+[set-context]: /powershell/module/az.accounts/Set-AzContext

@@ -7,7 +7,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/30/2018
+ms.date: 12/13/2018
 ---
 # Create an Azure service principal with Azure PowerShell
 
@@ -65,41 +65,37 @@ ReplyUrls               : {}
 The `New-AzADServicePrincipal` cmdlet is used to create the service principal.
 
 ```azurepowershell-interactive
-$password = [System.Guid]::NewGuid().ToString()
-$securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
-New-AzADServicePrincipal -ApplicationId $app.ApplicationId
+$servicePrincipal = New-AzADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4
 ```
 
 ```output
-DisplayName                    Type                           ObjectId
------------                    ----                           --------
-MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738-a866-b4e3081a69e4
-```
-
-### Get information about the service principal
-
-```azurepowershell-interactive
-$svcprincipal = Get-AzADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
-$svcprincipal | Select-Object *
-```
-
-```output
-ServicePrincipalNames : {http://MyDemoWebApp, 00c01aaa-1603-49fc-b6df-b78c4e5138b4}
+Secret                : System.Security.SecureString
+ServicePrincipalNames : {00c01aaa-1603-49fc-b6df-b78c4e5138b4, http://MyDemoWebApp}
 ApplicationId         : 00c01aaa-1603-49fc-b6df-b78c4e5138b4
 DisplayName           : MyDemoWebApp
 Id                    : 698138e7-d7b6-4738-a866-b4e3081a69e4
+AdfsId                :
 Type                  : ServicePrincipal
+```
+
+From here, you can either directly use the `$servicePrincipal.Secret` property as an argument to
+`Connect-AzAccount` (see "Sign in using the service principal"), or you can convert this `SecureString`
+to a plain text string:
+
+```azurepowershell-interactive
+$BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($servicePrincipal.Secret)
+$password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+[Runtime.InteropServices.Marshal]::ZeroFreeBSTR($BSTR)
 ```
 
 ### Sign in using the service principal
 
-You can now sign in as the new service principal for your app using the *appId* and *password* you
-provided. You also need the Tenant ID for the service principal. Your Tenant ID is displayed when you
-sign into Azure with your personal credentials. To sign in with a service principal, use the
-following commands:
+You can now sign in as the new service principal for your app using the `appId` you provided and `password` that was  
+generated. You also need the Tenant ID for the service principal. Your Tenant ID is displayed when you sign into Azure with your 
+personal credentials. To sign in with a service principal, use the commands:
 
 ```azurepowershell-interactive
-$cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
+$cred = New-Object System.Management.Automation.PSCredential ("00c01aaa-1603-49fc-b6df-b78c4e5138b4", $servicePrincipal.Secret)
 Connect-AzAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
@@ -188,14 +184,15 @@ change the password of the service principal by creating a new password and remo
 ### Add a new password for the service principal
 
 ```azurepowershell-interactive
-$password = [System.Web.Security.Membership]::GeneratePassword(16,3)
-New-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp -Password $password
+New-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
 ```output
-StartDate           EndDate             KeyId                                Type
----------           -------             -----                                ----
-3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 6f801c3e-6fcd-42b9-be8e-320b17ba1d36 Password
+Secret    : System.Security.SecureString
+StartDate : 11/16/2018 12:38:23 AM
+EndDate   : 11/16/2019 12:38:23 AM
+KeyId     : 6f801c3e-6fcd-42b9-be8e-320b17ba1d36
+Type      : Password
 ```
 
 ### Get a list of credentials for the service principal
@@ -234,4 +231,19 @@ Get-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp
 StartDate           EndDate             KeyId                                Type
 ---------           -------             -----                                ----
 3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 6f801c3e-6fcd-42b9-be8e-320b17ba1d36 Password
+```
+
+### Get information about the service principal
+
+```azurepowershell-interactive
+$svcprincipal = Get-AzADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
+$svcprincipal | Select-Object *
+```
+
+```output
+ServicePrincipalNames : {http://MyDemoWebApp, 00c01aaa-1603-49fc-b6df-b78c4e5138b4}
+ApplicationId         : 00c01aaa-1603-49fc-b6df-b78c4e5138b4
+DisplayName           : MyDemoWebApp
+Id                    : 698138e7-d7b6-4738-a866-b4e3081a69e4
+Type                  : ServicePrincipal
 ```

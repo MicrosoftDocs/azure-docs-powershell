@@ -13,36 +13,27 @@ ms.date: 10/29/2018
 
 Azure PowerShell provides a set of cmdlets that use the [Azure Resource
 Manager](/azure/azure-resource-manager/resource-group-overview) model for managing your Azure
-resources. You can use it in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or
-you can install it on your local machine and use it in any PowerShell session.
+resources. Azure PowerShell uses .NET Standard, making it available for Windows, macOS, and Linux.
+Azure PowerShell is also available from Azure Cloud Shell.
 
-Use the [Cloud Shell](/azure/cloud-shell/overview) to run the Azure PowerShell in your browser, or
-[install](install-az-ps.md) it on own computer. Then read the [Get Started](get-started-azureps.md)
-article to begin using it. For information about the latest release, see the
-[release notes](release-notes-azureps.md).
+Use [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure PowerShell in your browser, or
+[install locally](install-az-ps.md). Check out the [Get Started](get-started-azureps.md)
+article to learn the Azure PowerShell basics and get started with Azure.
+
+For information about the latest Azure PowerShell release, see the [release notes](release-notes-azureps.md).
 
 ## About the new Az module
 
-This documentation describes the new Az module for Azure PowerShell, which is currently in preview. This new module is written from the ground up in .NET Standard,
-making it portable and compatible with both PowerShell 5.x on Windows, and PowerShell 6.x on any platform.
+This documentation describes the new Az module for Azure PowerShell. This new module is written from the
+ground up in .NET Standard. Using .NET Standard allows Azure PowerShell to run under PowerShell 5.x on Windows
+or PowerShell 6 on any platform. The Az module is now the intended way to interact with Azure through PowerShell.
+AzureRM will continue to get bug fixes, but no longer receive new features.
 
-Az will become the main module for Azure PowerShell when it reaches version 1.0. Before that time, there's feature parity between `Az`
-and the current Azure PowerShell module `AzureRM`. Since Az is in preview, you may experience bugs. If you do, 
-[file a GitHub issue](https://github.com/azure/azure-powershell/issues).
+Learn the full details about the new module, including how commands have been renamed and the maintenance
+plans for AzureRM, in the [Introducing the Azure PowerShell Az module](new-azureps-module-az.md). If you
+want to get started with using the new module right away, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md)
 
-To prepare for the module changeover and get all of your scripts up-to-date, we've included some instructions on migrating older scripts to use the new
-cmdlet set. In general, the cmdlet names are the same except that any instance of `AzureRM` has been replaced with `Az`. So old commands like `New-AzureRmVM` have become
-`New-AzVM`.
-
-For detailed instructions on migrating to the new module, check out [Migrating from AzureRM to Az](migrate-from-azurerm-to-az.md).
-
-> [!IMPORTANT]
->
-> Since the `Az` module is in preview, our documentation in other sections of the site still use the `AzureRM` cmdlet set. You can use `AzureRM`-style cmdlets through
-> a compatibility mode that can be enabled with `Enable-AzureRmAlias`. To learn more about aliasing, see [Migrating from AzureRM to Az](migrate-from-azurerm-to-az.md#aliases).
-> If you run your PowerShell scripts in Cloud Shell, `AzureRM` aliases are already enabled for you.
-
-## Common scenarios
+## Common scenarios 
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
