@@ -1,6 +1,17 @@
+---
+title: Breaking changes for Microsoft Azure PowerShell Az 1.0.0
+description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 1 release.
+author: sptramer
+ms.author: sttramer
+manager: carmonm
+ms.devlang: powershell
+ms.topic: conceptual
+ms.date: 12/14/2018
+---
+
 # Migration Guide for Az 1.0.0
 
-This document describes the changes between the 6.x versions of AzureRM and Az version 1.0.0
+This document describes the changes between the 6.x versions of AzureRM and Az version 1.0.0.
 
 ## Table of Contents
 - [General breaking changes](#general-breaking-changes)

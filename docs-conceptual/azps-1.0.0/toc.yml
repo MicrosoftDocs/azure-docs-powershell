@@ -42,6 +42,9 @@
       href: using-psjobs.md
   - name: Release notes
     href: release-notes-az.md
+    items:
+    - name: Breaking changes for Az 1.0.0
+      href: migrate-az-1.0.0.md
 - name: Tutorials
   items:
   - name: Create Virtual Machines

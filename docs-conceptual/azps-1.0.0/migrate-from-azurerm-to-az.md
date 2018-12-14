@@ -17,6 +17,8 @@ module. To make the transition easier, Az offers tools to allow you to run your 
 using AzureRM. No migration to a new command set is ever convenient, but this article will help
 you get started on transitioning to the new module.
 
+To see the full list of breaking changes between AzureRM and Az, see the [Migration guide for Az 1.0.0](migrate-az-1.0.0.md)
+
 ## Check for installed versions of AzureRM
 
 The Az module can be installed side-by-side with the AzureRM module, but this is not recommended. Before
