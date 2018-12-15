@@ -37,7 +37,8 @@ on updating or installing a new version of .NET Framework, see the [.NET Framewo
 > You can have both the `AzureRM` and `Az` modules installed at the same time. If you have both modules installed, __don't enable aliases__.
 > Enabling aliases will cause conflicts between `AzureRM` cmdlets and `Az` command aliases, and could cause unexpected behavior.
 > It's recommended that before installing the `Az` module, you uninstall `AzureRM`. You can always uninstall `AzureRM` or enable aliases
-> at any time. For uninstall instructions, see [Uninstall the Azure PowerShell module (AzureRM)](uninstall-az-ps.md). 
+> at any time. To learn about the AzureRM command aliases, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
+> For uninstall instructions, see [Uninstall the Azure PowerShell module (AzureRM)](uninstall-az-ps.md). 
 
 To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
 run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
