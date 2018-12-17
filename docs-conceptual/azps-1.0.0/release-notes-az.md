@@ -103,6 +103,122 @@ Added KeyVault Support to Application Gateway using Identity.
 ### Az.Websites
 - Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
 
+## 0.7.0 - December 2018
+
+### General
+
+* Minor changes for upcoming AzureRM to Az transition
+
+### Az.Compute
+
+* Add support for UltraSSD and Gallery Images in the simple param sets for `New-AzVm(ss)` cmdlets.
+
+### Az.DataLakeStore
+
+* Fix the trailing slash of the domain of adls account
+
+### Az.FrontDoor
+
+* Fixed some broken links
+    - In the New-AzureRmFrontDoor and Set-AzureRmFrontDoor articles, fixed the link to the New-AzureRmFrontDoorHealthProbeSettingObject cmdlet article.
+    - In the New-AzureRmFrontDoorManagedRuleObject article, fixed the link to the New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet article.
+
+### Az.RecoveryServices
+
+* Added client side validations for Azure File Share restore operations.
+* Made storageAccountName and storageAccountResourceGroupName optional for afs restore.
+
+### Az.Resources
+
+* Fix for https://github.com/Azure/azure-powershell/issues/7679
+    - Update Get-AzureRmRoleAssignment to use the subscription scope if it is provided when requesting classic administrators.
+
+### Az.Sql
+
+* Minor changes for upcoming AzureRM to Az transition
+* Fixed issue with using Get-AzureRmSqlDatabaseVulnerabilityAssessment with DotNet core
+* Modified documentation of help messages related to SQL Auditing cmdlets.
+
+### Az.Storage
+
+* Add -EnableHierarchicalNamespace to New-AzureRmStorageAccount
+* Fix issue that Copy File cmdlet can't reuse source context in destination when not input -DestContext
+    - Start-AzureStorageFileCopy
+* Support Static Website configuration
+    - Enable-AzureStorageStaticWebsite
+    - Disable-AzureStorageStaticWebsite
+
+### Az.Websites
+
+* Set-AzureRmWebApp and Set-AzureRmWebAppSlot 
+    - New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps. Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.
+
+## 0.6.1 - November 2018
+
+### Az.ApiManagement
+* Update dependencies for type mapping issue
+
+### Az.Automation
+* Swagger based Azure Automation cmdlets
+* Added Update Management cmdlets
+* Added Source Control cmdlets
+* Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet
+* Fixed the DSC Register Node command
+
+### Az.Compute
+* Fixed identity issue for SystemAssigned identity
+* Update dependencies for type mapping issue
+
+### Az.ContainerInstance
+* Update dependencies for type mapping issue
+
+### Az.MarketplaceOrdering
+* update the examples description for marketplace cmdlets
+
+### Az.Network
+* Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError
+* Added ICMP back to supported AzureFirewall Network Protocols
+* Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port. 
+* Fix issues with memory usage in VirtualNetwork map
+
+### Az.RecoveryServices.Backup
+* Fix for modifying policy for a protected file share.
+* Converted policy timezone to uppercase.
+
+### Az.RecoveryServices.SiteRecovery
+* Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem
+* Update dependencies for type mapping issue
+
+### Az.Relay
+* Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.
+
+### Az.Resources
+* Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`
+* Add an example for New-AzureRmPolicyDefinition that uses -Metadata
+* Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703
+
+### Az.ServiceFabric
+* Add deprecation messages for upcoming breaking changes
+
+### Az.Sql
+* Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database
+	- Get-AzureRmSqlInstance
+	- New-AzureRmSqlInstance
+	- Set-AzureRmSqlInstance
+	- Remove-AzureRmSqlInstance
+	- Get-AzureRmSqlInstanceDatabase
+	- New-AzureRmSqlInstanceDatabase
+	- Restore-AzureRmSqlInstanceDatabase
+	- Remove-AzureRmSqlInstanceDatabase
+* Enabled Extended Auditing Policy management on a server or a database.
+	- New parameter (PredicateExpression) was added to enable filtering of audit logs.
+	- Cmdlets were modified to use SQL clients instead of Legacy clients.
+	- Set-AzureRmSqlServerAuditing.
+	- Get-AzureRmSqlServerAuditing.
+	- Set-AzureRmSqlDatabaseAuditing.
+	- Get-AzureRmSqlDatabaseAuditing.
+* Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set
+
 ## 0.5.0 - November 2018
 #### General
 * Added Resource Completers to many core cmdlets - these alloow you to tab through existing resource names when invoking cmdlets interactively
