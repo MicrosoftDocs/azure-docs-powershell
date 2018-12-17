@@ -1,30 +1,34 @@
 ---
-title: Install Azure PowerShell 'Az' with PowerShellGet
-description: How to install Azure PowerShell with PowerShellGet on Windows, macOS, and Linux.
+title: Install Azure PowerShell with PowerShellGet
+description: How to install Azure PowerShell with PowerShellGet
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/26/2018
+ms.date: 12/13/2018
 ---
 
-# Install the Azure PowerShell 'Az' module
+# Install the Azure PowerShell module
 
-This article tells you how to install the Azure PowerShell modules using PowerShellGet. These instructions work on Windows, macOS, and Linux
-platforms. For the preview release of Az, no other install methods are supported. 
+This article tells you how to install the Azure PowerShell modules using PowerShellGet. These instructions
+work on Windows, macOS, and Linux platforms. For the Az module, currently no other installation methods
+are supported.
 
 ## Requirements
 
-Azure PowerShell works with either PowerShell 5.x on Windows, or PowerShell 6.x on any platform. To check the version of PowerShell running
-on your machine, run the following command:
+Azure PowerShell works with PowerShell 5.x on Windows 7 or higher, or PowerShell 6.x on any platform.
+To check your PowerShell version, run the command:
 
 ```powershell-interactive
 $PSVersionTable.PSVersion
 ```
 
-If you have an outdated version or need to install PowerShell, see [Installing various versions of PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-powershell?view=powershell-6). Install
+If you have an outdated version or need to install PowerShell, see [Installing various versions of PowerShell](/powershell/scripting/setup/installing-powershell). Install
 information for your platform is linked from that page.
+
+If you are using PowerShell 5.x on Windows, you also need .NET Framework 4.7.2 installed. For instructions
+on updating or installing a new version of .NET Framework, see the [.NET Framework installation guide](/dotnet/framework/install).
 
 ## Install the Azure PowerShell module
 
@@ -33,7 +37,8 @@ information for your platform is linked from that page.
 > You can have both the `AzureRM` and `Az` modules installed at the same time. If you have both modules installed, __don't enable aliases__.
 > Enabling aliases will cause conflicts between `AzureRM` cmdlets and `Az` command aliases, and could cause unexpected behavior.
 > It's recommended that before installing the `Az` module, you uninstall `AzureRM`. You can always uninstall `AzureRM` or enable aliases
-> at any time. For uninstall instructions, see [Uninstall the Azure PowerShell module (AzureRM)](uninstall-azurerm-ps.md). 
+> at any time. To learn about the AzureRM command aliases, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).
+> For uninstall instructions, see [Uninstall the Azure PowerShell module (AzureRM)](uninstall-az-ps.md). 
 
 To install modules at a global scope, you need elevated privileges to install modules from the PowerShell Gallery. To install Azure PowerShell,
 run the following command in an elevated session ("Run as Administrator" on Windows, or with superuser privileges on macOS or Linux):
@@ -85,13 +90,13 @@ across PowerShell sessions, see [Persist user credentials across PowerShell sess
 
 ## Update the Azure PowerShell module
 
-You can update your Azure PowerShell installation by running [Update-Module](/powershell/module/powershellget/update-module). This command does __not__ uninstall earlier versions.
+You can update your Azure PowerShell installation by running [Update-Module](/powershell/module/powershellget/update-module). This command does __not__ uninstall older versions.
 
 ```powershell-interactive
 Update-Module -Name Az
 ```
 
-If you want to remove older versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
+To learn how to remove old versions of Azure PowerShell from your system, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md).
 
 ## Use multiple versions of Azure PowerShell
 
@@ -99,25 +104,29 @@ It's possible to install more than one version of Azure PowerShell. To check if 
 command:
 
 ```powershell-interactive
-Get-Module -Name Az -List | select Name,Version
+Get-Module -Name Az -ListAvailable | select Name,Version
 ```
 
-To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-azurerm-ps.md).
+To remove a version of Azure PowerShell, see [Uninstall the Azure PowerShell module](uninstall-az-ps.md).
 
-You can load a specific version of the `Az` module by using the `-RequiredVersion` argument with `Install-Module` and `Import-Module`:
+You can install or load a specific version of the `Az` module by using the `-RequiredVersion` argument:
 
 ```powershell-interactive
-Install-Module -Name Az -RequiredVersion 0.4.0
-Import-Module -Name Az -RequiredVersion 0.4.0
+# Install Az version 0.7.0
+Install-Module -Name Az -RequiredVersion 0.7.0 
+# Load Az version 0.7.0
+Import-Module -Name Az -RequiredVersion 0.7.0
 ```
 
-If you have more than one version of the module installed, the latest version is loaded by default.
+If you have more than one version of the module installed, module autoload and `Import-Module` load the
+latest version by default.
 
 ## Provide feedback
 
-If you find a bug when using Azure Powershell, [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).
-To provide feedback from the command line, use the [Send-Feedback](/powershell/module/az.profile/send-feedback) cmdlet.
+If you find a bug in Azure Powershell, [file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).
+To provide feedback from the command line, use the
+[Send-Feedback](/powershell/module/az.accounts/send-feedback) cmdlet.
 
 ## Next Steps
 
-To get started using Azure PowerShell, see [Get Started with Azure PowerShell](get-started-azureps.md) to learn more about the module and its features.
+To learn more about the Azure PowerShell modules and their features, see [Get Started with Azure PowerShell](get-started-azureps.md). If you're familiar with Azure PowerShell and need to migrate off of AzureRM, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md).

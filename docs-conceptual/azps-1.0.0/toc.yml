@@ -1,22 +1,12 @@
 - name: Azure PowerShell
   href: overview.md
   items:
-  - name: Introducing the new Az module
+  - name: Introducing the new Azure PowerShell module
     href: new-azureps-module-az.md
-    items:
-    - name: Install Az
-      href: install-az-ps.md
-    - name: Migrate to Az
-      href: migrate-from-azurerm-to-az.md
   - name: Install
-    href: install-azurerm-ps.md
-    items:
-    - name: Install on macOS or Linux
-      href: install-az-ps.md
-    - name: Install with MSI
-      href: other-install.md
+    href: install-az-ps.md
   - name: Uninstall
-    href: uninstall-azurerm-ps.md
+    href: uninstall-az-ps.md
   - name: Get started
     href: get-started-azureps.md
   - name: Cloud Shell
@@ -28,6 +18,8 @@
       href: create-azure-service-principal-azureps.md
     - name: Persistent credentials
       href: context-persistence.md
+  - name: Migrate from AzureRM
+    href: migrate-from-azurerm-to-az.md
   - name: Queries
     href: queries-azureps.md
   - name: Format output 
@@ -49,10 +41,10 @@
     - name: PowerShell jobs
       href: using-psjobs.md
   - name: Release notes
-    href: release-notes-azureps.md
+    href: release-notes-az.md
     items:
-    - name: Breaking changes for Azure PowerShell 6.x
-      href: migration-guide.6.0.0.md
+    - name: Breaking changes for Az 1.0.0
+      href: migrate-az-1.0.0.md
 - name: Tutorials
   items:
   - name: Create Virtual Machines

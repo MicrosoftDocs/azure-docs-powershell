@@ -1,25 +1,39 @@
 ---
-title: Overview of Azure PowerShell | Microsoft Docs
-description: An overview of Azure PowerShell with links to installation and configuration.
+title: Overview of Azure PowerShell
+description: An overview of the Azure PowerShell Az module, with information on how to install and get started.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 09/11/2018
+ms.date: 10/29/2018
 ---
 # Overview of Azure PowerShell
 
 Azure PowerShell provides a set of cmdlets that use the [Azure Resource
 Manager](/azure/azure-resource-manager/resource-group-overview) model for managing your Azure
-resources. You can use it in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or
-you can install it on your local machine and use it in any PowerShell session.
+resources. Azure PowerShell uses .NET Standard, making it available for Windows, macOS, and Linux.
+Azure PowerShell is also available from Azure Cloud Shell.
 
-Use the [Cloud Shell](/azure/cloud-shell/overview) to run the Azure PowerShell in your browser, or
-[install](install-azurerm-ps.md) it on own computer. Then read the [Get Started](get-started-azureps.md)
-article to begin using it. For information about the latest release, see the
-[release notes](release-notes-azureps.md).
+Use [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure PowerShell in your browser, or
+[install locally](install-az-ps.md). Check out the [Get Started](get-started-azureps.md)
+article to learn the Azure PowerShell basics and get started with Azure.
+
+For information about the latest Azure PowerShell release, see the [release notes](release-notes-azureps.md).
+
+## About the new Az module
+
+This documentation describes the new Az module for Azure PowerShell. This new module is written from the
+ground up in .NET Standard. Using .NET Standard allows Azure PowerShell to run under PowerShell 5.x on Windows
+or PowerShell 6 on any platform. The Az module is now the intended way to interact with Azure through PowerShell.
+AzureRM will continue to get bug fixes, but no longer receive new features.
+
+Learn the full details about the new module, including how commands have been renamed and the maintenance
+plans for AzureRM, in the [Introducing the Azure PowerShell Az module](new-azureps-module-az.md). If you
+want to get started with using the new module right away, see [Migrate from AzureRM to Az](migrate-from-azurerm-to-az.md)
+
+## Common scenarios 
 
 The following samples can help you learn how to perform common scenarios with Azure PowerShell:
 
@@ -28,11 +42,9 @@ The following samples can help you learn how to perform common scenarios with Az
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-[!INCLUDE[az-replacing-azurerm](../includes/az-replacing-azurerm.md)]
-
 ## Learn PowerShell basics
 
-If you're unfamiliar with PowerShell, an introduction to PowerShell may be helpful.
+If you're unfamiliar with PowerShell, an introduction may be helpful.
 
 * [Installing PowerShell](/powershell/scripting/setup/installing-windows-powershell)
 * [Scripting with PowerShell](/powershell/scripting/powershell-scripting)

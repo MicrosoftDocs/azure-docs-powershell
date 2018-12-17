@@ -15,7 +15,7 @@ Use these installation methods only if they're necessary for your system. The re
 on Windows is with PowerShellGet. For instructions on using PowerShellGet to install Azure PowerShell,
 see [Install Azure PowerShell with PowerShellGet](install-azurerm-ps.md).
 
-To install on Linux or macOS environments, see [Install Azure PowerShell on macOS or Linux](install-azurermps-maclinux.md).
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
 
 ## Install or update on Windows using the MSI Package
 

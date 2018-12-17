@@ -7,7 +7,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/09/2018
+ms.date: 12/13/2018
 ---
 # Create an Azure service principal with Azure PowerShell
 
@@ -15,15 +15,12 @@ If you plan to manage your app or service with Azure PowerShell, you should run 
 Active Directory (AAD) service principal, rather than your own credentials. This article steps you
 through creating a security principal with Azure PowerShell.
 
-> [!NOTE]
-> You can also create a service principal through the Azure portal. Read [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal) for more details.
-
-## What is a 'service principal'?
+## What is a service principal?
 
 An Azure service principal is a security identity used by user-created apps, services, and
-automation tools to access specific Azure resources. Think of it as a 'user identity' (username and
-password or certificate) with a specific role, and tightly controlled permissions. A service principal should only need to do specific things, unlike a general user identity. It improves security if you only
-grant it the minimum permissions level needed to perform its management tasks.
+automation tools to access specific Azure resources. Service principals are assigned specific permissions
+related to their tasks, giving you better security control. This is unlike a general user identity, which is usually
+authorized to make any changes.
 
 ## Verify your own permission level
 
@@ -39,15 +36,16 @@ The easiest way to check whether your account has the right permissions is throu
 Once signed in to your Azure account, you can create the service principal. You must have one
 of the following ways to identify your deployed app:
 
-* The unique name of your deployed app, such as "MyDemoWebApp" in the following examples, or
-* the Application ID, the unique GUID associated with your deployed app, service, or object
+* The unique name of your deployed app, such as "MyDemoWebApp" in the following examples
+* The Application ID, the unique GUID associated with your deployed app, service, or object
 
 ### Get information about your application
 
-The `Get-AzureRmADApplication` cmdlet can be used to get information about your application.
+The `Get-AzADApplication` cmdlet can be used to get information about your application.
 
 ```azurepowershell-interactive
-Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
+$app = Get-AzADApplication -DisplayNameStartWith MyDemoWebApp
+$app
 ```
 
 ```output
@@ -64,10 +62,10 @@ ReplyUrls               : {}
 
 ### Create a service principal for your application
 
-The `New-AzureRmADServicePrincipal` cmdlet is used to create the service principal.
+The `New-AzADServicePrincipal` cmdlet is used to create the service principal.
 
 ```azurepowershell-interactive
-$servicePrincipal = New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4
+$servicePrincipal = New-AzADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4
 ```
 
 ```output
@@ -80,7 +78,9 @@ AdfsId                :
 Type                  : ServicePrincipal
 ```
 
-From here, you can either directly use the $servicePrincipal.Secret property in Connect-AzureRmAccount (see "Sign in using the service principal" below), or you can convert this SecureString to a plain text string for later usage:
+From here, you can either directly use the `$servicePrincipal.Secret` property as an argument to
+`Connect-AzAccount` (see "Sign in using the service principal"), or you can convert this `SecureString`
+to a plain text string:
 
 ```azurepowershell-interactive
 $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($servicePrincipal.Secret)
@@ -90,13 +90,13 @@ $password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
 
 ### Sign in using the service principal
 
-You can now sign in as the new service principal for your app using the *appId* you provided and *password* that was automatically 
+You can now sign in as the new service principal for your app using the `appId` you provided and `password` that was  
 generated. You also need the Tenant ID for the service principal. Your Tenant ID is displayed when you sign into Azure with your 
-personal credentials. To sign in with a service principal, use the following commands:
+personal credentials. To sign in with a service principal, use the commands:
 
 ```azurepowershell-interactive
 $cred = New-Object System.Management.Automation.PSCredential ("00c01aaa-1603-49fc-b6df-b78c4e5138b4", $servicePrincipal.Secret)
-Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Connect-AzAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
 After a successful sign-in you see output like:
@@ -120,9 +120,9 @@ permissions of the service principal.
 
 Azure PowerShell provides the following cmdlets to manage role assignments:
 
-* [Get-AzureRmRoleAssignment](/powershell/module/azurerm.resources/get-azurermroleassignment)
-* [New-AzureRmRoleAssignment](/powershell/module/azurerm.resources/new-azurermroleassignment)
-* [Remove-AzureRmRoleAssignment](/powershell/module/azurerm.resources/remove-azurermroleassignment)
+* [Get-AzRoleAssignment](/powershell/module/az.resources/get-azroleassignment)
+* [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
+* [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
 The default role for a service principal is **Contributor**. It may not be the best choice
 depending on the scope of your app's interactions with Azure services, given its broad permissions.
@@ -133,7 +133,7 @@ In this example, we add the **Reader** role to our prior example, and delete the
 one:
 
 ```azurepowershell-interactive
-New-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
+New-AzRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
 ```
 
 ```output
@@ -148,13 +148,13 @@ ObjectType         : ServicePrincipal
 ```
 
 ```azurepowershell-interactive
-Remove-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
+Remove-AzRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
 ```
 
 To view the current roles assigned:
 
 ```azurepowershell-interactive
-Get-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
+Get-AzRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 ```
 
 ```output
@@ -170,10 +170,10 @@ ObjectType         : ServicePrincipal
 
 Other Azure PowerShell cmdlets for role management:
 
-* [Get-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Get-AzureRmRoleDefinition)
-* [New-AzureRmRoleDefinition](/powershell/module/azurerm.resources/New-AzureRmRoleDefinition)
-* [Remove-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Remove-AzureRmRoleDefinition)
-* [Set-AzureRmRoleDefinition](/powershell/module/azurerm.resources/Set-AzureRmRoleDefinition)
+* [Get-AzRoleDefinition](/powershell/module/az.resources/Get-azRoleDefinition)
+* [New-AzRoleDefinition](/powershell/module/az.resources/New-azRoleDefinition)
+* [Remove-AzRoleDefinition](/powershell/module/az.resources/Remove-azRoleDefinition)
+* [Set-AzRoleDefinition](/powershell/module/az.resources/Set-azRoleDefinition)
 
 ## Change the credentials of the security principal
 
@@ -184,7 +184,7 @@ change the password of the service principal by creating a new password and remo
 ### Add a new password for the service principal
 
 ```azurepowershell-interactive
-New-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
+New-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
 ```output
@@ -198,7 +198,7 @@ Type      : Password
 ### Get a list of credentials for the service principal
 
 ```azurepowershell-interactive
-Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
+Get-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
 ```output
@@ -211,7 +211,7 @@ StartDate           EndDate             KeyId                                Typ
 ### Remove the old password from the service principal
 
 ```azurepowershell-interactive
-Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
+Remove-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
 ```
 
 ```output
@@ -224,7 +224,7 @@ service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
 ### Verify the list of credentials for the service principal
 
 ```azurepowershell-interactive
-Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
+Get-AzADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
 ```output
@@ -236,7 +236,7 @@ StartDate           EndDate             KeyId                                Typ
 ### Get information about the service principal
 
 ```azurepowershell-interactive
-$svcprincipal = Get-AzureRmADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
+$svcprincipal = Get-AzADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 $svcprincipal | Select-Object *
 ```
 

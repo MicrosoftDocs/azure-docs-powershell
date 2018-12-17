@@ -21,10 +21,10 @@ Azure PowerShell has default formatting defined for each cmdlet. The most common
 each resource type are displayed in a table or list format automatically. For more information
 about formatting output, see [Formatting query results](formatting-output.md).
 
-Use the `Get-AzureRmVM` cmdlet to query for a list of VMs in your account.
+Use the `Get-AzVM` cmdlet to query for a list of VMs in your account.
 
 ```azurepowershell-interactive
-Get-AzureRmVM
+Get-AzVM
 ```
 
 The default output is automatically formatted as a table.
@@ -39,7 +39,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 The `Select-Object` cmdlet can be used to select the specific properties that are interesting to you.
 
 ```azurepowershell-interactive
-Get-AzureRmVM | Select Name,ResourceGroupName,Location
+Get-AzVM | Select Name,ResourceGroupName,Location
 ```
 
 ```output
@@ -53,10 +53,10 @@ MyWin2016VM   MYWESTEURG        westeurope
 
 If the property you want is nested in the JSON output, you need to supply the full
 path to the property. The following example shows how to select the VM Name and the OS type
-from the `Get-AzureRmVM` cmdlet.
+from the `Get-AzVM` cmdlet.
 
 ```azurepowershell-interactive
-Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
+Get-AzVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
 ```output
@@ -72,7 +72,7 @@ The `Where-Object` cmdlet allows you to filter the result based on any property 
 following example, the filter selects only VMs that have the text "RGD" in their name.
 
 ```azurepowershell-interactive
-Get-AzureRmVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
+Get-AzVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
 ```
 
 ```output
@@ -85,7 +85,7 @@ RGDEMO001          KBDemo020
 With the next example, the results will return the VMs that have the vmSize 'Standard_DS1_V2'.
 
 ```azurepowershell-interactive
-Get-AzureRmVM | Where vmSize -eq Standard_DS1_V2
+Get-AzVM | Where vmSize -eq Standard_DS1_V2
 ```
 
 ```output

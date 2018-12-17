@@ -6,7 +6,7 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/09/2018
+ms.date: 10/29/2018
 ---
 # Sign in with Azure PowerShell
 
@@ -15,31 +15,32 @@ interactively at the command line.
 
 ## Sign in interactively
 
-To sign in interactively, use the [Connect-AzureRmAccount](/powershell/module/azurerm.profile/connect-azurermaccount) cmdlet.
+To sign in interactively, use the [Connect-AzAccount](/powershell/module/az.profile/connect-azaccount) cmdlet.
 
 ```azurepowershell-interactive
-Connect-AzureRmAccount
+Connect-AzAccount
 ```
 
-When run, this cmdlet will bring up a dialog box prompting you for your email address and password associated with your Azure account. This authentication lasts for the current PowerShell session.
+When run, this cmdlet will present a token string. To log in, copy this string and paste it into https://microsoft.com/devicelogin in a browser. Your PowerShell session will
+then be authenticated to connect to Azure. This authentication lasts for the current PowerShell session.
 
 > [!IMPORTANT]
-> As of Azure PowerShell 6.3.0, your credentials are shared among multiple PowerShell sessions as long as you remain
-> signed in to Windows. For more information, see the article on [Persistent Credentials](context-persistence.md).
+>
+> Your credentials are shared among multiple PowerShell sessions as long as you remain signed in.
+> For more information, see the article on [Persistent Credentials](context-persistence.md).
 
 ## Sign in with a service principal
 
-Service principals are non-interactive Azure accounts. Like other user accounts, their permissions are managed with Azure Active Directory. By granting a service principal only the permissions it needs, your automation scripts
-stay secure.
+Service principals are non-interactive Azure accounts. Like other user accounts, their permissions are managed with Azure Active Directory. By granting a service principal only the permissions it needs, your automation scripts stay secure.
 
 To learn how to create a service principal for use with Azure PowerShell, see [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).
 
-To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzureRmAccount` cmdlet. You'll also need the service principal's application ID,
-sign-in credentials, and the tenant ID associate with the service principal. To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will display a dialog box to enter the service principal user ID and password into.
+To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzAccount` cmdlet. You'll also need the service principal's application ID,
+sign-in credentials, and the tenant ID associate with the service principal. To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This cmdlet will present a prompt for the service principal user ID and password.
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+Connect-AzAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
 ```
 
 ## Sign in using an Azure Managed Service Identity
@@ -56,7 +57,7 @@ For more information about managed identities for Azure resources, see
 A [Cloud Solution Provider (CSP)](https://azure.microsoft.com/en-us/offers/ms-azr-0145p/) sign-in requires the use of `-TenantId`. Normally, this parameter can be provided as either a tenant ID or a domain name. However, for CSP sign-in, it must be provided a **tenant ID**.
 
 ```azurepowershell-interactive
-Connect-AzureRmAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'
+Connect-AzAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'
 ```
 
 ## Sign in to another Cloud
@@ -66,13 +67,13 @@ For accounts in a regional cloud, set the environment when you sign in with the 
 For example, if your account is in the China cloud:
 
 ```azurepowershell-interactive
-Connect-AzureRmAccount -Environment AzureChinaCloud
+Connect-AzAccount -Environment AzureChinaCloud
 ```
 
 The following command gets a list of available environments:
 
 ```azurepowershell-interactive
-Get-AzureRmEnvironment | Select-Object Name
+Get-AzEnvironment | Select-Object Name
 ```
 
 ## Learn more about managing Azure role-based access
@@ -82,10 +83,10 @@ For more information about authentication and subscription management in Azure, 
 
 Azure PowerShell cmdlets for role management:
 
-* [Get-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/Get-AzureRmRoleAssignment)
-* [Get-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Get-AzureRmRoleDefinition)
-* [New-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/New-AzureRmRoleAssignment)
-* [New-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/New-AzureRmRoleDefinition)
-* [Remove-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/Remove-AzureRmRoleAssignment)
-* [Remove-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Remove-AzureRmRoleDefinition)
-* [Set-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Set-AzureRmRoleDefinition)
+* [Get-AzRoleAssignment](/powershell/module/az.Resources/Get-azRoleAssignment)
+* [Get-AzRoleDefinition](/powershell/module/az.Resources/Get-azRoleDefinition)
+* [New-AzRoleAssignment](/powershell/module/az.Resources/New-azRoleAssignment)
+* [New-AzRoleDefinition](/powershell/module/az.Resources/New-azRoleDefinition)
+* [Remove-AzRoleAssignment](/powershell/module/az.Resources/Remove-azRoleAssignment)
+* [Remove-AzRoleDefinition](/powershell/module/az.Resources/Remove-azRoleDefinition)
+* [Set-AzRoleDefinition](/powershell/module/az.Resources/Set-azRoleDefinition)

@@ -17,6 +17,8 @@ If you want to use Azure PowerShell on macOS or Linux, see the following article
 
 Installing Azure PowerShell from the PowerShell Gallery is the preferred method of installation.
 
+[!INCLUDE[az-replacing-azurerm.md](../includes/az-replacing-azurerm.md)]
+
 ## Step 1: Install PowerShellGet
 
 Installing items from the PowerShell Gallery requires the PowerShellGet module. Make sure you have
