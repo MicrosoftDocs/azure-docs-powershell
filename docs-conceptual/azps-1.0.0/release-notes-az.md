@@ -1,3 +1,108 @@
+## 1.0.0 - December 2018
+### General
+
+- General Availability of Az Module
+- Online help for each module
+- For more details and a roadmap, see the [Az Announcement page](https://aka.ms/azps-announce)
+- See the [Migration Guide](https://aka.ms/azps-migration-guide) for information on migrating from AzureRM
+
+### Az.Accounts
+- Changed from Az.Profile
+- Fixed table formats for profile and context types
+
+### Az.ApiManagement
+- Fixes for #7002
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.Batch
+- Added the ability to see what version of the Azure Batch Node Agent is running on each of the VMs in a pool, via the new `NodeAgentInformation` property on `PSComputeNode`.
+- The `Caching` default for `PSDataDisk` is now `ReadWrite` instead of `None`.
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.Billing
+- Combines Billing, Consumption, and UsageAggregates cmdlets, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.CognitivServices
+- Add completers for SkuName and Typem available on New-AzureRmCognitiveServicesAccount operation
+- Removed GetSkusWithAccountParamSetName parameter set from Get-AzCognitiveServicesAccountSkus
+
+### Az.ContainerInstance
+- Added ManagedIdentity support
+
+### Az.DataLakeAnalytics
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.DataLakeStore
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.Monitor
+- Renamed Az.Insights to Az.Monitor and other minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.KeyVault
+- Removed the deprecated 'PurgeDisabled' property from output types
+
+### Az.MachineLearning
+- Included cmdlets from Az.MachineLearningCompute module
+
+### Az.Media
+- Remove deprecated -Tags alias from New-AzMediaService
+
+### Az.Network
+Added support for the configuring RewriteRuleSets in the Application Gateway
+    - New cmdlets added:
+        - Add-AzureRmApplicationGatewayRewriteRuleSet
+        - Get-AzureRmApplicationGatewayRewriteRuleSet
+        - New-AzureRmApplicationGatewayRewriteRuleSet
+        - Remove-AzureRmApplicationGatewayRewriteRuleSet
+        - Set-AzureRmApplicationGatewayRewriteRuleSet
+        - New-AzureRmApplicationGatewayRewriteRule
+        - New-AzureRmApplicationGatewayRewriteRuleActionSet
+        - New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration
+    - Cmdlets updated with optional parameter -RewriteRuleSet
+        - New-AzureRmApplicationGateway
+        - New-AzureRmApplicationGatewayRequestRoutingRule
+        - Add-AzureRmApplicationGatewayRequestRoutingRule
+        - New-AzureRmApplicationGatewayPathRuleConfig
+        - Add-AzureRmApplicationGatewayUrlPathMapConfig
+        - New-AzureRmApplicationGatewayUrlPathMapConfig
+Added KeyVault Support to Application Gateway using Identity.
+    - Cmdlets updated with optonal parameter -KeyVaultSecretId, -KeyVaultSecret
+        - Add-AzApplicationGatewaySslCertificate
+        - New-AzApplicationGatewaySslCertificate
+        - Set-AzApplicationGatewaySslCertificate
+    - New-AzApplicationGateway cmdlet updated with optional parameter -UserAssignedIdentity
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.OperationalInsights
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.Profile
+- Changed module name to Az.Accounts
+
+### Az.RecoveryServices
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.Resources
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.ServiceFabric
+- Support specfying certificate by common name and thumbprint
+- Mnor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.SIgnalR
+- General Availability for PowerShell cmdlets for SIgnalR
+
+### Az.Sql
+- Added new Data_Exfiltration and Unsafe_Action detection types to Threat Detection's cmdlets
+- Updated documentation examples for Sql Auditing cmdlets
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.Storage
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
+### Az.Websites
+- Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details
+
 ## 0.5.0 - November 2018
 #### General
 * Added Resource Completers to many core cmdlets - these alloow you to tab through existing resource names when invoking cmdlets interactively
